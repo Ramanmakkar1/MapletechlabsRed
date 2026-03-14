@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
+
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,18 +13,38 @@ if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   useGSAP(() => {
     gsap.from('.contact-inner > *', { opacity: 0, y: 50, stagger: 0.15, duration: 1, ease: 'power4.out', scrollTrigger: { trigger: '#contact', start: 'top 85%', once: true } });
     ScrollTrigger.refresh();
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent('Project Inquiry from Mapletech Labs Website');
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:hello@mapletechlabs.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setIsLoading(true);
+
+    try {
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+      );
+
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -121,12 +143,13 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
+                  disabled={isLoading}
                   style={{ height: 52, borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, transition: '0.3s' }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
+                  onMouseEnter={e => { if(!isLoading){ e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; } }}
+                  onMouseLeave={e => { if(!isLoading){ e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; } }}
                 >
-                  Send Message
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  {isLoading ? 'Sending...' : 'Send Message'}
+                  {!isLoading && <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>}
                 </button>
               </form>
             )}

@@ -1,14 +1,39 @@
 'use client';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function ServiceHeroForm() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', budget: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+    setIsLoading(true);
+
+    try {
+      const templateParams = {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        budget: form.budget,
+        message: form.message,
+      };
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+      );
+
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -110,6 +135,7 @@ export default function ServiceHeroForm() {
           />
           <button
             type="submit"
+            disabled={isLoading}
             style={{
               width: '100%',
               height: 52,
@@ -127,11 +153,11 @@ export default function ServiceHeroForm() {
               justifyContent: 'center',
               gap: 8,
             }}
-            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(245,41,13,0.4)'; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
+            onMouseEnter={e => { if(!isLoading){ e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(245,41,13,0.4)'; } }}
+            onMouseLeave={e => { if(!isLoading){ e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; } }}
           >
-            Get Free Quote
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            {isLoading ? 'Sending...' : 'Get Free Quote'}
+            {!isLoading && <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>}
           </button>
         </form>
       )}

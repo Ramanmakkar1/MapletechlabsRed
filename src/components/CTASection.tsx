@@ -1,6 +1,42 @@
 'use client';
 
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 export default function CTASection() {
+  const [form, setForm] = useState({ name: '', email: '', company: '', service: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const templateParams = {
+        name: form.name,
+        email: form.email,
+        company: form.company,
+        projectType: form.service,
+        message: form.message,
+      };
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+      );
+
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="section" style={{
       background:'linear-gradient(135deg, #000 0%, #08323d 100%)',
@@ -34,26 +70,36 @@ export default function CTASection() {
             background:'rgba(255,255,255,0.04)', border:'1px solid rgba(255,255,255,0.08)',
             borderRadius:20, padding:36, backdropFilter:'blur(20px)',
           }}>
-            <form onSubmit={e=>e.preventDefault()} style={{ display:'flex', flexDirection:'column', gap:16 }}>
+            {submitted ? (
+              <div style={{ textAlign: 'center', padding: '40px 0' }}>
+                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', border: '2px solid #f5290d', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                </div>
+                <div style={{ fontSize: 18, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Thank You!</div>
+                <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>We'll get back to you within 24 hours.</div>
+              </div>
+            ) : (
+            <form onSubmit={handleSubmit} style={{ display:'flex', flexDirection:'column', gap:16 }}>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:14 }}>
-                <input required type="text" placeholder="Full Name"
+                <input required type="text" placeholder="Full Name" value={form.name} onChange={e => setForm({...form, name: e.target.value})}
                   style={{ padding:'13px 16px', background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:8, color:'#fff', fontFamily:'Poppins,sans-serif', fontSize:14, outline:'none' }}/>
-                <input required type="email" placeholder="Email Address"
+                <input required type="email" placeholder="Email Address" value={form.email} onChange={e => setForm({...form, email: e.target.value})}
                   style={{ padding:'13px 16px', background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:8, color:'#fff', fontFamily:'Poppins,sans-serif', fontSize:14, outline:'none' }}/>
               </div>
-              <input type="text" placeholder="Company (optional)"
+              <input type="text" placeholder="Company (optional)" value={form.company} onChange={e => setForm({...form, company: e.target.value})}
                 style={{ padding:'13px 16px', background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:8, color:'#fff', fontFamily:'Poppins,sans-serif', fontSize:14, outline:'none' }}/>
-              <select style={{ padding:'13px 16px', background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:8, color:'rgba(255,255,255,0.6)', fontFamily:'Poppins,sans-serif', fontSize:14, outline:'none', appearance:'none' }}>
-                <option value="">Select a Service</option>
-                {['Custom Software','Web Development','Mobile App','AI & Automation','Blockchain','Enterprise Software','Other'].map(s=><option key={s} style={{ background:'#1e1e1e' }}>{s}</option>)}
+              <select value={form.service} onChange={e => setForm({...form, service: e.target.value})} style={{ padding:'13px 16px', background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:8, color: form.service ? '#fff' : 'rgba(255,255,255,0.6)', fontFamily:'Poppins,sans-serif', fontSize:14, outline:'none', appearance:'none' }}>
+                <option value="" disabled>Select a Service</option>
+                {['Custom Software','Web Development','Mobile App','AI & Automation','Blockchain','Enterprise Software','Other'].map(s=><option key={s} value={s} style={{ background:'#1e1e1e' }}>{s}</option>)}
               </select>
-              <textarea required rows={4} placeholder="Tell us about your project..."
+              <textarea required rows={4} placeholder="Tell us about your project..." value={form.message} onChange={e => setForm({...form, message: e.target.value})}
                 style={{ padding:'13px 16px', background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:8, color:'#fff', fontFamily:'Poppins,sans-serif', fontSize:14, outline:'none', resize:'none' }}/>
-              <button type="submit" className="btn-primary btn-lg" style={{ width:'100%', justifyContent:'center' }}>
-                Send Message
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <button type="submit" disabled={isLoading} className="btn-primary btn-lg" style={{ width:'100%', justifyContent:'center' }}>
+                {isLoading ? 'Sending...' : 'Send Message'}
+                {!isLoading && <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>}
               </button>
             </form>
+            )}
           </div>
 
         </div>
