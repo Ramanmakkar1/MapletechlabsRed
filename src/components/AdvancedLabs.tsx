@@ -30,7 +30,7 @@ export default function AdvancedLabs() {
             <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 56 }}>
               Our dedicated R&D division builds the emerging technology that will define the next decade of software.
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 3vw, 36px)' }}>
               {features.map(f => (
                 <div key={f.title} style={{ display: 'flex', gap: 20 }}>
                   <div style={{ width: 2, flexShrink: 0, background: 'linear-gradient(to bottom, #f5290d, rgba(245,41,13,0.1))', borderRadius: 10, minHeight: 60 }} />

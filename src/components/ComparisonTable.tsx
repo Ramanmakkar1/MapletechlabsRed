@@ -51,17 +51,17 @@ export default function ComparisonTable() {
         </div>
 
         {/* Table */}
-        <div className="reveal reveal-d1 comparison-table" style={{ border: '1px solid rgba(255,255,255,0.08)', borderRadius: 40 }}>
-          <div className="comparison-table-inner" style={{ overflow: 'hidden' }}>
+        <div className="reveal reveal-d1 comparison-table" style={{ border: '1px solid rgba(255,255,255,0.08)', borderRadius: 40, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+          <div className="comparison-table-inner" style={{ overflow: 'hidden', minWidth: 600 }}>
           {/* Header row */}
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-            <div style={{ padding: '28px 40px', fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Feature</div>
+            <div style={{ padding: 'clamp(14px, 2vw, 28px) clamp(16px, 3vw, 40px)', fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Feature</div>
             {[
               { label: 'Mapletech Labs', highlight: true },
               { label: 'Traditional Agency', highlight: false },
               { label: 'Freelancer', highlight: false },
             ].map(col => (
-              <div key={col.label} style={{ padding: '28px 32px', textAlign: 'center', borderLeft: '1px solid rgba(255,255,255,0.06)', background: col.highlight ? 'rgba(245,41,13,0.05)' : 'transparent' }}>
+              <div key={col.label} style={{ padding: 'clamp(14px, 2vw, 28px) clamp(16px, 3vw, 32px)', textAlign: 'center', borderLeft: '1px solid rgba(255,255,255,0.06)', background: col.highlight ? 'rgba(245,41,13,0.05)' : 'transparent' }}>
                 <div style={{ fontSize: 14, fontWeight: 700, color: col.highlight ? '#f5290d' : 'rgba(255,255,255,0.75)', letterSpacing: '-0.01em' }}>{col.label}</div>
                 {col.highlight && <div style={{ width: 32, height: 2, background: '#f5290d', borderRadius: 1, margin: '8px auto 0' }} />}
               </div>
@@ -81,14 +81,14 @@ export default function ComparisonTable() {
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
             >
-              <div style={{ padding: '22px 40px', fontSize: 15, color: 'rgba(255,255,255,0.7)', fontWeight: 500, display: 'flex', alignItems: 'center' }}>{row.feature}</div>
-              <div style={{ padding: '22px 32px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)', background: 'rgba(245,41,13,0.02)' }}>
+              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 40px)', fontSize: 15, color: 'rgba(255,255,255,0.7)', fontWeight: 500, display: 'flex', alignItems: 'center' }}>{row.feature}</div>
+              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)', background: 'rgba(245,41,13,0.02)' }}>
                 <Check />
               </div>
-              <div style={{ padding: '22px 32px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
                 {row.agency ? <Check /> : <Cross />}
               </div>
-              <div style={{ padding: '22px 32px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
                 {row.freelancer ? <Check /> : <Cross />}
               </div>
             </div>

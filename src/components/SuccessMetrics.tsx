@@ -30,7 +30,7 @@ function StatCard({ s, index, active }: { s: typeof stats[0]; index: number; act
     <div
       className={`reveal reveal-d${index + 1}`}
       style={{
-        padding: '52px 44px',
+        padding: 'clamp(24px, 4vw, 52px) clamp(20px, 3vw, 44px)',
         border: '1px solid rgba(255,255,255,0.07)',
         borderRadius: '24px',
         background: 'rgba(255,255,255,0.02)',

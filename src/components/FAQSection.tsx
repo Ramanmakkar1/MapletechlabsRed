@@ -27,7 +27,7 @@ export default function FAQSection() {
     <section ref={ref} id="faq" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div className="cb-container">
         <div className="faq-grid">
-          <div className="reveal faq-sticky" style={{ position: 'sticky', top: 120 }}>
+          <div className="reveal faq-sticky" style={{ position: 'sticky', top: 80 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>FAQ</div>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
               Questions<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Answered.</span>
@@ -57,7 +57,7 @@ export default function FAQSection() {
                     </svg>
                   </div>
                 </button>
-                <div style={{ maxHeight: active === i ? 200 : 0, overflow: 'hidden', transition: 'max-height 0.45s cubic-bezier(0.16,1,0.3,1)' }}>
+                <div style={{ maxHeight: active === i ? 500 : 0, overflow: 'hidden', transition: 'max-height 0.45s cubic-bezier(0.16,1,0.3,1)' }}>
                   <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, paddingBottom: 28, margin: 0 }}>{faq.a}</p>
                 </div>
               </div>

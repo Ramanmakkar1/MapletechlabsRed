@@ -189,7 +189,7 @@ h1,h2,h3,h4,h5,h6 {
   .process-step { display: grid; grid-template-columns: 80px 1fr 1fr 200px; gap: 40px; }
   .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
   .whyus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: clamp(28px, 5vw, 60px); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
   .services-large-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .services-small-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
@@ -217,6 +217,9 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 1200px) {
   .awards-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 1024px) {
+  .hero-container { grid-template-columns: 1fr; padding: 40px 24px 80px; gap: 48px; }
 }
 @media (max-width: 1023px) {
   .process-step { grid-template-columns: 1fr; gap: 24px; }
@@ -248,25 +251,59 @@ h1,h2,h3,h4,h5,h6 {
   .awards-row { justify-content: center; }
   .industries-heading-grid { grid-template-columns: 1fr; gap: 24px; }
   .testimonials-heading-grid { grid-template-columns: 1fr; gap: 24px; }
+  .comparison-table-inner { min-width: unset; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .services-large-grid { grid-template-columns: 1fr; }
+  .tech-categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { gap: 32px; }
   .section-padding { padding: 80px 0; }
   .section-padding-sm { padding: 60px 0; }
 }
 @media (max-width: 640px) {
-  .stats-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .whyus-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .services-small-grid { grid-template-columns: 1fr; }
   .portfolio-content-row { flex-direction: column; gap: 24px; }
   .industries-grid { grid-template-columns: 1fr; }
+  .industries-heading-grid { grid-template-columns: 1fr; gap: 16px; }
+  .testimonials-heading-grid { grid-template-columns: 1fr; gap: 16px; }
   .tech-categories-grid { grid-template-columns: 1fr; }
   .portfolio-tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
   .hero-container { padding: 32px 20px 60px; gap: 36px; }
 }
 @media (max-width: 480px) {
-  .awards-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 1024px) {
-  .hero-container { grid-template-columns: 1fr; padding: 40px 24px 80px; gap: 48px; }
+  /* Small phone overrides (iPhone SE 375px etc.) */
+  .cb-container { padding: 0 16px; }
+  .section { padding: 48px 0; }
+  .section-padding { padding: 48px 0; }
+  .section-padding-sm { padding: 32px 0; }
+  .section-heading { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+  .section-subtext { font-size: 15px; }
+
+  /* All grids stack to 1 column with reduced gaps */
+  .stats-grid { grid-template-columns: 1fr; gap: 2px; }
+  .whyus-grid { grid-template-columns: 1fr; gap: 16px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .services-small-grid { grid-template-columns: 1fr; gap: 16px; }
+  .services-large-grid { grid-template-columns: 1fr; gap: 16px; }
+  .industries-grid { grid-template-columns: 1fr; gap: 16px; }
+  .tech-categories-grid { grid-template-columns: 1fr; gap: 12px; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
+  .insights-grid { grid-template-columns: 1fr; gap: 16px; }
+  .contact-grid { gap: 32px; }
+  .awards-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+
+  /* Key grids with large gaps reduced */
+  .advanced-labs-grid { grid-template-columns: 1fr; gap: 24px; }
+  .faq-grid { grid-template-columns: 1fr; gap: 24px; }
+  .industries-heading-grid { grid-template-columns: 1fr; gap: 16px; }
+  .testimonials-heading-grid { grid-template-columns: 1fr; gap: 16px; }
+  .hero-container { padding: 24px 16px 48px; grid-template-columns: 1fr; gap: 16px; }
+
+  /* Cards tighter on small screens */
+  .card-clean { padding: 24px; border-radius: 16px; }
 }
 
 /* ── SECTION GRADIENT DIVIDERS ──────────────────── */

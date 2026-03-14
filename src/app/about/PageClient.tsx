@@ -21,20 +21,20 @@ function useReveal() {
 const stats = [
   { value: '300+', label: 'Projects Delivered' },
   { value: '150+', label: 'Engineers Worldwide' },
-  { value: '12', label: 'Countries' },
+  { value: '12', label: 'Locations Across Canada' },
   { value: '98%', label: 'Client Satisfaction' },
   { value: '$500M+', label: 'Client Revenue Generated' },
 ];
 
 const timeline = [
-  { year: '2018', event: 'Founded in Toronto by engineers from Google, Amazon & Shopify.' },
+  { year: '2018', event: 'Founded in Edmonton by Raman Makkar. TML Branding Agency begins.' },
   { year: '2019', event: 'First 25 clients. Revenue crosses $1M. Team grows to 18 engineers.' },
-  { year: '2020', event: 'Opened London office. Expanded into European market.' },
+  { year: '2020', event: 'Expanded across Canada. Virtual-first team model adopted.' },
   { year: '2021', event: 'Series A funding. Headcount doubles. First enterprise contracts.' },
-  { year: '2022', event: 'Dubai and New York offices established. Now operating on 3 continents.' },
+  { year: '2022', event: 'Expanded to 12 locations across Canada. Coast-to-coast coverage.' },
   { year: '2023', event: '500+ projects milestone. Recognised in Deloitte\'s Fast 50.' },
   { year: '2024', event: 'Mapletech AI Labs launched. Dedicated research team for applied AI.' },
-  { year: '2026', event: 'Global team of 150+ engineers. $500M+ in client revenue generated.' },
+  { year: '2026', event: 'Global team of 150+ top agents working virtually. $500M+ in client revenue generated.' },
 ];
 
 const values = [
@@ -74,34 +74,34 @@ const team = [
   {
     initials: 'RM',
     name: 'Raman Makkar',
-    role: 'CEO & Co-founder',
-    bio: 'Former Google engineer. Built Shopify\'s payments infrastructure.',
+    role: 'Founder & CEO',
+    bio: 'Founded Mapletech Labs & TML Branding Agency. Leading Canadian businesses to the top in tech.',
   },
   {
-    initials: 'SK',
-    name: 'Sarah Kim',
-    role: 'CTO & Co-founder',
-    bio: '10 years at Amazon. Architected systems serving 500M users.',
-  },
-  {
-    initials: 'JT',
-    name: 'James Torres',
+    initials: 'HM',
+    name: 'Harry',
     role: 'VP Engineering',
-    bio: 'Led engineering at two unicorn startups.',
+    bio: 'Leads engineering across all 12 Canadian locations. Expert in scalable architecture.',
   },
   {
-    initials: 'AP',
-    name: 'Anika Patel',
+    initials: 'MC',
+    name: 'Michel',
     role: 'Chief Design Officer',
-    bio: 'Former design lead at Airbnb and Stripe.',
+    bio: 'Drives world-class design across all products and branding projects.',
+  },
+  {
+    initials: 'KS',
+    name: 'Karan',
+    role: 'Head of Operations',
+    bio: 'Manages our virtual team of top agents from around the world.',
   },
 ];
 
 const offices = [
-  { city: 'Toronto', role: 'HQ', detail: '121 King St W, Suite 1400', flag: '🇨🇦' },
-  { city: 'New York', role: 'East Coast', detail: '350 Fifth Avenue, 59th Floor', flag: '🇺🇸' },
-  { city: 'London', role: 'EMEA', detail: '1 Canada Square, Canary Wharf', flag: '🇬🇧' },
-  { city: 'Dubai', role: 'MENA', detail: 'DIFC Gate Village, Building 3', flag: '🇦🇪' },
+  { city: 'Edmonton', role: 'HQ', detail: 'Headquarters — Edmonton, Alberta', flag: '🇨🇦' },
+  { city: 'Toronto', role: 'Ontario', detail: 'Toronto Office', flag: '🇨🇦' },
+  { city: 'Vancouver', role: 'BC', detail: 'Vancouver Office', flag: '🇨🇦' },
+  { city: 'Calgary', role: 'Alberta', detail: 'Calgary Office', flag: '🇨🇦' },
 ];
 
 export default function AboutPage() {
@@ -138,7 +138,7 @@ export default function AboutPage() {
               fontSize: 20, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7,
               maxWidth: 600, marginBottom: 56,
             }}>
-              A world-class engineering firm headquartered in Toronto, building the products that define industries. Founded 2018. 150+ engineers. 12 countries.
+              A world-class engineering firm headquartered in Edmonton, Canada. Founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.
             </p>
             <div className="reveal reveal-d3" style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
@@ -230,13 +230,13 @@ export default function AboutPage() {
                 </h2>
                 <div className="reveal reveal-d2">
                   <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
-                    Mapletech Labs was founded in Toronto in 2018 by Raman Makkar and Sarah Kim — two engineers who had spent years inside Google and Amazon watching great product ideas fail because the engineering teams building them lacked depth or accountability.
+                    Mapletech Labs was founded in Edmonton, Canada in 2018 by Raman Makkar — with a mission to take Canadian businesses to the top in tech. What started as TML Branding Agency has grown into a full-service technology powerhouse ruling across all of Canada.
                   </p>
                   <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
                     They started with a simple belief: the best engineering talent in the world shouldn't only be available to the biggest companies. Founders building their first product deserve the same quality of engineering judgment as a Series D company with a 200-person team.
                   </p>
                   <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
-                    From a 5-person team in a co-working space on King Street West, Mapletech has grown into a global engineering firm with offices on four continents, a team of 150+ engineers, designers, and product strategists, and a track record of building products that have collectively generated over $500 million in client revenue.
+                    From a small team in Edmonton, Mapletech has grown into a Canada-wide engineering firm with 12 locations, a team of the best agents from around the world working virtually, and a track record of building products that have collectively generated over $500 million in client revenue.
                   </p>
                   <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
                     The founding belief hasn't changed. Neither has the standard we hold ourselves to.
@@ -353,7 +353,7 @@ export default function AboutPage() {
               fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7,
               maxWidth: 560, marginBottom: 60,
             }}>
-              Former engineers from the world's most demanding technology companies, united by a belief that great software should be accessible to every builder.
+              The best agents from around the world, working virtually across 12 Canadian locations to deliver world-class technology to every builder.
             </p>
             <div style={{
               display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20,
@@ -422,7 +422,7 @@ export default function AboutPage() {
               fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7,
               maxWidth: 520, marginBottom: 60,
             }}>
-              Four offices across three continents, one engineering culture.
+              12 locations across Canada, one engineering culture. Best agents from around the world.
             </p>
             <div style={{
               display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20,

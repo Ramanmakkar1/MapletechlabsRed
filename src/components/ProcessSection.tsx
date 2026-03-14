@@ -81,7 +81,7 @@ export default function ProcessSection() {
       <div className="cb-container">
 
         {/* Header */}
-        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 40, marginBottom: 100, flexWrap: 'wrap' }}>
+        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(16px, 3vw, 40px)', marginBottom: 100, flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>How We Work</div>
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
@@ -114,7 +114,7 @@ export default function ProcessSection() {
                 className={`reveal reveal-d${Math.min(i + 1, 6)} process-step`}
                 style={{
                   alignItems: 'center',
-                  padding: '36px 48px 36px 100px',
+                  padding: 'clamp(20px, 3vw, 36px) clamp(20px, 4vw, 48px) clamp(20px, 3vw, 36px) clamp(48px, 8vw, 100px)',
                   border: '1px solid rgba(255,255,255,0.07)',
                   borderRadius: 24,
                   background: 'rgba(255,255,255,0.02)',

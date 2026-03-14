@@ -1,6 +1,8 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
+
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
@@ -83,20 +85,31 @@ export default function ContactPage() {
     setError('');
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
-      });
+      const templateParams = {
+        name: form.name,
+        email: form.email,
+        company: form.company,
+        projectType: form.projectType,
+        budget: form.budget,
+        timeline: form.timeline,
+        description: form.description,
+      };
 
-      if (res.ok) {
+      const res = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+      );
+
+      if (res.status === 200) {
         setSubmitted(true);
         setForm({ name: '', email: '', company: '', projectType: '', budget: '', timeline: '', description: '' });
       } else {
-        const data = await res.json();
-        setError(data.error || 'Something went wrong. Please try again.');
+        setError('Something went wrong. Please try again.');
       }
     } catch (err) {
+      console.error(err);
       setError('Failed to send message. Please try again later.');
     } finally {
       setIsLoading(false);
@@ -243,7 +256,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right form */}
-            <div style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 36, padding: '52px 44px' }}>
+            <div style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 36, padding: 'clamp(20px, 4vw, 52px) clamp(20px, 4vw, 44px)' }}>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '48px 0' }}>
                   <div style={{ width: 72, height: 72, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>

@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     template: "%s | Mapletech Labs",
   },
   description:
-    "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Your strategic technology partner in Toronto, Canada.",
+    "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.",
   keywords:
-    "custom software development, web development, mobile app development, AI solutions, blockchain, Toronto",
+    "custom software development, web development, mobile app development, AI solutions, blockchain, Edmonton, Canada",
   openGraph: {
     type: "website",
     locale: "en_CA",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Mapletech Labs",
     title: "Mapletech Labs | Custom Software Development Company",
     description:
-      "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Your strategic technology partner in Toronto, Canada.",
+      "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.",
     images: [
       {
         url: "/images/og-default.jpg",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     creator: "@mapletechlabs",
     title: "Mapletech Labs | Custom Software Development Company",
     description:
-      "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Your strategic technology partner in Toronto, Canada.",
+      "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.",
   },
   robots: {
     index: true,
@@ -58,15 +58,15 @@ export const metadata: Metadata = {
     canonical: "https://www.mapletechlabs.com",
   },
   verification: {
-    google: "GOOGLE_VERIFICATION_CODE",
+    google: "bk5xt83LIShhQ9QrejYXCOg9lXhZubSY9ksIEtYrIVs",
   },
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
   other: {
-    "geo.region": "CA-ON",
-    "geo.placename": "Toronto",
+    "geo.region": "CA-AB",
+    "geo.placename": "Edmonton",
     "theme-color": "#000000",
   },
 };
@@ -78,11 +78,11 @@ const organizationSchema = {
   url: "https://www.mapletechlabs.com",
   logo: "https://www.mapletechlabs.com/logo.png",
   description:
-    "Custom software development company in Toronto, Canada specializing in web apps, mobile apps, AI solutions, and blockchain platforms.",
+    "Custom software development company founded by Raman Makkar in Edmonton, Canada. 12 locations across Canada. Best agents from around the world working virtually.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Toronto",
-    addressRegion: "ON",
+    addressLocality: "Edmonton",
+    addressRegion: "AB",
     addressCountry: "CA",
   },
   sameAs: [

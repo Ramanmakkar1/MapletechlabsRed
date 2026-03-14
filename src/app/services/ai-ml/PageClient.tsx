@@ -138,7 +138,7 @@ export default function AiMlPage() {
           <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: 500, height: 400, background: 'radial-gradient(ellipse,rgba(192,132,252,0.06) 0%,transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
 
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: 'clamp(24px, 5vw, 80px)', alignItems: 'center' }}>
               {/* Left */}
               <div>
                 {/* Badge */}

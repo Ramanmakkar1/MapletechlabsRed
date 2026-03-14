@@ -103,7 +103,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="h-stats" style={{ display: 'flex', gap: 40, flexWrap: 'wrap', paddingTop: 40, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="h-stats" style={{ display: 'flex', gap: 'clamp(16px, 3vw, 40px)', flexWrap: 'wrap', paddingTop: 40, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
             {[['500+', 'Projects'], ['150+', 'Clients'], ['99%', 'Satisfaction'], ['8wk', 'MVP']].map(([val, label]) => (
               <div key={label}>
                 <div style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{val}</div>

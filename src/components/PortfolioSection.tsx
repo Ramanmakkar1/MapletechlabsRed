@@ -76,7 +76,7 @@ export default function PortfolioSection() {
             <div>
               <div className="portfolio-content-row" style={{ marginBottom: 40 }}>
                 <div>
-                  <div style={{ fontSize: 52, fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{p.metric}</div>
+                  <div style={{ fontSize: 'clamp(28px, 5vw, 52px)', fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{p.metric}</div>
                   <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 8 }}>{p.metricLabel}</div>
                 </div>
                 <div style={{ width: 1, background: 'rgba(255,255,255,0.07)', alignSelf: 'stretch' }} />

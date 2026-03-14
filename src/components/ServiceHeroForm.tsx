@@ -57,7 +57,7 @@ export default function ServiceHeroForm() {
       background: 'rgba(255,255,255,0.03)',
       backdropFilter: 'blur(20px)',
       WebkitBackdropFilter: 'blur(20px)',
-      padding: '36px 32px',
+      padding: 'clamp(20px, 4vw, 36px) clamp(16px, 3vw, 32px)',
       boxShadow: '0 24px 64px rgba(0,0,0,0.4)',
     }}>
       {/* Glow accent */}
@@ -163,7 +163,7 @@ export default function ServiceHeroForm() {
       )}
 
       {/* Trust badges */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, marginTop: 20, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(10px, 2vw, 20px)', marginTop: 20, flexWrap: 'wrap' as const, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         {[
           { icon: '🔒', text: 'NDA Protected' },
           { icon: '⚡', text: '24hr Response' },
