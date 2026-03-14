@@ -113,7 +113,7 @@ export default function AboutPage() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
 
         {/* ── HERO ── */}
-        <section style={{ padding: '160px 0 100px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'clamp(120px, 12vw, 160px) 0 clamp(60px, 8vw, 100px)', position: 'relative', overflow: 'hidden' }}>
           {/* Ambient glow */}
           <div style={{
             position: 'absolute', top: -200, left: '30%',
@@ -166,7 +166,7 @@ export default function AboutPage() {
 
         {/* ── MISSION STATEMENT ── */}
         <section style={{
-          padding: '100px 0', borderTop: '1px solid rgba(255,255,255,0.07)',
+          padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)',
           background: 'rgba(255,255,255,0.01)',
         }}>
           <div className="cb-container">
@@ -187,7 +187,7 @@ export default function AboutPage() {
         <section style={{ borderTop: '1px solid rgba(255,255,255,0.07)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
             <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)',
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 160px), 1fr))',
             }}>
               {stats.map((stat, i) => (
                 <div
@@ -210,9 +210,9 @@ export default function AboutPage() {
         </section>
 
         {/* ── OUR STORY ── */}
-        <section style={{ padding: '120px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: 'clamp(40px, 6vw, 80px)', alignItems: 'start' }}>
 
               {/* Text */}
               <div>
@@ -282,7 +282,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── VALUES ── */}
-        <section style={{ padding: '120px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -297,7 +297,7 @@ export default function AboutPage() {
               Our Values
             </h2>
             <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20,
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20,
             }}>
               {values.map((val, i) => (
                 <div
@@ -335,7 +335,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── LEADERSHIP TEAM ── */}
-        <section style={{ padding: '120px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -356,7 +356,7 @@ export default function AboutPage() {
               The best agents from around the world, working virtually across 12 Canadian locations to deliver world-class technology to every builder.
             </p>
             <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20,
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 20,
             }}>
               {team.map((member, i) => (
                 <div
@@ -404,7 +404,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── OFFICES ── */}
-        <section style={{ padding: '120px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -425,7 +425,7 @@ export default function AboutPage() {
               12 locations across Canada, one engineering culture. Best agents from around the world.
             </p>
             <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20,
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 20,
             }}>
               {offices.map((office, i) => (
                 <div
@@ -464,12 +464,12 @@ export default function AboutPage() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ padding: '120px 0' }}>
+        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0' }}>
           <div className="cb-container">
             <div
               className="reveal"
               style={{
-                textAlign: 'center', padding: '80px 48px',
+                textAlign: 'center', padding: 'clamp(40px, 6vw, 80px) clamp(20px, 4vw, 48px)',
                 background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
                 borderRadius: 32, position: 'relative', overflow: 'hidden',
               }}

@@ -190,7 +190,7 @@ h1,h2,h3,h4,h5,h6 {
   .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
   .whyus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: clamp(28px, 5vw, 60px); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
   .services-large-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .services-small-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; }
@@ -266,6 +266,7 @@ h1,h2,h3,h4,h5,h6 {
   .services-small-grid { grid-template-columns: 1fr; }
   .portfolio-content-row { flex-direction: column; gap: 24px; }
   .industries-grid { grid-template-columns: 1fr; }
+  .contact-grid { gap: 32px; }
   .industries-heading-grid { grid-template-columns: 1fr; gap: 16px; }
   .testimonials-heading-grid { grid-template-columns: 1fr; gap: 16px; }
   .tech-categories-grid { grid-template-columns: 1fr; }

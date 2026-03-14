@@ -43,7 +43,7 @@ export default function ServicesSection() {
         <div className="services-large-grid" style={{ marginBottom: 20 }}>
           {large.map((s, i) => (
             <div key={s.title} className={`reveal reveal-d${i + 1}`}
-              style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 40, padding: 'clamp(32px, 5vw, 60px)', display: 'flex', flexDirection: 'column', gap: 32, minHeight: 360, position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
+              style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 40, padding: 'clamp(32px, 5vw, 60px)', display: 'flex', flexDirection: 'column', gap: 32, minHeight: 'clamp(280px, 50vh, 360px)', position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(245,41,13,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.025)'; e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}
             >

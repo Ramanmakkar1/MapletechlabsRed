@@ -223,6 +223,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -260,8 +261,8 @@ export default function Navbar() {
 
             {/* Logo */}
             <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, position: 'relative', zIndex: 2 }}>
-              <div style={{ position: 'relative', height: 40, width: 140 }}>
-                <Image src="/logo.png" alt="Mapletech Labs" fill style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+              <div style={{ position: 'relative', height: 'clamp(50px, 8vw, 100px)', width: 'clamp(130px, 18vw, 250px)' }}>
+                <Image src="/logo.png" alt="Mapletech Labs" fill style={{ objectFit: 'contain' }} />
               </div>
             </Link>
 
@@ -377,7 +378,7 @@ export default function Navbar() {
                 <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 6 }}>What We Build</div>
                 <div style={{ fontSize: 22, fontWeight: 500, color: '#fff', letterSpacing: '-0.03em' }}>End-to-End Engineering Services</div>
               </div>
-              <Link href="/services/mobile-app-development" onClick={() => setActiveMenu(null)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 40, padding: '0 20px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.7)', fontSize: 13, fontWeight: 600, textDecoration: 'none', transition: '0.2s' }}
+              <Link href="/services" onClick={() => setActiveMenu(null)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 40, padding: '0 20px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.7)', fontSize: 13, fontWeight: 600, textDecoration: 'none', transition: '0.2s' }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; e.currentTarget.style.color = '#f5290d'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
               >
@@ -446,11 +447,11 @@ export default function Navbar() {
           }}
         >
           <div className="cb-container" style={{ padding: '36px 60px 44px' }}>
-            <div style={{ display: 'flex', gap: 80, alignItems: 'flex-start' }}>
+            <div style={{ display: 'flex', gap: 'clamp(32px, 6vw, 80px)', alignItems: 'flex-start' }}>
               <div>
                 <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 6 }}>Sectors We Serve</div>
                 <div style={{ fontSize: 20, fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', marginBottom: 28 }}>Deep Domain Expertise</div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4, minWidth: 440 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4, minWidth: 'min(440px, 100%)' }}>
                   {industryLinks.map(link => (
                     <Link key={link.label} href={link.href} onClick={() => setActiveMenu(null)}
                       style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, fontSize: 13, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', transition: '0.2s' }}
@@ -537,12 +538,78 @@ export default function Navbar() {
         position: 'fixed', inset: 0, background: '#000', zIndex: 999, overflowY: 'auto',
         opacity: menuOpen ? 1 : 0, visibility: menuOpen ? 'visible' : 'hidden',
         transition: 'opacity 0.4s ease, visibility 0.4s ease',
-        display: 'flex', flexDirection: 'column', padding: '100px 32px 60px',
+        display: 'flex', flexDirection: 'column', padding: '100px 24px 60px',
       }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 48 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 32 }}>
+
+          {/* Services — expandable */}
+          <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+            <button
+              onClick={() => setMobileExpanded(mobileExpanded === 'services' ? null : 'services')}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', fontSize: 28, fontWeight: 500, color: 'rgba(255,255,255,0.8)', background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '-0.03em', padding: '12px 0', fontFamily: 'inherit' }}
+            >
+              Services
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transition: '0.3s', transform: mobileExpanded === 'services' ? 'rotate(180deg)' : 'none' }}><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div style={{ maxHeight: mobileExpanded === 'services' ? 2000 : 0, overflow: 'hidden', transition: 'max-height 0.4s ease' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 0, paddingBottom: 16 }}>
+                {serviceCategories.map(cat => (
+                  <div key={cat.title}>
+                    <Link href={cat.href} onClick={() => setMenuOpen(false)}
+                      style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 0', textDecoration: 'none' }}
+                    >
+                      <div style={{ width: 28, height: 28, borderRadius: 8, background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f5290d', flexShrink: 0 }}>
+                        {cat.icon}
+                      </div>
+                      <span style={{ fontSize: 15, fontWeight: 600, color: '#fff' }}>{cat.title}</span>
+                    </Link>
+                    <div style={{ paddingLeft: 38, display: 'flex', flexDirection: 'column', gap: 2, marginBottom: 8 }}>
+                      {cat.links.map(link => (
+                        <Link key={link.label} href={link.href} onClick={() => setMenuOpen(false)}
+                          style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', padding: '4px 0', display: 'flex', alignItems: 'center', gap: 6 }}
+                        >
+                          <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(245,41,13,0.35)', flexShrink: 0 }} />
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <Link href="/services" onClick={() => setMenuOpen(false)}
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 8, padding: '10px 20px', borderRadius: 100, border: '1px solid rgba(245,41,13,0.3)', color: '#f5290d', fontSize: 13, fontWeight: 600, textDecoration: 'none', width: 'fit-content' }}
+                >
+                  View All Services
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Industries — expandable */}
+          <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+            <button
+              onClick={() => setMobileExpanded(mobileExpanded === 'industries' ? null : 'industries')}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', fontSize: 28, fontWeight: 500, color: 'rgba(255,255,255,0.8)', background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '-0.03em', padding: '12px 0', fontFamily: 'inherit' }}
+            >
+              Industries
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transition: '0.3s', transform: mobileExpanded === 'industries' ? 'rotate(180deg)' : 'none' }}><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div style={{ maxHeight: mobileExpanded === 'industries' ? 500 : 0, overflow: 'hidden', transition: 'max-height 0.4s ease' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 2, paddingBottom: 16 }}>
+                {industryLinks.map(link => (
+                  <Link key={link.label} href={link.href} onClick={() => setMenuOpen(false)}
+                    style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0', fontSize: 15, color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}
+                  >
+                    <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#f5290d', flexShrink: 0 }} />
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Simple links */}
           {[
-            { label: 'Services', href: '/services/mobile-app-development' },
-            { label: 'Industries', href: '/industries/fintech' },
             { label: 'About', href: '/about' },
             { label: 'Case Studies', href: '/case-studies' },
             { label: 'Blog', href: '/blog' },
@@ -550,14 +617,20 @@ export default function Navbar() {
           ].map(item => (
             <Link key={item.label} href={item.href}
               onClick={() => setMenuOpen(false)}
-              style={{ fontSize: 28, fontWeight: 500, color: 'rgba(255,255,255,0.8)', textDecoration: 'none', letterSpacing: '-0.03em', padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', transition: '0.2s' }}
-              onMouseEnter={e => { e.currentTarget.style.color = '#fff'; }}
-              onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.8)'; }}
+              style={{ fontSize: 28, fontWeight: 500, color: 'rgba(255,255,255,0.8)', textDecoration: 'none', letterSpacing: '-0.03em', padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', transition: '0.2s' }}
             >
               {item.label}
             </Link>
           ))}
         </div>
+
+        {/* Phone number */}
+        <Link href="tel:+14036048692" onClick={() => setMenuOpen(false)}
+          style={{ fontSize: 16, fontWeight: 500, color: 'rgba(255,255,255,0.5)', textDecoration: 'none', marginBottom: 20 }}
+        >
+          +1 (403) 604-8692
+        </Link>
+
         <Link href="/contact" onClick={() => setMenuOpen(false)}
           style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 36px', borderRadius: 100, background: 'linear-gradient(135deg, #f5290d, #FF5733)', color: '#fff', fontSize: 16, fontWeight: 700, textDecoration: 'none', width: 'fit-content' }}
         >

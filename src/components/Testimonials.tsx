@@ -50,7 +50,7 @@ const testimonials = [
 
 function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
   return (
-    <div className="flex-shrink-0 w-[380px] lg:w-[420px] mx-4 glass-dark rounded-2xl p-7 border border-white/6">
+    <div className="flex-shrink-0 w-full sm:w-[350px] lg:w-[380px] mx-4 glass-dark rounded-2xl p-7 border border-white/6">
       {/* Stars */}
       <div className="flex gap-1 mb-5">
         {[...Array(5)].map((_, i) => (

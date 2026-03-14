@@ -98,7 +98,7 @@ export default function Contact() {
           </div>
 
           {/* Right — form */}
-          <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 24, padding: 40 }}>
+          <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 24, padding: 'clamp(20px, 4vw, 40px)' }}>
             {submitted ? (
               <div style={{ textAlign: 'center', padding: 40 }}>
                 <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(245,41,13,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>

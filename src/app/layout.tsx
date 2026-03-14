@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     google: "bk5xt83LIShhQ9QrejYXCOg9lXhZubSY9ksIEtYrIVs",
   },
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/Favicon.png",
+    apple: "/Favicon.png",
   },
   other: {
     "geo.region": "CA-AB",

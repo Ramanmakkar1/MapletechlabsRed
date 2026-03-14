@@ -44,9 +44,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="Mapletech Labs"
-                width={120}
-                height={44}
-                style={{ height: 40, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
+                width={250}
+                height={100}
+                style={{ height: 'clamp(50px, 8vw, 80px)', width: 'auto', objectFit: 'contain' as const }}
               />
             </div>
             <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, maxWidth: 300, marginBottom: 28 }}>
