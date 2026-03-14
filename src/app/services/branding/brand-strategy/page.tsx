@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Brand Strategy Services | Mapletech Labs',
     description: 'Strategic brand strategy consulting by Mapletech Labs. Market positioning, competitive analysis, and brand architecture for lasting market impact.',
-    url: 'https://mapletechlabs.com/services/branding/brand-strategy',
+    url: 'https://mapletechlabs.ca/services/branding/brand-strategy',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/branding/brand-strategy',
+    canonical: 'https://mapletechlabs.ca/services/branding/brand-strategy',
   },
 };
 

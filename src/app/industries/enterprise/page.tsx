@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Enterprise Software Development | Mapletech Labs',
     description: 'Enterprise software development by Mapletech Labs. ERP systems, CRM platforms, workflow automation, and business intelligence solutions at scale.',
-    url: 'https://mapletechlabs.com/industries/enterprise',
+    url: 'https://mapletechlabs.ca/industries/enterprise',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/industries/enterprise',
+    canonical: 'https://mapletechlabs.ca/industries/enterprise',
   },
 };
 

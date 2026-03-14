@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'WordPress & CMS Development | Mapletech Labs',
     description: 'WordPress and headless CMS development by Mapletech Labs. Custom themes, WooCommerce, Strapi, Sanity, and site speed optimization services.',
-    url: 'https://mapletechlabs.com/services/wordpress-cms',
+    url: 'https://mapletechlabs.ca/services/wordpress-cms',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/wordpress-cms',
+    canonical: 'https://mapletechlabs.ca/services/wordpress-cms',
   },
 };
 

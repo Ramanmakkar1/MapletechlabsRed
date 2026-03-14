@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Strapi & Sanity CMS Development | Mapletech Labs',
     description: 'Modern headless CMS solutions with Strapi and Sanity — flexible schemas, real-time preview, and seamless Next.js integration.',
-    url: 'https://mapletechlabs.com/services/wordpress-cms/strapi-sanity-cms',
+    url: 'https://mapletechlabs.ca/services/wordpress-cms/strapi-sanity-cms',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/wordpress-cms/strapi-sanity-cms',
+    canonical: 'https://mapletechlabs.ca/services/wordpress-cms/strapi-sanity-cms',
   },
 };
 

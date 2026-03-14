@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SaaS Analytics & Dashboard Development | Mapletech Labs',
     description: 'Product analytics, MRR dashboards, and embedded customer analytics for SaaS.',
-    url: 'https://mapletechlabs.com/services/saas-development/analytics-dashboards',
+    url: 'https://mapletechlabs.ca/services/saas-development/analytics-dashboards',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/saas-development/analytics-dashboards',
+    canonical: 'https://mapletechlabs.ca/services/saas-development/analytics-dashboards',
   },
 };
 

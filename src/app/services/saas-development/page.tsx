@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SaaS Development Services | Mapletech Labs',
     description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture, billing systems, auth/SSO, and analytics dashboards.',
-    url: 'https://mapletechlabs.com/services/saas-development',
+    url: 'https://mapletechlabs.ca/services/saas-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/saas-development',
+    canonical: 'https://mapletechlabs.ca/services/saas-development',
   },
 };
 

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Prototyping & User Testing Services | Mapletech Labs',
     description: 'Interactive prototyping and usability testing by Mapletech Labs. Figma prototypes, design sprints, and real-user testing. 300+ prototypes built across Canada.',
-    url: 'https://mapletechlabs.com/services/product-design/prototyping',
+    url: 'https://mapletechlabs.ca/services/product-design/prototyping',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/product-design/prototyping',
+    canonical: 'https://mapletechlabs.ca/services/product-design/prototyping',
   },
 };
 

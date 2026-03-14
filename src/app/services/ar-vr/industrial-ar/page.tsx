@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Industrial AR Solutions | Mapletech Labs',
     description: 'Enterprise industrial AR for manufacturing and maintenance with HoloLens 2 and digital twins.',
-    url: 'https://mapletechlabs.com/services/ar-vr/industrial-ar',
+    url: 'https://mapletechlabs.ca/services/ar-vr/industrial-ar',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/ar-vr/industrial-ar',
+    canonical: 'https://mapletechlabs.ca/services/ar-vr/industrial-ar',
   },
 };
 

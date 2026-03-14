@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: '12 Locations Across Canada | Mapletech Labs',
     description: 'Mapletech Labs operates from 12 locations across Canada including Edmonton, Toronto, Vancouver, Calgary, Ottawa, and Montreal. Find a software development team near you.',
-    url: 'https://mapletechlabs.com/locations',
+    url: 'https://mapletechlabs.ca/locations',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/locations',
+    canonical: 'https://mapletechlabs.ca/locations',
   },
 };
 

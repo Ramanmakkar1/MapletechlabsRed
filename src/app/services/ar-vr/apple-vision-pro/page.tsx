@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Apple Vision Pro App Development | Mapletech Labs',
     description: 'visionOS app development with SwiftUI and RealityKit for spatial computing experiences.',
-    url: 'https://mapletechlabs.com/services/ar-vr/apple-vision-pro',
+    url: 'https://mapletechlabs.ca/services/ar-vr/apple-vision-pro',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/ar-vr/apple-vision-pro',
+    canonical: 'https://mapletechlabs.ca/services/ar-vr/apple-vision-pro',
   },
 };
 

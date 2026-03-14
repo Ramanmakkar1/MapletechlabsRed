@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'UI/UX Strategy Services | Mapletech Labs',
     description: 'Data-driven UI/UX strategy from Mapletech Labs in Toronto. User research, UX audits, and design sprints that boost conversions by 40%. Get a free consultation.',
-    url: 'https://mapletechlabs.com/services/product-design/ui-ux-strategy',
+    url: 'https://mapletechlabs.ca/services/product-design/ui-ux-strategy',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/product-design/ui-ux-strategy',
+    canonical: 'https://mapletechlabs.ca/services/product-design/ui-ux-strategy',
   },
 };
 

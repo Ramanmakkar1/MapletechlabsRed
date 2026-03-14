@@ -70,7 +70,7 @@ export function getCityServiceData(
   // SEO metadata
   const title = `${service.heroHeadlinePrefix} Company in ${city.name}`;
   const description = `${service.heroHeadlinePrefix} company in ${city.name}, ${city.province}. Mapletech Labs delivers custom ${service.shortName.toLowerCase()} solutions. ${city.isHQ ? 'Headquartered in Edmonton.' : '12 locations across Canada.'} Get a free quote today.`;
-  const canonicalUrl = `https://mapletechlabs.com/locations/${city.slug}/${service.slug}`;
+  const canonicalUrl = `https://mapletechlabs.ca/locations/${city.slug}/${service.slug}`;
 
   return {
     cityName: city.name,

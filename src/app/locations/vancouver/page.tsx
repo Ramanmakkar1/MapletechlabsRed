@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Software Development Company in Vancouver | Mapletech Labs',
     description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Vancouver, British Columbia. Get a free quote today.',
-    url: 'https://mapletechlabs.com/locations/vancouver',
+    url: 'https://mapletechlabs.ca/locations/vancouver',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/locations/vancouver',
+    canonical: 'https://mapletechlabs.ca/locations/vancouver',
   },
 };
 

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Game Development Services | Mapletech Labs',
     description: 'Professional game development by Mapletech Labs. Mobile games, Unity, Unreal Engine, hyper-casual games, and multiplayer LiveOps solutions.',
-    url: 'https://mapletechlabs.com/services/game-development',
+    url: 'https://mapletechlabs.ca/services/game-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/game-development',
+    canonical: 'https://mapletechlabs.ca/services/game-development',
   },
 };
 

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'API & Backend Development | Mapletech Labs',
     description: 'We design and build robust REST and GraphQL APIs with bulletproof security and enterprise-grade performance.',
-    url: 'https://mapletechlabs.com/services/web-development/api-backend',
+    url: 'https://mapletechlabs.ca/services/web-development/api-backend',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/web-development/api-backend',
+    canonical: 'https://mapletechlabs.ca/services/web-development/api-backend',
   },
 };
 

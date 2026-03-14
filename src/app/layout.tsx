@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mapletechlabs.com"),
+  metadataBase: new URL("https://mapletechlabs.ca"),
   title: {
     default: "Mapletech Labs | Custom Software Development Company",
     template: "%s | Mapletech Labs",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://mapletechlabs.com",
+    url: "https://mapletechlabs.ca",
     siteName: "Mapletech Labs",
     title: "Mapletech Labs | Custom Software Development Company",
     description:
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://mapletechlabs.com",
+    canonical: "https://mapletechlabs.ca",
   },
   verification: {
     google: "bk5xt83LIShhQ9QrejYXCOg9lXhZubSY9ksIEtYrIVs",
@@ -76,8 +76,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Mapletech Labs",
-  url: "https://mapletechlabs.com",
-  logo: "https://mapletechlabs.com/logo.png",
+  url: "https://mapletechlabs.ca",
+  logo: "https://mapletechlabs.ca/logo.png",
   description:
     "Custom software development company founded by Raman Makkar in Edmonton, Canada. 12 locations across Canada. Best agents from around the world working virtually.",
   address: {
@@ -97,8 +97,6 @@ const organizationSchema = {
   },
 };
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
-
 export default function RootLayout({
   children,
 }: {
@@ -107,41 +105,37 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDSNLSJY4B" />
+        {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-VDSNLSJY4B');
-            `,
-          }}
-        />
-        {GTM_ID && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');`,
-            }}
-          />
-        )}
+})(window,document,'script','dataLayer','GT-PJ46RCMN');`,
+          }}
+        />
+        {/* Google Analytics (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLHNY6HD88" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-LLHNY6HD88');`,
+          }}
+        />
       </head>
       <body className={poppins.className}>
-        {GTM_ID && (
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            />
-          </noscript>
-        )}
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GT-PJ46RCMN"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

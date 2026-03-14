@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'E-Commerce Software Solutions | Mapletech Labs',
     description: 'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, inventory management, payment processing, and omnichannel retail platforms.',
-    url: 'https://mapletechlabs.com/industries/ecommerce',
+    url: 'https://mapletechlabs.ca/industries/ecommerce',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/industries/ecommerce',
+    canonical: 'https://mapletechlabs.ca/industries/ecommerce',
   },
 };
 

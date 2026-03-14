@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Performance Analytics & GA4 Setup | Mapletech Labs',
     description: 'GA4 setup, conversion tracking, attribution modelling, and custom dashboards. Certified analytics specialists serving Toronto and Canada.',
-    url: 'https://mapletechlabs.com/services/digital-marketing/performance-analytics',
+    url: 'https://mapletechlabs.ca/services/digital-marketing/performance-analytics',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/digital-marketing/performance-analytics',
+    canonical: 'https://mapletechlabs.ca/services/digital-marketing/performance-analytics',
   },
 };
 

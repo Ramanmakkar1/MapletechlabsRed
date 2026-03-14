@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SaaS Billing & Subscription Integration | Mapletech Labs',
     description: 'Stripe billing integration for SaaS with subscriptions, dunning, and self-serve portals.',
-    url: 'https://mapletechlabs.com/services/saas-development/billing-subscriptions',
+    url: 'https://mapletechlabs.ca/services/saas-development/billing-subscriptions',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/saas-development/billing-subscriptions',
+    canonical: 'https://mapletechlabs.ca/services/saas-development/billing-subscriptions',
   },
 };
 

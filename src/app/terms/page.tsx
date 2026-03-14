@@ -19,7 +19,7 @@ export default function TermsPage() {
             By using Mapletech Labs services and website, you agree to these terms. Please read them carefully before engaging with our services.
           </p>
           <div style={{ marginTop: 48, fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.9 }}>
-            <p>Last updated: March 2025. For questions, contact us at <a href="mailto:hello@mapletechlabs.com" style={{ color: '#f5290d' }}>hello@mapletechlabs.com</a>.</p>
+            <p>Last updated: March 2025. For questions, contact us at <a href="mailto:hello@mapletechlabs.ca" style={{ color: '#f5290d' }}>hello@mapletechlabs.ca</a>.</p>
           </div>
         </div>
       </main>

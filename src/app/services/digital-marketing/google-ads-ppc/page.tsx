@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Google Ads & PPC Management | Mapletech Labs',
     description: 'Expert Google Ads & PPC management in Toronto. Search, Shopping, Display, and YouTube campaigns with 3.5x avg ROAS.',
-    url: 'https://mapletechlabs.com/services/digital-marketing/google-ads-ppc',
+    url: 'https://mapletechlabs.ca/services/digital-marketing/google-ads-ppc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/digital-marketing/google-ads-ppc',
+    canonical: 'https://mapletechlabs.ca/services/digital-marketing/google-ads-ppc',
   },
 };
 

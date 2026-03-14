@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Hyper-Casual Game Development | Mapletech Labs',
     description: 'Rapid hyper-casual game prototyping, CPI testing, and publishing. 40+ games shipped with 50M+ downloads.',
-    url: 'https://mapletechlabs.com/services/game-development/hyper-casual-games',
+    url: 'https://mapletechlabs.ca/services/game-development/hyper-casual-games',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/game-development/hyper-casual-games',
+    canonical: 'https://mapletechlabs.ca/services/game-development/hyper-casual-games',
   },
 };
 

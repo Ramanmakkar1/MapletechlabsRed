@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'E-Commerce Development Services | Mapletech Labs',
     description: 'High-converting online stores with Shopify, headless commerce, and custom Next.js storefronts. $50M+ GMV processed.',
-    url: 'https://mapletechlabs.com/services/web-development/ecommerce-systems',
+    url: 'https://mapletechlabs.ca/services/web-development/ecommerce-systems',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/web-development/ecommerce-systems',
+    canonical: 'https://mapletechlabs.ca/services/web-development/ecommerce-systems',
   },
 };
 

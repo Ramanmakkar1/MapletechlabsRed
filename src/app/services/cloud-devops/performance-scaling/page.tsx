@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Performance Scaling & Optimization | Mapletech Labs',
     description: 'Expert performance engineering and scaling solutions. Load testing, database optimization, CDN strategy, and autoscaling for Canadian businesses.',
-    url: 'https://mapletechlabs.com/services/cloud-devops/performance-scaling',
+    url: 'https://mapletechlabs.ca/services/cloud-devops/performance-scaling',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/cloud-devops/performance-scaling',
+    canonical: 'https://mapletechlabs.ca/services/cloud-devops/performance-scaling',
   },
 };
 

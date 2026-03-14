@@ -16,14 +16,14 @@ import InsightsSection from '@/components/InsightsSection';
 import FAQSection from '@/components/FAQSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import StickySidebar from '@/components/StickySidebar';
+
 import ScrollUI from '@/components/ScrollUI';
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <StickySidebar />
+
       <ScrollUI />
       <main>
         <Hero />

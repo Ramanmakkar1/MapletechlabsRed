@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'React Native App Development | Mapletech Labs',
     description: 'React Native app development services by Mapletech Labs. Build cross-platform mobile apps with native performance using JavaScript and React.',
-    url: 'https://mapletechlabs.com/services/mobile-app-development/react-native-apps',
+    url: 'https://mapletechlabs.ca/services/mobile-app-development/react-native-apps',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/mobile-app-development/react-native-apps',
+    canonical: 'https://mapletechlabs.ca/services/mobile-app-development/react-native-apps',
   },
 };
 

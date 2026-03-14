@@ -159,10 +159,10 @@ export default function ContactPage() {
               Start a Project
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </a>
-            <a href="mailto:hello@mapletechlabs.com" style={{ display: 'inline-flex', alignItems: 'center', height: 60, padding: '0 40px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
+            <a href="mailto:hello@mapletechlabs.ca" style={{ display: 'inline-flex', alignItems: 'center', height: 60, padding: '0 40px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
               onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'}
               onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
-              hello@mapletechlabs.com
+              hello@mapletechlabs.ca
             </a>
           </div>
 
@@ -230,8 +230,8 @@ export default function ContactPage() {
               {/* Contact details */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginBottom: 48 }}>
                 {[
-                  { label: 'General', value: 'hello@mapletechlabs.com', href: 'mailto:hello@mapletechlabs.com' },
-                  { label: 'Sales', value: 'sales@mapletechlabs.com', href: 'mailto:sales@mapletechlabs.com' },
+                  { label: 'General', value: 'hello@mapletechlabs.ca', href: 'mailto:hello@mapletechlabs.ca' },
+                  { label: 'Sales', value: 'sales@mapletechlabs.ca', href: 'mailto:sales@mapletechlabs.ca' },
                   { label: 'Response Time', value: 'Within 4 business hours', href: null },
                 ].map(item => (
                   <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 16 }}>

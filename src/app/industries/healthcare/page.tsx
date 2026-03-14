@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Healthcare Software Development | Mapletech Labs',
     description: 'HIPAA-compliant healthcare software by Mapletech Labs. Telehealth platforms, EHR systems, patient portals, and medical device integrations.',
-    url: 'https://mapletechlabs.com/industries/healthcare',
+    url: 'https://mapletechlabs.ca/industries/healthcare',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/industries/healthcare',
+    canonical: 'https://mapletechlabs.ca/industries/healthcare',
   },
 };
 

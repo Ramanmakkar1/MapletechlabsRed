@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Brand Guidelines Development | Mapletech Labs',
     description: 'Comprehensive brand guidelines by Mapletech Labs. Usage rules, asset libraries, and style guides that maintain brand consistency across all touchpoints.',
-    url: 'https://mapletechlabs.com/services/branding/brand-guidelines',
+    url: 'https://mapletechlabs.ca/services/branding/brand-guidelines',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/branding/brand-guidelines',
+    canonical: 'https://mapletechlabs.ca/services/branding/brand-guidelines',
   },
 };
 

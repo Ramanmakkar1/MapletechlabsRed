@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'iOS App Development Services | Mapletech Labs',
     description: 'Expert iOS app development with Swift & SwiftUI. Mapletech Labs builds high-performance native iPhone and iPad apps. 200+ iOS apps delivered.',
-    url: 'https://mapletechlabs.com/services/mobile-app-development/ios-app-development',
+    url: 'https://mapletechlabs.ca/services/mobile-app-development/ios-app-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/mobile-app-development/ios-app-development',
+    canonical: 'https://mapletechlabs.ca/services/mobile-app-development/ios-app-development',
   },
 };
 

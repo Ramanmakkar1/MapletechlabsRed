@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SaaS MVP Development in 8 Weeks | Mapletech Labs',
     description: 'Launch your SaaS MVP in 8 weeks with production-quality code built to scale.',
-    url: 'https://mapletechlabs.com/services/saas-development/saas-mvp-development',
+    url: 'https://mapletechlabs.ca/services/saas-development/saas-mvp-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/saas-development/saas-mvp-development',
+    canonical: 'https://mapletechlabs.ca/services/saas-development/saas-mvp-development',
   },
 };
 

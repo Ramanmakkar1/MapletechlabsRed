@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Digital Marketing Services | Mapletech Labs',
     description: 'Data-driven digital marketing by Mapletech Labs. SEO, Google Ads, social media marketing, content strategy, and performance analytics.',
-    url: 'https://mapletechlabs.com/services/digital-marketing',
+    url: 'https://mapletechlabs.ca/services/digital-marketing',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/digital-marketing',
+    canonical: 'https://mapletechlabs.ca/services/digital-marketing',
   },
 };
 

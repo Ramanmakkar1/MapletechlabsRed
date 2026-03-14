@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Next.js Development Services | Mapletech Labs',
     description: 'Expert Next.js development by Mapletech Labs. Build fast, SEO-friendly React applications with server-side rendering and static site generation.',
-    url: 'https://mapletechlabs.com/services/web-development/nextjs-development',
+    url: 'https://mapletechlabs.ca/services/web-development/nextjs-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/web-development/nextjs-development',
+    canonical: 'https://mapletechlabs.ca/services/web-development/nextjs-development',
   },
 };
 

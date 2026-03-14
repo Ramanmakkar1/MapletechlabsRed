@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kubernetes & Docker Services | Mapletech Labs',
     description: 'Production-grade Kubernetes and Docker by Mapletech Labs. EKS, GKE, AKS cluster setup, Helm charts, and container security. 60+ K8s clusters deployed in Canada.',
-    url: 'https://mapletechlabs.com/services/cloud-devops/kubernetes-docker',
+    url: 'https://mapletechlabs.ca/services/cloud-devops/kubernetes-docker',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/cloud-devops/kubernetes-docker',
+    canonical: 'https://mapletechlabs.ca/services/cloud-devops/kubernetes-docker',
   },
 };
 

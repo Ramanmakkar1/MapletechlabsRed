@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Unity Game Development Services | Mapletech Labs',
     description: 'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, and console. HDRP, URP, and multiplayer.',
-    url: 'https://mapletechlabs.com/services/game-development/unity-development',
+    url: 'https://mapletechlabs.ca/services/game-development/unity-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/game-development/unity-development',
+    canonical: 'https://mapletechlabs.ca/services/game-development/unity-development',
   },
 };
 

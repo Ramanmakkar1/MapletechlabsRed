@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'LLM Integration Services | Mapletech Labs',
     description: 'LLM and large language model integration services. Mapletech Labs helps you integrate GPT, Claude, and custom AI models into your applications.',
-    url: 'https://mapletechlabs.com/services/ai-ml/llm-integration',
+    url: 'https://mapletechlabs.ca/services/ai-ml/llm-integration',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/ai-ml/llm-integration',
+    canonical: 'https://mapletechlabs.ca/services/ai-ml/llm-integration',
   },
 };
 

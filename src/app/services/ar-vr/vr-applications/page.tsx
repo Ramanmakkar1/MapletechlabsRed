@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'VR Application Development | Mapletech Labs',
     description: 'Virtual reality application development for Meta Quest, HTC Vive, and enterprise. Mapletech Labs creates immersive VR training and experiences.',
-    url: 'https://mapletechlabs.com/services/ar-vr/vr-applications',
+    url: 'https://mapletechlabs.ca/services/ar-vr/vr-applications',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/ar-vr/vr-applications',
+    canonical: 'https://mapletechlabs.ca/services/ar-vr/vr-applications',
   },
 };
 

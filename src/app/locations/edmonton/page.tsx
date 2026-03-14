@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Software Development Company in Edmonton | Mapletech Labs',
     description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Edmonton, Alberta. Get a free quote today.',
-    url: 'https://mapletechlabs.com/locations/edmonton',
+    url: 'https://mapletechlabs.ca/locations/edmonton',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/locations/edmonton',
+    canonical: 'https://mapletechlabs.ca/locations/edmonton',
   },
 };
 

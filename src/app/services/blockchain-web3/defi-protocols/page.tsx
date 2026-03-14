@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'DeFi Protocol Development | Mapletech Labs',
     description: 'Custom DeFi protocol development by Mapletech Labs. Build decentralized exchanges, lending platforms, yield aggregators, and liquidity pools.',
-    url: 'https://mapletechlabs.com/services/blockchain-web3/defi-protocols',
+    url: 'https://mapletechlabs.ca/services/blockchain-web3/defi-protocols',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/blockchain-web3/defi-protocols',
+    canonical: 'https://mapletechlabs.ca/services/blockchain-web3/defi-protocols',
   },
 };
 

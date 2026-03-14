@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Software Development Company in Kitchener | Mapletech Labs',
     description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Kitchener, Ontario. Get a free quote today.',
-    url: 'https://mapletechlabs.com/locations/kitchener',
+    url: 'https://mapletechlabs.ca/locations/kitchener',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/locations/kitchener',
+    canonical: 'https://mapletechlabs.ca/locations/kitchener',
   },
 };
 

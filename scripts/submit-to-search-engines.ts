@@ -15,7 +15,7 @@
  *   5. Set GOOGLE_SERVICE_ACCOUNT_KEY env var to the JSON key file path
  */
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://mapletechlabs.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://mapletechlabs.ca';
 const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
 
 // ── Fetch all URLs from sitemap (with fallback to local generation) ──────────
@@ -32,8 +32,20 @@ async function getUrlsFromSitemap(): Promise<string[]> {
       urls.push(match[1]);
     }
     if (urls.length > 0) {
-      console.log(`  Fetched ${urls.length} URLs from live sitemap`);
-      return urls;
+      // Ensure URLs match the configured SITE_URL domain
+      const normalizedUrls = urls.map(u => {
+        try {
+          const parsed = new URL(u);
+          const target = new URL(SITE_URL);
+          parsed.host = target.host;
+          parsed.protocol = target.protocol;
+          return parsed.toString().replace(/\/$/, '');
+        } catch {
+          return u;
+        }
+      });
+      console.log(`  Fetched ${normalizedUrls.length} URLs from live sitemap (normalized to ${SITE_URL})`);
+      return normalizedUrls;
     }
     throw new Error('No URLs found in sitemap');
   } catch {
@@ -119,6 +131,8 @@ async function submitToGoogleIndexingAPI(urls: string[]) {
 
   let success = 0;
   let failed = 0;
+  let skipped = 0;
+  let quotaExceeded = false;
   const batchSize = 10;
 
   for (let i = 0; i < urls.length; i += batchSize) {
@@ -142,22 +156,31 @@ async function submitToGoogleIndexingAPI(urls: string[]) {
         } else {
           const body = await res.text();
           if (res.status === 429) {
-            // Rate limited - wait and retry
-            await new Promise(r => setTimeout(r, 2000));
-            failed++;
+            // Daily quota exceeded - stop batch
+            if (!quotaExceeded) {
+              console.log('  [WARN] Daily quota (200/day) exceeded — remaining URLs will be skipped');
+              quotaExceeded = true;
+            }
+            skipped++;
           } else {
             failed++;
-            if (failed <= 3) {
+            if (failed <= 5) {
               console.log(`  [ERR] ${url}: ${res.status} ${body.slice(0, 100)}`);
             }
           }
         }
-      } catch {
+      } catch (err) {
         failed++;
+        if (failed <= 3) {
+          console.log(`  [ERR] ${url}: ${(err as Error).message}`);
+        }
       }
     });
 
     await Promise.all(promises);
+
+    // Stop if quota exceeded
+    if (quotaExceeded) break;
 
     // Rate limit: 200 requests per minute
     if (i + batchSize < urls.length) {
@@ -166,8 +189,11 @@ async function submitToGoogleIndexingAPI(urls: string[]) {
   }
 
   console.log(`  [OK] ${success} URLs submitted successfully`);
+  if (skipped > 0) {
+    console.log(`  [INFO] ${skipped} URLs skipped (daily quota exceeded — run again tomorrow)`);
+  }
   if (failed > 0) {
-    console.log(`  [WARN] ${failed} URLs failed (rate limits or errors)`);
+    console.log(`  [WARN] ${failed} URLs failed (errors)`);
   }
 }
 

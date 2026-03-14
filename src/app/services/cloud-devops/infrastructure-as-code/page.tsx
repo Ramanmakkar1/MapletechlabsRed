@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Infrastructure as Code Services | Mapletech Labs',
     description: 'Terraform and Pulumi IaC services by Mapletech Labs Toronto. GitOps workflows, state management, and security scanning. 70+ IaC projects delivered across Canada.',
-    url: 'https://mapletechlabs.com/services/cloud-devops/infrastructure-as-code',
+    url: 'https://mapletechlabs.ca/services/cloud-devops/infrastructure-as-code',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/cloud-devops/infrastructure-as-code',
+    canonical: 'https://mapletechlabs.ca/services/cloud-devops/infrastructure-as-code',
   },
 };
 

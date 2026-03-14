@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Blog & Insights | Mapletech Labs',
     description: 'Tech insights and industry trends from Mapletech Labs. Articles on software development, AI, mobile apps, blockchain, and digital transformation.',
-    url: 'https://mapletechlabs.com/blog',
+    url: 'https://mapletechlabs.ca/blog',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/blog',
+    canonical: 'https://mapletechlabs.ca/blog',
   },
 };
 

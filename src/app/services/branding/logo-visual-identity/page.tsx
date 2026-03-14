@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Logo & Visual Identity Design | Mapletech Labs',
     description: 'Professional logo and visual identity design by Mapletech Labs. Memorable logos, color systems, and typography that define your brand.',
-    url: 'https://mapletechlabs.com/services/branding/logo-visual-identity',
+    url: 'https://mapletechlabs.ca/services/branding/logo-visual-identity',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/branding/logo-visual-identity',
+    canonical: 'https://mapletechlabs.ca/services/branding/logo-visual-identity',
   },
 };
 

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web3 dApp Development Services | Mapletech Labs',
     description: 'Full-stack Web3 dApp development with wallet integration, on-chain indexing, and cross-chain UX.',
-    url: 'https://mapletechlabs.com/services/blockchain-web3/web3-dapps',
+    url: 'https://mapletechlabs.ca/services/blockchain-web3/web3-dapps',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/blockchain-web3/web3-dapps',
+    canonical: 'https://mapletechlabs.ca/services/blockchain-web3/web3-dapps',
   },
 };
 

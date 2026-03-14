@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Enterprise Portal Development | Mapletech Labs',
     description: 'Custom enterprise portals with SSO integration, role-based access, audit logging, and workflow automation.',
-    url: 'https://mapletechlabs.com/services/web-development/enterprise-portals',
+    url: 'https://mapletechlabs.ca/services/web-development/enterprise-portals',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.com/services/web-development/enterprise-portals',
+    canonical: 'https://mapletechlabs.ca/services/web-development/enterprise-portals',
   },
 };
 
