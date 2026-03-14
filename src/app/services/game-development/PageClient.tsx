@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
 
 function useReveal() {
@@ -81,6 +82,13 @@ export default function GameDevelopmentPage() {
       `}</style>
       <Navbar />
       <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+        <div className="cb-container">
+          <Breadcrumb items={[
+            { label: 'Home', href: '/' },
+            { label: 'Services', href: '/services' },
+            { label: 'Game Development' },
+          ]} />
+        </div>
 
         {/* HERO */}
         <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: '100px 0 120px', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>

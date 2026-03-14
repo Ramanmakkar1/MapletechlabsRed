@@ -42,7 +42,7 @@ const locations = [
   { label: 'Calgary', href: '/locations/calgary' },
   { label: 'Edmonton', href: '/locations/edmonton' },
   { label: 'Ottawa', href: '/locations/ottawa' },
-  { label: 'Montreal', href: '/locations/montreal' },
+  { label: 'Montréal', href: '/locations/montreal', lang: 'fr' },
   { label: 'Kitchener-Waterloo', href: '/locations/kitchener' },
   { label: 'London, ON', href: '/locations/london-on' },
   { label: 'Winnipeg', href: '/locations/winnipeg' },
@@ -69,15 +69,15 @@ const socials = [
   },
 ];
 
-function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+function FooterLink({ href, children, lang }: { href: string; children: React.ReactNode; lang?: string }) {
   return (
     <Link
       href={href}
-      style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.4, display: 'block' }}
+      style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.4, display: 'block', padding: '8px 0' }}
       onMouseEnter={e => { e.currentTarget.style.color = '#fff'; }}
-      onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
+      onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
     >
-      {children}
+      {lang ? <span lang={lang}>{children}</span> : children}
     </Link>
   );
 }
@@ -101,7 +101,7 @@ export default function Footer() {
             <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
               Ready to build something great?
             </h2>
-            <p style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)', color: 'rgba(255,255,255,0.5)', margin: 0, lineHeight: 1.6 }}>
+            <p style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)', color: 'rgba(255,255,255,0.7)', margin: 0, lineHeight: 1.6 }}>
               Let&apos;s turn your idea into a world-class digital product.
             </p>
           </div>
@@ -130,7 +130,7 @@ export default function Footer() {
               height={100}
               style={{ height: 'clamp(40px, 6vw, 60px)', width: 'auto', objectFit: 'contain' as const, marginBottom: 20 }}
             />
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, maxWidth: 280, marginBottom: 20 }}>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, maxWidth: 280, marginBottom: 20 }}>
               World-class software engineering for companies ready to lead their industry. Based in Canada, building globally.
             </p>
 
@@ -172,43 +172,45 @@ export default function Footer() {
           </div>
 
           {/* Services Column */}
-          <div>
+          <nav aria-label="Footer services links">
             <ColTitle>Services</ColTitle>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {services.map(s => (
                 <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
               ))}
             </div>
-          </div>
+          </nav>
 
-          {/* Industries Column */}
+          {/* Industries & Company Column */}
           <div>
-            <ColTitle>Industries</ColTitle>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {industries.map(s => (
-                <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
-              ))}
-            </div>
+            <nav aria-label="Footer industries links">
+              <ColTitle>Industries</ColTitle>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {industries.map(s => (
+                  <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
+                ))}
+              </div>
+            </nav>
 
-            <div style={{ marginTop: 28 }}>
+            <nav aria-label="Footer company links" style={{ marginTop: 28 }}>
               <ColTitle>Company</ColTitle>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {company.map(s => (
                   <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
                 ))}
               </div>
-            </div>
+            </nav>
           </div>
 
           {/* Locations Column */}
-          <div>
+          <nav aria-label="Footer locations links">
             <ColTitle>Locations</ColTitle>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {locations.map(s => (
-                <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
+                <FooterLink key={s.label} href={s.href} lang={'lang' in s ? s.lang : undefined}>{s.label}</FooterLink>
               ))}
             </div>
-          </div>
+          </nav>
         </div>
       </div>
 
@@ -224,7 +226,7 @@ export default function Footer() {
                 key={label}
                 href={href}
                 style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', textDecoration: 'none', transition: 'color 0.2s' }}
-                onMouseEnter={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
+                onMouseEnter={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
                 onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.2)'; }}
               >
                 {label}

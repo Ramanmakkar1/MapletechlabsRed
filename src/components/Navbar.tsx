@@ -232,6 +232,22 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+      const handleEsc = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') setMenuOpen(false);
+      };
+      window.addEventListener('keydown', handleEsc);
+      return () => {
+        document.body.style.overflow = '';
+        window.removeEventListener('keydown', handleEsc);
+      };
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [menuOpen]);
+
   const openMenu = (name: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setActiveMenu(name);
@@ -247,7 +263,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav style={{
+      <nav className={scrolled ? 'navbar-scrolled' : ''} style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
         transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
         background: scrolled || activeMenu ? 'rgba(0,0,0,0.95)' : 'transparent',
@@ -275,9 +291,18 @@ export default function Navbar() {
                   display: 'flex', alignItems: 'center', gap: 6, padding: '10px 16px', borderRadius: 100,
                   background: activeMenu === 'services' ? 'rgba(255,255,255,0.06)' : 'transparent',
                   border: 'none', cursor: 'pointer', fontFamily: 'inherit',
-                  fontSize: 15, fontWeight: 500, color: activeMenu === 'services' ? '#fff' : 'rgba(255,255,255,0.55)',
+                  fontSize: 15, fontWeight: 500, color: activeMenu === 'services' ? '#fff' : 'rgba(255,255,255,0.75)',
                   transition: '0.2s',
-                }}>
+                }} aria-expanded={activeMenu === 'services'} aria-label="Services menu"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setActiveMenu(activeMenu === 'services' ? null : 'services');
+                    }
+                    if (e.key === 'Escape') {
+                      setActiveMenu(null);
+                    }
+                  }}>
                   Services
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transition: '0.3s', transform: activeMenu === 'services' ? 'rotate(180deg)' : 'none' }}><path d="M6 9l6 6 6-6" /></svg>
                 </button>
@@ -289,9 +314,18 @@ export default function Navbar() {
                   display: 'flex', alignItems: 'center', gap: 6, padding: '10px 16px', borderRadius: 100,
                   background: activeMenu === 'industries' ? 'rgba(255,255,255,0.06)' : 'transparent',
                   border: 'none', cursor: 'pointer', fontFamily: 'inherit',
-                  fontSize: 15, fontWeight: 500, color: activeMenu === 'industries' ? '#fff' : 'rgba(255,255,255,0.55)',
+                  fontSize: 15, fontWeight: 500, color: activeMenu === 'industries' ? '#fff' : 'rgba(255,255,255,0.75)',
                   transition: '0.2s',
-                }}>
+                }} aria-expanded={activeMenu === 'industries'} aria-label="Industries menu"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setActiveMenu(activeMenu === 'industries' ? null : 'industries');
+                    }
+                    if (e.key === 'Escape') {
+                      setActiveMenu(null);
+                    }
+                  }}>
                   Industries
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transition: '0.3s', transform: activeMenu === 'industries' ? 'rotate(180deg)' : 'none' }}><path d="M6 9l6 6 6-6" /></svg>
                 </button>
@@ -303,9 +337,18 @@ export default function Navbar() {
                   display: 'flex', alignItems: 'center', gap: 6, padding: '10px 16px', borderRadius: 100,
                   background: activeMenu === 'company' ? 'rgba(255,255,255,0.06)' : 'transparent',
                   border: 'none', cursor: 'pointer', fontFamily: 'inherit',
-                  fontSize: 15, fontWeight: 500, color: activeMenu === 'company' ? '#fff' : 'rgba(255,255,255,0.55)',
+                  fontSize: 15, fontWeight: 500, color: activeMenu === 'company' ? '#fff' : 'rgba(255,255,255,0.75)',
                   transition: '0.2s',
-                }}>
+                }} aria-expanded={activeMenu === 'company'} aria-label="Company menu"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setActiveMenu(activeMenu === 'company' ? null : 'company');
+                    }
+                    if (e.key === 'Escape') {
+                      setActiveMenu(null);
+                    }
+                  }}>
                   Company
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transition: '0.3s', transform: activeMenu === 'company' ? 'rotate(180deg)' : 'none' }}><path d="M6 9l6 6 6-6" /></svg>
                 </button>
@@ -314,11 +357,11 @@ export default function Navbar() {
               {[{ label: 'Case Studies', href: '/case-studies' }, { label: 'Blog', href: '/blog' }].map(item => (
                 <Link key={item.label} href={item.href} style={{
                   display: 'flex', alignItems: 'center', padding: '10px 16px', borderRadius: 100,
-                  fontSize: 15, fontWeight: 500, color: 'rgba(255,255,255,0.55)',
+                  fontSize: 15, fontWeight: 500, color: 'rgba(255,255,255,0.75)',
                   textDecoration: 'none', transition: '0.2s',
                 }}
                   onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'transparent'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; e.currentTarget.style.background = 'transparent'; }}
                 >{item.label}</Link>
               ))}
             </div>
@@ -346,8 +389,8 @@ export default function Navbar() {
 
             {/* Mobile burger */}
             <button className="nav-mobile" onClick={() => setMenuOpen(!menuOpen)}
-              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexDirection: 'column', gap: 5, position: 'relative', zIndex: 2 }}
-              aria-label="Toggle menu"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 12, minWidth: 44, minHeight: 44, flexDirection: 'column', gap: 5, position: 'relative', zIndex: 2, alignItems: 'center', justifyContent: 'center' }}
+              aria-expanded={menuOpen} aria-label="Toggle navigation menu"
             >
               <div style={{ width: 24, height: 1.5, background: '#fff', transition: '0.3s', transform: menuOpen ? 'rotate(45deg) translate(4.5px, 4.5px)' : 'none' }} />
               <div style={{ width: 24, height: 1.5, background: '#fff', transition: '0.3s', opacity: menuOpen ? 0 : 1, margin: '5px 0' }} />
@@ -406,9 +449,9 @@ export default function Navbar() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                     {cat.links.map(link => (
                       <Link key={link.label} href={link.href} onClick={() => setActiveMenu(null)}
-                        style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.45)', textDecoration: 'none', padding: '3px 0', transition: '0.15s', display: 'flex', alignItems: 'center', gap: 5, lineHeight: 1.3 }}
+                        style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.75)', textDecoration: 'none', padding: '3px 0', transition: '0.15s', display: 'flex', alignItems: 'center', gap: 5, lineHeight: 1.3 }}
                         onMouseEnter={e => { e.currentTarget.style.color = '#f5290d'; }}
-                        onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.45)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; }}
                       >
                         <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(245,41,13,0.35)', flexShrink: 0, display: 'inline-block' }} />
                         {link.label}
@@ -454,9 +497,9 @@ export default function Navbar() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4, minWidth: 'min(440px, 100%)' }}>
                   {industryLinks.map(link => (
                     <Link key={link.label} href={link.href} onClick={() => setActiveMenu(null)}
-                      style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, fontSize: 13, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', transition: '0.2s' }}
+                      style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, fontSize: 13, color: 'rgba(255,255,255,0.75)', textDecoration: 'none', transition: '0.2s' }}
                       onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
-                      onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'transparent'; }}
+                      onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; e.currentTarget.style.background = 'transparent'; }}
                     >
                       <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#f5290d', flexShrink: 0 }} />
                       {link.label}
@@ -471,7 +514,7 @@ export default function Navbar() {
                 <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 10 }}>Featured Work</div>
                 <div style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.03em', marginBottom: 8 }}>AI Trading Engine</div>
                 <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: 20 }}>Processing 2M+ transactions daily with real-time ML sentiment analysis for a leading fintech client.</div>
-                <Link href="#portfolio" onClick={() => setActiveMenu(null)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 12, fontWeight: 700, color: '#f5290d', textDecoration: 'none' }}
+                <Link href="/case-studies/fintech-trading-platform" onClick={() => setActiveMenu(null)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 12, fontWeight: 700, color: '#f5290d', textDecoration: 'none' }}
                   onMouseEnter={e => { e.currentTarget.style.gap = '12px'; }}
                   onMouseLeave={e => { e.currentTarget.style.gap = '8px'; }}
                 >
@@ -506,9 +549,9 @@ export default function Navbar() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                   {companyLinks.map(link => (
                     <Link key={link.label} href={link.href} onClick={() => setActiveMenu(null)}
-                      style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, fontSize: 14, color: 'rgba(255,255,255,0.55)', textDecoration: 'none', transition: '0.2s' }}
+                      style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 10, fontSize: 14, color: 'rgba(255,255,255,0.75)', textDecoration: 'none', transition: '0.2s' }}
                       onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
-                      onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'transparent'; }}
+                      onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; e.currentTarget.style.background = 'transparent'; }}
                     >
                       <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#f5290d', flexShrink: 0 }} />
                       {link.label}

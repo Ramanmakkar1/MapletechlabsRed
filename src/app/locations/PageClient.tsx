@@ -123,6 +123,34 @@ export default function LocationsIndexPage() {
                 </Link>
               ))}
             </div>
+            <div style={{
+              textAlign: 'center',
+              padding: '80px 0 0',
+            }}>
+              <h2 style={{
+                fontSize: 'clamp(1.5rem, 3vw, 2.2rem)',
+                fontWeight: 700,
+                color: '#fff',
+                letterSpacing: '-0.03em',
+                marginBottom: 16,
+              }}>
+                Ready to Work with Our Local Team?
+              </h2>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', marginBottom: 32, maxWidth: 500, margin: '0 auto 32px' }}>
+                Get a free consultation with an expert from your nearest Mapletech Labs office.
+              </p>
+              <a href="/contact" style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                height: 48, padding: '0 28px', borderRadius: 100,
+                background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700,
+                textDecoration: 'none',
+              }}>
+                Schedule a Call
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
           </div>
         </section>
 

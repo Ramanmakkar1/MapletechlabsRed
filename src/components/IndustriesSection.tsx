@@ -57,6 +57,21 @@ export default function IndustriesSection() {
             </div>
           ))}
         </div>
+
+        <div style={{ textAlign: 'center', paddingTop: 48 }}>
+          <a href="/contact" style={{
+            display: 'inline-flex', alignItems: 'center', gap: 8,
+            height: 48, padding: '0 28px', borderRadius: 100,
+            background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
+            color: '#fff', fontSize: 14, fontWeight: 600,
+            textDecoration: 'none', transition: 'all 0.3s ease',
+          }}>
+            Discuss Your Industry Needs
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );

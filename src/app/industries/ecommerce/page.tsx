@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Software Solutions',
-  description: 'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, inventory management, payment processing, and omnichannel retail platforms.',
+  title: 'E-Commerce Software Development | Mapletech Labs',
+  description: 'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, payment processing & omnichannel retail for Canadian businesses. Get a free quote.',
   openGraph: {
-    title: 'E-Commerce Software Solutions | Mapletech Labs',
-    description: 'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, inventory management, payment processing, and omnichannel retail platforms.',
+    title: 'E-Commerce Software Development | Mapletech Labs',
+    description: 'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, payment processing & omnichannel retail for Canadian businesses.',
     url: 'https://mapletechlabs.ca/industries/ecommerce',
     type: 'website',
   },

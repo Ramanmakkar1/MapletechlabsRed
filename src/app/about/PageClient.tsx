@@ -111,11 +111,12 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
+        <article>
 
         {/* ── HERO ── */}
         <section style={{ padding: 'clamp(120px, 12vw, 160px) 0 clamp(60px, 8vw, 100px)', position: 'relative', overflow: 'hidden' }}>
           {/* Ambient glow */}
-          <div style={{
+          <div aria-hidden="true" style={{
             position: 'absolute', top: -200, left: '30%',
             width: 700, height: 700,
             background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 70%)',
@@ -248,7 +249,7 @@ export default function AboutPage() {
               <div className="reveal reveal-d2">
                 <div style={{ position: 'relative', paddingLeft: 32 }}>
                   {/* Vertical line */}
-                  <div style={{
+                  <div aria-hidden="true" style={{
                     position: 'absolute', left: 0, top: 12, bottom: 12,
                     width: 1, background: 'linear-gradient(to bottom, #f5290d, rgba(245,41,13,0.1))',
                   }} />
@@ -475,7 +476,7 @@ export default function AboutPage() {
               }}
             >
               {/* Glow */}
-              <div style={{
+              <div aria-hidden="true" style={{
                 position: 'absolute', top: '50%', left: '50%',
                 transform: 'translate(-50%, -50%)',
                 width: 500, height: 500,
@@ -523,6 +524,7 @@ export default function AboutPage() {
           </div>
         </section>
 
+        </article>
       </main>
       <Footer />
     </>

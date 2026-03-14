@@ -161,7 +161,7 @@ export default function Services() {
   return (
     <section id="services" className="section-light py-24 lg:py-32 relative overflow-hidden" ref={containerRef}>
       {/* Subtle bg */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-violet-50 blur-[120px] opacity-60 pointer-events-none" />
+      <div aria-hidden="true" className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-violet-50 blur-[120px] opacity-60 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Heading */}
@@ -195,6 +195,7 @@ export default function Services() {
             >
               {/* Hover gradient bg */}
               <div
+                aria-hidden="true"
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
                 style={{ background: `radial-gradient(circle at var(--mx, 50%) var(--my, 50%), ${service.accentBg} 0%, transparent 70%)` }}
               />

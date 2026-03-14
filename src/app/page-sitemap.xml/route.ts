@@ -9,6 +9,10 @@ export function GET() {
     { loc: `${BASE_URL}/services`, lastmod: now, changefreq: 'weekly', priority: '0.9' },
     { loc: `${BASE_URL}/blog`, lastmod: now, changefreq: 'weekly', priority: '0.7' },
     { loc: `${BASE_URL}/case-studies`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/case-studies/fintech-trading-platform`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/case-studies/healthcare-telehealth`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/case-studies/ecommerce-platform`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/case-studies/logistics-platform`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
     { loc: `${BASE_URL}/locations`, lastmod: now, changefreq: 'monthly', priority: '0.8' },
     { loc: `${BASE_URL}/faq`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
   ]);

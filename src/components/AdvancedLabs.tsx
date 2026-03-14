@@ -32,7 +32,10 @@ export default function AdvancedLabs() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 3vw, 36px)' }}>
               {features.map(f => (
-                <div key={f.title} style={{ display: 'flex', gap: 20 }}>
+                <div key={f.title} style={{ display: 'flex', gap: 20, padding: '16px 16px 16px 0', borderRadius: 16, transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)', cursor: 'default' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(245,41,13,0.08)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+                >
                   <div style={{ width: 2, flexShrink: 0, background: 'linear-gradient(to bottom, #f5290d, rgba(245,41,13,0.1))', borderRadius: 10, minHeight: 60 }} />
                   <div>
                     <h4 style={{ fontSize: 17, fontWeight: 600, color: '#fff', marginBottom: 8, letterSpacing: '-0.02em' }}>{f.title}</h4>

@@ -85,10 +85,15 @@ export default function TestimonialsSection() {
         <div className="testimonials-grid">
           {testimonials.map((t, i) => (
             <div key={t.name} className={`reveal reveal-d${i + 1}`}
-              style={{ padding: 'clamp(24px, 4vw, 40px) clamp(20px, 3vw, 36px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 36, display: 'flex', flexDirection: 'column', gap: 24, transition: '0.4s', cursor: 'default', background: 'rgba(255,255,255,0.02)' }}
+              style={{ padding: 'clamp(24px, 4vw, 40px) clamp(20px, 3vw, 36px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 36, display: 'flex', flexDirection: 'column', gap: 24, transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)', cursor: 'default', background: 'rgba(255,255,255,0.02)', position: 'relative' as const }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(245,41,13,0.08)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
             >
+              {/* Quote mark */}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,0.05)" style={{ position: 'absolute', top: 16, right: 16 }}>
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z"/>
+              </svg>
+
               {/* Stars + platform */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Stars count={t.stars} />
@@ -116,6 +121,38 @@ export default function TestimonialsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Post-testimonials CTA */}
+        <div style={{
+          textAlign: 'center',
+          padding: '60px 0 0',
+        }}>
+          <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 20 }}>
+            Join 150+ companies who&apos;ve shipped with Mapletech Labs
+          </p>
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="/contact" style={{
+              display: 'inline-flex', alignItems: 'center', gap: 8,
+              height: 44, padding: '0 24px', borderRadius: 100,
+              background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 600,
+              textDecoration: 'none',
+            }}>
+              Start Your Project
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="/case-studies" style={{
+              display: 'inline-flex', alignItems: 'center', gap: 8,
+              height: 44, padding: '0 24px', borderRadius: 100,
+              background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)',
+              color: '#fff', fontSize: 14, fontWeight: 600,
+              textDecoration: 'none',
+            }}>
+              View Case Studies
+            </a>
+          </div>
         </div>
       </div>
     </section>

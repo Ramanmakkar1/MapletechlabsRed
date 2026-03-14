@@ -97,13 +97,13 @@ export default function ProcessSection() {
         {/* Steps with left connecting line */}
         <div style={{ position: 'relative' }}>
           {/* Vertical connecting line */}
-          <div style={{
+          <div aria-hidden="true" style={{
             position: 'absolute',
             left: 39,
             top: 28,
             bottom: 28,
             width: 1,
-            background: 'linear-gradient(to bottom, rgba(245,41,13,0.4) 0%, rgba(245,41,13,0.1) 60%, transparent 100%)',
+            background: 'linear-gradient(to bottom, transparent, rgba(245,41,13,0.3) 20%, rgba(245,41,13,0.3) 80%, transparent)',
             zIndex: 0,
           }} />
 
@@ -126,20 +126,25 @@ export default function ProcessSection() {
                   e.currentTarget.style.background = 'rgba(245,41,13,0.03)';
                   e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)';
                   e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.4)';
+                  const circle = e.currentTarget.querySelector('.process-step-circle') as HTMLElement;
+                  if (circle) circle.style.boxShadow = '0 0 20px rgba(245,41,13,0.3)';
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
                   e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
                   e.currentTarget.style.boxShadow = '';
+                  const circle = e.currentTarget.querySelector('.process-step-circle') as HTMLElement;
+                  if (circle) circle.style.boxShadow = '';
                 }}
               >
                 {/* Step number circle - overlapping the vertical line */}
-                <div style={{
+                <div className="process-step-circle" style={{
                   position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)',
                   width: 48, height: 48, borderRadius: '50%',
                   background: '#000', border: '1px solid rgba(245,41,13,0.3)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   zIndex: 1,
+                  transition: 'all 0.3s ease',
                 }}>
                   <span style={{ fontSize: 11, fontWeight: 800, color: '#f5290d', letterSpacing: '0.05em' }}>{step.num}</span>
                 </div>

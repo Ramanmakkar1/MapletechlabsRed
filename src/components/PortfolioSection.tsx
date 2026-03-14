@@ -4,34 +4,64 @@ import Image from 'next/image';
 
 const projects = [
   {
+    id: 'fintech',
     client: 'Fintech Client',
-    title: 'AI Trading Engine',
+    title: 'AI-Powered Trading Platform',
     category: 'FinTech',
-    desc: 'Processing 2M+ transactions daily with real-time ML sentiment analysis and sub-50ms latency.',
-    tags: ['Python', 'AWS', 'SageMaker'],
-    metric: '2M+',
-    metricLabel: 'Daily TXs',
+    description: 'Real-time AI trading engine processing 50K+ daily transactions with institutional-grade security and 99.99% uptime.',
     image: '/images/portfolio-finance.png',
+    metrics: [
+      { value: '50K+', label: 'Daily Transactions' },
+      { value: '99.99%', label: 'Uptime' },
+      { value: '300ms', label: 'Avg Response' },
+    ],
+    tags: ['React', 'Python', 'AWS', 'PostgreSQL', 'Redis'],
+    href: '/case-studies/fintech-trading-platform',
   },
   {
+    id: 'healthcare',
     client: 'Healthcare Client',
-    title: 'Telehealth Platform',
+    title: 'HIPAA-Compliant Telehealth Platform',
     category: 'Healthcare',
-    desc: 'HIPAA-compliant platform connecting 100K+ patients with specialists via encrypted HD video.',
-    tags: ['React Native', 'WebRTC', 'HealthKit'],
-    metric: '100K+',
-    metricLabel: 'Patients',
+    description: 'Secure telehealth platform with video consultations, EHR integration, and real-time patient monitoring serving 200K+ sessions.',
     image: '/images/portfolio-health.png',
+    metrics: [
+      { value: '200K+', label: 'Patient Sessions' },
+      { value: '4.8★', label: 'App Rating' },
+      { value: '60%', label: 'Faster Consults' },
+    ],
+    tags: ['React Native', 'WebRTC', 'Node.js', 'AWS', 'HL7 FHIR'],
+    href: '/case-studies/healthcare-telehealth',
   },
   {
+    id: 'ecommerce',
     client: 'E-Commerce Client',
-    title: 'Enterprise Commerce',
+    title: 'Enterprise E-Commerce Platform',
     category: 'Retail',
-    desc: 'High-scale headless commerce handling 500K concurrent users during peak sale events.',
-    tags: ['Next.js', 'Kubernetes', 'Redis'],
-    metric: '500K',
-    metricLabel: 'Concurrent Users',
+    description: 'Headless commerce platform handling 2M+ monthly visitors with real-time inventory, multi-vendor support, and 3x revenue growth.',
     image: '/images/portfolio-retail.png',
+    metrics: [
+      { value: '3x', label: 'Revenue Growth' },
+      { value: '2M+', label: 'Monthly Visitors' },
+      { value: '1.2s', label: 'Page Load' },
+    ],
+    tags: ['Next.js', 'Stripe', 'PostgreSQL', 'Redis', 'Elasticsearch'],
+    href: '/case-studies/ecommerce-platform',
+  },
+  {
+    id: 'logistics',
+    client: 'Logistics Client',
+    title: 'Real-Time Fleet Management',
+    category: 'Logistics',
+    description: 'IoT-integrated logistics platform tracking 15K+ daily deliveries with ML-powered route optimization and 25% fuel savings.',
+    image: '/images/portfolio-logistics.png',
+    metrics: [
+      { value: '15K+', label: 'Daily Deliveries' },
+      { value: '25%', label: 'Fuel Savings' },
+      { value: '98%', label: 'On-Time Rate' },
+    ],
+    tags: ['React', 'Python', 'TensorFlow', 'AWS IoT', 'MapBox'],
+    href: '/case-studies/logistics-platform',
   },
 ];
 
@@ -71,20 +101,24 @@ export default function PortfolioSection() {
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>{p.client}</div>
               <h3 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>{p.title}</h3>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, maxWidth: 480 }}>{p.desc}</p>
+              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, maxWidth: 480 }}>{p.description}</p>
             </div>
             <div>
               <div className="portfolio-content-row" style={{ marginBottom: 40 }}>
-                <div>
-                  <div style={{ fontSize: 'clamp(28px, 5vw, 52px)', fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{p.metric}</div>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 8 }}>{p.metricLabel}</div>
-                </div>
-                <div style={{ width: 1, background: 'rgba(255,255,255,0.07)', alignSelf: 'stretch' }} />
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignContent: 'center' }}>
-                  {p.tags.map(t => <span key={t} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)', padding: '8px 18px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{t}</span>)}
-                </div>
+                {p.metrics.map((m, i) => (
+                  <div key={m.label} style={{ display: 'contents' }}>
+                    {i > 0 && <div style={{ width: 1, background: 'rgba(255,255,255,0.07)', alignSelf: 'stretch' }} />}
+                    <div>
+                      <div style={{ fontSize: 'clamp(24px, 4vw, 42px)', fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{m.value}</div>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 8 }}>{m.label}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <a href="/case-studies" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 30 }}>
+                {p.tags.map(t => <span key={t} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)', padding: '8px 18px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{t}</span>)}
+              </div>
+              <a href={p.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                 View Full Story
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </a>
@@ -98,6 +132,7 @@ export default function PortfolioSection() {
                 src={p.image}
                 alt={p.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: 'cover', opacity: 0.7 }}
               />
             </div>
@@ -106,7 +141,7 @@ export default function PortfolioSection() {
             {/* Metric badge */}
             <div style={{ position: 'absolute', bottom: 28, right: 28, padding: '12px 20px', background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(245,41,13,0.3)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)' }}>
               <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 8px #f5290d' }} />
-              <span style={{ fontSize: 13, fontWeight: 700, color: '#f5290d' }}>{p.metric} {p.metricLabel}</span>
+              <span style={{ fontSize: 13, fontWeight: 700, color: '#f5290d' }}>{p.metrics[0].value} {p.metrics[0].label}</span>
             </div>
           </div>
         </div>

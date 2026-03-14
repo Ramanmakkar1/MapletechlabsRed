@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 export const metadata: Metadata = {
-  title: 'EdTech Software Development',
-  description: 'Custom EdTech software development by Mapletech Labs. Learning management systems, virtual classrooms, assessment tools, and educational apps.',
+  title: 'EdTech Software Development | Mapletech Labs',
+  description: 'EdTech software by Mapletech Labs. LMS platforms, virtual classrooms & assessment tools for Canadian educators. Get a free consultation for your project.',
   openGraph: {
     title: 'EdTech Software Development | Mapletech Labs',
-    description: 'Custom EdTech software development by Mapletech Labs. Learning management systems, virtual classrooms, assessment tools, and educational apps.',
+    description: 'EdTech software by Mapletech Labs. LMS platforms, virtual classrooms & assessment tools for Canadian educators.',
     url: 'https://mapletechlabs.ca/industries/edtech',
     type: 'website',
   },

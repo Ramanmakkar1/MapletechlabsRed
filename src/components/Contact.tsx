@@ -49,7 +49,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-padding" style={{ background: '#000', position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 500, background: 'radial-gradient(ellipse, rgba(245,41,13,0.09) 0%, transparent 60%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
+      <div aria-hidden="true" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 500, background: 'radial-gradient(ellipse, rgba(245,41,13,0.09) 0%, transparent 60%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
 
       <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="contact-inner contact-grid" style={{ maxWidth: 1100, margin: '0 auto' }}>
@@ -85,6 +85,10 @@ export default function Contact() {
               </Link>
             </div>
 
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', marginTop: 16 }}>
+              See our <a href="/case-studies" style={{ color: '#f5290d', textDecoration: 'none' }}>case studies</a> for real client results.
+            </p>
+
             <div className="contact-badges" style={{ display: 'flex', gap: 32, marginTop: 40, paddingTop: 32, borderTop: '1px solid rgba(255,255,255,0.07)', flexWrap: 'wrap' }}>
               {['NDA Signed on Day 1', 'Fixed-Price Guarantee', '8-Week MVP Programme'].map(item => (
                 <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -100,19 +104,21 @@ export default function Contact() {
           {/* Right — form */}
           <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 24, padding: 'clamp(20px, 4vw, 40px)' }}>
             {submitted ? (
-              <div style={{ textAlign: 'center', padding: 40 }}>
-                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(245,41,13,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
-                </div>
-                <h3 style={{ fontSize: 20, fontWeight: 600, color: '#fff', marginBottom: 8 }}>Message sent!</h3>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>We&apos;ll get back to you within 24 hours.</p>
+              <div role="status" aria-live="polite" style={{ textAlign: 'center', padding: '40px 20px' }}>
+                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(16,185,129,0.1)', border: '2px solid #10b981', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: 24 }}>&#10003;</div>
+                <h3 style={{ fontSize: 20, fontWeight: 700, color: '#fff', marginBottom: 12 }}>Message Sent!</h3>
+                <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto' }}>
+                  Our team will review your message and respond within 4 business hours.
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', marginBottom: 8 }}>Name *</label>
+                  <label htmlFor="contact-name" style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', marginBottom: 8 }}>Name *</label>
                   <input
+                    id="contact-name"
                     required
+                    aria-required="true"
                     type="text"
                     value={formData.name}
                     onChange={e => setFormData(d => ({ ...d, name: e.target.value }))}
@@ -121,9 +127,11 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', marginBottom: 8 }}>Email *</label>
+                  <label htmlFor="contact-email" style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', marginBottom: 8 }}>Email *</label>
                   <input
+                    id="contact-email"
                     required
+                    aria-required="true"
                     type="email"
                     value={formData.email}
                     onChange={e => setFormData(d => ({ ...d, email: e.target.value }))}
@@ -132,8 +140,9 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', marginBottom: 8 }}>Project details</label>
+                  <label htmlFor="contact-message" style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', marginBottom: 8 }}>Project details</label>
                   <textarea
+                    id="contact-message"
                     rows={4}
                     value={formData.message}
                     onChange={e => setFormData(d => ({ ...d, message: e.target.value }))}
@@ -144,12 +153,20 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  style={{ height: 52, borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, transition: '0.3s' }}
+                  style={{ height: 52, borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, border: 'none', cursor: isLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, transition: '0.3s', opacity: isLoading ? 0.7 : 1 }}
                   onMouseEnter={e => { if(!isLoading){ e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; } }}
                   onMouseLeave={e => { if(!isLoading){ e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; } }}
                 >
-                  {isLoading ? 'Sending...' : 'Send Message'}
-                  {!isLoading && <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>}
+                  {isLoading ? (
+                    <>
+                      <span className="spinner" /> Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                    </>
+                  )}
                 </button>
               </form>
             )}

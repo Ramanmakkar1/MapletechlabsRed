@@ -323,7 +323,7 @@ export default function BlogPage() {
               Latest Articles
             </p>
             <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 20,
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(320px, 100%), 1fr))', gap: 20,
             }}>
               {posts.filter(p => activeCategory === 'All' || p.category === activeCategory).map((post, i) => {
                 const accentColor = categoryColors[post.category] || '#f5290d';

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 export const metadata: Metadata = {
-  title: 'AI & Machine Learning Development',
-  description: 'Custom AI and machine learning solutions by Mapletech Labs. LLM integration, computer vision, predictive analytics, and AI automation for enterprises.',
+  title: 'AI & Machine Learning Services in Canada | Mapletech Labs',
+  description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada. Request a free proposal.',
   openGraph: {
-    title: 'AI & Machine Learning Development | Mapletech Labs',
-    description: 'Custom AI and machine learning solutions by Mapletech Labs. LLM integration, computer vision, predictive analytics, and AI automation for enterprises.',
+    title: 'AI & Machine Learning Services in Canada | Mapletech Labs',
+    description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada.',
     url: 'https://mapletechlabs.ca/services/ai-ml',
     type: 'website',
   },

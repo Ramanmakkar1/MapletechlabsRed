@@ -13,41 +13,45 @@ const projects = [
     id: 1,
     client: 'Fintech Client',
     title: 'AI-Powered Trading Platform',
-    desc: 'Real-time algorithmic trading system processing 2M+ transactions daily with sub-millisecond latency.',
-    tags: ['Python', 'React', 'AWS', 'ML'],
-    metric: '2M+', metricLabel: 'Daily Transactions',
+    desc: 'Real-time AI trading engine processing 50K+ daily transactions with institutional-grade security and 99.99% uptime.',
+    tags: ['React', 'Python', 'AWS', 'PostgreSQL', 'Redis'],
+    metric: '50K+', metricLabel: 'Daily Transactions',
     gradient: 'from-violet-600 via-purple-600 to-indigo-700',
     num: '01',
+    href: '/case-studies/fintech-trading-platform',
   },
   {
     id: 2,
     client: 'Healthcare Client',
-    title: 'HIPAA-Compliant Patient Portal',
-    desc: 'Telemedicine platform serving 100K+ patients with EHR integration and real-time video consultation.',
-    tags: ['Next.js', 'Node.js', 'PostgreSQL'],
-    metric: '100K+', metricLabel: 'Active Patients',
+    title: 'HIPAA-Compliant Telehealth Platform',
+    desc: 'Secure telehealth platform with video consultations, EHR integration, and real-time patient monitoring serving 200K+ sessions.',
+    tags: ['React Native', 'WebRTC', 'Node.js', 'AWS', 'HL7 FHIR'],
+    metric: '200K+', metricLabel: 'Patient Sessions',
     gradient: 'from-cyan-600 via-sky-600 to-blue-700',
     num: '02',
+    href: '/case-studies/healthcare-telehealth',
   },
   {
     id: 3,
     client: 'E-Commerce Client',
-    title: 'Multi-Vendor E-Commerce Engine',
-    desc: 'Headless commerce platform scaling to Black Friday — 500K concurrent users, zero downtime.',
-    tags: ['Shopify API', 'React', 'Redis', 'Kubernetes'],
-    metric: '500K', metricLabel: 'Concurrent Users',
+    title: 'Enterprise E-Commerce Platform',
+    desc: 'Headless commerce platform handling 2M+ monthly visitors with real-time inventory, multi-vendor support, and 3x revenue growth.',
+    tags: ['Next.js', 'Stripe', 'PostgreSQL', 'Redis', 'Elasticsearch'],
+    metric: '3x', metricLabel: 'Revenue Growth',
     gradient: 'from-emerald-600 via-teal-600 to-cyan-700',
     num: '03',
+    href: '/case-studies/ecommerce-platform',
   },
   {
     id: 4,
-    client: 'Enterprise Client',
-    title: 'Enterprise ERP & Analytics',
-    desc: 'Custom ERP replacing legacy system — 85% faster reporting, full supply chain visibility.',
-    tags: ['React', 'Python', 'GraphQL', 'AWS'],
-    metric: '85%', metricLabel: 'Faster Reporting',
+    client: 'Logistics Client',
+    title: 'Real-Time Fleet Management',
+    desc: 'IoT-integrated logistics platform tracking 15K+ daily deliveries with ML-powered route optimization and 25% fuel savings.',
+    tags: ['React', 'Python', 'TensorFlow', 'AWS IoT', 'MapBox'],
+    metric: '15K+', metricLabel: 'Daily Deliveries',
     gradient: 'from-orange-600 via-amber-600 to-yellow-600',
     num: '04',
+    href: '/case-studies/logistics-platform',
   },
 ];
 
@@ -124,7 +128,16 @@ export default function CaseStudies() {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="case-card flex-shrink-0 w-[480px] lg:w-[560px] h-[460px] rounded-3xl overflow-hidden relative group cursor-default"
+                className="case-card flex-shrink-0 w-[min(480px,85vw)] lg:w-[560px] h-[460px] rounded-3xl overflow-hidden relative group cursor-default"
+                style={{ transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-6px)';
+                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 {/* Gradient bg */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-90`} />
@@ -157,7 +170,7 @@ export default function CaseStudies() {
                     </div>
 
                     <Link
-                      href="#contact"
+                      href={project.href}
                       className="inline-flex items-center gap-2 text-sm font-bold text-white hover:gap-4 transition-all duration-300"
                     >
                       View Case Study

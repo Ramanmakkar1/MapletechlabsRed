@@ -97,6 +97,7 @@ export default function FAQPageClient() {
                     <div key={key} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                       <button
                         onClick={() => setActive(isOpen ? null : key)}
+                        aria-expanded={isOpen}
                         style={{
                           width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                           padding: '24px 0', background: 'none', border: 'none', cursor: 'pointer',

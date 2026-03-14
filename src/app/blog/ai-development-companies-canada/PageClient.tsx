@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 
 function useReveal() {
@@ -53,6 +54,13 @@ export default function AiDevelopmentCompaniesCanadaClient() {
     <>
       <Navbar />
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
+        <div className="cb-container" style={{ paddingTop: 100 }}>
+          <Breadcrumb items={[
+            { label: 'Home', href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: 'Top 10 AI Development Companies in Canada' },
+          ]} />
+        </div>
 
         {/* ── ARTICLE HERO ── */}
         <section style={{ padding: '140px 0 64px', position: 'relative', overflow: 'hidden' }}>
@@ -569,6 +577,32 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   Start Your AI Project →
                 </button>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Articles */}
+        <section style={{ padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)', fontWeight: 700, color: '#fff', marginBottom: 32 }}>Related Articles</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+              {[
+                { title: 'Top Software Development Companies in Canada', href: '/blog/top-software-development-companies-canada' },
+                { title: 'How to Choose a Software Development Company in Canada', href: '/blog/choose-software-development-company-canada' },
+                { title: 'Top 10 Unicorn Apps of 2026', href: '/blog/top-10-unicorn-apps-2026' },
+              ].map((post) => (
+                <a key={post.href} href={post.href} style={{
+                  display: 'block', padding: '24px', borderRadius: 16,
+                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none', transition: 'all 0.3s ease',
+                  fontSize: 15, fontWeight: 600, color: '#fff', lineHeight: 1.5,
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                >
+                  {post.title} →
+                </a>
+              ))}
             </div>
           </div>
         </section>

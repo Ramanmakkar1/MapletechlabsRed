@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 export const metadata: Metadata = {
-  title: 'Logistics & Supply Chain Software',
-  description: 'Logistics and supply chain software by Mapletech Labs. Fleet management, route optimization, warehouse systems, and real-time tracking platforms.',
+  title: 'Logistics Software Development | Mapletech Labs',
+  description: 'Logistics & supply chain software by Mapletech Labs. Fleet management, route optimization & tracking for Canadian logistics. Get a free project estimate.',
   openGraph: {
-    title: 'Logistics & Supply Chain Software | Mapletech Labs',
-    description: 'Logistics and supply chain software by Mapletech Labs. Fleet management, route optimization, warehouse systems, and real-time tracking platforms.',
+    title: 'Logistics Software Development | Mapletech Labs',
+    description: 'Logistics & supply chain software by Mapletech Labs. Fleet management, route optimization & tracking for Canadian logistics.',
     url: 'https://mapletechlabs.ca/industries/logistics',
     type: 'website',
   },

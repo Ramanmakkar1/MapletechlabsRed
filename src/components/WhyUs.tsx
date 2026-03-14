@@ -114,7 +114,7 @@ export default function WhyUs() {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 24,
-                transition: 'all 0.4s ease',
+                transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                 cursor: 'default',
                 position: 'relative',
                 overflow: 'hidden',
@@ -133,7 +133,7 @@ export default function WhyUs() {
               }}
             >
               {/* Watermark stat */}
-              <div style={{ position: 'absolute', right: 20, bottom: -10, fontSize: 80, fontWeight: 900, color: 'rgba(255,255,255,0.02)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>
+              <div aria-hidden="true" style={{ position: 'absolute', right: 20, bottom: -10, fontSize: 80, fontWeight: 900, color: 'rgba(255,255,255,0.02)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>
                 {r.stat}
               </div>
 

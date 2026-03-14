@@ -70,7 +70,7 @@ export default function ServicesSection() {
             <div key={s.title} className={`reveal reveal-d${i + 1}`}
               style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 32, padding: 'clamp(24px, 4vw, 40px) clamp(24px, 3vw, 36px)', display: 'flex', flexDirection: 'column', gap: 16, minHeight: 220, position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(245,41,13,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}
             >
               <div style={{ position: 'absolute', bottom: -8, right: 16, fontSize: 80, fontWeight: 800, color: 'rgba(255,255,255,0.02)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>{s.num}</div>
               <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d' }}>{s.tag}</span>

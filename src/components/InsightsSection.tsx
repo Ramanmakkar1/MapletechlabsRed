@@ -1,6 +1,15 @@
 'use client';
 import { useRef, useEffect } from 'react';
 
+const featuredCaseStudy = {
+  tag: 'Case Study',
+  title: 'AI-Powered FinTech Trading Platform',
+  excerpt: 'How we built a real-time trading engine processing 2M+ daily transactions with ML-driven sentiment analysis for a leading fintech client.',
+  readTime: '5 min read',
+  date: 'Mar 2026',
+  href: '/case-studies/fintech-trading-platform',
+};
+
 const posts = [
   {
     tag: 'Business',
@@ -61,6 +70,36 @@ export default function InsightsSection() {
           </a>
         </div>
 
+        {/* Featured Case Study */}
+        <a
+          href={featuredCaseStudy.href}
+          className="reveal"
+          style={{
+            display: 'flex',
+            border: '1px solid rgba(245,41,13,0.15)',
+            borderRadius: 32,
+            overflow: 'hidden',
+            textDecoration: 'none',
+            transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
+            background: 'linear-gradient(135deg, rgba(245,41,13,0.04) 0%, rgba(0,0,0,0) 100%)',
+            marginBottom: 40,
+          }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.4)'; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.15)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+        >
+          <div style={{ padding: '32px 40px', display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, width: 'fit-content', padding: '6px 14px', borderRadius: 100, background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.2)' }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{featuredCaseStudy.tag}</span>
+            </div>
+            <h3 style={{ fontSize: 22, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.3, margin: 0 }}>{featuredCaseStudy.title}</h3>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{featuredCaseStudy.excerpt}</p>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 8, fontSize: 13, fontWeight: 700, color: '#f5290d' }}>
+              Read Case Study
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </div>
+          </div>
+        </a>
+
         {/* Cards */}
         <div className="insights-grid">
           {posts.map((post, i) => (
@@ -75,11 +114,11 @@ export default function InsightsSection() {
                 display: 'flex',
                 flexDirection: 'column',
                 textDecoration: 'none',
-                transition: 'all 0.4s ease',
+                transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                 background: 'rgba(255,255,255,0.02)',
               }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.4)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.15)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.4)'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
             >
               {/* Image placeholder */}
               <div style={{ height: 200, background: 'linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0d0d0d 100%)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

@@ -45,11 +45,11 @@ export default function Hero() {
   return (
     <section ref={ref} style={{ background: '#000', minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', paddingTop: 'clamp(80px, 12vw, 140px)' }}>
       {/* Grid bg */}
-      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px)', backgroundSize: '72px 72px', pointerEvents: 'none' }} />
+      <div aria-hidden="true" style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px)', backgroundSize: '72px 72px', pointerEvents: 'none' }} />
       {/* Glow left */}
-      <div style={{ position: 'absolute', top: '5%', left: '-10%', width: 700, height: 700, background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
+      <div aria-hidden="true" style={{ position: 'absolute', top: '5%', left: '-10%', width: 700, height: 700, background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
       {/* Glow right */}
-      <div style={{ position: 'absolute', top: '20%', right: '-5%', width: 600, height: 600, background: 'radial-gradient(circle, rgba(245,41,13,0.07) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
+      <div aria-hidden="true" style={{ position: 'absolute', top: '20%', right: '-5%', width: 600, height: 600, background: 'radial-gradient(circle, rgba(245,41,13,0.07) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
 
       <div className="cb-container hero-container" style={{ position: 'relative', zIndex: 1 }}>
 

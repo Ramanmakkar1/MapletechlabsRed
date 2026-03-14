@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 export const metadata: Metadata = {
-  title: 'Blockchain & Web3 Development',
-  description: 'Blockchain and Web3 development by Mapletech Labs. Smart contracts, DeFi protocols, NFT platforms, crypto wallets, and decentralized applications.',
+  title: 'Blockchain & Web3 Development in Canada | Mapletech Labs',
+  description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises. Schedule a free technical consultation.',
   openGraph: {
-    title: 'Blockchain & Web3 Development | Mapletech Labs',
-    description: 'Blockchain and Web3 development by Mapletech Labs. Smart contracts, DeFi protocols, NFT platforms, crypto wallets, and decentralized applications.',
+    title: 'Blockchain & Web3 Development in Canada | Mapletech Labs',
+    description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises.',
     url: 'https://mapletechlabs.ca/services/blockchain-web3',
     type: 'website',
   },

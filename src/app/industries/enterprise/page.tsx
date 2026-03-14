@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 
 export const metadata: Metadata = {
-  title: 'Enterprise Software Development',
-  description: 'Enterprise software development by Mapletech Labs. ERP systems, CRM platforms, workflow automation, and business intelligence solutions at scale.',
+  title: 'Enterprise Software Development | Mapletech Labs',
+  description: 'Enterprise software by Mapletech Labs. ERP, CRM, workflow automation & BI solutions at scale for Canadian enterprises. Schedule a free consultation today.',
   openGraph: {
     title: 'Enterprise Software Development | Mapletech Labs',
-    description: 'Enterprise software development by Mapletech Labs. ERP systems, CRM platforms, workflow automation, and business intelligence solutions at scale.',
+    description: 'Enterprise software by Mapletech Labs. ERP, CRM, workflow automation & BI solutions at scale for Canadian enterprises.',
     url: 'https://mapletechlabs.ca/industries/enterprise',
     type: 'website',
   },

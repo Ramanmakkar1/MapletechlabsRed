@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 
 function useReveal() {
@@ -53,6 +54,13 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
     <>
       <Navbar />
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
+        <div className="cb-container" style={{ paddingTop: 100 }}>
+          <Breadcrumb items={[
+            { label: 'Home', href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: 'Top 10 App Development Companies in Edmonton' },
+          ]} />
+        </div>
 
         {/* ── ARTICLE HERO ── */}
         <section style={{ padding: '140px 0 64px', position: 'relative', overflow: 'hidden' }}>

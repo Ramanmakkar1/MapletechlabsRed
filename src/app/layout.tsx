@@ -129,6 +129,7 @@ gtag('config', 'G-LLHNY6HD88');`,
         />
       </head>
       <body className={poppins.className}>
+        <a href="#main-content" className="sr-only-focusable">Skip to main content</a>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

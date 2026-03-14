@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -62,6 +63,13 @@ export default function LogisticsPage() {
     <>
       <Navbar />
       <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+        <div className="cb-container">
+          <Breadcrumb items={[
+            { label: 'Home', href: '/' },
+            { label: 'Industries', href: '/services' },
+            { label: 'Logistics' },
+          ]} />
+        </div>
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>

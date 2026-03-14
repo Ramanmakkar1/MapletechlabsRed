@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
@@ -124,6 +125,13 @@ export default function ProductDesignPage() {
     <>
       <Navbar />
       <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+        <div className="cb-container">
+          <Breadcrumb items={[
+            { label: 'Home', href: '/' },
+            { label: 'Services', href: '/services' },
+            { label: 'Product Design' },
+          ]} />
+        </div>
 
         {/* ═══════════════════════════════════════
             HERO

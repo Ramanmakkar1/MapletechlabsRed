@@ -48,6 +48,7 @@ export default function FAQSection() {
             {faqs.map((faq, i) => (
               <div key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', overflow: 'hidden' }}>
                 <button onClick={() => setActive(active === i ? null : i)}
+                  aria-expanded={active === i}
                   style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '28px 0', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', gap: 24, fontFamily: 'inherit' }}
                 >
                   <span style={{ fontSize: 17, fontWeight: 500, color: '#fff', lineHeight: 1.4, letterSpacing: '-0.01em' }}>{faq.q}</span>

@@ -497,6 +497,32 @@ export default function WebDevelopmentCompaniesTorontoClient() {
           </div>
         </section>
 
+        {/* Related Articles */}
+        <section style={{ padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)', fontWeight: 700, color: '#fff', marginBottom: 32 }}>Related Articles</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+              {[
+                { title: 'How Much Does a Website Cost in Canada?', href: '/blog/website-cost-canada' },
+                { title: 'Top Software Development Companies in Canada', href: '/blog/top-software-development-companies-canada' },
+                { title: 'Software Development Companies in Calgary', href: '/blog/software-development-companies-calgary' },
+              ].map((post) => (
+                <a key={post.href} href={post.href} style={{
+                  display: 'block', padding: '24px', borderRadius: 16,
+                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none', transition: 'all 0.3s ease',
+                  fontSize: 15, fontWeight: 600, color: '#fff', lineHeight: 1.5,
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                >
+                  {post.title} →
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>

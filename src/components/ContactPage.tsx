@@ -116,7 +116,7 @@ export default function ContactPage() {
     }
   };
 
-  const inp: React.CSSProperties = { width: '100%', padding: '15px 20px', fontSize: 15, fontFamily: 'inherit', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 14, color: '#fff', outline: 'none', transition: 'border 0.25s, box-shadow 0.25s' };
+  const inp: React.CSSProperties = { width: '100%', padding: '15px 20px', fontSize: 16, fontFamily: 'inherit', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 14, color: '#fff', outline: 'none', transition: 'border 0.25s, box-shadow 0.25s' };
   const sel: React.CSSProperties = { ...inp, appearance: 'none' as const, backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='rgba(255,255,255,0.75)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 18px center' };
   const lbl: React.CSSProperties = { display: 'block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.75)', marginBottom: 8 };
   const fi = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.5)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(245,41,13,0.08)'; };
@@ -277,33 +277,33 @@ export default function ContactPage() {
                     <h3 style={{ fontSize: 24, fontWeight: 600, color: '#fff', letterSpacing: '-0.03em', margin: 0 }}>Start the Conversation</h3>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
                     <div>
-                      <label style={lbl}>Full Name *</label>
-                      <input name="name" value={form.name} onChange={handle} required placeholder="Alex Johnson" style={inp} onFocus={fi} onBlur={fo} />
+                      <label htmlFor="cp-name" style={lbl}>Full Name *</label>
+                      <input id="cp-name" name="name" value={form.name} onChange={handle} required aria-required="true" placeholder="Alex Johnson" style={inp} onFocus={fi} onBlur={fo} aria-describedby={error ? 'cp-form-error' : undefined} />
                     </div>
                     <div>
-                      <label style={lbl}>Work Email *</label>
-                      <input name="email" type="email" value={form.email} onChange={handle} required placeholder="alex@company.com" style={inp} onFocus={fi} onBlur={fo} />
+                      <label htmlFor="cp-email" style={lbl}>Work Email *</label>
+                      <input id="cp-email" name="email" type="email" value={form.email} onChange={handle} required aria-required="true" placeholder="alex@company.com" style={inp} onFocus={fi} onBlur={fo} aria-describedby={error ? 'cp-form-error' : undefined} />
                     </div>
                   </div>
 
                   <div>
-                    <label style={lbl}>Company</label>
-                    <input name="company" value={form.company} onChange={handle} placeholder="Acme Corp" style={inp} onFocus={fi} onBlur={fo} />
+                    <label htmlFor="cp-company" style={lbl}>Company</label>
+                    <input id="cp-company" name="company" value={form.company} onChange={handle} placeholder="Acme Corp" style={inp} onFocus={fi} onBlur={fo} />
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
                     <div>
-                      <label style={lbl}>Project Type *</label>
-                      <select name="projectType" value={form.projectType} onChange={handle} required style={{ ...sel, color: form.projectType ? '#fff' : 'rgba(255,255,255,0.3)' }} onFocus={fi} onBlur={fo}>
+                      <label htmlFor="cp-projectType" style={lbl}>Project Type *</label>
+                      <select id="cp-projectType" name="projectType" value={form.projectType} onChange={handle} required aria-required="true" style={{ ...sel, color: form.projectType ? '#fff' : 'rgba(255,255,255,0.3)' }} onFocus={fi} onBlur={fo}>
                         <option value="" disabled>Select type</option>
                         {PROJECT_TYPES.map(t => <option key={t} value={t} style={{ background: '#111', color: '#fff' }}>{t}</option>)}
                       </select>
                     </div>
                     <div>
-                      <label style={lbl}>Budget Range</label>
-                      <select name="budget" value={form.budget} onChange={handle} style={{ ...sel, color: form.budget ? '#fff' : 'rgba(255,255,255,0.3)' }} onFocus={fi} onBlur={fo}>
+                      <label htmlFor="cp-budget" style={lbl}>Budget Range</label>
+                      <select id="cp-budget" name="budget" value={form.budget} onChange={handle} style={{ ...sel, color: form.budget ? '#fff' : 'rgba(255,255,255,0.3)' }} onFocus={fi} onBlur={fo}>
                         <option value="" disabled>Select range</option>
                         {BUDGETS.map(b => <option key={b} value={b} style={{ background: '#111', color: '#fff' }}>{b}</option>)}
                       </select>
@@ -311,19 +311,19 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label style={lbl}>Timeline</label>
-                    <select name="timeline" value={form.timeline} onChange={handle} style={{ ...sel, color: form.timeline ? '#fff' : 'rgba(255,255,255,0.3)' }} onFocus={fi} onBlur={fo}>
+                    <label htmlFor="cp-timeline" style={lbl}>Timeline</label>
+                    <select id="cp-timeline" name="timeline" value={form.timeline} onChange={handle} style={{ ...sel, color: form.timeline ? '#fff' : 'rgba(255,255,255,0.3)' }} onFocus={fi} onBlur={fo}>
                       <option value="" disabled>When do you need this?</option>
                       {TIMELINES.map(t => <option key={t} value={t} style={{ background: '#111', color: '#fff' }}>{t}</option>)}
                     </select>
                   </div>
 
                   <div>
-                    <label style={lbl}>Project Description *</label>
-                    <textarea name="description" value={form.description} onChange={handle} required placeholder="Tell us about your project, goals, tech requirements, and anything else that&apos;s important..." rows={5} style={{ ...inp, resize: 'vertical' as const, minHeight: 120 }} onFocus={fi} onBlur={fo} />
+                    <label htmlFor="cp-description" style={lbl}>Project Description *</label>
+                    <textarea id="cp-description" name="description" value={form.description} onChange={handle} required aria-required="true" placeholder="Tell us about your project, goals, tech requirements, and anything else that&apos;s important..." rows={5} style={{ ...inp, resize: 'vertical' as const, minHeight: 120 }} onFocus={fi} onBlur={fo} aria-describedby={error ? 'cp-form-error' : undefined} />
                   </div>
 
-                  {error && <div style={{ color: '#f5290d', fontSize: 13, fontWeight: 500, background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.2)', padding: '12px 16px', borderRadius: 12, marginTop: 4 }}>{error}</div>}
+                  {error && <div id="cp-form-error" role="alert" style={{ color: '#f5290d', fontSize: 13, fontWeight: 500, background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.2)', padding: '12px 16px', borderRadius: 12, marginTop: 4 }}>{error}</div>}
 
                   <button type="submit" disabled={isLoading} style={{ marginTop: 4, height: 60, borderRadius: 100, border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, background: isLoading ? 'rgba(245,41,13,0.5)' : '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, cursor: isLoading ? 'not-allowed' : 'pointer', transition: '0.3s', fontFamily: 'inherit' }}
                     onMouseEnter={e => { if(!isLoading){ e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.35)'; } }}
