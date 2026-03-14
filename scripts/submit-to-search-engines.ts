@@ -95,6 +95,20 @@ function generateUrls(): string[] {
     }
   }
 
+  // Blog posts
+  const blogSlugs = [
+    'top-10-unicorn-apps-2026', 'saas-guide', 'top-seo-companies-canada',
+    'top-software-development-companies-canada',
+    'app-development-cost-canada', 'ai-development-companies-canada',
+    'app-development-companies-edmonton', 'website-cost-canada',
+    'choose-software-development-company-canada', 'web-development-companies-toronto',
+    'saas-development-cost-canada', 'blockchain-development-companies-canada',
+    'digital-marketing-cost-canada', 'software-development-companies-calgary',
+  ];
+  for (const slug of blogSlugs) {
+    urls.push(`${SITE_URL}/blog/${slug}`);
+  }
+
   return urls;
 }
 
