@@ -3,28 +3,28 @@ import { useRef, useEffect } from 'react';
 
 const posts = [
   {
-    tag: 'Engineering',
-    title: 'How We Built a Real-Time Trading Engine Processing 2M+ Daily Transactions',
-    excerpt: 'A deep dive into the architecture decisions, ML pipeline, and infrastructure choices that allowed FinanceHub to scale from 10K to 2M daily transactions without a single production incident.',
+    tag: 'Business',
+    title: 'Top 10 Unicorn Apps of 2026',
+    excerpt: 'The mobile-first companies that crossed $1B valuation this year share a common thread: ruthless product discipline and engineering excellence.',
     readTime: '8 min read',
-    date: 'Mar 2025',
-    accent: '#f5290d',
+    date: 'Mar 2026',
+    href: '/blog/top-10-unicorn-apps-2026',
   },
   {
-    tag: 'Product Design',
-    title: 'The 5 UI Patterns That Reduced Our Client\'s Onboarding Drop-off by 60%',
-    excerpt: 'We analysed 12 months of user sessions for MediCore\'s telehealth platform and identified the exact friction points costing them 60% of new users. Here\'s what we changed — and the results.',
-    readTime: '6 min read',
-    date: 'Feb 2025',
-    accent: '#f5290d',
+    tag: 'Business',
+    title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026',
+    excerpt: 'Learn the exact blueprint non-technical founders use to build, launch, and scale successful B2B SaaS applications, and why custom architecture matters in 2026.',
+    readTime: '7 min read',
+    date: 'Mar 2026',
+    href: '/blog/saas-guide',
   },
   {
-    tag: 'Startup Strategy',
-    title: 'Why Fixed-Price Development Is the Only Model That Protects Founders',
-    excerpt: 'Time-and-materials billing creates a fundamental misalignment between agencies and clients. We explain why we built our entire business model around fixed-price contracts — and why it matters.',
-    readTime: '5 min read',
-    date: 'Jan 2025',
-    accent: '#f5290d',
+    tag: 'Digital Marketing',
+    title: 'Top 10 SEO Companies in Canada (2026)',
+    excerpt: 'A comprehensive, data-driven ranking of the top 10 SEO agencies in Canada for 2026, featuring Mapletech Labs and other industry leaders driving serious organic growth.',
+    readTime: '9 min read',
+    date: 'Mar 2026',
+    href: '/blog/top-seo-companies-canada',
   },
 ];
 
@@ -66,7 +66,7 @@ export default function InsightsSection() {
           {posts.map((post, i) => (
             <a
               key={post.title}
-              href="/blog"
+              href={post.href}
               className={`reveal reveal-d${i + 1}`}
               style={{
                 border: '1px solid rgba(255,255,255,0.07)',
