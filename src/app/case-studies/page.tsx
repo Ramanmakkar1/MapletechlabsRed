@@ -8,9 +8,9 @@ export const metadata = {
 };
 
 const projects = [
-  { client: 'FinanceHub', title: 'AI Trading Engine', category: 'FinTech', desc: 'Processing 2M+ transactions daily with real-time ML sentiment analysis and sub-50ms latency.', tags: ['Python', 'AWS', 'SageMaker'], metric: '2M+', metricLabel: 'Daily TXs' },
-  { client: 'MediCore', title: 'Telehealth Platform', category: 'Healthcare', desc: 'HIPAA-compliant platform connecting 100K+ patients with specialists via encrypted HD video.', tags: ['React Native', 'WebRTC', 'HealthKit'], metric: '100K+', metricLabel: 'Patients' },
-  { client: 'RetailX', title: 'Enterprise Commerce', category: 'Retail', desc: 'High-scale headless commerce handling 500K concurrent users during peak sale events.', tags: ['Next.js', 'Kubernetes', 'Redis'], metric: '500K', metricLabel: 'Concurrent Users' },
+  { client: 'Fintech Client', title: 'AI Trading Engine', category: 'FinTech', desc: 'Processing 2M+ transactions daily with real-time ML sentiment analysis and sub-50ms latency.', tags: ['Python', 'AWS', 'SageMaker'], metric: '2M+', metricLabel: 'Daily TXs' },
+  { client: 'Healthcare Client', title: 'Telehealth Platform', category: 'Healthcare', desc: 'HIPAA-compliant platform connecting 100K+ patients with specialists via encrypted HD video.', tags: ['React Native', 'WebRTC', 'HealthKit'], metric: '100K+', metricLabel: 'Patients' },
+  { client: 'E-Commerce Client', title: 'Enterprise Commerce', category: 'Retail', desc: 'High-scale headless commerce handling 500K concurrent users during peak sale events.', tags: ['Next.js', 'Kubernetes', 'Redis'], metric: '500K', metricLabel: 'Concurrent Users' },
 ];
 
 export default function CaseStudiesPage() {

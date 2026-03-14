@@ -155,7 +155,7 @@ export default function HealthcarePage() {
             <div className="reveal" style={{ border: '1px solid rgba(245,41,13,0.15)', borderRadius: 32, background: 'rgba(245,41,13,0.03)', padding: '3rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
               <div>
                 <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#f5290d', marginBottom: '0.5rem' }}>MediCore</div>
+                <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#f5290d', marginBottom: '0.5rem' }}>Healthcare Client</div>
                 <h3 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.2 }}>100K+ patients, 99.9% uptime, HIPAA audit passed</h3>
                 <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>We built their HIPAA-compliant telehealth platform from scratch — HL7 FHIR APIs, WebRTC video, and a full EHR integration suite.</p>
               </div>
@@ -164,7 +164,7 @@ export default function HealthcarePage() {
                   <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontStyle: 'italic', marginBottom: '1rem' }}>
                     "The Mapletech team understood healthcare compliance from day one. Zero audit findings."
                   </p>
-                  <cite style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.3)', fontStyle: 'normal' }}>— Chief Medical Officer, MediCore</cite>
+                  <cite style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.3)', fontStyle: 'normal' }}>— Chief Medical Officer, National Healthcare Provider</cite>
                 </blockquote>
               </div>
             </div>

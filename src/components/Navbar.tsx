@@ -470,7 +470,7 @@ export default function Navbar() {
                 <div style={{ position: 'absolute', top: -20, right: -20, width: 120, height: 120, background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 70%)', filter: 'blur(20px)' }} />
                 <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 10 }}>Featured Work</div>
                 <div style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.03em', marginBottom: 8 }}>AI Trading Engine</div>
-                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: 20 }}>Processing 2M+ transactions daily with real-time ML sentiment analysis for FinanceHub.</div>
+                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: 20 }}>Processing 2M+ transactions daily with real-time ML sentiment analysis for a leading fintech client.</div>
                 <Link href="#portfolio" onClick={() => setActiveMenu(null)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 12, fontWeight: 700, color: '#f5290d', textDecoration: 'none' }}
                   onMouseEnter={e => { e.currentTarget.style.gap = '12px'; }}
                   onMouseLeave={e => { e.currentTarget.style.gap = '8px'; }}

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const projects = [
   {
-    client: 'FinanceHub',
+    client: 'Fintech Client',
     title: 'AI Trading Engine',
     category: 'FinTech',
     desc: 'Processing 2M+ transactions daily with real-time ML sentiment analysis and sub-50ms latency.',
@@ -14,7 +14,7 @@ const projects = [
     image: '/images/portfolio-finance.png',
   },
   {
-    client: 'MediCore',
+    client: 'Healthcare Client',
     title: 'Telehealth Platform',
     category: 'Healthcare',
     desc: 'HIPAA-compliant platform connecting 100K+ patients with specialists via encrypted HD video.',
@@ -24,7 +24,7 @@ const projects = [
     image: '/images/portfolio-health.png',
   },
   {
-    client: 'RetailX',
+    client: 'E-Commerce Client',
     title: 'Enterprise Commerce',
     category: 'Retail',
     desc: 'High-scale headless commerce handling 500K concurrent users during peak sale events.',

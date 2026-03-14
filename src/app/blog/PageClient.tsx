@@ -31,7 +31,7 @@ const posts = [
   },
   {
     slug: 'top-seo-companies-canada',
-    category: 'Business',
+    category: 'Digital Marketing',
     title: 'Top 10 SEO Companies in Canada (2026)',
     excerpt: 'A comprehensive, data-driven ranking of the top 10 SEO agencies in Canada for 2026, featuring Mapletech Labs and other industry leaders driving serious organic growth.',
     author: 'RM',
@@ -41,13 +41,113 @@ const posts = [
   },
   {
     slug: 'top-software-development-companies-canada',
-    category: 'Business',
+    category: 'Engineering',
     title: 'Top 10 Software Development Companies in Canada (2026)',
     excerpt: 'Canada has emerged as a global powerhouse in technology. We ranked the absolute top 10 software companies doing the best engineering work across the country.',
     author: 'RM',
     authorName: 'Raman Makkar',
     date: 'Mar 2026',
     readTime: '10 min read',
+  },
+  {
+    slug: 'app-development-cost-canada',
+    category: 'Business',
+    title: 'How Much Does App Development Cost in Canada? (2026 Guide)',
+    excerpt: 'Complete breakdown of mobile app development costs in Canada — from simple MVPs to enterprise-grade platforms. Real pricing data from Canadian agencies.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'ai-development-companies-canada',
+    category: 'AI/ML',
+    title: 'Top 10 AI Development Companies in Canada (2026)',
+    excerpt: 'Ranking the best AI and machine learning development companies in Canada, from LLM integration specialists to computer vision experts.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'app-development-companies-edmonton',
+    category: 'Mobile',
+    title: 'Top 10 App Development Companies in Edmonton (2026)',
+    excerpt: 'Ranking the best mobile app development companies in Edmonton, Alberta — from homegrown startups to established agencies delivering world-class iOS and Android apps.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'website-cost-canada',
+    category: 'Business',
+    title: 'How Much Does a Website Cost in Canada? (2026 Guide)',
+    excerpt: 'From simple landing pages to complex web applications — a complete guide to website development costs across Canada with real pricing benchmarks.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '7 min read',
+  },
+  {
+    slug: 'choose-software-development-company-canada',
+    category: 'Business',
+    title: 'How to Choose a Software Development Company in Canada',
+    excerpt: 'Expert guide to selecting the right software development partner — what to look for, red flags to avoid, and questions every CTO should ask.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'web-development-companies-toronto',
+    category: 'Engineering',
+    title: 'Top 10 Web Development Companies in Toronto (2026)',
+    excerpt: 'Ranking the best web development companies in Toronto — from Next.js specialists to full-stack agencies building enterprise-grade digital products.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'saas-development-cost-canada',
+    category: 'Business',
+    title: 'How Much Does SaaS Development Cost in Canada? (2026)',
+    excerpt: 'Complete cost breakdown for building a SaaS product in Canada — MVP pricing, scaling costs, and what drives development budgets in 2026.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'blockchain-development-companies-canada',
+    category: 'Engineering',
+    title: 'Top 10 Blockchain Development Companies in Canada (2026)',
+    excerpt: 'Ranking the best blockchain and Web3 development companies in Canada — smart contracts, DeFi protocols, and enterprise blockchain solutions.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'digital-marketing-cost-canada',
+    category: 'Digital Marketing',
+    title: 'How Much Does Digital Marketing Cost in Canada? (2026)',
+    excerpt: 'Complete guide to digital marketing costs in Canada — SEO, PPC, social media, and content marketing pricing from top Canadian agencies.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '7 min read',
+  },
+  {
+    slug: 'software-development-companies-calgary',
+    category: 'Engineering',
+    title: 'Top 10 Software Development Companies in Calgary (2026)',
+    excerpt: 'Ranking the best software development companies in Calgary, Alberta — from energy-tech specialists to full-stack product studios.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '9 min read',
   },
 ];
 
@@ -57,12 +157,13 @@ const categoryColors: Record<string, string> = {
   Mobile: '#34d399',
   Design: '#f472b6',
   Business: '#f5290d',
+  'Digital Marketing': '#fb923c',
 };
 
 export default function BlogPage() {
   const pageRef = useReveal();
   const [activeCategory, setActiveCategory] = useState('All');
-  const categories = ['All', 'Engineering', 'AI/ML', 'Mobile', 'Design', 'Business'];
+  const categories = ['All', 'Engineering', 'AI/ML', 'Mobile', 'Business', 'Digital Marketing'];
 
   return (
     <>
@@ -222,9 +323,9 @@ export default function BlogPage() {
               Latest Articles
             </p>
             <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20,
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 20,
             }}>
-              {posts.map((post, i) => {
+              {posts.filter(p => activeCategory === 'All' || p.category === activeCategory).map((post, i) => {
                 const accentColor = categoryColors[post.category] || '#f5290d';
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>

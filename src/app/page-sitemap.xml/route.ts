@@ -10,6 +10,7 @@ export function GET() {
     { loc: `${BASE_URL}/blog`, lastmod: now, changefreq: 'weekly', priority: '0.7' },
     { loc: `${BASE_URL}/case-studies`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
     { loc: `${BASE_URL}/locations`, lastmod: now, changefreq: 'monthly', priority: '0.8' },
+    { loc: `${BASE_URL}/faq`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
   ]);
   return new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
 }

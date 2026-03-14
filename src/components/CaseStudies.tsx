@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     id: 1,
-    client: 'FinanceHub',
+    client: 'Fintech Client',
     title: 'AI-Powered Trading Platform',
     desc: 'Real-time algorithmic trading system processing 2M+ transactions daily with sub-millisecond latency.',
     tags: ['Python', 'React', 'AWS', 'ML'],
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: 2,
-    client: 'MediCore Health',
+    client: 'Healthcare Client',
     title: 'HIPAA-Compliant Patient Portal',
     desc: 'Telemedicine platform serving 100K+ patients with EHR integration and real-time video consultation.',
     tags: ['Next.js', 'Node.js', 'PostgreSQL'],
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     id: 3,
-    client: 'RetailX',
+    client: 'E-Commerce Client',
     title: 'Multi-Vendor E-Commerce Engine',
     desc: 'Headless commerce platform scaling to Black Friday — 500K concurrent users, zero downtime.',
     tags: ['Shopify API', 'React', 'Redis', 'Kubernetes'],
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     id: 4,
-    client: 'NexaCorp',
+    client: 'Enterprise Client',
     title: 'Enterprise ERP & Analytics',
     desc: 'Custom ERP replacing legacy system — 85% faster reporting, full supply chain visibility.',
     tags: ['React', 'Python', 'GraphQL', 'AWS'],

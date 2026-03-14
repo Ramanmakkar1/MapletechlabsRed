@@ -98,7 +98,7 @@ export default function About() {
               <div className="p-6 rounded-2xl bg-gray-50 border border-gray-100">
                 <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 mb-4">Trusted by</p>
                 <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-bold text-gray-400">
-                  {['Great American', 'Disney', 'JLL', 'Innovatech', 'NexaCorp', 'FinanceHub'].map(c => (
+                  {['Great American', 'Disney', 'JLL', 'Shopify Partners', 'AWS Partners', 'Google Cloud'].map(c => (
                     <span key={c} className="hover:text-gray-600 transition-colors cursor-default">{c}</span>
                   ))}
                 </div>

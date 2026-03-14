@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 const testimonials = [
   {
     name: 'Sarah J.',
-    role: 'CEO at FinStream',
+    role: 'CEO, Fintech Startup · Toronto',
     initials: 'SJ',
     color: '#f5290d',
     stars: 5,
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     name: 'Michael D.',
-    role: 'Head of Product at HealthSync',
+    role: 'Head of Product, Healthcare SaaS · Calgary',
     initials: 'MD',
     color: '#FF5733',
     stars: 5,
@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     name: 'Alex R.',
-    role: 'Founder of RetailX',
+    role: 'Founder, E-Commerce Platform · Edmonton',
     initials: 'AR',
     color: '#f5290d',
     stars: 5,

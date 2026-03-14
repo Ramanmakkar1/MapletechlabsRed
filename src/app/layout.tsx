@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -87,8 +88,9 @@ const organizationSchema = {
     addressCountry: "CA",
   },
   sameAs: [
-    "https://www.linkedin.com/company/mapletechlabs",
-    "https://twitter.com/mapletechlabs",
+    "https://www.linkedin.com/company/canadamapletechlabs/",
+    "https://www.facebook.com/Mapletechlabs/",
+    "https://www.instagram.com/mapletechlabs/",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -143,6 +145,7 @@ gtag('config', 'G-LLHNY6HD88');`,
           }}
         />
         {children}
+        <CookieConsent />
         <Analytics />
       </body>
     </html>

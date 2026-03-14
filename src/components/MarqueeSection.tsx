@@ -19,8 +19,8 @@ const techStack = [
 ];
 
 const clients = [
-  'Great American', 'Disney', 'JLL', 'Innovatech',
-  'NexaCorp', 'FinanceHub', 'MediCore', 'EduTech', 'RetailX',
+  'Great American', 'Disney', 'JLL', 'Shopify Partners',
+  'AWS Partners', 'Google Cloud', 'Stripe', 'Vercel', 'Twilio',
 ];
 
 function MarqueeRow({ items, direction = 1 }: { items: string[]; direction?: number }) {
