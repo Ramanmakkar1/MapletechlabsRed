@@ -20,6 +20,16 @@ function useReveal() {
 
 const posts = [
   {
+    slug: 'top-software-development-companies-canada',
+    category: 'Business',
+    title: 'Top 10 Software Development Companies in Canada (2026)',
+    excerpt: 'Canada has emerged as a global powerhouse in technology. We ranked the absolute top 10 software companies doing the best engineering work across the country.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '10 min read',
+  },
+  {
     slug: 'why-flutter-won-cross-platform',
     category: 'Engineering',
     title: 'Why Flutter Won the Cross-Platform War',

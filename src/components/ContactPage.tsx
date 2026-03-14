@@ -58,6 +58,8 @@ function useReveal() {
 export default function ContactPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const [form, setForm] = useState({ name: '', email: '', company: '', projectType: '', budget: '', timeline: '', description: '' });
 
   const heroRef = useRef<HTMLElement>(null);
@@ -74,7 +76,32 @@ export default function ContactPage() {
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm(p => ({ ...p, [e.target.name]: e.target.value }));
-  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => { e.preventDefault(); setSubmitted(true); };
+  
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setForm({ name: '', email: '', company: '', projectType: '', budget: '', timeline: '', description: '' });
+      } else {
+        const data = await res.json();
+        setError(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try again later.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const inp: React.CSSProperties = { width: '100%', padding: '15px 20px', fontSize: 15, fontFamily: 'inherit', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 14, color: '#fff', outline: 'none', transition: 'border 0.25s, box-shadow 0.25s' };
   const sel: React.CSSProperties = { ...inp, appearance: 'none' as const, backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='rgba(255,255,255,0.75)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 18px center' };
@@ -283,11 +310,13 @@ export default function ContactPage() {
                     <textarea name="description" value={form.description} onChange={handle} required placeholder="Tell us about your project, goals, tech requirements, and anything else that&apos;s important..." rows={5} style={{ ...inp, resize: 'vertical' as const, minHeight: 120 }} onFocus={fi} onBlur={fo} />
                   </div>
 
-                  <button type="submit" style={{ marginTop: 4, height: 60, borderRadius: 100, border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, cursor: 'pointer', transition: '0.3s', fontFamily: 'inherit' }}
-                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.35)'; }}
-                    onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
-                    Submit Enquiry
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  {error && <div style={{ color: '#f5290d', fontSize: 13, fontWeight: 500, background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.2)', padding: '12px 16px', borderRadius: 12, marginTop: 4 }}>{error}</div>}
+
+                  <button type="submit" disabled={isLoading} style={{ marginTop: 4, height: 60, borderRadius: 100, border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, background: isLoading ? 'rgba(245,41,13,0.5)' : '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, cursor: isLoading ? 'not-allowed' : 'pointer', transition: '0.3s', fontFamily: 'inherit' }}
+                    onMouseEnter={e => { if(!isLoading){ e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.35)'; } }}
+                    onMouseLeave={e => { if(!isLoading){ e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; } }}>
+                    {isLoading ? 'Sending Request...' : 'Submit Enquiry'}
+                    {!isLoading && <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>}
                   </button>
                 </form>
               )}
