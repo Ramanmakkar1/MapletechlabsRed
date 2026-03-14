@@ -20,6 +20,16 @@ function useReveal() {
 
 const posts = [
   {
+    slug: 'saas-guide',
+    category: 'Business',
+    title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026',
+    excerpt: 'Learn the exact blueprint non-technical founders use to build, launch, and scale successful B2B SaaS applications, and why custom architecture matters.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '7 min read',
+  },
+  {
     slug: 'top-software-development-companies-canada',
     category: 'Business',
     title: 'Top 10 Software Development Companies in Canada (2026)',
