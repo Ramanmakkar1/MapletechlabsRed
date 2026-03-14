@@ -2,7 +2,12 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-export default function ServiceHeroForm() {
+interface ServiceHeroFormProps {
+  service?: string;
+  city?: string;
+}
+
+export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps = {}) {
   const [form, setForm] = useState({ name: '', email: '', phone: '', budget: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -18,6 +23,8 @@ export default function ServiceHeroForm() {
         phone: form.phone,
         budget: form.budget,
         message: form.message,
+        ...(service && { service }),
+        ...(city && { city }),
       };
 
       await emailjs.send(

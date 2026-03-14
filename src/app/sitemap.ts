@@ -151,6 +151,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
+    {
+      url: `${BASE_URL}/blog/saas-guide`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
   ];
 
   const legalPages: MetadataRoute.Sitemap = [
@@ -164,6 +170,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
+  // Location pages
+  const locationCities = [
+    'edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal',
+    'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on',
+  ];
+
+  const locationPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/locations`, lastModified, changeFrequency: 'monthly' as const, priority: 0.8 },
+    ...locationCities.map((city) => ({
+      url: `${BASE_URL}/locations/${city}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+  ];
+
+  // City + Service combo pages (local SEO)
+  const serviceSlugs = [
+    'mobile-app-development', 'ai-ml', 'web-development', 'product-design',
+    'blockchain-web3', 'cloud-devops', 'ar-vr', 'digital-marketing',
+    'wordpress-cms', 'game-development', 'branding', 'saas-development',
+  ];
+
+  const cityServicePages: MetadataRoute.Sitemap = locationCities.flatMap((city) =>
+    serviceSlugs.map((service) => ({
+      url: `${BASE_URL}/locations/${city}/${service}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    }))
+  );
+
   return [
     ...mainPages,
     ...serviceCategories,
@@ -171,5 +209,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryPages,
     ...blogPosts,
     ...legalPages,
+    ...locationPages,
+    ...cityServicePages,
   ];
 }
