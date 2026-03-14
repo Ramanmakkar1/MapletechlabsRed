@@ -39,84 +39,62 @@ export default async function CityServicePage({ params }: PageProps) {
     notFound();
   }
 
-  // JSON-LD schemas
-  const serviceSchema = {
+  // Combined JSON-LD schema (single @graph to avoid duplicate field errors)
+  const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: `${data.serviceName} in ${data.cityName}`,
-    provider: {
-      '@type': 'Organization',
-      name: 'Mapletech Labs',
-      url: 'https://mapletechlabs.com',
-    },
-    areaServed: {
-      '@type': 'City',
-      name: data.cityName,
-      containedInPlace: {
-        '@type': 'AdministrativeArea',
-        name: data.province,
-      },
-    },
-    serviceType: data.serviceName,
-    description: data.description,
-    url: data.canonicalUrl,
-  };
-
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: `Mapletech Labs ${data.cityName}`,
-    url: `https://mapletechlabs.com/locations/${data.citySlug}`,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: data.cityName,
-      addressRegion: data.provinceAbbr,
-      addressCountry: 'CA',
-    },
-    priceRange: '$$$',
-    image: 'https://mapletechlabs.com/logo.png',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: data.faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.a,
-      },
-    })),
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+    '@graph': [
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://mapletechlabs.com',
+        '@type': 'Service',
+        name: `${data.serviceName} in ${data.cityName}`,
+        provider: {
+          '@type': 'Organization',
+          name: 'Mapletech Labs',
+          url: 'https://mapletechlabs.com',
+        },
+        areaServed: {
+          '@type': 'City',
+          name: data.cityName,
+          containedInPlace: {
+            '@type': 'AdministrativeArea',
+            name: data.province,
+          },
+        },
+        serviceType: data.serviceName,
+        description: data.description,
+        url: data.canonicalUrl,
       },
       {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Locations',
-        item: 'https://mapletechlabs.com/locations',
+        '@type': 'ProfessionalService',
+        name: `Mapletech Labs ${data.cityName}`,
+        url: `https://mapletechlabs.com/locations/${data.citySlug}`,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: data.cityName,
+          addressRegion: data.provinceAbbr,
+          addressCountry: 'CA',
+        },
+        priceRange: '$$$',
+        image: 'https://mapletechlabs.com/logo.png',
       },
       {
-        '@type': 'ListItem',
-        position: 3,
-        name: data.cityName,
-        item: `https://mapletechlabs.com/locations/${data.citySlug}`,
+        '@type': 'FAQPage',
+        mainEntity: data.faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a,
+          },
+        })),
       },
       {
-        '@type': 'ListItem',
-        position: 4,
-        name: data.serviceName,
-        item: data.canonicalUrl,
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.com' },
+          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.com/locations' },
+          { '@type': 'ListItem', position: 3, name: data.cityName, item: `https://mapletechlabs.com/locations/${data.citySlug}` },
+          { '@type': 'ListItem', position: 4, name: data.serviceName, item: data.canonicalUrl },
+        ],
       },
     ],
   };
@@ -125,19 +103,7 @@ export default async function CityServicePage({ params }: PageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <CityServicePageClient
         cityName={data.cityName}
