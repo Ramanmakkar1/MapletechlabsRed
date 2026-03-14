@@ -480,20 +480,20 @@ export default function CityServicePageClient(props: CityServicePageProps) {
               <div style={subLabel}>FAQ</div>
               <h2 style={heading2}>Frequently Asked Questions About {serviceName} in {cityName}</h2>
             </div>
-            <div className="reveal reveal-d1" itemScope itemType="https://schema.org/FAQPage" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div className="reveal reveal-d1" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {faqs.map((faq, i) => (
-                <div key={i} itemScope itemProp="mainEntity" itemType="https://schema.org/Question"
+                <div key={i}
                   style={{ background: openFaq === i ? 'rgba(245,41,13,0.04)' : 'rgba(255,255,255,0.02)', border: `1px solid ${openFaq === i ? 'rgba(245,41,13,0.2)' : 'rgba(255,255,255,0.07)'}`, borderRadius: 20, overflow: 'hidden', transition: 'border-color 0.3s, background 0.3s' }}>
-                  <button itemProp="name" onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 28px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                     <span style={{ fontSize: 16, fontWeight: 500, color: '#fff', textAlign: 'left', letterSpacing: '-0.01em' }}>{faq.q}</span>
                     <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'none' }}>
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={openFaq === i ? '#f5290d' : 'rgba(255,255,255,0.7)'} strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
                     </div>
                   </button>
-                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"
+                  <div
                     style={{ maxHeight: openFaq === i ? 500 : 0, overflow: 'hidden', transition: 'max-height 0.4s ease' }}>
-                    <p itemProp="text" style={{ padding: '0 28px 24px', margin: 0, fontSize: 15, color: 'rgba(255,255,255,0.44)', lineHeight: 1.75 }}>{faq.a}</p>
+                    <p style={{ padding: '0 28px 24px', margin: 0, fontSize: 15, color: 'rgba(255,255,255,0.44)', lineHeight: 1.75 }}>{faq.a}</p>
                   </div>
                 </div>
               ))}
