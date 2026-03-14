@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Software Development Company in Halifax | Mapletech Labs',
     description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Halifax, Nova Scotia. Get a free quote today.',
-    url: 'https://www.mapletechlabs.com/locations/halifax',
+    url: 'https://mapletechlabs.com/locations/halifax',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/locations/halifax',
+    canonical: 'https://mapletechlabs.com/locations/halifax',
   },
 };
 

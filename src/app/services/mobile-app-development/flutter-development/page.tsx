@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Flutter App Development Services | Mapletech Labs',
     description: 'Cross-platform Flutter app development by Mapletech Labs. Build beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.',
-    url: 'https://www.mapletechlabs.com/services/mobile-app-development/flutter-development',
+    url: 'https://mapletechlabs.com/services/mobile-app-development/flutter-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/mobile-app-development/flutter-development',
+    canonical: 'https://mapletechlabs.com/services/mobile-app-development/flutter-development',
   },
 };
 

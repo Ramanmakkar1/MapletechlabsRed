@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cross-Platform App Development | Mapletech Labs',
     description: 'Cross-platform mobile app development services. Mapletech Labs builds apps that run on iOS and Android with shared codebases and native performance.',
-    url: 'https://www.mapletechlabs.com/services/mobile-app-development/cross-platform-apps',
+    url: 'https://mapletechlabs.com/services/mobile-app-development/cross-platform-apps',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/mobile-app-development/cross-platform-apps',
+    canonical: 'https://mapletechlabs.com/services/mobile-app-development/cross-platform-apps',
   },
 };
 

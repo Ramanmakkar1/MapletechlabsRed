@@ -121,7 +121,7 @@ export default function WordPressCMSPage() {
         {/* STATS */}
         <section ref={s1} style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))' }}>
               {stats.map((s, i) => (
                 <div key={i} className="reveal" style={{ padding: '48px 0', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.07)' : 'none', paddingLeft: i > 0 ? 40 : 0, transitionDelay: `${i * 0.08}s` }}>
                   <div style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 600, color: '#f5290d', letterSpacing: '-0.03em', lineHeight: 1 }}>{s.value}</div>
@@ -140,7 +140,7 @@ export default function WordPressCMSPage() {
             </div>
             <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, letterSpacing: '-0.03em', margin: '0 0 16px' }}>WordPress & CMS Services</h2>
             <p className="reveal reveal-d2" style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 520, margin: '0 0 56px', lineHeight: 1.7 }}>Fast, secure and editable — everything from marketing sites to headless e-commerce.</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
               {services.map((svc, i) => (
                 <div key={i} className="reveal" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: '32px 28px', cursor: 'default', transition: '0.3s', transitionDelay: `${i * 0.07}s` }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.5)'; }}
@@ -183,7 +183,7 @@ export default function WordPressCMSPage() {
               <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Results</span>
             </div>
             <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, letterSpacing: '-0.03em', margin: '0 0 48px' }}>Sites That Perform</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
               {results.map((r, i) => (
                 <div key={i} className="reveal" style={{ background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.12)', borderRadius: 24, padding: '40px 32px', transitionDelay: `${i * 0.1}s` }}>
                   <div style={{ fontSize: 'clamp(2.5rem,4vw,3.5rem)', fontWeight: 700, color: '#f5290d', letterSpacing: '-0.04em', lineHeight: 1 }}>{r.value}</div>

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Computer Vision Development | Mapletech Labs',
     description: 'Custom computer vision solutions by Mapletech Labs. Image recognition, object detection, OCR, and visual AI for enterprise applications.',
-    url: 'https://www.mapletechlabs.com/services/ai-ml/computer-vision',
+    url: 'https://mapletechlabs.com/services/ai-ml/computer-vision',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/ai-ml/computer-vision',
+    canonical: 'https://mapletechlabs.com/services/ai-ml/computer-vision',
   },
 };
 

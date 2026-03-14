@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Predictive Analytics Services | Mapletech Labs',
     description: 'Predictive analytics and machine learning services. Mapletech Labs builds data-driven models for forecasting, recommendations, and business intelligence.',
-    url: 'https://www.mapletechlabs.com/services/ai-ml/predictive-analytics',
+    url: 'https://mapletechlabs.com/services/ai-ml/predictive-analytics',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/ai-ml/predictive-analytics',
+    canonical: 'https://mapletechlabs.com/services/ai-ml/predictive-analytics',
   },
 };
 

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fintech Software Development | Mapletech Labs',
     description: 'Custom fintech software development by Mapletech Labs. Payment platforms, banking apps, trading systems, and regulatory-compliant financial technology.',
-    url: 'https://www.mapletechlabs.com/industries/fintech',
+    url: 'https://mapletechlabs.com/industries/fintech',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/industries/fintech',
+    canonical: 'https://mapletechlabs.com/industries/fintech',
   },
 };
 

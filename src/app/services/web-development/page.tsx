@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Development Services | Mapletech Labs',
     description: 'Full-stack web development services by Mapletech Labs. Next.js, React, SaaS platforms, e-commerce, and enterprise portals built for performance.',
-    url: 'https://www.mapletechlabs.com/services/web-development',
+    url: 'https://mapletechlabs.com/services/web-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/web-development',
+    canonical: 'https://mapletechlabs.com/services/web-development',
   },
 };
 

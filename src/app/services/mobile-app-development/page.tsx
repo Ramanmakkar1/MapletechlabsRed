@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Mobile App Development Services | Mapletech Labs',
     description: 'Expert mobile app development services by Mapletech Labs. iOS, Android, Flutter, and React Native apps. 300+ apps shipped with 4.9-star average rating.',
-    url: 'https://www.mapletechlabs.com/services/mobile-app-development',
+    url: 'https://mapletechlabs.com/services/mobile-app-development',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/mobile-app-development',
+    canonical: 'https://mapletechlabs.com/services/mobile-app-development',
   },
 };
 

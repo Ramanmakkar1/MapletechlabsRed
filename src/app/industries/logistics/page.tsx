@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Logistics & Supply Chain Software | Mapletech Labs',
     description: 'Logistics and supply chain software by Mapletech Labs. Fleet management, route optimization, warehouse systems, and real-time tracking platforms.',
-    url: 'https://www.mapletechlabs.com/industries/logistics',
+    url: 'https://mapletechlabs.com/industries/logistics',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/industries/logistics',
+    canonical: 'https://mapletechlabs.com/industries/logistics',
   },
 };
 

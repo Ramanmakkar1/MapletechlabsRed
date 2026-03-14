@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://www.mapletechlabs.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://mapletechlabs.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -154,6 +154,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/blog/saas-guide`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/blog/top-seo-companies-canada`,
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.6,

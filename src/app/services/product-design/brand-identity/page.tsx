@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Brand Identity Design Services | Mapletech Labs',
     description: 'Custom brand identity design by Mapletech Labs. Logo design, visual identity systems, and brand guidelines for Canadian startups and enterprises. 100+ brands created.',
-    url: 'https://www.mapletechlabs.com/services/product-design/brand-identity',
+    url: 'https://mapletechlabs.com/services/product-design/brand-identity',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/product-design/brand-identity',
+    canonical: 'https://mapletechlabs.com/services/product-design/brand-identity',
   },
 };
 

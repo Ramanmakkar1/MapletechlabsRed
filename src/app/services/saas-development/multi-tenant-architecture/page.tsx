@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Multi-Tenant SaaS Architecture | Mapletech Labs',
     description: 'Scalable multi-tenant architecture with tenant isolation, RBAC, and custom domains.',
-    url: 'https://www.mapletechlabs.com/services/saas-development/multi-tenant-architecture',
+    url: 'https://mapletechlabs.com/services/saas-development/multi-tenant-architecture',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/saas-development/multi-tenant-architecture',
+    canonical: 'https://mapletechlabs.com/services/saas-development/multi-tenant-architecture',
   },
 };
 

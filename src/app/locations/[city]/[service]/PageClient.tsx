@@ -221,7 +221,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
             </div>
 
             {/* Large cards */}
-            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: 20, marginBottom: 20 }}>
               {largeServices.slice(0, 2).map(s => (
                 <div key={s.title} style={{ ...cardStyle, padding: '48px 44px', borderRadius: 32, position: 'relative', overflow: 'hidden' }}
                   onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>

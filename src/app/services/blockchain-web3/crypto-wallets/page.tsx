@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Crypto Wallet Development Services | Mapletech Labs',
     description: 'Custom crypto wallet development with multi-chain support, HD key management, and hardware wallet integration.',
-    url: 'https://www.mapletechlabs.com/services/blockchain-web3/crypto-wallets',
+    url: 'https://mapletechlabs.com/services/blockchain-web3/crypto-wallets',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/blockchain-web3/crypto-wallets',
+    canonical: 'https://mapletechlabs.com/services/blockchain-web3/crypto-wallets',
   },
 };
 

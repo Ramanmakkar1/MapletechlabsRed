@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Unreal Engine 5 Development | Mapletech Labs',
     description: 'Unreal Engine 5 game development with Lumen, Nanite, and Chaos Physics. AAA-quality games, simulations, and architectural visualization.',
-    url: 'https://www.mapletechlabs.com/services/game-development/unreal-engine',
+    url: 'https://mapletechlabs.com/services/game-development/unreal-engine',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/game-development/unreal-engine',
+    canonical: 'https://mapletechlabs.com/services/game-development/unreal-engine',
   },
 };
 

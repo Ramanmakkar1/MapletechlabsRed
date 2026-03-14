@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'WordPress Speed Optimisation | Mapletech Labs',
     description: 'Achieve 90+ PageSpeed scores with our WordPress speed optimisation — Core Web Vitals, caching, CDN, and image fixes.',
-    url: 'https://www.mapletechlabs.com/services/wordpress-cms/site-speed-optimisation',
+    url: 'https://mapletechlabs.com/services/wordpress-cms/site-speed-optimisation',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/wordpress-cms/site-speed-optimisation',
+    canonical: 'https://mapletechlabs.com/services/wordpress-cms/site-speed-optimisation',
   },
 };
 

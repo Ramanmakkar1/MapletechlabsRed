@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Mobile AR Development | Mapletech Labs',
     description: 'Mobile augmented reality development with ARKit and ARCore. Mapletech Labs builds immersive AR experiences for iOS and Android applications.',
-    url: 'https://www.mapletechlabs.com/services/ar-vr/mobile-ar',
+    url: 'https://mapletechlabs.com/services/ar-vr/mobile-ar',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/ar-vr/mobile-ar',
+    canonical: 'https://mapletechlabs.com/services/ar-vr/mobile-ar',
   },
 };
 

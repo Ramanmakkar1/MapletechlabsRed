@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI & Machine Learning Development | Mapletech Labs',
     description: 'Custom AI and machine learning solutions by Mapletech Labs. LLM integration, computer vision, predictive analytics, and AI automation for enterprises.',
-    url: 'https://www.mapletechlabs.com/services/ai-ml',
+    url: 'https://mapletechlabs.com/services/ai-ml',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/ai-ml',
+    canonical: 'https://mapletechlabs.com/services/ai-ml',
   },
 };
 

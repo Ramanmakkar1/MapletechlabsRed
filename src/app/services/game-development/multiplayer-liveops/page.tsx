@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Multiplayer & LiveOps Development | Mapletech Labs',
     description: 'We build scalable multiplayer game servers, matchmaking, and LiveOps systems that keep players engaged.',
-    url: 'https://www.mapletechlabs.com/services/game-development/multiplayer-liveops',
+    url: 'https://mapletechlabs.com/services/game-development/multiplayer-liveops',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/game-development/multiplayer-liveops',
+    canonical: 'https://mapletechlabs.com/services/game-development/multiplayer-liveops',
   },
 };
 

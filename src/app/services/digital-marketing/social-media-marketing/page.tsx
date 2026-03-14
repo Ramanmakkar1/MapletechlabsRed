@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Social Media Marketing Services | Mapletech Labs',
     description: 'Full-service social media marketing in Toronto. Strategy, content creation, community management, and paid social campaigns.',
-    url: 'https://www.mapletechlabs.com/services/digital-marketing/social-media-marketing',
+    url: 'https://mapletechlabs.com/services/digital-marketing/social-media-marketing',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/digital-marketing/social-media-marketing',
+    canonical: 'https://mapletechlabs.com/services/digital-marketing/social-media-marketing',
   },
 };
 

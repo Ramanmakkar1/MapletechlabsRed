@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'WebXR Development Services | Mapletech Labs',
     description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web applications accessible on any device.',
-    url: 'https://www.mapletechlabs.com/services/ar-vr/webxr-experiences',
+    url: 'https://mapletechlabs.com/services/ar-vr/webxr-experiences',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/ar-vr/webxr-experiences',
+    canonical: 'https://mapletechlabs.com/services/ar-vr/webxr-experiences',
   },
 };
 

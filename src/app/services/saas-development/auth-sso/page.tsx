@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SaaS Authentication & SSO Development | Mapletech Labs',
     description: 'Enterprise-ready auth with SAML SSO, MFA, RBAC, and audit logs for SaaS products.',
-    url: 'https://www.mapletechlabs.com/services/saas-development/auth-sso',
+    url: 'https://mapletechlabs.com/services/saas-development/auth-sso',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/saas-development/auth-sso',
+    canonical: 'https://mapletechlabs.com/services/saas-development/auth-sso',
   },
 };
 

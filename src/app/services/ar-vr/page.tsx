@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AR & VR Development Services | Mapletech Labs',
     description: 'Augmented and virtual reality development by Mapletech Labs. Mobile AR, VR applications, WebXR, Apple Vision Pro, and industrial AR solutions.',
-    url: 'https://www.mapletechlabs.com/services/ar-vr',
+    url: 'https://mapletechlabs.com/services/ar-vr',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/ar-vr',
+    canonical: 'https://mapletechlabs.com/services/ar-vr',
   },
 };
 

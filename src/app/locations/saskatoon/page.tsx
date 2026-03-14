@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Software Development Company in Saskatoon | Mapletech Labs',
     description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Saskatoon, Saskatchewan. Get a free quote today.',
-    url: 'https://www.mapletechlabs.com/locations/saskatoon',
+    url: 'https://mapletechlabs.com/locations/saskatoon',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/locations/saskatoon',
+    canonical: 'https://mapletechlabs.com/locations/saskatoon',
   },
 };
 

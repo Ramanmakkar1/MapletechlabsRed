@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Chatbot Development | Mapletech Labs',
     description: 'Custom AI chatbot development services. Mapletech Labs builds intelligent conversational agents for customer support, sales, and internal operations.',
-    url: 'https://www.mapletechlabs.com/services/ai-ml/ai-chatbots',
+    url: 'https://mapletechlabs.com/services/ai-ml/ai-chatbots',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/ai-ml/ai-chatbots',
+    canonical: 'https://mapletechlabs.com/services/ai-ml/ai-chatbots',
   },
 };
 

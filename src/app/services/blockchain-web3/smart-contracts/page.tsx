@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Smart Contract Development | Mapletech Labs',
     description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds secure DeFi, NFT, and DAO smart contracts.',
-    url: 'https://www.mapletechlabs.com/services/blockchain-web3/smart-contracts',
+    url: 'https://mapletechlabs.com/services/blockchain-web3/smart-contracts',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/blockchain-web3/smart-contracts',
+    canonical: 'https://mapletechlabs.com/services/blockchain-web3/smart-contracts',
   },
 };
 

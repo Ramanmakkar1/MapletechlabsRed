@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'CI/CD Pipeline Development Services | Mapletech Labs',
     description: 'Automated CI/CD pipelines by Mapletech Labs Toronto. GitHub Actions, blue-green deploys, and zero-downtime releases. 100+ pipelines built for Canadian teams.',
-    url: 'https://www.mapletechlabs.com/services/cloud-devops/ci-cd-pipelines',
+    url: 'https://mapletechlabs.com/services/cloud-devops/ci-cd-pipelines',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/cloud-devops/ci-cd-pipelines',
+    canonical: 'https://mapletechlabs.com/services/cloud-devops/ci-cd-pipelines',
   },
 };
 

@@ -47,7 +47,7 @@ export default async function CityServicePage({ params }: PageProps) {
     provider: {
       '@type': 'Organization',
       name: 'Mapletech Labs',
-      url: 'https://www.mapletechlabs.com',
+      url: 'https://mapletechlabs.com',
     },
     areaServed: {
       '@type': 'City',
@@ -66,7 +66,7 @@ export default async function CityServicePage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: `Mapletech Labs ${data.cityName}`,
-    url: `https://www.mapletechlabs.com/locations/${data.citySlug}`,
+    url: `https://mapletechlabs.com/locations/${data.citySlug}`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: data.cityName,
@@ -74,7 +74,7 @@ export default async function CityServicePage({ params }: PageProps) {
       addressCountry: 'CA',
     },
     priceRange: '$$$',
-    image: 'https://www.mapletechlabs.com/logo.png',
+    image: 'https://mapletechlabs.com/logo.png',
   };
 
   const faqSchema = {
@@ -98,19 +98,19 @@ export default async function CityServicePage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.mapletechlabs.com',
+        item: 'https://mapletechlabs.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Locations',
-        item: 'https://www.mapletechlabs.com/locations',
+        item: 'https://mapletechlabs.com/locations',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: data.cityName,
-        item: `https://www.mapletechlabs.com/locations/${data.citySlug}`,
+        item: `https://mapletechlabs.com/locations/${data.citySlug}`,
       },
       {
         '@type': 'ListItem',

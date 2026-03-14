@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'WooCommerce Store Development | Mapletech Labs',
     description: 'WooCommerce store development services. Mapletech Labs builds high-converting online stores with custom plugins, payment gateways, and integrations.',
-    url: 'https://www.mapletechlabs.com/services/wordpress-cms/woocommerce-stores',
+    url: 'https://mapletechlabs.com/services/wordpress-cms/woocommerce-stores',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/wordpress-cms/woocommerce-stores',
+    canonical: 'https://mapletechlabs.com/services/wordpress-cms/woocommerce-stores',
   },
 };
 

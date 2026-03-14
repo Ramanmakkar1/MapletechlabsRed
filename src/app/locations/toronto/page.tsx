@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Software Development Company in Toronto | Mapletech Labs',
     description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Toronto, Ontario. Get a free quote today.',
-    url: 'https://www.mapletechlabs.com/locations/toronto',
+    url: 'https://mapletechlabs.com/locations/toronto',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/locations/toronto',
+    canonical: 'https://mapletechlabs.com/locations/toronto',
   },
 };
 

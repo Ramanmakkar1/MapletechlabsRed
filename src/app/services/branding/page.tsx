@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Branding & Identity Services | Mapletech Labs',
     description: 'Strategic branding services by Mapletech Labs. Brand strategy, logo design, visual identity, brand guidelines, rebranding, and motion graphics.',
-    url: 'https://www.mapletechlabs.com/services/branding',
+    url: 'https://mapletechlabs.com/services/branding',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/branding',
+    canonical: 'https://mapletechlabs.com/services/branding',
   },
 };
 

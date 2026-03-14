@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.mapletechlabs.com"),
+  metadataBase: new URL("https://mapletechlabs.com"),
   title: {
     default: "Mapletech Labs | Custom Software Development Company",
     template: "%s | Mapletech Labs",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://www.mapletechlabs.com",
+    url: "https://mapletechlabs.com",
     siteName: "Mapletech Labs",
     title: "Mapletech Labs | Custom Software Development Company",
     description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.mapletechlabs.com",
+    canonical: "https://mapletechlabs.com",
   },
   verification: {
     google: "bk5xt83LIShhQ9QrejYXCOg9lXhZubSY9ksIEtYrIVs",
@@ -75,8 +75,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Mapletech Labs",
-  url: "https://www.mapletechlabs.com",
-  logo: "https://www.mapletechlabs.com/logo.png",
+  url: "https://mapletechlabs.com",
+  logo: "https://mapletechlabs.com/logo.png",
   description:
     "Custom software development company founded by Raman Makkar in Edmonton, Canada. 12 locations across Canada. Best agents from around the world working virtually.",
   address: {

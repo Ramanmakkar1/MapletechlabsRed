@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO Services Toronto | Mapletech Labs',
     description: 'Results-driven SEO services in Toronto & across Canada. Technical SEO, link building, local SEO, and content strategy.',
-    url: 'https://www.mapletechlabs.com/services/digital-marketing/seo-services',
+    url: 'https://mapletechlabs.com/services/digital-marketing/seo-services',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/digital-marketing/seo-services',
+    canonical: 'https://mapletechlabs.com/services/digital-marketing/seo-services',
   },
 };
 

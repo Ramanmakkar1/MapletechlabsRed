@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EdTech Software Development | Mapletech Labs',
     description: 'Custom EdTech software development by Mapletech Labs. Learning management systems, virtual classrooms, assessment tools, and educational apps.',
-    url: 'https://www.mapletechlabs.com/industries/edtech',
+    url: 'https://mapletechlabs.com/industries/edtech',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/industries/edtech',
+    canonical: 'https://mapletechlabs.com/industries/edtech',
   },
 };
 

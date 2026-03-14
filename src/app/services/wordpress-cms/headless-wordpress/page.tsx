@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Headless WordPress Development | Mapletech Labs',
     description: 'Combine WordPress CMS with Next.js speed. Decoupled architecture for 3x faster load times and global CDN delivery.',
-    url: 'https://www.mapletechlabs.com/services/wordpress-cms/headless-wordpress',
+    url: 'https://mapletechlabs.com/services/wordpress-cms/headless-wordpress',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/wordpress-cms/headless-wordpress',
+    canonical: 'https://mapletechlabs.com/services/wordpress-cms/headless-wordpress',
   },
 };
 

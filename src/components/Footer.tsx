@@ -3,10 +3,52 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const cols = [
-  { title: 'Services', links: [['Mobile Apps', '/services/mobile-app-development'], ['Web Systems', '#services'], ['AI Solutions', '#services'], ['Product Design', '#services'], ['Blockchain', '#services']] },
-  { title: 'Company', links: [['About Us', '#about'], ['Case Studies', '#portfolio'], ['R&D Labs', '#labs'], ['Careers', '#contact'], ['Press', '#contact']] },
-  { title: 'Industries', links: [['FinTech', '#industries'], ['Healthcare', '#industries'], ['E-Commerce', '#industries'], ['Logistics', '#industries'], ['Enterprise', '#industries']] },
+const services = [
+  { label: 'Mobile App Development', href: '/services/mobile-app-development' },
+  { label: 'Web Development', href: '/services/web-development' },
+  { label: 'AI & Machine Learning', href: '/services/ai-ml' },
+  { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+  { label: 'Blockchain & Web3', href: '/services/blockchain-web3' },
+  { label: 'Product Design', href: '/services/product-design' },
+  { label: 'SaaS Development', href: '/services/saas-development' },
+  { label: 'Digital Marketing', href: '/services/digital-marketing' },
+  { label: 'AR / VR', href: '/services/ar-vr' },
+  { label: 'Game Development', href: '/services/game-development' },
+  { label: 'WordPress & CMS', href: '/services/wordpress-cms' },
+  { label: 'Branding', href: '/services/branding' },
+];
+
+const industries = [
+  { label: 'FinTech', href: '/industries/fintech' },
+  { label: 'Healthcare', href: '/industries/healthcare' },
+  { label: 'E-Commerce', href: '/industries/ecommerce' },
+  { label: 'Logistics', href: '/industries/logistics' },
+  { label: 'EdTech', href: '/industries/edtech' },
+  { label: 'Enterprise', href: '/industries/enterprise' },
+];
+
+const company = [
+  { label: 'About Us', href: '/about' },
+  { label: 'Case Studies', href: '/case-studies' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Locations', href: '/locations' },
+  { label: 'All Services', href: '/services' },
+];
+
+const locations = [
+  { label: 'Toronto', href: '/locations/toronto' },
+  { label: 'Vancouver', href: '/locations/vancouver' },
+  { label: 'Calgary', href: '/locations/calgary' },
+  { label: 'Edmonton', href: '/locations/edmonton' },
+  { label: 'Ottawa', href: '/locations/ottawa' },
+  { label: 'Montreal', href: '/locations/montreal' },
+  { label: 'Kitchener-Waterloo', href: '/locations/kitchener' },
+  { label: 'London, ON', href: '/locations/london-on' },
+  { label: 'Winnipeg', href: '/locations/winnipeg' },
+  { label: 'Halifax', href: '/locations/halifax' },
+  { label: 'Victoria', href: '/locations/victoria' },
+  { label: 'Saskatoon', href: '/locations/saskatoon' },
 ];
 
 const socials = [
@@ -32,52 +74,100 @@ const socials = [
   },
 ];
 
+function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link
+      href={href}
+      style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.4, display: 'block' }}
+      onMouseEnter={e => { e.currentTarget.style.color = '#fff'; }}
+      onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
+    >
+      {children}
+    </Link>
+  );
+}
+
+function ColTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <div style={{ fontSize: 12, fontWeight: 700, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 20 }}>
+      {children}
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
-    <footer style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)', padding: '100px 0 48px' }}>
-      <div className="cb-container">
-        <div className="footer-grid" style={{ marginBottom: 80 }}>
+    <footer style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
 
-          {/* Brand */}
+      {/* CTA Banner */}
+      <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="cb-container" style={{ padding: 'clamp(48px, 8vw, 80px) 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
-              <Image
-                src="/logo.png"
-                alt="Mapletech Labs"
-                width={250}
-                height={100}
-                style={{ height: 'clamp(50px, 8vw, 80px)', width: 'auto', objectFit: 'contain' as const }}
-              />
-            </div>
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, maxWidth: 300, marginBottom: 28 }}>
-              World-class software engineering for the companies shaping tomorrow. Offices across 12 countries.
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
+              Ready to build something great?
+            </h2>
+            <p style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)', color: 'rgba(255,255,255,0.5)', margin: 0, lineHeight: 1.6 }}>
+              Let&apos;s turn your idea into a world-class digital product.
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 32px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s', whiteSpace: 'nowrap', flexShrink: 0 }}
+            onMouseEnter={e => { e.currentTarget.style.background = '#d9220b'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(245,41,13,0.35)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background = '#f5290d'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'none'; }}
+          >
+            Start a Project
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </Link>
+        </div>
+      </div>
+
+      {/* Main Footer Grid */}
+      <div className="cb-container" style={{ padding: 'clamp(48px, 8vw, 80px) 0' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: 'clamp(32px, 5vw, 48px)' }}>
+
+          {/* Brand Column */}
+          <div style={{ gridColumn: 'span 1' }}>
+            <Image
+              src="/logo.png"
+              alt="Mapletech Labs"
+              width={250}
+              height={100}
+              style={{ height: 'clamp(40px, 6vw, 60px)', width: 'auto', objectFit: 'contain' as const, marginBottom: 20 }}
+            />
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, maxWidth: 280, marginBottom: 20 }}>
+              World-class software engineering for companies ready to lead their industry. Based in Canada, building globally.
             </p>
 
-            {/* Contact Info */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
-              <a href="tel:+14036048692" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontSize: 15, transition: '0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.8)'}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            {/* Contact */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
+              <a href="tel:+14036048692" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 +1 (403) 604-8692
               </a>
-              <a href="mailto:hello@townmedilabs.com" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontSize: 15, transition: '0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.8)'}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                hello@townmedilabs.com
+              <a href="mailto:hello@mapletechlabs.com" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                hello@mapletechlabs.com
               </a>
-            </div>
-
-            {/* Status */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 28 }}>
-              <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 8px #f5290d' }} />
-              <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.08em', textTransform: 'uppercase' }}>All Systems Operational</span>
             </div>
 
             {/* Socials */}
-            <div style={{ display: 'flex', gap: 10 }}>
+            <div style={{ display: 'flex', gap: 8 }}>
               {socials.map(s => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  style={{ width: 38, height: 38, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: '0.25s' }}
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ width: 36, height: 36, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: '0.25s' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; e.currentTarget.style.color = '#f5290d'; e.currentTarget.style.background = 'rgba(245,41,13,0.08)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; e.currentTarget.style.background = 'transparent'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.4)'; e.currentTarget.style.background = 'transparent'; }}
                   aria-label={s.label}
                 >
                   {s.icon}
@@ -86,31 +176,64 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
-          {cols.map(col => (
-            <div key={col.title}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 28 }}>{col.title}</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                {col.links.map(([label, href]) => (
-                  <Link key={label} href={href} style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', textDecoration: 'none', transition: '0.2s' }}
-                    onMouseEnter={e => { e.currentTarget.style.color = '#fff'; }}
-                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; }}
-                  >{label}</Link>
+          {/* Services Column */}
+          <div>
+            <ColTitle>Services</ColTitle>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {services.map(s => (
+                <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
+              ))}
+            </div>
+          </div>
+
+          {/* Industries Column */}
+          <div>
+            <ColTitle>Industries</ColTitle>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {industries.map(s => (
+                <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
+              ))}
+            </div>
+
+            <div style={{ marginTop: 28 }}>
+              <ColTitle>Company</ColTitle>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {company.map(s => (
+                  <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
                 ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Bottom bar */}
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', paddingTop: 36, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
-          <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.2)' }}>© 2025 Mapletech Labs Inc. All rights reserved.</span>
-          <div style={{ display: 'flex', gap: 32 }}>
+          {/* Locations Column */}
+          <div>
+            <ColTitle>Locations</ColTitle>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {locations.map(s => (
+                <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="cb-container" style={{ padding: '24px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>
+            &copy; {new Date().getFullYear()} Mapletech Labs Inc. All rights reserved.
+          </span>
+          <div style={{ display: 'flex', gap: 'clamp(16px, 3vw, 32px)', flexWrap: 'wrap' }}>
             {[['Privacy Policy', '/privacy'], ['Terms of Service', '/terms'], ['Cookie Policy', '/cookies']].map(([label, href]) => (
-              <Link key={label} href={href} style={{ fontSize: 13, color: 'rgba(255,255,255,0.2)', textDecoration: 'none', transition: '0.2s' }}
+              <Link
+                key={label}
+                href={href}
+                style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', textDecoration: 'none', transition: 'color 0.2s' }}
                 onMouseEnter={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
                 onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.2)'; }}
-              >{label}</Link>
+              >
+                {label}
+              </Link>
             ))}
           </div>
         </div>

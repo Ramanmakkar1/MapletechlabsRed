@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Product Design & UI/UX Services | Mapletech Labs',
     description: 'Product design and UI/UX services by Mapletech Labs. User research, wireframing, prototyping, and design systems that drive user engagement.',
-    url: 'https://www.mapletechlabs.com/services/product-design',
+    url: 'https://mapletechlabs.com/services/product-design',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/product-design',
+    canonical: 'https://mapletechlabs.com/services/product-design',
   },
 };
 

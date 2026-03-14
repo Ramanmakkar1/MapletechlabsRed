@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Automation Solutions | Mapletech Labs',
     description: 'AI-powered automation solutions by Mapletech Labs. Automate workflows, processes, and decision-making with custom artificial intelligence systems.',
-    url: 'https://www.mapletechlabs.com/services/ai-ml/ai-automation',
+    url: 'https://mapletechlabs.com/services/ai-ml/ai-automation',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.mapletechlabs.com/services/ai-ml/ai-automation',
+    canonical: 'https://mapletechlabs.com/services/ai-ml/ai-automation',
   },
 };
 
