@@ -271,6 +271,8 @@ h1,h2,h3,h4,h5,h6 {
   .testimonials-heading-grid { grid-template-columns: 1fr; gap: 16px; }
   .tech-categories-grid { grid-template-columns: 1fr; }
   .portfolio-tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
+  .portfolio-tabs button { padding: 10px 20px !important; font-size: 12px !important; white-space: nowrap; flex-shrink: 0; }
+  .portfolio-visual { min-height: 240px !important; }
   .hero-container { padding: 32px 20px 60px; gap: 36px; }
 }
 @media (max-width: 480px) {
@@ -319,6 +321,19 @@ h1,h2,h3,h4,h5,h6 {
 
   /* Cards tighter on small screens */
   .card-clean { padding: 24px; border-radius: 16px; }
+
+  /* Hero buttons stack on small phones */
+  .h-btns { flex-direction: column; align-items: stretch; }
+  .h-btns > a { justify-content: center; text-align: center; }
+}
+
+/* ── EXTRA SMALL SCREENS (320px) ──────────────── */
+@media (max-width: 360px) {
+  .cb-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  .hero-container { padding: 20px 12px 40px; }
 }
 
 /* ── Mobile Responsiveness ─────────────────────── */
@@ -558,4 +573,93 @@ textarea:focus-visible {
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
   box-shadow: 0 4px 30px rgba(0,0,0,0.5) !important;
+}
+
+/* ── MOBILE RESPONSIVENESS FIXES (320px–768px) ── */
+
+/* StickyCTA: ensure button has proper touch target and text wraps */
+@media (max-width: 768px) {
+  .sticky-cta-text {
+    font-size: 13px !important;
+  }
+}
+
+/* Comparison table: column header labels smaller on mobile */
+@media (max-width: 768px) {
+  .comparison-table {
+    border-radius: 20px !important;
+  }
+  .comparison-table-inner {
+    min-width: 520px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-table {
+    border-radius: 16px !important;
+  }
+  .comparison-table-inner {
+    min-width: 480px !important;
+  }
+}
+
+/* Process step: hide vertical timeline on mobile */
+@media (max-width: 768px) {
+  .process-step {
+    padding-left: clamp(16px, 4vw, 48px) !important;
+  }
+  .process-step .process-step-circle {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin-bottom: 8px;
+  }
+}
+
+/* Cookie consent responsive */
+@media (max-width: 480px) {
+  .cookie-consent-banner {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
+  }
+  .cookie-consent-buttons {
+    flex-direction: column !important;
+  }
+  .cookie-consent-buttons button {
+    width: 100% !important;
+    min-height: 44px !important;
+  }
+}
+
+/* Breadcrumb mobile font sizing */
+@media (max-width: 480px) {
+  .breadcrumb-nav ol {
+    font-size: 12px !important;
+    gap: 4px !important;
+  }
+}
+
+/* Footer social icons touch targets */
+@media (max-width: 768px) {
+  .footer-social-icon {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* FAQ accordion touch targets */
+@media (max-width: 768px) {
+  .faq-question-btn {
+    padding: clamp(16px, 3vw, 28px) 0 !important;
+    min-height: 44px;
+  }
+  .faq-question-btn span {
+    font-size: clamp(15px, 3.5vw, 17px) !important;
+  }
 }

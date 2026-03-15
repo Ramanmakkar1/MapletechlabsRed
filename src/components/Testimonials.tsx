@@ -51,7 +51,7 @@ const testimonials = [
 function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
   return (
     <div
-      className="flex-shrink-0 w-full sm:w-[350px] lg:w-[380px] mx-4 glass-dark rounded-2xl p-7 border border-white/6 hover-lift"
+      className="flex-shrink-0 w-[min(320px,80vw)] sm:w-[350px] lg:w-[380px] mx-2 sm:mx-4 glass-dark rounded-2xl p-5 sm:p-7 border border-white/6 hover-lift"
       style={{ position: 'relative', transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)' }}
     >
       {/* Quote mark */}
@@ -119,14 +119,14 @@ export default function Testimonials() {
   const doubled2 = [...testimonials.slice(3), ...testimonials.slice(3)];
 
   return (
-    <section className="section-dark py-24 lg:py-32 overflow-hidden border-t border-white/5">
+    <section className="section-dark py-12 sm:py-24 lg:py-32 overflow-hidden border-t border-white/5">
       {/* Orbs */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] orb-violet orb opacity-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-16">
         <div className="text-center">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-violet-400 mb-4">Client Stories</p>
-          <h2 className="text-4xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-white tracking-tight leading-tight">
             Loved by teams<br />
             <span className="gradient-text">at great companies.</span>
           </h2>

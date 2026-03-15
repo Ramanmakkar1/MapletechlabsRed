@@ -73,7 +73,7 @@ function FooterLink({ href, children, lang }: { href: string; children: React.Re
   return (
     <Link
       href={href}
-      style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.4, display: 'block', padding: '8px 0' }}
+      style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.4, display: 'flex', alignItems: 'center', padding: '8px 0', minHeight: 44 }}
       onMouseEnter={e => { e.currentTarget.style.color = '#fff'; }}
       onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
     >
@@ -153,14 +153,15 @@ export default function Footer() {
             </div>
 
             {/* Socials */}
-            <div style={{ display: 'flex', gap: 8 }}>
+            <div style={{ display: 'flex', gap: 10 }}>
               {socials.map(s => (
                 <a
                   key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ width: 36, height: 36, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: '0.25s' }}
+                  className="footer-social-icon"
+                  style={{ width: 44, height: 44, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: '0.25s' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; e.currentTarget.style.color = '#f5290d'; e.currentTarget.style.background = 'rgba(245,41,13,0.08)'; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.4)'; e.currentTarget.style.background = 'transparent'; }}
                   aria-label={s.label}
@@ -174,7 +175,7 @@ export default function Footer() {
           {/* Services Column */}
           <nav aria-label="Footer services links">
             <ColTitle>Services</ColTitle>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {services.map(s => (
                 <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
               ))}
@@ -185,7 +186,7 @@ export default function Footer() {
           <div>
             <nav aria-label="Footer industries links">
               <ColTitle>Industries</ColTitle>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 {industries.map(s => (
                   <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
                 ))}
@@ -194,7 +195,7 @@ export default function Footer() {
 
             <nav aria-label="Footer company links" style={{ marginTop: 28 }}>
               <ColTitle>Company</ColTitle>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 {company.map(s => (
                   <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
                 ))}
@@ -205,7 +206,7 @@ export default function Footer() {
           {/* Locations Column */}
           <nav aria-label="Footer locations links">
             <ColTitle>Locations</ColTitle>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {locations.map(s => (
                 <FooterLink key={s.label} href={s.href} lang={'lang' in s ? s.lang : undefined}>{s.label}</FooterLink>
               ))}
@@ -216,7 +217,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-        <div className="cb-container" style={{ padding: '24px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
+        <div className="cb-container" style={{ padding: 'clamp(16px, 3vw, 24px) 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>
             &copy; {new Date().getFullYear()} Mapletech Labs Inc. All rights reserved.
           </span>

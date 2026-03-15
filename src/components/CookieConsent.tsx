@@ -30,19 +30,20 @@ export default function CookieConsent() {
     <div
       style={{
         position: 'fixed',
-        bottom: 24,
-        left: 24,
-        right: 24,
+        bottom: 'clamp(12px, 3vw, 24px)',
+        left: 'clamp(12px, 3vw, 24px)',
+        right: 'clamp(12px, 3vw, 24px)',
         maxWidth: 480,
         zIndex: 9999,
         background: 'rgba(10,10,10,0.95)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
         border: '1px solid rgba(255,255,255,0.1)',
-        borderRadius: 20,
-        padding: '24px 28px',
+        borderRadius: 'clamp(14px, 3vw, 20px)',
+        padding: 'clamp(16px, 3vw, 24px) clamp(16px, 3vw, 28px)',
         boxShadow: '0 20px 60px rgba(0,0,0,0.6)',
         animation: 'slideUp 0.4s ease-out',
+        boxSizing: 'border-box' as const,
       }}
     >
       <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, margin: '0 0 16px' }}>
@@ -51,19 +52,20 @@ export default function CookieConsent() {
           Learn more
         </Link>
       </p>
-      <div style={{ display: 'flex', gap: 10 }}>
+      <div className="cookie-consent-buttons" style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
         <button
           onClick={accept}
           style={{
-            padding: '10px 24px',
+            padding: '12px 24px',
             borderRadius: 100,
             background: '#f5290d',
             color: '#fff',
-            fontSize: 13,
+            fontSize: 14,
             fontWeight: 700,
             border: 'none',
             cursor: 'pointer',
             transition: 'opacity 0.2s',
+            minHeight: 44,
           }}
         >
           Accept
@@ -71,15 +73,16 @@ export default function CookieConsent() {
         <button
           onClick={decline}
           style={{
-            padding: '10px 24px',
+            padding: '12px 24px',
             borderRadius: 100,
             background: 'transparent',
             color: 'rgba(255,255,255,0.5)',
-            fontSize: 13,
+            fontSize: 14,
             fontWeight: 600,
             border: '1px solid rgba(255,255,255,0.1)',
             cursor: 'pointer',
             transition: 'all 0.2s',
+            minHeight: 44,
           }}
         >
           Decline

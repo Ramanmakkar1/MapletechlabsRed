@@ -7,16 +7,16 @@ interface BreadcrumbItem {
 
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav aria-label="Breadcrumb" style={{ padding: '20px 0 0' }}>
+    <nav aria-label="Breadcrumb" className="breadcrumb-nav" style={{ padding: 'clamp(12px, 3vw, 20px) 0 0' }}>
       <ol style={{
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
-        gap: 8,
+        gap: 'clamp(4px, 1vw, 8px)',
         listStyle: 'none',
         margin: 0,
         padding: 0,
-        fontSize: 13,
+        fontSize: 'clamp(12px, 2.5vw, 13px)',
       }}>
         {items.map((item, i) => (
           <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

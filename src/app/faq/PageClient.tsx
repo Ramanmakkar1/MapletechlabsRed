@@ -57,7 +57,7 @@ export default function FAQPageClient() {
       <main ref={ref} style={{ background: '#000', minHeight: '100vh' }}>
 
         {/* Hero */}
-        <section style={{ padding: '160px 0 80px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'clamp(120px, 12vw, 160px) 0 clamp(48px, 6vw, 80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
             width: 800, height: 800,
@@ -81,7 +81,7 @@ export default function FAQPageClient() {
         </section>
 
         {/* FAQ Categories */}
-        <section style={{ paddingBottom: 120 }}>
+        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)' }}>
           <div className="cb-container" style={{ maxWidth: 800, margin: '0 auto' }}>
             {categories.map((cat, ci) => (
               <div key={cat.name} className={`reveal reveal-d${ci + 1}`} style={{ marginBottom: 56 }}>
@@ -135,11 +135,11 @@ export default function FAQPageClient() {
         </section>
 
         {/* CTA */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
-              borderRadius: 28, padding: '64px 56px', textAlign: 'center',
+              borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 56px)', textAlign: 'center',
             }}>
               <h2 style={{
                 fontSize: 'clamp(1.6rem, 3vw, 2.5rem)', fontWeight: 700, color: '#fff',

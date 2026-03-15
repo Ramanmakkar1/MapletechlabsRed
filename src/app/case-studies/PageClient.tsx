@@ -85,7 +85,7 @@ export default function CaseStudiesPageClient() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
 
         {/* ── HERO ── */}
-        <section style={{ padding: '160px 0 80px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'clamp(120px, 12vw, 160px) 0 clamp(48px, 6vw, 80px)', position: 'relative', overflow: 'hidden' }}>
           {/* Background glow */}
           <div style={{
             position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
@@ -142,8 +142,8 @@ export default function CaseStudiesPageClient() {
         </section>
 
         {/* ── CASE STUDIES GRID ── */}
-        <section style={{ paddingBottom: 100, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'clamp(48px, 8vw, 100px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <p className="reveal" style={{
               fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
               color: 'rgba(255,255,255,0.3)', marginBottom: 40,
@@ -152,7 +152,7 @@ export default function CaseStudiesPageClient() {
             </p>
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(min(360px, 100%), 1fr))',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(320px, 100%), 1fr))',
               gap: 24,
             }}>
               {filtered.map((cs, i) => {
@@ -204,7 +204,7 @@ export default function CaseStudiesPageClient() {
                         {/* Metric callout in image */}
                         <div style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
                           <div style={{
-                            fontSize: 48, fontWeight: 800, color: '#fff', letterSpacing: '-0.03em',
+                            fontSize: 'clamp(32px, 6vw, 48px)', fontWeight: 800, color: '#fff', letterSpacing: '-0.03em',
                             lineHeight: 1,
                           }}>
                             {cs.metric.value}
@@ -293,10 +293,10 @@ export default function CaseStudiesPageClient() {
 
         {/* ── STATS BAR ── */}
         <section style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ padding: '64px 0' }}>
+          <div className="cb-container" style={{ padding: 'clamp(32px, 6vw, 64px) 0' }}>
             <div className="reveal" style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))',
               gap: 32,
               textAlign: 'center',
             }}>
@@ -326,13 +326,13 @@ export default function CaseStudiesPageClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div
               className="reveal"
               style={{
                 background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: 28, padding: '64px 48px', textAlign: 'center',
+                borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 48px)', textAlign: 'center',
               }}
             >
               <span style={{

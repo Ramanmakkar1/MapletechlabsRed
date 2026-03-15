@@ -82,7 +82,7 @@ export default function PortfolioSection() {
   return (
     <section ref={ref} id="portfolio" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div className="cb-container">
-        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 80, gap: 40, flexWrap: 'wrap' }}>
+        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 'clamp(40px, 8vw, 80px)', gap: 'clamp(20px, 4vw, 40px)', flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Case Studies</div>
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
@@ -96,7 +96,7 @@ export default function PortfolioSection() {
           </div>
         </div>
 
-        <div className="reveal reveal-d1 portfolio-grid" style={{ border: '1px solid rgba(255,255,255,0.08)', borderRadius: 48, overflow: 'hidden', minHeight: 400 }}>
+        <div className="reveal reveal-d1 portfolio-grid" style={{ border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'clamp(24px, 4vw, 48px)', overflow: 'hidden', minHeight: 400 }}>
           <div style={{ padding: 'clamp(40px,6vw,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: 'rgba(255,255,255,0.02)' }}>
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>{p.client}</div>
@@ -126,7 +126,7 @@ export default function PortfolioSection() {
           </div>
 
           {/* Right: real project image */}
-          <div style={{ background: '#050505', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderLeft: '1px solid rgba(255,255,255,0.06)' }} className="portfolio-visual">
+          <div style={{ background: '#050505', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderLeft: '1px solid rgba(255,255,255,0.06)', minHeight: 280 }} className="portfolio-visual">
             <div style={{ position: 'absolute', inset: 0 }}>
               <Image
                 src={p.image}
@@ -139,7 +139,7 @@ export default function PortfolioSection() {
             {/* Overlay gradient */}
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(0,0,0,0.4) 0%, transparent 60%)' }} />
             {/* Metric badge */}
-            <div style={{ position: 'absolute', bottom: 28, right: 28, padding: '12px 20px', background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(245,41,13,0.3)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)' }}>
+            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(245,41,13,0.3)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)', maxWidth: 'calc(100% - 32px)' }}>
               <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 8px #f5290d' }} />
               <span style={{ fontSize: 13, fontWeight: 700, color: '#f5290d' }}>{p.metrics[0].value} {p.metrics[0].label}</span>
             </div>

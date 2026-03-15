@@ -32,7 +32,7 @@ export default function FAQSection() {
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
               Questions<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Answered.</span>
             </h2>
-            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 40 }}>
+            <p style={{ fontSize: 'clamp(14px, 2.5vw, 16px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 'clamp(24px, 5vw, 40px)' }}>
               Everything you need to know before starting a project with us.
             </p>
             <Link href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
@@ -49,9 +49,10 @@ export default function FAQSection() {
               <div key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', overflow: 'hidden' }}>
                 <button onClick={() => setActive(active === i ? null : i)}
                   aria-expanded={active === i}
-                  style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '28px 0', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', gap: 24, fontFamily: 'inherit' }}
+                  className="faq-question-btn"
+                  style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'clamp(16px, 3vw, 28px) 0', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', gap: 'clamp(12px, 3vw, 24px)', fontFamily: 'inherit', minHeight: 44 }}
                 >
-                  <span style={{ fontSize: 17, fontWeight: 500, color: '#fff', lineHeight: 1.4, letterSpacing: '-0.01em' }}>{faq.q}</span>
+                  <span style={{ fontSize: 'clamp(15px, 3vw, 17px)', fontWeight: 500, color: '#fff', lineHeight: 1.4, letterSpacing: '-0.01em' }}>{faq.q}</span>
                   <div style={{ width: 36, height: 36, borderRadius: '50%', flexShrink: 0, background: active === i ? '#f5290d' : 'rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.3s' }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={active === i ? '#000' : 'rgba(255,255,255,0.6)'} strokeWidth="2.5" style={{ transition: '0.3s', transform: active === i ? 'rotate(45deg)' : 'rotate(0)' }}>
                       <path d="M12 5v14M5 12h14" />
@@ -59,7 +60,7 @@ export default function FAQSection() {
                   </div>
                 </button>
                 <div style={{ maxHeight: active === i ? 500 : 0, overflow: 'hidden', transition: 'max-height 0.45s cubic-bezier(0.16,1,0.3,1)' }}>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, paddingBottom: 28, margin: 0 }}>{faq.a}</p>
+                  <p style={{ fontSize: 'clamp(14px, 2.5vw, 15px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, paddingBottom: 'clamp(16px, 3vw, 28px)', margin: 0 }}>{faq.a}</p>
                 </div>
               </div>
             ))}

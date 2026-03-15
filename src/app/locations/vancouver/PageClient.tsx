@@ -71,7 +71,7 @@ export default function VancouverPage() {
       <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
 
         {/* HERO */}
-        <section ref={heroRef} className="section-padding" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
+        <section ref={heroRef} className="section-padding loc-city-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
           <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translateX(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(245,41,13,0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
@@ -92,7 +92,7 @@ export default function VancouverPage() {
                 View Case Studies
               </Link>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', maxWidth: 600, margin: '0 auto' }}>
+            <div className="reveal loc-city-hero-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', maxWidth: 600, margin: '0 auto' }}>
               {[['60+', 'Projects in BC'], ['96%', 'Client Satisfaction'], ['30+', 'Gaming & VFX Builds']].map(([val, label]) => (
                 <div key={label} style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#f5290d' }}>{val}</div>
@@ -132,7 +132,7 @@ export default function VancouverPage() {
                 <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Vancouver &amp; British Columbia by the Numbers</h2>
                 <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Building world-class software on Canada&apos;s Pacific gateway.</p>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
+              <div className="loc-city-stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
                 {[
                   ['60+', 'Projects Delivered in BC'],
                   ['96%', 'Client Satisfaction Rate'],
@@ -201,6 +201,17 @@ export default function VancouverPage() {
 
       </main>
       <Footer />
+
+      <style>{`
+        @media(max-width:480px){
+          .loc-city-hero{min-height:auto!important;}
+          .loc-city-hero-stats{grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr))!important;}
+          .loc-city-stats-grid{grid-template-columns:repeat(2,1fr)!important;gap:1.5rem!important;}
+        }
+        @media(max-width:360px){
+          .loc-city-stats-grid{grid-template-columns:1fr!important;}
+        }
+      `}</style>
     </>
   );
 }

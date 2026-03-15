@@ -116,7 +116,7 @@ export default function ContactPage() {
     }
   };
 
-  const inp: React.CSSProperties = { width: '100%', padding: '15px 20px', fontSize: 16, fontFamily: 'inherit', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 14, color: '#fff', outline: 'none', transition: 'border 0.25s, box-shadow 0.25s' };
+  const inp: React.CSSProperties = { width: '100%', padding: '15px 20px', fontSize: 16, fontFamily: 'inherit', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 14, color: '#fff', outline: 'none', transition: 'border 0.25s, box-shadow 0.25s', boxSizing: 'border-box' };
   const sel: React.CSSProperties = { ...inp, appearance: 'none' as const, backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='rgba(255,255,255,0.75)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 18px center' };
   const lbl: React.CSSProperties = { display: 'block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.75)', marginBottom: 8 };
   const fi = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.5)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(245,41,13,0.08)'; };
@@ -128,7 +128,7 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           HERO
       ═══════════════════════════════════════ */}
-      <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: '100px 0 120px', borderBottom: '1px solid rgba(255,255,255,0.07)', textAlign: 'center' }}>
+      <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 10vw, 100px) 0 clamp(60px, 10vw, 120px)', borderBottom: '1px solid rgba(255,255,255,0.07)', textAlign: 'center' }}>
         {/* Grid bg */}
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
         {/* Glow orb */}
@@ -153,13 +153,13 @@ export default function ContactPage() {
           </p>
 
           <div className="reveal reveal-d3" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a href="#contact-form" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, height: 60, padding: '0 40px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
+            <a href="#contact-form" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 12, height: 56, padding: '0 clamp(24px, 4vw, 40px)', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
               Start a Project
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </a>
-            <a href="mailto:hello@mapletechlabs.ca" style={{ display: 'inline-flex', alignItems: 'center', height: 60, padding: '0 40px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
+            <a href="mailto:hello@mapletechlabs.ca" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: 56, padding: '0 clamp(24px, 4vw, 40px)', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
               onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'}
               onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
               hello@mapletechlabs.ca
@@ -181,7 +181,7 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           ENGAGEMENT OPTIONS
       ═══════════════════════════════════════ */}
-      <section ref={engageRef} style={{ padding: '100px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+      <section ref={engageRef} style={{ padding: 'clamp(48px, 8vw, 100px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
         <div className="cb-container">
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.3)', marginBottom: 16 }}>How Can We Help?</div>
@@ -190,10 +190,10 @@ export default function ContactPage() {
             </h2>
           </div>
 
-          <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
+          <div className="reveal reveal-d1 cp-engage-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
             {ENGAGEMENT.map(o => (
               <a key={o.num} href="#contact-form"
-                style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 36, padding: '52px 44px', display: 'flex', flexDirection: 'column', gap: 20, position: 'relative', overflow: 'hidden', textDecoration: 'none', transition: 'all 0.4s cubic-bezier(0.165,0.84,0.44,1)' }}
+                style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 36, padding: 'clamp(28px, 4vw, 52px) clamp(24px, 3.5vw, 44px)', display: 'flex', flexDirection: 'column', gap: 20, position: 'relative', overflow: 'hidden', textDecoration: 'none', transition: 'all 0.4s cubic-bezier(0.165,0.84,0.44,1)' }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.28)'; e.currentTarget.style.background = 'rgba(245,41,13,0.04)'; e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 32px 64px rgba(0,0,0,0.5)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                 {/* Ghost watermark */}
@@ -213,9 +213,9 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           CONTACT FORM
       ═══════════════════════════════════════ */}
-      <section id="contact-form" ref={formRef} style={{ padding: '100px 0', borderBottom: '1px solid rgba(255,255,255,0.07)', scrollMarginTop: 80 }}>
+      <section id="contact-form" ref={formRef} style={{ padding: 'clamp(48px, 8vw, 100px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)', scrollMarginTop: 80 }}>
         <div className="cb-container">
-          <div className="reveal" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 80, alignItems: 'start' }}>
+          <div className="reveal cp-contact-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 'clamp(32px, 6vw, 80px)', alignItems: 'start' }}>
 
             {/* Left info col */}
             <div>
@@ -341,7 +341,7 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           OFFICES
       ═══════════════════════════════════════ */}
-      <section ref={officesRef} style={{ padding: '100px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+      <section ref={officesRef} style={{ padding: 'clamp(48px, 8vw, 100px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
         <div className="cb-container">
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.3)', marginBottom: 16 }}>Global Presence</div>
@@ -350,10 +350,10 @@ export default function ContactPage() {
             </h2>
           </div>
 
-          <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 2 }}>
+          <div className="reveal reveal-d1 cp-offices-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 2 }}>
             {OFFICES.map((o, i) => (
               <div key={o.city}
-                style={{ padding: '48px 36px', border: '1px solid rgba(255,255,255,0.07)', borderRadius: i === 0 ? '28px 0 0 28px' : i === 3 ? '0 28px 28px 0' : '0', background: 'rgba(255,255,255,0.02)', transition: '0.4s' }}
+                style={{ padding: 'clamp(28px, 4vw, 48px) clamp(24px, 3vw, 36px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16, background: 'rgba(255,255,255,0.02)', transition: '0.4s' }}
                 onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.04)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.zIndex = '1'; e.currentTarget.style.position = 'relative'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; }}>
                 <div style={{ width: 24, height: 3, background: '#f5290d', borderRadius: 2, marginBottom: 24 }} />
@@ -373,7 +373,7 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           FAQ
       ═══════════════════════════════════════ */}
-      <section ref={faqRef} style={{ padding: '100px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+      <section ref={faqRef} style={{ padding: 'clamp(48px, 8vw, 100px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
         <div className="cb-container" style={{ maxWidth: 860 }}>
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.3)', marginBottom: 16 }}>FAQ</div>
@@ -385,14 +385,14 @@ export default function ContactPage() {
           <div className="reveal reveal-d1" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             {FAQS.map((faq, i) => (
               <div key={i} style={{ background: openFaq === i ? 'rgba(245,41,13,0.04)' : 'rgba(255,255,255,0.02)', border: `1px solid ${openFaq === i ? 'rgba(245,41,13,0.2)' : 'rgba(255,255,255,0.07)'}`, borderRadius: 20, overflow: 'hidden', transition: 'border-color 0.3s, background 0.3s' }}>
-                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 28px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
+                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'clamp(16px, 3vw, 24px) clamp(16px, 3vw, 28px)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                   <span style={{ fontSize: 16, fontWeight: 500, color: '#fff', textAlign: 'left', letterSpacing: '-0.01em' }}>{faq.q}</span>
                   <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'none' }}>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={openFaq === i ? '#f5290d' : 'rgba(255,255,255,0.7)'} strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
                   </div>
                 </button>
                 {openFaq === i && (
-                  <p style={{ padding: '0 28px 24px', margin: 0, fontSize: 15, color: 'rgba(255,255,255,0.44)', lineHeight: 1.75 }}>{faq.a}</p>
+                  <p style={{ padding: '0 clamp(16px, 3vw, 28px) clamp(16px, 3vw, 24px)', margin: 0, fontSize: 15, color: 'rgba(255,255,255,0.44)', lineHeight: 1.75 }}>{faq.a}</p>
                 )}
               </div>
             ))}
@@ -403,7 +403,7 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           BOTTOM CTA
       ═══════════════════════════════════════ */}
-      <section style={{ padding: '120px 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+      <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 700, height: 400, background: 'radial-gradient(ellipse,rgba(245,41,13,0.08) 0%,transparent 70%)', filter: 'blur(60px)', pointerEvents: 'none' }} />
         <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Let&apos;s Talk</div>
@@ -414,13 +414,13 @@ export default function ContactPage() {
             Join 150+ companies who trusted Mapletech Labs to build, scale, and launch their most important products.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#contact-form" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, height: 60, padding: '0 40px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
+            <a href="#contact-form" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 12, height: 56, padding: '0 clamp(24px, 4vw, 40px)', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
               Start a Project
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </a>
-            <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', height: 60, padding: '0 40px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
+            <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: 56, padding: '0 clamp(24px, 4vw, 40px)', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
               onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'}
               onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
               View Our Work
@@ -441,15 +441,18 @@ export default function ContactPage() {
         input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.22);}
         select option{background:#111;color:#fff;}
         @media(max-width:1024px){
-          #contact-form .cb-container>div{grid-template-columns:1fr!important;gap:48px!important;}
+          .cp-contact-form-grid{grid-template-columns:1fr!important;gap:48px!important;}
         }
         @media(max-width:900px){
-          .cp-offices-grid{grid-template-columns:1fr 1fr!important;}
+          .cp-offices-grid{grid-template-columns:repeat(2,1fr)!important;}
         }
         @media(max-width:640px){
           .cp-engage-grid{grid-template-columns:1fr!important;}
           .cp-offices-grid{grid-template-columns:1fr!important;}
           .cp-form-row{grid-template-columns:1fr!important;}
+        }
+        @media(max-width:480px){
+          .cp-contact-form-grid{gap:32px!important;}
         }
       `}</style>
     </div>

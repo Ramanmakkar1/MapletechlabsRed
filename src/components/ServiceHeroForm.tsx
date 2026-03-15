@@ -54,6 +54,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
     fontFamily: 'inherit',
     transition: '0.3s',
     outline: 'none',
+    boxSizing: 'border-box',
   };
 
   return (

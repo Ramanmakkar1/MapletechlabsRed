@@ -123,7 +123,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={e => setFormData(d => ({ ...d, name: e.target.value }))}
                     placeholder="Your name"
-                    style={{ width: '100%', padding: '14px 18px', borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.03)', color: '#fff', fontSize: 15, outline: 'none' }}
+                    style={{ width: '100%', padding: '14px 18px', borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.03)', color: '#fff', fontSize: 16, outline: 'none', boxSizing: 'border-box' }}
                   />
                 </div>
                 <div>
@@ -136,7 +136,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={e => setFormData(d => ({ ...d, email: e.target.value }))}
                     placeholder="you@company.com"
-                    style={{ width: '100%', padding: '14px 18px', borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.03)', color: '#fff', fontSize: 15, outline: 'none' }}
+                    style={{ width: '100%', padding: '14px 18px', borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.03)', color: '#fff', fontSize: 16, outline: 'none', boxSizing: 'border-box' }}
                   />
                 </div>
                 <div>
@@ -147,7 +147,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={e => setFormData(d => ({ ...d, message: e.target.value }))}
                     placeholder="Tell us about your project..."
-                    style={{ width: '100%', padding: '14px 18px', borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.03)', color: '#fff', fontSize: 15, outline: 'none', resize: 'vertical' }}
+                    style={{ width: '100%', padding: '14px 18px', borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.03)', color: '#fff', fontSize: 16, outline: 'none', resize: 'vertical', boxSizing: 'border-box' }}
                   />
                 </div>
                 <button

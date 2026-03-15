@@ -27,7 +27,7 @@ export default function AdvancedLabs() {
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
               Pioneering the<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Edge of Innovation.</span>
             </h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 56 }}>
+            <p style={{ fontSize: 'clamp(14px, 3vw, 17px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 'clamp(28px, 6vw, 56px)' }}>
               Our dedicated R&D division builds the emerging technology that will define the next decade of software.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 3vw, 36px)' }}>
@@ -44,7 +44,7 @@ export default function AdvancedLabs() {
                 </div>
               ))}
             </div>
-            <button style={{ marginTop: 52, display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: 14, fontWeight: 500, cursor: 'pointer', transition: '0.3s', fontFamily: 'inherit' }}
+            <button style={{ marginTop: 'clamp(28px, 5vw, 52px)', display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 clamp(20px, 4vw, 28px)', borderRadius: 100, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: 14, fontWeight: 500, cursor: 'pointer', transition: '0.3s', fontFamily: 'inherit', minHeight: 44 }}
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.1)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = '#f5290d'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = '#fff'; }}
             >
@@ -54,7 +54,7 @@ export default function AdvancedLabs() {
           </div>
 
           <div className="reveal reveal-d1" style={{ position: 'relative' }}>
-            <div style={{ borderRadius: 48, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#050505', aspectRatio: '4/5', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ borderRadius: 'clamp(24px, 6vw, 48px)', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#050505', aspectRatio: '4/5', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ position: 'absolute', top: '20%', left: '20%', width: '60%', height: '60%', background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 65%)', filter: 'blur(60px)' }} />
               <div style={{ position: 'relative', zIndex: 2, width: '80%', aspectRatio: '1' }}>
                 <svg viewBox="0 0 400 400" style={{ width: '100%', opacity: 0.6 }}>

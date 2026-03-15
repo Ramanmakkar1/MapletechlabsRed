@@ -42,7 +42,7 @@ export default function ComparisonTable() {
       <div className="cb-container">
 
         {/* Header */}
-        <div className="reveal" style={{ textAlign: 'center', marginBottom: 80 }}>
+        <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(32px, 8vw, 80px)' }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>How We Compare</div>
           <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto', maxWidth: 800 }}>
             Why Clients Choose Us<br />

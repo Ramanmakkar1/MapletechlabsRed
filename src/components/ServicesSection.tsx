@@ -27,13 +27,13 @@ export default function ServicesSection() {
   return (
     <section ref={ref} id="services" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div className="cb-container">
-        <div className="reveal" style={{ marginBottom: 80 }}>
+        <div className="reveal" style={{ marginBottom: 'clamp(40px, 6vw, 80px)' }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Capabilities</div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 40, flexWrap: 'wrap' }}>
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0, maxWidth: 700 }}>
               Everything You Need<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>to Build & Scale.</span>
             </h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
+            <p style={{ fontSize: 'clamp(15px, 2vw, 17px)', color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
               From idea to launch and beyond — we cover every layer of modern software development.
             </p>
           </div>
@@ -43,11 +43,11 @@ export default function ServicesSection() {
         <div className="services-large-grid" style={{ marginBottom: 20 }}>
           {large.map((s, i) => (
             <div key={s.title} className={`reveal reveal-d${i + 1}`}
-              style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 40, padding: 'clamp(32px, 5vw, 60px)', display: 'flex', flexDirection: 'column', gap: 32, minHeight: 'clamp(280px, 50vh, 360px)', position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
+              style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'clamp(24px, 4vw, 40px)', padding: 'clamp(24px, 5vw, 60px)', display: 'flex', flexDirection: 'column', gap: 'clamp(20px, 3vw, 32px)', minHeight: 'clamp(240px, 50vh, 360px)', position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(245,41,13,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.025)'; e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}
             >
-              <div style={{ position: 'absolute', bottom: -20, right: 28, fontSize: 180, fontWeight: 800, color: 'rgba(255,255,255,0.02)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>{s.num}</div>
+              <div style={{ position: 'absolute', bottom: -20, right: 28, fontSize: 'clamp(80px, 20vw, 180px)', fontWeight: 800, color: 'rgba(255,255,255,0.02)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>{s.num}</div>
               <div>
                 <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#f5290d', background: 'rgba(245,41,13,0.1)', padding: '6px 14px', borderRadius: 100, marginBottom: 24 }}>{s.tag}</span>
                 <h3 style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16, lineHeight: 1.15 }}>{s.title}</h3>
@@ -68,7 +68,7 @@ export default function ServicesSection() {
         <div className="services-small-grid">
           {small.map((s, i) => (
             <div key={s.title} className={`reveal reveal-d${i + 1}`}
-              style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 32, padding: 'clamp(24px, 4vw, 40px) clamp(24px, 3vw, 36px)', display: 'flex', flexDirection: 'column', gap: 16, minHeight: 220, position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
+              style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 'clamp(20px, 3vw, 32px)', padding: 'clamp(20px, 4vw, 40px) clamp(20px, 3vw, 36px)', display: 'flex', flexDirection: 'column', gap: 16, minHeight: 'clamp(180px, 30vw, 220px)', position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(245,41,13,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}
             >

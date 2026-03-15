@@ -37,7 +37,7 @@ export default function HealthcareCaseStudyClient() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
 
         {/* ── HERO ── */}
-        <section style={{ padding: '140px 0 64px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'clamp(100px, 12vw, 140px) 0 clamp(40px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
@@ -96,10 +96,10 @@ export default function HealthcareCaseStudyClient() {
         </section>
 
         {/* ── OVERVIEW GRID ── */}
-        <section style={{ paddingBottom: 80, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
-              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
               gap: 24,
             }}>
               {[
@@ -108,7 +108,7 @@ export default function HealthcareCaseStudyClient() {
                 { title: 'Results', text: 'The platform has facilitated over 200K patient sessions with 99.97% uptime, earned a 4.8-star app store rating, and reduced average consultation times by 60% compared to in-person visits.' },
               ].map((card) => (
                 <div key={card.title} style={{
-                  padding: 36, borderRadius: 24,
+                  padding: 'clamp(24px, 4vw, 36px)', borderRadius: 24,
                   background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
                 }}>
                   <p style={{
@@ -125,7 +125,7 @@ export default function HealthcareCaseStudyClient() {
         </section>
 
         {/* ── THE CHALLENGE ── */}
-        <section style={{ paddingBottom: 80 }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
@@ -151,8 +151,8 @@ export default function HealthcareCaseStudyClient() {
         </section>
 
         {/* ── OUR SOLUTION ── */}
-        <section style={{ paddingBottom: 80, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
@@ -188,8 +188,8 @@ export default function HealthcareCaseStudyClient() {
         </section>
 
         {/* ── KEY RESULTS ── */}
-        <section style={{ paddingBottom: 80, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <p className="reveal" style={{
               fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
               color: '#f5290d', marginBottom: 16,
@@ -200,15 +200,15 @@ export default function HealthcareCaseStudyClient() {
             }}>Transforming Patient Care at Scale</h2>
 
             <div className="reveal" style={{
-              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))',
               gap: 24,
             }}>
               {metrics.map((m) => (
                 <div key={m.label} style={{
-                  padding: 36, borderRadius: 24, textAlign: 'center',
+                  padding: 'clamp(20px, 4vw, 36px)', borderRadius: 24, textAlign: 'center',
                   background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
                 }}>
-                  <div style={{ fontSize: 40, fontWeight: 800, color: '#f5290d', marginBottom: 8 }}>{m.value}</div>
+                  <div style={{ fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 800, color: '#f5290d', marginBottom: 8 }}>{m.value}</div>
                   <div style={{
                     fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.5)',
                     textTransform: 'uppercase', letterSpacing: '0.08em',
@@ -220,11 +220,11 @@ export default function HealthcareCaseStudyClient() {
         </section>
 
         {/* ── TESTIMONIAL ── */}
-        <section style={{ paddingBottom: 80, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               maxWidth: 760,
-              padding: 48, borderRadius: 24,
+              padding: 'clamp(24px, 4vw, 48px)', borderRadius: 24,
               background: 'linear-gradient(135deg, rgba(245,41,13,0.06), rgba(255,255,255,0.02))',
               border: '1px solid rgba(245,41,13,0.15)',
               position: 'relative',
@@ -248,11 +248,11 @@ export default function HealthcareCaseStudyClient() {
         </section>
 
         {/* ── CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
-              borderRadius: 28, padding: '64px 56px',
+              borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 56px)',
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               flexWrap: 'wrap', gap: 32,
             }}>

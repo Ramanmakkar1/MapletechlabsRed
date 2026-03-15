@@ -47,18 +47,18 @@ export default function Hero() {
       {/* Grid bg */}
       <div aria-hidden="true" style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px)', backgroundSize: '72px 72px', pointerEvents: 'none' }} />
       {/* Glow left */}
-      <div aria-hidden="true" style={{ position: 'absolute', top: '5%', left: '-10%', width: 700, height: 700, background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
+      <div aria-hidden="true" style={{ position: 'absolute', top: '5%', left: '-10%', width: 'min(700px, 100vw)', height: 'min(700px, 100vw)', background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
       {/* Glow right */}
-      <div aria-hidden="true" style={{ position: 'absolute', top: '20%', right: '-5%', width: 600, height: 600, background: 'radial-gradient(circle, rgba(245,41,13,0.07) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
+      <div aria-hidden="true" style={{ position: 'absolute', top: '20%', right: '-5%', width: 'min(600px, 100vw)', height: 'min(600px, 100vw)', background: 'radial-gradient(circle, rgba(245,41,13,0.07) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
 
       <div className="cb-container hero-container" style={{ position: 'relative', zIndex: 1 }}>
 
         {/* LEFT — copy */}
         <div>
           {/* Badge */}
-          <div className="h-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(245,41,13,0.07)', border: '1px solid rgba(245,41,13,0.2)', borderRadius: 100, padding: '8px 20px', marginBottom: 48 }}>
+          <div className="h-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(245,41,13,0.07)', border: '1px solid rgba(245,41,13,0.2)', borderRadius: 100, padding: '8px 20px', marginBottom: 'clamp(24px, 5vw, 48px)' }}>
             <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 10px #f5290d' }} />
-            <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Available for New Projects</span>
+            <span style={{ fontSize: 'clamp(10px, 2.5vw, 11px)', fontWeight: 700, color: '#f5290d', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Available for New Projects</span>
           </div>
 
           {/* Headline */}
@@ -81,20 +81,20 @@ export default function Hero() {
           </h1>
 
           {/* Sub */}
-          <p className="h-p" style={{ fontSize: 'clamp(1rem, 1.6vw, 1.15rem)', color: 'rgba(255,255,255,0.75)', maxWidth: 480, lineHeight: 1.8, margin: '0 0 52px' }}>
+          <p className="h-p" style={{ fontSize: 'clamp(0.95rem, 1.6vw, 1.15rem)', color: 'rgba(255,255,255,0.75)', maxWidth: 480, lineHeight: 1.8, margin: '0 0 clamp(28px, 5vw, 52px)' }}>
             Mapletech Labs engineers world-class digital products for companies ready to lead their industry — on time, on budget, every time.
           </p>
 
           {/* Buttons */}
-          <div className="h-btns" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 72 }}>
-            <Link href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 58, padding: '0 36px', borderRadius: 100, background: 'linear-gradient(135deg, #f5290d, #FF5733)', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s', boxShadow: '0 0 0 0 rgba(245,41,13,0)' }}
+          <div className="h-btns" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 'clamp(36px, 6vw, 72px)' }}>
+            <Link href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 'clamp(48px, 7vw, 58px)', padding: '0 clamp(24px, 4vw, 36px)', borderRadius: 100, background: 'linear-gradient(135deg, #f5290d, #FF5733)', color: '#fff', fontSize: 'clamp(14px, 2vw, 15px)', fontWeight: 700, textDecoration: 'none', transition: '0.3s', boxShadow: '0 0 0 0 rgba(245,41,13,0)' }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 0 0 0 rgba(245,41,13,0)'; }}
             >
               Start a Project
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
-            <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 58, padding: '0 36px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s', background: 'rgba(255,255,255,0.03)' }}
+            <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 'clamp(48px, 7vw, 58px)', padding: '0 clamp(24px, 4vw, 36px)', borderRadius: 100, border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(14px, 2vw, 15px)', fontWeight: 500, textDecoration: 'none', transition: '0.3s', background: 'rgba(255,255,255,0.03)' }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; e.currentTarget.style.background = 'rgba(255,255,255,0.03)'; }}
             >
@@ -103,11 +103,11 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="h-stats" style={{ display: 'flex', gap: 'clamp(16px, 3vw, 40px)', flexWrap: 'wrap', paddingTop: 40, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="h-stats" style={{ display: 'flex', gap: 'clamp(16px, 3vw, 40px)', flexWrap: 'wrap', paddingTop: 'clamp(20px, 4vw, 40px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
             {[['500+', 'Projects'], ['150+', 'Clients'], ['99%', 'Satisfaction'], ['8wk', 'MVP']].map(([val, label]) => (
               <div key={label}>
                 <div style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{val}</div>
-                <div style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.12em', marginTop: 6 }}>{label}</div>
+                <div style={{ fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 700, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.12em', marginTop: 6 }}>{label}</div>
               </div>
             ))}
           </div>

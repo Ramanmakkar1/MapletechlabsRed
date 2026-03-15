@@ -115,7 +115,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
         {/* ════════════════════════════════════════════
             1. HERO
         ════════════════════════════════════════════ */}
-        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: '100px 0 120px', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(48px, 8vw, 100px) 0 clamp(48px, 8vw, 120px)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', top: '30%', left: '5%', width: 600, height: 600, background: 'radial-gradient(ellipse,rgba(245,41,13,0.08) 0%,transparent 65%)', filter: 'blur(60px)', pointerEvents: 'none' }} />
 
@@ -175,7 +175,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
                 </div>
 
                 {/* Stats strip (inline in hero) */}
-                <div className="reveal reveal-d4" style={{ display: 'grid', gridTemplateColumns: `repeat(${stats.length}, 1fr)`, gap: 16 }}>
+                <div className="reveal reveal-d4 loc-hero-stats" style={{ display: 'grid', gridTemplateColumns: `repeat(${stats.length}, 1fr)`, gap: 16 }}>
                   {stats.map((s, i) => (
                     <div key={s.label} style={{ textAlign: 'center', borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none', paddingRight: i < stats.length - 1 ? 16 : 0 }}>
                       <div style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)', fontWeight: 700, color: '#f5290d', letterSpacing: '-0.03em' }}>{s.value}</div>
@@ -199,7 +199,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
         ════════════════════════════════════════════ */}
         <section ref={statsRef} style={{ ...sectionBorder }}>
           <div className="cb-container">
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
+            <div className="reveal loc-stats-strip" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
               {stats.map((s, i) => (
                 <div key={s.label} style={{ padding: '52px 40px', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.07)' : 'none', textAlign: 'center' }}>
                   <div style={{ fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{s.value}</div>
@@ -223,7 +223,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
             {/* Large cards */}
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: 20, marginBottom: 20 }}>
               {largeServices.slice(0, 2).map(s => (
-                <div key={s.title} style={{ ...cardStyle, padding: '48px 44px', borderRadius: 32, position: 'relative', overflow: 'hidden' }}
+                <div key={s.title} className="loc-large-card" style={{ ...cardStyle, padding: '48px 44px', borderRadius: 32, position: 'relative', overflow: 'hidden' }}
                   onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg, #f5290d, transparent)' }} />
                   <div style={{ fontSize: 32, marginBottom: 20 }}>{s.icon}</div>
@@ -266,7 +266,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
             </div>
             <div className="reveal reveal-d1" style={autoGrid}>
               {whyCity.map((w, i) => (
-                <div key={w.title} className={`reveal reveal-d${Math.min(i + 1, 4)}`} style={{ ...cardStyle, padding: '44px 36px' }}
+                <div key={w.title} className={`reveal reveal-d${Math.min(i + 1, 4)} loc-why-card`} style={{ ...cardStyle, padding: '44px 36px' }}
                   onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
                   <div style={{ fontSize: 36, marginBottom: 20 }}>{w.icon}</div>
                   <h3 style={{ fontSize: 20, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 12 }}>{w.title}</h3>
@@ -288,14 +288,14 @@ export default function CityServicePageClient(props: CityServicePageProps) {
             </div>
 
             <div style={{ position: 'relative' }}>
-              <div style={{ position: 'absolute', left: 23, top: 24, bottom: 24, width: 2, background: 'linear-gradient(to bottom, rgba(245,41,13,0.5), rgba(245,41,13,0.05))', zIndex: 0 }} />
+              <div className="loc-process-timeline" style={{ position: 'absolute', left: 23, top: 24, bottom: 24, width: 2, background: 'linear-gradient(to bottom, rgba(245,41,13,0.5), rgba(245,41,13,0.05))', zIndex: 0 }} />
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                 {steps.map((step, i) => (
-                  <div key={step.num} className={`reveal reveal-d${Math.min(i + 1, 5)}`} style={{ display: 'grid', gridTemplateColumns: '48px 1fr', gap: 32, alignItems: 'start', padding: '32px 0' }}>
-                    <div style={{ width: 48, height: 48, borderRadius: '50%', border: '2px solid rgba(245,41,13,0.4)', background: 'rgba(245,41,13,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: '#f5290d', flexShrink: 0, position: 'relative', zIndex: 1 }}>{step.num}</div>
+                  <div key={step.num} className={`reveal reveal-d${Math.min(i + 1, 5)} loc-process-row`} style={{ display: 'grid', gridTemplateColumns: '48px 1fr', gap: 32, alignItems: 'start', padding: '32px 0' }}>
+                    <div className="loc-process-num" style={{ width: 48, height: 48, borderRadius: '50%', border: '2px solid rgba(245,41,13,0.4)', background: 'rgba(245,41,13,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: '#f5290d', flexShrink: 0, position: 'relative', zIndex: 1 }}>{step.num}</div>
 
-                    <div style={{ ...cardStyle, padding: '32px 40px' }}
+                    <div className="loc-process-card" style={{ ...cardStyle, padding: '32px 40px' }}
                       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(245,41,13,0.2)'; (e.currentTarget as HTMLElement).style.background = 'rgba(245,41,13,0.03)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
                       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.02)'; (e.currentTarget as HTMLElement).style.boxShadow = ''; }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16, flexWrap: 'wrap', gap: 12 }}>
@@ -380,7 +380,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
                     </div>
                   </div>
-                  <div style={{ padding: '28px 32px' }}>
+                  <div className="loc-portfolio-inner" style={{ padding: '28px 32px' }}>
                     <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 10, display: 'block' }}>{p.industry}</span>
                     <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 10 }}>{p.title}</h3>
                     <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: 16 }}>{p.desc}</p>
@@ -406,7 +406,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
             </div>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 20 }}>
               {testimonials.map((t, i) => (
-                <div key={t.name} className={`reveal reveal-d${Math.min(i + 1, 3)}`} style={{ ...cardStyle, padding: '44px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+                <div key={t.name} className={`reveal reveal-d${Math.min(i + 1, 3)} loc-testimonial-card`} style={{ ...cardStyle, padding: '44px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
                   onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
                   {/* Quote icon */}
                   <div>
@@ -444,7 +444,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
             </div>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 20 }}>
               {pricingTiers.map((tier, i) => (
-                <div key={tier.name} className={`reveal reveal-d${Math.min(i + 1, 3)}`}
+                <div key={tier.name} className={`reveal reveal-d${Math.min(i + 1, 3)} loc-pricing-card`}
                   style={{ ...cardStyle, padding: '44px 36px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
                   onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
                   {i === 1 && <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: '#f5290d' }} />}
@@ -484,7 +484,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
               {faqs.map((faq, i) => (
                 <div key={i}
                   style={{ background: openFaq === i ? 'rgba(245,41,13,0.04)' : 'rgba(255,255,255,0.02)', border: `1px solid ${openFaq === i ? 'rgba(245,41,13,0.2)' : 'rgba(255,255,255,0.07)'}`, borderRadius: 20, overflow: 'hidden', transition: 'border-color 0.3s, background 0.3s' }}>
-                  <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  <button className="loc-faq-btn" onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 28px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                     <span style={{ fontSize: 16, fontWeight: 500, color: '#fff', textAlign: 'left', letterSpacing: '-0.01em' }}>{faq.q}</span>
                     <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'none' }}>
@@ -493,7 +493,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
                   </button>
                   <div
                     style={{ maxHeight: openFaq === i ? 500 : 0, overflow: 'hidden', transition: 'max-height 0.4s ease' }}>
-                    <p style={{ padding: '0 28px 24px', margin: 0, fontSize: 15, color: 'rgba(255,255,255,0.44)', lineHeight: 1.75 }}>{faq.a}</p>
+                    <p className="loc-faq-answer" style={{ padding: '0 28px 24px', margin: 0, fontSize: 15, color: 'rgba(255,255,255,0.44)', lineHeight: 1.75 }}>{faq.a}</p>
                   </div>
                 </div>
               ))}
@@ -586,12 +586,27 @@ export default function CityServicePageClient(props: CityServicePageProps) {
       <style>{`
         @media(max-width:768px){
           .cb-container{padding-left:20px!important;padding-right:20px!important;}
+          .loc-hero-stats{grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr))!important;gap:12px!important;}
+          .loc-hero-stats>div{padding-right:0!important;border-right:none!important;}
+          .loc-stats-strip{grid-template-columns:repeat(2,1fr)!important;}
+          .loc-stats-strip>div{padding:28px 16px!important;}
+          .loc-stats-strip>div:nth-child(2){border-right:none!important;}
+          .loc-large-card{padding:28px 20px!important;}
+          .loc-why-card{padding:28px 20px!important;}
+          .loc-process-row{grid-template-columns:1fr!important;gap:16px!important;}
+          .loc-process-num{display:none!important;}
+          .loc-process-card{padding:24px 20px!important;}
+          .loc-portfolio-inner{padding:20px!important;}
+          .loc-testimonial-card{padding:28px 20px!important;}
+          .loc-pricing-card{padding:28px 20px!important;}
+          .loc-faq-btn{padding:18px 16px!important;}
+          .loc-faq-answer{padding:0 16px 18px!important;}
+          .loc-process-timeline{display:none!important;}
         }
-        @media(max-width:640px){
-          [style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,1fr)!important;}
-          [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important;}
-          [style*="grid-template-columns: 48px"]{grid-template-columns:1fr!important;}
-          [style*="grid-template-columns: 48px"] > div:first-child{display:none!important;}
+        @media(max-width:480px){
+          .loc-stats-strip{grid-template-columns:1fr!important;}
+          .loc-stats-strip>div{border-right:none!important;padding:20px 12px!important;}
+          .loc-hero-stats{grid-template-columns:1fr!important;}
         }
       `}</style>
     </>

@@ -54,7 +54,7 @@ export default function InsightsSection() {
       <div className="cb-container">
 
         {/* Header */}
-        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 40, marginBottom: 80, flexWrap: 'wrap' }}>
+        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(20px, 4vw, 40px)', marginBottom: 'clamp(40px, 8vw, 80px)', flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Insights</div>
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
@@ -77,7 +77,7 @@ export default function InsightsSection() {
           style={{
             display: 'flex',
             border: '1px solid rgba(245,41,13,0.15)',
-            borderRadius: 32,
+            borderRadius: 'clamp(20px, 4vw, 32px)',
             overflow: 'hidden',
             textDecoration: 'none',
             transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
@@ -87,7 +87,7 @@ export default function InsightsSection() {
           onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.4)'; }}
           onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.15)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
         >
-          <div style={{ padding: '32px 40px', display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>
+          <div style={{ padding: 'clamp(20px, 4vw, 32px) clamp(16px, 4vw, 40px)', display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, width: 'fit-content', padding: '6px 14px', borderRadius: 100, background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.2)' }}>
               <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{featuredCaseStudy.tag}</span>
             </div>
@@ -109,7 +109,7 @@ export default function InsightsSection() {
               className={`reveal reveal-d${i + 1}`}
               style={{
                 border: '1px solid rgba(255,255,255,0.07)',
-                borderRadius: 32,
+                borderRadius: 'clamp(20px, 4vw, 32px)',
                 overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
@@ -129,7 +129,7 @@ export default function InsightsSection() {
               </div>
 
               {/* Content */}
-              <div style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>
+              <div style={{ padding: 'clamp(20px, 4vw, 32px)', display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>
                 <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.4, margin: 0 }}>{post.title}</h3>
                 <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0, flex: 1 }}>{post.excerpt}</p>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 16, borderTop: '1px solid rgba(255,255,255,0.06)' }}>

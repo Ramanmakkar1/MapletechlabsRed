@@ -414,7 +414,7 @@ export default function Navbar() {
             pointerEvents: activeMenu === 'services' ? 'auto' : 'none',
           }}
         >
-          <div className="cb-container" style={{ padding: '28px 40px 32px' }}>
+          <div className="cb-container" style={{ padding: 'clamp(16px, 3vw, 28px) clamp(20px, 4vw, 40px) clamp(20px, 3vw, 32px)' }}>
             {/* Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20, paddingBottom: 16, borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
               <div>
@@ -579,9 +579,10 @@ export default function Navbar() {
       {/* Mobile overlay menu */}
       <div style={{
         position: 'fixed', inset: 0, background: '#000', zIndex: 999, overflowY: 'auto',
+        WebkitOverflowScrolling: 'touch',
         opacity: menuOpen ? 1 : 0, visibility: menuOpen ? 'visible' : 'hidden',
         transition: 'opacity 0.4s ease, visibility 0.4s ease',
-        display: 'flex', flexDirection: 'column', padding: '100px 24px 60px',
+        display: 'flex', flexDirection: 'column', padding: 'clamp(80px, 15vw, 100px) clamp(16px, 4vw, 24px) 60px',
       }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginBottom: 32 }}>
 
@@ -589,7 +590,7 @@ export default function Navbar() {
           <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
             <button
               onClick={() => setMobileExpanded(mobileExpanded === 'services' ? null : 'services')}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', fontSize: 28, fontWeight: 500, color: 'rgba(255,255,255,0.8)', background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '-0.03em', padding: '12px 0', fontFamily: 'inherit' }}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', fontSize: 'clamp(22px, 5vw, 28px)', fontWeight: 500, color: 'rgba(255,255,255,0.8)', background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '-0.03em', padding: '14px 0', minHeight: 44, fontFamily: 'inherit' }}
             >
               Services
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transition: '0.3s', transform: mobileExpanded === 'services' ? 'rotate(180deg)' : 'none' }}><path d="M6 9l6 6 6-6" /></svg>
@@ -599,7 +600,7 @@ export default function Navbar() {
                 {serviceCategories.map(cat => (
                   <div key={cat.title}>
                     <Link href={cat.href} onClick={() => setMenuOpen(false)}
-                      style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 0', textDecoration: 'none' }}
+                      style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 0', minHeight: 44, textDecoration: 'none' }}
                     >
                       <div style={{ width: 28, height: 28, borderRadius: 8, background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f5290d', flexShrink: 0 }}>
                         {cat.icon}
@@ -609,7 +610,7 @@ export default function Navbar() {
                     <div style={{ paddingLeft: 38, display: 'flex', flexDirection: 'column', gap: 2, marginBottom: 8 }}>
                       {cat.links.map(link => (
                         <Link key={link.label} href={link.href} onClick={() => setMenuOpen(false)}
-                          style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', padding: '4px 0', display: 'flex', alignItems: 'center', gap: 6 }}
+                          style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', padding: '8px 0', minHeight: 44, display: 'flex', alignItems: 'center', gap: 6 }}
                         >
                           <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(245,41,13,0.35)', flexShrink: 0 }} />
                           {link.label}
@@ -632,7 +633,7 @@ export default function Navbar() {
           <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
             <button
               onClick={() => setMobileExpanded(mobileExpanded === 'industries' ? null : 'industries')}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', fontSize: 28, fontWeight: 500, color: 'rgba(255,255,255,0.8)', background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '-0.03em', padding: '12px 0', fontFamily: 'inherit' }}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', fontSize: 'clamp(22px, 5vw, 28px)', fontWeight: 500, color: 'rgba(255,255,255,0.8)', background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '-0.03em', padding: '14px 0', minHeight: 44, fontFamily: 'inherit' }}
             >
               Industries
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transition: '0.3s', transform: mobileExpanded === 'industries' ? 'rotate(180deg)' : 'none' }}><path d="M6 9l6 6 6-6" /></svg>
@@ -641,7 +642,7 @@ export default function Navbar() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 2, paddingBottom: 16 }}>
                 {industryLinks.map(link => (
                   <Link key={link.label} href={link.href} onClick={() => setMenuOpen(false)}
-                    style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0', fontSize: 15, color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}
+                    style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 0', minHeight: 44, fontSize: 15, color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}
                   >
                     <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#f5290d', flexShrink: 0 }} />
                     {link.label}
@@ -660,7 +661,7 @@ export default function Navbar() {
           ].map(item => (
             <Link key={item.label} href={item.href}
               onClick={() => setMenuOpen(false)}
-              style={{ fontSize: 28, fontWeight: 500, color: 'rgba(255,255,255,0.8)', textDecoration: 'none', letterSpacing: '-0.03em', padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', transition: '0.2s' }}
+              style={{ fontSize: 'clamp(22px, 5vw, 28px)', fontWeight: 500, color: 'rgba(255,255,255,0.8)', textDecoration: 'none', letterSpacing: '-0.03em', padding: '14px 0', minHeight: 44, borderBottom: '1px solid rgba(255,255,255,0.06)', transition: '0.2s', display: 'flex', alignItems: 'center' }}
             >
               {item.label}
             </Link>

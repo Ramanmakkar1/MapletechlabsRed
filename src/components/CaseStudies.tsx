@@ -109,7 +109,7 @@ export default function CaseStudies() {
         <div className="max-w-7xl mx-auto w-full mb-12 flex items-end justify-between gap-6 flex-shrink-0">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-violet-400 mb-3">Selected Work</p>
-            <h2 className="text-4xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-white tracking-tight leading-tight">
               Results that<br />
               <span className="gradient-text">speak for themselves.</span>
             </h2>
@@ -128,7 +128,7 @@ export default function CaseStudies() {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="case-card flex-shrink-0 w-[min(480px,85vw)] lg:w-[560px] h-[460px] rounded-3xl overflow-hidden relative group cursor-default"
+                className="case-card flex-shrink-0 w-[min(480px,85vw)] lg:w-[560px] h-[min(460px,80vh)] rounded-3xl overflow-hidden relative group cursor-default"
                 style={{ transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-6px)';
@@ -145,14 +145,14 @@ export default function CaseStudies() {
                 <div className="absolute inset-0 grid-bg opacity-20" />
 
                 {/* Content */}
-                <div className="relative z-10 h-full flex flex-col justify-between p-8 lg:p-10">
+                <div className="relative z-10 h-full flex flex-col justify-between p-5 sm:p-8 lg:p-10">
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-1">{project.client}</p>
-                      <span className="text-white/20 text-6xl font-black">{project.num}</span>
+                      <span className="text-white/20 text-4xl sm:text-6xl font-black">{project.num}</span>
                     </div>
                     <div className="text-right">
-                      <div className="text-3xl font-black text-white">{project.metric}</div>
+                      <div className="text-2xl sm:text-3xl font-black text-white">{project.metric}</div>
                       <div className="text-white/60 text-xs mt-1">{project.metricLabel}</div>
                     </div>
                   </div>

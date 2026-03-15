@@ -81,7 +81,7 @@ export default function ProcessSection() {
       <div className="cb-container">
 
         {/* Header */}
-        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(16px, 3vw, 40px)', marginBottom: 100, flexWrap: 'wrap' }}>
+        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(16px, 3vw, 40px)', marginBottom: 'clamp(40px, 8vw, 100px)', flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>How We Work</div>
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
@@ -96,8 +96,8 @@ export default function ProcessSection() {
 
         {/* Steps with left connecting line */}
         <div style={{ position: 'relative' }}>
-          {/* Vertical connecting line */}
-          <div aria-hidden="true" style={{
+          {/* Vertical connecting line - hidden on mobile via CSS */}
+          <div aria-hidden="true" className="hide-mobile" style={{
             position: 'absolute',
             left: 39,
             top: 28,
@@ -158,8 +158,8 @@ export default function ProcessSection() {
 
                 {/* Title + Desc */}
                 <div>
-                  <h3 style={{ fontSize: 22, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
+                  <h3 style={{ fontSize: 'clamp(18px, 3.5vw, 22px)', fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
+                  <p style={{ fontSize: 'clamp(14px, 2.5vw, 15px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
                 </div>
 
                 {/* Checklist */}
