@@ -55,7 +55,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
 
         {/* ── ARTICLE HERO ── */}
-        <section style={{ padding: '140px 0 64px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'clamp(100px, 15vw, 140px) 0 clamp(32px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
@@ -157,7 +157,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
         {/* ── ARTICLE BODY + SIDEBAR ── */}
         <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container" style={{ paddingTop: 80 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 80, alignItems: 'start' }}>
+            <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
               {/* ── MAIN ARTICLE ── */}
               <article>

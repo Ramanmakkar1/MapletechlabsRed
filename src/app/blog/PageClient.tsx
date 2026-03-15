@@ -250,7 +250,7 @@ export default function BlogPage() {
                 style={{
                   background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
                   borderRadius: 28, padding: 48, display: 'grid',
-                  gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'center',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 48, alignItems: 'center',
                   borderLeft: '3px solid #f5290d',
                   transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                   cursor: 'pointer',
@@ -301,7 +301,7 @@ export default function BlogPage() {
                   </span>
                 </div>
                 <div style={{
-                  width: 200, height: 200, borderRadius: 20, flexShrink: 0,
+                  width: 200, height: 200, borderRadius: 20, flexShrink: 0, maxWidth: '100%',
                   background: 'linear-gradient(135deg, rgba(245,41,13,0.12) 0%, rgba(245,41,13,0.04) 100%)',
                   border: '1px solid rgba(245,41,13,0.15)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -333,7 +333,7 @@ export default function BlogPage() {
                       className={`reveal reveal-d${Math.min(i + 1, 6)}`}
                       style={{
                         background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
-                        borderRadius: 24, padding: 32, height: '100%',
+                        borderRadius: 24, padding: 'clamp(20px, 4vw, 32px)', height: '100%',
                         transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                         display: 'flex', flexDirection: 'column', gap: 0,
                         cursor: 'pointer',
@@ -430,7 +430,7 @@ export default function BlogPage() {
               className="reveal"
               style={{
                 background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: 28, padding: '64px 48px', textAlign: 'center',
+                borderRadius: 28, padding: 'clamp(32px, 5vw, 64px) clamp(20px, 4vw, 48px)', textAlign: 'center',
               }}
             >
               <span style={{
@@ -457,7 +457,7 @@ export default function BlogPage() {
                   style={{
                     padding: '14px 24px', borderRadius: 100, background: 'rgba(255,255,255,0.05)',
                     border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: 15,
-                    outline: 'none', width: 300,
+                    outline: 'none', width: 'min(300px, 100%)',
                   }}
                 />
                 <button style={{

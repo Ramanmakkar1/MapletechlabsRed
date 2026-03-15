@@ -545,6 +545,13 @@ textarea:focus-visible {
   scroll-margin-top: 100px;
 }
 
+/* ── BLOG LAYOUT ─────────────────────────────── */
+@media (min-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: 1fr 320px !important;
+  }
+}
+
 /* ── NAVBAR SCROLL EFFECT ──────────────────────── */
 .navbar-scrolled {
   background: rgba(0,0,0,0.9) !important;
