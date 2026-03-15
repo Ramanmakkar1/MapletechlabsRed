@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
+import TrustBadges from '@/components/TrustBadges';
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -367,6 +368,7 @@ export default function BlockchainWeb3Page() {
                 </div>
               ))}
             </div>
+            <TrustBadges compact />
           </div>
         </section>
 

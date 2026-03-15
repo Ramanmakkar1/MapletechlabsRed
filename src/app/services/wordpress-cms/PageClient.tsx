@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
+import TrustBadges from '@/components/TrustBadges';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -65,6 +66,9 @@ export default function WordPressCMSPage() {
   const s4 = useReveal() as React.RefObject<HTMLElement>;
   const s5 = useReveal() as React.RefObject<HTMLElement>;
   const s6 = useReveal() as React.RefObject<HTMLElement>;
+  const s7 = useReveal() as React.RefObject<HTMLElement>;
+  const s8 = useReveal() as React.RefObject<HTMLElement>;
+  const s9 = useReveal() as React.RefObject<HTMLElement>;
 
   useEffect(() => {
     heroRef.current?.querySelectorAll('.reveal').forEach(n => setTimeout(() => n.classList.add('visible'), 100));
@@ -228,6 +232,172 @@ export default function WordPressCMSPage() {
           </div>
         </section>
 
+        {/* TECH STACK */}
+        <section ref={s7} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64, gap: 40, flexWrap: 'wrap' }}>
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>Technology</div>
+                <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0 }}>
+                  The Stack Behind Your Site
+                </h2>
+              </div>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.75, margin: 0 }}>
+                Industry-standard tools chosen for reliability, editorial control, and long-term maintainability.
+              </p>
+            </div>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
+              {[
+                { label: 'CMS', chips: ['WordPress', 'Headless WP', 'WooCommerce', 'Elementor'] },
+                { label: 'Development', chips: ['PHP', 'React (Headless)', 'REST API', 'GraphQL (WPGraphQL)'] },
+                { label: 'Hosting', chips: ['WP Engine', 'Cloudways', 'AWS Lightsail', 'Vercel (headless)'] },
+                { label: 'Plugins', chips: ['ACF Pro', 'Yoast SEO', 'WooCommerce', 'WPML', 'Gravity Forms'] },
+              ].map(cat => (
+                <div key={cat.label}
+                  style={{ padding: 'clamp(24px, 3vw, 36px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.02)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}>
+                  <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>{cat.label}</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                    {cat.chips.map(c => (
+                      <span key={c}
+                        style={{ padding: '7px 16px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 500, color: 'rgba(255,255,255,0.55)', transition: '0.25s', cursor: 'default' }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.35)'; e.currentTarget.style.color = '#f5290d'; e.currentTarget.style.background = 'rgba(245,41,13,0.06)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'transparent'; }}>
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* INDUSTRY USE CASES */}
+        <section ref={s8} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <div className="reveal" style={{ marginBottom: 64 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>Industries</div>
+              <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0 }}>
+                WordPress Solutions by Industry
+              </h2>
+            </div>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 20 }}>
+              {[
+                { icon: '🛒', title: 'E-Commerce', desc: 'WooCommerce stores, product catalogs, subscription boxes and multi-vendor marketplaces built for conversion.', href: '/industries/ecommerce' },
+                { icon: '🏥', title: 'Healthcare', desc: 'HIPAA-compliant patient portals, clinic websites, appointment booking and provider directory platforms.', href: '/industries/healthcare' },
+                { icon: '📚', title: 'Education', desc: 'Course platforms, alumni networks, school websites and learning management systems with editorial control.', href: '/industries/edtech' },
+                { icon: '🏠', title: 'Real Estate', desc: 'Property listings, agent portals, MLS integrations and neighbourhood guides with advanced search and filtering.', href: '/industries/enterprise' },
+                { icon: '🍽️', title: 'Hospitality', desc: 'Restaurant sites, booking systems, event platforms and venue showcases with reservation integrations.', href: '/industries/logistics' },
+                { icon: '💚', title: 'Non-Profit', desc: 'Donation platforms, volunteer management, campaign sites and impact reporting dashboards.', href: '/industries/fintech' },
+              ].map(ind => (
+                <Link key={ind.title} href={ind.href} style={{ textDecoration: 'none' }}>
+                  <div style={{ padding: '36px 32px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', position: 'relative', overflow: 'hidden', transition: 'all 0.35s ease', height: '100%' }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,#f5290d,transparent)' }} />
+                    <div style={{ fontSize: 32, marginBottom: 20 }}>{ind.icon}</div>
+                    <h3 style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 12 }}>{ind.title}</h3>
+                    <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: '0 0 16px' }}>{ind.desc}</p>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: '#f5290d', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                      Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* PRICING TIERS */}
+        <section ref={s9} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>Investment</div>
+              <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.05, margin: '0 0 16px' }}>
+                WordPress & CMS Pricing
+              </h2>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>Transparent pricing based on scope and complexity. Every engagement starts with a detailed proposal.</p>
+            </div>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 20 }}>
+              {[
+                {
+                  tier: 'Business Site',
+                  price: '$5,000+',
+                  desc: 'A polished, professional WordPress site built to convert.',
+                  features: ['Custom theme development', '5-10 pages', 'Contact forms & CTAs', 'SEO foundations', 'Mobile responsive', '30-day post-launch support'],
+                },
+                {
+                  tier: 'E-Commerce',
+                  price: '$15,000+',
+                  desc: 'A full WooCommerce store ready to sell from day one.',
+                  features: ['WooCommerce setup', 'Payment gateway integration', 'Inventory management', 'Shipping configuration', 'Custom checkout flow', 'Marketing integrations'],
+                  featured: true,
+                },
+                {
+                  tier: 'Enterprise',
+                  price: '$35,000+',
+                  desc: 'Headless WordPress with custom plugins and API integrations.',
+                  features: ['Headless WP architecture', 'Multi-site setup', 'Custom plugin development', 'API integrations', 'Advanced security hardening', 'Dedicated support & SLA'],
+                },
+              ].map(plan => (
+                <div key={plan.tier} style={{ padding: '40px 32px', border: plan.featured ? '2px solid rgba(245,41,13,0.4)' : '1px solid rgba(255,255,255,0.08)', borderRadius: 28, background: plan.featured ? 'rgba(245,41,13,0.04)' : 'rgba(255,255,255,0.02)', position: 'relative', overflow: 'hidden', transition: 'all 0.35s ease', display: 'flex', flexDirection: 'column' }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                  {plan.featured && <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,#f5290d,transparent)' }} />}
+                  {plan.featured && <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, marginBottom: 16, display: 'inline-block', alignSelf: 'flex-start' }}>Most Popular</span>}
+                  <h3 style={{ fontSize: 20, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 8 }}>{plan.tier}</h3>
+                  <div style={{ fontSize: 'clamp(2rem,3vw,2.5rem)', fontWeight: 700, color: '#f5290d', letterSpacing: '-0.03em', marginBottom: 12 }}>{plan.price}</div>
+                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 24 }}>{plan.desc}</p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 32, flex: 1 }}>
+                    {plan.features.map(f => (
+                      <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, color: 'rgba(255,255,255,0.75)' }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                        {f}
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, height: 48, borderRadius: 100, background: plan.featured ? '#f5290d' : 'transparent', border: plan.featured ? 'none' : '1px solid rgba(255,255,255,0.15)', color: '#fff', fontSize: 14, fontWeight: 600, textDecoration: 'none', transition: '0.3s' }}
+                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; if (plan.featured) e.currentTarget.style.boxShadow = '0 12px 32px rgba(245,41,13,0.35)'; else e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; if (!plan.featured) e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}>
+                    Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries We Serve */}
+        <section style={{ padding: '60px 0' }}>
+          <div className="cb-container" style={{ textAlign: 'center' }}>
+            <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 24 }}>Industries We Serve</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12 }}>
+              {[
+                { name: 'FinTech', href: '/industries/fintech' },
+                { name: 'Healthcare', href: '/industries/healthcare' },
+                { name: 'E-Commerce', href: '/industries/ecommerce' },
+                { name: 'Logistics', href: '/industries/logistics' },
+                { name: 'EdTech', href: '/industries/edtech' },
+                { name: 'Enterprise', href: '/industries/enterprise' },
+              ].map((ind) => (
+                <a key={ind.href} href={ind.href} style={{
+                  padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
+                  color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none',
+                  transition: 'all 0.2s ease',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
+                >
+                  {ind.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section ref={s6} className="section-padding">
           <div className="cb-container" style={{ textAlign: 'center' }}>
@@ -257,6 +427,7 @@ export default function WordPressCMSPage() {
                 </div>
               ))}
             </div>
+            <TrustBadges compact />
           </div>
         </section>
 

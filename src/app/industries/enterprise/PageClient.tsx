@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadges from '@/components/TrustBadges';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -225,6 +226,36 @@ export default function EnterprisePage() {
           </div>
         </section>
 
+        {/* Related Services */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+              Services for Enterprise
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(250px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { name: 'Web Development', href: '/services/web-development', desc: 'Internal tools, admin dashboards and employee portals built for thousands of concurrent users.' },
+                { name: 'Cloud & DevOps', href: '/services/cloud-devops', desc: 'Enterprise cloud migrations, Kubernetes orchestration and CI/CD pipelines for large teams.' },
+                { name: 'AI & Machine Learning', href: '/services/ai-ml', desc: 'Business intelligence models, process automation and predictive analytics for enterprise data.' },
+                { name: 'SaaS Development', href: '/services/saas-development', desc: 'Multi-tenant enterprise platforms with SSO, RBAC and audit-ready compliance tooling.' },
+                { name: 'Blockchain Development', href: '/services/blockchain', desc: 'Distributed ledger solutions for supply chain transparency and secure enterprise transactions.' },
+              ].map((s) => (
+                <a key={s.href} href={s.href} style={{
+                  display: 'block', padding: '24px', borderRadius: 16,
+                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none', transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                >
+                  <div style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{s.name}</div>
+                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{s.desc}</div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section ref={s6} className="section-padding">
           <div className="cb-container">
@@ -248,6 +279,7 @@ export default function EnterprisePage() {
                   <span key={t} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)' }}>✓ {t}</span>
                 ))}
               </div>
+              <TrustBadges compact />
             </div>
           </div>
         </section>

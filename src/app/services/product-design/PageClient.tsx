@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
+import TrustBadges from '@/components/TrustBadges';
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -332,6 +333,35 @@ export default function ProductDesignPage() {
           </div>
         </section>
 
+        {/* Industries We Serve */}
+        <section style={{ padding: '60px 0' }}>
+          <div className="cb-container" style={{ textAlign: 'center' }}>
+            <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 24 }}>Industries We Serve</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12 }}>
+              {[
+                { name: 'FinTech', href: '/industries/fintech' },
+                { name: 'Healthcare', href: '/industries/healthcare' },
+                { name: 'E-Commerce', href: '/industries/ecommerce' },
+                { name: 'Logistics', href: '/industries/logistics' },
+                { name: 'EdTech', href: '/industries/edtech' },
+                { name: 'Enterprise', href: '/industries/enterprise' },
+              ].map((ind) => (
+                <a key={ind.href} href={ind.href} style={{
+                  padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
+                  color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none',
+                  transition: 'all 0.2s ease',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
+                >
+                  {ind.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ═══════════════════════════════════════
             BOTTOM CTA
         ═══════════════════════════════════════ */}
@@ -367,6 +397,7 @@ export default function ProductDesignPage() {
                 </div>
               ))}
             </div>
+            <TrustBadges compact />
           </div>
         </section>
 

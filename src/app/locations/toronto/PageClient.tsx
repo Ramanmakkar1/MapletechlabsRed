@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadges from '@/components/TrustBadges';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -203,6 +204,7 @@ export default function TorontoPage() {
                   <span key={t} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)' }}>&#10003; {t}</span>
                 ))}
               </div>
+              <TrustBadges compact />
             </div>
           </div>
         </section>

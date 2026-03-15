@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
+import TrustBadges from '@/components/TrustBadges';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -61,6 +62,9 @@ export default function GameDevelopmentPage() {
   const heroRef = useRef<HTMLElement>(null);
   const s1 = useReveal() as React.RefObject<HTMLElement>;
   const s2 = useReveal() as React.RefObject<HTMLElement>;
+  const techRef = useReveal() as React.RefObject<HTMLElement>;
+  const industryRef = useReveal() as React.RefObject<HTMLElement>;
+  const pricingRef = useReveal() as React.RefObject<HTMLElement>;
   const s3 = useReveal() as React.RefObject<HTMLElement>;
   const s4 = useReveal() as React.RefObject<HTMLElement>;
   const s5 = useReveal() as React.RefObject<HTMLElement>;
@@ -164,6 +168,149 @@ export default function GameDevelopmentPage() {
           </div>
         </section>
 
+        {/* TECH STACK */}
+        <section ref={techRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64, gap: 40, flexWrap: 'wrap' }}>
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>Technology</div>
+                <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0 }}>
+                  The Stack Behind Your Game
+                </h2>
+              </div>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.75, margin: 0 }}>
+                Battle-tested engines, frameworks and backend services chosen for performance, scalability, and player experience.
+              </p>
+            </div>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
+              {[
+                { label: 'Game Engines', chips: ['Unity', 'Unreal Engine 5', 'Godot', 'Cocos2d'] },
+                { label: 'Mobile', chips: ['Swift (iOS)', 'Kotlin (Android)', 'Flutter', 'React Native'] },
+                { label: 'Backend', chips: ['PlayFab', 'Firebase', 'AWS GameLift', 'Photon Networking'] },
+                { label: 'Tools', chips: ['Blender', 'Spine 2D', 'FMOD', 'Wwise', 'Git LFS'] },
+              ].map(cat => (
+                <div key={cat.label}
+                  style={{ padding: 'clamp(24px, 3vw, 36px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.02)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}>
+                  <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>{cat.label}</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                    {cat.chips.map(c => (
+                      <span key={c}
+                        style={{ padding: '7px 16px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 500, color: 'rgba(255,255,255,0.55)', transition: '0.25s', cursor: 'default' }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.35)'; e.currentTarget.style.color = '#f5290d'; e.currentTarget.style.background = 'rgba(245,41,13,0.06)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'transparent'; }}>
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* INDUSTRY USE CASES */}
+        <section ref={industryRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <div className="reveal" style={{ marginBottom: 64 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>Industries</div>
+              <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0 }}>
+                Games That Power Every Sector
+              </h2>
+            </div>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
+              {[
+                { icon: '\uD83D\uDCF1', title: 'Mobile Gaming', desc: 'Casual games, puzzle games, hyper-casual hits and mid-core titles optimized for retention, monetization and scalable user acquisition.' },
+                { icon: '\uD83C\uDFC6', title: 'Gamification', desc: 'Loyalty programs, learning apps, fitness challenges and employee engagement platforms powered by game mechanics and reward loops.' },
+                { icon: '\uD83C\uDFAF', title: 'Serious Games', desc: 'Corporate training simulations, military scenario exercises, safety drills and compliance training built for measurable learning outcomes.' },
+                { icon: '\uD83C\uDF93', title: 'EdTech', desc: 'Educational games, language learning adventures, math puzzle platforms and interactive STEM experiences for K-12 and higher education.' },
+                { icon: '\uD83C\uDFE5', title: 'Healthcare', desc: 'Physical therapy games, cognitive training applications, mental wellness tools and rehabilitation programs with clinical outcome tracking.' },
+                { icon: '\uD83C\uDFAC', title: 'Entertainment', desc: 'Console and PC games, VR titles, streaming interactive experiences and cross-platform entertainment products for global audiences.' },
+              ].map((ind, i) => (
+                <div key={ind.title}
+                  style={{ padding: '36px 32px', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 24, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                  <div style={{ fontSize: 28, marginBottom: 16 }}>{ind.icon}</div>
+                  <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 10 }}>{ind.title}</h3>
+                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* PRICING TIERS */}
+        <section ref={pricingRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>Pricing</div>
+              <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.05, margin: '0 0 16px' }}>
+                Transparent Game Dev Pricing
+              </h2>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>Every project is scoped individually. These tiers give you a starting framework for budgeting.</p>
+            </div>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 20 }}>
+              {[
+                {
+                  tier: 'Casual / Hyper-Casual',
+                  price: '$20,000+',
+                  desc: '2D mobile game with polished core loop, monetization integration, and analytics from day one.',
+                  features: ['2D mobile game (iOS & Android)', 'Core loop & monetization design', 'Ad integration (rewarded, interstitial)', 'Analytics & A/B testing setup', 'App Store submission & optimization', '6\u201310 week delivery'],
+                },
+                {
+                  tier: 'Mid-Core Game',
+                  price: '$75,000+',
+                  desc: '3D game with multiplayer, in-app purchases, leaderboards, and live operations infrastructure.',
+                  features: ['3D game with custom art style', 'Real-time or turn-based multiplayer', 'IAP economy & battle pass system', 'Leaderboards & social features', 'LiveOps event framework', '12\u201320 week delivery'],
+                  featured: true,
+                },
+                {
+                  tier: 'AAA / Enterprise',
+                  price: '$200,000+',
+                  desc: 'Full production pipeline with custom engine work, cross-platform deployment, and dedicated team.',
+                  features: ['Full production with dedicated team', 'Custom engine features or modifications', 'Cross-platform (mobile, PC, console)', 'Advanced multiplayer infrastructure', 'Cinematic assets & narrative design', '20\u201340+ week delivery'],
+                },
+              ].map(plan => (
+                <div key={plan.tier}
+                  style={{
+                    padding: 'clamp(32px, 4vw, 48px) clamp(24px, 3vw, 40px)',
+                    border: plan.featured ? '1px solid rgba(245,41,13,0.3)' : '1px solid rgba(255,255,255,0.08)',
+                    borderRadius: 28,
+                    background: plan.featured ? 'rgba(245,41,13,0.04)' : 'rgba(255,255,255,0.02)',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    transition: 'all 0.35s ease',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = plan.featured ? 'rgba(245,41,13,0.3)' : 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                  {plan.featured && <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,#f5290d,transparent)' }} />}
+                  {plan.featured && (
+                    <span style={{ display: 'inline-block', fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, marginBottom: 16 }}>Most Popular</span>
+                  )}
+                  <h3 style={{ fontSize: 'clamp(1.2rem, 2vw, 1.5rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', margin: '0 0 8px' }}>{plan.tier}</h3>
+                  <div style={{ fontSize: 'clamp(2rem,3vw,2.8rem)', fontWeight: 700, color: '#f5290d', letterSpacing: '-0.03em', marginBottom: 16 }}>{plan.price}</div>
+                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: 28 }}>{plan.desc}</p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                    {plan.features.map(f => (
+                      <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, color: 'rgba(255,255,255,0.75)' }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                        {f}
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 48, padding: '0 28px', borderRadius: 100, background: plan.featured ? '#f5290d' : 'transparent', border: plan.featured ? 'none' : '1px solid rgba(255,255,255,0.15)', color: '#fff', fontSize: 14, fontWeight: 600, textDecoration: 'none', marginTop: 32, transition: '0.3s' }}
+                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; if (plan.featured) e.currentTarget.style.boxShadow = '0 12px 30px rgba(245,41,13,0.3)'; else e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; if (!plan.featured) e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}>
+                    Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* PROCESS */}
         <section ref={s3} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
@@ -228,6 +375,35 @@ export default function GameDevelopmentPage() {
           </div>
         </section>
 
+        {/* Industries We Serve */}
+        <section style={{ padding: '60px 0' }}>
+          <div className="cb-container" style={{ textAlign: 'center' }}>
+            <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 24 }}>Industries We Serve</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12 }}>
+              {[
+                { name: 'FinTech', href: '/industries/fintech' },
+                { name: 'Healthcare', href: '/industries/healthcare' },
+                { name: 'E-Commerce', href: '/industries/ecommerce' },
+                { name: 'Logistics', href: '/industries/logistics' },
+                { name: 'EdTech', href: '/industries/edtech' },
+                { name: 'Enterprise', href: '/industries/enterprise' },
+              ].map((ind) => (
+                <a key={ind.href} href={ind.href} style={{
+                  padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
+                  color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none',
+                  transition: 'all 0.2s ease',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
+                >
+                  {ind.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section ref={s6} className="section-padding">
           <div className="cb-container" style={{ textAlign: 'center' }}>
@@ -257,6 +433,7 @@ export default function GameDevelopmentPage() {
                 </div>
               ))}
             </div>
+            <TrustBadges compact />
           </div>
         </section>
 

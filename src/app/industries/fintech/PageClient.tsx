@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadges from '@/components/TrustBadges';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -225,6 +226,36 @@ export default function FintechPage() {
           </div>
         </section>
 
+        {/* Related Services */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+              Services for FinTech
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(250px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { name: 'Web Development', href: '/services/web-development', desc: 'High-performance trading dashboards and financial portals built with modern frameworks.' },
+                { name: 'Mobile App Development', href: '/services/mobile-app-development', desc: 'Secure mobile banking and wallet apps with biometric auth and real-time notifications.' },
+                { name: 'AI & Machine Learning', href: '/services/ai-ml', desc: 'Fraud detection models, risk scoring engines and predictive analytics for financial data.' },
+                { name: 'Cloud & DevOps', href: '/services/cloud-devops', desc: 'PCI-DSS compliant cloud infrastructure with zero-downtime deployments and auto-scaling.' },
+                { name: 'Blockchain Development', href: '/services/blockchain', desc: 'Smart contracts, DeFi protocols and tokenised asset platforms on EVM-compatible chains.' },
+              ].map((s) => (
+                <a key={s.href} href={s.href} style={{
+                  display: 'block', padding: '24px', borderRadius: 16,
+                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none', transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                >
+                  <div style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{s.name}</div>
+                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{s.desc}</div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section ref={s6} className="section-padding">
           <div className="cb-container">
@@ -248,6 +279,7 @@ export default function FintechPage() {
                   <span key={t} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)' }}>✓ {t}</span>
                 ))}
               </div>
+              <TrustBadges compact />
             </div>
           </div>
         </section>

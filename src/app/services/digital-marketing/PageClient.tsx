@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
+import TrustBadges from '@/components/TrustBadges';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -65,6 +66,9 @@ export default function DigitalMarketingPage() {
   const s4 = useReveal() as React.RefObject<HTMLElement>;
   const s5 = useReveal() as React.RefObject<HTMLElement>;
   const s6 = useReveal() as React.RefObject<HTMLElement>;
+  const s7 = useReveal() as React.RefObject<HTMLElement>;
+  const s8 = useReveal() as React.RefObject<HTMLElement>;
+  const s9 = useReveal() as React.RefObject<HTMLElement>;
 
   useEffect(() => {
     heroRef.current?.querySelectorAll('.reveal').forEach(n => setTimeout(() => n.classList.add('visible'), 100));
@@ -229,6 +233,139 @@ export default function DigitalMarketingPage() {
           </div>
         </section>
 
+        {/* Tools & Platforms */}
+        <section ref={s7} style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 className="reveal" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+              Our Marketing Toolkit
+            </h2>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
+              {[
+                { cat: 'SEO Tools', tools: ['Ahrefs', 'SEMrush', 'Google Analytics', 'Search Console'] },
+                { cat: 'Ads', tools: ['Google Ads', 'Meta Ads', 'LinkedIn Ads', 'TikTok Ads'] },
+                { cat: 'Content', tools: ['HubSpot', 'Mailchimp', 'Buffer', 'Hootsuite'] },
+                { cat: 'Analytics', tools: ['Google Tag Manager', 'Hotjar', 'Mixpanel', 'Data Studio'] },
+              ].map((g) => (
+                <div key={g.cat} style={{ padding: 'clamp(24px, 3vw, 36px)', borderRadius: 20, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <h3 style={{ fontSize: 14, fontWeight: 600, color: '#f5290d', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 16 }}>{g.cat}</h3>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                    {g.tools.map((t) => (
+                      <span key={t} style={{ padding: '6px 14px', borderRadius: 100, fontSize: 13, background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.7)' }}>{t}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industry Applications */}
+        <section ref={s8} style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 className="reveal" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16, textAlign: 'center' }}>
+              Marketing for Every Industry
+            </h2>
+            <p className="reveal reveal-d1" style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', textAlign: 'center', maxWidth: 600, margin: '0 auto 40px' }}>
+              We build growth engines tailored to your industry&apos;s unique challenges and opportunities.
+            </p>
+            <div className="reveal reveal-d2" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 16 }}>
+              {[
+                { industry: 'FinTech', desc: 'High-intent lead generation campaigns for financial services with compliance-ready ad copy and landing pages.', href: '/industries/fintech' },
+                { industry: 'Healthcare', desc: 'Patient acquisition strategies across search and social that build trust and drive appointment bookings.', href: '/industries/healthcare' },
+                { industry: 'E-Commerce', desc: 'ROAS-focused campaigns across Google Shopping, Meta and email that maximize revenue per ad dollar.', href: '/industries/ecommerce' },
+                { industry: 'SaaS', desc: 'Full-funnel growth marketing from awareness to trial sign-up with content, paid and lifecycle automation.', href: '/services/saas-development' },
+                { industry: 'Logistics', desc: 'B2B demand generation through LinkedIn, search and account-based marketing for supply chain companies.', href: '/industries/logistics' },
+                { industry: 'Enterprise', desc: 'Thought leadership and executive visibility programs that position your brand as the industry authority.', href: '/industries/enterprise' },
+              ].map((ind) => (
+                <a key={ind.industry} href={ind.href} style={{
+                  display: 'block', padding: '24px', borderRadius: 16,
+                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none', transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                >
+                  <h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{ind.industry}</h3>
+                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{ind.desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section ref={s9} style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 className="reveal" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+              Marketing Packages
+            </h2>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
+              {[
+                { tier: 'Starter', price: '$3,000/mo', desc: 'SEO foundations and basic PPC to start driving qualified traffic', features: ['Technical SEO Audit & Fixes', 'Keyword Strategy (50 keywords)', 'On-Page Optimization', 'Google Ads Setup & Management', 'Monthly Performance Report', 'Dedicated Account Manager'] },
+                { tier: 'Growth', price: '$7,500/mo', desc: 'Multi-channel marketing engine for scaling businesses', features: ['Everything in Starter', 'Content Marketing (4 articles/mo)', 'Meta & LinkedIn Ads', 'Email Marketing Automation', 'Conversion Rate Optimization', 'Weekly Strategy Calls', 'Custom Analytics Dashboard'], popular: true },
+                { tier: 'Enterprise', price: '$15,000+/mo', desc: 'Full-funnel growth program with dedicated team', features: ['Everything in Growth', 'Full SEO Program (200+ keywords)', 'Multi-Platform Paid Media', 'Account-Based Marketing', 'Video & Creative Production', 'Marketing Automation Setup', 'Executive Reporting & Strategy', 'Dedicated Growth Team'] },
+              ].map((p) => (
+                <div key={p.tier} style={{
+                  padding: '36px 28px', borderRadius: 24,
+                  background: p.popular ? 'rgba(245,41,13,0.05)' : 'rgba(255,255,255,0.03)',
+                  border: `1px solid ${p.popular ? 'rgba(245,41,13,0.2)' : 'rgba(255,255,255,0.08)'}`,
+                  position: 'relative',
+                }}>
+                  {p.popular && <span style={{ position: 'absolute', top: -12, left: '50%', transform: 'translateX(-50%)', padding: '4px 16px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 11, fontWeight: 700, textTransform: 'uppercase' }}>Most Popular</span>}
+                  <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', marginBottom: 4 }}>{p.tier}</h3>
+                  <div style={{ fontSize: 28, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{p.price}</div>
+                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: 24, lineHeight: 1.5 }}>{p.desc}</p>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    {p.features.map((f) => (
+                      <li key={f} style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <a href="/contact" style={{
+                    display: 'block', textAlign: 'center', marginTop: 24, padding: '14px', borderRadius: 12,
+                    background: p.popular ? '#f5290d' : 'rgba(255,255,255,0.06)',
+                    color: '#fff', fontSize: 14, fontWeight: 600, textDecoration: 'none',
+                    border: p.popular ? 'none' : '1px solid rgba(255,255,255,0.1)',
+                  }}>
+                    Get Started
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries We Serve */}
+        <section style={{ padding: '60px 0' }}>
+          <div className="cb-container" style={{ textAlign: 'center' }}>
+            <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 24 }}>Industries We Serve</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12 }}>
+              {[
+                { name: 'FinTech', href: '/industries/fintech' },
+                { name: 'Healthcare', href: '/industries/healthcare' },
+                { name: 'E-Commerce', href: '/industries/ecommerce' },
+                { name: 'Logistics', href: '/industries/logistics' },
+                { name: 'EdTech', href: '/industries/edtech' },
+                { name: 'Enterprise', href: '/industries/enterprise' },
+              ].map((ind) => (
+                <a key={ind.href} href={ind.href} style={{
+                  padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
+                  color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none',
+                  transition: 'all 0.2s ease',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
+                >
+                  {ind.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section ref={s6} className="section-padding">
           <div className="cb-container" style={{ textAlign: 'center' }}>
@@ -258,6 +395,7 @@ export default function DigitalMarketingPage() {
                 </div>
               ))}
             </div>
+            <TrustBadges compact />
           </div>
         </section>
 
