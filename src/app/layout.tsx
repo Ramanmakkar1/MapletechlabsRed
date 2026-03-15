@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
+import ClarityAnalytics from "@/components/ClarityAnalytics";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -147,6 +148,7 @@ gtag('config', 'G-LLHNY6HD88');`,
         />
         {children}
         <CookieConsent />
+        <ClarityAnalytics />
         <Analytics />
       </body>
     </html>
