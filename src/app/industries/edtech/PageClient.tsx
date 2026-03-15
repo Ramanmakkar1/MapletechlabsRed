@@ -134,23 +134,19 @@ export default function EdtechPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Solutions</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Learning experiences built for outcomes, not just completion.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '1.5rem' }}>
               {[
-                { title: 'Adaptive Learning Platforms', desc: 'AI-driven curriculum that adjusts difficulty in real time, spaced repetition scheduling, mastery-based progression, and detailed analytics for educators and learners.' },
-                { title: 'Live Tutoring & Classrooms', desc: 'WebRTC-powered virtual classrooms with interactive whiteboards, breakout rooms, screen sharing, session recording, and post-class AI summaries.' },
+                { icon: '🧠', title: 'Adaptive Learning Platforms', desc: 'AI-driven curriculum that adjusts difficulty in real time, spaced repetition scheduling, mastery-based progression, and detailed analytics for educators and learners.' },
+                { icon: '🎥', title: 'Live Tutoring & Classrooms', desc: 'WebRTC-powered virtual classrooms with interactive whiteboards, breakout rooms, screen sharing, session recording, and post-class AI summaries.' },
+                { icon: '🏆', title: 'Gamification & Badges', desc: 'Points, streaks, leaderboards, and achievement systems that boost learner motivation and drive consistent daily engagement.' },
+                { icon: '📚', title: 'LMS Integration', desc: 'Seamless SCORM and xAPI connections to Canvas, Moodle, and Google Classroom so your content works within existing institutional ecosystems.' },
+                { icon: '📝', title: 'Assessment & Proctoring', desc: 'AI-powered exam proctoring, adaptive testing, auto-grading, and plagiarism detection that maintain academic integrity at scale.' },
+                { icon: '📱', title: 'Offline-Capable Mobile', desc: 'Native and PWA learning apps with offline content sync, push notifications, and low-bandwidth optimisation for learners everywhere.' },
               ].map(s => (
-                <Card key={s.title} style={{ borderRadius: 32 }}>
-                  <div style={{ display: 'inline-block', background: 'rgba(245,41,13,0.1)', borderRadius: 8, padding: '4px 12px', fontSize: 12, color: '#f5290d', marginBottom: '1rem', letterSpacing: '0.05em' }}>Featured</div>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.35rem', marginBottom: '0.75rem' }}>{s.title}</h3>
+                <Card key={s.title}>
+                  <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{s.icon}</div>
+                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
                   <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
-                </Card>
-              ))}
-            </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
-              {['Gamification & Badges', 'LMS Integration', 'Assessment & Proctoring', 'Offline-Capable Mobile'].map(s => (
-                <Card key={s} style={{ padding: '1.5rem' }}>
-                  <div style={{ color: '#f5290d', fontSize: '1.2rem', marginBottom: '0.5rem' }}>→</div>
-                  <h4 style={{ fontWeight: 700, fontSize: '1rem' }}>{s}</h4>
                 </Card>
               ))}
             </div>

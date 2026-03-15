@@ -134,23 +134,19 @@ export default function LogisticsPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Solutions</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>From depot to doorstep, we engineer every link in the chain.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '1.5rem' }}>
               {[
-                { title: 'Fleet & Route Management', desc: 'GPS-integrated fleet tracking, ML route optimisation, driver mobile apps, maintenance scheduling, and real-time dispatch consoles that cut operational costs.' },
-                { title: 'Warehouse Management Systems', desc: 'Full-featured WMS with barcode and RFID scanning, robotics integrations, slotting optimisation, pick-and-pack workflows, and ERP connectivity.' },
+                { icon: '🚛', title: 'Fleet & Route Management', desc: 'GPS-integrated fleet tracking, ML route optimisation, driver mobile apps, maintenance scheduling, and real-time dispatch consoles that cut operational costs.' },
+                { icon: '🏭', title: 'Warehouse Management Systems', desc: 'Full-featured WMS with barcode and RFID scanning, robotics integrations, slotting optimisation, pick-and-pack workflows, and ERP connectivity.' },
+                { icon: '📦', title: 'Last-Mile Apps', desc: 'Driver-facing delivery apps with proof-of-delivery capture, dynamic ETAs, and customer notifications that reduce failed deliveries and improve satisfaction.' },
+                { icon: '📊', title: 'Supply Chain Analytics', desc: 'Demand forecasting, inventory optimisation, and end-to-end visibility dashboards that help you make smarter decisions across your supply chain.' },
+                { icon: '📡', title: 'IoT & Sensors', desc: 'Temperature monitoring, asset tracking, and condition-based alerts using GPS, RFID, and LoRaWAN sensors integrated into your logistics platform.' },
+                { icon: '🔍', title: 'Customer Tracking Portals', desc: 'Branded, real-time shipment tracking portals with live maps, delivery notifications, and self-service tools that reduce support tickets.' },
               ].map(s => (
-                <Card key={s.title} style={{ borderRadius: 32 }}>
-                  <div style={{ display: 'inline-block', background: 'rgba(245,41,13,0.1)', borderRadius: 8, padding: '4px 12px', fontSize: 12, color: '#f5290d', marginBottom: '1rem', letterSpacing: '0.05em' }}>Featured</div>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.35rem', marginBottom: '0.75rem' }}>{s.title}</h3>
+                <Card key={s.title}>
+                  <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{s.icon}</div>
+                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
                   <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
-                </Card>
-              ))}
-            </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
-              {['Last-Mile Apps', 'Supply Chain Analytics', 'IoT & Sensors', 'Customer Tracking Portals'].map(s => (
-                <Card key={s} style={{ padding: '1.5rem' }}>
-                  <div style={{ color: '#f5290d', fontSize: '1.2rem', marginBottom: '0.5rem' }}>→</div>
-                  <h4 style={{ fontWeight: 700, fontSize: '1rem' }}>{s}</h4>
                 </Card>
               ))}
             </div>

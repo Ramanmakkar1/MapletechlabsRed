@@ -134,23 +134,19 @@ export default function HealthcarePage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Solutions</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Clinical-grade software from consultation to care delivery.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '1.5rem' }}>
               {[
-                { title: 'Telehealth & Remote Care', desc: 'WebRTC-powered HIPAA video consultations, encrypted patient records, e-prescribing, and remote monitoring dashboards for modern care delivery.' },
-                { title: 'Clinical AI & Diagnostics', desc: 'FDA-validated ML models for imaging analysis, predictive care pathways, NLP-powered clinical documentation, and sepsis early-warning systems.' },
+                { icon: '🩺', title: 'Telehealth & Remote Care', desc: 'WebRTC-powered HIPAA video consultations, encrypted patient records, e-prescribing, and remote monitoring dashboards for modern care delivery.' },
+                { icon: '🧠', title: 'Clinical AI & Diagnostics', desc: 'FDA-validated ML models for imaging analysis, predictive care pathways, NLP-powered clinical documentation, and sepsis early-warning systems.' },
+                { icon: '🔗', title: 'EHR/EMR Integration', desc: 'Seamless HL7 FHIR connections to Epic, Cerner, and Allscripts that unify patient data across your entire care network.' },
+                { icon: '🧑‍⚕️', title: 'Patient Portals', desc: 'Secure, mobile-first portals for appointment scheduling, lab results, messaging, and medication management that improve patient engagement.' },
+                { icon: '📡', title: 'Medical Devices & IoT', desc: 'FDA-compliant integrations with wearables, remote monitoring devices, and clinical sensors that stream real-time vitals to care teams.' },
+                { icon: '📊', title: 'Healthcare Analytics', desc: 'Population health dashboards, clinical outcome tracking, and predictive models that help providers deliver better care at lower cost.' },
               ].map(s => (
-                <Card key={s.title} style={{ borderRadius: 32 }}>
-                  <div style={{ display: 'inline-block', background: 'rgba(245,41,13,0.1)', borderRadius: 8, padding: '4px 12px', fontSize: 12, color: '#f5290d', marginBottom: '1rem', letterSpacing: '0.05em' }}>Featured</div>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.35rem', marginBottom: '0.75rem' }}>{s.title}</h3>
+                <Card key={s.title}>
+                  <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{s.icon}</div>
+                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
                   <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
-                </Card>
-              ))}
-            </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
-              {['EHR/EMR Integration', 'Patient Portals', 'Medical Devices & IoT', 'Healthcare Analytics'].map(s => (
-                <Card key={s} style={{ padding: '1.5rem' }}>
-                  <div style={{ color: '#f5290d', fontSize: '1.2rem', marginBottom: '0.5rem' }}>→</div>
-                  <h4 style={{ fontWeight: 700, fontSize: '1rem' }}>{s}</h4>
                 </Card>
               ))}
             </div>

@@ -134,23 +134,19 @@ export default function FintechPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Solutions</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>End-to-end financial engineering from infrastructure to interface.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '1.5rem' }}>
               {[
-                { title: 'Trading & Investment Platforms', desc: 'AI-driven analytics, real-time market data ingestion, order management systems, and portfolio risk engines built for institutional-grade performance.' },
-                { title: 'Digital Banking & Wallets', desc: 'Mobile-first banking apps with KYC/AML workflows, multi-currency support, biometric auth, and seamless core-banking integrations.' },
+                { icon: '📈', title: 'Trading & Investment Platforms', desc: 'AI-driven analytics, real-time market data ingestion, order management systems, and portfolio risk engines built for institutional-grade performance.' },
+                { icon: '🏦', title: 'Digital Banking & Wallets', desc: 'Mobile-first banking apps with KYC/AML workflows, multi-currency support, biometric auth, and seamless core-banking integrations.' },
+                { icon: '💳', title: 'Payment Gateways', desc: 'Secure, PCI-compliant payment processing with multi-provider failover, tokenisation, and support for cards, ACH, and real-time payments.' },
+                { icon: '📋', title: 'RegTech & Compliance', desc: 'Automated regulatory reporting, KYC/AML screening workflows, and audit-ready systems that keep you ahead of evolving financial regulations.' },
+                { icon: '🔗', title: 'Crypto & DeFi', desc: 'Custodial and non-custodial wallet infrastructure, smart contract integration, and blockchain-based settlement for digital asset platforms.' },
+                { icon: '📊', title: 'Risk Analytics', desc: 'Real-time risk scoring, portfolio stress testing, and anomaly detection engines that surface threats before they become losses.' },
               ].map(s => (
-                <Card key={s.title} style={{ borderRadius: 32 }}>
-                  <div style={{ display: 'inline-block', background: 'rgba(245,41,13,0.1)', borderRadius: 8, padding: '4px 12px', fontSize: 12, color: '#f5290d', marginBottom: '1rem', letterSpacing: '0.05em' }}>Featured</div>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.35rem', marginBottom: '0.75rem' }}>{s.title}</h3>
+                <Card key={s.title}>
+                  <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{s.icon}</div>
+                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
                   <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
-                </Card>
-              ))}
-            </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
-              {['Payment Gateways', 'RegTech & Compliance', 'Crypto & DeFi', 'Risk Analytics'].map(s => (
-                <Card key={s} style={{ padding: '1.5rem' }}>
-                  <div style={{ color: '#f5290d', fontSize: '1.2rem', marginBottom: '0.5rem' }}>→</div>
-                  <h4 style={{ fontWeight: 700, fontSize: '1rem' }}>{s}</h4>
                 </Card>
               ))}
             </div>
