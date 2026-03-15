@@ -110,7 +110,7 @@ export default function EdmontonPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Edmonton</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Full-spectrum software development for Edmonton and Alberta businesses.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {services.map(s => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
@@ -156,7 +156,7 @@ export default function EdmontonPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Edmonton</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Your local HQ partner with national reach and global talent.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {[
                 { title: 'Our Headquarters', desc: 'Edmonton is home to our founding team and core operations. When you work with Mapletech Labs in Edmonton, you work directly with our leadership and most experienced engineers.' },
                 { title: 'Virtual Team of World-Class Agents', desc: 'Our distributed model gives you access to top-tier talent across Canada without geographic limitations. The best person for the job, every time.' },

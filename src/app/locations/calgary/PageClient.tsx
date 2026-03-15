@@ -110,7 +110,7 @@ export default function CalgaryPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Calgary</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Digital transformation for energy, logistics, and enterprise across Alberta.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {services.map(s => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
@@ -156,7 +156,7 @@ export default function CalgaryPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Calgary</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Energy sector expertise backed by our Edmonton headquarters next door.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {[
                 { title: 'Oil & Gas Digital Transformation', desc: 'We build SCADA integrations, production reporting platforms, and field data capture systems that help energy companies reduce downtime and optimize output across their operations.' },
                 { title: 'Close to Our Edmonton HQ', desc: 'Calgary is just three hours from our headquarters in Edmonton. This proximity means faster response times, in-person meetings when needed, and a deep understanding of Alberta\'s business landscape.' },

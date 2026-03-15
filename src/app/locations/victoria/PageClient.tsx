@@ -110,7 +110,7 @@ export default function VictoriaPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Victoria</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Custom software for BC government, clean tech, tourism, and marine industries.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {services.map(s => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
@@ -156,7 +156,7 @@ export default function VictoriaPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Victoria</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Island innovation backed by coast-to-coast engineering power.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {[
                 { title: 'BC Provincial Government', desc: 'Victoria is the seat of the BC government, and we build digital services that meet provincial accessibility, security, and procurement standards. From citizen portals to internal workflow tools, we deliver compliant solutions.' },
                 { title: 'Clean Tech & Sustainability', desc: 'Vancouver Island is a leader in clean energy and environmental innovation. We develop renewable energy monitoring platforms, carbon tracking systems, and environmental data analytics tools.' },

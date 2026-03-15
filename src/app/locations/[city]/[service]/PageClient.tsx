@@ -53,7 +53,7 @@ const sectionBorder: React.CSSProperties = { borderTop: '1px solid rgba(255,255,
 const heading2: React.CSSProperties = { fontSize: 'clamp(2.2rem, 4vw, 4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 };
 const subLabel: React.CSSProperties = { fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.3)', marginBottom: 20 };
 const bodyText: React.CSSProperties = { fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.75 };
-const autoGrid: React.CSSProperties = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(16px, 2vw, 20px)' };
+const autoGrid: React.CSSProperties = { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(16px, 2vw, 20px)' };
 
 function hoverCard(e: React.MouseEvent, on: boolean) {
   const t = e.currentTarget as HTMLElement;
@@ -371,7 +371,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </Link>
             </div>
-            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 20 }}>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 20 }}>
               {portfolioItems.map((p, i) => (
                 <div key={p.title} className={`reveal reveal-d${i + 1}`} style={{ ...cardStyle, padding: 0, overflow: 'hidden', borderRadius: 28 }}
                   onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
@@ -404,7 +404,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
               <div style={subLabel}>Testimonials</div>
               <h2 style={heading2}>What {cityName} Clients Say</h2>
             </div>
-            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 20 }}>
+            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 20 }}>
               {testimonials.map((t, i) => (
                 <div key={t.name} className={`reveal reveal-d${Math.min(i + 1, 3)}`} style={{ ...cardStyle, padding: '44px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
                   onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>

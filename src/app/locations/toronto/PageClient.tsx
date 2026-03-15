@@ -110,7 +110,7 @@ export default function TorontoPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Toronto</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Enterprise-grade software for Canada&apos;s financial capital and largest startup ecosystem.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {services.map(s => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
@@ -156,7 +156,7 @@ export default function TorontoPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Toronto</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Deep FinTech expertise meets national reach in Canada&apos;s business capital.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {[
                 { title: 'FinTech & Bay Street Expertise', desc: 'We understand the compliance, security, and performance requirements of financial services. From banking APIs to payment gateways, we build software that meets the standards of Canada\'s financial hub.' },
                 { title: 'Shopify Ecosystem Integration', desc: 'Toronto is home to Shopify and a thriving e-commerce ecosystem. We build custom apps, integrations, and headless commerce platforms that plug into the Shopify stack and beyond.' },

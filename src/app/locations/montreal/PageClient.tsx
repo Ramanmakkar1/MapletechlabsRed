@@ -110,7 +110,7 @@ export default function MontrealPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Montreal</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>AI-powered software for gaming, aerospace, and Quebec&apos;s bilingual market.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {services.map(s => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
@@ -156,7 +156,7 @@ export default function MontrealPage() {
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Montreal</h2>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>World-class AI expertise meets bilingual delivery in Canada&apos;s innovation capital.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {[
                 { title: 'AI & Deep Learning Leadership', desc: 'Montreal is home to MILA, the world\'s largest academic deep learning lab. We leverage this ecosystem to build production-grade AI systems including computer vision, NLP, and reinforcement learning solutions.' },
                 { title: 'Gaming Industry Expertise', desc: 'With Ubisoft Montreal, Warner Bros. Games, and hundreds of indie studios, the city is a global gaming hub. We build game backends, matchmaking systems, analytics platforms, and live ops toolchains.' },
