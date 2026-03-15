@@ -20,34 +20,58 @@ const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
 
 // ── Fetch all URLs from sitemap (with fallback to local generation) ──────────
 
+async function fetchSitemapUrls(url: string): Promise<string[]> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Status ${res.status}`);
+  const xml = await res.text();
+  const locs: string[] = [];
+  const regex = /<loc>(.*?)<\/loc>/g;
+  let match;
+  while ((match = regex.exec(xml)) !== null) {
+    locs.push(match[1]);
+  }
+  return locs;
+}
+
 async function getUrlsFromSitemap(): Promise<string[]> {
   try {
-    const res = await fetch(SITEMAP_URL);
-    if (!res.ok) throw new Error(`Status ${res.status}`);
-    const xml = await res.text();
-    const urls: string[] = [];
-    const regex = /<loc>(.*?)<\/loc>/g;
-    let match;
-    while ((match = regex.exec(xml)) !== null) {
-      urls.push(match[1]);
+    // Fetch sitemap index first
+    const sitemapLocs = await fetchSitemapUrls(SITEMAP_URL);
+    if (sitemapLocs.length === 0) throw new Error('No URLs found in sitemap');
+
+    // Check if these are sub-sitemaps (contain "sitemap" in URL) or direct page URLs
+    const subSitemaps = sitemapLocs.filter(u => u.includes('sitemap'));
+    const directUrls = sitemapLocs.filter(u => !u.includes('sitemap'));
+
+    // Recursively fetch all sub-sitemaps
+    const allUrls: string[] = [...directUrls];
+    for (const sub of subSitemaps) {
+      try {
+        const urls = await fetchSitemapUrls(sub);
+        allUrls.push(...urls);
+        console.log(`  Fetched ${urls.length} URLs from ${sub.split('/').pop()}`);
+      } catch {
+        console.log(`  [WARN] Could not fetch ${sub}`);
+      }
     }
-    if (urls.length > 0) {
-      // Ensure URLs match the configured SITE_URL domain
-      const normalizedUrls = urls.map(u => {
-        try {
-          const parsed = new URL(u);
-          const target = new URL(SITE_URL);
-          parsed.host = target.host;
-          parsed.protocol = target.protocol;
-          return parsed.toString().replace(/\/$/, '');
-        } catch {
-          return u;
-        }
-      });
-      console.log(`  Fetched ${normalizedUrls.length} URLs from live sitemap (normalized to ${SITE_URL})`);
-      return normalizedUrls;
-    }
-    throw new Error('No URLs found in sitemap');
+
+    // Normalize all URLs to match configured SITE_URL
+    const normalizedUrls = allUrls.map(u => {
+      try {
+        const parsed = new URL(u);
+        const target = new URL(SITE_URL);
+        parsed.host = target.host;
+        parsed.protocol = target.protocol;
+        return parsed.toString().replace(/\/$/, '');
+      } catch {
+        return u;
+      }
+    });
+
+    // Deduplicate
+    const unique = [...new Set(normalizedUrls)];
+    console.log(`  Total: ${unique.length} unique URLs from live sitemap`);
+    return unique;
   } catch {
     console.log('  Sitemap not reachable, using locally generated URLs');
     return generateUrls();
