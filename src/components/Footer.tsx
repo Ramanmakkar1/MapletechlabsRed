@@ -119,7 +119,7 @@ export default function Footer() {
 
       {/* Main Footer Grid */}
       <div className="cb-container" style={{ padding: 'clamp(48px, 8vw, 80px) 0' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: 'clamp(32px, 5vw, 48px)' }}>
+        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 'clamp(32px, 5vw, 48px)' }}>
 
           {/* Brand Column */}
           <div style={{ gridColumn: 'span 1' }}>

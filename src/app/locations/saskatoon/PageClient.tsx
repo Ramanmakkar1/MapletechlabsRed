@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -68,6 +69,13 @@ export default function SaskatoonPage() {
   return (
     <>
       <Navbar />
+      <div className="cb-container" style={{ paddingTop: 100 }}>
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Locations', href: '/locations' },
+          { label: 'Saskatoon' },
+        ]} />
+      </div>
       <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
 
         {/* HERO */}
@@ -195,6 +203,48 @@ export default function SaskatoonPage() {
                   <span key={t} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)' }}>&#10003; {t}</span>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* All Services in City */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
+              Our Services in Saskatoon
+            </h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>
+              Explore our full range of software development services available in Saskatoon.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { name: 'Web Development', slug: 'web-development' },
+                { name: 'Mobile App Development', slug: 'mobile-app-development' },
+                { name: 'AI & Machine Learning', slug: 'ai-ml' },
+                { name: 'Cloud & DevOps', slug: 'cloud-devops' },
+                { name: 'SaaS Development', slug: 'saas-development' },
+                { name: 'Digital Marketing', slug: 'digital-marketing' },
+                { name: 'Branding', slug: 'branding' },
+                { name: 'WordPress & CMS', slug: 'wordpress-cms' },
+                { name: 'Blockchain & Web3', slug: 'blockchain-web3' },
+                { name: 'Product Design', slug: 'product-design' },
+                { name: 'Game Development', slug: 'game-development' },
+                { name: 'AR & VR', slug: 'ar-vr' },
+              ].map((svc) => (
+                <a key={svc.slug} href={`/locations/saskatoon/${svc.slug}`} style={{
+                  display: 'flex', alignItems: 'center', gap: 12,
+                  padding: '16px 20px', borderRadius: 12,
+                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  textDecoration: 'none', transition: 'all 0.3s ease',
+                  fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.8)',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  {svc.name} in Saskatoon
+                </a>
+              ))}
             </div>
           </div>
         </section>

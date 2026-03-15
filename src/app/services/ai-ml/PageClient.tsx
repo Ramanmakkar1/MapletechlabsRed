@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
 import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadges from '@/components/TrustBadges';
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -373,6 +374,7 @@ export default function AiMlPage() {
             <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.5rem,5vw,5.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
               Ready to Build<br /><span style={{ color: '#f5290d' }}>With AI?</span>
             </h2>
+            <TrustBadges compact />
             <p className="reveal reveal-d2" style={{ fontSize: 18, color: 'rgba(255,255,255,0.38)', maxWidth: 480, margin: '0 auto 48px', lineHeight: 1.7 }}>
               Share your data challenge. We&apos;ll send a detailed AI strategy proposal within 48 hours — no commitment required.
             </p>

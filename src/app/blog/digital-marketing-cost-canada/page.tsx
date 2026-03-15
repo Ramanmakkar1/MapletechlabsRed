@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: DATE,
+  dateModified: '2026-03-15',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

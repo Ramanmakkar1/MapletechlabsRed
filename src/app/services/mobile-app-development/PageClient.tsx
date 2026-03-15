@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
 import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadges from '@/components/TrustBadges';
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
@@ -248,7 +249,7 @@ export default function MobileAppDevelopmentPage() {
         ═══════════════════════════════════════ */}
         <section ref={statsRef} style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))' }}>
+            <div className="reveal stats-strip-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
               {stats.map((s, i) => (
                 <div key={s.label} style={{ padding: 'clamp(28px, 4vw, 52px) clamp(16px, 3vw, 40px)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.07)' : 'none', textAlign: 'center' }}>
                   <div style={{ fontSize: 'clamp(2rem,3.5vw,3.2rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{s.value}</div>
@@ -494,6 +495,7 @@ export default function MobileAppDevelopmentPage() {
             <h2 style={{ fontSize: 'clamp(2.5rem,5vw,5.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
               Your App Could Be<br /><span style={{ color: '#f5290d' }}>Next.</span>
             </h2>
+            <TrustBadges compact />
             <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.38)', maxWidth: 480, margin: '0 auto 48px', lineHeight: 1.7 }}>
               Tell us about your idea. We&apos;ll send you a detailed proposal within 48 hours — no commitment required.
             </p>

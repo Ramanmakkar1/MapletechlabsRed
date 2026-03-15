@@ -91,6 +91,8 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>March 14, 2026</span>
+              <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 8px' }}>·</span>
+              <span style={{ color: 'rgba(255,255,255,0.5)' }}>Updated Mar 2026</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>·</span>
               <span className="reveal reveal-d1" style={{
                 fontSize: 13, color: 'rgba(255,255,255,0.3)',

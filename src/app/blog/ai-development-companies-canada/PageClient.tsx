@@ -91,6 +91,8 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                 padding: '5px 14px', borderRadius: 100,
               }}>Technology</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>March 14, 2026</span>
+              <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 8px' }}>·</span>
+              <span style={{ color: 'rgba(255,255,255,0.5)' }}>Updated Mar 2026</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>·</span>
               <span className="reveal reveal-d1" style={{
                 fontSize: 13, color: 'rgba(255,255,255,0.3)',
@@ -131,7 +133,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   fontSize: 15, fontWeight: 700, color: '#f5290d',
                 }}>RM</div>
                 <div>
-                  <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: 0 }}>Raman Makkar</p>
+                  <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: 0 }}><a href="/about/raman-makkar" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.2)' }}>Raman Makkar</a></p>
                   <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', margin: 0 }}>CEO, Mapletech Labs</p>
                 </div>
               </div>
@@ -493,7 +495,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                         fontSize: 14, fontWeight: 700, color: '#f5290d', flexShrink: 0,
                       }}>RM</div>
                       <div>
-                        <p style={{ fontSize: 14, fontWeight: 600, color: '#fff', margin: 0 }}>Raman Makkar</p>
+                        <p style={{ fontSize: 14, fontWeight: 600, color: '#fff', margin: 0 }}><a href="/about/raman-makkar" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.2)' }}>Raman Makkar</a></p>
                         <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', margin: 0 }}>CEO, Mapletech Labs</p>
                       </div>
                     </div>

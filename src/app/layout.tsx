@@ -98,6 +98,48 @@ const organizationSchema = {
     contactType: "sales",
     availableLanguage: ["English", "French"],
   },
+  foundingDate: "2018",
+  foundingLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Edmonton",
+      addressRegion: "Alberta",
+      addressCountry: "CA",
+    },
+  },
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    minValue: 25,
+    maxValue: 50,
+  },
+  founder: {
+    "@type": "Person",
+    name: "Raman Makkar",
+    jobTitle: "CEO & Founder",
+    url: "https://mapletechlabs.ca/about",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Software Development Services",
+    itemListElement: [
+      {
+        "@type": "OfferCatalog",
+        name: "Web Development",
+        url: "https://mapletechlabs.ca/services/web-development",
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "Mobile App Development",
+        url: "https://mapletechlabs.ca/services/mobile-app-development",
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "AI & Machine Learning",
+        url: "https://mapletechlabs.ca/services/ai-ml",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -106,7 +148,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-CA">
       <head>
         {/* Google Tag Manager */}
         <script

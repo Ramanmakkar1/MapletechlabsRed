@@ -60,6 +60,52 @@ const awards = [
   },
 ];
 
+function AwardCard({ award, i }: { award: typeof awards[number]; i: number }) {
+  return (
+    <div
+      className={`reveal-d${Math.min(i + 1, 6)} awards-card`}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 14,
+        padding: '28px 20px',
+        border: '1px solid rgba(255,255,255,0.07)',
+        borderRadius: 20,
+        background: 'rgba(255,255,255,0.02)',
+        transition: 'all 0.35s ease',
+        cursor: 'default',
+      }}
+      onMouseEnter={e => {
+        e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)';
+        e.currentTarget.style.background = 'rgba(245,41,13,0.04)';
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.4)';
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
+        e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
+        e.currentTarget.style.transform = '';
+        e.currentTarget.style.boxShadow = '';
+      }}
+    >
+      <div style={{ width: 80, height: 60, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+        <Image
+          src={award.src}
+          alt={award.name}
+          fill
+          style={{ objectFit: 'contain', filter: award.type === 'svg' ? 'brightness(0) invert(0.7)' : 'none' }}
+        />
+      </div>
+      <div style={{ textAlign: 'center' }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', lineHeight: 1.3 }}>{award.name}</div>
+        <div style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.2)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>{award.year}</div>
+      </div>
+    </div>
+  );
+}
+
 export default function FeaturedAwards() {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -88,13 +134,13 @@ export default function FeaturedAwards() {
           </h2>
         </div>
 
-        {/* Awards grid */}
-        <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 12 }}
+        {/* Awards grid - desktop only */}
+        <div className="reveal reveal-d1 awards-grid-desktop" style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 12 }}
           ref={el => {
             if (!el) return;
             const update = () => {
               const w = el.offsetWidth;
-              el.style.gridTemplateColumns = w < 480 ? 'repeat(2,1fr)' : w < 768 ? 'repeat(3,1fr)' : w < 1200 ? 'repeat(4,1fr)' : 'repeat(6,1fr)';
+              el.style.gridTemplateColumns = w < 1200 ? 'repeat(4,1fr)' : 'repeat(6,1fr)';
             };
             update();
             const ro = new ResizeObserver(update);
@@ -102,47 +148,23 @@ export default function FeaturedAwards() {
           }}
         >
           {awards.map((award, i) => (
-            <div
-              key={award.name}
-              className={`reveal-d${Math.min(i + 1, 6)}`}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: 14,
-                padding: '28px 20px',
-                border: '1px solid rgba(255,255,255,0.07)',
-                borderRadius: 20,
-                background: 'rgba(255,255,255,0.02)',
-                transition: 'all 0.35s ease',
-                cursor: 'default',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)';
-                e.currentTarget.style.background = 'rgba(245,41,13,0.04)';
-                e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.4)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
-                e.currentTarget.style.transform = '';
-                e.currentTarget.style.boxShadow = '';
-              }}
-            >
-              <div style={{ width: 80, height: 60, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                <Image
-                  src={award.src}
-                  alt={award.name}
-                  fill
-                  style={{ objectFit: 'contain', filter: award.type === 'svg' ? 'brightness(0) invert(0.7)' : 'none' }}
-                />
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', lineHeight: 1.3 }}>{award.name}</div>
-                <div style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.2)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>{award.year}</div>
-              </div>
+            <AwardCard key={award.name} award={award} i={i} />
+          ))}
+        </div>
+      </div>
+
+      {/* Awards marquee - mobile only */}
+      <div className="awards-marquee-mobile">
+        <div className="awards-marquee-track">
+          {awards.map((award, i) => (
+            <div key={award.name} className="awards-marquee-item">
+              <AwardCard award={award} i={i} />
+            </div>
+          ))}
+          {/* Duplicate for seamless loop */}
+          {awards.map((award, i) => (
+            <div key={`dup-${award.name}`} className="awards-marquee-item" aria-hidden="true">
+              <AwardCard award={award} i={i} />
             </div>
           ))}
         </div>
