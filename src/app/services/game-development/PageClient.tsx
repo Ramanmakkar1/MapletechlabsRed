@@ -54,7 +54,7 @@ const faqs = [
   { q: 'Can you build a game from concept, or only take over existing projects?', a: 'Both. We handle full game development from concept through launch, and we also take on rescue projects, port existing games to new platforms, or add features and live operations to shipped titles.' },
   { q: 'How do you approach mobile game monetisation?', a: 'Monetisation strategy is defined during concept — before a line of code is written. We design IAP economies, ad placement strategies and battle pass systems that maximise LTV without harming retention. We also run A/B tests post-launch to optimise.' },
   { q: 'Do you handle App Store and Google Play submission?', a: 'Yes. We manage all submission requirements including store listings, screenshots, trailers, metadata optimisation, rating questionnaires and compliance with both Apple and Google policies.' },
-  { q: 'What does a typical mobile game project cost?', a: 'Hyper-casual titles start around $40K–$80K. Mid-core mobile games typically range from $150K–$500K depending on feature depth and art style. We provide detailed estimates after a scoping session based on your game design document or brief.' },
+  { q: 'What does a typical mobile game project cost?', a: 'Hyper-casual titles start around $5K–$12K. Mid-core mobile games typically range from $15K–$50K depending on feature depth and art style. We provide detailed estimates after a scoping session based on your game design document or brief.' },
 ];
 
 export default function GameDevelopmentPage() {

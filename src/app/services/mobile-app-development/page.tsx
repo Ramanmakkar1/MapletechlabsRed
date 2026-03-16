@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'How much does a mobile app cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Simple MVPs typically start at $25,000 CAD. Consumer apps with full feature sets range $60,000–$150,000. Enterprise apps with complex integrations vary. You receive a fixed-price quote after our discovery call.',
+        text: 'Simple MVPs typically start at $2,500 CAD. Consumer apps with full feature sets range $8,000–$25,000. Enterprise apps with complex integrations vary. You receive a fixed-price quote after our discovery call.',
       },
     },
     {

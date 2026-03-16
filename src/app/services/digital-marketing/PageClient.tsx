@@ -52,7 +52,7 @@ const results = [
 const faqs = [
   { q: 'How long before I see results from SEO?', a: 'Most clients see meaningful ranking improvements within 3–4 months, with significant traffic gains by month 6. Paid channels like Google Ads and Meta deliver results within the first 2 weeks of launch.' },
   { q: 'Do you manage ad spend or just strategy?', a: 'We handle everything — strategy, creative, copy, campaign setup, bid management and weekly optimisation. You keep full ownership of your ad accounts and get transparent reporting.' },
-  { q: 'What budget do I need to start with paid ads?', a: 'We recommend a minimum of $3,000/month in ad spend for Google Ads and $2,000/month for paid social. Below these thresholds the data volume is too low for meaningful optimisation.' },
+  { q: 'What budget do I need to start with paid ads?', a: 'We recommend a minimum of $500/month in ad spend for Google Ads and $300/month for paid social. Below these thresholds the data volume is too low for meaningful optimisation.' },
   { q: 'Can you work with our in-house marketing team?', a: 'Absolutely. We frequently operate as a specialist extension of in-house teams — handling specific channels, providing senior strategy, or covering capacity gaps during high-growth periods.' },
   { q: 'How do you report on performance?', a: 'Every client gets a live dashboard, weekly performance summaries and a monthly strategy call. We tie every metric back to pipeline and revenue, not vanity numbers.' },
 ];

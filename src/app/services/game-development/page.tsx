@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'What does a typical mobile game project cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Hyper-casual titles start around $40K–$80K. Mid-core mobile games typically range from $150K–$500K depending on feature depth and art style. We provide detailed estimates after a scoping session based on your game design document or brief.',
+        text: 'Hyper-casual titles start around $5K–$12K. Mid-core mobile games typically range from $15K–$50K depending on feature depth and art style. We provide detailed estimates after a scoping session based on your game design document or brief.',
       },
     },
   ],

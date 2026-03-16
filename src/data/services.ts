@@ -182,7 +182,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$15,000 - $40,000",
+        range: "$2,500 - $8,000",
         features: [
           "Single platform (iOS or Android)",
           "Up to 8 core screens",
@@ -193,7 +193,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$40,000 - $100,000",
+        range: "$8,000 - $25,000",
         features: [
           "Cross-platform (iOS + Android)",
           "Up to 20 screens with animations",
@@ -204,7 +204,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$100,000 - $250,000+",
+        range: "$25,000 - $60,000+",
         features: [
           "Multi-platform with wearable support",
           "Complex business logic & workflows",
@@ -217,7 +217,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does it cost to build a mobile app in {city}?",
-        a: "Mobile app development in {city}, {province} typically ranges from $15,000 for a simple MVP to $250,000+ for complex enterprise applications. The final cost depends on the number of platforms, features, integrations, and design complexity. We provide detailed estimates after our free discovery session.",
+        a: "Mobile app development in {city}, {province} typically ranges from $2,500 for a simple MVP to $60,000+ for complex enterprise applications. The final cost depends on the number of platforms, features, integrations, and design complexity. We provide detailed estimates after our free discovery session.",
       },
       {
         q: "Should I choose native or cross-platform development in {city}?",
@@ -229,7 +229,7 @@ export const services: ServiceData[] = [
       },
       {
         q: "Do you offer app maintenance services in {city}?",
-        a: "Yes, we provide ongoing app maintenance and support packages for businesses in {city}, {province}. This includes OS compatibility updates, bug fixes, performance optimization, security patches, and feature enhancements. Our maintenance plans start at $2,000/month.",
+        a: "Yes, we provide ongoing app maintenance and support packages for businesses in {city}, {province}. This includes OS compatibility updates, bug fixes, performance optimization, security patches, and feature enhancements. Our maintenance plans start at $350/month.",
       },
       {
         q: "Can you help migrate our existing app to a new platform in {city}?",
@@ -383,7 +383,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$10,000 - $30,000",
+        range: "$850 - $5,000",
         features: [
           "Up to 10 pages with responsive design",
           "CMS integration (Sanity or Strapi)",
@@ -394,7 +394,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$30,000 - $80,000",
+        range: "$5,000 - $15,000",
         features: [
           "Custom web application with auth",
           "Third-party API integrations",
@@ -405,7 +405,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$80,000 - $200,000+",
+        range: "$15,000 - $40,000+",
         features: [
           "Complex SaaS or marketplace platform",
           "Microservices architecture",
@@ -418,7 +418,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does web development cost in {city}?",
-        a: "Web development costs in {city}, {province} range from $10,000 for a marketing website to $200,000+ for complex SaaS platforms. The cost depends on the number of pages, custom functionality, integrations, and design complexity. Contact us for a free estimate tailored to your project.",
+        a: "Web development costs in {city}, {province} range from $850 for a marketing website to $40,000+ for complex SaaS platforms. The cost depends on the number of pages, custom functionality, integrations, and design complexity. Contact us for a free estimate tailored to your project.",
       },
       {
         q: "Why should I choose Next.js for my {city} business website?",
@@ -438,7 +438,7 @@ export const services: ServiceData[] = [
       },
       {
         q: "Do you provide website hosting and maintenance in {city}?",
-        a: "Yes, we offer managed hosting and ongoing maintenance packages for {city} businesses. This includes uptime monitoring, security updates, content updates, performance optimization, and regular backups. Plans start at $500/month.",
+        a: "Yes, we offer managed hosting and ongoing maintenance packages for {city} businesses. This includes uptime monitoring, security updates, content updates, performance optimization, and regular backups. Plans start at $150/month.",
       },
       {
         q: "Will my website be optimized for search engines in {city}?",
@@ -590,7 +590,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$20,000 - $50,000",
+        range: "$3,500 - $10,000",
         features: [
           "Single AI use case implementation",
           "LLM API integration (GPT/Claude)",
@@ -601,7 +601,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$50,000 - $150,000",
+        range: "$10,000 - $30,000",
         features: [
           "Custom ML model development",
           "Multi-source data pipeline",
@@ -612,7 +612,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$150,000 - $500,000+",
+        range: "$30,000 - $80,000+",
         features: [
           "End-to-end AI platform build",
           "Multiple model deployment",
@@ -629,7 +629,7 @@ export const services: ServiceData[] = [
       },
       {
         q: "How much does AI development cost in {city}?",
-        a: "AI projects in {city}, {province} typically range from $20,000 for an LLM integration to $500,000+ for enterprise AI platforms. The cost depends on the complexity of the model, data requirements, and integration scope. We provide a free AI opportunity assessment to identify the best starting point.",
+        a: "AI projects in {city}, {province} typically range from $3,500 for an LLM integration to $80,000+ for enterprise AI platforms. The cost depends on the complexity of the model, data requirements, and integration scope. We provide a free AI opportunity assessment to identify the best starting point.",
       },
       {
         q: "Do I need a lot of data to start an AI project in {city}?",
@@ -791,7 +791,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$8,000 - $20,000",
+        range: "$1,500 - $5,000",
         features: [
           "Up to 15 screen designs",
           "Basic user research",
@@ -802,7 +802,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$20,000 - $60,000",
+        range: "$5,000 - $12,000",
         features: [
           "Full product design (30+ screens)",
           "In-depth user research & testing",
@@ -813,7 +813,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$60,000 - $150,000+",
+        range: "$12,000 - $30,000+",
         features: [
           "Multi-product design system",
           "Comprehensive UX research program",
@@ -830,7 +830,7 @@ export const services: ServiceData[] = [
       },
       {
         q: "How much does product design cost in {city}?",
-        a: "Product design in {city}, {province} typically ranges from $8,000 for a startup MVP design to $150,000+ for enterprise design systems. The cost depends on the number of screens, complexity of interactions, depth of user research, and whether brand identity work is included.",
+        a: "Product design in {city}, {province} typically ranges from $1,500 for a startup MVP design to $30,000+ for enterprise design systems. The cost depends on the number of screens, complexity of interactions, depth of user research, and whether brand identity work is included.",
       },
       {
         q: "How long does a design project take in {city}?",
@@ -992,7 +992,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$25,000 - $60,000",
+        range: "$4,000 - $12,000",
         features: [
           "Basic smart contract development",
           "Simple dApp frontend",
@@ -1003,7 +1003,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$60,000 - $150,000",
+        range: "$12,000 - $30,000",
         features: [
           "Complex smart contract system",
           "Full dApp with wallet integration",
@@ -1014,7 +1014,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$150,000 - $400,000+",
+        range: "$30,000 - $75,000+",
         features: [
           "DeFi protocol or NFT marketplace",
           "Cross-chain integration",
@@ -1027,7 +1027,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does blockchain development cost in {city}?",
-        a: "Blockchain development in {city}, {province} ranges from $25,000 for a simple smart contract and dApp to $400,000+ for complex DeFi protocols. The cost depends on the chain, contract complexity, security audit scope, and frontend requirements.",
+        a: "Blockchain development in {city}, {province} ranges from $4,000 for a simple smart contract and dApp to $75,000+ for complex DeFi protocols. The cost depends on the chain, contract complexity, security audit scope, and frontend requirements.",
       },
       {
         q: "Which blockchain should I build on in {city}?",
@@ -1193,7 +1193,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$10,000 - $30,000",
+        range: "$1,500 - $5,000",
         features: [
           "Basic cloud setup (single region)",
           "CI/CD pipeline configuration",
@@ -1204,7 +1204,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$30,000 - $80,000",
+        range: "$5,000 - $15,000",
         features: [
           "Multi-AZ high-availability setup",
           "Kubernetes cluster deployment",
@@ -1215,7 +1215,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$80,000 - $200,000+",
+        range: "$15,000 - $40,000+",
         features: [
           "Multi-region disaster recovery",
           "Full cloud migration & optimization",
@@ -1228,7 +1228,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does cloud migration cost in {city}?",
-        a: "Cloud migration costs in {city}, {province} range from $10,000 for simple workloads to $200,000+ for complex enterprise migrations. The cost depends on the number of servers, data volume, application complexity, and compliance requirements. We provide free assessments with detailed cost projections.",
+        a: "Cloud migration costs in {city}, {province} range from $850 for simple workloads to $40,000+ for complex enterprise migrations. The cost depends on the number of servers, data volume, application complexity, and compliance requirements. We provide free assessments with detailed cost projections.",
       },
       {
         q: "Which cloud provider is best for my {city} business?",
@@ -1394,7 +1394,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$20,000 - $50,000",
+        range: "$3,500 - $10,000",
         features: [
           "Single platform AR/VR experience",
           "Up to 5 interactive scenes",
@@ -1405,7 +1405,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$50,000 - $120,000",
+        range: "$10,000 - $25,000",
         features: [
           "Multi-platform deployment",
           "Custom 3D environments & assets",
@@ -1416,7 +1416,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$120,000 - $300,000+",
+        range: "$25,000 - $60,000+",
         features: [
           "Large-scale VR training platform",
           "Multiplayer / collaborative XR",
@@ -1429,7 +1429,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does AR/VR development cost in {city}?",
-        a: "AR/VR development in {city}, {province} ranges from $20,000 for a simple AR experience to $300,000+ for enterprise VR training platforms. The cost depends on the platform, content complexity, number of scenes, and 3D asset requirements. We provide detailed estimates after an initial consultation.",
+        a: "AR/VR development in {city}, {province} ranges from $3,500 for a simple AR experience to $60,000+ for enterprise VR training platforms. The cost depends on the platform, content complexity, number of scenes, and 3D asset requirements. We provide detailed estimates after an initial consultation.",
       },
       {
         q: "What industries use AR/VR in {city}?",
@@ -1595,7 +1595,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter",
-        range: "$2,500 - $5,000/month",
+        range: "$500 - $1,500/month",
         features: [
           "SEO or PPC management (one channel)",
           "Monthly keyword tracking",
@@ -1606,7 +1606,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$5,000 - $12,000/month",
+        range: "$1,500 - $3,500/month",
         features: [
           "Multi-channel campaigns (SEO + PPC + Social)",
           "Weekly content creation (4-8 posts/month)",
@@ -1617,7 +1617,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$12,000 - $30,000+/month",
+        range: "$3,500 - $8,000+/month",
         features: [
           "Full-funnel marketing strategy",
           "Daily content & social management",
@@ -1630,7 +1630,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does digital marketing cost in {city}?",
-        a: "Digital marketing services in {city}, {province} typically range from $2,500/month for a single channel to $30,000+/month for comprehensive multi-channel campaigns. The investment depends on your goals, industry competitiveness, and the channels you want to leverage.",
+        a: "Digital marketing services in {city}, {province} typically range from $500/month for a single channel to $8,000+/month for comprehensive multi-channel campaigns. The investment depends on your goals, industry competitiveness, and the channels you want to leverage.",
       },
       {
         q: "How long does SEO take to show results in {city}?",
@@ -1796,7 +1796,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$5,000 - $15,000",
+        range: "$700 - $3,000",
         features: [
           "Custom WordPress theme (up to 8 templates)",
           "Basic ACF custom fields",
@@ -1807,7 +1807,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$15,000 - $40,000",
+        range: "$3,000 - $8,000",
         features: [
           "Advanced custom theme with Gutenberg blocks",
           "WooCommerce store setup",
@@ -1818,7 +1818,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$40,000 - $100,000+",
+        range: "$8,000 - $20,000+",
         features: [
           "Headless WordPress with Next.js",
           "Multi-site or multi-language setup",
@@ -1831,7 +1831,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does a WordPress website cost in {city}?",
-        a: "WordPress website development in {city}, {province} ranges from $5,000 for a basic business site to $100,000+ for complex headless WordPress or enterprise WooCommerce builds. The cost depends on the number of page templates, custom functionality, and integration requirements.",
+        a: "WordPress website development in {city}, {province} ranges from $700 for a basic business site to $20,000+ for complex headless WordPress or enterprise WooCommerce builds. The cost depends on the number of page templates, custom functionality, and integration requirements.",
       },
       {
         q: "Is WordPress still a good choice in {city}?",
@@ -1855,7 +1855,7 @@ export const services: ServiceData[] = [
       },
       {
         q: "Do you provide WordPress maintenance in {city}?",
-        a: "Yes, we offer monthly WordPress maintenance packages for businesses in {city}, {province}. Plans include core and plugin updates, security monitoring, daily backups, uptime checks, performance optimization, and content update support starting at $300/month.",
+        a: "Yes, we offer monthly WordPress maintenance packages for businesses in {city}, {province}. Plans include core and plugin updates, security monitoring, daily backups, uptime checks, performance optimization, and content update support starting at $100/month.",
       },
     ],
     relatedSubServices: [
@@ -1997,7 +1997,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$20,000 - $50,000",
+        range: "$3,500 - $10,000",
         features: [
           "Hyper-casual or simple puzzle game",
           "Single platform (iOS or Android)",
@@ -2008,7 +2008,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$50,000 - $150,000",
+        range: "$10,000 - $30,000",
         features: [
           "Mid-core mobile game",
           "Cross-platform (iOS + Android)",
@@ -2019,7 +2019,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$150,000 - $500,000+",
+        range: "$30,000 - $80,000+",
         features: [
           "PC/Console or multiplayer game",
           "AAA-quality art and audio",
@@ -2032,7 +2032,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does game development cost in {city}?",
-        a: "Game development in {city}, {province} ranges from $20,000 for a simple hyper-casual mobile game to $500,000+ for PC/console games with multiplayer. The cost depends on the game genre, art quality, platform targets, and multiplayer requirements.",
+        a: "Game development in {city}, {province} ranges from $3,500 for a simple hyper-casual mobile game to $80,000+ for PC/console games with multiplayer. The cost depends on the game genre, art quality, platform targets, and multiplayer requirements.",
       },
       {
         q: "How long does it take to develop a mobile game in {city}?",
@@ -2216,7 +2216,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$5,000 - $15,000",
+        range: "$700 - $3,000",
         features: [
           "Logo design with 3 concepts",
           "Primary color palette",
@@ -2227,7 +2227,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$15,000 - $40,000",
+        range: "$3,000 - $8,000",
         features: [
           "Full brand identity system",
           "Brand strategy & positioning",
@@ -2238,7 +2238,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$40,000 - $100,000+",
+        range: "$8,000 - $20,000+",
         features: [
           "Complete rebrand with research",
           "Multi-brand architecture",
@@ -2251,7 +2251,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does branding cost in {city}?",
-        a: "Branding services in {city}, {province} range from $5,000 for a basic logo and identity package to $100,000+ for comprehensive enterprise rebranding with strategy, research, and multi-brand architecture. The investment depends on the scope, depth of research, and number of brand touchpoints.",
+        a: "Branding services in {city}, {province} range from $700 for a basic logo and identity package to $20,000+ for comprehensive enterprise rebranding with strategy, research, and multi-brand architecture. The investment depends on the scope, depth of research, and number of brand touchpoints.",
       },
       {
         q: "How long does a branding project take in {city}?",
@@ -2417,7 +2417,7 @@ export const services: ServiceData[] = [
     pricingTiers: [
       {
         name: "Starter / MVP",
-        range: "$25,000 - $60,000",
+        range: "$4,000 - $12,000",
         features: [
           "Core SaaS features (5-8 modules)",
           "Authentication with social login",
@@ -2428,7 +2428,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Growth",
-        range: "$60,000 - $150,000",
+        range: "$12,000 - $30,000",
         features: [
           "Full-featured SaaS platform",
           "Multi-tenant architecture",
@@ -2439,7 +2439,7 @@ export const services: ServiceData[] = [
       },
       {
         name: "Enterprise",
-        range: "$150,000 - $400,000+",
+        range: "$30,000 - $75,000+",
         features: [
           "Enterprise-grade SaaS platform",
           "SSO/SAML & SCIM provisioning",
@@ -2452,7 +2452,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         q: "How much does it cost to build a SaaS product in {city}?",
-        a: "SaaS development in {city}, {province} typically ranges from $25,000 for a lean MVP to $400,000+ for enterprise-grade platforms. The cost depends on the number of features, billing complexity, multi-tenancy requirements, and integrations. We recommend starting with an MVP and iterating based on user feedback.",
+        a: "SaaS development in {city}, {province} typically ranges from $4,000 for a lean MVP to $75,000+ for enterprise-grade platforms. The cost depends on the number of features, billing complexity, multi-tenancy requirements, and integrations. We recommend starting with an MVP and iterating based on user feedback.",
       },
       {
         q: "How long does it take to build a SaaS MVP in {city}?",

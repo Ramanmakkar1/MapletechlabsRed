@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'What budget do I need to start with paid ads?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We recommend a minimum of $3,000/month in ad spend for Google Ads and $2,000/month for paid social. Below these thresholds the data volume is too low for meaningful optimisation.',
+        text: 'We recommend a minimum of $500/month in ad spend for Google Ads and $300/month for paid social. Below these thresholds the data volume is too low for meaningful optimisation.',
       },
     },
     {
