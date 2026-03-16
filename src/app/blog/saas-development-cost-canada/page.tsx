@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'How Much Does SaaS Development Cost in Canada? (2026)';
 const DESCRIPTION = 'Complete guide to SaaS development costs in Canada for 2026';
 const SLUG = 'saas-development-cost-canada';
-const DATE = '2026-03-14';
+const DATE = '2026-03-06';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-03-12',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'Top 10 AI Development Companies in Canada (2026)';
 const DESCRIPTION = 'Ranking the best AI and machine learning development companies in Canada for 2026';
 const SLUG = 'ai-development-companies-canada';
-const DATE = '2026-03-14';
+const DATE = '2026-02-14';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-02-22',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

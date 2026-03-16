@@ -31,8 +31,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
                 textDecoration: 'none',
                 transition: 'color 0.2s',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#f5290d')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
+              className="breadcrumb-link"
               >
                 {item.label}
               </Link>

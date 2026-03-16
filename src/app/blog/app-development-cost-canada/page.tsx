@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'How Much Does App Development Cost in Canada? (2026 Guide)';
 const DESCRIPTION = 'Complete guide to mobile app development costs in Canada for 2026';
 const SLUG = 'app-development-cost-canada';
-const DATE = '2026-03-14';
+const DATE = '2026-01-29';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-02-05',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

@@ -1,24 +1,28 @@
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import PartnersMarquee from '@/components/PartnersMarquee';
-import ServicesSection from '@/components/ServicesSection';
-import ProcessSection from '@/components/ProcessSection';
-import WhyUs from '@/components/WhyUs';
-import FeaturedAwards from '@/components/FeaturedAwards';
-import TechStack from '@/components/TechStack';
-import SuccessMetrics from '@/components/SuccessMetrics';
-import PortfolioSection from '@/components/PortfolioSection';
-import IndustriesSection from '@/components/IndustriesSection';
-import ComparisonTable from '@/components/ComparisonTable';
-import AdvancedLabs from '@/components/AdvancedLabs';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import InsightsSection from '@/components/InsightsSection';
-import FAQSection from '@/components/FAQSection';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
 
-import ScrollUI from '@/components/ScrollUI';
-import StickyCTA from '@/components/StickyCTA';
+// Below-fold: lazy loaded for better initial page performance
+const ServicesSection = dynamic(() => import('@/components/ServicesSection'));
+const ProcessSection = dynamic(() => import('@/components/ProcessSection'));
+const WhyUs = dynamic(() => import('@/components/WhyUs'));
+const FeaturedAwards = dynamic(() => import('@/components/FeaturedAwards'));
+const TechStack = dynamic(() => import('@/components/TechStack'));
+const SuccessMetrics = dynamic(() => import('@/components/SuccessMetrics'));
+const PortfolioSection = dynamic(() => import('@/components/PortfolioSection'));
+const IndustriesSection = dynamic(() => import('@/components/IndustriesSection'));
+const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'));
+const AdvancedLabs = dynamic(() => import('@/components/AdvancedLabs'));
+const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSection'));
+const InsightsSection = dynamic(() => import('@/components/InsightsSection'));
+const FAQSection = dynamic(() => import('@/components/FAQSection'));
+const Contact = dynamic(() => import('@/components/Contact'));
+const Footer = dynamic(() => import('@/components/Footer'));
+
+// Browser-only components
+const ScrollUI = dynamic(() => import('@/components/ScrollUI'));
+const StickyCTA = dynamic(() => import('@/components/StickyCTA'));
 
 export default function Home() {
   return (

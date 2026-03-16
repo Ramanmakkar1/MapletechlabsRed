@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'From Idea to MRR: How to Build a Profitable SaaS in 2026';
 const DESCRIPTION = 'Learn the blueprint to build, launch, and scale successful B2B SaaS applications';
 const SLUG = 'saas-guide';
-const DATE = '2026-03-14';
+const DATE = '2026-01-08';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-01-15',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

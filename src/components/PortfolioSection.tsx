@@ -9,7 +9,7 @@ const projects = [
     title: 'AI-Powered Trading Platform',
     category: 'FinTech',
     description: 'Real-time AI trading engine processing 50K+ daily transactions with institutional-grade security and 99.99% uptime.',
-    image: '/images/portfolio-finance.png',
+    image: '/images/portfolio-finance.webp',
     metrics: [
       { value: '50K+', label: 'Daily Transactions' },
       { value: '99.99%', label: 'Uptime' },
@@ -24,7 +24,7 @@ const projects = [
     title: 'HIPAA-Compliant Telehealth Platform',
     category: 'Healthcare',
     description: 'Secure telehealth platform with video consultations, EHR integration, and real-time patient monitoring serving 200K+ sessions.',
-    image: '/images/portfolio-health.png',
+    image: '/images/portfolio-health.webp',
     metrics: [
       { value: '200K+', label: 'Patient Sessions' },
       { value: '4.8★', label: 'App Rating' },
@@ -39,7 +39,7 @@ const projects = [
     title: 'Enterprise E-Commerce Platform',
     category: 'Retail',
     description: 'Headless commerce platform handling 2M+ monthly visitors with real-time inventory, multi-vendor support, and 3x revenue growth.',
-    image: '/images/portfolio-retail.png',
+    image: '/images/portfolio-retail.webp',
     metrics: [
       { value: '3x', label: 'Revenue Growth' },
       { value: '2M+', label: 'Monthly Visitors' },
@@ -54,7 +54,7 @@ const projects = [
     title: 'Real-Time Fleet Management',
     category: 'Logistics',
     description: 'IoT-integrated logistics platform tracking 15K+ daily deliveries with ML-powered route optimization and 25% fuel savings.',
-    image: '/images/portfolio-logistics.png',
+    image: '/images/portfolio-logistics.webp',
     metrics: [
       { value: '15K+', label: 'Daily Deliveries' },
       { value: '25%', label: 'Fuel Savings' },

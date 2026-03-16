@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'How Much Does Digital Marketing Cost in Canada? (2026)';
 const DESCRIPTION = 'Complete guide to digital marketing costs in Canada for 2026';
 const SLUG = 'digital-marketing-cost-canada';
-const DATE = '2026-03-14';
+const DATE = '2026-03-10';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-03-14',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

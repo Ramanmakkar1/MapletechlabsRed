@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'How to Choose a Software Development Company in Canada (2026)';
 const DESCRIPTION = 'Expert guide to selecting the right software development partner in Canada';
 const SLUG = 'choose-software-development-company-canada';
-const DATE = '2026-03-14';
+const DATE = '2026-02-05';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-02-12',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

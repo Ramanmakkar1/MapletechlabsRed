@@ -1,5 +1,3 @@
-'use client';
-
 interface BackgroundGlowProps {
   color?: string;
   size?: number;

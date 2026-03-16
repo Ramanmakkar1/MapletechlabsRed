@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'Top 10 Web Development Companies in Toronto (2026)';
 const DESCRIPTION = 'Ranking the best web development companies in Toronto for 2026';
 const SLUG = 'web-development-companies-toronto';
-const DATE = '2026-03-14';
+const DATE = '2026-02-19';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-02-26',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

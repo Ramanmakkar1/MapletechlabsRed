@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'Top 10 Unicorn Apps of 2026';
 const DESCRIPTION = 'The mobile-first companies that crossed $1B valuation this year';
 const SLUG = 'top-10-unicorn-apps-2026';
-const DATE = '2026-03-14';
+const DATE = '2026-01-15';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-01-22',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',

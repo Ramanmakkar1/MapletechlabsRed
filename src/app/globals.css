@@ -635,6 +635,11 @@ textarea:focus-visible {
   }
 }
 
+/* Breadcrumb link hover */
+.breadcrumb-link:hover {
+  color: #f5290d !important;
+}
+
 /* Breadcrumb mobile font sizing */
 @media (max-width: 480px) {
   .breadcrumb-nav ol {

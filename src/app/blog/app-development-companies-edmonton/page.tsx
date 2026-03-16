@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 const TITLE = 'Top 10 App Development Companies in Edmonton (2026)';
 const DESCRIPTION = 'Ranking the best mobile app development companies in Edmonton, Alberta for 2026';
 const SLUG = 'app-development-companies-edmonton';
-const DATE = '2026-03-14';
+const DATE = '2026-02-24';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,7 +27,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-15',
+  dateModified: '2026-03-03',
   author: {
     '@type': 'Person',
     name: 'Raman Makkar',
