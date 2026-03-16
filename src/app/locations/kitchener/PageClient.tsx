@@ -207,6 +207,71 @@ export default function KitchenerPage() {
           </div>
         </section>
 
+        {/* Why Kitchener-Waterloo for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Kitchener-Waterloo for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Known as Canada&apos;s Silicon Valley, the KW region is home to 1,800+ tech companies and some of the world&apos;s top talent.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Communitech Hub', d: 'Canada\'s largest innovation hub supports 4,000+ companies from startups to Fortune 500 with mentorship and resources.' },
+                { t: 'Google\'s Canadian HQ', d: 'Google, Shopify, and 20+ major tech firms have engineering offices in KW, creating a deep talent ecosystem.' },
+                { t: 'UWaterloo Co-op Pipeline', d: 'The world\'s largest co-op program produces 7,000+ tech graduates annually — a direct pipeline for hiring.' },
+                { t: 'Quantum Valley', d: 'Home to the Institute for Quantum Computing (IQC) and Perimeter Institute — Canada\'s quantum computing epicenter.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* KW Areas We Serve */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Kitchener-Waterloo Areas We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>We partner with businesses across the Waterloo Region and Southwestern Ontario corridor.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Downtown Kitchener', d: 'Innovation district with Google\'s HQ, Communitech, and a booming startup scene.' },
+                { n: 'Uptown Waterloo', d: 'University-adjacent tech corridor with SaaS companies and AI startups.' },
+                { n: 'Cambridge', d: 'Manufacturing hub transitioning to smart factory and IoT innovation.' },
+                { n: 'Guelph', d: 'AgriFood tech capital with strong university research programs.' },
+                { n: 'Elmira', d: 'Growing commercial centre serving rural Southwestern Ontario businesses.' },
+                { n: 'New Hamburg', d: 'Small-town business community with insurance and manufacturing roots.' },
+                { n: 'Stratford', d: 'Digital media hub with the University of Waterloo Stratford campus.' },
+                { n: 'Brantford', d: 'Revitalizing downtown with new tech incubators and Laurier campus.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* KW Client Success Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Kitchener-Waterloo Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'KW SaaS Startup — Series A', metric: '$4M raised', desc: 'Built the MVP and scaled the platform for a Waterloo-based B2B SaaS company, helping them close a $4M Series A round within 14 months of launch.' },
+                { title: 'Waterloo AI Research Spinoff', metric: '10x model performance', desc: 'Partnered with a UWaterloo research group to productize their ML model into a commercial SaaS platform serving enterprise clients across North America.' },
+                { title: 'Cambridge Manufacturing IoT', metric: '28% efficiency gain', desc: 'Deployed IoT sensors and a real-time analytics dashboard for a Cambridge automotive parts manufacturer, reducing waste and optimizing production lines.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* KW Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Kitchener-Waterloo Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'AI & Quantum Computing', d: 'Leveraging KW\'s world-leading quantum and AI research ecosystem — IQC, Perimeter Institute, Vector Institute partnerships.' },
+                { t: 'Insurance Tech', d: 'Custom platforms for Waterloo Region\'s insurance giants — Manulife, Sun Life, Equitable Life — modernizing claims and underwriting.' },
+                { t: 'Autonomous Vehicles', d: 'Sensor fusion, computer vision, and fleet management systems for KW\'s autonomous vehicle corridor.' },
+                { t: 'Deep Tech & SaaS', d: 'Scaling research spinoffs into production-grade SaaS platforms — from UWaterloo labs to global enterprise customers.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

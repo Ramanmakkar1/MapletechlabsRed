@@ -207,6 +207,71 @@ export default function OttawaPage() {
           </div>
         </section>
 
+        {/* Why Ottawa for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Ottawa for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Ottawa is Canada&apos;s government tech and cybersecurity capital, with Kanata North as the country&apos;s largest tech park.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Kanata North Tech Park', d: 'Canada\'s largest tech park — 540+ companies, 35,000 workers, and anchors like Nokia, Ciena, and Mitel.' },
+                { t: 'Government & Defence', d: 'Federal government contracts drive massive demand for secure platforms, compliance tools, and GovTech solutions.' },
+                { t: 'Shopify Headquarters', d: 'Shopify\'s HQ anchors Ottawa\'s e-commerce ecosystem — plus hundreds of Shopify app developers and partners.' },
+                { t: 'Cybersecurity Hub', d: 'Home to the Canadian Centre for Cyber Security — Ottawa leads the nation in security tech and defence innovation.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Ottawa Neighborhoods */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Ottawa Areas We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From Kanata&apos;s tech park to the ByWard Market, we serve businesses across the National Capital Region.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Kanata / Kanata North', d: 'Canada\'s largest tech park — telecom, cybersecurity, and SaaS companies.' },
+                { n: 'Downtown / ByWard Market', d: 'Government offices, consulting firms, and GovTech startups.' },
+                { n: 'Nepean', d: 'Mixed commercial district with defence contractors and IT services.' },
+                { n: 'Barrhaven', d: 'Growing suburban tech community with remote-first companies.' },
+                { n: 'Orléans', d: 'East-end commercial hub with bilingual business services.' },
+                { n: 'Gatineau', d: 'Quebec side of the NCR — federal agencies and bilingual tech firms.' },
+                { n: 'Gloucester', d: 'Emerging tech corridor with affordable office space and logistics.' },
+                { n: 'Stittsville', d: 'West-end community with growing small business and startup activity.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Ottawa Client Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Ottawa Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'GovTech Compliance Platform', metric: '12 federal departments', desc: 'Built a WCAG 2.1 and Official Languages Act-compliant digital platform for a federal agency, now used across 12 departments for citizen service delivery.' },
+                { title: 'Defence Tech Contractor', metric: 'Secret-level clearance', desc: 'Developed a secure data analytics and reporting platform for an Ottawa defence contractor, meeting ITSG-33 and PBMM security requirements.' },
+                { title: 'Kanata Telecom Startup', metric: '5G-ready in 6 months', desc: 'Built the network management dashboard for a Kanata North telecom startup, enabling 5G network monitoring and automated fault detection.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Ottawa Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Ottawa Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Cybersecurity', d: 'Threat detection, compliance automation, and security platforms for government and defence — Ottawa\'s #1 tech vertical.' },
+                { t: 'GovTech', d: 'Citizen-facing portals, internal workflow automation, and bilingual digital services for federal and provincial agencies.' },
+                { t: '5G & Telecom', d: 'Network management, IoT infrastructure, and telecom analytics for Kanata North\'s 100+ telecom companies.' },
+                { t: 'Defence & Aerospace', d: 'Secure analytics, satellite data processing, and logistics platforms for Canada\'s defence and aerospace sector.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

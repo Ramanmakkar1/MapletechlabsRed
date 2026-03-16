@@ -209,6 +209,71 @@ export default function CalgaryPage() {
           </div>
         </section>
 
+        {/* Why Calgary for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Calgary for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Calgary is Western Canada&apos;s energy tech capital, leading the digital transformation of oil &amp; gas while building a diversified tech ecosystem.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Energy Sector Digital Transformation', d: 'Canada\'s energy capital is investing billions in digital — IoT, AI, predictive maintenance, and emissions tracking are reshaping oil & gas.' },
+                { t: 'Calgary Economic Development', d: 'CED\'s tech strategy is attracting companies like Infosys, Mphasis, and RBC\'s innovation lab to Calgary\'s growing tech corridor.' },
+                { t: 'Platform Calgary', d: 'Calgary\'s flagship innovation hub supports 200+ startups with mentorship, funding access, and enterprise partnerships.' },
+                { t: 'No Provincial Sales Tax', d: 'Alberta\'s tax advantage — no PST, competitive corporate rates, and generous SR&ED credits make Calgary ideal for scaling tech companies.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Calgary Neighborhoods */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Calgary Areas We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From Stephen Ave towers to suburban business parks, we build software across the Calgary region.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Downtown / Stephen Ave', d: 'Calgary\'s business core — energy company HQs, fintech startups, and Platform Calgary.' },
+                { n: 'Beltline', d: 'Creative district with digital agencies, SaaS companies, and tech co-working spaces.' },
+                { n: 'University District', d: 'Mixed-use innovation zone adjacent to U of C with research spinoffs and startups.' },
+                { n: 'East Village', d: 'Revitalized neighbourhood attracting tech companies and the National Music Centre.' },
+                { n: 'Kensington', d: 'Boutique tech firms, design studios, and indie developers in Calgary\'s creative hub.' },
+                { n: 'Airdrie', d: 'Fast-growing satellite city north of Calgary with logistics and small business tech.' },
+                { n: 'Cochrane', d: 'Western suburb with remote-first tech companies and outdoor industry startups.' },
+                { n: 'Okotoks', d: 'Southern community with agricultural tech and renewable energy companies.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Calgary Client Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Calgary Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Oil & Gas Analytics Platform', metric: '45% cost reduction', desc: 'Built a predictive maintenance and production analytics dashboard for a Calgary energy company, reducing unplanned downtime by 45% across 200+ well sites.' },
+                { title: 'Calgary Real Estate Marketplace', metric: '10,000+ listings', desc: 'Developed a custom property marketplace with 3D virtual tours, mortgage calculators, and agent matching — now the largest independent platform in Alberta.' },
+                { title: 'Alberta Logistics Fleet Management', metric: '22% fuel savings', desc: 'Created a real-time fleet tracking and route optimization platform for a Calgary logistics company, cutting fuel costs by 22% across 500+ vehicles.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Calgary Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Calgary Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Energy & Data Analytics', d: 'Production dashboards, SCADA integration, emissions tracking, and ESG reporting for Calgary\'s energy sector.' },
+                { t: 'IoT & Predictive Maintenance', d: 'Sensor networks, digital twins, and predictive analytics for oil & gas, mining, and infrastructure operations.' },
+                { t: 'FinTech for Western Canada', d: 'Payment platforms, lending apps, and wealth management tools serving Calgary\'s financial services sector.' },
+                { t: 'PropTech & Real Estate', d: 'Property marketplaces, virtual tour platforms, and property management systems for Calgary\'s real estate market.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

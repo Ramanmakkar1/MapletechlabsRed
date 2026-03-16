@@ -209,6 +209,71 @@ export default function TorontoPage() {
           </div>
         </section>
 
+        {/* Why Toronto for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Toronto for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Toronto is Canada&apos;s largest tech hub, ranked #4 in North America with 15,000+ tech companies and a $52B tech sector.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'MaRS Discovery District', d: 'One of the world\'s largest urban innovation hubs — 150+ startups, accelerators, and venture capital firms under one roof.' },
+                { t: 'Vector Institute for AI', d: 'World-leading AI research institute founded by Geoffrey Hinton — Toronto trains more AI talent than any other Canadian city.' },
+                { t: 'Bay Street FinTech', d: 'Canada\'s financial capital is undergoing a fintech revolution — from digital banking to RegTech and blockchain settlement.' },
+                { t: '#4 Tech Hub in North America', d: 'Behind only San Francisco, New York, and Seattle — Toronto added more tech jobs than all three combined in recent years.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Toronto Neighborhoods */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Toronto Neighborhoods We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From the Financial District to the GTA suburbs, we build software for Toronto&apos;s diverse business landscape.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Financial District', d: 'Bay Street banks, insurance firms, and fintech startups driving digital transformation.' },
+                { n: 'King West', d: 'Toronto\'s startup row — adtech, SaaS, and creative agencies in converted warehouses.' },
+                { n: 'Liberty Village', d: 'Design studios, game developers, and digital media companies in this creative hub.' },
+                { n: 'Yorkville', d: 'Luxury brands and professional services firms embracing digital-first experiences.' },
+                { n: 'Scarborough', d: 'Diverse business community with manufacturing, logistics, and healthcare tech.' },
+                { n: 'North York', d: 'Enterprise offices, tech parks, and growing SaaS companies along the Yonge corridor.' },
+                { n: 'Mississauga', d: 'Canada\'s 6th largest city — pharma, logistics HQs, and enterprise tech.' },
+                { n: 'Markham', d: 'Canada\'s high-tech capital with IBM, Huawei, and 400+ tech companies.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Toronto Client Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Toronto Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Bay Street FinTech Platform', metric: '$12M processed monthly', desc: 'Built a regulatory-compliant trading and portfolio management platform for a Toronto financial services firm, processing $12M in monthly transactions with real-time compliance checks.' },
+                { title: 'Toronto Healthcare SaaS', metric: '200+ clinics onboarded', desc: 'Developed an all-in-one clinic management platform with EHR integration, telehealth, and patient scheduling — now serving 200+ clinics across the GTA.' },
+                { title: 'GTA E-Commerce Expansion', metric: '340% revenue growth', desc: 'Scaled a Toronto-based DTC brand into the US market with a custom headless commerce platform, multi-currency support, and cross-border fulfillment integration.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Toronto Tech Trends */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Toronto Tech Trends</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'FinTech Dominance', d: 'Toronto is Canada\'s fintech capital — digital banking, RegTech, InsurTech, and blockchain settlement are reshaping Bay Street.' },
+                { t: 'AI & Machine Learning', d: 'With Vector Institute and dozens of AI startups, Toronto produces more AI research papers than any Canadian city.' },
+                { t: 'Enterprise Digital Transformation', d: 'Canada\'s largest enterprises are headquartered here — driving massive demand for cloud migration, SaaS, and automation.' },
+                { t: 'Web3 & Crypto', d: 'Toronto leads Canada\'s crypto ecosystem with exchanges, DeFi protocols, and blockchain infrastructure companies.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

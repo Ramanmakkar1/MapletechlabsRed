@@ -207,6 +207,69 @@ export default function SaskatoonPage() {
           </div>
         </section>
 
+        {/* Why Saskatoon for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Saskatoon for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Saskatoon is emerging as a tech hub fueled by world-class research institutions and resource-sector innovation.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Innovation Place', d: 'One of Canada\'s premier research parks, home to 130+ companies and 4,000+ workers driving tech innovation.' },
+                { t: 'University of Saskatchewan', d: 'World-class AI, agriculture, and mining research programs produce top engineering talent every year.' },
+                { t: 'Resource Tech Hub', d: 'Saskatchewan\'s mining and agriculture sectors create massive demand for IoT, analytics, and automation solutions.' },
+                { t: 'Cost Advantage', d: '40-60% lower operating costs than Toronto or Vancouver with comparable talent quality and strong government incentives.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Saskatoon Areas We Serve */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Saskatoon Areas We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>We work with businesses across Saskatoon and surrounding Saskatchewan communities.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Downtown', d: 'Saskatoon\'s business core with growing startup activity and professional services.' },
+                { n: 'Innovation Place', d: 'Canada\'s top research park — biotech, cleantech, and AI companies.' },
+                { n: 'Stonebridge', d: 'Fast-growing commercial district with retail tech and service businesses.' },
+                { n: 'University Area', d: 'Student startups and research spinoffs near the U of S campus.' },
+                { n: 'Warman', d: 'Rapidly expanding satellite city with small business and agriculture tech.' },
+                { n: 'Martensville', d: 'Growing community north of Saskatoon with emerging commercial services.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Saskatoon Client Success Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Saskatoon Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Mining Analytics Platform', metric: '35% cost reduction', desc: 'Built a real-time mining operations dashboard for a Saskatchewan potash producer, reducing equipment downtime and optimizing extraction workflows.' },
+                { title: 'Agriculture IoT System', metric: '2x crop yield insights', desc: 'Developed a field sensor network and analytics platform for a large Saskatchewan grain farm, enabling precision agriculture and data-driven planting decisions.' },
+                { title: 'Health Services App', metric: '50% faster booking', desc: 'Created a patient scheduling and telehealth platform for a Saskatoon medical clinic network, serving 15,000+ patients across rural Saskatchewan.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Saskatoon Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Saskatoon Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Mining & Resources', d: 'IoT sensors, predictive maintenance dashboards, and resource extraction analytics for Saskatchewan\'s mining sector.' },
+                { t: 'Agriculture Tech', d: 'Precision farming platforms, crop monitoring systems, and supply chain tools for Canada\'s breadbasket.' },
+                { t: 'Uranium & Energy Analytics', d: 'Data visualization and compliance platforms for Saskatchewan\'s uranium and energy producers.' },
+                { t: 'Indigenous Community Platforms', d: 'Custom digital solutions for First Nations communities — governance portals, education platforms, and service delivery apps.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

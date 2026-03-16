@@ -207,6 +207,71 @@ export default function LondonONPage() {
           </div>
         </section>
 
+        {/* Why London ON for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why London, Ontario for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>London is Southwestern Ontario&apos;s fastest-growing tech hub, anchored by healthcare innovation and a strong university pipeline.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'TechAlliance', d: 'London\'s innovation hub connects 500+ tech companies with mentorship, funding, and go-to-market support.' },
+                { t: 'Western University Pipeline', d: 'Ivey Business School and Western Engineering produce top talent in AI, business analytics, and biomedical engineering.' },
+                { t: 'Healthcare Innovation Corridor', d: 'London Health Sciences Centre and Lawson Research Institute drive demand for health tech, clinical trials, and patient platforms.' },
+                { t: 'Affordable Growth', d: '50% lower office costs than Toronto with direct highway access to the GTA — ideal for scaling tech companies.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* London Areas We Serve */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>London Areas We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>We serve businesses across London and Southwestern Ontario&apos;s growing tech corridor.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Downtown London', d: 'Revitalized core with co-working spaces, fintech startups, and TechAlliance headquarters.' },
+                { n: 'Old East Village', d: 'Creative district attracting digital agencies, design studios, and indie tech companies.' },
+                { n: 'Byron', d: 'Residential-commercial mix with growing small business and professional services.' },
+                { n: 'Westmount', d: 'Commercial corridor with retail tech and service-based businesses.' },
+                { n: 'St. Thomas', d: 'Manufacturing town pivoting to EV battery tech and advanced manufacturing.' },
+                { n: 'Woodstock', d: 'Toyota manufacturing hub embracing Industry 4.0 and smart factory solutions.' },
+                { n: 'Stratford', d: 'University of Waterloo digital media campus and cultural tech innovation.' },
+                { n: 'Ingersoll', d: 'Growing commercial centre with CAMI assembly and automotive supply chain tech.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* London Client Success Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>London Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Healthcare Platform', metric: '200+ clinics served', desc: 'Built a patient management and telehealth platform for a London medical network, connecting 200+ clinics across Southwestern Ontario with secure video visits and EHR integration.' },
+                { title: 'SW Ontario FinTech', metric: '3x transaction volume', desc: 'Developed a payment processing and invoicing platform for a London-based financial services firm, tripling transaction volume within the first year.' },
+                { title: 'Western University Research Tool', metric: '40% faster analysis', desc: 'Created a data visualization and analysis platform for a Western University research lab, accelerating clinical trial data processing by 40%.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* London Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>London Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Health Tech', d: 'Patient portals, telehealth platforms, and clinical trial tools for London Health Sciences Centre and regional healthcare networks.' },
+                { t: 'Insurance Tech', d: 'Claims automation, underwriting platforms, and customer portals for Southwestern Ontario\'s insurance sector.' },
+                { t: 'Digital Agriculture', d: 'Precision farming tools, supply chain platforms, and agricultural marketplace apps for Ontario\'s farming communities.' },
+                { t: 'Manufacturing Automation', d: 'Industry 4.0 dashboards, IoT integration, and quality control systems for London\'s automotive and manufacturing corridor.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

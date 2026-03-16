@@ -209,6 +209,71 @@ export default function VancouverPage() {
           </div>
         </section>
 
+        {/* Why Vancouver for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Vancouver for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Vancouver is Western Canada&apos;s #1 tech hub — a global leader in VFX, gaming, and clean tech with proximity to Silicon Valley and Asian markets.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: '#1 Tech Hub in Western Canada', d: 'Vancouver\'s tech sector employs 120,000+ people across 12,000+ companies — from startups to Amazon, Microsoft, and Apple offices.' },
+                { t: 'VFX & Gaming Corridor', d: 'Home to Industrial Light & Magic, Sony Pictures Imageworks, EA Vancouver, and 200+ VFX/game studios — the world\'s #2 VFX hub.' },
+                { t: 'Clean Tech Leader', d: 'BC\'s clean energy mandate drives demand for green tech, carbon tracking, and sustainability platforms — Vancouver leads Canada in clean tech investment.' },
+                { t: 'Asia-Pacific Gateway', d: 'Vancouver\'s time zone and cultural connections make it the natural bridge to Asian markets — ideal for companies targeting APAC expansion.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Vancouver Neighborhoods */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Vancouver Areas We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From Gastown startups to Surrey tech parks, we build software across Metro Vancouver and the Fraser Valley.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Gastown', d: 'Vancouver\'s startup row — adtech, SaaS, and creative agencies in heritage buildings.' },
+                { n: 'Yaletown', d: 'Tech companies, VCs, and Hootsuite\'s HQ in this waterfront tech corridor.' },
+                { n: 'Mount Pleasant', d: 'Main Street tech hub with VFX studios, game devs, and Shopify\'s Vancouver office.' },
+                { n: 'Burnaby', d: 'EA Vancouver, Ballard Power, and a growing SaaS cluster near Metrotown.' },
+                { n: 'Surrey', d: 'BC\'s fastest-growing city with health tech, logistics, and the new SFU campus tech hub.' },
+                { n: 'Richmond', d: 'Asia-Pacific business hub with fintech, e-commerce, and cross-border trade tech.' },
+                { n: 'North Vancouver', d: 'Clean tech companies, outdoor industry startups, and marine technology firms.' },
+                { n: 'Kitsilano', d: 'Lululemon\'s HQ neighbourhood — DTC brands, wellness tech, and lifestyle startups.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Vancouver Client Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Vancouver Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Vancouver SaaS Platform', metric: '$8M ARR', desc: 'Built and scaled a B2B SaaS platform for a Gastown startup from MVP to $8M ARR, handling 500K+ API calls daily with 99.99% uptime.' },
+                { title: 'BC Healthcare App', metric: '100K+ patients', desc: 'Developed a patient-facing mobile app for a BC healthcare provider with appointment booking, prescription refills, and secure messaging — serving 100K+ patients.' },
+                { title: 'West Coast E-Commerce', metric: '250% international growth', desc: 'Scaled a Vancouver DTC brand into Asian markets with a multi-currency headless commerce platform, localized for Japan, Korea, and China.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Vancouver Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Vancouver Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Game Dev & VFX', d: 'Game engines, real-time rendering pipelines, and production tools for Vancouver\'s 200+ VFX and game studios.' },
+                { t: 'Clean Tech & Sustainability', d: 'Carbon tracking dashboards, ESG reporting platforms, and clean energy analytics for BC\'s green tech sector.' },
+                { t: 'PropTech & Real Estate', d: 'Property marketplaces, virtual tour platforms, and tenant management systems for Vancouver\'s real estate market.' },
+                { t: 'Asia-Pacific Expansion', d: 'Multi-language platforms, cross-border e-commerce, and APAC market-ready applications leveraging Vancouver\'s Pacific gateway position.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

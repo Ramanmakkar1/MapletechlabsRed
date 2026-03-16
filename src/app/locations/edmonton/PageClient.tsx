@@ -209,6 +209,71 @@ export default function EdmontonPage() {
           </div>
         </section>
 
+        {/* Why Edmonton for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Edmonton for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Edmonton is Alberta&apos;s fastest-growing tech hub with 1,000+ tech companies, a $3B+ tech sector, and world-leading AI research at the University of Alberta.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'AI & Machine Learning Hub', d: 'University of Alberta\'s Amii institute is a global leader in reinforcement learning — Edmonton trains more AI researchers per capita than almost any city worldwide.' },
+                { t: 'ICE District Innovation', d: 'Edmonton\'s $2.5B ICE District is attracting tech companies, co-working spaces, and venture capital to the downtown core.' },
+                { t: 'Energy Tech Transformation', d: 'Alberta\'s oil & gas sector is driving massive demand for data analytics, IoT, predictive maintenance, and clean energy tech.' },
+                { t: 'Cost Advantage', d: 'No provincial sales tax, 30-50% lower operating costs than Toronto or Vancouver, and generous R&D tax credits for tech companies.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Edmonton Neighborhoods */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Edmonton Neighborhoods We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From downtown startups to suburban enterprises, we build software across the Edmonton metro area.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Downtown / ICE District', d: 'Edmonton\'s innovation core — tech startups, co-working spaces, and the $2.5B ICE District.' },
+                { n: 'Old Strathcona / Whyte Ave', d: 'Creative tech hub with indie studios, digital agencies, and startup incubators.' },
+                { n: 'South Edmonton Common', d: 'Commercial district with retail tech, e-commerce fulfillment, and logistics companies.' },
+                { n: 'West Edmonton', d: 'Growing tech corridor near West Edmonton Mall with mixed commercial and tech offices.' },
+                { n: 'Sherwood Park', d: 'Strathcona County\'s tech centre — energy companies, engineering firms, and SaaS startups.' },
+                { n: 'St. Albert', d: 'Fast-growing city north of Edmonton with healthcare, education, and professional services tech.' },
+                { n: 'Spruce Grove', d: 'Western suburb with emerging small business tech and agriculture services.' },
+                { n: 'Windermere / Heritage Valley', d: 'Southwest Edmonton\'s newest business park with healthcare and professional services.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Edmonton Client Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Edmonton Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Edmonton FinTech Startup', metric: '300% user growth', desc: 'Built a mobile banking and payments platform for an Edmonton fintech startup, growing from 5,000 to 20,000 active users within 8 months of launch.' },
+                { title: 'Alberta Healthcare Provider', metric: '50% faster onboarding', desc: 'Developed a patient intake and telehealth platform for a multi-clinic healthcare provider, cutting patient onboarding time in half across 12 Alberta locations.' },
+                { title: 'Edmonton E-Commerce Brand', metric: '$2M+ annual revenue', desc: 'Created a custom headless commerce platform with subscription management for an Edmonton DTC brand, driving $2M+ in annual online revenue.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Edmonton Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Edmonton Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'AI & Machine Learning', d: 'Production ML pipelines, computer vision, and NLP solutions — leveraging Edmonton\'s Amii institute and U of A AI talent pipeline.' },
+                { t: 'Energy & CleanTech', d: 'IoT dashboards, predictive maintenance, and emissions tracking platforms for Alberta\'s energy sector transformation.' },
+                { t: 'Healthcare & BioTech', d: 'Patient portals, telehealth platforms, and clinical data systems for Alberta Health Services and private clinics.' },
+                { t: 'E-Commerce & Retail', d: 'Headless commerce, subscription platforms, and omnichannel solutions for Edmonton\'s growing DTC and retail brands.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

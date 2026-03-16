@@ -207,6 +207,70 @@ export default function VictoriaPage() {
           </div>
         </section>
 
+        {/* Why Victoria for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Victoria for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Victoria is BC&apos;s second tech hub — a clean tech leader with the highest density of tech workers per capita in Canada and VIATEC driving the ecosystem.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'VIATEC Community', d: 'Victoria Innovation, Advanced Technology and Entrepreneurship Council supports 800+ tech companies with events, mentorship, and talent programs.' },
+                { t: 'Clean Tech Leader', d: 'BC\'s clean energy mandate and Victoria\'s sustainability focus make it Canada\'s top city for green tech startups and clean energy platforms.' },
+                { t: 'Highest Tech Density', d: 'Victoria has more tech workers per capita than any Canadian city — a concentrated talent pool ideal for specialized software projects.' },
+                { t: 'Quality of Life Advantage', d: 'Canada\'s mildest climate and outdoor lifestyle attract top remote-first talent — Victoria\'s tech sector grows 10%+ annually.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Victoria Areas */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Vancouver Island Areas We Serve</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Downtown Victoria', d: 'Government district with GovTech companies and startup co-working spaces.' },
+                { n: 'James Bay', d: 'Provincial legislature area — government contractors and civic tech firms.' },
+                { n: 'Langford', d: 'Fast-growing West Shore with tech parks and new commercial development.' },
+                { n: 'Sidney', d: 'Marine science hub with ocean tech and aerospace companies.' },
+                { n: 'Sooke', d: 'Emerging community with remote-first tech workers and clean energy.' },
+                { n: 'Saanich', d: 'UVic campus area — research spinoffs and student startups.' },
+                { n: 'Esquimalt', d: 'CFB Esquimalt — naval base driving defence tech and security software.' },
+                { n: 'Nanaimo', d: 'Mid-Island hub with growing tech scene and Vancouver Island University talent.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Victoria Client Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Victoria Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Clean Tech Dashboard', metric: '60% emissions visibility', desc: 'Built a carbon tracking and ESG reporting platform for a Victoria clean tech company, providing real-time emissions visibility across 200+ corporate clients.' },
+                { title: 'Island Tourism Platform', metric: '45K+ bookings/year', desc: 'Developed a booking and experience marketplace for Vancouver Island tourism operators, processing 45,000+ annual bookings with dynamic pricing.' },
+                { title: 'BC Gov Digital Service', metric: '2M+ citizens served', desc: 'Created a citizen-facing digital service portal for a BC government department, replacing paper-based processes and serving 2M+ residents.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Victoria Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Victoria Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Clean Technology', d: 'Carbon tracking, ESG reporting, renewable energy dashboards, and sustainability platforms for BC\'s green economy.' },
+                { t: 'Tourism Tech', d: 'Booking platforms, experience marketplaces, and visitor analytics for Vancouver Island\'s $2B+ tourism industry.' },
+                { t: 'Government Digital Services', d: 'Citizen portals, internal workflow automation, and accessibility-compliant platforms for BC provincial and municipal governments.' },
+                { t: 'Remote Work Tools', d: 'Collaboration platforms, project management tools, and async communication systems for Victoria\'s remote-first tech workforce.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

@@ -183,6 +183,70 @@ export default function HalifaxPage() {
           </div>
         </section>
 
+        {/* Why Halifax for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Halifax for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Halifax is Atlantic Canada&apos;s tech capital — a leader in ocean technology, defence, and clean energy with Volta innovation hub driving the ecosystem.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Volta Innovation Hub', d: 'Atlantic Canada\'s premier tech incubator — 100+ startups, corporate innovation programs, and a direct pipeline to East Coast talent.' },
+                { t: 'Ocean Tech Capital', d: 'Halifax leads the world in ocean technology — autonomous underwater vehicles, marine sensors, and maritime data platforms.' },
+                { t: 'Defence & Security', d: 'CFB Halifax and Irving Shipbuilding drive demand for secure platforms, logistics systems, and defence technology.' },
+                { t: 'Atlantic Canada Gateway', d: 'Hub for Nova Scotia, New Brunswick, PEI, and Newfoundland — one tech partner to serve all four Atlantic provinces.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Halifax Areas */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Atlantic Canada Areas We Serve</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Downtown / Waterfront', d: 'Halifax\'s tech core — Volta hub, ocean tech companies, and startup offices.' },
+                { n: 'Dartmouth', d: 'The "City of Lakes" with growing tech parks and defence contractors.' },
+                { n: 'Bedford', d: 'Suburban commercial hub with IT services and professional firms.' },
+                { n: 'Sackville', d: 'Growing community with retail and healthcare service businesses.' },
+                { n: 'Truro', d: 'Central Nova Scotia\'s commercial centre with agriculture and food tech.' },
+                { n: 'Moncton (NB)', d: 'New Brunswick\'s bilingual tech hub — call centres transitioning to AI and SaaS.' },
+                { n: 'Charlottetown (PEI)', d: 'PEI\'s capital with aerospace, bioscience, and government tech.' },
+                { n: 'St. John\'s (NL)', d: 'Newfoundland\'s capital — oil & gas tech, ocean research, and marine innovation.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Halifax Client Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Halifax Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Maritime Logistics Platform', metric: '40% faster port clearance', desc: 'Built a real-time cargo tracking and customs documentation platform for a Halifax shipping company, cutting port clearance times by 40%.' },
+                { title: 'Halifax Ocean Tech Startup', metric: '3 patents filed', desc: 'Developed the control system and data analytics dashboard for an autonomous underwater vehicle company, enabling deep-sea survey automation.' },
+                { title: 'Atlantic Healthcare Network', metric: '4 provinces connected', desc: 'Created a cross-provincial telehealth platform connecting patients in NS, NB, PEI, and NL with specialists across Atlantic Canada.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Halifax Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Halifax Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'Ocean Technology', d: 'AUV control systems, marine sensor platforms, and oceanographic data analytics for Halifax\'s world-leading ocean tech cluster.' },
+                { t: 'Maritime Logistics', d: 'Port management, cargo tracking, and supply chain optimization for Atlantic Canada\'s shipping and transportation sector.' },
+                { t: 'Defence Technology', d: 'Secure platforms, logistics systems, and simulation tools for CFB Halifax and Irving Shipbuilding\'s defence programs.' },
+                { t: 'Clean Energy', d: 'Tidal energy dashboards, wind farm analytics, and carbon tracking platforms for Nova Scotia\'s renewable energy sector.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">

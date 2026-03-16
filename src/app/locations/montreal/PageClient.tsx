@@ -207,6 +207,71 @@ export default function MontrealPage() {
           </div>
         </section>
 
+        {/* Why Montreal for Tech */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Montr&eacute;al for Tech</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Montr&eacute;al is the AI capital of Canada and a global game development hub, home to Mila, Ubisoft, and a thriving bilingual tech scene.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'AI Capital of Canada', d: 'Home to Mila (Yoshua Bengio), IVADO, and Element AI — Montréal produces more AI research than any other Canadian city.' },
+                { t: 'Game Dev Powerhouse', d: 'Ubisoft, EA, Warner Bros Games, and 200+ studios make Montréal the world\'s #3 game development hub.' },
+                { t: 'Bilingual Market Advantage', d: 'Build products for both English and French Canadian markets — Montréal is the gateway to Quebec\'s 8.5M consumers.' },
+                { t: 'VFX & Creative Tech', d: 'World-class VFX studios (Framestore, DNEG, Rodeo FX) and a $1.5B creative tech sector drive innovation in visual media.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Montreal Neighborhoods */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Montr&eacute;al Neighborhoods We Serve</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From Mile End startups to Old Montr&eacute;al enterprises, we build software across the Greater Montr&eacute;al Area.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
+              {[
+                { n: 'Mile End', d: 'Montréal\'s startup row — AI labs, indie game studios, and creative tech companies.' },
+                { n: 'Plateau Mont-Royal', d: 'Freelancers, agencies, and SaaS companies in Montréal\'s cultural heart.' },
+                { n: 'Old Montréal', d: 'Fintech firms, enterprise offices, and tourism tech companies in the historic core.' },
+                { n: 'Griffintown', d: 'Montréal\'s newest tech district — converted lofts housing AI and VR startups.' },
+                { n: 'Laval', d: 'Growing suburban tech park with biotech, pharma, and logistics companies.' },
+                { n: 'Longueuil', d: 'South Shore commercial hub with aerospace (Pratt & Whitney) and defence tech.' },
+                { n: 'Saint-Laurent', d: 'Industrial zone transitioning to aerospace tech, IoT, and smart manufacturing.' },
+                { n: 'Westmount', d: 'Professional services, wealth management tech, and boutique digital agencies.' },
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Montreal Client Stories */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Montr&eacute;al Client Success Stories</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
+              {[
+                { title: 'Montréal AI Startup', metric: '10x model accuracy', desc: 'Built the production ML pipeline and web dashboard for a Mile End AI startup, enabling real-time anomaly detection for industrial IoT sensors across North America.' },
+                { title: 'Quebec Healthcare Platform', metric: 'FR + EN bilingual', desc: 'Developed a fully bilingual (French/English) patient portal and telehealth platform for a Quebec healthcare network, meeting RAMQ compliance requirements.' },
+                { title: 'Gaming Studio Analytics', metric: '2M+ DAU tracked', desc: 'Created a real-time analytics and player behavior platform for a Montréal game studio, tracking 2M+ daily active users across mobile and console titles.' },
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Montreal Tech Focus */}
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Montr&eacute;al Tech Focus</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
+              {[
+                { t: 'AI & Deep Learning', d: 'Production ML pipelines, computer vision, NLP, and AI-powered SaaS — leveraging Montréal\'s world-leading AI research ecosystem.' },
+                { t: 'Game Development', d: 'Mobile games, console titles, gamification platforms, and player analytics for Montréal\'s 200+ game studios.' },
+                { t: 'VFX & Creative Tech', d: 'Real-time rendering tools, production pipelines, and asset management systems for Montréal\'s VFX and animation industry.' },
+                { t: 'Bilingual SaaS', d: 'French-English SaaS platforms, bilingual customer portals, and Quebec market-ready applications with Bill 96 compliance.' },
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+            </div>
+          </div>
+        </section>
+
         {/* All Services in City */}
         <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
