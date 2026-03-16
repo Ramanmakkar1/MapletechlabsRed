@@ -241,72 +241,20 @@ export default function GameDevelopmentPage() {
           </div>
         </section>
 
-        {/* PRICING TIERS */}
+        {/* Get a Quote */}
         <section ref={pricingRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
-            <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
+            <div className="reveal" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>Pricing</div>
               <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.05, margin: '0 0 16px' }}>
-                Transparent Game Dev Pricing
+                Every Game Is Unique
               </h2>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>Every project is scoped individually. These tiers give you a starting framework for budgeting.</p>
-            </div>
-            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 20 }}>
-              {[
-                {
-                  tier: 'Casual / Hyper-Casual',
-                  price: '$20,000+',
-                  desc: '2D mobile game with polished core loop, monetization integration, and analytics from day one.',
-                  features: ['2D mobile game (iOS & Android)', 'Core loop & monetization design', 'Ad integration (rewarded, interstitial)', 'Analytics & A/B testing setup', 'App Store submission & optimization', '6\u201310 week delivery'],
-                },
-                {
-                  tier: 'Mid-Core Game',
-                  price: '$75,000+',
-                  desc: '3D game with multiplayer, in-app purchases, leaderboards, and live operations infrastructure.',
-                  features: ['3D game with custom art style', 'Real-time or turn-based multiplayer', 'IAP economy & battle pass system', 'Leaderboards & social features', 'LiveOps event framework', '12\u201320 week delivery'],
-                  featured: true,
-                },
-                {
-                  tier: 'AAA / Enterprise',
-                  price: '$200,000+',
-                  desc: 'Full production pipeline with custom engine work, cross-platform deployment, and dedicated team.',
-                  features: ['Full production with dedicated team', 'Custom engine features or modifications', 'Cross-platform (mobile, PC, console)', 'Advanced multiplayer infrastructure', 'Cinematic assets & narrative design', '20\u201340+ week delivery'],
-                },
-              ].map(plan => (
-                <div key={plan.tier}
-                  style={{
-                    padding: 'clamp(32px, 4vw, 48px) clamp(24px, 3vw, 40px)',
-                    border: plan.featured ? '1px solid rgba(245,41,13,0.3)' : '1px solid rgba(255,255,255,0.08)',
-                    borderRadius: 28,
-                    background: plan.featured ? 'rgba(245,41,13,0.04)' : 'rgba(255,255,255,0.02)',
-                    position: 'relative',
-                    overflow: 'hidden',
-                    transition: 'all 0.35s ease',
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = plan.featured ? 'rgba(245,41,13,0.3)' : 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
-                  {plan.featured && <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,#f5290d,transparent)' }} />}
-                  {plan.featured && (
-                    <span style={{ display: 'inline-block', fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, marginBottom: 16 }}>Most Popular</span>
-                  )}
-                  <h3 style={{ fontSize: 'clamp(1.2rem, 2vw, 1.5rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', margin: '0 0 8px' }}>{plan.tier}</h3>
-                  <div style={{ fontSize: 'clamp(2rem,3vw,2.8rem)', fontWeight: 700, color: '#f5290d', letterSpacing: '-0.03em', marginBottom: 16 }}>{plan.price}</div>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: 28 }}>{plan.desc}</p>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                    {plan.features.map(f => (
-                      <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, color: 'rgba(255,255,255,0.75)' }}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
-                        {f}
-                      </div>
-                    ))}
-                  </div>
-                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 48, padding: '0 28px', borderRadius: 100, background: plan.featured ? '#f5290d' : 'transparent', border: plan.featured ? 'none' : '1px solid rgba(255,255,255,0.15)', color: '#fff', fontSize: 14, fontWeight: 600, textDecoration: 'none', marginTop: 32, transition: '0.3s' }}
-                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; if (plan.featured) e.currentTarget.style.boxShadow = '0 12px 30px rgba(245,41,13,0.3)'; else e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; }}
-                    onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; if (!plan.featured) e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}>
-                    Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                  </Link>
-                </div>
-              ))}
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 40 }}>
+                From casual mobile games to full 3D multiplayer experiences, we scope every project based on your game design, platform targets, and timeline. Share your concept and we&apos;ll deliver a detailed proposal within 48 hours.
+              </p>
+              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 36px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 600, textDecoration: 'none', transition: '0.3s' }}>
+                Get a Custom Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </Link>
             </div>
           </div>
         </section>

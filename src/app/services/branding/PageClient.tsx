@@ -292,46 +292,20 @@ export default function BrandingPage() {
           </div>
         </section>
 
-        {/* Pricing */}
+        {/* Get a Quote */}
         <section ref={s9} style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
-            <h2 className="reveal" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
-              Branding Packages
-            </h2>
-            <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
-              {[
-                { tier: 'Starter', price: '$5,000+', desc: 'Logo, color palette, typography, basic brand guidelines', features: ['Logo Design (3 concepts)', 'Color System', 'Typography Selection', 'Basic Brand Guide (10 pages)', '2 Revision Rounds'] },
-                { tier: 'Growth', price: '$15,000+', desc: 'Complete brand identity with digital assets and guidelines', features: ['Everything in Starter', 'Full Visual Identity System', 'Business Card & Stationery', 'Social Media Templates', 'Brand Voice Guidelines', 'Comprehensive Brand Book'], popular: true },
-                { tier: 'Enterprise', price: '$35,000+', desc: 'Full brand strategy, identity, and multi-channel rollout', features: ['Everything in Growth', 'Brand Strategy & Positioning', 'Market Research & Analysis', 'Motion Graphics & Animation', 'Website Design Direction', 'Brand Launch Support', 'Ongoing Brand Consulting'] },
-              ].map((p) => (
-                <div key={p.tier} style={{
-                  padding: '36px 28px', borderRadius: 24,
-                  background: p.popular ? 'rgba(245,41,13,0.05)' : 'rgba(255,255,255,0.03)',
-                  border: `1px solid ${p.popular ? 'rgba(245,41,13,0.2)' : 'rgba(255,255,255,0.08)'}`,
-                  position: 'relative',
-                }}>
-                  {p.popular && <span style={{ position: 'absolute', top: -12, left: '50%', transform: 'translateX(-50%)', padding: '4px 16px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 11, fontWeight: 700, textTransform: 'uppercase' }}>Most Popular</span>}
-                  <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', marginBottom: 4 }}>{p.tier}</h3>
-                  <div style={{ fontSize: 28, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{p.price}</div>
-                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: 24, lineHeight: 1.5 }}>{p.desc}</p>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                    {p.features.map((f) => (
-                      <li key={f} style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: 10 }}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <a href="/contact" style={{
-                    display: 'block', textAlign: 'center', marginTop: 24, padding: '14px', borderRadius: 12,
-                    background: p.popular ? '#f5290d' : 'rgba(255,255,255,0.06)',
-                    color: '#fff', fontSize: 14, fontWeight: 600, textDecoration: 'none',
-                    border: p.popular ? 'none' : '1px solid rgba(255,255,255,0.1)',
-                  }}>
-                    Get Started
-                  </a>
-                </div>
-              ))}
+            <div className="reveal" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>Pricing</div>
+              <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.05, margin: '0 0 16px' }}>
+                Every Project Is Unique
+              </h2>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 40 }}>
+                We tailor every branding engagement to your goals, timeline, and budget. Tell us about your project and we&apos;ll put together a custom proposal within 48 hours.
+              </p>
+              <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 36px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 600, textDecoration: 'none', transition: '0.3s' }}>
+                Get a Custom Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </a>
             </div>
           </div>
         </section>
