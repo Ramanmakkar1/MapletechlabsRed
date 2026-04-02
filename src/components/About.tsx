@@ -24,38 +24,42 @@ export default function About() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // Animated counters
-    stats.forEach((stat, i) => {
-      const counter = { val: 0 };
-      gsap.to(counter, {
-        val: stat.value,
-        duration: 2,
-        ease: 'power2.out',
-        snap: { val: 1 },
-        scrollTrigger: { trigger: '.stats-strip', start: 'top 80%', once: true },
-        onUpdate() {
-          const el = document.querySelector(`.stat-val-${i}`) as HTMLElement;
-          if (el) el.textContent = Math.round(counter.val) + stat.suffix;
-        },
+    // Defer animations until browser is idle for performance
+    const idleCallback = requestIdleCallback(() => {
+      // Animated counters
+      stats.forEach((stat, i) => {
+        const counter = { val: 0 };
+        gsap.to(counter, {
+          val: stat.value,
+          duration: 2,
+          ease: 'power2.out',
+          snap: { val: 1 },
+          scrollTrigger: { trigger: '.stats-strip', start: 'top 80%', once: true },
+          onUpdate() {
+            const el = document.querySelector(`.stat-val-${i}`) as HTMLElement;
+            if (el) el.textContent = Math.round(counter.val) + stat.suffix;
+          },
+        });
+        gsap.from(`.stat-item-${i}`, {
+          opacity: 0, y: 30, duration: 0.7, delay: i * 0.12, ease: 'power3.out',
+          scrollTrigger: { trigger: '.stats-strip', start: 'top 80%', once: true },
+        });
       });
-      gsap.from(`.stat-item-${i}`, {
-        opacity: 0, y: 30, duration: 0.7, delay: i * 0.12, ease: 'power3.out',
-        scrollTrigger: { trigger: '.stats-strip', start: 'top 80%', once: true },
+
+      // About text slide in
+      gsap.from('.about-text > *', {
+        opacity: 0, x: -40, duration: 0.8, stagger: 0.12, ease: 'power3.out',
+        scrollTrigger: { trigger: '.about-text', start: 'top 78%' },
+      });
+
+      // Pillars
+      gsap.from('.pillar', {
+        opacity: 0, x: 40, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+        scrollTrigger: { trigger: '.pillars', start: 'top 78%' },
       });
     });
 
-    // About text slide in
-    gsap.from('.about-text > *', {
-      opacity: 0, x: -40, duration: 0.8, stagger: 0.12, ease: 'power3.out',
-      scrollTrigger: { trigger: '.about-text', start: 'top 78%' },
-    });
-
-    // Pillars
-    gsap.from('.pillar', {
-      opacity: 0, x: 40, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-      scrollTrigger: { trigger: '.pillars', start: 'top 78%' },
-    });
-
+    return () => cancelIdleCallback(idleCallback);
   }, { scope: containerRef });
 
   return (

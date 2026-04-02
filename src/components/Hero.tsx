@@ -25,12 +25,17 @@ export default function Hero() {
   const [visible, setVisible] = useState(true);
 
   useGSAP(() => {
-    gsap.from(['.h-badge', '.h-h1', '.h-p', '.h-btns', '.h-stats'], {
-      opacity: 0, y: 30, stagger: 0.1, duration: 1, ease: 'power3.out', delay: 0.15,
+    // Defer animations until after page render using requestIdleCallback
+    const idleCallback = requestIdleCallback(() => {
+      gsap.from(['.h-badge', '.h-h1', '.h-p', '.h-btns', '.h-stats'], {
+        opacity: 0, y: 30, stagger: 0.1, duration: 1, ease: 'power3.out', delay: 0.15,
+      });
+      gsap.from('.h-code-panel', {
+        opacity: 0, x: 40, duration: 1.2, ease: 'power3.out', delay: 0.4,
+      });
     });
-    gsap.from('.h-code-panel', {
-      opacity: 0, x: 40, duration: 1.2, ease: 'power3.out', delay: 0.4,
-    });
+
+    return () => cancelIdleCallback(idleCallback);
   }, { scope: ref });
 
   useEffect(() => {
@@ -44,6 +49,9 @@ export default function Hero() {
 
   return (
     <section ref={ref} style={{ background: '#000', minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', paddingTop: 'clamp(80px, 12vw, 140px)' }}>
+      {/* SEO H1 - Hidden but present for search engines */}
+      <h1 style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>Custom Software Development | Mapletech Labs</h1>
+
       {/* Grid bg */}
       <div aria-hidden="true" style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px)', backgroundSize: '72px 72px', pointerEvents: 'none' }} />
       {/* Glow left */}
@@ -62,7 +70,7 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="h-h1" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)', fontWeight: 500, letterSpacing: '-0.05em', lineHeight: 0.95, margin: '0 0 36px' }}>
+          <h2 className="h-h1" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)', fontWeight: 500, letterSpacing: '-0.05em', lineHeight: 0.95, margin: '0 0 36px' }}>
             <span style={{ color: '#fff' }}>We Build</span><br />
             <span style={{
               display: 'inline-block',
@@ -78,7 +86,7 @@ export default function Hero() {
               {words[wordIndex]}
             </span><br />
             <span style={{ color: 'rgba(255,255,255,0.18)' }}>That Scale.</span>
-          </h1>
+          </h2>
 
           {/* Sub */}
           <p className="h-p" style={{ fontSize: 'clamp(0.95rem, 1.6vw, 1.15rem)', color: 'rgba(255,255,255,0.75)', maxWidth: 480, lineHeight: 1.8, margin: '0 0 clamp(28px, 5vw, 52px)' }}>
@@ -87,16 +95,12 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="h-btns" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 'clamp(36px, 6vw, 72px)' }}>
-            <Link href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 'clamp(48px, 7vw, 58px)', padding: '0 clamp(24px, 4vw, 36px)', borderRadius: 100, background: 'linear-gradient(135deg, #f5290d, #FF5733)', color: '#fff', fontSize: 'clamp(14px, 2vw, 15px)', fontWeight: 700, textDecoration: 'none', transition: '0.3s', boxShadow: '0 0 0 0 rgba(245,41,13,0)' }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 0 0 0 rgba(245,41,13,0)'; }}
+            <Link href="#contact" className="hero-btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 'clamp(48px, 7vw, 58px)', padding: '0 clamp(24px, 4vw, 36px)', borderRadius: 100, background: 'linear-gradient(135deg, #f5290d, #FF5733)', color: '#fff', fontSize: 'clamp(14px, 2vw, 15px)', fontWeight: 700, textDecoration: 'none', boxShadow: '0 0 0 0 rgba(245,41,13,0)' }}
             >
               Start a Project
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
-            <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 'clamp(48px, 7vw, 58px)', padding: '0 clamp(24px, 4vw, 36px)', borderRadius: 100, border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(14px, 2vw, 15px)', fontWeight: 500, textDecoration: 'none', transition: '0.3s', background: 'rgba(255,255,255,0.03)' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; e.currentTarget.style.background = 'rgba(255,255,255,0.03)'; }}
+            <Link href="/services" className="hero-btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 'clamp(48px, 7vw, 58px)', padding: '0 clamp(24px, 4vw, 36px)', borderRadius: 100, border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(14px, 2vw, 15px)', fontWeight: 500, textDecoration: 'none', background: 'rgba(255,255,255,0.03)' }}
             >
               View Services
             </Link>
