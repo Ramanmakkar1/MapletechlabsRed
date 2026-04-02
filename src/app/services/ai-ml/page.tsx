@@ -15,6 +15,39 @@ export const metadata: Metadata = {
   },
 };
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'AI & Machine Learning Services',
+  description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Canada',
+  },
+  url: 'https://mapletechlabs.ca/services/ai-ml',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://mapletechlabs.ca/services' },
+    { '@type': 'ListItem', position: 3, name: 'AI & Machine Learning', item: 'https://mapletechlabs.ca/services/ai-ml' },
+  ],
+};
+
 export default function Page() {
-  return <PageClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <PageClient />
+    </>
+  );
 }

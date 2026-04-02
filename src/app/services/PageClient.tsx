@@ -63,7 +63,7 @@ const services: ServiceCategory[] = [
     href: '/services/mobile-app-development',
     initial: 'M',
     color: '#f5290d',
-    description: 'Native and cross-platform mobile apps built for performance, scale, and exceptional user experience.',
+    description: 'We engineer native iOS, Android, and cross-platform mobile applications that drive measurable business results. From fintech trading apps to healthcare platforms and e-commerce storefronts, our team specializes in building apps that users love and investors notice. We combine Swift, Kotlin, Flutter, and React Native expertise to deliver high-performance solutions tailored to your audience. Our methodology spans discovery, UX design, agile development, rigorous QA across 200+ real devices, and post-launch App Store optimization. Most MVPs ship in 8-12 weeks with full 30-day post-launch support. We\'ve delivered 300+ apps with a 4.9-star App Store average, handling everything from concept to ASO to ongoing SLA support for scaling businesses.',
     subServices: [
       { name: 'iOS App Development', href: '/services/mobile-app-development/ios-app-development' },
       { name: 'Android App Development', href: '/services/mobile-app-development/android-app-development' },
@@ -77,7 +77,7 @@ const services: ServiceCategory[] = [
     href: '/services/web-development',
     initial: 'W',
     color: '#3b82f6',
-    description: 'Modern web applications, SaaS platforms, and enterprise portals powered by cutting-edge frameworks.',
+    description: 'We architect and build scalable web systems for startups and enterprises. Our expertise spans React, Next.js, Node.js, and GraphQL to deliver SaaS platforms, e-commerce storefronts, and complex enterprise applications. Using modern frameworks and cloud-native architecture, we design systems that grow from MVP to millions of users. Our approach includes discovery and requirements mapping, database schema design, high-fidelity prototyping, agile development with weekly deployments, and post-launch performance optimization. Real examples: fintech dashboards handling $10M+ in daily transactions, HIPAA-compliant healthcare portals, and multi-tenant SaaS with Stripe billing integration. Technology stack: React, Next.js, TypeScript, PostgreSQL, GraphQL, AWS, Kubernetes. Timeline: 4-12 weeks from kickoff to production. Ideal for companies needing robust, scalable web infrastructure.',
     subServices: [
       { name: 'Next.js Development', href: '/services/web-development/nextjs-development' },
       { name: 'SaaS Platforms', href: '/services/web-development/saas-platforms' },
@@ -91,7 +91,7 @@ const services: ServiceCategory[] = [
     href: '/services/ai-ml',
     initial: 'A',
     color: '#8b5cf6',
-    description: 'Intelligent automation, LLM integration, and predictive analytics to transform your business operations.',
+    description: 'We deploy cutting-edge AI and machine learning solutions that unlock automation, intelligence, and competitive advantage. Our team combines LLM integration (GPT-4, Claude, Llama), computer vision, and predictive analytics to solve real business problems. Methodology: we analyze your data, build custom models, integrate with your systems, and measure impact. Real examples: AI-powered customer support reducing ticket resolution time by 70%, predictive inventory systems for e-commerce, document classification for legal firms, and anomaly detection for fraud prevention. Technology stack: Python, TensorFlow, PyTorch, OpenAI API, Hugging Face, AWS SageMaker. Deliverables include data preparation, model training, API integration, and monitoring dashboards. Timeline: POC in 4 weeks, production deployment in 8-12 weeks. Key benefits: 24/7 automation, reduced operational costs, improved decision-making, and scalable intelligence.',
     subServices: [
       { name: 'LLM Integration', href: '/services/ai-ml/llm-integration' },
       { name: 'AI Automation', href: '/services/ai-ml/ai-automation' },
@@ -105,7 +105,7 @@ const services: ServiceCategory[] = [
     href: '/services/blockchain-web3',
     initial: 'B',
     color: '#f59e0b',
-    description: 'Decentralized applications, smart contracts, and DeFi solutions for the next generation of the web.',
+    description: 'We build decentralized applications, smart contracts, and blockchain solutions for the Web3 era. Our expertise spans Solidity smart contracts, DeFi protocol development, NFT platforms, and crypto wallet integration. Methodology: requirements analysis, contract architecture design, comprehensive testing (audits on request), and mainnet deployment with ongoing support. Real examples: DeFi yield farming protocols enabling users to earn 8-12% APY, NFT marketplaces with $50M+ trading volume, and permissionless lending platforms. Technology stack: Solidity, Hardhat, Ethers.js, Web3.js, Ethereum, Polygon, Arbitrum. Deliverables include audited smart contracts, web frontends for user interaction, liquidity management systems, and governance mechanisms. Timeline: smart contracts in 6-8 weeks, full dApp in 12-16 weeks. Key benefits: decentralized trust, 24/7 operation, transparent on-chain audit trails, and access to global liquidity.',
     subServices: [
       { name: 'Smart Contracts', href: '/services/blockchain-web3/smart-contracts' },
       { name: 'DeFi Protocols', href: '/services/blockchain-web3/defi-protocols' },
@@ -119,7 +119,7 @@ const services: ServiceCategory[] = [
     href: '/services/product-design',
     initial: 'P',
     color: '#ec4899',
-    description: 'User-centered design strategy, prototyping, and design systems that drive engagement and conversions.',
+    description: 'We craft intuitive digital experiences that drive user engagement and business growth through human-centered design. Our approach begins with comprehensive user research, competitive analysis, and stakeholder interviews to understand needs and pain points. We create detailed personas, user journeys, and wireframes, then validate with interactive prototypes before a single line of code is written. Real example: redesigning a fintech dashboard increased user adoption by 45% and reduced support tickets by 30% through simplified navigation and personalized workflows. Deliverables: user research reports, detailed wireframes, interactive Figma prototypes, design systems with component libraries, and handoff documentation. Technology stack: Figma, Whimsical, UserTesting, Maze. Timeline: discovery to design system in 4-8 weeks. Key benefits: reduced development rework, faster time-to-market, improved user retention, measurable conversion increases, and scalable design consistency.',
     subServices: [
       { name: 'UI/UX Strategy', href: '/services/product-design/ui-ux-strategy' },
       { name: 'Wireframing', href: '/services/product-design/wireframing' },
@@ -133,7 +133,7 @@ const services: ServiceCategory[] = [
     href: '/services/cloud-devops',
     initial: 'C',
     color: '#06b6d4',
-    description: 'Scalable cloud architecture, CI/CD pipelines, and infrastructure automation for reliable deployments.',
+    description: 'We design and implement production-grade cloud infrastructure, CI/CD automation, and DevOps workflows that enable teams to deploy confidently at scale. Our methodology encompasses AWS architecture design, containerization with Docker and Kubernetes, infrastructure-as-code, monitoring setup, and automated testing pipelines. Real example: migrating a legacy monolith to Kubernetes reduced deployment time from 4 hours to 8 minutes and improved system reliability to 99.99% uptime. Deliverables: VPC and networking design, containerized applications, Helm charts, automated CI/CD pipelines, infrastructure templates (Terraform), monitoring dashboards, and runbooks. Technology stack: AWS, Kubernetes, Docker, Terraform, GitHub Actions, DataDog, Prometheus. Timeline: foundational setup in 2-4 weeks, comprehensive DevOps maturity in 8-12 weeks. Key benefits: faster deployments, reduced human error, automatic scaling, cost optimization, and improved system observability.',
     subServices: [
       { name: 'AWS Architecture', href: '/services/cloud-devops/aws-architecture' },
       { name: 'Kubernetes & Docker', href: '/services/cloud-devops/kubernetes-docker' },

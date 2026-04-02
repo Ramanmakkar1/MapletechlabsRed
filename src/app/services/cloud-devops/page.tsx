@@ -15,6 +15,39 @@ export const metadata: Metadata = {
   },
 };
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Cloud & DevOps Services',
+  description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Canada',
+  },
+  url: 'https://mapletechlabs.ca/services/cloud-devops',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://mapletechlabs.ca/services' },
+    { '@type': 'ListItem', position: 3, name: 'Cloud & DevOps', item: 'https://mapletechlabs.ca/services/cloud-devops' },
+  ],
+};
+
 export default function Page() {
-  return <PageClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <PageClient />
+    </>
+  );
 }
