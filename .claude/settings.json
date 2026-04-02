@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:mapletechlabs.ca)"
+      "WebFetch(domain:mapletechlabs.ca)",
+      "Bash(npm list:*)",
+      "Bash(grep -o '\"[^\"]{50,100}\"' src/components/TestimonialsSection.tsx)",
+      "Bash(wc -l src/components/FAQ*.tsx)"
     ],
     "additionalDirectories": [
       "/Users/ramanmakkar/Desktop"
