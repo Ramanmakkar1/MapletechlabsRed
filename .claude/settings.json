@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:mapletechlabs.ca)"
+    ],
+    "additionalDirectories": [
+      "/Users/ramanmakkar/Desktop"
+    ]
+  }
+}

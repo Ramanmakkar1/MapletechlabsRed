@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 
 export const metadata: Metadata = {
@@ -16,5 +18,12 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PageClient />;
+  const breadcrumbs = getServiceBreadcrumbs('ar-vr', 'vr-applications');
+
+  return (
+    <>
+      <BreadcrumbSchema items={breadcrumbs} />
+      <PageClient />
+    </>
+  );
 }
