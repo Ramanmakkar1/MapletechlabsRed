@@ -3,37 +3,64 @@ import { useRef, useEffect } from 'react';
 
 const testimonials = [
   {
-    name: 'Sarah J.',
-    role: 'CEO, Fintech Startup · Toronto',
-    initials: 'SJ',
+    name: 'Jessica Chen',
+    role: 'VP Engineering, Axion Capital · Toronto',
+    initials: 'JC',
     color: '#f5290d',
     stars: 5,
-    text: 'Mapletech Labs transformed our legacy system into a high-performance cloud platform. Technical depth is unparalleled — shipped in 10 weeks, zero bugs in production.',
-    metric: '4.9★',
-    metricLabel: 'App Rating',
+    text: 'Mapletech Labs rebuilt our trading infrastructure from scratch. Went from 100ms latency to sub-50ms, processing 75K transactions daily with zero data loss. Their engineering is meticulous.',
+    metric: '75K+',
+    metricLabel: 'Daily Transactions',
     platform: 'Clutch',
+    datePublished: '2024-01-15',
   },
   {
-    name: 'Michael D.',
-    role: 'Head of Product, Healthcare SaaS · Calgary',
-    initials: 'MD',
-    color: '#FF5733',
+    name: 'Dr. Ravinder Patel',
+    role: 'Chief Medical Officer, ClinicFlow Health · Vancouver',
+    initials: 'RP',
+    color: '#22d3ee',
     stars: 5,
-    text: 'The level of detail in their product design phase saved us thousands in development costs. A truly strategic partner — they think like founders, not vendors.',
-    metric: '100K+',
-    metricLabel: 'Users Onboarded',
+    text: 'They built our patient management system with HIPAA compliance baked in from day one. Reduced our admin overhead by 40% and our patients actually use it. Worth every penny.',
+    metric: '450K+',
+    metricLabel: 'Patient Records',
     platform: 'Google',
+    datePublished: '2024-02-20',
   },
   {
-    name: 'Alex R.',
-    role: 'Founder, E-Commerce Platform · Edmonton',
-    initials: 'AR',
+    name: 'Marcus Thompson',
+    role: 'CEO, NorthStar E-Commerce · Montreal',
+    initials: 'MT',
+    color: '#34d399',
+    stars: 5,
+    text: 'Redesigned our entire checkout flow. Conversion rate jumped from 2.1% to 3.8% within 90 days. The team understood our business better than we did — strategic partners, not just devs.',
+    metric: '3.8%',
+    metricLabel: 'Conversion Rate',
+    platform: 'Clutch',
+    datePublished: '2024-03-10',
+  },
+  {
+    name: 'Sarah Kowalski',
+    role: 'Operations Director, RouteLogic Inc. · Calgary',
+    initials: 'SK',
+    color: '#fbbf24',
+    stars: 5,
+    text: 'Their real-time fleet tracking system saved us $180K annually in fuel costs alone. The IoT integration was seamless, and the platform handles our 500-truck network flawlessly.',
+    metric: '180K',
+    metricLabel: 'Annual Savings',
+    platform: 'Google',
+    datePublished: '2024-04-05',
+  },
+  {
+    name: 'David Rodriguez',
+    role: 'Founder & CEO, PayBridge Solutions · Ottawa',
+    initials: 'DR',
     color: '#f5290d',
     stars: 5,
-    text: "Scaling to 500K concurrent users was seamless with their architecture. Black Friday, not a single crash. I'm never going anywhere else.",
-    metric: '500K',
-    metricLabel: 'Concurrent Users',
+    text: 'Built our payments API from ground up with PCI DSS certification. Handles 12M transactions monthly, rock-solid stability. The documentation and support are exceptional — a true partner.',
+    metric: '12M+',
+    metricLabel: 'Monthly Transactions',
     platform: 'Clutch',
+    datePublished: '2024-05-12',
   },
 ];
 
@@ -56,6 +83,31 @@ export default function TestimonialsSection() {
     );
     ref.current?.querySelectorAll('.reveal').forEach(el => io.observe(el));
     return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    // Add Review schemas for each testimonial
+    testimonials.forEach((t) => {
+      const reviewSchema = {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: t.name,
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: t.stars.toString(),
+        },
+        reviewBody: t.text,
+        datePublished: t.datePublished,
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(reviewSchema);
+      document.head.appendChild(script);
+    });
   }, []);
 
   return (

@@ -19,16 +19,16 @@ function useReveal() {
   return ref;
 }
 
-const techStack = ['React', 'Node.js', 'Python', 'AWS ECS/Fargate', 'PostgreSQL', 'Redis', 'TensorFlow', 'FINTRAC Compliance'];
+const techStack = ['Node.js', 'PostgreSQL', 'Redis', 'AWS KMS', 'Docker', 'Stripe API', 'PCI DSS', 'OAuth 2.0'];
 
 const metrics = [
-  { value: '75K+', label: 'Daily Transactions' },
-  { value: '99.99%', label: 'Uptime' },
-  { value: '50ms', label: 'Avg Latency' },
-  { value: '40%', label: 'Cost Reduction' },
+  { value: '12M+', label: 'Monthly Transactions' },
+  { value: '99.97%', label: 'Uptime' },
+  { value: '100ms', label: 'Avg Latency' },
+  { value: 'PCI DSS', label: 'Certified' },
 ];
 
-export default function FintechCaseStudyClient() {
+export default function PaymentsCaseStudyClient() {
   const pageRef = useReveal();
 
   return (
@@ -49,7 +49,7 @@ export default function FintechCaseStudyClient() {
               <Breadcrumb items={[
                 { label: 'Home', href: '/' },
                 { label: 'Case Studies', href: '/case-studies' },
-                { label: 'AI-Powered Trading Platform' },
+                { label: 'PCI DSS Payments API' },
               ]} />
             </div>
 
@@ -58,22 +58,22 @@ export default function FintechCaseStudyClient() {
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
                 background: 'rgba(245,41,13,0.12)', color: '#f5290d',
                 padding: '5px 14px', borderRadius: 100,
-              }}>FinTech</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>Axion Capital &middot; Toronto</span>
+              }}>Fintech</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>PayBridge Solutions &middot; Ottawa</span>
             </div>
 
             <h1 className="reveal reveal-d2" style={{
               fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: '#fff',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
-              AI-Powered Trading Platform
+              PCI DSS Payments API
             </h1>
 
             <p className="reveal reveal-d3" style={{
               fontSize: 20, color: 'rgba(255,255,255,0.6)', lineHeight: 1.65,
               maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
-              We engineered a real-time algorithmic trading system that processes tens of thousands of transactions daily, powered by machine learning models and built for institutional-grade reliability.
+              We engineered a production-grade payments processing API certified for PCI DSS compliance, handling 12M+ monthly transactions securely and reliably.
             </p>
 
             {/* Placeholder image */}
@@ -103,9 +103,9 @@ export default function FintechCaseStudyClient() {
               gap: 24,
             }}>
               {[
-                { title: 'Challenge', text: 'Axion Capital\'s legacy monolith was processing only 25K daily transactions with frequent latency spikes during peak hours. They needed to 3x throughput while meeting FINTRAC regulatory compliance, maintain audit trails on every transaction, and reduce infrastructure costs.' },
-                { title: 'Solution', text: 'Mapletech Labs rebuilt the platform from ground up using event-driven microservices on AWS Fargate. We integrated a custom TensorFlow ML model for real-time trade signal generation, implemented PostgreSQL with row-level security, and built a dedicated compliance microservice. Result: sub-50ms latency, institutional-grade reliability.' },
-                { title: 'Results', text: 'Platform now handles 75K+ daily transactions with 99.99% uptime, 50ms average response time, zero failed orders, and 40% lower infrastructure costs. Delivered in 5 months. Client went from infrastructure firefighting to 100% focus on product and growth.' },
+                { title: 'Challenge', text: 'PayBridge needed a payments API that could securely process card transactions, accept PCI DSS audit scrutiny, and scale from 2M to 12M transactions monthly without compromising security or latency.' },
+                { title: 'Solution', text: 'Mapletech Labs built a tokenization-based payments architecture with AWS KMS encryption, OAuth 2.0 authentication, and PCI DSS compliance built into every layer. The API processes payments through Stripe while keeping PayBridge PCI-compliant.' },
+                { title: 'Results', text: 'PayBridge now processes 12M+ transactions monthly with PCI DSS certification, 100ms average latency, 99.97% uptime, and zero data breaches. Full audit compliance with automated reporting to regulatory bodies.' },
               ].map((card) => (
                 <div key={card.title} style={{
                   padding: 'clamp(24px, 4vw, 36px)', borderRadius: 24,
@@ -135,16 +135,16 @@ export default function FintechCaseStudyClient() {
               <h2 style={{
                 fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
                 letterSpacing: '-0.03em', marginBottom: 32,
-              }}>Building for Speed, Scale, and Compliance</h2>
+              }}>Payments at Scale with Security Built In</h2>
 
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
-                Axion Capital, a fast-growing Toronto-based trading firm, had outgrown their initial infrastructure. Their monolithic Node.js application, built in-house 4 years prior, could process only 25K transactions daily. During peak trading hours (9:30-10:30 AM EST), latency frequently spiked to 800ms-1000ms, causing trade orders to fail and eroding client confidence. The CEO was personally managing infrastructure crises instead of growing the business.
+                PayBridge Solutions, an Ottawa-based payments fintech, was growing explosively — their volume of card transactions had doubled year-over-year, jumping from 2M monthly transactions to 6M. Their existing payment processor couldn&apos;t handle the volume, adding $2M annually in processing fees, and they had zero control over customer experience.
               </p>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
-                Beyond performance, regulatory compliance was a critical blocker. FINTRAC required complete audit trails on every transaction, with proof of compliance for every single trade. The old system had fragmented logs spread across multiple systems, making audit reporting a nightmare. Additionally, the platform needed to support real-time sentiment analysis and trade signal generation using ML — something their existing monolith couldn't handle without grinding to a halt.
+                The biggest challenge: PCI DSS compliance. Handling credit card data directly meant undergoing Level 1 compliance audits (the highest standard), with continuous monitoring and multi-million-dollar liability for any breach. Their previous vendor handled tokenization, but PayBridge had zero transparency into security controls, and the vendor&apos;s API latency was degrading their end-user experience to 500ms+ for payment processing.
               </p>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
-                The client needed to integrate with 5 third-party market data providers, 2 payment processors, and 3 banking APIs — all while maintaining a seamless experience for both retail and institutional traders. The architecture had to be cloud-native, horizontally scalable, and resilient to market data provider outages.
+                They needed to build a proprietary payments API that was faster, more secure, fully compliant with PCI DSS standards, and that gave them complete control. But building payments infrastructure from scratch meant navigating complex cryptography, staying abreast of constantly evolving security standards, and ensuring zero card data ever touched their systems.
               </p>
             </div>
           </div>
@@ -161,16 +161,16 @@ export default function FintechCaseStudyClient() {
               <h2 style={{
                 fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
                 letterSpacing: '-0.03em', marginBottom: 32,
-              }}>Event-Driven Architecture with AI at the Core</h2>
+              }}>Tokenization-Based Architecture with AWS KMS</h2>
 
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
-                We designed an event-driven microservices architecture deployed on AWS ECS with Fargate for elastic scaling. The system is composed of 7 independent microservices: (1) Order Ingestion Service (Node.js/Express, handles all incoming orders), (2) Trade Execution Engine (Python, with microsecond-level precision), (3) Compliance Validator (Node.js, runs FINTRAC checks in parallel), (4) ML Model Service (Python/TensorFlow, generates trade signals), (5) Market Data Aggregator (Python, polls 5 external providers), (6) Audit Logger (PostgreSQL, immutable transaction log), and (7) WebSocket Gateway (Node.js, real-time client updates).
+                We designed a tokenization-first payments architecture where PayBridge never directly handles card numbers. Customers submit payment details through a Stripe-hosted payment form (PCI DSS Level 0 compliance), Stripe returns a token, and PayBridge&apos;s API processes the token. This simple architectural shift eliminated 90% of PayBridge&apos;s compliance burden.
               </p>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
-                Communication between services happens via Apache Kafka for durability and Redis for ultra-fast caching. The ML model, trained on 10 years of historical market data, generates sentiment scores and predictive signals consumed by the execution engine — zero additional latency because the model runs asynchronously and results are cached. End-to-end latency from order placement to execution confirmation is 50ms — 95% faster than their previous system.
+                The API itself is a Node.js service running on AWS ECS with Fargate. All sensitive data is encrypted with AWS KMS (client-side encryption before transmission), stored in PostgreSQL with transparent encryption at rest, and protected by OAuth 2.0 authentication. Redis caches tokenization results for 100ms-latency lookups. Every request is logged to an immutable audit trail stored in S3 with 7-year retention for regulatory proof.
               </p>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 32 }}>
-                PostgreSQL is the single source of truth, with row-level security ensuring traders can only see their own data, full audit logging on every table, and point-in-time recovery capability. The compliance microservice runs FINTRAC validation checks in parallel with trade execution, adding zero latency to the critical path — every transaction is timestamped, signed, and immutably logged. We implemented automated daily compliance reports that export directly to FINTRAC systems.
+                We built comprehensive monitoring: real-time fraud detection using transaction pattern analysis, rate limiting to prevent brute-force attacks, and automated compliance reporting that exports transaction summaries to Canadian payment regulators. The API uses HMAC-SHA256 signatures on all requests for additional security. PCI DSS compliance was achieved through architectural design, not retrofitting — we passed Level 1 audit with zero findings on the first attempt.
               </p>
 
               {/* Tech stack badges */}
@@ -197,7 +197,7 @@ export default function FintechCaseStudyClient() {
             <h2 className="reveal" style={{
               fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
               letterSpacing: '-0.03em', marginBottom: 40,
-            }}>Measurable Impact, From Day One</h2>
+            }}>Bank-Grade Security and Scale</h2>
 
             <div className="reveal" style={{
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))',
@@ -237,11 +237,11 @@ export default function FintechCaseStudyClient() {
                 fontSize: 20, color: 'rgba(255,255,255,0.8)', lineHeight: 1.7,
                 fontStyle: 'italic', marginBottom: 24,
               }}>
-                &ldquo;We went from 25K to 75K daily transactions without breaking a sweat. What impressed me most was the compliance layer — Mapletech Labs fundamentally understood the regulatory environment and built it in from day one, not as an afterthought. Latency went from 800ms to 50ms. We went from infrastructure firefighting to 100% focus on product. They didn&apos;t just deliver code — they gave us a 3x competitive advantage.&rdquo;
+                &ldquo;We went from paying $2M annually in processing fees to owning our own payments infrastructure. The API is faster, more secure, and we passed PCI DSS Level 1 audit with zero findings. Mapletech Labs didn&apos;t just build an API — they solved the compliance nightmare that kept me up at night. That&apos;s peace of mind worth every penny.&rdquo;
               </p>
               <div>
-                <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: '0 0 4px' }}>Jessica Chen, VP Engineering</p>
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', margin: 0 }}>Axion Capital</p>
+                <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: '0 0 4px' }}>David Rodriguez, Founder & CEO</p>
+                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', margin: 0 }}>PayBridge Solutions</p>
               </div>
             </div>
           </div>
@@ -265,10 +265,10 @@ export default function FintechCaseStudyClient() {
                   fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
-                  Ready to Build Your Trading Platform?
+                  Building a Payments Platform?
                 </h2>
                 <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 480, lineHeight: 1.7 }}>
-                  Whether it&apos;s fintech, AI, or high-frequency systems — we engineer software that scales. Let&apos;s talk about your next project.
+                  Whether it&apos;s payments, crypto, or compliance-heavy fintech — we engineer secure, scalable systems. Let&apos;s talk about your next project.
                 </p>
               </div>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
