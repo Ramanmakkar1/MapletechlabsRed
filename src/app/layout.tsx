@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
+import HrefLangTags from "@/components/HrefLangTags";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -87,8 +88,10 @@ const organizationSchema = {
     "Custom software development company founded by Raman Makkar in Edmonton, Canada. 12 locations across Canada. Best agents from around the world working virtually.",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Edmonton, Alberta",
     addressLocality: "Edmonton",
     addressRegion: "AB",
+    postalCode: "T5J 1B9",
     addressCountry: "CA",
   },
   sameAs: [
@@ -100,7 +103,10 @@ const organizationSchema = {
     "@type": "ContactPoint",
     contactType: "sales",
     availableLanguage: ["English", "French"],
+    telephone: "+1-403-604-8692",
+    email: "hello@mapletechlabs.ca",
   },
+  areaServed: ["CA", "US"],
   foundingDate: "2018",
   foundingLocation: {
     "@type": "Place",
@@ -143,6 +149,14 @@ const organizationSchema = {
       },
     ],
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    ratingCount: "500",
+    bestRating: "5",
+    worstRating: "1",
+    reviewCount: "500",
+  },
 };
 
 export default function RootLayout({
@@ -153,16 +167,12 @@ export default function RootLayout({
   return (
     <html lang="en-CA">
       <head>
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GT-PJ46RCMN');`,
-          }}
-        />
+        {/* Preload hero image for LCP optimization */}
+        <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp" />
+
+        <link rel="license" href="https://mapletechlabs.ca/llms.txt" />
+        {/* Hreflang tags for bilingual content */}
+        <HrefLangTags />
       </head>
       <body className={poppins.className}>
         <a href="#main-content" className="sr-only-focusable">Skip to main content</a>
@@ -175,8 +185,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        {/* Organization Schema - defer to avoid blocking render */}
         <script
           type="application/ld+json"
+          defer
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}
@@ -185,6 +197,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <CookieConsent />
         <ClarityAnalytics />
         <Analytics />
+        {/* Google Tag Manager - moved to end of body for LCP optimization */}
+        <script
+          async
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GT-PJ46RCMN');`,
+          }}
+        />
       </body>
     </html>
   );
