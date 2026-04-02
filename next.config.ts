@@ -23,6 +23,18 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // WWW to non-www redirect (handles both http and https from www)
+      {
+        source: '/:path((?!.*))*',
+        destination: '/:path*',
+        permanent: true,
+        has: [
+          {
+            type: 'host',
+            value: 'www.mapletechlabs.ca',
+          },
+        ],
+      },
       // Old city+service slug pattern: /service-in-city → /locations/city/service
       { source: '/software-development-company-in-edmonton', destination: '/locations/edmonton/web-development', permanent: true },
       { source: '/software-development-company-in-toronto', destination: '/locations/toronto/web-development', permanent: true },
