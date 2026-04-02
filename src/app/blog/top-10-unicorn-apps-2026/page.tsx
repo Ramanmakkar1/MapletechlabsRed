@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 
 const TITLE = 'Top 10 Unicorn Apps of 2026';
@@ -48,12 +50,15 @@ const jsonLd = {
 };
 
 export default function Page() {
+  const breadcrumbs = getBlogBreadcrumbs(TITLE, SLUG);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbSchema items={breadcrumbs} />
       <PageClient />
     </>
   );
