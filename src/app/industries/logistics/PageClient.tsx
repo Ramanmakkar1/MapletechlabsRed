@@ -67,7 +67,7 @@ export default function LogisticsPage() {
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
-            { label: 'Industries', href: '/services' },
+            { label: 'Industries', href: '/industries' },
             { label: 'Logistics' },
           ]} />
         </div>

@@ -67,7 +67,7 @@ export default function FintechPage() {
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
-            { label: 'Industries', href: '/services' },
+            { label: 'Industries', href: '/industries' },
             { label: 'FinTech' },
           ]} />
         </div>
