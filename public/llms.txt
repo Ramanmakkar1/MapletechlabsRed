@@ -1,0 +1,21 @@
+url: https://mapletechlabs.ca/
+provider: Mapletech Labs
+license: CC-BY-4.0
+
+User-Agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: CCBot
+Allow: /
