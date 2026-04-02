@@ -17,6 +17,7 @@ const AdvancedLabs = dynamic(() => import('@/components/AdvancedLabs'));
 const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSection'));
 const InsightsSection = dynamic(() => import('@/components/InsightsSection'));
 const FAQSection = dynamic(() => import('@/components/FAQSection'));
+const FAQSchema = dynamic(() => import("@/components/FAQSchema"));
 const Contact = dynamic(() => import('@/components/Contact'));
 const Footer = dynamic(() => import('@/components/Footer'));
 
@@ -50,6 +51,7 @@ export default function Home() {
         <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 50%, transparent)', margin: '0 auto', maxWidth: '80%' }} />
         <InsightsSection />
         <FAQSection />
+        <FAQSchema />
         <Contact />
       </main>
       <Footer />
