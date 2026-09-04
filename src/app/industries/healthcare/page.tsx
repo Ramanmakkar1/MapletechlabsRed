@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Software Development | Mapletech Labs',
+  title: 'Healthcare Software Development',
   description: 'HIPAA-compliant healthcare software by Mapletech Labs. Telehealth, EHR & patient portals for Canadian healthcare providers. Book a free consultation.',
   openGraph: {
     title: 'Healthcare Software Development | Mapletech Labs',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/industries/healthcare',
+    canonical: canonicalUrl('/industries/healthcare'),
   },
 };
 

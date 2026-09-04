@@ -1,5 +1,6 @@
-import { CityData, getCityBySlug, cities } from './cities';
-import { ServiceData, getServiceBySlug, services } from './services';
+import { type CityData, getCityBySlug, cities } from './cities';
+import { getServiceBySlug, services } from './services';
+import { canonicalUrl as buildCanonicalUrl } from '@/lib/seo/canonical';
 
 export interface CityServicePageData {
   // City data
@@ -70,7 +71,7 @@ export function getCityServiceData(
   // SEO metadata
   const title = `${service.heroHeadlinePrefix} Company in ${city.name}`;
   const description = `${service.heroHeadlinePrefix} company in ${city.name}, ${city.province}. Mapletech Labs delivers custom ${service.shortName.toLowerCase()} solutions. ${city.isHQ ? 'Headquartered in Edmonton.' : '12 locations across Canada.'} Get a free quote today.`;
-  const canonicalUrl = `https://mapletechlabs.ca/locations/${city.slug}/${service.slug}`;
+  const canonicalUrl = buildCanonicalUrl(`/locations/${city.slug}/${service.slug}`);
 
   return {
     cityName: city.name,

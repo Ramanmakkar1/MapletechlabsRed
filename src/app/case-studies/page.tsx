@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'Case Studies | Client Success Stories',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     url: 'https://mapletechlabs.ca/case-studies',
     type: 'website',
   },
-  alternates: { canonical: 'https://mapletechlabs.ca/case-studies' },
+  alternates: { canonical: canonicalUrl('/case-studies') },
 };
 
 export default function Page() {

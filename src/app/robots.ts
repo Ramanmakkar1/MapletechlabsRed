@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { siteOrigin } from '@/lib/seo/canonical';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://mapletechlabs.ca/sitemap.xml',
+    sitemap: `${siteOrigin()}/sitemap.xml`,
   };
 }

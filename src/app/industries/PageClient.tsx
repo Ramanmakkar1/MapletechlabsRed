@@ -165,7 +165,7 @@ export default function IndustriesPage() {
                 { icon: '🎯', title: 'Domain Specialists', desc: 'Our engineers have deep experience in your industry—we understand regulatory requirements, performance standards, and user expectations.' },
                 { icon: '🔐', title: 'Compliance-Ready', desc: 'From HIPAA to PCI-DSS to SOX, we build systems that meet regulatory requirements from day one.' },
                 { icon: '⚡', title: 'Proven at Scale', desc: '300+ projects delivered. Systems processing billions in transactions, serving millions of users globally.' },
-                { icon: '🛠️', title: 'Custom Solutions', desc: 'We don't do templates. Every solution is purpose-built for your business, competitive landscape, and growth ambitions.' },
+                { icon: '🛠️', title: 'Custom Solutions', desc: "We don't do templates. Every solution is purpose-built for your business, competitive landscape, and growth ambitions." },
               ].map(item => (
                 <Card key={item.title}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{item.icon}</div>

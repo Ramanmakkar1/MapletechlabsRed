@@ -1,14 +1,5 @@
-import { BASE_URL, industrySlugs, buildUrlset } from '@/lib/sitemap-data';
+import { SITEMAP_HEADERS, buildUrlset, industrySitemapEntries } from '@/lib/sitemap-data';
 
 export function GET() {
-  const now = new Date().toISOString();
-  const xml = buildUrlset(
-    industrySlugs.map(slug => ({
-      loc: `${BASE_URL}/industries/${slug}`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: '0.7',
-    }))
-  );
-  return new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
+  return new Response(buildUrlset(industrySitemapEntries()), { headers: SITEMAP_HEADERS });
 }

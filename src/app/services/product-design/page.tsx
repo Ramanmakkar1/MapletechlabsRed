@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Product Design & UI/UX in Canada | Mapletech Labs',
+  title: 'Product Design & UI/UX in Canada',
   description: 'Product design & UI/UX services by Mapletech Labs. User research, wireframing & prototyping for apps in Canada. Get a free design audit for your product.',
   openGraph: {
     title: 'Product Design & UI/UX in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/product-design',
+    canonical: canonicalUrl('/services/product-design'),
   },
 };
 

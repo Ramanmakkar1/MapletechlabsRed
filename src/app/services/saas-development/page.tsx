@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'SaaS Development Services in Canada | Mapletech Labs',
+  title: 'SaaS Development Services in Canada',
   description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture & billing systems for startups in Canada. Book a free strategy call.',
   openGraph: {
     title: 'SaaS Development Services in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/saas-development',
+    canonical: canonicalUrl('/services/saas-development'),
   },
 };
 

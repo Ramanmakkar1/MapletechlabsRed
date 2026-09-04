@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'How to Choose a Software Development Company in Canada (2026)';
 const DESCRIPTION = 'Expert guide to selecting the right software development partner in Canada';
@@ -7,7 +9,7 @@ const SLUG = 'choose-software-development-company-canada';
 const DATE = '2026-02-05';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
     url: `https://mapletechlabs.ca/blog/${SLUG}`,
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/blog/${SLUG}`,
+    canonical: canonicalUrl(`/blog/${SLUG}`),
   },
 };
 

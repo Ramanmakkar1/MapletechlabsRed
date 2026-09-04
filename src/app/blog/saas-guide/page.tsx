@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'From Idea to MRR: How to Build a Profitable SaaS in 2026';
 const DESCRIPTION = 'Learn the blueprint to build, launch, and scale successful B2B SaaS applications';
@@ -9,7 +11,7 @@ const SLUG = 'saas-guide';
 const DATE = '2026-01-08';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
     url: `https://mapletechlabs.ca/blog/${SLUG}`,
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/blog/${SLUG}`,
+    canonical: canonicalUrl(`/blog/${SLUG}`),
   },
 };
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'Google Ads & PPC Management Services Toronto',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/digital-marketing/google-ads-ppc',
+    canonical: canonicalUrl('/services/digital-marketing/google-ads-ppc'),
   },
 };
 

@@ -1,27 +1,27 @@
-'use client';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+/*
+ * Server-rendered 404. The previous version was a client component that
+ * counted down and router.replace()'d to the homepage — Google classifies a
+ * 404 that immediately redirects to a 200 page as a soft 404. This one
+ * returns a real 404 status, stays put, and offers navigation instead.
+ */
+export const metadata: Metadata = {
+  title: 'Page not found',
+  robots: { index: false, follow: true },
+  // Clear any canonical that could be inherited — a 404 must not canonicalise
+  // to another URL.
+  alternates: { canonical: null },
+};
+
+const HUB_LINKS = [
+  { href: '/services', label: 'Services' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+];
 
 export default function NotFound() {
-  const router = useRouter();
-  const [seconds, setSeconds] = useState(3);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setSeconds(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          router.replace('/');
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [router]);
-
   return (
     <div
       style={{
@@ -50,13 +50,10 @@ export default function NotFound() {
       >
         404
       </h1>
-      <p style={{ fontSize: 20, color: 'rgba(255,255,255,0.6)', marginTop: 16, marginBottom: 8 }}>
+      <p style={{ fontSize: 20, color: 'rgba(255,255,255,0.6)', marginTop: 16, marginBottom: 32 }}>
         This page doesn&apos;t exist or has moved.
       </p>
-      <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.35)', marginBottom: 32 }}>
-        Redirecting to homepage in {seconds} second{seconds !== 1 ? 's' : ''}...
-      </p>
-      <a
+      <Link
         href="/"
         style={{
           display: 'inline-flex',
@@ -77,7 +74,37 @@ export default function NotFound() {
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
           <path d="M5 12h14M12 5l7 7-7 7" />
         </svg>
-      </a>
+      </Link>
+      <nav aria-label="Popular pages" style={{ marginTop: 32 }}>
+        <ul
+          style={{
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: 24,
+          }}
+        >
+          {HUB_LINKS.map(link => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                style={{
+                  color: 'rgba(255,255,255,0.6)',
+                  fontSize: 14,
+                  fontWeight: 500,
+                  textDecoration: 'underline',
+                  textUnderlineOffset: 4,
+                }}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 }

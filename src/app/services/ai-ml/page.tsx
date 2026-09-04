@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'AI & Machine Learning Services in Canada | Mapletech Labs',
+  title: 'AI & Machine Learning Services in Canada',
   description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada. Request a free proposal.',
   openGraph: {
     title: 'AI & Machine Learning Services in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/ai-ml',
+    canonical: canonicalUrl('/services/ai-ml'),
   },
 };
 

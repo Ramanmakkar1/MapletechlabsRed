@@ -1,10 +1,13 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
-export const metadata = {
-  title: 'Cookie Policy | Mapletech Labs',
+export const metadata: Metadata = {
+  title: 'Cookie Policy',
   description: 'Cookie Policy for Mapletech Labs. Learn how we use cookies on our website.',
+  alternates: { canonical: canonicalUrl('/cookies') },
 };
 
 export default function CookiesPage() {

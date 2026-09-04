@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Branding & Identity Services in Canada | Mapletech Labs',
+  title: 'Branding & Identity Services in Canada',
   description: 'Strategic branding by Mapletech Labs. Logo design, visual identity & brand guidelines for businesses in Canada. Request a free brand consultation today.',
   openGraph: {
     title: 'Branding & Identity Services in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/branding',
+    canonical: canonicalUrl('/services/branding'),
   },
 };
 

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Cloud & DevOps Services in Canada | Mapletech Labs',
+  title: 'Cloud & DevOps Services in Canada',
   description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada. Get a free infrastructure audit.',
   openGraph: {
     title: 'Cloud & DevOps Services in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/cloud-devops',
+    canonical: canonicalUrl('/services/cloud-devops'),
   },
 };
 

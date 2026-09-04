@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'Top 10 Web Development Companies in Toronto (2026)';
 const DESCRIPTION = 'Ranking the best web development companies in Toronto for 2026';
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     url: `https://mapletechlabs.ca/blog/${SLUG}`,
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/blog/${SLUG}`,
+    canonical: canonicalUrl(`/blog/${SLUG}`),
   },
 };
 

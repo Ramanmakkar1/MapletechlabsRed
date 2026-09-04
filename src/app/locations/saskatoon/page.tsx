@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in Saskatoon | Mapletech Labs',
+  title: 'Software Development Company in Saskatoon',
   description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Saskatoon, Saskatchewan. Get a free quote today.',
   openGraph: {
     title: 'Software Development Company in Saskatoon | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/locations/saskatoon',
+    canonical: canonicalUrl('/locations/saskatoon'),
   },
 };
 

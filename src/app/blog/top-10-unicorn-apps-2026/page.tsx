@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'Top 10 Unicorn Apps of 2026';
 const DESCRIPTION = 'The mobile-first companies that crossed $1B valuation this year';
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: `https://mapletechlabs.ca/blog/${SLUG}`,
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/blog/${SLUG}`,
+    canonical: canonicalUrl(`/blog/${SLUG}`),
   },
 };
 

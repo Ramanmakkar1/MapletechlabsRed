@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Software Development | Mapletech Labs',
+  title: 'E-Commerce Software Development',
   description: 'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, payment processing & omnichannel retail for Canadian businesses. Get a free quote.',
   openGraph: {
     title: 'E-Commerce Software Development | Mapletech Labs',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/industries/ecommerce',
+    canonical: canonicalUrl('/industries/ecommerce'),
   },
 };
 

@@ -1,30 +1,33 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { canonicalPath, siteOrigin } from '@/lib/seo/canonical';
 
 /**
  * HrefLangTags Component
  *
  * Generates hreflang tags for bilingual content (English and French)
  * Supports the following language/region combinations:
- * - hreflang="en-ca" → https://mapletechlabs.ca{currentPath}
- * - hreflang="fr-ca" → https://mapletechlabs.ca/fr{currentPath}
- * - hreflang="x-default" → https://mapletechlabs.ca{currentPath}
+ * - hreflang="en-ca" → {siteOrigin}{currentPath}
+ * - hreflang="fr-ca" → {siteOrigin}/fr{currentPath}
+ * - hreflang="x-default" → {siteOrigin}{currentPath}
  */
 export default function HrefLangTags() {
   const pathname = usePathname();
 
   // Remove 'fr' prefix if the current path is French
   // e.g., /fr/services → /services
-  const canonicalPath = pathname.startsWith('/fr/')
-    ? pathname.slice(3)
-    : pathname === '/fr'
-      ? '/'
-      : pathname;
+  const basePath = canonicalPath(
+    pathname.startsWith('/fr/')
+      ? pathname.slice(3)
+      : pathname === '/fr'
+        ? '/'
+        : pathname
+  );
 
-  const baseUrl = 'https://mapletechlabs.ca';
-  const enUrl = `${baseUrl}${canonicalPath}`;
-  const frUrl = `${baseUrl}/fr${canonicalPath}`;
+  const baseUrl = siteOrigin();
+  const enUrl = `${baseUrl}${basePath}`;
+  const frUrl = `${baseUrl}/fr${basePath === '/' ? '' : basePath}`;
 
   return (
     <>

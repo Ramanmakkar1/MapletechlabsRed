@@ -2,10 +2,12 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Mapletech Labs',
+  title: 'Terms of Service',
   description: 'Terms of Service for Mapletech Labs. Read our service terms, conditions, and legal agreements.',
+  alternates: { canonical: canonicalUrl('/terms') },
 };
 
 export default function TermsPage() {

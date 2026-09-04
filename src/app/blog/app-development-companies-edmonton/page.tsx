@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'Top 10 App Development Companies in Edmonton (2026)';
 const DESCRIPTION = 'Ranking the best mobile app development companies in Edmonton, Alberta for 2026';
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     url: `https://mapletechlabs.ca/blog/${SLUG}`,
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/blog/${SLUG}`,
+    canonical: canonicalUrl(`/blog/${SLUG}`),
   },
 };
 

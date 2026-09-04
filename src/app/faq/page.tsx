@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
 import FAQPageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Frequently Asked Questions | Mapletech Labs';
 const DESCRIPTION = 'Get answers to common questions about working with Mapletech Labs — pricing, timelines, tech stack, IP ownership, support, and more.';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://mapletechlabs.ca/faq',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/faq',
+    canonical: canonicalUrl('/faq'),
   },
 };
 

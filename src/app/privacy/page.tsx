@@ -2,10 +2,12 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Mapletech Labs',
+  title: 'Privacy Policy',
   description: 'Privacy Policy for Mapletech Labs. Learn how we collect, use, and protect your information.',
+  alternates: { canonical: canonicalUrl('/privacy') },
 };
 
 export default function PrivacyPage() {

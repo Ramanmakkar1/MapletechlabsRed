@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'Enterprise E-Commerce Platform | Case Study';
 const DESCRIPTION = 'How Mapletech Labs built a high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/case-studies/${SLUG}`,
+    canonical: canonicalUrl(`/case-studies/${SLUG}`),
   },
 };
 

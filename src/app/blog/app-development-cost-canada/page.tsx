@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'How Much Does App Development Cost in Canada? (2026 Guide)';
 const DESCRIPTION = 'Complete guide to mobile app development costs in Canada for 2026';
@@ -7,7 +9,7 @@ const SLUG = 'app-development-cost-canada';
 const DATE = '2026-01-29';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
     url: `https://mapletechlabs.ca/blog/${SLUG}`,
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/blog/${SLUG}`,
+    canonical: canonicalUrl(`/blog/${SLUG}`),
   },
 };
 

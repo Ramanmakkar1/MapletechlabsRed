@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Raman Makkar | Founder & CEO | Mapletech Labs',
+  title: 'Raman Makkar | Founder & CEO',
   description: 'Meet Raman Makkar, founder of Mapletech Labs. 15+ years in software engineering, building scalable systems for Fortune 500s and startups.',
+  alternates: { canonical: canonicalUrl('/about/raman-makkar') },
 };
 
 export default function RamanPage() {

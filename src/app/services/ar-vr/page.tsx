@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'AR & VR Development in Canada | Mapletech Labs',
+  title: 'AR & VR Development in Canada',
   description: 'AR & VR development by Mapletech Labs. Mobile AR, WebXR, Apple Vision Pro & industrial solutions in Canada. Book a free immersive tech consultation.',
   openGraph: {
     title: 'AR & VR Development in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/ar-vr',
+    canonical: canonicalUrl('/services/ar-vr'),
   },
 };
 

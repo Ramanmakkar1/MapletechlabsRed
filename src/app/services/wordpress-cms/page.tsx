@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'WordPress & CMS Development in Canada | Mapletech Labs',
+  title: 'WordPress & CMS Development in Canada',
   description: 'WordPress & headless CMS development by Mapletech Labs. Custom themes, WooCommerce & Strapi for Canadian businesses. Get a free quote for your project.',
   openGraph: {
     title: 'WordPress & CMS Development in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/wordpress-cms',
+    canonical: canonicalUrl('/services/wordpress-cms'),
   },
 };
 

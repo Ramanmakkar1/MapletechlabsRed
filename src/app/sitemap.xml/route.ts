@@ -1,29 +1,19 @@
-import { BASE_URL } from '@/lib/sitemap-data';
+import { BASE_URL, SITEMAP_CHILDREN, SITEMAP_HEADERS, newestLastmod, xmlEscape } from '@/lib/sitemap-data';
 
 export function GET() {
-  const now = new Date().toISOString();
-
-  const sitemaps = [
-    { loc: `${BASE_URL}/page-sitemap.xml`, lastmod: now },
-    { loc: `${BASE_URL}/service-sitemap.xml`, lastmod: now },
-    { loc: `${BASE_URL}/subservice-sitemap.xml`, lastmod: now },
-    { loc: `${BASE_URL}/industry-sitemap.xml`, lastmod: now },
-    { loc: `${BASE_URL}/blog-sitemap.xml`, lastmod: now },
-    { loc: `${BASE_URL}/location-sitemap.xml`, lastmod: now },
-    { loc: `${BASE_URL}/local-seo-sitemap.xml`, lastmod: now },
-    { loc: `${BASE_URL}/legal-sitemap.xml`, lastmod: now },
-  ];
-
-  const entries = sitemaps.map(s =>
-    `  <sitemap>\n    <loc>${s.loc}</loc>\n    <lastmod>${s.lastmod}</lastmod>\n  </sitemap>`
-  ).join('\n');
+  // A child's lastmod is the newest lastmod among its own URLs. Children whose
+  // URLs carry no real dates are listed without <lastmod> rather than with the
+  // request time, which previously marked every child as modified on every fetch.
+  const entries = SITEMAP_CHILDREN.map(child => {
+    const lastmod = newestLastmod(child.entries());
+    const lastmodTag = lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : '';
+    return `  <sitemap>\n    <loc>${xmlEscape(`${BASE_URL}/${child.file}`)}</loc>${lastmodTag}\n  </sitemap>`;
+  }).join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entries}
 </sitemapindex>`;
 
-  return new Response(xml, {
-    headers: { 'Content-Type': 'application/xml' },
-  });
+  return new Response(xml, { headers: SITEMAP_HEADERS });
 }

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'Real-Time Logistics & Fleet Management | Case Study';
 const DESCRIPTION = 'How Mapletech Labs built a real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and 98% on-time delivery rate.';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/case-studies/${SLUG}`,
+    canonical: canonicalUrl(`/case-studies/${SLUG}`),
   },
 };
 

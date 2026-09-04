@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Blockchain & Web3 Development in Canada | Mapletech Labs',
+  title: 'Blockchain & Web3 Development in Canada',
   description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises. Schedule a free technical consultation.',
   openGraph: {
     title: 'Blockchain & Web3 Development in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/blockchain-web3',
+    canonical: canonicalUrl('/services/blockchain-web3'),
   },
 };
 

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | Mapletech Labs',
+  title: 'Industries We Serve',
   description: 'Specialized software development for FinTech, Healthcare, E-commerce, Enterprise, EdTech, and Media & Entertainment. 10+ years industry experience.',
   openGraph: {
     title: 'Industries We Serve | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/industries',
+    canonical: canonicalUrl('/industries'),
   },
 };
 

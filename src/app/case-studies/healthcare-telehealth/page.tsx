@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'HIPAA-Compliant Telehealth Platform | Case Study';
 const DESCRIPTION = 'How Mapletech Labs built a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/case-studies/${SLUG}`,
+    canonical: canonicalUrl(`/case-studies/${SLUG}`),
   },
 };
 

@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import { canonicalPath } from '@/lib/seo/canonical';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import PartnersMarquee from '@/components/PartnersMarquee';
@@ -24,6 +26,14 @@ const Footer = dynamic(() => import('@/components/Footer'));
 // Browser-only components
 const ScrollUI = dynamic(() => import('@/components/ScrollUI'));
 const StickyCTA = dynamic(() => import('@/components/StickyCTA'));
+
+export const metadata: Metadata = {
+  // `absolute`: the layout's "%s | Mapletech Labs" template would double the brand.
+  title: { absolute: 'Mapletech Labs | Custom Software Development Company' },
+  description:
+    'Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.',
+  alternates: { canonical: canonicalPath('/') },
+};
 
 export default function Home() {
   return (

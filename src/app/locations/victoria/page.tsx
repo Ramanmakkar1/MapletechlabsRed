@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in Victoria | Mapletech Labs',
+  title: 'Software Development Company in Victoria',
   description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Victoria, British Columbia. Get a free quote today.',
   openGraph: {
     title: 'Software Development Company in Victoria | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/locations/victoria',
+    canonical: canonicalUrl('/locations/victoria'),
   },
 };
 

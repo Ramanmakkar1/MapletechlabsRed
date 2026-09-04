@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: '12 Locations Across Canada | Mapletech Labs',
+  title: '12 Locations Across Canada',
   description: 'Mapletech Labs operates from 12 locations across Canada including Edmonton, Toronto, Vancouver, Calgary, Ottawa, and Montreal. Find a software development team near you.',
   openGraph: {
     title: '12 Locations Across Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/locations',
+    canonical: canonicalUrl('/locations'),
   },
 };
 

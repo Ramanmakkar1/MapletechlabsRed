@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Web Development Services in Canada | Mapletech Labs',
+  title: 'Web Development Services in Canada',
   description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. Fixed-price projects. 150+ apps shipped across Canada. Get a free quote today.',
   openGraph: {
     title: 'Web Development Services in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/web-development',
+    canonical: canonicalUrl('/services/web-development'),
   },
 };
 

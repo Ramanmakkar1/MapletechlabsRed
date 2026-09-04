@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'Fintech AI Trading Platform | Case Study';
 const DESCRIPTION = 'How Mapletech Labs built an AI-powered trading platform that processes 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: `https://mapletechlabs.ca/case-studies/${SLUG}`,
+    canonical: canonicalUrl(`/case-studies/${SLUG}`),
   },
 };
 

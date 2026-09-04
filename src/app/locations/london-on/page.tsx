@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in London, Ontario | Mapletech Labs',
+  title: 'Software Development Company in London, Ontario',
   description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in London, Ontario. Get a free quote today.',
   openGraph: {
     title: 'Software Development Company in London, Ontario | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/locations/london-on',
+    canonical: canonicalUrl('/locations/london-on'),
   },
 };
 

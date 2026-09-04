@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'EdTech Software Development | Mapletech Labs',
+  title: 'EdTech Software Development',
   description: 'EdTech software by Mapletech Labs. LMS platforms, virtual classrooms & assessment tools for Canadian educators. Get a free consultation for your project.',
   openGraph: {
     title: 'EdTech Software Development | Mapletech Labs',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/industries/edtech',
+    canonical: canonicalUrl('/industries/edtech'),
   },
 };
 

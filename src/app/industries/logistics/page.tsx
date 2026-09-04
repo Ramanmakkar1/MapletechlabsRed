@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Logistics Software Development | Mapletech Labs',
+  title: 'Logistics Software Development',
   description: 'Logistics & supply chain software by Mapletech Labs. Fleet management, route optimization & tracking for Canadian logistics. Get a free project estimate.',
   openGraph: {
     title: 'Logistics Software Development | Mapletech Labs',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/industries/logistics',
+    canonical: canonicalUrl('/industries/logistics'),
   },
 };
 

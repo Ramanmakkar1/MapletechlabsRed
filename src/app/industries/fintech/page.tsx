@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Fintech Software Development | Mapletech Labs',
+  title: 'Fintech Software Development',
   description: 'Fintech software by Mapletech Labs. Payment platforms, banking apps & compliant trading systems for Canadian finance. Request a free technical proposal.',
   openGraph: {
     title: 'Fintech Software Development | Mapletech Labs',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/industries/fintech',
+    canonical: canonicalUrl('/industries/fintech'),
   },
 };
 

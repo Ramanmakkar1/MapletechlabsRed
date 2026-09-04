@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Game Development Services in Canada | Mapletech Labs',
+  title: 'Game Development Services in Canada',
   description: 'Unity & Unreal Engine game development by Mapletech Labs. Mobile, hyper-casual & multiplayer games built in Canada. Request a free project estimate today.',
   openGraph: {
     title: 'Game Development Services in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/game-development',
+    canonical: canonicalUrl('/services/game-development'),
   },
 };
 

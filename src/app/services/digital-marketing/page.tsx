@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services in Canada | Mapletech Labs',
+  title: 'Digital Marketing Services in Canada',
   description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada. Get a free marketing audit today.',
   openGraph: {
     title: 'Digital Marketing Services in Canada | Mapletech Labs',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mapletechlabs.ca/services/digital-marketing',
+    canonical: canonicalUrl('/services/digital-marketing'),
   },
 };
 

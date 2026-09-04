@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
 import HrefLangTags from "@/components/HrefLangTags";
+import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -13,7 +14,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mapletechlabs.ca"),
+  metadataBase: new URL(siteOrigin()),
   title: {
     default: "Mapletech Labs | Custom Software Development Company",
     template: "%s | Mapletech Labs",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://mapletechlabs.ca",
+    url: siteOrigin(),
     siteName: "Mapletech Labs",
     title: "Mapletech Labs | Custom Software Development Company",
     description:
@@ -47,7 +48,11 @@ export const metadata: Metadata = {
     description:
       "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.",
   },
-  robots: {
+  // Preview / non-production deployments must never be indexed. Production
+  // keeps the permissive directive. No `alternates.canonical` here on
+  // purpose: a root canonical is inherited by every child page that does not
+  // set its own, so each page declares its own self-canonical instead.
+  robots: previewRobots() ?? {
     index: true,
     follow: true,
     googleBot: {
@@ -57,9 +62,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  alternates: {
-    canonical: "https://mapletechlabs.ca",
   },
   verification: {
     google: "bk5xt83LIShhQ9QrejYXCOg9lXhZubSY9ksIEtYrIVs",
@@ -82,8 +84,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Mapletech Labs",
-  url: "https://mapletechlabs.ca",
-  logo: "https://mapletechlabs.ca/logo.png",
+  url: siteOrigin(),
+  logo: `${siteOrigin()}/logo.png`,
   description:
     "Custom software development company founded by Raman Makkar in Edmonton, Canada. 12 locations across Canada. Best agents from around the world working virtually.",
   address: {
@@ -126,7 +128,7 @@ const organizationSchema = {
     "@type": "Person",
     name: "Raman Makkar",
     jobTitle: "CEO & Founder",
-    url: "https://mapletechlabs.ca/about",
+    url: `${siteOrigin()}/about`,
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -135,17 +137,17 @@ const organizationSchema = {
       {
         "@type": "OfferCatalog",
         name: "Web Development",
-        url: "https://mapletechlabs.ca/services/web-development",
+        url: `${siteOrigin()}/services/web-development`,
       },
       {
         "@type": "OfferCatalog",
         name: "Mobile App Development",
-        url: "https://mapletechlabs.ca/services/mobile-app-development",
+        url: `${siteOrigin()}/services/mobile-app-development`,
       },
       {
         "@type": "OfferCatalog",
         name: "AI & Machine Learning",
-        url: "https://mapletechlabs.ca/services/ai-ml",
+        url: `${siteOrigin()}/services/ai-ml`,
       },
     ],
   },
@@ -170,7 +172,7 @@ export default function RootLayout({
         {/* Preload hero image for LCP optimization */}
         <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp" />
 
-        <link rel="license" href="https://mapletechlabs.ca/llms.txt" />
+        <link rel="license" href={`${siteOrigin()}/llms.txt`} />
         {/* Hreflang tags for bilingual content */}
         <HrefLangTags />
       </head>
