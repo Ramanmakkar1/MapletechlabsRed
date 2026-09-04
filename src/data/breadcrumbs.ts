@@ -74,7 +74,6 @@ function slugToTitle(slug: string): string {
     'wireframing': 'Wireframing',
     'prototyping': 'Prototyping',
     'brand-identity': 'Brand Identity',
-    'ui-ux-strategy': 'UI/UX Strategy',
     'design-systems': 'Design Systems',
     'game-development': 'Game Development',
     'unreal-engine': 'Unreal Engine',
