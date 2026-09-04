@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "submit-urls": "npx tsx scripts/submit-to-search-engines.ts",
-    "postbuild": "npx tsx scripts/submit-to-search-engines.ts",
+    "submit:search-engines": "npx tsx scripts/submit-to-search-engines.ts",
     "seo:titles": "node --experimental-strip-types --no-warnings scripts/check-titles.mjs"
   },
   "dependencies": {
