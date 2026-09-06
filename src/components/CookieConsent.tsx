@@ -35,20 +35,20 @@ export default function CookieConsent() {
         right: 'clamp(12px, 3vw, 24px)',
         maxWidth: 480,
         zIndex: 9999,
-        background: 'var(--surface-ink)',
+        background: 'rgba(255,255,255,0.96)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
-        border: '1px solid var(--line)',
+        border: '1px solid var(--line-strong)',
         borderRadius: 'clamp(14px, 3vw, 20px)',
         padding: 'clamp(16px, 3vw, 24px) clamp(16px, 3vw, 28px)',
-        boxShadow: '0 20px 60px rgba(20,17,24,0.10)',
+        boxShadow: '0 18px 50px rgba(20,17,24,0.16)',
         animation: 'slideUp 0.4s ease-out',
         boxSizing: 'border-box' as const,
       }}
     >
       <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 16px' }}>
         We use cookies to enhance your experience and analyze site traffic. By clicking &quot;Accept&quot;, you consent to our use of cookies.{' '}
-        <Link href="/cookies" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+        <Link href="/cookies" style={{ color: 'var(--brand-deep)', textDecoration: 'underline', textUnderlineOffset: 3 }}>
           Learn more
         </Link>
       </p>
@@ -76,10 +76,10 @@ export default function CookieConsent() {
             padding: '12px 24px',
             borderRadius: 100,
             background: 'transparent',
-            color: 'var(--muted)',
+            color: 'var(--body)',
             fontSize: 14,
             fontWeight: 600,
-            border: '1px solid var(--line)',
+            border: '1px solid var(--line-strong)',
             cursor: 'pointer',
             transition: 'all 0.2s',
             minHeight: 44,

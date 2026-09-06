@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 const stats = [
   { value: 200, suffix: '+', label: 'Projects Delivered', color: '#7c3aed' },
   { value: 50, suffix: '+', label: 'Global Clients', color: '#4f46e5' },
-  { value: 8, suffix: '+', label: 'Years of Excellence', color: '#06b6d4' },
-  { value: 99, suffix: '%', label: 'Client Retention Rate', color: '#10b981' },
+  { value: 8, suffix: '+', label: 'Years of Excellence', color: '#0E7490' },
+  { value: 99, suffix: '%', label: 'Client Retention Rate', color: '#047857' },
 ];
 
 const pillars = [

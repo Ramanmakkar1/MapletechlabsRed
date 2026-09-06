@@ -1,6 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
+import { WorkStage } from './graphics/Mockups';
 
 const projects = [
   {
@@ -125,23 +125,24 @@ export default function PortfolioSection() {
             </div>
           </div>
 
-          {/* Right: real project image */}
-          <div style={{ background: 'var(--surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderLeft: '1px solid var(--line)', minHeight: 280 }} className="portfolio-visual">
-            <div style={{ position: 'absolute', inset: 0 }}>
-              <Image
-                src={p.image}
-                alt={p.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: 'cover', opacity: 0.7 }}
-              />
-            </div>
-            {/* Overlay gradient */}
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(20,17,24,0.10) 0%, transparent 60%)' }} />
+          {/* Right: gradient stage with device mockups. Original artwork —
+              the tile colour rotates with the selected project. */}
+          <div
+            className="portfolio-visual"
+            style={{ position: 'relative', overflow: 'hidden', minHeight: 400, display: 'flex' }}
+          >
+            <WorkStage
+              tile={((active % 4) + 1) as 1 | 2 | 3 | 4}
+              title={`${p.id}.mapletechlabs.ca`}
+              label={p.category}
+              metric={p.metrics[0].value}
+              caption={p.metrics[0].label}
+            />
+
             {/* Metric badge */}
-            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: 'var(--surface-alt)', border: '1px solid rgba(245,41,13,0.3)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)', maxWidth: 'calc(100% - 32px)' }}>
-              <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 8px #f5290d' }} />
-              <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand)' }}>{p.metrics[0].value} {p.metrics[0].label}</span>
+            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: 'rgba(255,255,255,0.94)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)', maxWidth: 'calc(100% - 32px)', boxShadow: '0 6px 20px rgba(20,17,24,.18)' }}>
+              <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)' }} />
+              <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand-deep)' }}>{p.metrics[1].value} {p.metrics[1].label}</span>
             </div>
           </div>
         </div>

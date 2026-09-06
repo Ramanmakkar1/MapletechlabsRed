@@ -119,6 +119,7 @@ export default function FeaturedAwards() {
 
   return (
     <section ref={ref} id="awards" style={{ background: 'var(--surface-ink)', padding: '80px 0 100px', borderTop: '1px solid var(--line-ink)', position: 'relative', overflow: 'hidden' }}>
+      <div aria-hidden className="aurora aurora--ink" />
       {/* Subtle radial glow */}
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 800, height: 400, background: 'radial-gradient(ellipse, rgba(245,41,13,0.04) 0%, transparent 65%)', pointerEvents: 'none' }} />
 

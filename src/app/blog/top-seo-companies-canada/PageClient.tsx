@@ -20,15 +20,15 @@ function useReveal() {
 
 const companies = [
   { num: 1, name: 'Mapletech Labs', category: 'Technical SEO', emoji: '🍁', metric: 'Next.js & Technical Search Leaders', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Major Tom', category: 'Digital Strategy', emoji: '🏢', metric: 'Full-service enterprise campaigns', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'Ignite Digital', category: 'Link Building', emoji: '🔗', metric: 'Aggressive off-page & content networks', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'BlueHat Marketing', category: 'E-Commerce', emoji: '🛍️', metric: 'Shopify & WooCommerce Optimization', accentColor: '#34d399', bgColor: 'rgba(52,211,153,' },
+  { num: 2, name: 'Major Tom', category: 'Digital Strategy', emoji: '🏢', metric: 'Full-service enterprise campaigns', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,' },
+  { num: 3, name: 'Ignite Digital', category: 'Link Building', emoji: '🔗', metric: 'Aggressive off-page & content networks', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,' },
+  { num: 4, name: 'BlueHat Marketing', category: 'E-Commerce', emoji: '🛍️', metric: 'Shopify & WooCommerce Optimization', accentColor: '#047857', bgColor: 'rgba(52,211,153,' },
   { num: 5, name: "Let's Get Optimized", category: 'Local SEO', emoji: '📍', metric: 'Staple for SMB local search visibility', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Search Engine People (SEP)', category: 'Enterprise', emoji: '🏢', metric: 'Large-scale dedicated search teams', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Social Media 55', category: 'Holistic PR', emoji: '📱', metric: 'Blending social signals & organic search', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'Kinex Media', category: 'Magento/Web', emoji: '💻', metric: 'E-commerce migration specialists', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'TechWyse', category: 'Lead Gen & CRO', emoji: '📈', metric: 'Data-driven conversion optimization', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: '1st on the List', category: 'B2B Links', emoji: '🤝', metric: 'Manual, tailored B2B link-building', accentColor: '#f87171', bgColor: 'rgba(248,113,113,' },
+  { num: 6, name: 'Search Engine People (SEP)', category: 'Enterprise', emoji: '🏢', metric: 'Large-scale dedicated search teams', accentColor: '#B45309', bgColor: 'rgba(251,146,60,' },
+  { num: 7, name: 'Social Media 55', category: 'Holistic PR', emoji: '📱', metric: 'Blending social signals & organic search', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,' },
+  { num: 8, name: 'Kinex Media', category: 'Magento/Web', emoji: '💻', metric: 'E-commerce migration specialists', accentColor: '#15803D', bgColor: 'rgba(74,222,128,' },
+  { num: 9, name: 'TechWyse', category: 'Lead Gen & CRO', emoji: '📈', metric: 'Data-driven conversion optimization', accentColor: '#B45309', bgColor: 'rgba(251,191,36,' },
+  { num: 10, name: '1st on the List', category: 'B2B Links', emoji: '🤝', metric: 'Manual, tailored B2B link-building', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,' },
 ];
 
 const relatedPosts = [
@@ -234,7 +234,7 @@ export default function TopSeoCompaniesCanadaClient() {
                 {[
                   {
                     num: '02', id: 'major-tom', name: 'Major Tom', category: 'Digital Strategy',
-                    emoji: '🏢', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,',
+                    emoji: '🏢', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
                     metric: 'Full-service enterprise campaigns',
                     paragraphs: [
                       'A highly respected, full-service digital agency. Major Tom excels in broad-scale digital marketing strategies, media buying, and enterprise-level local SEO. They are excellent for established consumer brands looking for integrated campaigns.',
@@ -242,7 +242,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '03', id: 'ignite', name: 'Ignite Digital', category: 'Link Building',
-                    emoji: '🔗', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,',
+                    emoji: '🔗', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,',
                     metric: 'Aggressive off-page & content networks',
                     paragraphs: [
                       'Known for their robust link-building networks and content strategies, Ignite Digital has a strong track record of pushing competitive keywords to the top of SERPs. They are a solid choice for aggressive off-page SEO tactics.',
@@ -250,7 +250,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '04', id: 'bluehat', name: 'BlueHat Marketing', category: 'E-Commerce',
-                    emoji: '🛍️', accentColor: '#34d399', bgColor: 'rgba(52,211,153,',
+                    emoji: '🛍️', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
                     metric: 'Shopify & WooCommerce Optimization',
                     paragraphs: [
                       'One of Montreal\'s finest. BlueHat specializes in hybrid SEO and PPC campaigns. They are particularly strong in the e-commerce space, optimizing large WooCommerce and Shopify catalogs for organic visibility.',
@@ -266,7 +266,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '06', id: 'sep', name: 'Search Engine People (SEP)', category: 'Enterprise',
-                    emoji: '🏢', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,',
+                    emoji: '🏢', accentColor: '#B45309', bgColor: 'rgba(251,146,60,',
                     metric: 'Large-scale dedicated search teams',
                     paragraphs: [
                       'One of Canada\'s oldest and largest dedicated search agencies. Their size allows them to handle massive enterprise accounts, though smaller businesses might prefer the agility of a specialized tech boutique.',
@@ -274,7 +274,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '07', id: 'social55', name: 'Social Media 55', category: 'Holistic PR',
-                    emoji: '📱', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,',
+                    emoji: '📱', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
                     metric: 'Blending social signals & organic search',
                     paragraphs: [
                       'While their name implies social media, their organic search division is highly capable. They are unique in how they blend social signals, influencer PR, and organic SEO to build holistic brand authority.',
@@ -282,7 +282,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '08', id: 'kinex', name: 'Kinex Media', category: 'Magento/Web',
-                    emoji: '💻', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,',
+                    emoji: '💻', accentColor: '#15803D', bgColor: 'rgba(74,222,128,',
                     metric: 'E-commerce migration specialists',
                     paragraphs: [
                       'A fantastic web design and Magento/e-commerce agency with a very strong in-house SEO team. If you need a complex e-commerce migration handled without losing organic traffic, Kinex is a top-tier option.',
@@ -290,7 +290,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '09', id: 'techwyse', name: 'TechWyse', category: 'Lead Gen & CRO',
-                    emoji: '📈', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,',
+                    emoji: '📈', accentColor: '#B45309', bgColor: 'rgba(251,191,36,',
                     metric: 'Data-driven conversion optimization',
                     paragraphs: [
                       'TechWyse focuses heavily on lead generation and analytics. They don\'t just secure rankings; they utilize conversion rate optimization (CRO) to ensure the traffic they bring you actually turns into viable leads.',
@@ -298,7 +298,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '10', id: '1st', name: '1st on the List', category: 'B2B Links',
-                    emoji: '🤝', accentColor: '#f87171', bgColor: 'rgba(248,113,113,',
+                    emoji: '🤝', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,',
                     metric: 'Manual, tailored B2B link-building',
                     paragraphs: [
                       'A West Coast powerhouse with decades of experience. They are highly transparent with their reporting and take a very manual, tailored approach to B2B link-building and long-tail keyword strategy.',

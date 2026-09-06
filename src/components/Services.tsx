@@ -31,7 +31,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
-    accent: '#06b6d4',
+    accent: '#0E7490',
     accentBg: 'rgba(6,182,212,0.08)',
     size: 'col-span-1',
   },
@@ -70,7 +70,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
-    accent: '#10b981',
+    accent: '#047857',
     accentBg: 'rgba(16,185,129,0.08)',
     size: 'col-span-1',
   },
@@ -96,7 +96,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
       </svg>
     ),
-    accent: '#f59e0b',
+    accent: '#B45309',
     accentBg: 'rgba(245,158,11,0.08)',
     size: 'col-span-1',
   },
@@ -109,7 +109,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
       </svg>
     ),
-    accent: '#ec4899',
+    accent: '#BE185D',
     accentBg: 'rgba(236,72,153,0.08)',
     size: 'col-span-2',
   },

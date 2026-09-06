@@ -47,31 +47,31 @@ const costCards = [
   },
   {
     id: 'ppc', title: 'Google Ads (PPC)', emoji: '🎯',
-    range: '$2,000 - $15,000/month (plus ad spend)', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,',
+    range: '$2,000 - $15,000/month (plus ad spend)', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
     description: 'Pay-per-click management fees in Canada typically range from 15-25% of your total ad spend, with minimum management fees starting around $2,000/month. This covers campaign setup, keyword research, ad copywriting, bid management, A/B testing, landing page optimization, and conversion tracking. Enterprise campaigns with multi-channel PPC (Google, Bing, YouTube) command premium pricing.',
     includes: ['Campaign setup & management', 'Keyword research & bidding', 'Ad copywriting & A/B testing', 'Conversion tracking', 'Monthly performance reports'],
   },
   {
     id: 'social', title: 'Social Media Marketing', emoji: '📱',
-    range: '$1,000 - $8,000/month', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,',
+    range: '$1,000 - $8,000/month', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,',
     description: 'Social media marketing costs in Canada vary widely based on the number of platforms, posting frequency, and whether paid social advertising is included. Basic packages include content creation for 2-3 platforms with 3-4 posts per week. Premium packages add community management, influencer outreach, paid ad management, and detailed analytics dashboards.',
     includes: ['Content creation & scheduling', 'Community management', 'Paid social campaigns', 'Analytics & reporting', 'Platform strategy'],
   },
   {
     id: 'content', title: 'Content Marketing', emoji: '✍️',
-    range: '$2,000 - $10,000/month', accentColor: '#34d399', bgColor: 'rgba(52,211,153,',
+    range: '$2,000 - $10,000/month', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
     description: 'Content marketing encompasses blog articles, whitepapers, case studies, video scripts, infographics, and thought leadership pieces. Canadian agencies typically charge $500-$2,000 per long-form article. Monthly retainers include content strategy, editorial calendars, SEO-optimized writing, visual design, and distribution across owned and earned channels.',
     includes: ['Content strategy & calendars', 'Blog posts & articles', 'Whitepapers & case studies', 'Visual content & infographics', 'Distribution & promotion'],
   },
   {
     id: 'email', title: 'Email Marketing', emoji: '📧',
-    range: '$500 - $3,000/month', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,',
+    range: '$500 - $3,000/month', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
     description: 'Email marketing remains one of the most cost-effective channels with an average ROI of $42 for every $1 spent. Canadian agencies offer packages covering email strategy, template design, list segmentation, automation workflows, A/B testing, and deliverability optimization. Higher-tier packages include advanced drip campaigns, behavioral triggers, and CRM integration.',
     includes: ['Email strategy & design', 'List segmentation', 'Automation workflows', 'A/B testing', 'Performance analytics'],
   },
   {
     id: 'full-service', title: 'Full-Service Digital Marketing', emoji: '🚀',
-    range: '$5,000 - $25,000/month', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,',
+    range: '$5,000 - $25,000/month', accentColor: '#B45309', bgColor: 'rgba(251,191,36,',
     description: 'Full-service packages combine SEO, PPC, social media, content, email, and web optimization under one roof. This is the most popular option for Canadian businesses with annual revenues of $2M+ who want a single point of accountability. Expect a dedicated account manager, comprehensive strategy sessions, cross-channel analytics, and monthly executive reporting.',
     includes: ['All channels integrated', 'Dedicated account manager', 'Cross-channel strategy', 'Executive reporting', 'Quarterly strategy reviews'],
   },
@@ -292,11 +292,11 @@ export default function DigitalMarketingCostCanadaClient() {
                       description: 'The most common model for Canadian agencies. You pay a fixed monthly fee for an agreed scope of work. This provides predictable budgeting and allows the agency to plan long-term strategies. Best for businesses seeking ongoing growth and consistent results across multiple channels.',
                     },
                     {
-                      model: 'Project-Based', price: '$5,000 - $100,000+ per project', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,',
+                      model: 'Project-Based', price: '$5,000 - $100,000+ per project', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
                       description: 'Ideal for one-time initiatives like website redesigns, brand launches, or marketing audits. You pay a fixed price for a defined deliverable. This model works well when you have a clear scope but can be more expensive per-hour than retainers due to the overhead of project scoping and management.',
                     },
                     {
-                      model: 'Performance-Based', price: 'Varies (% of revenue or per-lead)', accentColor: '#34d399', bgColor: 'rgba(52,211,153,',
+                      model: 'Performance-Based', price: 'Varies (% of revenue or per-lead)', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
                       description: 'The agency ties their fees to measurable outcomes like leads generated, sales closed, or revenue influenced. While appealing in theory, be cautious: legitimate agencies rarely work on pure performance models because too many variables are outside their control. Hybrid models (base retainer + performance bonus) are the most balanced approach.',
                     },
                   ].map((item) => (
@@ -329,7 +329,7 @@ export default function DigitalMarketingCostCanadaClient() {
                   {[
                     { tier: '$2,000 - $5,000/month', label: 'Starter', color: '#94a3b8', expectations: 'Foundation building. Expect improved local search visibility, basic social presence, and initial lead generation. Timeline: 4-6 months to see meaningful results. Best for small businesses and startups in low-competition niches.' },
                     { tier: '$5,000 - $15,000/month', label: 'Growth', color: 'var(--brand)', expectations: 'Aggressive scaling. Expect significant organic traffic growth (50-200%), multi-channel campaigns, and measurable revenue attribution. Timeline: 3-6 months for early wins, 6-12 months for compound growth. Best for established SMBs targeting regional or national markets.' },
-                    { tier: '$15,000 - $25,000+/month', label: 'Enterprise', color: '#fbbf24', expectations: 'Market domination. Expect comprehensive omnichannel strategies, competitive displacement, advanced analytics, and executive-level reporting. Timeline: 2-4 months for quick wins, ongoing optimization. Best for companies with $5M+ revenue targeting category leadership.' },
+                    { tier: '$15,000 - $25,000+/month', label: 'Enterprise', color: '#B45309', expectations: 'Market domination. Expect comprehensive omnichannel strategies, competitive displacement, advanced analytics, and executive-level reporting. Timeline: 2-4 months for quick wins, ongoing optimization. Best for companies with $5M+ revenue targeting category leadership.' },
                   ].map((item) => (
                     <div key={item.tier} style={{
                       background: 'var(--surface-alt)', border: '1px solid var(--line)',
@@ -364,12 +364,12 @@ export default function DigitalMarketingCostCanadaClient() {
                     {
                       option: 'Freelancer', pros: 'Lower cost ($1K-$5K/month), direct communication, flexibility, niche expertise',
                       cons: 'Single point of failure, limited capacity, no backup if they leave, narrower skill set', best: 'Startups and small businesses with focused needs (e.g., SEO-only or social-only)',
-                      accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,',
+                      accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
                     },
                     {
                       option: 'In-House Team', pros: 'Full control, deep brand knowledge, immediate availability, cultural alignment',
                       cons: 'Very expensive ($150K-$400K+/year for a small team), recruitment challenges, limited perspective, tool costs', best: 'Enterprises with $10M+ revenue and complex, ongoing marketing needs',
-                      accentColor: '#34d399', bgColor: 'rgba(52,211,153,',
+                      accentColor: '#047857', bgColor: 'rgba(52,211,153,',
                     },
                   ].map((item) => (
                     <div key={item.option} style={{
@@ -379,11 +379,11 @@ export default function DigitalMarketingCostCanadaClient() {
                       <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: '0 0 16px' }}>{item.option}</h3>
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 16, marginBottom: 16 }}>
                         <div>
-                          <p style={{ fontSize: 12, fontWeight: 700, color: '#34d399', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>Pros</p>
+                          <p style={{ fontSize: 12, fontWeight: 700, color: '#047857', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>Pros</p>
                           <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.pros}</p>
                         </div>
                         <div>
-                          <p style={{ fontSize: 12, fontWeight: 700, color: '#f87171', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>Cons</p>
+                          <p style={{ fontSize: 12, fontWeight: 700, color: '#B91C1C', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>Cons</p>
                           <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.cons}</p>
                         </div>
                       </div>
@@ -452,25 +452,25 @@ export default function DigitalMarketingCostCanadaClient() {
                     borderRadius: 24, padding: 36,
                   }}>
                     <div style={{ marginBottom: 24 }}>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#f87171', marginBottom: 12 }}>Too Cheap (Under $1,000/month for full-service)</h3>
+                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#B91C1C', marginBottom: 12 }}>Too Cheap (Under $1,000/month for full-service)</h3>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         If an agency offers comprehensive SEO, social media, and PPC for under $1,000/month, they are either outsourcing to low-quality offshore providers, using automated tools with zero human strategy, or planning to upsell you aggressively later. Quality digital marketing in Canada requires skilled professionals who command competitive salaries. The math simply does not work at bargain prices.
                       </p>
                     </div>
                     <div style={{ marginBottom: 24 }}>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#fbbf24', marginBottom: 12 }}>Guaranteed Rankings</h3>
+                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#B45309', marginBottom: 12 }}>Guaranteed Rankings</h3>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         No legitimate agency guarantees specific Google rankings. Search algorithms involve hundreds of variables outside any agency&apos;s control. Agencies that promise &ldquo;Page 1 in 30 days&rdquo; are either lying or planning to use black-hat tactics that will eventually get your site penalized. Look for agencies that guarantee process quality, reporting transparency, and measurable KPI improvements.
                       </p>
                     </div>
                     <div style={{ marginBottom: 24 }}>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#fbbf24', marginBottom: 12 }}>Long Lock-In Contracts</h3>
+                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#B45309', marginBottom: 12 }}>Long Lock-In Contracts</h3>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         Be wary of agencies requiring 12-24 month contracts with heavy cancellation penalties. While SEO does take time, a confident agency should be willing to earn your business month over month. Look for 3-month initial commitments with 30-day cancellation notices after the initial period.
                       </p>
                     </div>
                     <div>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#f87171', marginBottom: 12 }}>Overpriced (Paying for Brand Name, Not Results)</h3>
+                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#B91C1C', marginBottom: 12 }}>Overpriced (Paying for Brand Name, Not Results)</h3>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         Some agencies charge $30,000+/month for work that a skilled boutique agency delivers for $10,000. Large agencies often have high overhead&mdash;downtown offices, large sales teams, and management layers&mdash;that inflate pricing without improving output quality. Always evaluate based on team expertise, case studies, and projected ROI, not brand prestige.
                       </p>

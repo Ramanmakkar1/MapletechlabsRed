@@ -21,15 +21,15 @@ function useReveal() {
 
 const companies = [
   { num: 1, name: 'Mapletech Labs', category: 'AI/ML Integration', emoji: '🍁', metric: 'Production-Grade AI Systems & LLM Integration', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Townmedialabs', category: 'AI-Powered Web', emoji: '🌐', metric: 'AI-enhanced websites & marketing automation', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'TML', category: 'Intelligent Automation', emoji: '⚡', metric: 'AI-driven growth platforms for startups', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'Element AI (ServiceNow)', category: 'Enterprise AI Research', emoji: '🔬', metric: 'Large-scale enterprise AI transformation', accentColor: '#34d399', bgColor: 'rgba(52,211,153,' },
+  { num: 2, name: 'Townmedialabs', category: 'AI-Powered Web', emoji: '🌐', metric: 'AI-enhanced websites & marketing automation', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,' },
+  { num: 3, name: 'TML', category: 'Intelligent Automation', emoji: '⚡', metric: 'AI-driven growth platforms for startups', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,' },
+  { num: 4, name: 'Element AI (ServiceNow)', category: 'Enterprise AI Research', emoji: '🔬', metric: 'Large-scale enterprise AI transformation', accentColor: '#047857', bgColor: 'rgba(52,211,153,' },
   { num: 5, name: 'Coveo', category: 'AI-Powered Search', emoji: '🔍', metric: 'Intelligent search & recommendation engines', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Ada', category: 'Conversational AI', emoji: '💬', metric: 'Enterprise-grade AI chatbot platforms', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Layer 6 (TD Bank)', category: 'Financial AI', emoji: '🏦', metric: 'Deep learning for financial services', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'Integrate.ai', category: 'Federated Learning', emoji: '🔒', metric: 'Privacy-preserving AI & federated learning', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'Dessa (Square)', category: 'Applied ML & NLP', emoji: '🧠', metric: 'Production ML pipelines & NLP systems', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: 'Mindbridge', category: 'Financial Auditing AI', emoji: '📊', metric: 'AI-powered anomaly detection for auditing', accentColor: '#f87171', bgColor: 'rgba(248,113,113,' },
+  { num: 6, name: 'Ada', category: 'Conversational AI', emoji: '💬', metric: 'Enterprise-grade AI chatbot platforms', accentColor: '#B45309', bgColor: 'rgba(251,146,60,' },
+  { num: 7, name: 'Layer 6 (TD Bank)', category: 'Financial AI', emoji: '🏦', metric: 'Deep learning for financial services', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,' },
+  { num: 8, name: 'Integrate.ai', category: 'Federated Learning', emoji: '🔒', metric: 'Privacy-preserving AI & federated learning', accentColor: '#15803D', bgColor: 'rgba(74,222,128,' },
+  { num: 9, name: 'Dessa (Square)', category: 'Applied ML & NLP', emoji: '🧠', metric: 'Production ML pipelines & NLP systems', accentColor: '#B45309', bgColor: 'rgba(251,191,36,' },
+  { num: 10, name: 'Mindbridge', category: 'Financial Auditing AI', emoji: '📊', metric: 'AI-powered anomaly detection for auditing', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,' },
 ];
 
 const relatedPosts = [
@@ -255,7 +255,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>02</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(167,139,250,0.12)', color: '#a78bfa',
+                            background: 'rgba(167,139,250,0.12)', color: '#6D28D9',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>AI-Powered Web</span>
                         </div>
@@ -274,10 +274,10 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                       background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.12)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#a78bfa', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: '#6D28D9', fontWeight: 600 }}>
                         AI-enhanced websites & marketing automation
                       </span>
                     </div>
@@ -301,7 +301,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>03</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(244,114,182,0.12)', color: '#f472b6',
+                            background: 'rgba(244,114,182,0.12)', color: '#BE185D',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Intelligent Automation</span>
                         </div>
@@ -320,10 +320,10 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                       background: 'rgba(244,114,182,0.06)', border: '1px solid rgba(244,114,182,0.12)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f472b6" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BE185D" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#f472b6', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: '#BE185D', fontWeight: 600 }}>
                         AI-driven growth platforms for startups
                       </span>
                     </div>
@@ -334,7 +334,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                 {[
                   {
                     num: '04', id: 'element-ai', name: 'Element AI (ServiceNow)', category: 'Enterprise AI Research',
-                    emoji: '🔬', accentColor: '#34d399', bgColor: 'rgba(52,211,153,',
+                    emoji: '🔬', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
                     metric: 'Large-scale enterprise AI transformation',
                     paragraphs: [
                       'Originally founded by Yoshua Bengio and now part of ServiceNow, Element AI remains one of the most influential AI research labs in the country. Their focus on enterprise-scale AI transformation has helped some of Canada\'s largest corporations integrate machine learning into core business operations, from supply chain optimization to customer service automation.',
@@ -350,7 +350,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '06', id: 'ada', name: 'Ada', category: 'Conversational AI',
-                    emoji: '💬', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,',
+                    emoji: '💬', accentColor: '#B45309', bgColor: 'rgba(251,146,60,',
                     metric: 'Enterprise-grade AI chatbot platforms',
                     paragraphs: [
                       'Toronto-based Ada has become the gold standard for AI-powered customer service automation in Canada. Their conversational AI platform handles millions of customer interactions monthly for brands like Meta, Shopify, and Square. Ada\'s no-code platform allows non-technical teams to build and deploy sophisticated AI chatbots that resolve customer inquiries without human intervention.',
@@ -358,7 +358,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '07', id: 'layer-6', name: 'Layer 6 (TD Bank)', category: 'Financial AI',
-                    emoji: '🏦', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,',
+                    emoji: '🏦', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
                     metric: 'Deep learning for financial services',
                     paragraphs: [
                       'Acquired by TD Bank, Layer 6 is a world-class deep learning lab focused exclusively on financial services AI. Their models power fraud detection, credit risk assessment, and hyper-personalized banking experiences for millions of TD customers. Layer 6 represents the best of what happens when cutting-edge AI research meets real-world financial infrastructure.',
@@ -366,7 +366,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '08', id: 'integrate-ai', name: 'Integrate.ai', category: 'Federated Learning',
-                    emoji: '🔒', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,',
+                    emoji: '🔒', accentColor: '#15803D', bgColor: 'rgba(74,222,128,',
                     metric: 'Privacy-preserving AI & federated learning',
                     paragraphs: [
                       'In an era where data privacy is paramount, Toronto-based Integrate.ai has carved out a unique niche with their federated learning platform. Their technology allows organizations to train AI models across distributed datasets without ever sharing raw data. This is particularly critical for Canadian healthcare and financial institutions operating under strict PIPEDA and PHIPA regulations.',
@@ -374,7 +374,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '09', id: 'dessa', name: 'Dessa (Square)', category: 'Applied ML & NLP',
-                    emoji: '🧠', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,',
+                    emoji: '🧠', accentColor: '#B45309', bgColor: 'rgba(251,191,36,',
                     metric: 'Production ML pipelines & NLP systems',
                     paragraphs: [
                       'Now part of Square (Block), Dessa built its reputation on making machine learning accessible and production-ready. Their Atlas platform simplified the process of training, versioning, and deploying ML models at scale. Dessa\'s NLP capabilities, including their famous speech synthesis work, demonstrated the caliber of applied AI talent coming out of Canada\'s tech ecosystem.',
@@ -382,7 +382,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '10', id: 'mindbridge', name: 'Mindbridge', category: 'Financial Auditing AI',
-                    emoji: '📊', accentColor: '#f87171', bgColor: 'rgba(248,113,113,',
+                    emoji: '📊', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,',
                     metric: 'AI-powered anomaly detection for auditing',
                     paragraphs: [
                       'Ottawa-based Mindbridge has built a category-defining AI platform for financial auditing and risk discovery. Their technology uses machine learning to analyze entire financial datasets and flag anomalies that human auditors would miss. Used by major accounting firms and government agencies across Canada, Mindbridge represents the practical, high-impact side of Canadian AI innovation.',

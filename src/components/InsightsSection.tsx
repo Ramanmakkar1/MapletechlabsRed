@@ -120,11 +120,12 @@ export default function InsightsSection() {
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.15)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(20,17,24,0.10)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
             >
-              {/* Image placeholder */}
-              <div style={{ height: 200, background: 'linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 50%, #0d0d0d 100%)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ position: 'absolute', top: '20%', right: '20%', width: '50%', height: '50%', background: 'radial-gradient(circle, rgba(245,41,13,0.12) 0%, transparent 65%)', filter: 'blur(40px)' }} />
-                <div style={{ position: 'relative', zIndex: 1, padding: '12px 20px', background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.15)', borderRadius: 100 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{post.tag}</span>
+              {/* Gradient card header — original artwork, one tone per card */}
+              <div className={`tile tile--${(i % 3) + 1}`} style={{ height: 200, borderRadius: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div className="tile__grid" aria-hidden />
+                <div className="tile__sheen" aria-hidden />
+                <div style={{ position: 'relative', zIndex: 1, padding: '10px 18px', background: '#fff', borderRadius: 100, boxShadow: '0 4px 14px rgba(20,17,24,.16)' }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand-deep)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{post.tag}</span>
                 </div>
               </div>
 

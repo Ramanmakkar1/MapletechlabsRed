@@ -21,15 +21,15 @@ function useReveal() {
 
 const companies = [
   { num: 1, name: 'Mapletech Labs', category: 'Full-Stack Apps', emoji: '🍁', metric: 'Native, Cross-Platform & Enterprise App Development', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Townmedialabs', category: 'Creative Mobile', emoji: '🎨', metric: 'User-friendly apps for Alberta businesses', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'TML', category: 'Growth Apps', emoji: '🚀', metric: 'Rapid user acquisition & scale-up focus', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'Lift Interactive', category: 'UX-Focused Apps', emoji: '✨', metric: 'Award-winning UX design & development', accentColor: '#34d399', bgColor: 'rgba(52,211,153,' },
+  { num: 2, name: 'Townmedialabs', category: 'Creative Mobile', emoji: '🎨', metric: 'User-friendly apps for Alberta businesses', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,' },
+  { num: 3, name: 'TML', category: 'Growth Apps', emoji: '🚀', metric: 'Rapid user acquisition & scale-up focus', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,' },
+  { num: 4, name: 'Lift Interactive', category: 'UX-Focused Apps', emoji: '✨', metric: 'Award-winning UX design & development', accentColor: '#047857', bgColor: 'rgba(52,211,153,' },
   { num: 5, name: 'Pixel Jar', category: 'E-Commerce Mobile', emoji: '🛒', metric: 'Mobile commerce & retail app specialists', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Box Clever', category: 'Strategy & Design', emoji: '📐', metric: 'Strategy-first app design & prototyping', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Vog App Developers', category: 'Calgary/Edmonton', emoji: '📱', metric: 'Alberta corridor mobile development', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'Helcim', category: 'FinTech Mobile', emoji: '💳', metric: 'Payment & financial technology apps', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'Jobber', category: 'Field Service Apps', emoji: '🔧', metric: 'Home service & field management solutions', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: 'Drivewyze', category: 'Transportation Tech', emoji: '🚛', metric: 'Connected vehicle & logistics platforms', accentColor: '#f87171', bgColor: 'rgba(248,113,113,' },
+  { num: 6, name: 'Box Clever', category: 'Strategy & Design', emoji: '📐', metric: 'Strategy-first app design & prototyping', accentColor: '#B45309', bgColor: 'rgba(251,146,60,' },
+  { num: 7, name: 'Vog App Developers', category: 'Calgary/Edmonton', emoji: '📱', metric: 'Alberta corridor mobile development', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,' },
+  { num: 8, name: 'Helcim', category: 'FinTech Mobile', emoji: '💳', metric: 'Payment & financial technology apps', accentColor: '#15803D', bgColor: 'rgba(74,222,128,' },
+  { num: 9, name: 'Jobber', category: 'Field Service Apps', emoji: '🔧', metric: 'Home service & field management solutions', accentColor: '#B45309', bgColor: 'rgba(251,191,36,' },
+  { num: 10, name: 'Drivewyze', category: 'Transportation Tech', emoji: '🚛', metric: 'Connected vehicle & logistics platforms', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,' },
 ];
 
 const relatedPosts = [
@@ -242,7 +242,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                 {[
                   {
                     num: '02', id: 'townmedialabs', name: 'Townmedialabs', category: 'Creative Mobile',
-                    emoji: '🎨', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,',
+                    emoji: '🎨', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
                     metric: 'User-friendly apps for Alberta businesses',
                     paragraphs: [
                       'A rising Edmonton digital agency combining creative design with robust mobile development. Townmedialabs excels at building user-friendly apps for local Alberta businesses. Their design-first philosophy ensures every app they ship feels intuitive and polished, while their engineering team delivers reliable, performant code under the hood.',
@@ -251,7 +251,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                   },
                   {
                     num: '03', id: 'tml', name: 'TML', category: 'Growth Apps',
-                    emoji: '🚀', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,',
+                    emoji: '🚀', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,',
                     metric: 'Rapid user acquisition & scale-up focus',
                     paragraphs: [
                       'TML builds mobile applications designed for rapid user acquisition and growth, specializing in startups and scale-ups across Alberta. Their growth-engineering methodology bakes analytics, A/B testing, and push notification strategies directly into the development process.',
@@ -260,7 +260,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                   },
                   {
                     num: '04', id: 'lift-interactive', name: 'Lift Interactive', category: 'UX-Focused Apps',
-                    emoji: '✨', accentColor: '#34d399', bgColor: 'rgba(52,211,153,',
+                    emoji: '✨', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
                     metric: 'Award-winning UX design & development',
                     paragraphs: [
                       'Lift Interactive has been a fixture in Edmonton\'s digital scene for over fifteen years. They are known for their meticulous UX research process, conducting user interviews and usability testing before writing a single line of code. Their apps consistently win design awards and earn high ratings on both the App Store and Google Play.',
@@ -276,7 +276,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                   },
                   {
                     num: '06', id: 'box-clever', name: 'Box Clever', category: 'Strategy & Design',
-                    emoji: '📐', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,',
+                    emoji: '📐', accentColor: '#B45309', bgColor: 'rgba(251,146,60,',
                     metric: 'Strategy-first app design & prototyping',
                     paragraphs: [
                       'Box Clever takes a strategy-first approach to app development. Before any design or code begins, they run intensive discovery workshops to validate the business model, map user journeys, and define success metrics. This makes them an ideal partner for enterprises and funded startups who want to minimize risk before committing six figures to a build.',
@@ -284,7 +284,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                   },
                   {
                     num: '07', id: 'vog-app-developers', name: 'Vog App Developers', category: 'Calgary/Edmonton',
-                    emoji: '📱', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,',
+                    emoji: '📱', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
                     metric: 'Alberta corridor mobile development',
                     paragraphs: [
                       'Operating across the Calgary-Edmonton corridor, Vog App Developers has built a massive portfolio of over 200 mobile apps for clients ranging from local restaurants to national brands. They offer flexible engagement models including dedicated teams, fixed-price projects, and ongoing retainers, making them accessible to businesses of all sizes across Alberta.',
@@ -292,7 +292,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                   },
                   {
                     num: '08', id: 'helcim', name: 'Helcim', category: 'FinTech Mobile',
-                    emoji: '💳', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,',
+                    emoji: '💳', accentColor: '#15803D', bgColor: 'rgba(74,222,128,',
                     metric: 'Payment & financial technology apps',
                     paragraphs: [
                       'While Helcim is primarily known as a payments company, their in-house mobile engineering team has built one of Canada\'s most polished FinTech apps. Their expertise in PCI compliance, secure transaction processing, and financial UX design makes them a valuable partner for any Edmonton business building payment-related mobile solutions.',
@@ -300,7 +300,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                   },
                   {
                     num: '09', id: 'jobber', name: 'Jobber', category: 'Field Service Apps',
-                    emoji: '🔧', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,',
+                    emoji: '🔧', accentColor: '#B45309', bgColor: 'rgba(251,191,36,',
                     metric: 'Home service & field management solutions',
                     paragraphs: [
                       'Jobber is Edmonton\'s homegrown success story in field service management. Their mobile platform powers thousands of home service businesses across North America with features like job scheduling, GPS tracking, invoicing, and customer communication. While they primarily build their own product, their engineering expertise and open API make them a key player in Edmonton\'s app development ecosystem.',
@@ -308,7 +308,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                   },
                   {
                     num: '10', id: 'drivewyze', name: 'Drivewyze', category: 'Transportation Tech',
-                    emoji: '🚛', accentColor: '#f87171', bgColor: 'rgba(248,113,113,',
+                    emoji: '🚛', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,',
                     metric: 'Connected vehicle & logistics platforms',
                     paragraphs: [
                       'Drivewyze represents Edmonton\'s strength in transportation technology. Their connected vehicle platform processes millions of data points from commercial trucks across North America. Their mobile apps integrate with weigh station bypass systems, safety alerts, and fleet management tools, showcasing the kind of complex, real-time mobile engineering talent that exists in Edmonton.',

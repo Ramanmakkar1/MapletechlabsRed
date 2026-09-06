@@ -49,6 +49,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-padding" style={{ background: 'var(--surface)', position: 'relative', overflow: 'hidden' }}>
+      <div aria-hidden className="aurora aurora--section" />
       <div aria-hidden="true" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 500, background: 'radial-gradient(ellipse, rgba(245,41,13,0.09) 0%, transparent 60%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
 
       <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
@@ -105,7 +106,7 @@ export default function Contact() {
           <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 24, padding: 'clamp(20px, 4vw, 40px)' }}>
             {submitted ? (
               <div role="status" aria-live="polite" style={{ textAlign: 'center', padding: '40px 20px' }}>
-                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(16,185,129,0.1)', border: '2px solid #10b981', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: 24 }}>&#10003;</div>
+                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(16,185,129,0.1)', border: '2px solid #047857', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: 24 }}>&#10003;</div>
                 <h3 style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)', marginBottom: 12 }}>Message Sent!</h3>
                 <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto' }}>
                   Our team will review your message and respond within 4 business hours.

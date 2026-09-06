@@ -20,15 +20,15 @@ function useReveal() {
 
 const companies = [
   { num: 1, name: 'Mapletech Labs', category: 'Enterprise Software', emoji: '🍁', metric: 'Next.js, AI Solutions & Cloud Infrastructure', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Townmedialabs', category: 'Digital Products', emoji: '🎨', metric: 'Creative digital solutions for Calgary businesses', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'TML', category: 'Startup Tech', emoji: '🚀', metric: 'Full-stack development & rapid prototyping', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'Absorb Software', category: 'LMS & E-Learning', emoji: '📚', metric: 'Enterprise learning management platforms', accentColor: '#34d399', bgColor: 'rgba(52,211,153,' },
+  { num: 2, name: 'Townmedialabs', category: 'Digital Products', emoji: '🎨', metric: 'Creative digital solutions for Calgary businesses', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,' },
+  { num: 3, name: 'TML', category: 'Startup Tech', emoji: '🚀', metric: 'Full-stack development & rapid prototyping', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,' },
+  { num: 4, name: 'Absorb Software', category: 'LMS & E-Learning', emoji: '📚', metric: 'Enterprise learning management platforms', accentColor: '#047857', bgColor: 'rgba(52,211,153,' },
   { num: 5, name: 'Symend', category: 'Behavioural AI', emoji: '🧠', metric: 'AI-driven behavioural science solutions', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Benevity', category: 'CSR Tech', emoji: '💚', metric: 'Corporate social responsibility platforms', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Solium (Shareworks)', category: 'Equity Mgmt', emoji: '📊', metric: 'Equity management & compensation platforms', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'Neo Financial', category: 'FinTech', emoji: '💳', metric: 'Next-gen banking & financial products', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'Helcim', category: 'Payments', emoji: '💰', metric: 'Transparent payment processing solutions', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: 'Attabotics', category: 'Robotics & AI', emoji: '🤖', metric: 'Warehouse robotics & supply chain AI', accentColor: '#f87171', bgColor: 'rgba(248,113,113,' },
+  { num: 6, name: 'Benevity', category: 'CSR Tech', emoji: '💚', metric: 'Corporate social responsibility platforms', accentColor: '#B45309', bgColor: 'rgba(251,146,60,' },
+  { num: 7, name: 'Solium (Shareworks)', category: 'Equity Mgmt', emoji: '📊', metric: 'Equity management & compensation platforms', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,' },
+  { num: 8, name: 'Neo Financial', category: 'FinTech', emoji: '💳', metric: 'Next-gen banking & financial products', accentColor: '#15803D', bgColor: 'rgba(74,222,128,' },
+  { num: 9, name: 'Helcim', category: 'Payments', emoji: '💰', metric: 'Transparent payment processing solutions', accentColor: '#B45309', bgColor: 'rgba(251,191,36,' },
+  { num: 10, name: 'Attabotics', category: 'Robotics & AI', emoji: '🤖', metric: 'Warehouse robotics & supply chain AI', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,' },
 ];
 
 const relatedPosts = [
@@ -234,7 +234,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                 {[
                   {
                     num: '02', id: 'townmedialabs', name: 'Townmedialabs', category: 'Digital Products',
-                    emoji: '🎨', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,',
+                    emoji: '🎨', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
                     metric: 'Creative digital solutions for Calgary businesses',
                     paragraphs: [
                       'Townmedialabs delivers creative digital solutions for Calgary businesses, combining intuitive design with robust development to help local brands compete nationally. Their team specializes in responsive web applications, e-commerce platforms, and digital branding that captures the spirit of Alberta\'s entrepreneurial energy.',
@@ -243,7 +243,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '03', id: 'tml', name: 'TML', category: 'Startup Tech',
-                    emoji: '🚀', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,',
+                    emoji: '🚀', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,',
                     metric: 'Full-stack development & rapid prototyping',
                     paragraphs: [
                       'TML accelerates Calgary startups with full-stack development, rapid prototyping, and growth-focused engineering, helping turn Alberta ideas into scalable tech products. Their lean methodology and agile approach make them the ideal partner for early-stage companies looking to validate concepts quickly and iterate based on market feedback.',
@@ -252,7 +252,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '04', id: 'absorb-software', name: 'Absorb Software', category: 'LMS & E-Learning',
-                    emoji: '📚', accentColor: '#34d399', bgColor: 'rgba(52,211,153,',
+                    emoji: '📚', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
                     metric: 'Enterprise learning management platforms',
                     paragraphs: [
                       'Absorb Software is one of Calgary\'s true tech success stories. Their cloud-based Learning Management System (LMS) serves Fortune 500 companies, government agencies, and educational institutions worldwide. With over 200 employees in Calgary, they are proof that world-class SaaS products can be built right here in Alberta.',
@@ -268,7 +268,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '06', id: 'benevity', name: 'Benevity', category: 'CSR Tech',
-                    emoji: '💚', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,',
+                    emoji: '💚', accentColor: '#B45309', bgColor: 'rgba(251,146,60,',
                     metric: 'Corporate social responsibility platforms',
                     paragraphs: [
                       'Benevity is Calgary\'s crown jewel in social impact technology. Their platform powers corporate giving, volunteering, and grant management for some of the world\'s largest companies including Apple, Google, and Nike. Acquired for over $1B, Benevity proves that mission-driven software companies can achieve massive commercial success from Calgary.',
@@ -276,7 +276,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '07', id: 'solium', name: 'Solium (Shareworks by Morgan Stanley)', category: 'Equity Mgmt',
-                    emoji: '📊', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,',
+                    emoji: '📊', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
                     metric: 'Equity management & compensation platforms',
                     paragraphs: [
                       'Originally founded in Calgary as Solium Capital, now operating as Shareworks by Morgan Stanley, this company built the definitive platform for equity plan management and stock compensation. Their software manages billions of dollars in employee equity across thousands of companies worldwide, all engineered from their Calgary development centre.',
@@ -284,7 +284,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '08', id: 'neo-financial', name: 'Neo Financial', category: 'FinTech',
-                    emoji: '💳', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,',
+                    emoji: '💳', accentColor: '#15803D', bgColor: 'rgba(74,222,128,',
                     metric: 'Next-gen banking & financial products',
                     paragraphs: [
                       'Founded by the team behind SkipTheDishes, Neo Financial is reimagining banking for Canadians with high-interest savings accounts, cashback credit cards, and a modern mobile-first experience. With over $300M raised, Neo Financial is Calgary\'s most prominent fintech startup and a key driver of the city\'s financial technology ecosystem.',
@@ -292,7 +292,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '09', id: 'helcim', name: 'Helcim', category: 'Payments',
-                    emoji: '💰', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,',
+                    emoji: '💰', accentColor: '#B45309', bgColor: 'rgba(251,191,36,',
                     metric: 'Transparent payment processing solutions',
                     paragraphs: [
                       'Helcim has built a reputation as one of Canada\'s most transparent and merchant-friendly payment processors. Their Calgary-built platform offers interchange-plus pricing, beautiful POS hardware, and developer-friendly APIs. They are the antithesis of the opaque pricing models that have plagued the payments industry for decades.',
@@ -300,7 +300,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '10', id: 'attabotics', name: 'Attabotics', category: 'Robotics & AI',
-                    emoji: '🤖', accentColor: '#f87171', bgColor: 'rgba(248,113,113,',
+                    emoji: '🤖', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,',
                     metric: 'Warehouse robotics & supply chain AI',
                     paragraphs: [
                       'Attabotics is redefining warehouse logistics with their 3D robotics-based storage and retrieval system. Their technology reduces warehouse footprint by 85% and is backed by major investors including the Government of Canada. Combining hardware robotics with sophisticated AI software, Attabotics represents the cutting edge of Calgary\'s deep-tech ambitions.',

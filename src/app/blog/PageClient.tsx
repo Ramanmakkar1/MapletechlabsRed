@@ -152,12 +152,12 @@ const posts = [
 ];
 
 const categoryColors: Record<string, string> = {
-  Engineering: '#60a5fa',
-  'AI/ML': '#a78bfa',
-  Mobile: '#34d399',
-  Design: '#f472b6',
-  Business: '#f5290d',
-  'Digital Marketing': '#fb923c',
+  Engineering: '#1D4ED8',
+  'AI/ML': '#6D28D9',
+  Mobile: '#047857',
+  Design: '#BE185D',
+  Business: 'var(--brand)',
+  'Digital Marketing': '#B45309',
 };
 
 export default function BlogPage() {
@@ -326,7 +326,7 @@ export default function BlogPage() {
               display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(320px, 100%), 1fr))', gap: 20,
             }}>
               {posts.filter(p => activeCategory === 'All' || p.category === activeCategory).map((post, i) => {
-                const accentColor = categoryColors[post.category] || '#f5290d';
+                const accentColor = categoryColors[post.category] || 'var(--brand)';
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                     <article

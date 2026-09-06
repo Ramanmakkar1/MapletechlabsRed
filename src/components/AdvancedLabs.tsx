@@ -19,7 +19,8 @@ export default function AdvancedLabs() {
   }, []);
 
   return (
-    <section ref={ref} id="labs" className="section-padding" style={{ background: 'var(--surface-ink)', borderTop: '1px solid var(--line-ink)' }}>
+    <section ref={ref} id="labs" className="section-padding" style={{ background: 'var(--surface-ink)', borderTop: '1px solid var(--line-ink)' , position: 'relative', overflow: 'hidden'}}>
+      <div aria-hidden className="aurora aurora--ink" />
       <div className="cb-container">
         <div className="advanced-labs-grid">
           <div className="reveal">

@@ -83,11 +83,11 @@ const caseStudies = [
 ];
 
 const categoryColors: Record<string, string> = {
-  Fintech: '#a78bfa',
-  Healthcare: '#22d3ee',
-  'E-Commerce': '#34d399',
-  Logistics: '#fbbf24',
-  'Real Estate': '#3b82f6',
+  Fintech: '#6D28D9',
+  Healthcare: '#0E7490',
+  'E-Commerce': '#047857',
+  Logistics: '#B45309',
+  'Real Estate': '#1D4ED8',
 };
 
 const categories = ['All', 'Fintech', 'Healthcare', 'E-Commerce', 'Logistics', 'Real Estate'];
@@ -177,7 +177,7 @@ export default function CaseStudiesPageClient() {
               gap: 24,
             }}>
               {filtered.map((cs, i) => {
-                const accentColor = categoryColors[cs.category] || '#f5290d';
+                const accentColor = categoryColors[cs.category] || 'var(--brand)';
                 return (
                   <Link key={cs.slug} href={`/case-studies/${cs.slug}`} style={{ textDecoration: 'none' }}>
                     <article

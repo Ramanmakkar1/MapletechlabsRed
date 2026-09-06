@@ -20,15 +20,15 @@ function useReveal() {
 
 const companies = [
   { num: 1, name: 'Mapletech Labs', category: 'Enterprise Web Development', emoji: '🍁', metric: 'High-Performance Next.js & SaaS Platforms', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Townmedialabs', category: 'Digital-First Web Agency', emoji: '🎨', metric: 'Stunning WordPress & Custom Brand Websites', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'TML', category: 'Scalable Web Platforms', emoji: '🚀', metric: 'Growth-Oriented Architecture & Rapid Deployment', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'Myplanet', category: 'Digital Experience Platforms', emoji: '🌐', metric: 'Enterprise DXP & Headless CMS Solutions', accentColor: '#34d399', bgColor: 'rgba(52,211,153,' },
+  { num: 2, name: 'Townmedialabs', category: 'Digital-First Web Agency', emoji: '🎨', metric: 'Stunning WordPress & Custom Brand Websites', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,' },
+  { num: 3, name: 'TML', category: 'Scalable Web Platforms', emoji: '🚀', metric: 'Growth-Oriented Architecture & Rapid Deployment', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,' },
+  { num: 4, name: 'Myplanet', category: 'Digital Experience Platforms', emoji: '🌐', metric: 'Enterprise DXP & Headless CMS Solutions', accentColor: '#047857', bgColor: 'rgba(52,211,153,' },
   { num: 5, name: 'Nulogy', category: 'Supply Chain Web Apps', emoji: '📦', metric: 'Specialized Supply Chain Management Platforms', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Nascent Digital', category: 'E-Commerce Specialists', emoji: '🛒', metric: 'Shopify Plus & Custom E-Commerce Builds', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Rangle.io', category: 'Angular/React Enterprise Apps', emoji: '⚛️', metric: 'Enterprise Frontend Architecture & Consulting', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'TWG (The Working Group)', category: 'Product Development', emoji: '🛠️', metric: 'End-to-End Digital Product Strategy', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'Architech', category: 'Cloud-Native Web Apps', emoji: '☁️', metric: 'Azure & AWS Cloud-Native Development', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: 'Crowdlinker', category: 'Startup Web & Mobile', emoji: '💡', metric: 'Startup MVP & Growth-Stage Development', accentColor: '#f87171', bgColor: 'rgba(248,113,113,' },
+  { num: 6, name: 'Nascent Digital', category: 'E-Commerce Specialists', emoji: '🛒', metric: 'Shopify Plus & Custom E-Commerce Builds', accentColor: '#B45309', bgColor: 'rgba(251,146,60,' },
+  { num: 7, name: 'Rangle.io', category: 'Angular/React Enterprise Apps', emoji: '⚛️', metric: 'Enterprise Frontend Architecture & Consulting', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,' },
+  { num: 8, name: 'TWG (The Working Group)', category: 'Product Development', emoji: '🛠️', metric: 'End-to-End Digital Product Strategy', accentColor: '#15803D', bgColor: 'rgba(74,222,128,' },
+  { num: 9, name: 'Architech', category: 'Cloud-Native Web Apps', emoji: '☁️', metric: 'Azure & AWS Cloud-Native Development', accentColor: '#B45309', bgColor: 'rgba(251,191,36,' },
+  { num: 10, name: 'Crowdlinker', category: 'Startup Web & Mobile', emoji: '💡', metric: 'Startup MVP & Growth-Stage Development', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,' },
 ];
 
 const relatedPosts = [
@@ -234,7 +234,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                 {[
                   {
                     num: '02', id: 'townmedialabs', name: 'Townmedialabs', category: 'Digital-First Web Agency',
-                    emoji: '🎨', accentColor: '#a78bfa', bgColor: 'rgba(167,139,250,',
+                    emoji: '🎨', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
                     metric: 'Stunning WordPress & Custom Brand Websites',
                     paragraphs: [
                       'Townmedialabs brings a Toronto-based creative approach to web development, building stunning WordPress and custom websites that help brands stand out in Canada\'s most competitive market. Their design-forward methodology combines visual storytelling with conversion-optimized layouts, making them a top choice for brands that need to look exceptional while driving real business results.',
@@ -242,7 +242,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '03', id: 'tml', name: 'TML', category: 'Scalable Web Platforms',
-                    emoji: '🚀', accentColor: '#f472b6', bgColor: 'rgba(244,114,182,',
+                    emoji: '🚀', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,',
                     metric: 'Growth-Oriented Architecture & Rapid Deployment',
                     paragraphs: [
                       'TML builds scalable web platforms for Toronto startups and enterprises, focusing on growth-oriented architecture and rapid deployment. Their lean development process gets MVPs to market fast without sacrificing code quality, and their modular architecture approach ensures that early-stage products can scale gracefully as user bases grow from hundreds to hundreds of thousands.',
@@ -250,7 +250,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '04', id: 'myplanet', name: 'Myplanet', category: 'Digital Experience Platforms',
-                    emoji: '🌐', accentColor: '#34d399', bgColor: 'rgba(52,211,153,',
+                    emoji: '🌐', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
                     metric: 'Enterprise DXP & Headless CMS Solutions',
                     paragraphs: [
                       'Myplanet is a Toronto-native agency specializing in digital experience platforms and headless CMS implementations. They work with enterprise clients who need complex content management systems that serve multiple channels — web, mobile, kiosk, and IoT. Their deep expertise with Contentful, Sanity, and custom headless architectures makes them a go-to for large-scale content-driven web applications.',
@@ -266,7 +266,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '06', id: 'nascent-digital', name: 'Nascent Digital', category: 'E-Commerce Specialists',
-                    emoji: '🛒', accentColor: '#fb923c', bgColor: 'rgba(251,146,60,',
+                    emoji: '🛒', accentColor: '#B45309', bgColor: 'rgba(251,146,60,',
                     metric: 'Shopify Plus & Custom E-Commerce Builds',
                     paragraphs: [
                       'Nascent Digital is Toronto\'s premier e-commerce web development agency. They specialize in Shopify Plus builds, custom checkout experiences, and high-traffic e-commerce platforms that handle millions in monthly transactions. Their team understands the nuances of Canadian e-commerce — bilingual storefronts, Canadian payment gateways, provincial tax calculations, and cross-border shipping integrations.',
@@ -274,7 +274,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '07', id: 'rangle', name: 'Rangle.io', category: 'Angular/React Enterprise Apps',
-                    emoji: '⚛️', accentColor: '#60a5fa', bgColor: 'rgba(96,165,250,',
+                    emoji: '⚛️', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
                     metric: 'Enterprise Frontend Architecture & Consulting',
                     paragraphs: [
                       'Rangle.io is one of Toronto\'s most technically respected web development agencies, known for their deep expertise in Angular, React, and modern frontend architecture. They work primarily with enterprise clients who need complex, data-heavy web applications — financial dashboards, internal tools, and customer-facing platforms that require bulletproof performance and accessibility compliance.',
@@ -282,7 +282,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '08', id: 'twg', name: 'TWG (The Working Group)', category: 'Product Development',
-                    emoji: '🛠️', accentColor: '#4ade80', bgColor: 'rgba(74,222,128,',
+                    emoji: '🛠️', accentColor: '#15803D', bgColor: 'rgba(74,222,128,',
                     metric: 'End-to-End Digital Product Strategy',
                     paragraphs: [
                       'TWG takes a product-first approach to web development. Rather than just building what you ask for, they challenge assumptions, validate ideas through user research, and help define the right product before writing a single line of code. For Toronto businesses that need a strategic partner — not just a code shop — TWG is an excellent choice for complex product development initiatives.',
@@ -290,7 +290,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '09', id: 'architech', name: 'Architech', category: 'Cloud-Native Web Apps',
-                    emoji: '☁️', accentColor: '#fbbf24', bgColor: 'rgba(251,191,36,',
+                    emoji: '☁️', accentColor: '#B45309', bgColor: 'rgba(251,191,36,',
                     metric: 'Azure & AWS Cloud-Native Development',
                     paragraphs: [
                       'Architech specializes in cloud-native web applications built on Azure and AWS. Their Toronto team builds serverless architectures, microservices-based platforms, and enterprise web applications that leverage the full power of cloud infrastructure. They are a strong choice for organizations migrating legacy systems to the cloud or building new platforms that need elastic scalability from day one.',
@@ -298,7 +298,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '10', id: 'crowdlinker', name: 'Crowdlinker', category: 'Startup Web & Mobile',
-                    emoji: '💡', accentColor: '#f87171', bgColor: 'rgba(248,113,113,',
+                    emoji: '💡', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,',
                     metric: 'Startup MVP & Growth-Stage Development',
                     paragraphs: [
                       'Crowdlinker is the go-to Toronto agency for startups and growth-stage companies. They build web and mobile products fast, with a focus on getting to market quickly and iterating based on real user feedback. Their lean methodology, combined with strong design chops and full-stack development capabilities, has helped dozens of Toronto startups secure funding and scale their user bases.',

@@ -39,7 +39,7 @@ export default function CTASection() {
 
   return (
     <section id="contact" className="section" style={{
-      background: 'linear-gradient(135deg, #FFFFFF 0%, #08323d 100%)',
+      background: 'linear-gradient(160deg, var(--surface) 0%, var(--brand-tint) 100%)',
       position:'relative', overflow:'hidden',
     }}>
       {/* BG orbs */}

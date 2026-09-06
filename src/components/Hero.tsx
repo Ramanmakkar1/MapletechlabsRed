@@ -37,19 +37,16 @@ export default function Hero() {
         paddingTop: 'clamp(96px, 12vw, 132px)',
       }}
     >
-      {/* faint engineering grid + warm red bloom */}
-      <div aria-hidden className="grid-bg" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} />
-      <div
-        aria-hidden
-        className="glow-brand"
-        style={{ position: 'absolute', top: '-14%', right: '-6%', width: 'min(760px, 96vw)', height: 'min(760px, 96vw)' }}
-      />
+      {/* Layered red aurora with a white radial punched over the centre, so
+          colour survives only at the edges; faint engineering grid on top. */}
+      <div aria-hidden className="aurora aurora--hero" />
+      <div aria-hidden className="grid-bg" style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }} />
       <div
         aria-hidden
         style={{
-          position: 'absolute', bottom: 0, left: 0, right: 0, height: 220,
+          position: 'absolute', bottom: 0, left: 0, right: 0, height: 200,
           background: 'linear-gradient(to bottom, transparent, var(--surface-alt))',
-          pointerEvents: 'none',
+          pointerEvents: 'none', zIndex: 0,
         }}
       />
 
@@ -57,11 +54,10 @@ export default function Hero() {
         {/* ── LEFT: copy ───────────────────────────── */}
         <div>
           <div
-            className="reveal visible"
+            className="reveal visible grad-border"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 10,
-              background: 'var(--brand-tint)', border: '1px solid var(--brand-line)',
-              borderRadius: 100, padding: '8px 18px', marginBottom: 'clamp(20px, 3vw, 30px)',
+              padding: '8px 18px', marginBottom: 'clamp(20px, 3vw, 30px)',
             }}
           >
             <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand-bright)', boxShadow: '0 0 0 4px rgba(245,41,13,.14)' }} />
@@ -82,12 +78,9 @@ export default function Hero() {
           >
             We build{' '}
             <span
+              className="grad-text"
               style={{
                 display: 'inline-block',
-                background: 'var(--brand-grad)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
                 opacity: show ? 1 : 0,
                 transform: show ? 'translateY(0)' : 'translateY(-8px)',
                 transition: 'opacity .32s ease, transform .32s ease',

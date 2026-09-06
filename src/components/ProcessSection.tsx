@@ -77,7 +77,8 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section ref={ref} id="process" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' }}>
+    <section ref={ref} id="process" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' , position: 'relative', overflow: 'hidden'}}>
+      <div aria-hidden className="aurora aurora--section" />
       <div className="cb-container">
 
         {/* Header */}

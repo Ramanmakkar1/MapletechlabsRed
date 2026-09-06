@@ -27,14 +27,14 @@ const steps = [
     title: 'Build & Iterate',
     desc: 'Agile sprints with weekly demos. You see progress constantly. We ship fast without cutting corners.',
     detail: 'Agile sprints · Code reviews · Automated testing · Continuous delivery',
-    color: '#06b6d4',
+    color: '#0E7490',
   },
   {
     num: '04',
     title: 'Launch & Scale',
     desc: 'Seamless go-live with monitoring, training, and ongoing support. Your success doesn\'t end at launch.',
     detail: 'Deployment · Monitoring · Documentation · Ongoing support',
-    color: '#10b981',
+    color: '#047857',
   },
 ];
 

@@ -225,13 +225,13 @@ export default function SaasDevelopmentCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(167,139,250,0.12)', color: '#a78bfa',
+                        background: 'rgba(167,139,250,0.12)', color: '#6D28D9',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Tier 2</span>
                       <span style={{ fontSize: 13, color: 'var(--faint)', fontWeight: 600 }}>4 - 8 months</span>
                     </div>
                     <h3 style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>Growth Stage SaaS</h3>
-                    <p style={{ fontSize: 28, fontWeight: 800, color: '#a78bfa', marginBottom: 16, letterSpacing: '-0.02em' }}>$75,000 - $200,000</p>
+                    <p style={{ fontSize: 28, fontWeight: 800, color: '#6D28D9', marginBottom: 16, letterSpacing: '-0.02em' }}>$75,000 - $200,000</p>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
                       A production-ready platform with multi-tenant architecture, role-based access control, team management, advanced billing with plan tiers, third-party integrations (Slack, Zapier, HubSpot), analytics dashboards, email notifications, and a comprehensive admin panel. This is the stage where most funded Canadian startups begin scaling to their first 100 paying customers.
                     </p>
@@ -245,13 +245,13 @@ export default function SaasDevelopmentCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(52,211,153,0.12)', color: '#34d399',
+                        background: 'rgba(52,211,153,0.12)', color: '#047857',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Tier 3</span>
                       <span style={{ fontSize: 13, color: 'var(--faint)', fontWeight: 600 }}>8 - 18 months</span>
                     </div>
                     <h3 style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>Enterprise SaaS</h3>
-                    <p style={{ fontSize: 28, fontWeight: 800, color: '#34d399', marginBottom: 16, letterSpacing: '-0.02em' }}>$200,000 - $500,000+</p>
+                    <p style={{ fontSize: 28, fontWeight: 800, color: '#047857', marginBottom: 16, letterSpacing: '-0.02em' }}>$200,000 - $500,000+</p>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
                       A fully-scaled enterprise platform with SSO/SAML authentication, SOC 2 compliance readiness, custom API with rate limiting and versioning, white-label capabilities, advanced reporting with data exports, audit logs, multi-region deployment, dedicated onboarding workflows, and SLA-backed infrastructure. Built for companies targeting enterprise contracts of $50K+ ARR per client.
                     </p>
@@ -423,10 +423,10 @@ export default function SaasDevelopmentCostCanadaClient() {
 
                   {[
                     { phase: '01', name: 'Discovery', duration: '1-2 weeks', cost: '$3,000 - $8,000', color: 'var(--brand)', desc: 'We map your business model, define user personas, audit competitors, and create a detailed product requirements document (PRD). You walk away with a complete technical specification and accurate cost estimate — even if you decide to build with another team.' },
-                    { phase: '02', name: 'Architecture', duration: '1-2 weeks', cost: '$5,000 - $12,000', color: '#a78bfa', desc: 'Database schema design, API architecture, infrastructure planning, and technology stack finalization. We create wireframes for every screen and define the data flow between components. This phase eliminates costly rewrites later.' },
-                    { phase: '03', name: 'MVP Build', duration: '6-12 weeks', cost: '$20,000 - $60,000', color: '#34d399', desc: 'Iterative two-week sprints with demos after each cycle. We build the core product, integrate billing, deploy to staging, and conduct thorough QA. You have a working product in the hands of real users within three months.' },
-                    { phase: '04', name: 'Scale', duration: '4-8 weeks', cost: '$15,000 - $40,000', color: '#60a5fa', desc: 'Performance optimization, load testing, security hardening, and infrastructure scaling. We add monitoring, alerting, and automated backups. Your product is now ready for aggressive customer acquisition.' },
-                    { phase: '05', name: 'Optimize', duration: 'Ongoing', cost: '$3,000 - $10,000/mo', color: '#fbbf24', desc: 'Continuous improvement based on user analytics and feedback. Feature development, A/B testing, conversion optimization, and technical debt management. We become your fractional CTO and engineering team.' },
+                    { phase: '02', name: 'Architecture', duration: '1-2 weeks', cost: '$5,000 - $12,000', color: '#6D28D9', desc: 'Database schema design, API architecture, infrastructure planning, and technology stack finalization. We create wireframes for every screen and define the data flow between components. This phase eliminates costly rewrites later.' },
+                    { phase: '03', name: 'MVP Build', duration: '6-12 weeks', cost: '$20,000 - $60,000', color: '#047857', desc: 'Iterative two-week sprints with demos after each cycle. We build the core product, integrate billing, deploy to staging, and conduct thorough QA. You have a working product in the hands of real users within three months.' },
+                    { phase: '04', name: 'Scale', duration: '4-8 weeks', cost: '$15,000 - $40,000', color: '#1D4ED8', desc: 'Performance optimization, load testing, security hardening, and infrastructure scaling. We add monitoring, alerting, and automated backups. Your product is now ready for aggressive customer acquisition.' },
+                    { phase: '05', name: 'Optimize', duration: 'Ongoing', cost: '$3,000 - $10,000/mo', color: '#B45309', desc: 'Continuous improvement based on user analytics and feedback. Feature development, A/B testing, conversion optimization, and technical debt management. We become your fractional CTO and engineering team.' },
                   ].map((item, i) => (
                     <div key={i} style={{
                       display: 'flex', gap: 24, marginBottom: 24,

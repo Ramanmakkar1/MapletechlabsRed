@@ -75,7 +75,7 @@ export default function Preloader({ onComplete }: Props) {
               <defs>
                 <linearGradient id="pg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
                   <stop stopColor="#7c3aed" />
-                  <stop offset="1" stopColor="#06b6d4" />
+                  <stop offset="1" stopColor="#0E7490" />
                 </linearGradient>
               </defs>
             </svg>
