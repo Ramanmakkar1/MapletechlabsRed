@@ -52,9 +52,9 @@ interface CityServicePageProps {
 
 // ─── SHARED STYLES ───────────────────────────────────────────────────────────
 
-const sectionPad: React.CSSProperties = { padding: 'clamp(60px, 10vw, 120px) 0' };
+const sectionPad: React.CSSProperties = { padding: 'var(--section-y) 0' };
 const sectionBorder: React.CSSProperties = { borderTop: '1px solid var(--line)' };
-const heading2: React.CSSProperties = { fontSize: 'clamp(2.2rem, 4vw, 4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 };
+const heading2: React.CSSProperties = { fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 };
 const subLabel: React.CSSProperties = { fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 20 };
 const bodyText: React.CSSProperties = { fontSize: 15, color: 'var(--body)', lineHeight: 1.75 };
 const autoGrid: React.CSSProperties = { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(16px, 2vw, 20px)' };
@@ -116,12 +116,12 @@ export default function CityServicePageClient(props: CityServicePageProps) {
   return (
     <>
       <Navbar />
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* ════════════════════════════════════════════
             1. HERO
         ════════════════════════════════════════════ */}
-        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(48px, 8vw, 100px) 0 clamp(48px, 8vw, 120px)', borderBottom: '1px solid var(--line)' }}>
+        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,17,24,0.035) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', top: '30%', left: '5%', width: 600, height: 600, background: 'transparent', filter: 'blur(60px)', pointerEvents: 'none' }} />
 
@@ -156,7 +156,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
                 </div>
 
                 {/* H1 */}
-                <h1 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.6rem, 5vw, 4.8rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 0 24px' }}>
+                <h1 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 0 24px' }}>
                   {serviceName} Company in{' '}<span style={{ color: 'var(--brand)' }}>{cityName}</span>
                 </h1>
 
@@ -233,7 +233,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
                   onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg, #f5290d, transparent)' }} />
                   <div style={{ fontSize: 32, marginBottom: 20 }}>{s.icon}</div>
-                  <h3 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.8rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 14 }}>{s.title}</h3>
+                  <h3 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 14 }}>{s.title}</h3>
                   <p style={{ ...bodyText, marginBottom: s.tags && s.tags.length > 0 ? 28 : 0 }}>{s.desc}</p>
                   {s.tags && s.tags.length > 0 && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -584,7 +584,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
             {/* Related sub-service pages */}
             {relatedSubServices.length > 0 && (
               <div className="reveal reveal-d2">
-                <h3 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 24 }}>Explore Our {serviceName} Services</h3>
+                <h3 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 24 }}>Explore Our {serviceName} Services</h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
                   {relatedSubServices.map(sub => (
                     <Link key={sub.slug} href={`/services/${serviceSlug}/${sub.slug}`} style={{ padding: '10px 22px', border: '1px solid var(--line)', borderRadius: 100, fontSize: 13, fontWeight: 500, color: 'var(--muted)', textDecoration: 'none', transition: '0.25s' }}
@@ -602,11 +602,11 @@ export default function CityServicePageClient(props: CityServicePageProps) {
         {/* ════════════════════════════════════════════
             12. BOTTOM CTA
         ════════════════════════════════════════════ */}
-        <section style={{ padding: 'clamp(80px, 12vw, 140px) 0', position: 'relative', overflow: 'hidden', textAlign: 'center', ...sectionBorder }}>
+        <section style={{ padding: 'var(--section-y) 0', position: 'relative', overflow: 'hidden', textAlign: 'center', ...sectionBorder }}>
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 800, height: 500, background: 'transparent', filter: 'blur(70px)', pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 24 }}>Ready to Build?</div>
-            <h2 style={{ fontSize: 'clamp(2.4rem, 5vw, 5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 0 24px' }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 0 24px' }}>
               Start Your {serviceName} Project in{' '}<span style={{ color: 'var(--brand)' }}>{cityName}</span>
             </h2>
             <p style={{ fontSize: 18, color: 'var(--muted)', maxWidth: 520, margin: '0 auto 48px', lineHeight: 1.7 }}>

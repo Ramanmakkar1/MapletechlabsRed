@@ -57,7 +57,7 @@ export default function FAQPageClient() {
       <main ref={ref} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* Hero */}
-        <section style={{ padding: 'clamp(120px, 12vw, 160px) 0 clamp(48px, 6vw, 80px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
             width: 800, height: 800,
@@ -68,7 +68,7 @@ export default function FAQPageClient() {
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>FAQ</div>
               <h1 style={{
-                fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)',
+                fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
                 letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24,
               }}>
                 Frequently Asked<br /><span style={{ color: 'var(--faint)' }}>Questions</span>
@@ -81,7 +81,7 @@ export default function FAQPageClient() {
         </section>
 
         {/* FAQ Categories */}
-        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container" style={{ maxWidth: 800, margin: '0 auto' }}>
             {categories.map((cat, ci) => (
               <div key={cat.name} className={`reveal reveal-d${ci + 1}`} style={{ marginBottom: 56 }}>
@@ -135,14 +135,14 @@ export default function FAQPageClient() {
         </section>
 
         {/* CTA */}
-        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="reveal" style={{
               background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
               borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 56px)', textAlign: 'center',
             }}>
               <h2 style={{
-                fontSize: 'clamp(1.6rem, 3vw, 2.5rem)', fontWeight: 700, color: 'var(--ink)',
+                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 16,
               }}>
                 Still have questions?

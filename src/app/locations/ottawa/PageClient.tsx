@@ -69,14 +69,14 @@ export default function OttawaPage() {
   return (
     <>
       <Navbar />
-      <div className="cb-container" style={{ paddingTop: 100 }}>
+      <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
         <Breadcrumb items={[
           { label: 'Home', href: '/' },
           { label: 'Locations', href: '/locations' },
           { label: 'Ottawa' },
         ]} />
       </div>
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding loc-city-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
@@ -86,7 +86,7 @@ export default function OttawaPage() {
             <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               Ottawa, Ontario
             </div>
-            <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+            <h1 className="reveal" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
               Software Development in <span style={{ color: 'var(--brand)' }}>Ottawa</span>
             </h1>
             <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
@@ -115,7 +115,7 @@ export default function OttawaPage() {
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Ottawa</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Our Services in Ottawa</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Secure, compliant software for government, defence, and telecom.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
@@ -123,7 +123,7 @@ export default function OttawaPage() {
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
                     <div style={{ color: 'var(--brand)', fontSize: '1.2rem', marginBottom: '0.75rem' }}>&rarr;</div>
-                    <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
                     <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
                   </Card>
                 </Link>
@@ -137,7 +137,7 @@ export default function OttawaPage() {
           <div className="cb-container">
             <div className="reveal" style={{ border: '1px solid rgba(245,41,13,0.15)', borderRadius: 32, background: 'rgba(245,41,13,0.03)', padding: 'clamp(2rem, 4vw, 3rem)' }}>
               <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Ottawa &amp; the National Capital Region by the Numbers</h2>
+                <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Ottawa &amp; the National Capital Region by the Numbers</h2>
                 <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Trusted by government and defence organizations across the capital.</p>
               </div>
               <div className="loc-city-stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
@@ -161,7 +161,7 @@ export default function OttawaPage() {
         <section ref={s3} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Ottawa</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Ottawa</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Government-grade security with startup-speed delivery.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
@@ -172,7 +172,7 @@ export default function OttawaPage() {
                 { title: 'Defence & National Security', desc: 'We develop secure applications for defence contractors and agencies, with strict adherence to Canadian security protocols, data sovereignty requirements, and controlled goods regulations.' },
               ].map(w => (
                 <Card key={w.title}>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
+                  <h3 style={{ fontWeight: 600, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
                   <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
                 </Card>
               ))}
@@ -184,7 +184,7 @@ export default function OttawaPage() {
         <section ref={s4} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, lineHeight: 1.15, marginBottom: '1.5rem' }}>
                 Start Your Project in <span style={{ color: 'var(--brand)' }}>Ottawa</span>
               </h2>
               <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
@@ -208,9 +208,9 @@ export default function OttawaPage() {
         </section>
 
         {/* Why Ottawa for Tech */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Ottawa for Tech</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Ottawa for Tech</h2>
             <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Ottawa is Canada&apos;s government tech and cybersecurity capital, with Kanata North as the country&apos;s largest tech park.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
@@ -224,9 +224,9 @@ export default function OttawaPage() {
         </section>
 
         {/* Ottawa Neighborhoods */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Ottawa Areas We Serve</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Ottawa Areas We Serve</h2>
             <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From Kanata&apos;s tech park to the ByWard Market, we serve businesses across the National Capital Region.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
               {[
@@ -244,9 +244,9 @@ export default function OttawaPage() {
         </section>
 
         {/* Ottawa Client Stories */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Ottawa Client Success Stories</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Ottawa Client Success Stories</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
               {[
                 { title: 'GovTech Compliance Platform', metric: '12 federal departments', desc: 'Built a WCAG 2.1 and Official Languages Act-compliant digital platform for a federal agency, now used across 12 departments for citizen service delivery.' },
@@ -258,9 +258,9 @@ export default function OttawaPage() {
         </section>
 
         {/* Ottawa Tech Focus */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Ottawa Tech Focus</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Ottawa Tech Focus</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
                 { t: 'Cybersecurity', d: 'Threat detection, compliance automation, and security platforms for government and defence — Ottawa\'s #1 tech vertical.' },
@@ -273,9 +273,9 @@ export default function OttawaPage() {
         </section>
 
         {/* All Services in City */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
               Our Services in Ottawa
             </h2>
             <p style={{ fontSize: 15, color: 'var(--muted)', textAlign: 'center', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>

@@ -116,7 +116,7 @@ export default function TestimonialsSection() {
         <div className="reveal" style={{ marginBottom: 'clamp(40px, 8vw, 80px)' }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Testimonials</div>
           <div className="testimonials-heading-grid">
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               Trusted by People<br /><span style={{ color: 'var(--faint)' }}>Changing the World.</span>
             </h2>
             <div>

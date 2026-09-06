@@ -44,7 +44,7 @@ export default function ComparisonTable() {
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(32px, 8vw, 80px)' }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>How We Compare</div>
-          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto', maxWidth: 800 }}>
+          <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto', maxWidth: 800 }}>
             Why Clients Choose Us<br />
             <span style={{ color: 'var(--faint)' }}>Over the Alternatives.</span>
           </h2>

@@ -84,7 +84,7 @@ export default function ProcessSection() {
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(16px, 3vw, 40px)', marginBottom: 'clamp(40px, 8vw, 100px)', flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>How We Work</div>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               From Idea to Launch<br />
               <span style={{ color: 'var(--faint)' }}>In 5 Proven Steps.</span>
             </h2>
@@ -158,7 +158,7 @@ export default function ProcessSection() {
 
                 {/* Title + Desc */}
                 <div>
-                  <h3 style={{ fontSize: 'clamp(18px, 3.5vw, 22px)', fontWeight: 600, color: 'var(--ink)', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
+                  <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 600, color: 'var(--ink)', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
                   <p style={{ fontSize: 'clamp(14px, 2.5vw, 15px)', color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
                 </div>
 

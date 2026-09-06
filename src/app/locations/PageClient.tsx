@@ -72,7 +72,7 @@ export default function LocationsIndexPage() {
   return (
     <>
       <Navbar />
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding loc-city-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '70vh', display: 'flex', alignItems: 'center' }}>
@@ -82,7 +82,7 @@ export default function LocationsIndexPage() {
             <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               Our Locations
             </div>
-            <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+            <h1 className="reveal" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
               <span style={{ color: 'var(--brand)' }}>12 Locations</span> Across Canada
             </h1>
             <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
@@ -103,7 +103,7 @@ export default function LocationsIndexPage() {
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Find Us Near You</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Find Us Near You</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Select a city to learn more about our local presence and services.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
@@ -111,7 +111,7 @@ export default function LocationsIndexPage() {
                 <Link key={city.slug} href={`/locations/${city.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
-                      <h3 style={{ fontWeight: 700, fontSize: '1.3rem' }}>{city.name}</h3>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.3rem' }}>{city.name}</h3>
                       {city.slug === 'edmonton' && (
                         <span style={{ background: 'rgba(245,41,13,0.1)', borderRadius: 8, padding: '4px 12px', fontSize: 12, color: 'var(--brand)', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>HQ</span>
                       )}
@@ -128,8 +128,8 @@ export default function LocationsIndexPage() {
               padding: '80px 0 0',
             }}>
               <h2 style={{
-                fontSize: 'clamp(1.5rem, 3vw, 2.2rem)',
-                fontWeight: 700,
+                fontSize: 'var(--fs-h3)',
+                fontWeight: 600,
                 color: 'var(--ink)',
                 letterSpacing: '-0.03em',
                 marginBottom: 16,
@@ -158,7 +158,7 @@ export default function LocationsIndexPage() {
         <section ref={s2} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, lineHeight: 1.15, marginBottom: '1.5rem' }}>
                 Ready to Build <span style={{ color: 'var(--brand)' }}>Something Great?</span>
               </h2>
               <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>

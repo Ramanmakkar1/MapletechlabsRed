@@ -9,7 +9,7 @@ export default function RamanMakkarPageClient() {
     <>
       <Navbar />
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', minHeight: '100vh' }}>
-        <div className="cb-container" style={{ paddingTop: 100 }}>
+        <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
             { label: 'About', href: '/about' },
@@ -18,7 +18,7 @@ export default function RamanMakkarPageClient() {
         </div>
 
         {/* Hero */}
-        <section style={{ padding: 'clamp(40px, 5vw, 80px) 0' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container" style={{ maxWidth: 800 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginBottom: 40 }}>
               <div style={{
@@ -28,7 +28,7 @@ export default function RamanMakkarPageClient() {
                 fontSize: 28, fontWeight: 700, color: '#fff',
               }}>RM</div>
               <div>
-                <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 700, letterSpacing: '-0.03em', margin: 0 }}>
+                <h1 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.03em', margin: 0 }}>
                   Raman Makkar
                 </h1>
                 <p style={{ fontSize: 16, color: 'var(--brand)', fontWeight: 600, margin: '4px 0 0' }}>CEO & Founder, Mapletech Labs</p>
@@ -52,7 +52,7 @@ export default function RamanMakkarPageClient() {
 
             {/* Expertise */}
             <div style={{ marginTop: 48 }}>
-              <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 20 }}>Areas of Expertise</h2>
+              <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20 }}>Areas of Expertise</h2>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
                 {['Full-Stack Development', 'AI & Machine Learning', 'Cloud Architecture (AWS/GCP)', 'Mobile App Development', 'SaaS Product Strategy', 'Team Leadership', 'Digital Transformation', 'DevOps & CI/CD', 'Agile Methodology', 'Product Design'].map((skill) => (
                   <span key={skill} style={{
@@ -66,7 +66,7 @@ export default function RamanMakkarPageClient() {
 
             {/* Articles */}
             <div style={{ marginTop: 48 }}>
-              <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 20 }}>Published Articles</h2>
+              <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20 }}>Published Articles</h2>
               <div style={{ display: 'grid', gap: 12 }}>
                 {[
                   { title: 'Top 10 AI Development Companies in Canada', href: '/blog/ai-development-companies-canada' },
@@ -89,7 +89,7 @@ export default function RamanMakkarPageClient() {
 
             {/* CTA */}
             <div style={{ marginTop: 60, padding: '40px', borderRadius: 24, background: 'var(--surface-alt)', border: '1px solid var(--line)', textAlign: 'center' }}>
-              <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 12 }}>Work With Raman</h2>
+              <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 12 }}>Work With Raman</h2>
               <p style={{ fontSize: 15, color: 'var(--muted)', marginBottom: 24 }}>
                 Have a project in mind? Get a free consultation directly with the founder.
               </p>

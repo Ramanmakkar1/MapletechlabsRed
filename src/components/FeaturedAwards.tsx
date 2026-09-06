@@ -118,7 +118,7 @@ export default function FeaturedAwards() {
   }, []);
 
   return (
-    <section ref={ref} id="awards" style={{ background: 'var(--surface-ink)', padding: '80px 0 100px', borderTop: '1px solid var(--line-ink)', position: 'relative', overflow: 'hidden' }}>
+    <section ref={ref} id="awards" style={{ background: 'var(--surface-ink)', padding: 'var(--section-y) 0', borderTop: '1px solid var(--line-ink)', position: 'relative', overflow: 'hidden' }}>
       {/* Subtle radial glow */}
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 800, height: 400, background: 'transparent', pointerEvents: 'none' }} />
 
@@ -129,7 +129,7 @@ export default function FeaturedAwards() {
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 16 }}>
             Recognition & Certifications
           </div>
-          <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: '0 auto', maxWidth: 600 }}>
+          <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: '0 auto', maxWidth: 600 }}>
             Trusted, Verified &<br /><span style={{ color: 'rgba(255,255,255,0.38)' }}>Globally Recognised.</span>
           </h2>
         </div>

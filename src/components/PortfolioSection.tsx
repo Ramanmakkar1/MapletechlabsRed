@@ -86,7 +86,7 @@ export default function PortfolioSection() {
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 'clamp(40px, 8vw, 80px)', gap: 'clamp(20px, 4vw, 40px)', flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Case Studies</div>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               Engineering Impact<br /><span style={{ color: 'var(--faint)' }}>At Scale.</span>
             </h2>
           </div>
@@ -101,7 +101,7 @@ export default function PortfolioSection() {
           <div style={{ padding: 'clamp(40px,6vw,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: 'var(--surface-alt)' }}>
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>{p.client}</div>
-              <h3 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>{p.title}</h3>
+              <h3 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>{p.title}</h3>
               <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.7, maxWidth: 480 }}>{p.description}</p>
             </div>
             <div>

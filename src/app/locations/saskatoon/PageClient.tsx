@@ -69,14 +69,14 @@ export default function SaskatoonPage() {
   return (
     <>
       <Navbar />
-      <div className="cb-container" style={{ paddingTop: 100 }}>
+      <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
         <Breadcrumb items={[
           { label: 'Home', href: '/' },
           { label: 'Locations', href: '/locations' },
           { label: 'Saskatoon' },
         ]} />
       </div>
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding loc-city-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
@@ -86,7 +86,7 @@ export default function SaskatoonPage() {
             <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               Saskatoon, Saskatchewan
             </div>
-            <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+            <h1 className="reveal" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
               Software Development in <span style={{ color: 'var(--brand)' }}>Saskatoon</span>
             </h1>
             <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
@@ -115,7 +115,7 @@ export default function SaskatoonPage() {
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Saskatoon</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Our Services in Saskatoon</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Custom software for mining, agriculture, biotech, and Prairie enterprise.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
@@ -123,7 +123,7 @@ export default function SaskatoonPage() {
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
                     <div style={{ color: 'var(--brand)', fontSize: '1.2rem', marginBottom: '0.75rem' }}>&rarr;</div>
-                    <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
                     <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
                   </Card>
                 </Link>
@@ -137,7 +137,7 @@ export default function SaskatoonPage() {
           <div className="cb-container">
             <div className="reveal" style={{ border: '1px solid rgba(245,41,13,0.15)', borderRadius: 32, background: 'rgba(245,41,13,0.03)', padding: 'clamp(2rem, 4vw, 3rem)' }}>
               <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Saskatoon &amp; Saskatchewan by the Numbers</h2>
+                <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Saskatoon &amp; Saskatchewan by the Numbers</h2>
                 <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Digitizing the resource and agricultural sectors across the Prairies.</p>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
@@ -161,7 +161,7 @@ export default function SaskatoonPage() {
         <section ref={s3} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Saskatoon</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Saskatoon</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Prairie-smart software built by a team that understands resource industries.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
@@ -172,7 +172,7 @@ export default function SaskatoonPage() {
                 { title: 'Remote & Rugged Operations', desc: 'Saskatchewan\'s resource operations span vast, remote territories. We build offline-first mobile apps, satellite-connected IoT systems, and rugged field tools that work reliably in extreme conditions.' },
               ].map(w => (
                 <Card key={w.title}>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
+                  <h3 style={{ fontWeight: 600, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
                   <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
                 </Card>
               ))}
@@ -184,7 +184,7 @@ export default function SaskatoonPage() {
         <section ref={s4} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, lineHeight: 1.15, marginBottom: '1.5rem' }}>
                 Start Your Project in <span style={{ color: 'var(--brand)' }}>Saskatoon</span>
               </h2>
               <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
@@ -208,9 +208,9 @@ export default function SaskatoonPage() {
         </section>
 
         {/* Why Saskatoon for Tech */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Saskatoon for Tech</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Saskatoon for Tech</h2>
             <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Saskatoon is emerging as a tech hub fueled by world-class research institutions and resource-sector innovation.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
@@ -224,9 +224,9 @@ export default function SaskatoonPage() {
         </section>
 
         {/* Saskatoon Areas We Serve */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Saskatoon Areas We Serve</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Saskatoon Areas We Serve</h2>
             <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>We work with businesses across Saskatoon and surrounding Saskatchewan communities.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
               {[
@@ -242,9 +242,9 @@ export default function SaskatoonPage() {
         </section>
 
         {/* Saskatoon Client Success Stories */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Saskatoon Client Success Stories</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Saskatoon Client Success Stories</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
               {[
                 { title: 'Mining Analytics Platform', metric: '35% cost reduction', desc: 'Built a real-time mining operations dashboard for a Saskatchewan potash producer, reducing equipment downtime and optimizing extraction workflows.' },
@@ -256,9 +256,9 @@ export default function SaskatoonPage() {
         </section>
 
         {/* Saskatoon Tech Focus */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Saskatoon Tech Focus</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Saskatoon Tech Focus</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
                 { t: 'Mining & Resources', d: 'IoT sensors, predictive maintenance dashboards, and resource extraction analytics for Saskatchewan\'s mining sector.' },
@@ -271,9 +271,9 @@ export default function SaskatoonPage() {
         </section>
 
         {/* All Services in City */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
               Our Services in Saskatoon
             </h2>
             <p style={{ fontSize: 15, color: 'var(--muted)', textAlign: 'center', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>

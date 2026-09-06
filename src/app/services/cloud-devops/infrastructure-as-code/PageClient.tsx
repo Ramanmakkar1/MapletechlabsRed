@@ -75,7 +75,7 @@ export default function PageClient() {
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', fontFamily: 'inherit' }}>
 
         {/* HERO */}
-        <section ref={heroRef} style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', paddingTop: 140, paddingBottom: 80, background: 'transparent' }}>
+        <section ref={heroRef} style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', paddingTop: 'var(--section-y)', paddingBottom: 'var(--section-y)', background: 'transparent' }}>
           <div className="cb-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: 'clamp(24px, 5vw, 60px)', alignItems: 'center' }}>
               <div>
@@ -90,7 +90,7 @@ export default function PageClient() {
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand)', display: 'inline-block' }} />
               <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--brand)', letterSpacing: '0.05em' }}>CLOUD & DEVOPS</span>
             </div>
-            <h1 className="reveal reveal-d2" style={{ fontSize: 'clamp(36px, 6vw, 72px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 800 }}>
+            <h1 className="reveal reveal-d2" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 800 }}>
               Infrastructure as Code That <span style={{ color: 'var(--brand)' }}>Eliminates Drift</span>
             </h1>
             <p className="reveal reveal-d3" style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7, maxWidth: 600, marginBottom: 40 }}>We turn your cloud infrastructure into version-controlled, reproducible, auditable code — so every environment is consistent and every change is reviewed.</p>
@@ -118,17 +118,17 @@ export default function PageClient() {
         </section>
 
         {/* WHAT WE OFFER */}
-        <section ref={s1} style={{ padding: '100px 0', background: 'var(--surface-alt)' }}>
+        <section ref={s1} style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
               <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 12 }}>What We Offer</div>
-              <h2 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, letterSpacing: '-0.03em' }}>Our Capabilities</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.03em' }}>Our Capabilities</h2>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 24 }}>
               {services.map((svc, i) => (
                 <div key={svc.title} className={`reveal reveal-d${Math.min(i + 1, 4)}`} style={{ padding: '32px', borderRadius: 20, border: '1px solid var(--line)', background: 'var(--surface-alt)' }}>
                   <div style={{ fontSize: 32, marginBottom: 16 }}>{svc.icon}</div>
-                  <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 12, letterSpacing: '-0.02em' }}>{svc.title}</h3>
+                  <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12, letterSpacing: '-0.02em' }}>{svc.title}</h3>
                   <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7 }}>{svc.desc}</p>
                 </div>
               ))}
@@ -137,17 +137,17 @@ export default function PageClient() {
         </section>
 
         {/* PROCESS */}
-        <section ref={s2} style={{ padding: '100px 0' }}>
+        <section ref={s2} style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
               <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 12 }}>Our Process</div>
-              <h2 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, letterSpacing: '-0.03em' }}>How We Work</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.03em' }}>How We Work</h2>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
               {steps.map((step, i) => (
                 <div key={step.num} className={`reveal reveal-d${i + 1}`} style={{ padding: '32px', borderRadius: 20, border: '1px solid var(--line)', background: 'var(--surface-alt)' }}>
                   <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--brand)', letterSpacing: '0.1em', marginBottom: 16 }}>{step.num}</div>
-                  <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 12, letterSpacing: '-0.02em' }}>{step.title}</h3>
+                  <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12, letterSpacing: '-0.02em' }}>{step.title}</h3>
                   <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7 }}>{step.desc}</p>
                 </div>
               ))}
@@ -156,11 +156,11 @@ export default function PageClient() {
         </section>
 
         {/* FAQ */}
-        <section ref={s3} style={{ padding: '100px 0', background: 'var(--surface-alt)' }}>
+        <section ref={s3} style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
           <div className="cb-container" style={{ maxWidth: 800 }}>
             <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
               <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 12 }}>FAQ</div>
-              <h2 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, letterSpacing: '-0.03em' }}>Common Questions</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.03em' }}>Common Questions</h2>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {faqs.map((faq, i) => (
@@ -179,9 +179,9 @@ export default function PageClient() {
         </section>
 
         {/* CTA */}
-        <section ref={s4} style={{ padding: '120px 0', textAlign: 'center', background: 'transparent' }}>
+        <section ref={s4} style={{ padding: 'var(--section-y) 0', textAlign: 'center', background: 'transparent' }}>
           <div className="cb-container">
-            <h2 className="reveal" style={{ fontSize: 'clamp(32px, 5vw, 60px)', fontWeight: 800, letterSpacing: '-0.04em', marginBottom: 20 }}>Ready to Get Started?</h2>
+            <h2 className="reveal" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.04em', marginBottom: 20 }}>Ready to Get Started?</h2>
             <p className="reveal reveal-d1" style={{ fontSize: 18, color: 'var(--muted)', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>Let's discuss your project and build something great together.</p>
             <div className="reveal reveal-d2" style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 56, padding: '0 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 16, fontWeight: 700, textDecoration: 'none' }}>

@@ -86,7 +86,7 @@ export default function DigitalMarketingPage() {
         .reveal-d5 { transition-delay: 0.5s; }
       `}</style>
       <Navbar />
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -96,7 +96,7 @@ export default function DigitalMarketingPage() {
         </div>
 
         {/* HERO */}
-        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 8vw, 100px) 0 clamp(60px, 8vw, 120px)', borderBottom: '1px solid var(--line)' }}>
+        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,17,24,0.035) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', top: '30%', left: '5%', width: 600, height: 600, background: 'transparent', filter: 'blur(60px)', pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
@@ -107,7 +107,7 @@ export default function DigitalMarketingPage() {
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 8px #f5290d' }} />
                   <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Digital Marketing</span>
                 </div>
-                <h1 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.8rem,5vw,5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 24px', maxWidth: 700 }}>
+                <h1 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 24px', maxWidth: 700 }}>
                   We Market Brands That <span style={{ color: 'var(--brand)' }}>Get Found.</span>
                 </h1>
                 <p className="reveal reveal-d2" style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, maxWidth: 520, margin: '0 0 40px' }}>
@@ -136,7 +136,7 @@ export default function DigitalMarketingPage() {
           <div className="cb-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))' }}>
               {stats.map((s, i) => (
-                <div key={i} className="reveal" style={{ padding: 'clamp(28px, 4vw, 48px) 0', borderRight: i < 3 ? '1px solid var(--line)' : 'none', paddingLeft: i > 0 ? 'clamp(16px, 3vw, 40px)' : 0, transitionDelay: `${i * 0.08}s` }}>
+                <div key={i} className="reveal" style={{ padding: 'var(--section-y) 0', borderRight: i < 3 ? '1px solid var(--line)' : 'none', paddingLeft: i > 0 ? 'clamp(16px, 3vw, 40px)' : 0, transitionDelay: `${i * 0.08}s` }}>
                   <div style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 600, color: 'var(--brand)', letterSpacing: '-0.03em', lineHeight: 1 }}>{s.value}</div>
                   <div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{s.label}</div>
                 </div>
@@ -151,7 +151,7 @@ export default function DigitalMarketingPage() {
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>What We Do</span>
             </div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 16px' }}>Full-Funnel Marketing Services</h2>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 16px' }}>Full-Funnel Marketing Services</h2>
             <p className="reveal reveal-d2" style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 520, margin: '0 0 56px', lineHeight: 1.7 }}>Every channel, every tactic — all working together to grow your pipeline and revenue.</p>
             {/* Service Cards */}
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: 20 }}>
@@ -161,7 +161,7 @@ export default function DigitalMarketingPage() {
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,#f5290d,transparent)' }} />
                   <div style={{ fontSize: 32, marginBottom: 20 }}>{s.icon}</div>
-                  <h3 style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
+                  <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
                   <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
                 </div>
               ))}
@@ -175,7 +175,7 @@ export default function DigitalMarketingPage() {
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>How We Work</span>
             </div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 60px' }}>Our Growth Process</h2>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 60px' }}>Our Growth Process</h2>
             <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 0 }}>
               <div style={{ position: 'absolute', top: 24, bottom: 24, left: 23, width: 1, background: 'var(--brand-tint)', zIndex: 0 }} />
               {steps.map((step, i) => (
@@ -197,7 +197,7 @@ export default function DigitalMarketingPage() {
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Results</span>
             </div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 48px' }}>Numbers That Speak</h2>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 48px' }}>Numbers That Speak</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
               {results.map((r, i) => (
                 <div key={i} className="reveal" style={{ background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.12)', borderRadius: 24, padding: '40px 32px', transitionDelay: `${i * 0.1}s` }}>
@@ -216,7 +216,7 @@ export default function DigitalMarketingPage() {
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>FAQ</span>
             </div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 48px' }}>Common Questions</h2>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 48px' }}>Common Questions</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {faqs.map((faq, i) => (
                 <div key={i} className="reveal" style={{ background: openFaq === i ? 'rgba(245,41,13,0.04)' : 'rgba(20,17,24,0.035)', border: `1px solid ${openFaq === i ? 'rgba(245,41,13,0.2)' : 'var(--line)'}`, borderRadius: 20, overflow: 'hidden', transition: '0.3s', transitionDelay: `${i * 0.06}s` }}>
@@ -234,9 +234,9 @@ export default function DigitalMarketingPage() {
         </section>
 
         {/* Tools & Platforms */}
-        <section ref={s7} style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderBottom: '1px solid var(--line)' }}>
+        <section ref={s7} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 className="reveal" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+            <h2 className="reveal" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
               Our Marketing Toolkit
             </h2>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
@@ -260,9 +260,9 @@ export default function DigitalMarketingPage() {
         </section>
 
         {/* Industry Applications */}
-        <section ref={s8} style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderBottom: '1px solid var(--line)' }}>
+        <section ref={s8} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 className="reveal" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16, textAlign: 'center' }}>
+            <h2 className="reveal" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16, textAlign: 'center' }}>
               Marketing for Every Industry
             </h2>
             <p className="reveal reveal-d1" style={{ fontSize: 15, color: 'var(--muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 40px' }}>
@@ -294,11 +294,11 @@ export default function DigitalMarketingPage() {
         </section>
 
         {/* Get a Quote */}
-        <section ref={s9} style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderBottom: '1px solid var(--line)' }}>
+        <section ref={s9} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 20 }}>Pricing</div>
-              <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.05, margin: '0 0 16px' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.05, margin: '0 0 16px' }}>
                 Every Campaign Is Unique
               </h2>
               <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 40 }}>
@@ -312,7 +312,7 @@ export default function DigitalMarketingPage() {
         </section>
 
         {/* Industries We Serve */}
-        <section style={{ padding: '60px 0' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container" style={{ textAlign: 'center' }}>
             <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 24 }}>Industries We Serve</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12 }}>
@@ -347,7 +347,7 @@ export default function DigitalMarketingPage() {
               <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 8px #f5290d' }} />
               <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Get Started</span>
             </div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 0 24px' }}>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 0 24px' }}>
               Ready to <span style={{ color: 'var(--brand)' }}>Dominate</span> Your Market?
             </h2>
             <p className="reveal reveal-d2" style={{ fontSize: 17, color: 'var(--muted)', maxWidth: 480, margin: '0 auto 40px', lineHeight: 1.75 }}>

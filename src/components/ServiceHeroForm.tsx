@@ -72,7 +72,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
       <div style={{ position: 'absolute', top: -1, left: '20%', right: '20%', height: 2, background: 'var(--brand)', borderRadius: 2 }} />
 
       <div style={{ marginBottom: 28 }}>
-        <h3 style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 6 }}>
+        <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 6 }}>
           Get Your Custom Project Plan
         </h3>
         <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5, margin: 0 }}>
@@ -83,7 +83,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
       {submitted ? (
         <div role="status" aria-live="polite" style={{ textAlign: 'center', padding: '40px 20px' }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>&#10003;</div>
-          <h3 style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)', marginBottom: 12 }}>
+          <h3 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
             Request Received!
           </h3>
           <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto' }}>

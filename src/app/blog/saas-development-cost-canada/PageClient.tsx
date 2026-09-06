@@ -52,7 +52,7 @@ export default function SaasDevelopmentCostCanadaClient() {
     <>
       <Navbar />
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
-        <div className="cb-container" style={{ paddingTop: 100 }}>
+        <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },
@@ -61,7 +61,7 @@ export default function SaasDevelopmentCostCanadaClient() {
         </div>
 
         {/* ── ARTICLE HERO ── */}
-        <section style={{ padding: 'clamp(100px, 15vw, 140px) 0 clamp(32px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
@@ -104,7 +104,7 @@ export default function SaasDevelopmentCostCanadaClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               How Much Does It Cost to Build a SaaS Product in Canada? (2026)
@@ -163,8 +163,8 @@ export default function SaasDevelopmentCostCanadaClient() {
         </section>
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
               {/* ── MAIN ARTICLE ── */}
@@ -189,7 +189,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                 {/* SaaS Cost Tiers */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="cost-tiers">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>SaaS Cost Tiers in Canada</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
@@ -210,7 +210,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                       }}>Tier 1</span>
                       <span style={{ fontSize: 13, color: 'var(--faint)', fontWeight: 600 }}>3 - 4 months</span>
                     </div>
-                    <h3 style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>MVP / Proof of Concept</h3>
+                    <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>MVP / Proof of Concept</h3>
                     <p style={{ fontSize: 28, fontWeight: 800, color: 'var(--brand)', marginBottom: 16, letterSpacing: '-0.02em' }}>$30,000 - $75,000</p>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
                       A functional prototype with core features: user authentication, one primary workflow, basic dashboard, Stripe billing integration, and a clean responsive UI. Perfect for validating your idea with early adopters, securing initial funding, or testing product-market fit. This tier typically includes 3-5 core screens and a single user role.
@@ -230,7 +230,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                       }}>Tier 2</span>
                       <span style={{ fontSize: 13, color: 'var(--faint)', fontWeight: 600 }}>4 - 8 months</span>
                     </div>
-                    <h3 style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>Growth Stage SaaS</h3>
+                    <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>Growth Stage SaaS</h3>
                     <p style={{ fontSize: 28, fontWeight: 800, color: '#6D28D9', marginBottom: 16, letterSpacing: '-0.02em' }}>$75,000 - $200,000</p>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
                       A production-ready platform with multi-tenant architecture, role-based access control, team management, advanced billing with plan tiers, third-party integrations (Slack, Zapier, HubSpot), analytics dashboards, email notifications, and a comprehensive admin panel. This is the stage where most funded Canadian startups begin scaling to their first 100 paying customers.
@@ -250,7 +250,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                       }}>Tier 3</span>
                       <span style={{ fontSize: 13, color: 'var(--faint)', fontWeight: 600 }}>8 - 18 months</span>
                     </div>
-                    <h3 style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>Enterprise SaaS</h3>
+                    <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>Enterprise SaaS</h3>
                     <p style={{ fontSize: 28, fontWeight: 800, color: '#047857', marginBottom: 16, letterSpacing: '-0.02em' }}>$200,000 - $500,000+</p>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
                       A fully-scaled enterprise platform with SSO/SAML authentication, SOC 2 compliance readiness, custom API with rate limiting and versioning, white-label capabilities, advanced reporting with data exports, audit logs, multi-region deployment, dedicated onboarding workflows, and SLA-backed infrastructure. Built for companies targeting enterprise contracts of $50K+ ARR per client.
@@ -261,7 +261,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                 {/* Core Cost Components */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="core-components">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Core Cost Components</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
@@ -284,7 +284,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                       <div style={{ flexShrink: 0, width: 4, borderRadius: 4, background: 'var(--brand)', opacity: 0.5 }} />
                       <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
-                          <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>{item.title}</h3>
+                          <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>{item.title}</h3>
                           <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>{item.cost}</span>
                         </div>
                         <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>{item.desc}</p>
@@ -296,7 +296,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                 {/* Monthly Recurring Costs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="monthly-costs">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Monthly Recurring Costs</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
@@ -314,7 +314,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                       background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     }}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8, flexWrap: 'wrap', gap: 8 }}>
-                        <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>{item.name}</h3>
+                        <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>{item.name}</h3>
                         <span style={{ fontSize: 14, color: 'var(--brand)', fontWeight: 700 }}>{item.range}</span>
                       </div>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>{item.detail}</p>
@@ -325,7 +325,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                 {/* Build vs Buy */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="build-vs-buy">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Build vs Buy: When to Use Existing Tools</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
@@ -350,7 +350,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                 {/* Tech Stack */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="tech-stack">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>The Tech Stack That Matters</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
@@ -362,7 +362,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                     border: '1px solid rgba(245,41,13,0.3)',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>
-                    <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', marginBottom: 20 }}>Our Recommended SaaS Stack</h3>
+                    <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', marginBottom: 20 }}>Our Recommended SaaS Stack</h3>
                     {[
                       { layer: 'Frontend', tech: 'Next.js + TypeScript + Tailwind CSS', why: 'Server-side rendering for SEO, React ecosystem for hiring, TypeScript for reliability at scale.' },
                       { layer: 'Backend', tech: 'Node.js + Express or tRPC', why: 'Shared language with frontend reduces context switching. Massive npm ecosystem for rapid feature development.' },
@@ -394,7 +394,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                 {/* Canadian SaaS Funding */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="funding">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Canadian SaaS Funding Landscape</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
@@ -414,7 +414,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                 {/* How Mapletech Labs Builds SaaS */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="our-process">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>How Mapletech Labs Builds SaaS: Our 5-Phase Process</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
@@ -443,7 +443,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                       </div>
                       <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8, flexWrap: 'wrap' }}>
-                          <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>{item.name}</h3>
+                          <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>{item.name}</h3>
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 600 }}>{item.duration}</span>
                           <span style={{ fontSize: 13, color: item.color, fontWeight: 700 }}>{item.cost}</span>
                         </div>
@@ -559,8 +559,8 @@ export default function SaasDevelopmentCostCanadaClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div
               className="reveal"
               style={{
@@ -576,7 +576,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get Your Estimate</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                  fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Get Your SaaS Cost Estimate

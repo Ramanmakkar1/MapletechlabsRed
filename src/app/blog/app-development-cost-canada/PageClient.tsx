@@ -53,7 +53,7 @@ export default function AppDevelopmentCostCanadaClient() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* ── ARTICLE HERO ── */}
-        <section style={{ padding: 'clamp(100px, 15vw, 140px) 0 clamp(32px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
@@ -96,7 +96,7 @@ export default function AppDevelopmentCostCanadaClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               How Much Does It Cost to Build a Mobile App in Canada? (2026 Guide)
@@ -155,8 +155,8 @@ export default function AppDevelopmentCostCanadaClient() {
         </section>
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
               {/* ── MAIN ARTICLE ── */}
@@ -165,7 +165,7 @@ export default function AppDevelopmentCostCanadaClient() {
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="why-costs-vary">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Why App Development Costs Vary So Wildly in Canada</h2>
                   <p style={{
@@ -185,7 +185,7 @@ export default function AppDevelopmentCostCanadaClient() {
                 {/* Cost Breakdown */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="cost-breakdown">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>The Real Cost Breakdown for 2026</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
@@ -205,7 +205,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       }}>Simple App / MVP</span>
                     </div>
                     <h3 style={{
-                      fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, color: '#047857',
+                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#047857',
                       letterSpacing: '-0.03em', marginBottom: 16,
                     }}>$25,000 &ndash; $50,000</h3>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
@@ -235,7 +235,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       }}>Medium Complexity</span>
                     </div>
                     <h3 style={{
-                      fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, color: '#1D4ED8',
+                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#1D4ED8',
                       letterSpacing: '-0.03em', marginBottom: 16,
                     }}>$50,000 &ndash; $150,000</h3>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
@@ -265,7 +265,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       }}>Complex Enterprise</span>
                     </div>
                     <h3 style={{
-                      fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, color: '#6D28D9',
+                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#6D28D9',
                       letterSpacing: '-0.03em', marginBottom: 16,
                     }}>$150,000 &ndash; $500,000+</h3>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
@@ -286,7 +286,7 @@ export default function AppDevelopmentCostCanadaClient() {
                 {/* Factors Affecting Cost */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="factors-affecting-cost">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>7 Factors That Directly Affect Your App Cost</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 28 }}>
@@ -312,7 +312,7 @@ export default function AppDevelopmentCostCanadaClient() {
                         flexShrink: 0, width: 28,
                       }}>{factor.num}</span>
                       <div>
-                        <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{factor.title}</h3>
+                        <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{factor.title}</h3>
                         <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>{factor.desc}</p>
                       </div>
                     </div>
@@ -322,7 +322,7 @@ export default function AppDevelopmentCostCanadaClient() {
                 {/* Platform Comparison */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="platform-comparison">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>iOS vs Android vs Cross-Platform: Cost Comparison</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 28 }}>
@@ -339,7 +339,7 @@ export default function AppDevelopmentCostCanadaClient() {
                         background: 'var(--surface-alt)', border: '1px solid var(--line)',
                         borderRadius: 20, padding: 24,
                       }}>
-                        <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', marginBottom: 4 }}>{p.platform}</h3>
+                        <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', marginBottom: 4 }}>{p.platform}</h3>
                         <p style={{ fontSize: 12, color: 'var(--faint)', marginBottom: 16 }}>{p.lang}</p>
                         <p style={{ fontSize: 20, fontWeight: 800, color: 'var(--brand)', marginBottom: 16 }}>{p.cost}</p>
                         <p style={{ fontSize: 13, color: 'rgba(52,211,153,0.8)', marginBottom: 6 }}>+ {p.pros}</p>
@@ -356,7 +356,7 @@ export default function AppDevelopmentCostCanadaClient() {
                 {/* Hourly Rates */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="hourly-rates">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Canadian Rates vs Offshore: Why Quality Matters</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 28 }}>
@@ -370,7 +370,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
                       borderRadius: 20, padding: 28,
                     }}>
-                      <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--brand)', marginBottom: 12 }}>Canadian Agencies</h3>
+                      <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)', marginBottom: 12 }}>Canadian Agencies</h3>
                       <p style={{ fontSize: 24, fontWeight: 800, color: 'var(--ink)', marginBottom: 16 }}>$100 &ndash; $200/hr</p>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                         {['Same timezone & language', 'PIPEDA compliance built-in', 'Accountable legal framework', 'IP protection under Canadian law', 'Face-to-face meetings possible', 'Long-term partnership model'].map(item => (
@@ -384,7 +384,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       background: 'var(--surface-alt)', border: '1px solid var(--line)',
                       borderRadius: 20, padding: 28,
                     }}>
-                      <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--muted)', marginBottom: 12 }}>Offshore Agencies</h3>
+                      <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--muted)', marginBottom: 12 }}>Offshore Agencies</h3>
                       <p style={{ fontSize: 24, fontWeight: 800, color: 'var(--ink)', marginBottom: 16 }}>$25 &ndash; $50/hr</p>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                         {['Significant timezone gaps', 'May not understand Canadian regulations', 'Limited legal recourse', 'IP ownership can be murky', 'Communication barriers', 'Higher project management overhead'].map(item => (
@@ -404,7 +404,7 @@ export default function AppDevelopmentCostCanadaClient() {
                 {/* Hidden Costs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="hidden-costs">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Hidden Costs Most Agencies Won&apos;t Tell You About</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 28 }}>
@@ -425,7 +425,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       borderBottom: '1px solid var(--line)',
                     }}>
                       <div style={{ flex: 1, paddingRight: 20 }}>
-                        <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--ink)', marginBottom: 6 }}>{item.title}</h3>
+                        <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 6 }}>{item.title}</h3>
                         <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
                       </div>
                       <span style={{
@@ -458,7 +458,7 @@ export default function AppDevelopmentCostCanadaClient() {
                           }}>Our Approach</span>
                         </div>
                         <h2 style={{
-                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                          fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                           letterSpacing: '-0.03em', margin: 0,
                         }}>How Mapletech Labs Approaches Pricing</h2>
                       </div>
@@ -491,7 +491,7 @@ export default function AppDevelopmentCostCanadaClient() {
                 {/* Edmonton Advantage */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="edmonton-advantage">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Why Edmonton-Based Development Saves You 20-30%</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
@@ -619,8 +619,8 @@ export default function AppDevelopmentCostCanadaClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div
               className="reveal"
               style={{
@@ -636,7 +636,7 @@ export default function AppDevelopmentCostCanadaClient() {
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get Started</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                  fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Get a Free App Cost Estimate

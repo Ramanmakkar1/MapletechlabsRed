@@ -69,14 +69,14 @@ export default function HalifaxPage() {
   return (
     <>
       <Navbar />
-      <div className="cb-container" style={{ paddingTop: 100 }}>
+      <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
         <Breadcrumb items={[
           { label: 'Home', href: '/' },
           { label: 'Locations', href: '/locations' },
           { label: 'Halifax' },
         ]} />
       </div>
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding loc-city-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
@@ -86,7 +86,7 @@ export default function HalifaxPage() {
             <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               Halifax, Nova Scotia
             </div>
-            <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+            <h1 className="reveal" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
               Software Development in <span style={{ color: 'var(--brand)' }}>Halifax.</span>
             </h1>
             <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
@@ -107,7 +107,7 @@ export default function HalifaxPage() {
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Halifax</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Our Services in Halifax</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Enterprise-grade solutions for Atlantic Canada&apos;s defence, ocean-tech, and startup sectors.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
@@ -115,7 +115,7 @@ export default function HalifaxPage() {
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ height: '100%' }}>
                     <div style={{ color: 'var(--brand)', fontSize: '1.2rem', marginBottom: '0.75rem' }}>&#8594;</div>
-                    <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: '0.75rem' }}>{s.title}</h3>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.2rem', marginBottom: '0.75rem' }}>{s.title}</h3>
                     <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
                   </Card>
                 </Link>
@@ -147,7 +147,7 @@ export default function HalifaxPage() {
         <section ref={s3} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Halifax</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Halifax</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Atlantic Canada&apos;s gateway to world-class software engineering.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
@@ -158,7 +158,7 @@ export default function HalifaxPage() {
                 { title: 'Proudly Canadian', desc: 'Canadian-owned, Canadian-operated. Your data stays in Canada, your IP is protected by Canadian law, and your project is managed by people who understand local business culture.' },
               ].map(w => (
                 <Card key={w.title}>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem', color: 'var(--brand)' }}>{w.title}</h3>
+                  <h3 style={{ fontWeight: 600, fontSize: '1.15rem', marginBottom: '0.75rem', color: 'var(--brand)' }}>{w.title}</h3>
                   <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
                 </Card>
               ))}
@@ -170,7 +170,7 @@ export default function HalifaxPage() {
         <section ref={s4} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, lineHeight: 1.15, marginBottom: '1.5rem' }}>
                 Start Your Project in <span style={{ color: 'var(--brand)' }}>Halifax.</span>
               </h2>
               <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
@@ -184,9 +184,9 @@ export default function HalifaxPage() {
         </section>
 
         {/* Why Halifax for Tech */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Halifax for Tech</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Halifax for Tech</h2>
             <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Halifax is Atlantic Canada&apos;s tech capital — a leader in ocean technology, defence, and clean energy with Volta innovation hub driving the ecosystem.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
@@ -200,9 +200,9 @@ export default function HalifaxPage() {
         </section>
 
         {/* Halifax Areas */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Atlantic Canada Areas We Serve</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Atlantic Canada Areas We Serve</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
               {[
                 { n: 'Downtown / Waterfront', d: 'Halifax\'s tech core — Volta hub, ocean tech companies, and startup offices.' },
@@ -219,9 +219,9 @@ export default function HalifaxPage() {
         </section>
 
         {/* Halifax Client Stories */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Halifax Client Success Stories</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Halifax Client Success Stories</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
               {[
                 { title: 'Maritime Logistics Platform', metric: '40% faster port clearance', desc: 'Built a real-time cargo tracking and customs documentation platform for a Halifax shipping company, cutting port clearance times by 40%.' },
@@ -233,9 +233,9 @@ export default function HalifaxPage() {
         </section>
 
         {/* Halifax Tech Focus */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Halifax Tech Focus</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Halifax Tech Focus</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
                 { t: 'Ocean Technology', d: 'AUV control systems, marine sensor platforms, and oceanographic data analytics for Halifax\'s world-leading ocean tech cluster.' },
@@ -248,9 +248,9 @@ export default function HalifaxPage() {
         </section>
 
         {/* All Services in City */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
               Our Services in Halifax
             </h2>
             <p style={{ fontSize: 15, color: 'var(--muted)', textAlign: 'center', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>

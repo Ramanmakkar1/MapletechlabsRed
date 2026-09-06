@@ -49,7 +49,7 @@ export default function SaaSGuide2026Client() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* ── ARTICLE HERO ── */}
-        <section style={{ padding: 'clamp(100px, 15vw, 140px) 0 clamp(32px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
@@ -92,7 +92,7 @@ export default function SaaSGuide2026Client() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               From Idea to MRR: How to Build a Profitable SaaS in 2026
@@ -151,8 +151,8 @@ export default function SaaSGuide2026Client() {
         </section>
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
               {/* ── MAIN ARTICLE ── */}
@@ -173,7 +173,7 @@ export default function SaaSGuide2026Client() {
 
                 <div className="reveal" style={{ marginBottom: 56 }} id="definition">
                     <h2 style={{
-                        fontSize: 'clamp(1.5rem, 2.8vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                        fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                         letterSpacing: '-0.03em', marginBottom: 24,
                     }}>
                         What Exactly is a SaaS Business Model in 2026?
@@ -202,7 +202,7 @@ export default function SaaSGuide2026Client() {
 
                 <div className="reveal" style={{ marginBottom: 56 }} id="features">
                     <h2 style={{
-                        fontSize: 'clamp(1.5rem, 2.8vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                        fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                         letterSpacing: '-0.03em', marginBottom: 24,
                     }}>
                         How SaaS Companies Actually Earn Money
@@ -214,22 +214,22 @@ export default function SaaSGuide2026Client() {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
                         <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 20, padding: 24 }}>
                             <div style={{ width: 40, height: 40, borderRadius: 12, background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, marginBottom: 16 }}>📊</div>
-                            <h3 style={{ fontSize: 18, color: 'var(--ink)', fontWeight: 700, margin: '0 0 8px' }}>1. Tiered Pricing</h3>
+                            <h3 style={{ fontSize: 18, color: 'var(--ink)', fontWeight: 600, margin: '0 0 8px' }}>1. Tiered Pricing</h3>
                             <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0, lineHeight: 1.6 }}>The gold standard. Offer Basic, Pro, and Enterprise tiers. This captures small businesses early and upsells them.</p>
                         </div>
                         <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 20, padding: 24 }}>
                            <div style={{ width: 40, height: 40, borderRadius: 12, background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, marginBottom: 16 }}>⚡</div>
-                            <h3 style={{ fontSize: 18, color: 'var(--ink)', fontWeight: 700, margin: '0 0 8px' }}>2. Usage-Based</h3>
+                            <h3 style={{ fontSize: 18, color: 'var(--ink)', fontWeight: 600, margin: '0 0 8px' }}>2. Usage-Based</h3>
                             <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0, lineHeight: 1.6 }}>Charge based on usage (e.g., APIs, AI tokens, emails sent). This model has exploded in popularity in 2026.</p>
                         </div>
                         <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 20, padding: 24 }}>
                             <div style={{ width: 40, height: 40, borderRadius: 12, background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, marginBottom: 16 }}>🎁</div>
-                            <h3 style={{ fontSize: 18, color: 'var(--ink)', fontWeight: 700, margin: '0 0 8px' }}>3. Freemium</h3>
+                            <h3 style={{ fontSize: 18, color: 'var(--ink)', fontWeight: 600, margin: '0 0 8px' }}>3. Freemium</h3>
                             <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0, lineHeight: 1.6 }}>Offer a limited version for free to acquire users rapidly, then gate the most valuable features behind a paywall.</p>
                         </div>
                         <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 20, padding: 24 }}>
                             <div style={{ width: 40, height: 40, borderRadius: 12, background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, marginBottom: 16 }}>⏱️</div>
-                            <h3 style={{ fontSize: 18, color: 'var(--ink)', fontWeight: 700, margin: '0 0 8px' }}>4. Annual Contracts</h3>
+                            <h3 style={{ fontSize: 18, color: 'var(--ink)', fontWeight: 600, margin: '0 0 8px' }}>4. Annual Contracts</h3>
                             <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0, lineHeight: 1.6 }}>Securing upfront cash flow at a discount to fund your marketing and development bandwidth immediately.</p>
                         </div>
                     </div>
@@ -237,7 +237,7 @@ export default function SaaSGuide2026Client() {
 
                  <div className="reveal" style={{ marginBottom: 56 }} id="mistake">
                     <h2 style={{
-                        fontSize: 'clamp(1.5rem, 2.8vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                        fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                         letterSpacing: '-0.03em', marginBottom: 24,
                     }}>
                         The Biggest Mistake: Building Before Validating
@@ -258,7 +258,7 @@ export default function SaaSGuide2026Client() {
 
                 <div className="reveal" style={{ marginBottom: 56 }} id="stack">
                     <h2 style={{
-                        fontSize: 'clamp(1.5rem, 2.8vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                        fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                         letterSpacing: '-0.03em', marginBottom: 24,
                     }}>
                         Custom Software vs. No-Code in 2026
@@ -306,7 +306,7 @@ export default function SaaSGuide2026Client() {
 
                 <div className="reveal" style={{ marginBottom: 48 }} id="cost">
                     <h2 style={{
-                        fontSize: 'clamp(1.5rem, 2.8vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                        fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                         letterSpacing: '-0.03em', marginBottom: 24,
                     }}>
                         How Much Does it Cost?
@@ -427,8 +427,8 @@ export default function SaaSGuide2026Client() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div
               className="reveal"
               style={{
@@ -444,7 +444,7 @@ export default function SaaSGuide2026Client() {
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Start Building</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                  fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Building something ambitious?<br />Let's talk.
@@ -467,9 +467,9 @@ export default function SaaSGuide2026Client() {
         </section>
 
         {/* Related Articles */}
-        <section style={{ padding: '80px 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)', fontWeight: 700, color: 'var(--ink)', marginBottom: 32 }}>Related Articles</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related Articles</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {[
                 { title: 'SaaS Development Cost in Canada', href: '/blog/saas-development-cost-canada' },

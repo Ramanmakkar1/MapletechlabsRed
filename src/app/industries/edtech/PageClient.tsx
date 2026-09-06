@@ -63,7 +63,7 @@ export default function EdtechPage() {
   return (
     <>
       <Navbar />
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -80,7 +80,7 @@ export default function EdtechPage() {
             <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               Education Technology
             </div>
-            <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+            <h1 className="reveal" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
               We Build EdTech That <span style={{ color: 'var(--brand)' }}>Inspires Learning.</span>
             </h1>
             <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
@@ -109,7 +109,7 @@ export default function EdtechPage() {
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Key Challenges We Solve</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Key Challenges We Solve</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Engagement, scale, and personalisation — the three pillars of effective EdTech.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
@@ -120,7 +120,7 @@ export default function EdtechPage() {
               ].map(c => (
                 <Card key={c.title}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{c.icon}</div>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: '0.75rem' }}>{c.title}</h3>
+                  <h3 style={{ fontWeight: 600, fontSize: '1.2rem', marginBottom: '0.75rem' }}>{c.title}</h3>
                   <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{c.desc}</p>
                 </Card>
               ))}
@@ -132,7 +132,7 @@ export default function EdtechPage() {
         <section ref={s2} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Solutions</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Our Solutions</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Learning experiences built for outcomes, not just completion.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '1.5rem' }}>
@@ -146,7 +146,7 @@ export default function EdtechPage() {
               ].map(s => (
                 <Card key={s.title}>
                   <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{s.icon}</div>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
+                  <h3 style={{ fontWeight: 600, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
                   <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
                 </Card>
               ))}
@@ -161,7 +161,7 @@ export default function EdtechPage() {
               <div>
                 <div style={{ fontSize: 12, color: 'var(--faint)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
                 <div style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--brand)', marginBottom: '0.5rem' }}>LearnPath</div>
-                <h3 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.2 }}>500K learners, 85% completion rate — industry avg is 15%</h3>
+                <h3 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, marginBottom: '1rem', lineHeight: 1.2 }}>500K learners, 85% completion rate — industry avg is 15%</h3>
                 <p style={{ color: 'var(--body)', lineHeight: 1.7 }}>We rebuilt their platform with an AI-powered adaptive engine, gamified progress tracking, and a native mobile app that works offline — tripling engagement within 60 days.</p>
               </div>
               <div>
@@ -180,7 +180,7 @@ export default function EdtechPage() {
         <section ref={s4} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Tech Stack</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Tech Stack</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Modern EdTech infrastructure for the next generation of learners.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
@@ -207,7 +207,7 @@ export default function EdtechPage() {
         <section ref={s5} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Mapletech Labs</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Why Mapletech Labs</h2>
               <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>We build for learners first — then scale for millions.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
@@ -218,7 +218,7 @@ export default function EdtechPage() {
               ].map(w => (
                 <Card key={w.title}>
                   <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{w.icon}</div>
-                  <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
+                  <h3 style={{ fontWeight: 600, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
                   <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
                 </Card>
               ))}
@@ -227,9 +227,9 @@ export default function EdtechPage() {
         </section>
 
         {/* Related Services */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
               Services for EdTech
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(250px, 100%), 1fr))', gap: 16 }}>
@@ -260,7 +260,7 @@ export default function EdtechPage() {
         <section ref={s6} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, lineHeight: 1.15, marginBottom: '1.5rem' }}>
                 Build Your <span style={{ color: 'var(--brand)' }}>EdTech Platform.</span>
               </h2>
               <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>

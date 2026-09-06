@@ -240,7 +240,7 @@ export default function ServicesIndexPage() {
   return (
     <>
       <Navbar />
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding" style={{ position: 'relative', overflow: 'hidden', minHeight: '70vh', display: 'flex', alignItems: 'center' }}>
@@ -250,7 +250,7 @@ export default function ServicesIndexPage() {
             <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               What We Do
             </div>
-            <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+            <h1 className="reveal" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
               Our <span style={{ color: 'var(--brand)' }}>Services</span>
             </h1>
             <p className="reveal" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
@@ -271,7 +271,7 @@ export default function ServicesIndexPage() {
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
-              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Everything You Need to Build & Grow</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Everything You Need to Build & Grow</h2>
               <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)' }}>Explore our full range of services — each backed by deep domain expertise.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
@@ -284,7 +284,7 @@ export default function ServicesIndexPage() {
 
                   {/* Title */}
                   <Link href={service.href} style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <h3 style={{ fontWeight: 700, fontSize: 'clamp(1.05rem, 2vw, 1.25rem)', marginBottom: '0.5rem', lineHeight: 1.3 }}>{service.title}</h3>
+                    <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', marginBottom: '0.5rem', lineHeight: 1.3 }}>{service.title}</h3>
                   </Link>
 
                   {/* Description */}
@@ -319,7 +319,7 @@ export default function ServicesIndexPage() {
         <section ref={s2} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, lineHeight: 1.15, marginBottom: '1.5rem' }}>
                 Ready to <span style={{ color: 'var(--brand)' }}>Start?</span>
               </h2>
               <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.15rem)', marginBottom: '2.5rem', lineHeight: 1.7 }}>

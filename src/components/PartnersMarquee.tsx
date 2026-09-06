@@ -26,7 +26,7 @@ function PartnerPill({ name }: { name: string }) {
 
 export default function PartnersMarquee() {
   return (
-    <section style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)', padding: '52px 0', overflow: 'hidden', position: 'relative' }}>
+    <section style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)', padding: 'var(--section-y) 0', overflow: 'hidden', position: 'relative' }}>
       {/* Fade edges */}
       <div style={{ position: 'absolute', top: 0, left: 0, width: 200, height: '100%', background: 'linear-gradient(to right, #FFFFFF, transparent)', zIndex: 2, pointerEvents: 'none' }} />
       <div style={{ position: 'absolute', top: 0, right: 0, width: 200, height: '100%', background: 'linear-gradient(to left, #FFFFFF, transparent)', zIndex: 2, pointerEvents: 'none' }} />

@@ -54,7 +54,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
     <>
       <Navbar />
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
-        <div className="cb-container" style={{ paddingTop: 100 }}>
+        <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },
@@ -63,7 +63,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
         </div>
 
         {/* ── ARTICLE HERO ── */}
-        <section style={{ padding: 'clamp(100px, 15vw, 140px) 0 clamp(32px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
@@ -106,7 +106,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               Top 10 AI Development Companies in Canada (2026)
@@ -165,8 +165,8 @@ export default function AiDevelopmentCompaniesCanadaClient() {
         </section>
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
               {/* ── MAIN ARTICLE ── */}
@@ -211,7 +211,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           }}>AI/ML Integration</span>
                         </div>
                         <h2 style={{
-                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                          fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                           letterSpacing: '-0.03em', margin: 0,
                         }}>Mapletech Labs</h2>
                       </div>
@@ -260,7 +260,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           }}>AI-Powered Web</span>
                         </div>
                         <h2 style={{
-                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                          fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                           letterSpacing: '-0.03em', margin: 0,
                         }}>Townmedialabs</h2>
                       </div>
@@ -306,7 +306,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           }}>Intelligent Automation</span>
                         </div>
                         <h2 style={{
-                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                          fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                           letterSpacing: '-0.03em', margin: 0,
                         }}>TML</h2>
                       </div>
@@ -410,7 +410,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                             }}>{app.category}</span>
                           </div>
                           <h2 style={{
-                            fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                            fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                             letterSpacing: '-0.03em', margin: 0,
                           }}>{app.name}</h2>
                         </div>
@@ -544,8 +544,8 @@ export default function AiDevelopmentCompaniesCanadaClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div
               className="reveal"
               style={{
@@ -561,7 +561,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   color: 'var(--brand)', marginBottom: 12,
                 }}>AI Solutions</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                  fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Build Your AI Solution with Canada&apos;s Best
@@ -584,9 +584,9 @@ export default function AiDevelopmentCompaniesCanadaClient() {
         </section>
 
         {/* Related Articles */}
-        <section style={{ padding: '80px 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)', fontWeight: 700, color: 'var(--ink)', marginBottom: 32 }}>Related Articles</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related Articles</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {[
                 { title: 'Top Software Development Companies in Canada', href: '/blog/top-software-development-companies-canada' },

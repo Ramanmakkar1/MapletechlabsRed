@@ -122,7 +122,7 @@ export default function WebDevelopmentPage() {
   return (
     <>
       <Navbar />
-      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -134,7 +134,7 @@ export default function WebDevelopmentPage() {
         {/* ═══════════════════════════════════════
             HERO
         ═══════════════════════════════════════ */}
-        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 8vw, 100px) 0 clamp(60px, 8vw, 120px)', borderBottom: '1px solid var(--line)' }}>
+        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           {/* Grid bg */}
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,17,24,0.035) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
           {/* Glow */}
@@ -151,7 +151,7 @@ export default function WebDevelopmentPage() {
                 </div>
 
                 {/* Headline */}
-                <h1 className="reveal reveal-d1" style={{ fontSize: 'clamp(3rem,5.5vw,5.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px', maxWidth: 820 }}>
+                <h1 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px', maxWidth: 820 }}>
                   We Build Web Systems<br />That <span style={{ color: 'var(--brand)' }}>Scale.</span>
                 </h1>
 
@@ -224,7 +224,7 @@ export default function WebDevelopmentPage() {
             {/* Header */}
             <div className="reveal" style={{ marginBottom: 64 }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 20 }}>What We Build</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
                 Every Layer.<br /><span style={{ color: 'var(--faint)' }}>Every Complexity.</span>
               </h2>
             </div>
@@ -237,7 +237,7 @@ export default function WebDevelopmentPage() {
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,#f5290d,transparent)' }} />
                   <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--brand)', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, marginBottom: 20, display: 'inline-block' }}>{s.tag}</span>
-                  <h3 style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
+                  <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
                   <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, marginBottom: s.chips ? 24 : 0 }}>{s.desc}</p>
                   {s.chips && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -257,7 +257,7 @@ export default function WebDevelopmentPage() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 80 }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 20 }}>Our Process</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
                 How We Deliver<br /><span style={{ color: 'var(--faint)' }}>Your Platform.</span>
               </h2>
             </div>
@@ -306,7 +306,7 @@ export default function WebDevelopmentPage() {
             <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64, gap: 40, flexWrap: 'wrap' }}>
               <div>
                 <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 20 }}>Technology</div>
-                <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
                   The Stack Behind<br /><span style={{ color: 'var(--faint)' }}>Your Platform.</span>
                 </h2>
               </div>
@@ -344,7 +344,7 @@ export default function WebDevelopmentPage() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 64 }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 20 }}>Industries</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
                 Platforms That Power<br /><span style={{ color: 'var(--faint)' }}>Every Sector.</span>
               </h2>
             </div>
@@ -366,11 +366,11 @@ export default function WebDevelopmentPage() {
         {/* ═══════════════════════════════════════
             BOTTOM CTA
         ═══════════════════════════════════════ */}
-        <section ref={ctaRef} style={{ padding: 'clamp(60px, 8vw, 120px) 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+        <section ref={ctaRef} style={{ padding: 'var(--section-y) 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 500, background: 'transparent', filter: 'blur(70px)', pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 24 }}>Ready to Build?</div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.5rem,5vw,5.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
               Your Web Platform<br /><span style={{ color: 'var(--brand)' }}>Starts Here.</span>
             </h2>
             <TrustBadges compact />
@@ -405,9 +405,9 @@ export default function WebDevelopmentPage() {
         </section>
 
         {/* Related Services */}
-        <section style={{ padding: '80px 0', borderTop: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
               Related Services
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 20 }}>
@@ -433,7 +433,7 @@ export default function WebDevelopmentPage() {
         </section>
 
         {/* Industries We Serve */}
-        <section style={{ padding: '60px 0' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container" style={{ textAlign: 'center' }}>
             <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 24 }}>Industries We Serve</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12 }}>

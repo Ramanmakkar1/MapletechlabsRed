@@ -96,9 +96,9 @@ export default function Footer() {
 
       {/* CTA Banner */}
       <div style={{ borderBottom: '1px solid var(--line-ink)' }}>
-        <div className="cb-container" style={{ padding: 'clamp(48px, 8vw, 80px) 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
+        <div className="cb-container" style={{ padding: 'var(--section-y) 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
           <div>
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--on-ink)', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--on-ink)', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
               Ready to build something great?
             </h2>
             <p style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)', color: 'var(--on-ink-body)', margin: 0, lineHeight: 1.6 }}>
@@ -118,7 +118,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Grid */}
-      <div className="cb-container" style={{ padding: 'clamp(48px, 8vw, 80px) 0' }}>
+      <div className="cb-container" style={{ padding: 'var(--section-y) 0' }}>
         <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 'clamp(32px, 5vw, 48px)' }}>
 
           {/* Brand Column */}
@@ -217,7 +217,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div style={{ borderTop: '1px solid var(--line-ink)' }}>
-        <div className="cb-container" style={{ padding: 'clamp(16px, 3vw, 24px) 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+        <div className="cb-container" style={{ padding: 'var(--section-y) 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.62)' }}>
             &copy; {new Date().getFullYear()} Mapletech Labs Inc. All rights reserved.
           </span>

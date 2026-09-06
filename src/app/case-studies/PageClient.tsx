@@ -108,7 +108,7 @@ export default function CaseStudiesPageClient() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* ── HERO ── */}
-        <section style={{ padding: 'clamp(120px, 12vw, 160px) 0 clamp(48px, 6vw, 80px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           {/* Background glow */}
           <div style={{
             position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
@@ -131,7 +131,7 @@ export default function CaseStudiesPageClient() {
               </span>
             </div>
             <h1 className="reveal reveal-d1" style={{
-              fontSize: 'clamp(3rem, 6vw, 5.5rem)', fontWeight: 700, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               lineHeight: 1.05, letterSpacing: '-0.04em', marginBottom: 24, maxWidth: 800,
             }}>
               Our Work Speaks<br />for Itself
@@ -165,8 +165,8 @@ export default function CaseStudiesPageClient() {
         </section>
 
         {/* ── CASE STUDIES GRID ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 8vw, 100px)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <p className="reveal" style={{
               fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
               color: 'var(--faint)', marginBottom: 40,
@@ -247,7 +247,7 @@ export default function CaseStudiesPageClient() {
 
                         {/* Title */}
                         <h3 style={{
-                          fontSize: 20, fontWeight: 700, color: 'var(--ink)',
+                          fontSize: 20, fontWeight: 600, color: 'var(--ink)',
                           letterSpacing: '-0.02em', lineHeight: 1.25, marginBottom: 8,
                         }}>
                           {cs.title}
@@ -307,7 +307,7 @@ export default function CaseStudiesPageClient() {
 
         {/* ── STATS BAR ── */}
         <section style={{ borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ padding: 'clamp(32px, 6vw, 64px) 0' }}>
+          <div className="cb-container" style={{ padding: 'var(--section-y) 0' }}>
             <div className="reveal" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))',
@@ -340,8 +340,8 @@ export default function CaseStudiesPageClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div
               className="reveal"
               style={{
@@ -356,7 +356,7 @@ export default function CaseStudiesPageClient() {
                 Let&apos;s Build Together
               </span>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 16,
               }}>
                 Have a Similar Project?

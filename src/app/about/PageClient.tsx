@@ -114,7 +114,7 @@ export default function AboutPage() {
         <article>
 
         {/* ── HERO ── */}
-        <section style={{ padding: 'clamp(120px, 12vw, 160px) 0 clamp(60px, 8vw, 100px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           {/* Ambient glow */}
           <div aria-hidden="true" style={{
             position: 'absolute', top: -200, left: '30%',
@@ -130,7 +130,7 @@ export default function AboutPage() {
               }}>About Mapletech Labs</span>
             </div>
             <h1 className="reveal reveal-d1" style={{
-              fontSize: 'clamp(3rem, 7vw, 6rem)', fontWeight: 800, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               lineHeight: 1.0, letterSpacing: '-0.05em', marginBottom: 32, maxWidth: 900,
             }}>
               We Build Software<br />That Matters.
@@ -167,7 +167,7 @@ export default function AboutPage() {
 
         {/* ── MISSION STATEMENT ── */}
         <section style={{
-          padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)',
+          padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)',
           background: 'var(--surface-alt)',
         }}>
           <div className="cb-container">
@@ -195,7 +195,7 @@ export default function AboutPage() {
                   key={stat.label}
                   className={`reveal reveal-d${i + 1}`}
                   style={{
-                    padding: '52px 0', textAlign: 'center',
+                    padding: 'var(--section-y) 0', textAlign: 'center',
                     borderRight: i < stats.length - 1 ? '1px solid var(--line)' : 'none',
                   }}
                 >
@@ -211,7 +211,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── OUR STORY ── */}
-        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', borderBottom: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: 'clamp(40px, 6vw, 80px)', alignItems: 'start' }}>
 
@@ -224,7 +224,7 @@ export default function AboutPage() {
                   }}>Our Story</span>
                 </div>
                 <h2 className="reveal reveal-d1" style={{
-                  fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 700, color: 'var(--ink)',
+                  fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.04em', marginBottom: 28, lineHeight: 1.1,
                 }}>
                   Built by engineers,<br />for builders.
@@ -283,7 +283,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── VALUES ── */}
-        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', borderBottom: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -292,7 +292,7 @@ export default function AboutPage() {
               }}>What We Stand For</span>
             </div>
             <h2 className="reveal reveal-d1" style={{
-              fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'var(--ink)',
+              fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', marginBottom: 60, lineHeight: 1.1,
             }}>
               Our Values
@@ -323,7 +323,7 @@ export default function AboutPage() {
                 >
                   <div style={{ fontSize: 36, marginBottom: 20 }}>{val.icon}</div>
                   <h3 style={{
-                    fontSize: 17, fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 17, fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.02em', marginBottom: 12,
                   }}>{val.title}</h3>
                   <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
@@ -336,7 +336,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── LEADERSHIP TEAM ── */}
-        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', borderBottom: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -345,7 +345,7 @@ export default function AboutPage() {
               }}>The People Behind It</span>
             </div>
             <h2 className="reveal reveal-d1" style={{
-              fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'var(--ink)',
+              fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', marginBottom: 16, lineHeight: 1.1,
             }}>
               Leadership Team
@@ -389,7 +389,7 @@ export default function AboutPage() {
                     {member.initials}
                   </div>
                   <h3 style={{
-                    fontSize: 16, fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 16, fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.02em', marginBottom: 6,
                   }}>{member.name}</h3>
                   <p style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600, marginBottom: 14 }}>
@@ -405,7 +405,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── OFFICES ── */}
-        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', borderBottom: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -414,7 +414,7 @@ export default function AboutPage() {
               }}>Where We Are</span>
             </div>
             <h2 className="reveal reveal-d1" style={{
-              fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'var(--ink)',
+              fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', marginBottom: 16, lineHeight: 1.1,
             }}>
               Global Offices
@@ -449,7 +449,7 @@ export default function AboutPage() {
                   }}
                 >
                   <div style={{ fontSize: 32, marginBottom: 16 }}>{office.flag}</div>
-                  <h3 style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 6 }}>
+                  <h3 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 6 }}>
                     {office.city}
                   </h3>
                   <p style={{ fontSize: 12, fontWeight: 700, color: 'var(--brand)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 12 }}>
@@ -465,7 +465,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ padding: 'clamp(60px, 10vw, 120px) 0' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <div
               className="reveal"
@@ -488,7 +488,7 @@ export default function AboutPage() {
                 color: 'var(--brand)', display: 'block', marginBottom: 20, position: 'relative',
               }}>Join Our Clients</span>
               <h2 style={{
-                fontSize: 'clamp(2rem, 4.5vw, 3.8rem)', fontWeight: 800, color: 'var(--ink)',
+                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                 letterSpacing: '-0.04em', marginBottom: 20, lineHeight: 1.1, position: 'relative',
               }}>
                 Join 150+ companies<br />building with us.

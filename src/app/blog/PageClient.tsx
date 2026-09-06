@@ -173,7 +173,7 @@ export default function BlogPage() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* ── HERO ── */}
-        <section style={{ padding: '160px 0 80px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           {/* Background glow */}
           <div style={{
             position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
@@ -191,7 +191,7 @@ export default function BlogPage() {
               </span>
             </div>
             <h1 className="reveal reveal-d1" style={{
-              fontSize: 'clamp(3rem, 6vw, 5.5rem)', fontWeight: 700, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               lineHeight: 1.05, letterSpacing: '-0.04em', marginBottom: 24, maxWidth: 800,
             }}>
               Insights &<br />Perspectives
@@ -238,8 +238,8 @@ export default function BlogPage() {
         </section>
 
         {/* ── FEATURED POST ── */}
-        <section style={{ paddingBottom: 80, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <p className="reveal" style={{
               fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
               color: 'var(--faint)', marginBottom: 32,
@@ -281,7 +281,7 @@ export default function BlogPage() {
                     <span style={{ fontSize: 13, color: 'var(--faint)' }}>8 min read</span>
                   </div>
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', lineHeight: 1.15, marginBottom: 16,
                   }}>
                     Top 10 Unicorn Apps of 2026
@@ -317,8 +317,8 @@ export default function BlogPage() {
         </section>
 
         {/* ── POSTS GRID ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <p className="reveal" style={{
               fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
               color: 'var(--faint)', marginBottom: 40,
@@ -377,7 +377,7 @@ export default function BlogPage() {
 
                         {/* Title */}
                         <h3 style={{
-                          fontSize: 18, fontWeight: 700, color: 'var(--ink)',
+                          fontSize: 18, fontWeight: 600, color: 'var(--ink)',
                           letterSpacing: '-0.02em', lineHeight: 1.25, marginBottom: 12,
                         }}>
                           {post.title}
@@ -440,8 +440,8 @@ export default function BlogPage() {
         </section>
 
         {/* ── NEWSLETTER CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div
               className="reveal"
               style={{
@@ -454,7 +454,7 @@ export default function BlogPage() {
                 color: 'var(--brand)', display: 'block', marginBottom: 20,
               }}>Newsletter</span>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 16,
               }}>
                 Get the latest insights delivered.

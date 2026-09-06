@@ -95,7 +95,7 @@ export default function DigitalMarketingCostCanadaClient() {
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* -- ARTICLE HERO -- */}
-        <section style={{ padding: 'clamp(100px, 15vw, 140px) 0 clamp(32px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
@@ -138,7 +138,7 @@ export default function DigitalMarketingCostCanadaClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               How Much Does Digital Marketing Cost in Canada? (2026 Guide)
@@ -197,8 +197,8 @@ export default function DigitalMarketingCostCanadaClient() {
         </section>
 
         {/* -- ARTICLE BODY + SIDEBAR -- */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
               {/* -- MAIN ARTICLE -- */}
@@ -243,7 +243,7 @@ export default function DigitalMarketingCostCanadaClient() {
                         }}>{card.emoji}</div>
                         <div>
                           <h2 style={{
-                            fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                            fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                             letterSpacing: '-0.03em', margin: '0 0 8px',
                           }}>{card.title}</h2>
                           <div style={{
@@ -282,7 +282,7 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Pricing Models */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="pricing-models">
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>How Digital Marketing Pricing Models Work in Canada</h2>
 
@@ -305,7 +305,7 @@ export default function DigitalMarketingCostCanadaClient() {
                       borderRadius: 20, padding: 28, marginBottom: 20,
                     }}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12, flexWrap: 'wrap', gap: 12 }}>
-                        <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>{item.model}</h3>
+                        <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>{item.model}</h3>
                         <span style={{
                           fontSize: 13, fontWeight: 700, color: item.accentColor,
                           padding: '4px 14px', borderRadius: 100, background: `${item.bgColor}0.12)`,
@@ -319,7 +319,7 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* ROI Expectations */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="roi">
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>ROI Expectations by Budget Level</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 24 }}>
@@ -351,7 +351,7 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Agency vs Freelancer vs In-House */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="agency-vs-freelancer">
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Agency vs. Freelancer vs. In-House: What Works for Canadian Businesses?</h2>
 
@@ -376,7 +376,7 @@ export default function DigitalMarketingCostCanadaClient() {
                       background: 'var(--surface-alt)', border: '1px solid var(--line)',
                       borderRadius: 20, padding: 28, marginBottom: 20,
                     }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: '0 0 16px' }}>{item.option}</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: '0 0 16px' }}>{item.option}</h3>
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 16, marginBottom: 16 }}>
                         <div>
                           <p style={{ fontSize: 12, fontWeight: 700, color: '#047857', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>Pros</p>
@@ -409,7 +409,7 @@ export default function DigitalMarketingCostCanadaClient() {
                       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
                         <span style={{ fontSize: 28 }}>🍁</span>
                         <h2 style={{
-                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                          fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                           letterSpacing: '-0.03em', margin: 0,
                         }}>How Mapletech Labs Approaches Digital Marketing Differently</h2>
                       </div>
@@ -443,7 +443,7 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Red Flags */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="red-flags">
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Red Flags in Agency Pricing: What to Watch For</h2>
 
@@ -452,25 +452,25 @@ export default function DigitalMarketingCostCanadaClient() {
                     borderRadius: 24, padding: 36,
                   }}>
                     <div style={{ marginBottom: 24 }}>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#B91C1C', marginBottom: 12 }}>Too Cheap (Under $1,000/month for full-service)</h3>
+                      <h3 style={{ fontSize: 16, fontWeight: 600, color: '#B91C1C', marginBottom: 12 }}>Too Cheap (Under $1,000/month for full-service)</h3>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         If an agency offers comprehensive SEO, social media, and PPC for under $1,000/month, they are either outsourcing to low-quality offshore providers, using automated tools with zero human strategy, or planning to upsell you aggressively later. Quality digital marketing in Canada requires skilled professionals who command competitive salaries. The math simply does not work at bargain prices.
                       </p>
                     </div>
                     <div style={{ marginBottom: 24 }}>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#B45309', marginBottom: 12 }}>Guaranteed Rankings</h3>
+                      <h3 style={{ fontSize: 16, fontWeight: 600, color: '#B45309', marginBottom: 12 }}>Guaranteed Rankings</h3>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         No legitimate agency guarantees specific Google rankings. Search algorithms involve hundreds of variables outside any agency&apos;s control. Agencies that promise &ldquo;Page 1 in 30 days&rdquo; are either lying or planning to use black-hat tactics that will eventually get your site penalized. Look for agencies that guarantee process quality, reporting transparency, and measurable KPI improvements.
                       </p>
                     </div>
                     <div style={{ marginBottom: 24 }}>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#B45309', marginBottom: 12 }}>Long Lock-In Contracts</h3>
+                      <h3 style={{ fontSize: 16, fontWeight: 600, color: '#B45309', marginBottom: 12 }}>Long Lock-In Contracts</h3>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         Be wary of agencies requiring 12-24 month contracts with heavy cancellation penalties. While SEO does take time, a confident agency should be willing to earn your business month over month. Look for 3-month initial commitments with 30-day cancellation notices after the initial period.
                       </p>
                     </div>
                     <div>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: '#B91C1C', marginBottom: 12 }}>Overpriced (Paying for Brand Name, Not Results)</h3>
+                      <h3 style={{ fontSize: 16, fontWeight: 600, color: '#B91C1C', marginBottom: 12 }}>Overpriced (Paying for Brand Name, Not Results)</h3>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         Some agencies charge $30,000+/month for work that a skilled boutique agency delivers for $10,000. Large agencies often have high overhead&mdash;downtown offices, large sales teams, and management layers&mdash;that inflate pricing without improving output quality. Always evaluate based on team expertise, case studies, and projected ROI, not brand prestige.
                       </p>
@@ -584,8 +584,8 @@ export default function DigitalMarketingCostCanadaClient() {
         </section>
 
         {/* -- BOTTOM CTA -- */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div
               className="reveal"
               style={{
@@ -601,7 +601,7 @@ export default function DigitalMarketingCostCanadaClient() {
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get Started</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                  fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Get a Custom Digital Marketing Quote

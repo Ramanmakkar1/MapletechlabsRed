@@ -30,7 +30,7 @@ export default function ServicesSection() {
         <div className="reveal" style={{ marginBottom: 'clamp(40px, 6vw, 80px)' }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Capabilities</div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 40, flexWrap: 'wrap' }}>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0, maxWidth: 700 }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0, maxWidth: 700 }}>
               Everything You Need<br /><span style={{ color: 'var(--faint)' }}>to Build & Scale.</span>
             </h2>
             <p style={{ fontSize: 'clamp(15px, 2vw, 17px)', color: 'var(--body)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
@@ -50,7 +50,7 @@ export default function ServicesSection() {
               <div aria-hidden="true" style={{ position: 'absolute', bottom: -20, right: 28, fontSize: 'clamp(80px, 20vw, 180px)', fontWeight: 800, color: 'rgba(225,25,0,0.07)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>{s.num}</div>
               <div>
                 <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--brand)', background: 'rgba(245,41,13,0.1)', padding: '6px 14px', borderRadius: 100, marginBottom: 24 }}>{s.tag}</span>
-                <h3 style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16, lineHeight: 1.15 }}>{s.title}</h3>
+                <h3 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16, lineHeight: 1.15 }}>{s.title}</h3>
                 <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: 0, maxWidth: 440 }}>{s.desc}</p>
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 'auto' }}>

@@ -49,6 +49,24 @@
   --shadow-lg: 0 8px 24px rgba(20,17,24,0.06), 0 24px 64px rgba(20,17,24,0.08);
   --shadow-brand: 0 10px 30px rgba(225, 25, 0, 0.22);
 
+  /* ── LAYOUT RHYTHM ───────────────────────────── */
+  /* One vertical rhythm for every section on the site. The pages had four
+     competing systems (100px, 120px, and two different clamps), which is
+     what made the layout read as unstructured. */
+  --section-y: clamp(56px, 7vw, 104px);
+  --section-y-lg: clamp(72px, 9vw, 132px);
+  --section-y-sm: clamp(36px, 4.5vw, 60px);
+  /* page heroes also have to clear the 76px fixed header */
+  --hero-top: clamp(124px, 13vw, 164px);
+
+  /* ── TYPE SCALE ──────────────────────────────── */
+  /* Four steps, nothing in between. h2 alone was rendering at 72, 64, 56,
+     43 and 35px on a single page before this. */
+  --fs-display: clamp(2.5rem, 5vw, 4.25rem);
+  --fs-h2:      clamp(1.9rem, 3.6vw, 3rem);
+  --fs-h3:      clamp(1.4rem, 2.2vw, 1.9rem);
+  --fs-h4:      clamp(1.1rem, 1.6vw, 1.35rem);
+
   /* ── RADII ───────────────────────────────────── */
   --r-sm: 10px;
   --r-md: 16px;
@@ -99,9 +117,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
   text-wrap: balance;
 }
-h1 { font-size: clamp(2.5rem, 5.2vw, 4.5rem); letter-spacing: -0.035em; }
-h2 { font-size: clamp(2rem, 4vw, 3.25rem); letter-spacing: -0.03em; }
-h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+h1 { font-size: var(--fs-display); letter-spacing: -0.035em; }
+h2 { font-size: var(--fs-h2); letter-spacing: -0.03em; }
+h3 { font-size: var(--fs-h3); }
 
 p { margin: 0; text-wrap: pretty; }
 a { color: inherit; text-decoration: none; }
@@ -120,7 +138,7 @@ img, svg, video { display: block; max-width: 100%; }
 .cb-container--wide { max-width: 1560px; }
 
 /* ── SECTION SURFACES ───────────────────────────── */
-.section { padding: clamp(72px, 9vw, 130px) 0; position: relative; }
+.section { padding: var(--section-y) 0; position: relative; }
 .section--white { background: var(--surface); color: var(--body); }
 .section--off   { background: var(--surface-alt); color: var(--body); }
 .section--sunk  { background: var(--surface-sunk); color: var(--body); }
@@ -153,7 +171,7 @@ img, svg, video { display: block; max-width: 100%; }
   border-radius: 2px;
 }
 .section-heading {
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: var(--fs-h2);
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 20px;
@@ -417,8 +435,20 @@ textarea.field { height: auto; padding: 14px 18px; resize: vertical; min-height:
   .awards-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
   .portfolio-content-row { display: flex; gap: 40px; flex-wrap: wrap; }
   .portfolio-tabs { display: flex; gap: 10px; flex-wrap: wrap; }
-  .section-padding { padding: clamp(72px, 9vw, 140px) 0; }
-  .section-padding-sm { padding: clamp(40px, 5vw, 64px) 0; }
+  .section-padding { padding: var(--section-y) 0; }
+  .section-padding-sm { padding: var(--section-y-sm) 0; }
+}
+
+/* Cards in a row share a height. Without this a three-up grid ends up
+   ragged whenever one card's copy runs longer. */
+.services-large-grid, .services-small-grid, .whyus-grid, .industries-grid,
+.testimonials-grid, .insights-grid, .tech-categories-grid, .stats-grid {
+  align-items: stretch;
+}
+.services-large-grid > *, .services-small-grid > *, .whyus-grid > *,
+.industries-grid > *, .testimonials-grid > *, .insights-grid > *,
+.tech-categories-grid > * {
+  height: 100%;
 }
 
 /* Blog post link — light */

@@ -91,7 +91,7 @@ export default function WhyUs() {
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(48px, 8vw, 100px)' }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Why Mapletech Labs</div>
-          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto 24px', maxWidth: 800 }}>
+          <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto 24px', maxWidth: 800 }}>
             Built Different.<br />
             <span style={{ color: 'var(--faint)' }}>By Design.</span>
           </h2>

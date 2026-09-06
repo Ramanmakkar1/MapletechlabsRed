@@ -51,7 +51,7 @@ export default function WebsiteCostCanadaClient() {
     <>
       <Navbar />
       <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
-        <div className="cb-container" style={{ paddingTop: 100 }}>
+        <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },
@@ -60,7 +60,7 @@ export default function WebsiteCostCanadaClient() {
         </div>
 
         {/* ── ARTICLE HERO ── */}
-        <section style={{ padding: 'clamp(100px, 15vw, 140px) 0 clamp(32px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
@@ -103,7 +103,7 @@ export default function WebsiteCostCanadaClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               How Much Does a Custom Website Cost in Canada? (2026 Pricing Guide)
@@ -162,8 +162,8 @@ export default function WebsiteCostCanadaClient() {
         </section>
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
               {/* ── MAIN ARTICLE ── */}
@@ -188,7 +188,7 @@ export default function WebsiteCostCanadaClient() {
                 {/* Cost Tiers */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="cost-tiers">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Website Cost Tiers in Canada (2026)</h2>
 
@@ -198,7 +198,7 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>Template / WordPress Site</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Template / WordPress Site</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#047857',
                         background: 'rgba(52,211,153,0.1)', padding: '4px 14px', borderRadius: 100,
@@ -215,7 +215,7 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>Custom Business Website</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Custom Business Website</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#1D4ED8',
                         background: 'rgba(96,165,250,0.1)', padding: '4px 14px', borderRadius: 100,
@@ -232,7 +232,7 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>E-Commerce Platform</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>E-Commerce Platform</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#B45309',
                         background: 'rgba(251,146,60,0.1)', padding: '4px 14px', borderRadius: 100,
@@ -249,7 +249,7 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>Enterprise Web Application</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Enterprise Web Application</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#BE185D',
                         background: 'rgba(244,114,182,0.1)', padding: '4px 14px', borderRadius: 100,
@@ -266,7 +266,7 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 28,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>SaaS Platform</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>SaaS Platform</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#6D28D9',
                         background: 'rgba(167,139,250,0.1)', padding: '4px 14px', borderRadius: 100,
@@ -281,7 +281,7 @@ export default function WebsiteCostCanadaClient() {
                 {/* What Affects the Price */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="what-affects-price">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>What Affects the Price?</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
@@ -312,7 +312,7 @@ export default function WebsiteCostCanadaClient() {
                 {/* DIY vs Agency vs Custom */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="diy-vs-agency">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>DIY vs Agency vs Custom Development</h2>
 
@@ -320,7 +320,7 @@ export default function WebsiteCostCanadaClient() {
                     background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
-                    <h3 style={{ fontSize: 17, fontWeight: 700, color: '#047857', margin: '0 0 10px' }}>DIY (Wix / Squarespace) — $0 - $500/year</h3>
+                    <h3 style={{ fontSize: 17, fontWeight: 600, color: '#047857', margin: '0 0 10px' }}>DIY (Wix / Squarespace) — $0 - $500/year</h3>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Best for: Personal blogs, hobby projects, or micro-businesses with zero budget. You get a website up fast, but you sacrifice performance, SEO flexibility, and scalability. When you outgrow the platform, migrating is painful and expensive. Not recommended for businesses serious about growth.
                     </p>
@@ -330,7 +330,7 @@ export default function WebsiteCostCanadaClient() {
                     background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
-                    <h3 style={{ fontSize: 17, fontWeight: 700, color: '#1D4ED8', margin: '0 0 10px' }}>Agency (WordPress / Shopify) — $5,000 - $50,000</h3>
+                    <h3 style={{ fontSize: 17, fontWeight: 600, color: '#1D4ED8', margin: '0 0 10px' }}>Agency (WordPress / Shopify) — $5,000 - $50,000</h3>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Best for: Established SMBs who need a professional site with some custom functionality. Agencies handle design, content, and basic SEO. However, most agencies use page builders and templates under the hood, which creates technical debt and performance issues over time. Good for getting online quickly; less ideal for long-term competitive advantage.
                     </p>
@@ -341,7 +341,7 @@ export default function WebsiteCostCanadaClient() {
                     border: '1px solid rgba(245,41,13,0.2)',
                     borderRadius: 20, padding: 28,
                   }}>
-                    <h3 style={{ fontSize: 17, fontWeight: 700, color: 'var(--brand)', margin: '0 0 10px' }}>Custom Development (Next.js / React) — $15,000 - $500,000+</h3>
+                    <h3 style={{ fontSize: 17, fontWeight: 600, color: 'var(--brand)', margin: '0 0 10px' }}>Custom Development (Next.js / React) — $15,000 - $500,000+</h3>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Best for: Businesses where the website IS the product, or companies competing in high-value markets where speed, SEO, and user experience directly impact revenue. Custom development gives you complete control over performance, security, and scalability. This is what Mapletech Labs specializes in, and it is the only approach we recommend for businesses with serious growth ambitions.
                     </p>
@@ -351,7 +351,7 @@ export default function WebsiteCostCanadaClient() {
                 {/* Canadian Developer Rates */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="hourly-rates">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Canadian Developer Hourly Rates by City (2026)</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 24 }}>
@@ -397,7 +397,7 @@ export default function WebsiteCostCanadaClient() {
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <h2 style={{
-                      fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                       letterSpacing: '-0.03em', marginBottom: 16, position: 'relative', zIndex: 1,
                     }}>Why Mapletech Labs Uses Next.js for Every Project</h2>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
@@ -431,7 +431,7 @@ export default function WebsiteCostCanadaClient() {
                 {/* Hidden Costs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="hidden-costs">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Hidden Costs Most Agencies Won&apos;t Tell You About</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 24 }}>
@@ -468,7 +468,7 @@ export default function WebsiteCostCanadaClient() {
                 {/* How to Budget */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="how-to-budget">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>How to Budget for Your Website</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
@@ -598,8 +598,8 @@ export default function WebsiteCostCanadaClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 80 }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div
               className="reveal"
               style={{
@@ -615,7 +615,7 @@ export default function WebsiteCostCanadaClient() {
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get a Free Website Quote</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                  fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Stop Guessing. Get Real Numbers.

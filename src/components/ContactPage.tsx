@@ -123,7 +123,7 @@ export default function ContactPage() {
   const fo = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.boxShadow = 'none'; };
 
   return (
-    <div style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
+    <div style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
       {/* ═══════════════════════════════════════
           HERO
@@ -144,7 +144,7 @@ export default function ContactPage() {
             <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' as const }}>Available for New Projects</span>
           </div>
 
-          <h1 className="reveal reveal-d1" style={{ fontSize: 'clamp(3rem,8vw,8rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.05em', lineHeight: 0.95, margin: 0, maxWidth: 1000 }}>
+          <h1 className="reveal reveal-d1" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.05em', lineHeight: 0.95, margin: 0, maxWidth: 1000 }}>
             Let&apos;s Build Something<br /><span style={{ color: 'var(--brand)' }}>Extraordinary.</span>
           </h1>
 
@@ -167,7 +167,7 @@ export default function ContactPage() {
           </div>
 
           {/* Trust strip */}
-          <div className="reveal reveal-d4" style={{ display: 'flex', gap: 32, flexWrap: 'wrap', paddingTop: 44, borderTop: '1px solid var(--line)', justifyContent: 'center', width: '100%', marginTop: 8 }}>
+          <div className="reveal reveal-d4" style={{ display: 'flex', gap: 32, flexWrap: 'wrap', paddingTop: 'var(--section-y)', borderTop: '1px solid var(--line)', justifyContent: 'center', width: '100%', marginTop: 8 }}>
             {TRUST.map(t => (
               <div key={t.label} style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
                 <span style={{ fontSize: 14 }}>{t.icon}</span>
@@ -181,11 +181,11 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           ENGAGEMENT OPTIONS
       ═══════════════════════════════════════ */}
-      <section ref={engageRef} style={{ padding: 'clamp(48px, 8vw, 100px) 0', borderBottom: '1px solid var(--line)' }}>
+      <section ref={engageRef} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
         <div className="cb-container">
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 16 }}>How Can We Help?</div>
-            <h2 style={{ fontSize: 'clamp(2.2rem,4vw,3.8rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.08, margin: 0 }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.08, margin: 0 }}>
               Choose Your Path<br /><span style={{ color: 'var(--faint)' }}>to Launch.</span>
             </h2>
           </div>
@@ -213,14 +213,14 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           CONTACT FORM
       ═══════════════════════════════════════ */}
-      <section id="contact-form" ref={formRef} style={{ padding: 'clamp(48px, 8vw, 100px) 0', borderBottom: '1px solid var(--line)', scrollMarginTop: 80 }}>
+      <section id="contact-form" ref={formRef} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)', scrollMarginTop: 80 }}>
         <div className="cb-container">
           <div className="reveal cp-contact-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 'clamp(32px, 6vw, 80px)', alignItems: 'start' }}>
 
             {/* Left info col */}
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 20 }}>Get in Touch</div>
-              <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3.2rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: 20 }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: 20 }}>
                 Tell Us About<br /><span style={{ color: 'var(--faint)' }}>Your Project.</span>
               </h2>
               <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, marginBottom: 48, maxWidth: 380 }}>
@@ -258,7 +258,7 @@ export default function ContactPage() {
             {/* Right form */}
             <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 36, padding: 'clamp(20px, 4vw, 52px) clamp(20px, 4vw, 44px)' }}>
               {submitted ? (
-                <div style={{ textAlign: 'center', padding: '48px 0' }}>
+                <div style={{ textAlign: 'center', padding: 'var(--section-y) 0' }}>
                   <div style={{ width: 72, height: 72, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg>
                   </div>
@@ -341,11 +341,11 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           OFFICES
       ═══════════════════════════════════════ */}
-      <section ref={officesRef} style={{ padding: 'clamp(48px, 8vw, 100px) 0', borderBottom: '1px solid var(--line)' }}>
+      <section ref={officesRef} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
         <div className="cb-container">
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 16 }}>Global Presence</div>
-            <h2 style={{ fontSize: 'clamp(2.2rem,4vw,3.8rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.08, margin: 0 }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.08, margin: 0 }}>
               Offices Around<br /><span style={{ color: 'var(--faint)' }}>the World.</span>
             </h2>
           </div>
@@ -373,11 +373,11 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           FAQ
       ═══════════════════════════════════════ */}
-      <section ref={faqRef} style={{ padding: 'clamp(48px, 8vw, 100px) 0', borderBottom: '1px solid var(--line)' }}>
+      <section ref={faqRef} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
         <div className="cb-container" style={{ maxWidth: 860 }}>
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 16 }}>FAQ</div>
-            <h2 style={{ fontSize: 'clamp(2.2rem,4vw,3.8rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.08, margin: 0 }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.08, margin: 0 }}>
               Everything You<br /><span style={{ color: 'var(--faint)' }}>Need to Know.</span>
             </h2>
           </div>
@@ -403,11 +403,11 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           BOTTOM CTA
       ═══════════════════════════════════════ */}
-      <section style={{ padding: 'clamp(60px, 10vw, 120px) 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
+      <section style={{ padding: 'var(--section-y) 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 700, height: 400, background: 'transparent', filter: 'blur(60px)', pointerEvents: 'none' }} />
         <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 20 }}>Let&apos;s Talk</div>
-          <h2 style={{ fontSize: 'clamp(2.5rem,5vw,5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
+          <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
             Your Next Big Thing<br /><span style={{ color: 'var(--brand)' }}>Starts Here.</span>
           </h2>
           <p style={{ fontSize: 18, color: 'var(--muted)', maxWidth: 460, margin: '0 auto 48px', lineHeight: 1.7 }}>

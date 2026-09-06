@@ -24,7 +24,7 @@ export default function AdvancedLabs() {
         <div className="advanced-labs-grid">
           <div className="reveal">
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 20 }}>R&D Labs</div>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
               Pioneering the<br /><span style={{ color: 'rgba(255,255,255,0.38)' }}>Edge of Innovation.</span>
             </h2>
             <p style={{ fontSize: 'clamp(14px, 3vw, 17px)', color: 'var(--on-ink-body)', lineHeight: 1.7, marginBottom: 'clamp(28px, 6vw, 56px)' }}>

@@ -71,7 +71,7 @@ export default function CTASection() {
             borderRadius:20, padding:36, backdropFilter:'blur(20px)',
           }}>
             {submitted ? (
-              <div style={{ textAlign: 'center', padding: '40px 0' }}>
+              <div style={{ textAlign: 'center', padding: 'var(--section-y) 0' }}>
                 <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', border: '2px solid #f5290d', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                 </div>

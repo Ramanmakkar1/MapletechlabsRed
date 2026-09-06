@@ -63,7 +63,7 @@ export default function LogisticsCaseStudyClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
+              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               Real-Time Logistics &amp; Fleet Management
@@ -96,8 +96,8 @@ export default function LogisticsCaseStudyClient() {
         </section>
 
         {/* ── OVERVIEW GRID ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="reveal" style={{
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
               gap: 24,
@@ -125,7 +125,7 @@ export default function LogisticsCaseStudyClient() {
         </section>
 
         {/* ── THE CHALLENGE ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
@@ -133,7 +133,7 @@ export default function LogisticsCaseStudyClient() {
                 color: 'var(--brand)', marginBottom: 16,
               }}>The Challenge</p>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 32,
               }}>Blind Spots Across the Entire Fleet</h2>
 
@@ -151,15 +151,15 @@ export default function LogisticsCaseStudyClient() {
         </section>
 
         {/* ── OUR SOLUTION ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
                 color: 'var(--brand)', marginBottom: 16,
               }}>Our Solution</p>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 32,
               }}>IoT, Machine Learning, and Real-Time Visibility</h2>
 
@@ -188,14 +188,14 @@ export default function LogisticsCaseStudyClient() {
         </section>
 
         {/* ── KEY RESULTS ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <p className="reveal" style={{
               fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
               color: 'var(--brand)', marginBottom: 16,
             }}>Key Results</p>
             <h2 className="reveal" style={{
-              fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+              fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
               letterSpacing: '-0.03em', marginBottom: 40,
             }}>Operational Excellence, Delivered</h2>
 
@@ -220,8 +220,8 @@ export default function LogisticsCaseStudyClient() {
         </section>
 
         {/* ── TESTIMONIAL ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="reveal" style={{
               maxWidth: 760,
               padding: 'clamp(24px, 4vw, 48px)', borderRadius: 24,
@@ -248,8 +248,8 @@ export default function LogisticsCaseStudyClient() {
         </section>
 
         {/* ── CTA ── */}
-        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="reveal" style={{
               background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
               borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 56px)',
@@ -262,7 +262,7 @@ export default function LogisticsCaseStudyClient() {
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Start a Similar Project</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
+                  fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Need Smarter Logistics?
