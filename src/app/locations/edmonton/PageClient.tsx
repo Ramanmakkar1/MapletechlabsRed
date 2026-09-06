@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadges from '@/components/TrustBadges';
+import MediaBand from '@/components/MediaBand';
+import { officeMedia } from '@/data/media';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -113,6 +115,10 @@ export default function EdmontonPage() {
         </section>
 
         {/* SERVICES GRID */}
+
+        <MediaBand
+          media={officeMedia['meeting']}
+        />
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>

@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
 import TrustBadges from '@/components/TrustBadges';
+import MediaBand from '@/components/MediaBand';
+import { serviceMedia, defaultMedia } from '@/data/media';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -131,6 +133,10 @@ export default function ARVRPage() {
         </section>
 
         {/* STATS */}
+
+        <MediaBand
+          media={serviceMedia['ar-vr'] ?? defaultMedia}
+        />
         <section ref={s1} style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))' }}>

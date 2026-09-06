@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadges from '@/components/TrustBadges';
+import MediaBand from '@/components/MediaBand';
+import { serviceMedia, defaultMedia } from '@/data/media';
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
@@ -247,6 +249,10 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             STATS STRIP
         ═══════════════════════════════════════ */}
+
+        <MediaBand
+          media={serviceMedia['mobile-app-development'] ?? defaultMedia}
+        />
         <section ref={statsRef} style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal stats-strip-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>

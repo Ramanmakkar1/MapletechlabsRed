@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
+import MediaBand from '@/components/MediaBand';
+import { officeMedia } from '@/data/media';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -112,6 +114,10 @@ export default function KitchenerPage() {
         </section>
 
         {/* SERVICES GRID */}
+
+        <MediaBand
+          media={officeMedia['open']}
+        />
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>

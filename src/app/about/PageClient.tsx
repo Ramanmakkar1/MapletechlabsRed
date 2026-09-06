@@ -168,7 +168,6 @@ export default function AboutPage() {
         {/* ── MISSION STATEMENT ── */}
         <section style={{
           padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)',
-          background: 'var(--surface-alt)',
         }}>
           <div className="cb-container">
             <p className="reveal" style={{

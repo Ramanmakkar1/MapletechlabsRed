@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadges from '@/components/TrustBadges';
+import MediaBand from '@/components/MediaBand';
+import { industryMedia, defaultMedia } from '@/data/media';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -106,6 +108,10 @@ export default function FintechPage() {
         </section>
 
         {/* CHALLENGES */}
+
+        <MediaBand
+          media={industryMedia['fintech'] ?? defaultMedia}
+        />
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>

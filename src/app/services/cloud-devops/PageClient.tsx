@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadges from '@/components/TrustBadges';
+import MediaBand from '@/components/MediaBand';
+import { serviceMedia, defaultMedia } from '@/data/media';
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
@@ -184,6 +186,10 @@ export default function CloudDevOpsPage() {
         {/* ═══════════════════════════════════════
             STATS STRIP
         ═══════════════════════════════════════ */}
+
+        <MediaBand
+          media={serviceMedia['cloud-devops'] ?? defaultMedia}
+        />
         <section ref={statsRef} style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))' }}>

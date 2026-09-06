@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
+import MediaBand from '@/components/MediaBand';
+import { serviceMedia, defaultMedia } from '@/data/media';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -75,7 +77,7 @@ export default function PageClient() {
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', fontFamily: 'inherit' }}>
 
         {/* HERO */}
-        <section ref={heroRef} style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', paddingTop: 'var(--section-y)', paddingBottom: 'var(--section-y)', background: 'transparent' }}>
+        <section ref={heroRef} style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', paddingTop: 'var(--section-y)', paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: 'clamp(24px, 5vw, 60px)', alignItems: 'center' }}>
               <div>
@@ -118,7 +120,11 @@ export default function PageClient() {
         </section>
 
         {/* WHAT WE OFFER */}
-        <section ref={s1} style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
+
+        <MediaBand
+          media={serviceMedia['product-design'] ?? defaultMedia}
+        />
+        <section ref={s1} style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
               <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 12 }}>What We Offer</div>
@@ -156,7 +162,7 @@ export default function PageClient() {
         </section>
 
         {/* FAQ */}
-        <section ref={s3} style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
+        <section ref={s3} style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container" style={{ maxWidth: 800 }}>
             <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
               <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 12 }}>FAQ</div>
@@ -179,7 +185,7 @@ export default function PageClient() {
         </section>
 
         {/* CTA */}
-        <section ref={s4} style={{ padding: 'var(--section-y) 0', textAlign: 'center', background: 'transparent' }}>
+        <section ref={s4} style={{ padding: 'var(--section-y) 0', textAlign: 'center' }}>
           <div className="cb-container">
             <h2 className="reveal" style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, letterSpacing: '-0.04em', marginBottom: 20 }}>Ready to Get Started?</h2>
             <p className="reveal reveal-d1" style={{ fontSize: 18, color: 'var(--muted)', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>Let's discuss your project and build something great together.</p>

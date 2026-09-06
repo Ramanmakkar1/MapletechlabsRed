@@ -55,6 +55,25 @@ export const blogMedia: Media[] = [
   { src: `${S}/blog-review.webp`, alt: 'Group reviewing a design on a laptop screen' },
 ];
 
+/** Service category slug -> photo, for the band under each service hero. */
+export const serviceMedia: Record<string, Media> = {
+  'mobile-app-development': { src: `${S}/svc-mobile.webp`,     alt: 'Mobile dashboard running on a smartphone' },
+  'web-development':        { src: `${S}/blog-code.webp`,      alt: 'Engineers building a web platform at their monitors' },
+  'ai-ml':                  { src: `${S}/svc-ai.webp`,         alt: 'Source code on a developer monitor' },
+  'cloud-devops':           { src: `${S}/svc-cloud.webp`,      alt: 'Network cabling inside a data centre' },
+  'blockchain-web3':        { src: `${S}/svc-blockchain.webp`, alt: 'Abstract distributed-ledger node network' },
+  'product-design':         { src: `${S}/svc-design.webp`,     alt: 'Designer sketching interface concepts' },
+  'saas-development':       { src: `${S}/svc-saas.webp`,       alt: 'SaaS analytics dashboard on a laptop' },
+  'digital-marketing':      { src: `${S}/svc-marketing.webp`,  alt: 'Campaign performance metrics on screen' },
+  'ar-vr':                  { src: `${S}/blog-team.webp`,      alt: 'Team reviewing an immersive prototype' },
+  'game-development':       { src: `${S}/svc-game.webp`,       alt: 'Game controller lit in red' },
+  'wordpress-cms':          { src: `${S}/blog-desk.webp`,      alt: 'Developer working on a content site' },
+  'branding':               { src: `${S}/blog-collab.webp`,    alt: 'Team working through brand direction' },
+};
+
+/** Fallback so a page never renders an empty band. */
+export const defaultMedia: Media = { src: `${S}/office-open.webp`, alt: 'Mapletech Labs studio' };
+
 export const officeMedia: Record<string, Media> = {
   open: { src: `${S}/office-open.webp`, alt: 'Open-plan studio with white desks and glass partitions' },
   meeting: { src: `${S}/office-meeting.webp`, alt: 'Conference room set for a project review' },

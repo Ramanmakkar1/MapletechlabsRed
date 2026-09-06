@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ServiceHeroForm from '@/components/ServiceHeroForm';
+import MediaBand from '@/components/MediaBand';
+import { serviceMedia, defaultMedia } from '@/data/media';
 
 // ─── REVEAL HOOK ─────────────────────────────────────────────────────────────
 
@@ -203,6 +205,10 @@ export default function CityServicePageClient(props: CityServicePageProps) {
         {/* ════════════════════════════════════════════
             2. STATS STRIP
         ════════════════════════════════════════════ */}
+
+        <MediaBand
+          media={serviceMedia[serviceSlug] ?? defaultMedia}
+        />
         <section ref={statsRef} style={{ ...sectionBorder }}>
           <div className="cb-container">
             <div className="reveal loc-stats-strip" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
