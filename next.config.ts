@@ -63,6 +63,28 @@ const nextConfig: NextConfig = {
       { source: '/mobile-app-development-:city', destination: '/locations/:city/mobile-app-development', permanent: true },
       { source: '/web-development-:city', destination: '/locations/:city/web-development', permanent: true },
       { source: '/software-development-:city', destination: '/locations/:city/web-development', permanent: true },
+
+      // ── Legacy URLs reported as 404 in Google Search Console (16 URLs) ──
+      // These are indexed leftovers from the previous WordPress/.com site.
+      // Each 301s to its closest current equivalent so the link equity is kept
+      // and the "Not found (404)" report drains instead of growing.
+      { source: '/contact-us', destination: '/contact', permanent: true },
+      { source: '/mobile-app-development', destination: '/services/mobile-app-development', permanent: true },
+      { source: '/mobile-app-development-in-edmonton', destination: '/locations/edmonton/mobile-app-development', permanent: true },
+      { source: '/custom-android-apps-2', destination: '/services/mobile-app-development/android-app-development', permanent: true },
+      { source: '/react-native-app-development-company', destination: '/services/mobile-app-development/react-native-apps', permanent: true },
+      { source: '/services/blockchain', destination: '/services/blockchain-web3', permanent: true },
+      { source: '/services/saas-development/saas-development/multi-tenant', destination: '/services/saas-development/multi-tenant-architecture', permanent: true },
+      { source: '/app-development-company-in-saskatchewan-2', destination: '/locations/saskatoon/mobile-app-development', permanent: true },
+      { source: '/software-development-company-in-red-deer', destination: '/locations/edmonton/web-development', permanent: true },
+      // Vertical landing pages from the old site → nearest industry or service page
+      { source: '/fintech-app-development-company', destination: '/industries/fintech', permanent: true },
+      { source: '/insuretech-app-development-company', destination: '/industries/fintech', permanent: true },
+      { source: '/education-app-development-company', destination: '/industries/edtech', permanent: true },
+      { source: '/construction-app-development-company', destination: '/services/mobile-app-development', permanent: true },
+      { source: '/hospitality-app-development-company', destination: '/services/mobile-app-development', permanent: true },
+      { source: '/travel-app-development-company', destination: '/services/mobile-app-development', permanent: true },
+      { source: '/sports-app-development-company', destination: '/services/mobile-app-development', permanent: true },
     ];
   },
 };

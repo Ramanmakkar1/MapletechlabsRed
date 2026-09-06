@@ -44,6 +44,10 @@ interface CityServicePageProps {
   faqs: { q: string; a: string }[];
   relatedSubServices: { name: string; slug: string }[];
   relatedCityServices: { name: string; citySlug: string; serviceSlug: string }[];
+  sameServiceOtherCities: { cityName: string; citySlug: string; serviceSlug: string }[];
+  /** Content written for this city+service pairing specifically. */
+  intro: string;
+  applications: { industry: string; title: string; desc: string }[];
 }
 
 // ─── SHARED STYLES ───────────────────────────────────────────────────────────
@@ -79,7 +83,8 @@ export default function CityServicePageClient(props: CityServicePageProps) {
     serviceName, serviceSlug, heroContext, heroDescription, badge,
     stats, largeServices, smallServices, whyCity, steps,
     techCategories, testimonials, pricingTiers, faqs,
-    relatedSubServices, relatedCityServices,
+    relatedSubServices, relatedCityServices, sameServiceOtherCities,
+    intro, applications,
   } = props;
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -88,6 +93,7 @@ export default function CityServicePageClient(props: CityServicePageProps) {
   const statsRef = useReveal() as React.RefObject<HTMLElement>;
   const servicesRef = useReveal() as React.RefObject<HTMLElement>;
   const whyRef = useReveal() as React.RefObject<HTMLElement>;
+  const localRef = useReveal() as React.RefObject<HTMLElement>;
   const processRef = useReveal() as React.RefObject<HTMLElement>;
   const techRef = useReveal() as React.RefObject<HTMLElement>;
   const portfolioRef = useReveal() as React.RefObject<HTMLElement>;
@@ -271,6 +277,37 @@ export default function CityServicePageClient(props: CityServicePageProps) {
                   <div style={{ fontSize: 36, marginBottom: 20 }}>{w.icon}</div>
                   <h3 style={{ fontSize: 20, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 12 }}>{w.title}</h3>
                   <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, margin: 0 }}>{w.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════════
+            4b. THIS SERVICE, IN THIS CITY'S INDUSTRIES
+            The only block on the page written for the
+            city+service pairing rather than for either
+            axis alone. Without it these 144 pages are a
+            matrix recombination and Google indexes ~11%.
+        ════════════════════════════════════════════ */}
+        <section ref={localRef} style={{ ...sectionPad, ...sectionBorder }}>
+          <div className="cb-container">
+            <div className="reveal" style={{ marginBottom: 56, maxWidth: 860 }}>
+              <div style={subLabel}>{cityName} Sector Focus</div>
+              <h2 style={{ ...heading2, marginBottom: 24 }}>
+                {serviceName} for the industries {cityName} actually runs on
+              </h2>
+              <p style={{ ...bodyText, margin: 0 }}>{intro}</p>
+            </div>
+            <div className="reveal reveal-d1" style={autoGrid}>
+              {applications.map((a, i) => (
+                <div key={a.industry} className={`reveal reveal-d${Math.min(i + 1, 4)}`} style={{ ...cardStyle, padding: '36px 32px' }}
+                  onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
+                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(245,41,13,0.85)', marginBottom: 14 }}>
+                    {a.industry}
+                  </div>
+                  <h3 style={{ fontSize: 19, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 12, lineHeight: 1.3 }}>{a.title}</h3>
+                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, margin: 0 }}>{a.desc}</p>
                 </div>
               ))}
             </div>
@@ -517,6 +554,25 @@ export default function CityServicePageClient(props: CityServicePageProps) {
                       <div style={{ ...cardStyle, padding: '24px 28px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
                         onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
                         <span style={{ fontSize: 15, fontWeight: 500, color: '#fff' }}>{rs.name}</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Same service, other cities — gives the city axis a crawl path */}
+            {sameServiceOtherCities.length > 0 && (
+              <div className="reveal" style={{ marginBottom: 64 }}>
+                <div style={subLabel}>Other Locations</div>
+                <h2 style={{ ...heading2, marginBottom: 32 }}>{serviceName} Across Canada</h2>
+                <div style={autoGrid}>
+                  {sameServiceOtherCities.map(oc => (
+                    <Link key={oc.citySlug} href={`/locations/${oc.citySlug}/${oc.serviceSlug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <div style={{ ...cardStyle, padding: '24px 28px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+                        onMouseEnter={e => hoverCard(e, true)} onMouseLeave={e => hoverCard(e, false)}>
+                        <span style={{ fontSize: 15, fontWeight: 500, color: '#fff' }}>{serviceName} in {oc.cityName}</span>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                       </div>
                     </Link>

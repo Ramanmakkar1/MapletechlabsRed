@@ -33,8 +33,8 @@ const companies = [
 
 const relatedPosts = [
   { slug: 'top-10-unicorn-apps-2026', title: 'Top 10 Unicorn Apps of 2026', category: 'Business', readTime: '8 min' },
-  { slug: 'zero-to-1m-users-scaling-playbook', title: 'From 0 to 1M Users: A Scaling Playbook', category: 'Business', readTime: '9 min' },
-  { slug: 'true-cost-of-technical-debt', title: 'The True Cost of Technical Debt', category: 'Engineering', readTime: '7 min' },
+  { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
+  { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
 export default function BlogPostPageClient() {

@@ -238,7 +238,7 @@ export default function EnterprisePage() {
                 { name: 'Cloud & DevOps', href: '/services/cloud-devops', desc: 'Enterprise cloud migrations, Kubernetes orchestration and CI/CD pipelines for large teams.' },
                 { name: 'AI & Machine Learning', href: '/services/ai-ml', desc: 'Business intelligence models, process automation and predictive analytics for enterprise data.' },
                 { name: 'SaaS Development', href: '/services/saas-development', desc: 'Multi-tenant enterprise platforms with SSO, RBAC and audit-ready compliance tooling.' },
-                { name: 'Blockchain Development', href: '/services/blockchain', desc: 'Distributed ledger solutions for supply chain transparency and secure enterprise transactions.' },
+                { name: 'Blockchain Development', href: '/services/blockchain-web3', desc: 'Distributed ledger solutions for supply chain transparency and secure enterprise transactions.' },
               ].map((s) => (
                 <a key={s.href} href={s.href} style={{
                   display: 'block', padding: '24px', borderRadius: 16,

@@ -238,7 +238,7 @@ export default function FintechPage() {
                 { name: 'Mobile App Development', href: '/services/mobile-app-development', desc: 'Secure mobile banking and wallet apps with biometric auth and real-time notifications.' },
                 { name: 'AI & Machine Learning', href: '/services/ai-ml', desc: 'Fraud detection models, risk scoring engines and predictive analytics for financial data.' },
                 { name: 'Cloud & DevOps', href: '/services/cloud-devops', desc: 'PCI-DSS compliant cloud infrastructure with zero-downtime deployments and auto-scaling.' },
-                { name: 'Blockchain Development', href: '/services/blockchain', desc: 'Smart contracts, DeFi protocols and tokenised asset platforms on EVM-compatible chains.' },
+                { name: 'Blockchain Development', href: '/services/blockchain-web3', desc: 'Smart contracts, DeFi protocols and tokenised asset platforms on EVM-compatible chains.' },
               ].map((s) => (
                 <a key={s.href} href={s.href} style={{
                   display: 'block', padding: '24px', borderRadius: 16,

@@ -1,6 +1,7 @@
 import { type CityData, getCityBySlug, cities } from './cities';
 import { getServiceBySlug, services } from './services';
 import { canonicalUrl as buildCanonicalUrl } from '@/lib/seo/canonical';
+import { getCityServiceIntersection, type IndustryApplication } from './city-service-content';
 
 export interface CityServicePageData {
   // City data
@@ -27,6 +28,10 @@ export interface CityServicePageData {
   faqs: { q: string; a: string }[];
   relatedSubServices: { name: string; slug: string }[];
   relatedCityServices: { name: string; citySlug: string; serviceSlug: string }[];
+  sameServiceOtherCities: { cityName: string; citySlug: string; serviceSlug: string }[];
+  // City x service intersection content
+  intro: string;
+  applications: IndustryApplication[];
   // SEO
   title: string;
   description: string;
@@ -49,21 +54,38 @@ export function getCityServiceData(
 
   if (!city || !service) return null;
 
-  // Generate related city+service links (other services in same city)
+  // Every other service in this city, not a fixed first-four slice. The slice
+  // meant all 144 pages pointed at the same 4 destinations, so the remaining
+  // city+service pages were reachable only from the sitemap — which is exactly
+  // the shape that produces "Discovered - currently not indexed" at scale.
+  // Linking the full set makes each city an internally complete mesh.
   const relatedCityServices = services
     .filter(s => s.slug !== serviceSlug)
-    .slice(0, 4)
     .map(s => ({
       name: s.shortName,
       citySlug: city.slug,
       serviceSlug: s.slug,
     }));
 
-  // Process FAQs with city data
-  const processedFaqs = service.faqs.map(faq => ({
-    q: replacePlaceholders(faq.q, city),
-    a: replacePlaceholders(faq.a, city),
-  }));
+  // The same service in every other city. Gives the city axis its own crawl
+  // path, so a service page in one city can lead a crawler to the other 11.
+  const sameServiceOtherCities = cities
+    .filter(c => c.slug !== city.slug)
+    .map(c => ({ cityName: c.name, citySlug: c.slug, serviceSlug: service.slug }));
+
+  // Content written for this city+service pairing specifically.
+  const intersection = getCityServiceIntersection(city, service);
+
+  // Process FAQs with city data, then append the pairing-specific ones. These
+  // also flow into the FAQPage JSON-LD, so each page ships unique FAQ schema
+  // instead of 12 cities sharing one service's answers verbatim.
+  const processedFaqs = [
+    ...service.faqs.map(faq => ({
+      q: replacePlaceholders(faq.q, city),
+      a: replacePlaceholders(faq.a, city),
+    })),
+    ...intersection.localFaqs,
+  ];
 
   // Build hero description with city context
   const heroDescription = replacePlaceholders(service.heroDescription, city);
@@ -95,6 +117,9 @@ export function getCityServiceData(
     faqs: processedFaqs,
     relatedSubServices: service.relatedSubServices,
     relatedCityServices,
+    sameServiceOtherCities,
+    intro: intersection.intro,
+    applications: intersection.applications,
     title,
     description,
     canonicalUrl,

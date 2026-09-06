@@ -87,8 +87,11 @@ export function pageSitemapEntries(): SitemapEntry[] {
     { loc: `${BASE_URL}/case-studies/healthcare-telehealth`, lastmod: '2026-01-12', changefreq: 'monthly', priority: '0.7' },
     { loc: `${BASE_URL}/case-studies/ecommerce-platform`, lastmod: '2026-01-05', changefreq: 'monthly', priority: '0.7' },
     { loc: `${BASE_URL}/case-studies/logistics-platform`, lastmod: '2025-12-22', changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/case-studies/real-estate-portal`, lastmod: '2025-12-15', changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/case-studies/payments-api-platform`, lastmod: '2025-12-08', changefreq: 'monthly', priority: '0.7' },
     { loc: `${BASE_URL}/locations`, lastmod: '2026-02-15', changefreq: 'monthly', priority: '0.8' },
     { loc: `${BASE_URL}/faq`, lastmod: '2026-03-01', changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/industries`, lastmod: '2026-02-18', changefreq: 'monthly', priority: '0.8' },
     { loc: `${BASE_URL}/about/raman-makkar`, lastmod: '2026-02-20', changefreq: 'monthly', priority: '0.6' },
   ];
 }

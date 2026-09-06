@@ -117,6 +117,9 @@ export default async function CityServicePage({ params }: PageProps) {
         heroDescription={data.heroDescription}
         badge={data.badge}
         stats={data.stats}
+        sameServiceOtherCities={data.sameServiceOtherCities}
+        intro={data.intro}
+        applications={data.applications}
         largeServices={data.largeServices}
         smallServices={data.smallServices}
         whyCity={data.whyCity}

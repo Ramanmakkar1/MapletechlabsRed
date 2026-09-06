@@ -57,7 +57,7 @@ const cities = [
   { name: 'Victoria', province: 'British Columbia', slug: 'victoria', tagline: 'Pacific coast tech community', active: false },
   { name: 'Saskatoon', province: 'Saskatchewan', slug: 'saskatoon', tagline: 'Innovation on the prairies', active: false },
   { name: 'Kitchener', province: 'Ontario', slug: 'kitchener', tagline: 'Canada\'s Silicon Valley', active: false },
-  { name: 'London', province: 'Ontario', slug: 'london', tagline: 'Southwestern Ontario tech hub', active: false },
+  { name: 'London', province: 'Ontario', slug: 'london-on', tagline: 'Southwestern Ontario tech hub', active: false },
 ];
 
 export default function LocationsIndexPage() {

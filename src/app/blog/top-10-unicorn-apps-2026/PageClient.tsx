@@ -32,9 +32,9 @@ const apps = [
 ];
 
 const relatedPosts = [
-  { slug: 'zero-to-1m-users-scaling-playbook', title: 'From 0 to 1M Users: A Scaling Playbook', category: 'Business', readTime: '9 min' },
-  { slug: 'building-llm-apps-that-dont-hallucinate', title: 'Building LLM Apps That Don\'t Hallucinate', category: 'AI/ML', readTime: '10 min' },
-  { slug: 'true-cost-of-technical-debt', title: 'The True Cost of Technical Debt', category: 'Engineering', readTime: '7 min' },
+  { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
+  { slug: 'ai-development-companies-canada', title: 'Top 10 AI Development Companies in Canada (2026)', category: 'AI/ML', readTime: '9 min' },
+  { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
 export default function BlogPostPageClient() {
