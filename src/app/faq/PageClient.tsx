@@ -61,7 +61,7 @@ export default function FAQPageClient() {
           <div style={{
             position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
             width: 800, height: 800,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 65%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">

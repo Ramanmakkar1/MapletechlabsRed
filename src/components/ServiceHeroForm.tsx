@@ -69,7 +69,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
       boxShadow: '0 24px 64px rgba(20,17,24,0.10)',
     }}>
       {/* Glow accent */}
-      <div style={{ position: 'absolute', top: -1, left: '20%', right: '20%', height: 2, background: 'linear-gradient(90deg, transparent, #f5290d, transparent)', borderRadius: 2 }} />
+      <div style={{ position: 'absolute', top: -1, left: '20%', right: '20%', height: 2, background: 'var(--brand)', borderRadius: 2 }} />
 
       <div style={{ marginBottom: 28 }}>
         <h3 style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 6 }}>
@@ -173,7 +173,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
               height: 52,
               borderRadius: 12,
               border: 'none',
-              background: 'var(--brand-grad-btn)',
+              background: 'var(--brand)',
               color: '#fff',
               fontSize: 15,
               fontWeight: 700,

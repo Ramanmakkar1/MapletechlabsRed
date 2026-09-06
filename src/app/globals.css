@@ -619,143 +619,64 @@ textarea.field { height: auto; padding: 14px 18px; resize: vertical; min-height:
 }
 
 /* ═══════════════════════════════════════════════════════════
-   GRAPHICS LAYER
-   Aurora blooms, gradient borders and media tiles — the
-   graphic language of the reference sites, rebuilt in red.
-   Everything here is drawn in CSS: no third-party artwork,
-   nothing extra to download, crisp at any resolution.
+   MEDIA
+   Clean white treatment: photography carries the visual
+   weight, the frame around it stays quiet.
    ═══════════════════════════════════════════════════════════ */
 
-:root {
-  /* Warm red family for the blooms. Pure brand red at high alpha
-     reads as an alert, so the washes lean coral/peach and the
-     saturated red is kept for accents. */
-  --bloom-core:  rgba(245, 41, 13, 0.21);
-  --bloom-coral: rgba(255, 116, 78, 0.30);
-  --bloom-peach: rgba(255, 178, 148, 0.40);
-  --bloom-blush: rgba(255, 224, 212, 0.55);
+/* Image frame. Neutral ground shows while the photo loads and
+   behind transparent art, so a slow image never flashes white. */
+.media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--surface-sunk);
+  isolation: isolate;
 }
+.media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.media--lg { border-radius: var(--r-lg); }
+.media--flat { border-radius: 0; }
 
-/* ── AURORA BACKDROPS ───────────────────────────── */
-/* Sits behind a section's content; always pair with position:relative
-   on the section and z-index on the content. */
-.aurora {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Hero: blooms at the corners, then a white radial punched over the
-   middle so the colour survives only at the edges. */
-.aurora--hero {
-  background:
-    radial-gradient(circle at 12% 8%,  var(--bloom-coral) 0%, transparent 34%),
-    radial-gradient(circle at 88% 14%, var(--bloom-core)  0%, transparent 36%),
-    radial-gradient(circle at 72% 92%, var(--bloom-peach) 0%, transparent 40%);
-}
-.aurora--hero::after {
+/* Hairline inside the frame keeps a pale photo from bleeding into
+   a white section. */
+.media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% -10%,
-    #fff 0%, rgba(255,255,255,.97) 20%, rgba(255,255,255,.86) 38%,
-    rgba(255,255,255,.55) 60%, rgba(255,255,255,0) 84%);
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(20,17,24,.08);
+  pointer-events: none;
 }
 
-/* Section: a single soft corner bloom. */
-.aurora--section {
-  background:
-    radial-gradient(circle at 14% 10%, var(--bloom-peach) 0%, transparent 32%),
-    radial-gradient(circle at 90% 88%, var(--bloom-core)  0%, transparent 34%);
-}
+/* Zoom on hover for cards that link somewhere. */
+.media--zoom > img { transition: transform .6s cubic-bezier(.16,1,.3,1); }
+a:hover .media--zoom > img,
+.media--zoom:hover > img { transform: scale(1.04); }
 
-/* Band: stepped falloff, the layered look the references use behind
-   their award and testimonial strips. */
-.aurora--band {
-  background:
-    radial-gradient(circle at 16% 12%,
-      rgba(245,41,13,.20) 0%, rgba(245,41,13,.13) 12%,
-      rgba(245,41,13,.07) 24%, rgba(245,41,13,0) 42%),
-    radial-gradient(circle at 84% 82%,
-      rgba(255,138,96,.22) 0%, rgba(255,138,96,0) 40%);
-}
-
-/* On the deep-ink bands the same idea, tuned for a dark ground. */
-.aurora--ink {
-  background:
-    radial-gradient(circle at 14% 10%, rgba(245,41,13,.26) 0%, transparent 38%),
-    radial-gradient(circle at 86% 90%, rgba(255,106,61,.18) 0%, transparent 40%);
-}
-
-/* ── SECTION HAND-OFF ───────────────────────────── */
-/* Fades one section's ground into the next so bands meet softly
-   instead of butting together on a hard line. */
-.fade-to-tint  { background: linear-gradient(to bottom, var(--surface), var(--brand-tint)); }
-.fade-to-alt   { background: linear-gradient(to bottom, var(--surface), var(--surface-alt)); }
-.fade-from-alt { background: linear-gradient(to bottom, var(--surface-alt), var(--surface)); }
-
-/* ── GRADIENT BORDER ────────────────────────────── */
-/* Two stacked backgrounds: an opaque fill clipped to the padding box,
-   the gradient clipped to the border box — so the border itself is
-   the gradient. */
-.grad-border {
-  border: 1px solid transparent;
-  border-radius: var(--r-pill);
-  background:
-    linear-gradient(var(--surface), var(--surface)) padding-box,
-    linear-gradient(104deg, rgba(245,41,13,.45) 8%, rgba(255,150,120,.85) 50%, rgba(245,41,13,.45) 92%) border-box;
-}
-.grad-border--card { border-radius: var(--r-lg); }
-
-/* ── ANIMATED GRADIENT TEXT ─────────────────────── */
-.grad-text {
-  background: linear-gradient(90deg,
-    #C81700 0%, #E11900 12.5%, #F5290D 25%, #FF5A2E 37.5%,
-    #FF8A5B 50%, #FF5A2E 62.5%, #F5290D 75%, #E11900 87.5%, #C81700 100%);
-  background-size: 220% 100%;
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: grad-slide 7s linear infinite;
-}
-@keyframes grad-slide {
-  from { background-position: 0% 50%; }
-  to   { background-position: 220% 50%; }
-}
-
-/* ── MEDIA TILES ────────────────────────────────── */
-/* Vivid gradient panels used where the references drop a video or
-   photo. They read as intentional art rather than a missing image. */
-.tile {
-  position: relative;
-  border-radius: var(--r-md);
-  overflow: hidden;
-  isolation: isolate;
-}
-.tile--1 { background: linear-gradient(104deg, #FF7A4D 4%, #E11900 95%); }
-.tile--2 { background: linear-gradient(104deg, #FFC48A 4%, #F5290D 95%); }
-.tile--3 { background: linear-gradient(282deg, #FFB39C 10%, #C81700 96%); }
-.tile--4 { background: linear-gradient(140deg, #2B1F26 8%, #6E2418 95%); }
-.tile--ink { background: linear-gradient(160deg, #1B1419 40%, #3A1E1A); }
-
-/* A faint grid over a tile reads as "engineering" rather than "poster". */
-.tile__grid {
+/* Scrim for text placed over a photo. */
+.media__scrim {
   position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
-  background-size: 34px 34px;
-  -webkit-mask-image: radial-gradient(ellipse at 30% 20%, #000 10%, transparent 78%);
-          mask-image: radial-gradient(ellipse at 30% 20%, #000 10%, transparent 78%);
-}
-/* Soft light sweep across the top-left of a tile. */
-.tile__sheen {
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 22% 8%, rgba(255,255,255,.34), transparent 62%);
+  background: linear-gradient(to top, rgba(20,17,24,.62), rgba(20,17,24,.12) 46%, transparent 72%);
 }
 
-/* ── DOT / MESH TEXTURE ─────────────────────────── */
+/* Label chip that sits on a photo. */
+.media__chip {
+  position: absolute; left: 14px; top: 14px;
+  display: inline-flex; align-items: center;
+  padding: 7px 14px; border-radius: 100px;
+  background: #fff;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--brand-deep);
+  box-shadow: 0 3px 12px rgba(20,17,24,.16);
+}
+
+/* Faint dot texture, the one decorative flourish kept. */
 .dots {
   background-image: radial-gradient(rgba(20,17,24,.14) 1.1px, transparent 1.1px);
   background-size: 20px 20px;
@@ -763,8 +684,4 @@ textarea.field { height: auto; padding: 14px 18px; resize: vertical; min-height:
 .dots--ink {
   background-image: radial-gradient(rgba(255,255,255,.16) 1.1px, transparent 1.1px);
   background-size: 20px 20px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .grad-text { animation: none; }
 }

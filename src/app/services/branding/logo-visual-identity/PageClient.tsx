@@ -75,7 +75,7 @@ export default function LogoVisualIdentityPage() {
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', fontFamily: 'inherit' }}>
 
         {/* HERO */}
-        <section ref={heroRef} style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', paddingTop: 140, paddingBottom: 80, background: 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,41,13,0.12) 0%, transparent 70%)' }}>
+        <section ref={heroRef} style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', paddingTop: 140, paddingBottom: 80, background: 'transparent' }}>
           <div className="cb-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: 'clamp(24px, 5vw, 60px)', alignItems: 'center' }}>
               <div>
@@ -95,7 +95,7 @@ export default function LogoVisualIdentityPage() {
             </h1>
             <p className="reveal reveal-d3" style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7, maxWidth: 600, marginBottom: 40 }}>Award-winning logo design and complete visual identity systems — built to be distinctive, versatile, and timeless across every touchpoint your brand inhabits.</p>
             <div className="reveal reveal-d4" style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 52, padding: '0 32px', borderRadius: 100, background: 'var(--brand-grad-btn)', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none' }}>
+              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 52, padding: '0 32px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none' }}>
                 Start Your Project
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </Link>
@@ -179,12 +179,12 @@ export default function LogoVisualIdentityPage() {
         </section>
 
         {/* CTA */}
-        <section ref={s4} style={{ padding: '120px 0', textAlign: 'center', background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(245,41,13,0.08) 0%, transparent 70%)' }}>
+        <section ref={s4} style={{ padding: '120px 0', textAlign: 'center', background: 'transparent' }}>
           <div className="cb-container">
             <h2 className="reveal" style={{ fontSize: 'clamp(32px, 5vw, 60px)', fontWeight: 800, letterSpacing: '-0.04em', marginBottom: 20 }}>Ready to Build Your Identity?</h2>
             <p className="reveal reveal-d1" style={{ fontSize: 18, color: 'var(--muted)', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>Let's create a visual identity that makes your brand impossible to ignore.</p>
             <div className="reveal reveal-d2" style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 56, padding: '0 40px', borderRadius: 100, background: 'var(--brand-grad-btn)', color: '#fff', fontSize: 16, fontWeight: 700, textDecoration: 'none' }}>
+              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 56, padding: '0 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 16, fontWeight: 700, textDecoration: 'none' }}>
                 Get a Free Quote
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </Link>

@@ -53,7 +53,7 @@ export default function SaaSGuide2026Client() {
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.05) 0%, transparent 65%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
@@ -249,7 +249,7 @@ export default function SaaSGuide2026Client() {
                       background: 'rgba(245,41,13,0.05)', border: '1px solid rgba(245,41,13,0.2)',
                       borderRadius: 20, padding: 28, position: 'relative', overflow: 'hidden'
                     }}>
-                         <div style={{ position: 'absolute', top: -20, right: -20, width: 100, height: 100, background: 'radial-gradient(circle, rgba(245,41,13,0.1) 0%, transparent 70%)', filter: 'blur(20px)' }} />
+                         <div style={{ position: 'absolute', top: -20, right: -20, width: 100, height: 100, background: 'transparent', filter: 'blur(20px)' }} />
                         <p style={{ fontSize: 16, color: 'var(--ink)', lineHeight: 1.8, margin: 0, position: 'relative', zIndex: 1, fontWeight: 500 }}>
                             Before writing a single line of code, you need an <strong>MVP (Minimum Viable Product)</strong>. An MVP isn't a broken version of your app. It is the absolute <em>minimum</em> amount of features required to solve your customer's core problem and prove they are willing to pay.
                         </p>

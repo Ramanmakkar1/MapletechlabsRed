@@ -78,7 +78,6 @@ export default function ProcessSection() {
 
   return (
     <section ref={ref} id="process" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' , position: 'relative', overflow: 'hidden'}}>
-      <div aria-hidden className="aurora aurora--section" />
       <div className="cb-container">
 
         {/* Header */}
@@ -104,7 +103,7 @@ export default function ProcessSection() {
             top: 28,
             bottom: 28,
             width: 1,
-            background: 'linear-gradient(to bottom, transparent, rgba(245,41,13,0.3) 20%, rgba(245,41,13,0.3) 80%, transparent)',
+            background: 'var(--brand) 80%, transparent)',
             zIndex: 0,
           }} />
 

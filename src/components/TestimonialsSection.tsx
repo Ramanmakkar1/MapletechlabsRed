@@ -112,7 +112,6 @@ export default function TestimonialsSection() {
 
   return (
     <section ref={ref} id="testimonials" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' , position: 'relative', overflow: 'hidden'}}>
-      <div aria-hidden className="aurora aurora--band" />
       <div className="cb-container">
         <div className="reveal" style={{ marginBottom: 'clamp(40px, 8vw, 80px)' }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Testimonials</div>

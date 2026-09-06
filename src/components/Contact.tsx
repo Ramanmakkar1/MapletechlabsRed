@@ -49,8 +49,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-padding" style={{ background: 'var(--surface)', position: 'relative', overflow: 'hidden' }}>
-      <div aria-hidden className="aurora aurora--section" />
-      <div aria-hidden="true" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 500, background: 'radial-gradient(ellipse, rgba(245,41,13,0.09) 0%, transparent 60%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
+      <div aria-hidden="true" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 500, background: 'transparent', filter: 'blur(80px)', pointerEvents: 'none' }} />
 
       <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="contact-inner contact-grid" style={{ maxWidth: 1100, margin: '0 auto' }}>

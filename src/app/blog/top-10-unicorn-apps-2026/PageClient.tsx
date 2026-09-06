@@ -59,7 +59,7 @@ export default function BlogPostPageClient() {
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.05) 0%, transparent 65%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">

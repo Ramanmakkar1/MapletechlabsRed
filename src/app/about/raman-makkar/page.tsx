@@ -53,7 +53,7 @@ export default function RamanPage() {
           </div>
 
           <div style={{ marginTop: '48px', textAlign: 'center' }}>
-            <a href="/contact" style={{ display: 'inline-block', padding: '12px 32px', background: 'var(--brand-grad-btn)', color: '#fff', textDecoration: 'none', borderRadius: '100px', fontWeight: 700, fontSize: '16px' }}>
+            <a href="/contact" style={{ display: 'inline-block', padding: '12px 32px', background: 'var(--brand)', color: '#fff', textDecoration: 'none', borderRadius: '100px', fontWeight: 700, fontSize: '16px' }}>
               Get In Touch
             </a>
           </div>

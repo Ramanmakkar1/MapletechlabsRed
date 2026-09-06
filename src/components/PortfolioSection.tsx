@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import { WorkStage } from './graphics/Mockups';
+import Image from 'next/image';
+import { workMedia } from '@/data/media';
 
 const projects = [
   {
@@ -125,22 +126,18 @@ export default function PortfolioSection() {
             </div>
           </div>
 
-          {/* Right: gradient stage with device mockups. Original artwork —
-              the tile colour rotates with the selected project. */}
-          <div
-            className="portfolio-visual"
-            style={{ position: 'relative', overflow: 'hidden', minHeight: 400, display: 'flex' }}
-          >
-            <WorkStage
-              tile={((active % 4) + 1) as 1 | 2 | 3 | 4}
-              title={`${p.id}.mapletechlabs.ca`}
-              label={p.category}
-              metric={p.metrics[0].value}
-              caption={p.metrics[0].label}
+          {/* Right: the project photograph, full-bleed, with a floating
+              metric chip. No gradient — the photo carries the panel. */}
+          <div className="portfolio-visual" style={{ position: 'relative', minHeight: 400 }}>
+            <Image
+              src={workMedia[p.id]?.src ?? workMedia.fintech.src}
+              alt={workMedia[p.id]?.alt ?? p.title}
+              fill
+              sizes="(max-width: 1023px) 100vw, 50vw"
+              style={{ objectFit: 'cover' }}
             />
 
-            {/* Metric badge */}
-            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: 'rgba(255,255,255,0.94)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)', maxWidth: 'calc(100% - 32px)', boxShadow: '0 6px 20px rgba(20,17,24,.18)' }}>
+            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: '#fff', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, maxWidth: 'calc(100% - 32px)', boxShadow: '0 6px 20px rgba(20,17,24,.22)' }}>
               <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)' }} />
               <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand-deep)' }}>{p.metrics[1].value} {p.metrics[1].label}</span>
             </div>

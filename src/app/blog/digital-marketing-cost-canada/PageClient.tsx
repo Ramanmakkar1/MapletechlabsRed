@@ -99,7 +99,7 @@ export default function DigitalMarketingCostCanadaClient() {
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.05) 0%, transparent 65%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
@@ -225,7 +225,7 @@ export default function DigitalMarketingCostCanadaClient() {
                   <div key={card.id} className="reveal" style={{ marginBottom: 56 }} id={card.id}>
                     <div style={{
                       background: card.id === 'seo'
-                        ? 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(20,17,24,0.035) 100%)'
+                        ? 'var(--brand-tint) 100%)'
                         : 'rgba(20,17,24,0.035)',
                       border: card.id === 'seo'
                         ? '1px solid rgba(245,41,13,0.3)'
@@ -233,7 +233,7 @@ export default function DigitalMarketingCostCanadaClient() {
                       borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                     }}>
                       {card.id === 'seo' && (
-                        <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 70%)', filter: 'blur(30px)' }} />
+                        <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                       )}
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                         <div style={{
@@ -400,11 +400,11 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Mapletech Labs Approach */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-approach">
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(20,17,24,0.018) 100%)',
+                    background: 'var(--brand-tint) 100%)',
                     border: '1px solid rgba(245,41,13,0.3)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
-                    <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 70%)', filter: 'blur(30px)' }} />
+                    <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <div style={{ position: 'relative', zIndex: 1 }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
                         <span style={{ fontSize: 28 }}>🍁</span>

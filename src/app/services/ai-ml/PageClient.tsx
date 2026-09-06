@@ -138,7 +138,7 @@ export default function AiMlPage() {
           {/* Grid bg */}
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,17,24,0.035) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
           {/* Dual glow — green + purple for AI feel */}
-          <div style={{ position: 'absolute', top: '15%', right: '8%', width: 700, height: 600, background: 'radial-gradient(ellipse,rgba(245,41,13,0.07) 0%,transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: '15%', right: '8%', width: 700, height: 600, background: 'transparent', filter: 'blur(80px)', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: 500, height: 400, background: 'radial-gradient(ellipse,rgba(192,132,252,0.06) 0%,transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
 
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
@@ -265,7 +265,7 @@ export default function AiMlPage() {
 
             <div style={{ position: 'relative' }}>
               {/* Vertical connecting line */}
-              <div style={{ position: 'absolute', left: 23, top: 24, bottom: 24, width: 2, background: 'linear-gradient(to bottom, rgba(245,41,13,0.5), rgba(245,41,13,0.05))', zIndex: 0 }} />
+              <div style={{ position: 'absolute', left: 23, top: 24, bottom: 24, width: 2, background: 'var(--brand))', zIndex: 0 }} />
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                 {steps.map((step, i) => (
@@ -368,7 +368,7 @@ export default function AiMlPage() {
             BOTTOM CTA
         ═══════════════════════════════════════ */}
         <section ref={ctaRef} style={{ padding: 'clamp(60px, 8vw, 120px) 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
-          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 500, background: 'radial-gradient(ellipse,rgba(245,41,13,0.09) 0%,transparent 65%)', filter: 'blur(70px)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 500, background: 'transparent', filter: 'blur(70px)', pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--faint)', marginBottom: 24 }}>Let&apos;s Build</div>
             <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.5rem,5vw,5.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>

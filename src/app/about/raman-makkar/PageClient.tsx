@@ -23,7 +23,7 @@ export default function RamanMakkarPageClient() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginBottom: 40 }}>
               <div style={{
                 width: 80, height: 80, borderRadius: '50%',
-                background: 'var(--brand-grad-btn)',
+                background: 'var(--brand)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: 28, fontWeight: 700, color: '#fff',
               }}>RM</div>

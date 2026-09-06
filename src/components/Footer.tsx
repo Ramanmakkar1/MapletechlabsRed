@@ -93,7 +93,6 @@ function ColTitle({ children }: { children: React.ReactNode }) {
 export default function Footer() {
   return (
     <footer style={{ background: 'var(--surface-ink)', borderTop: '1px solid var(--line-ink)' , position: 'relative', overflow: 'hidden'}}>
-      <div aria-hidden className="aurora aurora--ink" />
 
       {/* CTA Banner */}
       <div style={{ borderBottom: '1px solid var(--line-ink)' }}>

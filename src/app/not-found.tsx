@@ -43,7 +43,7 @@ export default function NotFound() {
           fontWeight: 700,
           letterSpacing: '-0.04em',
           margin: 0,
-          background: 'var(--brand-grad-btn)',
+          background: 'var(--brand)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
         }}

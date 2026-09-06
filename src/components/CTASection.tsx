@@ -43,8 +43,8 @@ export default function CTASection() {
       position:'relative', overflow:'hidden',
     }}>
       {/* BG orbs */}
-      <div style={{ position:'absolute', top:'-20%', right:'-10%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle, rgba(245,41,13,0.1) 0%, transparent 70%)', pointerEvents:'none' }}/>
-      <div style={{ position:'absolute', bottom:'-20%', left:'-10%', width:400, height:400, borderRadius:'50%', background:'radial-gradient(circle, rgba(8,50,61,0.8) 0%, transparent 70%)', pointerEvents:'none' }}/>
+      <div style={{ position:'absolute', top:'-20%', right:'-10%', width:500, height:500, borderRadius:'50%', background:'transparent', pointerEvents:'none' }}/>
+      <div style={{ position:'absolute', bottom:'-20%', left:'-10%', width:400, height:400, borderRadius:'50%', background:'radial-gradient(circle, transparent 0%, transparent 70%)', pointerEvents:'none' }}/>
 
       <div className="cb-container" style={{ position:'relative', zIndex:10 }}>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'60px 80px', alignItems:'center' }}>

@@ -119,7 +119,7 @@ export default function AboutPage() {
           <div aria-hidden="true" style={{
             position: 'absolute', top: -200, left: '30%',
             width: 700, height: 700,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 70%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
@@ -251,7 +251,7 @@ export default function AboutPage() {
                   {/* Vertical line */}
                   <div aria-hidden="true" style={{
                     position: 'absolute', left: 0, top: 12, bottom: 12,
-                    width: 1, background: 'linear-gradient(to bottom, #f5290d, rgba(245,41,13,0.1))',
+                    width: 1, background: 'var(--brand-tint)',
                   }} />
                   {timeline.map((item, i) => (
                     <div key={item.year} style={{
@@ -480,7 +480,7 @@ export default function AboutPage() {
                 position: 'absolute', top: '50%', left: '50%',
                 transform: 'translate(-50%, -50%)',
                 width: 500, height: 500,
-                background: 'radial-gradient(circle, rgba(245,41,13,0.05) 0%, transparent 70%)',
+                background: 'transparent',
                 pointerEvents: 'none',
               }} />
               <span style={{

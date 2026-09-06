@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+import { caseStudyMedia, workMedia } from '@/data/media';
 
 import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
@@ -111,7 +113,7 @@ export default function CaseStudiesPageClient() {
           <div style={{
             position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
             width: 800, height: 800,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 70%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
@@ -204,35 +206,26 @@ export default function CaseStudiesPageClient() {
                         (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
                       }}
                     >
-                      {/* Placeholder image area — 16:9 */}
-                      <div style={{
-                        width: '100%',
-                        aspectRatio: '16/9',
-                        background: cs.gradient,
-                        borderBottom: '1px solid var(--line)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        position: 'relative',
-                        overflow: 'hidden',
-                      }}>
-                        {/* Decorative grid pattern */}
-                        <div style={{
-                          position: 'absolute', inset: 0, opacity: 0.15,
-                          backgroundImage: 'radial-gradient(var(--line-strong) 1px, transparent 1px)',
-                          backgroundSize: '24px 24px',
-                        }} />
-                        {/* Metric callout in image */}
-                        <div style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
+                      {/* Project photo, 16:9, with the headline metric over it */}
+                      <div className="media media--flat media--zoom" style={{ width: '100%', aspectRatio: '16/9', borderBottom: '1px solid var(--line)' }}>
+                        <Image
+                          src={caseStudyMedia[cs.slug]?.src ?? workMedia.fintech.src}
+                          alt={caseStudyMedia[cs.slug]?.alt ?? cs.title}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                          style={{ objectFit: 'cover' }}
+                        />
+                        <div className="media__scrim" aria-hidden />
+                        <div style={{ position: 'absolute', left: 20, bottom: 16, zIndex: 1 }}>
                           <div style={{
-                            fontSize: 'clamp(32px, 6vw, 48px)', fontWeight: 800, color: 'var(--ink)', letterSpacing: '-0.03em',
-                            lineHeight: 1,
+                            fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 800, color: '#fff',
+                            letterSpacing: '-0.03em', lineHeight: 1, textShadow: '0 2px 12px rgba(0,0,0,.4)',
                           }}>
                             {cs.metric.value}
                           </div>
                           <div style={{
-                            fontSize: 12, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase',
-                            color: 'var(--muted)', marginTop: 8,
+                            fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
+                            color: 'rgba(255,255,255,.88)', marginTop: 6, textShadow: '0 1px 8px rgba(0,0,0,.5)',
                           }}>
                             {cs.metric.label}
                           </div>

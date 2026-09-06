@@ -41,7 +41,7 @@ export default function RealEstateCaseStudyClient() {
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.05) 0%, transparent 65%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
@@ -81,7 +81,7 @@ export default function RealEstateCaseStudyClient() {
               width: '100%',
               aspectRatio: '16/9',
               borderRadius: 20,
-              background: 'linear-gradient(135deg, rgba(245,41,13,0.08), rgba(20,17,24,0.027))',
+              background: 'var(--brand-tint))',
               border: '1px solid var(--line)',
               display: 'flex',
               alignItems: 'center',
@@ -225,7 +225,7 @@ export default function RealEstateCaseStudyClient() {
             <div className="reveal" style={{
               maxWidth: 760,
               padding: 'clamp(24px, 4vw, 48px)', borderRadius: 24,
-              background: 'linear-gradient(135deg, rgba(245,41,13,0.06), rgba(20,17,24,0.018))',
+              background: 'var(--brand-tint))',
               border: '1px solid rgba(245,41,13,0.15)',
               position: 'relative',
             }}>

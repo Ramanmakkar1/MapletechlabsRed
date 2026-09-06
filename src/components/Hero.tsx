@@ -37,14 +37,12 @@ export default function Hero() {
         paddingTop: 'clamp(96px, 12vw, 132px)',
       }}
     >
-      {/* Layered red aurora with a white radial punched over the centre, so
-          colour survives only at the edges; faint engineering grid on top. */}
-      <div aria-hidden className="aurora aurora--hero" />
+      {/* Faint engineering grid, and a soft hand-off into the band below. */}
       <div aria-hidden className="grid-bg" style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }} />
       <div
         aria-hidden
         style={{
-          position: 'absolute', bottom: 0, left: 0, right: 0, height: 200,
+          position: 'absolute', bottom: 0, left: 0, right: 0, height: 140,
           background: 'linear-gradient(to bottom, transparent, var(--surface-alt))',
           pointerEvents: 'none', zIndex: 0,
         }}
@@ -54,10 +52,11 @@ export default function Hero() {
         {/* ── LEFT: copy ───────────────────────────── */}
         <div>
           <div
-            className="reveal visible grad-border"
+            className="reveal visible"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 10,
               padding: '8px 18px', marginBottom: 'clamp(20px, 3vw, 30px)',
+              border: '1px solid var(--line-strong)', borderRadius: 100,
             }}
           >
             <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand-bright)', boxShadow: '0 0 0 4px rgba(245,41,13,.14)' }} />
@@ -78,9 +77,9 @@ export default function Hero() {
           >
             We build{' '}
             <span
-              className="grad-text"
               style={{
                 display: 'inline-block',
+                color: 'var(--brand)',
                 opacity: show ? 1 : 0,
                 transform: show ? 'translateY(0)' : 'translateY(-8px)',
                 transition: 'opacity .32s ease, transform .32s ease',
@@ -186,7 +185,7 @@ function HeroVisual() {
                 flex: 1,
                 height: `${h}%`,
                 borderRadius: '7px 7px 3px 3px',
-                background: n === bars.length - 2 ? 'var(--brand-grad)' : 'var(--surface-sunk)',
+                background: n === bars.length - 2 ? 'var(--brand)' : 'var(--surface-sunk)',
                 boxShadow: n === bars.length - 2 ? '0 6px 18px rgba(245,41,13,.28)' : 'none',
                 animation: `hv-rise .9s cubic-bezier(.16,1,.3,1) ${n * 0.07}s both`,
                 transformOrigin: 'bottom',
@@ -221,7 +220,7 @@ function HeroVisual() {
           display: 'flex', alignItems: 'center', gap: 12,
         }}
       >
-        <span style={{ width: 34, height: 34, borderRadius: 10, background: 'var(--brand-grad)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+        <span style={{ width: 34, height: 34, borderRadius: 10, background: 'var(--brand)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
         </span>
         <span>

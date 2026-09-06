@@ -97,7 +97,7 @@ export default function ARVRPage() {
         {/* HERO */}
         <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 8vw, 100px) 0 clamp(60px, 8vw, 120px)', borderBottom: '1px solid var(--line)' }}>
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,17,24,0.035) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
-          <div style={{ position: 'absolute', top: '30%', left: '5%', width: 600, height: 600, background: 'radial-gradient(ellipse,rgba(245,41,13,0.08) 0%,transparent 65%)', filter: 'blur(60px)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: '30%', left: '5%', width: 600, height: 600, background: 'transparent', filter: 'blur(60px)', pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: 'clamp(24px, 5vw, 80px)', alignItems: 'center' }}>
               {/* Left */}
@@ -266,7 +266,7 @@ export default function ARVRPage() {
             </div>
             <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 60px' }}>Our XR Build Process</h2>
             <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 0 }}>
-              <div style={{ position: 'absolute', top: 24, bottom: 24, left: 23, width: 1, background: 'linear-gradient(to bottom, #f5290d, rgba(245,41,13,0.1))', zIndex: 0 }} />
+              <div style={{ position: 'absolute', top: 24, bottom: 24, left: 23, width: 1, background: 'var(--brand-tint)', zIndex: 0 }} />
               {steps.map((step, i) => (
                 <div key={i} className="reveal" style={{ display: 'flex', gap: 32, paddingBottom: i < steps.length - 1 ? 48 : 0, position: 'relative', zIndex: 1, transitionDelay: `${i * 0.1}s` }}>
                   <div style={{ width: 46, height: 46, borderRadius: '50%', background: 'var(--brand)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{step.num}</div>

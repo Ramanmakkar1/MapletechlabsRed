@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+import { blogImage } from '@/data/media';
 import { useRef, useEffect } from 'react';
 
 const featuredCaseStudy = {
@@ -81,7 +83,7 @@ export default function InsightsSection() {
             overflow: 'hidden',
             textDecoration: 'none',
             transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
-            background: 'linear-gradient(135deg, rgba(245,41,13,0.04) 0%, rgba(0,0,0,0) 100%)',
+            background: 'var(--brand-tint) 100%)',
             marginBottom: 40,
           }}
           onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(20,17,24,0.10)'; }}
@@ -120,13 +122,16 @@ export default function InsightsSection() {
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.15)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(20,17,24,0.10)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
             >
-              {/* Gradient card header — original artwork, one tone per card */}
-              <div className={`tile tile--${(i % 3) + 1}`} style={{ height: 200, borderRadius: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div className="tile__grid" aria-hidden />
-                <div className="tile__sheen" aria-hidden />
-                <div style={{ position: 'relative', zIndex: 1, padding: '10px 18px', background: '#fff', borderRadius: 100, boxShadow: '0 4px 14px rgba(20,17,24,.16)' }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand-deep)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{post.tag}</span>
-                </div>
+              {/* Photo header with the category chip over it */}
+              <div className="media media--flat media--zoom" style={{ height: 200 }}>
+                <Image
+                  src={blogImage(i).src}
+                  alt={blogImage(i).alt}
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 33vw"
+                  style={{ objectFit: 'cover' }}
+                />
+                <span className="media__chip">{post.tag}</span>
               </div>
 
               {/* Content */}

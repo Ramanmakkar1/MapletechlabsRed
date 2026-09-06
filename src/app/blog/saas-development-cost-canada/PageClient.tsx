@@ -65,7 +65,7 @@ export default function SaasDevelopmentCostCanadaClient() {
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.05) 0%, transparent 65%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
@@ -198,7 +198,7 @@ export default function SaasDevelopmentCostCanadaClient() {
 
                   {/* Tier 1: MVP */}
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(20,17,24,0.018) 100%)',
+                    background: 'var(--brand-tint) 100%)',
                     border: '1px solid rgba(245,41,13,0.3)',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>
@@ -358,7 +358,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                   </p>
 
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(20,17,24,0.018) 100%)',
+                    background: 'var(--brand-tint) 100%)',
                     border: '1px solid rgba(245,41,13,0.3)',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>

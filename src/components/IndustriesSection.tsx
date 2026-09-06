@@ -1,13 +1,15 @@
 'use client';
 import { useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { industryMedia } from '@/data/media';
 
 const industries = [
-  { name: 'FinTech', desc: 'Secure payment systems, trading platforms and compliance tools for modern finance.', icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' },
-  { name: 'Healthcare', desc: 'HIPAA-compliant telehealth apps, EHR systems and patient-first digital portals.', icon: 'M22 12h-4l-3 9L9 3l-3 9H2' },
-  { name: 'E-Commerce', desc: 'Headless commerce platforms and high-scale multi-vendor retail ecosystems.', icon: 'M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z' },
-  { name: 'Logistics', desc: 'Smart fleet tracking, route optimisation and automated warehouse management.', icon: 'M10 17h4V5H2v12h3m1 0a2 2 0 1 0 4 0 2 2 0 1 0-4 0' },
-  { name: 'Education', desc: 'Adaptive LMS platforms, e-learning tools and AI-powered digital certifications.', icon: 'M12 19l9 2V6l-9-2-9 2v15l9-2z' },
-  { name: 'Enterprise', desc: 'Complex ERP systems, BI dashboards and enterprise workflow automation.', icon: 'M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5' },
+  { key: 'fintech', name: 'FinTech', desc: 'Secure payment systems, trading platforms and compliance tools for modern finance.', icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' },
+  { key: 'healthcare', name: 'Healthcare', desc: 'HIPAA-compliant telehealth apps, EHR systems and patient-first digital portals.', icon: 'M22 12h-4l-3 9L9 3l-3 9H2' },
+  { key: 'ecommerce', name: 'E-Commerce', desc: 'Headless commerce platforms and high-scale multi-vendor retail ecosystems.', icon: 'M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z' },
+  { key: 'logistics', name: 'Logistics', desc: 'Smart fleet tracking, route optimisation and automated warehouse management.', icon: 'M10 17h4V5H2v12h3m1 0a2 2 0 1 0 4 0 2 2 0 1 0-4 0' },
+  { key: 'edtech', name: 'Education', desc: 'Adaptive LMS platforms, e-learning tools and AI-powered digital certifications.', icon: 'M12 19l9 2V6l-9-2-9 2v15l9-2z' },
+  { key: 'enterprise', name: 'Enterprise', desc: 'Complex ERP systems, BI dashboards and enterprise workflow automation.', icon: 'M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5' },
 ];
 
 export default function IndustriesSection() {
@@ -23,7 +25,6 @@ export default function IndustriesSection() {
 
   return (
     <section ref={ref} id="industries" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' , position: 'relative', overflow: 'hidden'}}>
-      <div aria-hidden className="aurora aurora--section" />
       <div className="cb-container">
         <div className="reveal" style={{ marginBottom: 'clamp(32px, 8vw, 80px)' }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Expertise</div>
@@ -40,20 +41,29 @@ export default function IndustriesSection() {
         <div className="industries-grid">
           {industries.map((ind, i) => (
             <div key={ind.name} className={`reveal reveal-d${Math.min(i + 1, 6)}`}
-              style={{ padding: 'clamp(20px, 4vw, 48px)', border: '1px solid var(--line)', borderRadius: 'clamp(20px, 5vw, 36px)', display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 3vw, 24px)', transition: 'all 0.4s ease', cursor: 'default' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(20,17,24,0.10), 0 0 40px rgba(245,41,13,0.08)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
+              style={{ border: '1px solid var(--line)', borderRadius: 'clamp(18px, 4vw, 26px)', overflow: 'hidden', display: 'flex', flexDirection: 'column', transition: 'border-color .3s ease, transform .3s ease, box-shadow .3s ease', background: 'var(--surface)' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand-line)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 48px rgba(20,17,24,0.10)'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
             >
-              <div style={{ width: 52, height: 52, borderRadius: 16, background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={ind.icon} /></svg>
+              <div className="media media--flat media--zoom" style={{ height: 168 }}>
+                <Image
+                  src={industryMedia[ind.key].src}
+                  alt={industryMedia[ind.key].alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
-              <div>
-                <h4 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 10, letterSpacing: '-0.02em' }}>{ind.name}</h4>
-                <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
-              </div>
-              <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: 6, color: 'var(--faint)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em' }}>
-                LEARN MORE
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+
+              <div style={{ padding: 'clamp(20px, 3vw, 30px)', display: 'flex', flexDirection: 'column', gap: 14, flex: 1 }}>
+                <div>
+                  <h4 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 10, letterSpacing: '-0.02em' }}>{ind.name}</h4>
+                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
+                </div>
+                <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: 6, color: 'var(--brand)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em' }}>
+                  LEARN MORE
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </div>
               </div>
             </div>
           ))}

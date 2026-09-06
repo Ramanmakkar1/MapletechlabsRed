@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+import { blogImage } from '@/data/media';
 
 import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
@@ -176,7 +178,7 @@ export default function BlogPage() {
           <div style={{
             position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
             width: 800, height: 800,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 70%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
@@ -300,13 +302,14 @@ export default function BlogPage() {
                     </svg>
                   </span>
                 </div>
-                <div style={{
-                  width: 200, height: 200, borderRadius: 20, flexShrink: 0, maxWidth: '100%',
-                  background: 'linear-gradient(135deg, rgba(245,41,13,0.12) 0%, rgba(245,41,13,0.04) 100%)',
-                  border: '1px solid rgba(245,41,13,0.15)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  <span style={{ fontSize: 64 }}>🦄</span>
+                <div className="media media--zoom" style={{ width: 220, height: 220, flexShrink: 0, maxWidth: '100%' }}>
+                  <Image
+                    src={blogImage(0).src}
+                    alt={blogImage(0).alt}
+                    fill
+                    sizes="220px"
+                    style={{ objectFit: 'cover' }}
+                  />
                 </div>
               </div>
             </Link>
@@ -332,88 +335,101 @@ export default function BlogPage() {
                     <article
                       className={`reveal reveal-d${Math.min(i + 1, 6)}`}
                       style={{
-                        background: 'var(--surface-alt)', border: '1px solid var(--line)',
-                        borderRadius: 24, padding: 'clamp(20px, 4vw, 32px)', height: '100%',
+                        background: 'var(--surface)', border: '1px solid var(--line)',
+                        borderRadius: 24, overflow: 'hidden', height: '100%',
                         transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                         display: 'flex', flexDirection: 'column', gap: 0,
                         cursor: 'pointer',
                       }}
                       onMouseEnter={e => {
                         (e.currentTarget as HTMLElement).style.borderColor = 'rgba(245,41,13,0.2)';
-                        (e.currentTarget as HTMLElement).style.background = 'rgba(245,41,13,0.03)';
+                        (e.currentTarget as HTMLElement).style.boxShadow = '0 20px 48px rgba(20,17,24,0.10)';
                         (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)';
                       }}
                       onMouseLeave={e => {
                         (e.currentTarget as HTMLElement).style.borderColor = 'var(--line)';
-                        (e.currentTarget as HTMLElement).style.background = 'var(--surface-alt)';
+                        (e.currentTarget as HTMLElement).style.boxShadow = 'none';
                         (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
                       }}
                     >
-                      {/* Category badge */}
-                      <div style={{ marginBottom: 20 }}>
-                        <span style={{
-                          fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
-                          background: `${accentColor}15`, color: accentColor,
-                          padding: '4px 12px', borderRadius: 100,
-                        }}>
-                          {post.category}
-                        </span>
+                      {/* Photo header */}
+                      <div className="media media--flat media--zoom" style={{ height: 190 }}>
+                        <Image
+                          src={blogImage(i + 1).src}
+                          alt={blogImage(i + 1).alt}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                          style={{ objectFit: 'cover' }}
+                        />
                       </div>
 
-                      {/* Title */}
-                      <h3 style={{
-                        fontSize: 18, fontWeight: 700, color: 'var(--ink)',
-                        letterSpacing: '-0.02em', lineHeight: 1.25, marginBottom: 12,
-                      }}>
-                        {post.title}
-                      </h3>
-
-                      {/* Excerpt */}
-                      <p style={{
-                        fontSize: 14, color: 'var(--muted)', lineHeight: 1.7,
-                        marginBottom: 28, flexGrow: 1,
-                      }}>
-                        {post.excerpt}
-                      </p>
-
-                      {/* Footer */}
-                      <div style={{
-                        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                        marginTop: 'auto', paddingTop: 20,
-                        borderTop: '1px solid var(--line)',
-                      }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                          {/* Author avatar */}
-                          <div style={{
-                            width: 30, height: 30, borderRadius: '50%',
-                            background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.2)',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            fontSize: 11, fontWeight: 700, color: 'var(--brand)',
+                      <div style={{ padding: 'clamp(20px, 4vw, 28px)', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                        {/* Category badge */}
+                        <div style={{ marginBottom: 20 }}>
+                          <span style={{
+                            fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
+                            background: `${accentColor}15`, color: accentColor,
+                            padding: '4px 12px', borderRadius: 100,
                           }}>
-                            {post.author}
-                          </div>
-                          <div>
-                            <p style={{ fontSize: 12, color: 'var(--muted)', margin: 0 }}>{post.date}</p>
-                          </div>
+                            {post.category}
+                          </span>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="2">
-                            <circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>
-                          </svg>
-                          <span style={{ fontSize: 12, color: 'var(--faint)' }}>{post.readTime}</span>
-                        </div>
-                      </div>
 
-                      <div style={{ marginTop: 16 }}>
-                        <span style={{
-                          fontSize: 13, fontWeight: 600, color: 'var(--brand)',
-                          display: 'inline-flex', alignItems: 'center', gap: 6,
+                        {/* Title */}
+                        <h3 style={{
+                          fontSize: 18, fontWeight: 700, color: 'var(--ink)',
+                          letterSpacing: '-0.02em', lineHeight: 1.25, marginBottom: 12,
                         }}>
-                          Read More
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                          </svg>
-                        </span>
+                          {post.title}
+                        </h3>
+
+                        {/* Excerpt */}
+                        <p style={{
+                          fontSize: 14, color: 'var(--muted)', lineHeight: 1.7,
+                          marginBottom: 28, flexGrow: 1,
+                        }}>
+                          {post.excerpt}
+                        </p>
+
+                        {/* Footer */}
+                        <div style={{
+                          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                          marginTop: 'auto', paddingTop: 20,
+                          borderTop: '1px solid var(--line)',
+                        }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                            {/* Author avatar */}
+                            <div style={{
+                              width: 30, height: 30, borderRadius: '50%',
+                              background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.2)',
+                              display: 'flex', alignItems: 'center', justifyContent: 'center',
+                              fontSize: 11, fontWeight: 700, color: 'var(--brand)',
+                            }}>
+                              {post.author}
+                            </div>
+                            <div>
+                              <p style={{ fontSize: 12, color: 'var(--muted)', margin: 0 }}>{post.date}</p>
+                            </div>
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="2">
+                              <circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <span style={{ fontSize: 12, color: 'var(--faint)' }}>{post.readTime}</span>
+                          </div>
+                        </div>
+
+                        <div style={{ marginTop: 16 }}>
+                          <span style={{
+                            fontSize: 13, fontWeight: 600, color: 'var(--brand)',
+                            display: 'inline-flex', alignItems: 'center', gap: 6,
+                          }}>
+                            Read More
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                          </span>
+                        </div>
                       </div>
                     </article>
                   </Link>

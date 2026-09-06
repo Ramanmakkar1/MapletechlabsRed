@@ -20,7 +20,6 @@ export default function AdvancedLabs() {
 
   return (
     <section ref={ref} id="labs" className="section-padding" style={{ background: 'var(--surface-ink)', borderTop: '1px solid var(--line-ink)' , position: 'relative', overflow: 'hidden'}}>
-      <div aria-hidden className="aurora aurora--ink" />
       <div className="cb-container">
         <div className="advanced-labs-grid">
           <div className="reveal">
@@ -37,7 +36,7 @@ export default function AdvancedLabs() {
                   onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(245,41,13,0.08)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
-                  <div style={{ width: 2, flexShrink: 0, background: 'linear-gradient(to bottom, #f5290d, rgba(245,41,13,0.1))', borderRadius: 10, minHeight: 60 }} />
+                  <div style={{ width: 2, flexShrink: 0, background: 'var(--brand-tint)', borderRadius: 10, minHeight: 60 }} />
                   <div>
                     <h4 style={{ fontSize: 17, fontWeight: 600, color: 'var(--on-ink)', marginBottom: 8, letterSpacing: '-0.02em' }}>{f.title}</h4>
                     <p style={{ fontSize: 14, color: 'var(--on-ink-body)', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
@@ -56,7 +55,7 @@ export default function AdvancedLabs() {
 
           <div className="reveal reveal-d1" style={{ position: 'relative' }}>
             <div style={{ borderRadius: 'clamp(24px, 6vw, 48px)', overflow: 'hidden', border: '1px solid var(--line-ink)', background: 'var(--surface-ink)', aspectRatio: '4/5', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ position: 'absolute', top: '20%', left: '20%', width: '60%', height: '60%', background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 65%)', filter: 'blur(60px)' }} />
+              <div style={{ position: 'absolute', top: '20%', left: '20%', width: '60%', height: '60%', background: 'transparent', filter: 'blur(60px)' }} />
               <div style={{ position: 'relative', zIndex: 2, width: '80%', aspectRatio: '1' }}>
                 <svg viewBox="0 0 400 400" style={{ width: '100%', opacity: 0.6 }}>
                   <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(245,41,13,0.15)" strokeWidth="1" strokeDasharray="4 8" />

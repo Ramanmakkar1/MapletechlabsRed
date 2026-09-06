@@ -64,7 +64,7 @@ export default function WebsiteCostCanadaClient() {
           <div style={{
             position: 'absolute', top: -300, left: '50%', transform: 'translateX(-50%)',
             width: 900, height: 900,
-            background: 'radial-gradient(circle, rgba(245,41,13,0.05) 0%, transparent 65%)',
+            background: 'transparent',
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
@@ -337,7 +337,7 @@ export default function WebsiteCostCanadaClient() {
                   </div>
 
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.06) 0%, rgba(20,17,24,0.018) 100%)',
+                    background: 'var(--brand-tint) 100%)',
                     border: '1px solid rgba(245,41,13,0.2)',
                     borderRadius: 20, padding: 28,
                   }}>
@@ -391,11 +391,11 @@ export default function WebsiteCostCanadaClient() {
                 {/* Why Next.js */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="why-nextjs">
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.08) 0%, rgba(20,17,24,0.018) 100%)',
+                    background: 'var(--brand-tint) 100%)',
                     border: '1px solid rgba(245,41,13,0.2)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
-                    <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 70%)', filter: 'blur(30px)' }} />
+                    <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <h2 style={{
                       fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                       letterSpacing: '-0.03em', marginBottom: 16, position: 'relative', zIndex: 1,
@@ -475,7 +475,7 @@ export default function WebsiteCostCanadaClient() {
                     The most common budgeting mistake we see from Canadian businesses is allocating 100% of their budget to the initial build and leaving nothing for maintenance, content, and iteration. A website is not a one-time purchase; it is a living asset that requires ongoing investment.
                   </p>
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.06) 0%, rgba(20,17,24,0.018) 100%)',
+                    background: 'var(--brand-tint) 100%)',
                     border: '1px solid rgba(245,41,13,0.15)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
