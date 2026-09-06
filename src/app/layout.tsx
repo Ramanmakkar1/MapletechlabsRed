@@ -7,6 +7,9 @@ import HrefLangTags from "@/components/HrefLangTags";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
 import "./globals.css";
 
+// Hostinger must not keep HTML from an obsolete deployment for a year.
+export const revalidate = 300;
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

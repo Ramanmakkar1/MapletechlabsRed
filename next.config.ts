@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  expireTime: 600,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
