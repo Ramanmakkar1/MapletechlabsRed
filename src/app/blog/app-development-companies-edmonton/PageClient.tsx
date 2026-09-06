@@ -53,7 +53,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
   return (
     <>
       <Navbar />
-      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
+      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
         <div className="cb-container" style={{ paddingTop: 100 }}>
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -73,7 +73,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
-                fontSize: 13, color: 'rgba(255,255,255,0.4)', textDecoration: 'none',
+                fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 transition: 'color 0.2s',
               }}>
@@ -87,15 +87,15 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: '#f5290d',
+                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>March 14, 2026</span>
-              <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 8px' }}>·</span>
-              <span style={{ color: 'rgba(255,255,255,0.5)' }}>Updated Mar 2026</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>·</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
+              <span style={{ color: 'var(--muted)', margin: '0 8px' }}>·</span>
+              <span style={{ color: 'var(--muted)' }}>Updated Mar 2026</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>·</span>
               <span className="reveal reveal-d1" style={{
-                fontSize: 13, color: 'rgba(255,255,255,0.3)',
+                fontSize: 13, color: 'var(--faint)',
                 display: 'inline-flex', alignItems: 'center', gap: 6,
               }}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -106,14 +106,14 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: '#fff',
+              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               Top 10 Mobile App Development Companies in Edmonton (2026)
             </h1>
 
             <p className="reveal reveal-d3" style={{
-              fontSize: 20, color: 'rgba(255,255,255,0.6)', lineHeight: 1.65,
+              fontSize: 20, color: 'var(--muted)', lineHeight: 1.65,
               maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
               Edmonton is rapidly becoming one of Canada&apos;s most exciting tech hubs. Here are the top 10 mobile app development companies building the future from Alberta&apos;s capital city.
@@ -123,37 +123,37 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
             <div className="reveal reveal-d4" style={{
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               flexWrap: 'wrap', gap: 24, paddingTop: 32,
-              borderTop: '1px solid rgba(255,255,255,0.07)',
+              borderTop: '1px solid var(--line)',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
                   background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 15, fontWeight: 700, color: '#f5290d',
+                  fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
                 <div>
-                  <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: 0 }}>Raman Makkar</p>
-                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', margin: 0 }}>CEO, Mapletech Labs</p>
+                  <p style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Raman Makkar</p>
+                  <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>CEO, Mapletech Labs</p>
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', marginRight: 4 }}>Share:</span>
+                <span style={{ fontSize: 12, color: 'var(--faint)', marginRight: 4 }}>Share:</span>
                 {[
                   { label: 'Twitter', icon: '𝕏' },
                   { label: 'LinkedIn', icon: 'in' },
                 ].map(s => (
                   <button key={s.label} style={{
-                    width: 36, height: 36, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)',
-                    background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.55)',
+                    width: 36, height: 36, borderRadius: '50%', border: '1px solid var(--line)',
+                    background: 'var(--surface-alt)', color: 'var(--muted)',
                     fontSize: 13, fontWeight: 700, cursor: 'pointer', display: 'flex',
                     alignItems: 'center', justifyContent: 'center',
                   }}>{s.icon}</button>
                 ))}
                 <button onClick={handleCopy} style={{
-                  padding: '8px 16px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.1)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'rgba(255,255,255,0.04)',
-                  color: copied ? '#f5290d' : 'rgba(255,255,255,0.55)',
+                  padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
+                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
                 }}>
@@ -165,7 +165,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
         </section>
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 80 }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
@@ -175,23 +175,23 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }}>
                   <p style={{
-                    fontSize: 18, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8,
+                    fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
                     marginBottom: 20,
                   }}>
                     Edmonton is no longer just the gateway to the oil sands. Over the past five years, the city has transformed into one of Canada&apos;s fastest-growing technology ecosystems, fueled by world-class AI research at the University of Alberta, the Alberta Machine Intelligence Institute (Amii), and a provincial government actively courting tech investment.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     With lower operating costs than Toronto or Vancouver, a thriving talent pipeline from the U of A and NAIT, and a cost of living that lets startups stretch their runway further, Edmonton is attracting app developers, AI researchers, and product studios at record pace.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
-                    Whether you are a startup looking to build an MVP, an enterprise modernizing legacy systems, or a scale-up expanding across Alberta, choosing the right mobile app development partner is critical. We evaluated dozens of Edmonton-area agencies and product studios to bring you this definitive ranking of the <strong style={{ color: 'rgba(255,255,255,0.85)' }}>Top 10 Mobile App Development Companies in Edmonton</strong> for 2026.
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
+                    Whether you are a startup looking to build an MVP, an enterprise modernizing legacy systems, or a scale-up expanding across Alberta, choosing the right mobile app development partner is critical. We evaluated dozens of Edmonton-area agencies and product studios to bring you this definitive ranking of the <strong style={{ color: 'var(--body)' }}>Top 10 Mobile App Development Companies in Edmonton</strong> for 2026.
                   </p>
                 </div>
 
                 {/* Company 1: Mapletech Labs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-labs">
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(255,255,255,0.02) 100%)', border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(20,17,24,0.018) 100%)', border: '1px solid rgba(245,41,13,0.3)',
                     borderRadius: 24, padding: 36, marginBottom: 0, position: 'relative', overflow: 'hidden'
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 70%)', filter: 'blur(30px)' }} />
@@ -203,24 +203,24 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                       }}>🍁</div>
                       <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
-                          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', fontWeight: 700 }}>01</span>
+                          <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>01</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(245,41,13,0.15)', color: '#f5290d',
+                            background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Full-Stack Apps</span>
                         </div>
                         <h2 style={{
-                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                           letterSpacing: '-0.03em', margin: 0,
                         }}>Mapletech Labs</h2>
                       </div>
                     </div>
 
-                    <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
+                    <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
                       Edmonton&apos;s premier app development agency. We build native iOS, Android, and cross-platform apps using React Native and Flutter. From MVPs to enterprise-grade solutions, our Edmonton headquarters serves as the command center for 300+ successful product launches.
                     </p>
-                    <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
+                    <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       What sets Mapletech Labs apart is our full-stack approach. We don&apos;t just build the front-end mobile experience; we architect the entire product ecosystem including scalable backend APIs, cloud infrastructure on AWS and GCP, CI/CD pipelines, and analytics dashboards. Our team leverages Edmonton&apos;s AI talent pool to integrate machine learning features directly into mobile applications, giving our clients a competitive edge that template-based agencies simply cannot match.
                     </p>
                     <div style={{
@@ -231,7 +231,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#f5290d', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
                         Key Metric: 300+ Product Launches | Native, Cross-Platform & Enterprise
                       </span>
                     </div>
@@ -317,7 +317,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                 ].map((app) => (
                   <div key={app.id} className="reveal" style={{ marginBottom: 56 }} id={app.id}>
                     <div style={{
-                      background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                      background: 'var(--surface-alt)', border: '1px solid var(--line)',
                       borderRadius: 24, padding: 36,
                     }}>
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
@@ -328,7 +328,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                         }}>{app.emoji}</div>
                         <div>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
-                            <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', fontWeight: 700 }}>{app.num}</span>
+                            <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>{app.num}</span>
                             <span style={{
                               fontSize: 11, padding: '3px 10px', borderRadius: 100,
                               background: `${app.bgColor}0.12)`, color: app.accentColor,
@@ -336,14 +336,14 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                             }}>{app.category}</span>
                           </div>
                           <h2 style={{
-                            fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                            fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                             letterSpacing: '-0.03em', margin: 0,
                           }}>{app.name}</h2>
                         </div>
                       </div>
                       {app.paragraphs.map((para, pi) => (
                         <p key={pi} style={{
-                          fontSize: 16, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8,
+                          fontSize: 16, color: 'var(--body)', lineHeight: 1.8,
                           marginBottom: pi < app.paragraphs.length - 1 ? 16 : 20,
                         }}>{para}</p>
                       ))}
@@ -366,16 +366,16 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                 {/* Why Edmonton section */}
                 <div className="reveal" style={{ marginBottom: 56 }}>
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Why Edmonton for App Development?</h2>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     Edmonton offers a unique combination of advantages for mobile app development that few Canadian cities can match. The University of Alberta is home to one of the world&apos;s top AI research programs, producing graduates who are immediately employable in machine learning, computer vision, and natural language processing. The Alberta Machine Intelligence Institute (Amii) further strengthens the talent pipeline with industry partnerships and applied research.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     Developer salaries in Edmonton run 20-35% lower than Toronto or Vancouver, meaning your budget goes significantly further without sacrificing quality. The Alberta government offers generous R&D tax credits through the Scientific Research and Experimental Development (SR&ED) program, and the province has no PST, reducing operational overhead for tech companies.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     Combined with a growing startup ecosystem anchored by incubators like Edmonton Unlimited and Startup Edmonton, the city is primed to become Western Canada&apos;s next major tech hub. If you are building a mobile app in 2026, Edmonton deserves a serious look.
                   </p>
                 </div>
@@ -390,32 +390,32 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                 }}>
                   {/* Table of Contents */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                       {companies.map(app => (
                         <a key={app.name} href={`#${app.name.toLowerCase().replace(/[\s\(\)]+/g, '-').replace(/-$/, '')}`} style={{
-                          fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none',
+                          fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
                           padding: '6px 10px', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 10,
                           transition: 'all 0.15s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.color = '#f5290d';
+                            (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
                           }}
                           onMouseLeave={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)';
+                            (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                         >
                           <span style={{ fontSize: 14 }}>{app.emoji}</span>
                           <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{app.name}</span>
-                          <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)', marginLeft: 'auto', flexShrink: 0 }}>{app.category}</span>
+                          <span style={{ fontSize: 11, color: 'var(--faint)', marginLeft: 'auto', flexShrink: 0 }}>{app.category}</span>
                         </a>
                       ))}
                     </nav>
@@ -423,44 +423,44 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
 
                   {/* Author card */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
                         background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontSize: 14, fontWeight: 700, color: '#f5290d', flexShrink: 0,
+                        fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
                       <div>
-                        <p style={{ fontSize: 14, fontWeight: 600, color: '#fff', margin: 0 }}>Raman Makkar</p>
-                        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', margin: 0 }}>CEO, Mapletech Labs</p>
+                        <p style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Raman Makkar</p>
+                        <p style={{ fontSize: 12, color: 'var(--muted)', margin: 0 }}>CEO, Mapletech Labs</p>
                       </div>
                     </div>
-                    <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Leading engineering strategy and product vision at Mapletech Labs. Has guided over 300+ bespoke product launches globally.
                     </p>
                   </div>
 
                   {/* Related posts */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
                           textDecoration: 'none', display: 'block', padding: '14px',
-                          borderRadius: 12, border: '1px solid rgba(255,255,255,0.06)',
+                          borderRadius: 12, border: '1px solid var(--line)',
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
@@ -468,13 +468,13 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                             (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
                           }}
                           onMouseLeave={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                         >
-                          <p style={{ fontSize: 11, color: '#f5290d', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 6px' }}>{post.category}</p>
-                          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.4, margin: '0 0 8px', fontWeight: 600 }}>{post.title}</p>
-                          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', margin: 0 }}>{post.readTime} read</p>
+                          <p style={{ fontSize: 11, color: 'var(--brand)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 6px' }}>{post.category}</p>
+                          <p style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.4, margin: '0 0 8px', fontWeight: 600 }}>{post.title}</p>
+                          <p style={{ fontSize: 12, color: 'var(--faint)', margin: 0 }}>{post.readTime} read</p>
                         </Link>
                       ))}
                     </div>
@@ -487,7 +487,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 80 }}>
             <div
               className="reveal"
@@ -501,21 +501,21 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
               <div>
                 <p style={{
                   fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                  color: '#f5290d', marginBottom: 12,
+                  color: 'var(--brand)', marginBottom: 12,
                 }}>Build Your App in Edmonton</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Your App Idea Deserves World-Class Engineering.
                 </h2>
-                <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 480, lineHeight: 1.7 }}>
+                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Stop settling for cookie-cutter apps built on templates. Let Mapletech Labs engineer a custom mobile experience that scales with your business, powered by Edmonton&apos;s best talent.
                 </p>
               </div>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: '#f5290d', color: '#fff',
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
                   fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
                   transition: 'all 0.2s', whiteSpace: 'nowrap',
                 }}>

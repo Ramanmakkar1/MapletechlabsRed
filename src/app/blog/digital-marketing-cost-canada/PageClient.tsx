@@ -92,7 +92,7 @@ export default function DigitalMarketingCostCanadaClient() {
   return (
     <>
       <Navbar />
-      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
+      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* -- ARTICLE HERO -- */}
         <section style={{ padding: 'clamp(100px, 15vw, 140px) 0 clamp(32px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
@@ -105,7 +105,7 @@ export default function DigitalMarketingCostCanadaClient() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
-                fontSize: 13, color: 'rgba(255,255,255,0.4)', textDecoration: 'none',
+                fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 transition: 'color 0.2s',
               }}>
@@ -119,15 +119,15 @@ export default function DigitalMarketingCostCanadaClient() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: '#f5290d',
+                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Digital Marketing</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>March 14, 2026</span>
-              <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 8px' }}>·</span>
-              <span style={{ color: 'rgba(255,255,255,0.5)' }}>Updated Mar 2026</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>·</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
+              <span style={{ color: 'var(--muted)', margin: '0 8px' }}>·</span>
+              <span style={{ color: 'var(--muted)' }}>Updated Mar 2026</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>·</span>
               <span className="reveal reveal-d1" style={{
-                fontSize: 13, color: 'rgba(255,255,255,0.3)',
+                fontSize: 13, color: 'var(--faint)',
                 display: 'inline-flex', alignItems: 'center', gap: 6,
               }}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -138,14 +138,14 @@ export default function DigitalMarketingCostCanadaClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: '#fff',
+              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               How Much Does Digital Marketing Cost in Canada? (2026 Guide)
             </h1>
 
             <p className="reveal reveal-d3" style={{
-              fontSize: 20, color: 'rgba(255,255,255,0.6)', lineHeight: 1.65,
+              fontSize: 20, color: 'var(--muted)', lineHeight: 1.65,
               maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
               A transparent breakdown of digital marketing costs across every channel in Canada for 2026, so you can budget wisely and avoid overpaying or underspending.
@@ -155,37 +155,37 @@ export default function DigitalMarketingCostCanadaClient() {
             <div className="reveal reveal-d4" style={{
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               flexWrap: 'wrap', gap: 24, paddingTop: 32,
-              borderTop: '1px solid rgba(255,255,255,0.07)',
+              borderTop: '1px solid var(--line)',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
                   background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 15, fontWeight: 700, color: '#f5290d',
+                  fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
                 <div>
-                  <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: 0 }}>Raman Makkar</p>
-                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', margin: 0 }}>CEO, Mapletech Labs</p>
+                  <p style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Raman Makkar</p>
+                  <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>CEO, Mapletech Labs</p>
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', marginRight: 4 }}>Share:</span>
+                <span style={{ fontSize: 12, color: 'var(--faint)', marginRight: 4 }}>Share:</span>
                 {[
                   { label: 'Twitter', icon: '\u{1D54F}' },
                   { label: 'LinkedIn', icon: 'in' },
                 ].map(s => (
                   <button key={s.label} style={{
-                    width: 36, height: 36, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)',
-                    background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.55)',
+                    width: 36, height: 36, borderRadius: '50%', border: '1px solid var(--line)',
+                    background: 'var(--surface-alt)', color: 'var(--muted)',
                     fontSize: 13, fontWeight: 700, cursor: 'pointer', display: 'flex',
                     alignItems: 'center', justifyContent: 'center',
                   }}>{s.icon}</button>
                 ))}
                 <button onClick={handleCopy} style={{
-                  padding: '8px 16px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.1)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'rgba(255,255,255,0.04)',
-                  color: copied ? '#f5290d' : 'rgba(255,255,255,0.55)',
+                  padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
+                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
                 }}>
@@ -197,7 +197,7 @@ export default function DigitalMarketingCostCanadaClient() {
         </section>
 
         {/* -- ARTICLE BODY + SIDEBAR -- */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 80 }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
@@ -207,15 +207,15 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }}>
                   <p style={{
-                    fontSize: 18, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8,
+                    fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
                     marginBottom: 20,
                   }}>
                     Every Canadian business owner asks the same question: &ldquo;How much should I spend on digital marketing?&rdquo; The answer is never simple because it depends on your industry, competition level, growth targets, and which channels will deliver the best return. But one thing is clear&mdash;underspending is just as dangerous as overspending.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     In 2026, Canadian businesses allocate between 7-15% of their gross revenue to marketing, with digital channels consuming 60-80% of that budget. The shift from traditional advertising to digital-first strategies has accelerated dramatically, and businesses that fail to invest properly are losing ground to competitors who understand the new landscape.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     This guide breaks down exactly what you should expect to pay for every major digital marketing service in Canada, how different pricing models work, and how to evaluate whether you are getting real value from your marketing spend.
                   </p>
                 </div>
@@ -225,11 +225,11 @@ export default function DigitalMarketingCostCanadaClient() {
                   <div key={card.id} className="reveal" style={{ marginBottom: 56 }} id={card.id}>
                     <div style={{
                       background: card.id === 'seo'
-                        ? 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(255,255,255,0.02) 100%)'
-                        : 'rgba(255,255,255,0.02)',
+                        ? 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(20,17,24,0.035) 100%)'
+                        : 'rgba(20,17,24,0.035)',
                       border: card.id === 'seo'
                         ? '1px solid rgba(245,41,13,0.3)'
-                        : '1px solid rgba(255,255,255,0.08)',
+                        : '1px solid var(--line)',
                       borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                     }}>
                       {card.id === 'seo' && (
@@ -243,7 +243,7 @@ export default function DigitalMarketingCostCanadaClient() {
                         }}>{card.emoji}</div>
                         <div>
                           <h2 style={{
-                            fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                            fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                             letterSpacing: '-0.03em', margin: '0 0 8px',
                           }}>{card.title}</h2>
                           <div style={{
@@ -255,7 +255,7 @@ export default function DigitalMarketingCostCanadaClient() {
                         </div>
                       </div>
 
-                      <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
+                      <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                         {card.description}
                       </p>
 
@@ -268,9 +268,9 @@ export default function DigitalMarketingCostCanadaClient() {
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                           {card.includes.map((item, idx) => (
                             <span key={idx} style={{
-                              fontSize: 12, color: 'rgba(255,255,255,0.55)', padding: '4px 12px',
-                              borderRadius: 100, background: 'rgba(255,255,255,0.04)',
-                              border: '1px solid rgba(255,255,255,0.08)',
+                              fontSize: 12, color: 'var(--muted)', padding: '4px 12px',
+                              borderRadius: 100, background: 'var(--surface-alt)',
+                              border: '1px solid var(--line)',
                             }}>{item}</span>
                           ))}
                         </div>
@@ -282,7 +282,7 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Pricing Models */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="pricing-models">
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>How Digital Marketing Pricing Models Work in Canada</h2>
 
@@ -301,17 +301,17 @@ export default function DigitalMarketingCostCanadaClient() {
                     },
                   ].map((item) => (
                     <div key={item.model} style={{
-                      background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                      background: 'var(--surface-alt)', border: '1px solid var(--line)',
                       borderRadius: 20, padding: 28, marginBottom: 20,
                     }}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12, flexWrap: 'wrap', gap: 12 }}>
-                        <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: 0 }}>{item.model}</h3>
+                        <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>{item.model}</h3>
                         <span style={{
                           fontSize: 13, fontWeight: 700, color: item.accentColor,
                           padding: '4px 14px', borderRadius: 100, background: `${item.bgColor}0.12)`,
                         }}>{item.price}</span>
                       </div>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, margin: 0 }}>{item.description}</p>
+                      <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>{item.description}</p>
                     </div>
                   ))}
                 </div>
@@ -319,20 +319,20 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* ROI Expectations */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="roi">
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>ROI Expectations by Budget Level</h2>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 24 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 24 }}>
                     Understanding what you can realistically expect at each budget tier prevents disappointment and helps you set proper KPIs with your agency partner.
                   </p>
 
                   {[
                     { tier: '$2,000 - $5,000/month', label: 'Starter', color: '#94a3b8', expectations: 'Foundation building. Expect improved local search visibility, basic social presence, and initial lead generation. Timeline: 4-6 months to see meaningful results. Best for small businesses and startups in low-competition niches.' },
-                    { tier: '$5,000 - $15,000/month', label: 'Growth', color: '#f5290d', expectations: 'Aggressive scaling. Expect significant organic traffic growth (50-200%), multi-channel campaigns, and measurable revenue attribution. Timeline: 3-6 months for early wins, 6-12 months for compound growth. Best for established SMBs targeting regional or national markets.' },
+                    { tier: '$5,000 - $15,000/month', label: 'Growth', color: 'var(--brand)', expectations: 'Aggressive scaling. Expect significant organic traffic growth (50-200%), multi-channel campaigns, and measurable revenue attribution. Timeline: 3-6 months for early wins, 6-12 months for compound growth. Best for established SMBs targeting regional or national markets.' },
                     { tier: '$15,000 - $25,000+/month', label: 'Enterprise', color: '#fbbf24', expectations: 'Market domination. Expect comprehensive omnichannel strategies, competitive displacement, advanced analytics, and executive-level reporting. Timeline: 2-4 months for quick wins, ongoing optimization. Best for companies with $5M+ revenue targeting category leadership.' },
                   ].map((item) => (
                     <div key={item.tier} style={{
-                      background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                      background: 'var(--surface-alt)', border: '1px solid var(--line)',
                       borderRadius: 20, padding: 28, marginBottom: 20,
                     }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
@@ -341,9 +341,9 @@ export default function DigitalMarketingCostCanadaClient() {
                           padding: '3px 10px', borderRadius: 100, color: item.color,
                           background: `rgba(${item.color === '#94a3b8' ? '148,163,184' : item.color === '#f5290d' ? '245,41,13' : '251,191,36'},0.12)`,
                         }}>{item.label}</span>
-                        <span style={{ fontSize: 14, fontWeight: 700, color: '#fff' }}>{item.tier}</span>
+                        <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)' }}>{item.tier}</span>
                       </div>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, margin: 0 }}>{item.expectations}</p>
+                      <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>{item.expectations}</p>
                     </div>
                   ))}
                 </div>
@@ -351,7 +351,7 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Agency vs Freelancer vs In-House */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="agency-vs-freelancer">
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Agency vs. Freelancer vs. In-House: What Works for Canadian Businesses?</h2>
 
@@ -373,18 +373,18 @@ export default function DigitalMarketingCostCanadaClient() {
                     },
                   ].map((item) => (
                     <div key={item.option} style={{
-                      background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                      background: 'var(--surface-alt)', border: '1px solid var(--line)',
                       borderRadius: 20, padding: 28, marginBottom: 20,
                     }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: '0 0 16px' }}>{item.option}</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: '0 0 16px' }}>{item.option}</h3>
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 16, marginBottom: 16 }}>
                         <div>
                           <p style={{ fontSize: 12, fontWeight: 700, color: '#34d399', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>Pros</p>
-                          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, margin: 0 }}>{item.pros}</p>
+                          <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.pros}</p>
                         </div>
                         <div>
                           <p style={{ fontSize: 12, fontWeight: 700, color: '#f87171', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>Cons</p>
-                          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, margin: 0 }}>{item.cons}</p>
+                          <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.cons}</p>
                         </div>
                       </div>
                       <div style={{
@@ -400,7 +400,7 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Mapletech Labs Approach */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-approach">
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(255,255,255,0.02) 100%)',
+                    background: 'linear-gradient(135deg, rgba(245,41,13,0.1) 0%, rgba(20,17,24,0.018) 100%)',
                     border: '1px solid rgba(245,41,13,0.3)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
@@ -409,18 +409,18 @@ export default function DigitalMarketingCostCanadaClient() {
                       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
                         <span style={{ fontSize: 28 }}>🍁</span>
                         <h2 style={{
-                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                          fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                           letterSpacing: '-0.03em', margin: 0,
                         }}>How Mapletech Labs Approaches Digital Marketing Differently</h2>
                       </div>
 
-                      <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 16 }}>
+                      <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
                         Most digital marketing agencies treat SEO, paid ads, and development as separate silos. At Mapletech Labs, we believe this fragmentation is why most marketing campaigns underperform. Our approach integrates technical SEO directly into the development process, ensuring your website is built from the ground up for search engine dominance.
                       </p>
-                      <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 16 }}>
+                      <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
                         We build every client project on Next.js with server-side rendering, achieving perfect Google Lighthouse scores that give you a structural advantage over competitors running on bloated WordPress themes. Our data-driven methodology combines real-time analytics, AI-assisted content optimization, and conversion rate engineering to maximize every dollar of your marketing budget.
                       </p>
-                      <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 20 }}>
+                      <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
                         The result? Canadian businesses working with Mapletech Labs see 3-5x higher ROI on their digital marketing spend because the technical foundation amplifies every marketing initiative. When your site loads in under 1 second and is architecturally perfect for Google&apos;s crawlers, every piece of content, every backlink, and every ad click converts at a significantly higher rate.
                       </p>
 
@@ -432,7 +432,7 @@ export default function DigitalMarketingCostCanadaClient() {
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
                           <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                         </svg>
-                        <span style={{ fontSize: 13, color: '#f5290d', fontWeight: 600 }}>
+                        <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
                           Technical SEO + Custom Development = 3-5x Higher Marketing ROI
                         </span>
                       </div>
@@ -443,35 +443,35 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Red Flags */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="red-flags">
                   <h2 style={{
-                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Red Flags in Agency Pricing: What to Watch For</h2>
 
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 24, padding: 36,
                   }}>
                     <div style={{ marginBottom: 24 }}>
                       <h3 style={{ fontSize: 16, fontWeight: 700, color: '#f87171', marginBottom: 12 }}>Too Cheap (Under $1,000/month for full-service)</h3>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, margin: 0 }}>
+                      <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         If an agency offers comprehensive SEO, social media, and PPC for under $1,000/month, they are either outsourcing to low-quality offshore providers, using automated tools with zero human strategy, or planning to upsell you aggressively later. Quality digital marketing in Canada requires skilled professionals who command competitive salaries. The math simply does not work at bargain prices.
                       </p>
                     </div>
                     <div style={{ marginBottom: 24 }}>
                       <h3 style={{ fontSize: 16, fontWeight: 700, color: '#fbbf24', marginBottom: 12 }}>Guaranteed Rankings</h3>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, margin: 0 }}>
+                      <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         No legitimate agency guarantees specific Google rankings. Search algorithms involve hundreds of variables outside any agency&apos;s control. Agencies that promise &ldquo;Page 1 in 30 days&rdquo; are either lying or planning to use black-hat tactics that will eventually get your site penalized. Look for agencies that guarantee process quality, reporting transparency, and measurable KPI improvements.
                       </p>
                     </div>
                     <div style={{ marginBottom: 24 }}>
                       <h3 style={{ fontSize: 16, fontWeight: 700, color: '#fbbf24', marginBottom: 12 }}>Long Lock-In Contracts</h3>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, margin: 0 }}>
+                      <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         Be wary of agencies requiring 12-24 month contracts with heavy cancellation penalties. While SEO does take time, a confident agency should be willing to earn your business month over month. Look for 3-month initial commitments with 30-day cancellation notices after the initial period.
                       </p>
                     </div>
                     <div>
                       <h3 style={{ fontSize: 16, fontWeight: 700, color: '#f87171', marginBottom: 12 }}>Overpriced (Paying for Brand Name, Not Results)</h3>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, margin: 0 }}>
+                      <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                         Some agencies charge $30,000+/month for work that a skilled boutique agency delivers for $10,000. Large agencies often have high overhead&mdash;downtown offices, large sales teams, and management layers&mdash;that inflate pricing without improving output quality. Always evaluate based on team expertise, case studies, and projected ROI, not brand prestige.
                       </p>
                     </div>
@@ -488,26 +488,26 @@ export default function DigitalMarketingCostCanadaClient() {
                 }}>
                   {/* Table of Contents */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                       {tocItems.map(item => (
                         <a key={item.id} href={`#${item.id}`} style={{
-                          fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none',
+                          fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
                           padding: '6px 10px', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 10,
                           transition: 'all 0.15s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.color = '#f5290d';
+                            (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
                           }}
                           onMouseLeave={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)';
+                            (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                         >
@@ -520,44 +520,44 @@ export default function DigitalMarketingCostCanadaClient() {
 
                   {/* Author card */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
                         background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontSize: 14, fontWeight: 700, color: '#f5290d', flexShrink: 0,
+                        fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
                       <div>
-                        <p style={{ fontSize: 14, fontWeight: 600, color: '#fff', margin: 0 }}>Raman Makkar</p>
-                        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', margin: 0 }}>CEO, Mapletech Labs</p>
+                        <p style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Raman Makkar</p>
+                        <p style={{ fontSize: 12, color: 'var(--muted)', margin: 0 }}>CEO, Mapletech Labs</p>
                       </div>
                     </div>
-                    <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Leading engineering strategy and product vision at Mapletech Labs. Has guided over 300+ bespoke product launches globally.
                     </p>
                   </div>
 
                   {/* Related posts */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
                           textDecoration: 'none', display: 'block', padding: '14px',
-                          borderRadius: 12, border: '1px solid rgba(255,255,255,0.06)',
+                          borderRadius: 12, border: '1px solid var(--line)',
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
@@ -565,13 +565,13 @@ export default function DigitalMarketingCostCanadaClient() {
                             (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
                           }}
                           onMouseLeave={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                         >
-                          <p style={{ fontSize: 11, color: '#f5290d', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 6px' }}>{post.category}</p>
-                          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.4, margin: '0 0 8px', fontWeight: 600 }}>{post.title}</p>
-                          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', margin: 0 }}>{post.readTime} read</p>
+                          <p style={{ fontSize: 11, color: 'var(--brand)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 6px' }}>{post.category}</p>
+                          <p style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.4, margin: '0 0 8px', fontWeight: 600 }}>{post.title}</p>
+                          <p style={{ fontSize: 12, color: 'var(--faint)', margin: 0 }}>{post.readTime} read</p>
                         </Link>
                       ))}
                     </div>
@@ -584,7 +584,7 @@ export default function DigitalMarketingCostCanadaClient() {
         </section>
 
         {/* -- BOTTOM CTA -- */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 80 }}>
             <div
               className="reveal"
@@ -598,21 +598,21 @@ export default function DigitalMarketingCostCanadaClient() {
               <div>
                 <p style={{
                   fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                  color: '#f5290d', marginBottom: 12,
+                  color: 'var(--brand)', marginBottom: 12,
                 }}>Get Started</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Get a Custom Digital Marketing Quote
                 </h2>
-                <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 480, lineHeight: 1.7 }}>
+                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Stop guessing what digital marketing should cost. Let Mapletech Labs build a data-driven strategy tailored to your Canadian market, budget, and growth targets.
                 </p>
               </div>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: '#f5290d', color: '#fff',
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
                   fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
                   transition: 'all 0.2s', whiteSpace: 'nowrap',
                 }}>

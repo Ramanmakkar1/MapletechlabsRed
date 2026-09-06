@@ -34,7 +34,7 @@ export default function FintechCaseStudyClient() {
   return (
     <>
       <Navbar />
-      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
+      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* ── HERO ── */}
         <section style={{ padding: 'clamp(100px, 12vw, 140px) 0 clamp(40px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
@@ -56,21 +56,21 @@ export default function FintechCaseStudyClient() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 32, marginBottom: 16 }}>
               <span className="reveal reveal-d1" style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: '#f5290d',
+                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>FinTech</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>Axion Capital &middot; Toronto</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>Axion Capital &middot; Toronto</span>
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: '#fff',
+              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               AI-Powered Trading Platform
             </h1>
 
             <p className="reveal reveal-d3" style={{
-              fontSize: 20, color: 'rgba(255,255,255,0.6)', lineHeight: 1.65,
+              fontSize: 20, color: 'var(--muted)', lineHeight: 1.65,
               maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
               We engineered a real-time algorithmic trading system that processes tens of thousands of transactions daily, powered by machine learning models and built for institutional-grade reliability.
@@ -81,14 +81,14 @@ export default function FintechCaseStudyClient() {
               width: '100%',
               aspectRatio: '16/9',
               borderRadius: 20,
-              background: 'linear-gradient(135deg, rgba(245,41,13,0.08), rgba(255,255,255,0.03))',
-              border: '1px solid rgba(255,255,255,0.08)',
+              background: 'linear-gradient(135deg, rgba(245,41,13,0.08), rgba(20,17,24,0.027))',
+              border: '1px solid var(--line)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               marginBottom: 48,
             }}>
-              <span style={{ fontSize: 15, color: 'rgba(255,255,255,0.3)', fontWeight: 500 }}>
+              <span style={{ fontSize: 15, color: 'var(--faint)', fontWeight: 500 }}>
                 Case Study Visual — Coming Soon
               </span>
             </div>
@@ -96,7 +96,7 @@ export default function FintechCaseStudyClient() {
         </section>
 
         {/* ── OVERVIEW GRID ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
@@ -109,13 +109,13 @@ export default function FintechCaseStudyClient() {
               ].map((card) => (
                 <div key={card.title} style={{
                   padding: 'clamp(24px, 4vw, 36px)', borderRadius: 24,
-                  background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                 }}>
                   <p style={{
                     fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                    color: '#f5290d', marginBottom: 16,
+                    color: 'var(--brand)', marginBottom: 16,
                   }}>{card.title}</p>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, margin: 0 }}>
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                     {card.text}
                   </p>
                 </div>
@@ -130,20 +130,20 @@ export default function FintechCaseStudyClient() {
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: '#f5290d', marginBottom: 16,
+                color: 'var(--brand)', marginBottom: 16,
               }}>The Challenge</p>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 32,
               }}>Building for Speed, Scale, and Compliance</h2>
 
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                 Axion Capital, a fast-growing Toronto-based trading firm, had outgrown their initial infrastructure. Their monolithic Node.js application, built in-house 4 years prior, could process only 25K transactions daily. During peak trading hours (9:30-10:30 AM EST), latency frequently spiked to 800ms-1000ms, causing trade orders to fail and eroding client confidence. The CEO was personally managing infrastructure crises instead of growing the business.
               </p>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                 Beyond performance, regulatory compliance was a critical blocker. FINTRAC required complete audit trails on every transaction, with proof of compliance for every single trade. The old system had fragmented logs spread across multiple systems, making audit reporting a nightmare. Additionally, the platform needed to support real-time sentiment analysis and trade signal generation using ML — something their existing monolith couldn't handle without grinding to a halt.
               </p>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                 The client needed to integrate with 5 third-party market data providers, 2 payment processors, and 3 banking APIs — all while maintaining a seamless experience for both retail and institutional traders. The architecture had to be cloud-native, horizontally scalable, and resilient to market data provider outages.
               </p>
             </div>
@@ -151,25 +151,25 @@ export default function FintechCaseStudyClient() {
         </section>
 
         {/* ── OUR SOLUTION ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: '#f5290d', marginBottom: 16,
+                color: 'var(--brand)', marginBottom: 16,
               }}>Our Solution</p>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 32,
               }}>Event-Driven Architecture with AI at the Core</h2>
 
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                 We designed an event-driven microservices architecture deployed on AWS ECS with Fargate for elastic scaling. The system is composed of 7 independent microservices: (1) Order Ingestion Service (Node.js/Express, handles all incoming orders), (2) Trade Execution Engine (Python, with microsecond-level precision), (3) Compliance Validator (Node.js, runs FINTRAC checks in parallel), (4) ML Model Service (Python/TensorFlow, generates trade signals), (5) Market Data Aggregator (Python, polls 5 external providers), (6) Audit Logger (PostgreSQL, immutable transaction log), and (7) WebSocket Gateway (Node.js, real-time client updates).
               </p>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                 Communication between services happens via Apache Kafka for durability and Redis for ultra-fast caching. The ML model, trained on 10 years of historical market data, generates sentiment scores and predictive signals consumed by the execution engine — zero additional latency because the model runs asynchronously and results are cached. End-to-end latency from order placement to execution confirmation is 50ms — 95% faster than their previous system.
               </p>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 32 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
                 PostgreSQL is the single source of truth, with row-level security ensuring traders can only see their own data, full audit logging on every table, and point-in-time recovery capability. The compliance microservice runs FINTRAC validation checks in parallel with trade execution, adding zero latency to the critical path — every transaction is timestamped, signed, and immutably logged. We implemented automated daily compliance reports that export directly to FINTRAC systems.
               </p>
 
@@ -177,9 +177,9 @@ export default function FintechCaseStudyClient() {
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                 {techStack.map(tech => (
                   <span key={tech} style={{
-                    fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.6)',
-                    padding: '10px 20px', border: '1px solid rgba(255,255,255,0.1)',
-                    borderRadius: 100, background: 'rgba(255,255,255,0.03)',
+                    fontSize: 13, fontWeight: 600, color: 'var(--muted)',
+                    padding: '10px 20px', border: '1px solid var(--line)',
+                    borderRadius: 100, background: 'var(--surface-alt)',
                   }}>{tech}</span>
                 ))}
               </div>
@@ -188,14 +188,14 @@ export default function FintechCaseStudyClient() {
         </section>
 
         {/* ── KEY RESULTS ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <p className="reveal" style={{
               fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-              color: '#f5290d', marginBottom: 16,
+              color: 'var(--brand)', marginBottom: 16,
             }}>Key Results</p>
             <h2 className="reveal" style={{
-              fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+              fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
               letterSpacing: '-0.03em', marginBottom: 40,
             }}>Measurable Impact, From Day One</h2>
 
@@ -206,11 +206,11 @@ export default function FintechCaseStudyClient() {
               {metrics.map((m) => (
                 <div key={m.label} style={{
                   padding: 'clamp(20px, 4vw, 36px)', borderRadius: 24, textAlign: 'center',
-                  background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                 }}>
-                  <div style={{ fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 800, color: '#f5290d', marginBottom: 8 }}>{m.value}</div>
+                  <div style={{ fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 800, color: 'var(--brand)', marginBottom: 8 }}>{m.value}</div>
                   <div style={{
-                    fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.5)',
+                    fontSize: 13, fontWeight: 600, color: 'var(--muted)',
                     textTransform: 'uppercase', letterSpacing: '0.08em',
                   }}>{m.label}</div>
                 </div>
@@ -220,12 +220,12 @@ export default function FintechCaseStudyClient() {
         </section>
 
         {/* ── TESTIMONIAL ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               maxWidth: 760,
               padding: 'clamp(24px, 4vw, 48px)', borderRadius: 24,
-              background: 'linear-gradient(135deg, rgba(245,41,13,0.06), rgba(255,255,255,0.02))',
+              background: 'linear-gradient(135deg, rgba(245,41,13,0.06), rgba(20,17,24,0.018))',
               border: '1px solid rgba(245,41,13,0.15)',
               position: 'relative',
             }}>
@@ -234,21 +234,21 @@ export default function FintechCaseStudyClient() {
                 <path d="M20 11h-4a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 011 1v7c0 2.21-1.79 4-4 4" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <p style={{
-                fontSize: 20, color: 'rgba(255,255,255,0.8)', lineHeight: 1.7,
+                fontSize: 20, color: 'var(--body)', lineHeight: 1.7,
                 fontStyle: 'italic', marginBottom: 24,
               }}>
                 &ldquo;We went from 25K to 75K daily transactions without breaking a sweat. What impressed me most was the compliance layer — Mapletech Labs fundamentally understood the regulatory environment and built it in from day one, not as an afterthought. Latency went from 800ms to 50ms. We went from infrastructure firefighting to 100% focus on product. They didn&apos;t just deliver code — they gave us a 3x competitive advantage.&rdquo;
               </p>
               <div>
-                <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: '0 0 4px' }}>Jessica Chen, VP Engineering</p>
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', margin: 0 }}>Axion Capital</p>
+                <p style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}>Jessica Chen, VP Engineering</p>
+                <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>Axion Capital</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* ── CTA ── */}
-        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
@@ -259,21 +259,21 @@ export default function FintechCaseStudyClient() {
               <div>
                 <p style={{
                   fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                  color: '#f5290d', marginBottom: 12,
+                  color: 'var(--brand)', marginBottom: 12,
                 }}>Start a Similar Project</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Ready to Build Your Trading Platform?
                 </h2>
-                <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 480, lineHeight: 1.7 }}>
+                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Whether it&apos;s fintech, AI, or high-frequency systems — we engineer software that scales. Let&apos;s talk about your next project.
                 </p>
               </div>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: '#f5290d', color: '#fff',
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
                   fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
                   transition: 'all 0.2s', whiteSpace: 'nowrap',
                 }}>

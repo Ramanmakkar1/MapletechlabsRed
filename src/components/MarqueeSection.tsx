@@ -5,7 +5,7 @@ import gsap from 'gsap';
 
 const techStack = [
   { name: 'React', color: '#61DAFB' },
-  { name: 'Next.js', color: '#ffffff' },
+  { name: 'Next.js', color: 'var(--ink)' },
   { name: 'TypeScript', color: '#3178C6' },
   { name: 'Node.js', color: '#68A063' },
   { name: 'Python', color: '#FFD43B' },

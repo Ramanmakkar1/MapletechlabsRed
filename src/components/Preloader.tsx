@@ -70,7 +70,7 @@ export default function Preloader({ onComplete }: Props) {
           <div className="flex items-center gap-3">
             <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
               <rect width="44" height="44" rx="12" fill="url(#pg)" />
-              <path d="M12 22L22 12L32 22L22 32L12 22Z" fill="white" opacity="0.9" />
+              <path d="M12 22L22 12L32 22L22 32L12 22Z" fill="var(--ink)" opacity="0.9" />
               <path d="M18 22L22 18L26 22L22 26L18 22Z" fill="url(#pg)" />
               <defs>
                 <linearGradient id="pg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">

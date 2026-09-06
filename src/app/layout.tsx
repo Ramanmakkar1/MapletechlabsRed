@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
@@ -10,10 +10,11 @@ import "./globals.css";
 // Hostinger must not keep HTML from an obsolete deployment for a year.
 export const revalidate = 300;
 
-const poppins = Poppins({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -77,9 +78,9 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "CA-AB",
     "geo.placename": "Edmonton",
-    "theme-color": "#000000",
+    "theme-color": "#ffffff",
     "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "apple-mobile-web-app-status-bar-style": "default",
   },
 };
 
@@ -172,14 +173,11 @@ export default function RootLayout({
   return (
     <html lang="en-CA">
       <head>
-        {/* Preload hero image for LCP optimization */}
-        <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp" />
-
         <link rel="license" href={`${siteOrigin()}/llms.txt`} />
         {/* Hreflang tags for bilingual content */}
         <HrefLangTags />
       </head>
-      <body className={poppins.className}>
+      <body className={jakarta.variable}>
         <a href="#main-content" className="sr-only-focusable">Skip to main content</a>
         {/* Google Tag Manager (noscript) */}
         <noscript>

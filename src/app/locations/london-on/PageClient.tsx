@@ -19,9 +19,9 @@ function useReveal() {
 }
 
 const cardBase: React.CSSProperties = {
-  border: '1px solid rgba(255,255,255,0.08)',
+  border: '1px solid var(--line)',
   borderRadius: 24,
-  background: 'rgba(255,255,255,0.02)',
+  background: 'var(--surface-alt)',
   padding: '2rem',
   transition: 'border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s',
 };
@@ -30,7 +30,7 @@ const cardHover: React.CSSProperties = {
   borderColor: 'rgba(245,41,13,0.2)',
   background: 'rgba(245,41,13,0.03)',
   transform: 'translateY(-4px)',
-  boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
+  boxShadow: '0 24px 60px rgba(20,17,24,0.10)',
 };
 
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
@@ -76,35 +76,35 @@ export default function LondonONPage() {
           { label: 'London' },
         ]} />
       </div>
-      <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding loc-city-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(20,17,24,0.035) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
           <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translateX(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(245,41,13,0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
-            <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: '#f5290d', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
+            <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               London, Ontario
             </div>
             <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-              Software Development in <span style={{ color: '#f5290d' }}>London, Ontario</span>
+              Software Development in <span style={{ color: 'var(--brand)' }}>London, Ontario</span>
             </h1>
-            <p className="reveal" style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.65)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
+            <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
               London, Ontario is a healthcare and insurance powerhouse — home to London Health Sciences Centre, Western University, and Canada&apos;s second-largest concentration of insurance companies. We build custom software that transforms patient care, streamlines underwriting, and powers AgriFood innovation across Southwestern Ontario.
             </p>
             <div className="reveal" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3.5rem' }}>
-              <Link href="/contact" style={{ background: '#f5290d', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                 Get a Free Quote
               </Link>
-              <Link href="/case-studies" style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/case-studies" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                 View Case Studies
               </Link>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', maxWidth: 600, margin: '0 auto' }}>
               {[['35+', 'Healthcare Solutions'], ['97%', 'Client Satisfaction'], ['15+', 'Insurance Platforms']].map(([val, label]) => (
                 <div key={label} style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#f5290d' }}>{val}</div>
-                  <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', marginTop: 4, letterSpacing: '0.05em' }}>{label}</div>
+                  <div style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--brand)' }}>{val}</div>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--faint)', marginTop: 4, letterSpacing: '0.05em' }}>{label}</div>
                 </div>
               ))}
             </div>
@@ -116,15 +116,15 @@ export default function LondonONPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in London, Ontario</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Healthcare-grade software for hospitals, insurers, and AgriFood innovators.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Healthcare-grade software for hospitals, insurers, and AgriFood innovators.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {services.map(s => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
-                    <div style={{ color: '#f5290d', fontSize: '1.2rem', marginBottom: '0.75rem' }}>&rarr;</div>
+                    <div style={{ color: 'var(--brand)', fontSize: '1.2rem', marginBottom: '0.75rem' }}>&rarr;</div>
                     <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
+                    <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
                   </Card>
                 </Link>
               ))}
@@ -138,7 +138,7 @@ export default function LondonONPage() {
             <div className="reveal" style={{ border: '1px solid rgba(245,41,13,0.15)', borderRadius: 32, background: 'rgba(245,41,13,0.03)', padding: 'clamp(2rem, 4vw, 3rem)' }}>
               <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>London &amp; Southwestern Ontario by the Numbers</h2>
-                <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Building software that transforms healthcare and insurance in Ontario&apos;s heartland.</p>
+                <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Building software that transforms healthcare and insurance in Ontario&apos;s heartland.</p>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
                 {[
@@ -148,8 +148,8 @@ export default function LondonONPage() {
                   ['100%', 'PHIPA Compliant'],
                 ].map(([val, label]) => (
                   <div key={label} style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#f5290d' }}>{val}</div>
-                    <div style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', marginTop: 8 }}>{label}</div>
+                    <div style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'var(--brand)' }}>{val}</div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: 8 }}>{label}</div>
                   </div>
                 ))}
               </div>
@@ -162,7 +162,7 @@ export default function LondonONPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in London, Ontario</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Healthcare and insurance expertise for Southwestern Ontario&apos;s anchor industries.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Healthcare and insurance expertise for Southwestern Ontario&apos;s anchor industries.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {[
@@ -173,7 +173,7 @@ export default function LondonONPage() {
               ].map(w => (
                 <Card key={w.title}>
                   <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
+                  <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
                 </Card>
               ))}
             </div>
@@ -185,22 +185,22 @@ export default function LondonONPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
               <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
-                Start Your Project in <span style={{ color: '#f5290d' }}>London, Ontario</span>
+                Start Your Project in <span style={{ color: 'var(--brand)' }}>London, Ontario</span>
               </h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
+              <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
                 Whether you are a hospital modernizing patient care, an insurer automating claims processing, or an AgriFood company building farm-to-table traceability — we are your Southwestern Ontario partner.
               </p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-                <Link href="/contact" style={{ background: '#f5290d', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+                <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                   Get a Free Quote
                 </Link>
-                <Link href="/locations" style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+                <Link href="/locations" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                   View All Locations
                 </Link>
               </div>
               <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 {['Free Consultation', 'NDA on Request', 'Fixed-Price Sprints', 'Canadian Data Residency'].map(t => (
-                  <span key={t} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)' }}>&#10003; {t}</span>
+                  <span key={t} style={{ fontSize: '0.85rem', color: 'var(--faint)' }}>&#10003; {t}</span>
                 ))}
               </div>
             </div>
@@ -208,26 +208,26 @@ export default function LondonONPage() {
         </section>
 
         {/* Why London ON for Tech */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why London, Ontario for Tech</h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>London is Southwestern Ontario&apos;s fastest-growing tech hub, anchored by healthcare innovation and a strong university pipeline.</p>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Why London, Ontario for Tech</h2>
+            <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>London is Southwestern Ontario&apos;s fastest-growing tech hub, anchored by healthcare innovation and a strong university pipeline.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
                 { t: 'TechAlliance', d: 'London\'s innovation hub connects 500+ tech companies with mentorship, funding, and go-to-market support.' },
                 { t: 'Western University Pipeline', d: 'Ivey Business School and Western Engineering produce top talent in AI, business analytics, and biomedical engineering.' },
                 { t: 'Healthcare Innovation Corridor', d: 'London Health Sciences Centre and Lawson Research Institute drive demand for health tech, clinical trials, and patient platforms.' },
                 { t: 'Affordable Growth', d: '50% lower office costs than Toronto with direct highway access to the GTA — ideal for scaling tech companies.' },
-              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
             </div>
           </div>
         </section>
 
         {/* London Areas We Serve */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>London Areas We Serve</h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>We serve businesses across London and Southwestern Ontario&apos;s growing tech corridor.</p>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>London Areas We Serve</h2>
+            <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>We serve businesses across London and Southwestern Ontario&apos;s growing tech corridor.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
               {[
                 { n: 'Downtown London', d: 'Revitalized core with co-working spaces, fintech startups, and TechAlliance headquarters.' },
@@ -238,47 +238,47 @@ export default function LondonONPage() {
                 { n: 'Woodstock', d: 'Toyota manufacturing hub embracing Industry 4.0 and smart factory solutions.' },
                 { n: 'Stratford', d: 'University of Waterloo digital media campus and cultural tech innovation.' },
                 { n: 'Ingersoll', d: 'Growing commercial centre with CAMI assembly and automotive supply chain tech.' },
-              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
             </div>
           </div>
         </section>
 
         {/* London Client Success Stories */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>London Client Success Stories</h2>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>London Client Success Stories</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
               {[
                 { title: 'Healthcare Platform', metric: '200+ clinics served', desc: 'Built a patient management and telehealth platform for a London medical network, connecting 200+ clinics across Southwestern Ontario with secure video visits and EHR integration.' },
                 { title: 'SW Ontario FinTech', metric: '3x transaction volume', desc: 'Developed a payment processing and invoicing platform for a London-based financial services firm, tripling transaction volume within the first year.' },
                 { title: 'Western University Research Tool', metric: '40% faster analysis', desc: 'Created a data visualization and analysis platform for a Western University research lab, accelerating clinical trial data processing by 40%.' },
-              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: 'var(--brand)', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
             </div>
           </div>
         </section>
 
         {/* London Tech Focus */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>London Tech Focus</h2>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>London Tech Focus</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
                 { t: 'Health Tech', d: 'Patient portals, telehealth platforms, and clinical trial tools for London Health Sciences Centre and regional healthcare networks.' },
                 { t: 'Insurance Tech', d: 'Claims automation, underwriting platforms, and customer portals for Southwestern Ontario\'s insurance sector.' },
                 { t: 'Digital Agriculture', d: 'Precision farming tools, supply chain platforms, and agricultural marketplace apps for Ontario\'s farming communities.' },
                 { t: 'Manufacturing Automation', d: 'Industry 4.0 dashboards, IoT integration, and quality control systems for London\'s automotive and manufacturing corridor.' },
-              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
             </div>
           </div>
         </section>
 
         {/* All Services in City */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
               Our Services in London
             </h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>
+            <p style={{ fontSize: 15, color: 'var(--muted)', textAlign: 'center', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>
               Explore our full range of software development services available in London.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 16 }}>
@@ -299,12 +299,12 @@ export default function LondonONPage() {
                 <a key={svc.slug} href={`/locations/london-on/${svc.slug}`} style={{
                   display: 'flex', alignItems: 'center', gap: 12,
                   padding: '16px 20px', borderRadius: 12,
-                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                   textDecoration: 'none', transition: 'all 0.3s ease',
-                  fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.8)',
+                  fontSize: 14, fontWeight: 500, color: 'var(--body)',
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   {svc.name} in London

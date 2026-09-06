@@ -28,10 +28,10 @@ export default function ScrollUI() {
       {/* Scroll progress bar */}
       <div style={{
         position: 'fixed', top: 0, left: 0, right: 0, height: 2,
-        background: 'rgba(255,255,255,0.06)', zIndex: 9999, pointerEvents: 'none',
+        background: 'var(--surface-sunk)', zIndex: 9999, pointerEvents: 'none',
       }}>
         <div style={{
-          height: '100%', background: '#f5290d',
+          height: '100%', background: 'var(--brand)',
           width: `${progress}%`,
           transition: 'width 0.1s linear',
           boxShadow: '0 0 8px rgba(245,41,13,0.6)',
@@ -49,15 +49,15 @@ export default function ScrollUI() {
         <Link href="#contact" style={{
           display: 'inline-flex', alignItems: 'center', gap: 10,
           height: 52, padding: '0 28px', borderRadius: 100,
-          background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700,
+          background: 'var(--brand)', color: '#fff', fontSize: 14, fontWeight: 700,
           textDecoration: 'none',
-          boxShadow: '0 8px 32px rgba(245,41,13,0.4), 0 2px 8px rgba(0,0,0,0.4)',
+          boxShadow: '0 8px 32px rgba(245,41,13,0.4), 0 2px 8px rgba(20,17,24,0.10)',
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
         }}
-          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.5), 0 4px 12px rgba(0,0,0,0.4)'; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 8px 32px rgba(245,41,13,0.4), 0 2px 8px rgba(0,0,0,0.4)'; }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.5), 0 4px 12px rgba(20,17,24,0.10)'; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 8px 32px rgba(245,41,13,0.4), 0 2px 8px rgba(20,17,24,0.10)'; }}
         >
-          <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#000', opacity: 0.5 }} />
+          <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--surface)', opacity: 0.5 }} />
           Book a Free Call
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
         </Link>
@@ -69,13 +69,13 @@ export default function ScrollUI() {
         style={{
           position: 'fixed', bottom: showCTA ? 100 : 32, right: 32, zIndex: 998,
           width: 48, height: 48, borderRadius: '50%',
-          background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)',
-          color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: 'var(--surface-sunk)', border: '1px solid var(--line-strong)',
+          color: 'var(--ink)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
           opacity: showBackTop ? 1 : 0, pointerEvents: showBackTop ? 'auto' : 'none',
           transition: 'opacity 0.3s, transform 0.3s, bottom 0.3s',
         }}
         onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.2)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; }}
-        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}
+        onMouseLeave={e => { e.currentTarget.style.background = 'var(--surface-sunk)'; e.currentTarget.style.borderColor = 'var(--line-strong)'; }}
         aria-label="Back to top"
         className="hide-mobile"
       >

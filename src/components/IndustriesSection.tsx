@@ -22,15 +22,15 @@ export default function IndustriesSection() {
   }, []);
 
   return (
-    <section ref={ref} id="industries" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="industries" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' }}>
       <div className="cb-container">
         <div className="reveal" style={{ marginBottom: 'clamp(32px, 8vw, 80px)' }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Expertise</div>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Expertise</div>
           <div className="industries-heading-grid">
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-              Domain Experts.<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Strategic Partners.</span>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+              Domain Experts.<br /><span style={{ color: 'var(--faint)' }}>Strategic Partners.</span>
             </h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>
+            <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
               Deep domain knowledge combined with world-class engineering — we build market leaders, not just software.
             </p>
           </div>
@@ -39,18 +39,18 @@ export default function IndustriesSection() {
         <div className="industries-grid">
           {industries.map((ind, i) => (
             <div key={ind.name} className={`reveal reveal-d${Math.min(i + 1, 6)}`}
-              style={{ padding: 'clamp(20px, 4vw, 48px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 'clamp(20px, 5vw, 36px)', display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 3vw, 24px)', transition: 'all 0.4s ease', cursor: 'default' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(245,41,13,0.08)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
+              style={{ padding: 'clamp(20px, 4vw, 48px)', border: '1px solid var(--line)', borderRadius: 'clamp(20px, 5vw, 36px)', display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 3vw, 24px)', transition: 'all 0.4s ease', cursor: 'default' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(20,17,24,0.10), 0 0 40px rgba(245,41,13,0.08)'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
             >
-              <div style={{ width: 52, height: 52, borderRadius: 16, background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={ind.icon} /></svg>
+              <div style={{ width: 52, height: 52, borderRadius: 16, background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={ind.icon} /></svg>
               </div>
               <div>
-                <h4 style={{ fontSize: 20, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{ind.name}</h4>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
+                <h4 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 10, letterSpacing: '-0.02em' }}>{ind.name}</h4>
+                <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
               </div>
-              <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: 6, color: 'rgba(255,255,255,0.2)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em' }}>
+              <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: 6, color: 'var(--faint)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em' }}>
                 LEARN MORE
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </div>
@@ -62,8 +62,8 @@ export default function IndustriesSection() {
           <a href="/contact" style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
             height: 48, padding: '0 28px', borderRadius: 100,
-            background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
-            color: '#fff', fontSize: 14, fontWeight: 600,
+            background: 'var(--surface-sunk)', border: '1px solid var(--line)',
+            color: 'var(--ink)', fontSize: 14, fontWeight: 600,
             textDecoration: 'none', transition: 'all 0.3s ease',
           }}>
             Discuss Your Industry Needs

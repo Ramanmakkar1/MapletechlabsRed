@@ -172,7 +172,7 @@ export default function MobileAppDevelopmentPage() {
   return (
     <>
       <Navbar />
-      <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -184,9 +184,9 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             HERO
         ═══════════════════════════════════════ */}
-        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 8vw, 100px) 0 clamp(60px, 8vw, 120px)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 8vw, 100px) 0 clamp(60px, 8vw, 120px)', borderBottom: '1px solid var(--line)' }}>
           {/* Grid bg */}
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,17,24,0.035) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
           {/* Glow */}
           <div style={{ position: 'absolute', top: '30%', left: '5%', width: 600, height: 600, background: 'radial-gradient(ellipse,rgba(245,41,13,0.08) 0%,transparent 65%)', filter: 'blur(60px)', pointerEvents: 'none' }} />
 
@@ -196,28 +196,28 @@ export default function MobileAppDevelopmentPage() {
               {/* Left */}
               <div>
                 <div className="reveal" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)', borderRadius: 100, padding: '8px 20px', marginBottom: 32 }}>
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 8px #f5290d' }} />
-                  <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Mobile App Development</span>
+                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 8px #f5290d' }} />
+                  <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Mobile App Development</span>
                 </div>
 
-                <h1 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.8rem,5vw,5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 24px' }}>
-                  We Build Apps<br />That Drive<br /><span style={{ color: '#f5290d' }}>Real Revenue.</span>
+                <h1 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.8rem,5vw,5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 24px' }}>
+                  We Build Apps<br />That Drive<br /><span style={{ color: 'var(--brand)' }}>Real Revenue.</span>
                 </h1>
 
-                <p className="reveal reveal-d2" style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, maxWidth: 480, margin: '0 0 40px' }}>
+                <p className="reveal reveal-d2" style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, maxWidth: 480, margin: '0 0 40px' }}>
                   From MVP to millions of users — we engineer iOS, Android and cross-platform apps that your customers love and your investors notice.
                 </p>
 
                 <div className="reveal reveal-d3" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 48 }}>
-                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 32px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
+                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 32px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
                     onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.35)'; }}
                     onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                     Start Your App
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </Link>
-                  <Link href="/case-studies" style={{ display: 'inline-flex', alignItems: 'center', height: 56, padding: '0 32px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 14, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
-                    onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'}
-                    onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
+                  <Link href="/case-studies" style={{ display: 'inline-flex', alignItems: 'center', height: 56, padding: '0 32px', borderRadius: 100, border: '1px solid var(--line)', color: 'var(--ink)', fontSize: 14, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
+                    onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--line-strong)'}
+                    onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--line)'}>
                     View Case Studies
                   </Link>
                 </div>
@@ -225,7 +225,7 @@ export default function MobileAppDevelopmentPage() {
                 {/* Platform badges */}
                 <div className="reveal reveal-d4" style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                   {[
-                    { label: 'iOS', color: '#fff' },
+                    { label: 'iOS', color: 'var(--ink)' },
                     { label: 'Android', color: '#3DDC84' },
                     { label: 'Flutter', color: '#54C5F8' },
                     { label: 'React Native', color: '#61DAFB' },
@@ -247,13 +247,13 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             STATS STRIP
         ═══════════════════════════════════════ */}
-        <section ref={statsRef} style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={statsRef} style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal stats-strip-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
               {stats.map((s, i) => (
-                <div key={s.label} style={{ padding: 'clamp(28px, 4vw, 52px) clamp(16px, 3vw, 40px)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.07)' : 'none', textAlign: 'center' }}>
-                  <div style={{ fontSize: 'clamp(2rem,3.5vw,3.2rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{s.value}</div>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 10 }}>{s.label}</div>
+                <div key={s.label} style={{ padding: 'clamp(28px, 4vw, 52px) clamp(16px, 3vw, 40px)', borderRight: i < 3 ? '1px solid var(--line)' : 'none', textAlign: 'center' }}>
+                  <div style={{ fontSize: 'clamp(2rem,3.5vw,3.2rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 10 }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -263,28 +263,28 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             WHAT WE BUILD
         ═══════════════════════════════════════ */}
-        <section ref={servicesRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={servicesRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 64 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>What We Build</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                Every Platform.<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Every Device.</span>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>What We Build</div>
+              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                Every Platform.<br /><span style={{ color: 'var(--faint)' }}>Every Device.</span>
               </h2>
             </div>
 
             {/* Service Cards */}
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: 20 }}>
               {services.map(s => (
-                <div key={s.title} style={{ padding: '36px 32px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', position: 'relative', overflow: 'hidden', transition: 'all 0.35s ease' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                <div key={s.title} style={{ padding: '36px 32px', border: '1px solid var(--line)', borderRadius: 28, background: 'var(--surface-alt)', position: 'relative', overflow: 'hidden', transition: 'all 0.35s ease' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(20,17,24,0.10)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,#f5290d,transparent)' }} />
-                  <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, marginBottom: 20, display: 'inline-block' }}>{s.tag}</span>
-                  <h3 style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: s.chips ? 24 : 0 }}>{s.desc}</p>
+                  <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand)', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, marginBottom: 20, display: 'inline-block' }}>{s.tag}</span>
+                  <h3 style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, marginBottom: s.chips ? 24 : 0 }}>{s.desc}</p>
                   {s.chips && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                      {s.chips.map(c => <span key={c} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', padding: '6px 14px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{c}</span>)}
+                      {s.chips.map(c => <span key={c} style={{ fontSize: 12, fontWeight: 600, color: 'var(--muted)', padding: '6px 14px', border: '1px solid var(--line)', borderRadius: 100 }}>{c}</span>)}
                     </div>
                   )}
                 </div>
@@ -296,27 +296,27 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             APP CAPABILITIES
         ═══════════════════════════════════════ */}
-        <section ref={capRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={capRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64, gap: 40, flexWrap: 'wrap' }}>
               <div>
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Capabilities</div>
-                <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                  Built-In From<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Day One.</span>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Capabilities</div>
+                <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                  Built-In From<br /><span style={{ color: 'var(--faint)' }}>Day One.</span>
                 </h2>
               </div>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', maxWidth: 380, lineHeight: 1.75, margin: 0 }}>
+              <p style={{ fontSize: 16, color: 'var(--body)', maxWidth: 380, lineHeight: 1.75, margin: 0 }}>
                 Every feature your app needs to compete — engineered natively, not bolted on.
               </p>
             </div>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100px, 100%), 1fr))', gap: 12 }}>
               {capabilities.map((c, i) => (
                 <div key={c.label} className={`reveal-d${Math.min(i+1,6)}`}
-                  style={{ padding: '28px 20px', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 20, background: 'rgba(255,255,255,0.02)', textAlign: 'center', transition: 'all 0.3s ease', cursor: 'default' }}
+                  style={{ padding: '28px 20px', border: '1px solid var(--line)', borderRadius: 20, background: 'var(--surface-alt)', textAlign: 'center', transition: 'all 0.3s ease', cursor: 'default' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.04)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; }}>
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; }}>
                   <div style={{ fontSize: 24, marginBottom: 10 }}>{c.icon}</div>
-                  <div style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.55)', lineHeight: 1.4 }}>{c.label}</div>
+                  <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--muted)', lineHeight: 1.4 }}>{c.label}</div>
                 </div>
               ))}
             </div>
@@ -326,12 +326,12 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             PROCESS
         ═══════════════════════════════════════ */}
-        <section ref={processRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={processRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 80 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Our Process</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                How We Build<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Your App.</span>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Our Process</div>
+              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                How We Build<br /><span style={{ color: 'var(--faint)' }}>Your App.</span>
               </h2>
             </div>
 
@@ -343,20 +343,20 @@ export default function MobileAppDevelopmentPage() {
                 {steps.map((step, i) => (
                   <div key={step.num} className={`reveal reveal-d${i + 1}`} style={{ display: 'grid', gridTemplateColumns: '48px 1fr', gap: 'clamp(16px, 3vw, 32px)', alignItems: 'start', padding: '32px 0' }}>
                     {/* Circle */}
-                    <div style={{ width: 48, height: 48, borderRadius: '50%', border: '2px solid rgba(245,41,13,0.4)', background: 'rgba(245,41,13,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: '#f5290d', flexShrink: 0, position: 'relative', zIndex: 1 }}>{step.num}</div>
+                    <div style={{ width: 48, height: 48, borderRadius: '50%', border: '2px solid rgba(245,41,13,0.4)', background: 'rgba(245,41,13,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: 'var(--brand)', flexShrink: 0, position: 'relative', zIndex: 1 }}>{step.num}</div>
 
                     {/* Content */}
-                    <div style={{ padding: 'clamp(20px, 3vw, 32px) clamp(16px, 3vw, 40px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
-                      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
-                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.boxShadow = ''; }}>
+                    <div style={{ padding: 'clamp(20px, 3vw, 32px) clamp(16px, 3vw, 40px)', border: '1px solid var(--line)', borderRadius: 28, background: 'var(--surface-alt)', transition: 'all 0.35s ease' }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(20,17,24,0.10)'; }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.boxShadow = ''; }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16, flexWrap: 'wrap', gap: 12 }}>
-                        <h3 style={{ fontSize: 22, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', margin: 0 }}>{step.title}</h3>
-                        <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, whiteSpace: 'nowrap' as const }}>{step.duration}</span>
+                        <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', margin: 0 }}>{step.title}</h3>
+                        <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, whiteSpace: 'nowrap' as const }}>{step.duration}</span>
                       </div>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, marginBottom: 24 }}>{step.desc}</p>
+                      <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.75, marginBottom: 24 }}>{step.desc}</p>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                         {step.deliverables.map(d => (
-                          <span key={d} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)', padding: '6px 14px', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 100 }}>
+                          <span key={d} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 600, color: 'var(--body)', padding: '6px 14px', border: '1px solid var(--line)', borderRadius: 100 }}>
                             <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
                             {d}
                           </span>
@@ -373,30 +373,30 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             TECH STACK
         ═══════════════════════════════════════ */}
-        <section ref={techRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={techRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64, gap: 40, flexWrap: 'wrap' }}>
               <div>
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Technology</div>
-                <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                  The Stack Behind<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Your App.</span>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Technology</div>
+                <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                  The Stack Behind<br /><span style={{ color: 'var(--faint)' }}>Your App.</span>
                 </h2>
               </div>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.75, margin: 0 }}>
+              <p style={{ fontSize: 16, color: 'var(--body)', maxWidth: 360, lineHeight: 1.75, margin: 0 }}>
                 Best-in-class tools chosen for performance, reliability, and long-term maintainability.
               </p>
             </div>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
               {techCategories.map(cat => (
-                <div key={cat.label} style={{ padding: 'clamp(24px, 3vw, 36px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
+                <div key={cat.label} style={{ padding: 'clamp(24px, 3vw, 36px)', border: '1px solid var(--line)', borderRadius: 28, background: 'var(--surface-alt)', transition: 'all 0.35s ease' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.02)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}>
-                  <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>{cat.label}</div>
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}>
+                  <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 20 }}>{cat.label}</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                     {cat.chips.map(c => (
-                      <span key={c} style={{ padding: '7px 16px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 500, color: 'rgba(255,255,255,0.55)', transition: '0.25s', cursor: 'default' }}
-                        onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.35)'; e.currentTarget.style.color = '#f5290d'; e.currentTarget.style.background = 'rgba(245,41,13,0.06)'; }}
-                        onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'transparent'; }}
+                      <span key={c} style={{ padding: '7px 16px', border: '1px solid var(--line)', borderRadius: 100, fontSize: 13, fontWeight: 500, color: 'var(--muted)', transition: '0.25s', cursor: 'default' }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.35)'; e.currentTarget.style.color = 'var(--brand)'; e.currentTarget.style.background = 'rgba(245,41,13,0.06)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.color = 'var(--muted)'; e.currentTarget.style.background = 'transparent'; }}
                       >{c}</span>
                     ))}
                   </div>
@@ -409,22 +409,22 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             INDUSTRIES
         ═══════════════════════════════════════ */}
-        <section ref={industriesRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={industriesRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 64 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Industries</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                Apps That Dominate<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Every Vertical.</span>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Industries</div>
+              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                Apps That Dominate<br /><span style={{ color: 'var(--faint)' }}>Every Vertical.</span>
               </h2>
             </div>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
               {industries.map((ind, i) => (
-                <div key={ind.title} className={`reveal-d${i + 1}`} style={{ padding: '36px 32px', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 24, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                <div key={ind.title} className={`reveal-d${i + 1}`} style={{ padding: '36px 32px', border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', transition: 'all 0.35s ease' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(20,17,24,0.10)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                   <div style={{ fontSize: 28, marginBottom: 16 }}>{ind.icon}</div>
-                  <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 10 }}>{ind.title}</h3>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
+                  <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 10 }}>{ind.title}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
                 </div>
               ))}
             </div>
@@ -434,22 +434,22 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             WHY CHOOSE US
         ═══════════════════════════════════════ */}
-        <section ref={whyRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={whyRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Why Mapletech Labs</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto', maxWidth: 700 }}>
-                The Standard Other Agencies<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Can&apos;t Match.</span>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Why Mapletech Labs</div>
+              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto', maxWidth: 700 }}>
+                The Standard Other Agencies<br /><span style={{ color: 'var(--faint)' }}>Can&apos;t Match.</span>
               </h2>
             </div>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
               {whyUs.map((w, i) => (
-                <div key={w.title} className={`reveal-d${i + 1}`} style={{ padding: '48px 40px', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(245,41,13,0.05)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                <div key={w.title} className={`reveal-d${i + 1}`} style={{ padding: '48px 40px', border: '1px solid var(--line)', borderRadius: 28, background: 'var(--surface-alt)', transition: 'all 0.35s ease' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(20,17,24,0.10), 0 0 40px rgba(245,41,13,0.05)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                   <div style={{ fontSize: 32, marginBottom: 24 }}>{w.icon}</div>
-                  <h3 style={{ fontSize: 20, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 14 }}>{w.title}</h3>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.42)', lineHeight: 1.75, margin: 0 }}>{w.desc}</p>
+                  <h3 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 14 }}>{w.title}</h3>
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>{w.desc}</p>
                 </div>
               ))}
             </div>
@@ -459,25 +459,25 @@ export default function MobileAppDevelopmentPage() {
         {/* ═══════════════════════════════════════
             FAQ
         ═══════════════════════════════════════ */}
-        <section ref={faqRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={faqRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ maxWidth: 860 }}>
             <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>FAQ</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                Common Questions<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Answered.</span>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>FAQ</div>
+              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                Common Questions<br /><span style={{ color: 'var(--faint)' }}>Answered.</span>
               </h2>
             </div>
             <div className="reveal reveal-d1" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {faqs.map((faq, i) => (
-                <div key={i} style={{ background: openFaq === i ? 'rgba(245,41,13,0.04)' : 'rgba(255,255,255,0.02)', border: `1px solid ${openFaq === i ? 'rgba(245,41,13,0.2)' : 'rgba(255,255,255,0.07)'}`, borderRadius: 20, overflow: 'hidden', transition: 'border-color 0.3s, background 0.3s' }}>
+                <div key={i} style={{ background: openFaq === i ? 'rgba(245,41,13,0.04)' : 'rgba(20,17,24,0.035)', border: `1px solid ${openFaq === i ? 'rgba(245,41,13,0.2)' : 'var(--line)'}`, borderRadius: 20, overflow: 'hidden', transition: 'border-color 0.3s, background 0.3s' }}>
                   <button onClick={() => setOpenFaq(openFaq === i ? null : i)} style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 28px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
-                    <span style={{ fontSize: 16, fontWeight: 500, color: '#fff', textAlign: 'left', letterSpacing: '-0.01em' }}>{faq.q}</span>
-                    <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'none' }}>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={openFaq === i ? '#f5290d' : 'rgba(255,255,255,0.7)'} strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
+                    <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--ink)', textAlign: 'left', letterSpacing: '-0.01em' }}>{faq.q}</span>
+                    <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'none' }}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={openFaq === i ? '#f5290d' : 'var(--body)'} strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
                     </div>
                   </button>
                   {openFaq === i && (
-                    <p style={{ padding: '0 28px 24px', margin: 0, fontSize: 15, color: 'rgba(255,255,255,0.44)', lineHeight: 1.75 }}>{faq.a}</p>
+                    <p style={{ padding: '0 28px 24px', margin: 0, fontSize: 15, color: 'var(--muted)', lineHeight: 1.75 }}>{faq.a}</p>
                   )}
                 </div>
               ))}
@@ -491,24 +491,24 @@ export default function MobileAppDevelopmentPage() {
         <section style={{ padding: 'clamp(60px, 8vw, 120px) 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 800, height: 500, background: 'radial-gradient(ellipse,rgba(245,41,13,0.09) 0%,transparent 65%)', filter: 'blur(70px)', pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 24 }}>Ready to Build?</div>
-            <h2 style={{ fontSize: 'clamp(2.5rem,5vw,5.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
-              Your App Could Be<br /><span style={{ color: '#f5290d' }}>Next.</span>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 24 }}>Ready to Build?</div>
+            <h2 style={{ fontSize: 'clamp(2.5rem,5vw,5.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
+              Your App Could Be<br /><span style={{ color: 'var(--brand)' }}>Next.</span>
             </h2>
             <TrustBadges compact />
-            <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.38)', maxWidth: 480, margin: '0 auto 48px', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 18, color: 'var(--muted)', maxWidth: 480, margin: '0 auto 48px', lineHeight: 1.7 }}>
               Tell us about your idea. We&apos;ll send you a detailed proposal within 48 hours — no commitment required.
             </p>
             <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 48 }}>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, height: 60, padding: '0 40px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
+              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, height: 60, padding: '0 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
                 onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                 Get a Free Proposal
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </Link>
-              <a href="tel:+14165551234" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 60, padding: '0 40px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
-                onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'}
-                onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
+              <a href="tel:+14165551234" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 60, padding: '0 40px', borderRadius: 100, border: '1px solid var(--line)', color: 'var(--ink)', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
+                onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--line-strong)'}
+                onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--line)'}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.22 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
                 Call Us
               </a>
@@ -518,7 +518,7 @@ export default function MobileAppDevelopmentPage() {
               {['NDA on Day 1', 'Fixed-Price Guarantee', '48hr Proposal', 'No Commitment'].map(t => (
                 <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
-                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>{t}</span>
+                  <span style={{ fontSize: 13, color: 'var(--body)', fontWeight: 500 }}>{t}</span>
                 </div>
               ))}
             </div>
@@ -526,9 +526,9 @@ export default function MobileAppDevelopmentPage() {
         </section>
 
         {/* Related Services */}
-        <section style={{ padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: '80px 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
               Related Services
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 20 }}>
@@ -539,14 +539,14 @@ export default function MobileAppDevelopmentPage() {
               ].map((s) => (
                 <a key={s.href} href={s.href} style={{
                   display: 'block', padding: '28px 24px', borderRadius: 16,
-                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                   textDecoration: 'none', transition: 'all 0.3s ease',
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
-                  <div style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.name}</div>
-                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>{s.desc}</div>
+                  <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{s.name}</div>
+                  <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6 }}>{s.desc}</div>
                 </a>
               ))}
             </div>
@@ -556,7 +556,7 @@ export default function MobileAppDevelopmentPage() {
         {/* Industries We Serve */}
         <section style={{ padding: '60px 0' }}>
           <div className="cb-container" style={{ textAlign: 'center' }}>
-            <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 24 }}>Industries We Serve</p>
+            <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 24 }}>Industries We Serve</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12 }}>
               {[
                 { name: 'FinTech', href: '/industries/fintech' },
@@ -568,12 +568,12 @@ export default function MobileAppDevelopmentPage() {
               ].map((ind) => (
                 <a key={ind.href} href={ind.href} style={{
                   padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
-                  color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.04)',
-                  border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none',
+                  color: 'var(--body)', background: 'var(--surface-alt)',
+                  border: '1px solid var(--line)', textDecoration: 'none',
                   transition: 'all 0.2s ease',
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = '#fff'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = 'var(--ink)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.color = 'var(--body)'; }}
                 >
                   {ind.name}
                 </a>

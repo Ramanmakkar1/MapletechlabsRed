@@ -20,9 +20,9 @@ function useReveal() {
 }
 
 const cardBase: React.CSSProperties = {
-  border: '1px solid rgba(255,255,255,0.08)',
+  border: '1px solid var(--line)',
   borderRadius: 24,
-  background: 'rgba(255,255,255,0.02)',
+  background: 'var(--surface-alt)',
   padding: '2rem',
   transition: 'border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s',
 };
@@ -31,7 +31,7 @@ const cardHover: React.CSSProperties = {
   borderColor: 'rgba(245,41,13,0.2)',
   background: 'rgba(245,41,13,0.03)',
   transform: 'translateY(-4px)',
-  boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
+  boxShadow: '0 24px 60px rgba(20,17,24,0.10)',
 };
 
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
@@ -97,7 +97,7 @@ export default function IndustriesPage() {
   return (
     <>
       <Navbar />
-      <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -107,20 +107,20 @@ export default function IndustriesPage() {
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding" style={{ position: 'relative', overflow: 'hidden', minHeight: '70vh', display: 'flex', alignItems: 'center' }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(20,17,24,0.035) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
           <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translateX(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(245,41,13,0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
             <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-              Industries We <span style={{ color: '#f5290d' }}>Serve.</span>
+              Industries We <span style={{ color: 'var(--brand)' }}>Serve.</span>
             </h1>
-            <p className="reveal" style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.65)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
+            <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
               Deep expertise across 6 verticals. Custom solutions built for your industry's unique challenges.
             </p>
             <div className="reveal" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3.5rem' }}>
-              <Link href="/contact" style={{ background: '#f5290d', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                 Get Started
               </Link>
-              <Link href="/services" style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/services" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                 View All Services
               </Link>
             </div>
@@ -139,11 +139,11 @@ export default function IndustriesPage() {
                 >
                   <Card>
                     <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{industry.icon}</div>
-                    <h2 style={{ fontWeight: 700, fontSize: '1.3rem', marginBottom: '0.75rem', color: '#fff' }}>{industry.name}</h2>
-                    <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem', marginBottom: '1.5rem' }}>{industry.description}</p>
+                    <h2 style={{ fontWeight: 700, fontSize: '1.3rem', marginBottom: '0.75rem', color: 'var(--ink)' }}>{industry.name}</h2>
+                    <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem', marginBottom: '1.5rem' }}>{industry.description}</p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                       {industry.highlights.map(h => (
-                        <span key={h} style={{ background: 'rgba(245,41,13,0.1)', borderRadius: 8, padding: '4px 12px', fontSize: '0.8rem', color: '#f5290d' }}>{h}</span>
+                        <span key={h} style={{ background: 'rgba(245,41,13,0.1)', borderRadius: 8, padding: '4px 12px', fontSize: '0.8rem', color: 'var(--brand)' }}>{h}</span>
                       ))}
                     </div>
                   </Card>
@@ -158,7 +158,7 @@ export default function IndustriesPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Industry-specific expertise meets cutting-edge technology.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Industry-specific expertise meets cutting-edge technology.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
               {[
@@ -170,7 +170,7 @@ export default function IndustriesPage() {
                 <Card key={item.title}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{item.icon}</div>
                   <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: '0.75rem' }}>{item.title}</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{item.desc}</p>
+                  <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{item.desc}</p>
                 </Card>
               ))}
             </div>
@@ -178,26 +178,26 @@ export default function IndustriesPage() {
         </section>
 
         {/* CTA */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
               <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
-                Ready to Transform Your <span style={{ color: '#f5290d' }}>Industry?</span>
+                Ready to Transform Your <span style={{ color: 'var(--brand)' }}>Industry?</span>
               </h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
+              <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
                 Let's discuss your challenges and build a custom solution that drives results.
               </p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-                <Link href="/contact" style={{ background: '#f5290d', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+                <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                   Schedule Consultation
                 </Link>
-                <Link href="/case-studies" style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+                <Link href="/case-studies" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                   View Case Studies
                 </Link>
               </div>
               <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 {['300+ Projects Delivered', '150+ Engineers', '5 Industry Verticals', 'NDA Protected'].map(t => (
-                  <span key={t} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)' }}>✓ {t}</span>
+                  <span key={t} style={{ fontSize: '0.85rem', color: 'var(--faint)' }}>✓ {t}</span>
                 ))}
               </div>
               <TrustBadges compact />

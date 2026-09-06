@@ -25,7 +25,7 @@ export default function StickyCTA() {
       left: 0,
       right: 0,
       zIndex: 900,
-      background: 'rgba(0,0,0,0.95)',
+      background: 'var(--surface-alt)',
       backdropFilter: 'blur(20px)',
       borderTop: '1px solid rgba(245,41,13,0.2)',
       padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 24px)',
@@ -36,7 +36,7 @@ export default function StickyCTA() {
       transform: visible ? 'translateY(0)' : 'translateY(100%)',
       transition: 'transform 0.4s cubic-bezier(0.16,1,0.3,1)',
     }}>
-      <span style={{ fontSize: 'clamp(12px, 2.5vw, 14px)', color: 'rgba(255,255,255,0.8)', fontWeight: 500 }} className="sticky-cta-text">
+      <span style={{ fontSize: 'clamp(12px, 2.5vw, 14px)', color: 'var(--body)', fontWeight: 500 }} className="sticky-cta-text">
         Ready to build something great?
       </span>
       <Link href="/contact" style={{
@@ -46,7 +46,7 @@ export default function StickyCTA() {
         height: 44,
         padding: '0 clamp(14px, 3vw, 20px)',
         borderRadius: 100,
-        background: '#f5290d',
+        background: 'var(--brand)',
         color: '#fff',
         fontSize: 'clamp(12px, 2.5vw, 13px)',
         fontWeight: 700,
@@ -65,7 +65,7 @@ export default function StickyCTA() {
         style={{
           background: 'none',
           border: 'none',
-          color: 'rgba(255,255,255,0.4)',
+          color: 'var(--muted)',
           cursor: 'pointer',
           padding: 8,
           fontSize: 18,

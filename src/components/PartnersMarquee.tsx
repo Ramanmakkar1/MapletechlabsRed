@@ -11,29 +11,29 @@ function PartnerPill({ name }: { name: string }) {
     <div
       style={{
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        padding: '10px 28px', border: '1px solid rgba(255,255,255,0.08)',
+        padding: '10px 28px', border: '1px solid var(--line)',
         borderRadius: 100, minWidth: 120, height: 44, flexShrink: 0,
-        background: 'rgba(255,255,255,0.02)', transition: '0.3s', cursor: 'default',
+        background: 'var(--surface-alt)', transition: '0.3s', cursor: 'default',
         whiteSpace: 'nowrap' as const,
       }}
-      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.18)'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
-      onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
+      onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--line-strong)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}
+      onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}
     >
-      <span style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.7)', letterSpacing: '-0.01em' }}>{name}</span>
+      <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--body)', letterSpacing: '-0.01em' }}>{name}</span>
     </div>
   );
 }
 
 export default function PartnersMarquee() {
   return (
-    <section style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)', padding: '52px 0', overflow: 'hidden', position: 'relative' }}>
+    <section style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)', padding: '52px 0', overflow: 'hidden', position: 'relative' }}>
       {/* Fade edges */}
-      <div style={{ position: 'absolute', top: 0, left: 0, width: 200, height: '100%', background: 'linear-gradient(to right, #000, transparent)', zIndex: 2, pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', top: 0, right: 0, width: 200, height: '100%', background: 'linear-gradient(to left, #000, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: 0, left: 0, width: 200, height: '100%', background: 'linear-gradient(to right, #FFFFFF, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: 0, right: 0, width: 200, height: '100%', background: 'linear-gradient(to left, #FFFFFF, transparent)', zIndex: 2, pointerEvents: 'none' }} />
 
       {/* Label */}
       <div style={{ textAlign: 'center', marginBottom: 32, position: 'relative', zIndex: 3 }}>
-        <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.2)', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
+        <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
           Trusted by 150+ companies worldwide
         </span>
       </div>

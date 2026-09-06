@@ -54,7 +54,7 @@ export default function FAQPageClient() {
   return (
     <>
       <Navbar />
-      <main ref={ref} style={{ background: '#000', minHeight: '100vh' }}>
+      <main ref={ref} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* Hero */}
         <section style={{ padding: 'clamp(120px, 12vw, 160px) 0 clamp(48px, 6vw, 80px)', position: 'relative', overflow: 'hidden' }}>
@@ -66,14 +66,14 @@ export default function FAQPageClient() {
           }} />
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>FAQ</div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>FAQ</div>
               <h1 style={{
-                fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: '#fff',
+                fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)',
                 letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24,
               }}>
-                Frequently Asked<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Questions</span>
+                Frequently Asked<br /><span style={{ color: 'var(--faint)' }}>Questions</span>
               </h1>
-              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
+              <p style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7 }}>
                 Everything you need to know about working with Mapletech Labs.
               </p>
             </div>
@@ -87,14 +87,14 @@ export default function FAQPageClient() {
               <div key={cat.name} className={`reveal reveal-d${ci + 1}`} style={{ marginBottom: 56 }}>
                 <div style={{
                   fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                  color: '#f5290d', marginBottom: 20, paddingBottom: 16,
-                  borderBottom: '1px solid rgba(255,255,255,0.07)',
+                  color: 'var(--brand)', marginBottom: 20, paddingBottom: 16,
+                  borderBottom: '1px solid var(--line)',
                 }}>{cat.name}</div>
                 {cat.faqs.map((faq, fi) => {
                   const key = `${ci}-${fi}`;
                   const isOpen = active === key;
                   return (
-                    <div key={key} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <div key={key} style={{ borderBottom: '1px solid var(--line)' }}>
                       <button
                         onClick={() => setActive(isOpen ? null : key)}
                         aria-expanded={isOpen}
@@ -104,14 +104,14 @@ export default function FAQPageClient() {
                           textAlign: 'left', gap: 20, fontFamily: 'inherit',
                         }}
                       >
-                        <span style={{ fontSize: 16, fontWeight: 500, color: '#fff', lineHeight: 1.5 }}>{faq.q}</span>
+                        <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--ink)', lineHeight: 1.5 }}>{faq.q}</span>
                         <div style={{
                           width: 32, height: 32, borderRadius: '50%', flexShrink: 0,
-                          background: isOpen ? '#f5290d' : 'rgba(255,255,255,0.06)',
+                          background: isOpen ? '#f5290d' : 'var(--line)',
                           display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.3s',
                         }}>
                           <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                            stroke={isOpen ? '#000' : 'rgba(255,255,255,0.6)'} strokeWidth="2.5"
+                            stroke={isOpen ? '#000' : 'var(--body)'} strokeWidth="2.5"
                             style={{ transition: '0.3s', transform: isOpen ? 'rotate(45deg)' : 'rotate(0)' }}
                           >
                             <path d="M12 5v14M5 12h14" />
@@ -122,7 +122,7 @@ export default function FAQPageClient() {
                         maxHeight: isOpen ? 500 : 0, overflow: 'hidden',
                         transition: 'max-height 0.45s cubic-bezier(0.16,1,0.3,1)',
                       }}>
-                        <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, paddingBottom: 24, margin: 0 }}>
+                        <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.8, paddingBottom: 24, margin: 0 }}>
                           {faq.a}
                         </p>
                       </div>
@@ -135,25 +135,25 @@ export default function FAQPageClient() {
         </section>
 
         {/* CTA */}
-        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
               borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 56px)', textAlign: 'center',
             }}>
               <h2 style={{
-                fontSize: 'clamp(1.6rem, 3vw, 2.5rem)', fontWeight: 700, color: '#fff',
+                fontSize: 'clamp(1.6rem, 3vw, 2.5rem)', fontWeight: 700, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 16,
               }}>
                 Still have questions?
               </h2>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', marginBottom: 32, maxWidth: 480, margin: '0 auto 32px' }}>
+              <p style={{ fontSize: 16, color: 'var(--muted)', marginBottom: 32, maxWidth: 480, margin: '0 auto 32px' }}>
                 Let&apos;s hop on a quick call. No pressure, no commitment — just a conversation.
               </p>
               <Link href="/contact" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 10,
                 height: 52, padding: '0 32px', borderRadius: 100,
-                background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700,
+                background: 'var(--brand)', color: '#fff', fontSize: 14, fontWeight: 700,
                 textDecoration: 'none',
               }}>
                 Get in Touch

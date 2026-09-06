@@ -20,9 +20,9 @@ function useReveal() {
 }
 
 const cardBase: React.CSSProperties = {
-  border: '1px solid rgba(255,255,255,0.08)',
+  border: '1px solid var(--line)',
   borderRadius: 24,
-  background: 'rgba(255,255,255,0.02)',
+  background: 'var(--surface-alt)',
   padding: '2rem',
   transition: 'border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s',
 };
@@ -31,7 +31,7 @@ const cardHover: React.CSSProperties = {
   borderColor: 'rgba(245,41,13,0.2)',
   background: 'rgba(245,41,13,0.03)',
   transform: 'translateY(-4px)',
-  boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
+  boxShadow: '0 24px 60px rgba(20,17,24,0.10)',
 };
 
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
@@ -63,7 +63,7 @@ export default function FintechPage() {
   return (
     <>
       <Navbar />
-      <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -74,31 +74,31 @@ export default function FintechPage() {
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(20,17,24,0.035) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
           <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translateX(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(245,41,13,0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
-            <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: '#f5290d', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
+            <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               Financial Technology
             </div>
             <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-              We Engineer FinTech That <span style={{ color: '#f5290d' }}>Moves Money.</span>
+              We Engineer FinTech That <span style={{ color: 'var(--brand)' }}>Moves Money.</span>
             </h1>
-            <p className="reveal" style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.65)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
+            <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
               Trading platforms, digital wallets, payment gateways and regulatory-compliant financial infrastructure.
             </p>
             <div className="reveal" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3.5rem' }}>
-              <Link href="/contact" style={{ background: '#f5290d', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                 Start Your Project
               </Link>
-              <Link href="/case-studies" style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/case-studies" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                 View Case Studies
               </Link>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))', gap: '1.5rem', maxWidth: 600, margin: '0 auto' }}>
               {[['$2B+', 'Processed Daily'], ['PCI-DSS', 'Compliant'], ['Sub-50ms', 'Latency']].map(([val, label]) => (
                 <div key={label} style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#f5290d' }}>{val}</div>
-                  <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', marginTop: 4, letterSpacing: '0.05em' }}>{label}</div>
+                  <div style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--brand)' }}>{val}</div>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--faint)', marginTop: 4, letterSpacing: '0.05em' }}>{label}</div>
                 </div>
               ))}
             </div>
@@ -110,7 +110,7 @@ export default function FintechPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Key Challenges We Solve</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>FinTech demands precision. We engineer for every edge case.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>FinTech demands precision. We engineer for every edge case.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
               {[
@@ -121,7 +121,7 @@ export default function FintechPage() {
                 <Card key={c.title}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{c.icon}</div>
                   <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: '0.75rem' }}>{c.title}</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{c.desc}</p>
+                  <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{c.desc}</p>
                 </Card>
               ))}
             </div>
@@ -133,7 +133,7 @@ export default function FintechPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Solutions</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>End-to-end financial engineering from infrastructure to interface.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>End-to-end financial engineering from infrastructure to interface.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '1.5rem' }}>
               {[
@@ -147,7 +147,7 @@ export default function FintechPage() {
                 <Card key={s.title}>
                   <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{s.icon}</div>
                   <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
+                  <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
                 </Card>
               ))}
             </div>
@@ -159,17 +159,17 @@ export default function FintechPage() {
           <div className="cb-container">
             <div className="reveal" style={{ border: '1px solid rgba(245,41,13,0.15)', borderRadius: 32, background: 'rgba(245,41,13,0.03)', padding: 'clamp(1.5rem, 4vw, 3rem)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px, 100%), 1fr))', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center' }}>
               <div>
-                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#f5290d', marginBottom: '0.5rem' }}>Fintech Client</div>
+                <div style={{ fontSize: 12, color: 'var(--faint)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
+                <div style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--brand)', marginBottom: '0.5rem' }}>Fintech Client</div>
                 <h3 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.2 }}>2M+ daily transactions, sub-50ms latency, 99.99% uptime</h3>
-                <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>We rebuilt their core trading engine from the ground up — new data pipeline, new order router, new risk management layer.</p>
+                <p style={{ color: 'var(--body)', lineHeight: 1.7 }}>We rebuilt their core trading engine from the ground up — new data pipeline, new order router, new risk management layer.</p>
               </div>
               <div>
                 <blockquote style={{ borderLeft: '3px solid #f5290d', paddingLeft: '1.5rem', margin: 0 }}>
-                  <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontStyle: 'italic', marginBottom: '1rem' }}>
+                  <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'var(--body)', fontStyle: 'italic', marginBottom: '1rem' }}>
                     "Mapletech Labs rebuilt our core trading engine. The performance gains were immediate and measurable."
                   </p>
-                  <cite style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.3)', fontStyle: 'normal' }}>— CTO, Leading Canadian Fintech</cite>
+                  <cite style={{ fontSize: '0.9rem', color: 'var(--faint)', fontStyle: 'normal' }}>— CTO, Leading Canadian Fintech</cite>
                 </blockquote>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function FintechPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Tech Stack</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Battle-tested technologies chosen for performance and compliance.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Battle-tested technologies chosen for performance and compliance.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
               {[
@@ -191,10 +191,10 @@ export default function FintechPage() {
                 { cat: 'Cloud', items: ['AWS GovCloud', 'Azure', 'Kubernetes', 'Terraform'] },
               ].map(t => (
                 <Card key={t.cat}>
-                  <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>{t.cat}</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--faint)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>{t.cat}</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                     {t.items.map(item => (
-                      <span key={item} style={{ background: 'rgba(255,255,255,0.06)', borderRadius: 8, padding: '4px 12px', fontSize: '0.85rem', color: 'rgba(255,255,255,0.85)' }}>{item}</span>
+                      <span key={item} style={{ background: 'var(--surface-sunk)', borderRadius: 8, padding: '4px 12px', fontSize: '0.85rem', color: 'var(--body)' }}>{item}</span>
                     ))}
                   </div>
                 </Card>
@@ -208,7 +208,7 @@ export default function FintechPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Mapletech Labs</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>We don't just write code — we understand financial systems.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>We don't just write code — we understand financial systems.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
               {[
@@ -219,7 +219,7 @@ export default function FintechPage() {
                 <Card key={w.title}>
                   <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{w.icon}</div>
                   <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
+                  <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
                 </Card>
               ))}
             </div>
@@ -227,9 +227,9 @@ export default function FintechPage() {
         </section>
 
         {/* Related Services */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
               Services for FinTech
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(250px, 100%), 1fr))', gap: 16 }}>
@@ -242,14 +242,14 @@ export default function FintechPage() {
               ].map((s) => (
                 <a key={s.href} href={s.href} style={{
                   display: 'block', padding: '24px', borderRadius: 16,
-                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                   textDecoration: 'none', transition: 'all 0.3s ease',
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
-                  <div style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{s.name}</div>
-                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{s.desc}</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', marginBottom: 6 }}>{s.name}</div>
+                  <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>{s.desc}</div>
                 </a>
               ))}
             </div>
@@ -261,22 +261,22 @@ export default function FintechPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
               <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
-                Build Your <span style={{ color: '#f5290d' }}>FinTech Product.</span>
+                Build Your <span style={{ color: 'var(--brand)' }}>FinTech Product.</span>
               </h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
+              <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
                 From MVP to mission-critical infrastructure — we have the expertise to make it happen.
               </p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-                <Link href="/contact" style={{ background: '#f5290d', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+                <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                   Start Your Project
                 </Link>
-                <Link href="/case-studies" style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+                <Link href="/case-studies" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                   See Our Work
                 </Link>
               </div>
               <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 {['PCI-DSS Compliant', 'SOC II Certified', 'NDA on Request', 'Fixed-Price Sprints'].map(t => (
-                  <span key={t} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)' }}>✓ {t}</span>
+                  <span key={t} style={{ fontSize: '0.85rem', color: 'var(--faint)' }}>✓ {t}</span>
                 ))}
               </div>
               <TrustBadges compact />

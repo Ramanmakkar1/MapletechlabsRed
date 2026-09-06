@@ -77,19 +77,19 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section ref={ref} id="process" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="process" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' }}>
       <div className="cb-container">
 
         {/* Header */}
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(16px, 3vw, 40px)', marginBottom: 'clamp(40px, 8vw, 100px)', flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>How We Work</div>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>How We Work</div>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               From Idea to Launch<br />
-              <span style={{ color: 'rgba(255,255,255,0.2)' }}>In 5 Proven Steps.</span>
+              <span style={{ color: 'var(--faint)' }}>In 5 Proven Steps.</span>
             </h2>
           </div>
-          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
+          <p style={{ fontSize: 17, color: 'var(--body)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
             A battle-tested process refined across 500+ projects — giving you full visibility and zero surprises.
           </p>
         </div>
@@ -115,9 +115,9 @@ export default function ProcessSection() {
                 style={{
                   alignItems: 'center',
                   padding: 'clamp(20px, 3vw, 36px) clamp(20px, 4vw, 48px) clamp(20px, 3vw, 36px) clamp(48px, 8vw, 100px)',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  border: '1px solid var(--line)',
                   borderRadius: 24,
-                  background: 'rgba(255,255,255,0.02)',
+                  background: 'var(--surface-alt)',
                   transition: 'all 0.4s ease',
                   cursor: 'default',
                   position: 'relative',
@@ -125,13 +125,13 @@ export default function ProcessSection() {
                 onMouseEnter={e => {
                   e.currentTarget.style.background = 'rgba(245,41,13,0.03)';
                   e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)';
-                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.4)';
+                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(20,17,24,0.10)';
                   const circle = e.currentTarget.querySelector('.process-step-circle') as HTMLElement;
                   if (circle) circle.style.boxShadow = '0 0 20px rgba(245,41,13,0.3)';
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
+                  e.currentTarget.style.background = 'var(--surface-alt)';
+                  e.currentTarget.style.borderColor = 'var(--line)';
                   e.currentTarget.style.boxShadow = '';
                   const circle = e.currentTarget.querySelector('.process-step-circle') as HTMLElement;
                   if (circle) circle.style.boxShadow = '';
@@ -141,12 +141,12 @@ export default function ProcessSection() {
                 <div className="process-step-circle" style={{
                   position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)',
                   width: 48, height: 48, borderRadius: '50%',
-                  background: '#000', border: '1px solid rgba(245,41,13,0.3)',
+                  background: 'var(--surface)', border: '1px solid rgba(245,41,13,0.3)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   zIndex: 1,
                   transition: 'all 0.3s ease',
                 }}>
-                  <span style={{ fontSize: 11, fontWeight: 800, color: '#f5290d', letterSpacing: '0.05em' }}>{step.num}</span>
+                  <span style={{ fontSize: 11, fontWeight: 800, color: 'var(--brand)', letterSpacing: '0.05em' }}>{step.num}</span>
                 </div>
 
                 {/* Icon */}
@@ -158,8 +158,8 @@ export default function ProcessSection() {
 
                 {/* Title + Desc */}
                 <div>
-                  <h3 style={{ fontSize: 'clamp(18px, 3.5vw, 22px)', fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
-                  <p style={{ fontSize: 'clamp(14px, 2.5vw, 15px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
+                  <h3 style={{ fontSize: 'clamp(18px, 3.5vw, 22px)', fontWeight: 600, color: 'var(--ink)', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
+                  <p style={{ fontSize: 'clamp(14px, 2.5vw, 15px)', color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
                 </div>
 
                 {/* Checklist */}
@@ -169,14 +169,14 @@ export default function ProcessSection() {
                       <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
                       </div>
-                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontWeight: 500 }}>{item}</span>
+                      <span style={{ fontSize: 13, color: 'var(--muted)', fontWeight: 500 }}>{item}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Duration badge */}
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }} className="process-duration">
-                  <div style={{ padding: '10px 20px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.75)', whiteSpace: 'nowrap' }}>
+                  <div style={{ padding: '10px 20px', border: '1px solid var(--line)', borderRadius: 100, fontSize: 13, fontWeight: 600, color: 'var(--body)', whiteSpace: 'nowrap' }}>
                     ⏱ {step.duration}
                   </div>
                 </div>

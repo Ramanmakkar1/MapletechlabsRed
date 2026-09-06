@@ -20,9 +20,9 @@ function useReveal() {
 }
 
 const cardBase: React.CSSProperties = {
-  border: '1px solid rgba(255,255,255,0.08)',
+  border: '1px solid var(--line)',
   borderRadius: 24,
-  background: 'rgba(255,255,255,0.02)',
+  background: 'var(--surface-alt)',
   padding: '2rem',
   transition: 'border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s',
 };
@@ -31,7 +31,7 @@ const cardHover: React.CSSProperties = {
   borderColor: 'rgba(245,41,13,0.2)',
   background: 'rgba(245,41,13,0.03)',
   transform: 'translateY(-4px)',
-  boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
+  boxShadow: '0 24px 60px rgba(20,17,24,0.10)',
 };
 
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
@@ -77,35 +77,35 @@ export default function EdmontonPage() {
           { label: 'Edmonton' },
         ]} />
       </div>
-      <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
 
         {/* HERO */}
         <section ref={heroRef} className="section-padding loc-city-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(20,17,24,0.035) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
           <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translateX(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(245,41,13,0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
-            <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: '#f5290d', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
+            <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
               Headquarters — Edmonton, Alberta
             </div>
             <h1 className="reveal" style={{ fontSize: 'clamp(2.6rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-              Software Development in <span style={{ color: '#f5290d' }}>Edmonton</span>
+              Software Development in <span style={{ color: 'var(--brand)' }}>Edmonton</span>
             </h1>
-            <p className="reveal" style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.65)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
+            <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
               Edmonton is where Mapletech Labs was founded. As our headquarters, this is the heart of our operations — serving Alberta&apos;s growing tech ecosystem and energy sector with custom software solutions.
             </p>
             <div className="reveal" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3.5rem' }}>
-              <Link href="/contact" style={{ background: '#f5290d', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                 Get a Free Quote
               </Link>
-              <Link href="/case-studies" style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+              <Link href="/case-studies" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                 View Case Studies
               </Link>
             </div>
             <div className="reveal loc-city-hero-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', maxWidth: 600, margin: '0 auto' }}>
               {[['85+', 'Projects in Alberta'], ['98%', 'Client Satisfaction'], ['40+', 'Team Members']].map(([val, label]) => (
                 <div key={label} style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#f5290d' }}>{val}</div>
-                  <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', marginTop: 4, letterSpacing: '0.05em' }}>{label}</div>
+                  <div style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--brand)' }}>{val}</div>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--faint)', marginTop: 4, letterSpacing: '0.05em' }}>{label}</div>
                 </div>
               ))}
             </div>
@@ -117,15 +117,15 @@ export default function EdmontonPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Our Services in Edmonton</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Full-spectrum software development for Edmonton and Alberta businesses.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Full-spectrum software development for Edmonton and Alberta businesses.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {services.map(s => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
-                    <div style={{ color: '#f5290d', fontSize: '1.2rem', marginBottom: '0.75rem' }}>&rarr;</div>
+                    <div style={{ color: 'var(--brand)', fontSize: '1.2rem', marginBottom: '0.75rem' }}>&rarr;</div>
                     <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{s.title}</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
+                    <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{s.desc}</p>
                   </Card>
                 </Link>
               ))}
@@ -139,7 +139,7 @@ export default function EdmontonPage() {
             <div className="reveal" style={{ border: '1px solid rgba(245,41,13,0.15)', borderRadius: 32, background: 'rgba(245,41,13,0.03)', padding: 'clamp(2rem, 4vw, 3rem)' }}>
               <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                 <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Edmonton &amp; Alberta by the Numbers</h2>
-                <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Our impact across the province since founding our headquarters here.</p>
+                <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Our impact across the province since founding our headquarters here.</p>
               </div>
               <div className="loc-city-stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
                 {[
@@ -149,8 +149,8 @@ export default function EdmontonPage() {
                   ['5+', 'Years Serving Edmonton'],
                 ].map(([val, label]) => (
                   <div key={label} style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#f5290d' }}>{val}</div>
-                    <div style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', marginTop: 8 }}>{label}</div>
+                    <div style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'var(--brand)' }}>{val}</div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: 8 }}>{label}</div>
                   </div>
                 ))}
               </div>
@@ -163,7 +163,7 @@ export default function EdmontonPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, marginBottom: '1rem' }}>Why Choose Mapletech Labs in Edmonton</h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem' }}>Your local HQ partner with national reach and global talent.</p>
+              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Your local HQ partner with national reach and global talent.</p>
             </div>
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
               {[
@@ -174,7 +174,7 @@ export default function EdmontonPage() {
               ].map(w => (
                 <Card key={w.title}>
                   <h3 style={{ fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.75rem' }}>{w.title}</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
+                  <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem' }}>{w.desc}</p>
                 </Card>
               ))}
             </div>
@@ -186,22 +186,22 @@ export default function EdmontonPage() {
           <div className="cb-container">
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
               <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem' }}>
-                Start Your Project in <span style={{ color: '#f5290d' }}>Edmonton</span>
+                Start Your Project in <span style={{ color: 'var(--brand)' }}>Edmonton</span>
               </h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
+              <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
                 Whether you are an energy company looking to digitize operations, a startup building the next big thing, or an enterprise modernizing legacy systems — we are ready to help.
               </p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-                <Link href="/contact" style={{ background: '#f5290d', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+                <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                   Get a Free Quote
                 </Link>
-                <Link href="/locations" style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
+                <Link href="/locations" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
                   View All Locations
                 </Link>
               </div>
               <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 {['Free Consultation', 'NDA on Request', 'Fixed-Price Sprints', 'Canadian Data Residency'].map(t => (
-                  <span key={t} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)' }}>&#10003; {t}</span>
+                  <span key={t} style={{ fontSize: '0.85rem', color: 'var(--faint)' }}>&#10003; {t}</span>
                 ))}
               </div>
               <TrustBadges compact />
@@ -210,26 +210,26 @@ export default function EdmontonPage() {
         </section>
 
         {/* Why Edmonton for Tech */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Edmonton for Tech</h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Edmonton is Alberta&apos;s fastest-growing tech hub with 1,000+ tech companies, a $3B+ tech sector, and world-leading AI research at the University of Alberta.</p>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Why Edmonton for Tech</h2>
+            <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>Edmonton is Alberta&apos;s fastest-growing tech hub with 1,000+ tech companies, a $3B+ tech sector, and world-leading AI research at the University of Alberta.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
                 { t: 'AI & Machine Learning Hub', d: 'University of Alberta\'s Amii institute is a global leader in reinforcement learning — Edmonton trains more AI researchers per capita than almost any city worldwide.' },
                 { t: 'ICE District Innovation', d: 'Edmonton\'s $2.5B ICE District is attracting tech companies, co-working spaces, and venture capital to the downtown core.' },
                 { t: 'Energy Tech Transformation', d: 'Alberta\'s oil & gas sector is driving massive demand for data analytics, IoT, predictive maintenance, and clean energy tech.' },
                 { t: 'Cost Advantage', d: 'No provincial sales tax, 30-50% lower operating costs than Toronto or Vancouver, and generous R&D tax credits for tech companies.' },
-              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
             </div>
           </div>
         </section>
 
         {/* Edmonton Neighborhoods */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>Edmonton Neighborhoods We Serve</h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From downtown startups to suburban enterprises, we build software across the Edmonton metro area.</p>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 16 }}>Edmonton Neighborhoods We Serve</h2>
+            <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 600, marginBottom: 40, lineHeight: 1.7 }}>From downtown startups to suburban enterprises, we build software across the Edmonton metro area.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 12 }}>
               {[
                 { n: 'Downtown / ICE District', d: 'Edmonton\'s innovation core — tech startups, co-working spaces, and the $2.5B ICE District.' },
@@ -240,47 +240,47 @@ export default function EdmontonPage() {
                 { n: 'St. Albert', d: 'Fast-growing city north of Edmonton with healthcare, education, and professional services tech.' },
                 { n: 'Spruce Grove', d: 'Western suburb with emerging small business tech and agriculture services.' },
                 { n: 'Windermere / Heritage Valley', d: 'Southwest Edmonton\'s newest business park with healthcare and professional services.' },
-              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
+              ].map(a => <Card key={a.n}><h3 style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', marginBottom: 6 }}>{a.n}</h3><p style={{ fontSize: 12, color: 'var(--muted)', lineHeight: 1.5, margin: 0 }}>{a.d}</p></Card>)}
             </div>
           </div>
         </section>
 
         {/* Edmonton Client Stories */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Edmonton Client Success Stories</h2>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Edmonton Client Success Stories</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20 }}>
               {[
                 { title: 'Edmonton FinTech Startup', metric: '300% user growth', desc: 'Built a mobile banking and payments platform for an Edmonton fintech startup, growing from 5,000 to 20,000 active users within 8 months of launch.' },
                 { title: 'Alberta Healthcare Provider', metric: '50% faster onboarding', desc: 'Developed a patient intake and telehealth platform for a multi-clinic healthcare provider, cutting patient onboarding time in half across 12 Alberta locations.' },
                 { title: 'Edmonton E-Commerce Brand', metric: '$2M+ annual revenue', desc: 'Created a custom headless commerce platform with subscription management for an Edmonton DTC brand, driving $2M+ in annual online revenue.' },
-              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: '#f5290d', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
+              ].map(s => <Card key={s.title}><div style={{ fontSize: 24, fontWeight: 700, color: 'var(--brand)', marginBottom: 8 }}>{s.metric}</div><h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{s.title}</h3><p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>{s.desc}</p></Card>)}
             </div>
           </div>
         </section>
 
         {/* Edmonton Tech Focus */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40 }}>Edmonton Tech Focus</h2>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40 }}>Edmonton Tech Focus</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 16 }}>
               {[
                 { t: 'AI & Machine Learning', d: 'Production ML pipelines, computer vision, and NLP solutions — leveraging Edmonton\'s Amii institute and U of A AI talent pipeline.' },
                 { t: 'Energy & CleanTech', d: 'IoT dashboards, predictive maintenance, and emissions tracking platforms for Alberta\'s energy sector transformation.' },
                 { t: 'Healthcare & BioTech', d: 'Patient portals, telehealth platforms, and clinical data systems for Alberta Health Services and private clinics.' },
                 { t: 'E-Commerce & Retail', d: 'Headless commerce, subscription platforms, and omnichannel solutions for Edmonton\'s growing DTC and retail brands.' },
-              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
+              ].map(c => <Card key={c.t}><h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{c.t}</h3><p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>{c.d}</p></Card>)}
             </div>
           </div>
         </section>
 
         {/* All Services in City */}
-        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12, textAlign: 'center' }}>
               Our Services in Edmonton
             </h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>
+            <p style={{ fontSize: 15, color: 'var(--muted)', textAlign: 'center', marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>
               Explore our full range of software development services available in Edmonton.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 16 }}>
@@ -301,12 +301,12 @@ export default function EdmontonPage() {
                 <a key={svc.slug} href={`/locations/edmonton/${svc.slug}`} style={{
                   display: 'flex', alignItems: 'center', gap: 12,
                   padding: '16px 20px', borderRadius: 12,
-                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                   textDecoration: 'none', transition: 'all 0.3s ease',
-                  fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.8)',
+                  fontSize: 14, fontWeight: 500, color: 'var(--body)',
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   {svc.name} in Edmonton

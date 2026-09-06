@@ -21,13 +21,13 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
         {items.map((item, i) => (
           <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             {i > 0 && (
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="2">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="2">
                 <path d="M9 18l6-6-6-6" />
               </svg>
             )}
             {item.href ? (
               <Link href={item.href} style={{
-                color: 'rgba(255,255,255,0.5)',
+                color: 'var(--muted)',
                 textDecoration: 'none',
                 transition: 'color 0.2s',
               }}
@@ -36,7 +36,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
                 {item.label}
               </Link>
             ) : (
-              <span style={{ color: 'rgba(255,255,255,0.8)' }}>{item.label}</span>
+              <span style={{ color: 'var(--body)' }}>{item.label}</span>
             )}
           </li>
         ))}

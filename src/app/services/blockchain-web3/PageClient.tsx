@@ -122,7 +122,7 @@ export default function BlockchainWeb3Page() {
   return (
     <>
       <Navbar />
-      <main style={{ background: '#000', color: '#fff', paddingTop: 80 }}>
+      <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 80 }}>
         <div className="cb-container">
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -134,9 +134,9 @@ export default function BlockchainWeb3Page() {
         {/* ═══════════════════════════════════════
             HERO
         ═══════════════════════════════════════ */}
-        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 8vw, 100px) 0 clamp(60px, 8vw, 120px)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 8vw, 100px) 0 clamp(60px, 8vw, 120px)', borderBottom: '1px solid var(--line)' }}>
           {/* Grid background */}
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,17,24,0.035) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
           {/* Glow */}
           <div style={{ position: 'absolute', top: '20%', left: '10%', width: 700, height: 600, background: 'radial-gradient(ellipse,rgba(245,41,13,0.08) 0%,transparent 65%)', filter: 'blur(70px)', pointerEvents: 'none' }} />
 
@@ -146,28 +146,28 @@ export default function BlockchainWeb3Page() {
               <div>
                 {/* Badge */}
                 <div className="reveal" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)', borderRadius: 100, padding: '8px 20px', marginBottom: 32 }}>
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 8px #f5290d' }} />
-                  <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Blockchain &amp; Web3</span>
+                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 8px #f5290d' }} />
+                  <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Blockchain &amp; Web3</span>
                 </div>
 
-                <h1 className="reveal reveal-d1" style={{ fontSize: 'clamp(3rem,6vw,6rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
-                  Build on Web3.<br />Build for <span style={{ color: '#f5290d' }}>Tomorrow.</span>
+                <h1 className="reveal reveal-d1" style={{ fontSize: 'clamp(3rem,6vw,6rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
+                  Build on Web3.<br />Build for <span style={{ color: 'var(--brand)' }}>Tomorrow.</span>
                 </h1>
 
-                <p className="reveal reveal-d2" style={{ fontSize: 18, color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, maxWidth: 620, margin: '0 0 44px' }}>
+                <p className="reveal reveal-d2" style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, maxWidth: 620, margin: '0 0 44px' }}>
                   Smart contracts, DeFi protocols, NFT marketplaces and decentralised apps — engineered for security, scale and real-world adoption.
                 </p>
 
                 <div className="reveal reveal-d3" style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 32px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
+                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 32px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
                     onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.35)'; }}
                     onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                     Start Your Project
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </Link>
-                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', height: 56, padding: '0 32px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 14, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
-                    onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'}
-                    onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
+                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', height: 56, padding: '0 32px', borderRadius: 100, border: '1px solid var(--line)', color: 'var(--ink)', fontSize: 14, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
+                    onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--line-strong)'}
+                    onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--line)'}>
                     View Our Work
                   </Link>
                 </div>
@@ -184,13 +184,13 @@ export default function BlockchainWeb3Page() {
         {/* ═══════════════════════════════════════
             STATS STRIP
         ═══════════════════════════════════════ */}
-        <section ref={statsRef} style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={statsRef} style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))' }}>
               {stats.map((s, i) => (
-                <div key={s.label} style={{ padding: 'clamp(28px, 4vw, 52px) clamp(16px, 3vw, 40px)', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.07)' : 'none', textAlign: 'center' }}>
-                  <div style={{ fontSize: 'clamp(2rem,3.5vw,3.2rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{s.value}</div>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 10 }}>{s.label}</div>
+                <div key={s.label} style={{ padding: 'clamp(28px, 4vw, 52px) clamp(16px, 3vw, 40px)', borderRight: i < 3 ? '1px solid var(--line)' : 'none', textAlign: 'center' }}>
+                  <div style={{ fontSize: 'clamp(2rem,3.5vw,3.2rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 10 }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -200,28 +200,28 @@ export default function BlockchainWeb3Page() {
         {/* ═══════════════════════════════════════
             WHAT WE BUILD
         ═══════════════════════════════════════ */}
-        <section ref={servicesRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={servicesRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 64 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>What We Build</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                Battle-Tested.<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Audit-Ready.</span>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>What We Build</div>
+              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                Battle-Tested.<br /><span style={{ color: 'var(--faint)' }}>Audit-Ready.</span>
               </h2>
             </div>
 
             {/* Service Cards */}
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: 20 }}>
               {services.map(s => (
-                <div key={s.title} style={{ padding: '36px 32px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', position: 'relative', overflow: 'hidden', transition: 'all 0.35s ease' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                <div key={s.title} style={{ padding: '36px 32px', border: '1px solid var(--line)', borderRadius: 28, background: 'var(--surface-alt)', position: 'relative', overflow: 'hidden', transition: 'all 0.35s ease' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(20,17,24,0.10)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,#f5290d,transparent)' }} />
-                  <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f5290d', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, marginBottom: 20, display: 'inline-block' }}>{s.tag}</span>
-                  <h3 style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: s.chips ? 24 : 0 }}>{s.desc}</p>
+                  <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand)', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, marginBottom: 20, display: 'inline-block' }}>{s.tag}</span>
+                  <h3 style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, marginBottom: s.chips ? 24 : 0 }}>{s.desc}</p>
                   {s.chips && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                      {s.chips.map(c => <span key={c} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', padding: '6px 14px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{c}</span>)}
+                      {s.chips.map(c => <span key={c} style={{ fontSize: 12, fontWeight: 600, color: 'var(--muted)', padding: '6px 14px', border: '1px solid var(--line)', borderRadius: 100 }}>{c}</span>)}
                     </div>
                   )}
                 </div>
@@ -233,12 +233,12 @@ export default function BlockchainWeb3Page() {
         {/* ═══════════════════════════════════════
             PROCESS
         ═══════════════════════════════════════ */}
-        <section ref={processRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={processRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 80 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Our Process</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                From Architecture<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>to Mainnet.</span>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Our Process</div>
+              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                From Architecture<br /><span style={{ color: 'var(--faint)' }}>to Mainnet.</span>
               </h2>
             </div>
 
@@ -247,18 +247,18 @@ export default function BlockchainWeb3Page() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                 {steps.map((step, i) => (
                   <div key={step.num} className={`reveal reveal-d${i + 1}`} style={{ display: 'grid', gridTemplateColumns: '48px 1fr', gap: 'clamp(16px, 3vw, 32px)', alignItems: 'start', padding: '32px 0' }}>
-                    <div style={{ width: 48, height: 48, borderRadius: '50%', border: '2px solid rgba(245,41,13,0.4)', background: 'rgba(245,41,13,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: '#f5290d', flexShrink: 0, position: 'relative', zIndex: 1 }}>{step.num}</div>
-                    <div style={{ padding: 'clamp(20px, 3vw, 32px) clamp(16px, 3vw, 40px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
-                      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
-                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.boxShadow = ''; }}>
+                    <div style={{ width: 48, height: 48, borderRadius: '50%', border: '2px solid rgba(245,41,13,0.4)', background: 'rgba(245,41,13,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: 'var(--brand)', flexShrink: 0, position: 'relative', zIndex: 1 }}>{step.num}</div>
+                    <div style={{ padding: 'clamp(20px, 3vw, 32px) clamp(16px, 3vw, 40px)', border: '1px solid var(--line)', borderRadius: 28, background: 'var(--surface-alt)', transition: 'all 0.35s ease' }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(20,17,24,0.10)'; }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.boxShadow = ''; }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16, flexWrap: 'wrap', gap: 12 }}>
-                        <h3 style={{ fontSize: 22, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', margin: 0 }}>{step.title}</h3>
-                        <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, whiteSpace: 'nowrap' as const }}>{step.duration}</span>
+                        <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', margin: 0 }}>{step.title}</h3>
+                        <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, whiteSpace: 'nowrap' as const }}>{step.duration}</span>
                       </div>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, marginBottom: 24 }}>{step.desc}</p>
+                      <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.75, marginBottom: 24 }}>{step.desc}</p>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                         {step.deliverables.map(d => (
-                          <span key={d} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)', padding: '6px 14px', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 100 }}>
+                          <span key={d} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 600, color: 'var(--body)', padding: '6px 14px', border: '1px solid var(--line)', borderRadius: 100 }}>
                             <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
                             {d}
                           </span>
@@ -275,30 +275,30 @@ export default function BlockchainWeb3Page() {
         {/* ═══════════════════════════════════════
             TECH STACK
         ═══════════════════════════════════════ */}
-        <section ref={techRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={techRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64, gap: 40, flexWrap: 'wrap' }}>
               <div>
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Technology</div>
-                <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                  The Stack Behind<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Your Protocol.</span>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Technology</div>
+                <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                  The Stack Behind<br /><span style={{ color: 'var(--faint)' }}>Your Protocol.</span>
                 </h2>
               </div>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.75, margin: 0 }}>
+              <p style={{ fontSize: 16, color: 'var(--body)', maxWidth: 360, lineHeight: 1.75, margin: 0 }}>
                 Proven tooling chosen for security, auditability and long-term protocol resilience.
               </p>
             </div>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
               {techCategories.map(cat => (
-                <div key={cat.label} style={{ padding: 'clamp(24px, 3vw, 36px)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 28, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
+                <div key={cat.label} style={{ padding: 'clamp(24px, 3vw, 36px)', border: '1px solid var(--line)', borderRadius: 28, background: 'var(--surface-alt)', transition: 'all 0.35s ease' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.02)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}>
-                  <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#f5290d', marginBottom: 20 }}>{cat.label}</div>
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}>
+                  <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 20 }}>{cat.label}</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                     {cat.chips.map(c => (
-                      <span key={c} style={{ padding: '7px 16px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 500, color: 'rgba(255,255,255,0.55)', transition: '0.25s', cursor: 'default' }}
-                        onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.35)'; e.currentTarget.style.color = '#f5290d'; e.currentTarget.style.background = 'rgba(245,41,13,0.06)'; }}
-                        onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'transparent'; }}
+                      <span key={c} style={{ padding: '7px 16px', border: '1px solid var(--line)', borderRadius: 100, fontSize: 13, fontWeight: 500, color: 'var(--muted)', transition: '0.25s', cursor: 'default' }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.35)'; e.currentTarget.style.color = 'var(--brand)'; e.currentTarget.style.background = 'rgba(245,41,13,0.06)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.color = 'var(--muted)'; e.currentTarget.style.background = 'transparent'; }}
                       >{c}</span>
                     ))}
                   </div>
@@ -311,22 +311,22 @@ export default function BlockchainWeb3Page() {
         {/* ═══════════════════════════════════════
             INDUSTRIES
         ═══════════════════════════════════════ */}
-        <section ref={industriesRef} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <section ref={industriesRef} className="section-padding" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 64 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Industries</div>
-              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-                Web3 Across<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Every Vertical.</span>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Industries</div>
+              <h2 style={{ fontSize: 'clamp(2.2rem,4vw,4rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+                Web3 Across<br /><span style={{ color: 'var(--faint)' }}>Every Vertical.</span>
               </h2>
             </div>
             <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20 }}>
               {industries.map((ind, i) => (
-                <div key={ind.title} className={`reveal-d${i + 1}`} style={{ padding: '36px 32px', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 24, background: 'rgba(255,255,255,0.02)', transition: 'all 0.35s ease' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+                <div key={ind.title} className={`reveal-d${i + 1}`} style={{ padding: '36px 32px', border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', transition: 'all 0.35s ease' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(20,17,24,0.10)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                   <div style={{ fontSize: 28, marginBottom: 16 }}>{ind.icon}</div>
-                  <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 10 }}>{ind.title}</h3>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
+                  <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 10 }}>{ind.title}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
                 </div>
               ))}
             </div>
@@ -339,23 +339,23 @@ export default function BlockchainWeb3Page() {
         <section ref={ctaRef} style={{ padding: 'clamp(60px, 8vw, 120px) 0', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 800, height: 500, background: 'radial-gradient(ellipse,rgba(245,41,13,0.09) 0%,transparent 65%)', filter: 'blur(70px)', pointerEvents: 'none' }} />
           <div className="cb-container" style={{ position: 'relative', zIndex: 1 }}>
-            <div className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 24 }}>Ready to Build?</div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.5rem,5vw,5.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
-              Ready to Build<br /><span style={{ color: '#f5290d' }}>on Web3?</span>
+            <div className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 24 }}>Ready to Build?</div>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2.5rem,5vw,5.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.0, margin: '0 0 28px' }}>
+              Ready to Build<br /><span style={{ color: 'var(--brand)' }}>on Web3?</span>
             </h2>
-            <p className="reveal reveal-d2" style={{ fontSize: 18, color: 'rgba(255,255,255,0.38)', maxWidth: 500, margin: '0 auto 48px', lineHeight: 1.7 }}>
+            <p className="reveal reveal-d2" style={{ fontSize: 18, color: 'var(--muted)', maxWidth: 500, margin: '0 auto 48px', lineHeight: 1.7 }}>
               Tell us about your protocol. We&apos;ll send a detailed proposal — with architecture recommendations — within 48 hours.
             </p>
             <div className="reveal reveal-d3" style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 48 }}>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, height: 60, padding: '0 40px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
+              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, height: 60, padding: '0 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
                 onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                 Get a Free Proposal
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </Link>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', height: 60, padding: '0 40px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
-                onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'}
-                onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
+              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', height: 60, padding: '0 40px', borderRadius: 100, border: '1px solid var(--line)', color: 'var(--ink)', fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
+                onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--line-strong)'}
+                onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--line)'}>
                 Talk to an Engineer
               </Link>
             </div>
@@ -364,7 +364,7 @@ export default function BlockchainWeb3Page() {
               {['Audit-First Approach', 'Multi-Chain Expertise', '48hr Proposal', 'NDA on Day 1'].map(t => (
                 <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
-                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>{t}</span>
+                  <span style={{ fontSize: 13, color: 'var(--body)', fontWeight: 500 }}>{t}</span>
                 </div>
               ))}
             </div>
@@ -373,9 +373,9 @@ export default function BlockchainWeb3Page() {
         </section>
 
         {/* Related Services */}
-        <section style={{ padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ padding: '80px 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 40, textAlign: 'center' }}>
               Related Services
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 20 }}>
@@ -386,14 +386,14 @@ export default function BlockchainWeb3Page() {
               ].map((s) => (
                 <a key={s.href} href={s.href} style={{
                   display: 'block', padding: '28px 24px', borderRadius: 16,
-                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                   textDecoration: 'none', transition: 'all 0.3s ease',
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
-                  <div style={{ fontSize: 16, fontWeight: 600, color: '#fff', marginBottom: 8 }}>{s.name}</div>
-                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>{s.desc}</div>
+                  <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>{s.name}</div>
+                  <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6 }}>{s.desc}</div>
                 </a>
               ))}
             </div>
@@ -403,7 +403,7 @@ export default function BlockchainWeb3Page() {
         {/* Industries We Serve */}
         <section style={{ padding: '60px 0' }}>
           <div className="cb-container" style={{ textAlign: 'center' }}>
-            <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 24 }}>Industries We Serve</p>
+            <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 24 }}>Industries We Serve</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12 }}>
               {[
                 { name: 'FinTech', href: '/industries/fintech' },
@@ -415,12 +415,12 @@ export default function BlockchainWeb3Page() {
               ].map((ind) => (
                 <a key={ind.href} href={ind.href} style={{
                   padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
-                  color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.04)',
-                  border: '1px solid rgba(255,255,255,0.08)', textDecoration: 'none',
+                  color: 'var(--body)', background: 'var(--surface-alt)',
+                  border: '1px solid var(--line)', textDecoration: 'none',
                   transition: 'all 0.2s ease',
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = '#fff'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = 'var(--ink)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.color = 'var(--body)'; }}
                 >
                   {ind.name}
                 </a>

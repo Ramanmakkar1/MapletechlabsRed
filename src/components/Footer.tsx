@@ -73,9 +73,9 @@ function FooterLink({ href, children, lang }: { href: string; children: React.Re
   return (
     <Link
       href={href}
-      style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.4, display: 'flex', alignItems: 'center', padding: '8px 0', minHeight: 44 }}
-      onMouseEnter={e => { e.currentTarget.style.color = '#fff'; }}
-      onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
+      style={{ fontSize: 13, color: 'var(--on-ink-body)', textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.4, display: 'flex', alignItems: 'center', padding: '8px 0', minHeight: 44 }}
+      onMouseEnter={e => { e.currentTarget.style.color = 'var(--on-ink)'; }}
+      onMouseLeave={e => { e.currentTarget.style.color = 'var(--on-ink-body)'; }}
     >
       {lang ? <span lang={lang}>{children}</span> : children}
     </Link>
@@ -84,7 +84,7 @@ function FooterLink({ href, children, lang }: { href: string; children: React.Re
 
 function ColTitle({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ fontSize: 12, fontWeight: 700, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 20 }}>
+    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--on-ink)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 20 }}>
       {children}
     </div>
   );
@@ -92,24 +92,24 @@ function ColTitle({ children }: { children: React.ReactNode }) {
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+    <footer style={{ background: 'var(--surface-ink)', borderTop: '1px solid var(--line-ink)' }}>
 
       {/* CTA Banner */}
-      <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+      <div style={{ borderBottom: '1px solid var(--line-ink)' }}>
         <div className="cb-container" style={{ padding: 'clamp(48px, 8vw, 80px) 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
           <div>
-            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#fff', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--on-ink)', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
               Ready to build something great?
             </h2>
-            <p style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)', color: 'rgba(255,255,255,0.7)', margin: 0, lineHeight: 1.6 }}>
+            <p style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)', color: 'var(--on-ink-body)', margin: 0, lineHeight: 1.6 }}>
               Let&apos;s turn your idea into a world-class digital product.
             </p>
           </div>
           <Link
             href="/contact"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 32px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s', whiteSpace: 'nowrap', flexShrink: 0 }}
-            onMouseEnter={e => { e.currentTarget.style.background = '#d9220b'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(245,41,13,0.35)'; }}
-            onMouseLeave={e => { e.currentTarget.style.background = '#f5290d'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'none'; }}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 32px', borderRadius: 100, background: 'var(--brand)', color: 'var(--on-ink)', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s', whiteSpace: 'nowrap', flexShrink: 0 }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand-deep)'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(245,41,13,0.35)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background = 'var(--brand)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'none'; }}
           >
             Start a Project
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
@@ -130,22 +130,22 @@ export default function Footer() {
               height={100}
               style={{ height: 'clamp(40px, 6vw, 60px)', width: 'auto', objectFit: 'contain' as const, marginBottom: 20 }}
             />
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, maxWidth: 280, marginBottom: 20 }}>
+            <p style={{ fontSize: 13, color: 'var(--on-ink-body)', lineHeight: 1.7, maxWidth: 280, marginBottom: 20 }}>
               World-class software engineering for companies ready to lead their industry. Based in Canada, building globally.
             </p>
 
             {/* Contact */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
-              <a href="tel:+14036048692" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
-                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
-                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+              <a href="tel:+14036048692" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--on-ink-muted)', textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.color = 'var(--on-ink)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'var(--on-ink-muted)'}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 +1 (403) 604-8692
               </a>
-              <a href="mailto:hello@mapletechlabs.ca" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
-                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
-                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+              <a href="mailto:hello@mapletechlabs.ca" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--on-ink-muted)', textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.color = 'var(--on-ink)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'var(--on-ink-muted)'}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 hello@mapletechlabs.ca
@@ -161,9 +161,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-social-icon"
-                  style={{ width: 44, height: 44, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: '0.25s' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; e.currentTarget.style.color = '#f5290d'; e.currentTarget.style.background = 'rgba(245,41,13,0.08)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.4)'; e.currentTarget.style.background = 'transparent'; }}
+                  style={{ width: 44, height: 44, borderRadius: '50%', border: '1px solid var(--line-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--on-ink-muted)', textDecoration: 'none', transition: '0.25s' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; e.currentTarget.style.color = 'var(--brand-bright)'; e.currentTarget.style.background = 'rgba(245,41,13,0.08)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line-ink)'; e.currentTarget.style.color = 'var(--on-ink-muted)'; e.currentTarget.style.background = 'transparent'; }}
                   aria-label={s.label}
                 >
                   {s.icon}
@@ -216,9 +216,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+      <div style={{ borderTop: '1px solid var(--line-ink)' }}>
         <div className="cb-container" style={{ padding: 'clamp(16px, 3vw, 24px) 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.62)' }}>
             &copy; {new Date().getFullYear()} Mapletech Labs Inc. All rights reserved.
           </span>
           <div style={{ display: 'flex', gap: 'clamp(16px, 3vw, 32px)', flexWrap: 'wrap' }}>
@@ -226,9 +226,9 @@ export default function Footer() {
               <Link
                 key={label}
                 href={href}
-                style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', textDecoration: 'none', transition: 'color 0.2s' }}
-                onMouseEnter={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
-                onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.2)'; }}
+                style={{ fontSize: 12, color: 'rgba(255,255,255,0.62)', textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={e => { e.currentTarget.style.color = 'var(--on-ink-body)'; }}
+                onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.62)'; }}
               >
                 {label}
               </Link>

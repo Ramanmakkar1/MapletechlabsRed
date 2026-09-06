@@ -50,7 +50,7 @@ export default function WebsiteCostCanadaClient() {
   return (
     <>
       <Navbar />
-      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
+      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
         <div className="cb-container" style={{ paddingTop: 100 }}>
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
@@ -70,7 +70,7 @@ export default function WebsiteCostCanadaClient() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
-                fontSize: 13, color: 'rgba(255,255,255,0.4)', textDecoration: 'none',
+                fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 transition: 'color 0.2s',
               }}>
@@ -84,15 +84,15 @@ export default function WebsiteCostCanadaClient() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: '#f5290d',
+                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>March 14, 2026</span>
-              <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 8px' }}>·</span>
-              <span style={{ color: 'rgba(255,255,255,0.5)' }}>Updated Mar 2026</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>·</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
+              <span style={{ color: 'var(--muted)', margin: '0 8px' }}>·</span>
+              <span style={{ color: 'var(--muted)' }}>Updated Mar 2026</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>·</span>
               <span className="reveal reveal-d1" style={{
-                fontSize: 13, color: 'rgba(255,255,255,0.3)',
+                fontSize: 13, color: 'var(--faint)',
                 display: 'inline-flex', alignItems: 'center', gap: 6,
               }}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -103,14 +103,14 @@ export default function WebsiteCostCanadaClient() {
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: '#fff',
+              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               How Much Does a Custom Website Cost in Canada? (2026 Pricing Guide)
             </h1>
 
             <p className="reveal reveal-d3" style={{
-              fontSize: 20, color: 'rgba(255,255,255,0.6)', lineHeight: 1.65,
+              fontSize: 20, color: 'var(--muted)', lineHeight: 1.65,
               maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
               Website costs in Canada range from $500 to $500,000+. This comprehensive guide breaks down exactly what you should expect to pay in 2026, what drives the price, and how to get the best value for your investment.
@@ -120,37 +120,37 @@ export default function WebsiteCostCanadaClient() {
             <div className="reveal reveal-d4" style={{
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               flexWrap: 'wrap', gap: 24, paddingTop: 32,
-              borderTop: '1px solid rgba(255,255,255,0.07)',
+              borderTop: '1px solid var(--line)',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
                   background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 15, fontWeight: 700, color: '#f5290d',
+                  fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
                 <div>
-                  <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: 0 }}><a href="/about/raman-makkar" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.2)' }}>Raman Makkar</a></p>
-                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', margin: 0 }}>CEO, Mapletech Labs</p>
+                  <p style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', margin: 0 }}><a href="/about/raman-makkar" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>Raman Makkar</a></p>
+                  <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>CEO, Mapletech Labs</p>
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', marginRight: 4 }}>Share:</span>
+                <span style={{ fontSize: 12, color: 'var(--faint)', marginRight: 4 }}>Share:</span>
                 {[
                   { label: 'Twitter', icon: '𝕏' },
                   { label: 'LinkedIn', icon: 'in' },
                 ].map(s => (
                   <button key={s.label} style={{
-                    width: 36, height: 36, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)',
-                    background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.55)',
+                    width: 36, height: 36, borderRadius: '50%', border: '1px solid var(--line)',
+                    background: 'var(--surface-alt)', color: 'var(--muted)',
                     fontSize: 13, fontWeight: 700, cursor: 'pointer', display: 'flex',
                     alignItems: 'center', justifyContent: 'center',
                   }}>{s.icon}</button>
                 ))}
                 <button onClick={handleCopy} style={{
-                  padding: '8px 16px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.1)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'rgba(255,255,255,0.04)',
-                  color: copied ? '#f5290d' : 'rgba(255,255,255,0.55)',
+                  padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
+                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
                 }}>
@@ -162,7 +162,7 @@ export default function WebsiteCostCanadaClient() {
         </section>
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 80 }}>
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 80, alignItems: 'start' }}>
 
@@ -172,15 +172,15 @@ export default function WebsiteCostCanadaClient() {
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }}>
                   <p style={{
-                    fontSize: 18, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8,
+                    fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
                     marginBottom: 20,
                   }}>
                     &quot;How much does a website cost?&quot; is the single most common question we hear from Canadian businesses. And the honest answer is frustrating: it depends. A simple brochure site on WordPress might cost $2,000, while a complex enterprise web application can run well over $500,000.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     The massive price range exists because &quot;a website&quot; in 2026 can mean anything from a five-page marketing site to a real-time SaaS platform serving millions of users. The technology, design complexity, integrations, and ongoing maintenance requirements all play a role in determining the final cost.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     This guide gives you real numbers based on our experience building over 300 web projects for Canadian clients. No vague ranges, no sales pitches. Just transparent pricing data so you can budget with confidence.
                   </p>
                 </div>
@@ -188,91 +188,91 @@ export default function WebsiteCostCanadaClient() {
                 {/* Cost Tiers */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="cost-tiers">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 24,
                   }}>Website Cost Tiers in Canada (2026)</h2>
 
                   {/* Tier 1: Template/WordPress */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: 0 }}>Template / WordPress Site</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>Template / WordPress Site</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#34d399',
                         background: 'rgba(52,211,153,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$2,000 - $10,000</span>
                     </div>
-                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Pre-built themes customized to your brand. Ideal for small businesses, freelancers, and local service providers who need a professional online presence without custom functionality. Typically includes 5-15 pages, contact forms, basic SEO setup, and mobile responsiveness. Timeline: 2-4 weeks.
                     </p>
                   </div>
 
                   {/* Tier 2: Custom Business */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: 0 }}>Custom Business Website</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>Custom Business Website</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#60a5fa',
                         background: 'rgba(96,165,250,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$10,000 - $50,000</span>
                     </div>
-                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Fully custom design and development with unique UI, animations, CMS integration, and advanced SEO architecture. Built with modern frameworks like Next.js or Nuxt for superior performance. Includes 10-50 pages, blog functionality, analytics integration, and custom forms. Timeline: 4-10 weeks.
                     </p>
                   </div>
 
                   {/* Tier 3: E-Commerce */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: 0 }}>E-Commerce Platform</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>E-Commerce Platform</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#fb923c',
                         background: 'rgba(251,146,60,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$25,000 - $100,000</span>
                     </div>
-                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Full online store with product catalog, shopping cart, payment processing (Stripe, Square, or custom gateway), inventory management, shipping integrations, and customer accounts. May include Shopify headless, WooCommerce, or fully custom solutions. Timeline: 8-16 weeks.
                     </p>
                   </div>
 
                   {/* Tier 4: Enterprise */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: 0 }}>Enterprise Web Application</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>Enterprise Web Application</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#f472b6',
                         background: 'rgba(244,114,182,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$100,000 - $500,000+</span>
                     </div>
-                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Complex, custom-built web applications with user authentication, role-based access, real-time data dashboards, third-party API integrations, and scalable cloud infrastructure. Includes comprehensive testing, security audits, and DevOps setup. Timeline: 4-12 months.
                     </p>
                   </div>
 
                   {/* Tier 5: SaaS */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: 0 }}>SaaS Platform</h3>
+                      <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>SaaS Platform</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#a78bfa',
                         background: 'rgba(167,139,250,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$50,000 - $300,000+</span>
                     </div>
-                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Subscription-based software products with multi-tenant architecture, billing integration (Stripe Billing), onboarding flows, admin dashboards, and analytics. Requires ongoing development, infrastructure scaling, and feature iteration. Timeline: 3-12 months for MVP.
                     </p>
                   </div>
@@ -281,10 +281,10 @@ export default function WebsiteCostCanadaClient() {
                 {/* What Affects the Price */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="what-affects-price">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>What Affects the Price?</h2>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     Understanding what drives website costs helps you make informed decisions about where to invest and where to save. Here are the primary cost factors for Canadian web projects in 2026:
                   </p>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 12, marginBottom: 20 }}>
@@ -299,11 +299,11 @@ export default function WebsiteCostCanadaClient() {
                       { factor: 'Animations & Interactivity', detail: 'Custom animations, parallax effects, and interactive elements.' },
                     ].map((item, i) => (
                       <div key={i} style={{
-                        background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)',
+                        background: 'var(--surface-alt)', border: '1px solid var(--line)',
                         borderRadius: 12, padding: '16px 18px',
                       }}>
-                        <p style={{ fontSize: 14, fontWeight: 600, color: '#fff', margin: '0 0 4px' }}>{item.factor}</p>
-                        <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', margin: 0, lineHeight: 1.5 }}>{item.detail}</p>
+                        <p style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}>{item.factor}</p>
+                        <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>{item.detail}</p>
                       </div>
                     ))}
                   </div>
@@ -312,37 +312,37 @@ export default function WebsiteCostCanadaClient() {
                 {/* DIY vs Agency vs Custom */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="diy-vs-agency">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>DIY vs Agency vs Custom Development</h2>
 
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <h3 style={{ fontSize: 17, fontWeight: 700, color: '#34d399', margin: '0 0 10px' }}>DIY (Wix / Squarespace) — $0 - $500/year</h3>
-                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Best for: Personal blogs, hobby projects, or micro-businesses with zero budget. You get a website up fast, but you sacrifice performance, SEO flexibility, and scalability. When you outgrow the platform, migrating is painful and expensive. Not recommended for businesses serious about growth.
                     </p>
                   </div>
 
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <h3 style={{ fontSize: 17, fontWeight: 700, color: '#60a5fa', margin: '0 0 10px' }}>Agency (WordPress / Shopify) — $5,000 - $50,000</h3>
-                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Best for: Established SMBs who need a professional site with some custom functionality. Agencies handle design, content, and basic SEO. However, most agencies use page builders and templates under the hood, which creates technical debt and performance issues over time. Good for getting online quickly; less ideal for long-term competitive advantage.
                     </p>
                   </div>
 
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                    background: 'linear-gradient(135deg, rgba(245,41,13,0.06) 0%, rgba(20,17,24,0.018) 100%)',
                     border: '1px solid rgba(245,41,13,0.2)',
                     borderRadius: 20, padding: 28,
                   }}>
-                    <h3 style={{ fontSize: 17, fontWeight: 700, color: '#f5290d', margin: '0 0 10px' }}>Custom Development (Next.js / React) — $15,000 - $500,000+</h3>
-                    <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, margin: 0 }}>
+                    <h3 style={{ fontSize: 17, fontWeight: 700, color: 'var(--brand)', margin: '0 0 10px' }}>Custom Development (Next.js / React) — $15,000 - $500,000+</h3>
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Best for: Businesses where the website IS the product, or companies competing in high-value markets where speed, SEO, and user experience directly impact revenue. Custom development gives you complete control over performance, security, and scalability. This is what Mapletech Labs specializes in, and it is the only approach we recommend for businesses with serious growth ambitions.
                     </p>
                   </div>
@@ -351,15 +351,15 @@ export default function WebsiteCostCanadaClient() {
                 {/* Canadian Developer Rates */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="hourly-rates">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Canadian Developer Hourly Rates by City (2026)</h2>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 24 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 24 }}>
                     Developer rates in Canada vary significantly by city due to differences in cost of living, talent supply, and local market demand. Here is what you can expect to pay for experienced full-stack developers in 2026:
                   </p>
 
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28,
                   }}>
                     {[
@@ -371,19 +371,19 @@ export default function WebsiteCostCanadaClient() {
                       <div key={city.city} style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                         padding: '16px 0',
-                        borderBottom: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
+                        borderBottom: i < arr.length - 1 ? '1px solid var(--line)' : 'none',
                       }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                           <div style={{
                             width: 10, height: 10, borderRadius: '50%', background: city.color,
                           }} />
-                          <span style={{ fontSize: 16, fontWeight: 600, color: '#fff' }}>{city.city}</span>
+                          <span style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)' }}>{city.city}</span>
                         </div>
                         <span style={{ fontSize: 15, fontWeight: 700, color: city.color }}>{city.range}</span>
                       </div>
                     ))}
                   </div>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, marginTop: 16 }}>
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
                     Note: These rates are for senior-level developers at established agencies. Freelancers may charge less but typically lack the project management, QA, and design resources that agencies provide.
                   </p>
                 </div>
@@ -391,16 +391,16 @@ export default function WebsiteCostCanadaClient() {
                 {/* Why Next.js */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="why-nextjs">
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.08) 0%, rgba(255,255,255,0.02) 100%)',
+                    background: 'linear-gradient(135deg, rgba(245,41,13,0.08) 0%, rgba(20,17,24,0.018) 100%)',
                     border: '1px solid rgba(245,41,13,0.2)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 70%)', filter: 'blur(30px)' }} />
                     <h2 style={{
-                      fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                      fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                       letterSpacing: '-0.03em', marginBottom: 16, position: 'relative', zIndex: 1,
                     }}>Why Mapletech Labs Uses Next.js for Every Project</h2>
-                    <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
+                    <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
                       At Mapletech Labs, we build every website on Next.js, the React-based framework used by Netflix, Nike, Twitch, and the Washington Post. This is not a trend-chasing decision. It is a strategic one based on measurable outcomes:
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10, position: 'relative', zIndex: 1 }}>
@@ -419,8 +419,8 @@ export default function WebsiteCostCanadaClient() {
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2" style={{ marginTop: 3, flexShrink: 0 }}>
                             <polyline points="20,6 9,17 4,12"/>
                           </svg>
-                          <span style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
-                            <strong style={{ color: '#f5290d' }}>{point.split(':')[0]}:</strong>{point.split(':').slice(1).join(':')}
+                          <span style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.6 }}>
+                            <strong style={{ color: 'var(--brand)' }}>{point.split(':')[0]}:</strong>{point.split(':').slice(1).join(':')}
                           </span>
                         </div>
                       ))}
@@ -431,10 +431,10 @@ export default function WebsiteCostCanadaClient() {
                 {/* Hidden Costs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="hidden-costs">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Hidden Costs Most Agencies Won&apos;t Tell You About</h2>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 24 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 24 }}>
                     The sticker price of your website is just the beginning. Many Canadian businesses get burned by unexpected ongoing costs that were never discussed during the sales process. Here is what to budget for beyond the initial build:
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -447,13 +447,13 @@ export default function WebsiteCostCanadaClient() {
                       { cost: 'Security Monitoring', range: '$100 - $500/month', desc: 'Firewall management, malware scanning, and DDoS protection.' },
                     ].map((item, i) => (
                       <div key={i} style={{
-                        background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)',
+                        background: 'var(--surface-alt)', border: '1px solid var(--line)',
                         borderRadius: 14, padding: '18px 22px',
                         display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20,
                       }}>
                         <div style={{ flex: 1 }}>
-                          <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: '0 0 4px' }}>{item.cost}</p>
-                          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', margin: 0, lineHeight: 1.5 }}>{item.desc}</p>
+                          <p style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}>{item.cost}</p>
+                          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>{item.desc}</p>
                         </div>
                         <span style={{
                           fontSize: 13, fontWeight: 700, color: '#fbbf24',
@@ -468,26 +468,26 @@ export default function WebsiteCostCanadaClient() {
                 {/* How to Budget */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="how-to-budget">
                   <h2 style={{
-                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: '#fff',
+                    fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 700, color: 'var(--ink)',
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>How to Budget for Your Website</h2>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     The most common budgeting mistake we see from Canadian businesses is allocating 100% of their budget to the initial build and leaving nothing for maintenance, content, and iteration. A website is not a one-time purchase; it is a living asset that requires ongoing investment.
                   </p>
                   <div style={{
-                    background: 'linear-gradient(135deg, rgba(245,41,13,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                    background: 'linear-gradient(135deg, rgba(245,41,13,0.06) 0%, rgba(20,17,24,0.018) 100%)',
                     border: '1px solid rgba(245,41,13,0.15)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
-                    <p style={{ fontSize: 16, fontWeight: 600, color: '#f5290d', margin: '0 0 12px' }}>Our Recommended Budgeting Rule:</p>
-                    <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, margin: 0 }}>
-                      Allocate <strong style={{ color: '#fff' }}>15-20% of your initial project cost</strong> for annual maintenance and improvements. If your website costs $50,000 to build, budget $7,500 to $10,000 per year for hosting, security updates, content changes, performance monitoring, and iterative improvements based on analytics data.
+                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', margin: '0 0 12px' }}>Our Recommended Budgeting Rule:</p>
+                    <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.8, margin: 0 }}>
+                      Allocate <strong style={{ color: 'var(--ink)' }}>15-20% of your initial project cost</strong> for annual maintenance and improvements. If your website costs $50,000 to build, budget $7,500 to $10,000 per year for hosting, security updates, content changes, performance monitoring, and iterative improvements based on analytics data.
                     </p>
                   </div>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     This approach ensures your website stays secure, fast, and competitive. Companies that invest in ongoing optimization typically see 30-50% better performance in search rankings compared to those who launch and forget.
                   </p>
-                  <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/month that include hosting, security monitoring, monthly performance reports, content updates, and priority support. Every client gets a dedicated Slack channel with direct access to their development team.
                   </p>
                 </div>
@@ -502,26 +502,26 @@ export default function WebsiteCostCanadaClient() {
                 }}>
                   {/* Table of Contents */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                       {tocSections.map(section => (
                         <a key={section.id} href={`#${section.id}`} style={{
-                          fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none',
+                          fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
                           padding: '6px 10px', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 10,
                           transition: 'all 0.15s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.color = '#f5290d';
+                            (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
                           }}
                           onMouseLeave={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)';
+                            (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                         >
@@ -534,44 +534,44 @@ export default function WebsiteCostCanadaClient() {
 
                   {/* Author card */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
                         background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontSize: 14, fontWeight: 700, color: '#f5290d', flexShrink: 0,
+                        fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
                       <div>
-                        <p style={{ fontSize: 14, fontWeight: 600, color: '#fff', margin: 0 }}><a href="/about/raman-makkar" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.2)' }}>Raman Makkar</a></p>
-                        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', margin: 0 }}>CEO, Mapletech Labs</p>
+                        <p style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', margin: 0 }}><a href="/about/raman-makkar" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>Raman Makkar</a></p>
+                        <p style={{ fontSize: 12, color: 'var(--muted)', margin: 0 }}>CEO, Mapletech Labs</p>
                       </div>
                     </div>
-                    <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Leading engineering strategy and product vision at Mapletech Labs. Has guided over 300+ bespoke product launches globally.
                     </p>
                   </div>
 
                   {/* Related posts */}
                   <div style={{
-                    background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
                       fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                      color: 'rgba(255,255,255,0.3)', marginBottom: 16,
+                      color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
                           textDecoration: 'none', display: 'block', padding: '14px',
-                          borderRadius: 12, border: '1px solid rgba(255,255,255,0.06)',
+                          borderRadius: 12, border: '1px solid var(--line)',
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
@@ -579,13 +579,13 @@ export default function WebsiteCostCanadaClient() {
                             (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
                           }}
                           onMouseLeave={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
                             (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                         >
-                          <p style={{ fontSize: 11, color: '#f5290d', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 6px' }}>{post.category}</p>
-                          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.4, margin: '0 0 8px', fontWeight: 600 }}>{post.title}</p>
-                          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', margin: 0 }}>{post.readTime} read</p>
+                          <p style={{ fontSize: 11, color: 'var(--brand)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 6px' }}>{post.category}</p>
+                          <p style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.4, margin: '0 0 8px', fontWeight: 600 }}>{post.title}</p>
+                          <p style={{ fontSize: 12, color: 'var(--faint)', margin: 0 }}>{post.readTime} read</p>
                         </Link>
                       ))}
                     </div>
@@ -598,7 +598,7 @@ export default function WebsiteCostCanadaClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 120, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 120, borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 80 }}>
             <div
               className="reveal"
@@ -612,21 +612,21 @@ export default function WebsiteCostCanadaClient() {
               <div>
                 <p style={{
                   fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                  color: '#f5290d', marginBottom: 12,
+                  color: 'var(--brand)', marginBottom: 12,
                 }}>Get a Free Website Quote</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Stop Guessing. Get Real Numbers.
                 </h2>
-                <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 480, lineHeight: 1.7 }}>
+                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Tell us about your project and get a transparent, detailed quote within 48 hours. No hidden fees, no surprise invoices. Just honest pricing from a team that has built 300+ web projects across Canada.
                 </p>
               </div>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: '#f5290d', color: '#fff',
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
                   fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
                   transition: 'all 0.2s', whiteSpace: 'nowrap',
                 }}>

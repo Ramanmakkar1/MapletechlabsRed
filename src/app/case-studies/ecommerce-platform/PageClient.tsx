@@ -34,7 +34,7 @@ export default function EcommerceCaseStudyClient() {
   return (
     <>
       <Navbar />
-      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: '#000', minHeight: '100vh' }}>
+      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* ── HERO ── */}
         <section style={{ padding: 'clamp(100px, 12vw, 140px) 0 clamp(40px, 5vw, 64px)', position: 'relative', overflow: 'hidden' }}>
@@ -56,21 +56,21 @@ export default function EcommerceCaseStudyClient() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 32, marginBottom: 16 }}>
               <span className="reveal reveal-d1" style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: '#f5290d',
+                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>E-Commerce</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)' }}>E-Commerce Client &middot; Edmonton</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>E-Commerce Client &middot; Edmonton</span>
             </div>
 
             <h1 className="reveal reveal-d2" style={{
-              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: '#fff',
+              fontSize: 'clamp(2.4rem, 5vw, 4.5rem)', fontWeight: 800, color: 'var(--ink)',
               letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24, maxWidth: 840,
             }}>
               Enterprise E-Commerce Platform
             </h1>
 
             <p className="reveal reveal-d3" style={{
-              fontSize: 20, color: 'rgba(255,255,255,0.6)', lineHeight: 1.65,
+              fontSize: 20, color: 'var(--muted)', lineHeight: 1.65,
               maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
               We migrated a legacy e-commerce system to a modern, headless architecture that tripled revenue, handles millions of monthly visitors, and delivers sub-second page loads — even during peak sale events.
@@ -81,14 +81,14 @@ export default function EcommerceCaseStudyClient() {
               width: '100%',
               aspectRatio: '16/9',
               borderRadius: 20,
-              background: 'linear-gradient(135deg, rgba(245,41,13,0.08), rgba(255,255,255,0.03))',
-              border: '1px solid rgba(255,255,255,0.08)',
+              background: 'linear-gradient(135deg, rgba(245,41,13,0.08), rgba(20,17,24,0.027))',
+              border: '1px solid var(--line)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               marginBottom: 48,
             }}>
-              <span style={{ fontSize: 15, color: 'rgba(255,255,255,0.3)', fontWeight: 500 }}>
+              <span style={{ fontSize: 15, color: 'var(--faint)', fontWeight: 500 }}>
                 Case Study Visual — Coming Soon
               </span>
             </div>
@@ -96,7 +96,7 @@ export default function EcommerceCaseStudyClient() {
         </section>
 
         {/* ── OVERVIEW GRID ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
@@ -109,13 +109,13 @@ export default function EcommerceCaseStudyClient() {
               ].map((card) => (
                 <div key={card.title} style={{
                   padding: 'clamp(24px, 4vw, 36px)', borderRadius: 24,
-                  background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                 }}>
                   <p style={{
                     fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                    color: '#f5290d', marginBottom: 16,
+                    color: 'var(--brand)', marginBottom: 16,
                   }}>{card.title}</p>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, margin: 0 }}>
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                     {card.text}
                   </p>
                 </div>
@@ -130,20 +130,20 @@ export default function EcommerceCaseStudyClient() {
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: '#f5290d', marginBottom: 16,
+                color: 'var(--brand)', marginBottom: 16,
               }}>The Challenge</p>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 32,
               }}>Outgrowing a Legacy Monolith</h2>
 
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                 Our client had built their original e-commerce platform on a tightly coupled monolithic architecture over five years ago. What started as a simple online storefront had evolved into a multi-vendor marketplace with thousands of SKUs, complex pricing rules, and a growing customer base — but the technology had not kept pace.
               </p>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                 Page load times averaged 6 seconds. During sale events, the platform would buckle under traffic, leading to cart abandonment rates exceeding 70%. Simple catalog updates required direct database modifications by a developer, and the monolithic codebase made it nearly impossible to deploy features without risking regressions across the entire system.
               </p>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                 The client needed a complete platform rebuild — but they couldn&apos;t afford downtime during the migration. They needed a partner who could architect a modern, scalable system and execute a seamless cutover without losing a single order or disrupting vendor operations.
               </p>
             </div>
@@ -151,25 +151,25 @@ export default function EcommerceCaseStudyClient() {
         </section>
 
         {/* ── OUR SOLUTION ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: '#f5290d', marginBottom: 16,
+                color: 'var(--brand)', marginBottom: 16,
               }}>Our Solution</p>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                 letterSpacing: '-0.03em', marginBottom: 32,
               }}>Headless Commerce, Built for Scale</h2>
 
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                 We architected a headless commerce platform using Next.js for the storefront, delivering server-side rendered pages with Incremental Static Regeneration (ISR) for product and category pages. This approach gave us the performance of a static site with the dynamic capabilities of a full application — resulting in sub-1.2-second page loads across all device types.
               </p>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                 Stripe was integrated as the payment backbone, supporting multi-vendor payouts, subscription billing, and complex tax calculations across Canadian provinces. Elasticsearch powered the product search and filtering engine, delivering instant results across a catalog of 50K+ SKUs with faceted navigation, typo tolerance, and relevance tuning.
               </p>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 32 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
                 Redis handled session management, cart state, and real-time inventory synchronization across vendors. We built a custom vendor dashboard that allowed marketplace sellers to manage their own products, track orders, and view analytics — eliminating the bottleneck of centralized catalog management. The entire system was deployed on AWS with auto-scaling groups to handle traffic spikes gracefully.
               </p>
 
@@ -177,9 +177,9 @@ export default function EcommerceCaseStudyClient() {
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                 {techStack.map(tech => (
                   <span key={tech} style={{
-                    fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.6)',
-                    padding: '10px 20px', border: '1px solid rgba(255,255,255,0.1)',
-                    borderRadius: 100, background: 'rgba(255,255,255,0.03)',
+                    fontSize: 13, fontWeight: 600, color: 'var(--muted)',
+                    padding: '10px 20px', border: '1px solid var(--line)',
+                    borderRadius: 100, background: 'var(--surface-alt)',
                   }}>{tech}</span>
                 ))}
               </div>
@@ -188,14 +188,14 @@ export default function EcommerceCaseStudyClient() {
         </section>
 
         {/* ── KEY RESULTS ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <p className="reveal" style={{
               fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-              color: '#f5290d', marginBottom: 16,
+              color: 'var(--brand)', marginBottom: 16,
             }}>Key Results</p>
             <h2 className="reveal" style={{
-              fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+              fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
               letterSpacing: '-0.03em', marginBottom: 40,
             }}>Revenue Growth That Speaks for Itself</h2>
 
@@ -206,11 +206,11 @@ export default function EcommerceCaseStudyClient() {
               {metrics.map((m) => (
                 <div key={m.label} style={{
                   padding: 'clamp(20px, 4vw, 36px)', borderRadius: 24, textAlign: 'center',
-                  background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'var(--surface-alt)', border: '1px solid var(--line)',
                 }}>
-                  <div style={{ fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 800, color: '#f5290d', marginBottom: 8 }}>{m.value}</div>
+                  <div style={{ fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 800, color: 'var(--brand)', marginBottom: 8 }}>{m.value}</div>
                   <div style={{
-                    fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.5)',
+                    fontSize: 13, fontWeight: 600, color: 'var(--muted)',
                     textTransform: 'uppercase', letterSpacing: '0.08em',
                   }}>{m.label}</div>
                 </div>
@@ -220,12 +220,12 @@ export default function EcommerceCaseStudyClient() {
         </section>
 
         {/* ── TESTIMONIAL ── */}
-        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(48px, 6vw, 80px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               maxWidth: 760,
               padding: 'clamp(24px, 4vw, 48px)', borderRadius: 24,
-              background: 'linear-gradient(135deg, rgba(245,41,13,0.06), rgba(255,255,255,0.02))',
+              background: 'linear-gradient(135deg, rgba(245,41,13,0.06), rgba(20,17,24,0.018))',
               border: '1px solid rgba(245,41,13,0.15)',
               position: 'relative',
             }}>
@@ -234,21 +234,21 @@ export default function EcommerceCaseStudyClient() {
                 <path d="M20 11h-4a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 011 1v7c0 2.21-1.79 4-4 4" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <p style={{
-                fontSize: 20, color: 'rgba(255,255,255,0.8)', lineHeight: 1.7,
+                fontSize: 20, color: 'var(--body)', lineHeight: 1.7,
                 fontStyle: 'italic', marginBottom: 24,
               }}>
                 &ldquo;The migration was flawless — we didn&apos;t lose a single order during cutover. Within three months, our conversion rate doubled, and by Black Friday we handled 10x our normal traffic without a hiccup. Mapletech Labs turned our biggest liability into our strongest competitive advantage.&rdquo;
               </p>
               <div>
-                <p style={{ fontSize: 15, fontWeight: 600, color: '#fff', margin: '0 0 4px' }}>VP of Digital Commerce</p>
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', margin: 0 }}>Leading Edmonton-Based Retailer</p>
+                <p style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}>VP of Digital Commerce</p>
+                <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>Leading Edmonton-Based Retailer</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* ── CTA ── */}
-        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <section style={{ paddingBottom: 'clamp(60px, 10vw, 120px)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'clamp(48px, 6vw, 80px)' }}>
             <div className="reveal" style={{
               background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
@@ -259,21 +259,21 @@ export default function EcommerceCaseStudyClient() {
               <div>
                 <p style={{
                   fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                  color: '#f5290d', marginBottom: 12,
+                  color: 'var(--brand)', marginBottom: 12,
                 }}>Start a Similar Project</p>
                 <h2 style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: '#fff',
+                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
                   Ready to Scale Your E-Commerce?
                 </h2>
-                <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 480, lineHeight: 1.7 }}>
+                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   From legacy migrations to headless commerce builds, we engineer platforms that drive real revenue. Let&apos;s discuss your growth goals.
                 </p>
               </div>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: '#f5290d', color: '#fff',
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
                   fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
                   transition: 'all 0.2s', whiteSpace: 'nowrap',
                 }}>

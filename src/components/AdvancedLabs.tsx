@@ -19,15 +19,15 @@ export default function AdvancedLabs() {
   }, []);
 
   return (
-    <section ref={ref} id="labs" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="labs" className="section-padding" style={{ background: 'var(--surface-ink)', borderTop: '1px solid var(--line-ink)' }}>
       <div className="cb-container">
         <div className="advanced-labs-grid">
           <div className="reveal">
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>R&D Labs</div>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
-              Pioneering the<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Edge of Innovation.</span>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 20 }}>R&D Labs</div>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
+              Pioneering the<br /><span style={{ color: 'rgba(255,255,255,0.38)' }}>Edge of Innovation.</span>
             </h2>
-            <p style={{ fontSize: 'clamp(14px, 3vw, 17px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 'clamp(28px, 6vw, 56px)' }}>
+            <p style={{ fontSize: 'clamp(14px, 3vw, 17px)', color: 'var(--on-ink-body)', lineHeight: 1.7, marginBottom: 'clamp(28px, 6vw, 56px)' }}>
               Our dedicated R&D division builds the emerging technology that will define the next decade of software.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 3vw, 36px)' }}>
@@ -38,15 +38,15 @@ export default function AdvancedLabs() {
                 >
                   <div style={{ width: 2, flexShrink: 0, background: 'linear-gradient(to bottom, #f5290d, rgba(245,41,13,0.1))', borderRadius: 10, minHeight: 60 }} />
                   <div>
-                    <h4 style={{ fontSize: 17, fontWeight: 600, color: '#fff', marginBottom: 8, letterSpacing: '-0.02em' }}>{f.title}</h4>
-                    <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
+                    <h4 style={{ fontSize: 17, fontWeight: 600, color: 'var(--on-ink)', marginBottom: 8, letterSpacing: '-0.02em' }}>{f.title}</h4>
+                    <p style={{ fontSize: 14, color: 'var(--on-ink-body)', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <button style={{ marginTop: 'clamp(28px, 5vw, 52px)', display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 clamp(20px, 4vw, 28px)', borderRadius: 100, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: 14, fontWeight: 500, cursor: 'pointer', transition: '0.3s', fontFamily: 'inherit', minHeight: 44 }}
-              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.1)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = '#f5290d'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = '#fff'; }}
+            <button style={{ marginTop: 'clamp(28px, 5vw, 52px)', display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 clamp(20px, 4vw, 28px)', borderRadius: 100, background: 'rgba(255,255,255,0.05)', border: '1px solid var(--line-ink)', color: 'var(--on-ink)', fontSize: 14, fontWeight: 500, cursor: 'pointer', transition: '0.3s', fontFamily: 'inherit', minHeight: 44 }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.1)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = 'var(--brand-bright)'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'var(--line-ink)'; e.currentTarget.style.color = 'var(--on-ink)'; }}
             >
               Explore R&D Labs
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
@@ -54,7 +54,7 @@ export default function AdvancedLabs() {
           </div>
 
           <div className="reveal reveal-d1" style={{ position: 'relative' }}>
-            <div style={{ borderRadius: 'clamp(24px, 6vw, 48px)', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: '#050505', aspectRatio: '4/5', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ borderRadius: 'clamp(24px, 6vw, 48px)', overflow: 'hidden', border: '1px solid var(--line-ink)', background: 'var(--surface-ink)', aspectRatio: '4/5', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ position: 'absolute', top: '20%', left: '20%', width: '60%', height: '60%', background: 'radial-gradient(circle, rgba(245,41,13,0.15) 0%, transparent 65%)', filter: 'blur(60px)' }} />
               <div style={{ position: 'relative', zIndex: 2, width: '80%', aspectRatio: '1' }}>
                 <svg viewBox="0 0 400 400" style={{ width: '100%', opacity: 0.6 }}>
@@ -72,9 +72,9 @@ export default function AdvancedLabs() {
                   <circle cx="200" cy="200" r="6" fill="#f5290d" />
                 </svg>
               </div>
-              <div style={{ position: 'absolute', bottom: 28, left: 28, display: 'flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100, padding: '9px 18px' }}>
-                <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#f5290d' }} />
-                <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Neural Core Active</span>
+              <div style={{ position: 'absolute', bottom: 28, left: 28, display: 'flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,0.05)', border: '1px solid var(--line-ink)', borderRadius: 100, padding: '9px 18px' }}>
+                <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)' }} />
+                <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand-bright)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Neural Core Active</span>
               </div>
             </div>
           </div>

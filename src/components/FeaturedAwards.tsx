@@ -71,9 +71,9 @@ function AwardCard({ award, i }: { award: typeof awards[number]; i: number }) {
         justifyContent: 'center',
         gap: 14,
         padding: '28px 20px',
-        border: '1px solid rgba(255,255,255,0.07)',
+        border: '1px solid var(--line-ink)',
         borderRadius: 20,
-        background: 'rgba(255,255,255,0.02)',
+        background: 'rgba(255,255,255,0.05)',
         transition: 'all 0.35s ease',
         cursor: 'default',
       }}
@@ -81,11 +81,11 @@ function AwardCard({ award, i }: { award: typeof awards[number]; i: number }) {
         e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)';
         e.currentTarget.style.background = 'rgba(245,41,13,0.04)';
         e.currentTarget.style.transform = 'translateY(-4px)';
-        e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.4)';
+        e.currentTarget.style.boxShadow = '0 16px 40px rgba(20,17,24,0.10)';
       }}
       onMouseLeave={e => {
-        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
-        e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
+        e.currentTarget.style.borderColor = 'var(--line-ink)';
+        e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
         e.currentTarget.style.transform = '';
         e.currentTarget.style.boxShadow = '';
       }}
@@ -99,8 +99,8 @@ function AwardCard({ award, i }: { award: typeof awards[number]; i: number }) {
         />
       </div>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.55)', letterSpacing: '-0.01em', lineHeight: 1.3 }}>{award.name}</div>
-        <div style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.2)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>{award.year}</div>
+        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--on-ink-muted)', letterSpacing: '-0.01em', lineHeight: 1.3 }}>{award.name}</div>
+        <div style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.38)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>{award.year}</div>
       </div>
     </div>
   );
@@ -118,7 +118,7 @@ export default function FeaturedAwards() {
   }, []);
 
   return (
-    <section ref={ref} id="awards" style={{ background: '#000', padding: '80px 0 100px', borderTop: '1px solid rgba(255,255,255,0.07)', position: 'relative', overflow: 'hidden' }}>
+    <section ref={ref} id="awards" style={{ background: 'var(--surface-ink)', padding: '80px 0 100px', borderTop: '1px solid var(--line-ink)', position: 'relative', overflow: 'hidden' }}>
       {/* Subtle radial glow */}
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 800, height: 400, background: 'radial-gradient(ellipse, rgba(245,41,13,0.04) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
@@ -126,11 +126,11 @@ export default function FeaturedAwards() {
 
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 16 }}>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 16 }}>
             Recognition & Certifications
           </div>
-          <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.1, margin: '0 auto', maxWidth: 600 }}>
-            Trusted, Verified &<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Globally Recognised.</span>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: '0 auto', maxWidth: 600 }}>
+            Trusted, Verified &<br /><span style={{ color: 'rgba(255,255,255,0.38)' }}>Globally Recognised.</span>
           </h2>
         </div>
 

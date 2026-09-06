@@ -85,17 +85,17 @@ export default function WhyUs() {
   }, []);
 
   return (
-    <section ref={ref} id="about" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="about" className="section-padding" style={{ background: 'var(--surface)', borderTop: '1px solid var(--line)' }}>
       <div className="cb-container">
 
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(48px, 8vw, 100px)' }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Why Mapletech Labs</div>
-          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto 24px', maxWidth: 800 }}>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Why Mapletech Labs</div>
+          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto 24px', maxWidth: 800 }}>
             Built Different.<br />
-            <span style={{ color: 'rgba(255,255,255,0.2)' }}>By Design.</span>
+            <span style={{ color: 'var(--faint)' }}>By Design.</span>
           </h2>
-          <p style={{ fontSize: 'clamp(15px, 2vw, 17px)', color: 'rgba(255,255,255,0.7)', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
+          <p style={{ fontSize: 'clamp(15px, 2vw, 17px)', color: 'var(--body)', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
             We're not a typical agency. Here's exactly what makes us different — and why our clients keep coming back.
           </p>
         </div>
@@ -108,9 +108,9 @@ export default function WhyUs() {
               className={`reveal reveal-d${Math.min(i + 1, 6)}`}
               style={{
                 padding: 'clamp(28px, 4vw, 48px) clamp(24px, 3.5vw, 40px)',
-                border: '1px solid rgba(255,255,255,0.07)',
+                border: '1px solid var(--line)',
                 borderRadius: 'clamp(24px, 3vw, 36px)',
-                background: 'rgba(255,255,255,0.02)',
+                background: 'var(--surface-alt)',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 24,
@@ -123,17 +123,17 @@ export default function WhyUs() {
                 e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)';
                 e.currentTarget.style.background = 'rgba(245,41,13,0.03)';
                 e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(245,41,13,0.08)';
+                e.currentTarget.style.boxShadow = '0 24px 60px rgba(20,17,24,0.10), 0 0 40px rgba(245,41,13,0.08)';
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
+                e.currentTarget.style.borderColor = 'var(--line)';
+                e.currentTarget.style.background = 'var(--surface-alt)';
                 e.currentTarget.style.transform = '';
                 e.currentTarget.style.boxShadow = '';
               }}
             >
               {/* Watermark stat */}
-              <div aria-hidden="true" style={{ position: 'absolute', right: 20, bottom: -10, fontSize: 'clamp(48px, 10vw, 80px)', fontWeight: 900, color: 'rgba(255,255,255,0.02)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>
+              <div aria-hidden="true" style={{ position: 'absolute', right: 20, bottom: -10, fontSize: 'clamp(48px, 10vw, 80px)', fontWeight: 900, color: 'rgba(225,25,0,0.07)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>
                 {r.stat}
               </div>
 
@@ -144,14 +144,14 @@ export default function WhyUs() {
 
               {/* Stat */}
               <div>
-                <div style={{ fontSize: 'clamp(2rem, 3vw, 2.8rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{r.stat}</div>
-                <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 6 }}>{r.statLabel}</div>
+                <div style={{ fontSize: 'clamp(2rem, 3vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1 }}>{r.stat}</div>
+                <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 6 }}>{r.statLabel}</div>
               </div>
 
               {/* Text */}
               <div>
-                <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{r.title}</h3>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{r.desc}</p>
+                <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', marginBottom: 10, letterSpacing: '-0.02em' }}>{r.title}</h3>
+                <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{r.desc}</p>
               </div>
             </div>
           ))}

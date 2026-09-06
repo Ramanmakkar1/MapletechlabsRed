@@ -80,45 +80,45 @@ export default function PortfolioSection() {
   }, []);
 
   return (
-    <section ref={ref} id="portfolio" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="portfolio" className="section-padding" style={{ background: 'var(--surface)', borderTop: '1px solid var(--line)' }}>
       <div className="cb-container">
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 'clamp(40px, 8vw, 80px)', gap: 'clamp(20px, 4vw, 40px)', flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Case Studies</div>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-              Engineering Impact<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>At Scale.</span>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Case Studies</div>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+              Engineering Impact<br /><span style={{ color: 'var(--faint)' }}>At Scale.</span>
             </h2>
           </div>
           <div className="portfolio-tabs">
             {projects.map((pr, i) => (
-              <button key={pr.category} onClick={() => setActive(i)} style={{ padding: '12px 28px', borderRadius: 100, cursor: 'pointer', fontSize: 13, fontWeight: 600, border: active === i ? '1px solid rgba(245,41,13,0.4)' : '1px solid rgba(255,255,255,0.1)', background: active === i ? 'rgba(245,41,13,0.1)' : 'transparent', color: active === i ? '#f5290d' : 'rgba(255,255,255,0.7)', transition: '0.3s', fontFamily: 'inherit' }}>{pr.category}</button>
+              <button key={pr.category} onClick={() => setActive(i)} style={{ padding: '12px 28px', borderRadius: 100, cursor: 'pointer', fontSize: 13, fontWeight: 600, border: active === i ? '1px solid var(--brand-line)' : '1px solid var(--line)', background: active === i ? 'var(--brand-tint)' : 'transparent', color: active === i ? 'var(--brand-deep)' : 'var(--body)', transition: '0.3s', fontFamily: 'inherit' }}>{pr.category}</button>
             ))}
           </div>
         </div>
 
-        <div className="reveal reveal-d1 portfolio-grid" style={{ border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'clamp(24px, 4vw, 48px)', overflow: 'hidden', minHeight: 400 }}>
-          <div style={{ padding: 'clamp(40px,6vw,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: 'rgba(255,255,255,0.02)' }}>
+        <div className="reveal reveal-d1 portfolio-grid" style={{ border: '1px solid var(--line)', borderRadius: 'clamp(24px, 4vw, 48px)', overflow: 'hidden', minHeight: 400 }}>
+          <div style={{ padding: 'clamp(40px,6vw,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: 'var(--surface-alt)' }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>{p.client}</div>
-              <h3 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>{p.title}</h3>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, maxWidth: 480 }}>{p.description}</p>
+              <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>{p.client}</div>
+              <h3 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>{p.title}</h3>
+              <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.7, maxWidth: 480 }}>{p.description}</p>
             </div>
             <div>
               <div className="portfolio-content-row" style={{ marginBottom: 40 }}>
                 {p.metrics.map((m, i) => (
                   <div key={m.label} style={{ display: 'contents' }}>
-                    {i > 0 && <div style={{ width: 1, background: 'rgba(255,255,255,0.07)', alignSelf: 'stretch' }} />}
+                    {i > 0 && <div style={{ width: 1, background: 'var(--surface-sunk)', alignSelf: 'stretch' }} />}
                     <div>
-                      <div style={{ fontSize: 'clamp(24px, 4vw, 42px)', fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{m.value}</div>
-                      <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 8 }}>{m.label}</div>
+                      <div style={{ fontSize: 'clamp(24px, 4vw, 42px)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1 }}>{m.value}</div>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 8 }}>{m.label}</div>
                     </div>
                   </div>
                 ))}
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 30 }}>
-                {p.tags.map(t => <span key={t} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)', padding: '8px 18px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{t}</span>)}
+                {p.tags.map(t => <span key={t} style={{ fontSize: 12, fontWeight: 600, color: 'var(--body)', padding: '8px 18px', border: '1px solid var(--line)', borderRadius: 100 }}>{t}</span>)}
               </div>
-              <a href={p.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
+              <a href={p.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 14, fontWeight: 700, textDecoration: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                 View Full Story
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </a>
@@ -126,7 +126,7 @@ export default function PortfolioSection() {
           </div>
 
           {/* Right: real project image */}
-          <div style={{ background: '#050505', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderLeft: '1px solid rgba(255,255,255,0.06)', minHeight: 280 }} className="portfolio-visual">
+          <div style={{ background: 'var(--surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderLeft: '1px solid var(--line)', minHeight: 280 }} className="portfolio-visual">
             <div style={{ position: 'absolute', inset: 0 }}>
               <Image
                 src={p.image}
@@ -137,11 +137,11 @@ export default function PortfolioSection() {
               />
             </div>
             {/* Overlay gradient */}
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(0,0,0,0.4) 0%, transparent 60%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(20,17,24,0.10) 0%, transparent 60%)' }} />
             {/* Metric badge */}
-            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(245,41,13,0.3)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)', maxWidth: 'calc(100% - 32px)' }}>
-              <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 8px #f5290d' }} />
-              <span style={{ fontSize: 13, fontWeight: 700, color: '#f5290d' }}>{p.metrics[0].value} {p.metrics[0].label}</span>
+            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: 'var(--surface-alt)', border: '1px solid rgba(245,41,13,0.3)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)', maxWidth: 'calc(100% - 32px)' }}>
+              <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 8px #f5290d' }} />
+              <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand)' }}>{p.metrics[0].value} {p.metrics[0].label}</span>
             </div>
           </div>
         </div>

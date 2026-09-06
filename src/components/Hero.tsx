@@ -1,187 +1,271 @@
 'use client';
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 
-const words = ['Mobile Apps', 'Web Platforms', 'AI Systems', 'SaaS Products', 'Fintech Tools'];
+const ROTATING = ['Mobile Apps', 'Web Platforms', 'AI Systems', 'SaaS Products', 'Fintech Tools'];
 
-const codeLines = [
-  { indent: 0, tokens: [{ t: 'const ', c: '#f5290d' }, { t: 'app ', c: '#fff' }, { t: '= ', c: 'rgba(255,255,255,0.7)' }, { t: 'await ', c: '#f5290d' }, { t: 'build(', c: '#fff' }, { t: '{', c: 'rgba(255,255,255,0.7)' }] },
-  { indent: 1, tokens: [{ t: 'stack: ', c: 'rgba(255,255,255,0.5)' }, { t: '"Next.js + AI"', c: '#f5290d' }, { t: ',', c: 'rgba(255,255,255,0.3)' }] },
-  { indent: 1, tokens: [{ t: 'deploy: ', c: 'rgba(255,255,255,0.5)' }, { t: '"AWS"', c: '#f5290d' }, { t: ',', c: 'rgba(255,255,255,0.3)' }] },
-  { indent: 1, tokens: [{ t: 'timeline: ', c: 'rgba(255,255,255,0.5)' }, { t: '"8 weeks"', c: '#f5290d' }, { t: ',', c: 'rgba(255,255,255,0.3)' }] },
-  { indent: 1, tokens: [{ t: 'price: ', c: 'rgba(255,255,255,0.5)' }, { t: '"Fixed"', c: '#f5290d' }] },
-  { indent: 0, tokens: [{ t: '});', c: 'rgba(255,255,255,0.7)' }] },
-  { indent: 0, tokens: [] },
-  { indent: 0, tokens: [{ t: '// ', c: 'rgba(255,255,255,0.2)' }, { t: '✓ Zero bugs in production', c: 'rgba(255,255,255,0.25)' }] },
-  { indent: 0, tokens: [{ t: '// ', c: 'rgba(255,255,255,0.2)' }, { t: '✓ On time, on budget', c: 'rgba(255,255,255,0.25)' }] },
-  { indent: 0, tokens: [{ t: '// ', c: 'rgba(255,255,255,0.2)' }, { t: '✓ IP 100% yours', c: 'rgba(255,255,255,0.25)' }] },
-];
+const STATS = [
+  ['500+', 'Projects delivered'],
+  ['150+', 'Clients served'],
+  ['99%', 'Client satisfaction'],
+  ['8 wk', 'Average MVP'],
+] as const;
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
-  const [wordIndex, setWordIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
-
-  useGSAP(() => {
-    // Defer animations until after page render using requestIdleCallback
-    const idleCallback = requestIdleCallback(() => {
-      gsap.from(['.h-badge', '.h-h1', '.h-p', '.h-btns', '.h-stats'], {
-        opacity: 0, y: 30, stagger: 0.1, duration: 1, ease: 'power3.out', delay: 0.15,
-      });
-      gsap.from('.h-code-panel', {
-        opacity: 0, x: 40, duration: 1.2, ease: 'power3.out', delay: 0.4,
-      });
-    });
-
-    return () => cancelIdleCallback(idleCallback);
-  }, { scope: ref });
+  const [i, setI] = useState(0);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const cycle = () => {
-      setVisible(false);
-      setTimeout(() => { setWordIndex(i => (i + 1) % words.length); setVisible(true); }, 380);
-    };
-    const id = setInterval(cycle, 2800);
+    const id = setInterval(() => {
+      setShow(false);
+      setTimeout(() => {
+        setI((n) => (n + 1) % ROTATING.length);
+        setShow(true);
+      }, 340);
+    }, 2900);
     return () => clearInterval(id);
   }, []);
 
   return (
-    <section ref={ref} style={{ background: '#000', minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', paddingTop: 'clamp(80px, 12vw, 140px)' }}>
-      {/* SEO H1 - Hidden but present for search engines */}
-      <h1 style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>Custom Software Development | Mapletech Labs</h1>
-
-      {/* Grid bg */}
-      <div aria-hidden="true" style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px)', backgroundSize: '72px 72px', pointerEvents: 'none' }} />
-      {/* Glow left */}
-      <div aria-hidden="true" style={{ position: 'absolute', top: '5%', left: '-10%', width: 'min(700px, 100vw)', height: 'min(700px, 100vw)', background: 'radial-gradient(circle, rgba(245,41,13,0.06) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none' }} />
-      {/* Glow right */}
-      <div aria-hidden="true" style={{ position: 'absolute', top: '20%', right: '-5%', width: 'min(600px, 100vw)', height: 'min(600px, 100vw)', background: 'radial-gradient(circle, rgba(245,41,13,0.07) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none' }} />
+    <section
+      ref={ref}
+      style={{
+        position: 'relative',
+        background: 'var(--surface)',
+        overflow: 'hidden',
+        paddingTop: 'clamp(96px, 12vw, 132px)',
+      }}
+    >
+      {/* faint engineering grid + warm red bloom */}
+      <div aria-hidden className="grid-bg" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} />
+      <div
+        aria-hidden
+        className="glow-brand"
+        style={{ position: 'absolute', top: '-14%', right: '-6%', width: 'min(760px, 96vw)', height: 'min(760px, 96vw)' }}
+      />
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute', bottom: 0, left: 0, right: 0, height: 220,
+          background: 'linear-gradient(to bottom, transparent, var(--surface-alt))',
+          pointerEvents: 'none',
+        }}
+      />
 
       <div className="cb-container hero-container" style={{ position: 'relative', zIndex: 1 }}>
-
-        {/* LEFT — copy */}
+        {/* ── LEFT: copy ───────────────────────────── */}
         <div>
-          {/* Badge */}
-          <div className="h-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(245,41,13,0.07)', border: '1px solid rgba(245,41,13,0.2)', borderRadius: 100, padding: '8px 20px', marginBottom: 'clamp(24px, 5vw, 48px)' }}>
-            <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 10px #f5290d' }} />
-            <span style={{ fontSize: 'clamp(10px, 2.5vw, 11px)', fontWeight: 700, color: '#f5290d', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Available for New Projects</span>
+          <div
+            className="reveal visible"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 10,
+              background: 'var(--brand-tint)', border: '1px solid var(--brand-line)',
+              borderRadius: 100, padding: '8px 18px', marginBottom: 'clamp(20px, 3vw, 30px)',
+            }}
+          >
+            <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand-bright)', boxShadow: '0 0 0 4px rgba(245,41,13,.14)' }} />
+            <span style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--brand-deep)', letterSpacing: '.12em', textTransform: 'uppercase' }}>
+              Canadian Software &amp; AI Engineering Partner
+            </span>
           </div>
 
-          {/* Headline */}
-          <h2 className="h-h1" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)', fontWeight: 500, letterSpacing: '-0.05em', lineHeight: 0.95, margin: '0 0 36px' }}>
-            <span style={{ color: '#fff' }}>We Build</span><br />
-            <span style={{
-              display: 'inline-block',
-              background: 'linear-gradient(135deg, #f5290d 0%, #FF5733 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              opacity: visible ? 1 : 0,
-              transform: visible ? 'translateY(0)' : 'translateY(-10px)',
-              transition: 'opacity 0.3s ease, transform 0.3s ease',
-              minWidth: '10px',
-            }}>
-              {words[wordIndex]}
-            </span><br />
-            <span style={{ color: 'rgba(255,255,255,0.18)' }}>That Scale.</span>
-          </h2>
+          <h1
+            style={{
+              fontSize: 'clamp(2.6rem, 5.4vw, 4.7rem)',
+              fontWeight: 700,
+              letterSpacing: '-0.04em',
+              lineHeight: 1.03,
+              color: 'var(--ink)',
+              margin: '0 0 24px',
+            }}
+          >
+            We build{' '}
+            <span
+              style={{
+                display: 'inline-block',
+                background: 'var(--brand-grad)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                opacity: show ? 1 : 0,
+                transform: show ? 'translateY(0)' : 'translateY(-8px)',
+                transition: 'opacity .32s ease, transform .32s ease',
+              }}
+            >
+              {ROTATING[i]}
+            </span>
+            <br />
+            that scale.
+          </h1>
 
-          {/* Sub */}
-          <p className="h-p" style={{ fontSize: 'clamp(0.95rem, 1.6vw, 1.15rem)', color: 'rgba(255,255,255,0.75)', maxWidth: 480, lineHeight: 1.8, margin: '0 0 clamp(28px, 5vw, 52px)' }}>
-            Mapletech Labs engineers world-class digital products for companies ready to lead their industry — on time, on budget, every time.
+          <p style={{ fontSize: 'clamp(16px, 1.5vw, 18.5px)', color: 'var(--body)', maxWidth: 520, lineHeight: 1.7, margin: '0 0 clamp(28px, 4vw, 40px)' }}>
+            Mapletech Labs engineers world-class digital products for companies ready to lead
+            their industry — on time, on budget, every time.
           </p>
 
-          {/* Buttons */}
-          <div className="h-btns" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 'clamp(36px, 6vw, 72px)' }}>
-            <Link href="#contact" className="hero-btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 'clamp(48px, 7vw, 58px)', padding: '0 clamp(24px, 4vw, 36px)', borderRadius: 100, background: 'linear-gradient(135deg, #f5290d, #FF5733)', color: '#fff', fontSize: 'clamp(14px, 2vw, 15px)', fontWeight: 700, textDecoration: 'none', boxShadow: '0 0 0 0 rgba(245,41,13,0)' }}
-            >
+          <div className="h-btns btn-group" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 'clamp(36px, 5vw, 56px)' }}>
+            <Link href="/contact" className="btn btn--primary btn--lg">
               Start a Project
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </Link>
-            <Link href="/services" className="hero-btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 'clamp(48px, 7vw, 58px)', padding: '0 clamp(24px, 4vw, 36px)', borderRadius: 100, border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(14px, 2vw, 15px)', fontWeight: 500, textDecoration: 'none', background: 'rgba(255,255,255,0.03)' }}
-            >
-              View Services
+            <Link href="/case-studies" className="btn btn--ghost btn--lg">
+              View Our Work
             </Link>
           </div>
 
-          {/* Stats */}
-          <div className="h-stats" style={{ display: 'flex', gap: 'clamp(16px, 3vw, 40px)', flexWrap: 'wrap', paddingTop: 'clamp(20px, 4vw, 40px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-            {[['500+', 'Projects'], ['150+', 'Clients'], ['99%', 'Satisfaction'], ['8wk', 'MVP']].map(([val, label]) => (
+          <div
+            className="h-stats"
+            style={{
+              display: 'grid', gridTemplateColumns: 'repeat(4, auto)', gap: 'clamp(18px, 3vw, 44px)',
+              justifyContent: 'start', paddingTop: 'clamp(22px, 3vw, 32px)', borderTop: '1px solid var(--line)',
+            }}
+          >
+            {STATS.map(([val, label]) => (
               <div key={label}>
-                <div style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{val}</div>
-                <div style={{ fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 700, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.12em', marginTop: 6 }}>{label}</div>
+                <div style={{ fontSize: 'clamp(1.5rem, 2.4vw, 2.1rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.045em', lineHeight: 1 }}>
+                  {val}
+                </div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.1em', marginTop: 8 }}>
+                  {label}
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* RIGHT — code panel */}
-        <div className="h-code-panel" style={{ position: 'relative' }}>
-          {/* Outer glow ring */}
-          <div style={{ position: 'absolute', inset: -1, borderRadius: 28, background: 'linear-gradient(135deg, rgba(245,41,13,0.2), rgba(245,41,13,0.04), rgba(245,41,13,0.15))', padding: 1 }}>
-            <div style={{ width: '100%', height: '100%', borderRadius: 27, background: '#000' }} />
-          </div>
+        {/* ── RIGHT: original product visual ───────── */}
+        <HeroVisual />
+      </div>
+    </section>
+  );
+}
 
-          {/* Code window */}
-          <div style={{ position: 'relative', background: '#050505', borderRadius: 28, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.06)' }}>
-            {/* Title bar */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '18px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.02)' }}>
-              <div style={{ display: 'flex', gap: 7 }}>
-                {['#ff5f57', '#ffbd2e', '#28c941'].map(c => <div key={c} style={{ width: 12, height: 12, borderRadius: '50%', background: c, opacity: 0.8 }} />)}
-              </div>
-              <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', fontWeight: 500, marginLeft: 8, fontFamily: 'monospace' }}>mapletechlabs/project.ts</span>
+/* An original, code-drawn product surface: a delivery dashboard with a
+   red accent, plus two floating metric cards. No third-party artwork. */
+function HeroVisual() {
+  const bars = [38, 55, 44, 72, 61, 88, 76];
+
+  return (
+    <div className="hero-visual" style={{ position: 'relative', minHeight: 440 }} aria-hidden>
+      {/* main panel */}
+      <div
+        style={{
+          position: 'relative',
+          background: 'var(--surface)',
+          border: '1px solid var(--line)',
+          borderRadius: 'var(--r-xl)',
+          boxShadow: 'var(--shadow-lg)',
+          padding: 26,
+          overflow: 'hidden',
+        }}
+      >
+        {/* window chrome */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 22 }}>
+          {['#FF5F57', '#FEBC2E', '#28C840'].map((c) => (
+            <span key={c} style={{ width: 10, height: 10, borderRadius: '50%', background: c, opacity: .85 }} />
+          ))}
+          <span style={{ marginLeft: 12, fontSize: 12, fontWeight: 600, color: 'var(--faint)', letterSpacing: '.02em' }}>
+            mapletechlabs / delivery
+          </span>
+        </div>
+
+        {/* headline metric */}
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 14, marginBottom: 6 }}>
+          <div style={{ fontSize: 42, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.045em', lineHeight: 1 }}>98.6%</div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12.5, fontWeight: 700, color: '#0F9960', background: 'rgba(15,153,96,.09)', padding: '4px 10px', borderRadius: 100, marginBottom: 4 }}>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M17 7H9M17 7v8" /></svg>
+            12.4%
+          </div>
+        </div>
+        <div style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 26 }}>
+          On-time delivery rate
+        </div>
+
+        {/* bar chart */}
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 9, height: 128, marginBottom: 20 }}>
+          {bars.map((h, n) => (
+            <div
+              key={n}
+              style={{
+                flex: 1,
+                height: `${h}%`,
+                borderRadius: '7px 7px 3px 3px',
+                background: n === bars.length - 2 ? 'var(--brand-grad)' : 'var(--surface-sunk)',
+                boxShadow: n === bars.length - 2 ? '0 6px 18px rgba(245,41,13,.28)' : 'none',
+                animation: `hv-rise .9s cubic-bezier(.16,1,.3,1) ${n * 0.07}s both`,
+                transformOrigin: 'bottom',
+              }}
+            />
+          ))}
+        </div>
+
+        {/* rows */}
+        <div style={{ borderTop: '1px solid var(--line)', paddingTop: 16, display: 'grid', gap: 11 }}>
+          {[['Discovery & architecture', 100], ['Sprint delivery', 82], ['QA & hardening', 46]].map(([label, pct]) => (
+            <div key={label as string} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span style={{ flex: '0 0 148px', fontSize: 12.5, fontWeight: 600, color: 'var(--body)' }}>{label}</span>
+              <span style={{ flex: 1, height: 6, borderRadius: 100, background: 'var(--surface-sunk)', overflow: 'hidden' }}>
+                <span style={{ display: 'block', height: '100%', width: `${pct}%`, borderRadius: 100, background: 'var(--brand)' }} />
+              </span>
+              <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--muted)', fontVariantNumeric: 'tabular-nums' }}>{pct}%</span>
             </div>
-
-            {/* Code */}
-            <div style={{ padding: '28px 28px 28px 0', fontFamily: 'monospace', fontSize: 14, lineHeight: 1.8 }}>
-              {codeLines.map((line, li) => (
-                <div key={li} style={{ display: 'flex', alignItems: 'baseline' }}>
-                  <span style={{ width: 48, textAlign: 'right', paddingRight: 20, color: 'rgba(255,255,255,0.12)', fontSize: 12, userSelect: 'none', flexShrink: 0 }}>{li + 1}</span>
-                  <span style={{ paddingLeft: line.indent * 22 }}>
-                    {line.tokens.map((tok, ti) => (
-                      <span key={ti} style={{ color: tok.c }}>{tok.t}</span>
-                    ))}
-                  </span>
-                </div>
-              ))}
-
-              {/* Blinking cursor */}
-              <div style={{ display: 'flex', alignItems: 'baseline' }}>
-                <span style={{ width: 48, textAlign: 'right', paddingRight: 20, color: 'rgba(255,255,255,0.12)', fontSize: 12, userSelect: 'none', flexShrink: 0 }}>{codeLines.length + 1}</span>
-                <span style={{ display: 'inline-block', width: 2, height: '1em', background: '#f5290d', animation: 'blink 1.1s step-end infinite', verticalAlign: 'text-bottom' }} />
-              </div>
-            </div>
-
-            {/* Bottom status bar */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 24px', borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(245,41,13,0.04)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#f5290d', boxShadow: '0 0 6px #f5290d' }} />
-                <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Build Successful</span>
-              </div>
-              <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.2)', fontFamily: 'monospace' }}>TypeScript · Next.js 16</span>
-            </div>
-          </div>
-
-          {/* Floating badge — "NDA signed" */}
-          <div style={{ position: 'absolute', top: -16, right: -16, background: '#000', border: '1px solid rgba(245,41,13,0.2)', borderRadius: 100, padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 8, boxShadow: '0 8px 24px rgba(0,0,0,0.6)' }}>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" /></svg>
-            <span style={{ fontSize: 11, fontWeight: 700, color: '#f5290d', letterSpacing: '0.08em', textTransform: 'uppercase' }}>NDA Signed</span>
-          </div>
-
-          {/* Floating badge — "Zero bugs" */}
-          <div style={{ position: 'absolute', bottom: -16, left: -16, background: '#000', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100, padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 8, boxShadow: '0 8px 24px rgba(0,0,0,0.6)' }}>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg>
-            <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>0 Production Bugs</span>
-          </div>
+          ))}
         </div>
       </div>
 
+      {/* floating card — top right */}
+      <div
+        className="hide-mobile"
+        style={{
+          position: 'absolute', top: -22, right: -26,
+          background: 'var(--surface-ink)', color: '#fff',
+          borderRadius: 'var(--r-md)', padding: '14px 18px',
+          boxShadow: 'var(--shadow-lg)',
+          animation: 'hv-float 6s ease-in-out infinite',
+          display: 'flex', alignItems: 'center', gap: 12,
+        }}
+      >
+        <span style={{ width: 34, height: 34, borderRadius: 10, background: 'var(--brand-grad)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+        </span>
+        <span>
+          <span style={{ display: 'block', fontSize: 13.5, fontWeight: 700, lineHeight: 1.2 }}>Sprint 14 shipped</span>
+          <span style={{ display: 'block', fontSize: 11.5, color: 'rgba(255,255,255,.55)', marginTop: 2 }}>2 days early</span>
+        </span>
+      </div>
+
+      {/* floating card — bottom left */}
+      <div
+        className="hide-mobile"
+        style={{
+          position: 'absolute', bottom: -26, left: -30,
+          background: 'var(--surface)', border: '1px solid var(--line)',
+          borderRadius: 'var(--r-md)', padding: '14px 18px',
+          boxShadow: 'var(--shadow-lg)',
+          animation: 'hv-float 6s ease-in-out 1.6s infinite',
+        }}
+      >
+        <span style={{ display: 'block', fontSize: 11, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.1em' }}>
+          Now building
+        </span>
+        <span style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 7 }}>
+          <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand-bright)', animation: 'hv-pulse 1.8s ease-in-out infinite' }} />
+          <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)' }}>7 active products</span>
+        </span>
+      </div>
+
       <style>{`
-        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-        @media(max-width:1024px){ .h-code-panel { display: none !important; } }
+        @keyframes hv-rise { from { transform: scaleY(.2); opacity: 0 } to { transform: scaleY(1); opacity: 1 } }
+        @keyframes hv-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-11px) } }
+        @keyframes hv-pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(245,41,13,.5) } 50% { opacity: .75; box-shadow: 0 0 0 6px rgba(245,41,13,0) } }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-visual * { animation: none !important }
+        }
+        @media (max-width: 1024px) { .hero-visual { min-height: 0 } }
       `}</style>
-    </section>
+    </div>
   );
 }

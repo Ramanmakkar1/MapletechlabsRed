@@ -31,26 +31,26 @@ function StatCard({ s, index, active }: { s: typeof stats[0]; index: number; act
       className={`reveal reveal-d${index + 1}`}
       style={{
         padding: 'clamp(24px, 4vw, 52px) clamp(20px, 3vw, 44px)',
-        border: '1px solid rgba(255,255,255,0.07)',
+        border: '1px solid var(--line)',
         borderRadius: '24px',
-        background: 'rgba(255,255,255,0.02)',
+        background: 'var(--surface-alt)',
         position: 'relative',
         overflow: 'hidden',
         transition: 'all 0.3s ease',
         cursor: 'default',
       }}
       onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.05)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(245,41,13,0.08)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
-      onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
+      onMouseLeave={e => { e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
     >
-      <div style={{ width: 28, height: 3, background: '#f5290d', borderRadius: 2, marginBottom: 'clamp(20px, 3vw, 36px)' }} />
+      <div style={{ width: 28, height: 3, background: 'var(--brand)', borderRadius: 2, marginBottom: 'clamp(20px, 3vw, 36px)' }} />
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 2, marginBottom: 16 }}>
-        <span style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: 700, color: '#fff', lineHeight: 1, letterSpacing: '-0.04em' }}>
+        <span style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: 700, color: 'var(--ink)', lineHeight: 1, letterSpacing: '-0.04em' }}>
           {count}
         </span>
-        <span style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.5rem)', fontWeight: 700, color: '#f5290d' }}>{s.suffix}</span>
+        <span style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.5rem)', fontWeight: 700, color: 'var(--brand)' }}>{s.suffix}</span>
       </div>
-      <div style={{ fontSize: 14, fontWeight: 700, color: '#fff', letterSpacing: '-0.01em', marginBottom: 10 }}>{s.label}</div>
-      <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>{s.desc}</div>
+      <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: 10 }}>{s.label}</div>
+      <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.6 }}>{s.desc}</div>
     </div>
   );
 }
@@ -75,16 +75,16 @@ export default function SuccessMetrics() {
   }, []);
 
   return (
-    <section ref={ref} className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' }}>
       <div className="cb-container">
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(20px, 4vw, 40px)', marginBottom: 'clamp(40px, 6vw, 80px)', flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>By The Numbers</div>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-              The Results<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Speak Loudly.</span>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>By The Numbers</div>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
+              The Results<br /><span style={{ color: 'var(--faint)' }}>Speak Loudly.</span>
             </h2>
           </div>
-          <p style={{ fontSize: 'clamp(15px, 2vw, 17px)', color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
+          <p style={{ fontSize: 'clamp(15px, 2vw, 17px)', color: 'var(--body)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
             A decade of engineering excellence, measured in outcomes — not outputs.
           </p>
         </div>

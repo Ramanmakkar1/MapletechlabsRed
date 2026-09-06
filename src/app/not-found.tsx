@@ -30,8 +30,8 @@ export default function NotFound() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        background: '#000',
-        color: '#fff',
+        background: 'var(--surface)',
+        color: 'var(--ink)',
         fontFamily: 'system-ui, -apple-system, sans-serif',
         textAlign: 'center',
         padding: '0 24px',
@@ -43,14 +43,14 @@ export default function NotFound() {
           fontWeight: 700,
           letterSpacing: '-0.04em',
           margin: 0,
-          background: 'linear-gradient(135deg, #f5290d, #ff6b4a)',
+          background: 'var(--brand-grad-btn)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
         }}
       >
         404
       </h1>
-      <p style={{ fontSize: 20, color: 'rgba(255,255,255,0.6)', marginTop: 16, marginBottom: 32 }}>
+      <p style={{ fontSize: 20, color: 'var(--muted)', marginTop: 16, marginBottom: 32 }}>
         This page doesn&apos;t exist or has moved.
       </p>
       <Link
@@ -62,7 +62,7 @@ export default function NotFound() {
           height: 48,
           padding: '0 32px',
           borderRadius: 100,
-          background: '#f5290d',
+          background: 'var(--brand)',
           color: '#fff',
           fontSize: 14,
           fontWeight: 600,
@@ -92,7 +92,7 @@ export default function NotFound() {
               <Link
                 href={link.href}
                 style={{
-                  color: 'rgba(255,255,255,0.6)',
+                  color: 'var(--muted)',
                   fontSize: 14,
                   fontWeight: 500,
                   textDecoration: 'underline',

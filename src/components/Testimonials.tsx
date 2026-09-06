@@ -55,7 +55,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
       style={{ position: 'relative', transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)' }}
     >
       {/* Quote mark */}
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,0.05)" style={{ position: 'absolute', top: 16, right: 16 }}>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--muted)" style={{ position: 'absolute', top: 16, right: 16 }}>
         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z"/>
       </svg>
       {/* Stars */}

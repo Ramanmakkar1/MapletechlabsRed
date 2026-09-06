@@ -45,20 +45,16 @@ export default function Home() {
         <Hero />
         <PartnersMarquee />
         <ServicesSection />
-        <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 50%, transparent)', margin: '0 auto', maxWidth: '80%' }} />
         <ProcessSection />
         <WhyUs />
-        <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 50%, transparent)', margin: '0 auto', maxWidth: '80%' }} />
         <FeaturedAwards />
         <TechStack />
         <SuccessMetrics />
         <PortfolioSection />
-        <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 50%, transparent)', margin: '0 auto', maxWidth: '80%' }} />
         <IndustriesSection />
         <ComparisonTable />
         <AdvancedLabs />
         <TestimonialsSection />
-        <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 50%, transparent)', margin: '0 auto', maxWidth: '80%' }} />
         <InsightsSection />
         <FAQSection />
         <FAQSchema />

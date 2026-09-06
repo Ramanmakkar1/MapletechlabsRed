@@ -20,8 +20,8 @@ const Check = () => (
 );
 
 const Cross = () => (
-  <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'rgba(255,255,255,0.04)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2.5"><path d="M18 6L6 18M6 6l12 12" /></svg>
+  <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="2.5"><path d="M18 6L6 18M6 6l12 12" /></svg>
   </div>
 );
 
@@ -38,32 +38,32 @@ export default function ComparisonTable() {
   }, []);
 
   return (
-    <section ref={ref} className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} className="section-padding" style={{ background: 'var(--surface)', borderTop: '1px solid var(--line)' }}>
       <div className="cb-container">
 
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(32px, 8vw, 80px)' }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>How We Compare</div>
-          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto', maxWidth: 800 }}>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>How We Compare</div>
+          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto', maxWidth: 800 }}>
             Why Clients Choose Us<br />
-            <span style={{ color: 'rgba(255,255,255,0.2)' }}>Over the Alternatives.</span>
+            <span style={{ color: 'var(--faint)' }}>Over the Alternatives.</span>
           </h2>
         </div>
 
         {/* Table */}
-        <div className="reveal reveal-d1 comparison-table" style={{ border: '1px solid rgba(255,255,255,0.08)', borderRadius: 40, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <div className="reveal reveal-d1 comparison-table" style={{ border: '1px solid var(--line)', borderRadius: 40, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
           <div className="comparison-table-inner" style={{ overflow: 'hidden', minWidth: 600 }}>
           {/* Header row */}
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-            <div style={{ padding: 'clamp(14px, 2vw, 28px) clamp(16px, 3vw, 40px)', fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Feature</div>
+          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', background: 'var(--surface-alt)', borderBottom: '1px solid var(--line)' }}>
+            <div style={{ padding: 'clamp(14px, 2vw, 28px) clamp(16px, 3vw, 40px)', fontSize: 13, fontWeight: 700, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Feature</div>
             {[
               { label: 'Mapletech Labs', highlight: true },
               { label: 'Traditional Agency', highlight: false },
               { label: 'Freelancer', highlight: false },
             ].map(col => (
-              <div key={col.label} style={{ padding: 'clamp(14px, 2vw, 28px) clamp(16px, 3vw, 32px)', textAlign: 'center', borderLeft: '1px solid rgba(255,255,255,0.06)', background: col.highlight ? 'rgba(245,41,13,0.05)' : 'transparent' }}>
-                <div style={{ fontSize: 14, fontWeight: 700, color: col.highlight ? '#f5290d' : 'rgba(255,255,255,0.75)', letterSpacing: '-0.01em' }}>{col.label}</div>
-                {col.highlight && <div style={{ width: 32, height: 2, background: '#f5290d', borderRadius: 1, margin: '8px auto 0' }} />}
+              <div key={col.label} style={{ padding: 'clamp(14px, 2vw, 28px) clamp(16px, 3vw, 32px)', textAlign: 'center', borderLeft: '1px solid var(--line)', background: col.highlight ? 'rgba(245,41,13,0.05)' : 'transparent' }}>
+                <div style={{ fontSize: 14, fontWeight: 700, color: col.highlight ? 'var(--brand)' : 'var(--body)', letterSpacing: '-0.01em' }}>{col.label}</div>
+                {col.highlight && <div style={{ width: 32, height: 2, background: 'var(--brand)', borderRadius: 1, margin: '8px auto 0' }} />}
               </div>
             ))}
           </div>
@@ -75,20 +75,20 @@ export default function ComparisonTable() {
               style={{
                 display: 'grid',
                 gridTemplateColumns: '2fr 1fr 1fr 1fr',
-                borderBottom: i < rows.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                borderBottom: i < rows.length - 1 ? '1px solid var(--line)' : 'none',
                 transition: '0.3s',
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'var(--surface-alt)'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
             >
-              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 40px)', fontSize: 15, color: 'rgba(255,255,255,0.7)', fontWeight: 500, display: 'flex', alignItems: 'center' }}>{row.feature}</div>
-              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)', background: 'rgba(245,41,13,0.02)' }}>
+              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 40px)', fontSize: 15, color: 'var(--body)', fontWeight: 500, display: 'flex', alignItems: 'center' }}>{row.feature}</div>
+              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid var(--line)', background: 'rgba(245,41,13,0.02)' }}>
                 <Check />
               </div>
-              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid var(--line)' }}>
                 {row.agency ? <Check /> : <Cross />}
               </div>
-              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+              <div style={{ padding: 'clamp(12px, 2vw, 22px) clamp(16px, 3vw, 32px)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderLeft: '1px solid var(--line)' }}>
                 {row.freelancer ? <Check /> : <Cross />}
               </div>
             </div>
@@ -98,8 +98,8 @@ export default function ComparisonTable() {
 
         {/* CTA below table */}
         <div className="reveal reveal-d2" style={{ textAlign: 'center', marginTop: 60 }}>
-          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', marginBottom: 28 }}>Ready to work with a team that checks every box?</p>
-          <a href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 36px', borderRadius: 100, background: '#f5290d', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
+          <p style={{ fontSize: 16, color: 'var(--body)', marginBottom: 28 }}>Ready to work with a team that checks every box?</p>
+          <a href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 36px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; }}
             onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
           >
