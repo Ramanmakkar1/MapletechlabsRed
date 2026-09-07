@@ -7,6 +7,8 @@ import { officeMedia } from '@/data/media';
 import { provinces } from '@/data/provinces';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
+import FaqSplit from '@/components/home/FaqSplit';
+import { FaqSchema } from '@/components/ServiceSchema';
 import MediaBand from '@/components/MediaBand';
 import { humanMedia } from '@/data/media';
 
@@ -64,6 +66,13 @@ const cities = [
   { name: 'Saskatoon', province: 'Saskatchewan', slug: 'saskatoon', tagline: 'Innovation on the prairies', active: false },
   { name: 'Kitchener', province: 'Ontario', slug: 'kitchener', tagline: 'Canada\'s Silicon Valley', active: false },
   { name: 'London', province: 'Ontario', slug: 'london-on', tagline: 'Southwestern Ontario tech hub', active: false },
+];
+
+const locationFaqs = [
+  { q: 'Do you have an office in my city?', a: 'Mapletech Labs is headquartered in Edmonton. Everywhere else we work through a distributed model: a dedicated team for your project, backed by our national engineering bench. Most collaboration is remote, with on-site sessions where they add value.' },
+  { q: 'How does remote delivery actually work?', a: 'The same way our on-site work does — two-week sprints, working software every fortnight, and a senior engineer you can reach directly. Distance has not been the constraint on a successful project in years; clarity and seniority are, and those we control.' },
+  { q: 'Which provinces do you serve?', a: 'We work with companies across seven provinces today — Alberta, British Columbia, Ontario, Quebec, Manitoba, Nova Scotia and Saskatchewan — with dedicated pages for twelve cities. If you are elsewhere in Canada, we can still help; get in touch.' },
+  { q: 'Do you understand local privacy and compliance rules?', a: 'Yes, and it is province-specific. Alberta and BC have their own PIPA statutes, Quebec has Law 25, and elsewhere federal PIPEDA applies, with PHIPA for Ontario health data. Each province page explains how we design for its rules.' },
 ];
 
 export default function LocationsIndexPage() {
@@ -171,6 +180,9 @@ export default function LocationsIndexPage() {
             </div>
           </div>
         </section>
+
+        <FaqSchema faqs={locationFaqs} />
+        <FaqSplit faqs={locationFaqs} title="Working with a distributed team" />
 
         {/* CTA */}
         <MediaBand media={humanMedia.meeting} ratio="21 / 8" />

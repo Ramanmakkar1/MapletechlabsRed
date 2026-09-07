@@ -141,7 +141,7 @@ export const provinces: ProvinceData[] = [
     slug: 'british-columbia',
     name: 'British Columbia',
     abbr: 'BC',
-    metaTitle: 'Software Development Company in British Columbia',
+    metaTitle: 'Software Development in British Columbia',
     metaDescription:
       'Custom software, web and mobile development across British Columbia — Vancouver and Victoria. Gaming, film tech, clean tech, marine and government.',
     heroSummary:
@@ -322,7 +322,7 @@ export const provinces: ProvinceData[] = [
     slug: 'saskatchewan',
     name: 'Saskatchewan',
     abbr: 'SK',
-    metaTitle: 'Software Development Company in Saskatchewan',
+    metaTitle: 'Software Development in Saskatchewan',
     metaDescription:
       'Custom software, web and mobile development across Saskatchewan and Saskatoon. Mining, agriculture, biotech and energy platforms, built to PIPEDA.',
     heroSummary:
@@ -367,4 +367,9 @@ export const provinces: ProvinceData[] = [
 export const provinceSlugs = provinces.map(p => p.slug);
 export function getProvince(slug: string): ProvinceData | undefined {
   return provinces.find(p => p.slug === slug);
+}
+
+/** City pages know their province by name; this maps it to the province slug. */
+export function provinceSlugForName(name: string): string | undefined {
+  return provinces.find(p => p.name === name)?.slug;
 }

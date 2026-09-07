@@ -91,8 +91,12 @@ export function getCityServiceData(
   const heroDescription = replacePlaceholders(service.heroDescription, city);
 
   // SEO metadata
-  const title = `${service.heroHeadlinePrefix} Company in ${city.name}`;
-  const description = `${service.heroHeadlinePrefix} company in ${city.name}, ${city.province}. Mapletech Labs delivers custom ${service.shortName.toLowerCase()} solutions. ${city.isHQ ? 'Headquartered in Edmonton.' : '12 locations across Canada.'} Get a free quote today.`;
+  // Keep "Company" (the higher-intent keyword) wherever the title still fits
+  // under ~60 chars once the layout appends " | Mapletech Labs" (17); drop it
+  // only for the longest service prefixes so no title is truncated.
+  const withCompany = `${service.heroHeadlinePrefix} Company in ${city.name}`;
+  const title = withCompany.length <= 43 ? withCompany : `${service.heroHeadlinePrefix} in ${city.name}`;
+  const description = `${service.heroHeadlinePrefix} in ${city.name}, ${city.province}. Mapletech Labs builds custom ${service.shortName.toLowerCase()} with fixed-scope, fixed-price delivery. Get a free quote.`;
   const canonicalUrl = buildCanonicalUrl(`/locations/${city.slug}/${service.slug}`);
 
   return {

@@ -7,10 +7,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'Wireframing & UX Design Services | Canada',
-  description: 'Professional wireframing and UX design by Mapletech Labs. Lo-fi to hi-fi wireframes in Figma, user flow mapping, and handoff-ready specs. 200+ products wireframed.',
+  description: 'Wireframing and UX design from Mapletech Labs. Low- and high-fidelity wireframes and clickable prototypes that settle the hard questions before build.',
   openGraph: {
     title: 'Wireframing & UX Design Services | Mapletech Labs',
-    description: 'Professional wireframing and UX design by Mapletech Labs. Lo-fi to hi-fi wireframes in Figma, user flow mapping, and handoff-ready specs. 200+ products wireframed.',
+    description: 'Wireframing and UX design from Mapletech Labs. Low- and high-fidelity wireframes and clickable prototypes that settle the hard questions before build.',
     url: 'https://mapletechlabs.ca/services/product-design/wireframing',
     type: 'website',
   },

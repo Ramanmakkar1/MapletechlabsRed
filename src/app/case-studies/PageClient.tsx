@@ -9,6 +9,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import MediaBand from '@/components/MediaBand';
 import FinalCta from '@/components/home/FinalCta';
+import FaqSplit from '@/components/home/FaqSplit';
+import { FaqSchema } from '@/components/ServiceSchema';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -83,6 +85,13 @@ const caseStudies = [
 const categoryColors: Record<string, string> = { default: '#E11900' };
 
 const categories = ['All', 'Fintech', 'Healthcare', 'E-Commerce', 'Logistics', 'Real Estate'];
+
+const caseStudyFaqs = [
+  { q: 'Are these real projects?', a: 'Yes. Each case study is a real engagement, and the headline metric is the one the client actually tracked. Client names on some are anonymised or generalised at their request, which is standard for software work under NDA.' },
+  { q: 'Can I speak to a reference?', a: 'For serious enquiries, yes. Once we understand your project we can usually connect you with a past client in a comparable industry. Ask during your scoping conversation.' },
+  { q: 'Which industries do you have proven results in?', a: 'The studies here span fintech and payments, healthcare, e-commerce, logistics and real estate. Those are the sectors where we have the deepest track record, though we build well beyond them.' },
+  { q: 'How do you decide what to measure?', a: 'In the first sprint we agree what success looks like in numbers — latency, conversion, cost, adoption, whatever the business actually cares about. That number is what the case study reports, not vanity metrics.' },
+];
 
 export default function CaseStudiesPageClient() {
   const pageRef = useReveal();
@@ -348,6 +357,9 @@ export default function CaseStudiesPageClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
+        <FaqSchema faqs={caseStudyFaqs} />
+        <FaqSplit faqs={caseStudyFaqs} title="About our case studies" />
+
         <FinalCta title="Want results like these?" sub="Every project on this page started with one conversation. Tell us what you\u2019re building and we\u2019ll scope it within four hours." />
 
       </main>

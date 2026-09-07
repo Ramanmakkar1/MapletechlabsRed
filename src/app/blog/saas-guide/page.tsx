@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'From Idea to MRR: How to Build a Profitable SaaS in 2026';
-const DESCRIPTION = 'Learn the blueprint to build, launch, and scale successful B2B SaaS applications';
+const DESCRIPTION = 'From validating an idea to your first paying customers: a practical, Canadian founder\u2019s guide to building a profitable SaaS product in 2026.';
 const SLUG = 'saas-guide';
 const DATE = '2026-01-08';
 

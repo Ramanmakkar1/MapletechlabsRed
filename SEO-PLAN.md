@@ -134,3 +134,34 @@ posts cover agentic patterns without naming unverifiable products.
 
 Phases 1–4 are code and content, and happen here. Phase 5 needs accounts and
 real-world business details, and needs the user in the loop.
+
+---
+
+## Progress log
+
+**2026-09-07 — technical foundation + province layer + hub enrichment shipped**
+
+- Phase 1 (structured data, metadata) complete and re-verified sitewide.
+- Phase 2 province layer live: 7 province pages (~1,000 words each), /locations
+  rebuilt as a real hub, every city links up to its province.
+- Sitewide meta sweep: every title ≤60 chars (a length-aware generator keeps
+  "Company" in city×service titles wherever it fits, drops it only for the
+  longest prefixes so none truncate), every description 118–163, one h1 per
+  page, all JSON-LD valid, canonicals everywhere.
+- Thin hubs fixed with real FAQs (not padding): /industries 280→598,
+  /case-studies 288→578, /locations 228→605.
+- Fixed the active case-study filter pill contrast (4.09→4.84).
+
+Verified across a 26-URL sample spanning every page type: 0 SEO defects
+except directory hubs, which are link-dense by design and now carry real
+intro prose plus an FAQ.
+
+**Still open (needs the user):**
+- Phase 4 editorial: the "Astra 6" posts are blocked — I will not publish
+  invented specifications about a product I cannot verify. Confirm what it
+  refers to and those get written properly. The SaaS and agentic-AI posts
+  that do not name unverifiable products can proceed on request.
+- Phase 5 off-site: Search Console / Bing verification, a Google Business
+  Profile per real address, and a reviews + citations programme. None of
+  these live in the repo, and daily leads depend on them as much as on the
+  on-page work now in place.
