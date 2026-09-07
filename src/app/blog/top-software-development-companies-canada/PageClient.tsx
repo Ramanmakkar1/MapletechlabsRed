@@ -80,8 +80,8 @@ export default function BlogPostPageClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -122,7 +122,7 @@ export default function BlogPostPageClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -146,7 +146,7 @@ export default function BlogPostPageClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -184,14 +184,14 @@ export default function BlogPostPageClient() {
                 {/* Company 1: Mapletech Labs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech labs">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)', border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 0, position: 'relative', overflow: 'hidden'
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.3)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🍁</div>
                       <div>
@@ -199,7 +199,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>01</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
+                            background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Premium Solutions</span>
                         </div>
@@ -221,10 +221,10 @@ export default function BlogPostPageClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', gap: 10, position: 'relative', zIndex: 1
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
                       <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
@@ -243,7 +243,7 @@ export default function BlogPostPageClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(96,165,250,0.1)', border: '1px solid rgba(96,165,250,0.2)',
+                        background: 'transparent', border: '1px solid transparent',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🏢</div>
                       <div>
@@ -251,7 +251,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>02</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(96,165,250,0.12)', color: '#E11900',
+                            background: 'transparent', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Digital Agency</span>
                         </div>
@@ -273,7 +273,7 @@ export default function BlogPostPageClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(96,165,250,0.06)', border: '1px solid rgba(96,165,250,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
@@ -295,7 +295,7 @@ export default function BlogPostPageClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(251,191,36,0.1)', border: '1px solid rgba(251,191,36,0.2)',
+                        background: 'transparent', border: '1px solid transparent',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🚀</div>
                       <div>
@@ -303,7 +303,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>03</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(251,191,36,0.12)', color: '#E11900',
+                            background: 'transparent', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Growth Tech</span>
                         </div>
@@ -325,7 +325,7 @@ export default function BlogPostPageClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(251,191,36,0.06)', border: '1px solid rgba(251,191,36,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
@@ -342,7 +342,7 @@ export default function BlogPostPageClient() {
                 {[
                   {
                     num: '04', id: 'shopify', name: 'Shopify Engineering', category: 'E-Commerce',
-                    emoji: '🛍️', accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
+                    emoji: '🛍️', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Powers 10% of US E-commerce',
                     paragraphs: [
                       'Shopify is a global powerhouse of software engineering, pioneering massive-scale Ruby on Rails deployments. While primarily a SaaS product, their custom enterprise engineering division delivers unparalleled custom commerce infrastructure for the world\'s biggest brands, handling millions of requests per second during flash sales.',
@@ -350,7 +350,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '05', id: 'opentext', name: 'OpenText', category: 'Information Mgmt',
-                    emoji: '📂', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
+                    emoji: '📂', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Global Enterprise Information Management Leader',
                     paragraphs: [
                       'Headquartered in Waterloo, OpenText provides massive-scale intelligent information management software. Their custom development teams focus on deep data lakes, AI-driven automation, and extreme high-security environments, making them indispensable to government and Fortune 500 infrastructure.',
@@ -358,7 +358,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '06', id: 'cgi', name: 'CGI Group', category: 'IT Consulting',
-                    emoji: '🌐', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
+                    emoji: '🌐', accentColor: '#E11900', bgColor: 'transparent',
                     metric: '400 locations worldwide, robust IT systems',
                     paragraphs: [
                       'One of the largest IT consulting firms globally. CGI tackles monumental software development projects, specializing in secure government portals, core banking systems, and complex supply chain integrations that require thousands of engineers operating in unison.',
@@ -366,7 +366,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '07', id: 'constellation', name: 'Constellation Software', category: 'Vertical Market',
-                    emoji: '🧩', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,',
+                    emoji: '🧩', accentColor: 'var(--faint)', bgColor: 'transparent',
                     metric: 'Acquires and builds mission-critical software',
                     paragraphs: [
                       'Constellation doesn\'t build consumer apps; they build the quiet software that runs the world. From specialized transit scheduling to niche medical administration, their engineering teams excel at highly specific, mission-critical vertical market software.',
@@ -374,7 +374,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '08', id: 'kinaxis', name: 'Kinaxis', category: 'Supply Chain',
-                    emoji: '🔗', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
+                    emoji: '🔗', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'RapidResponse concurrent planning platform',
                     paragraphs: [
                       'Based in Ottawa, Kinaxis builds software that orchestrates global supply chains. Their proprietary concurrent planning engine allows massive global manufacturers to run real-time simulations—a massive data engineering feat that puts them at the absolute forefront of supply chain tech.',
@@ -382,7 +382,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '09', id: 'lightspeed', name: 'Lightspeed Commerce', category: 'POS Systems',
-                    emoji: '💳', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
+                    emoji: '💳', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Cloud-based commerce for SMBs globally',
                     paragraphs: [
                       'Lightspeed provides complex, cloud-based POS and commerce software. Their engineering teams are masters of handling omni-channel high-availability systems, bridging the gap between hardware terminals and cloud analytics beautifully and seamlessly across global latency constraints.',
@@ -390,7 +390,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '10', id: 'descartes', name: 'Descartes Systems Group', category: 'Logistics',
-                    emoji: '🚚', accentColor: '#E11900', bgColor: 'rgba(74,222,128,',
+                    emoji: '🚚', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Global Logistics Technology & Routing',
                     paragraphs: [
                       'If a package is moving globally, Descartes\' software likely touched it. They are quiet giants in logistics and routing algorithms, building software that powers the complex calculus of global freight, compliance, and real-time fleet delivery paths.',
@@ -405,7 +405,7 @@ export default function BlogPostPageClient() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                         <div style={{
                           width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                          background: `${app.bgColor}0.1)`, border: `1px solid ${app.bgColor}0.2)`,
+                          background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                           display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                         }}>{app.emoji}</div>
                         <div>
@@ -413,7 +413,7 @@ export default function BlogPostPageClient() {
                             <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>{app.num}</span>
                             <span style={{
                               fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                              background: `${app.bgColor}0.12)`, color: app.accentColor,
+                              background: `${app.bgColor}`, color: app.accentColor,
                               fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                             }}>{app.category}</span>
                           </div>
@@ -431,7 +431,7 @@ export default function BlogPostPageClient() {
                       ))}
                       <div style={{
                         padding: '14px 20px', borderRadius: 12,
-                        background: `${app.bgColor}0.06)`, border: `1px solid ${app.bgColor}0.12)`,
+                        background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                         display: 'flex', alignItems: 'center', gap: 10,
                       }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={app.accentColor} strokeWidth="2">
@@ -478,7 +478,7 @@ export default function BlogPostPageClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -490,7 +490,7 @@ export default function BlogPostPageClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -511,13 +511,13 @@ export default function BlogPostPageClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -537,7 +537,7 @@ export default function BlogPostPageClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -548,8 +548,8 @@ export default function BlogPostPageClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -576,7 +576,7 @@ export default function BlogPostPageClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -584,7 +584,7 @@ export default function BlogPostPageClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Start Building</p>
                 <h2 style={{

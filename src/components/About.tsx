@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
   { value: 200, suffix: '+', label: 'Projects Delivered', color: '#E11900' },
-  { value: 50, suffix: '+', label: 'Global Clients', color: '#4f46e5' },
+  { value: 50, suffix: '+', label: 'Global Clients', color: '#E11900' },
   { value: 8, suffix: '+', label: 'Years of Excellence', color: '#E11900' },
   { value: 99, suffix: '%', label: 'Client Retention Rate', color: '#E11900' },
 ];

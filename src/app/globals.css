@@ -26,7 +26,7 @@
 
   /* ── SURFACES ────────────────────────────────── */
   --surface: #FFFFFF;
-  --surface-alt: #F4F4F4;   /* neutral light band */
+  --surface-alt: #FFFFFF;   /* white; separation via outline + hairline */
   --surface-sunk: #EAEAEA;  /* deeper neutral band */
   --surface-ink: #0A0A0A;   /* solid black band */
   --surface-ink-2: #171717;
@@ -41,7 +41,7 @@
   --on-ink-muted: rgba(255, 255, 255, 0.55);
 
   /* ── LINES & ELEVATION ───────────────────────── */
-  --line: rgba(0, 0, 0, 0.10);
+  --line: rgba(0, 0, 0, 0.12);
   --line-strong: rgba(0, 0, 0, 0.18);
   --line-ink: rgba(255, 255, 255, 0.12);
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.04);
@@ -53,9 +53,11 @@
   /* One vertical rhythm for every section on the site. The pages had four
      competing systems (100px, 120px, and two different clamps), which is
      what made the layout read as unstructured. */
-  --section-y: clamp(56px, 7vw, 104px);
-  --section-y-lg: clamp(72px, 9vw, 132px);
-  --section-y-sm: clamp(36px, 4.5vw, 60px);
+  --section-y: clamp(64px, 7.5vw, 128px);
+  --section-y-lg: clamp(88px, 10vw, 168px);
+  --section-y-sm: clamp(44px, 5vw, 76px);
+  /* one gutter for every card grid on the site */
+  --gap: clamp(16px, 1.6vw, 24px);
   /* page heroes also have to clear the 76px fixed header */
   --hero-top: clamp(124px, 13vw, 164px);
 
@@ -78,7 +80,7 @@
   --primary: #111111;
   --accent: #E11900;
   --white: #FFFFFF;
-  --off-white: #F4F4F4;
+  --off-white: #FFFFFF;
   --text-main: #111111;
   --text-muted: #565656;
   --border: rgba(0, 0, 0, 0.10);
@@ -255,11 +257,11 @@ img, svg, video { display: block; max-width: 100%; }
   padding: clamp(24px, 3vw, 36px);
   transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
 }
-.card:hover { border-color: var(--line-strong); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.card:hover { border-color: var(--ink); box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .card--flat:hover { transform: none; }
 .card--ink { background: var(--surface-ink-2); border-color: var(--line-ink); color: var(--on-ink-body); }
 .card--ink:hover { border-color: rgba(255,255,255,.24); }
-.card--tint { background: var(--brand-tint); border-color: var(--brand-line); }
+.card--tint { background: #fff; border-color: var(--brand-line); }
 
 .card-clean {
   background: var(--surface);
@@ -286,7 +288,7 @@ img, svg, video { display: block; max-width: 100%; }
   font-size: 13px; font-weight: 600; color: var(--body);
   transition: .25s ease;
 }
-.pill:hover { border-color: var(--brand-line); background: var(--brand-tint); color: var(--brand); }
+.pill:hover { border-color: var(--brand); background: #fff; color: var(--brand); }
 .pill--brand { background: var(--brand); border-color: var(--brand); color: #fff; }
 .pill--on-ink { background: rgba(255,255,255,.06); border-color: var(--line-ink); color: var(--on-ink-body); }
 
@@ -301,34 +303,13 @@ img, svg, video { display: block; max-width: 100%; }
 }
 
 /* ── DECORATIVE ─────────────────────────────────── */
-/* Faint grid, the light-theme counterpart of the old dark grid */
-.grid-bg {
-  background-image:
-    var(--surface-alt) 1px, transparent 1px),
-    var(--surface-alt) 1px, transparent 1px);
-  background-size: 64px 64px;
-  -webkit-mask-image: transparent;
-          mask-image: transparent;
-}
-.grid-bg--ink {
-  background-image:
-    var(--surface-alt) 1px, transparent 1px),
-    var(--surface-alt) 1px, transparent 1px);
-  background-size: 64px 64px;
-}
+/* Decorative background grids removed: the canvas stays plain white
+   (and plain black on ink bands) — separation comes from whitespace,
+   photography and hairlines, not texture. */
+.grid-bg, .grid-bg--ink { background-image: none; }
 
-.noise-bg::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: .025;
-  pointer-events: none;
-  z-index: 1;
-}
-.section-divider {
-  height: 1px;
-  background: var(--surface-alt) 30%, var(--line-strong) 70%, transparent);
-}
+.noise-bg::before { content: none; }
+.section-divider { height: 1px; background: var(--line); }
 
 /* ── REVEAL ANIMATIONS ──────────────────────────── */
 /* Content is never gated on a class-triggered transition: hidden tabs and
@@ -355,10 +336,7 @@ img, svg, video { display: block; max-width: 100%; }
 /* ── MARQUEE ────────────────────────────────────── */
 @keyframes marquee-l { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes marquee-r { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-.marquee-mask {
-  -webkit-mask-image: var(--surface-alt);
-          mask-image: var(--surface-alt);
-}
+.marquee-mask { overflow: hidden; }
 
 /* ── FOCUS / A11Y ───────────────────────────────── */
 *:focus-visible {
@@ -427,17 +405,60 @@ textarea.field { height: auto; padding: 14px 18px; resize: vertical; min-height:
   .section-padding-sm { padding: var(--section-y-sm) 0; }
 }
 
+
+/* ═══════════════════════════════════════════════════════════
+   GRID — one system, balanced rows, equal-height children
+   Column counts are chosen so a row is never left half-empty:
+   six items go 3+3, four go 2+2, eight go 4+4. Anything that
+   would orphan a row uses .rows (a divider list) instead.
+   ═══════════════════════════════════════════════════════════ */
+.grid { display: grid; gap: var(--gap); align-items: stretch; }
+.grid > * { min-width: 0; height: 100%; }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1023px) { .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 639px)  { .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; } }
+
+/* A card is a flex column so its footer/CTA pins to the bottom and
+   every card in the row ends level regardless of copy length. */
+.tile {
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(24px, 2.6vw, 34px);
+  transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+}
+.tile > .tile__foot { margin-top: auto; }
+a.tile:hover, .tile--hover:hover { border-color: var(--ink); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+/* Section head: one heading, one optional lede, one optional action. */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap; margin-bottom: clamp(32px, 4vw, 56px); }
+.head > div { max-width: 720px; }
+.lede { font-size: clamp(16px, 1.35vw, 18px); color: var(--body); line-height: 1.7; max-width: 62ch; margin-top: 16px; }
+
+/* ── MOTION ──────────────────────────────────────────────
+   Scroll-driven, so nothing is gated on JS or a class: where
+   view() is unsupported the element is simply already visible. */
+@keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .rise { animation: rise .8s cubic-bezier(.16, 1, .3, 1) both; animation-timeline: view(); animation-range: entry 0% cover 24%; }
+    .fade { animation: fade .9s ease both; animation-timeline: view(); animation-range: entry 0% cover 20%; }
+  }
+}
+
 /* ── PAGE BAND RHYTHM ───────────────────────────
    Inner pages laid every section on one unbroken white run, separated by
    hairlines. That is what made them read as flat next to the home page,
    which alternates bands. Alternate here too — components that set their
    own background inline (the home sections) are unaffected, since inline
    styles win over this rule. */
-main > section:nth-of-type(even),
-main > div > section:nth-of-type(even),
-main > article > section:nth-of-type(even) {
-  background: var(--surface-alt);
-}
+/* Sections are separated by rhythm, not by rules: one consistent
+   --section-y everywhere, plus the occasional ink band. Hairlines
+   between every pair of sections read as seams. */
 
 /* With alternating bands the hairline between sections is redundant and
    reads as a seam. */
@@ -639,8 +660,6 @@ main > section, main > div > section, main > article > section { border-bottom: 
   .awards-grid-desktop { display: none !important; }
   .awards-marquee-mobile {
     display: block; overflow: hidden; width: 100%;
-    mask-image: var(--surface-alt);
-    -webkit-mask-image: var(--surface-alt);
   }
   .awards-marquee-track { display: flex; gap: 12px; animation: awards-scroll 25s linear infinite; width: max-content; }
   .awards-marquee-item { flex-shrink: 0; width: 140px; }
@@ -702,64 +721,95 @@ a:hover .media--zoom > img,
   box-shadow: 0 3px 12px rgba(0,0,0,.16);
 }
 
-/* Faint dot texture, the one decorative flourish kept. */
-.dots {
-  background-image: transparent 1.1px, transparent 1.1px);
-  background-size: 20px 20px;
-}
-.dots--ink {
-  background-image: transparent 1.1px, transparent 1.1px);
-  background-size: 20px 20px;
-}
+/* Dot texture retired with the other decoration. */
+.dots, .dots--ink { background-image: none; }
 
 /* ═══════════════════════════════════════════════════════════
-   HOME — layouts mirroring the reference structure
+   HOME + PAGE LAYOUTS
+   Each one exists so a section can differ from its neighbour:
+   split, editorial, timeline, alternating case rows.
    ═══════════════════════════════════════════════════════════ */
-.stair { display: grid; grid-template-columns: repeat(4, 1fr); }
-.stair > * { padding: 40px 28px 48px; border-left: 1px solid var(--line); display: flex; flex-direction: column; }
-.stair > *:first-child { border-left: 0; padding-left: 0; }
-.stair > *:nth-child(2) { padding-top: 128px; }
-.stair > *:nth-child(3) { padding-top: 216px; }
-.stair > *:nth-child(4) { padding-top: 304px; }
-.work-card  { display: grid; grid-template-columns: 1.1fr 1fr; }
-.ind-tabs   { display: grid; grid-template-columns: 300px 1fr 1fr; gap: 48px; align-items: start; }
-.exp-grid   { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 40px; }
-.exp-grid > * { padding: 34px 0 38px; border-top: 1px solid var(--line); }
-.faq-split  { display: grid; grid-template-columns: 1fr 1.4fr; gap: 28px; align-items: start; }
-.cta-card   { display: grid; grid-template-columns: 1fr 1fr; }
-.reel       { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; }
-.ailab      { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: start; }
-.split-cta  { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+
+/* Copy beside one large image — hero, AI practice, testimonial. */
+.hero-split { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
+.split      { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
+.split--tight { grid-template-columns: 1fr 1.2fr; align-items: center; }
+
+/* Full-width photograph, then heading and prose side by side. */
+.editorial-copy {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 5vw, 72px);
+  margin-top: clamp(36px, 4vw, 56px);
+  align-items: start;
+}
+
+/* Case study: image one side, copy the other, flipping each row. */
+.case-row { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.case-row--flip > :first-child { order: 2; }
+.case-row__copy { min-width: 0; }
+
+/* Process: numbered sequence beside a standing image. */
+.process-split { display: grid; grid-template-columns: 1fr 400px; gap: clamp(40px, 6vw, 88px); align-items: stretch; }
+.process-split > .media { height: 100%; }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline > li { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 28px 0; border-top: 1px solid var(--line); }
+.timeline > li:last-child { border-bottom: 1px solid var(--line); }
+.timeline__num { font-size: 14px; font-weight: 700; color: var(--brand); font-variant-numeric: tabular-nums; letter-spacing: .06em; padding-top: 3px; }
+
+/* Statement left, benefit list right. */
+.why-split { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(36px, 5vw, 80px); align-items: start; }
+
+/* Recognition beside compliance on the ink band. */
+.credentials { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 88px); align-items: start; }
+
+/* Divider rows — the alternative to yet another card grid. */
+.rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.rows > * { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 28px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+
+/* Legacy home helpers still used by inner pages. */
 .marquee-track { display: flex; gap: 16px; width: max-content; animation: marquee-l 48s linear infinite; }
 .marquee-track:hover { animation-play-state: paused; }
 .stat-card { flex: 0 0 340px; }
+.exp-grid   { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 40px; }
+.exp-grid > * { padding: 34px 0 38px; border-top: 1px solid var(--line); }
+.faq-split  { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
+.work-card  { display: grid; grid-template-columns: 1.1fr 1fr; }
+.cta-card   { display: grid; grid-template-columns: 1fr 1fr; }
+.ailab      { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: start; }
+.split-cta  { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.ind-tabs   { display: grid; grid-template-columns: 300px 1fr 1fr; gap: 48px; align-items: start; }
+.stair { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stair > * { padding: 40px 28px 48px; border-left: 1px solid var(--line); display: flex; flex-direction: column; }
+.stair > *:first-child { border-left: 0; padding-left: 0; }
+
 @media (max-width: 1023px) {
+  .hero-split, .split, .split--tight, .case-row, .process-split, .why-split,
+  .credentials, .editorial-copy, .work-card, .ind-tabs, .faq-split, .cta-card,
+  .ailab, .split-cta { grid-template-columns: 1fr; }
+  .case-row--flip > :first-child { order: 0; }
+  .exp-grid { grid-template-columns: 1fr 1fr; }
   .stair { grid-template-columns: 1fr 1fr; }
   .stair > * { padding-top: 32px !important; border-left: 0; padding-left: 0; }
-  .work-card, .ind-tabs, .faq-split, .cta-card, .reel, .ailab, .split-cta { grid-template-columns: 1fr; }
-  .exp-grid { grid-template-columns: 1fr 1fr; }
+  .process-split .media { display: none; }
+}
+@media (max-width: 767px) {
+  .rows > * { grid-template-columns: 1fr; gap: 10px; }
+  .timeline > li { grid-template-columns: 44px 1fr; gap: 14px; padding: 22px 0; }
 }
 @media (max-width: 640px) {
-  .stair, .exp-grid { grid-template-columns: 1fr; }
+  .exp-grid, .stair { grid-template-columns: 1fr; }
   .stat-card { flex-basis: 280px; }
 }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
 /* Service cards: three across on desktop, level rows, same copy length */
-.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); align-items: stretch; }
+.svc-grid > * { height: 100%; min-width: 0; }
 @media (max-width: 1023px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px)  { .svc-grid { grid-template-columns: 1fr; } }
-.clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .svc-grid--2 { grid-template-columns: repeat(2, 1fr); }
 .svc-grid--4 { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 1023px) { .svc-grid--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px)  { .svc-grid--2, .svc-grid--4 { grid-template-columns: 1fr; } }
-
-/* Divider rows — the alternative to yet another card grid */
-.rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.rows > * { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 28px; padding: 24px 0; border-bottom: 1px solid var(--line); }
-@media (max-width: 767px) { .rows > * { grid-template-columns: 1fr; gap: 8px; } }
-/* Split hero — copy left, photograph right */
-.hero-split { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
-@media (max-width: 1023px) { .hero-split { grid-template-columns: 1fr; } }
+.clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }

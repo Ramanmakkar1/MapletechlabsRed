@@ -44,7 +44,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2" />
       </svg>
     ),
-    accent: '#a855f7',
+    accent: '#E11900',
     accentBg: 'rgba(225,25,0,0.10)',
     size: 'col-span-1',
   },
@@ -57,8 +57,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    accent: '#4f46e5',
-    accentBg: 'rgba(79,70,229,0.08)',
+    accent: '#E11900',
+    accentBg: 'transparent',
     size: 'col-span-1',
   },
   {
@@ -83,8 +83,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
       </svg>
     ),
-    accent: '#0ea5e9',
-    accentBg: 'rgba(14,165,233,0.08)',
+    accent: '#E11900',
+    accentBg: 'transparent',
     size: 'col-span-1',
   },
   {
@@ -97,7 +97,7 @@ const services = [
       </svg>
     ),
     accent: '#E11900',
-    accentBg: 'rgba(245,158,11,0.08)',
+    accentBg: 'transparent',
     size: 'col-span-1',
   },
   {
@@ -110,7 +110,7 @@ const services = [
       </svg>
     ),
     accent: '#E11900',
-    accentBg: 'rgba(236,72,153,0.08)',
+    accentBg: 'transparent',
     size: 'col-span-2',
   },
 ];

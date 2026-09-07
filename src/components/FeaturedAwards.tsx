@@ -78,8 +78,8 @@ function AwardCard({ award, i }: { award: typeof awards[number]; i: number }) {
         cursor: 'default',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)';
-        e.currentTarget.style.background = 'rgba(245,41,13,0.04)';
+        e.currentTarget.style.borderColor = 'var(--brand)';
+        e.currentTarget.style.background = 'transparent';
         e.currentTarget.style.transform = 'translateY(-4px)';
         e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.10)';
       }}
@@ -100,7 +100,7 @@ function AwardCard({ award, i }: { award: typeof awards[number]; i: number }) {
       </div>
       <div style={{ textAlign: 'center' }}>
         <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--on-ink-muted)', letterSpacing: '-0.01em', lineHeight: 1.3 }}>{award.name}</div>
-        <div style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.38)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>{award.year}</div>
+        <div style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.38)', textTransform: 'none', letterSpacing: '-0.005em', marginTop: 4 }}>{award.year}</div>
       </div>
     </div>
   );
@@ -126,7 +126,7 @@ export default function FeaturedAwards() {
 
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 16 }}>
+          <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'rgba(255,255,255,0.38)', marginBottom: 16 }}>
             Recognition & Certifications
           </div>
           <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: '0 auto', maxWidth: 600 }}>

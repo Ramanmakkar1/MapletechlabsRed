@@ -85,14 +85,14 @@ export default function PortfolioSection() {
       <div className="cb-container">
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 'clamp(40px, 8vw, 80px)', gap: 'clamp(20px, 4vw, 40px)', flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Case Studies</div>
+            <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 20 }}>Case Studies</div>
             <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               Engineering Impact<br /><span style={{ color: 'var(--faint)' }}>At Scale.</span>
             </h2>
           </div>
           <div className="portfolio-tabs">
             {projects.map((pr, i) => (
-              <button key={pr.category} onClick={() => setActive(i)} style={{ padding: '12px 28px', borderRadius: 100, cursor: 'pointer', fontSize: 13, fontWeight: 600, border: active === i ? '1px solid var(--brand-line)' : '1px solid var(--line)', background: active === i ? 'var(--brand-tint)' : 'transparent', color: active === i ? 'var(--brand-deep)' : 'var(--body)', transition: '0.3s', fontFamily: 'inherit' }}>{pr.category}</button>
+              <button key={pr.category} onClick={() => setActive(i)} style={{ padding: '12px 28px', borderRadius: 100, cursor: 'pointer', fontSize: 13, fontWeight: 600, border: active === i ? '1px solid var(--brand-line)' : '1px solid var(--line)', background: active === i ? 'var(--surface)' : 'transparent', color: active === i ? 'var(--brand-deep)' : 'var(--body)', transition: '0.3s', fontFamily: 'inherit' }}>{pr.category}</button>
             ))}
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function PortfolioSection() {
         <div className="reveal reveal-d1 portfolio-grid" style={{ border: '1px solid var(--line)', borderRadius: 'clamp(24px, 4vw, 48px)', overflow: 'hidden', minHeight: 400 }}>
           <div style={{ padding: 'clamp(40px,6vw,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: 'var(--surface-alt)' }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>{p.client}</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--faint)', letterSpacing: '-0.005em', textTransform: 'none', marginBottom: 20 }}>{p.client}</div>
               <h3 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>{p.title}</h3>
               <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.7, maxWidth: 480 }}>{p.description}</p>
             </div>
@@ -111,7 +111,7 @@ export default function PortfolioSection() {
                     {i > 0 && <div style={{ width: 1, background: 'var(--surface-sunk)', alignSelf: 'stretch' }} />}
                     <div>
                       <div style={{ fontSize: 'clamp(24px, 4vw, 42px)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1 }}>{m.value}</div>
-                      <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 8 }}>{m.label}</div>
+                      <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--faint)', textTransform: 'none', letterSpacing: '-0.005em', marginTop: 8 }}>{m.label}</div>
                     </div>
                   </div>
                 ))}

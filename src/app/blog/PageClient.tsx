@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import MediaBand from '@/components/MediaBand';
+import FinalCta from '@/components/home/FinalCta';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -20,6 +21,8 @@ function useReveal() {
   }, []);
   return ref;
 }
+
+const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
@@ -178,7 +181,7 @@ export default function BlogPage() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 24 }}>
               <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                 color: 'var(--brand)',
               }}>
                 Mapletech Labs Journal
@@ -220,7 +223,7 @@ export default function BlogPage() {
                   style={{
                     padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
                     cursor: 'pointer', border: 'none', transition: 'all 0.2s',
-                    background: activeCategory === cat ? '#f5290d' : 'var(--line)',
+                    background: activeCategory === cat ? '#E11900' : 'var(--line)',
                     color: activeCategory === cat ? 'var(--ink)' : 'var(--body)',
                   }}
                 >
@@ -236,31 +239,24 @@ export default function BlogPage() {
         {/* ── FEATURED POST ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <p className="reveal" style={{
-              fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-              color: 'var(--faint)', marginBottom: 32,
-            }}>
-              Featured Article
-            </p>
-            <Link href="/blog/top-10-unicorn-apps-2026" style={{ textDecoration: 'none', display: 'block' }}>
+            <h2 style={{ marginBottom: 32 }}>The one to read first</h2>
+            <Link href={`/blog/${FEATURED}`} style={{ textDecoration: 'none', display: 'block' }}>
               <div
                 className="reveal"
                 style={{
                   background: 'var(--surface-alt)', border: '1px solid var(--line)',
                   borderRadius: 28, padding: 48, display: 'grid',
                   gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 48, alignItems: 'center',
-                  borderLeft: '3px solid #f5290d',
                   transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                   cursor: 'pointer',
                 }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,41,13,0.35)';
-                  (e.currentTarget as HTMLDivElement).style.background = 'rgba(245,41,13,0.03)';
+                  (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--brand)';
+                  (e.currentTarget as HTMLDivElement).style.background = 'transparent';
                   (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--line)';
-                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = '#f5290d';
                   (e.currentTarget as HTMLDivElement).style.background = 'var(--surface-alt)';
                   (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                 }}
@@ -268,8 +264,8 @@ export default function BlogPage() {
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
                     <span style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
-                      background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                      background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                       padding: '4px 12px', borderRadius: 100,
                     }}>Business</span>
                     <span style={{ fontSize: 13, color: 'var(--faint)' }}>March 2026</span>
@@ -315,16 +311,9 @@ export default function BlogPage() {
         {/* ── POSTS GRID ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <p className="reveal" style={{
-              fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-              color: 'var(--faint)', marginBottom: 40,
-            }}>
-              Latest Articles
-            </p>
-            <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(320px, 100%), 1fr))', gap: 20,
-            }}>
-              {posts.filter(p => activeCategory === 'All' || p.category === activeCategory).map((post, i) => {
+            <h2 style={{ marginBottom: 40 }}>Latest articles</h2>
+            <div className="grid grid--3">
+              {posts.filter(p => p.slug !== FEATURED && (activeCategory === 'All' || p.category === activeCategory)).map((post, i) => {
                 const accentColor = 'var(--brand)';
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
@@ -338,7 +327,7 @@ export default function BlogPage() {
                         cursor: 'pointer',
                       }}
                       onMouseEnter={e => {
-                        (e.currentTarget as HTMLElement).style.borderColor = 'rgba(245,41,13,0.2)';
+                        (e.currentTarget as HTMLElement).style.borderColor = 'var(--brand)';
                         (e.currentTarget as HTMLElement).style.boxShadow = '0 20px 48px rgba(0,0,0,0.10)';
                         (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)';
                       }}
@@ -363,7 +352,7 @@ export default function BlogPage() {
                         {/* Category badge */}
                         <div style={{ marginBottom: 20 }}>
                           <span style={{
-                            fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
+                            fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                             background: 'var(--brand)', color: '#fff',
                             padding: '4px 12px', borderRadius: 100,
                           }}>
@@ -397,7 +386,7 @@ export default function BlogPage() {
                             {/* Author avatar */}
                             <div style={{
                               width: 30, height: 30, borderRadius: '50%',
-                              background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.2)',
+                              background: 'transparent', border: '1px solid var(--brand)',
                               display: 'flex', alignItems: 'center', justifyContent: 'center',
                               fontSize: 11, fontWeight: 700, color: 'var(--brand)',
                             }}>
@@ -436,56 +425,7 @@ export default function BlogPage() {
         </section>
 
         {/* ── NEWSLETTER CTA ── */}
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <div
-              className="reveal"
-              style={{
-                background: 'var(--surface-alt)', border: '1px solid var(--line)',
-                borderRadius: 28, padding: 'clamp(32px, 5vw, 64px) clamp(20px, 4vw, 48px)', textAlign: 'center',
-              }}
-            >
-              <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: 'var(--brand)', display: 'block', marginBottom: 20,
-              }}>Newsletter</span>
-              <h2 style={{
-                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
-                letterSpacing: '-0.03em', marginBottom: 16,
-              }}>
-                Get the latest insights delivered.
-              </h2>
-              <p style={{
-                fontSize: 16, color: 'var(--muted)', marginBottom: 40, maxWidth: 460, margin: '0 auto 40px',
-              }}>
-                Engineering deep dives, product strategy, and startup insights — twice a month, no noise.
-              </p>
-              <div style={{
-                display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap',
-              }}>
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  style={{
-                    padding: '14px 24px', borderRadius: 100, background: 'var(--surface-alt)',
-                    border: '1px solid var(--line)', color: 'var(--ink)', fontSize: 15,
-                    outline: 'none', width: 'min(300px, 100%)',
-                  }}
-                />
-                <button style={{
-                  padding: '14px 32px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 14, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s',
-                }}>
-                  Subscribe
-                </button>
-              </div>
-              <p style={{ fontSize: 12, color: 'var(--faint)', marginTop: 20 }}>
-                No spam. Unsubscribe anytime.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FinalCta title="Have a project in mind?" sub="Reading is one thing, shipping is another. Tell us what you\u2019re building and a senior engineer will scope it within four hours." />
 
       </main>
       <Footer />

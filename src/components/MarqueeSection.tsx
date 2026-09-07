@@ -4,18 +4,18 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 
 const techStack = [
-  { name: 'React', color: '#61DAFB' },
+  { name: 'React', color: '#E11900' },
   { name: 'Next.js', color: 'var(--ink)' },
-  { name: 'TypeScript', color: '#3178C6' },
-  { name: 'Node.js', color: '#68A063' },
-  { name: 'Python', color: '#FFD43B' },
-  { name: 'AWS', color: '#FF9900' },
-  { name: 'Kubernetes', color: '#326CE5' },
-  { name: 'PostgreSQL', color: '#4169E1' },
-  { name: 'GraphQL', color: '#E535AB' },
-  { name: 'Docker', color: '#2496ED' },
-  { name: 'TensorFlow', color: '#FF6F00' },
-  { name: 'Solidity', color: '#627EEA' },
+  { name: 'TypeScript', color: '#E11900' },
+  { name: 'Node.js', color: '#E11900' },
+  { name: 'Python', color: '#E11900' },
+  { name: 'AWS', color: '#E11900' },
+  { name: 'Kubernetes', color: '#E11900' },
+  { name: 'PostgreSQL', color: '#E11900' },
+  { name: 'GraphQL', color: '#E11900' },
+  { name: 'Docker', color: '#E11900' },
+  { name: 'TensorFlow', color: '#E11900' },
+  { name: 'Solidity', color: '#E11900' },
 ];
 
 const clients = [

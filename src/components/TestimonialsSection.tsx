@@ -67,7 +67,7 @@ const testimonials = [
 const Stars = ({ count }: { count: number }) => (
   <div style={{ display: 'flex', gap: 3 }}>
     {Array.from({ length: count }).map((_, i) => (
-      <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#f5290d" stroke="none">
+      <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#E11900" stroke="none">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ))}
@@ -114,7 +114,7 @@ export default function TestimonialsSection() {
     <section ref={ref} id="testimonials" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' , position: 'relative', overflow: 'hidden'}}>
       <div className="cb-container">
         <div className="reveal" style={{ marginBottom: 'clamp(40px, 8vw, 80px)' }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Testimonials</div>
+          <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 20 }}>Testimonials</div>
           <div className="testimonials-heading-grid">
             <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               Trusted by People<br /><span style={{ color: 'var(--faint)' }}>Changing the World.</span>
@@ -124,7 +124,7 @@ export default function TestimonialsSection() {
                 Hear directly from the founders and CTOs who've shipped with us.
               </p>
               {/* Aggregate rating */}
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '12px 20px', border: '1px solid rgba(245,41,13,0.2)', borderRadius: 100, background: 'rgba(245,41,13,0.05)' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '12px 20px', border: '1px solid var(--brand)', borderRadius: 100, background: 'transparent' }}>
                 <Stars count={5} />
                 <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)' }}>4.9</span>
                 <span style={{ fontSize: 13, color: 'var(--body)' }}>·</span>
@@ -138,7 +138,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <div key={t.name} className={`reveal reveal-d${i + 1}`}
               style={{ padding: 'clamp(24px, 4vw, 40px) clamp(20px, 3vw, 36px)', border: '1px solid var(--line)', borderRadius: 36, display: 'flex', flexDirection: 'column', gap: 24, transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)', cursor: 'default', background: 'var(--surface-alt)', position: 'relative' as const }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.10), 0 0 40px rgba(245,41,13,0.08)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.10), 0 0 40px transparent'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
             >
               {/* Quote mark */}
@@ -149,7 +149,7 @@ export default function TestimonialsSection() {
               {/* Stars + platform */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Stars count={t.stars} />
-                <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{t.platform}</span>
+                <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--faint)', letterSpacing: '-0.005em', textTransform: 'none' }}>{t.platform}</span>
               </div>
 
               <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, margin: 0, flex: 1 }}>&ldquo;{t.text}&rdquo;</p>
@@ -157,7 +157,7 @@ export default function TestimonialsSection() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 16 }}>
                 {/* Avatar + name */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: 14, minWidth: 0 }}>
-                  <div style={{ width: 44, height: 44, borderRadius: '50%', background: `rgba(${t.color === '#f5290d' ? '245,41,13' : '125,235,62'},0.15)`, border: `1px solid ${t.color}40`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <div style={{ width: 44, height: 44, borderRadius: '50%', background: `rgba(${t.color === '#E11900' ? '245,41,13' : '125,235,62'},0.15)`, border: `1px solid ${t.color}40`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <span style={{ fontSize: 13, fontWeight: 700, color: t.color }}>{t.initials}</span>
                   </div>
                   <div style={{ minWidth: 0 }}>
@@ -168,7 +168,7 @@ export default function TestimonialsSection() {
                 {/* Metric */}
                 <div style={{ textAlign: 'right', flexShrink: 0 }}>
                   <div style={{ fontSize: 'clamp(18px, 4vw, 24px)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1 }}>{t.metric}</div>
-                  <div style={{ fontSize: 10, fontWeight: 700, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>{t.metricLabel}</div>
+                  <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--faint)', textTransform: 'none', letterSpacing: '-0.005em', marginTop: 4 }}>{t.metricLabel}</div>
                 </div>
               </div>
             </div>

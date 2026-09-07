@@ -59,8 +59,8 @@ export default function Hero() {
               border: '1px solid var(--line-strong)', borderRadius: 100,
             }}
           >
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 0 4px rgba(245,41,13,.14)' }} />
-            <span style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--brand-deep)', letterSpacing: '.12em', textTransform: 'uppercase' }}>
+            <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 0 4px transparent' }} />
+            <span style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--brand-deep)', letterSpacing: '-0.005em', textTransform: 'none' }}>
               Canadian Software &amp; AI Engineering Partner
             </span>
           </div>
@@ -120,7 +120,7 @@ export default function Hero() {
                 <div style={{ fontSize: 'clamp(1.5rem, 2.4vw, 2.1rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.045em', lineHeight: 1 }}>
                   {val}
                 </div>
-                <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.1em', marginTop: 8 }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--muted)', textTransform: 'none', letterSpacing: '-0.005em', marginTop: 8 }}>
                   {label}
                 </div>
               </div>
@@ -156,7 +156,7 @@ function HeroVisual() {
       >
         {/* window chrome */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 22 }}>
-          {['#FF5F57', '#FEBC2E', '#28C840'].map((c) => (
+          {['#E11900', '#E11900', '#E11900'].map((c) => (
             <span key={c} style={{ width: 10, height: 10, borderRadius: '50%', background: c, opacity: .85 }} />
           ))}
           <span style={{ marginLeft: 12, fontSize: 12, fontWeight: 600, color: 'var(--faint)', letterSpacing: '.02em' }}>
@@ -167,12 +167,12 @@ function HeroVisual() {
         {/* headline metric */}
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 14, marginBottom: 6 }}>
           <div style={{ fontSize: 42, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.045em', lineHeight: 1 }}>98.6%</div>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12.5, fontWeight: 700, color: '#0F9960', background: 'rgba(15,153,96,.09)', padding: '4px 10px', borderRadius: 100, marginBottom: 4 }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12.5, fontWeight: 700, color: '#E11900', background: 'transparent', padding: '4px 10px', borderRadius: 100, marginBottom: 4 }}>
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M17 7H9M17 7v8" /></svg>
             12.4%
           </div>
         </div>
-        <div style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 26 }}>
+        <div style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--muted)', textTransform: 'none', letterSpacing: '-0.005em', marginBottom: 26 }}>
           On-time delivery rate
         </div>
 
@@ -186,7 +186,7 @@ function HeroVisual() {
                 height: `${h}%`,
                 borderRadius: '7px 7px 3px 3px',
                 background: n === bars.length - 2 ? 'var(--brand)' : 'var(--surface-sunk)',
-                boxShadow: n === bars.length - 2 ? '0 6px 18px rgba(245,41,13,.28)' : 'none',
+                boxShadow: n === bars.length - 2 ? '0 6px 18px transparent' : 'none',
                 animation: `hv-rise .9s cubic-bezier(.16,1,.3,1) ${n * 0.07}s both`,
                 transformOrigin: 'bottom',
               }}
@@ -240,7 +240,7 @@ function HeroVisual() {
           animation: 'hv-float 6s ease-in-out 1.6s infinite',
         }}
       >
-        <span style={{ display: 'block', fontSize: 11, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.1em' }}>
+        <span style={{ display: 'block', fontSize: 13, fontWeight: 700, color: 'var(--muted)', textTransform: 'none', letterSpacing: '-0.005em' }}>
           Now building
         </span>
         <span style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 7 }}>
@@ -252,7 +252,7 @@ function HeroVisual() {
       <style>{`
         @keyframes hv-rise { from { transform: scaleY(.2); opacity: 0 } to { transform: scaleY(1); opacity: 1 } }
         @keyframes hv-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-11px) } }
-        @keyframes hv-pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(245,41,13,.5) } 50% { opacity: .75; box-shadow: 0 0 0 6px rgba(245,41,13,0) } }
+        @keyframes hv-pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 transparent } 50% { opacity: .75; box-shadow: 0 0 0 6px transparent } }
         @media (prefers-reduced-motion: reduce) {
           .hero-visual * { animation: none !important }
         }

@@ -34,7 +34,7 @@ export default function ScrollUI() {
           height: '100%', background: 'var(--brand)',
           width: `${progress}%`,
           transition: 'width 0.1s linear',
-          boxShadow: '0 0 8px rgba(245,41,13,0.6)',
+          boxShadow: '0 0 8px transparent',
         }} />
       </div>
 
@@ -51,11 +51,11 @@ export default function ScrollUI() {
           height: 52, padding: '0 28px', borderRadius: 100,
           background: 'var(--brand)', color: '#fff', fontSize: 14, fontWeight: 700,
           textDecoration: 'none',
-          boxShadow: '0 8px 32px rgba(245,41,13,0.4), 0 2px 8px rgba(0,0,0,0.10)',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.16), 0 2px 8px rgba(0,0,0,0.10)',
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
         }}
-          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.5), 0 4px 12px rgba(0,0,0,0.10)'; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 8px 32px rgba(245,41,13,0.4), 0 2px 8px rgba(0,0,0,0.10)'; }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px transparent, 0 4px 12px rgba(0,0,0,0.10)'; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.16), 0 2px 8px rgba(0,0,0,0.10)'; }}
         >
           <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--surface)', opacity: 0.5 }} />
           Book a Free Call
@@ -74,7 +74,7 @@ export default function ScrollUI() {
           opacity: showBackTop ? 1 : 0, pointerEvents: showBackTop ? 'auto' : 'none',
           transition: 'opacity 0.3s, transform 0.3s, bottom 0.3s',
         }}
-        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.2)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; }}
+        onMouseEnter={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'var(--brand)'; }}
         onMouseLeave={e => { e.currentTarget.style.background = 'var(--surface-sunk)'; e.currentTarget.style.borderColor = 'var(--line-strong)'; }}
         aria-label="Back to top"
         className="hide-mobile"

@@ -85,8 +85,8 @@ export default function WebsiteCostCanadaClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -127,7 +127,7 @@ export default function WebsiteCostCanadaClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -151,7 +151,7 @@ export default function WebsiteCostCanadaClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -205,7 +205,7 @@ export default function WebsiteCostCanadaClient() {
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Template / WordPress Site</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#E11900',
-                        background: 'rgba(52,211,153,0.1)', padding: '4px 14px', borderRadius: 100,
+                        background: 'transparent', padding: '4px 14px', borderRadius: 100,
                       }}>$2,000 - $10,000</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
@@ -222,7 +222,7 @@ export default function WebsiteCostCanadaClient() {
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Custom Business Website</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#E11900',
-                        background: 'rgba(96,165,250,0.1)', padding: '4px 14px', borderRadius: 100,
+                        background: 'transparent', padding: '4px 14px', borderRadius: 100,
                       }}>$10,000 - $50,000</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
@@ -239,7 +239,7 @@ export default function WebsiteCostCanadaClient() {
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>E-Commerce Platform</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#E11900',
-                        background: 'rgba(251,146,60,0.1)', padding: '4px 14px', borderRadius: 100,
+                        background: 'transparent', padding: '4px 14px', borderRadius: 100,
                       }}>$25,000 - $100,000</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
@@ -256,7 +256,7 @@ export default function WebsiteCostCanadaClient() {
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Enterprise Web Application</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#E11900',
-                        background: 'rgba(244,114,182,0.1)', padding: '4px 14px', borderRadius: 100,
+                        background: 'transparent', padding: '4px 14px', borderRadius: 100,
                       }}>$100,000 - $500,000+</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
@@ -273,7 +273,7 @@ export default function WebsiteCostCanadaClient() {
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>SaaS Platform</h3>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: '#E11900',
-                        background: 'rgba(167,139,250,0.1)', padding: '4px 14px', borderRadius: 100,
+                        background: 'transparent', padding: '4px 14px', borderRadius: 100,
                       }}>$50,000 - $300,000+</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
@@ -341,8 +341,8 @@ export default function WebsiteCostCanadaClient() {
                   </div>
 
                   <div style={{
-                    background: 'var(--brand-tint) 100%)',
-                    border: '1px solid rgba(245,41,13,0.2)',
+                    background: 'var(--surface) 100%)',
+                    border: '1px solid var(--brand)',
                     borderRadius: 20, padding: 28,
                   }}>
                     <h3 style={{ fontSize: 17, fontWeight: 600, color: 'var(--brand)', margin: '0 0 10px' }}>Custom Development (Next.js / React) — $15,000 - $500,000+</h3>
@@ -395,8 +395,8 @@ export default function WebsiteCostCanadaClient() {
                 {/* Why Next.js */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="why-nextjs">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)',
-                    border: '1px solid rgba(245,41,13,0.2)',
+                    background: 'var(--surface) 100%)',
+                    border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
@@ -417,10 +417,10 @@ export default function WebsiteCostCanadaClient() {
                       ].map((point, i) => (
                         <div key={i} style={{
                           padding: '12px 16px', borderRadius: 10,
-                          background: 'rgba(245,41,13,0.06)', border: '1px solid rgba(245,41,13,0.12)',
+                          background: 'transparent', border: '1px solid var(--brand)',
                           display: 'flex', alignItems: 'flex-start', gap: 10,
                         }}>
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2" style={{ marginTop: 3, flexShrink: 0 }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2" style={{ marginTop: 3, flexShrink: 0 }}>
                             <polyline points="20,6 9,17 4,12"/>
                           </svg>
                           <span style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.6 }}>
@@ -461,7 +461,7 @@ export default function WebsiteCostCanadaClient() {
                         </div>
                         <span style={{
                           fontSize: 13, fontWeight: 700, color: '#E11900',
-                          background: 'rgba(251,191,36,0.08)', padding: '4px 12px', borderRadius: 100,
+                          background: 'transparent', padding: '4px 12px', borderRadius: 100,
                           whiteSpace: 'nowrap', flexShrink: 0,
                         }}>{item.range}</span>
                       </div>
@@ -479,8 +479,8 @@ export default function WebsiteCostCanadaClient() {
                     The most common budgeting mistake we see from Canadian businesses is allocating 100% of their budget to the initial build and leaving nothing for maintenance, content, and iteration. A website is not a one-time purchase; it is a living asset that requires ongoing investment.
                   </p>
                   <div style={{
-                    background: 'var(--brand-tint) 100%)',
-                    border: '1px solid rgba(245,41,13,0.15)',
+                    background: 'var(--surface) 100%)',
+                    border: '1px solid var(--brand)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
                     <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', margin: '0 0 12px' }}>Our Recommended Budgeting Rule:</p>
@@ -510,7 +510,7 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -522,7 +522,7 @@ export default function WebsiteCostCanadaClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -542,13 +542,13 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -568,7 +568,7 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -579,8 +579,8 @@ export default function WebsiteCostCanadaClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -607,7 +607,7 @@ export default function WebsiteCostCanadaClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -615,7 +615,7 @@ export default function WebsiteCostCanadaClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get a Free Website Quote</p>
                 <h2 style={{

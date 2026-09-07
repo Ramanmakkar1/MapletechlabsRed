@@ -1,11 +1,11 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
-import ComplianceAccordion from '@/components/home/ComplianceAccordion';
-import AwardsList from '@/components/home/AwardsList';
+import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import PageHero from './PageHero';
-import { StatRow, ServicesGrid, ProcessSteps, WhyUs, SuccessStories, CtaStrip } from './Blocks';
+import FinalCta from '@/components/home/FinalCta';
+import { StatRow, ServicesGrid, ProcessSteps, WhyUs, SuccessStories } from './Blocks';
 import { serviceMedia, defaultMedia, officeMedia } from '@/data/media';
 import type { Faq, HeroCopy, ServiceCard, Stat, Step } from './types';
 
@@ -23,15 +23,14 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
       <main id="main-content">
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: parent.label, href: parent.href }, { label: name }]} copy={copy} stats={stats} photo={hero} serviceName={name} />
         <StatRow stats={stats} />
+        <ServicesGrid title={capabilitiesTitle ?? `Our ${name} capabilities`} items={services} />
         <MediaBand media={serviceMedia[parentSlug] ?? defaultMedia} />
-        <ServicesGrid title={capabilitiesTitle ?? `Our ${name} Capabilities`} items={services} />
-        <CtaStrip />
-        <ProcessSteps title="How We Work" steps={steps} bg="var(--surface)" />
+        <ProcessSteps title="How we work" steps={steps} />
         <SuccessStories />
-        <ComplianceAccordion />
-        <WhyUs bg="var(--surface-alt)" />
-        <AwardsList />
-        <FaqSplit faqs={faqs} title="Common Questions" />
+        <WhyUs />
+        <Credentials />
+        <FaqSplit faqs={faqs} title="Common questions" />
+        <FinalCta />
       </main>
       <Footer />
     </>

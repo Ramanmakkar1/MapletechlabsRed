@@ -74,8 +74,8 @@ export default function SaaSGuide2026Client() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -116,7 +116,7 @@ export default function SaaSGuide2026Client() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -140,7 +140,7 @@ export default function SaaSGuide2026Client() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -196,7 +196,7 @@ export default function SaaSGuide2026Client() {
                         <p style={{ fontSize: 15, color: 'var(--muted)', margin: 0 }}>Think Netflix or Spotify (high volume, low price).</p>
                     </div>
                     <div style={{
-                      background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       borderRadius: 16, padding: 24,
                     }}>
                         <p style={{ fontSize: 16, color: 'var(--brand)', margin: '0 0 8px', fontWeight: 600 }}>B2B SaaS (Business-to-Business):</p>
@@ -250,7 +250,7 @@ export default function SaaSGuide2026Client() {
                         We see it constantly at Mapletech Labs: a founder spends $50,000 and six months building a massive application, only to launch it and realize nobody wants to pay for it.
                     </p>
                     <div style={{
-                      background: 'rgba(245,41,13,0.05)', border: '1px solid rgba(245,41,13,0.2)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       borderRadius: 20, padding: 28, position: 'relative', overflow: 'hidden'
                     }}>
                          <div style={{ position: 'absolute', top: -20, right: -20, width: 100, height: 100, background: 'transparent', filter: 'blur(20px)' }} />
@@ -276,7 +276,7 @@ export default function SaaSGuide2026Client() {
 
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 16 }}>
                         <li style={{ display: 'flex', gap: 16 }}>
-                            <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 4 }}>
+                            <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 4 }}>
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             </div>
                             <div>
@@ -285,7 +285,7 @@ export default function SaaSGuide2026Client() {
                             </div>
                         </li>
                         <li style={{ display: 'flex', gap: 16 }}>
-                            <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 4 }}>
+                            <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 4 }}>
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             </div>
                             <div>
@@ -294,7 +294,7 @@ export default function SaaSGuide2026Client() {
                             </div>
                         </li>
                         <li style={{ display: 'flex', gap: 16 }}>
-                            <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 4 }}>
+                            <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 4 }}>
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             </div>
                             <div>
@@ -340,7 +340,7 @@ export default function SaaSGuide2026Client() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -352,7 +352,7 @@ export default function SaaSGuide2026Client() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -371,13 +371,13 @@ export default function SaaSGuide2026Client() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -397,7 +397,7 @@ export default function SaaSGuide2026Client() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -408,8 +408,8 @@ export default function SaaSGuide2026Client() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -436,7 +436,7 @@ export default function SaaSGuide2026Client() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -444,7 +444,7 @@ export default function SaaSGuide2026Client() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Start Building</p>
                 <h2 style={{
@@ -486,7 +486,7 @@ export default function SaaSGuide2026Client() {
                   textDecoration: 'none', transition: 'all 0.3s ease',
                   fontSize: 15, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.5,
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
                   {post.title} →

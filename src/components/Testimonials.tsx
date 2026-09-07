@@ -44,7 +44,7 @@ const testimonials = [
     name: "David N.",
     title: "Founder, EdTech Platform · Montreal",
     initials: "DN",
-    color: '#4f46e5',
+    color: '#E11900',
   },
 ];
 

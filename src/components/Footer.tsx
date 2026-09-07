@@ -84,7 +84,7 @@ function FooterLink({ href, children, lang }: { href: string; children: React.Re
 
 function ColTitle({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--on-ink)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 20 }}>
+    <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--on-ink)', textTransform: 'none', letterSpacing: '-0.005em', marginBottom: 20 }}>
       {children}
     </div>
   );
@@ -94,32 +94,9 @@ export default function Footer() {
   return (
     <footer style={{ background: 'var(--surface-ink)', borderTop: '1px solid var(--line-ink)' , position: 'relative', overflow: 'hidden'}}>
 
-      {/* CTA Banner */}
-      <div style={{ borderBottom: '1px solid var(--line-ink)' }}>
-        <div className="cb-container" style={{ padding: 'var(--section-y) 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
-          <div>
-            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--on-ink)', margin: '0 0 8px', letterSpacing: '-0.02em' }}>
-              Ready to build something great?
-            </h2>
-            <p style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)', color: 'var(--on-ink-body)', margin: 0, lineHeight: 1.6 }}>
-              Let&apos;s turn your idea into a world-class digital product.
-            </p>
-          </div>
-          <Link
-            href="/contact"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 32px', borderRadius: 100, background: 'var(--brand)', color: 'var(--on-ink)', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s', whiteSpace: 'nowrap', flexShrink: 0 }}
-            onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand-deep)'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(245,41,13,0.35)'; }}
-            onMouseLeave={e => { e.currentTarget.style.background = 'var(--brand)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'none'; }}
-          >
-            Start a Project
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-          </Link>
-        </div>
-      </div>
-
       {/* Main Footer Grid */}
-      <div className="cb-container" style={{ padding: 'var(--section-y) 0' }}>
-        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 'clamp(32px, 5vw, 48px)' }}>
+      <div className="cb-container" style={{ padding: 'clamp(40px, 5vw, 64px) 0' }}>
+        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1.5fr 1fr 1.5fr', gap: 'clamp(28px, 4vw, 44px)' }}>
 
           {/* Brand Column */}
           <div style={{ gridColumn: 'span 1' }}>
@@ -128,14 +105,14 @@ export default function Footer() {
               alt="Mapletech Labs"
               width={250}
               height={100}
-              style={{ height: 'clamp(40px, 6vw, 60px)', width: 'auto', objectFit: 'contain' as const, marginBottom: 20 }}
+              style={{ height: 44, width: 'auto', objectFit: 'contain' as const, marginBottom: 16 }}
             />
-            <p style={{ fontSize: 13, color: 'var(--on-ink-body)', lineHeight: 1.7, maxWidth: 280, marginBottom: 20 }}>
+            <p style={{ fontSize: 13, color: 'var(--on-ink-body)', lineHeight: 1.6, maxWidth: 260, marginBottom: 16 }}>
               World-class software engineering for companies ready to lead their industry. Based in Canada, building globally.
             </p>
 
             {/* Contact */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 18 }}>
               <a href="tel:+14036048692" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--on-ink-muted)', textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
                 onMouseEnter={e => e.currentTarget.style.color = 'var(--on-ink)'}
                 onMouseLeave={e => e.currentTarget.style.color = 'var(--on-ink-muted)'}
@@ -162,7 +139,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="footer-social-icon"
                   style={{ width: 44, height: 44, borderRadius: '50%', border: '1px solid var(--line-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--on-ink-muted)', textDecoration: 'none', transition: '0.25s' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; e.currentTarget.style.color = 'var(--brand)'; e.currentTarget.style.background = 'rgba(245,41,13,0.08)'; }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.color = 'var(--brand)'; e.currentTarget.style.background = 'transparent'; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line-ink)'; e.currentTarget.style.color = 'var(--on-ink-muted)'; e.currentTarget.style.background = 'transparent'; }}
                   aria-label={s.label}
                 >
@@ -175,7 +152,7 @@ export default function Footer() {
           {/* Services Column */}
           <nav aria-label="Footer services links">
             <ColTitle>Services</ColTitle>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px 16px' }}>
               {services.map(s => (
                 <FooterLink key={s.label} href={s.href}>{s.label}</FooterLink>
               ))}
@@ -193,7 +170,7 @@ export default function Footer() {
               </div>
             </nav>
 
-            <nav aria-label="Footer company links" style={{ marginTop: 28 }}>
+            <nav aria-label="Footer company links" style={{ marginTop: 22 }}>
               <ColTitle>Company</ColTitle>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 {company.map(s => (
@@ -206,7 +183,7 @@ export default function Footer() {
           {/* Locations Column */}
           <nav aria-label="Footer locations links">
             <ColTitle>Locations</ColTitle>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px 16px' }}>
               {locations.map(s => (
                 <FooterLink key={s.label} href={s.href} lang={'lang' in s ? s.lang : undefined}>{s.label}</FooterLink>
               ))}
@@ -217,7 +194,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div style={{ borderTop: '1px solid var(--line-ink)' }}>
-        <div className="cb-container" style={{ padding: 'var(--section-y) 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+        <div className="cb-container" style={{ padding: '18px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.62)' }}>
             &copy; {new Date().getFullYear()} Mapletech Labs Inc. All rights reserved.
           </span>

@@ -21,16 +21,16 @@ function useReveal() {
 }
 
 const companies = [
-  { num: 1, name: 'Mapletech Labs', category: 'Enterprise Web Development', emoji: '🍁', metric: 'High-Performance Next.js & SaaS Platforms', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Townmedialabs', category: 'Digital-First Web Agency', emoji: '🎨', metric: 'Stunning WordPress & Custom Brand Websites', accentColor: '#E11900', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'TML', category: 'Scalable Web Platforms', emoji: '🚀', metric: 'Growth-Oriented Architecture & Rapid Deployment', accentColor: '#E11900', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'Myplanet', category: 'Digital Experience Platforms', emoji: '🌐', metric: 'Enterprise DXP & Headless CMS Solutions', accentColor: '#E11900', bgColor: 'rgba(52,211,153,' },
-  { num: 5, name: 'Nulogy', category: 'Supply Chain Web Apps', emoji: '📦', metric: 'Specialized Supply Chain Management Platforms', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Nascent Digital', category: 'E-Commerce Specialists', emoji: '🛒', metric: 'Shopify Plus & Custom E-Commerce Builds', accentColor: '#E11900', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Rangle.io', category: 'Angular/React Enterprise Apps', emoji: '⚛️', metric: 'Enterprise Frontend Architecture & Consulting', accentColor: '#E11900', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'TWG (The Working Group)', category: 'Product Development', emoji: '🛠️', metric: 'End-to-End Digital Product Strategy', accentColor: '#E11900', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'Architech', category: 'Cloud-Native Web Apps', emoji: '☁️', metric: 'Azure & AWS Cloud-Native Development', accentColor: '#E11900', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: 'Crowdlinker', category: 'Startup Web & Mobile', emoji: '💡', metric: 'Startup MVP & Growth-Stage Development', accentColor: '#E11900', bgColor: 'rgba(248,113,113,' },
+  { num: 1, name: 'Mapletech Labs', category: 'Enterprise Web Development', emoji: '🍁', metric: 'High-Performance Next.js & SaaS Platforms', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 2, name: 'Townmedialabs', category: 'Digital-First Web Agency', emoji: '🎨', metric: 'Stunning WordPress & Custom Brand Websites', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 3, name: 'TML', category: 'Scalable Web Platforms', emoji: '🚀', metric: 'Growth-Oriented Architecture & Rapid Deployment', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 4, name: 'Myplanet', category: 'Digital Experience Platforms', emoji: '🌐', metric: 'Enterprise DXP & Headless CMS Solutions', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 5, name: 'Nulogy', category: 'Supply Chain Web Apps', emoji: '📦', metric: 'Specialized Supply Chain Management Platforms', accentColor: 'var(--faint)', bgColor: 'transparent', },
+  { num: 6, name: 'Nascent Digital', category: 'E-Commerce Specialists', emoji: '🛒', metric: 'Shopify Plus & Custom E-Commerce Builds', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 7, name: 'Rangle.io', category: 'Angular/React Enterprise Apps', emoji: '⚛️', metric: 'Enterprise Frontend Architecture & Consulting', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 8, name: 'TWG (The Working Group)', category: 'Product Development', emoji: '🛠️', metric: 'End-to-End Digital Product Strategy', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 9, name: 'Architech', category: 'Cloud-Native Web Apps', emoji: '☁️', metric: 'Azure & AWS Cloud-Native Development', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 10, name: 'Crowdlinker', category: 'Startup Web & Mobile', emoji: '💡', metric: 'Startup MVP & Growth-Stage Development', accentColor: '#E11900', bgColor: 'transparent', },
 ];
 
 const relatedPosts = [
@@ -80,8 +80,8 @@ export default function WebDevelopmentCompaniesTorontoClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -122,7 +122,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -146,7 +146,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -187,14 +187,14 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                 {/* Company 1: Mapletech Labs — Highlighted Card */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-labs">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)', border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 0, position: 'relative', overflow: 'hidden'
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.3)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🍁</div>
                       <div>
@@ -202,7 +202,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>01</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
+                            background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Enterprise Web Development</span>
                         </div>
@@ -221,10 +221,10 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', gap: 10, position: 'relative', zIndex: 1
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
                       <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
@@ -238,7 +238,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                 {[
                   {
                     num: '02', id: 'townmedialabs', name: 'Townmedialabs', category: 'Digital-First Web Agency',
-                    emoji: '🎨', accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
+                    emoji: '🎨', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Stunning WordPress & Custom Brand Websites',
                     paragraphs: [
                       'Townmedialabs brings a Toronto-based creative approach to web development, building stunning WordPress and custom websites that help brands stand out in Canada\'s most competitive market. Their design-forward methodology combines visual storytelling with conversion-optimized layouts, making them a top choice for brands that need to look exceptional while driving real business results.',
@@ -246,7 +246,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '03', id: 'tml', name: 'TML', category: 'Scalable Web Platforms',
-                    emoji: '🚀', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
+                    emoji: '🚀', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Growth-Oriented Architecture & Rapid Deployment',
                     paragraphs: [
                       'TML builds scalable web platforms for Toronto startups and enterprises, focusing on growth-oriented architecture and rapid deployment. Their lean development process gets MVPs to market fast without sacrificing code quality, and their modular architecture approach ensures that early-stage products can scale gracefully as user bases grow from hundreds to hundreds of thousands.',
@@ -254,7 +254,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '04', id: 'myplanet', name: 'Myplanet', category: 'Digital Experience Platforms',
-                    emoji: '🌐', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
+                    emoji: '🌐', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Enterprise DXP & Headless CMS Solutions',
                     paragraphs: [
                       'Myplanet is a Toronto-native agency specializing in digital experience platforms and headless CMS implementations. They work with enterprise clients who need complex content management systems that serve multiple channels — web, mobile, kiosk, and IoT. Their deep expertise with Contentful, Sanity, and custom headless architectures makes them a go-to for large-scale content-driven web applications.',
@@ -262,7 +262,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '05', id: 'nulogy', name: 'Nulogy', category: 'Supply Chain Web Apps',
-                    emoji: '📦', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,',
+                    emoji: '📦', accentColor: 'var(--faint)', bgColor: 'transparent',
                     metric: 'Specialized Supply Chain Management Platforms',
                     paragraphs: [
                       'Nulogy occupies a unique niche in the Toronto web development scene — they build specialized supply chain management platforms that help CPG brands and contract packers digitize their operations. If your business involves complex logistics, warehouse management, or supply chain collaboration, Nulogy\'s domain expertise is unmatched in the Canadian market.',
@@ -270,7 +270,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '06', id: 'nascent-digital', name: 'Nascent Digital', category: 'E-Commerce Specialists',
-                    emoji: '🛒', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
+                    emoji: '🛒', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Shopify Plus & Custom E-Commerce Builds',
                     paragraphs: [
                       'Nascent Digital is Toronto\'s premier e-commerce web development agency. They specialize in Shopify Plus builds, custom checkout experiences, and high-traffic e-commerce platforms that handle millions in monthly transactions. Their team understands the nuances of Canadian e-commerce — bilingual storefronts, Canadian payment gateways, provincial tax calculations, and cross-border shipping integrations.',
@@ -278,7 +278,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '07', id: 'rangle', name: 'Rangle.io', category: 'Angular/React Enterprise Apps',
-                    emoji: '⚛️', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
+                    emoji: '⚛️', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Enterprise Frontend Architecture & Consulting',
                     paragraphs: [
                       'Rangle.io is one of Toronto\'s most technically respected web development agencies, known for their deep expertise in Angular, React, and modern frontend architecture. They work primarily with enterprise clients who need complex, data-heavy web applications — financial dashboards, internal tools, and customer-facing platforms that require bulletproof performance and accessibility compliance.',
@@ -286,7 +286,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '08', id: 'twg', name: 'TWG (The Working Group)', category: 'Product Development',
-                    emoji: '🛠️', accentColor: '#E11900', bgColor: 'rgba(74,222,128,',
+                    emoji: '🛠️', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'End-to-End Digital Product Strategy',
                     paragraphs: [
                       'TWG takes a product-first approach to web development. Rather than just building what you ask for, they challenge assumptions, validate ideas through user research, and help define the right product before writing a single line of code. For Toronto businesses that need a strategic partner — not just a code shop — TWG is an excellent choice for complex product development initiatives.',
@@ -294,7 +294,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '09', id: 'architech', name: 'Architech', category: 'Cloud-Native Web Apps',
-                    emoji: '☁️', accentColor: '#E11900', bgColor: 'rgba(251,191,36,',
+                    emoji: '☁️', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Azure & AWS Cloud-Native Development',
                     paragraphs: [
                       'Architech specializes in cloud-native web applications built on Azure and AWS. Their Toronto team builds serverless architectures, microservices-based platforms, and enterprise web applications that leverage the full power of cloud infrastructure. They are a strong choice for organizations migrating legacy systems to the cloud or building new platforms that need elastic scalability from day one.',
@@ -302,7 +302,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   },
                   {
                     num: '10', id: 'crowdlinker', name: 'Crowdlinker', category: 'Startup Web & Mobile',
-                    emoji: '💡', accentColor: '#E11900', bgColor: 'rgba(248,113,113,',
+                    emoji: '💡', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Startup MVP & Growth-Stage Development',
                     paragraphs: [
                       'Crowdlinker is the go-to Toronto agency for startups and growth-stage companies. They build web and mobile products fast, with a focus on getting to market quickly and iterating based on real user feedback. Their lean methodology, combined with strong design chops and full-stack development capabilities, has helped dozens of Toronto startups secure funding and scale their user bases.',
@@ -317,7 +317,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                         <div style={{
                           width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                          background: `${app.bgColor}0.1)`, border: `1px solid ${app.bgColor}0.2)`,
+                          background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                           display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                         }}>{app.emoji}</div>
                         <div>
@@ -325,7 +325,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                             <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>{app.num}</span>
                             <span style={{
                               fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                              background: `${app.bgColor}0.12)`, color: app.accentColor,
+                              background: `${app.bgColor}`, color: app.accentColor,
                               fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                             }}>{app.category}</span>
                           </div>
@@ -343,7 +343,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                       ))}
                       <div style={{
                         padding: '14px 20px', borderRadius: 12,
-                        background: `${app.bgColor}0.06)`, border: `1px solid ${app.bgColor}0.12)`,
+                        background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                         display: 'flex', alignItems: 'center', gap: 10,
                       }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={app.accentColor} strokeWidth="2">
@@ -371,7 +371,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -383,7 +383,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -404,13 +404,13 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -430,7 +430,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -441,8 +441,8 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -469,7 +469,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -477,7 +477,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Toronto Web Development</p>
                 <h2 style={{
@@ -519,7 +519,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                   textDecoration: 'none', transition: 'all 0.3s ease',
                   fontSize: 15, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.5,
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
                   {post.title} →

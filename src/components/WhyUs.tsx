@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 const reasons = [
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
@@ -15,7 +15,7 @@ const reasons = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
       </svg>
     ),
@@ -26,7 +26,7 @@ const reasons = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
       </svg>
     ),
@@ -37,7 +37,7 @@ const reasons = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
         <path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
@@ -49,7 +49,7 @@ const reasons = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
@@ -60,7 +60,7 @@ const reasons = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" />
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
       </svg>
@@ -90,7 +90,7 @@ export default function WhyUs() {
 
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(48px, 8vw, 100px)' }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Why Mapletech Labs</div>
+          <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 20 }}>Why Mapletech Labs</div>
           <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 auto 24px', maxWidth: 800 }}>
             Built Different.<br />
             <span style={{ color: 'var(--faint)' }}>By Design.</span>
@@ -120,10 +120,10 @@ export default function WhyUs() {
                 overflow: 'hidden',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)';
-                e.currentTarget.style.background = 'rgba(245,41,13,0.03)';
+                e.currentTarget.style.borderColor = 'var(--brand)';
+                e.currentTarget.style.background = 'transparent';
                 e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.10), 0 0 40px rgba(245,41,13,0.08)';
+                e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.10), 0 0 40px transparent';
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.borderColor = 'var(--line)';
@@ -138,14 +138,14 @@ export default function WhyUs() {
               </div>
 
               {/* Icon */}
-              <div style={{ width: 60, height: 60, borderRadius: 18, background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 60, height: 60, borderRadius: 18, background: 'transparent', border: '1px solid var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 {r.icon}
               </div>
 
               {/* Stat */}
               <div>
                 <div style={{ fontSize: 'clamp(2rem, 3vw, 2.8rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1 }}>{r.stat}</div>
-                <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 6 }}>{r.statLabel}</div>
+                <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--faint)', textTransform: 'none', letterSpacing: '-0.005em', marginTop: 6 }}>{r.statLabel}</div>
               </div>
 
               {/* Text */}

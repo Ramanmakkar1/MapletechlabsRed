@@ -85,8 +85,8 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -127,7 +127,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -151,7 +151,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -196,7 +196,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   }}>
                     <div style={{
                       width: 40, height: 40, borderRadius: 12,
-                      background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.25)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
                     }}>🎯</div>
                     <h2 style={{
@@ -235,7 +235,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   }}>
                     <div style={{
                       width: 40, height: 40, borderRadius: 12,
-                      background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.25)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
                     }}>🌍</div>
                     <h2 style={{
@@ -272,7 +272,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   }}>
                     <div style={{
                       width: 40, height: 40, borderRadius: 12,
-                      background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.25)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
                     }}>🚩</div>
                     <h2 style={{
@@ -294,7 +294,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   ].map((item, i) => (
                     <div key={i} style={{
                       padding: '20px 24px', borderRadius: 14, marginBottom: 12,
-                      background: 'rgba(248,113,113,0.04)', border: '1px solid rgba(248,113,113,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                     }}>
                       <p style={{ fontSize: 15, fontWeight: 700, color: '#E11900', marginBottom: 6 }}>{i + 1}. {item.flag}</p>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.detail}</p>
@@ -309,7 +309,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   }}>
                     <div style={{
                       width: 40, height: 40, borderRadius: 12,
-                      background: 'rgba(52,211,153,0.1)', border: '1px solid rgba(52,211,153,0.25)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
                     }}>✅</div>
                     <h2 style={{
@@ -331,7 +331,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   ].map((item, i) => (
                     <div key={i} style={{
                       padding: '20px 24px', borderRadius: 14, marginBottom: 12,
-                      background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                     }}>
                       <p style={{ fontSize: 15, fontWeight: 700, color: '#E11900', marginBottom: 6 }}>{i + 1}. {item.flag}</p>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.detail}</p>
@@ -346,7 +346,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   }}>
                     <div style={{
                       width: 40, height: 40, borderRadius: 12,
-                      background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.25)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
                     }}>❓</div>
                     <h2 style={{
@@ -388,14 +388,14 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                 {/* Section 6: How Mapletech Labs Stands Apart */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-difference">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)', border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 24, position: 'relative', zIndex: 1 }}>
                       <div style={{
                         width: 48, height: 48, borderRadius: 14,
-                        background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.3)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22,
                       }}>🍁</div>
                       <h2 style={{
@@ -415,7 +415,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                     ].map((item, i) => (
                       <div key={i} style={{
                         padding: '16px 20px', borderRadius: 12, marginBottom: 10,
-                        background: 'rgba(245,41,13,0.06)', border: '1px solid rgba(245,41,13,0.15)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         position: 'relative', zIndex: 1,
                       }}>
                         <p style={{ fontSize: 14, fontWeight: 700, color: 'var(--brand)', marginBottom: 4 }}>{item.title}</p>
@@ -432,7 +432,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   }}>
                     <div style={{
                       width: 40, height: 40, borderRadius: 12,
-                      background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.25)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
                     }}>💰</div>
                     <h2 style={{
@@ -480,7 +480,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -492,7 +492,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -512,13 +512,13 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -538,7 +538,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -549,8 +549,8 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -577,7 +577,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -585,7 +585,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get Started</p>
                 <h2 style={{

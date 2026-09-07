@@ -55,9 +55,9 @@ export default function Contact() {
         <div className="contact-inner contact-grid" style={{ maxWidth: 1100, margin: '0 auto' }}>
           {/* Left — copy */}
           <div style={{ textAlign: 'left' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)', borderRadius: 100, padding: '10px 24px', marginBottom: 32 }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'transparent', border: '1px solid var(--brand)', borderRadius: 100, padding: '10px 24px', marginBottom: 32 }}>
               <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)' }} />
-              <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--brand)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Let&apos;s Build Together</span>
+              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--brand)', letterSpacing: '-0.005em', textTransform: 'none' }}>Let&apos;s Build Together</span>
             </div>
 
             <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.05em', lineHeight: 1.1, margin: '0 0 24px' }}>
@@ -71,7 +71,7 @@ export default function Contact() {
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <a href="mailto:hello@mapletechlabs.ca" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 14, fontWeight: 600, textDecoration: 'none', transition: '0.3s' }}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.35)'; }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px transparent'; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
               >
                 Email Us
@@ -92,8 +92,8 @@ export default function Contact() {
             <div className="contact-badges" style={{ display: 'flex', gap: 32, marginTop: 40, paddingTop: 32, borderTop: '1px solid var(--line)', flexWrap: 'wrap' }}>
               {['NDA Signed on Day 1', 'Fixed-Price Guarantee', '8-Week MVP Programme'].map(item => (
                 <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(245,41,13,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
+                  <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
                   </div>
                   <span style={{ fontSize: 13, color: 'var(--body)', fontWeight: 500 }}>{item}</span>
                 </div>
@@ -154,7 +154,7 @@ export default function Contact() {
                   type="submit"
                   disabled={isLoading}
                   style={{ height: 52, borderRadius: 100, background: 'var(--brand)', color: '#fff', fontSize: 15, fontWeight: 700, border: 'none', cursor: isLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, transition: '0.3s', opacity: isLoading ? 0.7 : 1 }}
-                  onMouseEnter={e => { if(!isLoading){ e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(245,41,13,0.4)'; } }}
+                  onMouseEnter={e => { if(!isLoading){ e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px transparent'; } }}
                   onMouseLeave={e => { if(!isLoading){ e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; } }}
                 >
                   {isLoading ? (

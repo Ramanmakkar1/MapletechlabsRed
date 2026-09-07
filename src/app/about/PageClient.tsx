@@ -4,8 +4,9 @@ import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { blogMedia, officeMedia } from '@/data/media';
+import { blogMedia, officeMedia, humanMedia } from '@/data/media';
 import PageHero from '@/components/page/PageHero';
+import FinalCta from '@/components/home/FinalCta';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -116,7 +117,7 @@ export default function AboutPage() {
         <article>
 
         {/* ── HERO ── */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "About Mapletech Labs", title: <>We Build Software<br />That Matters.</>, desc: <>A world-class engineering firm headquartered in Edmonton, Canada. Founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={officeMedia.meeting} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "About Mapletech Labs", title: <>We Build Software<br />That Matters.</>, desc: <>A world-class engineering firm headquartered in Edmonton, Canada. Founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={humanMedia.workshop} form={false} />
 
         {/* ── MISSION STATEMENT ── */}
         <section style={{
@@ -171,7 +172,7 @@ export default function AboutPage() {
               <div>
                 <div className="reveal" style={{ marginBottom: 20 }}>
                   <span style={{
-                    fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                    fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                     color: 'var(--faint)',
                   }}>Our Story</span>
                 </div>
@@ -213,8 +214,8 @@ export default function AboutPage() {
                       <div style={{
                         position: 'absolute', left: -38, top: 4,
                         width: 10, height: 10, borderRadius: '50%',
-                        background: i === timeline.length - 1 ? '#f5290d' : 'rgba(245,41,13,0.4)',
-                        border: `2px solid ${i === timeline.length - 1 ? '#f5290d' : 'rgba(245,41,13,0.2)'}`,
+                        background: i === timeline.length - 1 ? '#E11900' : 'transparent',
+                        border: `2px solid ${i === timeline.length - 1 ? '#E11900' : 'transparent'}`,
                       }} />
                       <div>
                         <span style={{
@@ -239,7 +240,7 @@ export default function AboutPage() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                 color: 'var(--faint)',
               }}>What We Stand For</span>
             </div>
@@ -249,9 +250,7 @@ export default function AboutPage() {
             }}>
               Our Values
             </h2>
-            <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20,
-            }}>
+            <div className="grid grid--3">
               {values.map((val, i) => (
                 <div
                   key={val.title}
@@ -263,8 +262,8 @@ export default function AboutPage() {
                     cursor: 'default',
                   }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,41,13,0.2)';
-                    (e.currentTarget as HTMLDivElement).style.background = 'rgba(245,41,13,0.03)';
+                    (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--brand)';
+                    (e.currentTarget as HTMLDivElement).style.background = 'transparent';
                     (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
                   }}
                   onMouseLeave={e => {
@@ -292,7 +291,7 @@ export default function AboutPage() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                 color: 'var(--faint)',
               }}>The People Behind It</span>
             </div>
@@ -321,8 +320,8 @@ export default function AboutPage() {
                     transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                   }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,41,13,0.2)';
-                    (e.currentTarget as HTMLDivElement).style.background = 'rgba(245,41,13,0.03)';
+                    (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--brand)';
+                    (e.currentTarget as HTMLDivElement).style.background = 'transparent';
                     (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
                   }}
                   onMouseLeave={e => {
@@ -334,7 +333,7 @@ export default function AboutPage() {
                   {/* Avatar */}
                   <div style={{
                     width: 72, height: 72, borderRadius: '50%', margin: '0 auto 20px',
-                    background: 'rgba(245,41,13,0.1)', border: '2px solid rgba(245,41,13,0.2)',
+                    background: 'transparent', border: '2px solid transparent',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: 22, fontWeight: 800, color: 'var(--brand)',
                   }}>
@@ -361,7 +360,7 @@ export default function AboutPage() {
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                 color: 'var(--faint)',
               }}>Where We Are</span>
             </div>
@@ -390,8 +389,8 @@ export default function AboutPage() {
                     transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                   }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,41,13,0.2)';
-                    (e.currentTarget as HTMLDivElement).style.background = 'rgba(245,41,13,0.03)';
+                    (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--brand)';
+                    (e.currentTarget as HTMLDivElement).style.background = 'transparent';
                     (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
                   }}
                   onMouseLeave={e => {
@@ -417,64 +416,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ padding: 'var(--section-y) 0' }}>
-          <div className="cb-container">
-            <div
-              className="reveal"
-              style={{
-                textAlign: 'center', padding: 'clamp(40px, 6vw, 80px) clamp(20px, 4vw, 48px)',
-                background: 'var(--surface-alt)', border: '1px solid var(--line)',
-                borderRadius: 32, position: 'relative', overflow: 'hidden',
-              }}
-            >
-              {/* Glow */}
-              <div aria-hidden="true" style={{
-                position: 'absolute', top: '50%', left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: 500, height: 500,
-                background: 'transparent',
-                pointerEvents: 'none',
-              }} />
-              <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: 'var(--brand)', display: 'block', marginBottom: 20, position: 'relative',
-              }}>Join Our Clients</span>
-              <h2 style={{
-                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
-                letterSpacing: '-0.04em', marginBottom: 20, lineHeight: 1.1, position: 'relative',
-              }}>
-                Join 150+ companies<br />building with us.
-              </h2>
-              <p style={{
-                fontSize: 18, color: 'var(--muted)', maxWidth: 500,
-                margin: '0 auto 40px', lineHeight: 1.7, position: 'relative',
-              }}>
-                From seed-stage startups to public companies — we help every kind of builder ship software that makes a difference.
-              </p>
-              <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', position: 'relative' }}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <button style={{
-                    padding: '18px 44px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                    fontSize: 16, fontWeight: 700, border: 'none', cursor: 'pointer',
-                    transition: 'all 0.2s',
-                  }}>
-                    Start a Project
-                  </button>
-                </Link>
-                <Link href="/case-studies" style={{ textDecoration: 'none' }}>
-                  <button style={{
-                    padding: '18px 44px', borderRadius: 100,
-                    background: 'var(--surface-alt)', color: 'var(--body)',
-                    fontSize: 16, fontWeight: 600, border: '1px solid var(--line)', cursor: 'pointer',
-                    transition: 'all 0.2s',
-                  }}>
-                    View Case Studies
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FinalCta title="Let\u2019s talk about what you\u2019re building." sub="Tell us the problem. A senior engineer will come back within four hours with how we\u2019d approach it, what it takes and what it costs." />
 
         </article>
       </main>

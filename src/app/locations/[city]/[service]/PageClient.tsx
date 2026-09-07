@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
-import ComplianceAccordion from '@/components/home/ComplianceAccordion';
-import AwardsList from '@/components/home/AwardsList';
+import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import PageHero from '@/components/page/PageHero';
-import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, WhyUs, SuccessStories, CtaStrip } from '@/components/page/Blocks';
+import FinalCta from '@/components/home/FinalCta';
+import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, WhyUs, SuccessStories } from '@/components/page/Blocks';
 import { serviceMedia, defaultMedia, officeMedia } from '@/data/media';
 
 interface CityServicePageProps {
@@ -28,10 +28,16 @@ interface CityServicePageProps {
   applications: { industry: string; title: string; desc: string }[];
 }
 
-const Head = ({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) => (
-  <div style={{ maxWidth: 720, marginBottom: 'clamp(26px, 3.5vw, 44px)' }}>
-    <h2 style={{ margin: 0 }}>{title}</h2>
-    {sub && <p style={{ color: 'var(--body)', lineHeight: 1.75, marginTop: 14 }}>{sub}</p>}
+/* Column count that never orphans a row: three across when the count
+   divides by three, otherwise two. */
+const balanced = (n: number) => (n % 3 === 0 ? 'grid grid--3' : n % 2 === 0 ? 'grid grid--2' : 'grid grid--3');
+
+const Head = ({ title, sub }: { title: string; sub?: string }) => (
+  <div className="head">
+    <div>
+      <h2>{title}</h2>
+      {sub && <p className="lede">{sub}</p>}
+    </div>
   </div>
 );
 
@@ -57,12 +63,12 @@ export default function CityServicePageClient(p: CityServicePageProps) {
         <StatRow stats={p.stats} />
         <MediaBand media={serviceMedia[serviceSlug] ?? defaultMedia} />
 
-        <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
-            <Head eyebrow={`${cityName}, ${province}`} title={`${serviceName} for the industries that drive ${cityName}`} sub={p.intro} />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+            <Head title={`${serviceName} for the industries that drive ${cityName}`} sub={p.intro} />
+            <div className={balanced(p.applications.length)}>
               {p.applications.map(a => (
-                <article key={a.title} className="card card--flat" style={{ background: 'var(--surface-alt)' }}>
+                <article key={a.title} className="tile rise">
                   <span className="eyebrow" style={{ color: 'var(--brand)' }}>{a.industry}</span>
                   <h3 style={{ fontSize: 'var(--fs-h4)', margin: '12px 0 8px' }}>{a.title}</h3>
                   <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{a.desc}</p>
@@ -72,15 +78,14 @@ export default function CityServicePageClient(p: CityServicePageProps) {
           </div>
         </section>
 
-        <ServicesGrid title={`${serviceName} Services We Offer in ${cityName}`} items={services} bg="var(--surface-alt)" />
-        <CtaStrip title={`Need ${serviceName.toLowerCase()} in ${cityName}?`} sub={`A senior engineer will scope your project and send a fixed price within four hours — ${p.isHQ ? 'from our head office here in ' + cityName : 'with local delivery across ' + province}.`} bg="var(--surface)" />
+        <ServicesGrid title={`${serviceName} Services We Offer in ${cityName}`} items={services} />
 
-        <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
-            <Head eyebrow="Local advantage" title={`Why ${cityName} Businesses Choose ${serviceName}`} />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+            <Head title={`Why ${cityName} Businesses Choose ${serviceName}`} />
+            <div className={balanced(p.pricingTiers.length)}>
               {p.whyCity.map((w, i) => (
-                <div key={w.title} className="card card--flat" style={{ background: '#fff' }}>
+                <div key={w.title} className="tile rise">
                   <span className="idx">[ {i + 1} ]</span>
                   <h3 style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{w.title}</h3>
                   <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{w.desc}</p>
@@ -90,34 +95,34 @@ export default function CityServicePageClient(p: CityServicePageProps) {
           </div>
         </section>
 
-        <ProcessSteps title={`Our ${serviceName} Process`} steps={p.steps} bg="var(--surface)" />
-        <TechBlocks title="Technologies We Use" cats={tech} bg="var(--surface-alt)" />
-        <SuccessStories title={`Projects We've Built for ${province} Clients`} bg="var(--surface)" />
+        <ProcessSteps title={`Our ${serviceName} Process`} steps={p.steps} />
+        <TechBlocks title="Technologies We Use" cats={tech} />
+        <SuccessStories title={`Projects We've Built for ${province} Clients`} />
 
-        <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
-            <Head eyebrow="Client validation" title={`What ${cityName} Clients Say`} />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
+            <Head title={`What ${cityName} Clients Say`} />
+            <div className={balanced(p.testimonials.length)}>
               {p.testimonials.map(t => (
-                <blockquote key={t.name} style={{ margin: 0, background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', padding: 'clamp(24px, 3vw, 34px)', display: 'flex', flexDirection: 'column' }}>
+                <blockquote key={t.name} className="tile" style={{ margin: 0 }}>
                   <p style={{ fontSize: '1.05rem', color: 'var(--ink)', lineHeight: 1.6, fontWeight: 500, marginBottom: 20 }}>&ldquo;{t.quote}&rdquo;</p>
-                  <footer style={{ marginTop: 'auto' }}><div style={{ fontWeight: 700, color: 'var(--ink)' }}>{t.name}</div><div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 3 }}>{t.role}, {t.company}</div></footer>
+                  <footer className="tile__foot" style={{ paddingTop: 8 }}><div style={{ fontWeight: 700, color: 'var(--ink)' }}>{t.name}</div><div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 3 }}>{t.role}, {t.company}</div></footer>
                 </blockquote>
               ))}
             </div>
           </div>
         </section>
 
-        <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
-            <Head eyebrow="Investment" title={`${serviceName} Costs in ${cityName}`} sub="Fixed-scope, fixed-price. You know the number before we write a line of code." />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+            <Head title={`${serviceName} Costs in ${cityName}`} sub="Fixed-scope, fixed-price. You know the number before we write a line of code." />
+            <div className={balanced(p.pricingTiers.length)}>
               {p.pricingTiers.map((t, i) => (
-                <div key={t.name} className="card card--flat" style={{ background: i === 1 ? 'var(--surface-ink)' : 'var(--surface-alt)', color: i === 1 ? 'var(--on-ink-body)' : undefined }}>
-                  <div className="eyebrow" style={{ color: i === 1 ? 'var(--brand)' : 'var(--brand)' }}>{t.name}</div>
+                <div key={t.name} className="tile rise" style={{ background: i === 1 ? 'var(--surface-ink)' : undefined, borderColor: i === 1 ? 'var(--surface-ink)' : undefined, color: i === 1 ? 'var(--on-ink-body)' : undefined }}>
+                  <div style={{ fontSize: 13, fontWeight: 700, color: i === 1 ? '#fff' : 'var(--brand)' }}>{t.name}</div>
                   <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', fontWeight: 700, letterSpacing: '-0.04em', color: i === 1 ? '#fff' : 'var(--ink)', margin: '12px 0 16px' }}>{t.range}</div>
                   <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 8 }}>
-                    {t.features.map(f => <li key={f} style={{ display: 'flex', gap: 8, fontSize: 14 }}><span style={{ color: i === 1 ? 'var(--brand)' : 'var(--brand)' }}>✓</span>{f}</li>)}
+                    {t.features.map(f => <li key={f} style={{ display: 'flex', gap: 8, fontSize: 14 }}><span aria-hidden style={{ color: i === 1 ? '#fff' : 'var(--brand)' }}>✓</span>{f}</li>)}
                   </ul>
                 </div>
               ))}
@@ -125,28 +130,31 @@ export default function CityServicePageClient(p: CityServicePageProps) {
           </div>
         </section>
 
-        <WhyUs bg="var(--surface-alt)" />
-        <ComplianceAccordion />
-        <AwardsList />
+        <WhyUs />
+        <Credentials />
         <FaqSplit faqs={p.faqs} title={`Questions About ${serviceName} in ${cityName}`} />
 
-        <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container" style={{ display: 'grid', gap: 40 }}>
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Related Services in {cityName}</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.relatedCityServices.map(r => <Link key={r.serviceSlug} href={`/locations/${r.citySlug}/${r.serviceSlug}`} className="pill" style={{ background: '#fff' }}>{r.name}</Link>)}
-                {p.relatedSubServices.map(r => <Link key={r.slug} href={`/services/${serviceSlug}/${r.slug}`} className="pill" style={{ background: '#fff' }}>{r.name}</Link>)}
+                {p.relatedCityServices.map(r => <Link key={r.serviceSlug} href={`/locations/${r.citySlug}/${r.serviceSlug}`} className="pill">{r.name}</Link>)}
+                {p.relatedSubServices.map(r => <Link key={r.slug} href={`/services/${serviceSlug}/${r.slug}`} className="pill">{r.name}</Link>)}
               </div>
             </div>
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>{serviceName} Across Canada</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.sameServiceOtherCities.map(c => <Link key={c.citySlug} href={`/locations/${c.citySlug}/${c.serviceSlug}`} className="pill" style={{ background: '#fff' }}>{c.cityName}</Link>)}
+                {p.sameServiceOtherCities.map(c => <Link key={c.citySlug} href={`/locations/${c.citySlug}/${c.serviceSlug}`} className="pill">{c.cityName}</Link>)}
               </div>
             </div>
           </div>
         </section>
+        <FinalCta
+          title={`Need ${serviceName} in ${cityName}?`}
+          sub={`A senior engineer will scope your project and send a fixed price within four hours — ${p.isHQ ? 'from our head office here in ' + cityName : 'with local delivery across ' + province}.`}
+        />
       </main>
       <Footer />
     </>

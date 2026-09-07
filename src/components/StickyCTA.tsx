@@ -27,7 +27,7 @@ export default function StickyCTA() {
       zIndex: 900,
       background: 'var(--surface-alt)',
       backdropFilter: 'blur(20px)',
-      borderTop: '1px solid rgba(245,41,13,0.2)',
+      borderTop: '1px solid var(--brand)',
       padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 24px)',
       display: 'flex',
       alignItems: 'center',

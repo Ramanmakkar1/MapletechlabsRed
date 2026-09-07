@@ -27,7 +27,7 @@ export default function PageHero({ crumbs, copy, stats, photo, form = true, serv
               <Link href="/case-studies" className="btn btn--ghost btn--lg">View Our Work</Link>
             </div>
             {stats?.length ? (
-              <div style={{ display: 'flex', gap: 'clamp(20px, 3vw, 40px)', flexWrap: 'wrap' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(stats.length, 3)}, 1fr)`, gap: 'clamp(12px, 2vw, 32px)' }}>
                 {stats.slice(0, 3).map(s => (
                   <div key={s.label}>
                     <div style={{ fontSize: 'clamp(1.4rem, 2vw, 1.8rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1 }}>{s.value}</div>

@@ -78,8 +78,8 @@ export default function AppDevelopmentCostCanadaClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -120,7 +120,7 @@ export default function AppDevelopmentCostCanadaClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -144,7 +144,7 @@ export default function AppDevelopmentCostCanadaClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -198,13 +198,13 @@ export default function AppDevelopmentCostCanadaClient() {
 
                   {/* Simple App */}
                   <div style={{
-                    background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.15)',
+                    background: 'transparent', border: '1px solid transparent',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(52,211,153,0.15)', color: '#E11900',
+                        background: 'transparent', color: '#E11900',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Simple App / MVP</span>
                     </div>
@@ -219,8 +219,8 @@ export default function AppDevelopmentCostCanadaClient() {
                       {['5-8 screens', 'Single platform', 'Basic auth', 'Simple backend', '8-12 weeks'].map(tag => (
                         <span key={tag} style={{
                           fontSize: 12, padding: '5px 12px', borderRadius: 100,
-                          background: 'rgba(52,211,153,0.08)', color: 'var(--muted)',
-                          border: '1px solid rgba(52,211,153,0.1)',
+                          background: 'transparent', color: 'var(--muted)',
+                          border: '1px solid transparent',
                         }}>{tag}</span>
                       ))}
                     </div>
@@ -228,13 +228,13 @@ export default function AppDevelopmentCostCanadaClient() {
 
                   {/* Medium Complexity */}
                   <div style={{
-                    background: 'rgba(96,165,250,0.04)', border: '1px solid rgba(96,165,250,0.15)',
+                    background: 'transparent', border: '1px solid transparent',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(96,165,250,0.15)', color: '#E11900',
+                        background: 'transparent', color: '#E11900',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Medium Complexity</span>
                     </div>
@@ -249,8 +249,8 @@ export default function AppDevelopmentCostCanadaClient() {
                       {['15-30 screens', 'iOS + Android', 'Payment integration', 'Real-time features', 'Admin panel', '12-24 weeks'].map(tag => (
                         <span key={tag} style={{
                           fontSize: 12, padding: '5px 12px', borderRadius: 100,
-                          background: 'rgba(96,165,250,0.08)', color: 'var(--muted)',
-                          border: '1px solid rgba(96,165,250,0.1)',
+                          background: 'transparent', color: 'var(--muted)',
+                          border: '1px solid transparent',
                         }}>{tag}</span>
                       ))}
                     </div>
@@ -258,13 +258,13 @@ export default function AppDevelopmentCostCanadaClient() {
 
                   {/* Complex Enterprise */}
                   <div style={{
-                    background: 'rgba(167,139,250,0.04)', border: '1px solid rgba(167,139,250,0.15)',
+                    background: 'transparent', border: '1px solid transparent',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(167,139,250,0.15)', color: '#E11900',
+                        background: 'transparent', color: '#E11900',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Complex Enterprise</span>
                     </div>
@@ -279,8 +279,8 @@ export default function AppDevelopmentCostCanadaClient() {
                       {['50+ screens', 'AI/ML features', 'Microservices', 'PIPEDA compliance', 'IoT integration', 'Custom APIs', '6-18 months'].map(tag => (
                         <span key={tag} style={{
                           fontSize: 12, padding: '5px 12px', borderRadius: 100,
-                          background: 'rgba(167,139,250,0.08)', color: 'var(--muted)',
-                          border: '1px solid rgba(167,139,250,0.1)',
+                          background: 'transparent', color: 'var(--muted)',
+                          border: '1px solid transparent',
                         }}>{tag}</span>
                       ))}
                     </div>
@@ -312,7 +312,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     }}>
                       <span style={{
-                        fontSize: 14, fontWeight: 800, color: 'rgba(245,41,13,0.4)',
+                        fontSize: 14, fontWeight: 800, color: 'transparent',
                         flexShrink: 0, width: 28,
                       }}>{factor.num}</span>
                       <div>
@@ -346,8 +346,8 @@ export default function AppDevelopmentCostCanadaClient() {
                         <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', marginBottom: 4 }}>{p.platform}</h3>
                         <p style={{ fontSize: 12, color: 'var(--faint)', marginBottom: 16 }}>{p.lang}</p>
                         <p style={{ fontSize: 20, fontWeight: 800, color: 'var(--brand)', marginBottom: 16 }}>{p.cost}</p>
-                        <p style={{ fontSize: 13, color: 'rgba(52,211,153,0.8)', marginBottom: 6 }}>+ {p.pros}</p>
-                        <p style={{ fontSize: 13, color: 'rgba(248,113,113,0.8)', margin: 0 }}>- {p.cons}</p>
+                        <p style={{ fontSize: 13, color: 'var(--brand)', marginBottom: 6 }}>+ {p.pros}</p>
+                        <p style={{ fontSize: 13, color: 'var(--brand)', margin: 0 }}>- {p.cons}</p>
                       </div>
                     ))}
                   </div>
@@ -371,7 +371,7 @@ export default function AppDevelopmentCostCanadaClient() {
                     display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: 20, marginBottom: 28,
                   }}>
                     <div style={{
-                      background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       borderRadius: 20, padding: 28,
                     }}>
                       <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)', marginBottom: 12 }}>Canadian Agencies</h3>
@@ -434,7 +434,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       </div>
                       <span style={{
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', whiteSpace: 'nowrap', flexShrink: 0,
-                        background: 'rgba(245,41,13,0.08)', padding: '6px 14px', borderRadius: 100,
+                        background: 'transparent', padding: '6px 14px', borderRadius: 100,
                       }}>{item.cost}</span>
                     </div>
                   ))}
@@ -443,21 +443,21 @@ export default function AppDevelopmentCostCanadaClient() {
                 {/* Mapletech Labs Pricing */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-pricing">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)', border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden'
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.3)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🍁</div>
                       <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
+                            background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Our Approach</span>
                         </div>
@@ -479,10 +479,10 @@ export default function AppDevelopmentCostCanadaClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', gap: 10, position: 'relative', zIndex: 1
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
                       <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
@@ -509,7 +509,7 @@ export default function AppDevelopmentCostCanadaClient() {
                   </p>
                   <div style={{
                     padding: '20px 24px', borderRadius: 16,
-                    background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.12)',
+                    background: 'transparent', border: '1px solid transparent',
                   }}>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
                       <strong style={{ color: '#E11900' }}>Real example:</strong> A Toronto fintech startup approached us after receiving quotes of $280,000-$350,000 from GTA agencies. We delivered the same scope for $195,000, on time and under budget. Same tech stack. Same quality. Just smarter economics.
@@ -531,7 +531,7 @@ export default function AppDevelopmentCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -543,7 +543,7 @@ export default function AppDevelopmentCostCanadaClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -563,13 +563,13 @@ export default function AppDevelopmentCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -589,7 +589,7 @@ export default function AppDevelopmentCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -600,8 +600,8 @@ export default function AppDevelopmentCostCanadaClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -628,7 +628,7 @@ export default function AppDevelopmentCostCanadaClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -636,7 +636,7 @@ export default function AppDevelopmentCostCanadaClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get Started</p>
                 <h2 style={{

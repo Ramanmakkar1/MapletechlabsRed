@@ -1,11 +1,12 @@
 'use client';
+import Image from 'next/image';
 
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import { caseStudyMedia, workMedia } from '@/data/media';
+import { caseStudyMedia } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
@@ -57,8 +58,8 @@ export default function HealthcareCaseStudyClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 32, marginBottom: 16 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Healthcare</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>Healthcare Client &middot; Calgary</span>
@@ -78,26 +79,11 @@ export default function HealthcareCaseStudyClient() {
               We designed and built a fully compliant telehealth platform that connects patients with specialists through encrypted HD video, integrated EHR workflows, and a seamless mobile experience.
             </p>
 
-            {/* Placeholder image */}
-            <div className="reveal reveal-d4" style={{
-              width: '100%',
-              aspectRatio: '16/9',
-              borderRadius: 20,
-              background: 'var(--brand-tint))',
-              border: '1px solid var(--line)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginBottom: 48,
-            }}>
-              <span style={{ fontSize: 15, color: 'var(--faint)', fontWeight: 500 }}>
-                Case Study Visual — Coming Soon
-              </span>
-            </div>
+            <figure className="media media--lg fade" style={{ aspectRatio: '16 / 9', margin: '0 0 48px' }}>
+              <Image src={caseStudyMedia['healthcare-telehealth'].src} alt={caseStudyMedia['healthcare-telehealth'].alt} fill priority sizes="(max-width: 1400px) 100vw, 1320px" style={{ objectFit: 'cover' }} />
+            </figure>
           </div>
         </section>
-
-        <MediaBand media={caseStudyMedia['healthcare-telehealth'] ?? workMedia.fintech} />
 
         {/* ── OVERVIEW GRID ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
@@ -116,7 +102,7 @@ export default function HealthcareCaseStudyClient() {
                   background: 'var(--surface-alt)', border: '1px solid var(--line)',
                 }}>
                   <p style={{
-                    fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                    fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                     color: 'var(--brand)', marginBottom: 16,
                   }}>{card.title}</p>
                   <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
@@ -133,7 +119,7 @@ export default function HealthcareCaseStudyClient() {
           <div className="cb-container">
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                 color: 'var(--brand)', marginBottom: 16,
               }}>The Challenge</p>
               <h2 style={{
@@ -159,7 +145,7 @@ export default function HealthcareCaseStudyClient() {
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="reveal" style={{ maxWidth: 760 }}>
               <p style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                 color: 'var(--brand)', marginBottom: 16,
               }}>Our Solution</p>
               <h2 style={{
@@ -195,7 +181,7 @@ export default function HealthcareCaseStudyClient() {
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <p className="reveal" style={{
-              fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+              fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
               color: 'var(--brand)', marginBottom: 16,
             }}>Key Results</p>
             <h2 className="reveal" style={{
@@ -229,13 +215,13 @@ export default function HealthcareCaseStudyClient() {
             <div className="reveal" style={{
               maxWidth: 760,
               padding: 'clamp(24px, 4vw, 48px)', borderRadius: 24,
-              background: 'var(--brand-tint))',
-              border: '1px solid rgba(245,41,13,0.15)',
+              background: 'var(--surface)',
+              border: '1px solid var(--brand)',
               position: 'relative',
             }}>
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style={{ marginBottom: 24, opacity: 0.15 }}>
-                <path d="M10 11H6a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 011 1v7c0 2.21-1.79 4-4 4" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M20 11h-4a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 011 1v7c0 2.21-1.79 4-4 4" stroke="#f5290d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10 11H6a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 011 1v7c0 2.21-1.79 4-4 4" stroke="#E11900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M20 11h-4a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 011 1v7c0 2.21-1.79 4-4 4" stroke="#E11900" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <p style={{
                 fontSize: 20, color: 'var(--body)', lineHeight: 1.7,
@@ -255,14 +241,14 @@ export default function HealthcareCaseStudyClient() {
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="reveal" style={{
-              background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+              background: 'transparent', border: '1px solid var(--brand)',
               borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 56px)',
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               flexWrap: 'wrap', gap: 32,
             }}>
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Start a Similar Project</p>
                 <h2 style={{

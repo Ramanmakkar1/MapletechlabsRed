@@ -39,7 +39,7 @@ function StatCard({ s, index, active }: { s: typeof stats[0]; index: number; act
         transition: 'all 0.3s ease',
         cursor: 'default',
       }}
-      onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.05)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(245,41,13,0.08)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+      onMouseEnter={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.boxShadow = '0 0 20px transparent'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
       onMouseLeave={e => { e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
     >
       <div style={{ width: 28, height: 3, background: 'var(--brand)', borderRadius: 2, marginBottom: 'clamp(20px, 3vw, 36px)' }} />
@@ -79,7 +79,7 @@ export default function SuccessMetrics() {
       <div className="cb-container">
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(20px, 4vw, 40px)', marginBottom: 'clamp(40px, 6vw, 80px)', flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>By The Numbers</div>
+            <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 20 }}>By The Numbers</div>
             <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               The Results<br /><span style={{ color: 'var(--faint)' }}>Speak Loudly.</span>
             </h2>

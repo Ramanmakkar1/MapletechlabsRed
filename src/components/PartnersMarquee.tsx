@@ -33,7 +33,7 @@ export default function PartnersMarquee() {
 
       {/* Label */}
       <div style={{ textAlign: 'center', marginBottom: 32, position: 'relative', zIndex: 3 }}>
-        <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--faint)', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
+        <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--faint)', textTransform: 'none', letterSpacing: '-0.005em' }}>
           Trusted by 150+ companies worldwide
         </span>
       </div>

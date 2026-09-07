@@ -329,7 +329,7 @@ export default function Navbar() {
           padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r-md);
           background: var(--surface-alt); transition: .22s ease;
         }
-        .mega-card:hover { border-color: var(--brand-line); background: var(--brand-tint); transform: translateY(-2px); }
+        .mega-card:hover { border-color: var(--brand-line); background: var(--surface); transform: translateY(-2px); }
         .nav-mobile-drawer { display: block; }
         @media (min-width: 1024px) { .nav-mobile-drawer { display: none; } }
       `}</style>
@@ -340,7 +340,7 @@ export default function Navbar() {
 function MegaHead({ title, href, cta }: { title: string; href: string; cta: string }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, marginBottom: 26, paddingBottom: 16, borderBottom: '1px solid var(--line)' }}>
-      <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--muted)' }}>
+      <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--muted)' }}>
         {title}
       </span>
       <Link href={href} className="link-arrow" style={{ fontSize: 14 }}>

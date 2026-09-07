@@ -39,12 +39,12 @@ export const caseStudyMedia: Record<string, Media> = {
 };
 
 export const industryMedia: Record<string, Media> = {
-  fintech: { src: `${S}/ind-fintech.webp`, alt: 'Desk with a keyboard, calculator and tablet showing market charts' },
+  fintech: { src: `${S}/work-fintech.webp`, alt: 'Live market data on a trading dashboard and companion mobile app' },
   healthcare: { src: `${S}/ind-healthcare.webp`, alt: 'Doctor reviewing a diagnostic scan on a tablet' },
-  ecommerce: { src: `${S}/ind-ecommerce.webp`, alt: 'Packed cartons ready for despatch' },
+  ecommerce: { src: `${S}/human-delivery.webp`, alt: 'A shopper paying by phone at a small retail counter' },
   logistics: { src: `${S}/ind-logistics.webp`, alt: 'Forklift moving pallets through a distribution centre' },
-  edtech: { src: `${S}/ind-edtech.webp`, alt: 'Student working through coursework at a computer' },
-  enterprise: { src: `${S}/ind-enterprise.webp`, alt: 'Open-plan enterprise office with rows of workstations' },
+  edtech: { src: `${S}/ind-edtech.webp`, alt: 'A student working through coursework at a computer' },
+  enterprise: { src: `${S}/human-boardroom.webp`, alt: 'An engineering team talking at their desks in an open studio' },
 };
 
 export const blogMedia: Media[] = [
@@ -72,13 +72,33 @@ export const serviceMedia: Record<string, Media> = {
 };
 
 /** Fallback so a page never renders an empty band. */
-export const defaultMedia: Media = { src: `${S}/office-open.webp`, alt: 'Mapletech Labs studio' };
+export const defaultMedia: Media = { src: `${S}/human-team.webp`, alt: 'A product team working across laptops around one table' };
 
+/* Page heroes point here. Empty rooms said nothing, so these are the
+   working situations the rooms exist for. */
 export const officeMedia: Record<string, Media> = {
-  open: { src: `${S}/office-open.webp`, alt: 'Open-plan studio with white desks and glass partitions' },
-  meeting: { src: `${S}/office-meeting.webp`, alt: 'Conference room set for a project review' },
-  desk: { src: `${S}/office-desk.webp`, alt: 'Engineer working across multiple monitors' },
+  open: { src: `${S}/human-boardroom.webp`, alt: 'An engineering team talking through a problem at their desks' },
+  meeting: { src: `${S}/human-standup.webp`, alt: 'A project review around a table in the morning light' },
+  desk: { src: `${S}/human-studio.webp`, alt: 'A quiet studio corridor with glass-walled meeting rooms' },
 };
+
+
+/* ── Editorial human photography ──────────────────────────
+   The site's story is what technology does for people, so these
+   carry the image-led sections. Natural light, real working
+   situations, no staged handshakes and no synthetic people. */
+export const humanMedia = {
+  analysts:  { src: `${S}/human-analyst.webp`,   alt: 'Two engineers reviewing code together at a bright office desk' },
+  team:      { src: `${S}/human-team.webp`,      alt: 'A product team working across laptops around one table' },
+  workshop:  { src: `${S}/human-workshop.webp`,  alt: 'Four colleagues talking through an idea over a tablet' },
+  standup:   { src: `${S}/human-standup.webp`,   alt: 'A working session around a table, notes and coffee in the morning light' },
+  office:    { src: `${S}/human-boardroom.webp`, alt: 'An engineering team talking at their desks in an open studio' },
+  pairing:   { src: `${S}/human-devs.webp`,      alt: 'Two developers pairing on a problem at a shared screen' },
+  designer:  { src: `${S}/human-designer.webp`,  alt: 'A designer sketching interface wireframes on a tablet' },
+  studio:    { src: `${S}/human-studio.webp`,    alt: 'A calm studio corridor with glass-walled meeting rooms' },
+  checkout:  { src: `${S}/human-delivery.webp`,  alt: 'A shopper paying by phone at a small retail counter' },
+  founder:   { src: `${S}/human-mobile.webp`,    alt: 'A founder working through the day at her laptop' },
+} satisfies Record<string, Media>;
 
 /** Deterministic pick so a card always gets the same photo across renders. */
 export const blogImage = (i: number): Media => blogMedia[i % blogMedia.length];

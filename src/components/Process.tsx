@@ -20,7 +20,7 @@ const steps = [
     title: 'Architecture & Design',
     desc: 'We architect systems that scale before writing the first line. UX design and technical design happen in tandem.',
     detail: 'System design · UI prototyping · Design system · API contracts',
-    color: '#4f46e5',
+    color: '#E11900',
   },
   {
     num: '03',

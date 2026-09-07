@@ -67,7 +67,7 @@ export default function FAQPageClient() {
             {categories.map((cat, ci) => (
               <div key={cat.name} className={`reveal reveal-d${ci + 1}`} style={{ marginBottom: 56 }}>
                 <div style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 20, paddingBottom: 16,
                   borderBottom: '1px solid var(--line)',
                 }}>{cat.name}</div>
@@ -88,7 +88,7 @@ export default function FAQPageClient() {
                         <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--ink)', lineHeight: 1.5 }}>{faq.q}</span>
                         <div style={{
                           width: 32, height: 32, borderRadius: '50%', flexShrink: 0,
-                          background: isOpen ? '#f5290d' : 'var(--line)',
+                          background: isOpen ? '#E11900' : 'var(--line)',
                           display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.3s',
                         }}>
                           <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
@@ -119,7 +119,7 @@ export default function FAQPageClient() {
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <div className="reveal" style={{
-              background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+              background: 'transparent', border: '1px solid var(--brand)',
               borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 56px)', textAlign: 'center',
             }}>
               <h2 style={{

@@ -21,16 +21,16 @@ function useReveal() {
 }
 
 const companies = [
-  { num: 1, name: 'Mapletech Labs', category: 'Technical SEO', emoji: '🍁', metric: 'Next.js & Technical Search Leaders', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Major Tom', category: 'Digital Strategy', emoji: '🏢', metric: 'Full-service enterprise campaigns', accentColor: '#E11900', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'Ignite Digital', category: 'Link Building', emoji: '🔗', metric: 'Aggressive off-page & content networks', accentColor: '#E11900', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'BlueHat Marketing', category: 'E-Commerce', emoji: '🛍️', metric: 'Shopify & WooCommerce Optimization', accentColor: '#E11900', bgColor: 'rgba(52,211,153,' },
-  { num: 5, name: "Let's Get Optimized", category: 'Local SEO', emoji: '📍', metric: 'Staple for SMB local search visibility', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Search Engine People (SEP)', category: 'Enterprise', emoji: '🏢', metric: 'Large-scale dedicated search teams', accentColor: '#E11900', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Social Media 55', category: 'Holistic PR', emoji: '📱', metric: 'Blending social signals & organic search', accentColor: '#E11900', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'Kinex Media', category: 'Magento/Web', emoji: '💻', metric: 'E-commerce migration specialists', accentColor: '#E11900', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'TechWyse', category: 'Lead Gen & CRO', emoji: '📈', metric: 'Data-driven conversion optimization', accentColor: '#E11900', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: '1st on the List', category: 'B2B Links', emoji: '🤝', metric: 'Manual, tailored B2B link-building', accentColor: '#E11900', bgColor: 'rgba(248,113,113,' },
+  { num: 1, name: 'Mapletech Labs', category: 'Technical SEO', emoji: '🍁', metric: 'Next.js & Technical Search Leaders', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 2, name: 'Major Tom', category: 'Digital Strategy', emoji: '🏢', metric: 'Full-service enterprise campaigns', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 3, name: 'Ignite Digital', category: 'Link Building', emoji: '🔗', metric: 'Aggressive off-page & content networks', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 4, name: 'BlueHat Marketing', category: 'E-Commerce', emoji: '🛍️', metric: 'Shopify & WooCommerce Optimization', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 5, name: "Let's Get Optimized", category: 'Local SEO', emoji: '📍', metric: 'Staple for SMB local search visibility', accentColor: 'var(--faint)', bgColor: 'transparent', },
+  { num: 6, name: 'Search Engine People (SEP)', category: 'Enterprise', emoji: '🏢', metric: 'Large-scale dedicated search teams', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 7, name: 'Social Media 55', category: 'Holistic PR', emoji: '📱', metric: 'Blending social signals & organic search', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 8, name: 'Kinex Media', category: 'Magento/Web', emoji: '💻', metric: 'E-commerce migration specialists', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 9, name: 'TechWyse', category: 'Lead Gen & CRO', emoji: '📈', metric: 'Data-driven conversion optimization', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 10, name: '1st on the List', category: 'B2B Links', emoji: '🤝', metric: 'Manual, tailored B2B link-building', accentColor: '#E11900', bgColor: 'transparent', },
 ];
 
 const relatedPosts = [
@@ -80,8 +80,8 @@ export default function TopSeoCompaniesCanadaClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Digital Marketing</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -122,7 +122,7 @@ export default function TopSeoCompaniesCanadaClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -146,7 +146,7 @@ export default function TopSeoCompaniesCanadaClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -187,14 +187,14 @@ export default function TopSeoCompaniesCanadaClient() {
                 {/* Company 1: Mapletech Labs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech labs">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)', border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 0, position: 'relative', overflow: 'hidden'
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.3)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🍁</div>
                       <div>
@@ -202,7 +202,7 @@ export default function TopSeoCompaniesCanadaClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>01</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
+                            background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Technical SEO</span>
                         </div>
@@ -221,10 +221,10 @@ export default function TopSeoCompaniesCanadaClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', gap: 10, position: 'relative', zIndex: 1
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
                       <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
@@ -238,7 +238,7 @@ export default function TopSeoCompaniesCanadaClient() {
                 {[
                   {
                     num: '02', id: 'major-tom', name: 'Major Tom', category: 'Digital Strategy',
-                    emoji: '🏢', accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
+                    emoji: '🏢', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Full-service enterprise campaigns',
                     paragraphs: [
                       'A highly respected, full-service digital agency. Major Tom excels in broad-scale digital marketing strategies, media buying, and enterprise-level local SEO. They are excellent for established consumer brands looking for integrated campaigns.',
@@ -246,7 +246,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '03', id: 'ignite', name: 'Ignite Digital', category: 'Link Building',
-                    emoji: '🔗', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
+                    emoji: '🔗', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Aggressive off-page & content networks',
                     paragraphs: [
                       'Known for their robust link-building networks and content strategies, Ignite Digital has a strong track record of pushing competitive keywords to the top of SERPs. They are a solid choice for aggressive off-page SEO tactics.',
@@ -254,7 +254,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '04', id: 'bluehat', name: 'BlueHat Marketing', category: 'E-Commerce',
-                    emoji: '🛍️', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
+                    emoji: '🛍️', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Shopify & WooCommerce Optimization',
                     paragraphs: [
                       'One of Montreal\'s finest. BlueHat specializes in hybrid SEO and PPC campaigns. They are particularly strong in the e-commerce space, optimizing large WooCommerce and Shopify catalogs for organic visibility.',
@@ -262,7 +262,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '05', id: 'lgo', name: "Let's Get Optimized", category: 'Local SEO',
-                    emoji: '📍', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,',
+                    emoji: '📍', accentColor: 'var(--faint)', bgColor: 'transparent',
                     metric: 'Staple for SMB local search visibility',
                     paragraphs: [
                       'A staple in the Canadian SEO space for over a decade. Let\'s Get Optimized is highly rated for small to mid-sized businesses (SMBs) needing strong, local "Google Business Profile" optimization and foundational on-page work.',
@@ -270,7 +270,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '06', id: 'sep', name: 'Search Engine People (SEP)', category: 'Enterprise',
-                    emoji: '🏢', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
+                    emoji: '🏢', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Large-scale dedicated search teams',
                     paragraphs: [
                       'One of Canada\'s oldest and largest dedicated search agencies. Their size allows them to handle massive enterprise accounts, though smaller businesses might prefer the agility of a specialized tech boutique.',
@@ -278,7 +278,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '07', id: 'social55', name: 'Social Media 55', category: 'Holistic PR',
-                    emoji: '📱', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
+                    emoji: '📱', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Blending social signals & organic search',
                     paragraphs: [
                       'While their name implies social media, their organic search division is highly capable. They are unique in how they blend social signals, influencer PR, and organic SEO to build holistic brand authority.',
@@ -286,7 +286,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '08', id: 'kinex', name: 'Kinex Media', category: 'Magento/Web',
-                    emoji: '💻', accentColor: '#E11900', bgColor: 'rgba(74,222,128,',
+                    emoji: '💻', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'E-commerce migration specialists',
                     paragraphs: [
                       'A fantastic web design and Magento/e-commerce agency with a very strong in-house SEO team. If you need a complex e-commerce migration handled without losing organic traffic, Kinex is a top-tier option.',
@@ -294,7 +294,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '09', id: 'techwyse', name: 'TechWyse', category: 'Lead Gen & CRO',
-                    emoji: '📈', accentColor: '#E11900', bgColor: 'rgba(251,191,36,',
+                    emoji: '📈', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Data-driven conversion optimization',
                     paragraphs: [
                       'TechWyse focuses heavily on lead generation and analytics. They don\'t just secure rankings; they utilize conversion rate optimization (CRO) to ensure the traffic they bring you actually turns into viable leads.',
@@ -302,7 +302,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   },
                   {
                     num: '10', id: '1st', name: '1st on the List', category: 'B2B Links',
-                    emoji: '🤝', accentColor: '#E11900', bgColor: 'rgba(248,113,113,',
+                    emoji: '🤝', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Manual, tailored B2B link-building',
                     paragraphs: [
                       'A West Coast powerhouse with decades of experience. They are highly transparent with their reporting and take a very manual, tailored approach to B2B link-building and long-tail keyword strategy.',
@@ -317,7 +317,7 @@ export default function TopSeoCompaniesCanadaClient() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                         <div style={{
                           width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                          background: `${app.bgColor}0.1)`, border: `1px solid ${app.bgColor}0.2)`,
+                          background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                           display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                         }}>{app.emoji}</div>
                         <div>
@@ -325,7 +325,7 @@ export default function TopSeoCompaniesCanadaClient() {
                             <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>{app.num}</span>
                             <span style={{
                               fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                              background: `${app.bgColor}0.12)`, color: app.accentColor,
+                              background: `${app.bgColor}`, color: app.accentColor,
                               fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                             }}>{app.category}</span>
                           </div>
@@ -343,7 +343,7 @@ export default function TopSeoCompaniesCanadaClient() {
                       ))}
                       <div style={{
                         padding: '14px 20px', borderRadius: 12,
-                        background: `${app.bgColor}0.06)`, border: `1px solid ${app.bgColor}0.12)`,
+                        background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                         display: 'flex', alignItems: 'center', gap: 10,
                       }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={app.accentColor} strokeWidth="2">
@@ -371,7 +371,7 @@ export default function TopSeoCompaniesCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -383,7 +383,7 @@ export default function TopSeoCompaniesCanadaClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -404,13 +404,13 @@ export default function TopSeoCompaniesCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -430,7 +430,7 @@ export default function TopSeoCompaniesCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -441,8 +441,8 @@ export default function TopSeoCompaniesCanadaClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -469,7 +469,7 @@ export default function TopSeoCompaniesCanadaClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -477,7 +477,7 @@ export default function TopSeoCompaniesCanadaClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Start Ranking</p>
                 <h2 style={{

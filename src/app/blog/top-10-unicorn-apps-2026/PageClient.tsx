@@ -80,8 +80,8 @@ export default function BlogPostPageClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 13, 2026</span>
@@ -122,7 +122,7 @@ export default function BlogPostPageClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -146,7 +146,7 @@ export default function BlogPostPageClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -190,7 +190,7 @@ export default function BlogPostPageClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(96,165,250,0.1)', border: '1px solid rgba(96,165,250,0.2)',
+                        background: 'transparent', border: '1px solid transparent',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>💳</div>
                       <div>
@@ -198,7 +198,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>01</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(96,165,250,0.12)', color: '#E11900',
+                            background: 'transparent', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>FinTech</span>
                         </div>
@@ -220,7 +220,7 @@ export default function BlogPostPageClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(96,165,250,0.06)', border: '1px solid rgba(96,165,250,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
@@ -242,7 +242,7 @@ export default function BlogPostPageClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(52,211,153,0.1)', border: '1px solid rgba(52,211,153,0.2)',
+                        background: 'transparent', border: '1px solid transparent',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🏥</div>
                       <div>
@@ -250,7 +250,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>02</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(52,211,153,0.12)', color: '#E11900',
+                            background: 'transparent', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>HealthTech</span>
                         </div>
@@ -272,7 +272,7 @@ export default function BlogPostPageClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(52,211,153,0.06)', border: '1px solid rgba(52,211,153,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
@@ -294,7 +294,7 @@ export default function BlogPostPageClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(251,191,36,0.1)', border: '1px solid rgba(251,191,36,0.2)',
+                        background: 'transparent', border: '1px solid transparent',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🚚</div>
                       <div>
@@ -302,7 +302,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>03</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(251,191,36,0.12)', color: '#E11900',
+                            background: 'transparent', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Logistics</span>
                         </div>
@@ -324,7 +324,7 @@ export default function BlogPostPageClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(251,191,36,0.06)', border: '1px solid rgba(251,191,36,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
@@ -346,7 +346,7 @@ export default function BlogPostPageClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.2)',
+                        background: 'transparent', border: '1px solid transparent',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>⚡</div>
                       <div>
@@ -354,7 +354,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>04</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(167,139,250,0.12)', color: '#E11900',
+                            background: 'transparent', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>DevTools</span>
                         </div>
@@ -376,7 +376,7 @@ export default function BlogPostPageClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
@@ -398,7 +398,7 @@ export default function BlogPostPageClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.2)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🌿</div>
                       <div>
@@ -406,7 +406,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>05</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                            background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Sustainability</span>
                         </div>
@@ -428,10 +428,10 @@ export default function BlogPostPageClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(245,41,13,0.06)', border: '1px solid rgba(245,41,13,0.12)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
                       <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
@@ -445,7 +445,7 @@ export default function BlogPostPageClient() {
                 {[
                   {
                     num: '06', id: 'mindspace', name: 'MindSpace', category: 'MentalHealth',
-                    emoji: '🧠', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
+                    emoji: '🧠', accentColor: '#E11900', bgColor: 'transparent',
                     metric: '$1.6B valuation, 72% 90-day retention',
                     paragraphs: [
                       'MindSpace arrived at a moment when the mental health app market was drowning in meditation timers and breathing exercises. Their differentiation was clinical rigour: the app delivers structured Cognitive Behavioural Therapy programmes co-developed with licensed psychologists, adapted in real time by an AI coach that adjusts difficulty, pacing, and content based on your mood check-ins and engagement patterns.',
@@ -455,7 +455,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '07', id: 'tradeedge', name: 'TradeEdge', category: 'FinTech',
-                    emoji: '📈', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
+                    emoji: '📈', accentColor: '#E11900', bgColor: 'transparent',
                     metric: '$2.1B valuation, $900M daily trade volume',
                     paragraphs: [
                       'Retail algorithmic trading was inaccessible before TradeEdge — building a trading bot required Python proficiency, API keys, and a willingness to risk real money while learning. TradeEdge\'s no-code strategy builder lets retail investors construct, backtest, and deploy trading algorithms through a drag-and-drop mobile interface, with simulated paper trading before going live. The democratisation of algo trading, made real.',
@@ -465,7 +465,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '08', id: 'foodforge', name: 'FoodForge', category: 'FoodTech',
-                    emoji: '🍽️', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
+                    emoji: '🍽️', accentColor: '#E11900', bgColor: 'transparent',
                     metric: '$1.3B valuation, 34M meals planned/week',
                     paragraphs: [
                       'Meal planning apps have existed for a decade and have mostly failed because they create work rather than remove it. FoodForge\'s AI meal planner takes your dietary preferences, current pantry inventory (scanned via camera), local grocery prices, and weekly schedule to generate a complete meal plan with a single tap — then automatically adds missing ingredients to your preferred grocery delivery app.',
@@ -475,7 +475,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '09', id: 'vaultid', name: 'VaultID', category: 'Identity',
-                    emoji: '🔐', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,',
+                    emoji: '🔐', accentColor: 'var(--faint)', bgColor: 'transparent',
                     metric: '$1.5B valuation, zero identity breaches to date',
                     paragraphs: [
                       'VaultID is the decentralised identity app that enterprises actually adopted. While blockchain-based identity projects spent years promising a revolution and delivering complexity, VaultID built on the W3C Decentralised Identifiers standard with a mobile UX that\'s simpler than a password manager. Users hold their own cryptographic credentials on-device, share them selectively with any compatible service, and revoke access instantly — all from an interface that looks like a digital wallet.',
@@ -485,7 +485,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '10', id: 'loomai', name: 'LoomAI', category: 'CreativeTech',
-                    emoji: '🎬', accentColor: '#E11900', bgColor: 'rgba(248,113,113,',
+                    emoji: '🎬', accentColor: '#E11900', bgColor: 'transparent',
                     metric: '$3.2B valuation, 180M videos generated',
                     paragraphs: [
                       'LoomAI is the highest-valued unicorn on this list, and it got there by doing one thing: making professional video production accessible to everyone with a phone. Input a script, choose a visual style, and LoomAI generates a complete video with AI presenters, dynamic graphics, background music, and captions in under 3 minutes. The output quality crossed the threshold that marketers, educators, and content creators need for professional use — a bar that previous tools never cleared.',
@@ -502,7 +502,7 @@ export default function BlogPostPageClient() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                         <div style={{
                           width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                          background: `${app.bgColor}0.1)`, border: `1px solid ${app.bgColor}0.2)`,
+                          background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                           display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                         }}>{app.emoji}</div>
                         <div>
@@ -510,7 +510,7 @@ export default function BlogPostPageClient() {
                             <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>{app.num}</span>
                             <span style={{
                               fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                              background: `${app.bgColor}0.12)`, color: app.accentColor,
+                              background: `${app.bgColor}`, color: app.accentColor,
                               fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                             }}>{app.category}</span>
                           </div>
@@ -528,7 +528,7 @@ export default function BlogPostPageClient() {
                       ))}
                       <div style={{
                         padding: '14px 20px', borderRadius: 12,
-                        background: `${app.bgColor}0.06)`, border: `1px solid ${app.bgColor}0.12)`,
+                        background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                         display: 'flex', alignItems: 'center', gap: 10,
                       }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={app.accentColor} strokeWidth="2">
@@ -564,7 +564,7 @@ export default function BlogPostPageClient() {
                 {/* ── KEY TAKEAWAYS BOX ── */}
                 <div className="reveal" style={{ marginBottom: 64 }}>
                   <div style={{
-                    background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                    background: 'transparent', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36,
                   }}>
                     <h3 style={{
@@ -584,7 +584,7 @@ export default function BlogPostPageClient() {
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
                           <span style={{
                             width: 22, height: 22, borderRadius: '50%', flexShrink: 0,
-                            background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
+                            background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                             fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center',
                             marginTop: 2,
                           }}>{i + 1}</span>
@@ -609,7 +609,7 @@ export default function BlogPostPageClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -621,7 +621,7 @@ export default function BlogPostPageClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -642,13 +642,13 @@ export default function BlogPostPageClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -668,7 +668,7 @@ export default function BlogPostPageClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -679,8 +679,8 @@ export default function BlogPostPageClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -707,7 +707,7 @@ export default function BlogPostPageClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -715,7 +715,7 @@ export default function BlogPostPageClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Start Building</p>
                 <h2 style={{

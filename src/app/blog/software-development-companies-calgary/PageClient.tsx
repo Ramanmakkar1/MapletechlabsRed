@@ -21,16 +21,16 @@ function useReveal() {
 }
 
 const companies = [
-  { num: 1, name: 'Mapletech Labs', category: 'Enterprise Software', emoji: '🍁', metric: 'Next.js, AI Solutions & Cloud Infrastructure', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Townmedialabs', category: 'Digital Products', emoji: '🎨', metric: 'Creative digital solutions for Calgary businesses', accentColor: '#E11900', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'TML', category: 'Startup Tech', emoji: '🚀', metric: 'Full-stack development & rapid prototyping', accentColor: '#E11900', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'Absorb Software', category: 'LMS & E-Learning', emoji: '📚', metric: 'Enterprise learning management platforms', accentColor: '#E11900', bgColor: 'rgba(52,211,153,' },
-  { num: 5, name: 'Symend', category: 'Behavioural AI', emoji: '🧠', metric: 'AI-driven behavioural science solutions', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Benevity', category: 'CSR Tech', emoji: '💚', metric: 'Corporate social responsibility platforms', accentColor: '#E11900', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Solium (Shareworks)', category: 'Equity Mgmt', emoji: '📊', metric: 'Equity management & compensation platforms', accentColor: '#E11900', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'Neo Financial', category: 'FinTech', emoji: '💳', metric: 'Next-gen banking & financial products', accentColor: '#E11900', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'Helcim', category: 'Payments', emoji: '💰', metric: 'Transparent payment processing solutions', accentColor: '#E11900', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: 'Attabotics', category: 'Robotics & AI', emoji: '🤖', metric: 'Warehouse robotics & supply chain AI', accentColor: '#E11900', bgColor: 'rgba(248,113,113,' },
+  { num: 1, name: 'Mapletech Labs', category: 'Enterprise Software', emoji: '🍁', metric: 'Next.js, AI Solutions & Cloud Infrastructure', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 2, name: 'Townmedialabs', category: 'Digital Products', emoji: '🎨', metric: 'Creative digital solutions for Calgary businesses', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 3, name: 'TML', category: 'Startup Tech', emoji: '🚀', metric: 'Full-stack development & rapid prototyping', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 4, name: 'Absorb Software', category: 'LMS & E-Learning', emoji: '📚', metric: 'Enterprise learning management platforms', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 5, name: 'Symend', category: 'Behavioural AI', emoji: '🧠', metric: 'AI-driven behavioural science solutions', accentColor: 'var(--faint)', bgColor: 'transparent', },
+  { num: 6, name: 'Benevity', category: 'CSR Tech', emoji: '💚', metric: 'Corporate social responsibility platforms', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 7, name: 'Solium (Shareworks)', category: 'Equity Mgmt', emoji: '📊', metric: 'Equity management & compensation platforms', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 8, name: 'Neo Financial', category: 'FinTech', emoji: '💳', metric: 'Next-gen banking & financial products', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 9, name: 'Helcim', category: 'Payments', emoji: '💰', metric: 'Transparent payment processing solutions', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 10, name: 'Attabotics', category: 'Robotics & AI', emoji: '🤖', metric: 'Warehouse robotics & supply chain AI', accentColor: '#E11900', bgColor: 'transparent', },
 ];
 
 const relatedPosts = [
@@ -80,8 +80,8 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -122,7 +122,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -146,7 +146,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -187,14 +187,14 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                 {/* Company 1: Mapletech Labs (highlighted) */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-labs">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)', border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 0, position: 'relative', overflow: 'hidden'
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.3)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🍁</div>
                       <div>
@@ -202,7 +202,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>01</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
+                            background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Enterprise Software</span>
                         </div>
@@ -221,10 +221,10 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', gap: 10, position: 'relative', zIndex: 1
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
                       <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
@@ -238,7 +238,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                 {[
                   {
                     num: '02', id: 'townmedialabs', name: 'Townmedialabs', category: 'Digital Products',
-                    emoji: '🎨', accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
+                    emoji: '🎨', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Creative digital solutions for Calgary businesses',
                     paragraphs: [
                       'Townmedialabs delivers creative digital solutions for Calgary businesses, combining intuitive design with robust development to help local brands compete nationally. Their team specializes in responsive web applications, e-commerce platforms, and digital branding that captures the spirit of Alberta\'s entrepreneurial energy.',
@@ -247,7 +247,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '03', id: 'tml', name: 'TML', category: 'Startup Tech',
-                    emoji: '🚀', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
+                    emoji: '🚀', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Full-stack development & rapid prototyping',
                     paragraphs: [
                       'TML accelerates Calgary startups with full-stack development, rapid prototyping, and growth-focused engineering, helping turn Alberta ideas into scalable tech products. Their lean methodology and agile approach make them the ideal partner for early-stage companies looking to validate concepts quickly and iterate based on market feedback.',
@@ -256,7 +256,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '04', id: 'absorb-software', name: 'Absorb Software', category: 'LMS & E-Learning',
-                    emoji: '📚', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
+                    emoji: '📚', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Enterprise learning management platforms',
                     paragraphs: [
                       'Absorb Software is one of Calgary\'s true tech success stories. Their cloud-based Learning Management System (LMS) serves Fortune 500 companies, government agencies, and educational institutions worldwide. With over 200 employees in Calgary, they are proof that world-class SaaS products can be built right here in Alberta.',
@@ -264,7 +264,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '05', id: 'symend', name: 'Symend', category: 'Behavioural AI',
-                    emoji: '🧠', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,',
+                    emoji: '🧠', accentColor: 'var(--faint)', bgColor: 'transparent',
                     metric: 'AI-driven behavioural science solutions',
                     paragraphs: [
                       'Symend combines behavioural science with artificial intelligence to help large enterprises improve customer engagement and reduce churn. Their platform uses machine learning models trained on billions of customer interactions to deliver hyper-personalized digital experiences. A Calgary-born unicorn that raised over $100M in venture funding.',
@@ -272,7 +272,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '06', id: 'benevity', name: 'Benevity', category: 'CSR Tech',
-                    emoji: '💚', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
+                    emoji: '💚', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Corporate social responsibility platforms',
                     paragraphs: [
                       'Benevity is Calgary\'s crown jewel in social impact technology. Their platform powers corporate giving, volunteering, and grant management for some of the world\'s largest companies including Apple, Google, and Nike. Acquired for over $1B, Benevity proves that mission-driven software companies can achieve massive commercial success from Calgary.',
@@ -280,7 +280,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '07', id: 'solium', name: 'Solium (Shareworks by Morgan Stanley)', category: 'Equity Mgmt',
-                    emoji: '📊', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
+                    emoji: '📊', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Equity management & compensation platforms',
                     paragraphs: [
                       'Originally founded in Calgary as Solium Capital, now operating as Shareworks by Morgan Stanley, this company built the definitive platform for equity plan management and stock compensation. Their software manages billions of dollars in employee equity across thousands of companies worldwide, all engineered from their Calgary development centre.',
@@ -288,7 +288,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '08', id: 'neo-financial', name: 'Neo Financial', category: 'FinTech',
-                    emoji: '💳', accentColor: '#E11900', bgColor: 'rgba(74,222,128,',
+                    emoji: '💳', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Next-gen banking & financial products',
                     paragraphs: [
                       'Founded by the team behind SkipTheDishes, Neo Financial is reimagining banking for Canadians with high-interest savings accounts, cashback credit cards, and a modern mobile-first experience. With over $300M raised, Neo Financial is Calgary\'s most prominent fintech startup and a key driver of the city\'s financial technology ecosystem.',
@@ -296,7 +296,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '09', id: 'helcim', name: 'Helcim', category: 'Payments',
-                    emoji: '💰', accentColor: '#E11900', bgColor: 'rgba(251,191,36,',
+                    emoji: '💰', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Transparent payment processing solutions',
                     paragraphs: [
                       'Helcim has built a reputation as one of Canada\'s most transparent and merchant-friendly payment processors. Their Calgary-built platform offers interchange-plus pricing, beautiful POS hardware, and developer-friendly APIs. They are the antithesis of the opaque pricing models that have plagued the payments industry for decades.',
@@ -304,7 +304,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                   },
                   {
                     num: '10', id: 'attabotics', name: 'Attabotics', category: 'Robotics & AI',
-                    emoji: '🤖', accentColor: '#E11900', bgColor: 'rgba(248,113,113,',
+                    emoji: '🤖', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Warehouse robotics & supply chain AI',
                     paragraphs: [
                       'Attabotics is redefining warehouse logistics with their 3D robotics-based storage and retrieval system. Their technology reduces warehouse footprint by 85% and is backed by major investors including the Government of Canada. Combining hardware robotics with sophisticated AI software, Attabotics represents the cutting edge of Calgary\'s deep-tech ambitions.',
@@ -319,7 +319,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                         <div style={{
                           width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                          background: `${app.bgColor}0.1)`, border: `1px solid ${app.bgColor}0.2)`,
+                          background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                           display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                         }}>{app.emoji}</div>
                         <div>
@@ -327,7 +327,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                             <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>{app.num}</span>
                             <span style={{
                               fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                              background: `${app.bgColor}0.12)`, color: app.accentColor,
+                              background: `${app.bgColor}`, color: app.accentColor,
                               fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                             }}>{app.category}</span>
                           </div>
@@ -345,7 +345,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                       ))}
                       <div style={{
                         padding: '14px 20px', borderRadius: 12,
-                        background: `${app.bgColor}0.06)`, border: `1px solid ${app.bgColor}0.12)`,
+                        background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                         display: 'flex', alignItems: 'center', gap: 10,
                       }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={app.accentColor} strokeWidth="2">
@@ -373,7 +373,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -385,7 +385,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -406,13 +406,13 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -432,7 +432,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -443,8 +443,8 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -471,7 +471,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -479,7 +479,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Build Local</p>
                 <h2 style={{

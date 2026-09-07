@@ -86,8 +86,8 @@ export default function SaasDevelopmentCostCanadaClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -128,7 +128,7 @@ export default function SaasDevelopmentCostCanadaClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -152,7 +152,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -202,14 +202,14 @@ export default function SaasDevelopmentCostCanadaClient() {
 
                   {/* Tier 1: MVP */}
                   <div style={{
-                    background: 'var(--brand-tint) 100%)',
-                    border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)',
+                    border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
+                        background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Tier 1</span>
                       <span style={{ fontSize: 13, color: 'var(--faint)', fontWeight: 600 }}>3 - 4 months</span>
@@ -229,7 +229,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(167,139,250,0.12)', color: '#E11900',
+                        background: 'transparent', color: '#E11900',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Tier 2</span>
                       <span style={{ fontSize: 13, color: 'var(--faint)', fontWeight: 600 }}>4 - 8 months</span>
@@ -249,7 +249,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(52,211,153,0.12)', color: '#E11900',
+                        background: 'transparent', color: '#E11900',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Tier 3</span>
                       <span style={{ fontSize: 13, color: 'var(--faint)', fontWeight: 600 }}>8 - 18 months</span>
@@ -343,7 +343,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                   </p>
                   <div style={{
                     padding: '20px 24px', borderRadius: 16,
-                    background: 'rgba(245,41,13,0.06)', border: '1px solid rgba(245,41,13,0.15)',
+                    background: 'transparent', border: '1px solid var(--brand)',
                   }}>
                     <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.75, margin: 0 }}>
                       <strong style={{ color: 'var(--brand)' }}>Pro tip:</strong> At Mapletech Labs, we estimate that using best-in-class third-party services for commodity features saves our clients 30-40% on initial development costs and reduces time-to-market by 6-8 weeks on average.
@@ -362,8 +362,8 @@ export default function SaasDevelopmentCostCanadaClient() {
                   </p>
 
                   <div style={{
-                    background: 'var(--brand-tint) 100%)',
-                    border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)',
+                    border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>
                     <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', marginBottom: 20 }}>Our Recommended SaaS Stack</h3>
@@ -471,7 +471,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -483,7 +483,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -503,13 +503,13 @@ export default function SaasDevelopmentCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -529,7 +529,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -540,8 +540,8 @@ export default function SaasDevelopmentCostCanadaClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -568,7 +568,7 @@ export default function SaasDevelopmentCostCanadaClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -576,7 +576,7 @@ export default function SaasDevelopmentCostCanadaClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get Your Estimate</p>
                 <h2 style={{

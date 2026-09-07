@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import MediaBand from '@/components/MediaBand';
+import FinalCta from '@/components/home/FinalCta';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -113,7 +114,7 @@ export default function CaseStudiesPageClient() {
 
             <div className="reveal" style={{ marginBottom: 24, marginTop: 32 }}>
               <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                 color: 'var(--brand)',
               }}>
                 Client Success Stories
@@ -142,7 +143,7 @@ export default function CaseStudiesPageClient() {
                   style={{
                     padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
                     cursor: 'pointer', border: 'none', transition: 'all 0.2s',
-                    background: activeCategory === cat ? '#f5290d' : 'var(--line)',
+                    background: activeCategory === cat ? '#E11900' : 'var(--line)',
                     color: activeCategory === cat ? 'var(--ink)' : 'var(--body)',
                   }}
                 >
@@ -159,7 +160,7 @@ export default function CaseStudiesPageClient() {
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <p className="reveal" style={{
-              fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+              fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
               color: 'var(--faint)', marginBottom: 40,
             }}>
               {activeCategory === 'All' ? 'All Projects' : activeCategory + ' Projects'}
@@ -187,8 +188,8 @@ export default function CaseStudiesPageClient() {
                         cursor: 'pointer',
                       }}
                       onMouseEnter={e => {
-                        (e.currentTarget as HTMLElement).style.borderColor = 'rgba(245,41,13,0.25)';
-                        (e.currentTarget as HTMLElement).style.background = 'rgba(245,41,13,0.03)';
+                        (e.currentTarget as HTMLElement).style.borderColor = 'var(--brand)';
+                        (e.currentTarget as HTMLElement).style.background = 'transparent';
                         (e.currentTarget as HTMLElement).style.transform = 'translateY(-6px)';
                       }}
                       onMouseLeave={e => {
@@ -215,7 +216,7 @@ export default function CaseStudiesPageClient() {
                             {cs.metric.value}
                           </div>
                           <div style={{
-                            fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
+                            fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                             color: 'rgba(255,255,255,.88)', marginTop: 6, textShadow: '0 1px 8px rgba(0,0,0,.5)',
                           }}>
                             {cs.metric.label}
@@ -228,7 +229,7 @@ export default function CaseStudiesPageClient() {
                         {/* Category badge */}
                         <div style={{ marginBottom: 16 }}>
                           <span style={{
-                            fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
+                            fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                             background: 'var(--brand)', color: '#fff',
                             padding: '4px 12px', borderRadius: 100,
                           }}>
@@ -331,60 +332,7 @@ export default function CaseStudiesPageClient() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <div
-              className="reveal"
-              style={{
-                background: 'var(--surface-alt)', border: '1px solid var(--line)',
-                borderRadius: 28, padding: 'clamp(32px, 6vw, 64px) clamp(20px, 4vw, 48px)', textAlign: 'center',
-              }}
-            >
-              <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: 'var(--brand)', display: 'block', marginBottom: 20,
-              }}>
-                Let&apos;s Build Together
-              </span>
-              <h2 style={{
-                fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
-                letterSpacing: '-0.03em', marginBottom: 16,
-              }}>
-                Have a Similar Project?
-              </h2>
-              <p style={{
-                fontSize: 16, color: 'var(--muted)', marginBottom: 40,
-                maxWidth: 500, margin: '0 auto 40px',
-                lineHeight: 1.7,
-              }}>
-                Tell us about your idea and we&apos;ll show you how we can turn it into a success story.
-              </p>
-              <Link
-                href="/contact"
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 10,
-                  height: 52, padding: '0 36px', borderRadius: 100,
-                  background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, textDecoration: 'none',
-                  transition: 'all 0.2s',
-                }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLElement).style.background = '#d9220a';
-                  (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLElement).style.background = 'var(--brand)';
-                  (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-                }}
-              >
-                Start Your Project
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <FinalCta title="Want results like these?" sub="Every project on this page started with one conversation. Tell us what you\u2019re building and we\u2019ll scope it within four hours." />
 
       </main>
       <Footer />

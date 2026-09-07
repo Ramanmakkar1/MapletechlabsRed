@@ -43,37 +43,37 @@ const relatedPosts = [
 const costCards = [
   {
     id: 'seo', title: 'SEO (Search Engine Optimization)', emoji: '🔍',
-    range: '$1,500 - $10,000/month', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,',
+    range: '$1,500 - $10,000/month', accentColor: '#E11900', bgColor: 'transparent',
     description: 'SEO remains the highest-ROI digital marketing channel for Canadian businesses. At the lower end, you get foundational on-page optimization, Google Business Profile management, and basic keyword targeting. At $5,000+/month, expect comprehensive technical SEO audits, Next.js performance optimization, advanced Schema markup, programmatic content strategies, and aggressive link-building campaigns targeting high-competition national keywords.',
     includes: ['Technical site audits', 'On-page optimization', 'Link building', 'Content strategy', 'Monthly reporting'],
   },
   {
     id: 'ppc', title: 'Google Ads (PPC)', emoji: '🎯',
-    range: '$2,000 - $15,000/month (plus ad spend)', accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
+    range: '$2,000 - $15,000/month (plus ad spend)', accentColor: '#E11900', bgColor: 'transparent',
     description: 'Pay-per-click management fees in Canada typically range from 15-25% of your total ad spend, with minimum management fees starting around $2,000/month. This covers campaign setup, keyword research, ad copywriting, bid management, A/B testing, landing page optimization, and conversion tracking. Enterprise campaigns with multi-channel PPC (Google, Bing, YouTube) command premium pricing.',
     includes: ['Campaign setup & management', 'Keyword research & bidding', 'Ad copywriting & A/B testing', 'Conversion tracking', 'Monthly performance reports'],
   },
   {
     id: 'social', title: 'Social Media Marketing', emoji: '📱',
-    range: '$1,000 - $8,000/month', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
+    range: '$1,000 - $8,000/month', accentColor: '#E11900', bgColor: 'transparent',
     description: 'Social media marketing costs in Canada vary widely based on the number of platforms, posting frequency, and whether paid social advertising is included. Basic packages include content creation for 2-3 platforms with 3-4 posts per week. Premium packages add community management, influencer outreach, paid ad management, and detailed analytics dashboards.',
     includes: ['Content creation & scheduling', 'Community management', 'Paid social campaigns', 'Analytics & reporting', 'Platform strategy'],
   },
   {
     id: 'content', title: 'Content Marketing', emoji: '✍️',
-    range: '$2,000 - $10,000/month', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
+    range: '$2,000 - $10,000/month', accentColor: '#E11900', bgColor: 'transparent',
     description: 'Content marketing encompasses blog articles, whitepapers, case studies, video scripts, infographics, and thought leadership pieces. Canadian agencies typically charge $500-$2,000 per long-form article. Monthly retainers include content strategy, editorial calendars, SEO-optimized writing, visual design, and distribution across owned and earned channels.',
     includes: ['Content strategy & calendars', 'Blog posts & articles', 'Whitepapers & case studies', 'Visual content & infographics', 'Distribution & promotion'],
   },
   {
     id: 'email', title: 'Email Marketing', emoji: '📧',
-    range: '$500 - $3,000/month', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
+    range: '$500 - $3,000/month', accentColor: '#E11900', bgColor: 'transparent',
     description: 'Email marketing remains one of the most cost-effective channels with an average ROI of $42 for every $1 spent. Canadian agencies offer packages covering email strategy, template design, list segmentation, automation workflows, A/B testing, and deliverability optimization. Higher-tier packages include advanced drip campaigns, behavioral triggers, and CRM integration.',
     includes: ['Email strategy & design', 'List segmentation', 'Automation workflows', 'A/B testing', 'Performance analytics'],
   },
   {
     id: 'full-service', title: 'Full-Service Digital Marketing', emoji: '🚀',
-    range: '$5,000 - $25,000/month', accentColor: '#E11900', bgColor: 'rgba(251,191,36,',
+    range: '$5,000 - $25,000/month', accentColor: '#E11900', bgColor: 'transparent',
     description: 'Full-service packages combine SEO, PPC, social media, content, email, and web optimization under one roof. This is the most popular option for Canadian businesses with annual revenues of $2M+ who want a single point of accountability. Expect a dedicated account manager, comprehensive strategy sessions, cross-channel analytics, and monthly executive reporting.',
     includes: ['All channels integrated', 'Dedicated account manager', 'Cross-channel strategy', 'Executive reporting', 'Quarterly strategy reviews'],
   },
@@ -120,8 +120,8 @@ export default function DigitalMarketingCostCanadaClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Digital Marketing</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -162,7 +162,7 @@ export default function DigitalMarketingCostCanadaClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -186,7 +186,7 @@ export default function DigitalMarketingCostCanadaClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -229,10 +229,10 @@ export default function DigitalMarketingCostCanadaClient() {
                   <div key={card.id} className="reveal" style={{ marginBottom: 56 }} id={card.id}>
                     <div style={{
                       background: card.id === 'seo'
-                        ? 'var(--brand-tint) 100%)'
+                        ? 'var(--surface) 100%)'
                         : 'rgba(0,0,0,0.035)',
                       border: card.id === 'seo'
-                        ? '1px solid rgba(245,41,13,0.3)'
+                        ? '1px solid transparent'
                         : '1px solid var(--line)',
                       borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                     }}>
@@ -242,7 +242,7 @@ export default function DigitalMarketingCostCanadaClient() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                         <div style={{
                           width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                          background: `${card.bgColor}0.1)`, border: `1px solid ${card.bgColor}0.2)`,
+                          background: `${card.bgColor}`, border: `1px solid ${card.bgColor}`,
                           display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                         }}>{card.emoji}</div>
                         <div>
@@ -253,7 +253,7 @@ export default function DigitalMarketingCostCanadaClient() {
                           <div style={{
                             fontSize: 14, fontWeight: 700, color: card.accentColor,
                             padding: '4px 12px', borderRadius: 100,
-                            background: `${card.bgColor}0.12)`,
+                            background: `${card.bgColor}`,
                             display: 'inline-block',
                           }}>{card.range}</div>
                         </div>
@@ -265,7 +265,7 @@ export default function DigitalMarketingCostCanadaClient() {
 
                       <div style={{
                         padding: '16px 20px', borderRadius: 12,
-                        background: `${card.bgColor}0.06)`, border: `1px solid ${card.bgColor}0.12)`,
+                        background: `${card.bgColor}`, border: `1px solid ${card.bgColor}`,
                         position: 'relative', zIndex: 1,
                       }}>
                         <p style={{ fontSize: 12, fontWeight: 700, color: card.accentColor, marginBottom: 10, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Typically Includes:</p>
@@ -292,15 +292,15 @@ export default function DigitalMarketingCostCanadaClient() {
 
                   {[
                     {
-                      model: 'Monthly Retainer', price: '$2,000 - $25,000/month', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,',
+                      model: 'Monthly Retainer', price: '$2,000 - $25,000/month', accentColor: '#E11900', bgColor: 'transparent',
                       description: 'The most common model for Canadian agencies. You pay a fixed monthly fee for an agreed scope of work. This provides predictable budgeting and allows the agency to plan long-term strategies. Best for businesses seeking ongoing growth and consistent results across multiple channels.',
                     },
                     {
-                      model: 'Project-Based', price: '$5,000 - $100,000+ per project', accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
+                      model: 'Project-Based', price: '$5,000 - $100,000+ per project', accentColor: '#E11900', bgColor: 'transparent',
                       description: 'Ideal for one-time initiatives like website redesigns, brand launches, or marketing audits. You pay a fixed price for a defined deliverable. This model works well when you have a clear scope but can be more expensive per-hour than retainers due to the overhead of project scoping and management.',
                     },
                     {
-                      model: 'Performance-Based', price: 'Varies (% of revenue or per-lead)', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
+                      model: 'Performance-Based', price: 'Varies (% of revenue or per-lead)', accentColor: '#E11900', bgColor: 'transparent',
                       description: 'The agency ties their fees to measurable outcomes like leads generated, sales closed, or revenue influenced. While appealing in theory, be cautious: legitimate agencies rarely work on pure performance models because too many variables are outside their control. Hybrid models (base retainer + performance bonus) are the most balanced approach.',
                     },
                   ].map((item) => (
@@ -312,7 +312,7 @@ export default function DigitalMarketingCostCanadaClient() {
                         <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>{item.model}</h3>
                         <span style={{
                           fontSize: 13, fontWeight: 700, color: item.accentColor,
-                          padding: '4px 14px', borderRadius: 100, background: `${item.bgColor}0.12)`,
+                          padding: '4px 14px', borderRadius: 100, background: `${item.bgColor}`,
                         }}>{item.price}</span>
                       </div>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>{item.description}</p>
@@ -331,7 +331,7 @@ export default function DigitalMarketingCostCanadaClient() {
                   </p>
 
                   {[
-                    { tier: '$2,000 - $5,000/month', label: 'Starter', color: '#94a3b8', expectations: 'Foundation building. Expect improved local search visibility, basic social presence, and initial lead generation. Timeline: 4-6 months to see meaningful results. Best for small businesses and startups in low-competition niches.' },
+                    { tier: '$2,000 - $5,000/month', label: 'Starter', color: 'var(--faint)', expectations: 'Foundation building. Expect improved local search visibility, basic social presence, and initial lead generation. Timeline: 4-6 months to see meaningful results. Best for small businesses and startups in low-competition niches.' },
                     { tier: '$5,000 - $15,000/month', label: 'Growth', color: 'var(--brand)', expectations: 'Aggressive scaling. Expect significant organic traffic growth (50-200%), multi-channel campaigns, and measurable revenue attribution. Timeline: 3-6 months for early wins, 6-12 months for compound growth. Best for established SMBs targeting regional or national markets.' },
                     { tier: '$15,000 - $25,000+/month', label: 'Enterprise', color: '#E11900', expectations: 'Market domination. Expect comprehensive omnichannel strategies, competitive displacement, advanced analytics, and executive-level reporting. Timeline: 2-4 months for quick wins, ongoing optimization. Best for companies with $5M+ revenue targeting category leadership.' },
                   ].map((item) => (
@@ -343,7 +343,7 @@ export default function DigitalMarketingCostCanadaClient() {
                         <span style={{
                           fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           padding: '3px 10px', borderRadius: 100, color: item.color,
-                          background: `rgba(${item.color === '#94a3b8' ? '148,163,184' : item.color === '#f5290d' ? '245,41,13' : '251,191,36'},0.12)`,
+                          background: `rgba(${item.color === 'var(--faint)' ? '148,163,184' : item.color === '#E11900' ? '245,41,13' : '251,191,36'},0.12)`,
                         }}>{item.label}</span>
                         <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)' }}>{item.tier}</span>
                       </div>
@@ -363,17 +363,17 @@ export default function DigitalMarketingCostCanadaClient() {
                     {
                       option: 'Digital Marketing Agency', pros: 'Full team of specialists, scalable resources, proven processes, accountability, cross-industry experience, access to enterprise tools',
                       cons: 'Higher cost ($5K-$25K+/month), less direct control, potential communication layers', best: 'Businesses with $1M+ revenue needing multi-channel expertise',
-                      accentColor: '#f5290d', bgColor: 'rgba(245,41,13,',
+                      accentColor: '#E11900', bgColor: 'transparent',
                     },
                     {
                       option: 'Freelancer', pros: 'Lower cost ($1K-$5K/month), direct communication, flexibility, niche expertise',
                       cons: 'Single point of failure, limited capacity, no backup if they leave, narrower skill set', best: 'Startups and small businesses with focused needs (e.g., SEO-only or social-only)',
-                      accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
+                      accentColor: '#E11900', bgColor: 'transparent',
                     },
                     {
                       option: 'In-House Team', pros: 'Full control, deep brand knowledge, immediate availability, cultural alignment',
                       cons: 'Very expensive ($150K-$400K+/year for a small team), recruitment challenges, limited perspective, tool costs', best: 'Enterprises with $10M+ revenue and complex, ongoing marketing needs',
-                      accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
+                      accentColor: '#E11900', bgColor: 'transparent',
                     },
                   ].map((item) => (
                     <div key={item.option} style={{
@@ -393,7 +393,7 @@ export default function DigitalMarketingCostCanadaClient() {
                       </div>
                       <div style={{
                         padding: '12px 16px', borderRadius: 12,
-                        background: `${item.bgColor}0.06)`, border: `1px solid ${item.bgColor}0.12)`,
+                        background: `${item.bgColor}`, border: `1px solid ${item.bgColor}`,
                       }}>
                         <span style={{ fontSize: 13, color: item.accentColor, fontWeight: 600 }}>Best for: {item.best}</span>
                       </div>
@@ -404,8 +404,8 @@ export default function DigitalMarketingCostCanadaClient() {
                 {/* Mapletech Labs Approach */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-approach">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)',
-                    border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)',
+                    border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
@@ -430,10 +430,10 @@ export default function DigitalMarketingCostCanadaClient() {
 
                       <div style={{
                         padding: '14px 20px', borderRadius: 12,
-                        background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', gap: 10,
                       }}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                           <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                         </svg>
                         <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
@@ -496,7 +496,7 @@ export default function DigitalMarketingCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -508,7 +508,7 @@ export default function DigitalMarketingCostCanadaClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -528,13 +528,13 @@ export default function DigitalMarketingCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -554,7 +554,7 @@ export default function DigitalMarketingCostCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -565,8 +565,8 @@ export default function DigitalMarketingCostCanadaClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -593,7 +593,7 @@ export default function DigitalMarketingCostCanadaClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -601,7 +601,7 @@ export default function DigitalMarketingCostCanadaClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>Get Started</p>
                 <h2 style={{

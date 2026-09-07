@@ -72,8 +72,8 @@ export default function CTASection() {
           }}>
             {submitted ? (
               <div style={{ textAlign: 'center', padding: 'var(--section-y) 0' }}>
-                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(245,41,13,0.1)', border: '2px solid #f5290d', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'transparent', border: '2px solid #E11900', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                 </div>
                 <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>Thank You!</div>
                 <div style={{ fontSize: 14, color: 'var(--muted)' }}>We'll get back to you within 24 hours.</div>
@@ -90,7 +90,7 @@ export default function CTASection() {
                 style={{ padding:'13px 16px', background: 'var(--surface-sunk)', border: '1px solid var(--line)', borderRadius:8, color: 'var(--ink)', fontFamily: 'inherit', fontSize:14, outline:'none' }}/>
               <select value={form.service} onChange={e => setForm({...form, service: e.target.value})} style={{ padding:'13px 16px', background: 'var(--surface-sunk)', border: '1px solid var(--line)', borderRadius:8, color: form.service ? 'var(--ink)' : 'var(--body)', fontFamily: 'inherit', fontSize:14, outline:'none', appearance:'none' }}>
                 <option value="" disabled>Select a Service</option>
-                {['Custom Software','Web Development','Mobile App','AI & Automation','Blockchain','Enterprise Software','Other'].map(s=><option key={s} value={s} style={{ background:'#1e1e1e' }}>{s}</option>)}
+                {['Custom Software','Web Development','Mobile App','AI & Automation','Blockchain','Enterprise Software','Other'].map(s=><option key={s} value={s} style={{ background:'var(--faint)' }}>{s}</option>)}
               </select>
               <textarea required rows={4} placeholder="Tell us about your project..." value={form.message} onChange={e => setForm({...form, message: e.target.value})}
                 style={{ padding:'13px 16px', background: 'var(--surface-sunk)', border: '1px solid var(--line)', borderRadius:8, color: 'var(--ink)', fontFamily: 'inherit', fontSize:14, outline:'none', resize:'none' }}/>

@@ -27,7 +27,7 @@ export default function IndustriesSection() {
     <section ref={ref} id="industries" className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' , position: 'relative', overflow: 'hidden'}}>
       <div className="cb-container">
         <div className="reveal" style={{ marginBottom: 'clamp(32px, 8vw, 80px)' }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Expertise</div>
+          <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 20 }}>Expertise</div>
           <div className="industries-heading-grid">
             <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               Domain Experts.<br /><span style={{ color: 'var(--faint)' }}>Strategic Partners.</span>

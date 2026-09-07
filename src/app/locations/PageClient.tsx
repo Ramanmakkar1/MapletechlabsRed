@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { officeMedia } from '@/data/media';
 import PageHero from '@/components/page/PageHero';
+import FinalCta from '@/components/home/FinalCta';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -28,8 +29,8 @@ const cardBase: React.CSSProperties = {
 };
 
 const cardHover: React.CSSProperties = {
-  borderColor: 'rgba(245,41,13,0.2)',
-  background: 'rgba(245,41,13,0.03)',
+  borderColor: 'var(--brand)',
+  background: 'transparent',
   transform: 'translateY(-4px)',
   boxShadow: '0 24px 60px rgba(0,0,0,0.10)',
 };
@@ -93,7 +94,7 @@ export default function LocationsIndexPage() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
                       <h3 style={{ fontWeight: 600, fontSize: '1.3rem' }}>{city.name}</h3>
                       {city.slug === 'edmonton' && (
-                        <span style={{ background: 'rgba(245,41,13,0.1)', borderRadius: 8, padding: '4px 12px', fontSize: 12, color: 'var(--brand)', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>HQ</span>
+                        <span style={{ background: 'transparent', borderRadius: 8, padding: '4px 12px', fontSize: 12, color: 'var(--brand)', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>HQ</span>
                       )}
                     </div>
                     <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>{city.province}</p>
@@ -135,26 +136,7 @@ export default function LocationsIndexPage() {
         </section>
 
         {/* CTA */}
-        <section ref={s2} className="section-padding">
-          <div className="cb-container">
-            <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, lineHeight: 1.15, marginBottom: '1.5rem' }}>
-                Ready to Build <span style={{ color: 'var(--brand)' }}>Something Great?</span>
-              </h2>
-              <p style={{ color: 'var(--body)', fontSize: '1.15rem', marginBottom: '2.5rem', lineHeight: 1.7 }}>
-                No matter where you are in Canada, our team is ready to bring your vision to life.
-              </p>
-              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '16px 36px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
-                  Get a Free Quote
-                </Link>
-                <Link href="/services/mobile-app-development" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '16px 36px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
-                  Explore Services
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FinalCta title="Let\u2019s build something great, wherever you are." sub="We work with companies across Canada, remotely and on site. Tell us about your project and we\u2019ll come back within four hours." />
 
       </main>
       <Footer />

@@ -58,7 +58,7 @@ export default function InsightsSection() {
         {/* Header */}
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 'clamp(20px, 4vw, 40px)', marginBottom: 'clamp(40px, 8vw, 80px)', flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Insights</div>
+            <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 20 }}>Insights</div>
             <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               From the<br /><span style={{ color: 'var(--faint)' }}>Engineering Desk.</span>
             </h2>
@@ -78,20 +78,20 @@ export default function InsightsSection() {
           className="reveal"
           style={{
             display: 'flex',
-            border: '1px solid rgba(245,41,13,0.15)',
+            border: '1px solid var(--brand)',
             borderRadius: 'clamp(20px, 4vw, 32px)',
             overflow: 'hidden',
             textDecoration: 'none',
             transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
-            background: 'var(--brand-tint) 100%)',
+            background: 'var(--surface) 100%)',
             marginBottom: 40,
           }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.10)'; }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.15)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.10)'; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
         >
           <div style={{ padding: 'clamp(20px, 4vw, 32px) clamp(16px, 4vw, 40px)', display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, width: 'fit-content', padding: '6px 14px', borderRadius: 100, background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.2)' }}>
-              <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{featuredCaseStudy.tag}</span>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, width: 'fit-content', padding: '6px 14px', borderRadius: 100, background: 'transparent', border: '1px solid var(--brand)' }}>
+              <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.005em', textTransform: 'none' }}>{featuredCaseStudy.tag}</span>
             </div>
             <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', lineHeight: 1.3, margin: 0 }}>{featuredCaseStudy.title}</h3>
             <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{featuredCaseStudy.excerpt}</p>
@@ -119,7 +119,7 @@ export default function InsightsSection() {
                 transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                 background: 'var(--surface-alt)',
               }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.15)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.10)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.10)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
             >
               {/* Photo header with the category chip over it */}

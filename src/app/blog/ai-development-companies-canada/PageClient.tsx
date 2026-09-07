@@ -22,16 +22,16 @@ function useReveal() {
 }
 
 const companies = [
-  { num: 1, name: 'Mapletech Labs', category: 'AI/ML Integration', emoji: '🍁', metric: 'Production-Grade AI Systems & LLM Integration', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Townmedialabs', category: 'AI-Powered Web', emoji: '🌐', metric: 'AI-enhanced websites & marketing automation', accentColor: '#E11900', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'TML', category: 'Intelligent Automation', emoji: '⚡', metric: 'AI-driven growth platforms for startups', accentColor: '#E11900', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'Element AI (ServiceNow)', category: 'Enterprise AI Research', emoji: '🔬', metric: 'Large-scale enterprise AI transformation', accentColor: '#E11900', bgColor: 'rgba(52,211,153,' },
-  { num: 5, name: 'Coveo', category: 'AI-Powered Search', emoji: '🔍', metric: 'Intelligent search & recommendation engines', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Ada', category: 'Conversational AI', emoji: '💬', metric: 'Enterprise-grade AI chatbot platforms', accentColor: '#E11900', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Layer 6 (TD Bank)', category: 'Financial AI', emoji: '🏦', metric: 'Deep learning for financial services', accentColor: '#E11900', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'Integrate.ai', category: 'Federated Learning', emoji: '🔒', metric: 'Privacy-preserving AI & federated learning', accentColor: '#E11900', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'Dessa (Square)', category: 'Applied ML & NLP', emoji: '🧠', metric: 'Production ML pipelines & NLP systems', accentColor: '#E11900', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: 'Mindbridge', category: 'Financial Auditing AI', emoji: '📊', metric: 'AI-powered anomaly detection for auditing', accentColor: '#E11900', bgColor: 'rgba(248,113,113,' },
+  { num: 1, name: 'Mapletech Labs', category: 'AI/ML Integration', emoji: '🍁', metric: 'Production-Grade AI Systems & LLM Integration', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 2, name: 'Townmedialabs', category: 'AI-Powered Web', emoji: '🌐', metric: 'AI-enhanced websites & marketing automation', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 3, name: 'TML', category: 'Intelligent Automation', emoji: '⚡', metric: 'AI-driven growth platforms for startups', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 4, name: 'Element AI (ServiceNow)', category: 'Enterprise AI Research', emoji: '🔬', metric: 'Large-scale enterprise AI transformation', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 5, name: 'Coveo', category: 'AI-Powered Search', emoji: '🔍', metric: 'Intelligent search & recommendation engines', accentColor: 'var(--faint)', bgColor: 'transparent', },
+  { num: 6, name: 'Ada', category: 'Conversational AI', emoji: '💬', metric: 'Enterprise-grade AI chatbot platforms', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 7, name: 'Layer 6 (TD Bank)', category: 'Financial AI', emoji: '🏦', metric: 'Deep learning for financial services', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 8, name: 'Integrate.ai', category: 'Federated Learning', emoji: '🔒', metric: 'Privacy-preserving AI & federated learning', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 9, name: 'Dessa (Square)', category: 'Applied ML & NLP', emoji: '🧠', metric: 'Production ML pipelines & NLP systems', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 10, name: 'Mindbridge', category: 'Financial Auditing AI', emoji: '📊', metric: 'AI-powered anomaly detection for auditing', accentColor: '#E11900', bgColor: 'transparent', },
 ];
 
 const relatedPosts = [
@@ -88,8 +88,8 @@ export default function AiDevelopmentCompaniesCanadaClient() {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
               <span className="reveal reveal-d1" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                background: 'rgba(245,41,13,0.12)', color: 'var(--brand)',
+                fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
+                background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Technology</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
@@ -130,7 +130,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: '50%',
-                  background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                  background: 'transparent', border: '1px solid var(--brand)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: 15, fontWeight: 700, color: 'var(--brand)',
                 }}>RM</div>
@@ -154,7 +154,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                 ))}
                 <button onClick={handleCopy} style={{
                   padding: '8px 16px', borderRadius: 100, border: '1px solid var(--line)',
-                  background: copied ? 'rgba(245,41,13,0.1)' : 'var(--line)',
+                  background: copied ? 'transparent' : 'var(--line)',
                   color: copied ? 'var(--brand)' : 'var(--body)',
                   fontSize: 12, fontWeight: 600, cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -195,14 +195,14 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                 {/* Company 1: Mapletech Labs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-labs">
                   <div style={{
-                    background: 'var(--brand-tint) 100%)', border: '1px solid rgba(245,41,13,0.3)',
+                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 0, position: 'relative', overflow: 'hidden'
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(245,41,13,0.1)', border: '1px solid rgba(245,41,13,0.3)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🍁</div>
                       <div>
@@ -210,7 +210,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>01</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(245,41,13,0.15)', color: 'var(--brand)',
+                            background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>AI/ML Integration</span>
                         </div>
@@ -229,10 +229,10 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(245,41,13,0.08)', border: '1px solid rgba(245,41,13,0.2)',
+                      background: 'transparent', border: '1px solid var(--brand)',
                       display: 'flex', alignItems: 'center', gap: 10, position: 'relative', zIndex: 1
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5290d" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
                       <span style={{ fontSize: 13, color: 'var(--brand)', fontWeight: 600 }}>
@@ -251,7 +251,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.2)',
+                        background: 'transparent', border: '1px solid transparent',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>🌐</div>
                       <div>
@@ -259,7 +259,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>02</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(167,139,250,0.12)', color: '#E11900',
+                            background: 'transparent', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>AI-Powered Web</span>
                         </div>
@@ -275,7 +275,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     }}>Combining creative digital agency work with emerging AI capabilities, Townmedialabs delivers AI-enhanced websites and marketing automation for growing Canadian businesses.</p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
@@ -297,7 +297,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                       <div style={{
                         width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                        background: 'rgba(244,114,182,0.1)', border: '1px solid rgba(244,114,182,0.2)',
+                        background: 'transparent', border: '1px solid transparent',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                       }}>⚡</div>
                       <div>
@@ -305,7 +305,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>03</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(244,114,182,0.12)', color: '#E11900',
+                            background: 'transparent', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Intelligent Automation</span>
                         </div>
@@ -321,7 +321,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     }}>TML specializes in building AI-driven growth platforms that help Canadian startups scale faster with intelligent automation and data-driven decision making.</p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
-                      background: 'rgba(244,114,182,0.06)', border: '1px solid rgba(244,114,182,0.12)',
+                      background: 'transparent', border: '1px solid transparent',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
@@ -338,7 +338,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                 {[
                   {
                     num: '04', id: 'element-ai', name: 'Element AI (ServiceNow)', category: 'Enterprise AI Research',
-                    emoji: '🔬', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
+                    emoji: '🔬', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Large-scale enterprise AI transformation',
                     paragraphs: [
                       'Originally founded by Yoshua Bengio and now part of ServiceNow, Element AI remains one of the most influential AI research labs in the country. Their focus on enterprise-scale AI transformation has helped some of Canada\'s largest corporations integrate machine learning into core business operations, from supply chain optimization to customer service automation.',
@@ -346,7 +346,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '05', id: 'coveo', name: 'Coveo', category: 'AI-Powered Search',
-                    emoji: '🔍', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,',
+                    emoji: '🔍', accentColor: 'var(--faint)', bgColor: 'transparent',
                     metric: 'Intelligent search & recommendation engines',
                     paragraphs: [
                       'Quebec City-based Coveo has built one of the most sophisticated AI-powered search and recommendation platforms in the world. Their technology powers intelligent search experiences for enterprise websites, e-commerce platforms, and customer service portals. With a strong focus on relevance ranking and personalization, Coveo\'s AI learns from user behavior to deliver increasingly accurate results.',
@@ -354,7 +354,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '06', id: 'ada', name: 'Ada', category: 'Conversational AI',
-                    emoji: '💬', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
+                    emoji: '💬', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Enterprise-grade AI chatbot platforms',
                     paragraphs: [
                       'Toronto-based Ada has become the gold standard for AI-powered customer service automation in Canada. Their conversational AI platform handles millions of customer interactions monthly for brands like Meta, Shopify, and Square. Ada\'s no-code platform allows non-technical teams to build and deploy sophisticated AI chatbots that resolve customer inquiries without human intervention.',
@@ -362,7 +362,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '07', id: 'layer-6', name: 'Layer 6 (TD Bank)', category: 'Financial AI',
-                    emoji: '🏦', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
+                    emoji: '🏦', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Deep learning for financial services',
                     paragraphs: [
                       'Acquired by TD Bank, Layer 6 is a world-class deep learning lab focused exclusively on financial services AI. Their models power fraud detection, credit risk assessment, and hyper-personalized banking experiences for millions of TD customers. Layer 6 represents the best of what happens when cutting-edge AI research meets real-world financial infrastructure.',
@@ -370,7 +370,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '08', id: 'integrate-ai', name: 'Integrate.ai', category: 'Federated Learning',
-                    emoji: '🔒', accentColor: '#E11900', bgColor: 'rgba(74,222,128,',
+                    emoji: '🔒', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Privacy-preserving AI & federated learning',
                     paragraphs: [
                       'In an era where data privacy is paramount, Toronto-based Integrate.ai has carved out a unique niche with their federated learning platform. Their technology allows organizations to train AI models across distributed datasets without ever sharing raw data. This is particularly critical for Canadian healthcare and financial institutions operating under strict PIPEDA and PHIPA regulations.',
@@ -378,7 +378,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '09', id: 'dessa', name: 'Dessa (Square)', category: 'Applied ML & NLP',
-                    emoji: '🧠', accentColor: '#E11900', bgColor: 'rgba(251,191,36,',
+                    emoji: '🧠', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Production ML pipelines & NLP systems',
                     paragraphs: [
                       'Now part of Square (Block), Dessa built its reputation on making machine learning accessible and production-ready. Their Atlas platform simplified the process of training, versioning, and deploying ML models at scale. Dessa\'s NLP capabilities, including their famous speech synthesis work, demonstrated the caliber of applied AI talent coming out of Canada\'s tech ecosystem.',
@@ -386,7 +386,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '10', id: 'mindbridge', name: 'Mindbridge', category: 'Financial Auditing AI',
-                    emoji: '📊', accentColor: '#E11900', bgColor: 'rgba(248,113,113,',
+                    emoji: '📊', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'AI-powered anomaly detection for auditing',
                     paragraphs: [
                       'Ottawa-based Mindbridge has built a category-defining AI platform for financial auditing and risk discovery. Their technology uses machine learning to analyze entire financial datasets and flag anomalies that human auditors would miss. Used by major accounting firms and government agencies across Canada, Mindbridge represents the practical, high-impact side of Canadian AI innovation.',
@@ -401,7 +401,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20, marginBottom: 20 }}>
                         <div style={{
                           width: 56, height: 56, borderRadius: 16, flexShrink: 0,
-                          background: `${app.bgColor}0.1)`, border: `1px solid ${app.bgColor}0.2)`,
+                          background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                           display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
                         }}>{app.emoji}</div>
                         <div>
@@ -409,7 +409,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                             <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>{app.num}</span>
                             <span style={{
                               fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                              background: `${app.bgColor}0.12)`, color: app.accentColor,
+                              background: `${app.bgColor}`, color: app.accentColor,
                               fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                             }}>{app.category}</span>
                           </div>
@@ -427,7 +427,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                       ))}
                       <div style={{
                         padding: '14px 20px', borderRadius: 12,
-                        background: `${app.bgColor}0.06)`, border: `1px solid ${app.bgColor}0.12)`,
+                        background: `${app.bgColor}`, border: `1px solid ${app.bgColor}`,
                         display: 'flex', alignItems: 'center', gap: 10,
                       }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={app.accentColor} strokeWidth="2">
@@ -455,7 +455,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -467,7 +467,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                         }}
                           onMouseEnter={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--brand)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.06)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.color = 'var(--muted)';
@@ -488,13 +488,13 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>About the Author</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                       <div style={{
                         width: 44, height: 44, borderRadius: '50%',
-                        background: 'rgba(245,41,13,0.12)', border: '1px solid rgba(245,41,13,0.25)',
+                        background: 'transparent', border: '1px solid var(--brand)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontSize: 14, fontWeight: 700, color: 'var(--brand)', flexShrink: 0,
                       }}>RM</div>
@@ -514,7 +514,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     borderRadius: 20, padding: 24,
                   }}>
                     <p style={{
-                      fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                      fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -525,8 +525,8 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                           background: 'transparent', transition: 'all 0.2s',
                         }}
                           onMouseEnter={e => {
-                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,41,13,0.15)';
-                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(245,41,13,0.03)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--brand)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                           }}
                           onMouseLeave={e => {
                             (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--line)';
@@ -553,7 +553,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
             <div
               className="reveal"
               style={{
-                background: 'rgba(245,41,13,0.04)', border: '1px solid rgba(245,41,13,0.15)',
+                background: 'transparent', border: '1px solid var(--brand)',
                 borderRadius: 28, padding: '64px 56px',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexWrap: 'wrap', gap: 32,
@@ -561,7 +561,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
             >
               <div>
                 <p style={{
-                  fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                   color: 'var(--brand)', marginBottom: 12,
                 }}>AI Solutions</p>
                 <h2 style={{
@@ -603,7 +603,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   textDecoration: 'none', transition: 'all 0.3s ease',
                   fontSize: 15, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.5,
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
                   {post.title} →

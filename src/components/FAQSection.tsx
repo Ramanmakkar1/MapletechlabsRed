@@ -28,7 +28,7 @@ export default function FAQSection() {
       <div className="cb-container">
         <div className="faq-grid">
           <div className="reveal faq-sticky" style={{ position: 'sticky', top: 80 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>FAQ</div>
+            <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 20 }}>FAQ</div>
             <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
               Questions<br /><span style={{ color: 'var(--faint)' }}>Answered.</span>
             </h2>
@@ -53,7 +53,7 @@ export default function FAQSection() {
                   style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'var(--section-y) 0', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', gap: 'clamp(12px, 3vw, 24px)', fontFamily: 'inherit', minHeight: 44 }}
                 >
                   <span style={{ fontSize: 'clamp(15px, 3vw, 17px)', fontWeight: 600, color: 'var(--ink)', lineHeight: 1.4, letterSpacing: '-0.01em' }}>{faq.q}</span>
-                  <div style={{ width: 36, height: 36, borderRadius: '50%', flexShrink: 0, background: active === i ? '#f5290d' : 'var(--line)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.3s' }}>
+                  <div style={{ width: 36, height: 36, borderRadius: '50%', flexShrink: 0, background: active === i ? '#E11900' : 'var(--line)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.3s' }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={active === i ? 'var(--ink)' : 'var(--body)'} strokeWidth="2.5" style={{ transition: '0.3s', transform: active === i ? 'rotate(45deg)' : 'rotate(0)' }}>
                       <path d="M12 5v14M5 12h14" />
                     </svg>

@@ -3,8 +3,9 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { officeMedia, serviceMedia } from '@/data/media';
+import { officeMedia, serviceMedia, humanMedia } from '@/data/media';
 import PageHero from '@/components/page/PageHero';
+import FinalCta from '@/components/home/FinalCta';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -31,8 +32,8 @@ const cardBase: React.CSSProperties = {
 };
 
 const cardHover: React.CSSProperties = {
-  borderColor: 'rgba(245,41,13,0.2)',
-  background: 'rgba(245,41,13,0.03)',
+  borderColor: 'var(--brand)',
+  background: 'transparent',
   transform: 'translateY(-4px)',
   boxShadow: '0 24px 60px rgba(0,0,0,0.10)',
 };
@@ -176,7 +177,7 @@ const services: ServiceCategory[] = [
     title: 'Digital Marketing',
     href: '/services/digital-marketing',
     initial: 'D',
-    color: '#f97316',
+    color: '#E11900',
     description: 'Data-driven SEO, PPC, social media, and content marketing strategies to grow your online presence.',
     subServices: [
       { name: 'SEO Services', href: '/services/digital-marketing/seo-services' },
@@ -190,7 +191,7 @@ const services: ServiceCategory[] = [
     title: 'Branding & Identity',
     href: '/services/branding',
     initial: 'B',
-    color: '#a855f7',
+    color: '#E11900',
     description: 'Comprehensive brand strategy, visual identity, guidelines, and motion branding that set you apart.',
     subServices: [
       { name: 'Brand Strategy', href: '/services/branding/brand-strategy' },
@@ -204,7 +205,7 @@ const services: ServiceCategory[] = [
     title: 'WordPress & CMS',
     href: '/services/wordpress-cms',
     initial: 'W',
-    color: '#0ea5e9',
+    color: '#E11900',
     description: 'Custom WordPress themes, headless CMS setups, WooCommerce stores, and site speed optimisation.',
     subServices: [
       { name: 'Custom WordPress Themes', href: '/services/wordpress-cms/custom-wordpress-themes' },
@@ -245,7 +246,7 @@ export default function ServicesIndexPage() {
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} copy={{ badge: "What we do", title: <>Our <span style={{ color: 'var(--brand)' }}>Services</span></>, desc: <>From mobile apps and AI to blockchain and branding, we deliver end-to-end digital solutions that help startups and enterprises build, launch, and scale.</> }} photo={officeMedia.open} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} copy={{ badge: "What we do", title: <>Our <span style={{ color: 'var(--brand)' }}>Services</span></>, desc: <>From mobile apps and AI to blockchain and branding, we deliver end-to-end digital solutions that help startups and enterprises build, launch, and scale.</> }} photo={humanMedia.team} form={false} />
 
         {/* SERVICE GRID */}
         <section ref={s1} className="section-padding">
@@ -254,13 +255,9 @@ export default function ServicesIndexPage() {
               <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Everything You Need to Build & Grow</h2>
               <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)' }}>Explore our full range of services — each backed by deep domain expertise.</p>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="reveal grid grid--3">
               {services.map(service => (
                 <Card key={service.href}>
-                  {/* Icon area */}
-                  <div style={{ width: 52, height: 52, borderRadius: 14, background: `${service.color}15`, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', flexShrink: 0 }}>
-                    <span style={{ fontSize: 22, fontWeight: 800, color: service.color }}>{service.initial}</span>
-                  </div>
 
                   {/* Title */}
                   <Link href={service.href} style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -268,11 +265,11 @@ export default function ServicesIndexPage() {
                   </Link>
 
                   {/* Description */}
-                  <p style={{ color: 'var(--muted)', fontSize: 'clamp(0.85rem, 1.5vw, 0.95rem)', lineHeight: 1.65, marginBottom: '1rem' }}>{service.description}</p>
+                  <p className="clamp-3" style={{ color: 'var(--body)', fontSize: 14.5, lineHeight: 1.7, marginBottom: '1rem' }}>{service.description}</p>
 
                   {/* Sub-services */}
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 10px', marginBottom: '1.25rem', flexGrow: 1 }}>
-                    {service.subServices.map(sub => (
+                    {service.subServices.slice(0, 4).map(sub => (
                       <Link
                         key={sub.href}
                         href={sub.href}
@@ -296,26 +293,7 @@ export default function ServicesIndexPage() {
         </section>
 
         {/* CTA */}
-        <section ref={s2} className="section-padding">
-          <div className="cb-container">
-            <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, lineHeight: 1.15, marginBottom: '1.5rem' }}>
-                Ready to <span style={{ color: 'var(--brand)' }}>Start?</span>
-              </h2>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.15rem)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
-                Tell us about your project and we will match you with the right team, technology, and timeline.
-              </p>
-              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: 'clamp(12px, 2vw, 16px) clamp(24px, 4vw, 36px)', borderRadius: 999, fontWeight: 700, fontSize: 'clamp(0.9rem, 2vw, 1rem)', textDecoration: 'none', display: 'inline-block' }}>
-                  Get a Free Quote
-                </Link>
-                <Link href="/case-studies" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: 'clamp(12px, 2vw, 16px) clamp(24px, 4vw, 36px)', borderRadius: 999, fontWeight: 600, fontSize: 'clamp(0.9rem, 2vw, 1rem)', textDecoration: 'none', display: 'inline-block' }}>
-                  View Case Studies
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FinalCta title="Not sure which service you need?" sub="Describe the outcome you\u2019re after and we\u2019ll tell you what it actually takes \u2014 scope, timeline and fixed price, within four hours." />
 
       </main>
       <Footer />

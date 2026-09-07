@@ -26,7 +26,7 @@ export default function TechStack() {
       <div className="cb-container">
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 40, marginBottom: 80, flexWrap: 'wrap' }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>Technology Foundation</div>
+            <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 20 }}>Technology Foundation</div>
             <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               Built With the Tools<br /><span style={{ color: 'var(--faint)' }}>of Tomorrow.</span>
             </h2>
@@ -40,15 +40,15 @@ export default function TechStack() {
           {categories.map((cat, ci) => (
             <div key={cat.label}
               style={{ padding: '32px 28px', border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', transition: 'all 0.4s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.02)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.background = 'transparent'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}
             >
-              <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brand)', marginBottom: 20 }}>{cat.label}</div>
+              <div style={{ fontSize: 13, fontWeight: 800, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--brand)', marginBottom: 20 }}>{cat.label}</div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {cat.techs.map(t => (
                   <span key={t}
                     style={{ padding: '7px 16px', border: '1px solid var(--line)', borderRadius: 100, fontSize: 13, fontWeight: 500, color: 'var(--muted)', transition: '0.25s', cursor: 'default' }}
-                    onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.35)'; e.currentTarget.style.color = 'var(--brand)'; e.currentTarget.style.background = 'rgba(245,41,13,0.06)'; }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.color = 'var(--brand)'; e.currentTarget.style.background = 'transparent'; }}
                     onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.color = 'var(--muted)'; e.currentTarget.style.background = 'transparent'; }}
                   >{t}</span>
                 ))}
