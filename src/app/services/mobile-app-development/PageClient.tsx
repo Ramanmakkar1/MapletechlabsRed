@@ -102,7 +102,7 @@ export default function PageClient() {
       techCategories={techCategories}
       industries={industries}
       faqs={faqs}
-      servicesTitle="Related Services"
+      servicesTitle="Every Platform. Every Screen."
     />
   );
 }

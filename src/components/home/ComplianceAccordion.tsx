@@ -1,6 +1,3 @@
-'use client';
-import { useState } from 'react';
-
 const items = [
   { t: 'Data Privacy & Protection',     d: 'Personal data is handled to the letter of Canadian and international law, with privacy reviews built into every sprint.', tags: ['PIPEDA', 'GDPR', 'HIPAA', 'CCPA'] },
   { t: 'Security & Risk Management',    d: 'Threat modelling, least-privilege access and audited controls across every environment we operate.', tags: ['SOC 2 Type II', 'ISO 27001', 'Zero Trust'] },
@@ -10,36 +7,30 @@ const items = [
   { t: 'Accessibility',                 d: 'Every interface we deliver is built and tested against WCAG so it works for everyone, and passes AODA audits.', tags: ['WCAG 2.2 AA', 'AODA'] },
 ];
 
-/* Numbered [ 1 ]–[ 6 ] accordion beside the section copy. */
+/* Six compliance areas as a level three-across grid — every item's copy
+   and tags visible, instead of an accordion that shows one and hides five.
+   Keeps its filename so nothing that imports it has to change. */
 export default function ComplianceAccordion() {
-  const [open, setOpen] = useState(0);
   return (
     <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
-      <div className="cb-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 48, alignItems: 'start' }}>
-        <div>
-          <h2 style={{ marginBottom: 14 }}>Building With Compliance and Security in Mind</h2>
-          <p style={{ color: 'var(--body)', lineHeight: 1.7, maxWidth: '52ch' }}>We integrate compliance into every layer of the engineering process, so your business can meet complex regulations while keeping both security and performance.</p>
+      <div className="cb-container">
+        <div style={{ maxWidth: 720, marginBottom: 'clamp(26px, 3.5vw, 44px)' }}>
+          <span className="section-tag">Compliance</span>
+          <h2 style={{ margin: 0 }}>Building With Compliance and Security in Mind</h2>
+          <p style={{ color: 'var(--body)', lineHeight: 1.7, marginTop: 14, maxWidth: '60ch' }}>We integrate compliance into every layer of the engineering process, so your business can meet complex regulations while keeping both security and performance.</p>
         </div>
-        <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-          {items.map((it, i) => {
-            const on = open === i;
-            return (
-              <li key={it.t} style={{ borderTop: '1px solid var(--line)' }}>
-                <button onClick={() => setOpen(on ? -1 : i)} aria-expanded={on} style={{ width: '100%', display: 'grid', gridTemplateColumns: '56px 1fr auto', alignItems: 'center', gap: 12, padding: '20px 0', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
-                  <span className="idx">[ {i + 1} ]</span>
-                  <span style={{ fontSize: 17, fontWeight: 600, color: 'var(--ink)' }}>{it.t}</span>
-                  <span style={{ color: 'var(--brand)', fontSize: 22, lineHeight: 1, transform: on ? 'rotate(45deg)' : 'none', transition: 'transform .25s' }}>+</span>
-                </button>
-                {on && (
-                  <div style={{ padding: '0 0 22px 56px' }}>
-                    <p style={{ color: 'var(--body)', lineHeight: 1.7, marginBottom: 14 }}>{it.d}</p>
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>{it.tags.map(t => <span key={t} className="pill pill--brand">{t}</span>)}</div>
-                  </div>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+        <div className="svc-grid">
+          {items.map((it, i) => (
+            <article key={it.t} className="card card--flat" style={{ display: 'flex', flexDirection: 'column', background: 'var(--surface-alt)' }}>
+              <span className="idx">[ {String(i + 1).padStart(2, '0')} ]</span>
+              <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{it.t}</h3>
+              <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, marginBottom: 16 }}>{it.d}</p>
+              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 'auto' }}>
+                {it.tags.map(t => <span key={t} className="pill pill--brand" style={{ height: 28, fontSize: 12 }}>{t}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

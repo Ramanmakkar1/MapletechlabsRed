@@ -42,16 +42,19 @@ export function ServicesGrid({ title, sub, items, bg = 'var(--surface)' }: { tit
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow="What we deliver" title={title} sub={sub} />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+        <div className="svc-grid">
           {items.map((s, i) => (
             <article key={s.title} className="card" style={{ display: 'flex', flexDirection: 'column', background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 18 }}>
                 <span className="idx">[ {String(i + 1).padStart(2, '0')} ]</span>
                 {s.tag && <span className="pill pill--brand" style={{ height: 28, fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase' }}>{s.tag}</span>}
               </div>
-              <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{s.title}</h3>
-              <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, marginBottom: s.chips?.length ? 18 : 0 }}>{s.desc}</p>
-              {s.chips?.length ? <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 'auto' }}>{s.chips.map(c => <span key={c} className="pill" style={{ height: 28, fontSize: 12, background: '#fff' }}>{c}</span>)}</div> : null}
+              <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{s.title}</h3>
+              {/* every card gets the same three lines of copy, so a row stays level */}
+              <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, marginBottom: 18 }}>{s.desc}</p>
+              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 'auto', minHeight: 28 }}>
+                {(s.chips ?? []).slice(0, 4).map(c => <span key={c} className="pill" style={{ height: 28, fontSize: 12, background: '#fff' }}>{c}</span>)}
+              </div>
             </article>
           ))}
         </div>

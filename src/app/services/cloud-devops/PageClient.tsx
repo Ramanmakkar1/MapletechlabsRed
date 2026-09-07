@@ -91,7 +91,7 @@ export default function PageClient() {
       steps={steps}
       techCategories={techCategories}
       industries={industries}
-      servicesTitle="Related Services"
+      servicesTitle="Every Platform. Every Screen."
     />
   );
 }

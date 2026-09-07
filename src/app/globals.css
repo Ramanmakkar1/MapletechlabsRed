@@ -764,3 +764,10 @@ a:hover .media--zoom > img,
   .stat-card { flex-basis: 280px; }
 }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+/* Service cards: three across on desktop, level rows, same copy length */
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
+@media (max-width: 1023px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .svc-grid { grid-template-columns: 1fr; } }
+.clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
