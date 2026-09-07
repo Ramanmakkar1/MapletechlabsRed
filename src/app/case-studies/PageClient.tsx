@@ -142,9 +142,10 @@ export default function CaseStudiesPageClient() {
                   onClick={() => setActiveCategory(cat)}
                   style={{
                     padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 500,
-                    cursor: 'pointer', border: 'none', transition: 'all 0.2s',
-                    background: activeCategory === cat ? '#E11900' : 'var(--line)',
-                    color: activeCategory === cat ? 'var(--ink)' : 'var(--body)',
+                    cursor: 'pointer', transition: 'all 0.2s',
+                    background: activeCategory === cat ? 'var(--brand)' : 'var(--surface-alt)',
+                    color: activeCategory === cat ? '#fff' : 'var(--body)',
+                    border: activeCategory === cat ? '1px solid var(--brand)' : '1px solid var(--line)',
                   }}
                 >
                   {cat}
@@ -155,6 +156,21 @@ export default function CaseStudiesPageClient() {
         </section>
 
         <MediaBand media={workMedia.healthcare} />
+
+        {/* ── INTRO — how we think about outcomes ── */}
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container prose-split">
+            <div><h2 style={{ maxWidth: '15ch' }}>We report the number that mattered to the business</h2></div>
+            <div className="prose-body">
+              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
+                A case study is easy to inflate. We try not to. Each project below leads with the outcome the client actually cared about &mdash; latency cut from 100ms to sub-50ms, checkout conversion moved from 2.1% to 3.8%, admin overhead down 40% &mdash; because that is the only measure of whether the engineering was worth it.
+              </p>
+              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
+                They span the industries we know best: fintech and payments, healthcare, e-commerce, logistics and real estate. Different sectors, different regulations, one pattern &mdash; understand the business, ship something people use, and stay accountable for how it performs after launch. Filter by industry, or read them all.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* ── CASE STUDIES GRID ── */}
         <section style={{ paddingBottom: 'var(--section-y)' }}>
