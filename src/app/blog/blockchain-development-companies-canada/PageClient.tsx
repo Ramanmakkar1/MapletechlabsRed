@@ -22,15 +22,15 @@ function useReveal() {
 
 const companies = [
   { num: 1, name: 'Mapletech Labs', category: 'Full-Stack Blockchain', emoji: '🍁', metric: 'Smart Contracts, DeFi, NFT Platforms & Crypto Wallets', accentColor: '#f5290d', bgColor: 'rgba(245,41,13,' },
-  { num: 2, name: 'Townmedialabs', category: 'Web3 Marketing & Dev', emoji: '🌐', metric: 'Blockchain development with digital marketing expertise', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,' },
-  { num: 3, name: 'TML', category: 'DeFi & Token Platforms', emoji: '🪙', metric: 'Decentralized finance and token ecosystem builders', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,' },
-  { num: 4, name: 'Blockstream', category: 'Bitcoin Infrastructure', emoji: '⛏️', metric: 'Enterprise Bitcoin solutions from Victoria, BC', accentColor: '#047857', bgColor: 'rgba(52,211,153,' },
+  { num: 2, name: 'Townmedialabs', category: 'Web3 Marketing & Dev', emoji: '🌐', metric: 'Blockchain development with digital marketing expertise', accentColor: '#E11900', bgColor: 'rgba(167,139,250,' },
+  { num: 3, name: 'TML', category: 'DeFi & Token Platforms', emoji: '🪙', metric: 'Decentralized finance and token ecosystem builders', accentColor: '#E11900', bgColor: 'rgba(244,114,182,' },
+  { num: 4, name: 'Blockstream', category: 'Bitcoin Infrastructure', emoji: '⛏️', metric: 'Enterprise Bitcoin solutions from Victoria, BC', accentColor: '#E11900', bgColor: 'rgba(52,211,153,' },
   { num: 5, name: 'Consensys (Canadian Office)', category: 'Ethereum Tools & DApps', emoji: '💎', metric: 'MetaMask, Infura & enterprise Ethereum development', accentColor: '#94a3b8', bgColor: 'rgba(148,163,184,' },
-  { num: 6, name: 'Dapper Labs', category: 'NFTs & Flow Blockchain', emoji: '🎨', metric: 'Creators of CryptoKitties & NBA Top Shot', accentColor: '#B45309', bgColor: 'rgba(251,146,60,' },
-  { num: 7, name: 'Ledn', category: 'Crypto Lending Platform', emoji: '🏦', metric: 'Bitcoin-backed lending and savings products', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,' },
-  { num: 8, name: 'Wealthsimple Crypto', category: 'Retail Crypto Access', emoji: '📱', metric: 'Making crypto accessible to everyday Canadians', accentColor: '#15803D', bgColor: 'rgba(74,222,128,' },
-  { num: 9, name: 'Polymath', category: 'Security Token Platform', emoji: '🔐', metric: 'Regulated digital securities infrastructure', accentColor: '#B45309', bgColor: 'rgba(251,191,36,' },
-  { num: 10, name: 'Figment', category: 'Blockchain Infrastructure', emoji: '🔗', metric: 'Enterprise staking and node infrastructure', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,' },
+  { num: 6, name: 'Dapper Labs', category: 'NFTs & Flow Blockchain', emoji: '🎨', metric: 'Creators of CryptoKitties & NBA Top Shot', accentColor: '#E11900', bgColor: 'rgba(251,146,60,' },
+  { num: 7, name: 'Ledn', category: 'Crypto Lending Platform', emoji: '🏦', metric: 'Bitcoin-backed lending and savings products', accentColor: '#E11900', bgColor: 'rgba(96,165,250,' },
+  { num: 8, name: 'Wealthsimple Crypto', category: 'Retail Crypto Access', emoji: '📱', metric: 'Making crypto accessible to everyday Canadians', accentColor: '#E11900', bgColor: 'rgba(74,222,128,' },
+  { num: 9, name: 'Polymath', category: 'Security Token Platform', emoji: '🔐', metric: 'Regulated digital securities infrastructure', accentColor: '#E11900', bgColor: 'rgba(251,191,36,' },
+  { num: 10, name: 'Figment', category: 'Blockchain Infrastructure', emoji: '🔗', metric: 'Enterprise staking and node infrastructure', accentColor: '#E11900', bgColor: 'rgba(248,113,113,' },
 ];
 
 const relatedPosts = [
@@ -238,7 +238,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                 {[
                   {
                     num: '02', id: 'townmedialabs', name: 'Townmedialabs', category: 'Web3 Marketing & Dev',
-                    emoji: '🌐', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
+                    emoji: '🌐', accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
                     metric: 'Blockchain development with digital marketing expertise',
                     paragraphs: [
                       'Townmedialabs combines blockchain development with digital marketing expertise, helping Canadian Web3 projects launch with both technical excellence and market traction. Their unique positioning bridges the gap between building decentralized applications and actually getting them in front of users — a challenge that pure-play blockchain agencies often overlook.',
@@ -247,7 +247,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '03', id: 'tml', name: 'TML', category: 'DeFi & Token Platforms',
-                    emoji: '🪙', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,',
+                    emoji: '🪙', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
                     metric: 'Decentralized finance and token ecosystem builders',
                     paragraphs: [
                       'TML builds decentralized finance platforms and token ecosystems, helping Canadian blockchain startups navigate the regulatory landscape while building compliant, scalable solutions. Their deep understanding of CSA guidelines and OSC requirements makes them invaluable for projects that need to operate within Canadian securities law.',
@@ -256,7 +256,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '04', id: 'blockstream', name: 'Blockstream', category: 'Bitcoin Infrastructure',
-                    emoji: '⛏️', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
+                    emoji: '⛏️', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
                     metric: 'Enterprise Bitcoin solutions from Victoria, BC',
                     paragraphs: [
                       'Based in Victoria, BC, Blockstream is a global leader in Bitcoin infrastructure. They developed the Liquid Network, a Bitcoin sidechain for faster settlements and confidential transactions. Their satellite network broadcasts the Bitcoin blockchain worldwide, and their mining operations are among the most energy-efficient in North America.',
@@ -272,7 +272,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '06', id: 'dapper-labs', name: 'Dapper Labs', category: 'NFTs & Flow Blockchain',
-                    emoji: '🎨', accentColor: '#B45309', bgColor: 'rgba(251,146,60,',
+                    emoji: '🎨', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
                     metric: 'Creators of CryptoKitties & NBA Top Shot',
                     paragraphs: [
                       'Vancouver-based Dapper Labs literally invented the NFT craze with CryptoKitties in 2017, then built the Flow blockchain to solve the scalability problems they encountered. NBA Top Shot, their flagship product, has generated over $1 billion in sales. They are the gold standard for consumer-facing blockchain applications and continue to push the boundaries of what is possible with digital collectibles.',
@@ -280,7 +280,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '07', id: 'ledn', name: 'Ledn', category: 'Crypto Lending Platform',
-                    emoji: '🏦', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
+                    emoji: '🏦', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
                     metric: 'Bitcoin-backed lending and savings products',
                     paragraphs: [
                       'Toronto-based Ledn has built one of the most trusted crypto lending platforms in Canada. Their Bitcoin-backed loans and savings accounts offer Canadians a regulated way to earn yield on their crypto holdings. Unlike many competitors that collapsed during the 2022 crypto winter, Ledn maintained full solvency and published regular proof-of-reserves attestations — a testament to their engineering discipline and risk management.',
@@ -288,7 +288,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '08', id: 'wealthsimple-crypto', name: 'Wealthsimple Crypto', category: 'Retail Crypto Access',
-                    emoji: '📱', accentColor: '#15803D', bgColor: 'rgba(74,222,128,',
+                    emoji: '📱', accentColor: '#E11900', bgColor: 'rgba(74,222,128,',
                     metric: 'Making crypto accessible to everyday Canadians',
                     paragraphs: [
                       'As one of the first OSC-registered crypto trading platforms in Canada, Wealthsimple Crypto has made digital assets accessible to millions of everyday Canadians. Their engineering team has built a seamless experience that bridges traditional investing and crypto, allowing users to buy Bitcoin, Ethereum, and over 50 other tokens within the same app they use for stocks and ETFs. Their focus on regulatory compliance sets the standard for Canadian crypto platforms.',
@@ -296,7 +296,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '09', id: 'polymath', name: 'Polymath', category: 'Security Token Platform',
-                    emoji: '🔐', accentColor: '#B45309', bgColor: 'rgba(251,191,36,',
+                    emoji: '🔐', accentColor: '#E11900', bgColor: 'rgba(251,191,36,',
                     metric: 'Regulated digital securities infrastructure',
                     paragraphs: [
                       'Toronto-based Polymath is pioneering the security token industry with Polymesh, a purpose-built blockchain for regulated assets. They enable the tokenization of real-world assets — real estate, private equity, bonds — in a way that satisfies securities regulators globally. Their technology has been adopted by major financial institutions looking to bring traditional assets on-chain while maintaining full regulatory compliance.',
@@ -304,7 +304,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   },
                   {
                     num: '10', id: 'figment', name: 'Figment', category: 'Blockchain Infrastructure & Staking',
-                    emoji: '🔗', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,',
+                    emoji: '🔗', accentColor: '#E11900', bgColor: 'rgba(248,113,113,',
                     metric: 'Enterprise staking and node infrastructure',
                     paragraphs: [
                       'Toronto-headquartered Figment is one of the world\'s largest blockchain infrastructure providers. They operate validator nodes across over 60 proof-of-stake networks, managing billions of dollars in staked assets. Their DataHub platform provides enterprise-grade API access to blockchain data, and their staking solutions serve institutional investors, exchanges, and custodians. Figment represents the infrastructure backbone that makes the entire blockchain ecosystem function.',

@@ -23,7 +23,7 @@ export default function Cursor() {
 
     const onEnterLink = () => {
       gsap.to(dot, { scale: 0, duration: 0.2 });
-      gsap.to(follower, { scale: 2.2, borderColor: 'rgba(124,58,237,0.8)', duration: 0.3, ease: 'power2.out' });
+      gsap.to(follower, { scale: 2.2, borderColor: 'rgba(225,25,0,0.10)', duration: 0.3, ease: 'power2.out' });
     };
 
     const onLeaveLink = () => {
@@ -35,8 +35,8 @@ export default function Cursor() {
       gsap.to(dot, { scale: 0, duration: 0.2 });
       gsap.to(follower, {
         scale: 3,
-        background: 'rgba(124,58,237,0.15)',
-        borderColor: 'rgba(124,58,237,0.6)',
+        background: 'rgba(225,25,0,0.10)',
+        borderColor: 'rgba(225,25,0,0.10)',
         duration: 0.3,
         ease: 'power2.out'
       });

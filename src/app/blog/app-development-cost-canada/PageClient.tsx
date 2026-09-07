@@ -204,12 +204,12 @@ export default function AppDevelopmentCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(52,211,153,0.15)', color: '#047857',
+                        background: 'rgba(52,211,153,0.15)', color: '#E11900',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Simple App / MVP</span>
                     </div>
                     <h3 style={{
-                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#047857',
+                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#E11900',
                       letterSpacing: '-0.03em', marginBottom: 16,
                     }}>$25,000 &ndash; $50,000</h3>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
@@ -234,12 +234,12 @@ export default function AppDevelopmentCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(96,165,250,0.15)', color: '#1D4ED8',
+                        background: 'rgba(96,165,250,0.15)', color: '#E11900',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Medium Complexity</span>
                     </div>
                     <h3 style={{
-                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#1D4ED8',
+                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#E11900',
                       letterSpacing: '-0.03em', marginBottom: 16,
                     }}>$50,000 &ndash; $150,000</h3>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
@@ -264,12 +264,12 @@ export default function AppDevelopmentCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                       <span style={{
                         fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                        background: 'rgba(167,139,250,0.15)', color: '#6D28D9',
+                        background: 'rgba(167,139,250,0.15)', color: '#E11900',
                         fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                       }}>Complex Enterprise</span>
                     </div>
                     <h3 style={{
-                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#6D28D9',
+                      fontSize: 'var(--fs-h3)', fontWeight: 600, color: '#E11900',
                       letterSpacing: '-0.03em', marginBottom: 16,
                     }}>$150,000 &ndash; $500,000+</h3>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
@@ -379,7 +379,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                         {['Same timezone & language', 'PIPEDA compliance built-in', 'Accountable legal framework', 'IP protection under Canadian law', 'Face-to-face meetings possible', 'Long-term partnership model'].map(item => (
                           <p key={item} style={{ fontSize: 13, color: 'var(--muted)', margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
-                            <span style={{ color: '#047857', fontSize: 14 }}>&#10003;</span> {item}
+                            <span style={{ color: '#E11900', fontSize: 14 }}>&#10003;</span> {item}
                           </p>
                         ))}
                       </div>
@@ -393,7 +393,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                         {['Significant timezone gaps', 'May not understand Canadian regulations', 'Limited legal recourse', 'IP ownership can be murky', 'Communication barriers', 'Higher project management overhead'].map(item => (
                           <p key={item} style={{ fontSize: 13, color: 'var(--muted)', margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
-                            <span style={{ color: '#B91C1C', fontSize: 14 }}>&#10007;</span> {item}
+                            <span style={{ color: '#E11900', fontSize: 14 }}>&#10007;</span> {item}
                           </p>
                         ))}
                       </div>
@@ -512,7 +512,7 @@ export default function AppDevelopmentCostCanadaClient() {
                     background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.12)',
                   }}>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8, margin: 0 }}>
-                      <strong style={{ color: '#047857' }}>Real example:</strong> A Toronto fintech startup approached us after receiving quotes of $280,000-$350,000 from GTA agencies. We delivered the same scope for $195,000, on time and under budget. Same tech stack. Same quality. Just smarter economics.
+                      <strong style={{ color: '#E11900' }}>Real example:</strong> A Toronto fintech startup approached us after receiving quotes of $280,000-$350,000 from GTA agencies. We delivered the same scope for $195,000, on time and under budget. Same tech stack. Same quality. Just smarter economics.
                     </p>
                   </div>
                 </div>

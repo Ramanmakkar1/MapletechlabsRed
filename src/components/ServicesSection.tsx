@@ -44,7 +44,7 @@ export default function ServicesSection() {
           {large.map((s, i) => (
             <div key={s.title} className={`reveal reveal-d${i + 1}`}
               style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 'clamp(24px, 4vw, 40px)', padding: 'clamp(24px, 5vw, 60px)', display: 'flex', flexDirection: 'column', gap: 'clamp(20px, 3vw, 32px)', minHeight: 'clamp(240px, 50vh, 360px)', position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(20,17,24,0.10), 0 0 0 1px rgba(245,41,13,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.10), 0 0 0 1px rgba(245,41,13,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}
             >
               <div aria-hidden="true" style={{ position: 'absolute', bottom: -20, right: 28, fontSize: 'clamp(80px, 20vw, 180px)', fontWeight: 800, color: 'rgba(225,25,0,0.07)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>{s.num}</div>
@@ -69,7 +69,7 @@ export default function ServicesSection() {
           {small.map((s, i) => (
             <div key={s.title} className={`reveal reveal-d${i + 1}`}
               style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 'clamp(20px, 3vw, 32px)', padding: 'clamp(20px, 4vw, 40px) clamp(20px, 3vw, 36px)', display: 'flex', flexDirection: 'column', gap: 16, minHeight: 'clamp(180px, 30vw, 220px)', position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(20,17,24,0.10), 0 0 0 1px rgba(245,41,13,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.10), 0 0 0 1px rgba(245,41,13,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}
             >
               <div aria-hidden="true" style={{ position: 'absolute', bottom: -8, right: 16, fontSize: 80, fontWeight: 800, color: 'rgba(225,25,0,0.07)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>{s.num}</div>

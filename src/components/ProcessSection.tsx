@@ -125,7 +125,7 @@ export default function ProcessSection() {
                 onMouseEnter={e => {
                   e.currentTarget.style.background = 'rgba(245,41,13,0.03)';
                   e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)';
-                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(20,17,24,0.10)';
+                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.10)';
                   const circle = e.currentTarget.querySelector('.process-step-circle') as HTMLElement;
                   if (circle) circle.style.boxShadow = '0 0 20px rgba(245,41,13,0.3)';
                 }}

@@ -154,14 +154,7 @@ const posts = [
   },
 ];
 
-const categoryColors: Record<string, string> = {
-  Engineering: '#1D4ED8',
-  'AI/ML': '#6D28D9',
-  Mobile: '#047857',
-  Design: '#BE185D',
-  Business: 'var(--brand)',
-  'Digital Marketing': '#B45309',
-};
+const categoryColors: Record<string, string> = { default: '#E11900' };
 
 export default function BlogPage() {
   const pageRef = useReveal();
@@ -332,7 +325,7 @@ export default function BlogPage() {
               display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(320px, 100%), 1fr))', gap: 20,
             }}>
               {posts.filter(p => activeCategory === 'All' || p.category === activeCategory).map((post, i) => {
-                const accentColor = categoryColors[post.category] || 'var(--brand)';
+                const accentColor = 'var(--brand)';
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                     <article
@@ -346,7 +339,7 @@ export default function BlogPage() {
                       }}
                       onMouseEnter={e => {
                         (e.currentTarget as HTMLElement).style.borderColor = 'rgba(245,41,13,0.2)';
-                        (e.currentTarget as HTMLElement).style.boxShadow = '0 20px 48px rgba(20,17,24,0.10)';
+                        (e.currentTarget as HTMLElement).style.boxShadow = '0 20px 48px rgba(0,0,0,0.10)';
                         (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)';
                       }}
                       onMouseLeave={e => {
@@ -371,7 +364,7 @@ export default function BlogPage() {
                         <div style={{ marginBottom: 20 }}>
                           <span style={{
                             fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
-                            background: `${accentColor}15`, color: accentColor,
+                            background: 'var(--brand)', color: '#fff',
                             padding: '4px 12px', borderRadius: 100,
                           }}>
                             {post.category}

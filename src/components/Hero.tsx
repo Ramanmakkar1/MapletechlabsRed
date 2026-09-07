@@ -43,7 +43,7 @@ export default function Hero() {
         aria-hidden
         style={{
           position: 'absolute', bottom: 0, left: 0, right: 0, height: 140,
-          background: 'linear-gradient(to bottom, transparent, var(--surface-alt))',
+          background: 'var(--surface-alt)',
           pointerEvents: 'none', zIndex: 0,
         }}
       />
@@ -59,7 +59,7 @@ export default function Hero() {
               border: '1px solid var(--line-strong)', borderRadius: 100,
             }}
           >
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand-bright)', boxShadow: '0 0 0 4px rgba(245,41,13,.14)' }} />
+            <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 0 4px rgba(245,41,13,.14)' }} />
             <span style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--brand-deep)', letterSpacing: '.12em', textTransform: 'uppercase' }}>
               Canadian Software &amp; AI Engineering Partner
             </span>
@@ -244,7 +244,7 @@ function HeroVisual() {
           Now building
         </span>
         <span style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 7 }}>
-          <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand-bright)', animation: 'hv-pulse 1.8s ease-in-out infinite' }} />
+          <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)', animation: 'hv-pulse 1.8s ease-in-out infinite' }} />
           <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)' }}>7 active products</span>
         </span>
       </div>

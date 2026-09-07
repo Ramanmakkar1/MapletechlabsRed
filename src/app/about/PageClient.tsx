@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { blogMedia, officeMedia } from '@/data/media';
-import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 
 function useReveal() {
@@ -118,7 +117,6 @@ export default function AboutPage() {
 
         {/* ── HERO ── */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "About Mapletech Labs", title: <>We Build Software<br />That Matters.</>, desc: <>A world-class engineering firm headquartered in Edmonton, Canada. Founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={officeMedia.meeting} form={false} />
-        <MediaBand media={blogMedia[0]} />
 
         {/* ── MISSION STATEMENT ── */}
         <section style={{
@@ -205,7 +203,7 @@ export default function AboutPage() {
                   {/* Vertical line */}
                   <div aria-hidden="true" style={{
                     position: 'absolute', left: 0, top: 12, bottom: 12,
-                    width: 1, background: 'var(--brand-tint)',
+                    width: 1, background: 'var(--surface-alt)',
                   }} />
                   {timeline.map((item, i) => (
                     <div key={item.year} style={{

@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import { serviceMedia } from '@/data/media';
 
 const caps = [
   { title: 'GenAI Integration', items: ['AI agents', 'Chatbots & copilots', 'Coding assistants'] },
@@ -13,8 +15,10 @@ export default function AiLab() {
   return (
     <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
       <div className="cb-container ailab">
-        <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', minHeight: 300, display: 'grid', placeItems: 'center', padding: 40 }}>
-          <div style={{ fontSize: 'clamp(2.6rem, 5vw, 4.5rem)', fontWeight: 700, letterSpacing: '-0.05em', color: 'var(--ink)', lineHeight: 1 }}>
+        <div className="media media--lg" style={{ position: 'relative', aspectRatio: '4 / 5', maxHeight: 560 }}>
+          <Image src={serviceMedia['ai-ml'].src} alt={serviceMedia['ai-ml'].alt} fill sizes="(max-width: 1023px) 100vw, 44vw" style={{ objectFit: 'cover' }} />
+          <div className="media__scrim" aria-hidden />
+          <div style={{ position: 'absolute', left: 26, bottom: 24, color: '#fff', fontSize: 'clamp(2rem, 3.4vw, 3rem)', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1, textShadow: '0 2px 12px rgba(0,0,0,.35)' }}>
             Maple<span style={{ color: 'var(--brand)', fontWeight: 500 }}>AI</span>
           </div>
         </div>

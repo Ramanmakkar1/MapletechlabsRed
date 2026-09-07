@@ -175,7 +175,7 @@ export default function Navbar() {
               background: 'var(--surface)',
               borderTop: '1px solid var(--line)',
               borderBottom: '1px solid var(--line)',
-              boxShadow: '0 24px 60px rgba(20,17,24,.10)',
+              boxShadow: '0 24px 60px rgba(0,0,0,.10)',
               animation: 'mega-in .22s cubic-bezier(.16,1,.3,1)',
               maxHeight: 'calc(100vh - 76px)', overflowY: 'auto',
             }}
@@ -193,7 +193,7 @@ export default function Navbar() {
                           style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}
                           className="mega-cat"
                         >
-                          <span style={{ width: 34, height: 34, borderRadius: 10, background: 'var(--brand-tint)', color: 'var(--brand)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
+                          <span style={{ width: 34, height: 34, borderRadius: 10, background: 'var(--surface-alt)', color: 'var(--brand)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
                             {c.icon}
                           </span>
                           <span style={{ fontSize: 14.5, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.01em' }}>{c.title}</span>

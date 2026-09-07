@@ -36,7 +36,7 @@ export default function AdvancedLabs() {
                   onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(245,41,13,0.08)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
-                  <div style={{ width: 2, flexShrink: 0, background: 'var(--brand-tint)', borderRadius: 10, minHeight: 60 }} />
+                  <div style={{ width: 2, flexShrink: 0, background: 'var(--surface-alt)', borderRadius: 10, minHeight: 60 }} />
                   <div>
                     <h4 style={{ fontSize: 17, fontWeight: 600, color: 'var(--on-ink)', marginBottom: 8, letterSpacing: '-0.02em' }}>{f.title}</h4>
                     <p style={{ fontSize: 14, color: 'var(--on-ink-body)', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
@@ -45,7 +45,7 @@ export default function AdvancedLabs() {
               ))}
             </div>
             <button style={{ marginTop: 'clamp(28px, 5vw, 52px)', display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 clamp(20px, 4vw, 28px)', borderRadius: 100, background: 'rgba(255,255,255,0.05)', border: '1px solid var(--line-ink)', color: 'var(--on-ink)', fontSize: 14, fontWeight: 500, cursor: 'pointer', transition: '0.3s', fontFamily: 'inherit', minHeight: 44 }}
-              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.1)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = 'var(--brand-bright)'; }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245,41,13,0.1)'; e.currentTarget.style.borderColor = 'rgba(245,41,13,0.3)'; e.currentTarget.style.color = 'var(--brand)'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'var(--line-ink)'; e.currentTarget.style.color = 'var(--on-ink)'; }}
             >
               Explore R&D Labs
@@ -74,7 +74,7 @@ export default function AdvancedLabs() {
               </div>
               <div style={{ position: 'absolute', bottom: 28, left: 28, display: 'flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,0.05)', border: '1px solid var(--line-ink)', borderRadius: 100, padding: '9px 18px' }}>
                 <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)' }} />
-                <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand-bright)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Neural Core Active</span>
+                <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Neural Core Active</span>
               </div>
             </div>
           </div>

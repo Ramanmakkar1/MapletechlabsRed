@@ -81,7 +81,7 @@ function AwardCard({ award, i }: { award: typeof awards[number]; i: number }) {
         e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)';
         e.currentTarget.style.background = 'rgba(245,41,13,0.04)';
         e.currentTarget.style.transform = 'translateY(-4px)';
-        e.currentTarget.style.boxShadow = '0 16px 40px rgba(20,17,24,0.10)';
+        e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.10)';
       }}
       onMouseLeave={e => {
         e.currentTarget.style.borderColor = 'var(--line-ink)';

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { officeMedia, serviceMedia } from '@/data/media';
-import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 
 function useReveal() {
@@ -35,7 +34,7 @@ const cardHover: React.CSSProperties = {
   borderColor: 'rgba(245,41,13,0.2)',
   background: 'rgba(245,41,13,0.03)',
   transform: 'translateY(-4px)',
-  boxShadow: '0 24px 60px rgba(20,17,24,0.10)',
+  boxShadow: '0 24px 60px rgba(0,0,0,0.10)',
 };
 
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
@@ -79,7 +78,7 @@ const services: ServiceCategory[] = [
     title: 'Web Development',
     href: '/services/web-development',
     initial: 'W',
-    color: '#1D4ED8',
+    color: '#E11900',
     description: 'We architect and build scalable web systems for startups and enterprises. Our expertise spans React, Next.js, Node.js, and GraphQL to deliver SaaS platforms, e-commerce storefronts, and complex enterprise applications. Using modern frameworks and cloud-native architecture, we design systems that grow from MVP to millions of users. Our approach includes discovery and requirements mapping, database schema design, high-fidelity prototyping, agile development with weekly deployments, and post-launch performance optimization. Real examples: fintech dashboards handling $10M+ in daily transactions, HIPAA-compliant healthcare portals, and multi-tenant SaaS with Stripe billing integration. Technology stack: React, Next.js, TypeScript, PostgreSQL, GraphQL, AWS, Kubernetes. Timeline: 4-12 weeks from kickoff to production. Ideal for companies needing robust, scalable web infrastructure.',
     subServices: [
       { name: 'Next.js Development', href: '/services/web-development/nextjs-development' },
@@ -93,7 +92,7 @@ const services: ServiceCategory[] = [
     title: 'AI & Machine Learning',
     href: '/services/ai-ml',
     initial: 'A',
-    color: '#6D28D9',
+    color: '#E11900',
     description: 'We deploy cutting-edge AI and machine learning solutions that unlock automation, intelligence, and competitive advantage. Our team combines LLM integration (GPT-4, Claude, Llama), computer vision, and predictive analytics to solve real business problems. Methodology: we analyze your data, build custom models, integrate with your systems, and measure impact. Real examples: AI-powered customer support reducing ticket resolution time by 70%, predictive inventory systems for e-commerce, document classification for legal firms, and anomaly detection for fraud prevention. Technology stack: Python, TensorFlow, PyTorch, OpenAI API, Hugging Face, AWS SageMaker. Deliverables include data preparation, model training, API integration, and monitoring dashboards. Timeline: POC in 4 weeks, production deployment in 8-12 weeks. Key benefits: 24/7 automation, reduced operational costs, improved decision-making, and scalable intelligence.',
     subServices: [
       { name: 'LLM Integration', href: '/services/ai-ml/llm-integration' },
@@ -107,7 +106,7 @@ const services: ServiceCategory[] = [
     title: 'Blockchain & Web3',
     href: '/services/blockchain-web3',
     initial: 'B',
-    color: '#B45309',
+    color: '#E11900',
     description: 'We build decentralized applications, smart contracts, and blockchain solutions for the Web3 era. Our expertise spans Solidity smart contracts, DeFi protocol development, NFT platforms, and crypto wallet integration. Methodology: requirements analysis, contract architecture design, comprehensive testing (audits on request), and mainnet deployment with ongoing support. Real examples: DeFi yield farming protocols enabling users to earn 8-12% APY, NFT marketplaces with $50M+ trading volume, and permissionless lending platforms. Technology stack: Solidity, Hardhat, Ethers.js, Web3.js, Ethereum, Polygon, Arbitrum. Deliverables include audited smart contracts, web frontends for user interaction, liquidity management systems, and governance mechanisms. Timeline: smart contracts in 6-8 weeks, full dApp in 12-16 weeks. Key benefits: decentralized trust, 24/7 operation, transparent on-chain audit trails, and access to global liquidity.',
     subServices: [
       { name: 'Smart Contracts', href: '/services/blockchain-web3/smart-contracts' },
@@ -121,7 +120,7 @@ const services: ServiceCategory[] = [
     title: 'Product Design',
     href: '/services/product-design',
     initial: 'P',
-    color: '#BE185D',
+    color: '#E11900',
     description: 'We craft intuitive digital experiences that drive user engagement and business growth through human-centered design. Our approach begins with comprehensive user research, competitive analysis, and stakeholder interviews to understand needs and pain points. We create detailed personas, user journeys, and wireframes, then validate with interactive prototypes before a single line of code is written. Real example: redesigning a fintech dashboard increased user adoption by 45% and reduced support tickets by 30% through simplified navigation and personalized workflows. Deliverables: user research reports, detailed wireframes, interactive Figma prototypes, design systems with component libraries, and handoff documentation. Technology stack: Figma, Whimsical, UserTesting, Maze. Timeline: discovery to design system in 4-8 weeks. Key benefits: reduced development rework, faster time-to-market, improved user retention, measurable conversion increases, and scalable design consistency.',
     subServices: [
       { name: 'UI/UX Strategy', href: '/services/product-design/ui-ux-strategy' },
@@ -135,7 +134,7 @@ const services: ServiceCategory[] = [
     title: 'Cloud & DevOps',
     href: '/services/cloud-devops',
     initial: 'C',
-    color: '#0E7490',
+    color: '#E11900',
     description: 'We design and implement production-grade cloud infrastructure, CI/CD automation, and DevOps workflows that enable teams to deploy confidently at scale. Our methodology encompasses AWS architecture design, containerization with Docker and Kubernetes, infrastructure-as-code, monitoring setup, and automated testing pipelines. Real example: migrating a legacy monolith to Kubernetes reduced deployment time from 4 hours to 8 minutes and improved system reliability to 99.99% uptime. Deliverables: VPC and networking design, containerized applications, Helm charts, automated CI/CD pipelines, infrastructure templates (Terraform), monitoring dashboards, and runbooks. Technology stack: AWS, Kubernetes, Docker, Terraform, GitHub Actions, DataDog, Prometheus. Timeline: foundational setup in 2-4 weeks, comprehensive DevOps maturity in 8-12 weeks. Key benefits: faster deployments, reduced human error, automatic scaling, cost optimization, and improved system observability.',
     subServices: [
       { name: 'AWS Architecture', href: '/services/cloud-devops/aws-architecture' },
@@ -149,7 +148,7 @@ const services: ServiceCategory[] = [
     title: 'AR & VR Development',
     href: '/services/ar-vr',
     initial: 'R',
-    color: '#047857',
+    color: '#E11900',
     description: 'Immersive augmented and virtual reality experiences for mobile, web, and enterprise applications.',
     subServices: [
       { name: 'Mobile AR', href: '/services/ar-vr/mobile-ar' },
@@ -163,7 +162,7 @@ const services: ServiceCategory[] = [
     title: 'Game Development',
     href: '/services/game-development',
     initial: 'G',
-    color: '#B91C1C',
+    color: '#E11900',
     description: 'Engaging mobile games, Unity and Unreal Engine titles, and multiplayer experiences with LiveOps.',
     subServices: [
       { name: 'Mobile Games', href: '/services/game-development/mobile-games' },
@@ -219,7 +218,7 @@ const services: ServiceCategory[] = [
     title: 'SaaS Development',
     href: '/services/saas-development',
     initial: 'S',
-    color: '#0F766E',
+    color: '#E11900',
     description: 'End-to-end SaaS product development — from MVP to multi-tenant architecture, billing, and analytics.',
     subServices: [
       { name: 'SaaS MVP Development', href: '/services/saas-development/saas-mvp-development' },
@@ -247,7 +246,6 @@ export default function ServicesIndexPage() {
 
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} copy={{ badge: "What we do", title: <>Our <span style={{ color: 'var(--brand)' }}>Services</span></>, desc: <>From mobile apps and AI to blockchain and branding, we deliver end-to-end digital solutions that help startups and enterprises build, launch, and scale.</> }} photo={officeMedia.open} form={false} />
-        <MediaBand media={serviceMedia['web-development']} />
 
         {/* SERVICE GRID */}
         <section ref={s1} className="section-padding">

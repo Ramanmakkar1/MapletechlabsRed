@@ -1,12 +1,11 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MediaBand from '@/components/MediaBand';
 import ComplianceAccordion from '@/components/home/ComplianceAccordion';
 import AwardsList from '@/components/home/AwardsList';
 import FaqSplit from '@/components/home/FaqSplit';
 import PageHero from './PageHero';
 import { StatRow, TechBlocks, SuccessStories, CtaStrip, CaseBand, CardGrid, WhyUs } from './Blocks';
-import { industryMedia, defaultMedia, officeMedia } from '@/data/media';
+import { industryMedia, defaultMedia } from '@/data/media';
 import type { HeroCopy, Stat } from './types';
 
 export interface IndustryProps {
@@ -26,14 +25,13 @@ export default function IndustryPageTemplate(p: IndustryProps) {
     <>
       <Navbar />
       <main id="main-content">
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries', href: '/industries' }, { label: p.name }]} copy={p.copy} stats={p.heroStats} photo={officeMedia.meeting} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries', href: '/industries' }, { label: p.name }]} copy={p.copy} stats={p.heroStats} photo={industryMedia[p.slug] ?? defaultMedia} form={false} />
         <StatRow stats={p.heroStats} />
-        <MediaBand media={industryMedia[p.slug] ?? defaultMedia} />
-        <CardGrid eyebrow="The problem space" title="Key Challenges We Solve" items={p.challenges} bg="var(--surface)" min={280} />
+        <CardGrid eyebrow="The problem space" title="Key Challenges We Solve" items={p.challenges} bg="var(--surface)" variant="rows" />
         <CardGrid eyebrow="What we build" title={`Systems We Build for ${p.name}`} items={p.solutions} bg="var(--surface-alt)" />
         <CaseBand {...p.caseStudy} />
         <TechBlocks title={`Built With the Right Tools for ${p.name}`} cats={p.tech.map(t => ({ label: t.cat, chips: t.items }))} bg="var(--surface-alt)" />
-        <CardGrid eyebrow={`Why Mapletech Labs for ${p.name}`} title="Domain experts, not generalists." items={p.whyUs} bg="var(--surface)" min={280} />
+        <CardGrid eyebrow={`Why Mapletech Labs for ${p.name}`} title="Domain experts, not generalists." items={p.whyUs} bg="var(--surface)" variant="rows" />
         <SuccessStories bg="var(--surface-alt)" />
         <ComplianceAccordion />
         <WhyUs bg="var(--surface-alt)" />

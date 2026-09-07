@@ -6,7 +6,6 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadges from '@/components/TrustBadges';
 import { industryMedia, officeMedia } from '@/data/media';
-import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 
 function useReveal() {
@@ -34,7 +33,7 @@ const cardHover: React.CSSProperties = {
   borderColor: 'rgba(245,41,13,0.2)',
   background: 'rgba(245,41,13,0.03)',
   transform: 'translateY(-4px)',
-  boxShadow: '0 24px 60px rgba(20,17,24,0.10)',
+  boxShadow: '0 24px 60px rgba(0,0,0,0.10)',
 };
 
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
@@ -110,7 +109,6 @@ export default function IndustriesPage() {
 
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} copy={{ badge: "Sectors we serve", title: <>Industries We <span style={{ color: 'var(--brand)' }}>Serve.</span></>, desc: <>Deep expertise across 6 verticals. Custom solutions built for your industry's unique challenges.</> }} photo={officeMedia.meeting} form={false} />
-        <MediaBand media={industryMedia.healthcare} />
 
         {/* INDUSTRIES GRID */}
         <section ref={s1} className="section-padding">

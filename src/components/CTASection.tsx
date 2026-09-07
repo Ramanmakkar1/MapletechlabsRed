@@ -39,12 +39,12 @@ export default function CTASection() {
 
   return (
     <section id="contact" className="section" style={{
-      background: 'linear-gradient(160deg, var(--surface) 0%, var(--brand-tint) 100%)',
+      background: 'var(--surface-alt)',
       position:'relative', overflow:'hidden',
     }}>
       {/* BG orbs */}
       <div style={{ position:'absolute', top:'-20%', right:'-10%', width:500, height:500, borderRadius:'50%', background:'transparent', pointerEvents:'none' }}/>
-      <div style={{ position:'absolute', bottom:'-20%', left:'-10%', width:400, height:400, borderRadius:'50%', background:'radial-gradient(circle, transparent 0%, transparent 70%)', pointerEvents:'none' }}/>
+      <div style={{ position:'absolute', bottom:'-20%', left:'-10%', width:400, height:400, borderRadius:'50%', background:'transparent', pointerEvents:'none' }}/>
 
       <div className="cb-container" style={{ position:'relative', zIndex:10 }}>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'60px 80px', alignItems:'center' }}>
@@ -53,7 +53,7 @@ export default function CTASection() {
           <div>
             <p className="section-tag">Ready to Start?</p>
             <h2 style={{ fontSize:'clamp(1.8rem,3.5vw,3rem)', fontWeight:800, color: 'var(--ink)', lineHeight:1.15, marginBottom:20 }}>
-              Let's Build Something <span style={{ color:'#7c3aed' }}>Amazing Together</span>
+              Let's Build Something <span style={{ color:'#E11900' }}>Amazing Together</span>
             </h2>
             <p style={{ color: 'var(--muted)', fontSize:15, lineHeight:1.8, marginBottom:36 }}>
               Have a project in mind? Tell us about it and we'll get back to you within 24 hours with a clear path forward.

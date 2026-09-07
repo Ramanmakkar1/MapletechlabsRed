@@ -30,7 +30,6 @@ interface CityServicePageProps {
 
 const Head = ({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) => (
   <div style={{ maxWidth: 720, marginBottom: 'clamp(26px, 3.5vw, 44px)' }}>
-    <span className="section-tag">{eyebrow}</span>
     <h2 style={{ margin: 0 }}>{title}</h2>
     {sub && <p style={{ color: 'var(--body)', lineHeight: 1.75, marginTop: 14 }}>{sub}</p>}
   </div>
@@ -115,10 +114,10 @@ export default function CityServicePageClient(p: CityServicePageProps) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
               {p.pricingTiers.map((t, i) => (
                 <div key={t.name} className="card card--flat" style={{ background: i === 1 ? 'var(--surface-ink)' : 'var(--surface-alt)', color: i === 1 ? 'var(--on-ink-body)' : undefined }}>
-                  <div className="eyebrow" style={{ color: i === 1 ? 'var(--brand-bright)' : 'var(--brand)' }}>{t.name}</div>
+                  <div className="eyebrow" style={{ color: i === 1 ? 'var(--brand)' : 'var(--brand)' }}>{t.name}</div>
                   <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', fontWeight: 700, letterSpacing: '-0.04em', color: i === 1 ? '#fff' : 'var(--ink)', margin: '12px 0 16px' }}>{t.range}</div>
                   <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 8 }}>
-                    {t.features.map(f => <li key={f} style={{ display: 'flex', gap: 8, fontSize: 14 }}><span style={{ color: i === 1 ? 'var(--brand-bright)' : 'var(--brand)' }}>✓</span>{f}</li>)}
+                    {t.features.map(f => <li key={f} style={{ display: 'flex', gap: 8, fontSize: 14 }}><span style={{ color: i === 1 ? 'var(--brand)' : 'var(--brand)' }}>✓</span>{f}</li>)}
                   </ul>
                 </div>
               ))}

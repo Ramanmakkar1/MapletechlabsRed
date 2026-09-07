@@ -296,7 +296,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                       padding: '20px 24px', borderRadius: 14, marginBottom: 12,
                       background: 'rgba(248,113,113,0.04)', border: '1px solid rgba(248,113,113,0.12)',
                     }}>
-                      <p style={{ fontSize: 15, fontWeight: 700, color: '#B91C1C', marginBottom: 6 }}>{i + 1}. {item.flag}</p>
+                      <p style={{ fontSize: 15, fontWeight: 700, color: '#E11900', marginBottom: 6 }}>{i + 1}. {item.flag}</p>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.detail}</p>
                     </div>
                   ))}
@@ -333,7 +333,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                       padding: '20px 24px', borderRadius: 14, marginBottom: 12,
                       background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.12)',
                     }}>
-                      <p style={{ fontSize: 15, fontWeight: 700, color: '#047857', marginBottom: 6 }}>{i + 1}. {item.flag}</p>
+                      <p style={{ fontSize: 15, fontWeight: 700, color: '#E11900', marginBottom: 6 }}>{i + 1}. {item.flag}</p>
                       <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{item.detail}</p>
                     </div>
                   ))}

@@ -42,7 +42,7 @@ export default function TestimonialsReel() {
             </div>
             <div style={{ display: 'flex', gap: 8, marginTop: 28 }}>
               {quotes.map((_, n) => (
-                <button key={n} onClick={() => setI(n)} aria-label={`Testimonial ${n + 1}`} style={{ width: n === i ? 28 : 10, height: 10, borderRadius: 100, border: 'none', cursor: 'pointer', background: n === i ? 'var(--brand)' : 'var(--line-strong)', transition: 'width .25s' }} />
+                <button key={n} onClick={() => setI(n)} aria-label={`Testimonial ${n + 1}`} aria-pressed={n === i} style={{ width: 28, height: 10, borderRadius: 100, border: 'none', cursor: 'pointer', background: n === i ? 'var(--brand)' : 'var(--line-strong)', transform: n === i ? 'none' : 'scaleX(.36)', transformOrigin: 'left center', transition: 'transform .25s cubic-bezier(.16,1,.3,1), background-color .25s' }} />
               ))}
             </div>
           </div>

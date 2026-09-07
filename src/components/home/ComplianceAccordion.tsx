@@ -15,15 +15,13 @@ export default function ComplianceAccordion() {
     <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
       <div className="cb-container">
         <div style={{ maxWidth: 720, marginBottom: 'clamp(26px, 3.5vw, 44px)' }}>
-          <span className="section-tag">Compliance</span>
           <h2 style={{ margin: 0 }}>Building With Compliance and Security in Mind</h2>
           <p style={{ color: 'var(--body)', lineHeight: 1.7, marginTop: 14, maxWidth: '60ch' }}>We integrate compliance into every layer of the engineering process, so your business can meet complex regulations while keeping both security and performance.</p>
         </div>
         <div className="svc-grid">
-          {items.map((it, i) => (
+          {items.map(it => (
             <article key={it.t} className="card card--flat" style={{ display: 'flex', flexDirection: 'column', background: 'var(--surface-alt)' }}>
-              <span className="idx">[ {String(i + 1).padStart(2, '0')} ]</span>
-              <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{it.t}</h3>
+              <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px' }}>{it.t}</h3>
               <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, marginBottom: 16 }}>{it.d}</p>
               <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 'auto' }}>
                 {it.tags.map(t => <span key={t} className="pill pill--brand" style={{ height: 28, fontSize: 12 }}>{t}</span>)}

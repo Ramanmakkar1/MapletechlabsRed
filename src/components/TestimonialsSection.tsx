@@ -18,7 +18,7 @@ const testimonials = [
     name: 'Dr. Ravinder Patel',
     role: 'Chief Medical Officer, ClinicFlow Health · Vancouver',
     initials: 'RP',
-    color: '#0E7490',
+    color: '#E11900',
     stars: 5,
     text: 'They built our patient management system with HIPAA compliance baked in from day one. Reduced our admin overhead by 40% and our patients actually use it. Worth every penny.',
     metric: '450K+',
@@ -30,7 +30,7 @@ const testimonials = [
     name: 'Marcus Thompson',
     role: 'CEO, NorthStar E-Commerce · Montreal',
     initials: 'MT',
-    color: '#047857',
+    color: '#E11900',
     stars: 5,
     text: 'Redesigned our entire checkout flow. Conversion rate jumped from 2.1% to 3.8% within 90 days. The team understood our business better than we did — strategic partners, not just devs.',
     metric: '3.8%',
@@ -42,7 +42,7 @@ const testimonials = [
     name: 'Sarah Kowalski',
     role: 'Operations Director, RouteLogic Inc. · Calgary',
     initials: 'SK',
-    color: '#B45309',
+    color: '#E11900',
     stars: 5,
     text: 'Their real-time fleet tracking system saved us $180K annually in fuel costs alone. The IoT integration was seamless, and the platform handles our 500-truck network flawlessly.',
     metric: '180K',
@@ -138,7 +138,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <div key={t.name} className={`reveal reveal-d${i + 1}`}
               style={{ padding: 'clamp(24px, 4vw, 40px) clamp(20px, 3vw, 36px)', border: '1px solid var(--line)', borderRadius: 36, display: 'flex', flexDirection: 'column', gap: 24, transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)', cursor: 'default', background: 'var(--surface-alt)', position: 'relative' as const }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(20,17,24,0.10), 0 0 40px rgba(245,41,13,0.08)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.2)'; e.currentTarget.style.background = 'rgba(245,41,13,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.10), 0 0 40px rgba(245,41,13,0.08)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
             >
               {/* Quote mark */}

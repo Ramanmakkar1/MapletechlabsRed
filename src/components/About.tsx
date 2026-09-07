@@ -8,10 +8,10 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: 200, suffix: '+', label: 'Projects Delivered', color: '#7c3aed' },
+  { value: 200, suffix: '+', label: 'Projects Delivered', color: '#E11900' },
   { value: 50, suffix: '+', label: 'Global Clients', color: '#4f46e5' },
-  { value: 8, suffix: '+', label: 'Years of Excellence', color: '#0E7490' },
-  { value: 99, suffix: '%', label: 'Client Retention Rate', color: '#047857' },
+  { value: 8, suffix: '+', label: 'Years of Excellence', color: '#E11900' },
+  { value: 99, suffix: '%', label: 'Client Retention Rate', color: '#E11900' },
 ];
 
 const pillars = [

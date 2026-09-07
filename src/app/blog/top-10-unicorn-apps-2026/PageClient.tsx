@@ -198,7 +198,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>01</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(96,165,250,0.12)', color: '#1D4ED8',
+                            background: 'rgba(96,165,250,0.12)', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>FinTech</span>
                         </div>
@@ -223,10 +223,10 @@ export default function BlogPostPageClient() {
                       background: 'rgba(96,165,250,0.06)', border: '1px solid rgba(96,165,250,0.12)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#1D4ED8', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: '#E11900', fontWeight: 600 }}>
                         Key Metric: $2.4B valuation, 4.8M active users
                       </span>
                     </div>
@@ -250,7 +250,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>02</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(52,211,153,0.12)', color: '#047857',
+                            background: 'rgba(52,211,153,0.12)', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>HealthTech</span>
                         </div>
@@ -275,10 +275,10 @@ export default function BlogPostPageClient() {
                       background: 'rgba(52,211,153,0.06)', border: '1px solid rgba(52,211,153,0.12)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#047857" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#047857', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: '#E11900', fontWeight: 600 }}>
                         Key Metric: $1.7B valuation, 2.1M consultations/month
                       </span>
                     </div>
@@ -302,7 +302,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>03</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(251,191,36,0.12)', color: '#B45309',
+                            background: 'rgba(251,191,36,0.12)', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Logistics</span>
                         </div>
@@ -327,10 +327,10 @@ export default function BlogPostPageClient() {
                       background: 'rgba(251,191,36,0.06)', border: '1px solid rgba(251,191,36,0.12)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B45309" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#B45309', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: '#E11900', fontWeight: 600 }}>
                         Key Metric: $1.9B valuation, 98.3% on-time delivery rate
                       </span>
                     </div>
@@ -354,7 +354,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>04</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(167,139,250,0.12)', color: '#6D28D9',
+                            background: 'rgba(167,139,250,0.12)', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>DevTools</span>
                         </div>
@@ -379,10 +379,10 @@ export default function BlogPostPageClient() {
                       background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.12)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#6D28D9', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: '#E11900', fontWeight: 600 }}>
                         Key Metric: $1.2B valuation, 340K developer teams
                       </span>
                     </div>
@@ -445,7 +445,7 @@ export default function BlogPostPageClient() {
                 {[
                   {
                     num: '06', id: 'mindspace', name: 'MindSpace', category: 'MentalHealth',
-                    emoji: '🧠', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,',
+                    emoji: '🧠', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
                     metric: '$1.6B valuation, 72% 90-day retention',
                     paragraphs: [
                       'MindSpace arrived at a moment when the mental health app market was drowning in meditation timers and breathing exercises. Their differentiation was clinical rigour: the app delivers structured Cognitive Behavioural Therapy programmes co-developed with licensed psychologists, adapted in real time by an AI coach that adjusts difficulty, pacing, and content based on your mood check-ins and engagement patterns.',
@@ -455,7 +455,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '07', id: 'tradeedge', name: 'TradeEdge', category: 'FinTech',
-                    emoji: '📈', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
+                    emoji: '📈', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
                     metric: '$2.1B valuation, $900M daily trade volume',
                     paragraphs: [
                       'Retail algorithmic trading was inaccessible before TradeEdge — building a trading bot required Python proficiency, API keys, and a willingness to risk real money while learning. TradeEdge\'s no-code strategy builder lets retail investors construct, backtest, and deploy trading algorithms through a drag-and-drop mobile interface, with simulated paper trading before going live. The democratisation of algo trading, made real.',
@@ -465,7 +465,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '08', id: 'foodforge', name: 'FoodForge', category: 'FoodTech',
-                    emoji: '🍽️', accentColor: '#B45309', bgColor: 'rgba(251,146,60,',
+                    emoji: '🍽️', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
                     metric: '$1.3B valuation, 34M meals planned/week',
                     paragraphs: [
                       'Meal planning apps have existed for a decade and have mostly failed because they create work rather than remove it. FoodForge\'s AI meal planner takes your dietary preferences, current pantry inventory (scanned via camera), local grocery prices, and weekly schedule to generate a complete meal plan with a single tap — then automatically adds missing ingredients to your preferred grocery delivery app.',
@@ -485,7 +485,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '10', id: 'loomai', name: 'LoomAI', category: 'CreativeTech',
-                    emoji: '🎬', accentColor: '#B91C1C', bgColor: 'rgba(248,113,113,',
+                    emoji: '🎬', accentColor: '#E11900', bgColor: 'rgba(248,113,113,',
                     metric: '$3.2B valuation, 180M videos generated',
                     paragraphs: [
                       'LoomAI is the highest-valued unicorn on this list, and it got there by doing one thing: making professional video production accessible to everyone with a phone. Input a script, choose a visual style, and LoomAI generates a complete video with AI presenters, dynamic graphics, background music, and captions in under 3 minutes. The output quality crossed the threshold that marketers, educators, and content creators need for professional use — a bar that previous tools never cleared.',

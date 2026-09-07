@@ -36,7 +36,7 @@ export default function WorkTabs() {
             <p style={{ color: 'var(--body)', lineHeight: 1.7, marginBottom: 28, maxWidth: '52ch' }}>{p.desc}</p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 28 }}>
               {p.metrics.map(mt => (
-                <div key={mt.label} style={{ borderLeft: '3px solid var(--brand)', paddingLeft: 14 }}>
+                <div key={mt.label}>
                   <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.2rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1 }}>{mt.value}</div>
                   <div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 6 }}>{mt.label}</div>
                 </div>

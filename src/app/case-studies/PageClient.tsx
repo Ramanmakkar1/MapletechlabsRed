@@ -31,8 +31,7 @@ const caseStudies = [
     description: 'Built a real-time AI trading engine processing 75K+ daily transactions with 99.99% uptime and sub-50ms latency.',
     metric: { value: '75K+', label: 'Daily Transactions' },
     tech: ['React', 'Python', 'AWS', 'PostgreSQL'],
-    gradient: 'linear-gradient(135deg, rgba(124,58,237,0.1), rgba(245,41,13,0.05))',
-  },
+    },
   {
     slug: 'healthcare-telehealth',
     category: 'Healthcare',
@@ -41,8 +40,7 @@ const caseStudies = [
     description: 'Developed a telehealth platform serving 450K+ patient records with HIPAA/PIPEDA compliance and 40% admin reduction.',
     metric: { value: '450K+', label: 'Patient Records' },
     tech: ['React Native', 'WebRTC', 'Node.js', 'AWS'],
-    gradient: 'linear-gradient(135deg, rgba(6,182,212,0.1), rgba(245,41,13,0.05))',
-  },
+    },
   {
     slug: 'ecommerce-platform',
     category: 'E-Commerce',
@@ -51,8 +49,7 @@ const caseStudies = [
     description: 'Redesigned checkout flow for 2M+ monthly visitors, increasing conversion rate from 2.1% to 3.8% in 90 days.',
     metric: { value: '3.8%', label: 'Conversion Rate' },
     tech: ['Next.js', 'Stripe', 'PostgreSQL', 'Redis'],
-    gradient: 'linear-gradient(135deg, rgba(16,185,129,0.1), rgba(245,41,13,0.05))',
-  },
+    },
   {
     slug: 'logistics-platform',
     category: 'Logistics',
@@ -61,8 +58,7 @@ const caseStudies = [
     description: 'Built IoT-integrated platform tracking 500 trucks with 15K+ daily deliveries, achieving 25% fuel cost reduction ($180K annually).',
     metric: { value: '180K', label: 'Annual Savings' },
     tech: ['React', 'Python', 'TensorFlow', 'AWS IoT'],
-    gradient: 'linear-gradient(135deg, rgba(245,158,11,0.1), rgba(245,41,13,0.05))',
-  },
+    },
   {
     slug: 'payments-api-platform',
     category: 'Fintech',
@@ -71,8 +67,7 @@ const caseStudies = [
     description: 'Engineered secure payments processing API handling 12M+ monthly transactions with PCI DSS compliance.',
     metric: { value: '12M+', label: 'Monthly Transactions' },
     tech: ['Node.js', 'PostgreSQL', 'Redis', 'AWS KMS'],
-    gradient: 'linear-gradient(135deg, rgba(168,85,247,0.1), rgba(245,41,13,0.05))',
-  },
+    },
   {
     slug: 'real-estate-portal',
     category: 'Real Estate',
@@ -81,17 +76,10 @@ const caseStudies = [
     description: 'Developed ML-powered property recommendation engine for 850K+ active listings across Canada.',
     metric: { value: '850K+', label: 'Active Listings' },
     tech: ['React', 'Node.js', 'TensorFlow', 'Elasticsearch'],
-    gradient: 'linear-gradient(135deg, rgba(59,130,246,0.1), rgba(245,41,13,0.05))',
-  },
+    },
 ];
 
-const categoryColors: Record<string, string> = {
-  Fintech: '#6D28D9',
-  Healthcare: '#0E7490',
-  'E-Commerce': '#047857',
-  Logistics: '#B45309',
-  'Real Estate': '#1D4ED8',
-};
+const categoryColors: Record<string, string> = { default: '#E11900' };
 
 const categories = ['All', 'Fintech', 'Healthcare', 'E-Commerce', 'Logistics', 'Real Estate'];
 
@@ -182,7 +170,7 @@ export default function CaseStudiesPageClient() {
               gap: 24,
             }}>
               {filtered.map((cs, i) => {
-                const accentColor = categoryColors[cs.category] || 'var(--brand)';
+                const accentColor = 'var(--brand)';
                 return (
                   <Link key={cs.slug} href={`/case-studies/${cs.slug}`} style={{ textDecoration: 'none' }}>
                     <article
@@ -241,7 +229,7 @@ export default function CaseStudiesPageClient() {
                         <div style={{ marginBottom: 16 }}>
                           <span style={{
                             fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
-                            background: `${accentColor}18`, color: accentColor,
+                            background: 'var(--brand)', color: '#fff',
                             padding: '4px 12px', borderRadius: 100,
                           }}>
                             {cs.category}

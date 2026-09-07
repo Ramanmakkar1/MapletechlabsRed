@@ -130,7 +130,7 @@ export default function ContactPage() {
       ═══════════════════════════════════════ */}
       <section ref={heroRef} style={{ position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 10vw, 100px) 0 clamp(60px, 10vw, 120px)', borderBottom: '1px solid var(--line)', textAlign: 'center' }}>
         {/* Grid bg */}
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(20,17,24,0.035) 1px,transparent 1px)', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'none', backgroundSize: '64px 64px', pointerEvents: 'none' }} />
         {/* Glow orb */}
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 900, height: 600, background: 'transparent', filter: 'blur(80px)', pointerEvents: 'none' }} />
         {/* Rings */}
@@ -194,10 +194,10 @@ export default function ContactPage() {
             {ENGAGEMENT.map(o => (
               <a key={o.num} href="#contact-form"
                 style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 36, padding: 'clamp(28px, 4vw, 52px) clamp(24px, 3.5vw, 44px)', display: 'flex', flexDirection: 'column', gap: 20, position: 'relative', overflow: 'hidden', textDecoration: 'none', transition: 'all 0.4s cubic-bezier(0.165,0.84,0.44,1)' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.28)'; e.currentTarget.style.background = 'rgba(245,41,13,0.04)'; e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 32px 64px rgba(20,17,24,0.10)'; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.28)'; e.currentTarget.style.background = 'rgba(245,41,13,0.04)'; e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 32px 64px rgba(0,0,0,0.10)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                 {/* Ghost watermark */}
-                <div style={{ position: 'absolute', bottom: -20, right: 24, fontSize: 130, fontWeight: 800, lineHeight: 1, color: 'rgba(20,17,24,0.045)', pointerEvents: 'none', letterSpacing: '-0.05em' }}>{o.num}</div>
+                <div style={{ position: 'absolute', bottom: -20, right: 24, fontSize: 130, fontWeight: 800, lineHeight: 1, color: 'rgba(0,0,0,0.045)', pointerEvents: 'none', letterSpacing: '-0.05em' }}>{o.num}</div>
                 <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--brand)', background: 'rgba(245,41,13,0.1)', padding: '5px 14px', borderRadius: 100, display: 'inline-block', alignSelf: 'flex-start' }}>{o.tag}</span>
                 <div>
                   <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 12 }}>{o.title}</h3>
@@ -384,7 +384,7 @@ export default function ContactPage() {
 
           <div className="reveal reveal-d1" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             {FAQS.map((faq, i) => (
-              <div key={i} style={{ background: openFaq === i ? 'rgba(245,41,13,0.04)' : 'rgba(20,17,24,0.035)', border: `1px solid ${openFaq === i ? 'rgba(245,41,13,0.2)' : 'var(--line)'}`, borderRadius: 20, overflow: 'hidden', transition: 'border-color 0.3s, background 0.3s' }}>
+              <div key={i} style={{ background: openFaq === i ? 'rgba(245,41,13,0.04)' : 'rgba(0,0,0,0.035)', border: `1px solid ${openFaq === i ? 'rgba(245,41,13,0.2)' : 'var(--line)'}`, borderRadius: 20, overflow: 'hidden', transition: 'border-color 0.3s, background 0.3s' }}>
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)} style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'clamp(16px, 3vw, 24px) clamp(16px, 3vw, 28px)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                   <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--ink)', textAlign: 'left', letterSpacing: '-0.01em' }}>{faq.q}</span>
                   <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'var(--surface-alt)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'none' }}>

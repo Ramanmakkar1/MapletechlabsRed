@@ -13,7 +13,7 @@ const steps = [
     title: 'Discovery & Strategy',
     desc: 'We immerse ourselves in your business — goals, constraints, users, and technical landscape. No assumptions, only clarity.',
     detail: 'Stakeholder interviews · Technical audit · Competitive research · Roadmap planning',
-    color: '#7c3aed',
+    color: '#E11900',
   },
   {
     num: '02',
@@ -27,14 +27,14 @@ const steps = [
     title: 'Build & Iterate',
     desc: 'Agile sprints with weekly demos. You see progress constantly. We ship fast without cutting corners.',
     detail: 'Agile sprints · Code reviews · Automated testing · Continuous delivery',
-    color: '#0E7490',
+    color: '#E11900',
   },
   {
     num: '04',
     title: 'Launch & Scale',
     desc: 'Seamless go-live with monitoring, training, and ongoing support. Your success doesn\'t end at launch.',
     detail: 'Deployment · Monitoring · Documentation · Ongoing support',
-    color: '#047857',
+    color: '#E11900',
   },
 ];
 
@@ -182,7 +182,7 @@ export default function Process() {
                     {i < steps.length - 1 && (
                       <div
                         className="process-connector hidden lg:block absolute -bottom-16 left-1/2 -translate-x-1/2 w-px h-16"
-                        style={{ background: `linear-gradient(to bottom, ${step.color}40, ${steps[i+1].color}40)` }}
+                        style={{ background: 'var(--surface-alt)' }}
                       />
                     )}
                   </div>

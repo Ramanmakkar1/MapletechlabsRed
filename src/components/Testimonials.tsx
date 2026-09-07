@@ -9,35 +9,35 @@ const testimonials = [
     name: "Sarah C.",
     title: "CTO, Fintech Startup · Toronto",
     initials: "SC",
-    color: '#7c3aed',
+    color: '#E11900',
   },
   {
     quote: "They didn't just build what we asked — they pushed back when it mattered and suggested a better architecture. That saved us 6 months of future work.",
     name: "Michael T.",
     title: "VP Engineering, Enterprise SaaS · Vancouver",
     initials: "MT",
-    color: '#0E7490',
+    color: '#E11900',
   },
   {
     quote: "Our patient portal went from concept to HIPAA-compliant production in 4 months. The quality of code and documentation was outstanding.",
     name: "Dr. Rachel K.",
     title: "Head of Digital, Healthcare Provider · Calgary",
     initials: "RK",
-    color: '#047857',
+    color: '#E11900',
   },
   {
     quote: "500K concurrent users on Black Friday with zero downtime. That speaks for itself. We've been with Mapletech Labs for 4 years and counting.",
     name: "James W.",
     title: "CEO, E-Commerce Platform · Edmonton",
     initials: "JW",
-    color: '#B45309',
+    color: '#E11900',
   },
   {
     quote: "The AI automation suite they built cut our manual processing time by 70%. ROI in the first 3 months. Simply excellent.",
     name: "Priya P.",
     title: "Operations Director, AI Startup · Ottawa",
     initials: "PP",
-    color: '#BE185D',
+    color: '#E11900',
   },
   {
     quote: "What sets them apart is communication. Always responsive, always transparent. You always know exactly where your project stands.",
@@ -72,7 +72,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
       <div className="flex items-center gap-3">
         <div
           className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-black text-white flex-shrink-0"
-          style={{ background: `linear-gradient(135deg, ${t.color}, ${t.color}99)` }}
+          style={{ background: 'var(--surface-alt)' }}
         >
           {t.initials}
         </div>

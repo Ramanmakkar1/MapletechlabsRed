@@ -204,7 +204,7 @@ export default function WebsiteCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Template / WordPress Site</h3>
                       <span style={{
-                        fontSize: 14, fontWeight: 700, color: '#047857',
+                        fontSize: 14, fontWeight: 700, color: '#E11900',
                         background: 'rgba(52,211,153,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$2,000 - $10,000</span>
                     </div>
@@ -221,7 +221,7 @@ export default function WebsiteCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Custom Business Website</h3>
                       <span style={{
-                        fontSize: 14, fontWeight: 700, color: '#1D4ED8',
+                        fontSize: 14, fontWeight: 700, color: '#E11900',
                         background: 'rgba(96,165,250,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$10,000 - $50,000</span>
                     </div>
@@ -238,7 +238,7 @@ export default function WebsiteCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>E-Commerce Platform</h3>
                       <span style={{
-                        fontSize: 14, fontWeight: 700, color: '#B45309',
+                        fontSize: 14, fontWeight: 700, color: '#E11900',
                         background: 'rgba(251,146,60,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$25,000 - $100,000</span>
                     </div>
@@ -255,7 +255,7 @@ export default function WebsiteCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>Enterprise Web Application</h3>
                       <span style={{
-                        fontSize: 14, fontWeight: 700, color: '#BE185D',
+                        fontSize: 14, fontWeight: 700, color: '#E11900',
                         background: 'rgba(244,114,182,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$100,000 - $500,000+</span>
                     </div>
@@ -272,7 +272,7 @@ export default function WebsiteCostCanadaClient() {
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
                       <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: 0 }}>SaaS Platform</h3>
                       <span style={{
-                        fontSize: 14, fontWeight: 700, color: '#6D28D9',
+                        fontSize: 14, fontWeight: 700, color: '#E11900',
                         background: 'rgba(167,139,250,0.1)', padding: '4px 14px', borderRadius: 100,
                       }}>$50,000 - $300,000+</span>
                     </div>
@@ -324,7 +324,7 @@ export default function WebsiteCostCanadaClient() {
                     background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
-                    <h3 style={{ fontSize: 17, fontWeight: 600, color: '#047857', margin: '0 0 10px' }}>DIY (Wix / Squarespace) — $0 - $500/year</h3>
+                    <h3 style={{ fontSize: 17, fontWeight: 600, color: '#E11900', margin: '0 0 10px' }}>DIY (Wix / Squarespace) — $0 - $500/year</h3>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Best for: Personal blogs, hobby projects, or micro-businesses with zero budget. You get a website up fast, but you sacrifice performance, SEO flexibility, and scalability. When you outgrow the platform, migrating is painful and expensive. Not recommended for businesses serious about growth.
                     </p>
@@ -334,7 +334,7 @@ export default function WebsiteCostCanadaClient() {
                     background: 'var(--surface-alt)', border: '1px solid var(--line)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>
-                    <h3 style={{ fontSize: 17, fontWeight: 600, color: '#1D4ED8', margin: '0 0 10px' }}>Agency (WordPress / Shopify) — $5,000 - $50,000</h3>
+                    <h3 style={{ fontSize: 17, fontWeight: 600, color: '#E11900', margin: '0 0 10px' }}>Agency (WordPress / Shopify) — $5,000 - $50,000</h3>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                       Best for: Established SMBs who need a professional site with some custom functionality. Agencies handle design, content, and basic SEO. However, most agencies use page builders and templates under the hood, which creates technical debt and performance issues over time. Good for getting online quickly; less ideal for long-term competitive advantage.
                     </p>
@@ -367,10 +367,10 @@ export default function WebsiteCostCanadaClient() {
                     borderRadius: 20, padding: 28,
                   }}>
                     {[
-                      { city: 'Toronto', range: '$120 - $180/hr', color: '#BE185D' },
-                      { city: 'Vancouver', range: '$110 - $170/hr', color: '#1D4ED8' },
-                      { city: 'Montreal', range: '$100 - $160/hr', color: '#6D28D9' },
-                      { city: 'Edmonton', range: '$90 - $150/hr', color: '#047857' },
+                      { city: 'Toronto', range: '$120 - $180/hr', color: '#E11900' },
+                      { city: 'Vancouver', range: '$110 - $170/hr', color: '#E11900' },
+                      { city: 'Montreal', range: '$100 - $160/hr', color: '#E11900' },
+                      { city: 'Edmonton', range: '$90 - $150/hr', color: '#E11900' },
                     ].map((city, i, arr) => (
                       <div key={city.city} style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -460,7 +460,7 @@ export default function WebsiteCostCanadaClient() {
                           <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>{item.desc}</p>
                         </div>
                         <span style={{
-                          fontSize: 13, fontWeight: 700, color: '#B45309',
+                          fontSize: 13, fontWeight: 700, color: '#E11900',
                           background: 'rgba(251,191,36,0.08)', padding: '4px 12px', borderRadius: 100,
                           whiteSpace: 'nowrap', flexShrink: 0,
                         }}>{item.range}</span>

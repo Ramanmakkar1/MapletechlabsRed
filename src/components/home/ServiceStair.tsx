@@ -19,7 +19,7 @@ export default function ServiceStair() {
             const icon = serviceCategories.find(c => c.href === p.href)?.icon;
             return (
               <div key={p.href}>
-                <span style={{ width: 48, height: 48, borderRadius: 12, background: 'var(--brand-tint)', color: 'var(--brand)', display: 'grid', placeItems: 'center', marginBottom: 44 }}>{icon}</span>
+                <span style={{ width: 48, height: 48, borderRadius: 12, background: 'var(--surface-alt)', color: 'var(--brand)', display: 'grid', placeItems: 'center', marginBottom: 44 }}>{icon}</span>
                 <h3 style={{ fontSize: 'var(--fs-h3)', whiteSpace: 'pre-line', marginBottom: 14 }}>{p.title}</h3>
                 <p style={{ color: 'var(--body)', fontSize: 15, lineHeight: 1.7, marginBottom: 28 }}>{p.desc}</p>
                 <Link href={p.href} className="btn btn--ghost btn--sm" style={{ alignSelf: 'flex-start', marginTop: 'auto' }}>{p.cta}</Link>

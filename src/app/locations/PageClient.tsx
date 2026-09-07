@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { officeMedia } from '@/data/media';
-import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 
 function useReveal() {
@@ -32,7 +31,7 @@ const cardHover: React.CSSProperties = {
   borderColor: 'rgba(245,41,13,0.2)',
   background: 'rgba(245,41,13,0.03)',
   transform: 'translateY(-4px)',
-  boxShadow: '0 24px 60px rgba(20,17,24,0.10)',
+  boxShadow: '0 24px 60px rgba(0,0,0,0.10)',
 };
 
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
@@ -79,7 +78,6 @@ export default function LocationsIndexPage() {
 
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations' }]} copy={{ badge: "Across Canada", title: <><span style={{ color: 'var(--brand)' }}>12 Locations</span> Across Canada</>, desc: <>From coast to coast, Mapletech Labs brings world-class software development to businesses across Canada. Our distributed team model means you get local expertise backed by national resources.</> }} photo={officeMedia.open} form={false} />
-        <MediaBand media={officeMedia.desk} />
 
         {/* CITY GRID */}
         <section ref={s1} className="section-padding">

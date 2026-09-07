@@ -29,12 +29,11 @@ export default function FaqSplit({ faqs = defaultFaqs, title = 'Frequently Asked
               const on = open === i;
               return (
                 <li key={f.q} style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 'var(--r-md)', marginBottom: 10 }}>
-                  <button className="faq-question-btn" onClick={() => setOpen(on ? -1 : i)} aria-expanded={on} style={{ width: '100%', display: 'grid', gridTemplateColumns: '48px 1fr auto', alignItems: 'center', gap: 12, padding: '20px 22px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
-                    <span className="idx">[ {i + 1} ]</span>
+                  <button className="faq-question-btn" onClick={() => setOpen(on ? -1 : i)} aria-expanded={on} style={{ width: '100%', display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', gap: 12, padding: '20px 22px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit' }}>
                     <span style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)' }}>{f.q}</span>
                     <span style={{ color: 'var(--brand)', fontSize: 22, lineHeight: 1, transform: on ? 'rotate(45deg)' : 'none', transition: 'transform .25s' }}>+</span>
                   </button>
-                  {on && <p style={{ padding: '0 22px 22px 82px', color: 'var(--body)', lineHeight: 1.7 }}>{f.a}</p>}
+                  {on && <p style={{ padding: '0 22px 22px', color: 'var(--body)', lineHeight: 1.7, maxWidth: '68ch' }}>{f.a}</p>}
                 </li>
               );
             })}

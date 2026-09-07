@@ -11,7 +11,6 @@ const CtaCard = dynamic(() => import('@/components/home/CtaCard'));
 const StatsMarquee = dynamic(() => import('@/components/home/StatsMarquee'));
 const AiLab = dynamic(() => import('@/components/home/AiLab'));
 const TestimonialsReel = dynamic(() => import('@/components/home/TestimonialsReel'));
-const LogoGrid = dynamic(() => import('@/components/home/LogoGrid'));
 const ExpertiseGrid = dynamic(() => import('@/components/home/ExpertiseGrid'));
 const AwardsList = dynamic(() => import('@/components/home/AwardsList'));
 const ComplianceAccordion = dynamic(() => import('@/components/home/ComplianceAccordion'));
@@ -47,7 +46,6 @@ export default function Home() {
         <StatsMarquee />
         <AiLab />
         <TestimonialsReel />
-        <LogoGrid />
         <ExpertiseGrid />
         <AwardsList />
         <ComplianceAccordion />

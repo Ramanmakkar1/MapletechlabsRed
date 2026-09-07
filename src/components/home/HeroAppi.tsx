@@ -12,13 +12,8 @@ const badges = [
    badges bottom-right — the reference hero, on a white ground. */
 export default function HeroAppi() {
   return (
-    <section style={{ position: 'relative', minHeight: 'min(88vh, 820px)', display: 'flex', alignItems: 'flex-end', overflow: 'hidden', background: 'var(--surface)' }}>
-      <Image src={officeMedia.open.src} alt="" fill priority sizes="100vw" style={{ objectFit: 'cover', objectPosition: '70% 40%' }} />
-      {/* white scrim so the headline reads over the photo */}
-      <div aria-hidden style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.92) 34%, rgba(255,255,255,.55) 60%, rgba(255,255,255,.08) 100%)' }} />
-      <div aria-hidden style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 200, background: 'linear-gradient(to top, rgba(255,255,255,.9), transparent)' }} />
-
-      <div className="cb-container" style={{ paddingTop: 'var(--hero-top)', paddingBottom: 'clamp(48px, 6vw, 80px)', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 40, flexWrap: 'wrap' }}>
+    <section style={{ background: 'var(--surface)', padding: 'var(--hero-top) 0 var(--section-y)' }}>
+      <div className="cb-container hero-split">
         <div style={{ maxWidth: 640 }}>
           <span className="section-tag">Canadian Software &amp; AI Engineering Partner</span>
           <h1 style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.05, letterSpacing: '-0.035em', margin: '0 0 22px' }}>
@@ -36,13 +31,17 @@ export default function HeroAppi() {
           </div>
         </div>
 
-        <ul className="hide-mobile" style={{ listStyle: 'none', margin: 0, padding: 0, gap: 12 }}>
-          {badges.map(b => (
-            <li key={b.src} style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 14, padding: 10, width: 108, height: 78, position: 'relative', boxShadow: 'var(--shadow-md)' }}>
-              <Image src={b.src} alt={b.alt} fill sizes="108px" style={{ objectFit: 'contain', padding: 10 }} />
-            </li>
-          ))}
-        </ul>
+        {/* the photograph, uncovered, with the award badges on it */}
+        <div className="media media--lg" style={{ position: 'relative', aspectRatio: '4 / 4.6', maxHeight: 620 }}>
+          <Image src={officeMedia.open.src} alt={officeMedia.open.alt} fill priority sizes="(max-width: 1023px) 100vw, 46vw" style={{ objectFit: 'cover', objectPosition: '60% 40%' }} />
+          <ul className="hide-mobile" style={{ listStyle: 'none', margin: 0, padding: 0, gap: 10, position: 'absolute', left: 18, bottom: 18 }}>
+            {badges.map(b => (
+              <li key={b.src} style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 12, width: 104, height: 72, position: 'relative', boxShadow: 'var(--shadow-md)' }}>
+                <Image src={b.src} alt={b.alt} fill sizes="104px" style={{ objectFit: 'contain', padding: 10 }} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

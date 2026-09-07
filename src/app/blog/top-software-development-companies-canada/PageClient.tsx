@@ -251,7 +251,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>02</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(96,165,250,0.12)', color: '#1D4ED8',
+                            background: 'rgba(96,165,250,0.12)', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Digital Agency</span>
                         </div>
@@ -276,10 +276,10 @@ export default function BlogPostPageClient() {
                       background: 'rgba(96,165,250,0.06)', border: '1px solid rgba(96,165,250,0.12)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#1D4ED8', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: '#E11900', fontWeight: 600 }}>
                         Key Metric: Award-winning UX/UI & Web Solutions
                       </span>
                     </div>
@@ -303,7 +303,7 @@ export default function BlogPostPageClient() {
                           <span style={{ fontSize: 12, color: 'var(--faint)', fontWeight: 700 }}>03</span>
                           <span style={{
                             fontSize: 11, padding: '3px 10px', borderRadius: 100,
-                            background: 'rgba(251,191,36,0.12)', color: '#B45309',
+                            background: 'rgba(251,191,36,0.12)', color: '#E11900',
                             fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
                           }}>Growth Tech</span>
                         </div>
@@ -328,10 +328,10 @@ export default function BlogPostPageClient() {
                       background: 'rgba(251,191,36,0.06)', border: '1px solid rgba(251,191,36,0.12)',
                       display: 'flex', alignItems: 'center', gap: 10,
                     }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B45309" strokeWidth="2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2">
                         <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
                       </svg>
-                      <span style={{ fontSize: 13, color: '#B45309', fontWeight: 600 }}>
+                      <span style={{ fontSize: 13, color: '#E11900', fontWeight: 600 }}>
                         Key Metric: Scalable Startup Infrastructure Experts
                       </span>
                     </div>
@@ -342,7 +342,7 @@ export default function BlogPostPageClient() {
                 {[
                   {
                     num: '04', id: 'shopify', name: 'Shopify Engineering', category: 'E-Commerce',
-                    emoji: '🛍️', accentColor: '#6D28D9', bgColor: 'rgba(167,139,250,',
+                    emoji: '🛍️', accentColor: '#E11900', bgColor: 'rgba(167,139,250,',
                     metric: 'Powers 10% of US E-commerce',
                     paragraphs: [
                       'Shopify is a global powerhouse of software engineering, pioneering massive-scale Ruby on Rails deployments. While primarily a SaaS product, their custom enterprise engineering division delivers unparalleled custom commerce infrastructure for the world\'s biggest brands, handling millions of requests per second during flash sales.',
@@ -350,7 +350,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '05', id: 'opentext', name: 'OpenText', category: 'Information Mgmt',
-                    emoji: '📂', accentColor: '#BE185D', bgColor: 'rgba(244,114,182,',
+                    emoji: '📂', accentColor: '#E11900', bgColor: 'rgba(244,114,182,',
                     metric: 'Global Enterprise Information Management Leader',
                     paragraphs: [
                       'Headquartered in Waterloo, OpenText provides massive-scale intelligent information management software. Their custom development teams focus on deep data lakes, AI-driven automation, and extreme high-security environments, making them indispensable to government and Fortune 500 infrastructure.',
@@ -358,7 +358,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '06', id: 'cgi', name: 'CGI Group', category: 'IT Consulting',
-                    emoji: '🌐', accentColor: '#047857', bgColor: 'rgba(52,211,153,',
+                    emoji: '🌐', accentColor: '#E11900', bgColor: 'rgba(52,211,153,',
                     metric: '400 locations worldwide, robust IT systems',
                     paragraphs: [
                       'One of the largest IT consulting firms globally. CGI tackles monumental software development projects, specializing in secure government portals, core banking systems, and complex supply chain integrations that require thousands of engineers operating in unison.',
@@ -374,7 +374,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '08', id: 'kinaxis', name: 'Kinaxis', category: 'Supply Chain',
-                    emoji: '🔗', accentColor: '#B45309', bgColor: 'rgba(251,146,60,',
+                    emoji: '🔗', accentColor: '#E11900', bgColor: 'rgba(251,146,60,',
                     metric: 'RapidResponse concurrent planning platform',
                     paragraphs: [
                       'Based in Ottawa, Kinaxis builds software that orchestrates global supply chains. Their proprietary concurrent planning engine allows massive global manufacturers to run real-time simulations—a massive data engineering feat that puts them at the absolute forefront of supply chain tech.',
@@ -382,7 +382,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '09', id: 'lightspeed', name: 'Lightspeed Commerce', category: 'POS Systems',
-                    emoji: '💳', accentColor: '#1D4ED8', bgColor: 'rgba(96,165,250,',
+                    emoji: '💳', accentColor: '#E11900', bgColor: 'rgba(96,165,250,',
                     metric: 'Cloud-based commerce for SMBs globally',
                     paragraphs: [
                       'Lightspeed provides complex, cloud-based POS and commerce software. Their engineering teams are masters of handling omni-channel high-availability systems, bridging the gap between hardware terminals and cloud analytics beautifully and seamlessly across global latency constraints.',
@@ -390,7 +390,7 @@ export default function BlogPostPageClient() {
                   },
                   {
                     num: '10', id: 'descartes', name: 'Descartes Systems Group', category: 'Logistics',
-                    emoji: '🚚', accentColor: '#15803D', bgColor: 'rgba(74,222,128,',
+                    emoji: '🚚', accentColor: '#E11900', bgColor: 'rgba(74,222,128,',
                     metric: 'Global Logistics Technology & Routing',
                     paragraphs: [
                       'If a package is moving globally, Descartes\' software likely touched it. They are quiet giants in logistics and routing algorithms, building software that powers the complex calculus of global freight, compliance, and real-time fleet delivery paths.',

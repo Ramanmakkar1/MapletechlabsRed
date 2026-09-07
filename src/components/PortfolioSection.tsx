@@ -137,7 +137,7 @@ export default function PortfolioSection() {
               style={{ objectFit: 'cover' }}
             />
 
-            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: '#fff', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, maxWidth: 'calc(100% - 32px)', boxShadow: '0 6px 20px rgba(20,17,24,.22)' }}>
+            <div style={{ position: 'absolute', bottom: 16, right: 16, padding: '10px 16px', background: '#fff', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, maxWidth: 'calc(100% - 32px)', boxShadow: '0 6px 20px rgba(0,0,0,.22)' }}>
               <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)' }} />
               <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand-deep)' }}>{p.metrics[1].value} {p.metrics[1].label}</span>
             </div>

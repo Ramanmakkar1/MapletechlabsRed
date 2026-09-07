@@ -38,7 +38,7 @@ export default function LocationPageTemplate(p: LocationProps) {
         <MediaBand media={shots[(p.slug.length + 1) % 3]} />
         <CardGrid eyebrow={`What we build in ${name}`} title={`Our Services in ${name}`} items={p.services.map(s => ({ title: s.title, desc: s.desc, href: s.href }))} bg="var(--surface)" />
         {p.numbers ? <ResultsBand title={p.numbers.title} items={p.numbers.stats} /> : null}
-        <CardGrid eyebrow="Local advantage" title={`Why Choose Mapletech Labs in ${name}`} items={p.whyChoose} bg="var(--surface)" min={280} />
+        <CardGrid eyebrow="Local advantage" title={`Why Choose Mapletech Labs in ${name}`} items={p.whyChoose} bg="var(--surface)" variant="rows" />
         <CtaStrip title={`Building in ${name}? Let's scope it.`} sub={`A senior engineer will send a fixed-price plan within four hours${city?.isHQ ? ' — from our head office right here in ' + name + '.' : '.'}`} />
         <CardGrid eyebrow="The market" title={p.whyCity.title} sub={p.whyCity.intro} items={p.whyCity.items.map(i => ({ title: i.t, desc: i.d }))} bg="var(--surface)" />
         <CardGrid eyebrow="Where we work" title={p.neighborhoods.title} sub={p.neighborhoods.intro || undefined} items={p.neighborhoods.items.map(i => ({ title: i.n, desc: i.d }))} bg="var(--surface-alt)" min={200} />
@@ -56,7 +56,7 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
-        <CardGrid eyebrow="Trends" title={p.trends.title} items={p.trends.items.map(i => ({ title: i.t, desc: i.d }))} bg="var(--surface-alt)" />
+        <CardGrid eyebrow="Trends" title={p.trends.title} items={p.trends.items.map(i => ({ title: i.t, desc: i.d }))} bg="var(--surface-alt)" variant="rows" />
         <WhyUs bg="var(--surface)" />
         <ComplianceAccordion />
         <AwardsList />

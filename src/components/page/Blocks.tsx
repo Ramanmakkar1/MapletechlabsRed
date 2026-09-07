@@ -14,7 +14,7 @@ const Arrow = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" 
 const Head = ({ eyebrow, title, sub, right }: { eyebrow?: string; title: string; sub?: string; right?: React.ReactNode }) => (
   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24, flexWrap: 'wrap', marginBottom: 'clamp(26px, 3.5vw, 44px)' }}>
     <div style={{ maxWidth: 680 }}>
-      {eyebrow && <span className="section-tag">{eyebrow}</span>}
+      {/* no per-section eyebrow: one kicker on the hero is voice, one on every section is scaffolding */}
       <h2 style={{ margin: 0 }}>{title}</h2>
       {sub && <p style={{ color: 'var(--body)', lineHeight: 1.7, marginTop: 12, maxWidth: '60ch' }}>{sub}</p>}
     </div>
@@ -48,12 +48,9 @@ export function ServicesGrid({ title, sub, items, bg = 'var(--surface)' }: { tit
       <div className="cb-container">
         <Head eyebrow="What we deliver" title={title} sub={sub} />
         <div className="svc-grid">
-          {items.map((s, i) => (
+          {items.map(s => (
             <article key={s.title} className="card" style={{ display: 'flex', flexDirection: 'column', background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 18 }}>
-                <span className="idx">[ {String(i + 1).padStart(2, '0')} ]</span>
-                {s.tag && <span className="pill pill--brand" style={{ height: 28, fontSize: 11, letterSpacing: '.08em', textTransform: 'uppercase' }}>{s.tag}</span>}
-              </div>
+              {s.tag && <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--brand)', marginBottom: 12 }}>{s.tag}</span>}
               <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{s.title}</h3>
               {/* every card gets the same three lines of copy, so a row stays level */}
               <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, marginBottom: anyChips ? 18 : 0 }}>{s.desc}</p>
@@ -102,14 +99,14 @@ export function TechBlocks({ title = 'The Stack Behind Your Platform', cats, bg 
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow="Technology" title={title} />
-        <div className={gridClass(cats.length)}>
+        <ul className="rows">
           {cats.map(c => (
-            <div key={c.label} className="card card--flat" style={{ background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>
-              <div className="eyebrow" style={{ color: 'var(--brand)', marginBottom: 14 }}>{c.label}</div>
-              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>{c.chips.map(ch => <span key={ch} className="pill" style={{ background: '#fff' }}>{ch}</span>)}</div>
-            </div>
+            <li key={c.label}>
+              <h3 style={{ fontSize: 'var(--fs-h4)', margin: 0 }}>{c.label}</h3>
+              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>{c.chips.map(ch => <span key={ch} className="pill" style={{ background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>{ch}</span>)}</div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
@@ -156,15 +153,14 @@ export function WhyUs({ bg = 'var(--surface)' }: { bg?: string }) {
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow="Why Mapletech Labs" title="Accountable partners, not outsourced vendors." />
-        <div className={gridClass(reasons.length)}>
-          {reasons.map((r, i) => (
-            <div key={r.t} className="card card--flat" style={{ display: 'flex', flexDirection: 'column', background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>
-              <span className="idx">[ {String(i + 1).padStart(2, '0')} ]</span>
-              <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{r.t}</h3>
-              <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{r.d}</p>
-            </div>
+        <ul className="rows">
+          {reasons.map(r => (
+            <li key={r.t}>
+              <h3 style={{ fontSize: 'var(--fs-h4)', margin: 0 }}>{r.t}</h3>
+              <p style={{ color: 'var(--body)', lineHeight: 1.7, maxWidth: '64ch' }}>{r.d}</p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
@@ -268,7 +264,7 @@ export function CaseBand({ client, headline, text, quote, cite, bg = 'var(--surf
       <div className="cb-container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 0, background: 'var(--surface-ink)', color: 'var(--on-ink-body)', borderRadius: 'var(--r-lg)', overflow: 'hidden' }}>
           <div style={{ padding: 'clamp(28px, 4vw, 52px)' }}>
-            <span className="eyebrow" style={{ color: 'var(--brand-bright)' }}>Case study · {client}</span>
+            <span className="eyebrow" style={{ color: 'var(--brand)' }}>Case study · {client}</span>
             <h3 style={{ color: '#fff', fontSize: 'var(--fs-h3)', margin: '14px 0 12px', lineHeight: 1.25 }}>{headline}</h3>
             <p style={{ lineHeight: 1.7 }}>{text}</p>
           </div>
@@ -283,20 +279,37 @@ export function CaseBand({ client, headline, text, quote, cite, bg = 'var(--surf
 }
 
 /* ── generic titled card grid (challenges, why-us, trends…) ── */
-export function CardGrid({ eyebrow, title, sub, items, bg = 'var(--surface)', min = 260 }: { eyebrow: string; title: string; sub?: string; items: { title: string; desc: string; href?: string; tag?: string }[]; bg?: string; min?: number }) {
+export function CardGrid({ eyebrow, title, sub, items, bg = 'var(--surface)', min = 260, variant = 'cards' }: { eyebrow: string; title: string; sub?: string; items: { title: string; desc: string; href?: string; tag?: string }[]; bg?: string; min?: number; variant?: 'cards' | 'rows' }) {
   const inner = bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff';
+  if (variant === 'rows') {
+    return (
+      <section style={{ padding: 'var(--section-y) 0', background: bg }}>
+        <div className="cb-container">
+          <Head eyebrow={eyebrow} title={title} sub={sub} />
+          <ul className="rows">
+            {items.map(it => (
+              <li key={it.title}>
+                <h3 style={{ fontSize: 'var(--fs-h4)', margin: 0 }}>{it.title}</h3>
+                <div>
+                  <p style={{ color: 'var(--body)', lineHeight: 1.7, maxWidth: '64ch' }}>{it.desc}</p>
+                  {it.href && <Link href={it.href} className="link-arrow" style={{ marginTop: 10, fontSize: 14 }}>Learn more <Arrow /></Link>}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    );
+  }
   return (
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow={eyebrow} title={title} sub={sub} />
         <div className={min < 240 ? 'svc-grid svc-grid--4' : gridClass(items.length)}>
-          {items.map((it, i) => {
+          {items.map(it => {
             const body = (
               <>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-                  <span className="idx">[ {String(i + 1).padStart(2, '0')} ]</span>
-                  {it.tag && <span className="pill pill--brand" style={{ height: 26, fontSize: 11 }}>{it.tag}</span>}
-                </div>
+                {it.tag && <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--brand)', marginBottom: 12 }}>{it.tag}</span>}
                 <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>{it.title}</h3>
                 <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{it.desc}</p>
                 {it.href && <span className="link-arrow" style={{ marginTop: 'auto', paddingTop: 14, fontSize: 14 }}>Learn more <Arrow /></span>}

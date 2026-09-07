@@ -42,7 +42,7 @@ export default function IndustriesSection() {
           {industries.map((ind, i) => (
             <div key={ind.name} className={`reveal reveal-d${Math.min(i + 1, 6)}`}
               style={{ border: '1px solid var(--line)', borderRadius: 'clamp(18px, 4vw, 26px)', overflow: 'hidden', display: 'flex', flexDirection: 'column', transition: 'border-color .3s ease, transform .3s ease, box-shadow .3s ease', background: 'var(--surface)' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand-line)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 48px rgba(20,17,24,0.10)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand-line)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 20px 48px rgba(0,0,0,0.10)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
             >
               <div className="media media--flat media--zoom" style={{ height: 168 }}>

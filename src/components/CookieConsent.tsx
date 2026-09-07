@@ -41,7 +41,7 @@ export default function CookieConsent() {
         border: '1px solid var(--line-strong)',
         borderRadius: 'clamp(14px, 3vw, 20px)',
         padding: 'clamp(16px, 3vw, 24px) clamp(16px, 3vw, 28px)',
-        boxShadow: '0 18px 50px rgba(20,17,24,0.16)',
+        boxShadow: '0 18px 50px rgba(0,0,0,0.16)',
         animation: 'slideUp 0.4s ease-out',
         boxSizing: 'border-box' as const,
       }}

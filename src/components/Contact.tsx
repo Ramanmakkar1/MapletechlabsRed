@@ -105,7 +105,7 @@ export default function Contact() {
           <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 24, padding: 'clamp(20px, 4vw, 40px)' }}>
             {submitted ? (
               <div role="status" aria-live="polite" style={{ textAlign: 'center', padding: '40px 20px' }}>
-                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(16,185,129,0.1)', border: '2px solid #047857', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: 24 }}>&#10003;</div>
+                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(225,25,0,0.10)', border: '2px solid #E11900', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: 24 }}>&#10003;</div>
                 <h3 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>Message Sent!</h3>
                 <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto' }}>
                   Our team will review your message and respond within 4 business hours.

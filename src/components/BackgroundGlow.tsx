@@ -10,7 +10,7 @@ interface BackgroundGlowProps {
 }
 
 export default function BackgroundGlow({
-  color = '#7c3aed',
+  color = '#E11900',
   size = 400,
   top,
   left,
@@ -30,7 +30,7 @@ export default function BackgroundGlow({
         width: size,
         height: size,
         borderRadius: '50%',
-        background: `radial-gradient(circle, ${color} 0%, transparent 70%)`,
+        background: 'transparent',
         opacity,
         filter: `blur(${blur}px)`,
         pointerEvents: 'none',

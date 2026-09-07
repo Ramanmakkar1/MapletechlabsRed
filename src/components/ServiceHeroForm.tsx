@@ -66,7 +66,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
       backdropFilter: 'blur(20px)',
       WebkitBackdropFilter: 'blur(20px)',
       padding: 'clamp(24px, 4vw, 36px) clamp(20px, 3vw, 32px)',
-      boxShadow: '0 24px 64px rgba(20,17,24,0.10)',
+      boxShadow: '0 24px 64px rgba(0,0,0,0.10)',
     }}>
       {/* Glow accent */}
       <div style={{ position: 'absolute', top: -1, left: '20%', right: '20%', height: 2, background: 'var(--brand)', borderRadius: 2 }} />

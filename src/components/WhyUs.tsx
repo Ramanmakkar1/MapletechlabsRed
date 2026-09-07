@@ -123,7 +123,7 @@ export default function WhyUs() {
                 e.currentTarget.style.borderColor = 'rgba(245,41,13,0.25)';
                 e.currentTarget.style.background = 'rgba(245,41,13,0.03)';
                 e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 24px 60px rgba(20,17,24,0.10), 0 0 40px rgba(245,41,13,0.08)';
+                e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.10), 0 0 40px rgba(245,41,13,0.08)';
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.borderColor = 'var(--line)';

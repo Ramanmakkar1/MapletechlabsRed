@@ -162,7 +162,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="footer-social-icon"
                   style={{ width: 44, height: 44, borderRadius: '50%', border: '1px solid var(--line-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--on-ink-muted)', textDecoration: 'none', transition: '0.25s' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; e.currentTarget.style.color = 'var(--brand-bright)'; e.currentTarget.style.background = 'rgba(245,41,13,0.08)'; }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,41,13,0.4)'; e.currentTarget.style.color = 'var(--brand)'; e.currentTarget.style.background = 'rgba(245,41,13,0.08)'; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line-ink)'; e.currentTarget.style.color = 'var(--on-ink-muted)'; e.currentTarget.style.background = 'transparent'; }}
                   aria-label={s.label}
                 >
