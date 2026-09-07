@@ -5,6 +5,10 @@ import { work } from '@/data/work';
 import { quotes } from '@/data/testimonials';
 import type { Faq, IndustryCard, ServiceCard, Stat, Step, TechCategory } from './types';
 
+/* Column rule shared by every card block: three across, four only when there
+   are exactly four items, two when there are two — so six never lands 4 + 2. */
+const gridClass = (n: number) => n === 2 ? 'svc-grid svc-grid--2' : n === 4 ? 'svc-grid svc-grid--4' : 'svc-grid';
+
 const Arrow = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M17 7H9M17 7v8" /></svg>;
 
 const Head = ({ eyebrow, title, sub, right }: { eyebrow?: string; title: string; sub?: string; right?: React.ReactNode }) => (
@@ -95,7 +99,7 @@ export function TechBlocks({ title = 'The Stack Behind Your Platform', cats, bg 
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow="Technology" title={title} />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+        <div className={gridClass(cats.length)}>
           {cats.map(c => (
             <div key={c.label} className="card card--flat" style={{ background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>
               <div className="eyebrow" style={{ color: 'var(--brand)', marginBottom: 14 }}>{c.label}</div>
@@ -119,7 +123,7 @@ export function IndustryRow({ title, items, bg = 'var(--surface-alt)' }: { title
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow="Industries" title={title} right={<Link href="/industries" className="btn btn--ghost btn--sm">See All Industries</Link>} />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+        <div className={gridClass(items.length)}>
           {items.map(ind => { const m = mediaFor(ind.title); return (
             <article key={ind.title} style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', overflow: 'hidden' }}>
               <div className="media media--flat" style={{ height: 150 }}><Image src={m.src} alt={m.alt} fill sizes="(max-width: 640px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></div>
@@ -149,12 +153,12 @@ export function WhyUs({ bg = 'var(--surface)' }: { bg?: string }) {
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow="Why Mapletech Labs" title="Accountable partners, not outsourced vendors." />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+        <div className={gridClass(reasons.length)}>
           {reasons.map((r, i) => (
-            <div key={r.t} className="card card--flat" style={{ background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>
-              <span className="idx">[ {i + 1} ]</span>
-              <h3 style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{r.t}</h3>
-              <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{r.d}</p>
+            <div key={r.t} className="card card--flat" style={{ display: 'flex', flexDirection: 'column', background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>
+              <span className="idx">[ {String(i + 1).padStart(2, '0')} ]</span>
+              <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{r.t}</h3>
+              <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{r.d}</p>
             </div>
           ))}
         </div>
@@ -199,7 +203,7 @@ export function Voices({ bg = 'var(--surface)' }: { bg?: string }) {
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow="Client validation" title="Leaders Choosing Mapletech Labs" />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
+        <div className="svc-grid svc-grid--2">
           {quotes.slice(0, 2).map(q => (
             <blockquote key={q.name} style={{ margin: 0, background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', padding: 'clamp(24px, 3vw, 36px)', display: 'flex', flexDirection: 'column' }}>
               <p style={{ fontSize: 'clamp(1.05rem, 1.3vw, 1.2rem)', color: 'var(--ink)', lineHeight: 1.6, fontWeight: 500, marginBottom: 22 }}>&ldquo;{q.text}&rdquo;</p>
@@ -240,7 +244,7 @@ export function ResultsBand({ title = 'Results That Move the Needle', items, bg 
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow="Outcomes" title={title} />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+        <div className={gridClass(items.length)}>
           {items.map(r => (
             <div key={r.label} className="card card--flat" style={{ background: bg === 'var(--surface)' ? 'var(--surface-alt)' : '#fff' }}>
               <div style={{ fontSize: 'clamp(2.2rem, 3.4vw, 3rem)', fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.05em', lineHeight: 1 }}>{r.value}</div>
@@ -282,7 +286,7 @@ export function CardGrid({ eyebrow, title, sub, items, bg = 'var(--surface)', mi
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
         <Head eyebrow={eyebrow} title={title} sub={sub} />
-        <div style={{ display: 'grid', gridTemplateColumns: `repeat(auto-fit, minmax(${min}px, 1fr))`, gap: 16 }}>
+        <div className={min < 240 ? 'svc-grid svc-grid--4' : gridClass(items.length)}>
           {items.map((it, i) => {
             const body = (
               <>
@@ -290,9 +294,9 @@ export function CardGrid({ eyebrow, title, sub, items, bg = 'var(--surface)', mi
                   <span className="idx">[ {String(i + 1).padStart(2, '0')} ]</span>
                   {it.tag && <span className="pill pill--brand" style={{ height: 26, fontSize: 11 }}>{it.tag}</span>}
                 </div>
-                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>{it.title}</h3>
-                <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{it.desc}</p>
-                {it.href && <span className="link-arrow" style={{ marginTop: 14, fontSize: 14 }}>Learn more <Arrow /></span>}
+                <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>{it.title}</h3>
+                <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{it.desc}</p>
+                {it.href && <span className="link-arrow" style={{ marginTop: 'auto', paddingTop: 14, fontSize: 14 }}>Learn more <Arrow /></span>}
               </>
             );
             return it.href
