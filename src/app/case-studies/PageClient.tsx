@@ -157,7 +157,7 @@ export default function CaseStudiesPageClient() {
         <MediaBand media={workMedia.healthcare} />
 
         {/* ── CASE STUDIES GRID ── */}
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <p className="reveal" style={{
               fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',

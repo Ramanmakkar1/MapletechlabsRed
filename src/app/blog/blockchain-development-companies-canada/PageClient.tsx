@@ -465,6 +465,8 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
           </div>
         </section>
 
+        <MediaBand media={blogImage(3 + 7)} ratio="21 / 7" />
+
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>

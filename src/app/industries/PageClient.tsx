@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -53,6 +54,7 @@ function Card({ children, style }: { children: React.ReactNode; style?: React.CS
 const industries = [
   {
     icon: '',
+    key: 'fintech',
     name: 'FinTech & Banking',
     href: '/industries/fintech',
     description: 'Trading platforms, payment gateways, and regulatory-compliant financial infrastructure. We process billions in daily transactions for institutional clients.',
@@ -60,6 +62,7 @@ const industries = [
   },
   {
     icon: '',
+    key: 'healthcare',
     name: 'Healthcare & Medical',
     href: '/industries/healthcare',
     description: 'HIPAA-compliant patient portals, telemedicine platforms, and clinical workflow systems that improve outcomes at scale.',
@@ -67,6 +70,7 @@ const industries = [
   },
   {
     icon: '',
+    key: 'ecommerce',
     name: 'E-commerce & Retail',
     href: '/industries/ecommerce',
     description: 'High-performance storefronts, headless commerce, payment systems, and inventory management built for conversion and scale.',
@@ -74,6 +78,7 @@ const industries = [
   },
   {
     icon: '',
+    key: 'enterprise',
     name: 'Enterprise & Logistics',
     href: '/industries/enterprise',
     description: 'Supply chain platforms, fleet tracking, warehouse management, and enterprise resource planning systems for complex operations.',
@@ -81,6 +86,7 @@ const industries = [
   },
   {
     icon: '',
+    key: 'logistics',
     name: 'Logistics & Supply Chain',
     href: '/industries/logistics',
     description: 'Fleet tracking, route optimisation and warehouse automation, with IoT integration that holds up in the field.',
@@ -88,6 +94,7 @@ const industries = [
   },
   {
     icon: '',
+    key: 'edtech',
     name: 'EdTech & SaaS',
     href: '/industries/edtech',
     description: 'Learning management systems, interactive e-learning platforms, and SaaS solutions that engage students and simplify administration.',
@@ -122,23 +129,25 @@ export default function IndustriesPage() {
         <section ref={s1} className="section-padding">
           <div className="cb-container">
             <div className="reveal grid grid--3">
-              {industries.map((industry) => (
-                <Link
-                  key={industry.href}
-                  href={industry.href}
-                  style={{ textDecoration: 'none', display: 'block', height: '100%' }}
-                >
-                  <Card>
-                    <h2 style={{ fontWeight: 600, fontSize: '1.3rem', marginBottom: '0.75rem', color: 'var(--ink)' }}>{industry.name}</h2>
-                    <p style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: '0.95rem', marginBottom: '1.5rem' }}>{industry.description}</p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                      {industry.highlights.map(h => (
-                        <span key={h} style={{ background: 'transparent', borderRadius: 8, padding: '4px 12px', fontSize: '0.8rem', color: 'var(--brand)' }}>{h}</span>
+              {industries.map((industry) => {
+                const m = industryMedia[industry.key];
+                return (
+                <Link key={industry.href} href={industry.href} className="tile rise" style={{ padding: 0, overflow: 'hidden' }}>
+                  <div className="media media--flat media--zoom" style={{ aspectRatio: '16 / 10' }}>
+                    <Image src={m.src} alt={m.alt} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
+                  </div>
+                  <div style={{ padding: 'clamp(22px, 2.2vw, 28px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <h2 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', marginBottom: '0.6rem', color: 'var(--ink)' }}>{industry.name}</h2>
+                    <p className="clamp-3" style={{ color: 'var(--body)', lineHeight: 1.7, fontSize: 14.5, marginBottom: '1.1rem' }}>{industry.description}</p>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 'auto' }}>
+                      {industry.highlights.slice(0, 3).map(h => (
+                        <span key={h} className="pill" style={{ height: 26, fontSize: 12 }}>{h}</span>
                       ))}
                     </div>
-                  </Card>
+                  </div>
                 </Link>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

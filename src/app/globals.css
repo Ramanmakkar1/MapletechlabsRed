@@ -649,6 +649,28 @@ main > section, main > div > section, main > article > section { border-bottom: 
   .blog-layout { grid-template-columns: 1fr 320px !important; }
 }
 
+/* ── LARGE DISPLAYS ──────────────────────────────────────
+   A 1320px column stranded in the middle of a 27-inch screen looks
+   like a phone layout that forgot to grow. The container and the type
+   step up once past a 16-inch laptop; prose stays capped by its own
+   max-width, so line length does not run away. */
+@media (min-width: 1600px) {
+  :root {
+    --fs-display: clamp(3.5rem, 4.4vw, 4.75rem);
+    --fs-h2:      clamp(2.6rem, 3.2vw, 3.35rem);
+    --fs-h3:      clamp(1.6rem, 2vw, 2.05rem);
+    --section-y:    clamp(112px, 7.5vw, 148px);
+    --section-y-lg: clamp(150px, 10vw, 196px);
+    --gap: 24px;
+  }
+  .cb-container { max-width: 1460px; padding: 0 64px; }
+  .cb-container--wide { max-width: 1720px; }
+}
+@media (min-width: 1920px) {
+  .cb-container { max-width: 1560px; }
+  .cb-container--wide { max-width: 1840px; }
+}
+
 /* Awards marquee (mobile) */
 .awards-marquee-mobile { display: none; }
 @keyframes awards-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
@@ -908,3 +930,77 @@ a:hover .media--zoom > img,
   .footer-bar .cb-container { padding-top: 16px; padding-bottom: 16px; justify-content: center; text-align: center; }
   .footer-bar nav { justify-content: center; }
 }
+
+/* ── CHIPS ───────────────────────────────────────────────
+   A set of standards or technologies. Outlined, never filled, so a
+   long list stays quiet next to the label it belongs to. */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips > span {
+  display: inline-flex; align-items: center;
+  height: 28px; padding: 0 12px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-strong);
+  font-size: 12.5px; font-weight: 500; color: var(--body);
+  white-space: nowrap;
+}
+.tile--ink .chips > span { border-color: rgba(255,255,255,0.22); color: var(--on-ink-body); }
+
+/* Card on the ink band */
+.tile--ink { background: transparent; border-color: rgba(255,255,255,0.14); }
+.tile--ink h3 { color: var(--on-ink); font-size: var(--fs-h4); margin-bottom: 10px; }
+.tile--ink p { font-size: 14px; line-height: 1.7; color: var(--on-ink-body); margin-bottom: 18px; }
+.tile--ink:hover { border-color: rgba(255,255,255,0.4); }
+
+/* ── AWARD ROW ───────────────────────────────────────────
+   The badges themselves, six across, each on a white tile so a badge
+   drawn for light backgrounds still reads on the ink band. */
+.award-row {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: var(--gap); align-items: start;
+}
+.award-row > li { min-width: 0; }
+.award-badge {
+  position: relative;
+  background: #fff;
+  border-radius: var(--r-md);
+  aspect-ratio: 3 / 2;
+  margin-bottom: 14px;
+  padding: 14px;
+  overflow: hidden;
+}
+/* A badge drawn in white artwork keeps the ink ground and an outline. */
+.award-badge--light { background: transparent; border: 1px solid rgba(255,255,255,0.16); }
+
+.award-name {
+  font-size: 13.5px; font-weight: 600; color: var(--on-ink); line-height: 1.4;
+  /* two lines for every caption, so the row of badges stays level */
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; min-height: 2.8em;
+}
+.award-meta { font-size: 12.5px; color: var(--on-ink-muted); margin-top: 4px; }
+@media (max-width: 1023px) { .award-row { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 559px)  { .award-row { grid-template-columns: repeat(2, 1fr); } }
+
+/* ── STACK SPLIT ─────────────────────────────────────────
+   Photograph beside the six technology groups. */
+.stack-split { display: grid; grid-template-columns: 0.85fr 1.4fr; gap: clamp(28px, 3.5vw, 56px); align-items: stretch; }
+@media (max-width: 1023px) {
+  .stack-split { grid-template-columns: 1fr; }
+  .stack-split > .media { display: none; }
+}
+
+/* ── REASON LIST ─────────────────────────────────────────
+   Two columns of differentiators: the title carries the weight, the
+   row separates them, so the column is not one grey block. */
+.reasons {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr;
+  column-gap: clamp(28px, 3vw, 48px);
+}
+@media (min-width: 1024px) and (max-width: 1279px) { .reasons { grid-template-columns: repeat(2, 1fr); } }
+.reasons > li { padding: 24px 0; border-top: 1px solid var(--line); min-width: 0; }
+.reasons > li:last-child { border-bottom: 1px solid var(--line); }
+.reasons h3 { font-size: 16.5px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.reasons p { font-size: 14.5px; line-height: 1.7; color: var(--body); }
+

@@ -7,7 +7,7 @@ import FaqSplit from '@/components/home/FaqSplit';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ResultsBand, CardGrid, WhyUs } from './Blocks';
-import { officeMedia } from '@/data/media';
+import { officeMedia, humanPick } from '@/data/media';
 import { cities } from '@/data/cities';
 import type { HeroCopy, Stat } from './types';
 
@@ -24,6 +24,7 @@ export interface LocationProps {
 }
 
 const shots = [officeMedia.open, officeMedia.desk, officeMedia.meeting];
+void shots;
 
 /* City page — same block sequence, with the local proof the reference puts on its location pages. */
 export default function LocationPageTemplate(p: LocationProps) {
@@ -33,13 +34,14 @@ export default function LocationPageTemplate(p: LocationProps) {
     <>
       <Navbar />
       <main id="main-content">
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={p.heroStats} photo={shots[p.slug.length % 3]} serviceName={`Software development in ${name}`} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={p.heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} />
         {p.heroStats.length ? <StatRow stats={p.heroStats} /> : null}
-        <MediaBand media={shots[(p.slug.length + 1) % 3]} />
+        <MediaBand media={humanPick(p.slug, 4)} />
         <CardGrid title={`Our services in ${name}`} items={p.services.map(s => ({ title: s.title, desc: s.desc, href: s.href }))} />
         {p.numbers ? <ResultsBand title={p.numbers.title} items={p.numbers.stats} /> : null}
         <CardGrid title={`Why choose Mapletech Labs in ${name}`} items={p.whyChoose} variant="rows" />
         <CardGrid title={p.whyCity.title} sub={p.whyCity.intro} items={p.whyCity.items.map(i => ({ title: i.t, desc: i.d }))} />
+        <MediaBand media={humanPick(p.slug, 6)} ratio="21 / 7" />
         <CardGrid title={p.neighborhoods.title} sub={p.neighborhoods.intro || undefined} items={p.neighborhoods.items.map(i => ({ title: i.n, desc: i.d }))} />
         <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
           <div className="cb-container">
@@ -55,6 +57,7 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
+        <MediaBand media={humanPick(p.slug, 8)} ratio="21 / 7" />
         <CardGrid title={p.trends.title} items={p.trends.items.map(i => ({ title: i.t, desc: i.d }))} variant="rows" />
         <WhyUs />
         <Credentials />

@@ -7,7 +7,7 @@ import FaqSplit from '@/components/home/FaqSplit';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, WhyUs, SuccessStories } from '@/components/page/Blocks';
-import { serviceMedia, defaultMedia, officeMedia } from '@/data/media';
+import { serviceMedia, defaultMedia, humanPick } from '@/data/media';
 
 interface CityServicePageProps {
   cityName: string; citySlug: string; province: string; provinceAbbr: string; isHQ: boolean;
@@ -28,9 +28,11 @@ interface CityServicePageProps {
   applications: { industry: string; title: string; desc: string }[];
 }
 
-/* Column count that never orphans a row: three across when the count
-   divides by three, otherwise two. */
-const balanced = (n: number) => (n % 3 === 0 ? 'grid grid--3' : n % 2 === 0 ? 'grid grid--2' : 'grid grid--3');
+/* Column count that never orphans a row. Counts that cannot divide evenly
+   (5, 7, 11…) get null, and the caller falls back to a divider list rather
+   than leaving an empty cell. */
+const balanced = (n: number): string | null =>
+  n % 3 === 0 ? 'grid grid--3' : n % 4 === 0 ? 'grid grid--2' : n % 2 === 0 ? 'grid grid--2' : null;
 
 const Head = ({ title, sub }: { title: string; sub?: string }) => (
   <div className="head">
@@ -58,7 +60,7 @@ export default function CityServicePageClient(p: CityServicePageProps) {
         <PageHero
           crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: cityName, href: `/locations/${citySlug}` }, { label: serviceName }]}
           copy={{ badge: p.badge, title: <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>, desc: p.heroDescription }}
-          stats={p.stats} photo={officeMedia.open} serviceName={`${serviceName} in ${cityName}`}
+          stats={p.stats} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
         />
         <StatRow stats={p.stats} />
         <MediaBand media={serviceMedia[serviceSlug] ?? defaultMedia} />
@@ -66,15 +68,29 @@ export default function CityServicePageClient(p: CityServicePageProps) {
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <Head title={`${serviceName} for the industries that drive ${cityName}`} sub={p.intro} />
-            <div className={balanced(p.applications.length)}>
-              {p.applications.map(a => (
-                <article key={a.title} className="tile rise">
-                  <span className="eyebrow" style={{ color: 'var(--brand)' }}>{a.industry}</span>
-                  <h3 style={{ fontSize: 'var(--fs-h4)', margin: '12px 0 8px' }}>{a.title}</h3>
-                  <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{a.desc}</p>
-                </article>
-              ))}
-            </div>
+            {balanced(p.applications.length) ? (
+              <div className={balanced(p.applications.length)!}>
+                {p.applications.map(a => (
+                  <article key={a.title} className="tile rise">
+                    <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--brand)', marginBottom: 12 }}>{a.industry}</p>
+                    <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>{a.title}</h3>
+                    <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{a.desc}</p>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <ul className="rows">
+                {p.applications.map(a => (
+                  <li key={a.title}>
+                    <div>
+                      <h3 style={{ fontSize: 'var(--fs-h4)', margin: 0 }}>{a.title}</h3>
+                      <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--brand)', marginTop: 6 }}>{a.industry}</p>
+                    </div>
+                    <p style={{ color: 'var(--body)', lineHeight: 1.7, maxWidth: '62ch' }}>{a.desc}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </section>
 
@@ -83,18 +99,29 @@ export default function CityServicePageClient(p: CityServicePageProps) {
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <Head title={`Why ${cityName} Businesses Choose ${serviceName}`} />
-            <div className={balanced(p.pricingTiers.length)}>
-              {p.whyCity.map((w, i) => (
-                <div key={w.title} className="tile rise">
-                  <span className="idx">[ {i + 1} ]</span>
-                  <h3 style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{w.title}</h3>
-                  <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{w.desc}</p>
-                </div>
-              ))}
-            </div>
+            {balanced(p.whyCity.length) ? (
+              <div className={balanced(p.whyCity.length)!}>
+                {p.whyCity.map(w => (
+                  <div key={w.title} className="tile rise">
+                    <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>{w.title}</h3>
+                    <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{w.desc}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <ul className="rows">
+                {p.whyCity.map(w => (
+                  <li key={w.title}>
+                    <h3 style={{ fontSize: 'var(--fs-h4)', margin: 0 }}>{w.title}</h3>
+                    <p style={{ color: 'var(--body)', lineHeight: 1.7, maxWidth: '62ch' }}>{w.desc}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </section>
 
+        <MediaBand media={humanPick(citySlug + serviceSlug, 6)} ratio="21 / 7" />
         <ProcessSteps title={`Our ${serviceName} Process`} steps={p.steps} />
         <TechBlocks title="Technologies We Use" cats={tech} />
         <SuccessStories title={`Projects We've Built for ${province} Clients`} />
@@ -102,7 +129,7 @@ export default function CityServicePageClient(p: CityServicePageProps) {
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <Head title={`What ${cityName} Clients Say`} />
-            <div className={balanced(p.testimonials.length)}>
+            <div className={balanced(p.testimonials.length) ?? 'grid grid--2'}>
               {p.testimonials.map(t => (
                 <blockquote key={t.name} className="tile" style={{ margin: 0 }}>
                   <p style={{ fontSize: '1.05rem', color: 'var(--ink)', lineHeight: 1.6, fontWeight: 500, marginBottom: 20 }}>&ldquo;{t.quote}&rdquo;</p>
@@ -116,7 +143,7 @@ export default function CityServicePageClient(p: CityServicePageProps) {
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <Head title={`${serviceName} Costs in ${cityName}`} sub="Fixed-scope, fixed-price. You know the number before we write a line of code." />
-            <div className={balanced(p.pricingTiers.length)}>
+            <div className={balanced(p.pricingTiers.length) ?? 'grid grid--2'}>
               {p.pricingTiers.map((t, i) => (
                 <div key={t.name} className="tile rise" style={{ background: i === 1 ? 'var(--surface-ink)' : undefined, borderColor: i === 1 ? 'var(--surface-ink)' : undefined, color: i === 1 ? 'var(--on-ink-body)' : undefined }}>
                   <div style={{ fontSize: 13, fontWeight: 700, color: i === 1 ? '#fff' : 'var(--brand)' }}>{t.name}</div>

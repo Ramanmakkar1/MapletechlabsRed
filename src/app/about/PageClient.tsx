@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { blogMedia, officeMedia, humanMedia } from '@/data/media';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
+import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -121,7 +122,7 @@ export default function AboutPage() {
 
         {/* ── MISSION STATEMENT ── */}
         <section style={{
-          padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)',
+          padding: 'var(--section-y) 0',
         }}>
           <div className="cb-container">
             <p className="reveal" style={{
@@ -164,7 +165,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── OUR STORY ── */}
-        <section style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: 'clamp(40px, 6vw, 80px)', alignItems: 'start' }}>
 
@@ -236,7 +237,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── VALUES ── */}
-        <section style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -287,7 +288,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── LEADERSHIP TEAM ── */}
-        <section style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -356,7 +357,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── OFFICES ── */}
-        <section style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
+        <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{
@@ -416,6 +417,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── BOTTOM CTA ── */}
+        <MediaBand media={humanMedia.meeting} ratio="21 / 8" />
         <FinalCta title="Let\u2019s talk about what you\u2019re building." sub="Tell us the problem. A senior engineer will come back within four hours with how we\u2019d approach it, what it takes and what it costs." />
 
         </article>

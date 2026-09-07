@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import { caseStudyMedia } from '@/data/media';
+import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
@@ -208,6 +208,8 @@ export default function RealEstateCaseStudyClient() {
             </div>
           </div>
         </section>
+
+        <MediaBand media={humanPick('real-estate-portal')} ratio="21 / 8" />
 
         {/* ── TESTIMONIAL ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

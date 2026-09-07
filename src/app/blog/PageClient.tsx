@@ -237,7 +237,7 @@ export default function BlogPage() {
         <MediaBand media={blogMedia[2]} />
 
         {/* ── FEATURED POST ── */}
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <h2 style={{ marginBottom: 32 }}>The one to read first</h2>
             <Link href={`/blog/${FEATURED}`} style={{ textDecoration: 'none', display: 'block' }}>
@@ -309,7 +309,7 @@ export default function BlogPage() {
         </section>
 
         {/* ── POSTS GRID ── */}
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+        <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <h2 style={{ marginBottom: 40 }}>Latest articles</h2>
             <div className="grid grid--3">

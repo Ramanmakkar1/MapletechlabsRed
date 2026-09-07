@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import { officeMedia } from '@/data/media';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
+import MediaBand from '@/components/MediaBand';
+import { humanMedia } from '@/data/media';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -136,6 +138,7 @@ export default function LocationsIndexPage() {
         </section>
 
         {/* CTA */}
+        <MediaBand media={humanMedia.meeting} ratio="21 / 8" />
         <FinalCta title="Let\u2019s build something great, wherever you are." sub="We work with companies across Canada, remotely and on site. Tell us about your project and we\u2019ll come back within four hours." />
 
       </main>

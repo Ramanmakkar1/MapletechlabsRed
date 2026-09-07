@@ -328,7 +328,7 @@ export function CaseBand({ client, headline, text, quote, cite }: { client: stri
       <div className="cb-container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', background: 'var(--surface-ink)', color: 'var(--on-ink-body)', borderRadius: 'var(--r-lg)', overflow: 'hidden' }}>
           <div style={{ padding: 'clamp(32px, 4vw, 56px)' }}>
-            <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--brand)', marginBottom: 14 }}>Case study &middot; {client}</p>
+            <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '.02em', marginBottom: 14 }}>Case study &middot; {client}</p>
             <h2 style={{ color: 'var(--on-ink)', fontSize: 'var(--fs-h3)', marginBottom: 14, lineHeight: 1.25 }}>{headline}</h2>
             <p style={{ lineHeight: 1.75 }}>{text}</p>
           </div>

@@ -6,7 +6,7 @@ import PageHero from './PageHero';
 import MediaBand from '@/components/MediaBand';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, TechBlocks, SuccessStories, CaseBand, CardGrid, WhyUs } from './Blocks';
-import { industryMedia, defaultMedia } from '@/data/media';
+import { industryMedia, defaultMedia, humanPick } from '@/data/media';
 import type { HeroCopy, Stat } from './types';
 
 export interface IndustryProps {
@@ -34,6 +34,7 @@ export default function IndustryPageTemplate(p: IndustryProps) {
         <CaseBand {...p.caseStudy} />
         <TechBlocks title={`The stack behind ${p.name} platforms`} cats={p.tech.map(t => ({ label: t.cat, chips: t.items }))} />
         <CardGrid title="Domain experts, not generalists" items={p.whyUs} variant="rows" />
+        <MediaBand media={humanPick(p.slug, 5)} ratio="21 / 7" />
         <SuccessStories />
         <WhyUs />
         <CardGrid title={`Services for ${p.name}`} items={p.related.map(r => ({ title: r.name, desc: r.desc, href: r.href }))} />

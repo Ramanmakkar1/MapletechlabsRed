@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { officeMedia, serviceMedia, humanMedia } from '@/data/media';
+import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
 
@@ -293,6 +294,7 @@ export default function ServicesIndexPage() {
         </section>
 
         {/* CTA */}
+        <MediaBand media={humanMedia.planning} ratio="21 / 8" />
         <FinalCta title="Not sure which service you need?" sub="Describe the outcome you\u2019re after and we\u2019ll tell you what it actually takes \u2014 scope, timeline and fixed price, within four hours." />
 
       </main>

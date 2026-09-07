@@ -2,6 +2,8 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
+import MediaBand from '@/components/MediaBand';
+import { humanMedia } from '@/data/media';
 
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
@@ -181,7 +183,7 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           ENGAGEMENT OPTIONS
       ═══════════════════════════════════════ */}
-      <section ref={engageRef} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
+      <section ref={engageRef} style={{ padding: 'var(--section-y) 0' }}>
         <div className="cb-container">
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none' as const, color: 'var(--faint)', marginBottom: 16 }}>How Can We Help?</div>
@@ -211,7 +213,7 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           CONTACT FORM
       ═══════════════════════════════════════ */}
-      <section id="contact-form" ref={formRef} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)', scrollMarginTop: 80 }}>
+      <section id="contact-form" ref={formRef} style={{ padding: 'var(--section-y) 0', scrollMarginTop: 80 }}>
         <div className="cb-container">
           <div className="reveal cp-contact-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 'clamp(32px, 6vw, 80px)', alignItems: 'start' }}>
 
@@ -339,7 +341,9 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           OFFICES
       ═══════════════════════════════════════ */}
-      <section ref={officesRef} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
+      <MediaBand media={humanMedia.workshop} ratio="21 / 8" />
+
+      <section ref={officesRef} style={{ padding: 'var(--section-y) 0' }}>
         <div className="cb-container">
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none' as const, color: 'var(--faint)', marginBottom: 16 }}>Global Presence</div>
@@ -371,7 +375,7 @@ export default function ContactPage() {
       {/* ═══════════════════════════════════════
           FAQ
       ═══════════════════════════════════════ */}
-      <section ref={faqRef} style={{ padding: 'var(--section-y) 0', borderBottom: '1px solid var(--line)' }}>
+      <section ref={faqRef} style={{ padding: 'var(--section-y) 0' }}>
         <div className="cb-container" style={{ maxWidth: 860 }}>
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 60 }}>
             <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none' as const, color: 'var(--faint)', marginBottom: 16 }}>FAQ</div>

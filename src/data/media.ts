@@ -48,11 +48,20 @@ export const industryMedia: Record<string, Media> = {
 };
 
 export const blogMedia: Media[] = [
-  { src: `${S}/blog-team.webp`, alt: 'Team reviewing work together around a laptop' },
+  { src: `${S}/blog-team.webp`, alt: 'A team reviewing work together around a laptop' },
+  { src: `${S}/human-planning.webp`, alt: 'A team mapping out a project across a wall of notes' },
   { src: `${S}/blog-code.webp`, alt: 'Two engineers working on code at their monitors' },
+  { src: `${S}/human-whiteboard.webp`, alt: 'An engineer sketching a system diagram on a whiteboard' },
   { src: `${S}/blog-collab.webp`, alt: 'Four colleagues collaborating around a laptop' },
-  { src: `${S}/blog-desk.webp`, alt: 'Developer writing code at a workspace' },
-  { src: `${S}/blog-review.webp`, alt: 'Group reviewing a design on a laptop screen' },
+  { src: `${S}/human-numbers.webp`, alt: 'Two people going through the numbers together' },
+  { src: `${S}/blog-desk.webp`, alt: 'A developer writing code at a workspace' },
+  { src: `${S}/human-meeting.webp`, alt: 'A project meeting in progress around a long table' },
+  { src: `${S}/blog-review.webp`, alt: 'A group reviewing a design on a laptop screen' },
+  { src: `${S}/human-review.webp`, alt: 'Colleagues reviewing performance figures on a laptop' },
+  { src: `${S}/human-app.webp`, alt: 'A mobile app open on a phone in someone\u2019s hand' },
+  { src: `${S}/human-desk.webp`, alt: 'A quiet desk by the window at the start of the day' },
+  { src: `${S}/human-devs.webp`, alt: 'Two developers pairing on a problem at a shared screen' },
+  { src: `${S}/human-team.webp`, alt: 'A product team working across laptops around one table' },
 ];
 
 /** Service category slug -> photo, for the band under each service hero. */
@@ -98,7 +107,26 @@ export const humanMedia = {
   studio:    { src: `${S}/human-studio.webp`,    alt: 'A calm studio corridor with glass-walled meeting rooms' },
   checkout:  { src: `${S}/human-delivery.webp`,  alt: 'A shopper paying by phone at a small retail counter' },
   founder:   { src: `${S}/human-mobile.webp`,    alt: 'A founder working through the day at her laptop' },
+  planning:  { src: `${S}/human-planning.webp`,  alt: 'A team mapping out a project across a wall of notes' },
+  whiteboard:{ src: `${S}/human-whiteboard.webp`,alt: 'An engineer sketching a system diagram on a whiteboard' },
+  review:    { src: `${S}/human-review.webp`,    alt: 'Colleagues reviewing performance figures on a laptop' },
+  meeting:   { src: `${S}/human-meeting.webp`,   alt: 'A project meeting in progress around a long table' },
+  desk:      { src: `${S}/human-desk.webp`,      alt: 'A quiet desk by the window at the start of the day' },
+  app:       { src: `${S}/human-app.webp`,       alt: 'A mobile app open on a phone in someone\u2019s hand' },
+  numbers:   { src: `${S}/human-numbers.webp`,   alt: 'Two people going through the numbers together' },
 } satisfies Record<string, Media>;
+
+/**
+ * Deterministic rotation: the same page always gets the same photograph, and
+ * `nth` steps to a different one rather than re-hashing, so two calls on one
+ * page can never land on the same image.
+ */
+const humanKeys = ['planning', 'whiteboard', 'review', 'meeting', 'desk', 'app', 'numbers', 'team', 'workshop', 'pairing', 'designer', 'studio'] as const;
+export const humanPick = (seed: string, nth = 0): Media => {
+  let n = 0;
+  for (let i = 0; i < seed.length; i++) n = (n * 31 + seed.charCodeAt(i)) >>> 0;
+  return humanMedia[humanKeys[(n + nth) % humanKeys.length]];
+};
 
 /** Deterministic pick so a card always gets the same photo across renders. */
 export const blogImage = (i: number): Media => blogMedia[i % blogMedia.length];
