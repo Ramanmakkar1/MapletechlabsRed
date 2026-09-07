@@ -42,6 +42,7 @@ export function StatRow({ stats }: { stats: Stat[] }) {
 
 /* ── services / capabilities grid ────────────────────────── */
 export function ServicesGrid({ title, sub, items, bg = 'var(--surface)' }: { title: string; sub?: string; items: ServiceCard[]; bg?: string }) {
+  const anyChips = items.some(s => s.chips?.length);
   return (
     <section style={{ padding: 'var(--section-y) 0', background: bg }}>
       <div className="cb-container">
@@ -55,10 +56,12 @@ export function ServicesGrid({ title, sub, items, bg = 'var(--surface)' }: { tit
               </div>
               <h3 className="clamp-2" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{s.title}</h3>
               {/* every card gets the same three lines of copy, so a row stays level */}
-              <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, marginBottom: 18 }}>{s.desc}</p>
-              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 'auto', minHeight: 28 }}>
-                {(s.chips ?? []).slice(0, 4).map(c => <span key={c} className="pill" style={{ height: 28, fontSize: 12, background: '#fff' }}>{c}</span>)}
-              </div>
+              <p className="clamp-3" style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, marginBottom: anyChips ? 18 : 0 }}>{s.desc}</p>
+              {anyChips && (
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 'auto', minHeight: 28 }}>
+                  {(s.chips ?? []).slice(0, 4).map(c => <span key={c} className="pill" style={{ height: 28, fontSize: 12, background: '#fff' }}>{c}</span>)}
+                </div>
+              )}
             </article>
           ))}
         </div>
