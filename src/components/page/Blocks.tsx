@@ -112,19 +112,23 @@ export function ProcessSteps({ title = 'How we deliver', steps }: { title?: stri
     <section style={{ padding: 'var(--section-y) 0' }}>
       <div className="cb-container">
         <Head title={title} sub="Fixed milestones, working software every fortnight, and no surprises on the invoice." />
-        <ol className="timeline">
+        {/* A connected spine, so the numbers mark a real sequence rather than
+            decorating six lookalike cards. */}
+        <ol className="steps">
           {steps.map((st, i) => (
             <li key={st.num}>
-              <span className="timeline__num">{String(i + 1).padStart(2, '0')}</span>
-              <div>
-                <div style={{ display: 'flex', gap: 14, alignItems: 'baseline', flexWrap: 'wrap', marginBottom: 8 }}>
-                  <h3 style={{ fontSize: 'var(--fs-h4)', margin: 0 }}>{st.title}</h3>
-                  {st.duration && <span style={{ fontSize: 13, color: 'var(--muted)' }}>{st.duration}</span>}
+              <div className="steps__node">
+                <span className="steps__num">{String(i + 1).padStart(2, '0')}</span>
+              </div>
+              <div className="steps__body">
+                <div className="steps__head">
+                  <h3>{st.title}</h3>
+                  {st.duration && <span className="steps__when">{st.duration}</span>}
                 </div>
-                <p style={{ color: 'var(--body)', lineHeight: 1.7, maxWidth: '62ch' }}>{st.desc}</p>
+                <p>{st.desc}</p>
                 {st.deliverables?.length ? (
-                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 14 }}>
-                    {st.deliverables.map(d => <span key={d} className="pill" style={{ height: 26, fontSize: 12 }}>{d}</span>)}
+                  <div className="steps__out">
+                    {st.deliverables.map(d => <span key={d}>{d}</span>)}
                   </div>
                 ) : null}
               </div>
@@ -202,16 +206,24 @@ export function WhyUs({ bg }: { bg?: string }) {
   void bg;
   return (
     <section style={{ padding: 'var(--section-y) 0' }}>
-      <div className="cb-container why-split">
-        <div>
-          <h2 style={{ maxWidth: '14ch' }}>Accountable partners, not outsourced vendors</h2>
-          <p className="lede">How we price, who we staff and what happens after launch — the parts that decide whether a project actually lands.</p>
+      <div className="cb-container">
+        <div className="head">
+          <div>
+            <h2 style={{ maxWidth: '18ch' }}>Accountable partners, not outsourced vendors</h2>
+            <p className="lede">How we price, who we staff and what happens after launch &mdash; the parts that decide whether a project actually lands.</p>
+          </div>
+          <Link href="/contact" className="btn btn--ghost">Talk to an engineer</Link>
         </div>
-        <ul className="grid grid--2" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+
+        {/* A bordered ledger, not six floating cards: shared hairlines make the
+            six commitments read as one itemised agreement, which is the point
+            of the section. */}
+        <ul className="commitments">
           {reasons.map(r => (
-            <li key={r.title} style={{ paddingTop: 20, borderTop: '1px solid var(--line)' }}>
-              <h3 style={{ fontSize: 16.5, fontWeight: 700, marginBottom: 8 }}>{r.title}</h3>
-              <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{r.desc}</p>
+            <li key={r.title}>
+              <span className="commitments__mark" aria-hidden />
+              <h3>{r.title}</h3>
+              <p>{r.desc}</p>
             </li>
           ))}
         </ul>

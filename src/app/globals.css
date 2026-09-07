@@ -1004,3 +1004,65 @@ a:hover .media--zoom > img,
 .reasons h3 { font-size: 16.5px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
 .reasons p { font-size: 14.5px; line-height: 1.7; color: var(--body); }
 
+
+/* ── COMMITMENTS LEDGER (inner-page "why us") ────────────
+   Six commitments as one bordered grid, hairlines shared, so they
+   read as an itemised agreement rather than six floating cards. */
+.commitments {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.commitments > li {
+  background: var(--surface);
+  padding: clamp(24px, 2.4vw, 34px);
+  display: flex; flex-direction: column;
+  transition: background-color .25s ease;
+}
+.commitments > li:hover { background: var(--surface-alt); }
+.commitments__mark { width: 26px; height: 3px; border-radius: 3px; background: var(--brand); margin-bottom: 18px; }
+.commitments h3 { font-size: 16.5px; font-weight: 700; color: var(--ink); margin: 0 0 10px; letter-spacing: -0.01em; }
+.commitments p { font-size: 14.5px; line-height: 1.7; color: var(--body); margin: 0; }
+@media (max-width: 900px) { .commitments { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .commitments { grid-template-columns: 1fr; } }
+
+/* ── PROCESS STEPS (connected spine) ─────────────────────
+   A real sequence: numbered nodes threaded on a vertical line, so the
+   order carries meaning the reader needs. */
+.steps { list-style: none; margin: 0; padding: 0; }
+.steps > li { display: grid; grid-template-columns: 64px 1fr; gap: clamp(18px, 2.5vw, 32px); position: relative; }
+.steps > li:not(:last-child) { padding-bottom: clamp(28px, 3.5vw, 44px); }
+/* the spine: a hairline down the node column, drawn behind the nodes */
+.steps > li:not(:last-child)::before {
+  content: ""; position: absolute;
+  left: 31px; top: 44px; bottom: -1px; width: 2px;
+  background: var(--line);
+}
+.steps__node {
+  width: 64px; height: 64px; border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  display: grid; place-items: center;
+  background: var(--surface); position: relative; z-index: 1;
+  transition: border-color .25s ease, background-color .25s ease;
+}
+.steps > li:hover .steps__node { border-color: var(--brand); }
+.steps__num { font-size: 17px; font-weight: 700; color: var(--brand); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.steps__body { padding-top: 6px; min-width: 0; }
+.steps__head { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-bottom: 8px; }
+.steps__head h3 { font-size: var(--fs-h4); margin: 0; }
+.steps__when { font-size: 13px; font-weight: 600; color: var(--brand); }
+.steps__body > p { color: var(--body); line-height: 1.7; max-width: 64ch; margin: 0; }
+.steps__out { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 16px; }
+.steps__out > span {
+  display: inline-flex; align-items: center; height: 28px; padding: 0 12px;
+  border: 1px solid var(--line); border-radius: var(--r-pill);
+  font-size: 12px; font-weight: 500; color: var(--muted); background: var(--surface);
+}
+@media (max-width: 560px) {
+  .steps > li { grid-template-columns: 48px 1fr; gap: 16px; }
+  .steps > li:not(:last-child)::before { left: 23px; }
+  .steps__node { width: 48px; height: 48px; }
+  .steps__num { font-size: 14px; }
+}
