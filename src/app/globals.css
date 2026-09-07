@@ -446,13 +446,14 @@ textarea.field { height: auto; padding: 14px 18px; resize: vertical; min-height:
    own background inline (the home sections) are unaffected, since inline
    styles win over this rule. */
 main > section:nth-of-type(even),
-main > div > section:nth-of-type(even) {
+main > div > section:nth-of-type(even),
+main > article > section:nth-of-type(even) {
   background: var(--surface-alt);
 }
 
 /* With alternating bands the hairline between sections is redundant and
    reads as a seam. */
-main > section { border-bottom: 0 !important; }
+main > section, main > div > section, main > article > section { border-bottom: 0 !important; }
 
 /* Cards in a row share a height. Without this a three-up grid ends up
    ragged whenever one card's copy runs longer. */
