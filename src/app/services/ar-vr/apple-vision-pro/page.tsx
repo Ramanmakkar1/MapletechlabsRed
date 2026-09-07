@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Apple Vision Pro App Development | Canada'}
+        description={'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds spatial computing apps for Apple Vision Pro from Toronto, Canada.'}
+        url={'https://mapletechlabs.ca/services/ar-vr/apple-vision-pro'}
+      />
       <PageClient />
     </>
   );

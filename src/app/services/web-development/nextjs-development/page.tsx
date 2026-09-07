@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Next.js Development Services'}
+        description={'Expert Next.js development by Mapletech Labs. Build fast, SEO-friendly React applications with server-side rendering and static site generation.'}
+        url={'https://mapletechlabs.ca/services/web-development/nextjs-development'}
+      />
       <PageClient />
     </>
   );

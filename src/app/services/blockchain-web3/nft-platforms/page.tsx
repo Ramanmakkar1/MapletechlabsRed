@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'NFT Platform & Marketplace Development'}
+        description={'Gas-optimized NFT minting contracts, custom marketplaces, and royalty systems. 500K+ NFTs minted across 30+ platforms by Mapletech Labs in Toronto.'}
+        url={'https://mapletechlabs.ca/services/blockchain-web3/nft-platforms'}
+      />
       <PageClient />
     </>
   );

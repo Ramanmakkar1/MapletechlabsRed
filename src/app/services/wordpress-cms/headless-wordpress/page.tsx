@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Headless WordPress Development Services'}
+        description={'Headless WordPress with Next.js frontends for blazing-fast performance. WPGraphQL, ISR, and CDN delivery by Mapletech Labs, Toronto. 40+ projects shipped.'}
+        url={'https://mapletechlabs.ca/services/wordpress-cms/headless-wordpress'}
+      />
       <PageClient />
     </>
   );

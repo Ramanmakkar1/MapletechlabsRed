@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Motion & Video Branding'}
+        description={'Motion graphics and video branding by Mapletech Labs. Animated logos, brand videos, social media content, and product demos that captivate audiences.'}
+        url={'https://mapletechlabs.ca/services/branding/motion-video-branding'}
+      />
       <PageClient />
     </>
   );

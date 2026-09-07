@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Social Media Marketing Services Toronto'}
+        description={'Full-service social media marketing in Toronto. Strategy, content creation, community management, and paid social campaigns. 50M+ impressions generated.'}
+        url={'https://mapletechlabs.ca/services/digital-marketing/social-media-marketing'}
+      />
       <PageClient />
     </>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Custom WordPress Theme Development'}
+        description={'Custom WordPress theme development by Mapletech Labs. Pixel-perfect, fast-loading themes built from scratch with clean code and SEO best practices.'}
+        url={'https://mapletechlabs.ca/services/wordpress-cms/custom-wordpress-themes'}
+      />
       <PageClient />
     </>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Fintech Software Development'}
+        description={'Fintech software by Mapletech Labs. Payment platforms, banking apps & compliant trading systems for Canadian finance. Request a free technical proposal.'}
+        url={'https://mapletechlabs.ca/industries/fintech'}
+      />
       <PageClient />
     </>
   );

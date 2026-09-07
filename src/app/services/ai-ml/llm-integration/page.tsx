@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'LLM Integration Services'}
+        description={'LLM and large language model integration services. Mapletech Labs helps you integrate GPT, Claude, and custom AI models into your applications.'}
+        url={'https://mapletechlabs.ca/services/ai-ml/llm-integration'}
+      />
       <PageClient />
     </>
   );

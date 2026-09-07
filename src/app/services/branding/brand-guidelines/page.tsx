@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Brand Guidelines Development'}
+        description={'Comprehensive brand guidelines by Mapletech Labs. Usage rules, asset libraries, and style guides that maintain brand consistency across all touchpoints.'}
+        url={'https://mapletechlabs.ca/services/branding/brand-guidelines'}
+      />
       <PageClient />
     </>
   );

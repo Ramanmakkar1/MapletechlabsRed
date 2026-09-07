@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'React Native App Development'}
+        description={'React Native app development services by Mapletech Labs. Build cross-platform mobile apps with native performance using JavaScript and React.'}
+        url={'https://mapletechlabs.ca/services/mobile-app-development/react-native-apps'}
+      />
       <PageClient />
     </>
   );

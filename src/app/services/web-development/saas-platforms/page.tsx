@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'SaaS Platform Development'}
+        description={'Custom SaaS platform development services. Mapletech Labs builds scalable, multi-tenant software-as-a-service applications from concept to launch.'}
+        url={'https://mapletechlabs.ca/services/web-development/saas-platforms'}
+      />
       <PageClient />
     </>
   );

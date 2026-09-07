@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Multiplayer & LiveOps Game Development'}
+        description={'Real-time multiplayer infrastructure and LiveOps systems built for scale. Netcode, matchmaking, seasonal events, and anti-cheat from a Canadian game dev team.'}
+        url={'https://mapletechlabs.ca/services/game-development/multiplayer-liveops'}
+      />
       <PageClient />
     </>
   );

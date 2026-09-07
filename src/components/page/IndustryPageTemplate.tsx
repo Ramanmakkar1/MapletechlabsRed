@@ -2,6 +2,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
+import { defaultFaqs } from '@/data/faqs';
+import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
 import MediaBand from '@/components/MediaBand';
 import FinalCta from '@/components/home/FinalCta';
@@ -40,6 +42,7 @@ export default function IndustryPageTemplate(p: IndustryProps) {
         <CardGrid title={`Services for ${p.name}`} items={p.related.map(r => ({ title: r.name, desc: r.desc, href: r.href }))} />
         <Credentials />
         <FaqSplit />
+        <FaqSchema faqs={defaultFaqs} />
         <FinalCta title={p.cta.title} sub={p.cta.sub} />
       </main>
       <Footer />

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Strapi & Sanity CMS Development Services'}
+        description={'Expert Strapi and Sanity headless CMS setup with Next.js integration, live preview, and content migration. Mapletech Labs, Toronto. 30+ CMS projects.'}
+        url={'https://mapletechlabs.ca/services/wordpress-cms/strapi-sanity-cms'}
+      />
       <PageClient />
     </>
   );

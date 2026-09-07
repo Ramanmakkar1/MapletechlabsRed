@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Cross-Platform App Development'}
+        description={'Cross-platform mobile app development services. Mapletech Labs builds apps that run on iOS and Android with shared codebases and native performance.'}
+        url={'https://mapletechlabs.ca/services/mobile-app-development/cross-platform-apps'}
+      />
       <PageClient />
     </>
   );

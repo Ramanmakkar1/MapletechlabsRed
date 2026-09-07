@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'PCI DSS Payments API Case Study',
-  description: 'How we built PayBridge Solutions\' PCI DSS certified payments API processing 12M+ monthly transactions securely.',
+  description: 'How Mapletech Labs built PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.',
   openGraph: {
     title: 'PCI DSS Payments API | Mapletech Labs',
     description: 'Real client success story from Mapletech Labs.',
@@ -15,5 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PageClient />;
+  return (
+    <>
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs('PCI DSS Payments API', 'payments-api-platform')} />
+      <PageClient />
+    </>
+  );
 }

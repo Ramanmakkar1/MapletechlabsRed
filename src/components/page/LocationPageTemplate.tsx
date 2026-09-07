@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
+import { defaultFaqs } from '@/data/faqs';
+import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ResultsBand, CardGrid, WhyUs } from './Blocks';
@@ -70,6 +72,7 @@ export default function LocationPageTemplate(p: LocationProps) {
           </div>
         </section>
         <FaqSplit />
+        <FaqSchema faqs={defaultFaqs} />
         <FinalCta title={`Building in ${name}? Let's scope it.`} sub={`Tell us what you need and a senior engineer will send a fixed-price plan within four hours${city?.isHQ ? ' — from our head office right here in ' + name + '.' : '.'}`} />
       </main>
       <Footer />

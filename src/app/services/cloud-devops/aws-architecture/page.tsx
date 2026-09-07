@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'AWS Architecture & Cloud Solutions | Canada'}
+        description={'Certified AWS architects at Mapletech Labs Toronto. Cloud migration, cost optimisation, and multi-region HA design. $2M+ saved for Canadian businesses. Free audit.'}
+        url={'https://mapletechlabs.ca/services/cloud-devops/aws-architecture'}
+      />
       <PageClient />
     </>
   );

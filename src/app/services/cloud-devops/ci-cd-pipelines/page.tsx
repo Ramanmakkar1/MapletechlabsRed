@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'CI/CD Pipeline Development Services | Canada'}
+        description={'Automated CI/CD pipelines by Mapletech Labs Toronto. GitHub Actions, blue-green deploys, and zero-downtime releases. 100+ pipelines built for Canadian teams.'}
+        url={'https://mapletechlabs.ca/services/cloud-devops/ci-cd-pipelines'}
+      />
       <PageClient />
     </>
   );

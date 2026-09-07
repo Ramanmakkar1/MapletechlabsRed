@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'SaaS Authentication & SSO Development'}
+        description={'Enterprise-ready auth with SAML SSO, MFA, RBAC, and audit logs for SaaS products. Mapletech Labs builds secure auth systems from Toronto, Canada.'}
+        url={'https://mapletechlabs.ca/services/saas-development/auth-sso'}
+      />
       <PageClient />
     </>
   );

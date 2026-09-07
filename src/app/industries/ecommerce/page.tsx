@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'E-Commerce Software Development'}
+        description={'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, payment processing & omnichannel retail for Canadian businesses. Get a free quote.'}
+        url={'https://mapletechlabs.ca/industries/ecommerce'}
+      />
       <PageClient />
     </>
   );

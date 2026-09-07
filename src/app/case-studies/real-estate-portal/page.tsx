@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'ML-Powered Real Estate Portal Case Study',
-  description: 'How we built PropConnect Canada\'s real estate platform with ML recommendations for 850K+ active listings.',
+  description: 'How Mapletech Labs built PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.',
   openGraph: {
     title: 'Real Estate Portal with ML | Mapletech Labs',
     description: 'Real client success story from Mapletech Labs.',
@@ -15,5 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PageClient />;
+  return (
+    <>
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs('ML-Powered Real Estate Portal', 'real-estate-portal')} />
+      <PageClient />
+    </>
+  );
 }

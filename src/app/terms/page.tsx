@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: 'Terms of Service for Mapletech Labs. Read our service terms, conditions, and legal agreements.',
+  description: 'The terms governing use of the Mapletech Labs website and services, including intellectual property, liability and governing law in Canada.',
   alternates: { canonical: canonicalUrl('/terms') },
 };
 

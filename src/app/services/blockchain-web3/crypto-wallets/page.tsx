@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Crypto Wallet Development Services | Toronto'}
+        description={'Custom crypto wallet development with multi-chain support, HD key management, and hardware wallet integration. Mapletech Labs builds secure wallets in Canada.'}
+        url={'https://mapletechlabs.ca/services/blockchain-web3/crypto-wallets'}
+      />
       <PageClient />
     </>
   );

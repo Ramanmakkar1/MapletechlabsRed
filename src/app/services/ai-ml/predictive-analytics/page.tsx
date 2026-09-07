@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Predictive Analytics Services'}
+        description={'Predictive analytics and machine learning services. Mapletech Labs builds data-driven models for forecasting, recommendations, and business intelligence.'}
+        url={'https://mapletechlabs.ca/services/ai-ml/predictive-analytics'}
+      />
       <PageClient />
     </>
   );

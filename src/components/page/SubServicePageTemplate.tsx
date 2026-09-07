@@ -3,6 +3,8 @@ import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
+import { defaultFaqs } from '@/data/faqs';
+import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, WhyUs, SuccessStories } from './Blocks';
@@ -30,6 +32,7 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
         <WhyUs />
         <Credentials />
         <FaqSplit faqs={faqs} title="Common questions" />
+        <FaqSchema faqs={faqs ?? defaultFaqs} />
         <FinalCta />
       </main>
       <Footer />

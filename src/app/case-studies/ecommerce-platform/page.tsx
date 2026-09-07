@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'Enterprise E-Commerce Platform | Case Study';
@@ -45,6 +47,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(TITLE.split(' | ')[0], SLUG)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

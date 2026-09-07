@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Logo & Visual Identity Design'}
+        description={'Professional logo and visual identity design by Mapletech Labs. Memorable logos, color systems, and typography that define your brand.'}
+        url={'https://mapletechlabs.ca/services/branding/logo-visual-identity'}
+      />
       <PageClient />
     </>
   );

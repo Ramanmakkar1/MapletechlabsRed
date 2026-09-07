@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Logistics Software Development'}
+        description={'Logistics & supply chain software by Mapletech Labs. Fleet management, route optimization & tracking for Canadian logistics. Get a free project estimate.'}
+        url={'https://mapletechlabs.ca/industries/logistics'}
+      />
       <PageClient />
     </>
   );

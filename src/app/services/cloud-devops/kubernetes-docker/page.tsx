@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Kubernetes & Docker Services | Toronto, Canada'}
+        description={'Production-grade Kubernetes and Docker by Mapletech Labs. EKS, GKE, AKS cluster setup, Helm charts, and container security. 60+ K8s clusters deployed in Canada.'}
+        url={'https://mapletechlabs.ca/services/cloud-devops/kubernetes-docker'}
+      />
       <PageClient />
     </>
   );

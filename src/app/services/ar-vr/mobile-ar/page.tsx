@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Mobile AR Development'}
+        description={'Mobile augmented reality development with ARKit and ARCore. Mapletech Labs builds immersive AR experiences for iOS and Android applications.'}
+        url={'https://mapletechlabs.ca/services/ar-vr/mobile-ar'}
+      />
       <PageClient />
     </>
   );

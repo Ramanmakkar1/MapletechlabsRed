@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Enterprise Portal Development Services'}
+        description={'Secure, SOC2-compliant enterprise portals with SSO, RBAC, and workflow automation. Built by Mapletech Labs in Toronto for 10,000+ daily active users.'}
+        url={'https://mapletechlabs.ca/services/web-development/enterprise-portals'}
+      />
       <PageClient />
     </>
   );

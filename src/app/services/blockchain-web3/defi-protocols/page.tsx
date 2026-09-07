@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'DeFi Protocol Development'}
+        description={'Custom DeFi protocol development by Mapletech Labs. Build decentralized exchanges, lending platforms, yield aggregators, and liquidity pools.'}
+        url={'https://mapletechlabs.ca/services/blockchain-web3/defi-protocols'}
+      />
       <PageClient />
     </>
   );

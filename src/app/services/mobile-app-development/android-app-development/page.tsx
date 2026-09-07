@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Android App Development Services'}
+        description={'Professional Android app development with Kotlin & Jetpack Compose. Mapletech Labs creates scalable apps for phones, tablets, and foldables.'}
+        url={'https://mapletechlabs.ca/services/mobile-app-development/android-app-development'}
+      />
       <PageClient />
     </>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Unreal Engine 5 Development | AAA Game Studio'}
+        description={'Unreal Engine 5 game development with Lumen, Nanite, and Chaos Physics. AAA-quality games, simulations, and archviz. 30+ UE5 projects delivered in Canada.'}
+        url={'https://mapletechlabs.ca/services/game-development/unreal-engine'}
+      />
       <PageClient />
     </>
   );

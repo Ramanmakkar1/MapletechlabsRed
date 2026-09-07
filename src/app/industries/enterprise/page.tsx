@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'Enterprise Software Development'}
+        description={'Enterprise software by Mapletech Labs. ERP, CRM, workflow automation & BI solutions at scale for Canadian enterprises. Schedule a free consultation today.'}
+        url={'https://mapletechlabs.ca/industries/enterprise'}
+      />
       <PageClient />
     </>
   );

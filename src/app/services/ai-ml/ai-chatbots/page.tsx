@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -24,6 +25,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema
+        name={'AI Chatbot Development'}
+        description={'Custom AI chatbot development services. Mapletech Labs builds intelligent conversational agents for customer support, sales, and internal operations.'}
+        url={'https://mapletechlabs.ca/services/ai-ml/ai-chatbots'}
+      />
       <PageClient />
     </>
   );

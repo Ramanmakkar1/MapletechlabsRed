@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
+import { defaultFaqs } from '@/data/faqs';
+import { FaqSchema } from '@/components/ServiceSchema';
 import InsightsSection from '@/components/InsightsSection';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
@@ -38,6 +40,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <Credentials />
         <InsightsSection />
         <FaqSplit faqs={faqs} />
+        <FaqSchema faqs={faqs ?? defaultFaqs} />
         <FinalCta />
       </main>
       <Footer />
