@@ -1070,3 +1070,9 @@ a:hover .media--zoom > img,
 /* Hero assurance grid: two up, one up on the narrowest phones. */
 .hero-assurances { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; }
 @media (max-width: 400px) { .hero-assurances { grid-template-columns: 1fr; } }
+
+/* Prose split: a heading held left while the paragraphs run in a readable
+   measure on the right — used by province intros. */
+.prose-split { display: grid; grid-template-columns: 0.85fr 1.4fr; gap: clamp(28px, 4vw, 72px); align-items: start; }
+.prose-body { max-width: 68ch; }
+@media (max-width: 900px) { .prose-split { grid-template-columns: 1fr; gap: 20px; } }

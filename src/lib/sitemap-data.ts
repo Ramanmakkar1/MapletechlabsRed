@@ -1,3 +1,4 @@
+import { provinceSlugs } from '@/data/provinces';
 import { siteOrigin } from '@/lib/seo/canonical';
 
 export const BASE_URL = siteOrigin();
@@ -150,11 +151,17 @@ export function industrySitemapEntries(): SitemapEntry[] {
 }
 
 export function locationSitemapEntries(): SitemapEntry[] {
-  return citySlugs.map(slug => ({
+  const provinces = provinceSlugs.map(slug => ({
     loc: `${BASE_URL}/locations/${slug}`,
-    changefreq: 'monthly',
+    changefreq: 'monthly' as const,
+    priority: '0.75',
+  }));
+  const cities = citySlugs.map(slug => ({
+    loc: `${BASE_URL}/locations/${slug}`,
+    changefreq: 'monthly' as const,
     priority: '0.7',
   }));
+  return [...provinces, ...cities];
 }
 
 export function localSeoSitemapEntries(): SitemapEntry[] {

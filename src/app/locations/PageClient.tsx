@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { officeMedia } from '@/data/media';
+import { provinces } from '@/data/provinces';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import MediaBand from '@/components/MediaBand';
@@ -82,19 +83,53 @@ export default function LocationsIndexPage() {
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations' }]} copy={{ badge: "Across Canada", title: <><span style={{ color: 'var(--brand)' }}>12 Locations</span> Across Canada</>, desc: <>From coast to coast, Mapletech Labs brings world-class software development to businesses across Canada. Our distributed team model means you get local expertise backed by national resources.</> }} photo={officeMedia.open} form={false} />
 
-        {/* CITY GRID */}
+        {/* INTRO — national coverage, real content */}
+        <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container prose-split">
+            <div><h2 style={{ maxWidth: '16ch' }}>One engineering bench, delivered locally across Canada</h2></div>
+            <div className="prose-body">
+              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
+                Mapletech Labs is headquartered in Edmonton and works with companies in twelve cities across seven provinces. Our distributed model means you get a team that understands your local market &mdash; the regulators you answer to, the industries around you, the way business actually gets done in your province &mdash; backed by the depth of a national engineering bench.
+              </p>
+              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
+                That matters because software is not built in a vacuum. An Alberta energy operator, a Toronto fintech, a Montréal studio under Law 25 and a Halifax ocean-tech company each need something different, and each answers to different rules. Start with your province below, or jump straight to your city.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* PROVINCES — the hub → province → city layer */}
         <section ref={s1} className="section-padding">
           <div className="cb-container">
-            <div className="reveal" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Find Us Near You</h2>
-              <p style={{ color: 'var(--body)', fontSize: '1.1rem' }}>Select a city to learn more about our local presence and services.</p>
+            <div className="head">
+              <div>
+                <h2>Browse by province</h2>
+                <p className="lede">Seven provinces, twelve cities. Each province page covers the local economy, privacy law and the industries we build for there.</p>
+              </div>
             </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 480px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+            <div className="grid grid--2" style={{ marginBottom: 'clamp(40px, 5vw, 64px)' }}>
+              {provinces.map(prov => (
+                <div key={prov.slug} className="tile">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 16, marginBottom: 14 }}>
+                    <Link href={`/locations/${prov.slug}`} style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)' }}>{prov.name}</Link>
+                    <Link href={`/locations/${prov.slug}`} className="link-arrow" style={{ fontSize: 13.5 }}>Province overview &rarr;</Link>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    {prov.cities.map(c => (
+                      <Link key={c.slug} href={`/locations/${c.slug}`} className="pill">{c.name}{c.slug === 'edmonton' ? ' · HQ' : ''}</Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="head"><div><h2>All cities</h2></div></div>
+            <div className="reveal grid grid--3">
               {cities.map(city => (
                 <Link key={city.slug} href={`/locations/${city.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
-                      <h3 style={{ fontWeight: 600, fontSize: '1.3rem' }}>{city.name}</h3>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.2rem' }}>{city.name}</h3>
                       {city.slug === 'edmonton' && (
                         <span style={{ background: 'transparent', borderRadius: 8, padding: '4px 12px', fontSize: 12, color: 'var(--brand)', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>HQ</span>
                       )}
