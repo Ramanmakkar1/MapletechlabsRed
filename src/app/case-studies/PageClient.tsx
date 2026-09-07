@@ -299,7 +299,7 @@ export default function CaseStudiesPageClient() {
 
         {/* ── STATS BAR ── */}
         <section style={{ borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ padding: 'var(--section-y) 0' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)', paddingBottom: 'var(--section-y)' }}>
             <div className="reveal" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))',
