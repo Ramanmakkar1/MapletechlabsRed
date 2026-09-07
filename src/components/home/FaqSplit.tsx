@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-const faqs = [
+const defaultFaqs = [
   { q: 'How long does a typical project take?', a: 'A focused MVP typically takes 8–12 weeks. A full-featured product is 16–24 weeks. Every project starts with a scoping session where we give you a precise timeline with fixed milestones.' },
   { q: 'How do you price your projects?', a: 'We work on a fixed-scope, fixed-price model. No hourly billing, no scope-creep surprises. You know exactly what you are getting and what it costs before we write a line of code.' },
   { q: 'Do you work with startups or only enterprises?', a: 'Both. We have a Rapid Launch programme for early-stage startups (8 weeks, fixed price) and dedicated enterprise teams for complex multi-year engagements.' },
@@ -12,12 +12,12 @@ const faqs = [
 ];
 
 /* Ink CTA card left, numbered accordion right. */
-export default function FaqSplit() {
+export default function FaqSplit({ faqs = defaultFaqs, title = 'Frequently Asked Questions' }: { faqs?: { q: string; a: string }[]; title?: string } = {}) {
   const [open, setOpen] = useState(0);
   return (
     <section id="faq" style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
       <div className="cb-container">
-        <h2 style={{ textAlign: 'center', marginBottom: 'clamp(28px, 4vw, 48px)' }}>Frequently Asked Questions</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: 'clamp(28px, 4vw, 48px)' }}>{title}</h2>
         <div className="faq-split">
           <div style={{ background: 'var(--surface-ink)', color: 'var(--on-ink-body)', borderRadius: 'var(--r-lg)', padding: 'clamp(28px, 4vw, 44px)', position: 'sticky', top: 100 }}>
             <h3 style={{ color: '#fff', fontSize: 'var(--fs-h3)', marginBottom: 12 }}>Didn&apos;t find what you were looking for?</h3>
