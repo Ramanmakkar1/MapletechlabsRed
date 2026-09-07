@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
+import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -163,6 +164,8 @@ export default function CaseStudiesPageClient() {
             </div>
           </div>
         </section>
+
+        <MediaBand media={workMedia.healthcare} />
 
         {/* ── CASE STUDIES GRID ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

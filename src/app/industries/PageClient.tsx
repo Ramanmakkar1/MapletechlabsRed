@@ -5,6 +5,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadges from '@/components/TrustBadges';
+import { industryMedia, officeMedia } from '@/data/media';
+import MediaBand from '@/components/MediaBand';
+import PageHero from '@/components/page/PageHero';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -106,26 +109,8 @@ export default function IndustriesPage() {
         </div>
 
         {/* HERO */}
-        <section ref={heroRef} className="section-padding" style={{ position: 'relative', overflow: 'hidden', minHeight: '70vh', display: 'flex', alignItems: 'center' }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(20,17,24,0.035) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
-          <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translateX(-50%)', width: 600, height: 600, background: 'transparent', zIndex: 0, pointerEvents: 'none' }} />
-          <div className="cb-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
-            <h1 className="reveal" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-              Industries We <span style={{ color: 'var(--brand)' }}>Serve.</span>
-            </h1>
-            <p className="reveal" style={{ fontSize: '1.2rem', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7 }}>
-              Deep expertise across 6 verticals. Custom solutions built for your industry's unique challenges.
-            </p>
-            <div className="reveal" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3.5rem' }}>
-              <Link href="/contact" style={{ background: 'var(--brand)', color: '#fff', padding: '14px 32px', borderRadius: 999, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
-                Get Started
-              </Link>
-              <Link href="/services" style={{ border: '1px solid var(--line-strong)', color: 'var(--ink)', padding: '14px 32px', borderRadius: 999, fontWeight: 600, fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}>
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </section>
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} copy={{ badge: "Sectors we serve", title: <>Industries We <span style={{ color: 'var(--brand)' }}>Serve.</span></>, desc: <>Deep expertise across 6 verticals. Custom solutions built for your industry's unique challenges.</> }} photo={officeMedia.meeting} form={false} />
+        <MediaBand media={industryMedia.healthcare} />
 
         {/* INDUSTRIES GRID */}
         <section ref={s1} className="section-padding">

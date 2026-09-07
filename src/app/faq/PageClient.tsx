@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { officeMedia } from '@/data/media';
+import PageHero from '@/components/page/PageHero';
 
 const categories = [
   {
@@ -57,28 +59,7 @@ export default function FAQPageClient() {
       <main ref={ref} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* Hero */}
-        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
-          <div style={{
-            position: 'absolute', top: -200, left: '50%', transform: 'translateX(-50%)',
-            width: 800, height: 800,
-            background: 'transparent',
-            pointerEvents: 'none',
-          }} />
-          <div className="cb-container">
-            <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto' }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 20 }}>FAQ</div>
-              <h1 style={{
-                fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
-                letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 24,
-              }}>
-                Frequently Asked<br /><span style={{ color: 'var(--faint)' }}>Questions</span>
-              </h1>
-              <p style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7 }}>
-                Everything you need to know about working with Mapletech Labs.
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]} copy={{ badge: "Help centre", title: <>Frequently Asked<br /><span style={{ color: 'var(--brand)' }}>Questions</span></>, desc: <></> }} photo={officeMedia.desk} form={false} />
 
         {/* FAQ Categories */}
         <section style={{ paddingBottom: 'var(--section-y)' }}>

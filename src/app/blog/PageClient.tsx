@@ -1,11 +1,12 @@
 'use client';
 import Image from 'next/image';
-import { blogImage } from '@/data/media';
+import { blogImage, blogMedia } from '@/data/media';
 
 import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -236,6 +237,8 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
+
+        <MediaBand media={blogMedia[2]} />
 
         {/* ── FEATURED POST ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

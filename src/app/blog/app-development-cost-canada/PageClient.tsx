@@ -4,6 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { blogImage } from '@/data/media';
+import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -153,6 +155,8 @@ export default function AppDevelopmentCostCanadaClient() {
             </div>
           </div>
         </section>
+
+        <MediaBand media={blogImage(2)} />
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

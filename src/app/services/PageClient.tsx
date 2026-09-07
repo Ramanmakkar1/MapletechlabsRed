@@ -3,6 +3,9 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { officeMedia, serviceMedia } from '@/data/media';
+import MediaBand from '@/components/MediaBand';
+import PageHero from '@/components/page/PageHero';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -243,29 +246,8 @@ export default function ServicesIndexPage() {
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
-        <section ref={heroRef} className="section-padding" style={{ position: 'relative', overflow: 'hidden', minHeight: '70vh', display: 'flex', alignItems: 'center' }}>
-          <div aria-hidden="true" style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(20,17,24,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(20,17,24,0.035) 1px, transparent 1px)', backgroundSize: '60px 60px', zIndex: 0 }} />
-          <div aria-hidden="true" style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translateX(-50%)', width: 600, height: 600, background: 'transparent', zIndex: 0, pointerEvents: 'none' }} />
-          <div className="cb-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
-            <div className="reveal" style={{ display: 'inline-block', border: '1px solid rgba(245,41,13,0.4)', borderRadius: 999, padding: '6px 20px', fontSize: 13, color: 'var(--brand)', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
-              What We Do
-            </div>
-            <h1 className="reveal" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-              Our <span style={{ color: 'var(--brand)' }}>Services</span>
-            </h1>
-            <p className="reveal" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--body)', marginBottom: '2.5rem', lineHeight: 1.7, maxWidth: 640, margin: '0 auto 2.5rem' }}>
-              From mobile apps and AI to blockchain and branding, we deliver end-to-end digital solutions that help startups and enterprises build, launch, and scale.
-            </p>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'clamp(1rem, 2vw, 1.5rem)', maxWidth: 600, margin: '0 auto' }}>
-              {[['12', 'Service Categories'], ['60+', 'Specialisations'], ['300+', 'Projects Delivered']].map(([val, label]) => (
-                <div key={label} style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: 'clamp(1.2rem, 3vw, 1.6rem)', fontWeight: 800, color: 'var(--brand)' }}>{val}</div>
-                  <div style={{ fontSize: 'clamp(0.65rem, 1.5vw, 0.8rem)', color: 'var(--faint)', marginTop: 4, letterSpacing: '0.05em' }}>{label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} copy={{ badge: "What we do", title: <>Our <span style={{ color: 'var(--brand)' }}>Services</span></>, desc: <>From mobile apps and AI to blockchain and branding, we deliver end-to-end digital solutions that help startups and enterprises build, launch, and scale.</> }} photo={officeMedia.open} form={false} />
+        <MediaBand media={serviceMedia['web-development']} />
 
         {/* SERVICE GRID */}
         <section ref={s1} className="section-padding">

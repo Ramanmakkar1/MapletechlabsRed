@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
+import { blogImage } from '@/data/media';
+import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -161,6 +163,8 @@ export default function SaasDevelopmentCostCanadaClient() {
             </div>
           </div>
         </section>
+
+        <MediaBand media={blogImage(6)} />
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

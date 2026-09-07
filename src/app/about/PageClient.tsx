@@ -4,6 +4,9 @@ import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { blogMedia, officeMedia } from '@/data/media';
+import MediaBand from '@/components/MediaBand';
+import PageHero from '@/components/page/PageHero';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -114,56 +117,8 @@ export default function AboutPage() {
         <article>
 
         {/* ── HERO ── */}
-        <section style={{ padding: 'var(--hero-top) 0 var(--section-y)', position: 'relative', overflow: 'hidden' }}>
-          {/* Ambient glow */}
-          <div aria-hidden="true" style={{
-            position: 'absolute', top: -200, left: '30%',
-            width: 700, height: 700,
-            background: 'transparent',
-            pointerEvents: 'none',
-          }} />
-          <div className="cb-container">
-            <div className="reveal" style={{ marginBottom: 24 }}>
-              <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: 'var(--brand)',
-              }}>About Mapletech Labs</span>
-            </div>
-            <h1 className="reveal reveal-d1" style={{
-              fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
-              lineHeight: 1.0, letterSpacing: '-0.05em', marginBottom: 32, maxWidth: 900,
-            }}>
-              We Build Software<br />That Matters.
-            </h1>
-            <p className="reveal reveal-d2" style={{
-              fontSize: 20, color: 'var(--muted)', lineHeight: 1.7,
-              maxWidth: 600, marginBottom: 56,
-            }}>
-              A world-class engineering firm headquartered in Edmonton, Canada. Founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.
-            </p>
-            <div className="reveal reveal-d3" style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '16px 36px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s',
-                }}>
-                  Work With Us
-                </button>
-              </Link>
-              <Link href="/case-studies" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '16px 36px', borderRadius: 100,
-                  background: 'var(--surface-alt)', color: 'var(--body)',
-                  fontSize: 15, fontWeight: 600, border: '1px solid var(--line)', cursor: 'pointer',
-                  transition: 'all 0.2s',
-                }}>
-                  See Our Work
-                </button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "About Mapletech Labs", title: <>We Build Software<br />That Matters.</>, desc: <>A world-class engineering firm headquartered in Edmonton, Canada. Founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={officeMedia.meeting} form={false} />
+        <MediaBand media={blogMedia[0]} />
 
         {/* ── MISSION STATEMENT ── */}
         <section style={{

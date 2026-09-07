@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
+import { caseStudyMedia, workMedia } from '@/data/media';
+import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -94,6 +96,8 @@ export default function FintechCaseStudyClient() {
             </div>
           </div>
         </section>
+
+        <MediaBand media={caseStudyMedia['fintech-trading-platform'] ?? workMedia.fintech} />
 
         {/* ── OVERVIEW GRID ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
