@@ -177,37 +177,21 @@ export default function Navbar() {
               borderBottom: '1px solid var(--line)',
               boxShadow: '0 24px 60px rgba(0,0,0,.10)',
               animation: 'mega-in .22s cubic-bezier(.16,1,.3,1)',
-              maxHeight: 'calc(100vh - 76px)', overflowY: 'auto',
             }}
           >
             <div className="cb-container" style={{ padding: '36px 48px 40px' }}>
               {activeMenu === 'services' && (
                 <>
                   <MegaHead title="What we build" href="/services" cta="All services" />
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '28px 32px' }}>
+                  {/* Categories only. Listing all sixty sub-services here made
+                      the panel taller than the viewport; each category page
+                      carries its own sub-service links. */}
+                  <div className="mega-services">
                     {serviceCategories.map((c) => (
-                      <div key={c.title}>
-                        <Link
-                          href={c.href}
-                          onClick={() => setActiveMenu(null)}
-                          style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}
-                          className="mega-cat"
-                        >
-                          <span style={{ width: 34, height: 34, borderRadius: 10, background: 'var(--surface-alt)', color: 'var(--brand)', display: 'grid', placeItems: 'center', flexShrink: 0 }}>
-                            {c.icon}
-                          </span>
-                          <span style={{ fontSize: 14.5, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.01em' }}>{c.title}</span>
-                        </Link>
-                        <ul style={{ listStyle: 'none', margin: 0, padding: '0 0 0 44px', display: 'grid', gap: 7 }}>
-                          {c.links.map((l) => (
-                            <li key={l.href}>
-                              <Link href={l.href} onClick={() => setActiveMenu(null)} className="mega-link">
-                                {l.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      <Link key={c.title} href={c.href} onClick={() => setActiveMenu(null)} className="mega-card">
+                        <span className="mega-card__icon">{c.icon}</span>
+                        <span style={{ fontSize: 14.5, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.01em' }}>{c.title}</span>
+                      </Link>
                     ))}
                   </div>
                 </>
@@ -321,15 +305,22 @@ export default function Navbar() {
       <style>{`
         @keyframes mega-in { from { opacity: 0; transform: translateY(-8px) } to { opacity: 1; transform: none } }
         @keyframes drawer-in { from { opacity: 0; transform: translateY(-10px) } to { opacity: 1; transform: none } }
-        .mega-link { font-size: 13.5px; color: var(--muted); transition: color .18s ease; }
-        .mega-link:hover { color: var(--brand); }
-        .mega-cat:hover span:last-child { color: var(--brand); }
+        /* Twelve categories, four across, three even rows. */
+        .mega-services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+        @media (max-width: 1180px) { .mega-services { grid-template-columns: repeat(3, 1fr); } }
+        .mega-card__icon {
+          width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0;
+          border: 1px solid var(--line); color: var(--brand);
+          display: grid; place-items: center;
+        }
+        .mega-card:hover .mega-card__icon { border-color: var(--brand); }
         .mega-card {
           display: flex; align-items: center; justify-content: space-between; gap: 12px;
-          padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r-md);
-          background: var(--surface-alt); transition: .22s ease;
+          padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--r-md);
+          background: var(--surface); transition: border-color .22s ease, transform .22s ease;
         }
-        .mega-card:hover { border-color: var(--brand-line); background: var(--surface); transform: translateY(-2px); }
+        .mega-services .mega-card { justify-content: flex-start; }
+        .mega-card:hover { border-color: var(--ink); transform: translateY(-2px); }
         .nav-mobile-drawer { display: block; }
         @media (min-width: 1024px) { .nav-mobile-drawer { display: none; } }
       `}</style>

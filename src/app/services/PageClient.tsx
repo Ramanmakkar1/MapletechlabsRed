@@ -270,7 +270,7 @@ export default function ServicesIndexPage() {
 
                   {/* Sub-services */}
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 10px', marginBottom: '1.25rem', flexGrow: 1 }}>
-                    {service.subServices.slice(0, 4).map(sub => (
+                    {service.subServices.map(sub => (
                       <Link
                         key={sub.href}
                         href={sub.href}
