@@ -5,6 +5,19 @@ import ServiceHeroForm from '@/components/ServiceHeroForm';
 import type { Media } from '@/data/media';
 import type { Crumb, HeroCopy, Stat } from './types';
 
+/* Assurances that fill the copy column to the height of the quote form and,
+   because these are the pages a visitor converts on, double as the reasons to
+   fill it in. Every one is a real, sitewide guarantee — nothing page-specific. */
+const assurances = [
+  { t: 'Fixed scope, fixed price', d: 'A number before we write code' },
+  { t: 'Your IP from day one', d: 'Full ownership on final payment' },
+  { t: 'Senior engineers only', d: 'No juniors on your budget' },
+  { t: 'Reply within 4 hours', d: 'From an engineer, not a bot' },
+];
+const Tick = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M20 6 9 17l-5-5" /></svg>
+);
+
 /* Inner-page hero. With a quote form: clean white, copy left, form right —
    the media band below carries the imagery. Without one: copy left, the
    photograph itself on the right, unscrimmed. */
@@ -15,7 +28,7 @@ export default function PageHero({ crumbs, copy, stats, photo, form = true, serv
     <section style={{ background: 'var(--surface)', padding: 'var(--hero-top) 0 var(--section-y)' }}>
       <div className="cb-container">
         <Breadcrumb items={crumbs} />
-        <div className="hero-split" style={{ marginTop: 'clamp(20px, 3vw, 36px)' }}>
+        <div className="hero-split" style={{ marginTop: 'clamp(20px, 3vw, 36px)', alignItems: form ? 'start' : 'center' }}>
           <div>
             <span className="section-tag">{copy.badge}</span>
             <h1 style={{ fontSize: 'var(--fs-display)', fontWeight: 600, letterSpacing: '-0.035em', lineHeight: 1.05, margin: '0 0 20px' }}>{copy.title}</h1>
@@ -34,6 +47,24 @@ export default function PageHero({ crumbs, copy, stats, photo, form = true, serv
                     <div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 6 }}>{s.label}</div>
                   </div>
                 ))}
+              </div>
+            ) : null}
+
+            {/* Balances the copy column against the form, and gives the visitor
+                the reasons to fill it in. Form pages only. */}
+            {form ? (
+              <div style={{ marginTop: 'clamp(28px, 3.5vw, 40px)', paddingTop: 'clamp(24px, 3vw, 32px)', borderTop: '1px solid var(--line)' }}>
+                <div className="hero-assurances">
+                  {assurances.map(a => (
+                    <div key={a.t} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                      <span style={{ flexShrink: 0, marginTop: 2 }}><Tick /></span>
+                      <div>
+                        <div style={{ fontSize: 14.5, fontWeight: 700, color: 'var(--ink)', lineHeight: 1.3 }}>{a.t}</div>
+                        <div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 3 }}>{a.d}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             ) : null}
           </div>

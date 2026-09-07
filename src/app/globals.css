@@ -1066,3 +1066,7 @@ a:hover .media--zoom > img,
   .steps__node { width: 48px; height: 48px; }
   .steps__num { font-size: 14px; }
 }
+
+/* Hero assurance grid: two up, one up on the narrowest phones. */
+.hero-assurances { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; }
+@media (max-width: 400px) { .hero-assurances { grid-template-columns: 1fr; } }
