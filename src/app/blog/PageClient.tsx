@@ -26,6 +26,30 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'what-is-agentic-ai', category: 'AI/ML',
+    title: 'What Is Agentic AI? A Plain-English Guide for Business Leaders',
+    excerpt: 'What agentic AI actually means in plain English — where it genuinely helps a business, where it quietly fails, and how to decide whether it belongs in your operations yet.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Sep 2026', readTime: '9 min read',
+  },
+  {
+    slug: 'build-saas-mvp-8-weeks', category: 'Business',
+    title: 'How to Build a SaaS MVP in 8 Weeks: A Founder’s Playbook',
+    excerpt: 'Eight weeks is enough to launch a real SaaS MVP with ruthless scope and the right early decisions. The week-by-week playbook, what to cut, and when 8 weeks is not realistic.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Sep 2026', readTime: '10 min read',
+  },
+  {
+    slug: 'native-vs-cross-platform-vs-pwa', category: 'Engineering',
+    title: 'Native vs Cross-Platform vs PWA: Choosing Your App Approach (2026)',
+    excerpt: 'Native, cross-platform or PWA? What each does best, where each falls down, and a simple framework for choosing the right app approach for your product and budget.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Sep 2026', readTime: '9 min read',
+  },
+  {
+    slug: 'custom-software-vs-off-the-shelf', category: 'Business',
+    title: 'Custom Software vs Off-the-Shelf: How to Decide (2026)',
+    excerpt: 'Building custom when you could have bought is expensive — and so is forcing your business into software that does not fit. An honest framework for deciding which is right.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Sep 2026', readTime: '9 min read',
+  },
+  {
     slug: 'use-claude-for-free',
     category: 'AI/ML',
     title: 'How to Use Claude for Free in 2026: A Practical Guide',

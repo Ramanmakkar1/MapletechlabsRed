@@ -28,6 +28,8 @@ export const subServices: Record<string, string[]> = {
 export const industrySlugs = ['fintech', 'healthcare', 'ecommerce', 'logistics', 'edtech', 'enterprise'];
 
 export const blogSlugs = [
+  'what-is-agentic-ai', 'build-saas-mvp-8-weeks',
+  'native-vs-cross-platform-vs-pwa', 'custom-software-vs-off-the-shelf',
   'use-claude-for-free', 'run-ai-models-locally-free',
   'saas-development-company-canada', 'website-development-company-canada',
   'agentic-ai-in-production', 'saas-ideas-2026', 'what-profitable-saas-gets-right',
