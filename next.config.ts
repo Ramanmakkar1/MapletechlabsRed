@@ -23,7 +23,13 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
+    // Priority services moved from the /locations/<city>/<service> mesh to keyword URLs.
+    // 301 the old mesh URLs so there is no duplicate content / cannibalization.
+    const cityHubs = ['edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal', 'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on'];
+    const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development']];
+    const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, permanent: true })));
     return [
+      ...serviceCityMeshRedirects,
       // City landing pages moved to keyword URLs (/locations/<city> → /locations/software-development-company-in-<city>).
       // Exact path only, so the /locations/<city>/<service> mesh is unaffected.
       { source: '/locations/edmonton', destination: '/locations/software-development-company-in-edmonton', permanent: true },

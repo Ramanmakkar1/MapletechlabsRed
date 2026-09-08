@@ -1,4 +1,5 @@
 import { provinceSlugs } from '@/data/provinces';
+import { serviceCityCombos, isPriorityService } from '@/data/serviceCity';
 import { siteOrigin } from '@/lib/seo/canonical';
 
 export const BASE_URL = siteOrigin();
@@ -164,12 +165,19 @@ export function locationSitemapEntries(): SitemapEntry[] {
     changefreq: 'monthly' as const,
     priority: '0.7',
   }));
-  return [...provinces, ...cities];
+  const serviceCities = serviceCityCombos.map(c => ({
+    loc: `${BASE_URL}/locations/${c.slug}`,
+    changefreq: 'monthly' as const,
+    priority: '0.85',
+  }));
+  return [...provinces, ...cities, ...serviceCities];
 }
 
 export function localSeoSitemapEntries(): SitemapEntry[] {
+  // Priority services now live at keyword URLs (in locationSitemapEntries), so
+  // their old mesh URLs are excluded here to avoid duplicate listings.
   return citySlugs.flatMap(city =>
-    serviceSlugs.map(service => ({
+    serviceSlugs.filter(s => !isPriorityService(s)).map(service => ({
       loc: `${BASE_URL}/locations/${city}/${service}`,
       changefreq: 'monthly',
       priority: '0.85',
