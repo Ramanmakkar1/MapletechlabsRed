@@ -26,6 +26,26 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'agentic-ai-in-production',
+    category: 'AI/ML',
+    title: 'Agentic AI in Production: What Actually Works in 2026',
+    excerpt: 'The hype-free version: what agentic AI really is, the patterns that hold up in production, the failure modes nobody demos, and how to deploy agents without betting the business on a demo.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Sep 2026',
+    readTime: '11 min read',
+  },
+  {
+    slug: 'saas-ideas-2026',
+    category: 'Business',
+    title: '12 SaaS Ideas Worth Building in 2026 (and Why)',
+    excerpt: 'Not a listicle of app names — a way to find ideas that can become a real business, with twelve concrete directions grounded in genuine Canadian market gaps.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Sep 2026',
+    readTime: '10 min read',
+  },
+  {
     slug: 'saas-guide',
     category: 'Business',
     title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026',
