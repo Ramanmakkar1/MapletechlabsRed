@@ -43,6 +43,7 @@ export const blogSlugs = [
 export const citySlugs = [
   'edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal',
   'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on',
+  'mississauga', 'hamilton', 'surrey', 'burnaby', 'regina', 'quebec-city',
 ];
 
 export type SitemapEntry = {

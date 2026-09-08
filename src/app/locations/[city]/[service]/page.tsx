@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getCityServiceData, getAllCityServiceParams } from '@/data/city-service';
-import CityServicePageClient from './PageClient';
+import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -105,32 +105,7 @@ export default async function CityServicePage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <CityServicePageClient
-        cityName={data.cityName}
-        citySlug={data.citySlug}
-        province={data.province}
-        provinceAbbr={data.provinceAbbr}
-        isHQ={data.isHQ}
-        serviceName={data.serviceName}
-        serviceSlug={data.serviceSlug}
-        heroContext={data.heroContext}
-        heroDescription={data.heroDescription}
-        badge={data.badge}
-        stats={data.stats}
-        sameServiceOtherCities={data.sameServiceOtherCities}
-        intro={data.intro}
-        applications={data.applications}
-        largeServices={data.largeServices}
-        smallServices={data.smallServices}
-        whyCity={data.whyCity}
-        steps={data.steps}
-        techCategories={data.techCategories}
-        testimonials={data.testimonials}
-        pricingTiers={data.pricingTiers}
-        faqs={data.faqs}
-        relatedSubServices={data.relatedSubServices}
-        relatedCityServices={data.relatedCityServices}
-      />
+      <ServiceCityTemplate data={data} />
     </>
   );
 }

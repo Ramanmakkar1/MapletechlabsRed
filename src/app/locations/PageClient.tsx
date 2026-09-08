@@ -66,12 +66,18 @@ const cities = [
   { name: 'Saskatoon', province: 'Saskatchewan', slug: 'saskatoon', tagline: 'Innovation on the prairies', active: false },
   { name: 'Kitchener', province: 'Ontario', slug: 'kitchener', tagline: 'Canada\'s Silicon Valley', active: false },
   { name: 'London', province: 'Ontario', slug: 'london-on', tagline: 'Southwestern Ontario tech hub', active: false },
+  { name: 'Mississauga', province: 'Ontario', slug: 'mississauga', tagline: 'Corporate HQ and logistics hub', active: false },
+  { name: 'Hamilton', province: 'Ontario', slug: 'hamilton', tagline: 'Advanced manufacturing and health sciences', active: false },
+  { name: 'Surrey', province: 'British Columbia', slug: 'surrey', tagline: 'BC\'s fastest-growing city', active: false },
+  { name: 'Burnaby', province: 'British Columbia', slug: 'burnaby', tagline: 'Games, media and telecom', active: false },
+  { name: 'Regina', province: 'Saskatchewan', slug: 'regina', tagline: 'Saskatchewan\'s capital', active: false },
+  { name: 'Quebec City', province: 'Quebec', slug: 'quebec-city', tagline: 'Government, games and optics', active: false },
 ];
 
 const locationFaqs = [
   { q: 'Do you have an office in my city?', a: 'Mapletech Labs is headquartered in Edmonton. Everywhere else we work through a distributed model: a dedicated team for your project, backed by our national engineering bench. Most collaboration is remote, with on-site sessions where they add value.' },
   { q: 'How does remote delivery actually work?', a: 'The same way our on-site work does — two-week sprints, working software every fortnight, and a senior engineer you can reach directly. Distance has not been the constraint on a successful project in years; clarity and seniority are, and those we control.' },
-  { q: 'Which provinces do you serve?', a: 'We work with companies across seven provinces today — Alberta, British Columbia, Ontario, Quebec, Manitoba, Nova Scotia and Saskatchewan — with dedicated pages for twelve cities. If you are elsewhere in Canada, we can still help; get in touch.' },
+  { q: 'Which provinces do you serve?', a: 'We work with companies across seven provinces today — Alberta, British Columbia, Ontario, Quebec, Manitoba, Nova Scotia and Saskatchewan — with dedicated pages for eighteen cities. If you are elsewhere in Canada, we can still help; get in touch.' },
   { q: 'Do you understand local privacy and compliance rules?', a: 'Yes, and it is province-specific. Alberta and BC have their own PIPA statutes, Quebec has Law 25, and elsewhere federal PIPEDA applies, with PHIPA for Ontario health data. Each province page explains how we design for its rules.' },
 ];
 
@@ -98,7 +104,7 @@ export default function LocationsIndexPage() {
             <div><h2 style={{ maxWidth: '16ch' }}>One engineering bench, delivered locally across Canada</h2></div>
             <div className="prose-body">
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
-                Mapletech Labs is headquartered in Edmonton and works with companies in twelve cities across seven provinces. Our distributed model means you get a team that understands your local market &mdash; the regulators you answer to, the industries around you, the way business actually gets done in your province &mdash; backed by the depth of a national engineering bench.
+                Mapletech Labs is headquartered in Edmonton and works with companies in eighteen cities across seven provinces. Our distributed model means you get a team that understands your local market &mdash; the regulators you answer to, the industries around you, the way business actually gets done in your province &mdash; backed by the depth of a national engineering bench.
               </p>
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
                 That matters because software is not built in a vacuum. An Alberta energy operator, a Toronto fintech, a Montréal studio under Law 25 and a Halifax ocean-tech company each need something different, and each answers to different rules. Start with your province below, or jump straight to your city.
@@ -113,7 +119,7 @@ export default function LocationsIndexPage() {
             <div className="head">
               <div>
                 <h2>Browse by province</h2>
-                <p className="lede">Seven provinces, twelve cities. Each province page covers the local economy, privacy law and the industries we build for there.</p>
+                <p className="lede">Seven provinces, eighteen cities. Each province page covers the local economy, privacy law and the industries we build for there.</p>
               </div>
             </div>
             <div className="grid grid--2" style={{ marginBottom: 'clamp(40px, 5vw, 64px)' }}>

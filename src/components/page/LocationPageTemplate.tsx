@@ -21,16 +21,40 @@ import type { HeroCopy, Stat } from './types';
 
 export interface LocationProps {
   slug: string; copy: HeroCopy; heroStats?: Stat[];
-  services: { title: string; desc: string; href: string }[];
+  services?: { title: string; desc: string; href: string }[];
   numbers?: { title: string; sub: string; stats: Stat[] };
-  whyChoose: { title: string; desc: string }[];
+  whyChoose?: { title: string; desc: string }[];
   whyCity: { title: string; intro: string; items: { t: string; d: string }[] };
   neighborhoods: { title: string; intro: string; items: { n: string; d: string }[] };
   wins?: { title: string; metric: string; desc: string }[]; winsTitle?: string;
   trends: { title: string; items: { t: string; d: string }[] };
-  serviceLinks: { name: string; slug: string }[];
+  serviceLinks?: { name: string; slug: string }[];
   overview?: { title: string; lead: string; points: { t: string; d: string }[]; covers: string[] };
 }
+
+// Shared defaults so a new city only needs its city-specific content (copy, whyCity, neighborhoods, trends).
+const DEFAULT_SERVICES = [
+  { title: 'Mobile App Development', desc: '', href: '/services/mobile-app-development' },
+  { title: 'Web Development', desc: '', href: '/services/web-development' },
+  { title: 'AI & Machine Learning', desc: '', href: '/services/ai-ml' },
+  { title: 'Cloud & DevOps', desc: '', href: '/services/cloud-devops' },
+  { title: 'SaaS Development', desc: '', href: '/services/saas-development' },
+  { title: 'Product Design', desc: '', href: '/services/product-design' },
+];
+const DEFAULT_WHYCHOOSE = [
+  { title: 'Senior engineers, not juniors', desc: 'You work directly with senior engineers and our leadership — the people who build and ship, not a sales layer in front of a junior team.' },
+  { title: 'Fixed scope, fixed price', desc: 'Every project is scoped and priced up front. You know the number and the timeline before we write a line of code.' },
+  { title: 'Canadian team, coast to coast', desc: 'A distributed Canadian team across 12 cities — local understanding with national engineering depth, and your data kept in Canada.' },
+  { title: 'You own everything', desc: 'All the code, infrastructure and IP we produce is yours, protected under Canadian law. No lock-in, ever.' },
+];
+const DEFAULT_SERVICELINKS = [
+  { name: 'Web Development', slug: 'web-development' }, { name: 'Mobile App Development', slug: 'mobile-app-development' },
+  { name: 'AI & Machine Learning', slug: 'ai-ml' }, { name: 'Cloud & DevOps', slug: 'cloud-devops' },
+  { name: 'SaaS Development', slug: 'saas-development' }, { name: 'Digital Marketing', slug: 'digital-marketing' },
+  { name: 'Branding', slug: 'branding' }, { name: 'WordPress & CMS', slug: 'wordpress-cms' },
+  { name: 'Blockchain & Web3', slug: 'blockchain-web3' }, { name: 'Product Design', slug: 'product-design' },
+  { name: 'Game Development', slug: 'game-development' }, { name: 'AR & VR', slug: 'ar-vr' },
+];
 
 // Honest, company-wide facts shown on every city page — no invented per-city metrics.
 const HONEST_STATS: Stat[] = [
@@ -84,7 +108,9 @@ export default function LocationPageTemplate(p: LocationProps) {
 
   const heroStats = HONEST_STATS;
   const overview = p.overview ?? defaultOverview(name, city?.localIndustries ?? []);
-  const serviceItems = p.services.map(s => {
+  const whyChoose = p.whyChoose ?? DEFAULT_WHYCHOOSE;
+  const serviceLinks = p.serviceLinks ?? DEFAULT_SERVICELINKS;
+  const serviceItems = (p.services ?? DEFAULT_SERVICES).map(s => {
     const slug = s.href.split('/').filter(Boolean).pop() ?? '';
     return { ...s, desc: SERVICE_BLURB[slug] ?? s.desc };
   });
@@ -133,7 +159,7 @@ export default function LocationPageTemplate(p: LocationProps) {
         <TechStrip />
         <Industries />
         <Process />
-        <CardGrid title={`Why choose Mapletech Labs in ${name}`} items={p.whyChoose} variant="rows" />
+        <CardGrid title={`Why choose Mapletech Labs in ${name}`} items={whyChoose} variant="rows" />
         <CardGrid title={p.whyCity.title} sub={p.whyCity.intro} items={p.whyCity.items.map(i => ({ title: i.t, desc: i.d }))} />
         <MediaBand media={humanPick(p.slug, 6)} ratio="21 / 7" />
         <CardGrid title={p.neighborhoods.title} sub={p.neighborhoods.intro || undefined} items={p.neighborhoods.items.map(i => ({ title: i.n, desc: i.d }))} />
@@ -160,7 +186,7 @@ export default function LocationPageTemplate(p: LocationProps) {
           <div className="cb-container">
             <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Every service we offer in {name}</h3>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {p.serviceLinks.map(s => <Link key={s.slug} href={`/locations/${p.slug}/${s.slug}`} className="pill">{s.name}</Link>)}
+              {serviceLinks.map(s => <Link key={s.slug} href={`/locations/${p.slug}/${s.slug}`} className="pill">{s.name}</Link>)}
             </div>
           </div>
         </section>

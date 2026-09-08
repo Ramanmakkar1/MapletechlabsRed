@@ -25,25 +25,15 @@ const nextConfig: NextConfig = {
   async redirects() {
     // Priority services moved from the /locations/<city>/<service> mesh to keyword URLs.
     // 301 the old mesh URLs so there is no duplicate content / cannibalization.
-    const cityHubs = ['edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal', 'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on'];
+    const cityHubs = ['edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal', 'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on', 'mississauga', 'hamilton', 'surrey', 'burnaby', 'regina', 'quebec-city'];
+    const cityLandingRedirects = cityHubs.map(c => ({ source: `/locations/${c}`, destination: `/locations/software-development-company-in-${c}`, permanent: true }));
     const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development']];
     const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, permanent: true })));
     return [
       ...serviceCityMeshRedirects,
-      // City landing pages moved to keyword URLs (/locations/<city> → /locations/software-development-company-in-<city>).
+      // City landing pages live at keyword URLs; 301 the bare /locations/<city> paths.
       // Exact path only, so the /locations/<city>/<service> mesh is unaffected.
-      { source: '/locations/edmonton', destination: '/locations/software-development-company-in-edmonton', permanent: true },
-      { source: '/locations/toronto', destination: '/locations/software-development-company-in-toronto', permanent: true },
-      { source: '/locations/vancouver', destination: '/locations/software-development-company-in-vancouver', permanent: true },
-      { source: '/locations/calgary', destination: '/locations/software-development-company-in-calgary', permanent: true },
-      { source: '/locations/ottawa', destination: '/locations/software-development-company-in-ottawa', permanent: true },
-      { source: '/locations/montreal', destination: '/locations/software-development-company-in-montreal', permanent: true },
-      { source: '/locations/winnipeg', destination: '/locations/software-development-company-in-winnipeg', permanent: true },
-      { source: '/locations/halifax', destination: '/locations/software-development-company-in-halifax', permanent: true },
-      { source: '/locations/victoria', destination: '/locations/software-development-company-in-victoria', permanent: true },
-      { source: '/locations/saskatoon', destination: '/locations/software-development-company-in-saskatoon', permanent: true },
-      { source: '/locations/kitchener', destination: '/locations/software-development-company-in-kitchener', permanent: true },
-      { source: '/locations/london-on', destination: '/locations/software-development-company-in-london-on', permanent: true },
+      ...cityLandingRedirects,
       // WWW to non-www redirect (handles both http and https from www)
       {
         source: '/:path((?!.*))*',

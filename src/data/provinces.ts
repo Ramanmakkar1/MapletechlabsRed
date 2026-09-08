@@ -107,6 +107,8 @@ export const provinces: ProvinceData[] = [
       { name: 'Ottawa', slug: 'ottawa', role: 'Government, cybersecurity, telecom and SaaS' },
       { name: 'Kitchener-Waterloo', slug: 'kitchener', role: 'SaaS, insurtech and AI/ML product engineering' },
       { name: 'London', slug: 'london-on', role: 'Healthcare, insurance, education and agri-food' },
+      { name: 'Mississauga', slug: 'mississauga', role: 'Corporate head offices, pharma, aerospace and logistics' },
+      { name: 'Hamilton', slug: 'hamilton', role: 'Advanced manufacturing, health sciences and logistics' },
     ],
     industries: [
       { title: 'Fintech & banking', desc: 'Payment platforms, trading systems and compliance tooling built for OSFI and PCI DSS — the core of Toronto’s financial sector.' },
@@ -153,6 +155,8 @@ export const provinces: ProvinceData[] = [
     cities: [
       { name: 'Vancouver', slug: 'vancouver', role: 'Film & VFX, gaming, clean tech and real-estate technology' },
       { name: 'Victoria', slug: 'victoria', role: 'Government, marine and ocean tech, education and clean tech' },
+      { name: 'Surrey', slug: 'surrey', role: 'Health tech, manufacturing, education and agriculture' },
+      { name: 'Burnaby', slug: 'burnaby', role: 'Games, VFX, telecom and clean tech' },
     ],
     industries: [
       { title: 'Gaming & media technology', desc: 'Real-time tools, media pipelines and platforms for Vancouver’s game studios, VFX houses and the tools companies around them.' },
@@ -198,6 +202,7 @@ export const provinces: ProvinceData[] = [
     ],
     cities: [
       { name: 'Montréal', slug: 'montreal', role: 'AI & deep learning, gaming, aerospace, biotech and creative industries' },
+      { name: 'Quebec City', slug: 'quebec-city', role: 'Government, insurance, games and optics-photonics' },
     ],
     industries: [
       { title: 'AI & machine learning', desc: 'Applied AI, LLM integration and machine-learning systems for Montréal’s deep AI ecosystem — in production, not just research.' },
@@ -333,6 +338,7 @@ export const provinces: ProvinceData[] = [
     ],
     cities: [
       { name: 'Saskatoon', slug: 'saskatoon', role: 'Mining, agriculture, biotech, energy and education' },
+      { name: 'Regina', slug: 'regina', role: 'Government, agriculture, energy and insurance' },
     ],
     industries: [
       { title: 'Mining & resources', desc: 'Site operations, safety and logistics platforms built for the scale and conditions of Saskatchewan’s mining sector.' },
