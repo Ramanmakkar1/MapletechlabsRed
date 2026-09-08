@@ -107,16 +107,23 @@ Order of work, by search volume and margin:
 2. Web development, mobile apps, AI/ML, SaaS, cloud
 3. Remaining cities, remaining services
 
-## Phase 4 — editorial
+## Phase 4 — editorial — **in progress**
 
-New posts, each targeting a real query cluster:
+Runs on one reusable ArticleTemplate (content-as-data) so posts stay
+consistent and are fast to add. Shipped:
 
-- Agentic AI: what changed, and how to actually put agents into production
-- How to build a SaaS: idea to first revenue
-- SaaS ideas worth building in 2026
-- SaaS products making real money, and what they get right
-- Choosing a software partner in Canada
-- What custom software costs in Canada
+- ✅ **Agentic AI in Production (2026)** — 1,757 words. The agentic-AI cluster,
+  model-agnostic and honest about hype. Names no unverifiable product.
+- ✅ **12 SaaS Ideas Worth Building in 2026** — 1,589 words.
+- ✅ **What Profitable SaaS Products Get Right** — 1,311 words.
+
+Already on the site and covering the rest of the cluster: the SaaS build
+guide, the "choosing a partner" post, and the cost guides (app, website,
+SaaS, digital marketing).
+
+Blocked, needs the user:
+- The **"Astra 6"** posts. I will not publish invented specifications about a
+  product I cannot verify. Confirm what it refers to and they get written.
 
 **Open question before writing:** the brief mentions "Fable 5" and "Astra 6".
 Fable 5 is a Claude model. "Astra 6" is not something I can verify, and I will
