@@ -49,6 +49,18 @@ const INDUSTRY_GROUP_OF: Record<string, IndustryGroup> = {
   'Tourism': 'tourism',
   'Real Estate': 'realestate',
   'Retail': 'commerce',
+  // Labels from the expanded 24-city set, mapped to the closest existing group.
+  'Corporate Head Offices': 'finance', 'Finance & Insurance': 'finance', 'Insurance & Finance': 'finance',
+  'Pharmaceuticals & Life Sciences': 'health', 'Life Sciences': 'health', 'Health Sciences': 'health',
+  'Health Technology': 'health', 'Health': 'health', 'Biotech & Pharmaceuticals': 'health',
+  'Logistics & Supply Chain': 'logistics', 'Logistics & Port': 'logistics', 'Logistics & Distribution': 'logistics',
+  'Cross-Border Trade': 'logistics',
+  'Advanced Manufacturing': 'manufacturing', 'Food Processing': 'manufacturing', 'Optics & Photonics': 'manufacturing',
+  'Creative & Tech': 'media', 'Film & Visual Effects': 'media', 'Video Games': 'media', 'Gaming & Tech': 'media',
+  'Clean Technology': 'energy', 'Energy & Potash': 'energy',
+  'Government & Crown Corporations': 'public', 'Federal Government': 'public', 'Public Administration': 'public',
+  'Agriculture & Agri-Tech': 'agriculture', 'Agriculture & Wine': 'agriculture', 'Agri-Food': 'agriculture',
+  'Technology & Software': 'tech', 'Telecommunications': 'tech', 'IT Services': 'tech',
 };
 
 export function industryGroupOf(label: string): IndustryGroup | undefined {
@@ -311,10 +323,12 @@ export function getCityServiceIntersection(
   const angles = SERVICE_INDUSTRY_ANGLES[service.slug] ?? {};
 
   const applications: IndustryApplication[] = [];
+  const seenGroups = new Set<IndustryGroup>();
   for (const label of city.localIndustries) {
     const group = industryGroupOf(label);
     const desc = group ? angles[group] : undefined;
-    if (!desc) continue;
+    if (!group || !desc || seenGroups.has(group)) continue;
+    seenGroups.add(group);
     applications.push({
       industry: label,
       title: `${service.shortName} for ${city.name}'s ${label} sector`,
