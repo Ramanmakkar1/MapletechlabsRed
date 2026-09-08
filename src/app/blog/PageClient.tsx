@@ -36,6 +36,16 @@ const posts = [
     readTime: '11 min read',
   },
   {
+    slug: 'what-profitable-saas-gets-right',
+    category: 'Business',
+    title: 'What the Most Profitable SaaS Products Get Right',
+    excerpt: 'The durable SaaS businesses win on unglamorous fundamentals — retention, expansion, a moat that deepens. Here is what they actually get right.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Sep 2026',
+    readTime: '9 min read',
+  },
+  {
     slug: 'saas-ideas-2026',
     category: 'Business',
     title: '12 SaaS Ideas Worth Building in 2026 (and Why)',
