@@ -168,7 +168,7 @@ export function getLocationBreadcrumbs(
     {
       position: 3,
       name: cityName,
-      item: `https://mapletechlabs.ca/locations/${citySlug}`,
+      item: `https://mapletechlabs.ca/locations/software-development-company-in-${citySlug}`,
     },
   ];
 }

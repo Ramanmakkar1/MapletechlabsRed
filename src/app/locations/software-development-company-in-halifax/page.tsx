@@ -3,36 +3,36 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in Kitchener',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Kitchener, Ontario. Get a free quote today.',
+  title: 'Software Development Company in Halifax',
+  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Halifax, Nova Scotia. Get a free quote today.',
   openGraph: {
-    title: 'Software Development Company in Kitchener | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Kitchener, Ontario. Get a free quote today.',
-    url: 'https://mapletechlabs.ca/locations/kitchener',
+    title: 'Software Development Company in Halifax | Mapletech Labs',
+    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Halifax, Nova Scotia. Get a free quote today.',
+    url: 'https://mapletechlabs.ca/locations/software-development-company-in-halifax',
     type: 'website',
   },
   alternates: {
-    canonical: canonicalUrl('/locations/kitchener'),
+    canonical: canonicalUrl('/locations/software-development-company-in-halifax'),
   },
 };
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Mapletech Labs - Kitchener',
-  url: 'https://mapletechlabs.ca/locations/kitchener',
+  name: 'Mapletech Labs - Halifax',
+  url: 'https://mapletechlabs.ca/locations/software-development-company-in-halifax',
   telephone: '+1-780-850-5314',
   priceRange: '$$-$$$',
   image: 'https://mapletechlabs.ca/images/og-default.jpg',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Kitchener',
-    addressRegion: 'Ontario',
+    addressLocality: 'Halifax',
+    addressRegion: 'Nova Scotia',
     addressCountry: 'CA',
   },
   areaServed: {
     '@type': 'City',
-    name: 'Kitchener',
+    name: 'Halifax',
   },
   serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
   sameAs: [
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
     { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
-    { '@type': 'ListItem', position: 3, name: 'Kitchener' },
+    { '@type': 'ListItem', position: 3, name: 'Halifax' },
   ],
 };
 

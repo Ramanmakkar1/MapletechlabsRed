@@ -3,36 +3,36 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in Vancouver',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Vancouver, British Columbia. Get a free quote today.',
+  title: 'Software Development Company in Montreal',
+  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Montreal, Quebec. Get a free quote today.',
   openGraph: {
-    title: 'Software Development Company in Vancouver | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Vancouver, British Columbia. Get a free quote today.',
-    url: 'https://mapletechlabs.ca/locations/vancouver',
+    title: 'Software Development Company in Montreal | Mapletech Labs',
+    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Montreal, Quebec. Get a free quote today.',
+    url: 'https://mapletechlabs.ca/locations/software-development-company-in-montreal',
     type: 'website',
   },
   alternates: {
-    canonical: canonicalUrl('/locations/vancouver'),
+    canonical: canonicalUrl('/locations/software-development-company-in-montreal'),
   },
 };
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Mapletech Labs - Vancouver',
-  url: 'https://mapletechlabs.ca/locations/vancouver',
+  name: 'Mapletech Labs - Montréal',
+  url: 'https://mapletechlabs.ca/locations/software-development-company-in-montreal',
   telephone: '+1-780-850-5314',
   priceRange: '$$-$$$',
   image: 'https://mapletechlabs.ca/images/og-default.jpg',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Vancouver',
-    addressRegion: 'British Columbia',
+    addressLocality: 'Montréal',
+    addressRegion: 'Quebec',
     addressCountry: 'CA',
   },
   areaServed: {
     '@type': 'City',
-    name: 'Vancouver',
+    name: 'Montréal',
   },
   serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
   sameAs: [
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
     { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
-    { '@type': 'ListItem', position: 3, name: 'Vancouver' },
+    { '@type': 'ListItem', position: 3, name: 'Montréal' },
   ],
 };
 

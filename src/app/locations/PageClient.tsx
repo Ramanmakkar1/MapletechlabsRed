@@ -125,7 +125,7 @@ export default function LocationsIndexPage() {
                   </div>
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                     {prov.cities.map(c => (
-                      <Link key={c.slug} href={`/locations/${c.slug}`} className="pill">{c.name}{c.slug === 'edmonton' ? ' · HQ' : ''}</Link>
+                      <Link key={c.slug} href={`/locations/software-development-company-in-${c.slug}`} className="pill">{c.name}{c.slug === 'edmonton' ? ' · HQ' : ''}</Link>
                     ))}
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function LocationsIndexPage() {
             <div className="head"><div><h2>All cities</h2></div></div>
             <div className="reveal grid grid--3">
               {cities.map(city => (
-                <Link key={city.slug} href={`/locations/${city.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link key={city.slug} href={`/locations/software-development-company-in-${city.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
                       <h3 style={{ fontWeight: 600, fontSize: '1.2rem' }}>{city.name}</h3>

@@ -3,36 +3,36 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in Winnipeg',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Winnipeg, Manitoba. Get a free quote today.',
+  title: 'Software Development Company in Ottawa',
+  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Ottawa, Ontario. Get a free quote today.',
   openGraph: {
-    title: 'Software Development Company in Winnipeg | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Winnipeg, Manitoba. Get a free quote today.',
-    url: 'https://mapletechlabs.ca/locations/winnipeg',
+    title: 'Software Development Company in Ottawa | Mapletech Labs',
+    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Ottawa, Ontario. Get a free quote today.',
+    url: 'https://mapletechlabs.ca/locations/software-development-company-in-ottawa',
     type: 'website',
   },
   alternates: {
-    canonical: canonicalUrl('/locations/winnipeg'),
+    canonical: canonicalUrl('/locations/software-development-company-in-ottawa'),
   },
 };
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Mapletech Labs - Winnipeg',
-  url: 'https://mapletechlabs.ca/locations/winnipeg',
+  name: 'Mapletech Labs - Ottawa',
+  url: 'https://mapletechlabs.ca/locations/software-development-company-in-ottawa',
   telephone: '+1-780-850-5314',
   priceRange: '$$-$$$',
   image: 'https://mapletechlabs.ca/images/og-default.jpg',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Winnipeg',
-    addressRegion: 'Manitoba',
+    addressLocality: 'Ottawa',
+    addressRegion: 'Ontario',
     addressCountry: 'CA',
   },
   areaServed: {
     '@type': 'City',
-    name: 'Winnipeg',
+    name: 'Ottawa',
   },
   serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
   sameAs: [
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
     { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
-    { '@type': 'ListItem', position: 3, name: 'Winnipeg' },
+    { '@type': 'ListItem', position: 3, name: 'Ottawa' },
   ],
 };
 

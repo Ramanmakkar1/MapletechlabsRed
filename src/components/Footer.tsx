@@ -35,12 +35,12 @@ const columns: { title: string; links: { label: string; href: string; lang?: str
   {
     title: 'Locations',
     links: [
-      { label: 'Toronto', href: '/locations/toronto' },
-      { label: 'Vancouver', href: '/locations/vancouver' },
-      { label: 'Calgary', href: '/locations/calgary' },
-      { label: 'Edmonton', href: '/locations/edmonton' },
-      { label: 'Ottawa', href: '/locations/ottawa' },
-      { label: 'Montréal', href: '/locations/montreal', lang: 'fr' },
+      { label: 'Toronto', href: '/locations/software-development-company-in-toronto' },
+      { label: 'Vancouver', href: '/locations/software-development-company-in-vancouver' },
+      { label: 'Calgary', href: '/locations/software-development-company-in-calgary' },
+      { label: 'Edmonton', href: '/locations/software-development-company-in-edmonton' },
+      { label: 'Ottawa', href: '/locations/software-development-company-in-ottawa' },
+      { label: 'Montréal', href: '/locations/software-development-company-in-montreal', lang: 'fr' },
     ],
   },
   {
@@ -64,12 +64,12 @@ const more: { label: string; href: string }[] = [
   { label: 'Game Development', href: '/services/game-development' },
   { label: 'WordPress & CMS', href: '/services/wordpress-cms' },
   { label: 'Branding', href: '/services/branding' },
-  { label: 'Kitchener-Waterloo', href: '/locations/kitchener' },
-  { label: 'London, ON', href: '/locations/london-on' },
-  { label: 'Winnipeg', href: '/locations/winnipeg' },
-  { label: 'Halifax', href: '/locations/halifax' },
-  { label: 'Victoria', href: '/locations/victoria' },
-  { label: 'Saskatoon', href: '/locations/saskatoon' },
+  { label: 'Kitchener-Waterloo', href: '/locations/software-development-company-in-kitchener' },
+  { label: 'London, ON', href: '/locations/software-development-company-in-london-on' },
+  { label: 'Winnipeg', href: '/locations/software-development-company-in-winnipeg' },
+  { label: 'Halifax', href: '/locations/software-development-company-in-halifax' },
+  { label: 'Victoria', href: '/locations/software-development-company-in-victoria' },
+  { label: 'Saskatoon', href: '/locations/software-development-company-in-saskatoon' },
 ];
 
 const socials = [

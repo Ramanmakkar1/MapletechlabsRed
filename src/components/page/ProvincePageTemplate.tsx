@@ -97,7 +97,7 @@ export default function ProvincePageTemplate({ p }: { p: ProvinceData }) {
             </div>
             <div className={p.cities.length % 3 === 0 ? 'grid grid--3' : p.cities.length % 2 === 0 ? 'grid grid--2' : p.cities.length === 1 ? 'grid grid--2' : 'grid grid--3'}>
               {p.cities.map(c => (
-                <Link key={c.slug} href={`/locations/${c.slug}`} className="tile rise">
+                <Link key={c.slug} href={`/locations/software-development-company-in-${c.slug}`} className="tile rise">
                   <span className="commitments__mark" aria-hidden />
                   <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{c.name}</h3>
                   <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{c.role}</p>

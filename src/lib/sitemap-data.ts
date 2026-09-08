@@ -160,7 +160,7 @@ export function locationSitemapEntries(): SitemapEntry[] {
     priority: '0.75',
   }));
   const cities = citySlugs.map(slug => ({
-    loc: `${BASE_URL}/locations/${slug}`,
+    loc: `${BASE_URL}/locations/software-development-company-in-${slug}`,
     changefreq: 'monthly' as const,
     priority: '0.7',
   }));

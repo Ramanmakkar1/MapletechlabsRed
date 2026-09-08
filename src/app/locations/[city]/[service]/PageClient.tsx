@@ -58,7 +58,7 @@ export default function CityServicePageClient(p: CityServicePageProps) {
       <Navbar />
       <main id="main-content">
         <PageHero
-          crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: cityName, href: `/locations/${citySlug}` }, { label: serviceName }]}
+          crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: cityName, href: `/locations/software-development-company-in-${citySlug}` }, { label: serviceName }]}
           copy={{ badge: p.badge, title: <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>, desc: p.heroDescription }}
           stats={p.stats} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
         />

@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Software Development Company in Toronto | Mapletech Labs',
     description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Toronto, Ontario. Get a free quote today.',
-    url: 'https://mapletechlabs.ca/locations/toronto',
+    url: 'https://mapletechlabs.ca/locations/software-development-company-in-toronto',
     type: 'website',
   },
   alternates: {
-    canonical: canonicalUrl('/locations/toronto'),
+    canonical: canonicalUrl('/locations/software-development-company-in-toronto'),
   },
 };
 
@@ -20,7 +20,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'Mapletech Labs - Toronto',
-  url: 'https://mapletechlabs.ca/locations/toronto',
+  url: 'https://mapletechlabs.ca/locations/software-development-company-in-toronto',
   telephone: '+1-780-850-5314',
   priceRange: '$$-$$$',
   image: 'https://mapletechlabs.ca/images/og-default.jpg',
