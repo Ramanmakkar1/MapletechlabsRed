@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { submitToSplitForms } from '@/lib/splitforms';
 
 interface ServiceHeroFormProps {
   service?: string;
@@ -17,7 +17,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
     setIsLoading(true);
 
     try {
-      const templateParams = {
+      await submitToSplitForms(`New enquiry — ${form.name}`, {
         name: form.name,
         email: form.email,
         phone: form.phone,
@@ -25,14 +25,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
         message: form.message,
         ...(service && { service }),
         ...(city && { city }),
-      };
-
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
-      );
+      });
 
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 4000);

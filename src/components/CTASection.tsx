@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { submitToSplitForms } from '@/lib/splitforms';
 
 export default function CTASection() {
   const [form, setForm] = useState({ name: '', email: '', company: '', service: '', message: '' });
@@ -13,20 +13,13 @@ export default function CTASection() {
     setIsLoading(true);
 
     try {
-      const templateParams = {
+      await submitToSplitForms(`New enquiry — ${form.name}`, {
         name: form.name,
         email: form.email,
         company: form.company,
         projectType: form.service,
         message: form.message,
-      };
-
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
-      );
+      });
 
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 4000);

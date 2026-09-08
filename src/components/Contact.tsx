@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import emailjs from '@emailjs/browser';
+import { submitToSplitForms } from '@/lib/splitforms';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -25,18 +25,11 @@ export default function Contact() {
     setIsLoading(true);
 
     try {
-      const templateParams = {
+      await submitToSplitForms(`New enquiry — ${formData.name}`, {
         name: formData.name,
         email: formData.email,
         message: formData.message,
-      };
-
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
-      );
+      });
 
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 4000);
