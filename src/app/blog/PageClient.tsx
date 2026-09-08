@@ -495,7 +495,7 @@ export default function BlogPage() {
         </section>
 
         {/* ── NEWSLETTER CTA ── */}
-        <FinalCta title="Have a project in mind?" sub="Reading is one thing, shipping is another. Tell us what you’re building and a senior engineer will scope it within four hours." />
+        <FinalCta title="Have a project in mind?" sub="Reading is one thing, shipping is another. Tell us what you’re building and a senior engineer will scope it within one working day." />
 
       </main>
       <Footer />

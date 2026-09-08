@@ -360,7 +360,7 @@ export default function CaseStudiesPageClient() {
         <FaqSchema faqs={caseStudyFaqs} />
         <FaqSplit faqs={caseStudyFaqs} title="About our case studies" />
 
-        <FinalCta title="Want results like these?" sub="Every project on this page started with one conversation. Tell us what you’re building and we’ll scope it within four hours." />
+        <FinalCta title="Want results like these?" sub="Every project on this page started with one conversation. Tell us what you’re building and we’ll scope it within one working day." />
 
       </main>
       <Footer />

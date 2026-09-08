@@ -12,7 +12,7 @@ const assurances = [
   { t: 'Fixed scope, fixed price', d: 'A number before we write code' },
   { t: 'Your IP from day one', d: 'Full ownership on final payment' },
   { t: 'Senior engineers only', d: 'No juniors on your budget' },
-  { t: 'Reply within 4 hours', d: 'From an engineer, not a bot' },
+  { t: 'Reply within 1 working day', d: 'From an engineer, not a bot' },
 ];
 const Tick = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M20 6 9 17l-5-5" /></svg>

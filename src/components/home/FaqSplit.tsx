@@ -15,7 +15,7 @@ export default function FaqSplit({ faqs = defaultFaqs, title = 'Frequently asked
         <div style={{ position: 'sticky', top: 110 }}>
           <h2 style={{ maxWidth: '12ch' }}>{title}</h2>
           <p className="lede" style={{ marginBottom: 28 }}>
-            If your question is not here, a senior engineer will answer it within four hours.
+            If your question is not here, a senior engineer will answer it within one working day.
           </p>
           <Link href="/contact" className="btn btn--ghost">Ask our team</Link>
         </div>

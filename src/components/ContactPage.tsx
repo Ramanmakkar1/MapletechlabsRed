@@ -32,7 +32,7 @@ const FAQS = [
   { q: "Do you offer fixed-price contracts?", a: "Yes — every standard engagement comes with a fixed-price guarantee. You know the full cost before development begins. No surprises, no scope-creep charges." },
   { q: "Is there a minimum project size?", a: "Typical engagements start at $25,000 CAD. For smaller scope, ask us about our pre-built accelerator packages." },
   { q: "Do you sign NDAs?", a: "Absolutely — on Day 1, before any project discussion. Your IP and ideas are protected from our very first conversation." },
-  { q: "What happens after I submit?", a: "A senior project lead responds within 4 business hours. We schedule a discovery call, then deliver a full proposal within 48 hours of that call." },
+  { q: "What happens after I submit?", a: "A senior project lead responds within one working day. We schedule a discovery call, then deliver a full proposal within 48 hours of that call." },
   { q: "Do you offer post-launch support?", a: "Yes. We offer flexible SLA-backed support including 24/7 monitoring, bug fixes, feature updates, and performance optimisation." },
 ];
 
@@ -224,7 +224,7 @@ export default function ContactPage() {
                 Tell Us About<br /><span style={{ color: 'var(--faint)' }}>Your Project.</span>
               </h2>
               <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, marginBottom: 48, maxWidth: 380 }}>
-                A senior engineer will respond within 4 business hours with a tailored plan.
+                A senior engineer will respond within one working day with a tailored plan.
               </p>
 
               {/* Contact details */}
@@ -232,7 +232,7 @@ export default function ContactPage() {
                 {[
                   { label: 'General', value: 'hello@mapletechlabs.ca', href: 'mailto:hello@mapletechlabs.ca' },
                   { label: 'Sales', value: 'sales@mapletechlabs.ca', href: 'mailto:sales@mapletechlabs.ca' },
-                  { label: 'Response Time', value: 'Within 4 business hours', href: null },
+                  { label: 'Response Time', value: 'Within one working day', href: null },
                 ].map(item => (
                   <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
                     <div style={{ width: 44, height: 44, borderRadius: 12, background: 'transparent', border: '1px solid var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -264,7 +264,7 @@ export default function ContactPage() {
                   </div>
                   <h3 style={{ fontSize: 28, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 12 }}>We&apos;ve Got It!</h3>
                   <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto 32px' }}>
-                    A senior engineer will reach out within 4 business hours. Check your inbox — we&apos;re already on it.
+                    A senior engineer will reach out within one working day. Check your inbox — we&apos;re already on it.
                   </p>
                   <button onClick={() => setSubmitted(false)} style={{ background: 'none', border: '1px solid var(--line)', borderRadius: 100, padding: '12px 28px', color: 'var(--muted)', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', transition: '0.2s' }}>
                     Submit Another →

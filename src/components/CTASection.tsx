@@ -56,7 +56,7 @@ export default function CTASection() {
               Let's Build Something <span style={{ color:'#E11900' }}>Amazing Together</span>
             </h2>
             <p style={{ color: 'var(--muted)', fontSize:15, lineHeight:1.8, marginBottom:36 }}>
-              Have a project in mind? Tell us about it and we'll get back to you within 24 hours with a clear path forward.
+              Have a project in mind? Tell us about it and we'll get back to you within one working day with a clear path forward.
             </p>
             <div style={{ display:'flex', flexWrap:'wrap', gap:12 }}>
               {['✓ Free Discovery Call','✓ 24h Response','✓ No Commitment Required'].map(item => (
@@ -76,7 +76,7 @@ export default function CTASection() {
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                 </div>
                 <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>Thank You!</div>
-                <div style={{ fontSize: 14, color: 'var(--muted)' }}>We'll get back to you within 24 hours.</div>
+                <div style={{ fontSize: 14, color: 'var(--muted)' }}>We'll get back to you within one working day.</div>
               </div>
             ) : (
             <form onSubmit={handleSubmit} style={{ display:'flex', flexDirection:'column', gap:16 }}>

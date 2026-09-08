@@ -1,20 +1,15 @@
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
-const heroStats = pair([['85+', 'Projects in Alberta'], ['98%', 'Client Satisfaction'], ['40+', 'Team Members']]);
-const numbers = pair([
-                  ['85+', 'Projects Delivered in Alberta'],
-                  ['98%', 'Client Satisfaction Rate'],
-                  ['40+', 'Team Members'],
-                  ['5+', 'Years Serving Edmonton'],
-                ]);
+// Honest hero figures: the company's own verifiable facts, not invented client metrics.
+const heroStats = pair([['2018', 'Founded in Edmonton'], ['12', 'Canadian cities served'], ['1 day', 'To a senior-engineer reply']]);
 const services = [
-  { title: 'Mobile App Development', desc: 'Native and cross-platform apps built for iOS and Android.', href: '/services/mobile-app-development' },
-  { title: 'Web Development', desc: 'Scalable web applications and enterprise portals.', href: '/services/web-development' },
-  { title: 'AI & Machine Learning', desc: 'Intelligent automation, predictive analytics, and LLM integration.', href: '/services/ai-ml' },
-  { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols, and decentralized applications.', href: '/services/blockchain-web3' },
-  { title: 'Cloud & DevOps', desc: 'AWS, Azure, Kubernetes, and CI/CD pipeline architecture.', href: '/services/cloud-devops' },
-  { title: 'Product Design', desc: 'UI/UX strategy, prototyping, and design systems.', href: '/services/product-design' },
+  { title: 'Mobile App Development', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: '/services/mobile-app-development' },
+  { title: 'Web Development', desc: 'Fast, secure web platforms and enterprise portals engineered to scale — from marketing sites to the complex internal systems that replace spreadsheets and legacy tools.', href: '/services/web-development' },
+  { title: 'AI & Machine Learning', desc: 'LLM integration, intelligent automation and predictive analytics built for production — wired into the systems your team already uses, where a model removes real work.', href: '/services/ai-ml' },
+  { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols and decentralized apps engineered for security and audit — practical Web3 that solves a real problem rather than chasing a trend.', href: '/services/blockchain-web3' },
+  { title: 'Cloud & DevOps', desc: 'AWS and Azure architecture, Kubernetes and CI/CD pipelines for zero-downtime releases — infrastructure that scales with demand and costs less to run.', href: '/services/cloud-devops' },
+  { title: 'Product Design', desc: 'UX research, product strategy, prototyping and design systems that convert — interfaces your customers find obvious and your engineers can build on.', href: '/services/product-design' },
 ];
 
 const whyChoose = [
@@ -27,7 +22,7 @@ const whyCity = [
                 { t: 'AI & Machine Learning Hub', d: 'University of Alberta\'s Amii institute is a global leader in reinforcement learning — Edmonton trains more AI researchers per capita than almost any city worldwide.' },
                 { t: 'ICE District Innovation', d: 'Edmonton\'s $2.5B ICE District is attracting tech companies, co-working spaces, and venture capital to the downtown core.' },
                 { t: 'Energy Tech Transformation', d: 'Alberta\'s oil & gas sector is driving massive demand for data analytics, IoT, predictive maintenance, and clean energy tech.' },
-                { t: 'Cost Advantage', d: 'No provincial sales tax, 30-50% lower operating costs than Toronto or Vancouver, and generous R&D tax credits for tech companies.' },
+                { t: 'Cost Advantage', d: 'No provincial sales tax, lower operating costs than Toronto or Vancouver, and generous R&D tax credits for tech companies.' },
               ];
 const neighborhoods = [
                 { n: 'Downtown / ICE District', d: 'Edmonton\'s innovation core — tech startups, co-working spaces, and the $2.5B ICE District.' },
@@ -39,10 +34,11 @@ const neighborhoods = [
                 { n: 'Spruce Grove', d: 'Western suburb with emerging small business tech and agriculture services.' },
                 { n: 'Windermere / Heritage Valley', d: 'Southwest Edmonton\'s newest business park with healthcare and professional services.' },
               ];
-const wins = [
-                { title: 'Edmonton FinTech Startup', metric: '300% user growth', desc: 'Built a mobile banking and payments platform for an Edmonton fintech startup, growing from 5,000 to 20,000 active users within 8 months of launch.' },
-                { title: 'Alberta Healthcare Provider', metric: '50% faster onboarding', desc: 'Developed a patient intake and telehealth platform for a multi-clinic healthcare provider, cutting patient onboarding time in half across 12 Alberta locations.' },
-                { title: 'Edmonton E-Commerce Brand', metric: '$2M+ annual revenue', desc: 'Created a custom headless commerce platform with subscription management for an Edmonton DTC brand, driving $2M+ in annual online revenue.' },
+// Honest commitments in place of invented client metrics — every figure here is true of how we work.
+const commitments = [
+                { title: 'Scope and price up front', metric: 'Fixed', desc: 'You approve a fixed scope and a fixed price before we write a line of code — no open-ended hourly billing and no surprises at the end.' },
+                { title: 'A senior engineer replies', metric: '1 day', desc: 'Tell us about your Edmonton project and a senior engineer comes back within one working day with how we would approach it, what it takes and what it costs.' },
+                { title: 'You own the code and IP', metric: '100%', desc: 'Every repository, cloud account and asset we set up is yours to keep. No lock-in, no hostage-taking — your software is your property.' },
               ];
 const trends = [
                 { t: 'AI & Machine Learning', d: 'Production ML pipelines, computer vision, and NLP solutions — leveraging Edmonton\'s Amii institute and U of A AI talent pipeline.' },
@@ -69,14 +65,25 @@ export default function PageClient() {
   return (
     <LocationPageTemplate
       slug="edmonton"
-      copy={{ badge: 'Software development in Edmonton', title: <>Software Development in <span style={{ color: 'var(--brand)' }}>Edmonton</span></>, desc: <>Edmonton is where Mapletech Labs was founded. As our headquarters, this is the heart of our operations — serving Alberta&apos;s growing tech ecosystem and energy sector with custom software solutions.</> }}
+      copy={{ badge: 'Software development in Edmonton', title: <>Software Development Company in <span style={{ color: 'var(--brand)' }}>Edmonton</span></>, desc: <>Edmonton is where Mapletech Labs was founded, and it is still our headquarters. We are a custom software development company serving Alberta&apos;s energy sector, the University of Alberta&apos;s AI ecosystem and a fast-growing base of Edmonton startups.</> }}
       heroStats={heroStats}
       services={services}
-      numbers={{ title: "Edmonton & Alberta by the Numbers", sub: "Our impact across the province since founding our headquarters here.", stats: numbers }}
+      overview={{
+        title: 'Your software and app development partner in Edmonton',
+        lead: 'Mapletech Labs is a custom software development company based in Edmonton, building web platforms, mobile apps and AI systems for Alberta businesses. From our headquarters here we work with energy and clean-tech operators, University of Alberta and Amii-adjacent AI teams, healthcare providers, public-sector groups and a fast-growing base of local startups &mdash; the Edmonton organisations that need software built properly the first time.',
+        points: [
+          { t: 'Senior engineers, directly', d: 'You work with senior engineers from day one, never a sales layer in front of a junior team.' },
+          { t: 'Fixed scope, fixed price', d: 'Every engagement is scoped and priced up front, so there are no open-ended hours or surprises.' },
+          { t: 'Your data stays in Canada', d: 'Canadian data residency by default, with your IP protected under Canadian law.' },
+          { t: 'You own everything we build', d: 'All the code, infrastructure and intellectual property we produce is yours to keep.' },
+        ],
+        covers: ['Product strategy & UX', 'Mobile & web engineering', 'Cloud & DevOps', 'Ongoing support'],
+      }}
       whyChoose={whyChoose}
-      whyCity={{ title: "Why Edmonton for Tech", intro: "Edmonton is Alberta's fastest-growing tech hub with 1,000+ tech companies, a $3B+ tech sector, and world-leading AI research at the University of Alberta.", items: whyCity }}
+      whyCity={{ title: "Why Edmonton for Tech", intro: "Edmonton is Alberta's fastest-growing tech hub, home to the University of Alberta's world-leading Amii AI institute and the $2.5B ICE District downtown.", items: whyCity }}
       neighborhoods={{ title: "Edmonton Neighborhoods We Serve", intro: "From downtown startups to suburban enterprises, we build software across the Edmonton metro area.", items: neighborhoods }}
-      wins={wins}
+      winsTitle="What working with us looks like"
+      wins={commitments}
       trends={{ title: "Edmonton Tech Focus", items: trends }}
       serviceLinks={serviceLinks}
     />

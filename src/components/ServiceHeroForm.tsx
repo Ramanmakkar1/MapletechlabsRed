@@ -76,7 +76,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
           Get Your Custom Project Plan
         </h2>
         <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5, margin: 0 }}>
-          Share your project details — a senior engineer responds within 4 hours.
+          Share your project details — a senior engineer responds within one working day.
         </p>
       </div>
 
@@ -87,7 +87,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
             Request Received!
           </h3>
           <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto' }}>
-            A senior engineer will review your project details and respond within 4 business hours with a custom assessment.
+            A senior engineer will review your project details and respond within one working day with a custom assessment.
           </p>
         </div>
       ) : (

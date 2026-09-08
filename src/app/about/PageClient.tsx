@@ -418,7 +418,7 @@ export default function AboutPage() {
 
         {/* ── BOTTOM CTA ── */}
         <MediaBand media={humanMedia.meeting} ratio="21 / 8" />
-        <FinalCta title="Let’s talk about what you’re building." sub="Tell us the problem. A senior engineer will come back within four hours with how we’d approach it, what it takes and what it costs." />
+        <FinalCta title="Let’s talk about what you’re building." sub="Tell us the problem. A senior engineer will come back within one working day with how we’d approach it, what it takes and what it costs." />
 
         </article>
       </main>

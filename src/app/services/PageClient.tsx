@@ -295,7 +295,7 @@ export default function ServicesIndexPage() {
 
         {/* CTA */}
         <MediaBand media={humanMedia.planning} ratio="21 / 8" />
-        <FinalCta title="Not sure which service you need?" sub="Describe the outcome you’re after and we’ll tell you what it actually takes — scope, timeline and fixed price, within four hours." />
+        <FinalCta title="Not sure which service you need?" sub="Describe the outcome you’re after and we’ll tell you what it actually takes — scope, timeline and fixed price, within one working day." />
 
       </main>
       <Footer />

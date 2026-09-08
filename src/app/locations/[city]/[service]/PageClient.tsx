@@ -180,7 +180,7 @@ export default function CityServicePageClient(p: CityServicePageProps) {
         </section>
         <FinalCta
           title={`Need ${serviceName} in ${cityName}?`}
-          sub={`A senior engineer will scope your project and send a fixed price within four hours — ${p.isHQ ? 'from our head office here in ' + cityName : 'with local delivery across ' + province}.`}
+          sub={`A senior engineer will scope your project and send a fixed price within one working day — ${p.isHQ ? 'from our head office here in ' + cityName : 'with local delivery across ' + province}.`}
         />
       </main>
       <Footer />

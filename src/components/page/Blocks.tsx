@@ -61,13 +61,13 @@ export function StatRow({ stats }: { stats: Stat[] }) {
   const items = stats.slice(0, 4);
   if (!items.length) return null;
   return (
-    <section aria-label="Key numbers" style={{ padding: 'clamp(28px, 3vw, 44px) 0', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)' }}>
+    <section aria-label="Key numbers" style={{ padding: 'clamp(20px, 2.4vw, 34px) 0' }}>
       <div className="cb-container">
-        <dl className="stats-strip-grid" style={{ display: 'grid', gridTemplateColumns: `repeat(${items.length}, 1fr)`, gap: 24, margin: 0 }}>
-          {items.map(s => (
-            <div key={s.label}>
-              <dt style={{ fontSize: 'clamp(1.6rem, 2.6vw, 2.3rem)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.05em', lineHeight: 1 }}>{s.value}</dt>
-              <dd style={{ margin: '10px 0 0', fontSize: 13.5, color: 'var(--muted)' }}>{s.label}</dd>
+        <dl className="stats-strip-grid" style={{ display: 'grid', gridTemplateColumns: `repeat(${items.length}, 1fr)`, gap: 0, margin: 0, border: '1px solid var(--line)', borderRadius: 20, overflow: 'hidden', background: 'var(--surface-alt)' }}>
+          {items.map((s, i) => (
+            <div key={s.label} style={{ padding: 'clamp(24px, 2.8vw, 38px)', borderLeft: i === 0 ? undefined : '1px solid var(--line)' }}>
+              <dt style={{ fontSize: 'clamp(2rem, 3.2vw, 2.9rem)', fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.05em', lineHeight: 1 }}>{s.value}</dt>
+              <dd style={{ margin: '12px 0 0', fontSize: 14, color: 'var(--body)', fontWeight: 500 }}>{s.label}</dd>
             </div>
           ))}
         </dl>
@@ -294,7 +294,7 @@ export function Voices({ bg }: { bg?: string }) {
 }
 
 /* ── mid-page CTA strip ──────────────────────────────────── */
-export function CtaStrip({ title = 'Ready to build it right the first time?', sub = 'Share your project and a senior engineer will send a scoped plan, timeline and fixed price within four hours.', cta = 'Get a free project plan' }: { title?: string; sub?: string; cta?: string; bg?: string }) {
+export function CtaStrip({ title = 'Ready to build it right the first time?', sub = 'Share your project and a senior engineer will send a scoped plan, timeline and fixed price within one working day.', cta = 'Get a free project plan' }: { title?: string; sub?: string; cta?: string; bg?: string }) {
   return (
     <section style={{ padding: 'var(--section-y-sm) 0' }}>
       <div className="cb-container">

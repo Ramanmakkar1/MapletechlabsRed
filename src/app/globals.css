@@ -59,7 +59,7 @@
   /* one gutter for every card grid on the site */
   --gap: clamp(16px, 1.6vw, 24px);
   /* page heroes also have to clear the 76px fixed header */
-  --hero-top: clamp(124px, 13vw, 164px);
+  --hero-top: clamp(96px, 9vw, 120px);
 
   /* ── TYPE SCALE ──────────────────────────────── */
   /* Four steps, nothing in between. h2 alone was rendering at 72, 64, 56,

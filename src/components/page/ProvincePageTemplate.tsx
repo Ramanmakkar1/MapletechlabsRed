@@ -199,7 +199,7 @@ export default function ProvincePageTemplate({ p }: { p: ProvinceData }) {
 
         <FinalCta
           title={`Building software in ${p.name}? Let's scope it.`}
-          sub={`Tell us what you're building and a senior engineer will come back within four hours with a scope, a timeline and a fixed price.`}
+          sub={`Tell us what you're building and a senior engineer will come back within one working day with a scope, a timeline and a fixed price.`}
         />
       </main>
       <Footer />

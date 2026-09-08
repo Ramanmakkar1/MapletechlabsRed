@@ -108,7 +108,7 @@ export default function Contact() {
                 <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(225,25,0,0.10)', border: '2px solid #E11900', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: 24 }}>&#10003;</div>
                 <h3 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>Message Sent!</h3>
                 <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto' }}>
-                  Our team will review your message and respond within 4 business hours.
+                  Our team will review your message and respond within one working day.
                 </p>
               </div>
             ) : (

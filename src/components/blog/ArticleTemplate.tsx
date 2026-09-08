@@ -176,7 +176,7 @@ export default function ArticleTemplate({ a }: { a: Article }) {
                 {/* Inline CTA */}
                 <div className="reveal" style={{ marginTop: 'clamp(40px, 5vw, 60px)', padding: 'clamp(28px, 3.5vw, 44px)', borderRadius: 'var(--r-lg)', background: 'var(--surface-ink)', color: 'var(--on-ink-body)' }}>
                   <h2 style={{ color: 'var(--on-ink)', fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Have a project in mind?</h2>
-                  <p style={{ lineHeight: 1.7, margin: '0 0 22px', maxWidth: '52ch' }}>Tell us what you&rsquo;re building. A senior engineer will come back within four hours with a scope, a timeline and a fixed price.</p>
+                  <p style={{ lineHeight: 1.7, margin: '0 0 22px', maxWidth: '52ch' }}>Tell us what you&rsquo;re building. A senior engineer will come back within one working day with a scope, a timeline and a fixed price.</p>
                   <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <Link href="/contact" className="btn btn--on-ink">Start a project</Link>
                     <Link href={a.cta.href} className="btn btn--ghost-on-ink">{a.cta.label}</Link>
@@ -201,7 +201,7 @@ export default function ArticleTemplate({ a }: { a: Article }) {
           </div>
         </section>
 
-        <FinalCta title="Let's build something worth keeping." sub="Tell us what you're building and a senior engineer will scope it within four hours." />
+        <FinalCta title="Let's build something worth keeping." sub="Tell us what you're building and a senior engineer will scope it within one working day." />
       </main>
       <Footer />
     </>

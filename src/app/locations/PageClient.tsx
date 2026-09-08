@@ -186,7 +186,7 @@ export default function LocationsIndexPage() {
 
         {/* CTA */}
         <MediaBand media={humanMedia.meeting} ratio="21 / 8" />
-        <FinalCta title="Let’s build something great, wherever you are." sub="We work with companies across Canada, remotely and on site. Tell us about your project and we’ll come back within four hours." />
+        <FinalCta title="Let’s build something great, wherever you are." sub="We work with companies across Canada, remotely and on site. Tell us about your project and we’ll come back within one working day." />
 
       </main>
       <Footer />
