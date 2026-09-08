@@ -109,6 +109,9 @@ export const provinces: ProvinceData[] = [
       { name: 'London', slug: 'london-on', role: 'Healthcare, insurance, education and agri-food' },
       { name: 'Mississauga', slug: 'mississauga', role: 'Corporate head offices, pharma, aerospace and logistics' },
       { name: 'Hamilton', slug: 'hamilton', role: 'Advanced manufacturing, health sciences and logistics' },
+      { name: 'Brampton', slug: 'brampton', role: 'Logistics, advanced manufacturing, food processing and health' },
+      { name: 'Markham', slug: 'markham', role: 'Technology, fintech, life sciences and advanced manufacturing' },
+      { name: 'Windsor', slug: 'windsor', role: 'Automotive, advanced manufacturing and cross-border trade' },
     ],
     industries: [
       { title: 'Fintech & banking', desc: 'Payment platforms, trading systems and compliance tooling built for OSFI and PCI DSS — the core of Toronto’s financial sector.' },
@@ -157,6 +160,7 @@ export const provinces: ProvinceData[] = [
       { name: 'Victoria', slug: 'victoria', role: 'Government, marine and ocean tech, education and clean tech' },
       { name: 'Surrey', slug: 'surrey', role: 'Health tech, manufacturing, education and agriculture' },
       { name: 'Burnaby', slug: 'burnaby', role: 'Games, VFX, telecom and clean tech' },
+      { name: 'Kelowna', slug: 'kelowna', role: 'Technology, aerospace, agriculture and tourism' },
     ],
     industries: [
       { title: 'Gaming & media technology', desc: 'Real-time tools, media pipelines and platforms for Vancouver’s game studios, VFX houses and the tools companies around them.' },
@@ -203,6 +207,8 @@ export const provinces: ProvinceData[] = [
     cities: [
       { name: 'Montréal', slug: 'montreal', role: 'AI & deep learning, gaming, aerospace, biotech and creative industries' },
       { name: 'Quebec City', slug: 'quebec-city', role: 'Government, insurance, games and optics-photonics' },
+      { name: 'Laval', slug: 'laval', role: 'Biotech, pharma, manufacturing and agri-food' },
+      { name: 'Gatineau', slug: 'gatineau', role: 'Federal government, IT services and tourism' },
     ],
     industries: [
       { title: 'AI & machine learning', desc: 'Applied AI, LLM integration and machine-learning systems for Montréal’s deep AI ecosystem — in production, not just research.' },

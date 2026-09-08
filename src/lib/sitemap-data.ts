@@ -44,6 +44,7 @@ export const citySlugs = [
   'edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal',
   'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on',
   'mississauga', 'hamilton', 'surrey', 'burnaby', 'regina', 'quebec-city',
+  'brampton', 'markham', 'windsor', 'kelowna', 'laval', 'gatineau',
 ];
 
 export type SitemapEntry = {
