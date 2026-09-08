@@ -133,7 +133,7 @@ export default function CaseStudiesPageClient() {
               fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               lineHeight: 1.05, letterSpacing: '-0.04em', marginBottom: 24, maxWidth: 800,
             }}>
-              Our Work Speaks<br />for Itself
+              Software Development<br />Case Studies
             </h1>
             <p className="reveal reveal-d2" style={{
               fontSize: 18, color: 'var(--muted)', lineHeight: 1.7,
@@ -360,7 +360,7 @@ export default function CaseStudiesPageClient() {
         <FaqSchema faqs={caseStudyFaqs} />
         <FaqSplit faqs={caseStudyFaqs} title="About our case studies" />
 
-        <FinalCta title="Want results like these?" sub="Every project on this page started with one conversation. Tell us what you\u2019re building and we\u2019ll scope it within four hours." />
+        <FinalCta title="Want results like these?" sub="Every project on this page started with one conversation. Tell us what you’re building and we’ll scope it within four hours." />
 
       </main>
       <Footer />

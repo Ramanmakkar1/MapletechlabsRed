@@ -3,11 +3,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve',
-  description: 'Specialized software development for FinTech, Healthcare, E-commerce, Enterprise, EdTech, and Media & Entertainment. 10+ years industry experience.',
+  title: 'Software Development by Industry',
+  description: 'Specialized software development for FinTech, healthcare, e-commerce, enterprise, EdTech and logistics. Deep domain expertise in every vertical we serve.',
   openGraph: {
-    title: 'Industries We Serve | Mapletech Labs',
-    description: 'Specialized software development for FinTech, Healthcare, E-commerce, Enterprise, EdTech, and Media & Entertainment.',
+    title: 'Software Development by Industry | Mapletech Labs',
+    description: 'Specialized software development for FinTech, healthcare, e-commerce, enterprise, EdTech and logistics — deep domain expertise in every vertical.',
     url: 'https://mapletechlabs.ca/industries',
     type: 'website',
   },

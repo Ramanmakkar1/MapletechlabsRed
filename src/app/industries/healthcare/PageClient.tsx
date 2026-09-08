@@ -38,7 +38,7 @@ export default function PageClient() {
     <IndustryPageTemplate
       slug="healthcare"
       name="Healthcare"
-      copy={{ badge: "Healthcare", title: <>We Build HealthTech That <span style={{ color: 'var(--brand)' }}>Saves Lives.</span></>, desc: <>HIPAA-compliant telehealth platforms, EHR integrations, and clinical AI tools trusted by healthcare providers.</> }}
+      copy={{ badge: "Healthcare", title: <>Healthcare Software Development That <span style={{ color: 'var(--brand)' }}>Saves Lives.</span></>, desc: <>Healthcare software development in Canada — PHIPA- and PIPEDA-compliant telehealth platforms, EHR integrations and clinical tools trusted by healthcare providers.</> }}
       heroStats={heroStats}
       challenges={challenges}
       solutions={solutions}

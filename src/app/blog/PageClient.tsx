@@ -26,6 +26,46 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'use-claude-for-free',
+    category: 'AI/ML',
+    title: 'How to Use Claude for Free in 2026: A Practical Guide',
+    excerpt: 'No credit card, no install: how Claude’s free plan actually works in 2026, what you can do with it, where the limits sit, and how to get better answers from every message.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Sep 2026',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'run-ai-models-locally-free',
+    category: 'AI/ML',
+    title: 'How to Run AI Models Locally for Free in 2026',
+    excerpt: 'Run capable AI on your own machine — private, offline and free. The tools, the open models worth downloading, the hardware you really need, and where local hits its limits.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Sep 2026',
+    readTime: '10 min read',
+  },
+  {
+    slug: 'saas-development-company-canada',
+    category: 'Business',
+    title: 'How to Choose a SaaS Development Company in Canada (2026)',
+    excerpt: 'What separates a strong Canadian SaaS development partner from an expensive mistake: what to look for, engagement models and real costs, red flags, and the questions to ask before you sign.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Sep 2026',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'website-development-company-canada',
+    category: 'Engineering',
+    title: 'How to Choose a Website Development Company in Canada (2026)',
+    excerpt: 'Anyone can build a website; few build one that is fast, ranks and sells. How to choose a Canadian web development company that earns its fee — standards, costs, red flags and questions.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Sep 2026',
+    readTime: '9 min read',
+  },
+  {
     slug: 'agentic-ai-in-production',
     category: 'AI/ML',
     title: 'Agentic AI in Production: What Actually Works in 2026',
@@ -221,7 +261,7 @@ export default function BlogPage() {
               fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)',
               lineHeight: 1.05, letterSpacing: '-0.04em', marginBottom: 24, maxWidth: 800,
             }}>
-              Insights &<br />Perspectives
+              Software Development<br />Insights & Guides
             </h1>
             <p className="reveal reveal-d2" style={{
               fontSize: 18, color: 'var(--muted)', lineHeight: 1.7,
@@ -455,7 +495,7 @@ export default function BlogPage() {
         </section>
 
         {/* ── NEWSLETTER CTA ── */}
-        <FinalCta title="Have a project in mind?" sub="Reading is one thing, shipping is another. Tell us what you\u2019re building and a senior engineer will scope it within four hours." />
+        <FinalCta title="Have a project in mind?" sub="Reading is one thing, shipping is another. Tell us what you’re building and a senior engineer will scope it within four hours." />
 
       </main>
       <Footer />

@@ -42,7 +42,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="game-development"
       name="Game Development"
-      copy={{ badge: "Game Development", title: <>We Build Games That <span style={{ color: 'var(--brand)' }}>Players Love.</span></>, desc: <>Mobile games, PC/console titles, and web-based experiences — engineered for engagement, retention and monetisation.</> }}
+      copy={{ badge: "Game Development", title: <>Game Development That <span style={{ color: 'var(--brand)' }}>Players Love.</span></>, desc: <>A Canadian game development studio building mobile games, PC and console titles and web-based experiences — engineered for engagement, retention and monetisation.</> }}
       stats={stats}
       services={services}
       steps={steps}

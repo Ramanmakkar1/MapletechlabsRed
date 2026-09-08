@@ -85,7 +85,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="ai-ml"
       name="AI & Machine Learning"
-      copy={{ badge: "AI & Machine Learning", title: <>AI That Moves Your<br /><span style={{ color: 'var(--brand)' }}>Business Forward.</span></>, desc: <>Custom AI models, intelligent automation, and LLM-powered products — built for production, not demos.</> }}
+      copy={{ badge: "AI & Machine Learning", title: <>AI Development<br />That Moves Your <span style={{ color: 'var(--brand)' }}>Business Forward.</span></>, desc: <>An AI development company in Canada building custom AI models, LLM-powered products and intelligent automation — engineered for production, not demos.</> }}
       stats={stats}
       services={services}
       steps={steps}

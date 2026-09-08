@@ -85,7 +85,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="product-design"
       name="Product Design"
-      copy={{ badge: "Product Design", title: <>Design That Converts<br /><span style={{ color: 'var(--brand)' }}>Users to Customers.</span></>, desc: <>UX research, product strategy, and pixel-perfect interfaces — designed to delight users and drive measurable business outcomes.</> }}
+      copy={{ badge: "Product Design", title: <>Product Design That Converts<br /><span style={{ color: 'var(--brand)' }}>Users to Customers.</span></>, desc: <>A Canadian product design and UI/UX agency — UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes.</> }}
       stats={stats}
       services={services}
       steps={steps}

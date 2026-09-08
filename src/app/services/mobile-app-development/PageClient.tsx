@@ -95,7 +95,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="mobile-app-development"
       name="Mobile App Development"
-      copy={{ badge: "Mobile App Development", title: <>We Build Apps<br />That Drive<br /><span style={{ color: 'var(--brand)' }}>Real Revenue.</span></>, desc: <>From MVP to millions of users — we engineer iOS, Android and cross-platform apps that your customers love and your investors notice.</> }}
+      copy={{ badge: "Mobile App Development", title: <>Mobile App Development<br />That Drives <span style={{ color: 'var(--brand)' }}>Real Revenue.</span></>, desc: <>A Canadian mobile app development company building iOS, Android and cross-platform apps — from MVP to millions of users, engineered for the app stores and loved by your customers.</> }}
       stats={stats}
       services={services}
       steps={steps}

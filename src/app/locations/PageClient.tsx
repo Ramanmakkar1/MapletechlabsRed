@@ -90,7 +90,7 @@ export default function LocationsIndexPage() {
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations' }]} copy={{ badge: "Across Canada", title: <><span style={{ color: 'var(--brand)' }}>12 Locations</span> Across Canada</>, desc: <>From coast to coast, Mapletech Labs brings world-class software development to businesses across Canada. Our distributed team model means you get local expertise backed by national resources.</> }} photo={officeMedia.open} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations' }]} copy={{ badge: "Across Canada", title: <>Software Development Company<br /><span style={{ color: 'var(--brand)' }}>Across Canada.</span></>, desc: <>From coast to coast, Mapletech Labs brings world-class software development to businesses across Canada. Our distributed team model means you get local expertise backed by national resources.</> }} photo={officeMedia.open} form={false} />
 
         {/* INTRO — national coverage, real content */}
         <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
@@ -186,7 +186,7 @@ export default function LocationsIndexPage() {
 
         {/* CTA */}
         <MediaBand media={humanMedia.meeting} ratio="21 / 8" />
-        <FinalCta title="Let\u2019s build something great, wherever you are." sub="We work with companies across Canada, remotely and on site. Tell us about your project and we\u2019ll come back within four hours." />
+        <FinalCta title="Let’s build something great, wherever you are." sub="We work with companies across Canada, remotely and on site. Tell us about your project and we’ll come back within four hours." />
 
       </main>
       <Footer />

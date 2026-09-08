@@ -85,7 +85,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="cloud-devops"
       name="Cloud &amp; DevOps"
-      copy={{ badge: "Cloud &amp; DevOps", title: <>Infrastructure That<br /><span style={{ color: 'var(--brand)' }}>Never Sleeps.</span></>, desc: <>Cloud architecture, CI/CD pipelines and DevSecOps — engineered for zero downtime, infinite scale and full observability.</> }}
+      copy={{ badge: "Cloud &amp; DevOps", title: <>Cloud &amp; DevOps<br />That <span style={{ color: 'var(--brand)' }}>Never Sleeps.</span></>, desc: <>A Canadian cloud and DevOps company — cloud architecture, CI/CD pipelines and DevSecOps engineered for zero downtime, infinite scale and full observability.</> }}
       stats={stats}
       services={services}
       steps={steps}

@@ -38,7 +38,7 @@ export default function PageClient() {
     <IndustryPageTemplate
       slug="edtech"
       name="EdTech"
-      copy={{ badge: "EdTech", title: <>We Build EdTech That <span style={{ color: 'var(--brand)' }}>Inspires Learning.</span></>, desc: <>Adaptive learning platforms, live tutoring apps, and AI-powered assessment tools that make education accessible to everyone.</> }}
+      copy={{ badge: "EdTech", title: <>EdTech Development That <span style={{ color: 'var(--brand)' }}>Inspires Learning.</span></>, desc: <>EdTech and e-learning software development — adaptive learning platforms, LMS builds, live tutoring apps and AI-powered assessment tools that make education accessible to everyone.</> }}
       heroStats={heroStats}
       challenges={challenges}
       solutions={solutions}

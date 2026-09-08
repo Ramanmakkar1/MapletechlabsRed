@@ -85,7 +85,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="web-development"
       name="Web Development"
-      copy={{ badge: "Web Development", title: <>We Build Web Systems<br />That <span style={{ color: 'var(--brand)' }}>Scale.</span></>, desc: <>From SaaS platforms to enterprise portals — we engineer fast, secure, and beautiful web products that grow with your business.</> }}
+      copy={{ badge: "Web Development", title: <>Web Development<br />That <span style={{ color: 'var(--brand)' }}>Scales.</span></>, desc: <>A Canadian web development company engineering fast, secure and beautiful web platforms — from SaaS products to enterprise portals — that grow with your business.</> }}
       stats={stats}
       services={services}
       steps={steps}

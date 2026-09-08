@@ -42,7 +42,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="saas-development"
       name="SaaS Development"
-      copy={{ badge: "SaaS Development", title: <>We Build SaaS Products That <span style={{ color: 'var(--brand)' }}>Scale.</span></>, desc: <>From zero to Series A — multi-tenant SaaS platforms with billing, auth, analytics and the infrastructure to grow.</> }}
+      copy={{ badge: "SaaS Development", title: <>SaaS Development<br />That <span style={{ color: 'var(--brand)' }}>Scales.</span></>, desc: <>A Canadian SaaS development company building multi-tenant platforms with billing, auth and analytics — engineered to grow from zero to Series A and beyond.</> }}
       stats={stats}
       services={services}
       steps={steps}

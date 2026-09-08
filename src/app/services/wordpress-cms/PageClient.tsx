@@ -42,7 +42,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="wordpress-cms"
       name="WordPress & CMS"
-      copy={{ badge: "WordPress & CMS", title: <>We Build Sites That <span style={{ color: 'var(--brand)' }}>Sell.</span></>, desc: <>Custom WordPress sites, headless CMS platforms and content management systems — fast, secure and easy to manage.</> }}
+      copy={{ badge: "WordPress & CMS", title: <>WordPress Development<br />That <span style={{ color: 'var(--brand)' }}>Sells.</span></>, desc: <>A Canadian WordPress and CMS development company — custom WordPress sites, headless CMS platforms and WooCommerce stores that are fast, secure and easy to manage.</> }}
       stats={stats}
       services={services}
       steps={steps}

@@ -24,7 +24,7 @@ export default function Hero() {
             Custom software that moves Canadian business forward.
           </h1>
           <p className="lede" style={{ marginTop: 0, marginBottom: 36, maxWidth: '46ch' }}>
-            Mapletech Labs designs and builds the digital products ambitious companies
+            Mapletech Labs is a custom software development company in Canada, designing and building the digital products ambitious companies
             run on &mdash; web platforms, mobile apps and AI systems, engineered to last.
           </p>
 

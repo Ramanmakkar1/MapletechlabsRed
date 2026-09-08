@@ -85,7 +85,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="blockchain-web3"
       name="Blockchain &amp; Web3"
-      copy={{ badge: "Blockchain &amp; Web3", title: <>Build on Web3.<br />Build for <span style={{ color: 'var(--brand)' }}>Tomorrow.</span></>, desc: <>Smart contracts, DeFi protocols, NFT marketplaces and decentralised apps — engineered for security, scale and real-world adoption.</> }}
+      copy={{ badge: "Blockchain &amp; Web3", title: <>Blockchain Development<br />Built for <span style={{ color: 'var(--brand)' }}>Web3.</span></>, desc: <>A Canadian blockchain development company building smart contracts, DeFi protocols, NFT marketplaces and decentralised apps — engineered for security, scale and real-world adoption.</> }}
       stats={stats}
       services={services}
       steps={steps}

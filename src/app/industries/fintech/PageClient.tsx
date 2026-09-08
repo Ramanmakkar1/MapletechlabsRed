@@ -38,7 +38,7 @@ export default function PageClient() {
     <IndustryPageTemplate
       slug="fintech"
       name="FinTech"
-      copy={{ badge: "FinTech", title: <>We Engineer FinTech That <span style={{ color: 'var(--brand)' }}>Moves Money.</span></>, desc: <>Trading platforms, digital wallets, payment gateways and regulatory-compliant financial infrastructure.</> }}
+      copy={{ badge: "FinTech", title: <>FinTech Development That <span style={{ color: 'var(--brand)' }}>Moves Money.</span></>, desc: <>FinTech software development in Canada — trading platforms, digital wallets, payment gateways and regulatory-compliant financial infrastructure built to PCI DSS and OSFI expectations.</> }}
       heroStats={heroStats}
       challenges={challenges}
       solutions={solutions}

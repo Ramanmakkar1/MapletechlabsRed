@@ -42,7 +42,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="digital-marketing"
       name="Digital Marketing"
-      copy={{ badge: "Digital Marketing", title: <>We Market Brands That <span style={{ color: 'var(--brand)' }}>Get Found.</span></>, desc: <>SEO, Google Ads, social media and paid advertising — data-driven strategies that fill your pipeline.</> }}
+      copy={{ badge: "Digital Marketing", title: <>Digital Marketing That <span style={{ color: 'var(--brand)' }}>Gets You Found.</span></>, desc: <>A Canadian digital marketing agency — SEO, Google Ads, social media and paid advertising — data-driven strategies that fill your pipeline.</> }}
       stats={stats}
       services={services}
       steps={steps}

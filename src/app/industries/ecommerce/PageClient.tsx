@@ -38,7 +38,7 @@ export default function PageClient() {
     <IndustryPageTemplate
       slug="ecommerce"
       name="E-Commerce"
-      copy={{ badge: "E-Commerce", title: <>We Build Storefronts That <span style={{ color: 'var(--brand)' }}>Convert.</span></>, desc: <>High-performance headless commerce, mobile-first checkout flows, and AI-powered merchandising that maximises revenue.</> }}
+      copy={{ badge: "E-Commerce", title: <>E-Commerce Development That <span style={{ color: 'var(--brand)' }}>Converts.</span></>, desc: <>E-commerce software development for Canadian retailers — high-performance headless commerce, mobile-first checkout and AI-powered merchandising that maximises revenue.</> }}
       heroStats={heroStats}
       challenges={challenges}
       solutions={solutions}

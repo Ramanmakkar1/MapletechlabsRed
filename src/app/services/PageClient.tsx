@@ -247,7 +247,7 @@ export default function ServicesIndexPage() {
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
 
         {/* HERO */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} copy={{ badge: "What we do", title: <>Our <span style={{ color: 'var(--brand)' }}>Services</span></>, desc: <>From mobile apps and AI to blockchain and branding, we deliver end-to-end digital solutions that help startups and enterprises build, launch, and scale.</> }} photo={humanMedia.team} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} copy={{ badge: "What we do", title: <>Software Development<br /><span style={{ color: 'var(--brand)' }}>Services in Canada.</span></>, desc: <>From mobile apps and AI to web platforms, cloud and branding — a Canadian software development company delivering end-to-end digital solutions that help startups and enterprises build, launch and scale.</> }} photo={humanMedia.team} form={false} />
 
         {/* SERVICE GRID */}
         <section ref={s1} className="section-padding">
@@ -295,7 +295,7 @@ export default function ServicesIndexPage() {
 
         {/* CTA */}
         <MediaBand media={humanMedia.planning} ratio="21 / 8" />
-        <FinalCta title="Not sure which service you need?" sub="Describe the outcome you\u2019re after and we\u2019ll tell you what it actually takes \u2014 scope, timeline and fixed price, within four hours." />
+        <FinalCta title="Not sure which service you need?" sub="Describe the outcome you’re after and we’ll tell you what it actually takes — scope, timeline and fixed price, within four hours." />
 
       </main>
       <Footer />

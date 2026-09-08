@@ -42,7 +42,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="branding"
       name="Branding & Identity"
-      copy={{ badge: "Branding & Identity", title: <>We Build Brands People <span style={{ color: 'var(--brand)' }}>Remember.</span></>, desc: <>Logo, visual identity, brand strategy and guidelines that make your company instantly recognisable.</> }}
+      copy={{ badge: "Branding & Identity", title: <>Branding &amp; Identity People <span style={{ color: 'var(--brand)' }}>Remember.</span></>, desc: <>A Canadian branding agency — logo, visual identity, brand strategy and guidelines that make your company instantly recognisable.</> }}
       stats={stats}
       services={services}
       steps={steps}

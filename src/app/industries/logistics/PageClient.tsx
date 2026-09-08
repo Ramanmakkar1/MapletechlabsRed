@@ -38,7 +38,7 @@ export default function PageClient() {
     <IndustryPageTemplate
       slug="logistics"
       name="Logistics"
-      copy={{ badge: "Logistics", title: <>We Engineer Logistics That <span style={{ color: 'var(--brand)' }}>Never Stops.</span></>, desc: <>Fleet management, real-time tracking, route optimisation and warehouse automation for the modern supply chain.</> }}
+      copy={{ badge: "Logistics", title: <>Logistics Software Development That <span style={{ color: 'var(--brand)' }}>Never Stops.</span></>, desc: <>Logistics and supply-chain software development — fleet management, real-time tracking, route optimisation and warehouse automation for the modern supply chain.</> }}
       heroStats={heroStats}
       challenges={challenges}
       solutions={solutions}

@@ -42,7 +42,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="ar-vr"
       name="AR & VR Development"
-      copy={{ badge: "AR & VR Development", title: <>We Build Immersive Experiences That <span style={{ color: 'var(--brand)' }}>Wow.</span></>, desc: <>Augmented reality, virtual reality and mixed reality applications for mobile, headset and web — engineered for real-world impact.</> }}
+      copy={{ badge: "AR & VR Development", title: <>AR/VR Development That <span style={{ color: 'var(--brand)' }}>Wows.</span></>, desc: <>An AR/VR development company in Canada building augmented, virtual and mixed reality applications for mobile, headset and web — engineered for real-world impact.</> }}
       stats={stats}
       services={services}
       steps={steps}

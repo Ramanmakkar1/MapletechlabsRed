@@ -123,7 +123,7 @@ export default function IndustriesPage() {
         </div>
 
         {/* HERO */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} copy={{ badge: "Sectors we serve", title: <>Industries We <span style={{ color: 'var(--brand)' }}>Serve.</span></>, desc: <>Deep expertise across six verticals. Custom solutions built for your industry's unique challenges.</> }} photo={humanMedia.pairing} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} copy={{ badge: "Sectors we serve", title: <>Software Development<br />by <span style={{ color: 'var(--brand)' }}>Industry.</span></>, desc: <>Deep expertise across six verticals — FinTech, healthcare, e-commerce, enterprise, EdTech and logistics — with custom software built for your industry's regulations and realities.</> }} photo={humanMedia.pairing} form={false} />
 
         {/* INTRO — why domain expertise matters */}
         <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
@@ -214,7 +214,7 @@ export default function IndustriesPage() {
         </section>
 
         {/* CTA */}
-        <FinalCta title="Building for a regulated industry?" sub="We\u2019ve shipped in fintech, healthcare and logistics. Tell us your constraints and we\u2019ll show you how we\u2019d design around them." />
+        <FinalCta title="Building for a regulated industry?" sub="We’ve shipped in fintech, healthcare and logistics. Tell us your constraints and we’ll show you how we’d design around them." />
 
         {/* JSON-LD Schema */}
         <script

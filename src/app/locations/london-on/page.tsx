@@ -3,10 +3,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in London, Ontario',
+  title: 'Software Development in London, Ontario',
   description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in London, Ontario. Get a free quote today.',
   openGraph: {
-    title: 'Software Development Company in London, Ontario | Mapletech Labs',
+    title: 'Software Development in London, Ontario | Mapletech Labs',
     description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in London, Ontario. Get a free quote today.',
     url: 'https://mapletechlabs.ca/locations/london-on',
     type: 'website',
