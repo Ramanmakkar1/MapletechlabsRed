@@ -36,8 +36,8 @@ const nextConfig: NextConfig = {
       ...cityLandingRedirects,
       // WWW to non-www redirect (handles both http and https from www)
       {
-        source: '/:path((?!.*))*',
-        destination: '/:path*',
+        source: '/:path*',
+        destination: 'https://mapletechlabs.ca/:path*',
         permanent: true,
         has: [
           {
