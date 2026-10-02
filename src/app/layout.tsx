@@ -172,8 +172,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-CA">
-      <head>
-        <link rel="license" href={`${siteOrigin()}/llms.txt`} />      </head>
       <body className={jakarta.variable}>
         <a href="#main-content" className="sr-only-focusable">Skip to main content</a>
         {/* Organization Schema - defer to avoid blocking render */}
