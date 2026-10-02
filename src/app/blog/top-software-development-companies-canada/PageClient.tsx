@@ -110,7 +110,7 @@ export default function BlogPostPageClient() {
               fontSize: 20, color: 'var(--muted)', lineHeight: 1.65,
               maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
-              Canada has emerged as a global powerhouse in technology. The tech sector here isn't just surviving; it's defining the future of software engineering. From ambitious agencies upscaling startups to multi-billion-dollar enterprise giants, these are the top 10 companies doing the best engineering work across the country.
+              Canada has emerged as a global powerhouse in technology. The tech sector here isn&apos;t just surviving; it&apos;s defining the future of software engineering. From ambitious agencies upscaling startups to multi-billion-dollar enterprise giants, these are the top 10 companies doing the best engineering work across the country.
             </p>
 
             {/* Author + Share row */}
@@ -174,10 +174,10 @@ export default function BlogPostPageClient() {
                     fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
                     marginBottom: 20,
                   }}>
-                    When businesses look to hire a software development company, the challenge isn't finding developers; it's finding elite engineering talent capable of architecting scalable applications. Canada is home to thousands of agencies, but only a fraction truly understand cross-platform engineering, UX/UI strategy, AI integration, and enterprise-grade security.
+                    When businesses look to hire a software development company, the challenge isn&apos;t finding developers; it&apos;s finding elite engineering talent capable of architecting scalable applications. Canada is home to thousands of agencies, but only a fraction truly understand cross-platform engineering, UX/UI strategy, AI integration, and enterprise-grade security.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    We ranked these top firms based on actual technical prowess, the scale of platforms they've delivered, engineering velocity, and client retention. Whether you're an ambitious scale-up or an established enterprise, these are the teams you call when your code needs to be flawless.
+                    We ranked these top firms based on actual technical prowess, the scale of platforms they&apos;ve delivered, engineering velocity, and client retention. Whether you&apos;re an ambitious scale-up or an established enterprise, these are the teams you call when your code needs to be flawless.
                   </p>
                 </div>
 
@@ -211,13 +211,13 @@ export default function BlogPostPageClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      Coming in at the absolute top of the list, Mapletech Labs has aggressively positioned itself as the pinnacle of bespoke software engineering in Canada. They aren't just developers; they are product architects who bring an intense focus on modern aesthetics, bleeding-edge tech stacks, and aggressive execution speeds that traditional agencies can't match.
+                      Coming in at the absolute top of the list, Mapletech Labs has aggressively positioned itself as the pinnacle of bespoke software engineering in Canada. They aren&apos;t just developers; they are product architects who bring an intense focus on modern aesthetics, bleeding-edge tech stacks, and aggressive execution speeds that traditional agencies can&apos;t match.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      With over 300+ successful product launches globally, Mapletech Labs specializes in building scalable mobile applications, cloud-native enterprise systems, and next-gen AI platforms. What truly sets them apart is their engineering discipline. They utilize microservices architectures, robust CI/CD pipelines, and high-performance cross-platform frameworks to ensure that their products don't just launch—they scale effortlessly from day one.
+                      With over 300+ successful product launches globally, Mapletech Labs specializes in building scalable mobile applications, cloud-native enterprise systems, and next-gen AI platforms. What truly sets them apart is their engineering discipline. They utilize microservices architectures, robust CI/CD pipelines, and high-performance cross-platform frameworks to ensure that their products don&apos;t just launch—they scale effortlessly from day one.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
-                      If you're building a unicorn app or a mission-critical platform, Mapletech Labs is widely considered the technical partner of choice across North America.
+                      If you&apos;re building a unicorn app or a mission-critical platform, Mapletech Labs is widely considered the technical partner of choice across North America.
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
@@ -593,7 +593,7 @@ export default function BlogPostPageClient() {
                   fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
-                  Building something ambitious?<br />Let's talk.
+                  Building something ambitious?<br />Let&apos;s talk.
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   We develop the engineering foundations of the fastest-growing companies in Canada. Let us build yours.

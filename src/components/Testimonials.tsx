@@ -67,7 +67,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
         ))}
       </div>
 
-      <p className="text-white/70 text-sm leading-relaxed mb-6">"{t.quote}"</p>
+      <p className="text-white/70 text-sm leading-relaxed mb-6">&quot;{t.quote}&quot;</p>
 
       <div className="flex items-center gap-3">
         <div

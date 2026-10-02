@@ -16,7 +16,7 @@ export default function RamanPage() {
           <p style={{ fontSize: '24px', color: 'var(--brand)', marginBottom: '32px' }}>Founder & CEO</p>
           
           <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '32px', color: 'var(--body)', maxWidth: '800px' }}>
-            Founded Mapletech Labs in 2018 with a mission to build world-class software without compromise. With 15+ years in software engineering, I've architected systems processing billions of transactions, scaled engineering teams, and mentored builders across fintech, healthcare, and enterprise.
+            Founded Mapletech Labs in 2018 with a mission to build world-class software without compromise. With 15+ years in software engineering, I&apos;ve architected systems processing billions of transactions, scaled engineering teams, and mentored builders across fintech, healthcare, and enterprise.
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '32px', marginTop: '48px' }}>

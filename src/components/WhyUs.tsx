@@ -96,7 +96,7 @@ export default function WhyUs() {
             <span style={{ color: 'var(--faint)' }}>By Design.</span>
           </h2>
           <p style={{ fontSize: 'clamp(15px, 2vw, 17px)', color: 'var(--body)', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
-            We're not a typical agency. Here's exactly what makes us different — and why our clients keep coming back.
+            We&apos;re not a typical agency. Here&apos;s exactly what makes us different — and why our clients keep coming back.
           </p>
         </div>
 

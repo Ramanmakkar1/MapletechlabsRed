@@ -123,7 +123,7 @@ export default function IndustriesPage() {
         </div>
 
         {/* HERO */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} copy={{ badge: "Sectors we serve", title: <>Software Development<br />by <span style={{ color: 'var(--brand)' }}>Industry.</span></>, desc: <>Deep expertise across six verticals — FinTech, healthcare, e-commerce, enterprise, EdTech and logistics — with custom software built for your industry's regulations and realities.</> }} photo={humanMedia.pairing} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} copy={{ badge: "Sectors we serve", title: <>Software Development<br />by <span style={{ color: 'var(--brand)' }}>Industry.</span></>, desc: <>Deep expertise across six verticals — FinTech, healthcare, e-commerce, enterprise, EdTech and logistics — with custom software built for your industry&apos;s regulations and realities.</> }} photo={humanMedia.pairing} form={false} />
 
         {/* INTRO — why domain expertise matters */}
         <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>

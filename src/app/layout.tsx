@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
-import HrefLangTags from "@/components/HrefLangTags";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
 import "./globals.css";
 
@@ -173,21 +173,9 @@ export default function RootLayout({
   return (
     <html lang="en-CA">
       <head>
-        <link rel="license" href={`${siteOrigin()}/llms.txt`} />
-        {/* Hreflang tags for bilingual content */}
-        <HrefLangTags />
-      </head>
+        <link rel="license" href={`${siteOrigin()}/llms.txt`} />      </head>
       <body className={jakarta.variable}>
         <a href="#main-content" className="sr-only-focusable">Skip to main content</a>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GT-PJ46RCMN"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
         {/* Organization Schema - defer to avoid blocking render */}
         <script
           type="application/ld+json"
@@ -201,16 +189,14 @@ export default function RootLayout({
         <ClarityAnalytics />
         <Analytics />
         {/* Google Tag Manager - moved to end of body for LCP optimization */}
-        <script
+        <Script
           async
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GT-PJ46RCMN');`,
-          }}
+          src="https://www.googletagmanager.com/gtag/js?id=GT-PJ46RCMN"
+          strategy="afterInteractive"
         />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'GT-PJ46RCMN');`}
+        </Script>
       </body>
     </html>
   );

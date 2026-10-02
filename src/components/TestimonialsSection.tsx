@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
             </h2>
             <div>
               <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 24px' }}>
-                Hear directly from the founders and CTOs who've shipped with us.
+                Hear directly from the founders and CTOs who&apos;ve shipped with us.
               </p>
               {/* Aggregate rating */}
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '12px 20px', border: '1px solid var(--brand)', borderRadius: 100, background: 'transparent' }}>

@@ -51,7 +51,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/ar-vr", label: "AR &amp; VR Development" }}
       name="Apple Vision Pro Development"
-      copy={{ badge: "AR &amp; VR DEVELOPMENT", title: <>Building for <span style={{ color: 'var(--brand)' }}>Apple Vision Pro</span></>, desc: <>We are early visionOS adopters building spatial computing apps with SwiftUI, RealityKit, and Apple's spatial design principles for the world's most advanced computing platform.</> }}
+      copy={{ badge: "AR &amp; VR DEVELOPMENT", title: <>Building for <span style={{ color: 'var(--brand)' }}>Apple Vision Pro</span></>, desc: <>We are early visionOS adopters building spatial computing apps with SwiftUI, RealityKit, and Apple&apos;s spatial design principles for the world&apos;s most advanced computing platform.</> }}
       stats={stats}
       services={services}
       steps={steps}

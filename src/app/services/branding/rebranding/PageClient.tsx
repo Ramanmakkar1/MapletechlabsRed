@@ -36,7 +36,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/branding", label: "Branding & Identity" }}
       name="Rebranding Services"
-      copy={{ badge: "BRANDING & IDENTITY", title: <>Rebranding Done <span style={{ color: 'var(--brand)' }}>With Confidence</span></>, desc: <>A rigorous, stakeholder-led rebrand process that evolves your identity strategically — protecting what works, replacing what doesn't, and launching with full organisational alignment.</> }}
+      copy={{ badge: "BRANDING & IDENTITY", title: <>Rebranding Done <span style={{ color: 'var(--brand)' }}>With Confidence</span></>, desc: <>A rigorous, stakeholder-led rebrand process that evolves your identity strategically — protecting what works, replacing what doesn&apos;t, and launching with full organisational alignment.</> }}
       stats={stats}
       services={services}
       steps={steps}

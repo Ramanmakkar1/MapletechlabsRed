@@ -177,10 +177,10 @@ export default function TopSeoCompaniesCanadaClient() {
                     The search landscape has shifted permanently. With the rise of AI-generated content (SGE) and increasingly complex ranking algorithms, traditional SEO—stuffing keywords and buying cheap backlinks—is dead. In 2026, ranking on Google requires technical infrastructure, authoritative content, and deep strategic alignment.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
-                    If your Canadian business isn't dominating search, you are leaving hundreds of thousands of dollars on the table for your competitors.
+                    If your Canadian business isn&apos;t dominating search, you are leaving hundreds of thousands of dollars on the table for your competitors.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    We reviewed over 100 digital marketing agencies across Toronto, Vancouver, Calgary, and Montreal to curate this definitive list of the <strong>Top 10 SEO Companies in Canada</strong> for 2026. These agencies aren't just selling "rankings"—they are engineering revenue pipelines.
+                    We reviewed over 100 digital marketing agencies across Toronto, Vancouver, Calgary, and Montreal to curate this definitive list of the <strong>Top 10 SEO Companies in Canada</strong> for 2026. These agencies aren&apos;t just selling &quot;rankings&quot;—they are engineering revenue pipelines.
                   </p>
                 </div>
 
@@ -214,10 +214,10 @@ export default function TopSeoCompaniesCanadaClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      We might be biased, but the data is undeniable. Most SEO agencies fail because they don't understand the underlying code of a website. Mapletech Labs bridges the gap between elite custom software development and aggressive search strategies.
+                      We might be biased, but the data is undeniable. Most SEO agencies fail because they don&apos;t understand the underlying code of a website. Mapletech Labs bridges the gap between elite custom software development and aggressive search strategies.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
-                      We don't just write content; we architect Next.js applications that score 100 on Google Lighthouse, implement complex Schema markup perfectly, and build digital experiences that convert traffic into high-ticket clients.
+                      We don&apos;t just write content; we architect Next.js applications that score 100 on Google Lighthouse, implement complex Schema markup perfectly, and build digital experiences that convert traffic into high-ticket clients.
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
@@ -486,7 +486,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
-                  You Can't Outrank Bad Code.
+                  You Can&apos;t Outrank Bad Code.
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Stop losing traffic to competitors with inferior products but faster websites. Let Mapletech Labs engineer an SEO strategy built into your source code.

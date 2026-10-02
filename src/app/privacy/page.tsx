@@ -28,7 +28,7 @@ export default function PrivacyPage() {
             
             <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginTop: '48px', marginBottom: '16px' }}>1. Introduction</h2>
             <p style={{ marginBottom: '20px' }}>
-              Mapletech Labs ("Company", "we", "us", "our") operates the mapletechlabs.ca website and related services ("Service"). We are committed to protecting your privacy and ensuring you have a positive experience on our website and when using our services.
+              Mapletech Labs (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;) operates the mapletechlabs.ca website and related services (&quot;Service&quot;). We are committed to protecting your privacy and ensuring you have a positive experience on our website and when using our services.
             </p>
 
             <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginTop: '48px', marginBottom: '16px' }}>2. Information We Collect</h2>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
               We may share information with service providers (hosting, analytics, payments) who are contractually bound to protect your data. We do not sell your information to third parties.
             </p>
 
-            <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginTop: '48px', marginBottom: '16px' }}>9. Children's Privacy</h2>
+            <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginTop: '48px', marginBottom: '16px' }}>9. Children&apos;s Privacy</h2>
             <p style={{ marginBottom: '20px' }}>
               Our services are not directed to children under 13. We do not knowingly collect information from children. If we become aware of such collection, we will delete it immediately.
             </p>

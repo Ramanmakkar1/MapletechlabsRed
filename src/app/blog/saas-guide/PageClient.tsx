@@ -168,7 +168,7 @@ export default function SaaSGuide2026Client() {
                     fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
                     marginBottom: 20,
                   }}>
-                    The Software as a Service (SaaS) landscape has shifted dramatically. What worked in 2022 no longer works in 2026. With the rise of advanced AI integrations, hyper-niche B2B solutions, and demanding user expectations, launching a generic tool won't cut it.
+                    The Software as a Service (SaaS) landscape has shifted dramatically. What worked in 2022 no longer works in 2026. With the rise of advanced AI integrations, hyper-niche B2B solutions, and demanding user expectations, launching a generic tool won&apos;t cut it.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     If you are a founder looking to build a profitable SaaS product this year—whether you are technical or not—this guide is your blueprint.
@@ -186,7 +186,7 @@ export default function SaaSGuide2026Client() {
                         At its core, SaaS is software hosted in the cloud that customers pay a recurring subscription (Monthly Recurring Revenue or MRR) to access.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
-                        In 2026, the definition has evolved. Modern SaaS isn't just about providing a digital tool; it's about providing an <strong>automated outcome</strong>. The most successful products today don't just organize data—they use AI to analyze it, act on it, and save the user hours of manual labor.
+                        In 2026, the definition has evolved. Modern SaaS isn&apos;t just about providing a digital tool; it&apos;s about providing an <strong>automated outcome</strong>. The most successful products today don&apos;t just organize data—they use AI to analyze it, act on it, and save the user hours of manual labor.
                     </p>
                     <div style={{
                       background: 'var(--surface-alt)', border: '1px solid var(--line)',
@@ -255,7 +255,7 @@ export default function SaaSGuide2026Client() {
                     }}>
                          <div style={{ position: 'absolute', top: -20, right: -20, width: 100, height: 100, background: 'transparent', filter: 'blur(20px)' }} />
                         <p style={{ fontSize: 16, color: 'var(--ink)', lineHeight: 1.8, margin: 0, position: 'relative', zIndex: 1, fontWeight: 500 }}>
-                            Before writing a single line of code, you need an <strong>MVP (Minimum Viable Product)</strong>. An MVP isn't a broken version of your app. It is the absolute <em>minimum</em> amount of features required to solve your customer's core problem and prove they are willing to pay.
+                            Before writing a single line of code, you need an <strong>MVP (Minimum Viable Product)</strong>. An MVP isn&apos;t a broken version of your app. It is the absolute <em>minimum</em> amount of features required to solve your customer&apos;s core problem and prove they are willing to pay.
                         </p>
                     </div>
                 </div>
@@ -268,7 +268,7 @@ export default function SaaSGuide2026Client() {
                         Custom Software vs. No-Code in 2026
                     </h2>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
-                        In 2026, "no-code" tools are powerful, but they have major limitations when building a serious, scalable SaaS.
+                        In 2026, &quot;no-code&quot; tools are powerful, but they have major limitations when building a serious, scalable SaaS.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 24 }}>
                         If you are just testing an idea, a no-code wrapper might work for a few weeks. But if you are building an application that handles complex data, integrates proprietary AI, or needs to scale securely, you need custom architecture.
@@ -290,7 +290,7 @@ export default function SaaSGuide2026Client() {
                             </div>
                             <div>
                                 <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: 4 }}>Ownership</strong>
-                                <span style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.6 }}>You actually own the intellectual property. You don't lease your core product from a third-party builder.</span>
+                                <span style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.6 }}>You actually own the intellectual property. You don&apos;t lease your core product from a third-party builder.</span>
                             </div>
                         </li>
                         <li style={{ display: 'flex', gap: 16 }}>
@@ -322,7 +322,7 @@ export default function SaaSGuide2026Client() {
                         While a simple informational website costs a few thousand dollars, a custom SaaS application (with user authentication, database architecture, payment gateways, and core features) typically ranges from <strong>$25,000 to $75,000+</strong> for an MVP.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8 }}>
-                        Why? Because you aren't buying a template. You are hiring a team of engineers, designers, and project managers to architect a digital product that generates revenue passively.
+                        Why? Because you aren&apos;t buying a template. You are hiring a team of engineers, designers, and project managers to architect a digital product that generates revenue passively.
                     </p>
                 </div>
 
@@ -453,7 +453,7 @@ export default function SaaSGuide2026Client() {
                   fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)',
                   letterSpacing: '-0.03em', marginBottom: 12,
                 }}>
-                  Building something ambitious?<br />Let's talk.
+                  Building something ambitious?<br />Let&apos;s talk.
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   We develop the engineering foundations of the fastest-growing companies in Canada. Let us build yours.

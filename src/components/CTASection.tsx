@@ -46,10 +46,10 @@ export default function CTASection() {
           <div>
             <p className="section-tag">Ready to Start?</p>
             <h2 style={{ fontSize:'clamp(1.8rem,3.5vw,3rem)', fontWeight:800, color: 'var(--ink)', lineHeight:1.15, marginBottom:20 }}>
-              Let's Build Something <span style={{ color:'#E11900' }}>Amazing Together</span>
+              Let&apos;s Build Something <span style={{ color:'#E11900' }}>Amazing Together</span>
             </h2>
             <p style={{ color: 'var(--muted)', fontSize:15, lineHeight:1.8, marginBottom:36 }}>
-              Have a project in mind? Tell us about it and we'll get back to you within one working day with a clear path forward.
+              Have a project in mind? Tell us about it and we&apos;ll get back to you within one working day with a clear path forward.
             </p>
             <div style={{ display:'flex', flexWrap:'wrap', gap:12 }}>
               {['✓ Free Discovery Call','✓ 24h Response','✓ No Commitment Required'].map(item => (
@@ -69,7 +69,7 @@ export default function CTASection() {
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E11900" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                 </div>
                 <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>Thank You!</div>
-                <div style={{ fontSize: 14, color: 'var(--muted)' }}>We'll get back to you within one working day.</div>
+                <div style={{ fontSize: 14, color: 'var(--muted)' }}>We&apos;ll get back to you within one working day.</div>
               </div>
             ) : (
             <form onSubmit={handleSubmit} style={{ display:'flex', flexDirection:'column', gap:16 }}>

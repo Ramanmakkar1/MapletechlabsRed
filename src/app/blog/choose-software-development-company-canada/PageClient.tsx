@@ -205,7 +205,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                     }}>1. Define Your Project Scope Before You Start Looking</h2>
                   </div>
                   <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
-                    Before you contact a single agency, you need internal clarity. The biggest source of project failure is not bad developers — it is undefined requirements. Companies that approach agencies with vague briefs like "we need an app" or "rebuild our platform" are setting themselves up for scope creep, budget overruns, and a product that satisfies nobody.
+                    Before you contact a single agency, you need internal clarity. The biggest source of project failure is not bad developers — it is undefined requirements. Companies that approach agencies with vague briefs like &quot;we need an app&quot; or &quot;rebuild our platform&quot; are setting themselves up for scope creep, budget overruns, and a product that satisfies nobody.
                   </p>
                   <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
                     At minimum, you should be able to answer these questions before reaching out:

@@ -130,10 +130,10 @@ export default function AboutPage() {
               lineHeight: 1.35, letterSpacing: '-0.03em', textAlign: 'center',
               maxWidth: 920, margin: '0 auto',
             }}>
-              "Our mission is to democratise access to world-class software engineering.{' '}
+              &quot;Our mission is to democratise access to world-class software engineering.{' '}
               <span style={{ color: 'var(--muted)' }}>
                 Every company, regardless of size, deserves technology that competes at the highest level.
-              </span>"
+              </span>&quot;
             </p>
           </div>
         </section>
@@ -188,13 +188,13 @@ export default function AboutPage() {
                     Mapletech Labs was founded in Edmonton, Canada in 2018 by Raman Makkar — with a mission to take Canadian businesses to the top in tech. What started as TML Branding Agency has grown into a full-service technology powerhouse ruling across all of Canada.
                   </p>
                   <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
-                    They started with a simple belief: the best engineering talent in the world shouldn't only be available to the biggest companies. Founders building their first product deserve the same quality of engineering judgment as a Series D company with a 200-person team.
+                    They started with a simple belief: the best engineering talent in the world shouldn&apos;t only be available to the biggest companies. Founders building their first product deserve the same quality of engineering judgment as a Series D company with a 200-person team.
                   </p>
                   <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     From a small team in Edmonton, Mapletech has grown into a Canada-wide engineering firm with 12 locations, a team of the best agents from around the world working virtually, and a track record of building products that have collectively generated over $500 million in client revenue.
                   </p>
                   <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    The founding belief hasn't changed. Neither has the standard we hold ourselves to.
+                    The founding belief hasn&apos;t changed. Neither has the standard we hold ourselves to.
                   </p>
                 </div>
               </div>

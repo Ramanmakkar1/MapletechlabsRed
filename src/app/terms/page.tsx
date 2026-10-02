@@ -86,7 +86,7 @@ export default function TermsPage() {
 
             <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginTop: '48px', marginBottom: '16px' }}>10. Disclaimer</h2>
             <p style={{ marginBottom: '20px' }}>
-              Our services and website are provided "as is" without warranties. We disclaim all warranties, express or implied, including fitness for a particular purpose.
+              Our services and website are provided &quot;as is&quot; without warranties. We disclaim all warranties, express or implied, including fitness for a particular purpose.
             </p>
 
             <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginTop: '48px', marginBottom: '16px' }}>11. Modifications</h2>

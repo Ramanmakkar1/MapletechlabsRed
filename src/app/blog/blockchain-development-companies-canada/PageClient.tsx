@@ -174,7 +174,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                     fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
                     marginBottom: 20,
                   }}>
-                    Canada has emerged as one of the world's most crypto-friendly nations. The Canadian Securities Administrators (CSA) have established clear regulatory frameworks, the Ontario Securities Commission (OSC) operates an innovation sandbox for fintech and blockchain projects, and Canadian banks were among the first globally to explore central bank digital currencies (CBDCs).
+                    Canada has emerged as one of the world&apos;s most crypto-friendly nations. The Canadian Securities Administrators (CSA) have established clear regulatory frameworks, the Ontario Securities Commission (OSC) operates an innovation sandbox for fintech and blockchain projects, and Canadian banks were among the first globally to explore central bank digital currencies (CBDCs).
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     This regulatory clarity, combined with deep engineering talent from institutions like the University of Waterloo, UBC, and the University of Toronto, has made Canada a magnet for blockchain development. From Ethereum co-founder Vitalik Buterin (who grew up in Toronto) to the creators of CryptoKitties in Vancouver, Canadian builders are at the heart of the Web3 revolution.

@@ -110,7 +110,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
               fontSize: 20, color: 'var(--muted)', lineHeight: 1.65,
               maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
-              A definitive ranking of the best web development agencies in Toronto for 2026 — from enterprise platforms to startup MVPs, these are the companies building the digital backbone of Canada's tech capital.
+              A definitive ranking of the best web development agencies in Toronto for 2026 — from enterprise platforms to startup MVPs, these are the companies building the digital backbone of Canada&apos;s tech capital.
             </p>
 
             {/* Author + Share row */}
@@ -177,7 +177,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                     Toronto is the undisputed tech capital of Canada. Home to MaRS Discovery District, the Vector Institute, and a startup ecosystem that rivals Silicon Valley in density, the city generates billions in digital commerce every year. For businesses operating in this market, your website is not a brochure — it is your most critical revenue asset.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
-                    But Toronto is also saturated with web development agencies. Hundreds of shops claim to build "world-class" websites, making it nearly impossible to separate genuine engineering talent from template resellers and offshore middlemen.
+                    But Toronto is also saturated with web development agencies. Hundreds of shops claim to build &quot;world-class&quot; websites, making it nearly impossible to separate genuine engineering talent from template resellers and offshore middlemen.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     We evaluated over 80 Toronto-area web development companies based on portfolio quality, technical capabilities, client retention, team size, and industry reputation to compile this definitive ranking of the <strong>Top 10 Web Development Companies in Toronto</strong> for 2026.

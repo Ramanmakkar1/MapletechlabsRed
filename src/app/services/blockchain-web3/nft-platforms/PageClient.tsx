@@ -36,7 +36,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/blockchain-web3", label: "Blockchain & Web3" }}
       name="NFT Platform Development"
-      copy={{ badge: "BLOCKCHAIN & WEB3", title: <>NFT Platforms Built to <span style={{ color: 'var(--brand)' }}>Launch</span></>, desc: <>We build gas-optimized NFT minting contracts, custom marketplaces, and royalty systems from strategy through launch — 500K+ NFTs minted across 30+ platforms we've shipped.</> }}
+      copy={{ badge: "BLOCKCHAIN & WEB3", title: <>NFT Platforms Built to <span style={{ color: 'var(--brand)' }}>Launch</span></>, desc: <>We build gas-optimized NFT minting contracts, custom marketplaces, and royalty systems from strategy through launch — 500K+ NFTs minted across 30+ platforms we&apos;ve shipped.</> }}
       stats={stats}
       services={services}
       steps={steps}

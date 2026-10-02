@@ -180,7 +180,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                     fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
                     marginBottom: 20,
                   }}>
-                    Canada has quietly become one of the world's most prolific SaaS ecosystems. Shopify, Lightspeed, Clio, Wealthsimple, and Coveo are just the tip of the iceberg. Behind these household names, thousands of Canadian startups are building subscription-based software products — and asking the same first question: <strong style={{ color: 'var(--ink)' }}>how much will this actually cost?</strong>
+                    Canada has quietly become one of the world&apos;s most prolific SaaS ecosystems. Shopify, Lightspeed, Clio, Wealthsimple, and Coveo are just the tip of the iceberg. Behind these household names, thousands of Canadian startups are building subscription-based software products — and asking the same first question: <strong style={{ color: 'var(--ink)' }}>how much will this actually cost?</strong>
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     The answer is never simple. A SaaS product is not a website. It is a living, breathing platform that requires multi-tenant architecture, authentication layers, billing integrations, admin dashboards, API infrastructure, and ongoing maintenance. The cost depends entirely on complexity, timeline, and team structure.
