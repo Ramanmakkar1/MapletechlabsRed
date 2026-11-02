@@ -1,5 +1,6 @@
-// Regression check: every <title> this site can emit stays within Bing's
-// 70-character limit and never carries the brand twice.
+// Regression check: every <title> this site can emit stays within the 60
+// character limit (src/lib/seo/title.ts MAX_TITLE_LENGTH) and never carries
+// the brand twice.
 //
 // The root layout applies `title.template = "%s | Mapletech Labs"`, so a page
 // title that already ends in "| Mapletech Labs" is rendered with the brand
@@ -16,7 +17,7 @@ import { pathToFileURL } from "node:url";
 
 const ROOT = new URL("../", import.meta.url);
 const BRAND = " | Mapletech Labs";
-const MAX = 70;
+const MAX = 60;
 const problems = [];
 
 // 1. Hand-written page metadata (src/app/**/page.tsx).
@@ -61,11 +62,31 @@ for (const { city, service } of getAllCityServiceParams()) {
 
 // 3. The helper itself.
 if (typeof seoTitle("Contact Mapletech Labs") !== "object") problems.push("seoTitle() must opt out of the template when the brand is present");
-if (typeof seoTitle("x".repeat(60)) !== "object") problems.push("seoTitle() must opt out of the template when branding would exceed 70");
+if (typeof seoTitle("x".repeat(60)) !== "object") problems.push("seoTitle() must opt out of the template when branding would exceed 60");
 if (seoTitle("Short title") !== "Short title") problems.push("seoTitle() must keep short titles on the template");
+
+// 4. Meta descriptions (src/app/**/page.tsx literals + src/data/articles.ts).
+let descriptions = 0;
+const descFiles = execSync("rg -l 'description' src/app --glob '**/page.tsx'", { cwd: ROOT })
+  .toString().trim().split("\n").filter(Boolean);
+for (const file of descFiles) {
+  const src = readFileSync(new URL(file, ROOT), "utf8");
+  const m = src.match(/^const DESCRIPTION = '((?:[^'\\]|\\.)*)';$/m)
+    || src.match(/^  description: '((?:[^'\\]|\\.)*)',$/m); // two-space indent only: skips openGraph and nested
+  if (!m) continue; // dynamic data: no literal to check
+  const text = m[1].replace(/\\'/g, "'");
+  descriptions++;
+  if (text.length < 120 || text.length > 160) problems.push(`${file}: description is ${text.length} chars (want 120-160)`);
+}
+const articlesSrc = readFileSync(new URL("src/data/articles.ts", ROOT), "utf8");
+for (const m of articlesSrc.matchAll(/metaDescription: '((?:[^'\\]|\\.)*)'/g)) {
+  const text = m[1].replace(/\\'/g, "'");
+  descriptions++;
+  if (text.length < 120 || text.length > 160) problems.push(`articles.ts: ${text.slice(0, 40)}... is ${text.length} chars`);
+}
 
 if (problems.length) {
   console.error(`check-titles: ${problems.length} problem(s)\n` + problems.join("\n"));
   process.exit(1);
 }
-console.log(`check-titles: ${files.length} page files + ${generated} generated city x service titles OK (<= ${MAX} chars, single brand)`);
+console.log(`check-titles: ${files.length} page files + ${generated} generated city x service titles + ${descriptions} descriptions OK (<= ${MAX} chars, 120-160 chars, single brand)`);

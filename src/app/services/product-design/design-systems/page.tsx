@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { seoTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -6,7 +7,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Design System Development | Figma & Storybook',
+  title: seoTitle('Design System Development | Figma & Storybook'),
   description: 'Scalable design systems built by Mapletech Labs in Toronto. Figma component libraries, Storybook docs, and WCAG 2.1 accessibility. 50+ systems delivered in Canada.',
   openGraph: {
     title: 'Design System Development | Mapletech Labs',

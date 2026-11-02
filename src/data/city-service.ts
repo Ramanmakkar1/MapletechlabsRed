@@ -92,10 +92,14 @@ export function getCityServiceData(
 
   // SEO metadata
   // Keep "Company" (the higher-intent keyword) wherever the title still fits
-  // under ~60 chars once the layout appends " | Mapletech Labs" (17); drop it
-  // only for the longest service prefixes so no title is truncated.
+  // under 60 chars once the layout appends " | Mapletech Labs" (17); drop it
+  // only for the longest service prefixes so no title is truncated. When even
+  // the no-"Company" form overflows, fall back to the service's shortName.
   const withCompany = `${service.heroHeadlinePrefix} Company in ${city.name}`;
-  const title = withCompany.length <= 43 ? withCompany : `${service.heroHeadlinePrefix} in ${city.name}`;
+  const withoutCompany = `${service.heroHeadlinePrefix} in ${city.name}`;
+  const title = withCompany.length <= 43 ? withCompany
+    : withoutCompany.length <= 43 ? withoutCompany
+    : `${service.shortName} in ${city.name}`;
   const description = `${service.heroHeadlinePrefix} in ${city.name}, ${city.province}. Mapletech Labs builds custom ${service.shortName.toLowerCase()} with fixed-scope, fixed-price delivery. Get a free quote.`;
   const canonicalUrl = buildCanonicalUrl(`/locations/${city.slug}/${service.slug}`);
 

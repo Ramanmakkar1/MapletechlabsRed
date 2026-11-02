@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { seoTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -6,7 +7,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Mobile Game Development Services | iOS & Android',
+  title: seoTitle('Mobile Game Development Services | iOS & Android'),
   description: 'Professional mobile game development for iOS and Android. From hyper-casual to mid-core games with proven monetization. 50+ games shipped, 10M+ downloads.',
   openGraph: {
     title: 'Mobile Game Development | Mapletech Labs',

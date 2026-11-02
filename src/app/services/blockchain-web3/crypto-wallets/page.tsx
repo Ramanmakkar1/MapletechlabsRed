@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { seoTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -6,7 +7,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Crypto Wallet Development Services | Toronto',
+  title: seoTitle('Crypto Wallet Development Services | Toronto'),
   description: 'Custom crypto wallet development with multi-chain support, HD key management, and hardware wallet integration. Mapletech Labs builds secure wallets in Canada.',
   openGraph: {
     title: 'Crypto Wallet Development Services | Mapletech Labs',
