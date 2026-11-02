@@ -3,15 +3,19 @@ import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
+
+const TITLE = 'ML-Powered Real Estate Portal Case Study';
+const DESCRIPTION = 'How Mapletech Labs built PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.';
 
 export const metadata: Metadata = {
-  title: 'ML-Powered Real Estate Portal Case Study',
-  description: 'How Mapletech Labs built PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.',
+  title: seoTitle(TITLE),
+  description: DESCRIPTION,
   openGraph: {
-    title: 'Real Estate Portal with ML | Mapletech Labs',
-    description: 'Real client success story from Mapletech Labs.',
+    title: TITLE,
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/case-studies/real-estate-portal',
-    type: 'website',
+    type: 'article',
   },
   alternates: { canonical: canonicalUrl('/case-studies/real-estate-portal') },
 };

@@ -2,12 +2,14 @@ import { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const DESCRIPTION = 'Explore how Mapletech Labs has helped Canadian businesses build scalable software. Real results from fintech, healthcare, e-commerce, and logistics projects.';
+
 export const metadata: Metadata = {
   title: 'Case Studies | Client Success Stories',
-  description: 'Explore how Mapletech Labs has helped Canadian businesses build scalable software. Real results from fintech, healthcare, e-commerce, and logistics projects.',
+  description: DESCRIPTION,
   openGraph: {
     title: 'Case Studies | Mapletech Labs',
-    description: 'Real client success stories from Mapletech Labs.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/case-studies',
     type: 'website',
   },
