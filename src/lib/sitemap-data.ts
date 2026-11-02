@@ -1,3 +1,4 @@
+import { getArticle } from '@/data/articles';
 import { provinceSlugs } from '@/data/provinces';
 import { serviceCityCombos, isPriorityService } from '@/data/serviceCity';
 import { siteOrigin } from '@/lib/seo/canonical';
@@ -105,7 +106,10 @@ export function pageSitemapEntries(): SitemapEntry[] {
   ];
 }
 
-/* Real publish/update dates per post, staggered across the last 3 months. */
+/*
+ * Real publish/update dates for legacy posts that are not in
+ * src/data/articles.ts. Posts in articles.ts use their own dateModified.
+ */
 const blogLastmod: Record<string, string> = {
   'top-10-unicorn-apps-2026':                    '2026-03-15',
   'saas-guide':                                  '2026-03-12',
@@ -126,7 +130,7 @@ const blogLastmod: Record<string, string> = {
 export function blogSitemapEntries(): SitemapEntry[] {
   return blogSlugs.map(slug => ({
     loc: `${BASE_URL}/blog/${slug}`,
-    lastmod: blogLastmod[slug] ?? '2026-03-15',
+    lastmod: getArticle(slug)?.dateModified ?? blogLastmod[slug],
     changefreq: 'monthly',
     priority: '0.6',
   }));
