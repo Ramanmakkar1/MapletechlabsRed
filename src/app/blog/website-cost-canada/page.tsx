@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'How Much Does a Website Cost in Canada? (2026 Guide)';
-const DESCRIPTION = 'Complete guide to website development costs in Canada for 2026';
+const DESCRIPTION = 'What a website costs in Canada in 2026: real price ranges for templates, custom builds and e-commerce, what drives cost, and how to budget wisely.';
 const SLUG = 'website-cost-canada';
 const DATE = '2026-01-22';
 
