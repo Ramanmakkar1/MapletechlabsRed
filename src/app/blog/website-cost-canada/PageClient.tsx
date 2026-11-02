@@ -173,6 +173,12 @@ export default function WebsiteCostCanadaClient() {
               {/* ── MAIN ARTICLE ── */}
               <article>
 
+                <Link href="/tools/cost-estimator" style={{
+                  display: 'block', marginBottom: 40, padding: '16px 20px', borderRadius: 16,
+                  border: '1px solid var(--line)', background: 'var(--surface-alt)',
+                  fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none',
+                }}>Get a ballpark for your project → Free cost estimator</Link>
+
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }}>
                   <p style={{
