@@ -3,7 +3,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'How to Choose a Software Development Company in Canada (2026)';
+const TITLE = 'How to Choose a Software Development Company in Canada';
 const DESCRIPTION = 'Expert guide to selecting the right software development partner in Canada';
 const SLUG = 'choose-software-development-company-canada';
 const DATE = '2026-02-05';

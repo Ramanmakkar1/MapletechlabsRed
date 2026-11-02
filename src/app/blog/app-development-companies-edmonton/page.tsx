@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Top 10 App Development Companies in Edmonton (2026)';
 const DESCRIPTION = 'Ranking the best mobile app development companies in Edmonton, Alberta for 2026';
@@ -8,7 +9,7 @@ const SLUG = 'app-development-companies-edmonton';
 const DATE = '2026-02-24';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,

@@ -3,13 +3,14 @@ import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Fintech AI Trading Platform | Case Study';
 const DESCRIPTION = 'How Mapletech Labs built an AI-powered trading platform that processes 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.';
 const SLUG = 'fintech-trading-platform';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,

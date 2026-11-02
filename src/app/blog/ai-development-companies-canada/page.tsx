@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Top 10 AI Development Companies in Canada';
 const DESCRIPTION = 'A researched ranking of the best AI and machine-learning development companies in Canada for 2026, with how to choose the right partner for your project.';
@@ -8,7 +9,7 @@ const SLUG = 'ai-development-companies-canada';
 const DATE = '2026-02-14';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,

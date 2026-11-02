@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Top 10 SEO Companies in Canada (2026)';
 const DESCRIPTION = 'A comprehensive, data-driven ranking of the top 10 SEO agencies in Canada for 2026';
@@ -8,7 +9,7 @@ const SLUG = 'top-seo-companies-canada';
 const DATE = '2026-03-14';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,

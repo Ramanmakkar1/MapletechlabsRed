@@ -6,13 +6,13 @@
  *
  *   1. The title already names the brand ("Contact Mapletech Labs | …"),
  *      otherwise the brand is emitted twice.
- *   2. Branding would push the rendered title past 70 characters — Bing
+ *   2. Branding would push the rendered title past 60 characters — Bing
  *      Webmaster flags those, and the useful part gets truncated in SERPs.
  *
  * Titles that fit are returned unchanged so the template still brands them.
  */
 export const BRAND_SUFFIX = ' | Mapletech Labs';
-export const MAX_TITLE_LENGTH = 70;
+export const MAX_TITLE_LENGTH = 60;
 
 export function seoTitle(title: string): string | { absolute: string } {
   const trimmed = title.trim();

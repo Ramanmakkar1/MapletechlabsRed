@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'How Much Does SaaS Development Cost in Canada? (2026)';
 const DESCRIPTION = 'Complete guide to SaaS development costs in Canada for 2026';
@@ -8,7 +9,7 @@ const SLUG = 'saas-development-cost-canada';
 const DATE = '2026-03-06';
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,
