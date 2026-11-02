@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import MoreCaseStudies from '@/components/MoreCaseStudies';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
@@ -277,6 +278,7 @@ export default function PaymentsCaseStudyClient() {
         </section>
 
       </main>
+      <MoreCaseStudies current="payments-api-platform" />
       <Footer />
     </>
   );
