@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactPage from '@/components/ContactPage';
+import ContactInfo, { CONTACT_FAQS } from '@/components/ContactInfo';
+import { FaqSchema } from '@/components/ServiceSchema';
 import Footer from '@/components/Footer';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
@@ -25,7 +27,9 @@ export default function ContactRoute() {
       <Navbar />
       <main>
         <ContactPage />
+        <ContactInfo />
       </main>
+      <FaqSchema faqs={CONTACT_FAQS.map(({ question, answer }) => ({ q: question, a: answer }))} />
       <Footer />
     </>
   );
