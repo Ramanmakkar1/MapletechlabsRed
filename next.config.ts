@@ -30,6 +30,10 @@ const nextConfig: NextConfig = {
     const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development']];
     const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, permanent: true })));
     return [
+      // The old French locale (/fr/*) no longer exists; 301 to the English pages.
+      // Destinations never start with /fr, so this cannot loop.
+      { source: '/fr', destination: '/', permanent: true },
+      { source: '/fr/:path*', destination: '/:path*', permanent: true },
       ...serviceCityMeshRedirects,
       // City landing pages live at keyword URLs; 301 the bare /locations/<city> paths.
       // Exact path only, so the /locations/<city>/<service> mesh is unaffected.
