@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
@@ -52,6 +54,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
+      <BreadcrumbSchema items={getBlogBreadcrumbs(TITLE, SLUG)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
