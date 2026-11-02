@@ -23,6 +23,8 @@ export interface IndustryProps {
 }
 
 /* Industry page — the reference's sector-page sequence, on white. */
+const INDUSTRY_CASE_HREF: Record<string, string> = { fintech: '/case-studies/fintech-trading-platform', healthcare: '/case-studies/healthcare-telehealth', ecommerce: '/case-studies/ecommerce-platform', logistics: '/case-studies/logistics-platform' };
+
 export default function IndustryPageTemplate(p: IndustryProps) {
   return (
     <>
@@ -33,7 +35,7 @@ export default function IndustryPageTemplate(p: IndustryProps) {
         <CardGrid title="The challenges we solve" items={p.challenges} variant="rows" />
         <CardGrid title={`Systems we build for ${p.name}`} items={p.solutions} />
         <MediaBand media={industryMedia[p.slug] ?? defaultMedia} />
-        <CaseBand {...p.caseStudy} />
+        <CaseBand {...p.caseStudy} href={INDUSTRY_CASE_HREF[p.slug]} />
         <TechBlocks title={`The stack behind ${p.name} platforms`} cats={p.tech.map(t => ({ label: t.cat, chips: t.items }))} />
         <CardGrid title="Domain experts, not generalists" items={p.whyUs} variant="rows" />
         <MediaBand media={humanPick(p.slug, 5)} ratio="21 / 7" />

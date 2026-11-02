@@ -334,7 +334,7 @@ export function ResultsBand({ title = 'Results that move the needle', items }: {
 }
 
 /* ── featured case band ──────────────────────────────────── */
-export function CaseBand({ client, headline, text, quote, cite }: { client: string; headline: string; text: string; quote: string; cite: string; bg?: string }) {
+export function CaseBand({ client, headline, text, quote, cite, href }: { client: string; headline: string; text: string; quote: string; cite: string; bg?: string; href?: string }) {
   return (
     <section style={{ padding: 'var(--section-y-sm) 0' }}>
       <div className="cb-container">
@@ -343,6 +343,7 @@ export function CaseBand({ client, headline, text, quote, cite }: { client: stri
             <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--on-ink)', letterSpacing: '.02em', marginBottom: 14 }}>Case study &middot; {client}</p>
             <h2 style={{ color: 'var(--on-ink)', fontSize: 'var(--fs-h3)', marginBottom: 14, lineHeight: 1.25 }}>{headline}</h2>
             <p style={{ lineHeight: 1.75 }}>{text}</p>
+            {href ? <p style={{ marginTop: 20 }}><Link href={href} style={{ color: 'var(--on-ink)', fontWeight: 600, textDecoration: 'underline' }}>Read the full case study →</Link></p> : null}
           </div>
           <blockquote style={{ margin: 0, padding: 'clamp(32px, 4vw, 56px)', borderLeft: '1px solid var(--line-ink)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <p style={{ color: 'var(--on-ink)', fontSize: 'clamp(1.05rem, 1.4vw, 1.25rem)', lineHeight: 1.6, fontWeight: 500, marginBottom: 16 }}>&ldquo;{quote}&rdquo;</p>
