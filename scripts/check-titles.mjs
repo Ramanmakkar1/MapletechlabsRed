@@ -10,26 +10,34 @@
 //
 // Run: npm run seo:titles   (also imports the city x service generator via
 // Node's type stripping, so generated titles are checked for real).
-import { readFileSync } from "node:fs";
-import { execSync } from "node:child_process";
+import { readdirSync, readFileSync } from "node:fs";
+import { join, relative, sep } from "node:path";
 import { register } from "node:module";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-const ROOT = new URL("../", import.meta.url);
+const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const BRAND = " | Mapletech Labs";
 const MAX = 60;
 const problems = [];
 
+function pageFiles(directory) {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const file = join(directory, entry.name);
+    if (entry.isDirectory()) return pageFiles(file);
+    return entry.isFile() && entry.name === "page.tsx" ? [relative(ROOT, file)] : [];
+  });
+}
+const allPageFiles = pageFiles(join(ROOT, "src", "app"));
+
 // 1. Hand-written page metadata (src/app/**/page.tsx).
-const files = execSync("rg -l '^  title: ' src/app --glob '**/page.tsx'", { cwd: ROOT })
-  .toString().trim().split("\n").filter(Boolean);
+const files = allPageFiles.filter((file) => readFileSync(join(ROOT, file), "utf8").match(/^  title: /m));
 for (const file of files) {
-  const src = readFileSync(new URL(file, ROOT), "utf8");
+  const src = readFileSync(join(ROOT, file), "utf8");
   const m = src.match(/^  title: (.+),$/m);
   if (!m) continue;
   const expr = m[1];
   let literal = expr.match(/^'([^']*)'$/)?.[1];
-  if (expr === "TITLE") literal = src.match(/^const TITLE = '([^']*)';$/m)?.[1];
+  if (expr === "TITLE" || expr === "seoTitle(TITLE)") literal = src.match(/^const TITLE = '((?:[^'\\]|\\.)*)';$/m)?.[1]?.replace(/\\'/g, "'");
   if (literal === undefined) continue; // seoTitle(...) / { absolute } / dynamic: rule enforced by helper
   if (/Mapletech Labs/i.test(literal)) problems.push(`${file}: "${literal}" names the brand -> rendered twice; wrap in seoTitle()`);
   else if (literal.length + BRAND.length > MAX) problems.push(`${file}: "${literal}" is ${literal.length + BRAND.length} chars once branded (max ${MAX}); wrap in seoTitle()`);
@@ -39,18 +47,19 @@ for (const file of files) {
 //    "@/..." alias so the TS data modules load directly.
 const loader = `
   import { existsSync } from "node:fs";
-  const SRC = ${JSON.stringify(new URL("src/", ROOT).pathname)};
+  import { fileURLToPath, pathToFileURL } from "node:url";
+  const SRC = ${JSON.stringify(join(ROOT, "src") + sep)};
   const probe = (b) => [".ts", ".tsx", "/index.ts"].map((e) => b + e).find(existsSync);
   export async function resolve(spec, ctx, next) {
-    if (spec.startsWith("@/")) { const p = probe(SRC + spec.slice(2)); if (p) return { url: "file://" + p, shortCircuit: true }; }
+    if (spec.startsWith("@/")) { const p = probe(SRC + spec.slice(2)); if (p) return { url: pathToFileURL(p).href, shortCircuit: true }; }
     if (/^\\.\\.?\\//.test(spec) && ctx.parentURL?.startsWith("file:") && !/\\.[a-z]+$/.test(spec)) {
-      const p = probe(new URL(spec, ctx.parentURL).pathname); if (p) return { url: "file://" + p, shortCircuit: true };
+      const p = probe(fileURLToPath(new URL(spec, ctx.parentURL))); if (p) return { url: pathToFileURL(p).href, shortCircuit: true };
     }
     return next(spec, ctx);
   }`;
 register("data:text/javascript," + encodeURIComponent(loader));
-const { getAllCityServiceParams, getCityServiceData } = await import(pathToFileURL(new URL("src/data/city-service.ts", ROOT).pathname).href);
-const { seoTitle } = await import(pathToFileURL(new URL("src/lib/seo/title.ts", ROOT).pathname).href);
+const { getAllCityServiceParams, getCityServiceData } = await import(pathToFileURL(join(ROOT, "src/data/city-service.ts")).href);
+const { seoTitle } = await import(pathToFileURL(join(ROOT, "src/lib/seo/title.ts")).href);
 let generated = 0;
 for (const { city, service } of getAllCityServiceParams()) {
   const data = getCityServiceData(city, service);
@@ -67,18 +76,18 @@ if (seoTitle("Short title") !== "Short title") problems.push("seoTitle() must ke
 
 // 4. Meta descriptions (src/app/**/page.tsx literals + src/data/articles.ts).
 let descriptions = 0;
-const descFiles = execSync("rg -l 'description' src/app --glob '**/page.tsx'", { cwd: ROOT })
-  .toString().trim().split("\n").filter(Boolean);
+const descFiles = allPageFiles.filter((file) => readFileSync(join(ROOT, file), "utf8").includes("description"));
 for (const file of descFiles) {
-  const src = readFileSync(new URL(file, ROOT), "utf8");
+  const src = readFileSync(join(ROOT, file), "utf8");
   const m = src.match(/^const DESCRIPTION = '((?:[^'\\]|\\.)*)';$/m)
-    || src.match(/^  description: '((?:[^'\\]|\\.)*)',$/m); // two-space indent only: skips openGraph and nested
+    || src.match(/^  description: '((?:[^'\\]|\\.)*)',$/m)
+    || (src.match(/^  description: DESCRIPTION,$/m) && src.match(/^const DESCRIPTION = '((?:[^'\\]|\\.)*)';$/m)); // two-space indent only: skips openGraph and nested
   if (!m) continue; // dynamic data: no literal to check
   const text = m[1].replace(/\\'/g, "'");
   descriptions++;
   if (text.length < 120 || text.length > 160) problems.push(`${file}: description is ${text.length} chars (want 120-160)`);
 }
-const articlesSrc = readFileSync(new URL("src/data/articles.ts", ROOT), "utf8");
+const articlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
 for (const m of articlesSrc.matchAll(/metaDescription: '((?:[^'\\]|\\.)*)'/g)) {
   const text = m[1].replace(/\\'/g, "'");
   descriptions++;
