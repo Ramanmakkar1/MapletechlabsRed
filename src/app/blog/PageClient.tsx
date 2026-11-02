@@ -256,7 +256,10 @@ const categoryColors: Record<string, string> = { default: '#E11900' };
 export default function BlogPage() {
   const pageRef = useReveal();
   const [activeCategory, setActiveCategory] = useState('All');
+  const [query, setQuery] = useState('');
   const categories = ['All', 'Engineering', 'AI/ML', 'Mobile', 'Business', 'Digital Marketing'];
+  const q = query.trim().toLowerCase();
+  const filteredPosts = posts.filter(p => p.slug !== FEATURED && (activeCategory === 'All' || p.category === activeCategory) && (!q || (p.title + ' ' + (p.excerpt ?? '')).toLowerCase().includes(q)));
 
   return (
     <>
@@ -296,7 +299,7 @@ export default function BlogPage() {
 
             {/* Search bar */}
             <div className="reveal reveal-d3" style={{ marginBottom: 40, maxWidth: 520 }}>
-              <div style={{
+              <div role="search" style={{
                 display: 'flex', alignItems: 'center', gap: 12,
                 background: 'var(--surface-alt)', border: '1px solid var(--line)',
                 borderRadius: 100, padding: '12px 20px',
@@ -304,7 +307,14 @@ export default function BlogPage() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
                 </svg>
-                <span style={{ fontSize: 14, color: 'var(--faint)' }}>Search articles…</span>
+                <input
+                  type="search"
+                  value={query}
+                  onChange={e => setQuery(e.target.value)}
+                  placeholder="Search articles…"
+                  aria-label="Search articles"
+                  style={{ flex: 1, background: 'transparent', border: 'none', outline: 'none', fontSize: 14, color: 'var(--ink)' }}
+                />
               </div>
             </div>
 
@@ -406,8 +416,11 @@ export default function BlogPage() {
         <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <h2 style={{ marginBottom: 40 }}>Latest articles</h2>
+            {filteredPosts.length === 0 && (
+              <p style={{ color: 'var(--muted)' }}>No articles match &quot;{query}&quot;. Try another word or pick All.</p>
+            )}
             <div className="grid grid--3">
-              {posts.filter(p => p.slug !== FEATURED && (activeCategory === 'All' || p.category === activeCategory)).map((post, i) => {
+              {filteredPosts.map((post, i) => {
                 const accentColor = 'var(--brand)';
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
