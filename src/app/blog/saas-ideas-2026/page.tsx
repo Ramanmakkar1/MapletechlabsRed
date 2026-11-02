@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
-import { getArticle } from '@/data/articles';
+import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
@@ -43,7 +43,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'saas-ideas-2026')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} />
+      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} />
     </>
   );
 }

@@ -794,3 +794,18 @@ export const articleSlugs = articles.map(a => a.slug);
 export function getArticle(slug: string): Article | undefined {
   return articles.find(a => a.slug === slug);
 }
+
+export interface RelatedArticle {
+  slug: string;
+  title: string;
+  category: string;
+  readTime: string;
+}
+
+export function getRelatedArticles(slug: string, n = 3): RelatedArticle[] {
+  const current = getArticle(slug);
+  const others = articles.filter(a => a.slug !== slug);
+  const sameCategory = current ? others.filter(a => a.category === current.category) : [];
+  const selected = [...sameCategory, ...others.filter(a => !current || a.category !== current.category)].slice(0, n);
+  return selected.map(({ slug: articleSlug, title, category, readTime }) => ({ slug: articleSlug, title, category, readTime }));
+}

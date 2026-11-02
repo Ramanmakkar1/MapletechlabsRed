@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import FinalCta from '@/components/home/FinalCta';
 import { humanMedia } from '@/data/media';
-import type { Article, Block } from '@/data/articles';
+import type { Article, Block, RelatedArticle } from '@/data/articles';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -92,7 +92,7 @@ function BlockView({ b }: { b: Block }) {
   }
 }
 
-export default function ArticleTemplate({ a }: { a: Article }) {
+export default function ArticleTemplate({ a, related = [] }: { a: Article; related?: RelatedArticle[] }) {
   const pageRef = useReveal();
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
   const hero = humanMedia[a.heroKey as keyof typeof humanMedia] ?? humanMedia.team;
@@ -182,6 +182,21 @@ export default function ArticleTemplate({ a }: { a: Article }) {
                     <Link href={a.cta.href} className="btn btn--ghost-on-ink">{a.cta.label}</Link>
                   </div>
                 </div>
+                {related.length > 0 && (
+                  <nav aria-label="Related articles" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
+                    <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 16px' }}>Related articles</h2>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
+                      {related.map(r => (
+                        <li key={r.slug}>
+                          <Link href={`/blog/${r.slug}`} style={{ display: 'block', padding: 20, border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', textDecoration: 'none' }}>
+                            <span style={{ display: 'block', fontSize: 12.5, color: 'var(--muted)', marginBottom: 6 }}>{r.category} · {r.readTime}</span>
+                            <span style={{ fontWeight: 600, color: 'var(--ink)' }}>{r.title}</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                )}
               </article>
 
               {/* TOC sidebar */}
