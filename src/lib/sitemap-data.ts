@@ -110,6 +110,7 @@ export function pageSitemapEntries(): SitemapEntry[] {
     { loc: `${BASE_URL}/tools/cost-estimator`, lastmod: '2026-11-02', changefreq: 'monthly', priority: '0.7' },
     { loc: `${BASE_URL}/tools`, lastmod: '2026-11-03', changefreq: 'monthly', priority: '0.6' },
     { loc: `${BASE_URL}/tools/sred-estimator`, lastmod: '2026-11-03', changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/tools/in-house-vs-agency`, lastmod: '2026-11-03', changefreq: 'monthly', priority: '0.7' },
   ];
 }
 

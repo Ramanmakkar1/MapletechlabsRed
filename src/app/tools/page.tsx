@@ -34,6 +34,11 @@ const TOOLS = [
     href: '/tools/sred-estimator',
     description: 'Enter your eligible salaries, contractor costs and materials. See a rough range for the federal SR&ED credit and an optional provincial credit.',
   },
+  {
+    name: 'In-House vs Agency Developer Cost Calculator',
+    href: '/tools/in-house-vs-agency',
+    description: 'Compare the fully loaded cost of hiring your own developers, including recruiting and hiring time, with a typical agency range for your project.',
+  },
 ];
 
 const itemListJsonLd = {

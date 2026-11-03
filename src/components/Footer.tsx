@@ -52,6 +52,7 @@ const columns: { title: string; links: { label: string; href: string; lang?: str
       { label: 'Cost Estimator', href: '/tools/cost-estimator' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'SR&ED Estimator', href: '/tools/sred-estimator' },
+      { label: 'Developer Cost Calculator', href: '/tools/in-house-vs-agency' },
       { label: 'All Services', href: '/services' },
       { label: 'All Locations', href: '/locations' },
       { label: 'Contact', href: '/contact' },
