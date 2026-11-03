@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'app-privacy-compliance-canada', category: 'Engineering',
+    title: 'Privacy Compliance Checklist for Canadian Apps: PIPEDA, Quebec Law 25 and PHIPA (2026)',
+    excerpt: 'Which privacy law applies to your app, and a build checklist for developers: consent, data minimization, Canadian hosting, breach reporting, access requests, encryption and AI vendors.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'nrc-irap-funding-software-canada', category: 'Business',
     title: 'NRC IRAP Funding for Software Projects in Canada (2026)',
     excerpt: 'How NRC IRAP works for Canadian software companies: who qualifies, the Industrial Technology Advisor process, what software work fits, and how IRAP funding stacks with SR&ED.',

@@ -998,6 +998,7 @@ export const articles: Article[] = [
         '<strong>Incidents and access requests.</strong> Systems should make it possible to respond to privacy incidents and to requests from people who want to see, correct or remove their information.',
       ] },
       { type: 'p', html: 'This is a general overview, not legal advice. Exact duties depend on your business and your data, so confirm your obligations with a lawyer or privacy professional before the build starts. A good partner will build to those requirements rather than guess at them.' },
+      { type: 'p', html: 'For a developer-level view of Law 25 alongside PIPEDA and health laws such as PHIPA, see our <a href="/blog/app-privacy-compliance-canada">privacy compliance checklist for Canadian apps</a>.' },
 
       { type: 'h2', id: 'french-language', text: 'French-language requirements for software' },
       { type: 'p', html: 'Quebec&rsquo;s Charter of the French Language, strengthened by Bill 96, sets rules on the use of French in business. In general terms, products and services offered to Quebec customers are expected to be available in French, and French should be at least as available as any other language. For software, that usually touches:' },
@@ -1157,6 +1158,89 @@ export const articles: Article[] = [
       { q: 'How long does the IRAP process take?', a: 'It varies by project, your readiness and available funding. Early conversations with an advisor can take a few weeks, and scoping, the proposal and review can take longer. Costs before an agreement is signed are generally not covered, so start the conversation well before development begins.' },
     ],
     cta: { href: '/tools/sred-estimator', label: 'Estimate your SR&ED credit' },
+  },
+  {
+    slug: 'app-privacy-compliance-canada',
+    category: 'Engineering',
+    title: 'Privacy Compliance Checklist for Canadian Apps: PIPEDA, Quebec Law 25 and PHIPA (2026)',
+    dek: 'Canadian apps answer to more than one privacy law. Here is which law applies to your product, a build checklist for developers covering consent, data residency, breaches, access requests and AI vendors, and what compliance means for your budget and timeline.',
+    metaTitle: 'App Privacy Compliance in Canada: Checklist',
+    metaDescription: 'A privacy checklist for Canadian apps in 2026: which law applies (PIPEDA, Quebec Law 25, PHIPA), consent, data residency, breaches, access requests and AI.',
+    date: '2026-11-02',
+    dateModified: '2026-11-02',
+    readTime: '9 min read',
+    heroKey: 'whiteboard',
+    intro: [
+      'Privacy is no longer something you add before launch. In Canada, the laws that govern personal information shape how an app collects data, where it stores it, who can see it and what happens when something goes wrong. Most of those decisions are made in the first weeks of a build, so they are cheapest to get right at the start.',
+      'This guide explains which law is likely to apply to your app, then gives developers and product owners a practical build checklist. It pairs with our <a href="/blog/software-development-companies-montreal">Montreal guide</a>, which covers Quebec Law 25 from a buyer&rsquo;s point of view.',
+    ],
+    body: [
+      { type: 'callout', tone: 'muted', title: 'Not legal advice', text: 'This is general guidance for planning a software build, not legal advice. Your exact duties depend on your organization, your users and your data. Confirm them with a lawyer or privacy professional, and read the official sources: the Office of the Privacy Commissioner of Canada (priv.gc.ca), the Commission d&rsquo;accès à l&rsquo;information du Québec (cai.gouv.qc.ca) and the Information and Privacy Commissioner of Ontario (ipc.on.ca).' },
+      { type: 'p', html: 'Official sources: <a href="https://www.priv.gc.ca" target="_blank" rel="noopener noreferrer">Office of the Privacy Commissioner of Canada (priv.gc.ca)</a>, <a href="https://www.cai.gouv.qc.ca" target="_blank" rel="noopener noreferrer">Commission d&rsquo;accès à l&rsquo;information du Québec (cai.gouv.qc.ca)</a> and <a href="https://www.ipc.on.ca" target="_blank" rel="noopener noreferrer">Information and Privacy Commissioner of Ontario (ipc.on.ca)</a>.' },
+
+      { type: 'h2', id: 'which-law', text: 'Which privacy law applies to your app' },
+      { type: 'p', html: 'Canada does not have a single privacy law for every app. Which one applies depends on who you are, where your users are and what kind of information you handle. Many apps answer to more than one.' },
+      { type: 'checks', items: [
+        { term: 'PIPEDA (federal)', text: 'The Personal Information Protection and Electronic Documents Act covers private-sector organizations that collect, use or disclose personal information in the course of commercial activity. It is the starting point for most Canadian business apps, and it also applies to personal information that crosses provincial or national borders.' },
+        { term: 'Quebec Law 25', text: 'Law 25 updated Quebec&rsquo;s private-sector privacy law. It applies to businesses that handle personal information about people in Quebec, and it adds specific duties such as privacy impact assessments, privacy by default and assessments before information leaves Quebec.' },
+        { term: 'Ontario PHIPA', text: 'The Personal Health Information Protection Act sets rules for personal health information in Ontario, mainly for health information custodians such as clinics, hospitals and practitioners, and for the vendors who provide them with services.' },
+        { term: 'Alberta HIA', text: 'The Health Information Act governs health information held by custodians in Alberta&rsquo;s health system. Other provinces have their own health privacy laws, so check the rules wherever your health users are.' },
+      ] },
+      { type: 'p', html: 'A simple way to read this: a general consumer or business app usually starts with PIPEDA, adds Law 25 if it serves people in Quebec, and adds a provincial health law if it handles health information for custodians in that province. Public bodies such as ministries, municipalities and schools usually fall under separate public-sector laws.' },
+
+      { type: 'h2', id: 'checklist', text: 'The build checklist for developers' },
+      { type: 'p', html: 'These are the topics a privacy-aware build covers. None of them is exotic; each one is a design decision that is easy early and expensive to retrofit.' },
+      { type: 'checks', items: [
+        { term: 'Consent and purpose', text: 'Know why you collect each piece of personal information, tell users in plain language, and get meaningful consent. Record what each user agreed to and when, and let them change their mind.' },
+        { term: 'Data minimization', text: 'Collect only what the feature actually needs, keep it only as long as you need it, and set retention rules that delete or anonymize old data automatically.' },
+        { term: 'Privacy by default', text: 'Under Law 25, products should offer the most privacy-protective settings by default. Optional tracking and profiling should stay off until the user turns them on.' },
+        { term: 'Privacy impact assessments', text: 'Law 25 expects a privacy impact assessment for projects that acquire, develop or overhaul a system involving personal information. Even where it is not required, a short assessment during discovery maps data flows and risks before code is written.' },
+      ] },
+
+      { type: 'h2', id: 'data-residency', text: 'Where your data lives' },
+      { type: 'p', html: 'Decide early where personal information will be stored and processed. The major cloud providers offer Canadian hosting regions, and some clients, especially in health and the public sector, will ask for data to stay in Canada. List every third-party service that touches personal information, including analytics, email, error tracking and backups, and note where each one stores data.' },
+      { type: 'p', html: 'Under Law 25, before personal information is communicated outside Quebec, a business is expected to assess whether it will be adequately protected. Build that assessment into vendor selection rather than discovering the question after launch.' },
+
+      { type: 'h2', id: 'breaches', text: 'Breach logging and reporting' },
+      { type: 'p', html: 'PIPEDA requires organizations to report breaches of security safeguards that create a real risk of significant harm, notify affected people, and keep records of breaches. Law 25 has similar duties for confidentiality incidents that present a risk of serious injury, and health laws such as PHIPA have their own notification rules.' },
+      { type: 'p', html: 'For developers, this means the app needs the evidence to answer: what happened, which records were affected, whose data it was and when. Build an incident log, keep enough audit data to scope a breach, and agree on who decides whether to report it.' },
+
+      { type: 'h2', id: 'access-deletion', text: 'Access and deletion requests' },
+      { type: 'p', html: 'People can ask to see and correct the personal information you hold about them, and Law 25 adds further rights in Quebec. Design the data model so you can find everything about one person across the database, files, logs and third-party tools, then export, correct or remove it. An admin screen for this is far cheaper than a manual search every time a request arrives.' },
+
+      { type: 'h2', id: 'encryption-audit', text: 'Encryption and audit logs' },
+      { type: 'p', html: 'Encrypt personal information in transit and at rest, manage keys properly, and limit access by role so staff see only what their job needs. Encryption in transit and at rest is a baseline safeguard these laws expect.' },
+      { type: 'p', html: 'Audit logs record who viewed or changed sensitive records and when. For health data under PHIPA or HIA, audit logging is especially important. Make the logs tamper-resistant and keep them out of reach of the people whose actions they record.' },
+
+      { type: 'h2', id: 'vendors-ai', text: 'Vendors and AI APIs' },
+      { type: 'p', html: 'Every vendor that processes personal information for you is part of your compliance. Read their data processing terms, confirm where they store data, and put contracts in place that protect it. This matters most with AI APIs: check whether prompts and outputs are stored, for how long, in which region, and whether they are used to train models.' },
+      { type: 'ul', items: [
+        'Send AI services only the personal information the task needs, and strip or mask identifiers where you can.',
+        'Prefer settings or plans that do not retain prompts or use them for training.',
+        'Tell users when AI is part of how their information is processed, in plain language.',
+        'For sensitive data, consider models hosted in a Canadian region or on your own infrastructure.',
+      ] },
+
+      { type: 'h2', id: 'budget-timeline', text: 'What this means for your budget and timeline' },
+      { type: 'p', html: 'Privacy work is mostly design and discipline, not exotic technology. Plan for it in three places. During discovery, map your data, decide which laws apply and run a privacy impact assessment if one is needed. During the build, implement consent records, retention rules, role-based access, encryption, audit logs and an access-request workflow as normal features. Before launch, review vendors, test the incident process and document what you built.' },
+      { type: 'p', html: 'Building this in from the start usually adds modest scope; retrofitting it after launch often means reworking the data model, migrating data between regions and replacing vendors. If you are estimating a project, our <a href="/blog/app-development-cost-canada">app development cost guide</a> covers typical Canadian ranges, and a good partner will raise privacy questions before giving you a fixed price.' },
+    ],
+    keyTakeaways: [
+      'PIPEDA is the starting point for most private-sector Canadian apps that handle personal information in commercial activity.',
+      'Apps that serve people in Quebec also need to plan for Law 25, including privacy impact assessments and privacy by default.',
+      'Health data brings provincial health laws such as Ontario PHIPA and Alberta HIA into scope.',
+      'Consent records, data minimization, retention rules, encryption and audit logs are design decisions best made at the start.',
+      'Know where every piece of personal data lives, including in analytics, backups and AI APIs, and assess transfers outside Quebec.',
+      'This is general guidance, not legal advice; confirm your duties with a professional and the official regulators.',
+    ],
+    faqs: [
+      { q: 'Does PIPEDA apply to my app?', a: 'PIPEDA generally applies to private-sector organizations that collect, use or disclose personal information in the course of commercial activity in Canada. Most business and consumer apps start there. Provincial laws, such as Quebec Law 25 or provincial health laws, may also apply depending on your users and data.' },
+      { q: 'Do I need to follow Quebec Law 25 if my company is outside Quebec?', a: 'It can apply if your business handles personal information about people in Quebec. If you have Quebec users, plan for its duties, such as privacy impact assessments, privacy by default and assessments before information leaves Quebec, and confirm your obligations with a professional.' },
+      { q: 'What is PHIPA and when does it apply to software?', a: 'PHIPA is Ontario’s Personal Health Information Protection Act. It mainly governs health information custodians, such as clinics and hospitals, and the vendors who provide them with services. If your app handles personal health information for Ontario custodians, it is likely in scope.' },
+      { q: 'Does my app have to store data in Canada?', a: 'Not always. Many private-sector apps can use services outside Canada if they protect the data and are open about it. Some clients, especially in health and the public sector, require Canadian hosting, and Law 25 expects an assessment before personal information leaves Quebec. Decide this before choosing vendors.' },
+      { q: 'Can my app use AI APIs with personal information?', a: 'It can, with care. Check where the provider stores prompts, how long it keeps them and whether they are used for training. Send only the information the task needs, mask identifiers where possible, and tell users how AI is used with their information.' },
+    ],
+    cta: { href: '/contact', label: 'Plan a compliant build' },
   },
 ];
 

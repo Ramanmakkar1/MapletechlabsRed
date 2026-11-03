@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 
 const heroStats = ([['$2B+', 'Processed Daily'], ['PCI-DSS', 'Compliant'], ['Sub-50ms', 'Latency']] as [string, string][]).map(([value, label]) => ({ value, label }));
@@ -38,7 +39,7 @@ export default function PageClient() {
     <IndustryPageTemplate
       slug="fintech"
       name="FinTech"
-      copy={{ badge: "FinTech", title: <>FinTech Development That <span style={{ color: 'var(--brand)' }}>Moves Money.</span></>, desc: <>FinTech software development in Canada — trading platforms, digital wallets, payment gateways and regulatory-compliant financial infrastructure built to PCI DSS and OSFI expectations.</> }}
+      copy={{ badge: "FinTech", title: <>FinTech Development That <span style={{ color: 'var(--brand)' }}>Moves Money.</span></>, desc: <>FinTech software development in Canada — trading platforms, digital wallets, payment gateways and regulatory-compliant financial infrastructure built to PCI DSS and OSFI expectations. Privacy &amp; compliance: see our <Link href="/blog/app-privacy-compliance-canada" style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 }}>PIPEDA and Quebec Law 25 checklist for Canadian apps</Link>.</> }}
       heroStats={heroStats}
       challenges={challenges}
       solutions={solutions}

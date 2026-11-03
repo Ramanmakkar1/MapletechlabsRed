@@ -45,6 +45,7 @@ export const blogSlugs = [
   'software-development-companies-ottawa',
   'software-development-companies-montreal',
   'nrc-irap-funding-software-canada',
+  'app-privacy-compliance-canada',
 ];
 
 export const citySlugs = [

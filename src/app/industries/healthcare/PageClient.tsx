@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 
 const heroStats = ([['100K+', 'Patients Served'], ['HIPAA', 'Compliant'], ['HL7/FHIR', 'Certified']] as [string, string][]).map(([value, label]) => ({ value, label }));
@@ -38,7 +39,7 @@ export default function PageClient() {
     <IndustryPageTemplate
       slug="healthcare"
       name="Healthcare"
-      copy={{ badge: "Healthcare", title: <>Healthcare Software Development That <span style={{ color: 'var(--brand)' }}>Saves Lives.</span></>, desc: <>Healthcare software development in Canada — PHIPA- and PIPEDA-compliant telehealth platforms, EHR integrations and clinical tools trusted by healthcare providers.</> }}
+      copy={{ badge: "Healthcare", title: <>Healthcare Software Development That <span style={{ color: 'var(--brand)' }}>Saves Lives.</span></>, desc: <>Healthcare software development in Canada — PHIPA- and PIPEDA-compliant telehealth platforms, EHR integrations and clinical tools trusted by healthcare providers. Privacy &amp; compliance: see our <Link href="/blog/app-privacy-compliance-canada" style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 }}>PIPEDA, Law 25 and PHIPA checklist for Canadian apps</Link>.</> }}
       heroStats={heroStats}
       challenges={challenges}
       solutions={solutions}
