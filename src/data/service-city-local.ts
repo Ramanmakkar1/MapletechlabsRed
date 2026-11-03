@@ -261,4 +261,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-calgary': {
+    title: 'AI Development Company in Calgary',
+    description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Calgary companies, from an Alberta team with fixed CAD pricing. Get a free quote.',
+    intro: 'Mapletech Labs is an Alberta company headquartered in Edmonton, roughly a three-hour drive north of Calgary and in the same time zone, so our working days line up with yours. We build AI chatbots, large language model (LLM) features and workflow automation for Calgary businesses that want AI to take routine work off their staff. You work directly with the senior engineers who design and build your system, with no sales layer in between. Scope and price are fixed in CAD before any work begins, so your budget stays put. Call us on +1-403-604-8692 to discuss your project.',
+    sections: [
+      {
+        heading: 'Where AI helps Calgary businesses',
+        body: [
+          'Energy and oil and gas head offices hold huge libraries of technical manuals, regulatory filings and safety procedures, and AI search lets staff find the right passage in seconds instead of digging through folders. It can also condense long reports into short summaries for an engineer to review. Financial services and insurance teams can use AI for document intake and claims triage, with a person checking each result before it moves on. Logistics and transportation firms can sort dispatch emails automatically, agribusinesses can pull answers from crop, equipment and supplier records, and Calgary’s growing tech and startup scene can add LLM features to their SaaS products.',
+        ],
+      },
+      {
+        heading: 'Chatbots that answer from your own documents',
+        body: [
+          'A useful business chatbot should answer from what your company actually knows, not from whatever is on the public web. We build them with retrieval-augmented generation (RAG): when someone asks a question, the system looks up the matching sections in your manuals, policies or knowledge base, writes a reply from them and links to the source so the answer can be checked. Permissions follow your existing access rules, so people only get answers from documents they are cleared to see. If the bot is unsure or the question falls outside its scope, it passes the conversation to a person rather than making something up.',
+        ],
+      },
+      {
+        heading: 'Data residency, privacy and Alberta rules',
+        body: [
+          'Many Calgary companies, especially in energy and finance, want their data kept inside Canada. We can run your AI system and store its data in Canadian cloud regions, and we configure model providers so your information is not used to train their models. We design with PIPEDA and Alberta’s PIPA in mind, using encryption, role-based access and audit logs that show who asked what and when. We can help you prepare for a privacy review, but your own privacy officer should confirm the final compliance position before launch.',
+        ],
+      },
+      {
+        heading: 'What AI development costs',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' sets out planning ranges for Canadian projects. An LLM feature in an existing app is about $10,000-$35,000 CAD. A document chatbot with sources, access control and hand-off to staff is about $15,000-$50,000. Custom model training starts around $75,000. These are planning ranges, not quotes: after a free discovery call we agree a fixed scope and a fixed price in CAD before work begins. If you are comparing vendors, our ',
+          { href: '/blog/software-development-companies-calgary', label: 'guide to choosing a Calgary software company' },
+          ' covers the questions worth asking.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month, securely and at scale.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Calgary?',
+        a: 'Based on the planning ranges in our AI development cost guide, an LLM feature in an existing app costs about $10,000-$35,000 CAD, a document chatbot with sources and access control about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Do you have an office in Calgary?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, about a three-hour drive from Calgary and in the same time zone. We serve Calgary clients remotely through weekly calls and shared project boards, and our team can come to Calgary for in-person workshops by arrangement.',
+      },
+      {
+        q: 'How long does a first AI chatbot take?',
+        a: 'A focused first version is usually a matter of weeks, not months, particularly when your documents are already organised. Projects that pull from many data sources, connect to several systems or need custom models take longer. Your written scope sets out the timeline and milestones before work starts.',
+      },
+      {
+        q: 'Does our data stay in Canada?',
+        a: 'It can. We can host your AI system and its data in Canadian cloud regions and configure model providers so your data is not used for training. We design with PIPEDA and Alberta’s PIPA in mind, with encryption, role-based access and audit logs, and your own privacy officer should confirm the final position.',
+      },
+      {
+        q: 'Who owns the code and prompts?',
+        a: 'You do. All source code, prompts, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or move everything to your own team.',
+      },
+    ],
+  },
 };
