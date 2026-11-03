@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Mapletech Labs",
   },
   description:
-    "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.",
+    "Mapletech Labs builds custom software, web and mobile apps, and AI solutions for Canadian businesses. Edmonton-based, serving clients across Canada.",
   keywords:
     "custom software development, web development, mobile app development, AI solutions, blockchain, Edmonton, Canada",
   openGraph: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Mapletech Labs",
     title: "Mapletech Labs | Custom Software Development Company",
     description:
-      "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.",
+      "Mapletech Labs builds custom software, web and mobile apps, and AI solutions for Canadian businesses. Edmonton-based, serving clients across Canada.",
     images: [
       {
         url: "/images/og-default.jpg",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     creator: "@mapletechlabs",
     title: "Mapletech Labs | Custom Software Development Company",
     description:
-      "Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.",
+      "Mapletech Labs builds custom software, web and mobile apps, and AI solutions for Canadian businesses. Edmonton-based, serving clients across Canada.",
   },
   // Preview / non-production deployments must never be indexed. Production
   // keeps the permissive directive. No `alternates.canonical` here on
@@ -91,7 +91,7 @@ const organizationSchema = {
   url: siteOrigin(),
   logo: `${siteOrigin()}/logo.png`,
   description:
-    "Custom software development company founded by Raman Makkar in Edmonton, Canada. 12 locations across Canada. Best agents from around the world working virtually.",
+    "Custom software development company founded by Raman Makkar in Edmonton, Canada, with 12 locations across Canada and an experienced remote engineering team.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Edmonton, Alberta",

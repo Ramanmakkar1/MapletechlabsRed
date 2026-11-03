@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   // `absolute`: the layout's "%s | Mapletech Labs" template would double the brand.
   title: { absolute: 'Mapletech Labs | Custom Software Development Company' },
   description:
-    'Mapletech Labs builds custom software, web apps, mobile apps, AI solutions, and blockchain platforms. Founded by Raman Makkar in Edmonton — ruling across Canada.',
+    'Mapletech Labs builds custom software, web and mobile apps, and AI solutions for Canadian businesses. Edmonton-based, serving clients across Canada.',
   alternates: { canonical: canonicalPath('/') },
 };
 

@@ -185,7 +185,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="reveal reveal-d2">
                   <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
-                    Mapletech Labs was founded in Edmonton, Canada in 2018 by Raman Makkar — with a mission to take Canadian businesses to the top in tech. What started as TML Branding Agency has grown into a full-service technology powerhouse ruling across all of Canada.
+                    Mapletech Labs was founded in Edmonton, Canada in 2018 by Raman Makkar — with a mission to take Canadian businesses to the top in tech. What started as TML Branding Agency has grown into a full-service technology company serving clients across Canada.
                   </p>
                   <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     They started with a simple belief: the best engineering talent in the world shouldn&apos;t only be available to the biggest companies. Founders building their first product deserve the same quality of engineering judgment as a Series D company with a 200-person team.
