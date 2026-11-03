@@ -44,6 +44,7 @@ export const blogSlugs = [
   'software-development-companies-vancouver',
   'software-development-companies-ottawa',
   'software-development-companies-montreal',
+  'software-development-companies-toronto',
   'nrc-irap-funding-software-canada',
   'app-privacy-compliance-canada',
   'software-maintenance-cost-canada',

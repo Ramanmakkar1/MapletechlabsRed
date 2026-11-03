@@ -50,6 +50,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
   },
   {
+    slug: 'software-development-companies-toronto', category: 'Business',
+    title: 'Software Development Companies in Toronto (2026): How to Choose',
+    excerpt: 'How to choose a software development company in Toronto: local vs remote teams, Ontario accessibility and privacy rules, typical costs, engagement models and a vetting checklist.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'software-development-companies-montreal', category: 'Business',
     title: 'Software Development Companies in Montreal (2026)',
     excerpt: 'How to choose a software development company in Montreal: Quebec Law 25 privacy, French-language rules for software, typical costs and the questions to ask on the first call.',
