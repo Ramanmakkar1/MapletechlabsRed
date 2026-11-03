@@ -387,4 +387,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-toronto': {
+    title: 'AI Development Company in Toronto',
+    description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features and workflow automation for Toronto businesses. Edmonton is two hours behind Toronto, so most of your working day overlaps with ours and questions get answered the same day. We focus on practical AI that saves staff time and answers from your own documents. You work directly with the senior engineers who build your system, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'Where AI helps Toronto businesses',
+        body: [
+          'Banks and fintech firms use AI to review documents faster, run customer support bots that hand off to a person when needed, and triage fraud alerts so analysts check the most urgent ones first. Insurance teams can turn long claims intake files into short summaries for an adjuster to review. Legal and professional services firms can search across contracts and precedents in seconds. Retail and e-commerce brands use AI for smarter product search and customer support, and SaaS companies add AI features directly inside their product.',
+        ],
+      },
+      {
+        heading: 'Chatbots on your own documents, with sources',
+        body: [
+          'A business chatbot is only useful if it answers from what your company actually knows. We build them with retrieval-augmented generation (RAG): when someone asks a question, the system first pulls the matching passages from your policies, manuals or knowledge base, then writes a reply from them and cites the source so it can be checked. Permissions follow your existing access rules, so each person only gets answers from documents they are allowed to see. When the bot is unsure, it passes the question to a person instead of guessing.',
+        ],
+      },
+      {
+        heading: 'Privacy and financial-sector rules',
+        body: [
+          'Most private-sector personal data in Ontario falls under PIPEDA, and personal health information falls under Ontario’s PHIPA. Federally regulated financial institutions follow OSFI guidance on model risk, so we document each model, test it before launch and keep audit logs of what it was asked and how it answered. We can host your AI system and its data in Canadian cloud regions, and we set up model providers so they do not train on your data. Your privacy officer or lawyer should confirm the final compliance position.',
+        ],
+      },
+      {
+        heading: 'What AI development costs',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. If you are still comparing vendors, our ',
+          { href: '/blog/ai-development-companies-canada', label: 'guide to AI development companies in Canada' },
+          ' lists the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month, securely and at scale.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Toronto?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Do you have an office in Toronto?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Toronto office. We serve Toronto clients remotely, with working hours that overlap for most of the day, and we come to Toronto for in-person workshops when a milestone needs one, with travel agreed up front.',
+      },
+      {
+        q: 'Can AI be used in a regulated bank or fintech?',
+        a: 'Yes, with the right controls. We build in human review for important decisions, audit logs of every question and answer, documentation of each model and how it was tested, and Canadian hosting. Your compliance team should confirm the final position for your organisation.',
+      },
+      {
+        q: 'Does our data stay in Canada?',
+        a: 'It can. We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used for training. We design with PIPEDA and Ontario’s PHIPA in mind, with encryption, role-based access and audit logs, and your own privacy officer should confirm the final position.',
+      },
+      {
+        q: 'Who owns the code and prompts?',
+        a: 'You do. All source code, prompts, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
 };
