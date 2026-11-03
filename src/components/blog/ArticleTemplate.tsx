@@ -89,6 +89,8 @@ function BlockView({ b }: { b: Block }) {
           {b.cite && <cite style={{ display: 'block', marginTop: 10, fontSize: 14, color: 'var(--muted)', fontStyle: 'normal' }}>&mdash; {b.cite}</cite>}
         </blockquote>
       );
+    case 'table':
+      return <div className="article-table" dangerouslySetInnerHTML={{ __html: b.html }} />;
   }
 }
 

@@ -47,6 +47,7 @@ export const blogSlugs = [
   'nrc-irap-funding-software-canada',
   'app-privacy-compliance-canada',
   'software-maintenance-cost-canada',
+  'sred-software-development-canada',
 ];
 
 export const citySlugs = [

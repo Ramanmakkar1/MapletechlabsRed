@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'sred-software-development-canada', category: 'Business',
+    title: 'SR&ED Tax Credits for Software Development in Canada (2026 Guide)',
+    excerpt: 'How SR&ED works for Canadian software teams: what work qualifies, CCPC vs non-CCPC rates, eligible costs, the records to keep, the T661 deadline, agencies and stacking with IRAP.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'software-maintenance-cost-canada', category: 'Business',
     title: 'Software & App Maintenance Cost in Canada (2026)',
     excerpt: 'What maintenance covers, the 15-20% rule of thumb, typical monthly CAD ranges by app size, retainer vs pay-as-you-go vs in-house, hidden costs and how to keep the bill down.',

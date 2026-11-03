@@ -111,7 +111,8 @@ export default function SredEstimatorPage() {
               ))}
               <p style={{ ...p, borderTop: '1px solid var(--line)', paddingTop: 20 }}>
                 Also see: <Link href="/blog/nrc-irap-funding-software-canada" style={{ color: 'var(--ink)', textDecoration: 'underline' }}>IRAP funding guide</Link>, which
-                explains how government assistance affects your SR&amp;ED claim.
+                explains how government assistance affects your SR&amp;ED claim, and our{' '}
+                <Link href="/blog/sred-software-development-canada" style={{ color: 'var(--ink)', textDecoration: 'underline' }}>SR&amp;ED guide for software teams</Link>.
               </p>
             </div>
           </div>

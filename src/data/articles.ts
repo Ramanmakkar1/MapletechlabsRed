@@ -17,7 +17,8 @@ export type Block =
   | { type: 'checks'; items: { term: string; text: string }[] }
   | { type: 'cards'; items: { title: string; text: string }[] }
   | { type: 'callout'; tone?: 'brand' | 'muted'; title?: string; text: string }
-  | { type: 'quote'; text: string; cite?: string };
+  | { type: 'quote'; text: string; cite?: string }
+  | { type: 'table'; html: string };
 
 export interface Article {
   slug: string;
@@ -1332,6 +1333,97 @@ export const articles: Article[] = [
       { q: 'Does my app need Canadian hosting?', a: 'Not always. Many private-sector apps can use hosting outside Canada if they protect the data and are open about it. Some clients, especially in health and the public sector, require data to stay in Canada, which can affect your hosting cost.' },
     ],
     cta: { href: '/tools/cost-estimator', label: 'Estimate your build cost' },
+  },
+  {
+    slug: 'sred-software-development-canada',
+    category: 'Business',
+    title: 'SR&ED Tax Credits for Software Development in Canada (2026 Guide)',
+    dek: 'The SR&ED program can return part of what Canadian companies spend solving real technical problems in software. Here is what qualifies, who can claim and at what rate, which costs count, what records to keep, when to file, and how SR&ED works with agencies and IRAP.',
+    metaTitle: 'SR&ED Tax Credits for Software in Canada',
+    metaDescription: 'How SR&ED tax credits work for Canadian software projects in 2026: what qualifies, CCPC vs non-CCPC rates, documentation, claim timing and common pitfalls.',
+    date: '2026-11-03',
+    dateModified: '2026-11-03',
+    readTime: '10 min read',
+    heroKey: 'numbers',
+    intro: [
+      'The Scientific Research and Experimental Development program, better known as SR&amp;ED, is the largest federal tax incentive for research and development in Canada. Many software companies use it to recover part of the cost of solving hard technical problems, but many others either miss it or claim work that does not qualify.',
+      'This guide explains SR&amp;ED for software teams in plain terms: what the program is, what software work qualifies, who can claim and at what rate, which costs count, what records to keep, when to file, how it works when an agency does the build, and how it stacks with IRAP. For a rough number, try our <a href="/tools/sred-estimator">SR&amp;ED estimator</a>.',
+    ],
+    body: [
+      { type: 'callout', tone: 'muted', title: 'General information, not tax advice', text: 'This guide is a general overview of SR&amp;ED for planning purposes. It is not tax, legal or accounting advice. Rates, limits and rules change, so confirm your situation with a qualified SR&amp;ED advisor or accountant and the official CRA guidance before you rely on any figure.' },
+
+      { type: 'h2', id: 'what-is-sred', text: 'What SR&ED is' },
+      { type: 'p', html: 'SR&amp;ED is run by the Canada Revenue Agency (CRA). It gives businesses that do eligible research and development in Canada a federal investment tax credit (ITC) on part of their qualifying spending. Most provinces and territories also offer their own R&amp;D tax credits, which are claimed alongside the federal credit and follow their own rules.' },
+      { type: 'p', html: 'SR&amp;ED is a tax credit, not a grant. You do the work, pay the costs, and claim the credit after your tax year ends with your corporate tax return. Depending on your company, the credit may come back as a cash refund or reduce the tax you owe. The official details are on the <a href="https://www.canada.ca/en/revenue-agency/services/scientific-research-experimental-development-tax-incentive-program.html" target="_blank" rel="noopener noreferrer">CRA SR&amp;ED program page</a>.' },
+
+      { type: 'h2', id: 'what-qualifies', text: 'What software work qualifies' },
+      { type: 'p', html: 'SR&amp;ED does not reward writing software as such. It rewards the work of resolving technological uncertainty. For software, CRA generally looks for three things:' },
+      { type: 'checks', items: [
+        { term: 'Technological uncertainty', text: 'At the start, you could not know how to reach the technical goal, or whether it was possible, using standard practice and knowledge that is readily available to a competent developer.' },
+        { term: 'Systematic investigation', text: 'You worked through the problem in a structured way: forming hypotheses, building prototypes or experiments, testing them and recording what happened.' },
+        { term: 'Technological advancement', text: 'The work produced new knowledge about the technology, even if the attempt failed. The advancement is in what you learned, not in the business value of the feature.' },
+      ] },
+      { type: 'p', html: 'Software work that often fits includes:' },
+      { type: 'ul', items: [
+        'Designing a new algorithm or data structure because existing ones could not meet a performance, accuracy or memory target.',
+        'Making a system work at a scale or speed where known architectures failed, and showing why through testing.',
+        'Building machine learning models or data pipelines where it was unclear whether the approach could reach the required results.',
+        'Integrating with hardware, legacy systems or protocols whose behaviour was undocumented and had to be worked out by experiment.',
+      ] },
+      { type: 'p', html: 'Work that usually does not qualify includes routine CRUD screens, standard UI and front-end work, configuring off-the-shelf platforms, ordinary bug fixing, data entry, content, and integrating well-documented APIs in a known way. A project can contain both kinds of work, and usually only the part that tackled the uncertainty counts.' },
+
+      { type: 'h2', id: 'who-can-claim', text: 'Who can claim and the rates' },
+      { type: 'p', html: 'The federal credit rate depends mainly on the type of corporation. A Canadian-controlled private corporation (CCPC) can generally earn an enhanced 35% refundable credit on qualifying spending up to an annual expenditure limit, with the 15% rate applying above that limit. Other corporations, such as public companies or those controlled by non-residents, generally earn a 15% non-refundable credit that reduces tax owed and can be carried forward or back.' },
+      { type: 'table', html: '<table><thead><tr><th scope="col">Point</th><th scope="col">CCPC</th><th scope="col">Non-CCPC corporation</th></tr></thead><tbody><tr><th scope="row">Federal credit rate</th><td>Enhanced 35% on qualifying spending up to the expenditure limit, 15% above it</td><td>15%</td></tr><tr><th scope="row">Refundable?</th><td>Generally refundable at the enhanced rate, so it can be paid out as cash</td><td>Non-refundable: reduces tax owed, with unused credits carried forward or back</td></tr><tr><th scope="row">Expenditure limit</th><td>Applies, and can be reduced or shared within associated groups; check current CRA limits</td><td>Does not apply to the 15% rate</td></tr><tr><th scope="row">Provincial credits</th><td colspan="2">Most provinces and territories offer their own credits with their own rates and rules; check with your province</td></tr></tbody></table>' },
+      { type: 'p', html: 'The expenditure limit, and the rules that phase it down based on taxable capital and associated companies, have changed over time. Check current CRA limits and provincial rates for your tax year rather than relying on older figures.' },
+
+      { type: 'h2', id: 'eligible-costs', text: 'Eligible costs' },
+      { type: 'p', html: 'Only costs tied directly to the SR&amp;ED work count. For software projects, the main categories are:' },
+      { type: 'checks', items: [
+        { term: 'Salaries and wages', text: 'The share of employee pay for time spent directly on eligible work, such as developers, architects and testers working on the uncertainty. This is usually the largest part of a software claim.' },
+        { term: 'Contractors', text: 'Arm&rsquo;s length contractors who do SR&amp;ED work in Canada for you. Generally only 80% of the contract amount counts toward the claim.' },
+        { term: 'Materials', text: 'Materials consumed or transformed in the work. For pure software projects this is often small.' },
+        { term: 'Overhead', text: 'Most claimants use the proxy method, which adds an amount based on eligible salaries instead of tracking each overhead cost. Check how the proxy is calculated for your year.' },
+      ] },
+      { type: 'p', html: 'Capital expenditures are generally not eligible, and government assistance or contract payments you receive for the work generally reduce the eligible amount.' },
+
+      { type: 'h2', id: 'documentation', text: 'Documentation that supports a claim' },
+      { type: 'p', html: 'CRA can review any claim, and the strongest evidence is the record your team created while the work was happening, not a story written a year later. Software teams usually already have most of it:' },
+      { type: 'ul', items: [
+        'Git history with clear commit messages and branches for experiments, including the ones that were abandoned.',
+        'Tickets or issues that describe the technical problem, the hypotheses tried and the outcome.',
+        'Test logs, benchmarks and performance results that show what each approach achieved.',
+        'Design notes or architecture decisions that explain why standard approaches were not enough.',
+        'Time records that link each person&rsquo;s hours to the eligible work.',
+      ] },
+      { type: 'p', html: 'A simple habit helps: when a ticket involves real uncertainty, write down the goal, what you did not know, what you tried and what you learned, at the time.' },
+
+      { type: 'h2', id: 'claim-timing', text: 'Claim timing' },
+      { type: 'p', html: 'SR&amp;ED is claimed on Form T661 with your corporate income tax return, along with the schedules that calculate the credit. The claim must generally be filed within 18 months of the end of the tax year in which the costs were incurred. If you miss that deadline, the claim for that year is usually lost, so plan for it well before it arrives.' },
+      { type: 'p', html: 'Refundable credits for CCPCs are paid after CRA processes the return, which can take some time, and longer if the claim is reviewed. Do not build a cash-flow plan that depends on an exact refund date.' },
+
+      { type: 'h2', id: 'working-with-an-agency', text: 'Working with an agency' },
+      { type: 'p', html: 'When an outside team builds your software, who can claim SR&amp;ED depends on the contract. In general, the business that pays for the work and carries the financial risk is the one that may claim it, and the contractor usually cannot claim the same work. Where you are the claimant, the 80% rule for arm&rsquo;s length contractors generally applies.' },
+      { type: 'p', html: 'Settle these points in the contract before the work starts: who owns the intellectual property, who is expected to claim SR&amp;ED, and what records the agency will keep and share, such as commits, tickets and time logs. Our <a href="/blog/choose-software-development-company-canada">guide to choosing a software development company in Canada</a> covers the questions to ask, and our <a href="/services/saas-development">SaaS development</a> page explains how we work on product builds.' },
+
+      { type: 'h2', id: 'sred-and-irap', text: 'How SR&ED stacks with IRAP' },
+      { type: 'p', html: 'Many software companies also get support from NRC IRAP. The two programs can work together, but IRAP funding counts as government assistance, and government assistance generally reduces the expenditure base the SR&amp;ED credit is calculated on. In plain terms, you usually cannot claim SR&amp;ED on the part of a salary that IRAP already paid.' },
+      { type: 'p', html: 'Keep both sets of records consistent: the same people, hours and technical problems should tell the same story. Our <a href="/blog/nrc-irap-funding-software-canada">NRC IRAP funding guide</a> explains the IRAP process, and when you use the <a href="/tools/sred-estimator">SR&amp;ED estimator</a>, reduce your costs by any IRAP funding first.' },
+    ],
+    keyTakeaways: [
+      'SR&ED is a CRA tax incentive that gives a federal investment tax credit on qualifying R&D spending, and most provinces add their own credits.',
+      'Software work qualifies when it resolves real technological uncertainty through systematic investigation; routine CRUD, UI and configuration work usually does not.',
+      'CCPCs can generally earn an enhanced 35% refundable credit up to an expenditure limit; other corporations generally earn 15% non-refundable. Check current CRA limits.',
+      'Salaries are usually the biggest eligible cost; arm’s length contractors generally count at 80%, and IRAP funding reduces the eligible base.',
+      'Keep records while the work happens, and file Form T661 within 18 months of the tax year end.',
+    ],
+    faqs: [
+      { q: 'Does software development qualify for SR&ED?', a: 'Some of it does. Work qualifies when it tries to resolve a technological uncertainty that standard practice could not solve, through a systematic process of testing and learning. Routine work such as standard screens, UI, configuration and ordinary bug fixing usually does not qualify, even inside an innovative project.' },
+      { q: 'What is the SR&ED rate for a CCPC?', a: 'A Canadian-controlled private corporation can generally earn an enhanced 35% refundable federal credit on qualifying spending up to an annual expenditure limit, and 15% above it. Provincial credits may add to this. The limit and the rules around it change, so check current CRA limits with your accountant.' },
+      { q: 'What is the deadline to file an SR&ED claim?', a: 'The claim, made on Form T661 with your corporate tax return, must generally be filed within 18 months of the end of the tax year in which the costs were incurred. Late claims for that year are usually not accepted.' },
+      { q: 'Can I claim SR&ED if an agency builds my software?', a: 'Possibly. In general, the business that pays for the work and carries the financial risk may claim it, and arm’s length contractor costs usually count at 80%. Agree in the contract on IP ownership, who claims SR&ED and what records the agency keeps, and confirm the details with an SR&ED advisor.' },
+    ],
+    cta: { href: '/tools/sred-estimator', label: 'Estimate your SR&ED credit' },
   },
 ];
 
