@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'software-development-companies-vancouver', category: 'Business',
+    title: 'Software Development Companies in Vancouver (2026)',
+    excerpt: 'How to choose a software development company in Vancouver: local vs remote teams, BC data residency, typical Canadian costs and timelines, and the questions to ask on the first call.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
+  },
+  {
     slug: 'what-is-agentic-ai', category: 'AI/ML',
     title: 'What Is Agentic AI? A Plain-English Guide for Business Leaders',
     excerpt: 'What agentic AI actually means in plain English — where it genuinely helps a business, where it quietly fails, and how to decide whether it belongs in your operations yet.',

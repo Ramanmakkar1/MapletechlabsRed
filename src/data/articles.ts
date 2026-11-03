@@ -788,6 +788,80 @@ export const articles: Article[] = [
     ],
     cta: { href: '/services/web-development', label: 'See our custom software services' },
   },
+  {
+    slug: 'software-development-companies-vancouver',
+    category: 'Business',
+    title: 'Software Development Companies in Vancouver (2026)',
+    dek: 'Vancouver has no shortage of software studios, but the right partner depends on where your team works, who your users are and where your data has to live. Here is how to choose a software development company in Vancouver, what it typically costs, and what to ask on the first call.',
+    metaTitle: 'Software Development Companies in Vancouver',
+    metaDescription: 'How to choose a software development company in Vancouver in 2026: local vs remote teams, BC data residency, typical costs and timelines, and a checklist.',
+    date: '2026-11-03',
+    dateModified: '2026-11-03',
+    readTime: '8 min read',
+    heroKey: 'whiteboard',
+    intro: [
+      'Vancouver is one of Canada&rsquo;s busiest technology markets, with gaming, film and VFX, clean tech and SaaS companies all competing for engineering talent. For a business that needs software built, that is good news and bad news: there are plenty of capable firms, and plenty of ways to pick the wrong one.',
+      'This guide completes our city series alongside <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers how to choose a Vancouver development partner, what projects typically cost in Canada, a short list of well-known Vancouver-area firms described only by public facts, and the questions that reveal the most on a first call.',
+    ],
+    body: [
+      { type: 'h2', id: 'how-to-choose', text: 'How to choose a Vancouver development partner' },
+      { type: 'p', html: 'Start with how you want to work, not with a list of names. Three decisions narrow the field quickly:' },
+      { type: 'checks', items: [
+        { term: 'Local or remote', text: 'A team in Metro Vancouver makes in-person workshops and site visits easy. A Canadian team based elsewhere can deliver the same work remotely, often with on-site visits for discovery or launch. What matters is a named senior contact and a clear meeting rhythm, not the street address.' },
+        { term: 'Time zone', text: 'Vancouver runs on Pacific Time. A Canadian partner in Pacific or Mountain Time shares most of your working day; a partner many hours away means decisions wait overnight. Ask how many hours of live overlap you will actually get.' },
+        { term: 'BC data residency', text: 'Health and public-sector projects in British Columbia often come with rules on where personal information is stored and who can access it, including the obligations of public bodies under BC&rsquo;s Freedom of Information and Protection of Privacy Act (FIPPA). If that applies to you, ask early which Canadian hosting regions and vendors the team will use, and get it in the contract.' },
+      ] },
+      { type: 'p', html: 'If you are comparing firms across the province, our <a href="/locations/british-columbia">British Columbia</a> page covers the other BC cities we serve.' },
+
+      { type: 'h2', id: 'costs', text: 'Typical Vancouver rates and timelines' },
+      { type: 'p', html: 'Vancouver projects are priced in line with Canadian market rates for quality onshore development. As approximate ranges from our <a href="/blog/choose-software-development-company-canada">guide to choosing a software development company in Canada</a>:' },
+      { type: 'ul', items: [
+        'Marketing website (10&ndash;20 pages): CAD $15,000&ndash;$45,000, about 4&ndash;8 weeks.',
+        'E-commerce platform: CAD $40,000&ndash;$120,000, about 8&ndash;16 weeks.',
+        'Custom mobile app (iOS + Android): CAD $60,000&ndash;$200,000, about 12&ndash;24 weeks.',
+        'SaaS platform (MVP): CAD $80,000&ndash;$250,000, about 16&ndash;28 weeks.',
+        'AI/ML integration project: CAD $50,000&ndash;$180,000, about 10&ndash;20 weeks.',
+        'Enterprise software system: CAD $150,000&ndash;$500,000+, about 24&ndash;52 weeks.',
+      ] },
+      { type: 'p', html: 'These are approximate ranges based on Canadian market averages. Final pricing depends on complexity, integrations and specific requirements. For a rough number on your own scope, try the <a href="/tools/cost-estimator">software cost estimator</a>.' },
+
+      { type: 'h2', id: 'shortlist', text: 'Well-known Vancouver-area software firms' },
+      { type: 'p', html: 'A starting shortlist, in no particular order and with no ranking. Each description sticks to public facts; check every firm&rsquo;s current services on its own website before you reach out.' },
+      { type: 'cards', items: [
+        { title: 'Steamclock Software', text: 'Founded in Vancouver. Focuses on designing and building native iOS and Android apps.' },
+        { title: 'Atimi Software', text: 'Founded in Vancouver. Focuses on mobile app development for businesses and media companies.' },
+        { title: 'Two Tall Totems', text: 'Founded in Vancouver. Focuses on mobile and web app design and development.' },
+        { title: 'Mapletech Labs', text: 'A Canadian software company headquartered in Edmonton, Alberta. Serves Vancouver and BC clients remotely or on site, across custom software, web, mobile, SaaS and AI projects.' },
+      ] },
+      { type: 'p', html: 'See how we work with Vancouver businesses on our <a href="/locations/software-development-company-in-vancouver">Vancouver software development</a> page.' },
+
+      { type: 'h2', id: 'first-call', text: 'Questions to ask on the first call' },
+      { type: 'ol', items: [
+        'Who will actually work on my project, and will I meet them before signing?',
+        'How many hours of live overlap with Pacific Time will we have each week?',
+        'Where will my data be hosted, and can you keep it in Canada if we need to?',
+        'Is the quote fixed-price or time-and-materials, and what happens when scope changes?',
+        'Can I see live products you have built and speak to a past client?',
+        'Will I own the code, designs and accounts outright when the project ends?',
+        'What support do you offer after launch, and at what cost?',
+      ] },
+      { type: 'p', html: 'A good partner answers these plainly and in writing. Vague answers on ownership, hosting or who does the work are the clearest warning signs you will get.' },
+    ],
+    keyTakeaways: [
+      'Decide first between a local Vancouver team and a remote Canadian one; a named senior contact matters more than an address.',
+      'Check real working-hour overlap with Pacific Time before you sign.',
+      'For BC health or public-sector work, confirm Canadian hosting and FIPPA obligations early and put them in the contract.',
+      'Vancouver projects follow Canadian onshore rates, from about CAD $15,000 for a marketing site to $150,000+ for enterprise systems.',
+      'Shortlist on public facts, then use the first call to test ownership, hosting and who actually does the work.',
+    ],
+    faqs: [
+      { q: 'How much does software development cost in Vancouver?', a: 'Vancouver projects follow Canadian onshore market rates. As approximate ranges, a marketing website runs about CAD $15,000 to $45,000, a custom iOS and Android app about $60,000 to $200,000, a SaaS MVP about $80,000 to $250,000, and enterprise systems $150,000 and up. Final pricing depends on complexity and integrations.' },
+      { q: 'Do I need a software company with an office in Vancouver?', a: 'Not necessarily. A local team makes in-person workshops easier, but a Canadian team elsewhere can deliver the same work remotely, often with on-site visits for discovery. Focus on time-zone overlap, a named senior contact and clear communication.' },
+      { q: 'Does my BC project need Canadian data hosting?', a: 'It depends on the project. Health and public-sector work in British Columbia often comes with rules on where personal information is stored and accessed, including FIPPA obligations for public bodies. Confirm your requirements early and make sure the partner can host in Canada if needed.' },
+      { q: 'How long does a software project take in Vancouver?', a: 'As approximate Canadian ranges, a marketing website takes about 4 to 8 weeks, an e-commerce platform 8 to 16 weeks, a mobile app 12 to 24 weeks, a SaaS MVP 16 to 28 weeks, and an enterprise system 24 to 52 weeks.' },
+    ],
+    cta: { href: '/locations/software-development-company-in-vancouver', label: 'See our Vancouver software services' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);
