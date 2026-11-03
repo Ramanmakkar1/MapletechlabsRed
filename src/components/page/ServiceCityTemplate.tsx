@@ -14,6 +14,7 @@ import { provinceSlugForName } from '@/data/provinces';
 import { serviceCityPath } from '@/data/serviceCity';
 import type { Stat } from './types';
 import type { CityServicePageData } from '@/data/city-service';
+import type { ServiceCityLocal } from '@/data/service-city-local';
 
 // Honest, company-wide facts — no invented per-city metrics.
 const HONEST_STATS: Stat[] = [
@@ -42,7 +43,8 @@ const balanced = (n: number): string | null =>
 
 /* Premium "[service] company in [city]" page — honest facts, no invented proof. */
 // heroTitle / heroDesc let one city+service page target its own search phrase; others keep the shared copy.
-export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode }) {
+// local adds hand-written sections and case-study proof (from SERVICE_CITY_LOCAL).
+export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal }) {
   const { cityName, citySlug, province, serviceName, serviceSlug } = p;
   const provinceSlug = provinceSlugForName(province);
   const services = [
@@ -96,6 +98,34 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc }: { 
             </div>
           </div>
         </section>
+
+        {/* Hand-written local sections and proof (only for combos in SERVICE_CITY_LOCAL) */}
+        {local ? (
+          <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+            <div className="cb-container">
+              <Head title={`Working with a local ${serviceName.toLowerCase()} team in ${cityName}`} />
+              <div className="grid grid--2" style={{ rowGap: 'clamp(22px, 2.6vw, 32px)' }}>
+                {local.sections.map(s => (
+                  <article key={s.heading} className="tile rise">
+                    <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>{s.heading}</h3>
+                    <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>
+                      {s.body.map((part, i) => (typeof part === 'string' ? part : <Link key={i} href={part.href}>{part.label}</Link>))}
+                    </p>
+                  </article>
+                ))}
+              </div>
+              <h3 style={{ fontSize: 'var(--fs-h3)', margin: 'clamp(36px, 4vw, 52px) 0 16px' }}>Proof from our case studies</h3>
+              <div className="grid grid--3">
+                {local.proof.map(pr => (
+                  <Link key={pr.href} href={pr.href} className="tile rise" style={{ display: 'block', textDecoration: 'none' }}>
+                    <h4 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8, color: 'var(--ink)' }}>{pr.label}</h4>
+                    <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{pr.note}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         <MediaBand media={serviceMedia[serviceSlug] ?? defaultMedia} />
         <ServicesGrid title={`${serviceName} services we offer in ${cityName}`} items={services} />

@@ -513,6 +513,9 @@ export default function AppDevelopmentCostCanadaClient() {
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     The quality difference? Zero. Our team ships the same React Native, Flutter, and native Swift/Kotlin code as any Bay Street firm. We just do it without the Bay Street overhead. In 2026, with fully remote collaboration tools, your development team&apos;s physical location is irrelevant to the quality of your product.
                   </p>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
+                    If you are based in Alberta and want to meet the team, see our pages for an <Link href="/locations/app-development-company-in-edmonton">app development company in Edmonton</Link> and an <Link href="/locations/app-development-company-in-calgary">app development company in Calgary</Link>.
+                  </p>
                   <div style={{
                     padding: '20px 24px', borderRadius: 16,
                     background: 'transparent', border: '1px solid transparent',

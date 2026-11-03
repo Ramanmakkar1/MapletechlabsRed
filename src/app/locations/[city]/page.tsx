@@ -4,6 +4,7 @@ import { getServiceCityCombo, serviceCitySlugs } from '@/data/serviceCity';
 import { getCityServiceData } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
+import { SERVICE_CITY_LOCAL, type ServiceCityLocal } from '@/data/service-city-local';
 
 interface PageProps {
   params: Promise<{ city: string }>;
@@ -22,6 +23,10 @@ const META_OVERRIDES: Record<string, { title: string; description: string }> = {
   },
 };
 
+// Hand-written local copy (title, intro, sections, proof, FAQs) for selected combos.
+const localFor = (slug: string): ServiceCityLocal | undefined =>
+  Object.prototype.hasOwnProperty.call(SERVICE_CITY_LOCAL, slug) ? SERVICE_CITY_LOCAL[slug] : undefined;
+
 export function generateStaticParams() {
   return serviceCitySlugs.map(slug => ({ city: slug }));
 }
@@ -33,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = getCityServiceData(combo.citySlug, combo.serviceSlug);
   if (!data) return {};
   const base = `${combo.label} Company in ${data.cityName}`;
-  const override = META_OVERRIDES[slug];
+  const override = localFor(slug) ?? META_OVERRIDES[slug];
   const title = override?.title ?? (base.length <= 43 ? base : `${combo.label} in ${data.cityName}`);
   const description = override?.description ?? data.description;
   const url = canonicalUrl(`/locations/${slug}`);
@@ -55,7 +60,10 @@ export default async function ServiceCityPage({ params }: PageProps) {
 
   // Display the keyword label (e.g. "AI Development") rather than the formal
   // service name, so the H1 and headings match the target query.
-  const data = { ...raw, serviceName: combo.label };
+  const local = localFor(slug);
+  const data = local
+    ? { ...raw, serviceName: combo.label, description: local.description, intro: local.intro, faqs: local.faqs }
+    : { ...raw, serviceName: combo.label };
   const url = `https://mapletechlabs.ca/locations/${slug}`;
   const cityLanding = `https://mapletechlabs.ca/locations/software-development-company-in-${combo.citySlug}`;
 
@@ -98,7 +106,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ServiceCityTemplate data={data} />
+      <ServiceCityTemplate data={data} local={local} />
     </>
   );
 }

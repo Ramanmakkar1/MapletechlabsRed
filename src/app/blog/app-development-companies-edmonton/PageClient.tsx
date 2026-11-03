@@ -188,7 +188,7 @@ export default function AppDevelopmentCompaniesEdmontonClient({ localLinks }: { 
                     With lower operating costs than Toronto or Vancouver, a thriving talent pipeline from the U of A and NAIT, and a cost of living that lets startups stretch their runway further, Edmonton is attracting app developers, AI researchers, and product studios at record pace.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    Whether you are a startup looking to build an MVP, an enterprise modernizing legacy systems, or a scale-up expanding across Alberta, choosing the right mobile app development partner is critical. We evaluated dozens of Edmonton-area agencies and product studios to bring you this definitive ranking of the <strong style={{ color: 'var(--body)' }}>Top 10 Mobile App Development Companies in Edmonton</strong> for 2026.
+                    Whether you are a startup looking to build an MVP, an enterprise modernizing legacy systems, or a scale-up expanding across Alberta, choosing the right mobile app development partner is critical. (Mapletech Labs is headquartered here, so if you want a local team, see our <Link href="/locations/app-development-company-in-edmonton">app development company in Edmonton</Link> page.) We evaluated dozens of Edmonton-area agencies and product studios to bring you this definitive ranking of the <strong style={{ color: 'var(--body)' }}>Top 10 Mobile App Development Companies in Edmonton</strong> for 2026.
                   </p>
                 </div>
 
