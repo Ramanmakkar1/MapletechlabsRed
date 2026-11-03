@@ -835,7 +835,7 @@ export const articles: Article[] = [
         { title: 'Two Tall Totems', text: 'Founded in Vancouver. Focuses on mobile and web app design and development.' },
         { title: 'Mapletech Labs', text: 'A Canadian software company headquartered in Edmonton, Alberta. Serves Vancouver and BC clients remotely or on site, across custom software, web, mobile, SaaS and AI projects.' },
       ] },
-      { type: 'p', html: 'See how we work with Vancouver businesses on our <a href="/locations/software-development-company-in-vancouver">Vancouver software development</a> page.' },
+      { type: 'p', html: 'See how we work with Vancouver businesses on our <a href="/locations/software-development-company-in-vancouver">Vancouver software development</a> page, or go straight to our <a href="/locations/app-development-company-in-vancouver">app development company in Vancouver</a> and <a href="/locations/ai-development-company-in-vancouver">AI development in Vancouver</a> pages.' },
 
       { type: 'h2', id: 'first-call', text: 'Questions to ask on the first call' },
       { type: 'ol', items: [
@@ -1556,7 +1556,7 @@ export const articles: Article[] = [
         { term: 'Time and materials', text: 'You pay for the hours worked, usually in sprints. It suits products that will change as you learn, and it needs regular demos and budget tracking to stay on course.' },
         { term: 'Retainer', text: 'A set amount of work each month, common after launch for maintenance, improvements and support. Agree on what is included and how unused hours are handled.' },
       ] },
-      { type: 'p', html: 'If you are still deciding whether to hire or outsource, our <a href="/tools/in-house-vs-agency">in-house vs agency calculator</a> compares the two for your situation. See how we work with Ontario businesses on our <a href="/locations/software-development-company-in-toronto">Toronto software development</a> page.' },
+      { type: 'p', html: 'If you are still deciding whether to hire or outsource, our <a href="/tools/in-house-vs-agency">in-house vs agency calculator</a> compares the two for your situation. See how we work with Ontario businesses on our <a href="/locations/software-development-company-in-toronto">Toronto software development</a> page. Building a mobile app or an AI feature? See our <a href="/locations/app-development-company-in-toronto">app development company in Toronto</a> and <a href="/locations/ai-development-company-in-toronto">AI development company in Toronto</a> pages.' },
 
       { type: 'h2', id: 'vetting-checklist', text: 'Vetting checklist' },
       { type: 'p', html: 'Before you sign, check each of these in writing:' },
