@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getServiceCityCombo, serviceCitySlugs } from '@/data/serviceCity';
 import { getCityServiceData } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { localServiceSchema } from '@/lib/seo/business';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { SERVICE_CITY_LOCAL, type ServiceCityLocal } from '@/data/service-city-local';
 
@@ -73,20 +74,18 @@ export default async function ServiceCityPage({ params }: PageProps) {
       {
         '@type': 'Service',
         name: `${combo.label} in ${data.cityName}`,
-        provider: { '@type': 'Organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca' },
+        provider: { '@id': 'https://mapletechlabs.ca/#localbusiness' },
         areaServed: { '@type': 'City', name: data.cityName, containedInPlace: { '@type': 'AdministrativeArea', name: data.province } },
         serviceType: combo.label,
         description: data.description,
         url,
       },
-      {
-        '@type': 'ProfessionalService',
-        name: `Mapletech Labs ${data.cityName}`,
-        url: cityLanding,
-        address: { '@type': 'PostalAddress', addressLocality: data.cityName, addressRegion: data.provinceAbbr, addressCountry: 'CA' },
-        priceRange: '$$$',
-        image: 'https://mapletechlabs.ca/logo.png',
-      },
+      localServiceSchema({
+        cityName: data.cityName,
+        provinceName: data.province,
+        url,
+        serviceType: [combo.label],
+      }),
       {
         '@type': 'FAQPage',
         mainEntity: data.faqs.map(faq => ({ '@type': 'Question', name: faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.a } })),

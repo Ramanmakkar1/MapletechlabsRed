@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
+import { BUSINESS, HQ_ADDRESS } from "@/lib/seo/business";
 import "./globals.css";
 
 // Hostinger must not keep HTML from an obsolete deployment for a year.
@@ -92,25 +93,14 @@ const organizationSchema = {
   logo: `${siteOrigin()}/logo.png`,
   description:
     "Custom software development company founded by Raman Makkar in Edmonton, Canada, with 12 locations across Canada and an experienced remote engineering team.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Edmonton, Alberta",
-    addressLocality: "Edmonton",
-    addressRegion: "AB",
-    postalCode: "T5J 1B9",
-    addressCountry: "CA",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/canadamapletechlabs/",
-    "https://www.facebook.com/Mapletechlabs/",
-    "https://www.instagram.com/mapletechlabs/",
-  ],
+  address: { ...HQ_ADDRESS },
+  sameAs: [...BUSINESS.sameAs],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
     availableLanguage: ["English", "French"],
-    telephone: "+1-403-604-8692",
-    email: "hello@mapletechlabs.ca",
+    telephone: BUSINESS.telephone,
+    email: BUSINESS.email,
   },
   areaServed: ["CA", "US"],
   foundingDate: "2018",

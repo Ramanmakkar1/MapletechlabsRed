@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getCityServiceData, getAllCityServiceParams } from '@/data/city-service';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { isIndexableCityService } from '@/data/serviceCity';
+import { localServiceSchema } from '@/lib/seo/business';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -61,11 +62,7 @@ export default async function CityServicePage({ params }: PageProps) {
       {
         '@type': 'Service',
         name: `${data.serviceName} in ${data.cityName}`,
-        provider: {
-          '@type': 'Organization',
-          name: 'Mapletech Labs',
-          url: 'https://mapletechlabs.ca',
-        },
+        provider: { '@id': 'https://mapletechlabs.ca/#localbusiness' },
         areaServed: {
           '@type': 'City',
           name: data.cityName,
@@ -78,19 +75,12 @@ export default async function CityServicePage({ params }: PageProps) {
         description: desc,
         url: data.canonicalUrl,
       },
-      {
-        '@type': 'ProfessionalService',
-        name: `Mapletech Labs ${data.cityName}`,
-        url: `https://mapletechlabs.ca/locations/software-development-company-in-${data.citySlug}`,
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: data.cityName,
-          addressRegion: data.provinceAbbr,
-          addressCountry: 'CA',
-        },
-        priceRange: '$$$',
-        image: 'https://mapletechlabs.ca/logo.png',
-      },
+      localServiceSchema({
+        cityName: data.cityName,
+        provinceName: data.province,
+        url: data.canonicalUrl,
+        serviceType: [data.serviceName],
+      }),
       {
         '@type': 'FAQPage',
         mainEntity: data.faqs.map(faq => ({
