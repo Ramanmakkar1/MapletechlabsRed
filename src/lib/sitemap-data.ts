@@ -104,6 +104,8 @@ export function pageSitemapEntries(): SitemapEntry[] {
     { loc: `${BASE_URL}/industries`, lastmod: '2026-02-18', changefreq: 'monthly', priority: '0.8' },
     { loc: `${BASE_URL}/about/raman-makkar`, lastmod: '2026-02-20', changefreq: 'monthly', priority: '0.6' },
     { loc: `${BASE_URL}/tools/cost-estimator`, lastmod: '2026-11-02', changefreq: 'monthly', priority: '0.7' },
+    { loc: `${BASE_URL}/tools`, lastmod: '2026-11-03', changefreq: 'monthly', priority: '0.6' },
+    { loc: `${BASE_URL}/tools/sred-estimator`, lastmod: '2026-11-03', changefreq: 'monthly', priority: '0.7' },
   ];
 }
 

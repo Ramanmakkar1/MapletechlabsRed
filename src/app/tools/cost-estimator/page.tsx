@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -104,6 +105,11 @@ export default function CostEstimatorPage() {
                 <div key={f.q} style={{ borderTop: '1px solid var(--line)', padding: '20px 0' }}>
                   <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: '0 0 8px' }}>{f.q}</h3>
                   <p style={{ ...p, marginBottom: 0 }}>{f.a}</p>
+                  {f.q === 'Does SR&ED reduce the cost?' && (
+                    <Link href="/tools/sred-estimator" style={{ display: 'inline-block', marginTop: 8, fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none' }}>
+                      Estimate your SR&amp;ED credit →
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
