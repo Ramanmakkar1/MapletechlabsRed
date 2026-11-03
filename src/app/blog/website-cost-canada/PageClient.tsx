@@ -353,7 +353,7 @@ export default function WebsiteCostCanadaClient() {
                   }}>
                     <h3 style={{ fontSize: 17, fontWeight: 600, color: 'var(--brand)', margin: '0 0 10px' }}>Custom Development (Next.js / React) — $15,000 - $500,000+</h3>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
-                      Best for: Businesses where the website IS the product, or companies competing in high-value markets where speed, SEO, and user experience directly impact revenue. Custom development gives you complete control over performance, security, and scalability. This is what Mapletech Labs specializes in, and it is the only approach we recommend for businesses with serious growth ambitions.
+                      Best for: Businesses where the website IS the product, or companies competing in high-value markets where speed, SEO, and user experience directly impact revenue. Custom development gives you complete control over performance, security, and scalability. Pairing it with dedicated <Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>UI/UX design</Link> is what turns that speed into conversions. This is what Mapletech Labs specializes in, and it is the only approach we recommend for businesses with serious growth ambitions.
                     </p>
                   </div>
                 </div>
