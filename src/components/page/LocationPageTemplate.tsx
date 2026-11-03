@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
@@ -31,6 +32,7 @@ export interface LocationProps {
   trends: { title: string; items: { t: string; d: string }[] };
   serviceLinks?: { name: string; slug: string }[];
   overview?: { title: string; lead: string; points: { t: string; d: string }[]; covers: string[] };
+  localContent?: ReactNode;
 }
 
 // Shared defaults so a new city only needs its city-specific content (copy, whyCity, neighborhoods, trends).
@@ -181,6 +183,7 @@ export default function LocationPageTemplate(p: LocationProps) {
         </section>
         <MediaBand media={humanPick(p.slug, 8)} ratio="21 / 7" />
         <CardGrid title={p.trends.title} items={p.trends.items.map(i => ({ title: i.t, desc: i.d }))} variant="rows" />
+        {p.localContent}
         <WhyUs />
         <Credentials />
         <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
