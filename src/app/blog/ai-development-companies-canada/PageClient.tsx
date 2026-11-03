@@ -575,6 +575,9 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Stop experimenting with AI demos and start deploying production systems. Mapletech Labs builds custom AI solutions that integrate seamlessly into your existing infrastructure and deliver measurable ROI.
                 </p>
+                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
+                  Looking for a team near you? See <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>our AI development services</Link>, our local pages for <Link href="/locations/ai-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Edmonton</Link>, <Link href="/locations/ai-development-company-in-calgary" style={{ color: 'var(--brand)' }}>Calgary</Link>, <Link href="/locations/ai-development-company-in-toronto" style={{ color: 'var(--brand)' }}>Toronto</Link> and <Link href="/locations/ai-development-company-in-vancouver" style={{ color: 'var(--brand)' }}>Vancouver</Link>, and typical prices in our <Link href="/blog/ai-development-cost-canada" style={{ color: 'var(--brand)' }}>AI development cost guide</Link>.
+                </p>
               </div>
               <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your AI Project →</Link>
             </div>

@@ -492,6 +492,9 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Calgary&apos;s tech ecosystem is thriving. Partner with Mapletech Labs to build enterprise-grade software with local engineering excellence at a fraction of Toronto and Vancouver costs.
                 </p>
+                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
+                  See our local pages for <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)' }}>software development in Calgary</Link>, <Link href="/locations/app-development-company-in-calgary" style={{ color: 'var(--brand)' }}>app development in Calgary</Link> and <Link href="/locations/ai-development-company-in-calgary" style={{ color: 'var(--brand)' }}>AI development in Calgary</Link>, or read what projects cost in our <Link href="/blog/software-development-cost-canada" style={{ color: 'var(--brand)' }}>software development cost guide</Link>.
+                </p>
               </div>
               <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your Calgary Project →</Link>
             </div>
