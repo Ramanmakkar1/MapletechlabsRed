@@ -6,7 +6,8 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Top 10 Unicorn Apps of 2026';
-const DESCRIPTION = 'The mobile-first companies that crossed $1B valuation this year';
+const DESCRIPTION =
+  'The 10 mobile-first apps that became unicorns in 2026: what they build, how they grew past a $1B valuation, and the product lessons for Canadian founders.';
 const SLUG = 'top-10-unicorn-apps-2026';
 const DATE = '2026-01-15';
 

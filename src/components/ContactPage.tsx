@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import { submitToSplitForms } from '@/lib/splitforms';
 
 const PROJECT_TYPES = ['Mobile App', 'Web Platform', 'AI / ML Solution', 'Product Design', 'Blockchain / Web3', 'Custom Engineering', 'Other'];
@@ -153,6 +154,71 @@ export default function ContactPage() {
                 </form>
               )}
             </div>
+          </div>
+
+          <div style={{ marginTop: 'clamp(56px, 8vw, 88px)', paddingTop: 48, borderTop: '1px solid var(--line)', maxWidth: 760 }}>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
+              What happens after you send this
+            </h2>
+            <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px' }}>
+              We keep the process transparent from the first reply through to a written proposal — no pressure, and no generic sales deck.
+            </p>
+            <ol style={{ margin: '0 0 56px', paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 20 }}>
+              <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
+                <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Reply within one working day</strong>
+                {' — '}
+                A senior engineer reads your brief and responds with honest first thoughts, relevant experience, and the questions that matter for a build like yours.
+              </li>
+              <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
+                <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Free 30-minute scoping call</strong>
+                {' — '}
+                We walk through goals, users, constraints, and timeline so you leave with a clearer picture of scope, whether or not we work together.
+              </li>
+              <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
+                <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Fixed-scope, fixed-price proposal in CAD</strong>
+                {' — '}
+                You receive deliverables, milestones, and a breakdown of where every dollar goes — signed under NDA before sensitive details are exchanged.
+              </li>
+            </ol>
+
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
+              Where we work
+            </h2>
+            <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 56px' }}>
+              Mapletech Labs is headquartered in Edmonton, Alberta. Call us at{' '}
+              <a href="tel:+14036048692" style={{ color: 'var(--brand)', fontWeight: 500, textDecoration: 'none' }}>+1-403-604-8692</a>
+              {' '}or email the addresses above. Our team serves clients across Canada — on-site when it helps, remote by default — with dedicated engineers in{' '}
+              <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', fontWeight: 500, textDecoration: 'none' }}>Edmonton</Link>
+              {', '}
+              <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)', fontWeight: 500, textDecoration: 'none' }}>Calgary</Link>
+              {', '}
+              <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)', fontWeight: 500, textDecoration: 'none' }}>Toronto</Link>
+              {', and '}
+              <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)', fontWeight: 500, textDecoration: 'none' }}>Vancouver</Link>
+              .
+            </p>
+
+            <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', margin: '0 0 10px' }}>Do you sign NDAs?</h3>
+            <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px' }}>
+              Yes — before any confidential details are shared. We will sign your mutual NDA or provide our standard agreement for your review. Your idea, data, and roadmap stay confidential from the first conversation.
+            </p>
+
+            <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', margin: '0 0 10px' }}>Can you work with an existing codebase?</h3>
+            <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px' }}>
+              Often, yes. We start with a short technical review: architecture, test coverage, deployment, and where the product hurts today. From there we can take over maintenance, ship the next release, or refactor toward something your team can own long term.
+            </p>
+
+            <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', margin: '0 0 10px' }}>What budget do I need?</h3>
+            <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px' }}>
+              It depends on scope, but most product builds are phased so you are not committing blind. See our{' '}
+              <Link href="/pricing" style={{ color: 'var(--brand)', fontWeight: 500, textDecoration: 'none' }}>pricing page</Link>
+              {' '}for typical ranges in CAD, discovery-first engagements, and what drives cost on web, mobile, and AI work.
+            </p>
+
+            <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', margin: '0 0 10px' }}>Do you work with startups using SR&ED or IRAP?</h3>
+            <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
+              Yes. We document eligible R&D activity, keep time and deliverables audit-friendly, and align milestones with funding cycles where that helps your cash flow. Tell us about your grant or advisor on the form and we will factor it into the proposal.
+            </p>
           </div>
         </div>
       </section>
