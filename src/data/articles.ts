@@ -1063,6 +1063,101 @@ export const articles: Article[] = [
     ],
     cta: { href: '/locations/software-development-company-in-montreal', label: 'See our Montreal software services' },
   },
+  {
+    slug: 'nrc-irap-funding-software-canada',
+    category: 'Business',
+    title: 'NRC IRAP Funding for Software Projects in Canada (2026)',
+    dek: 'NRC IRAP can help Canadian small and medium-sized businesses pay for technology innovation, including some software projects. Here is what IRAP is, who usually qualifies, how the process works, what software work tends to fit, and how IRAP funding interacts with your SR&ED claim.',
+    metaTitle: 'NRC IRAP Funding for Software in Canada',
+    metaDescription: 'How NRC IRAP works for Canadian software projects in 2026: who qualifies, the ITA process, what work fits, how IRAP stacks with SR&ED, and pitfalls.',
+    date: '2026-11-02',
+    dateModified: '2026-11-02',
+    readTime: '8 min read',
+    heroKey: 'planning',
+    intro: [
+      'The National Research Council of Canada Industrial Research Assistance Program, better known as NRC IRAP, is one of the main federal programs that helps small and medium-sized businesses take on technology innovation. For a Canadian company building new software, it can be a useful source of non-repayable support alongside the SR&amp;ED tax credit.',
+      'This guide explains IRAP in plain terms: what it is, who usually qualifies, how the process works with an Industrial Technology Advisor, what kinds of software work tend to fit, how IRAP and SR&amp;ED stack, the common mistakes, and a realistic timeline. It is a general overview, not financial or legal advice, so always confirm current rules with NRC IRAP and your accountant.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-is-irap', text: 'What NRC IRAP is' },
+      { type: 'p', html: 'NRC IRAP is run by the National Research Council of Canada. It supports small and medium-sized enterprises (SMEs) that are developing and commercializing innovative technology. Support can include advice from experienced advisors, connections to experts and partners, and financial support for eligible projects.' },
+      { type: 'p', html: 'The financial support is usually a non-repayable contribution toward part of an approved project&rsquo;s costs, most often salaries and some contractor costs. It is not a loan and not a grant you can spend freely: it is tied to an agreed project plan, and you claim it back as you spend. The amount and the share of costs covered depend on the project and the funding available, so there is no fixed figure you can count on in advance.' },
+      { type: 'p', html: 'The official details are on the <a href="https://nrc.canada.ca/en/support-technology-innovation" target="_blank" rel="noopener noreferrer">NRC IRAP page</a>, which is the best place to check current eligibility and contact details.' },
+
+      { type: 'h2', id: 'who-qualifies', text: 'Who usually qualifies' },
+      { type: 'p', html: 'IRAP is aimed at growing Canadian businesses rather than individuals or large corporations. In general terms, companies that work with IRAP tend to be:' },
+      { type: 'checks', items: [
+        { term: 'Incorporated and for-profit', text: 'The business is an incorporated, for-profit company, not a sole proprietorship, charity or not-for-profit.' },
+        { term: 'Canadian', text: 'The company operates in Canada and the project work is done here.' },
+        { term: 'Small or medium-sized', text: 'The company is an SME, generally with fewer than 500 employees.' },
+        { term: 'Growth-focused', text: 'The company wants to grow and has the ability to carry out and commercialize the project, including the people and finances to manage it.' },
+      ] },
+      { type: 'p', html: 'Meeting these points does not guarantee funding. IRAP looks at the project, the team and the business case, and funding is limited, so an advisor will discuss whether and how IRAP can help.' },
+
+      { type: 'h2', id: 'how-it-works', text: 'How the IRAP process works' },
+      { type: 'p', html: 'IRAP is relationship-based. You do not simply fill in an online form and wait. The usual path looks like this:' },
+      { type: 'ol', items: [
+        '<strong>First contact.</strong> You reach out to NRC IRAP and are connected with an Industrial Technology Advisor (ITA), usually someone with technical and business experience in your region or sector.',
+        '<strong>Getting to know your business.</strong> The ITA learns about your company, your technology and your plans. This often takes more than one conversation.',
+        '<strong>Project scoping.</strong> Together you shape a project with clear technical goals, milestones, a budget and the people who will do the work.',
+        '<strong>Proposal.</strong> If the project looks like a fit, you prepare a formal proposal with the technical plan, the budget and your company&rsquo;s financial information.',
+        '<strong>Agreement.</strong> If approved, you sign a contribution agreement that sets out the eligible costs, the share IRAP will contribute and the reporting you must do.',
+        '<strong>Claims and reporting.</strong> You do the work, pay the costs, and submit claims with records to be reimbursed for IRAP&rsquo;s share. Progress reports show how the project is going.',
+      ] },
+      { type: 'p', html: 'Costs incurred before an agreement is in place are generally not covered, so talk to IRAP before the project starts rather than after.' },
+
+      { type: 'h2', id: 'software-fit', text: 'What software work tends to fit, and what does not' },
+      { type: 'p', html: 'IRAP is about technology innovation, so the question is whether your project develops something technically new for your business, with real risk and a path to market. Software work that often fits includes:' },
+      { type: 'ul', items: [
+        'Building a new product or platform around technology that does not exist in a ready-made form.',
+        'Developing new algorithms, machine learning models or data processing methods for a specific problem.',
+        'Solving hard technical problems such as performance at scale, real-time processing or complex integrations with hardware or legacy systems.',
+        'Adapting an emerging technology to a new use where the outcome is uncertain.',
+      ] },
+      { type: 'p', html: 'Work that usually fits poorly includes routine website builds, standard e-commerce stores, theme customization, ordinary maintenance and bug fixing, and projects that mainly assemble existing tools in a well-known way. Marketing, sales and general operating costs are also typically outside a technology project. If you are not sure, describe the technical challenge to your ITA and let them guide you.' },
+
+      { type: 'h2', id: 'irap-and-sred', text: 'How IRAP and SR&ED stack' },
+      { type: 'p', html: 'Many software companies use both IRAP and the federal <a href="https://www.canada.ca/en/revenue-agency/services/scientific-research-experimental-development-tax-incentive-program.html" target="_blank" rel="noopener noreferrer">Scientific Research and Experimental Development (SR&amp;ED) tax incentive</a>. They can work together, but they are not simply added on top of each other.' },
+      { type: 'p', html: 'IRAP funding counts as government assistance. When the same costs are part of an SR&amp;ED claim, government assistance generally reduces the expenditure base the SR&amp;ED credit is calculated on. In plain terms, if IRAP paid part of a salary, you usually cannot also claim that same part for SR&amp;ED. You can still claim SR&amp;ED on the eligible portion you paid yourself, and on eligible work outside the IRAP project.' },
+      { type: 'p', html: 'Keep IRAP and SR&amp;ED records aligned: the same people, hours and technical problems should tell a consistent story in both. Our <a href="/tools/sred-estimator">SR&amp;ED estimator</a> gives a rough idea of a claim, but remember to reduce your costs by any IRAP funding before you rely on the result, and confirm the details with an accountant.' },
+
+      { type: 'h2', id: 'common-mistakes', text: 'Common mistakes' },
+      { type: 'ul', items: [
+        'Starting the work, or hiring for it, before an agreement is in place and expecting those costs to be covered.',
+        'Pitching a routine build as innovation. ITAs see many proposals and can tell the difference.',
+        'A vague project plan without clear technical goals, milestones or a budget tied to real people.',
+        'Weak records of time and costs, which make claims slow and SR&amp;ED claims harder to support.',
+        'Claiming the same costs in full for both IRAP and SR&amp;ED instead of reducing the SR&amp;ED base.',
+        'Treating IRAP as guaranteed money in a cash-flow plan. You pay first and are reimbursed after claims are approved.',
+      ] },
+
+      { type: 'h2', id: 'timeline', text: 'A realistic timeline' },
+      { type: 'p', html: 'Every project is different, but in general terms the path tends to look like this:' },
+      { type: 'ul', items: [
+        '<strong>First weeks:</strong> initial contact and early conversations with an ITA about your business and technology.',
+        '<strong>Following weeks to months:</strong> project scoping, the proposal, and review. Timing depends on the project, your readiness and available funding.',
+        '<strong>During the project:</strong> regular claims and progress reports under the contribution agreement, usually over several months to a year or more.',
+        '<strong>After the tax year:</strong> your SR&amp;ED claim, filed with your corporate tax return, with IRAP funding taken into account.',
+      ] },
+      { type: 'p', html: 'Because the process takes time, it helps to start the IRAP conversation well before you plan to begin development. If you are planning a custom software project, our guide to <a href="/blog/custom-software-vs-off-the-shelf">custom software versus off-the-shelf</a> can help you decide whether a build is the right move first.' },
+    ],
+    keyTakeaways: [
+      'NRC IRAP offers advice and non-repayable contributions to Canadian SMEs doing technology innovation, tied to an approved project.',
+      'Applicants are generally incorporated, for-profit Canadian SMEs with fewer than 500 employees and a plan to grow.',
+      'The process runs through an Industrial Technology Advisor: contact, project scoping, proposal, agreement, then claims.',
+      'Software projects with real technical risk tend to fit; routine websites, maintenance and standard builds usually do not.',
+      'IRAP funding is government assistance, so it generally reduces the expenditure base for SR&ED on the same costs.',
+      'Talk to IRAP before work starts, keep clean records, and never count on funding until an agreement is signed.',
+    ],
+    faqs: [
+      { q: 'What is NRC IRAP?', a: 'NRC IRAP is the National Research Council of Canada Industrial Research Assistance Program. It supports small and medium-sized Canadian businesses doing technology innovation with advice and, for approved projects, non-repayable contributions toward part of the costs, usually salaries and some contractor costs.' },
+      { q: 'Does my software company qualify for IRAP?', a: 'Companies that work with IRAP are generally incorporated, for-profit Canadian SMEs with fewer than 500 employees and a plan to grow. The project also needs real technical innovation. Meeting these points does not guarantee funding, so talk to an Industrial Technology Advisor about your project.' },
+      { q: 'How do I apply for IRAP funding?', a: 'You start by contacting NRC IRAP and being connected with an Industrial Technology Advisor. The advisor learns about your business, helps scope a project and, if it fits, invites a formal proposal. Approved projects get a contribution agreement, and you then submit claims for the agreed share of eligible costs.' },
+      { q: 'Can I claim SR&ED on work funded by IRAP?', a: 'Often yes, but not on the same costs in full. IRAP funding is government assistance, which generally reduces the expenditure base for the SR&ED credit. You can usually still claim SR&ED on the eligible portion you paid yourself. Confirm the details with your accountant.' },
+      { q: 'How long does the IRAP process take?', a: 'It varies by project, your readiness and available funding. Early conversations with an advisor can take a few weeks, and scoping, the proposal and review can take longer. Costs before an agreement is signed are generally not covered, so start the conversation well before development begins.' },
+    ],
+    cta: { href: '/tools/sred-estimator', label: 'Estimate your SR&ED credit' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);

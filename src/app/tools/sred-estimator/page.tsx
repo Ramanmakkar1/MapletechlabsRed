@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -108,6 +109,10 @@ export default function SredEstimatorPage() {
                   <p style={{ ...p, marginBottom: 0 }}>{f.a}</p>
                 </div>
               ))}
+              <p style={{ ...p, borderTop: '1px solid var(--line)', paddingTop: 20 }}>
+                Also see: <Link href="/blog/nrc-irap-funding-software-canada" style={{ color: 'var(--ink)', textDecoration: 'underline' }}>IRAP funding guide</Link>, which
+                explains how government assistance affects your SR&amp;ED claim.
+              </p>
             </div>
           </div>
         </section>

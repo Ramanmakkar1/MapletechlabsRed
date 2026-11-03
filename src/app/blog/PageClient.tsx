@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'nrc-irap-funding-software-canada', category: 'Business',
+    title: 'NRC IRAP Funding for Software Projects in Canada (2026)',
+    excerpt: 'How NRC IRAP works for Canadian software companies: who qualifies, the Industrial Technology Advisor process, what software work fits, and how IRAP funding stacks with SR&ED.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
+  },
+  {
     slug: 'software-development-companies-montreal', category: 'Business',
     title: 'Software Development Companies in Montreal (2026)',
     excerpt: 'How to choose a software development company in Montreal: Quebec Law 25 privacy, French-language rules for software, typical costs and the questions to ask on the first call.',
