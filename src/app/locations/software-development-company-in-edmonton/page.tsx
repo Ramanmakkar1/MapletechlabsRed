@@ -2,12 +2,16 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Custom Software Development Edmonton | Local Team';
+const DESCRIPTION = 'Custom software development in Edmonton by Mapletech Labs, a software development company headquartered here. Fixed price; a senior engineer replies in 1 day.';
+
 export const metadata: Metadata = {
-  title: 'Software Development Company in Edmonton',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Edmonton, Alberta. Get a free quote today.',
+  // Brand-free so the hook fits 60 chars; the OG title keeps the brand.
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   openGraph: {
     title: 'Software Development Company in Edmonton | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Edmonton, Alberta. Get a free quote today.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton',
     type: 'website',
   },

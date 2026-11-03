@@ -38,6 +38,12 @@ for (const file of files) {
   const expr = m[1];
   let literal = expr.match(/^'([^']*)'$/)?.[1];
   if (expr === "TITLE" || expr === "seoTitle(TITLE)") literal = src.match(/^const TITLE = '((?:[^'\\]|\\.)*)';$/m)?.[1]?.replace(/\\'/g, "'");
+  if (expr === "{ absolute: TITLE }") {
+    // Brand-free absolute title: rendered exactly as written, so it alone must fit.
+    const absolute = src.match(/^const TITLE = '((?:[^'\\]|\\.)*)';$/m)?.[1]?.replace(/\\'/g, "'");
+    if (absolute !== undefined && absolute.length > MAX) problems.push(`${file}: "${absolute}" is ${absolute.length} chars (max ${MAX})`);
+    continue;
+  }
   if (literal === undefined) continue; // seoTitle(...) / { absolute } / dynamic: rule enforced by helper
   if (/Mapletech Labs/i.test(literal)) problems.push(`${file}: "${literal}" names the brand -> rendered twice; wrap in seoTitle()`);
   else if (literal.length + BRAND.length > MAX) problems.push(`${file}: "${literal}" is ${literal.length + BRAND.length} chars once branded (max ${MAX}); wrap in seoTitle()`);

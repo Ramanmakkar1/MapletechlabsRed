@@ -47,7 +47,7 @@ const trends = [
                 { t: 'E-Commerce & Retail', d: 'Headless commerce, subscription platforms, and omnichannel solutions for Edmonton\'s growing DTC and retail brands.' },
               ];
 const serviceLinks = [
-                { name: 'Web Development', slug: 'web-development' },
+                { name: 'Edmonton web development', slug: 'web-development' },
                 { name: 'Mobile App Development', slug: 'mobile-app-development' },
                 { name: 'AI & Machine Learning', slug: 'ai-ml' },
                 { name: 'Cloud & DevOps', slug: 'cloud-devops' },
