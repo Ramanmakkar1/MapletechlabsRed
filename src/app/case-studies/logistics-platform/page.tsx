@@ -8,6 +8,7 @@ import { seoTitle } from '@/lib/seo/title';
 const TITLE = 'Logistics & Fleet Platform | Case Study';
 const DESCRIPTION = 'How Mapletech Labs built a real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and 98% on-time delivery rate.';
 const SLUG = 'logistics-platform';
+const DATE = '2026-03-14';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
     type: 'article',
+    publishedTime: DATE,
   },
   alternates: {
     canonical: canonicalUrl(`/case-studies/${SLUG}`),
@@ -26,11 +28,14 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Real-Time Logistics & Fleet Management - Case Study',
+  headline: TITLE,
   description: DESCRIPTION,
+  datePublished: DATE,
+  dateModified: DATE,
   author: {
     '@type': 'Organization',
     name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
   },
   publisher: {
     '@type': 'Organization',
