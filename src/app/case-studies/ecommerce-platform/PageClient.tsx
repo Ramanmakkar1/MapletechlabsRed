@@ -9,6 +9,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import CaseStudyRelated from '@/components/CaseStudyRelated';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -239,6 +240,16 @@ export default function EcommerceCaseStudyClient() {
             </div>
           </div>
         </section>
+
+        <CaseStudyRelated
+          intro="Planning a similar storefront in Edmonton? See how we approach web and e-commerce development for Edmonton businesses."
+          services={[
+            { label: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
+            { label: 'Web Development', href: '/services/web-development' },
+            { label: 'Web Development in Edmonton', href: '/locations/web-development-company-in-edmonton' },
+          ]}
+          city={{ label: 'Software Development in Edmonton', href: '/locations/software-development-company-in-edmonton' }}
+        />
 
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

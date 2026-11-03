@@ -9,6 +9,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import CaseStudyRelated from '@/components/CaseStudyRelated';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -239,6 +240,16 @@ export default function HealthcareCaseStudyClient() {
             </div>
           </div>
         </section>
+
+        <CaseStudyRelated
+          intro="Planning something similar in Calgary? See our app development work for Calgary businesses."
+          services={[
+            { label: 'Mobile App Development', href: '/services/mobile-app-development' },
+            { label: 'Web Development', href: '/services/web-development' },
+            { label: 'App Development in Calgary', href: '/locations/app-development-company-in-calgary' },
+          ]}
+          city={{ label: 'Software Development in Calgary', href: '/locations/software-development-company-in-calgary' }}
+        />
 
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

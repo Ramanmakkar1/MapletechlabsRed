@@ -9,6 +9,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import CaseStudyRelated from '@/components/CaseStudyRelated';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -239,6 +240,17 @@ export default function FintechCaseStudyClient() {
             </div>
           </div>
         </section>
+
+        <CaseStudyRelated
+          intro="Building something similar in Toronto? See our web development and cloud DevOps services for Toronto fintech teams."
+          services={[
+            { label: 'Web Development', href: '/services/web-development' },
+            { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+            { label: 'Web Development in Toronto', href: '/locations/web-development-company-in-toronto' },
+            { label: 'Cloud & DevOps in Toronto', href: '/locations/toronto/cloud-devops' },
+          ]}
+          city={{ label: 'Software Development in Toronto', href: '/locations/software-development-company-in-toronto' }}
+        />
 
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

@@ -39,6 +39,7 @@ const jsonLd = {
   },
   publisher: {
     '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
     name: 'Mapletech Labs',
     url: 'https://mapletechlabs.ca',
     logo: {
@@ -46,6 +47,11 @@ const jsonLd = {
       url: 'https://mapletechlabs.ca/logo.png',
     },
   },
+  about: [
+    { '@type': 'Service', name: 'Enterprise Portals', url: 'https://mapletechlabs.ca/services/web-development/enterprise-portals' },
+    { '@type': 'Service', name: 'Mobile App Development', url: 'https://mapletechlabs.ca/services/mobile-app-development' },
+    { '@type': 'Service', name: 'App Development in Vancouver', url: 'https://mapletechlabs.ca/locations/app-development-company-in-vancouver' },
+  ],
   url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/case-studies/${SLUG}`,
 };

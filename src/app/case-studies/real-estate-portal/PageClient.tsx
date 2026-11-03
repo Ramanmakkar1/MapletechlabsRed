@@ -9,6 +9,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import CaseStudyRelated from '@/components/CaseStudyRelated';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -239,6 +240,15 @@ export default function RealEstateCaseStudyClient() {
             </div>
           </div>
         </section>
+
+        <CaseStudyRelated
+          intro="Planning a data-driven portal in Toronto? See our web development services for Toronto product teams."
+          services={[
+            { label: 'Web Development', href: '/services/web-development' },
+            { label: 'Web Development in Toronto', href: '/locations/web-development-company-in-toronto' },
+          ]}
+          city={{ label: 'Software Development in Toronto', href: '/locations/software-development-company-in-toronto' }}
+        />
 
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

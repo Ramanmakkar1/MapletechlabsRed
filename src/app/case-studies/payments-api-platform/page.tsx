@@ -8,6 +8,8 @@ import { seoTitle } from '@/lib/seo/title';
 const TITLE = 'PCI DSS Payments API Case Study';
 const DESCRIPTION = 'How Mapletech Labs built PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.';
 
+const SLUG = 'payments-api-platform';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
@@ -20,10 +22,42 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/case-studies/payments-api-platform') },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'PCI DSS Payments API - Case Study',
+  description: DESCRIPTION,
+  author: {
+    '@type': 'Organization',
+    name: 'Mapletech Labs',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
+    name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://mapletechlabs.ca/logo.png',
+    },
+  },
+  about: [
+    { '@type': 'Service', name: 'API & Backend Development', url: 'https://mapletechlabs.ca/services/web-development/api-backend' },
+    { '@type': 'Service', name: 'SaaS Development', url: 'https://mapletechlabs.ca/services/saas-development' },
+    { '@type': 'Service', name: 'SaaS Development in Ottawa', url: 'https://mapletechlabs.ca/locations/saas-development-company-in-ottawa' },
+  ],
+  url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
+  mainEntityOfPage: `https://mapletechlabs.ca/case-studies/${SLUG}`,
+};
+
 export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={getCaseStudyBreadcrumbs('PCI DSS Payments API', 'payments-api-platform')} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageClient />
     </>
   );

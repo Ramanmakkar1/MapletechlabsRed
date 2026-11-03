@@ -9,6 +9,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import CaseStudyRelated from '@/components/CaseStudyRelated';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -239,6 +240,16 @@ export default function LogisticsCaseStudyClient() {
             </div>
           </div>
         </section>
+
+        <CaseStudyRelated
+          intro="Planning a logistics platform in Vancouver? See our web and mobile development work for Vancouver teams."
+          services={[
+            { label: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
+            { label: 'Mobile App Development', href: '/services/mobile-app-development' },
+            { label: 'App Development in Vancouver', href: '/locations/app-development-company-in-vancouver' },
+          ]}
+          city={{ label: 'Software Development in Vancouver', href: '/locations/software-development-company-in-vancouver' }}
+        />
 
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

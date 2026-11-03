@@ -9,6 +9,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import CaseStudyRelated from '@/components/CaseStudyRelated';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -239,6 +240,16 @@ export default function PaymentsCaseStudyClient() {
             </div>
           </div>
         </section>
+
+        <CaseStudyRelated
+          intro="Planning a payments or SaaS API in Ottawa? See our backend and SaaS development work for Ottawa companies."
+          services={[
+            { label: 'API & Backend Development', href: '/services/web-development/api-backend' },
+            { label: 'SaaS Development', href: '/services/saas-development' },
+            { label: 'SaaS Development in Ottawa', href: '/locations/saas-development-company-in-ottawa' },
+          ]}
+          city={{ label: 'Software Development in Ottawa', href: '/locations/software-development-company-in-ottawa' }}
+        />
 
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

@@ -34,6 +34,7 @@ const jsonLd = {
   },
   publisher: {
     '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
     name: 'Mapletech Labs',
     url: 'https://mapletechlabs.ca',
     logo: {
@@ -41,6 +42,11 @@ const jsonLd = {
       url: 'https://mapletechlabs.ca/logo.png',
     },
   },
+  about: [
+    { '@type': 'Service', name: 'E-Commerce Systems', url: 'https://mapletechlabs.ca/services/web-development/ecommerce-systems' },
+    { '@type': 'Service', name: 'Web Development', url: 'https://mapletechlabs.ca/services/web-development' },
+    { '@type': 'Service', name: 'Web Development in Edmonton', url: 'https://mapletechlabs.ca/locations/web-development-company-in-edmonton' },
+  ],
   url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/case-studies/${SLUG}`,
 };
