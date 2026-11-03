@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { localServiceSchema } from '@/lib/seo/business';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Laval',
@@ -16,16 +17,12 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'Mapletech Labs - Laval',
-  url: 'https://mapletechlabs.ca/locations/software-development-company-in-laval',
-  telephone: '+1-403-604-8692',
-  priceRange: '$$-$$$',
-  image: 'https://mapletechlabs.ca/images/og-default.jpg',
-  address: { '@type': 'PostalAddress', addressLocality: 'Laval', addressRegion: 'Quebec', addressCountry: 'CA' },
-  areaServed: { '@type': 'City', name: 'Laval' },
-  serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
-  sameAs: ['https://www.linkedin.com/company/canadamapletechlabs/', 'https://www.facebook.com/Mapletechlabs/', 'https://www.instagram.com/mapletechlabs/'],
+  ...localServiceSchema({
+    cityName: 'Laval',
+    provinceName: 'Quebec',
+    url: 'https://mapletechlabs.ca/locations/software-development-company-in-laval',
+    serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
+  }),
 };
 
 const breadcrumbSchema = {
