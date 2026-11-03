@@ -68,6 +68,9 @@ export default function ContactPage() {
                 Send us the short version — a senior engineer replies within one working day with next steps, not a sales script.
               </p>
 
+              <p style={{ fontSize: 15, color: 'var(--body)', margin: '-24px 0 36px' }}>
+                <a href="/pricing" style={{ color: 'var(--brand)' }}>See pricing</a> · <a href="/tools/cost-estimator" style={{ color: 'var(--brand)' }}>Cost estimator</a>
+              </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 22, marginBottom: 36 }}>
                 {DETAILS.map(item => (
                   <div key={item.label}>

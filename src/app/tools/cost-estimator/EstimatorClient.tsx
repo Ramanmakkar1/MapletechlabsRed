@@ -2,34 +2,14 @@
 
 import { useState, type CSSProperties } from 'react';
 import Link from 'next/link';
+import { MOBILE_PLATFORM_PRICING, PROJECT_PRICING, type Platform } from '@/data/pricing';
 
 type ProjectType = 'website' | 'webapp' | 'saas' | 'mobile';
-type Platform = 'ios' | 'android' | 'cross' | 'native-both';
 type Complexity = 'mvp' | 'standard' | 'complex';
 type Urgency = 'flexible' | 'standard' | 'rush';
 type AddOn = 'accounts' | 'payments' | 'admin' | 'ai' | 'integrations' | 'design-system';
 
-type Range = { low: number; high: number; weeksLow: number; weeksHigh: number };
-
-/*
- * Base ranges in CAD, kept in line with the cost articles:
- * - website: "Custom Business Website" tier, blog/website-cost-canada
- * - webapp: "E-Commerce Platform" tier (first tier with real app logic), blog/website-cost-canada
- * - saas: bootstrapped MVP budget, blog/saas-development-cost-canada
- * - mobile: platform comparison, blog/app-development-cost-canada
- *   (native on both = native iOS + native Android)
- */
-const BASE: Record<Exclude<ProjectType, 'mobile'>, Range> & { mobile: Record<Platform, Range> } = {
-  website: { low: 10_000, high: 50_000, weeksLow: 4, weeksHigh: 10 },
-  webapp: { low: 25_000, high: 100_000, weeksLow: 8, weeksHigh: 16 },
-  saas: { low: 30_000, high: 75_000, weeksLow: 8, weeksHigh: 13 },
-  mobile: {
-    ios: { low: 40_000, high: 180_000, weeksLow: 12, weeksHigh: 24 },
-    android: { low: 35_000, high: 160_000, weeksLow: 12, weeksHigh: 24 },
-    cross: { low: 30_000, high: 200_000, weeksLow: 10, weeksHigh: 24 },
-    'native-both': { low: 75_000, high: 340_000, weeksLow: 16, weeksHigh: 32 },
-  },
-};
+const BASE = { ...PROJECT_PRICING, mobile: MOBILE_PLATFORM_PRICING };
 
 const PROJECT_TYPES: { value: ProjectType; label: string }[] = [
   { value: 'website', label: 'Website' },
@@ -55,7 +35,7 @@ const ADD_ONS: Record<AddOn, { label: string; low: number; high: number; weeks: 
   accounts: { label: 'User accounts & login', low: 3_000, high: 8_000, weeks: 1 },
   payments: { label: 'Payments integration', low: 4_000, high: 12_000, weeks: 1 },
   admin: { label: 'Admin dashboard', low: 6_000, high: 18_000, weeks: 2 },
-  ai: { label: 'AI features', low: 10_000, high: 35_000, weeks: 3 },
+  ai: { label: 'AI features', low: PROJECT_PRICING.ai.low, high: PROJECT_PRICING.ai.high, weeks: PROJECT_PRICING.ai.weeksLow },
   integrations: { label: 'Third-party integrations', low: 5_000, high: 15_000, weeks: 2 },
   'design-system': { label: 'Custom design system', low: 8_000, high: 20_000, weeks: 2 },
 };

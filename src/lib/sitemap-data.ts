@@ -90,6 +90,7 @@ export function pageSitemapEntries(): SitemapEntry[] {
     { loc: BASE_URL, lastmod: '2026-03-15', changefreq: 'weekly', priority: '1.0' },
     { loc: `${BASE_URL}/about`, lastmod: '2026-02-20', changefreq: 'monthly', priority: '0.8' },
     { loc: `${BASE_URL}/contact`, lastmod: '2026-02-10', changefreq: 'monthly', priority: '0.9' },
+    { loc: `${BASE_URL}/pricing`, lastmod: '2026-11-02', changefreq: 'monthly', priority: '0.8' },
     { loc: `${BASE_URL}/services`, lastmod: '2026-03-10', changefreq: 'weekly', priority: '0.9' },
     { loc: `${BASE_URL}/blog`, lastmod: '2026-03-15', changefreq: 'weekly', priority: '0.7' },
     { loc: `${BASE_URL}/case-studies`, lastmod: '2026-01-25', changefreq: 'monthly', priority: '0.7' },

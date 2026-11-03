@@ -50,6 +50,7 @@ const columns: { title: string; links: { label: string; href: string; lang?: str
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Blog', href: '/blog' },
       { label: 'Cost Estimator', href: '/tools/cost-estimator' },
+      { label: 'Pricing', href: '/pricing' },
       { label: 'SR&ED Estimator', href: '/tools/sred-estimator' },
       { label: 'All Services', href: '/services' },
       { label: 'All Locations', href: '/locations' },
