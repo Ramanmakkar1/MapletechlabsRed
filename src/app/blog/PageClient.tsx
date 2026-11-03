@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'software-maintenance-cost-canada', category: 'Business',
+    title: 'Software & App Maintenance Cost in Canada (2026)',
+    excerpt: 'What maintenance covers, the 15-20% rule of thumb, typical monthly CAD ranges by app size, retainer vs pay-as-you-go vs in-house, hidden costs and how to keep the bill down.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
+  },
+  {
     slug: 'app-privacy-compliance-canada', category: 'Engineering',
     title: 'Privacy Compliance Checklist for Canadian Apps: PIPEDA, Quebec Law 25 and PHIPA (2026)',
     excerpt: 'Which privacy law applies to your app, and a build checklist for developers: consent, data minimization, Canadian hosting, breach reporting, access requests, encryption and AI vendors.',

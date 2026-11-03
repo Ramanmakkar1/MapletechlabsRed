@@ -46,6 +46,7 @@ export const blogSlugs = [
   'software-development-companies-montreal',
   'nrc-irap-funding-software-canada',
   'app-privacy-compliance-canada',
+  'software-maintenance-cost-canada',
 ];
 
 export const citySlugs = [

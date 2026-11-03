@@ -63,6 +63,7 @@ export default function PricingPage() {
                 ['Discovery sprint', 'Fits an early idea or complex project that needs clearer requirements before committing to a build.', 'A short, defined discovery engagement is scoped and billed separately, producing agreed planning outputs for the next decision.'],
               ].map(([name, fit, billing]) => <article key={name} style={{ padding: 22, border: '1px solid var(--line)', borderRadius: 16 }}><h3 style={{ color: 'var(--ink)', marginTop: 0 }}>{name}</h3><p style={p}><strong>Fits:</strong> {fit}</p><p style={{ ...p, marginBottom: 0 }}><strong>Billing:</strong> {billing}</p></article>)}
             </div>
+            <p style={{ ...p, marginTop: 18 }}>Planning for life after launch? Our <Link href="/blog/software-maintenance-cost-canada">software maintenance cost guide</Link> covers typical monthly ranges and retainer options.</p>
           </section>
           <section style={{ marginBottom: 64 }}><h2 style={h2}>What changes the price</h2>
             <p style={p}>Scope, platform, business rules, integrations and quality requirements all shape the effort. More screens, edge cases, custom design and testing increase the work. Building for multiple platforms or connecting several external systems can also shift a project toward the higher end. Compare details in our <Link href="/blog/app-development-cost-canada">app</Link>, <Link href="/blog/saas-development-cost-canada">SaaS</Link> and <Link href="/blog/website-cost-canada">website</Link> cost guides.</p>

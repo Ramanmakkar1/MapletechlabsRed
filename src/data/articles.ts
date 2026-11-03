@@ -1242,6 +1242,97 @@ export const articles: Article[] = [
     ],
     cta: { href: '/contact', label: 'Plan a compliant build' },
   },
+  {
+    slug: 'software-maintenance-cost-canada',
+    category: 'Business',
+    title: 'Software & App Maintenance Cost in Canada (2026)',
+    dek: 'Launch is not the last bill. Here is what software and app maintenance covers, how much Canadian businesses typically budget each month in CAD, how retainers compare with pay-as-you-go and in-house teams, and how to keep the cost down.',
+    metaTitle: 'Software & App Maintenance Cost in Canada (2026)',
+    metaDescription: 'What software and app maintenance costs in Canada in 2026: what it covers, typical monthly CAD ranges by app size, retainers vs in-house, and hidden costs.',
+    date: '2026-11-03',
+    dateModified: '2026-11-03',
+    readTime: '8 min read',
+    heroKey: 'numbers',
+    intro: [
+      'Most cost guides stop at launch day, but software keeps costing money after it ships. Operating systems change, frameworks release new versions, security holes are found, and users ask for small improvements. A product that nobody maintains slowly breaks.',
+      'This guide explains what maintenance includes, the rule of thumb most teams use to budget for it, and typical monthly ranges in Canadian dollars. It completes our cost series alongside the <a href="/blog/app-development-cost-canada">app development cost guide</a>, the <a href="/blog/website-cost-canada">website cost guide</a> and the <a href="/blog/saas-development-cost-canada">SaaS development cost guide</a>.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-it-covers', text: 'What software maintenance covers' },
+      { type: 'p', html: 'Maintenance is everything needed to keep a live product working, secure and useful. It is different from building major new features, although small improvements are often part of it.' },
+      { type: 'checks', items: [
+        { term: 'Bug fixes', text: 'Fixing defects that users report or that monitoring catches, including edge cases that only appear with real data and real traffic.' },
+        { term: 'OS and framework updates', text: 'Apple and Google release new mobile operating systems every year, and web frameworks, libraries and runtimes reach end of support. Keeping up avoids crashes, store rejections and painful upgrades later.' },
+        { term: 'Security patches', text: 'Applying fixes for vulnerabilities in your code and its dependencies, rotating keys and reviewing access. This is the part you cannot skip.' },
+        { term: 'Hosting and cloud', text: 'Servers, databases, storage, backups and bandwidth. Cloud bills grow with usage and need regular review.' },
+        { term: 'Monitoring', text: 'Uptime checks, error tracking and performance alerts, so problems are found before customers report them.' },
+        { term: 'Small features', text: 'Copy changes, small workflow tweaks and minor improvements that keep the product in step with how the business works.' },
+      ] },
+
+      { type: 'h2', id: 'rule-of-thumb', text: 'The 15-20% rule of thumb' },
+      { type: 'p', html: 'A common industry rule of thumb is that yearly maintenance costs about 15-20% of the original build cost. A $100,000 app would then need roughly $15,000 to $20,000 a year, or about $1,250 to $1,670 a month, to stay healthy.' },
+      { type: 'callout', tone: 'muted', title: 'A rule of thumb, not a quote', text: 'The 15-20% figure is a widely used industry rule of thumb for planning, not a Mapletech guarantee or price. Your real cost depends on the size of the codebase, how many users and integrations you have, how much change you want each month and how well the product was built.' },
+      { type: 'p', html: 'Products with many third-party integrations, strict compliance needs or fast-moving mobile platforms tend to sit at the top of the range or above it. Simple, stable websites often sit at the bottom.' },
+
+      { type: 'h2', id: 'monthly-ranges', text: 'Typical monthly maintenance ranges in CAD' },
+      { type: 'p', html: 'The ranges below apply the 15-20% rule to the typical Canadian build ranges used in our <a href="/tools/cost-estimator">cost estimator</a> and on our <a href="/pricing">pricing page</a>, then divide by twelve. They are rounded and exclude hosting fees and third-party subscriptions.' },
+      { type: 'cards', items: [
+        { title: 'Website', text: 'Build about $10,000-$50,000. Maintenance about $1,500-$10,000 a year, or roughly $125-$850 a month.' },
+        { title: 'Web app', text: 'Build about $25,000-$100,000. Maintenance about $3,750-$20,000 a year, or roughly $300-$1,700 a month.' },
+        { title: 'SaaS MVP', text: 'Build about $30,000-$75,000. Maintenance about $4,500-$15,000 a year, or roughly $375-$1,250 a month.' },
+        { title: 'Mobile app', text: 'Build about $30,000-$200,000. Maintenance about $4,500-$40,000 a year, or roughly $375-$3,350 a month.' },
+      ] },
+      { type: 'p', html: 'A SaaS product usually keeps growing after its MVP, so its build cost and its maintenance budget grow with it. Re-run the numbers each year against what you have actually built.' },
+
+      { type: 'h2', id: 'engagement-options', text: 'Retainer vs pay-as-you-go vs in-house' },
+      { type: 'checks', items: [
+        { term: 'Monthly retainer', text: 'You reserve a set number of hours or a fixed scope each month. Response times are agreed in advance and the same team knows your code. It suits products that change often or that the business depends on every day.' },
+        { term: 'Pay-as-you-go', text: 'You pay hourly for work when you need it. It is cheaper for stable products with few changes, but there is usually no guaranteed response time, and urgent fixes can wait in a queue.' },
+        { term: 'In-house developer', text: 'A full-time hire gives you the most control and context. It also brings salary, benefits, equipment and recruiting costs, and one person cannot cover every skill or every holiday. It usually makes sense once there is enough work to keep a developer busy all year.' },
+      ] },
+      { type: 'p', html: 'Many businesses combine them: a small retainer for security updates and monitoring, with larger changes quoted separately. Our <a href="/pricing">pricing page</a> describes the engagement models we use.' },
+
+      { type: 'h2', id: 'hidden-costs', text: 'Hidden maintenance costs' },
+      { type: 'ul', items: [
+        'App Store and Google Play policy updates, such as new privacy labels, target SDK levels or account deletion rules, that must be met before your next release.',
+        'API deprecations from payment, mapping, social login or AI providers, which force code changes on their schedule, not yours.',
+        'SSL certificates, domain renewals and DNS services, which are small but break the product if they lapse.',
+        'Third-party SaaS fees for email delivery, error tracking, analytics, search and authentication, which often rise as your user base grows.',
+        'Developer account fees for the app stores and paid tiers of developer tools.',
+      ] },
+
+      { type: 'h2', id: 'reduce-cost', text: 'How to cut maintenance cost' },
+      { type: 'p', html: 'Much of the maintenance bill is set by decisions made during the build. These habits keep it down:' },
+      { type: 'checks', items: [
+        { term: 'Automated tests', text: 'Tests catch regressions before users do, so updates can be made quickly and with less manual checking.' },
+        { term: 'CI/CD pipelines', text: 'Automated builds and deployments make every release cheaper, faster and less risky.' },
+        { term: 'Regular dependency updates', text: 'Small, frequent updates are far cheaper than one large upgrade after years of neglect, and they close security holes sooner.' },
+        { term: 'Fewer, well-chosen dependencies', text: 'Every library and service is something you have to update and pay for. Choose mature, well-supported ones and remove what you no longer use.' },
+        { term: 'Monitoring and documentation', text: 'Good error tracking and clear documentation shorten every fix, especially when a new developer joins.' },
+      ] },
+
+      { type: 'h2', id: 'canada', text: 'Canadian points to plan for' },
+      { type: 'p', html: 'Ask for maintenance quotes in Canadian dollars. Many hosting and SaaS tools bill in US dollars, so exchange rates can move your monthly bill even when usage stays the same.' },
+      { type: 'p', html: 'If you handle personal information, where it is hosted matters. PIPEDA does not always require Canadian hosting, but some clients, especially in health and the public sector, will ask for data to stay in Canada, and Canadian cloud regions can cost a little more. Our <a href="/blog/app-privacy-compliance-canada">privacy compliance checklist for Canadian apps</a> explains what to plan for.' },
+    ],
+    keyTakeaways: [
+      'Maintenance covers bug fixes, OS and framework updates, security patches, hosting, monitoring and small features.',
+      'A common industry rule of thumb is 15-20% of the original build cost per year; treat it as a planning figure, not a quote.',
+      'Applied to typical Canadian build ranges, that is roughly $125-$850 a month for a website and $375-$3,350 a month for a mobile app, before hosting and SaaS fees.',
+      'Retainers suit products that change often, pay-as-you-go suits stable ones, and in-house makes sense once there is a full year of work.',
+      'Store policy changes, API deprecations, renewals and SaaS fees are the costs most often missed.',
+      'Tests, CI/CD and regular dependency updates are the most reliable ways to keep maintenance cheaper.',
+    ],
+    faqs: [
+      { q: 'How much does app maintenance cost per year in Canada?', a: 'A common industry rule of thumb is about 15-20% of the original build cost per year. For an app that cost $100,000 to build, that is roughly $15,000 to $20,000 a year. It is a planning figure, not a guarantee; complex or fast-changing products can cost more.' },
+      { q: 'How much is website maintenance per month?', a: 'Applying the 15-20% rule to typical Canadian website builds of about $10,000 to $50,000 gives roughly $125 to $850 a month, before hosting and third-party fees. Simple brochure sites sit at the low end; sites with e-commerce or integrations sit higher.' },
+      { q: 'What does a software maintenance plan include?', a: 'Usually bug fixes, operating system and framework updates, security patches, monitoring, backups and a set amount of time for small changes. Hosting and third-party subscriptions are often billed separately, so check what each plan includes.' },
+      { q: 'Is a maintenance retainer better than paying hourly?', a: 'A retainer suits products that change often or that the business relies on daily, because response times are agreed and the team keeps its context. Paying hourly can be cheaper for stable products with few changes, but urgent fixes may wait.' },
+      { q: 'Can I skip maintenance after launch?', a: 'Not safely. Without updates, apps break on new operating systems, store policies block new releases, and unpatched dependencies become security risks. Skipping maintenance usually leads to a larger, more expensive repair later.' },
+      { q: 'Does my app need Canadian hosting?', a: 'Not always. Many private-sector apps can use hosting outside Canada if they protect the data and are open about it. Some clients, especially in health and the public sector, require data to stay in Canada, which can affect your hosting cost.' },
+    ],
+    cta: { href: '/tools/cost-estimator', label: 'Estimate your build cost' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);

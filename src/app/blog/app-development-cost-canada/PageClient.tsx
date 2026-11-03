@@ -418,7 +418,7 @@ export default function AppDevelopmentCostCanadaClient() {
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Hidden Costs Most Agencies Won&apos;t Tell You About</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 28 }}>
-                    The sticker price of app development is only the beginning. Here are the ongoing costs that catch most Canadian business owners off guard.
+                    The sticker price of app development is only the beginning. Here are the ongoing costs that catch most Canadian business owners off guard. For monthly ranges and ways to keep them down, see our <Link href="/blog/software-maintenance-cost-canada">software maintenance cost guide</Link>.
                   </p>
 
                   {[
