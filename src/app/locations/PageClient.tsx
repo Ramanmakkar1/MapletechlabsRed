@@ -11,6 +11,13 @@ import FaqSplit from '@/components/home/FaqSplit';
 import { FaqSchema } from '@/components/ServiceSchema';
 import MediaBand from '@/components/MediaBand';
 import { humanMedia } from '@/data/media';
+import { PRIORITY_SERVICES, serviceCityPath, priorityCompanyHeadline } from '@/data/serviceCity';
+import { cities as allCities } from '@/data/cities';
+
+// Edmonton (HQ) first, then the other major markets.
+const MAJOR_CITY_SLUGS = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa', 'montreal'];
+const majorCities = MAJOR_CITY_SLUGS.flatMap(slug => allCities.filter(c => c.slug === slug));
+const otherCities = allCities.filter(c => !MAJOR_CITY_SLUGS.includes(c.slug));
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -162,6 +169,57 @@ export default function LocationsIndexPage() {
                 </Link>
               ))}
             </div>
+
+            {/* SERVICES BY CITY — every keyword service+city page */}
+            <div className="head" style={{ marginTop: 'clamp(56px, 7vw, 96px)' }}>
+              <div>
+                <h2>Services by city</h2>
+                <p className="lede">Mapletech Labs is headquartered in Edmonton and works with companies in twenty-four cities across seven provinces. Every city gets the same national engineering bench for AI, SaaS, app and web development, SEO and UI/UX design. Pick your city and service below.</p>
+              </div>
+            </div>
+            <div className="grid grid--3">
+              {majorCities.map(city => (
+                <div key={city.slug} className="tile">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 16, marginBottom: 14 }}>
+                    <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)' }}>{city.name}{city.isHQ ? ' · HQ' : ''}</Link>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    {PRIORITY_SERVICES.map(ps => (
+                      <Link key={ps.serviceSlug} href={serviceCityPath(ps.serviceSlug, city.slug)} className="pill">{ps.label} in {city.name}</Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>All other cities</h3>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+                <thead>
+                  <tr>
+                    <th scope="col" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)', color: 'var(--muted)', fontWeight: 600 }}>City</th>
+                    {PRIORITY_SERVICES.map(ps => (
+                      <th key={ps.serviceSlug} scope="col" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)', color: 'var(--muted)', fontWeight: 600, whiteSpace: 'nowrap' }}>{ps.label}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {otherCities.map(city => (
+                    <tr key={city.slug}>
+                      <th scope="row" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)', whiteSpace: 'nowrap' }}>
+                        <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ color: 'var(--ink)', fontWeight: 600 }}>{city.name}, {city.provinceAbbr}</Link>
+                      </th>
+                      {PRIORITY_SERVICES.map(ps => (
+                        <td key={ps.serviceSlug} style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)', whiteSpace: 'nowrap' }}>
+                          <Link href={serviceCityPath(ps.serviceSlug, city.slug)} title={`${priorityCompanyHeadline(ps.serviceSlug, ps.label)} Company in ${city.name}`} style={{ color: 'var(--brand)' }}>{priorityCompanyHeadline(ps.serviceSlug, ps.label)}</Link>
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
             <div style={{
               textAlign: 'center',
               padding: '80px 0 0',

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { PRIORITY_SERVICES, serviceCityPath } from '@/data/serviceCity';
+import { cities } from '@/data/cities';
 
 export const metadata: Metadata = {
   title: 'Software Development Company Across Canada',
@@ -16,6 +18,25 @@ export const metadata: Metadata = {
   },
 };
 
+const MAJOR_CITIES = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa', 'montreal'].flatMap(slug => cities.filter(c => c.slug === slug));
+
+const servicesByCityJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Mapletech Labs services by city',
+  itemListElement: MAJOR_CITIES.flatMap(c => PRIORITY_SERVICES.map(ps => ({ city: c, ps }))).map(({ city, ps }, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: `${ps.label} in ${city.name}`,
+    url: `https://mapletechlabs.ca${serviceCityPath(ps.serviceSlug, city.slug)}`,
+  })),
+};
+
 export default function Page() {
-  return <PageClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesByCityJsonLd).replace(/</g, '\\u003c') }} />
+      <PageClient />
+    </>
+  );
 }
