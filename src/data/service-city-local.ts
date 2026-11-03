@@ -449,4 +449,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-vancouver': {
+    title: 'AI Development Company in Vancouver',
+    description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Vancouver and BC businesses, with a fixed CAD price agreed up front. Free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features and workflow automation for Vancouver businesses. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. You work directly with the senior engineers who design and build your system, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'Where AI helps Vancouver businesses',
+        body: [
+          'Tech and SaaS startups add AI features directly inside their product and run support bots that answer common questions around the clock. Film, VFX and gaming studios can search large asset libraries and production documents in seconds instead of digging through folders. Tourism and hospitality businesses can offer multilingual guest help. Port, logistics and trade companies can sort shipping documents and busy email inboxes automatically. Clean-tech and real estate teams can turn long reports into short summaries for staff to check.',
+        ],
+      },
+      {
+        heading: 'Chatbots on your own documents, with sources',
+        body: [
+          'A useful business chatbot answers from your own material, not from whatever the open internet says. We build it with retrieval-augmented generation (RAG). In plain words, the system first looks up the right passages in your manuals, policies or help centre, then writes its reply from those passages and shows where each answer came from. Access rules decide which documents each person can draw on. If a question falls outside what the bot knows, it passes the conversation to a member of your team.',
+        ],
+      },
+      {
+        heading: 'BC privacy rules and keeping data in Canada',
+        body: [
+          'Private-sector organisations in British Columbia fall under BC’s Personal Information Protection Act (PIPA). BC public bodies fall under the Freedom of Information and Protection of Privacy Act (FIPPA), which has its own rules on storing personal information outside Canada. We can host your AI system and its data in Canadian cloud regions and set up model providers so they do not train on your data, with encryption, role-based access and audit logs. Your privacy officer should confirm the final compliance position.',
+        ],
+      },
+      {
+        heading: 'What AI development costs',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. If you are comparing local vendors, our ',
+          { href: '/blog/software-development-companies-vancouver', label: 'guide to Vancouver software companies' },
+          ' lists the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Vancouver?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Do you have an office in Vancouver?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Vancouver office. Edmonton is one hour ahead of Vancouver, so we serve Vancouver clients remotely with almost the same working day, and we come to Vancouver for in-person workshops when a milestone needs one, with travel agreed up front.',
+      },
+      {
+        q: 'Can our data stay in Canada under BC rules?',
+        a: 'Yes. We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used for training. We design with BC’s PIPA and, for public bodies, FIPPA in mind, with encryption, role-based access and audit logs. Your privacy officer should confirm the final position.',
+      },
+      {
+        q: 'How long does a first AI chatbot take?',
+        a: 'A focused first version usually takes weeks rather than months, especially when your documents are already in good shape. Larger projects with many data sources, integrations or custom models take longer. Your written scope includes a timeline with clear milestones.',
+      },
+      {
+        q: 'Who owns the code and prompts?',
+        a: 'You do. All source code, prompts, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
 };
