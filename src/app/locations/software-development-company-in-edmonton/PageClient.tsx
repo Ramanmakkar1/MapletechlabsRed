@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
+import { defaultFaqs } from '@/data/faqs';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
 // Honest hero figures: the company's own verifiable facts, not invented client metrics.
@@ -61,11 +63,43 @@ const serviceLinks = [
                 { name: 'AR & VR', slug: 'ar-vr' },
               ];
 
+// Edmonton-specific questions first, then the shared ones. This one list is
+// rendered on the page and sent to the FAQPage schema, so the two always match.
+const edmontonFaqs = [
+  { q: 'Is Mapletech Labs actually based in Edmonton?', a: 'Yes. Mapletech Labs was founded in Edmonton in 2018 and Edmonton is still our headquarters. Edmonton clients work directly with our leadership and senior engineers, and we can meet in person anywhere in the Edmonton metro area, from downtown to Sherwood Park and St. Albert.' },
+  { q: 'What kinds of custom software do you build for Edmonton businesses?', a: 'Web platforms and customer portals, mobile apps for field crews and customers, internal tools that replace spreadsheets, e-commerce systems and AI features built into existing software. Most of our Edmonton work comes from energy and clean-tech operators, healthcare providers, retailers and local startups.' },
+  { q: 'How does pricing work for custom software development in Edmonton?', a: 'Every project is scoped and priced up front in CAD. You approve a fixed scope and a fixed price before we write any code, so there is no open-ended hourly billing. Tell us what you need and a senior engineer replies within one working day with an approach and a price.' },
+];
+const faqs = [...edmontonFaqs, ...defaultFaqs];
+
+const localContent = (
+  <section style={{ padding: 'var(--section-y) 0' }}>
+    <div className="cb-container">
+      <div className="prose-split">
+        <div><h2 style={{ maxWidth: '16ch' }}>Custom software development in Edmonton, from our home city</h2></div>
+        <div className="prose-body">
+          <p>Mapletech Labs started in Edmonton in 2018, and Edmonton is still where our leadership and most experienced engineers work. When an Edmonton company hires us for custom software development, it is not handing the project to a sales office that forwards it somewhere else. The people who scope the work are the people who build it, and they live in the same city as you, deal with the same winters and know the same industries.</p>
+          <p>That matters because Edmonton&apos;s economy has its own shape. A large share of the region runs on energy, pipelines, construction and the services around them, alongside a strong public sector, the University of Alberta, Alberta Health Services and a growing group of software and AI startups. The software these organisations need is rarely an off-the-shelf product. It is usually a system that fits one specific way of working: a dispatch tool for crews spread across the Capital Region, a portal that lets customers track orders, or a data dashboard that pulls readings from equipment in the field.</p>
+          <h3>What custom software usually means for an Edmonton business</h3>
+          <p>Most of the Edmonton projects we see fall into a few groups. Operations teams want to replace spreadsheets, paper forms and email chains with one web application that everyone can trust. Field-heavy companies in energy, construction and utilities need mobile apps that work on a job site with poor signal and sync when the crew is back in range. Retailers and distributors in South Edmonton Common and the west end need e-commerce and inventory systems that cope with seasonal peaks. Healthcare and professional-services firms need secure portals with Canadian data residency. And startups coming out of Edmonton&apos;s AI community, around the University of Alberta and Amii, need a production-grade product built around a model that already works in the lab.</p>
+          <p>We build all of these as custom software: a web or mobile front end your users actually like, a back end and database designed for your data, cloud hosting in Canada, and the integrations that connect it to the tools you already use, such as accounting, CRM or ERP systems.</p>
+          <h3>A local case study: an Edmonton retailer&apos;s e-commerce platform</h3>
+          <p>One of our Edmonton clients is a multi-vendor retailer that had outgrown a legacy monolithic platform. Pages took around six seconds to load, traffic spikes caused problems, and simple catalogue changes took weeks of developer time. We rebuilt the platform as a headless commerce system with Next.js, Stripe payments, Elasticsearch product search and a custom vendor portal, delivered in five months. After launch, revenue tripled within eight months, average page loads dropped to 1.2 seconds and the site ran through Black Friday peak traffic without downtime. You can read the full story in our <Link href="/case-studies/ecommerce-platform">Edmonton e-commerce platform case study</Link>.</p>
+          <h3>How an Edmonton project runs with us</h3>
+          <p>Every engagement starts with a short discovery conversation, in person in Edmonton or on a call. A senior engineer replies within one working day of your enquiry, then works with you to agree on a fixed scope and a fixed price in CAD before any code is written. From there we design, build and release in short cycles so you see working software early and can change direction while it is still cheap to do so. You own all of the code, cloud accounts and intellectual property from day one, and your data stays in Canada.</p>
+          <p>Because we are headquartered here, it is easy to sit down together for a workshop downtown, visit your site in Nisku or Sherwood Park, or meet the people who will use the software every day. After launch, the same team stays on for support, hosting and new features, so you are never left with a system nobody understands.</p>
+          <p>If your project is mainly a website or web application, see our page on <Link href="/locations/edmonton/web-development">web development in Edmonton</Link>. To talk through an idea, <Link href="/contact">contact our Edmonton team</Link> and tell us what you want to build.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 export default function PageClient() {
   return (
     <LocationPageTemplate
       slug="edmonton"
-      copy={{ badge: 'Software development in Edmonton', title: <>Software Development Company in <span style={{ color: 'var(--brand)' }}>Edmonton</span></>, desc: <>Edmonton is where Mapletech Labs was founded, and it is still our headquarters. We are a custom software development company serving Alberta&apos;s energy sector, the University of Alberta&apos;s AI ecosystem and a fast-growing base of Edmonton startups.</> }}
+      copy={{ badge: 'Software development in Edmonton', title: <>Custom Software Development <span style={{ color: 'var(--brand)' }}>Edmonton</span></>, desc: <>Edmonton is where Mapletech Labs was founded, and it is still our headquarters. We are a custom software development company serving Alberta&apos;s energy sector, the University of Alberta&apos;s AI ecosystem and a fast-growing base of Edmonton startups.</> }}
       heroStats={heroStats}
       services={services}
       overview={{
@@ -86,6 +120,8 @@ export default function PageClient() {
       wins={commitments}
       trends={{ title: "Edmonton Tech Focus", items: trends }}
       serviceLinks={serviceLinks}
+      localContent={localContent}
+      localFaqs={faqs}
     />
   );
 }

@@ -23,9 +23,12 @@ export default function Hero() {
           <h1 style={{ marginBottom: 24, maxWidth: '15ch' }}>
             Custom software that moves Canadian business forward.
           </h1>
-          <p className="lede" style={{ marginTop: 0, marginBottom: 36, maxWidth: '46ch' }}>
+          <p className="lede" style={{ marginTop: 0, marginBottom: 16, maxWidth: '46ch' }}>
             Mapletech Labs is a custom software development company in Canada, designing and building the digital products ambitious companies
             run on &mdash; web platforms, mobile apps and AI systems, engineered to last.
+          </p>
+          <p style={{ marginTop: 0, marginBottom: 36, fontSize: 15, color: 'var(--muted)' }}>
+            Headquartered in Alberta: <Link href="/locations/software-development-company-in-edmonton">Custom Software Development Edmonton</Link>
           </p>
 
           <div className="btn-group" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 40 }}>

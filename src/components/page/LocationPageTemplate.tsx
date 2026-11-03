@@ -33,6 +33,8 @@ export interface LocationProps {
   serviceLinks?: { name: string; slug: string }[];
   overview?: { title: string; lead: string; points: { t: string; d: string }[]; covers: string[] };
   localContent?: ReactNode;
+  // City-specific FAQs: one list feeds both the visible FAQ block and the FAQPage schema.
+  localFaqs?: { q: string; a: string }[];
 }
 
 // Shared defaults so a new city only needs its city-specific content (copy, whyCity, neighborhoods, trends).
@@ -113,6 +115,7 @@ export default function LocationPageTemplate(p: LocationProps) {
   const overview = p.overview ?? defaultOverview(name, city?.localIndustries ?? []);
   const whyChoose = p.whyChoose ?? DEFAULT_WHYCHOOSE;
   const serviceLinks = p.serviceLinks ?? DEFAULT_SERVICELINKS;
+  const faqs = p.localFaqs ?? defaultFaqs;
   const serviceItems = (p.services ?? DEFAULT_SERVICES).map(s => {
     const slug = s.href.split('/').filter(Boolean).pop() ?? '';
     return { ...s, desc: SERVICE_BLURB[slug] ?? s.desc };
@@ -194,8 +197,8 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
-        <FaqSplit />
-        <FaqSchema faqs={defaultFaqs} />
+        <FaqSplit faqs={faqs} />
+        <FaqSchema faqs={faqs} />
         <FinalCta title={`Building in ${name}? Let's scope it.`} sub={`Tell us what you need and a senior engineer will send a fixed-price plan within one working day${city?.isHQ ? ' — from our head office right here in ' + name + '.' : '.'}`} />
       </main>
       <Footer />

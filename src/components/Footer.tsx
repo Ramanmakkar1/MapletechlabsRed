@@ -128,6 +128,7 @@ export default function Footer() {
               style={{ height: 40, width: 'auto', objectFit: 'contain' }}
             />
             <p>World-class software engineering for companies ready to lead their industry. Based in Canada, building globally.</p>
+            <p><Link href="/locations/software-development-company-in-edmonton">Custom Software Development Edmonton</Link></p>
             <ul className="footer-contact">
               {contacts.map(c => (
                 <li key={c.href}>

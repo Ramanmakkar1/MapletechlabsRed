@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
@@ -40,7 +41,8 @@ const balanced = (n: number): string | null =>
   n % 3 === 0 ? 'grid grid--3' : n % 4 === 0 ? 'grid grid--2' : n % 2 === 0 ? 'grid grid--2' : null;
 
 /* Premium "[service] company in [city]" page — honest facts, no invented proof. */
-export default function ServiceCityTemplate({ data: p }: { data: CityServicePageData }) {
+// heroTitle / heroDesc let one city+service page target its own search phrase; others keep the shared copy.
+export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode }) {
   const { cityName, citySlug, province, serviceName, serviceSlug } = p;
   const provinceSlug = provinceSlugForName(province);
   const services = [
@@ -55,7 +57,7 @@ export default function ServiceCityTemplate({ data: p }: { data: CityServicePage
       <main id="main-content">
         <PageHero
           crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: cityName, href: `/locations/software-development-company-in-${citySlug}` }, { label: serviceName }]}
-          copy={{ badge: p.badge, title: <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>, desc: p.heroDescription }}
+          copy={{ badge: p.badge, title: heroTitle ?? <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>, desc: heroDesc ?? p.heroDescription }}
           stats={HONEST_STATS} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
         />
         <StatRow stats={HONEST_STATS} />
