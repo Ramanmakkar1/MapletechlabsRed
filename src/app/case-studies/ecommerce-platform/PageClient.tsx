@@ -264,14 +264,8 @@ export default function EcommerceCaseStudyClient() {
                   From legacy migrations to headless commerce builds, we engineer platforms that drive real revenue. Let&apos;s discuss your growth goals.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Get in Touch →
-                </button>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
+                Get in Touch →
               </Link>
             </div>
           </div>

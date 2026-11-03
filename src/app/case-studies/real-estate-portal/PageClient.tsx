@@ -264,14 +264,8 @@ export default function RealEstateCaseStudyClient() {
                   Whether it&apos;s real estate, e-commerce, or any data-driven platform — we build ML systems that scale and drive business results.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Get in Touch →
-                </button>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
+                Get in Touch →
               </Link>
             </div>
           </div>
