@@ -139,4 +139,64 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-edmonton': {
+    title: 'AI Development Company in Edmonton',
+    description: 'Mapletech Labs is headquartered in Edmonton and builds AI chatbots, LLM features and automation for Alberta teams. Get a free quote.',
+    intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for AI development you work with a local team. We build AI chatbots, large language model (LLM) features and workflow automation for Edmonton companies, public bodies and health providers. Our focus is practical AI that saves your staff time, answers from your own documents and keeps your data under control. You work directly with the senior engineers who build it, not a sales layer. Scope and price are fixed in CAD before any work starts, so the budget does not drift. Call us on +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'Where AI actually helps Edmonton organisations',
+        body: [
+          'Energy and field operations teams have thousands of pages of manuals and safety procedures, and AI search can find the right answer in seconds. It can also draft summaries of long inspection reports for a supervisor to check. Government and post-secondary teams can offer citizen or student help bots that show the source for every answer. Clinics can use AI to draft intake and triage notes, built to respect Alberta’s Health Information Act. Logistics firms can sort dispatch requests and triage busy email inboxes so staff spend less time on routine messages.',
+        ],
+      },
+      {
+        heading: 'Chatbots on your own documents, with sources',
+        body: [
+          'Most business chatbots should answer from your own content, not the open internet. We use retrieval-augmented generation (RAG): the bot first finds the relevant passages in your policies, manuals or knowledge base, then writes an answer and cites the source so staff can check it. Access control means each user only sees answers drawn from documents they are allowed to read. When a question is out of scope or the bot is not sure, it hands off to a person instead of guessing.',
+        ],
+      },
+      {
+        heading: 'Keeping data in Canada',
+        body: [
+          'Many Edmonton organisations need their data to stay in the country. We can host your AI system and its data in Canadian cloud regions, and we set up model providers so your data is not used to train their models. We design with PIPEDA and Alberta’s PIPA and Health Information Act in mind, with encryption, role-based access and audit logs. We can support your privacy impact assessment, but your own privacy officer should confirm the final compliance position before launch.',
+        ],
+      },
+      {
+        heading: 'What AI development costs',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents, with sources, access control and hand-off, is about $15,000-$50,000. Custom model training starts around $75,000. These are planning ranges, not quotes. After a free discovery call we agree a fixed scope and a fixed price in CAD before any work starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month, securely and at scale.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Edmonton?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training $75,000 or more. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Can we meet your team in person in Edmonton?',
+        a: 'Yes. Mapletech Labs is headquartered in Edmonton, so we can hold discovery workshops, reviews and demos at your office or site. Ongoing work runs on weekly calls and shared project boards, and we can meet in person again whenever a milestone needs it.',
+      },
+      {
+        q: 'How long does it take to build a first AI chatbot?',
+        a: 'A focused first version usually takes weeks rather than months, especially when your documents are already in good shape. Larger projects with many data sources, integrations or custom models take longer. Your written scope includes a timeline with clear milestones.',
+      },
+      {
+        q: 'Does our data stay in Canada?',
+        a: 'It can. We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used for training. We design with PIPEDA, Alberta’s PIPA and the Health Information Act in mind, and your own privacy officer should confirm the final position.',
+      },
+      {
+        q: 'Who owns the code and prompts?',
+        a: 'You do. All source code, prompts, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
 };
