@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { localServiceSchema } from '@/lib/seo/business';
 
 const TITLE = 'Custom Software Development Edmonton | Local Team';
 const DESCRIPTION = 'Custom software development in Edmonton by Mapletech Labs, a software development company headquartered here. Fixed price; a senior engineer replies in 1 day.';
@@ -22,28 +23,12 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'Mapletech Labs - Edmonton',
-  url: 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton',
-  telephone: '+1-780-850-5314',
-  priceRange: '$$-$$$',
-  image: 'https://mapletechlabs.ca/images/og-default.jpg',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Edmonton',
-    addressRegion: 'Alberta',
-    addressCountry: 'CA',
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Edmonton',
-  },
-  serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
-  sameAs: [
-    'https://www.linkedin.com/company/canadamapletechlabs/',
-    'https://www.facebook.com/Mapletechlabs/',
-    'https://www.instagram.com/mapletechlabs/',
-  ],
+  ...localServiceSchema({
+    cityName: 'Edmonton',
+    provinceName: 'Alberta',
+    url: 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton',
+    serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
+  }),
 };
 
 const breadcrumbSchema = {

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { localServiceSchema } from '@/lib/seo/business';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Winnipeg',
@@ -18,28 +19,12 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'Mapletech Labs - Winnipeg',
-  url: 'https://mapletechlabs.ca/locations/software-development-company-in-winnipeg',
-  telephone: '+1-780-850-5314',
-  priceRange: '$$-$$$',
-  image: 'https://mapletechlabs.ca/images/og-default.jpg',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Winnipeg',
-    addressRegion: 'Manitoba',
-    addressCountry: 'CA',
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Winnipeg',
-  },
-  serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
-  sameAs: [
-    'https://www.linkedin.com/company/canadamapletechlabs/',
-    'https://www.facebook.com/Mapletechlabs/',
-    'https://www.instagram.com/mapletechlabs/',
-  ],
+  ...localServiceSchema({
+    cityName: 'Winnipeg',
+    provinceName: 'Manitoba',
+    url: 'https://mapletechlabs.ca/locations/software-development-company-in-winnipeg',
+    serviceType: ['Web Development', 'Mobile App Development', 'AI & Machine Learning', 'Cloud & DevOps', 'SaaS Development', 'Digital Marketing'],
+  }),
 };
 
 const breadcrumbSchema = {
