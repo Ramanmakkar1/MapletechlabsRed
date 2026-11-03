@@ -233,13 +233,14 @@ export function WhyUs({ bg }: { bg?: string }) {
 }
 
 /* ── success stories ─────────────────────────────────────── */
-export function SuccessStories({ title = 'Work we have shipped' }: { bg?: string; title?: string }) {
+export function SuccessStories({ title = 'Work we have shipped', categories }: { bg?: string; title?: string; categories?: string[] }) {
+  const picked = categories?.length ? [...work.filter(w => categories.includes(w.category)), ...work.filter(w => !categories.includes(w.category))].slice(0, 3) : work.slice(0, 3);
   return (
     <section style={{ padding: 'var(--section-y) 0' }}>
       <div className="cb-container">
         <Head title={title} right={<Link href="/case-studies" className="btn btn--ghost">All case studies</Link>} />
         <div className="grid grid--3">
-          {work.slice(0, 3).map(w => (
+          {picked.map(w => (
             <Link key={w.slug} href={w.href} className="tile rise" style={{ padding: 0, overflow: 'hidden' }}>
               <div className="media media--flat media--zoom" style={{ aspectRatio: '16 / 10' }}>
                 <Image src={w.media.src} alt={w.media.alt} fill sizes="(max-width: 639px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
