@@ -17,6 +17,7 @@ import AiPractice from '@/components/home/AiPractice';
 import { humanPick } from '@/data/media';
 import { cities } from '@/data/cities';
 import { provinceSlugForName } from '@/data/provinces';
+import { serviceCityPath } from '@/data/serviceCity';
 import type { HeroCopy, Stat } from './types';
 
 export interface LocationProps {
@@ -186,7 +187,7 @@ export default function LocationPageTemplate(p: LocationProps) {
           <div className="cb-container">
             <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Every service we offer in {name}</h3>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {serviceLinks.map(s => <Link key={s.slug} href={`/locations/${p.slug}/${s.slug}`} className="pill">{s.name}</Link>)}
+              {serviceLinks.map(s => <Link key={s.slug} href={serviceCityPath(s.slug, p.slug)} className="pill">{s.name}</Link>)}
             </div>
           </div>
         </section>

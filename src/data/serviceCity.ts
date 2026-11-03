@@ -28,6 +28,21 @@ export const serviceCitySlugs = serviceCityCombos.map(c => c.slug);
 const kwFor: Record<string, string> = Object.fromEntries(PRIORITY_SERVICES.map(p => [p.serviceSlug, p.kw]));
 export const isPriorityService = (serviceSlug: string): boolean => serviceSlug in kwFor;
 
+/**
+ * Niche services whose /locations/<city>/<service> pages only earn a place in
+ * the index in Canada's largest tech markets. In the other cities these pages
+ * are near-duplicates with almost no local search demand, and GSC left them
+ * "Discovered - currently not indexed". They stay reachable (noindex, follow)
+ * but are kept out of the index and the sitemap so crawl budget goes to the
+ * core service pages.
+ */
+const NICHE_SERVICES = new Set(['ar-vr', 'blockchain-web3']);
+const MAJOR_TECH_CITIES = new Set(['toronto', 'vancouver', 'montreal', 'calgary', 'edmonton', 'ottawa']);
+
+/** Whether a /locations/<city>/<service> mesh page should be indexed and listed in the sitemap. */
+export const isIndexableCityService = (citySlug: string, serviceSlug: string): boolean =>
+  !NICHE_SERVICES.has(serviceSlug) || MAJOR_TECH_CITIES.has(citySlug);
+
 /** Canonical path for a service in a city: keyword URL for priority services, else the mesh URL. */
 export const serviceCityPath = (serviceSlug: string, citySlug: string): string =>
   kwFor[serviceSlug] ? `/locations/${kwFor[serviceSlug]}-company-in-${citySlug}` : `/locations/${citySlug}/${serviceSlug}`;

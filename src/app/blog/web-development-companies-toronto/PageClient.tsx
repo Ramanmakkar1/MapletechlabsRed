@@ -39,7 +39,7 @@ const relatedPosts = [
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
-export default function WebDevelopmentCompaniesTorontoClient() {
+export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { localLinks?: React.ReactNode }) {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -456,6 +456,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                       ))}
                     </div>
                   </div>
+                  {localLinks}
                 </div>
               </aside>
 

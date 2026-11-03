@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getCityServiceData, getAllCityServiceParams } from '@/data/city-service';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
+import { isIndexableCityService } from '@/data/serviceCity';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -28,6 +29,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: data.canonicalUrl,
     },
+    // Niche pairs in smaller cities stay crawlable but out of the index.
+    ...(isIndexableCityService(city, service) ? {} : { robots: { index: false, follow: true } }),
   };
 }
 
@@ -66,7 +69,7 @@ export default async function CityServicePage({ params }: PageProps) {
       {
         '@type': 'ProfessionalService',
         name: `Mapletech Labs ${data.cityName}`,
-        url: `https://mapletechlabs.ca/locations/${data.citySlug}`,
+        url: `https://mapletechlabs.ca/locations/software-development-company-in-${data.citySlug}`,
         address: {
           '@type': 'PostalAddress',
           addressLocality: data.cityName,
@@ -92,7 +95,7 @@ export default async function CityServicePage({ params }: PageProps) {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
           { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
-          { '@type': 'ListItem', position: 3, name: data.cityName, item: `https://mapletechlabs.ca/locations/${data.citySlug}` },
+          { '@type': 'ListItem', position: 3, name: data.cityName, item: `https://mapletechlabs.ca/locations/software-development-company-in-${data.citySlug}` },
           { '@type': 'ListItem', position: 4, name: data.serviceName, item: data.canonicalUrl },
         ],
       },

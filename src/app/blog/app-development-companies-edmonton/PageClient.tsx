@@ -40,7 +40,7 @@ const relatedPosts = [
   { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
 ];
 
-export default function AppDevelopmentCompaniesEdmontonClient() {
+export default function AppDevelopmentCompaniesEdmontonClient({ localLinks }: { localLinks?: React.ReactNode }) {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -483,6 +483,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                       ))}
                     </div>
                   </div>
+                  {localLinks}
                 </div>
               </aside>
 

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
+import LocalServiceLinks from '@/components/LocalServiceLinks';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
@@ -59,7 +60,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <PageClient />
+      <PageClient localLinks={<LocalServiceLinks citySlug="edmonton" cityName="Edmonton" />} />
     </>
   );
 }

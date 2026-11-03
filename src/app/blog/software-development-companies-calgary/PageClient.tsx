@@ -39,7 +39,7 @@ const relatedPosts = [
   { slug: 'app-development-cost-canada', title: 'How Much Does App Development Cost in Canada?', category: 'Business', readTime: '10 min' },
 ];
 
-export default function SoftwareDevelopmentCompaniesCalgaryClient() {
+export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }: { localLinks?: React.ReactNode }) {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -458,6 +458,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                       ))}
                     </div>
                   </div>
+                  {localLinks}
                 </div>
               </aside>
 

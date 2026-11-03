@@ -1,6 +1,6 @@
 import { getArticle } from '@/data/articles';
 import { provinceSlugs } from '@/data/provinces';
-import { serviceCityCombos, isPriorityService } from '@/data/serviceCity';
+import { serviceCityCombos, isPriorityService, isIndexableCityService } from '@/data/serviceCity';
 import { siteOrigin } from '@/lib/seo/canonical';
 
 export const BASE_URL = siteOrigin();
@@ -184,9 +184,10 @@ export function locationSitemapEntries(): SitemapEntry[] {
 
 export function localSeoSitemapEntries(): SitemapEntry[] {
   // Priority services now live at keyword URLs (in locationSitemapEntries), so
-  // their old mesh URLs are excluded here to avoid duplicate listings.
+  // their old mesh URLs are excluded here to avoid duplicate listings. Niche
+  // pairs that the page itself marks noindex are excluded as well.
   return citySlugs.flatMap(city =>
-    serviceSlugs.filter(s => !isPriorityService(s)).map(service => ({
+    serviceSlugs.filter(s => !isPriorityService(s) && isIndexableCityService(city, s)).map(service => ({
       loc: `${BASE_URL}/locations/${city}/${service}`,
       changefreq: 'monthly',
       priority: '0.85',
