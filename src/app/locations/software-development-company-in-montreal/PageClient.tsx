@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
@@ -79,6 +80,13 @@ export default function PageClient() {
       wins={wins}
       trends={{ title: "Montr&eacute;al Tech Focus", items: trends }}
       serviceLinks={serviceLinks}
+      localContent={
+        <section style={{ padding: 'var(--section-y) 0' }}>
+          <div className="cb-container prose-body">
+            <p>Comparing development partners in Montreal? Read our guide to <Link href="/blog/software-development-companies-montreal">software development companies in Montreal</Link> for Quebec Law 25 privacy, French-language rules, typical costs and the questions to ask on the first call.</p>
+          </div>
+        </section>
+      }
     />
   );
 }

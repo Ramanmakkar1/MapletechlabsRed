@@ -43,6 +43,7 @@ export const blogSlugs = [
   'digital-marketing-cost-canada', 'software-development-companies-calgary',
   'software-development-companies-vancouver',
   'software-development-companies-ottawa',
+  'software-development-companies-montreal',
 ];
 
 export const citySlugs = [

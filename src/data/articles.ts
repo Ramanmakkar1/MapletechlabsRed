@@ -958,6 +958,111 @@ export const articles: Article[] = [
     ],
     cta: { href: '/locations/software-development-company-in-ottawa', label: 'See our Ottawa software services' },
   },
+  {
+    slug: 'software-development-companies-montreal',
+    category: 'Business',
+    title: 'Software Development Companies in Montreal (2026)',
+    dek: 'Montreal is a software market shaped by AI research, gaming, aerospace and fintech, and by Quebec rules on privacy and the French language. Here is how to choose a software development company in Montreal, what Law 25 and French-language rules mean for your product, what projects typically cost, and what to ask on the first call.',
+    metaTitle: 'Software Development Companies in Montreal',
+    metaDescription: 'How to choose a software development company in Montreal in 2026: Quebec Law 25 privacy, French-language rules, AI talent, typical costs and a checklist.',
+    date: '2026-11-04',
+    dateModified: '2026-11-04',
+    readTime: '8 min read',
+    heroKey: 'whiteboard',
+    intro: [
+      'Montreal is one of the most distinctive tech markets in Canada. It is known worldwide for artificial intelligence research, it has a large video game industry, and it is a long-standing centre for aerospace and financial services. It is also in Quebec, which has its own rules on privacy and on the use of French. For a business that needs software built, both sides shape what a good partner looks like.',
+      'This guide continues our city series alongside <a href="/blog/software-development-companies-vancouver">Vancouver</a>, <a href="/blog/software-development-companies-ottawa">Ottawa</a> and <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers the Montreal tech scene, local versus remote teams, Quebec Law 25, French-language requirements, typical Canadian costs, SR&amp;ED and Quebec credits, and the questions that reveal the most on a first call.',
+    ],
+    body: [
+      { type: 'h2', id: 'montreal-tech-scene', text: 'Montreal’s tech scene' },
+      { type: 'p', html: 'Montreal has a broad mix of industries that buy and build software. Each one brings its own expectations to a project:' },
+      { type: 'checks', items: [
+        { term: 'AI research', text: 'The city has deep university and research ties in machine learning, and a strong pool of AI talent. Projects here often involve data pipelines, model training and putting AI features into real products.' },
+        { term: 'Gaming and creative tech', text: 'Montreal is home to many game studios and visual effects companies. Software for this sector tends to deal with real-time performance, live operations, player analytics and large asset pipelines.' },
+        { term: 'Aerospace and manufacturing', text: 'The region has a long aerospace history. Software for this market covers simulation, training, maintenance and supply chain tools, usually with strict quality and documentation needs.' },
+        { term: 'Fintech and financial services', text: 'Banks, insurers and fintech startups need secure, audited systems that handle personal and financial data carefully.' },
+      ] },
+      { type: 'p', html: 'Whatever your industry, ask a partner how they have handled work like yours, and what they would do differently for a Quebec audience.' },
+
+      { type: 'h2', id: 'local-vs-remote', text: 'Local or remote teams' },
+      { type: 'p', html: 'A team in Greater Montreal makes in-person workshops and stakeholder sessions easy, and it may already work in French every day. For many projects, a Canadian team elsewhere can deliver the same results remotely, as long as it can handle French content properly and understands Quebec rules.' },
+      { type: 'p', html: 'Montreal runs on Eastern Time, so a partner in Eastern or Central Time shares most of your working day. What matters most is a named senior contact, a clear meeting rhythm, the ability to work with French-speaking stakeholders, and honest answers about who does the work.' },
+
+      { type: 'h2', id: 'law-25', text: 'Quebec Law 25 and privacy' },
+      { type: 'p', html: 'Quebec updated its private-sector privacy law through what is commonly called Law 25. It places duties on businesses that collect personal information about people in Quebec, and many of those duties affect how software is designed. In general terms, these are the topics to raise early:' },
+      { type: 'ul', items: [
+        '<strong>Privacy impact assessments.</strong> Businesses are generally expected to assess privacy risks before building or overhauling a system that handles personal information. A good partner will help you document data flows and risks during discovery.',
+        '<strong>Consent and transparency.</strong> Consent should be clear and specific, and people should be told how their information is used. Ask how the product will collect consent, explain its purpose in plain language and record choices.',
+        '<strong>Privacy by default.</strong> Products and services should offer the most privacy-protective settings by default. Tracking, profiling and optional data collection should be off until the user turns them on.',
+        '<strong>Data leaving Quebec.</strong> Before personal information is sent outside Quebec, including to cloud services or vendors elsewhere, a business is generally expected to assess whether it will be adequately protected. Ask where data will be stored and which third-party services will touch it.',
+        '<strong>Incidents and access requests.</strong> Systems should make it possible to respond to privacy incidents and to requests from people who want to see, correct or remove their information.',
+      ] },
+      { type: 'p', html: 'This is a general overview, not legal advice. Exact duties depend on your business and your data, so confirm your obligations with a lawyer or privacy professional before the build starts. A good partner will build to those requirements rather than guess at them.' },
+
+      { type: 'h2', id: 'french-language', text: 'French-language requirements for software' },
+      { type: 'p', html: 'Quebec&rsquo;s Charter of the French Language, strengthened by Bill 96, sets rules on the use of French in business. In general terms, products and services offered to Quebec customers are expected to be available in French, and French should be at least as available as any other language. For software, that usually touches:' },
+      { type: 'ul', items: [
+        'User interfaces, menus, error messages and emails that Quebec users see.',
+        'Product documentation, help content, terms and other customer-facing text.',
+        'Websites and online stores aimed at Quebec customers.',
+        'Software used by employees in Quebec workplaces, which may need a French version where one exists.',
+      ] },
+      { type: 'p', html: 'Building French support in from the start is far cheaper than adding it later. Ask how the team handles translated content, language switching, French text that runs longer than English, accents and sorting, date and number formats, and bilingual URLs for search. As with Law 25, confirm the exact rules that apply to you with a legal advisor.' },
+
+      { type: 'h2', id: 'costs', text: 'Typical Canadian costs and timelines' },
+      { type: 'p', html: 'Montreal projects are priced in line with Canadian market rates for quality onshore development. As approximate ranges:' },
+      { type: 'ul', items: [
+        'Marketing website (10&ndash;20 pages): CAD $15,000&ndash;$45,000, about 4&ndash;8 weeks.',
+        'E-commerce platform: CAD $40,000&ndash;$120,000, about 8&ndash;16 weeks.',
+        'Custom mobile app (iOS + Android): CAD $60,000&ndash;$200,000, about 12&ndash;24 weeks.',
+        'SaaS platform (MVP): CAD $80,000&ndash;$250,000, about 16&ndash;28 weeks.',
+        'Enterprise software system: CAD $150,000&ndash;$500,000+, about 24&ndash;52 weeks.',
+      ] },
+      { type: 'p', html: 'These are approximate ranges based on Canadian market averages. Privacy assessments, French content and translation add time and cost, so include them in the scope from the start. Our <a href="/blog/app-development-cost-canada">app development cost guide for Canada</a> goes deeper, our <a href="/pricing">pricing page</a> shows how we structure engagements, and the <a href="/tools/cost-estimator">software cost estimator</a> gives a rough number for your own scope.' },
+
+      { type: 'h2', id: 'sred', text: 'SR&ED and Quebec tax credits' },
+      { type: 'p', html: 'If your project involves real technical uncertainty, such as new algorithms, hard performance problems or novel AI work, part of the cost may qualify for the federal Scientific Research and Experimental Development (SR&amp;ED) tax credit. Quebec also offers its own provincial credits for eligible research and development, and has offered credits for certain technology and multimedia work. Eligibility depends on the work and the company, and the rules change over time, so check current programs with an accountant. Good records kept during the project make any claim much easier. Our <a href="/tools/sred-estimator">SR&amp;ED estimator</a> gives a rough idea of what a federal claim could be worth.' },
+      { type: 'p', html: 'See how we work with businesses across Quebec on our <a href="/locations/software-development-company-in-montreal">Montreal software development</a> page.' },
+
+      { type: 'h2', id: 'first-call', text: 'Questions to ask on the first call' },
+      { type: 'ol', items: [
+        'Who will actually work on my project, and will I meet them before signing?',
+        'How will you help us meet Law 25, including privacy impact assessments and consent?',
+        'Where will my data be hosted, and which third-party services will handle personal information?',
+        'How do you build, translate and test French content, and who reviews it?',
+        'Can your team work with French-speaking stakeholders and users?',
+        'Is the quote fixed-price or time-and-materials, and what happens when scope changes?',
+        'Will I own the code, designs and accounts outright when the project ends?',
+        'What support do you offer after launch, and at what cost?',
+      ] },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags to watch for' },
+      { type: 'ul', items: [
+        'Vague answers about who does the work, or a senior team in the pitch and a different team on the project.',
+        'No plan for privacy, or no clear answer on where personal information will be stored.',
+        'Treating French as a translation job at the end rather than part of the design.',
+        'Analytics and tracking switched on by default with no consent step.',
+        'A fixed price given before anyone has asked about your privacy, language or integration needs.',
+        'Contracts that leave the code, designs or cloud accounts in the vendor&rsquo;s name.',
+      ] },
+      { type: 'p', html: 'A good partner answers these plainly and in writing. Vague answers on ownership, privacy or language support are the clearest warning signs you will get.' },
+    ],
+    keyTakeaways: [
+      'Montreal demand spans AI, gaming, aerospace and fintech, so look for a partner who has handled work like yours.',
+      'Choose a local or remote Canadian team based on time-zone overlap and French capability; a named senior contact matters more than an address.',
+      'Plan for Quebec Law 25 early: privacy impact assessments, clear consent, privacy by default and care with data leaving Quebec.',
+      'Build French support into the interface and documentation from the start, and confirm language rules with a legal advisor.',
+      'Projects follow Canadian onshore rates, and SR&ED and Quebec credits may offset part of the cost of genuinely technical work.',
+    ],
+    faqs: [
+      { q: 'How much does software development cost in Montreal?', a: 'Montreal projects follow Canadian onshore market rates. As approximate ranges, a marketing website runs about CAD $15,000 to $45,000, a custom iOS and Android app about $60,000 to $200,000, a SaaS MVP about $80,000 to $250,000, and enterprise systems $150,000 and up. Privacy assessments and French content can add to the scope.' },
+      { q: 'What is Quebec Law 25 and does it affect my software?', a: 'Law 25 updated Quebec privacy rules for businesses that handle personal information about people in Quebec. In general, it affects how software collects consent, sets privacy defaults, assesses privacy risks and sends data outside Quebec. Confirm your exact duties with a lawyer or privacy professional before the build starts.' },
+      { q: 'Does my app or website need to be in French for Quebec users?', a: 'In general, products and services offered to Quebec customers are expected to be available in French under the Charter of the French Language, as strengthened by Bill 96. That usually covers the interface, documentation and customer-facing text. Check the rules that apply to your business with a legal advisor.' },
+      { q: 'Do I need a software company with an office in Montreal?', a: 'Not always. A local team makes in-person sessions easier and may work in French every day. A Canadian team elsewhere can deliver the same work remotely if it handles French content well and understands Quebec rules. Focus on time-zone overlap, a named senior contact and clear communication.' },
+      { q: 'Can SR&ED and Quebec tax credits help pay for software development?', a: 'Possibly. Work that resolves real technical uncertainty may qualify for the federal SR&ED tax credit, and Quebec offers its own credits for eligible research and development. Routine development usually does not qualify, and the rules change, so check current programs with an accountant and keep good records of the technical problems you solve.' },
+    ],
+    cta: { href: '/locations/software-development-company-in-montreal', label: 'See our Montreal software services' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);

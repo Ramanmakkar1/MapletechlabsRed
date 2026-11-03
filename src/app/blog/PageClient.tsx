@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'software-development-companies-montreal', category: 'Business',
+    title: 'Software Development Companies in Montreal (2026)',
+    excerpt: 'How to choose a software development company in Montreal: Quebec Law 25 privacy, French-language rules for software, typical costs and the questions to ask on the first call.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
+  },
+  {
     slug: 'software-development-companies-ottawa', category: 'Business',
     title: 'Software Development Companies in Ottawa (2026)',
     excerpt: 'How to choose a software development company in Ottawa: public-sector security, Canadian data residency, bilingual and accessible builds, typical costs and the questions to ask on the first call.',
