@@ -3,11 +3,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Product Design & UI/UX in Canada',
-  description: 'Product design & UI/UX services by Mapletech Labs. User research, wireframing & prototyping for apps in Canada. Get a free design audit for your product.',
+  title: 'UI/UX Design Company in Canada',
+  description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps and SaaS, with fixed CAD pricing. Book a free design audit.',
   openGraph: {
-    title: 'Product Design & UI/UX in Canada | Mapletech Labs',
-    description: 'Product design & UI/UX services by Mapletech Labs. User research, wireframing & prototyping for apps in Canada.',
+    title: 'UI/UX Design Company in Canada | Mapletech Labs',
+    description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps and SaaS, with fixed CAD pricing. Book a free design audit.',
     url: 'https://mapletechlabs.ca/services/product-design',
     type: 'website',
   },
@@ -19,13 +19,10 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Product Design & UI/UX Services',
-  description: 'Product design & UI/UX services by Mapletech Labs. User research, wireframing & prototyping for apps in Canada.',
-  provider: {
-    '@type': 'Organization',
-    name: 'Mapletech Labs',
-    url: 'https://mapletechlabs.ca',
-  },
+  name: 'UI/UX Design Services',
+  serviceType: 'UI/UX Design',
+  description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps and SaaS, with fixed CAD pricing. Book a free design audit.',
+  provider: { '@id': 'https://mapletechlabs.ca/#localbusiness' },
   areaServed: {
     '@type': 'Country',
     name: 'Canada',
@@ -39,7 +36,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
     { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://mapletechlabs.ca/services' },
-    { '@type': 'ListItem', position: 3, name: 'Product Design', item: 'https://mapletechlabs.ca/services/product-design' },
+    { '@type': 'ListItem', position: 3, name: 'UI/UX Design', item: 'https://mapletechlabs.ca/services/product-design' },
   ],
 };
 

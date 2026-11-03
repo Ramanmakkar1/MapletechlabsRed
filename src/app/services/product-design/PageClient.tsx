@@ -1,10 +1,19 @@
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 
 const stats = [
-  { value: '500+', label: 'Screens Designed' },
-  { value: '4.8★', label: 'Avg Usability Score' },
-  { value: '40%', label: 'Avg Conversion Lift' },
-  { value: '200+', label: 'Design Systems' },
+  { value: '5', label: 'Step Design Process' },
+  { value: '6–11 wks', label: 'Typical Design Timeline' },
+  { value: 'WCAG 2.2', label: 'AA Accessibility Target' },
+  { value: 'CAD', label: 'Fixed-Price Quotes' },
+];
+
+const faqs = [
+  { q: 'How much does UI/UX design cost in Canada?', a: 'UI/UX design ranges from roughly $1,500 CAD for a startup MVP design up to $30,000+ CAD for an enterprise design system. Cost depends on the number of screens, interaction complexity, depth of user research and whether branding is included. We provide a fixed quote after a free audit.' },
+  { q: 'How long does a UI/UX design project take?', a: 'Most projects take 6–11 weeks across research, strategy, wireframes, visual design and handoff. Small MVPs can be faster.' },
+  { q: 'What do I get at the end of a design project?', a: 'You get Figma files with auto-layout, an interactive prototype, a component library or design system, annotated specs and assets ready for developers.' },
+  { q: 'Do you also build the app or website you design?', a: 'Yes. The same team develops it. We build mobile apps and websites.' },
+  { q: 'Can you redesign an existing app or website?', a: 'Yes. We start with a UX audit that includes a heuristic review and analytics, then provide a prioritised fix list.' },
+  { q: 'Do you design for accessibility?', a: 'Designs target WCAG 2.2 AA, which covers Canadian requirements such as Ontario’s AODA.' },
 ];
 
 const services: { title: string; tag: string; desc: string; chips?: string[] }[] = [
@@ -85,12 +94,13 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="product-design"
       name="Product Design"
-      copy={{ badge: "Product Design", title: <>Product Design That Converts<br /><span style={{ color: 'var(--brand)' }}>Users to Customers.</span></>, desc: <>A Canadian product design and UI/UX agency — UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes.</> }}
+      copy={{ badge: "UI/UX Design", title: <>Product Design That Converts<br /><span style={{ color: 'var(--brand)' }}>Users to Customers.</span></>, desc: <>A Canadian UI/UX design company: UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes.</> }}
       stats={stats}
       services={services}
       steps={steps}
       techCategories={techCategories}
       industries={industries}
+      faqs={faqs}
     />
   );
 }
