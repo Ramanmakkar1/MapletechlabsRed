@@ -511,4 +511,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-toronto': {
+    title: 'Web Development Company in Toronto',
+    description: 'Mapletech Labs builds fast custom websites and web apps for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building business websites, e-commerce stores and web apps for Toronto companies. Edmonton is two hours behind Toronto, so our working days overlap for most of yours, making it straightforward to review designs and discuss decisions together. You work directly with the senior engineers who build your website. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts, so you know what is included. Call us on +1-403-604-8692 to talk through your project.',
+    sections: [
+      {
+        heading: 'Websites and web apps Toronto businesses ask us for',
+        body: [
+          'We build professional-services and B2B websites designed to generate leads, with clear service pages and enquiry forms that help prospective customers take the next step. For retailers, we develop e-commerce stores using headless Shopify or a custom build, with Stripe or Square for payments. Customer portals and dashboards give clients and staff access to the information and tasks they need. We also build SaaS web apps, with the scope shaped around how your customers will use the product.',
+        ],
+      },
+      {
+        heading: 'Built for speed and search',
+        body: [
+          'We build on Next.js and React, with pages rendered on the server so Google and Bing can read their content. Core Web Vitals are a target from day one, guiding decisions about images, scripts and page layout as we develop the site. We add clean URLs and structured data (schema) that describe your pages to search engines. A content management system (CMS) lets your team edit pages without a developer, so service details and other business information can stay current.',
+        ],
+      },
+      {
+        heading: 'AODA accessibility for Ontario sites',
+        body: [
+          'Many Ontario organisations must make their public websites meet WCAG 2.0 level AA under the Accessibility for Ontarians with Disabilities Act (AODA). We design and test for keyboard access, screen readers, colour contrast and text resizing, so accessibility is considered throughout the build. That includes checking how visitors navigate menus, understand forms and use pages without a mouse. Your legal team confirms how the AODA applies to your organisation and website, and we can share accessibility test results to support that review.',
+        ],
+      },
+      {
+        heading: 'What a website costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). If you are comparing vendors, our ',
+          { href: '/blog/web-development-companies-toronto', label: 'guide to Toronto web development companies' },
+          ' lists the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Toronto?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After free discovery you get a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Do you have an office in Toronto?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Toronto office. We serve Toronto clients remotely, with working hours that overlap for most of the day, and we come to Toronto for in-person workshops when a milestone needs one, with travel agreed up front.',
+      },
+      {
+        q: 'Will our website meet AODA rules?',
+        a: 'We design and test to WCAG 2.0 level AA, the standard the AODA points to for public websites, covering keyboard access, screen readers, colour contrast and text resizing. We can share our accessibility test results with you, and your own legal team should confirm whether and how the AODA applies to your organisation.',
+      },
+      {
+        q: 'Can we edit the website ourselves?',
+        a: 'Yes. We provide a CMS so your team can edit pages and content without a developer. At handover we train your team to use it, so you can keep your website current after launch.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
 };
