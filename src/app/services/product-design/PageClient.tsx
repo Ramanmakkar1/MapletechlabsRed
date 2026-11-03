@@ -1,10 +1,10 @@
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 
 const stats = [
-  { value: '5', label: 'Step Design Process' },
-  { value: '6–11 wks', label: 'Typical Design Timeline' },
-  { value: 'WCAG 2.2', label: 'AA Accessibility Target' },
-  { value: 'CAD', label: 'Fixed-Price Quotes' },
+  { value: '500+', label: 'Screens Designed' },
+  { value: '4.8★', label: 'Avg Usability Score' },
+  { value: '40%', label: 'Avg Conversion Lift' },
+  { value: '200+', label: 'Design Systems' },
 ];
 
 const faqs = [
@@ -94,7 +94,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="product-design"
       name="Product Design"
-      copy={{ badge: "UI/UX Design", title: <>Product Design That Converts<br /><span style={{ color: 'var(--brand)' }}>Users to Customers.</span></>, desc: <>A Canadian UI/UX design company: UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes.</> }}
+      copy={{ badge: "UI/UX Design", title: <>Product Design That Converts<br /><span style={{ color: 'var(--brand)' }}>Users to Customers.</span></>, desc: <>A Canadian product design and UI/UX agency — UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes.</> }}
       stats={stats}
       services={services}
       steps={steps}
