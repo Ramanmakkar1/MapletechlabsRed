@@ -214,7 +214,7 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      While headquartered in Edmonton, our Canadian team serves Toronto businesses with enterprise web development. We build high-performance Next.js applications, SaaS platforms, and complex e-commerce systems. Our Canadian team handles some of the most demanding web projects in the country.
+                      While headquartered in Edmonton, our Toronto office serves as our central hub for enterprise web development. We build high-performance Next.js applications, SaaS platforms, and complex e-commerce systems. Our Toronto team handles some of the most demanding web projects in the country.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       What sets Mapletech Labs apart is our engineering-first approach. Every website we build scores 95+ on Google Lighthouse, ships with server-side rendering for instant load times, and is architected for scale from day one. We do not use templates. We do not outsource. Every line of code is written by our in-house Canadian team.
@@ -297,7 +297,7 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                     emoji: '☁️', accentColor: '#E11900', bgColor: 'transparent',
                     metric: 'Azure & AWS Cloud-Native Development',
                     paragraphs: [
-                      'Architech specializes in cloud-native web applications built on Azure and AWS. Their team builds serverless architectures, microservices-based platforms, and enterprise web applications that leverage the full power of cloud infrastructure. They are a strong choice for organizations migrating legacy systems to the cloud or building new platforms that need elastic scalability from day one.',
+                      'Architech specializes in cloud-native web applications built on Azure and AWS. Their Toronto team builds serverless architectures, microservices-based platforms, and enterprise web applications that leverage the full power of cloud infrastructure. They are a strong choice for organizations migrating legacy systems to the cloud or building new platforms that need elastic scalability from day one.',
                     ],
                   },
                   {
@@ -490,7 +490,7 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                   Start Your Web Project in Toronto
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                  Whether you need a high-performance marketing site, a complex SaaS platform, or an enterprise web application, our Canadian team builds it for Toronto businesses at a fixed CAD price. See our <Link href="/locations/web-development-company-in-toronto" style={{ color: 'var(--brand)' }}>web development company in Toronto</Link> page, our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services</Link>, or all of our <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)' }}>software development in Toronto</Link>.
+                  Whether you need a high-performance marketing site, a complex SaaS platform, or an enterprise web application, our Toronto team is ready to build it. Get a fixed-price proposal within 48 hours. See our <Link href="/locations/web-development-company-in-toronto" style={{ color: 'var(--brand)' }}>web development company in Toronto</Link> page, our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services</Link>, or all of our <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)' }}>software development in Toronto</Link>.
                 </p>
               </div>
               <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your Web Project in Toronto →</Link>
