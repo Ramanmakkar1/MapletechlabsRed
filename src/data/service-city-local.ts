@@ -199,4 +199,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-toronto': {
+    title: 'App Development Company in Toronto',
+    description: 'Mapletech Labs is a Canadian team building iOS and Android apps for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, and we build iOS and Android apps for Toronto businesses. Edmonton is only two hours behind Toronto, so our working days overlap for most of yours and questions get answered the same day. We work with fintech firms, retailers, health providers and SaaS companies across the city. You deal directly with the senior engineers who write your code, and your contract is with a Canadian company, priced in CAD. Before any work starts you get a fixed scope and a fixed price. Call us on +1-403-604-8692 to talk through your app.',
+    sections: [
+      {
+        heading: 'Apps Toronto businesses ask us for',
+        body: [
+          'Toronto is Canada’s financial centre, and fintech and banking-adjacent companies need secure mobile apps for payments, investing, lending and account access, built and tested with care. Retailers and e-commerce brands want shopping apps with fast checkout, loyalty programs and links to their store systems. Clinics and health providers need patient booking, telehealth and records apps that handle personal health information under Ontario’s PHIPA. B2B SaaS companies often need a companion iOS and Android app so their customers can use the core product on the go.',
+        ],
+      },
+      {
+        heading: 'Ontario rules your app has to meet',
+        body: [
+          'Public-facing apps from many Ontario organisations fall under the Accessibility for Ontarians with Disabilities Act (AODA), which points to WCAG 2.0 level AA. We design and test for it from the first screen: screen reader labels, colour contrast, text resizing and keyboard or switch access. Apps that hold health information need to meet PHIPA, and most private-sector apps that collect personal data fall under PIPEDA. We build in encryption, access control and audit logs, but your lawyer or privacy officer should confirm the final compliance position.',
+        ],
+      },
+      {
+        heading: 'Native or cross-platform: how we choose',
+        body: [
+          'Most Toronto apps have to reach both iPhone and Android users, so our usual advice is a cross-platform build in Flutter or React Native. A single codebase ships to both app stores and typically costs 30-40% less than paying for two separate native apps. If your app relies heavily on device hardware, Bluetooth sensors, large offline data sets or maximum performance, we build natively in Swift and Kotlin instead. Either way, we explain the trade-off for your app in plain language before you commit to a stack.',
+        ],
+      },
+      {
+        heading: 'What an app costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. If you are still comparing vendors, our ',
+          { href: '/blog/software-development-companies-toronto', label: 'guide to choosing a Toronto software company' },
+          ' lists the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Toronto?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. After a free discovery phase you get a fixed price in CAD, so your budget is set before development begins.',
+      },
+      {
+        q: 'Do you have an office in Toronto?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Toronto office. We serve Toronto clients remotely, with working hours that overlap for most of the day, and we come to Toronto for in-person workshops when a milestone needs one, with travel agreed up front.',
+      },
+      {
+        q: 'Will our app meet AODA accessibility rules?',
+        a: 'We design and test to WCAG 2.0 level AA, the standard the AODA points to, covering screen readers, colour contrast, text size and alternative input. We can share our accessibility test results with you, and your own legal team should confirm whether and how the AODA applies to your organisation.',
+      },
+      {
+        q: 'How long does it take to build an app?',
+        a: 'A simple app with a handful of screens usually takes 8-12 weeks. A mid-size iOS and Android app with payments and an admin panel takes about 12-24 weeks, and complex platforms take 6-18 months. Your written scope includes a timeline with milestones such as beta and launch.',
+      },
+      {
+        q: 'Who owns the code for our app?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
 };
