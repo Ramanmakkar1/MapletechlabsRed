@@ -386,6 +386,9 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
                     Not sure whether a fixed-price or time-and-materials quote suits you, or who should own the code? Our <Link href="/blog/software-development-contract-canada" style={{ color: 'var(--brand)' }}>guide to software development contracts in Canada</Link> compares the engagement models and lists the clauses to check before you sign.
                   </p>
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
+                    Hiring a separate design partner too? Our guide to the <Link href="/blog/ui-ux-design-companies-canada" style={{ color: 'var(--brand)' }}>best UI/UX design companies in Canada</Link> covers costs, a checklist and the red flags to watch for.
+                  </p>
                 </div>
 
                 {/* Section 6: How Mapletech Labs Stands Apart */}

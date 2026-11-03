@@ -9,6 +9,8 @@
  * that cannot be verified.
  */
 
+import { serviceCityPath } from './serviceCity';
+
 export type Block =
   | { type: 'h2'; id: string; text: string }
   | { type: 'p'; html: string }
@@ -1666,6 +1668,93 @@ export const articles: Article[] = [
       { q: 'Do I need a lawyer to review a software development contract?', a: 'It is a good idea. A checklist helps you know what to ask about, but a lawyer can check the exact wording, how it applies where you operate and whether it protects your business. This guide is general information, not legal advice.' },
     ],
     cta: { href: '/tools/project-brief', label: 'Build your project brief' },
+  },
+  {
+    slug: 'ui-ux-design-companies-canada',
+    category: 'Business',
+    title: 'Best UI/UX Design Companies in Canada (2026): How to Choose, Costs and What to Ask',
+    dek: 'A UI/UX company should hand you more than nice screens. Here is what a good Canadian design partner actually delivers, what it costs in CAD, a neutral shortlist of well-known studios, and the checklist and red flags that separate real product design from pretty mock-ups.',
+    metaTitle: 'Best UI/UX Design Companies in Canada (2026)',
+    metaDescription: 'How to choose a UI/UX design company in Canada: what you get, CAD costs from audit to design system, a shortlist of studios, a checklist and red flags.',
+    date: '2026-11-03',
+    dateModified: '2026-11-03',
+    readTime: '9 min read',
+    heroKey: 'whiteboard',
+    intro: [
+      'Search for the best UI/UX company in Canada and you will find hundreds of studios with beautiful portfolios. The trouble is that a portfolio shows the final screens, not the work that made them succeed: the research, the testing, the decisions that were thrown out and the handoff that let developers build the design without guessing.',
+      'This guide is written for founders, product owners and marketing leads who need to hire a design partner. It explains what a UI/UX company should actually deliver, what each stage typically costs in Canadian dollars, a short list of well-known Canadian studios described only by public facts, and the questions and warning signs that tell you the most before you sign. To be upfront: Mapletech Labs offers <a href="/services/product-design">UI/UX and product design</a>, and we are on the list, described with the same facts we publish on our own site.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-you-get', text: 'What a UI/UX company actually delivers' },
+      { type: 'p', html: 'UI (user interface) design is how the product looks and behaves on screen. UX (user experience) design is whether people can reach their goal without friction. A serious UI/UX company works across both, in roughly this order:' },
+      { type: 'checks', items: [
+        { term: 'User research and strategy', text: 'Interviews with real or target users, a review of your analytics, a look at competitors and a clear statement of the problem being solved. The output is a short list of user goals and a product direction you can defend. See our <a href="/services/product-design/ui-ux-strategy">UI/UX strategy</a> service.' },
+        { term: 'Wireframes', text: 'Low-fidelity layouts of every key screen and flow, without colour or polish, so the structure can be argued over cheaply before anyone spends days on visuals. See our <a href="/services/product-design/wireframing">wireframing</a> service.' },
+        { term: 'Interactive prototypes', text: 'Clickable versions of the main journeys, usually built in Figma, that look and feel close to the real product. They let stakeholders sign off and let users try the flow before a line of code is written. See our <a href="/services/product-design/prototyping">prototyping</a> service.' },
+        { term: 'Usability testing', text: 'Watching five to eight real users try the prototype on set tasks, noting where they hesitate or fail, and fixing those screens. This is the step most often skipped, and the one that catches the most expensive mistakes. We run it on prototypes as part of our <a href="/services/product-design/prototyping">prototyping</a> work.' },
+        { term: 'Design system', text: 'A library of reusable components, colours, type styles and spacing tokens, documented so developers and future designers stay consistent as the product grows. See our <a href="/services/product-design/design-systems">design systems</a> service.' },
+      ] },
+      { type: 'p', html: 'Some studios also offer <a href="/services/product-design/brand-identity">brand identity</a> work. That is useful when you are launching something new, but it is a separate job from product design and should be priced separately.' },
+
+      { type: 'h2', id: 'costs', text: 'How much UI/UX design costs in Canada' },
+      { type: 'p', html: 'Prices vary with the number of screens, how complex the interactions are, how much research is involved and whether branding is included. These are the CAD ranges we publish on our <a href="/services/product-design">UI/UX service page</a> and our UI/UX city pages, so you can use them as a reference point when comparing quotes:' },
+      { type: 'table', html: '<table><thead><tr><th>Engagement</th><th>What it usually covers</th><th>Typical range (CAD)</th></tr></thead><tbody><tr><td>UX audit</td><td>Heuristic review of an existing app or website plus analytics, ending in a prioritised fix list</td><td>Free with us, before a fixed quote</td></tr><tr><td>MVP design</td><td>Up to about 15 screens, basic user research, an interactive prototype, responsive layouts and file handoff</td><td>$1,500&ndash;$5,000</td></tr><tr><td>Full product design</td><td>30+ screens, in-depth research and usability testing, a design system foundation, interaction design and developer handoff support</td><td>$5,000&ndash;$12,000</td></tr><tr><td>Design system (enterprise)</td><td>Multi-product design system, a full UX research program, accessibility compliance work and an embedded design team</td><td>$12,000&ndash;$30,000+</td></tr></tbody></table>' },
+      { type: 'p', html: 'Most projects take 6 to 11 weeks across research, strategy, wireframes, visual design and handoff; small MVPs can be faster. If you also need the product built, compare development ranges on our <a href="/pricing">pricing page</a>. A design quote that is far below these ranges usually means research and testing have been left out; one far above them should come with a clear explanation of the extra scope.' },
+
+      { type: 'h2', id: 'shortlist', text: 'Well-known Canadian UI/UX design studios' },
+      { type: 'p', html: 'A starting shortlist, in no particular order and with no ranking, ratings or scores. Each description sticks to what the studio says about itself publicly; check its current services and recent work on its own website before you reach out.' },
+      { type: 'cards', items: [
+        { title: 'Mapletech Labs', text: 'A Canadian software, app, AI and UI/UX company founded in 2018 in Edmonton, Alberta. Our product design team has designed 500+ screens and 200+ design systems, designs to WCAG 2.2 AA, and the same team can build the app or website it designs.' },
+        { title: 'Konrad', text: 'Toronto-based digital agency. Known for designing and building digital products, apps and websites for large brands.' },
+        { title: 'Rangle', text: 'Toronto-based digital consultancy. Known for product design and development work and for its focus on design systems.' },
+        { title: 'Normative', text: 'Toronto-based design firm. Known for product and service design work grounded in research.' },
+        { title: 'Steamclock Software', text: 'Founded in Vancouver. Focuses on designing and building native iOS and Android apps.' },
+        { title: 'Domain7', text: 'Vancouver-based digital agency. Known for research-led strategy, design and development of websites and digital products.' },
+        { title: 'Evans Hunt', text: 'Calgary-based digital agency. Known for web design, development and digital marketing work.' },
+        { title: 'Yellow Pencil', text: 'Edmonton-based digital agency. Known for website strategy, design and development, often for public-sector and institutional clients.' },
+      ] },
+      { type: 'p', html: 'Location matters less than it used to. Most Canadian studios work remotely with clients across the country, so focus on time-zone overlap, a named senior designer and the quality of the process rather than the city on the website.' },
+
+      { type: 'h2', id: 'checklist', text: 'How to evaluate a UI/UX company: a checklist' },
+      { type: 'checks', items: [
+        { term: 'Portfolio depth, not just polish', text: 'Ask for two or three case studies that show the problem, the research, rejected options and what changed after launch. A gallery of final screens tells you about taste, not about process.' },
+        { term: 'A real research process', text: 'Ask who they will talk to, how many users, and what happens if the research contradicts your assumptions. A good answer names methods (interviews, analytics review, usability tests) and a budget of time for each.' },
+        { term: 'Accessibility and WCAG', text: 'Ask which standard they design to. In Canada, WCAG 2.1 or 2.2 AA is the usual target, and it covers requirements such as Ontario&rsquo;s AODA. Colour contrast, focus states, text sizes and screen-reader labels should be in the design files, not added later.' },
+        { term: 'Handoff to developers', text: 'Ask to see a real handoff file. You want Figma files with auto-layout, named components, annotated specs, exported assets and a person who answers developer questions during the build.' },
+        { term: 'Design-to-code', text: 'Ask whether the design system maps to real code components (for example a Storybook library) and whether the studio has worked alongside developers on your stack. Designs that cannot be built on budget are not finished designs.' },
+        { term: 'Ownership', text: 'Confirm in the contract that you own the design files, the design system and any research recordings when the project ends.' },
+      ] },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags when hiring a design studio' },
+      { type: 'ul', items: [
+        'They quote a fixed price before asking about your users, your goals or how many screens you need.',
+        'No user research or usability testing appears anywhere in the plan, or it is listed as an optional extra.',
+        'They show only Dribbble-style shots and cannot explain why any design decision was made.',
+        'Accessibility is &ldquo;something the developers handle&rdquo;.',
+        'Deliverables are static images or PDFs instead of editable Figma files and a component library.',
+        'You never meet the designer who will actually do the work, only a sales contact.',
+        'They will not say who owns the design files after the project.',
+      ] },
+      { type: 'p', html: 'If you are also hiring a team to build the product, the same instincts apply. Our <a href="/blog/choose-software-development-company-canada">guide to choosing a software development company in Canada</a> covers the questions to ask a development partner.' },
+
+      { type: 'h2', id: 'next-steps', text: 'Work with a UI/UX team near you' },
+      { type: 'callout', tone: 'brand', title: 'Talk to our UI/UX design team', text: `See how we run research, prototyping, design systems and handoff on our <a href="/services/product-design">UI/UX and product design</a> page, or visit the page for your city: <a href="${serviceCityPath('product-design', 'edmonton')}">UI/UX design in Edmonton</a>, <a href="${serviceCityPath('product-design', 'calgary')}">Calgary</a>, <a href="${serviceCityPath('product-design', 'toronto')}">Toronto</a> or <a href="${serviceCityPath('product-design', 'vancouver')}">Vancouver</a>. Every project starts with a free audit and a fixed quote.` },
+    ],
+    keyTakeaways: [
+      'A real UI/UX company delivers research, wireframes, prototypes, usability testing and a design system, not just final screens.',
+      'Typical Canadian ranges: about CAD $1,500–$5,000 for MVP design, $5,000–$12,000 for full product design and $12,000–$30,000+ for an enterprise design system.',
+      'Judge studios on case studies that show process, a named research plan, WCAG 2.1/2.2 AA accessibility and a clean developer handoff.',
+      'Walk away from quotes that skip research and testing, or that leave design file ownership unclear.',
+    ],
+    faqs: [
+      { q: 'How much does UI/UX design cost in Canada?', a: 'As a guide, an MVP design with up to about 15 screens runs roughly CAD $1,500 to $5,000, a full product design with 30+ screens about $5,000 to $12,000, and an enterprise design system $12,000 to $30,000 or more. The number of screens, interaction complexity, research depth and branding drive the price.' },
+      { q: 'How long does a UI/UX design project take?', a: 'Most projects take 6 to 11 weeks across research, strategy, wireframes, visual design and handoff. Small MVPs can be faster, and projects with a large research program or a multi-product design system can take longer.' },
+      { q: 'What is the difference between UI and UX design?', a: 'UX design decides how the product works: the flows, structure and steps a user takes to reach a goal. UI design decides how it looks and feels on screen: layout, type, colour and interaction details. A good studio does both and tests them together.' },
+      { q: 'What should I get at the end of a UI/UX project?', a: 'Editable Figma files with auto-layout, an interactive prototype, a component library or design system, annotated specs and exported assets ready for developers, plus the research findings and usability test notes behind the decisions.' },
+      { q: 'Do UI/UX designs need to meet accessibility standards in Canada?', a: 'Many organisations must meet accessibility rules, such as Ontario’s AODA, and WCAG 2.1 or 2.2 AA is the usual design target. Even where it is not required, designing for contrast, keyboard use and screen readers from the start costs far less than fixing it after launch.' },
+      { q: 'Should the same company design and build my product?', a: 'It often helps. When designers and developers sit in one team, the design system maps directly to code and fewer details are lost in handoff. If you use separate firms, insist on a detailed handoff file and a designer who stays available during the build.' },
+    ],
+    cta: { href: '/services/product-design', label: 'See our UI/UX design services' },
   },
 ];
 

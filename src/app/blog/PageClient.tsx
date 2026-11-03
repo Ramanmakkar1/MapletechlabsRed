@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'ui-ux-design-companies-canada', category: 'Business',
+    title: 'Best UI/UX Design Companies in Canada (2026): How to Choose, Costs and What to Ask',
+    excerpt: 'What a UI/UX company should deliver, CAD costs from MVP design to a design system, a neutral shortlist of Canadian studios, an evaluation checklist and red flags.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'sred-software-development-canada', category: 'Business',
     title: 'SR&ED Tax Credits for Software Development in Canada (2026 Guide)',
     excerpt: 'How SR&ED works for Canadian software teams: what work qualifies, CCPC vs non-CCPC rates, eligible costs, the records to keep, the T661 deadline, agencies and stacking with IRAP.',

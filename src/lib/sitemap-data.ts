@@ -51,6 +51,7 @@ export const blogSlugs = [
   'ai-development-cost-canada',
   'sred-software-development-canada',
   'software-development-contract-canada',
+  'ui-ux-design-companies-canada',
 ];
 
 export const citySlugs = [
