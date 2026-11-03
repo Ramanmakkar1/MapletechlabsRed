@@ -847,7 +847,7 @@ export const articles: Article[] = [
         'Will I own the code, designs and accounts outright when the project ends?',
         'What support do you offer after launch, and at what cost?',
       ] },
-      { type: 'p', html: 'A good partner answers these plainly and in writing. Vague answers on ownership, hosting or who does the work are the clearest warning signs you will get.' },
+      { type: 'p', html: 'A good partner answers these plainly and in writing. Vague answers on ownership, hosting or who does the work are the clearest warning signs you will get. Our <a href="/blog/software-development-contract-canada">guide to software development contracts in Canada</a> compares fixed price and time and materials and lists the clauses to check before you sign.' },
     ],
     keyTakeaways: [
       'Decide first between a local Vancouver team and a remote Canadian one; a named senior contact matters more than an address.',
@@ -1593,6 +1593,79 @@ export const articles: Article[] = [
       { q: 'Which privacy law applies to my Toronto app?', a: 'Most private-sector businesses in Ontario follow the federal PIPEDA when they collect personal information in commercial activity. If your app handles personal health information for health information custodians, Ontario’s PHIPA also applies. Confirm the details with a privacy professional before the build.' },
     ],
     cta: { href: '/contact', label: 'Talk to our team' },
+  },
+  {
+    slug: 'software-development-contract-canada',
+    category: 'Business',
+    title: 'Software Development Contracts in Canada (2026): Fixed Price vs Time & Materials, IP Ownership and a Pre-Signing Checklist',
+    dek: 'Before you sign with a software development company, make sure the contract matches how the work will really run. Here is how the three engagement models compare, who owns the code, the clauses to check and the red flags to walk away from.',
+    metaTitle: 'Software Development Contracts in Canada (2026)',
+    metaDescription: 'Fixed price vs time and materials vs dedicated team, who owns the code, and the clauses to check before you sign a software development contract in Canada.',
+    date: '2026-11-03',
+    dateModified: '2026-11-03',
+    readTime: '9 min read',
+    heroKey: 'planning',
+    intro: [
+      'Many software projects that go wrong do not fail because of the code. They fail because the client and the vendor had different ideas about scope, payment, ownership or what happens when the work ends, and the contract did not settle it. A clear contract is one of the cheapest ways to reduce that risk.',
+      'This guide walks through the three common engagement models, explains in general terms who owns the code, and gives you a checklist of clauses to review before you sign. It is general information, not legal advice. Have a lawyer review any contract before you sign it.',
+    ],
+    body: [
+      { type: 'h2', id: 'engagement-models', text: 'The three engagement models' },
+      { type: 'p', html: 'Canadian software development companies typically work in one of three ways. The right one depends on how well defined your project is and how much you expect it to change:' },
+      { type: 'table', html: '<table><thead><tr><th scope="col">Point</th><th scope="col">Fixed price</th><th scope="col">Time and materials</th><th scope="col">Dedicated team</th></tr></thead><tbody><tr><th scope="row">Best for</th><td>A well-defined first build or MVP with clear features, deliverables and acceptance criteria</td><td>Products where requirements will evolve as you learn</td><td>Ongoing product development after launch, or when you are scaling and want a consistent team</td></tr><tr><th scope="row">Who carries budget risk</th><td>Mostly the vendor: you know the cost up front, and overruns on the agreed scope sit with them</td><td>Mostly you: you pay for the time worked, so trust, transparency and budget tracking matter most</td><td>Mostly you: you pay for an agreed capacity each month, whatever gets built with it</td></tr><tr><th scope="row">How scope changes work</th><td>Changes go through a change-request process and are reviewed, priced and agreed before work proceeds</td><td>Priorities can change between sprints, and the budget moves with them</td><td>Priorities are re-set in regular planning sessions within the agreed capacity</td></tr><tr><th scope="row">Typical billing</th><td>Payments tied to agreed project milestones and deliverables</td><td>Hourly or monthly invoices for time worked, often by sprint</td><td>Month to month against an agreed team capacity and delivery cadence</td></tr></tbody></table>' },
+      { type: 'p', html: 'Many projects combine them: a short discovery phase to define the scope, a fixed-price build of the first version, then a dedicated team after launch. Our <a href="/pricing">pricing page</a> shows how we structure fixed-scope projects, monthly dedicated teams and discovery sprints, and our <a href="/blog/saas-development-company-canada">guide to choosing a SaaS development company in Canada</a> covers which model suits which stage.' },
+
+      { type: 'h2', id: 'who-owns-the-code', text: 'Who owns the code' },
+      { type: 'callout', tone: 'muted', title: 'General information, not legal advice', text: 'Intellectual property rules depend on your situation, and the exact wording of a contract matters. Use this section to know what to ask about, then have a lawyer review the contract before you sign.' },
+      { type: 'p', html: 'In general terms, these are the ownership points to understand:' },
+      { type: 'checks', items: [
+        { term: 'Assignment vs licence', text: 'An assignment transfers ownership of the work to you. A licence only gives you permission to use it on the terms the licence sets, while the vendor keeps ownership. If you expect to own your product outright, the contract should say clearly that the custom work is assigned to you, and when that happens (for example, on payment).' },
+        { term: 'Background (pre-existing) IP', text: 'Vendors often reuse their own tools, libraries or templates that existed before your project. These usually stay theirs. The contract should describe them and give you a lasting licence to use them as part of your product, so you are not stuck if you change vendors.' },
+        { term: 'Open-source components', text: 'Most modern software uses open-source packages, each with its own licence. Some licences carry obligations when you distribute the software. Ask the vendor to use components whose licences suit your business and to keep a list of what is included.' },
+        { term: 'Source code and repository access', text: 'Ownership on paper means little if you cannot get to the code. The repository should live in an account you own, or you should have full access to it throughout the project, not only at the end.' },
+      ] },
+
+      { type: 'h2', id: 'clauses-to-check', text: 'Clauses to check before you sign' },
+      { type: 'p', html: 'Before you sign, read the contract and statement of work for each of these:' },
+      { type: 'checks', items: [
+        { term: 'Scope and acceptance criteria', text: 'A written description of what will be built, and how you will both decide that each part is finished and accepted.' },
+        { term: 'Change-request process', text: 'How new or changed work is requested, estimated, approved and billed, and that nothing extra is billed without your written approval.' },
+        { term: 'Payment milestones', text: 'What each payment is tied to. Payments linked to delivered and accepted work are easier to manage than large up-front amounts.' },
+        { term: 'Warranty or bug-fix period', text: 'How long after launch the vendor fixes defects in their own work at no extra cost, and what counts as a defect rather than a new request.' },
+        { term: 'Hosting and accounts in your name', text: 'Domains, cloud hosting, app store listings, analytics and third-party services should be registered to your business, with the vendor given access rather than ownership.' },
+        { term: 'Data handling and privacy', text: 'Who can access personal information during the build, where it is stored and how it is protected. Our <a href="/blog/app-privacy-compliance-canada">privacy compliance checklist for Canadian apps</a> covers what to plan for.' },
+        { term: 'Confidentiality', text: 'Both sides agree to keep each other&rsquo;s business information, plans and data private, during the project and after it ends.' },
+        { term: 'Termination and handover', text: 'How either side can end the contract, what you pay for work done to that point, and what the vendor must hand over: code, designs, documentation, credentials and access.' },
+        { term: 'Support and maintenance terms', text: 'What happens after the warranty period, how support requests are handled and what it costs. Our <a href="/blog/software-maintenance-cost-canada">software maintenance cost guide</a> explains typical options.' },
+      ] },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags' },
+      { type: 'ul', items: [
+        '<strong>No written scope.</strong> A quote or contract without a clear description of what will be delivered leaves every disagreement open.',
+        '<strong>The vendor owns your repository or cloud accounts.</strong> If the code, hosting or domains sit in the vendor&rsquo;s name, leaving them becomes slow, costly or impossible.',
+        '<strong>Vague hourly caps.</strong> Time and materials without an agreed estimate, budget ceiling or regular reporting gives you no early warning before costs run over.',
+        '<strong>No exit or handover clause.</strong> If the contract does not say how it ends and what you receive, you may struggle to move the project to another team.',
+      ] },
+      { type: 'p', html: 'A good partner explains these terms plainly and is happy to put them in writing. Pushback on ownership, access or a clear exit is the clearest warning sign you will get.' },
+
+      { type: 'h2', id: 'next-steps', text: 'Next steps' },
+      { type: 'callout', tone: 'brand', title: 'Get your project ready to quote', text: 'Write up your project with the free <a href="/tools/project-brief">software project brief builder</a>, compare typical ranges on our <a href="/pricing">pricing page</a>, and use our <a href="/blog/choose-software-development-company-canada">guide to choosing a software development company in Canada</a> to vet vendors. When you are ready, <a href="/contact">talk to our team</a>.' },
+    ],
+    keyTakeaways: [
+      'Fixed price suits a clear, stable scope; time and materials suits evolving requirements; a dedicated team suits ongoing development.',
+      'Look for a clear assignment of custom work to you, a licence to any background IP, and repository access throughout.',
+      'Check scope, change requests, payment milestones, warranty, account ownership, privacy, confidentiality, termination and support before you sign.',
+      'This is general information, not legal advice: have a lawyer review the contract.',
+    ],
+    faqs: [
+      { q: 'Should I choose a fixed-price or time-and-materials contract?', a: 'Fixed price suits a well-defined build where you want cost certainty, and the risk of overruns on the agreed scope sits with the vendor. Time and materials suits requirements that will evolve, and you carry the budget risk. A dedicated team fits ongoing development after launch.' },
+      { q: 'Who owns the code when an agency builds my software?', a: 'It depends on the contract. In general, look for a clear assignment of the custom work to your business, a licence to any pre-existing tools the vendor reuses, and access to the repository throughout. This is general information, not legal advice, so have a lawyer review the wording.' },
+      { q: 'What is the difference between an IP assignment and a licence?', a: 'An assignment transfers ownership to you. A licence lets you use the work on set terms while the vendor keeps ownership. If you expect to own your product outright, the custom work should be assigned to you.' },
+      { q: 'Should hosting and cloud accounts be in my name?', a: 'Generally, yes. Domains, cloud hosting, app store listings and third-party services registered to your business make it much easier to change vendors or bring the work in-house later. The vendor can be given access instead.' },
+      { q: 'What should a termination and handover clause include?', a: 'It should say how either side can end the contract, what you pay for work done so far, and what the vendor hands over: source code, designs, documentation, credentials and access to every account the product depends on.' },
+      { q: 'Do I need a lawyer to review a software development contract?', a: 'It is a good idea. A checklist helps you know what to ask about, but a lawyer can check the exact wording, how it applies where you operate and whether it protects your business. This guide is general information, not legal advice.' },
+    ],
+    cta: { href: '/tools/project-brief', label: 'Build your project brief' },
   },
 ];
 

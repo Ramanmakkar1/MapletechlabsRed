@@ -383,6 +383,9 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                       <span style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7 }}>{q}</span>
                     </div>
                   ))}
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
+                    Not sure whether a fixed-price or time-and-materials quote suits you, or who should own the code? Our <Link href="/blog/software-development-contract-canada" style={{ color: 'var(--brand)' }}>guide to software development contracts in Canada</Link> compares the engagement models and lists the clauses to check before you sign.
+                  </p>
                 </div>
 
                 {/* Section 6: How Mapletech Labs Stands Apart */}

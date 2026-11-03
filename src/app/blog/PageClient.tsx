@@ -56,6 +56,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
   },
   {
+    slug: 'software-development-contract-canada', category: 'Business',
+    title: 'Software Development Contracts in Canada (2026): Fixed Price vs Time & Materials, IP Ownership and a Pre-Signing Checklist',
+    excerpt: 'How fixed price, time and materials and dedicated team contracts compare, who owns the code, the clauses to check before you sign and the red flags to walk away from.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'software-development-companies-toronto', category: 'Business',
     title: 'Software Development Companies in Toronto (2026): How to Choose',
     excerpt: 'How to choose a software development company in Toronto: local vs remote teams, Ontario accessibility and privacy rules, typical costs, engagement models and a vetting checklist.',

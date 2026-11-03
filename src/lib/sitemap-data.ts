@@ -50,6 +50,7 @@ export const blogSlugs = [
   'software-maintenance-cost-canada',
   'ai-development-cost-canada',
   'sred-software-development-canada',
+  'software-development-contract-canada',
 ];
 
 export const citySlugs = [
