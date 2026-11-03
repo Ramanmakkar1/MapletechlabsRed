@@ -862,6 +862,102 @@ export const articles: Article[] = [
     ],
     cta: { href: '/locations/software-development-company-in-vancouver', label: 'See our Vancouver software services' },
   },
+  {
+    slug: 'software-development-companies-ottawa',
+    category: 'Business',
+    title: 'Software Development Companies in Ottawa (2026)',
+    dek: 'Ottawa is a software market shaped by the federal government, defence, telecom and cybersecurity. Here is how to choose a software development company in Ottawa, what public-sector security and bilingual builds involve, what projects typically cost, and what to ask on the first call.',
+    metaTitle: 'Software Development Companies in Ottawa',
+    metaDescription: 'How to choose a software development company in Ottawa in 2026: public-sector security, bilingual and accessible builds, typical costs, and a checklist.',
+    date: '2026-11-04',
+    dateModified: '2026-11-04',
+    readTime: '8 min read',
+    heroKey: 'whiteboard',
+    intro: [
+      'Ottawa is not like other Canadian tech markets. As the national capital, it is home to federal departments and agencies, and around them a large community of defence, telecom and cybersecurity companies, many of them in the Kanata North tech park. For a business or agency that needs software built, that shapes what a good partner looks like.',
+      'This guide continues our city series alongside <a href="/blog/software-development-companies-vancouver">Vancouver</a> and <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers what makes Ottawa different, local versus remote teams, security and compliance for public-sector work, bilingual and accessible builds, typical Canadian costs, SR&amp;ED, and the questions that reveal the most on a first call.',
+    ],
+    body: [
+      { type: 'h2', id: 'why-ottawa', text: 'Why Ottawa is different' },
+      { type: 'p', html: 'Most software markets are driven by startups and private companies. Ottawa has those too, but much of its demand comes from the public sector and the industries that serve it. That changes the questions you should ask a development partner:' },
+      { type: 'checks', items: [
+        { term: 'Federal government', text: 'Departments and agencies buy software through formal procurement and expect security assessments, accessibility, bilingual content and detailed documentation as part of the deliverable, not as extras.' },
+        { term: 'Defence and security', text: 'Defence suppliers and their subcontractors often work under security clearances, controlled goods rules and strict handling of sensitive information. A partner should know which of these applies to your project before writing code.' },
+        { term: 'Telecom and cybersecurity', text: 'Kanata North has long been a centre for networking, telecom and security companies. Software built for this market tends to deal with high data volumes, complex integrations and a security-minded customer base.' },
+      ] },
+      { type: 'p', html: 'If your project is purely commercial, you may not need any of this. If you sell to government or defence, or plan to, choose a partner who can work within those rules from day one.' },
+
+      { type: 'h2', id: 'local-vs-remote', text: 'Local or remote teams' },
+      { type: 'p', html: 'A team based in the National Capital Region makes in-person workshops, stakeholder sessions and on-site reviews easy, and some secure projects require people to be on site. For most other work, a Canadian team elsewhere can deliver the same results remotely, with visits for discovery or launch.' },
+      { type: 'p', html: 'Ottawa runs on Eastern Time. A Canadian partner in Eastern or Central Time shares most of your working day, and one in Mountain Time still overlaps for several hours. What matters most is a named senior contact, a clear meeting rhythm and honest answers about who does the work.' },
+
+      { type: 'h2', id: 'security-compliance', text: 'Security and compliance for public-sector work' },
+      { type: 'p', html: 'Public-sector projects come with security expectations that private projects often do not. In general terms, these are the topics to raise early:' },
+      { type: 'ul', items: [
+        '<strong>Protected B information.</strong> Much government data that is personal or sensitive falls into the Protected B category. Systems that store or process it need security controls matched to that level, and the department will usually assess them before launch.',
+        '<strong>Canadian data residency.</strong> Many public-sector and regulated projects require data to be stored in Canada. Ask which Canadian cloud regions and vendors the team will use, and put it in the contract.',
+        '<strong>Government of Canada cloud guardrails.</strong> Federal departments that use public cloud follow a set of baseline security guardrails for accounts, access, logging and networking. A partner building on cloud for government should know how to set up an environment that meets them.',
+        '<strong>Security assessment and documentation.</strong> Expect to provide architecture diagrams, data flows and evidence of controls. A team that keeps this documentation as it builds saves weeks at the end.',
+      ] },
+      { type: 'p', html: 'Exact requirements differ by department and project, so confirm them with your security or procurement contact. A good partner will ask for those requirements before quoting, not after.' },
+
+      { type: 'h2', id: 'bilingual-accessible', text: 'Bilingual and accessible builds' },
+      { type: 'p', html: 'Federal institutions publish in both official languages, and many Ottawa and Gatineau businesses serve English and French customers. Building bilingual support in from the start is far cheaper than adding it later. Ask how the team handles translated content, language switching, French text that runs longer than English, and bilingual URLs for search.' },
+      { type: 'p', html: 'Accessibility matters just as much. Government of Canada websites are expected to meet WCAG 2.1 AA, and it is a sound standard for any public-facing product. That means keyboard navigation, screen reader support, enough colour contrast, captions and clear form errors. Ask how the team tests for accessibility and whether it is part of every release or a check at the end.' },
+
+      { type: 'h2', id: 'costs', text: 'Typical Canadian costs and timelines' },
+      { type: 'p', html: 'Ottawa projects are priced in line with Canadian market rates for quality onshore development. As approximate ranges:' },
+      { type: 'ul', items: [
+        'Marketing website (10&ndash;20 pages): CAD $15,000&ndash;$45,000, about 4&ndash;8 weeks.',
+        'E-commerce platform: CAD $40,000&ndash;$120,000, about 8&ndash;16 weeks.',
+        'Custom mobile app (iOS + Android): CAD $60,000&ndash;$200,000, about 12&ndash;24 weeks.',
+        'SaaS platform (MVP): CAD $80,000&ndash;$250,000, about 16&ndash;28 weeks.',
+        'Enterprise software system: CAD $150,000&ndash;$500,000+, about 24&ndash;52 weeks.',
+      ] },
+      { type: 'p', html: 'These are approximate ranges based on Canadian market averages. Security assessments, bilingual content and accessibility testing add time and cost, so include them in the scope from the start. Our <a href="/blog/app-development-cost-canada">app development cost guide for Canada</a> goes deeper, our <a href="/pricing">pricing page</a> shows how we structure engagements, and the <a href="/tools/cost-estimator">software cost estimator</a> gives a rough number for your own scope.' },
+
+      { type: 'h2', id: 'sred', text: 'SR&ED tax credits' },
+      { type: 'p', html: 'If your project involves real technical uncertainty, such as new algorithms, hard performance problems or novel integrations, part of the cost may qualify for the federal Scientific Research and Experimental Development (SR&amp;ED) tax credit, with Ontario credits on top for eligible companies. Eligibility depends on the work, not the industry, and good records kept during the project make a claim much easier. Our <a href="/tools/sred-estimator">SR&amp;ED estimator</a> gives a rough idea of what a claim could be worth.' },
+      { type: 'p', html: 'See how we work with businesses in the capital on our <a href="/locations/software-development-company-in-ottawa">Ottawa software development</a> page.' },
+
+      { type: 'h2', id: 'first-call', text: 'Questions to ask on the first call' },
+      { type: 'ol', items: [
+        'Who will actually work on my project, and will I meet them before signing?',
+        'Have you built software that handles Protected B or similarly sensitive data, and how did you secure it?',
+        'Where will my data be hosted, and can you keep it in Canada?',
+        'How do you build and test bilingual English and French content?',
+        'How do you test for WCAG 2.1 AA accessibility, and how often?',
+        'Is the quote fixed-price or time-and-materials, and what happens when scope changes?',
+        'Will I own the code, designs and accounts outright when the project ends?',
+        'What support do you offer after launch, and at what cost?',
+      ] },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags to watch for' },
+      { type: 'ul', items: [
+        'Vague answers about who does the work, or a senior team in the pitch and a different team on the project.',
+        'No clear answer on where data will be hosted, or hosting outside Canada when your project needs it inside.',
+        'Treating French content or accessibility as a final step rather than part of the design.',
+        'A fixed price given before anyone has asked about your security, language or accessibility needs.',
+        'Contracts that leave the code, designs or cloud accounts in the vendor&rsquo;s name.',
+      ] },
+      { type: 'p', html: 'A good partner answers these plainly and in writing. Vague answers on ownership, hosting or security are the clearest warning signs you will get.' },
+    ],
+    keyTakeaways: [
+      'Ottawa demand is shaped by the federal government, defence, telecom and cybersecurity, so security and compliance come up early.',
+      'Choose a local or remote Canadian team based on on-site needs and time-zone overlap; a named senior contact matters more than an address.',
+      'For public-sector work, raise Protected B, Canadian data residency and cloud guardrails before you get a quote.',
+      'Plan bilingual English and French content and WCAG 2.1 AA accessibility from the start.',
+      'Projects follow Canadian onshore rates, and SR&ED credits may offset part of the cost of genuinely technical work.',
+    ],
+    faqs: [
+      { q: 'How much does software development cost in Ottawa?', a: 'Ottawa projects follow Canadian onshore market rates. As approximate ranges, a marketing website runs about CAD $15,000 to $45,000, a custom iOS and Android app about $60,000 to $200,000, a SaaS MVP about $80,000 to $250,000, and enterprise systems $150,000 and up. Security assessments, bilingual content and accessibility testing can add to the scope.' },
+      { q: 'Do I need a software company with an office in Ottawa?', a: 'Not always. Some secure government projects require on-site work, and a local team makes in-person sessions easier. For most other projects, a Canadian team elsewhere can deliver the same work remotely, with visits for discovery or launch. Focus on time-zone overlap, a named senior contact and clear communication.' },
+      { q: 'What is Protected B and does my project need it?', a: 'Protected B is a Government of Canada category for sensitive information, such as many kinds of personal data. Systems that handle it need security controls matched to that level. Whether your project needs it depends on the data involved, so confirm with your department or client before the build starts.' },
+      { q: 'Does my Ottawa project need to be bilingual and accessible?', a: 'Federal institutions publish in English and French and expect websites to meet WCAG 2.1 AA. Private businesses are not always required to, but many Ottawa and Gatineau companies serve both language groups, and accessibility helps every user. Building both in from the start costs much less than adding them later.' },
+      { q: 'Can SR&ED tax credits help pay for software development?', a: 'Possibly. Work that resolves real technical uncertainty may qualify for the federal SR&ED tax credit, and eligible Ontario companies may also claim provincial credits. Routine development usually does not qualify, so keep good records of the technical problems you solve.' },
+    ],
+    cta: { href: '/locations/software-development-company-in-ottawa', label: 'See our Ottawa software services' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);

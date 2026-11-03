@@ -42,6 +42,7 @@ export const blogSlugs = [
   'saas-development-cost-canada', 'blockchain-development-companies-canada',
   'digital-marketing-cost-canada', 'software-development-companies-calgary',
   'software-development-companies-vancouver',
+  'software-development-companies-ottawa',
 ];
 
 export const citySlugs = [
