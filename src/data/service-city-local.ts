@@ -323,4 +323,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-vancouver': {
+    title: 'App Development Company in Vancouver',
+    description: 'Mapletech Labs builds iOS and Android apps for Vancouver and BC businesses, with a Canadian contract and a fixed CAD price up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, and we build iOS and Android apps for Vancouver businesses. Edmonton is just one hour ahead of Vancouver, so our working days almost fully overlap and you rarely wait for an answer. We work with Vancouver startups, retailers, health providers, tourism operators and film and creative companies. You speak directly with the senior engineers who build your app, and you sign with a Canadian company, priced in CAD. Scope and price are fixed before any work starts. Call us on +1-403-604-8692 to talk about your app.',
+    sections: [
+      {
+        heading: 'Apps Vancouver businesses ask us for',
+        body: [
+          'Vancouver’s tech startups and SaaS companies often come to us for a companion mobile app for their web product, or for a lean MVP to test with early users and investors. Retail, outdoor and apparel brands want shopping and loyalty apps that tie into their online store and reward repeat customers. Health and wellness providers need appointment booking and telehealth apps that keep personal health information private. Tourism, hospitality and events businesses ask for booking and visitor guide apps, and port, logistics and trades firms need field apps for crews and tracking apps for shipments and jobs.',
+        ],
+      },
+      {
+        heading: 'BC privacy rules your app has to meet',
+        body: [
+          'Most private-sector apps in British Columbia fall under BC’s Personal Information Protection Act (PIPA), and apps built for BC public bodies fall under the Freedom of Information and Protection of Privacy Act (FIPPA). We plan for Canadian data hosting where your project needs it, and we build in encryption, access control and audit logs from the start. We also design and test for accessibility to WCAG 2.1 level AA. Our ',
+          { href: '/blog/app-privacy-compliance-canada', label: 'Canadian app privacy checklist' },
+          ' explains the basics, but your lawyer or privacy officer should confirm the final compliance position.',
+        ],
+      },
+      {
+        heading: 'Native or cross-platform: how we choose',
+        body: [
+          'For most Vancouver clients we recommend Flutter or React Native, because one shared codebase reaches both the App Store and Google Play. That usually costs 30-40% less than building and maintaining two separate native apps. We switch to native Swift for iOS and Kotlin for Android when your app leans hard on device hardware or Bluetooth, has to store large amounts of data offline, or needs the best possible performance. We walk you through the reasons for our recommendation before you choose.',
+        ],
+      },
+      {
+        heading: 'What an app costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. If you are still weighing up vendors, our ',
+          { href: '/blog/software-development-companies-vancouver', label: 'guide to choosing a Vancouver software company' },
+          ' covers the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Vancouver?',
+        a: 'Based on the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. After a free discovery phase you get a fixed price in CAD, so your budget is settled before development begins.',
+      },
+      {
+        q: 'Do you have an office in Vancouver?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Vancouver office. We serve Vancouver and BC clients remotely, with working hours that almost fully overlap, and we can hold in-person workshops in Vancouver by arrangement, with travel agreed up front.',
+      },
+      {
+        q: 'Will our app meet BC privacy rules?',
+        a: 'We build with BC’s PIPA in mind for private-sector apps, and FIPPA for apps used by BC public bodies, with Canadian data hosting where needed, encryption, access control and audit logs. We can document how your app handles personal information, and your lawyer or privacy officer should confirm the final compliance position.',
+      },
+      {
+        q: 'How long does it take to build an app?',
+        a: 'A simple app with a handful of screens usually takes 8-12 weeks. A mid-size iOS and Android app with payments and an admin panel takes about 12-24 weeks, and complex platforms take 6-18 months. Your written scope includes a timeline with milestones such as beta and launch.',
+      },
+      {
+        q: 'Who owns the code for our app?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
 };
