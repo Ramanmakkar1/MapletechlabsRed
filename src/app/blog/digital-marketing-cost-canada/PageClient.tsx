@@ -620,15 +620,7 @@ export default function DigitalMarketingCostCanadaClient() {
                   Stop guessing what digital marketing should cost. Let Mapletech Labs build a data-driven strategy tailored to your Canadian market, budget, and growth targets.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Get Your Custom Quote →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Custom Quote →</Link>
             </div>
           </div>
         </section>

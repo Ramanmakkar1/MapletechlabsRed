@@ -576,15 +576,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   Stop experimenting with AI demos and start deploying production systems. Mapletech Labs builds custom AI solutions that integrate seamlessly into your existing infrastructure and deliver measurable ROI.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Start Your AI Project →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your AI Project →</Link>
             </div>
           </div>
         </section>

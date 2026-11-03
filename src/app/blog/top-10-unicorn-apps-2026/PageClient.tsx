@@ -730,15 +730,7 @@ export default function BlogPostPageClient() {
                   We&apos;ve helped build the engineering foundations of some of the fastest-growing apps in the world. Let us help you build yours.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Start a Project →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start a Project →</Link>
             </div>
           </div>
         </section>

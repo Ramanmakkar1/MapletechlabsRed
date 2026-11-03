@@ -600,15 +600,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   Stop wasting time with agencies that over-promise and under-deliver. Talk to our team and get a fixed-price proposal for your project within 48 hours.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Schedule a Free Consultation →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Schedule a Free Consultation →</Link>
             </div>
           </div>
         </section>

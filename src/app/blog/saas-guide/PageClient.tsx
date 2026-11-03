@@ -459,15 +459,7 @@ export default function SaaSGuide2026Client() {
                   We develop the engineering foundations of the fastest-growing companies in Canada. Let us build yours.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Book a Technical Discovery Call →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Book a Technical Discovery Call →</Link>
             </div>
           </div>
         </section>

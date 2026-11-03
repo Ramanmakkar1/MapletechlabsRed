@@ -636,15 +636,7 @@ export default function WebsiteCostCanadaClient() {
                   Tell us about your project and get a transparent, detailed quote within 48 hours. No hidden fees, no surprise invoices. Just honest pricing from a team that has built 300+ web projects across Canada.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Get Your Free Quote →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Free Quote →</Link>
             </div>
           </div>
         </section>

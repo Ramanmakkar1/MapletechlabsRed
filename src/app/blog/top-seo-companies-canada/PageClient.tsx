@@ -492,15 +492,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   Stop losing traffic to competitors with inferior products but faster websites. Let Mapletech Labs engineer an SEO strategy built into your source code.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Schedule an SEO Technical Audit →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Schedule an SEO Technical Audit →</Link>
             </div>
           </div>
         </section>

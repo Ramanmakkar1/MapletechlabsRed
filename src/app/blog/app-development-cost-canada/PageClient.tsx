@@ -657,15 +657,7 @@ export default function AppDevelopmentCostCanadaClient() {
                   Stop guessing what your app will cost. Share your idea with our team and receive a detailed, fixed-price proposal within 48 hours. No commitment. No sales pitch. Just real numbers.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Get Your Free Estimate →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Free Estimate →</Link>
             </div>
           </div>
         </section>

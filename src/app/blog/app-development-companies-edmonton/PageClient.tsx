@@ -520,15 +520,7 @@ export default function AppDevelopmentCompaniesEdmontonClient({ localLinks }: { 
                   Stop settling for cookie-cutter apps built on templates. Let Mapletech Labs engineer a custom mobile experience that scales with your business, powered by Edmonton&apos;s best talent.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Start Your App Project →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your App Project →</Link>
             </div>
           </div>
         </section>

@@ -494,15 +494,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   Whether you are building a DeFi protocol, NFT marketplace, or enterprise blockchain solution, Mapletech Labs has the Web3 engineering expertise to bring your vision to production.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Launch Your Blockchain Project →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Launch Your Blockchain Project →</Link>
             </div>
           </div>
         </section>

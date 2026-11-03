@@ -597,15 +597,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                   Stop guessing and start building. Share your SaaS idea with Mapletech Labs and receive a detailed cost breakdown, timeline, and technical roadmap within 48 hours — completely free.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Get Your SaaS Cost Estimate →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your SaaS Cost Estimate →</Link>
             </div>
           </div>
         </section>

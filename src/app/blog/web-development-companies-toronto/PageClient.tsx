@@ -493,15 +493,7 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                   Whether you need a high-performance marketing site, a complex SaaS platform, or an enterprise web application, our Toronto team is ready to build it. Get a fixed-price proposal within 48 hours.
                 </p>
               </div>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
-                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
-                  transition: 'all 0.2s', whiteSpace: 'nowrap',
-                }}>
-                  Start Your Web Project in Toronto →
-                </button>
-              </Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your Web Project in Toronto →</Link>
             </div>
           </div>
         </section>
