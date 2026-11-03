@@ -48,6 +48,7 @@ export const blogSlugs = [
   'nrc-irap-funding-software-canada',
   'app-privacy-compliance-canada',
   'software-maintenance-cost-canada',
+  'ai-development-cost-canada',
   'sred-software-development-canada',
 ];
 

@@ -38,6 +38,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
   },
   {
+    slug: 'ai-development-cost-canada', category: 'AI/ML',
+    title: 'AI Development Cost in Canada (2026): Chatbots, LLM Integration and Custom Models',
+    excerpt: 'Ballpark CAD ranges for AI chatbot RAG, LLM integration, workflow automation, computer vision, predictive analytics and custom model training in Canada.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'app-privacy-compliance-canada', category: 'Engineering',
     title: 'Privacy Compliance Checklist for Canadian Apps: PIPEDA, Quebec Law 25 and PHIPA (2026)',
     excerpt: 'Which privacy law applies to your app, and a build checklist for developers: consent, data minimization, Canadian hosting, breach reporting, access requests, encryption and AI vendors.',

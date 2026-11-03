@@ -593,6 +593,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'should-you', text: 'Should your business use it yet?' },
       { type: 'p', html: 'A simple test: find a task that is repetitive, rule-heavy, done many times a day, and where a wrong result is caught before it does damage. If you have one, agentic AI can probably remove real work from it now. If your candidate task is rare, high-stakes and hard to check, wait — or keep a human firmly in the loop. The technology is real and improving fast, but the returns come from matching it to the right job, not from adopting it because a competitor issued a press release.' },
       { type: 'p', html: 'If you want the builder’s view of how these systems are put into production safely, we wrote that up in <a href="/blog/agentic-ai-in-production">Agentic AI in Production</a>.' },
+      { type: 'p', html: 'For a rough cost estimate on building or integrating AI, see our <a href="/blog/ai-development-cost-canada">AI development cost guide</a>.' },
     ],
     keyTakeaways: [
       'An AI agent is a model plus tools plus a loop: it takes actions step by step, where a chatbot only answers.',
@@ -1333,6 +1334,79 @@ export const articles: Article[] = [
       { q: 'Does my app need Canadian hosting?', a: 'Not always. Many private-sector apps can use hosting outside Canada if they protect the data and are open about it. Some clients, especially in health and the public sector, require data to stay in Canada, which can affect your hosting cost.' },
     ],
     cta: { href: '/tools/cost-estimator', label: 'Estimate your build cost' },
+  },
+    {
+    slug: 'ai-development-cost-canada',
+    category: 'AI/ML',
+    title: 'AI Development Cost in Canada (2026): Chatbots, LLM Integration and Custom Models',
+    dek: 'How much AI development costs in Canada in 2026: ballpark CAD ranges for chatbots, LLM features, automation, vision and custom models, plus what drives the price up or down.',
+    metaTitle: 'AI Development Cost in Canada (2026)',
+    metaDescription: 'Ballpark AI development costs in Canada (2026) for chatbots, LLM integration, automation, vision, analytics and custom models in CAD.',
+    date: '2026-11-03',
+    dateModified: '2026-11-03',
+    readTime: '9 min read',
+    heroKey: 'numbers',
+    intro: [
+      'Most AI cost guides show a single number and pretend it covers everything. It does not. The real cost depends on what the system actually has to do, how much of your data it must learn from, whether you use an API or train your own weights, and how often you need to evaluate and guard it before it reaches users.',
+      'The figures below are ballpark ranges in Canadian dollars, drawn from our pricing ranges and from typical Canadian build patterns. They are for planning, not quotes. Your project may sit inside the range or outside it depending on scope, integration complexity and data quality.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-you-pay-for', text: 'What you are actually paying for' },
+      { type: 'p', html: 'An AI feature is not one purchase. It is several stages that each take time, expertise and testing. The main ones:' },
+      { type: 'checks', items: [
+        { term: 'Data preparation', text: 'Cleaning, labeling and structuring the data that feeds the model. For RAG, that means document parsing and chunking. For custom training, that can mean weeks of annotation and validation.' },
+        { term: 'Model choice', text: 'Using an API model (OpenAI, Claude, Gemini) is faster and cheaper to start. Open-weight models (Llama, Mistral) can reduce per-request cost but need hosting and tuning. Custom training is the most flexible and the most expensive, because you own the weights and the risk.' },
+        { term: 'Integration', text: 'Connecting the model to your app, your database, your workflow and your authentication. Integration usually takes more time than the model call itself.' },
+        { term: 'Evaluation and guardrails', text: 'Testing for accuracy, latency, bias and failure modes, plus input validation, output filtering and escalation rules for anything the model should not do.' },
+        { term: 'Hosting and serving', text: 'API calls, GPU instances for open-weight or custom models, caching layers and load balancing. Cost grows with usage, not just with build.' },
+      ] },
+
+      { type: 'h2', id: 'cost-table', text: 'AI development cost by project type (CAD)' },
+      { type: 'p', html: 'These ranges apply to Canadian builds using our <a href="/tools/cost-estimator">cost estimator</a> and <a href="/pricing">pricing page</a> patterns. They include design, build, basic evaluation and initial deployment, not ongoing usage.' },
+      { type: 'table', html: '<table><thead><tr><th scope="col">Project type</th><th scope="col">Typical CAD range</th><th scope="col">Notes</th></tr></thead><tbody><tr><th scope="row">AI chatbot / assistant on your docs (RAG)</th><td>$15,000 – $45,000</td><td>Document parsing, chunking, retrieval, prompt design, guardrails</td></tr><tr><th scope="row">LLM feature added to existing app</th><td>$10,000 – $35,000</td><td>API integration, context design, UI and error handling</td></tr><tr><th scope="row">Workflow automation / agent</th><td>$25,000 – $80,000</td><td>Multi-step loops, tool access, approvals, observability</td></tr><tr><th scope="row">Computer vision</th><td>$30,000 – $95,000</td><td>Image labeling, model selection, edge vs cloud deployment</td></tr><tr><th scope="row">Predictive analytics</th><td>$20,000 – $70,000</td><td>Data pipelines, feature engineering, model validation</td></tr><tr><th scope="row">Custom model training</th><td>$40,000 – $150,000+</td><td>Dataset creation, training, tuning, evaluation, hosting</td></tr></tbody></table>' },
+
+      { type: 'h2', id: 'ongoing-costs', text: 'Ongoing costs people forget' },
+      { type: 'p', html: 'Building is the visible part. Running is the part that determines whether the feature survives past its first quarter.' },
+      { type: 'ul', items: [
+        'API token usage: every request to a hosted LLM has a per-token price that scales with user count and prompt size.',
+        'GPU hosting: open-weight or custom models need GPU instances that stay on, not just during building.',
+        'Monitoring and drift: models change in performance as data shifts; you need logging, alerts and periodic re-evaluation.',
+        'Re-evaluation and updates: new versions of base models, new security requirements, new compliance rules.',
+      ] },
+      { type: 'p', html: 'For a longer look at monthly maintenance, see our <a href="/blog/software-maintenance-cost-canada">software maintenance cost guide</a>.' },
+
+      { type: 'h2', id: 'lower-cost', text: 'Ways to lower the cost' },
+      { type: 'p', html: 'The cheapest AI project is usually a narrow one that proves value before it scales.' },
+      { type: 'checks', items: [
+        { term: 'Start with a narrow pilot', text: 'One workflow, one audience, one success metric. A successful pilot earns more budget; a failed one saves you a large build.' },
+        { term: 'Use API models before fine-tuning', text: 'If a hosted model solves the problem, do not train your own. Fine-tuning and custom training should follow proof, not replace it.' },
+        { term: 'Consider local open-weight models', text: 'For privacy-sensitive or high-volume uses, open-weight models running on Canadian-hosted GPUs can cut per-request cost. See our <a href="/blog/run-ai-models-locally-free">guide to running AI models locally</a>.' },
+        { term: 'Use SR&ED and IRAP for real technical uncertainty', text: 'If your project involves genuine technological uncertainty — not just configuration — you may qualify for federal and provincial R&amp;D incentives. Our <a href="/blog/sred-software-development-canada">SR&amp;ED guide</a>, <a href="/blog/nrc-irap-funding-software-canada">NRC IRAP funding guide</a> and <a href="/tools/sred-estimator">SR&amp;ED estimator</a> explain how.' },
+      ] },
+
+      { type: 'h2', id: 'privacy', text: 'Canadian privacy and hosting' },
+      { type: 'p', html: 'If the AI feature handles personal information, data location and consent matter under PIPEDA, Quebec Law 25 and provincial health rules. Our <a href="/blog/app-privacy-compliance-canada">privacy compliance checklist</a> covers what to plan for, including AI vendor data handling and Canadian hosting options.' },
+
+      { type: 'h2', id: 'cta', text: 'Next step' },
+      { type: 'p', html: 'If you need a rough number for your scope, our <a href="/tools/cost-estimator">cost estimator</a> and <a href="/pricing">pricing page</a> are the best starting point. For a custom AI or LLM integration, see our <a href="/services/ai-ml">AI &amp; ML services</a>, <a href="/services/ai-ml/llm-integration">LLM integration</a>, <a href="/services/ai-ml/ai-chatbots">AI chatbots</a> and <a href="/services/ai-ml/ai-automation">AI automation</a> pages.' },
+    ],
+    keyTakeaways: [
+      'AI build costs in Canada range from about $10k for a simple API feature to $150k+ for custom model training.',
+      'The biggest drivers are data preparation, integration, guardrails and hosting — not just the model call.',
+      'Ongoing costs (API tokens, GPU hosting, monitoring, re-evaluation) determine whether the feature lasts.',
+      'Start narrow, use APIs first, and consider open-weight or local hosting to control running cost.',
+      'Real technical uncertainty can qualify for SR&amp;ED and IRAP — confirm with an advisor.',
+      'Plan privacy and Canadian hosting from the start, especially for health, finance and public-sector uses.',
+    ],
+    faqs: [
+      { q: 'How much does AI development cost in Canada?', a: 'Ballpark ranges run from about $10,000–$35,000 for an LLM feature in an existing app, $15,000–$45,000 for a document-based chatbot (RAG), $25,000–$80,000 for workflow automation, $30,000–$95,000 for computer vision, $20,000–$70,000 for predictive analytics, and $40,000–$150,000+ for custom model training. These are planning ranges, not quotes.' },
+      { q: 'Is an API model cheaper than custom training?', a: 'Usually yes for the build. API models remove the need to collect, label and train on your own data, and they remove GPU hosting for training. They add a per-request cost that grows with usage, so over time a high-volume use can make open-weight or local hosting cheaper.' },
+      { q: 'What is the hidden cost of AI after launch?', a: 'API token usage, GPU hosting for open-weight or custom models, monitoring and drift detection, periodic re-evaluation, and compliance updates. These often exceed the initial build over a one- to two-year period.' },
+      { q: 'Can SR&ED or IRAP help pay for AI development?', a: 'Yes, when the work involves real technological uncertainty — for example, designing a new pipeline, improving model performance where standard approaches fail, or integrating with undocumented systems. Routine configuration, UI or standard API usage usually does not qualify. Confirm with a qualified advisor.' },
+      { q: 'Should I build a chatbot or a full agent?', a: 'Start with a chatbot if you need answers from your documents. Move to an agent only when the workflow is multi-step, has clear inputs and outputs, and can be protected with guardrails and human escalation. Agents are more powerful and more expensive to build safely.' },
+      { q: 'Do I need Canadian data hosting for AI?', a: 'Not always for private-sector apps, but some clients — especially in health and public sector — require Canadian data residency. Canadian cloud regions exist but can cost slightly more. Plan it in the contract and the architecture from the start.' },
+    ],
+    cta: { href: '/tools/cost-estimator', label: 'Estimate your AI build cost' },
   },
   {
     slug: 'sred-software-development-canada',
