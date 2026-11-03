@@ -491,6 +491,9 @@ export default function TopSeoCompaniesCanadaClient() {
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Stop losing traffic to competitors with inferior products but faster websites. Let Mapletech Labs engineer an SEO strategy built into your source code.
                 </p>
+                <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
+                  See our <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO services</Link>, or our local pages for <Link href="/locations/seo-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Edmonton</Link>, <Link href="/locations/seo-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Calgary</Link> and <Link href="/locations/seo-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Toronto</Link>.
+                </p>
               </div>
               <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Schedule an SEO Technical Audit →</Link>
             </div>

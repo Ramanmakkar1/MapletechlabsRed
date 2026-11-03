@@ -619,6 +619,9 @@ export default function DigitalMarketingCostCanadaClient() {
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Stop guessing what digital marketing should cost. Let Mapletech Labs build a data-driven strategy tailored to your Canadian market, budget, and growth targets.
                 </p>
+                <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
+                  Compare our <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>digital marketing services</Link> and <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO services</Link>, or see local pages for <Link href="/locations/seo-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Edmonton</Link>, <Link href="/locations/seo-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Calgary</Link>, <Link href="/locations/seo-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Toronto</Link> and <Link href="/locations/seo-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Vancouver</Link>.
+                </p>
               </div>
               <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Custom Quote →</Link>
             </div>
