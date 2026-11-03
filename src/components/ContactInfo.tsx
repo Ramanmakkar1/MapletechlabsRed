@@ -113,6 +113,8 @@ export default function ContactInfo() {
           </h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px' }}>
             From a first idea to a system your team already relies on, we can help plan and build software around the work you need done.
+            Not sure what to write?{' '}
+            <Link href="/tools/project-brief" style={link}>Build a brief first</Link> with our free project brief builder.
           </p>
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 64px', display: 'grid', gap: 22 }}>
             {HELP_AREAS.map(area => (

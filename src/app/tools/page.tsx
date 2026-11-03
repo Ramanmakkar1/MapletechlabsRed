@@ -39,6 +39,11 @@ const TOOLS = [
     href: '/tools/in-house-vs-agency',
     description: 'Compare the fully loaded cost of hiring your own developers, including recruiting and hiring time, with a typical agency range for your project.',
   },
+  {
+    name: 'Software Project Brief Builder',
+    href: '/tools/project-brief',
+    description: 'Fill in a short form about your app, website or AI feature and get a clear, ready-to-send project brief you can copy or download.',
+  },
 ];
 
 const itemListJsonLd = {
