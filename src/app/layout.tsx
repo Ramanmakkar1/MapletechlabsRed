@@ -49,9 +49,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@mapletechlabs",
     creator: "@mapletechlabs",
-    title: "Software Development Company in Canada | Mapletech Labs",
-    description:
-      "Mapletech Labs builds custom software, web and mobile apps, and AI solutions for Canadian businesses. Edmonton-based, serving clients across Canada.",
   },
   // Preview / non-production deployments must never be indexed. Production
   // keeps the permissive directive. No `alternates.canonical` here on
