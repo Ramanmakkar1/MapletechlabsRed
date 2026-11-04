@@ -19,7 +19,7 @@ const FAQS = [
   { q: 'Why does the price range vary?', a: 'Projects differ in screens, business rules, integrations, platform choices, design polish and testing needs. A focused build sits toward the lower end; broader requirements move it higher.' },
   { q: 'What affects software development cost most?', a: 'Scope and platform usually have the biggest effect. Native apps for both iOS and Android, AI features and multiple third-party integrations can add substantial work.' },
   { q: 'Can we start with an MVP?', a: 'Yes. Prioritising the core user journey and deferring secondary features can reduce the initial scope and leave room to learn before expanding.' },
-  { q: 'Do prices differ between Edmonton, Calgary, Toronto and Vancouver?', a: 'No. We quote the same CAD ranges in every city, because projects are run from our Edmonton headquarters with a remote team. Scope, platform and integrations decide the price, not your location.' },
+  { q: 'Do prices differ between Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal?', a: 'No. We quote the same CAD ranges in every city, because projects are run from our Edmonton headquarters with a remote team. Scope, platform and integrations decide the price, not your location.' },
   { q: 'Can SR&ED lower the net cost?', a: 'Eligible Canadian businesses may be able to claim qualifying development work through SR&ED. Eligibility and amounts depend on the work and company; review the details with a qualified tax professional.' },
 ];
 const cad = (amount: number) => `$${amount.toLocaleString('en-CA')}`;
@@ -28,6 +28,8 @@ const PRICING_CITIES = [
   { slug: 'calgary', name: 'Calgary' },
   { slug: 'toronto', name: 'Toronto' },
   { slug: 'vancouver', name: 'Vancouver' },
+  { slug: 'ottawa', name: 'Ottawa' },
+  { slug: 'montreal', name: 'Montreal' },
 ] as const;
 const CITY_SERVICES = [
   { slug: 'mobile-app-development', label: 'App development' },
@@ -81,7 +83,7 @@ export default function PricingPage() {
             <p style={p}>Planning for life after launch? Our <Link href="/blog/software-maintenance-cost-canada">software maintenance cost guide</Link> covers typical monthly ranges and retainer options.</p>
           </section>
           <section style={{ marginBottom: 64 }}><h2 style={h2}>Pricing by city</h2>
-            <p style={p}>Mapletech Labs quotes the same CAD ranges for every Canadian city. Projects are run from our Edmonton headquarters with a remote team, so a build for a client in Calgary, Toronto or Vancouver is priced the same way as one in Edmonton: by scope, platform and integrations.</p>
+            <p style={p}>Mapletech Labs quotes the same CAD ranges for every Canadian city. Projects are run from our Edmonton headquarters with a remote team, so a build for a client in Calgary, Toronto, Vancouver, Ottawa or Montreal is priced the same way as one in Edmonton: by scope, platform and integrations.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
               {PRICING_CITIES.map(c => <article key={c.slug} style={{ padding: 22, border: '1px solid var(--line)', borderRadius: 16 }}>
                 <h3 style={{ color: 'var(--ink)', marginTop: 0 }}><Link href={`/locations/software-development-company-in-${c.slug}`}>Software development in {c.name}</Link></h3>
