@@ -827,6 +827,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-vancouver': {
+    title: 'Web Development Company in Vancouver',
+    description: 'Mapletech Labs builds custom websites and web apps for Vancouver businesses, with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building business websites, e-commerce stores and web apps for Vancouver companies. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. You work directly with the senior engineers who build your website, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your project.',
+    sections: [
+      {
+        heading: 'Websites and web apps Vancouver businesses ask us for',
+        body: [
+          'Vancouver tech startups and SaaS teams need marketing sites and product dashboards that explain a complex offer and convert trials into paid accounts. Film, VFX and creative studios want portfolio sites and client review flows that load quickly with large media. Tourism and hospitality operators need booking pages and seasonal campaigns that stay easy to update. Real estate brokerages need listing search and lead capture, port and logistics firms need shipment tracking and customer portals, and e-commerce and DTC brands need storefronts that tie cleanly into inventory and fulfilment.',
+        ],
+      },
+      {
+        heading: 'Built for speed and search',
+        body: [
+          'We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get fast first loads. Core Web Vitals shape image sizes, fonts and script loading as we build, not as a last-minute audit. Semantic HTML, sensible URLs and structured data help search engines understand your services and locations. A CMS lets your team publish updates to offers, listings and blog posts without opening a ticket with a developer every time.',
+        ],
+      },
+      {
+        heading: 'BC privacy and Canadian hosting',
+        body: [
+          'Private-sector websites that collect personal information in British Columbia often fall under BC’s Personal Information Protection Act (PIPA). When residency matters, we plan Canadian hosting for your site, database, backups and third-party integrations from discovery onward, with encryption and role-based access where appropriate. We document data flows so compliance and legal review are straightforward; your legal team confirms what applies.',
+        ],
+      },
+      {
+        heading: 'What a website costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). If you are comparing vendors, our ',
+          { href: '/blog/software-development-companies-vancouver', label: 'guide to choosing a Vancouver software company' },
+          ' lists the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Vancouver?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After free discovery you get a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Do you have an office in Vancouver?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Vancouver office. We serve Vancouver and BC clients remotely, with working hours that almost fully overlap, and we can hold in-person workshops in Vancouver by arrangement, with travel agreed up front.',
+      },
+      {
+        q: 'How do you handle BC privacy rules (PIPA)?',
+        a: 'We build with BC’s PIPA in mind for private-sector sites that handle personal information, planning Canadian data hosting, encryption and access controls where your project needs them. We document how data is collected, stored and shared so your team can review it, and your legal team confirms the obligations that apply to your business.',
+      },
+      {
+        q: 'Can we edit the website ourselves?',
+        a: 'Yes. We provide a CMS so your team can edit pages and content without a developer. At handover we train your team to use it, so you can keep your website current after launch.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
   'seo-company-in-vancouver': {
     title: 'SEO Company in Vancouver',
     description: 'Vancouver SEO from Mapletech Labs: local map-pack search, technical fixes and CAD retainers with monthly reporting. Call +1-403-604-8692.',
