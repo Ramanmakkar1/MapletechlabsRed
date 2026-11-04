@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -23,6 +24,8 @@ export interface IndustryProps {
   cta: { title: string; sub: string };
   faqs?: Faq[];
   cityLinks?: { label: string; href: string }[];
+  /** Optional industry-specific buyer content, rendered after the systems grid. */
+  buyerContent?: ReactNode;
 }
 
 /* Industry page — the reference's sector-page sequence, on white. */
@@ -39,6 +42,7 @@ export default function IndustryPageTemplate(p: IndustryProps) {
         <StatRow stats={p.heroStats} />
         <CardGrid title="The challenges we solve" items={p.challenges} variant="rows" />
         <CardGrid title={`Systems we build for ${p.name}`} items={p.solutions} />
+        {p.buyerContent ?? null}
         <MediaBand media={industryMedia[p.slug] ?? defaultMedia} />
         <CaseBand {...p.caseStudy} href={INDUSTRY_CASE_HREF[p.slug]} />
         <TechBlocks title={`The stack behind ${p.name} platforms`} cats={p.tech.map(t => ({ label: t.cat, chips: t.items }))} />

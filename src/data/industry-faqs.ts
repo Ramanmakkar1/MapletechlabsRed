@@ -50,6 +50,14 @@ export const industryFaqs: Record<
       q: 'Do you work with healthcare companies in Edmonton, Calgary, Toronto and Vancouver?',
       a: 'Yes. We support hospitals, clinics and health-tech vendors in Edmonton, Calgary, Toronto and Vancouver. Our web development team delivers patient portals and clinician dashboards; mobile app development covers telehealth and engagement tools. We schedule around clinical stakeholders and provincial privacy reviews.',
     },
+    {
+      q: 'What should we prepare before requesting a healthcare software quote?',
+      a: 'Bring the user roles (clinicians, admin staff, patients, caregivers), the systems you use today, whether your EHR or scheduling vendor offers sandbox API access, rough migration volumes, hosting and data residency expectations, the accessibility standard you follow and who will support the product after launch. We confirm each item in discovery and reflect it in the fixed quote.',
+    },
+    {
+      q: 'Who arranges EHR vendor API access for an integration project?',
+      a: 'Your organisation usually requests sandbox and production access from the EHR vendor, because the agreement is between you and them. We prepare the technical request, join vendor calls, build against the sandbox and agree the read and write-back flows and acceptance tests before production credentials are issued.',
+    },
   ],
   ecommerce: [
     {
