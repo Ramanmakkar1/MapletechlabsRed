@@ -8,8 +8,37 @@ export const metadata: Metadata = {
 };
 
 export default function RamanPage() {
+  const profileUrl = canonicalUrl('/about/raman-makkar');
+  const personId = `${profileUrl}#person`;
+  const profileSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ProfilePage',
+        '@id': `${profileUrl}#profilepage`,
+        url: profileUrl,
+        name: 'Raman Makkar | Founder & CEO',
+        mainEntity: { '@id': personId },
+      },
+      {
+        '@type': 'Person',
+        '@id': personId,
+        name: 'Raman Makkar',
+        jobTitle: 'Founder & CEO',
+        url: profileUrl,
+        worksFor: { '@id': `${canonicalUrl('/')}#organization` },
+        description: 'Founded Mapletech Labs in 2018 with a mission to build world-class software without compromise. With 15+ years in software engineering, Raman Makkar has architected systems processing billions of transactions, scaled engineering teams, and mentored builders across fintech, healthcare, and enterprise.',
+        knowsAbout: ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS', 'Scaling systems', 'Team architecture', 'AI integration'],
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-black text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema).replace(/</g, '\\u003c') }}
+      />
       <section style={{ paddingTop: '120px', paddingBottom: '80px', paddingLeft: '40px', paddingRight: '40px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
