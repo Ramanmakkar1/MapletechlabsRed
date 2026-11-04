@@ -14,11 +14,38 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 import { register } from "node:module";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import assert from "node:assert/strict";
+import { seoTitle } from "../src/lib/seo/title.ts";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const BRAND = " | Mapletech Labs";
 const MAX = 60;
 const problems = [];
+
+function resolveTitle(title) {
+  return typeof title === "string" ? title + BRAND : title.absolute;
+}
+
+function titleProblems(title) {
+  const rendered = resolveTitle(title);
+  const errors = [];
+  if (rendered.length > MAX) errors.push(`"${rendered}" is ${rendered.length} chars (max ${MAX})`);
+  if ((rendered.match(/Mapletech Labs/gi) || []).length > 1) errors.push(`"${rendered}" names the brand twice`);
+  return errors;
+}
+
+// Parse only the site's literal/TITLE metadata forms; never execute page source.
+function parseTitle(expr, src) {
+  const helper = expr.match(/^seoTitle\((.+)\)$/);
+  const absolute = expr.match(/^\{ absolute: (.+) \}$/);
+  const value = helper?.[1] ?? absolute?.[1] ?? expr;
+  const literal = value === "TITLE"
+    ? src.match(/^const TITLE = '((?:[^'\\]|\\.)*)';$/m)?.[1]
+    : value.match(/^'((?:[^'\\]|\\.)*)'$/)?.[1];
+  if (literal === undefined) return undefined;
+  const text = literal.replace(/\\'/g, "'");
+  return helper ? seoTitle(text) : absolute ? { absolute: text } : text;
+}
 
 function pageFiles(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -35,18 +62,9 @@ for (const file of files) {
   const src = readFileSync(join(ROOT, file), "utf8");
   const m = src.match(/^  title: (.+),$/m);
   if (!m) continue;
-  const expr = m[1];
-  let literal = expr.match(/^'([^']*)'$/)?.[1];
-  if (expr === "TITLE" || expr === "seoTitle(TITLE)") literal = src.match(/^const TITLE = '((?:[^'\\]|\\.)*)';$/m)?.[1]?.replace(/\\'/g, "'");
-  if (expr === "{ absolute: TITLE }") {
-    // Brand-free absolute title: rendered exactly as written, so it alone must fit.
-    const absolute = src.match(/^const TITLE = '((?:[^'\\]|\\.)*)';$/m)?.[1]?.replace(/\\'/g, "'");
-    if (absolute !== undefined && absolute.length > MAX) problems.push(`${file}: "${absolute}" is ${absolute.length} chars (max ${MAX})`);
-    continue;
-  }
-  if (literal === undefined) continue; // seoTitle(...) / { absolute } / dynamic: rule enforced by helper
-  if (/Mapletech Labs/i.test(literal)) problems.push(`${file}: "${literal}" names the brand -> rendered twice; wrap in seoTitle()`);
-  else if (literal.length + BRAND.length > MAX) problems.push(`${file}: "${literal}" is ${literal.length + BRAND.length} chars once branded (max ${MAX}); wrap in seoTitle()`);
+  const title = parseTitle(m[1], src);
+  if (title === undefined) continue; // Dynamic metadata is checked at its data source.
+  problems.push(...titleProblems(title).map((problem) => `${file}: ${problem}`));
 }
 
 // 2. Generated city x service titles (src/data/city-service.ts) — resolve the
@@ -65,7 +83,6 @@ const loader = `
   }`;
 register("data:text/javascript," + encodeURIComponent(loader));
 const { getAllCityServiceParams, getCityServiceData } = await import(pathToFileURL(join(ROOT, "src/data/city-service.ts")).href);
-const { seoTitle } = await import(pathToFileURL(join(ROOT, "src/lib/seo/title.ts")).href);
 let generated = 0;
 for (const { city, service } of getAllCityServiceParams()) {
   const data = getCityServiceData(city, service);
@@ -79,6 +96,23 @@ for (const { city, service } of getAllCityServiceParams()) {
 if (typeof seoTitle("Contact Mapletech Labs") !== "object") problems.push("seoTitle() must opt out of the template when the brand is present");
 if (typeof seoTitle("x".repeat(60)) !== "object") problems.push("seoTitle() must opt out of the template when branding would exceed 60");
 if (seoTitle("Short title") !== "Short title") problems.push("seoTitle() must keep short titles on the template");
+
+// Exercise parsing, final rendering and rejection without evaluating source code.
+const fixture = "const TITLE = '" + "x".repeat(50) + "';";
+assert.equal(resolveTitle(parseTitle("seoTitle('Short title')", "")), "Short title" + BRAND);
+assert.equal(resolveTitle(parseTitle("seoTitle(TITLE)", fixture)), "x".repeat(50));
+assert.deepEqual(titleProblems(parseTitle("seoTitle(TITLE)", fixture)), []);
+assert.equal(resolveTitle(parseTitle("'Raw title'", "")), "Raw title" + BRAND);
+assert.equal(resolveTitle(parseTitle("TITLE", fixture)), "x".repeat(50) + BRAND);
+assert.deepEqual(titleProblems(parseTitle("seoTitle('Contact Mapletech Labs')", "")), []);
+assert.equal(resolveTitle(parseTitle("{ absolute: TITLE }", fixture)), "x".repeat(50));
+assert.equal(resolveTitle(parseTitle("{ absolute: 'Short title' }", "")), "Short title");
+assert.match(titleProblems(parseTitle("{ absolute: '" + "x".repeat(61) + "' }", ""))[0], /61 chars/);
+assert.match(titleProblems(seoTitle("x".repeat(61)))[0], /61 chars/);
+assert.match(titleProblems(parseTitle("TITLE", fixture))[0], /67 chars/);
+assert.match(titleProblems(parseTitle("'Contact Mapletech Labs'", ""))[0], /brand twice/);
+assert.match(titleProblems(seoTitle("Mapletech Labs | Mapletech Labs"))[0], /brand twice/);
+assert.equal(parseTitle("seoTitle(getTitle())", ""), undefined);
 
 // 4. Meta descriptions (src/app/**/page.tsx literals + src/data/articles.ts).
 let descriptions = 0;
@@ -94,6 +128,12 @@ for (const file of descFiles) {
   if (text.length < 120 || text.length > 160) problems.push(`${file}: description is ${text.length} chars (want 120-160)`);
 }
 const articlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
+let articleTitles = 0;
+for (const m of articlesSrc.matchAll(/metaTitle: ('(?:[^'\\]|\\.)*')/g)) {
+  const title = parseTitle(`seoTitle(${m[1]})`, "");
+  articleTitles++;
+  problems.push(...titleProblems(title).map((problem) => `articles.ts: ${problem}`));
+}
 for (const m of articlesSrc.matchAll(/metaDescription: '((?:[^'\\]|\\.)*)'/g)) {
   const text = m[1].replace(/\\'/g, "'");
   descriptions++;
@@ -104,4 +144,4 @@ if (problems.length) {
   console.error(`check-titles: ${problems.length} problem(s)\n` + problems.join("\n"));
   process.exit(1);
 }
-console.log(`check-titles: ${files.length} page files + ${generated} generated city x service titles + ${descriptions} descriptions OK (<= ${MAX} chars, 120-160 chars, single brand)`);
+console.log(`check-titles: ${files.length} page files + ${articleTitles} article titles + ${generated} generated city x service titles + ${descriptions} descriptions OK (<= ${MAX} chars, 120-160 chars, single brand); resolver assertions passed`);
