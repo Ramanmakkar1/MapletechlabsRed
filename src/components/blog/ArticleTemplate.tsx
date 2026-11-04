@@ -63,7 +63,7 @@ const Check = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden><polyline points="20 6 9 17 4 12" /></svg>
 );
 
-function BlockView({ b }: { b: Block }) {
+function BlockView({ b, heading }: { b: Block; heading?: string }) {
   switch (b.type) {
     case 'h2':
       return <h2 id={b.id} style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 20px', scrollMarginTop: 100 }}>{b.text}</h2>;
@@ -126,7 +126,12 @@ function BlockView({ b }: { b: Block }) {
         </blockquote>
       );
     case 'table':
-      return <div className="article-table" dangerouslySetInnerHTML={{ __html: b.html }} />;
+      return (
+        <>
+          <p className="article-table-hint">Scroll sideways or use arrow keys to see all columns.</p>
+          <div className="article-table" role="region" tabIndex={0} aria-label={heading ? `Table: ${heading}` : 'Comparison table'} dangerouslySetInnerHTML={{ __html: b.html }} />
+        </>
+      );
   }
 }
 
@@ -135,6 +140,12 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
   const projectService = SLUG_PROJECT_SERVICE[a.slug];
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
+  const blockHeadings: (string | undefined)[] = [];
+  let currentHeading: string | undefined;
+  for (const b of a.body) {
+    if (b.type === 'h2') currentHeading = b.text;
+    blockHeadings.push(currentHeading);
+  }
   const hero = humanMedia[a.heroKey as keyof typeof humanMedia] ?? humanMedia.team;
   const published = new Date(a.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -195,7 +206,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
 
                 {a.body.map((b, i) => (
                   <div key={i} className="reveal" style={{ marginBottom: b.type === 'h2' ? 4 : 0 }}>
-                    <BlockView b={b} />
+                    <BlockView b={b} heading={blockHeadings[i]} />
                   </div>
                 ))}
 
@@ -371,6 +382,21 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
         }
         .article-toc-sidebar {
           display: none;
+        }
+        article :global(.article-table:focus-visible) {
+          outline: 2px solid var(--brand);
+          outline-offset: 2px;
+        }
+        article :global(.article-table-hint) {
+          display: none;
+          margin: 0 0 8px;
+          font-size: 13px;
+          color: var(--muted);
+        }
+        @media (max-width: 767px) {
+          article :global(.article-table-hint) {
+            display: block;
+          }
         }
         @media (min-width: 1024px) {
           .article-toc-mobile {
