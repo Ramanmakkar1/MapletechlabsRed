@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import ServiceCityLinks from '@/components/ServiceCityLinks';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 
 function useReveal() {
@@ -562,6 +563,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                       ))}
                     </div>
                   </div>
+                  <ServiceCityLinks serviceSlug="saas-development" label="SaaS development" />
                 </div>
               </aside>
 

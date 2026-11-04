@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import ServiceCityLinks from '@/components/ServiceCityLinks';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -456,6 +457,7 @@ export default function TopSeoCompaniesCanadaClient() {
                       ))}
                     </div>
                   </div>
+                  <ServiceCityLinks serviceSlug="digital-marketing" label="SEO company" heading="Our SEO services by city" />
                 </div>
               </aside>
 
