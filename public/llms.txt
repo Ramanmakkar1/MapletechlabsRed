@@ -94,7 +94,7 @@
 ## Pricing and guides
 
 - [Pricing](https://mapletechlabs.ca/pricing): project pricing in CAD.
-- [Software Development Cost in Canada (2026): The Complete Guide](https://mapletechlabs.ca/blog/software-development-cost-canada)
+- [Website Cost in Canada: 2026 Pricing Guide](https://mapletechlabs.ca/blog/website-cost-canada)
 - [How Much Does App Development Cost in Canada? (2026 Guide)](https://mapletechlabs.ca/blog/app-development-cost-canada)
 - [AI Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/ai-development-cost-canada)
 - [How Much Does SaaS Development Cost in Canada? (2026)](https://mapletechlabs.ca/blog/saas-development-cost-canada)

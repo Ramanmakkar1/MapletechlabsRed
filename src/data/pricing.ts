@@ -2,7 +2,7 @@ export type PricingRange = { low: number; high: number; weeksLow: number; weeksH
 
 export const PROJECT_PRICING = {
   website: { label: 'Website', low: 10_000, high: 50_000, weeksLow: 4, weeksHigh: 10, serviceHref: '/services/web-development', guideHref: '/blog/website-cost-canada' },
-  webapp: { label: 'Web app', low: 25_000, high: 100_000, weeksLow: 8, weeksHigh: 16, serviceHref: '/services/web-development', guideHref: '/blog/software-development-cost-canada' },
+  webapp: { label: 'Web app', low: 25_000, high: 100_000, weeksLow: 8, weeksHigh: 16, serviceHref: '/services/web-development', guideHref: '/blog/website-cost-canada' },
   saas: { label: 'SaaS MVP', low: 30_000, high: 75_000, weeksLow: 8, weeksHigh: 13, serviceHref: '/services/saas-development', guideHref: '/blog/saas-development-cost-canada' },
   mobile: { label: 'Mobile app', low: 30_000, high: 200_000, weeksLow: 10, weeksHigh: 24, serviceHref: '/services/mobile-app-development', guideHref: '/blog/app-development-cost-canada' },
   ai: { label: 'AI feature', low: 10_000, high: 35_000, weeksLow: 3, weeksHigh: 3, serviceHref: '/services/ai-ml', guideHref: '/blog/ai-development-cost-canada' },
