@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 
 const stats = [
@@ -49,6 +50,27 @@ export default function PageClient() {
       results={results}
       faqs={faqs}
       servicesTitle="Full-Funnel Marketing Services"
+      buyerContent={(
+        <>
+          <section style={{ padding: 'var(--section-y-sm) 0' }}>
+            <div className="cb-container">
+              <h2>Which digital marketing service should you start with?</h2>
+              <p className="lede">Start with the enquiry you want: a quote request, phone call or booked consultation. Choose one priority service and market, then match the channel to how those customers search and how quickly you need to learn.</p>
+              <p className="lede">Choose <Link href="/services/digital-marketing/seo-services">SEO services for organic search growth</Link> when customers search for your expertise and you can invest in ongoing technical improvements and useful service content. Organic visibility builds over time; assess qualified enquiries alongside rankings and traffic.</p>
+              <p className="lede">Choose <Link href="/services/digital-marketing/local-seo">local SEO for nearby customer enquiries</Link> when calls and bookings depend on your city or service area. Prioritise accurate business listings, relevant location pages and a clear route from local search to contacting you.</p>
+              <p className="lede">Choose <Link href="/services/digital-marketing/google-ads-ppc">Google Ads PPC for paid search enquiries</Link> when you need to test demand sooner and have a focused landing page. If forms, calls or campaign attribution are unreliable, start with <Link href="/services/digital-marketing/performance-analytics">performance analytics and conversion tracking repairs</Link> before increasing spend.</p>
+            </div>
+          </section>
+          <section style={{ padding: 'var(--section-y-sm) 0' }}>
+            <div className="cb-container">
+              <h2>Plan your marketing scope and budget</h2>
+              <p className="lede">Separate agency fees for strategy, setup, content, management and reporting from advertising spend paid to platforms such as Google or Meta. Ask proposals to show both, including one-time work and ongoing costs. Our <Link href="/blog/digital-marketing-cost-canada">Canadian digital marketing cost guide</Link> helps frame that discussion.</p>
+              <p className="lede">More target services and cities require more research, content and campaign coverage. Geography and competition affect targeting and media costs. Landing pages may need clearer offers, proof and working enquiry forms before launch; conversion tracking may need repair to distinguish qualified leads from clicks.</p>
+              <p className="lede"><Link href="/contact">Discuss your marketing scope and enquiry goals</Link>. Bring your website URL, target services and cities, current channels and enquiry goals so we can prioritise the work and agree how success will be measured.</p>
+            </div>
+          </section>
+        </>
+      )}
     />
   );
 }
