@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
@@ -79,6 +80,13 @@ export default function PageClient() {
       wins={wins}
       trends={{ title: "Toronto Tech Trends", items: trends }}
       serviceLinks={serviceLinks}
+      localContent={
+        <section style={{ padding: 'var(--section-y) 0' }}>
+          <div className="cb-container prose-body">
+            <p>Need cloud migration, CI/CD or Kubernetes in the GTA? See our page on <Link href="/locations/toronto/cloud-devops">cloud and DevOps in Toronto</Link>, or read our <Link href="/blog/software-development-companies-toronto">guide to Toronto software companies</Link> for costs and vetting questions.</p>
+          </div>
+        </section>
+      }
     />
   );
 }

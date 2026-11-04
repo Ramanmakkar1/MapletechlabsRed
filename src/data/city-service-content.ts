@@ -287,11 +287,252 @@ export interface IndustryApplication {
   desc: string;
 }
 
+export interface CityServiceLocalSection {
+  heading: string;
+  body: string;
+}
+
 export interface CityServiceIntersection {
   intro: string;
   applications: IndustryApplication[];
+  localSections: CityServiceLocalSection[];
   localFaqs: { q: string; a: string }[];
 }
+
+/** Hand-written copy for thin /locations/<city>/<service> pairs that need more than the matrix template. */
+interface CityServicePairOverride {
+  intro?: string;
+  applications?: IndustryApplication[];
+  localSections?: CityServiceLocalSection[];
+  localFaqs?: { q: string; a: string }[];
+}
+
+const CITY_SERVICE_PAIR_OVERRIDES: Record<string, CityServicePairOverride> = {
+  'montreal/digital-marketing': {
+    intro:
+      'Digital marketing in Montreal is not the same playbook as Toronto or Vancouver. Buyers search in French and English, Quebec’s Law 25 shapes how you collect leads, and the city’s economy mixes AI research labs, game launches and aerospace suppliers — each with different buying cycles. Mapletech Labs runs SEO, paid search and content for Montreal teams from a Canadian company with fixed-scope pricing, bilingual delivery when you need it, and technical SEO on modern Next.js and WordPress stacks.',
+    applications: [
+      {
+        industry: 'AI & Deep Learning',
+        title: 'SEO and demand gen for Montreal AI products',
+        desc: 'Thought-leadership content, technical landing pages and LinkedIn campaigns that reach enterprise buyers evaluating copilots and ML platforms, without generic “AI agency” filler.',
+      },
+      {
+        industry: 'Gaming',
+        title: 'Launch campaigns for studios and live-service titles',
+        desc: 'Seasonal paid social, influencer coordination and store-page SEO timed to launch windows, with analytics wired so you can see which channels actually drive installs.',
+      },
+      {
+        industry: 'Aerospace',
+        title: 'B2B marketing for long-cycle aerospace sales',
+        desc: 'Technical SEO, spec-driven content and ABM-style landing pages that survive scrutiny from engineering buyers at Bombardier-tier suppliers and their procurement teams.',
+      },
+      {
+        industry: 'Creative Industries',
+        title: 'Bilingual brand visibility for Quebec audiences',
+        desc: 'French and English keyword maps, hreflang-ready site structure and local SEO so Montreal creative firms show up for both language markets without duplicate-content penalties.',
+      },
+    ],
+    localSections: [
+      {
+        heading: 'Bilingual SEO and Quebec privacy (Law 25)',
+        body:
+          'We build keyword and content plans in French and English, align hreflang and on-page signals for Quebec search behaviour, and keep forms and analytics compliant with Law 25 consent expectations. That includes clear privacy copy, opt-in for remarketing and documentation your team can hand to a privacy officer.',
+      },
+      {
+        heading: 'Technical SEO on fast modern sites',
+        body:
+          'Montreal companies often ship on Next.js, headless WordPress or Webflow. We audit Core Web Vitals, indexation, schema and internal linking on those stacks — the same technical work described in our SEO services — so rankings are not blocked by performance or crawl issues.',
+      },
+    ],
+    localFaqs: [
+      {
+        q: 'Do you run French and English SEO for Montreal businesses?',
+        a: 'Yes. We research and optimize for both language markets, structure pages for hreflang where needed, and can produce or coordinate French copy with your team. Many Montreal clients need Quebec French, not European French, and we plan keywords accordingly.',
+      },
+      {
+        q: 'How does Quebec Law 25 affect digital marketing in Montreal?',
+        a: 'Law 25 requires clear consent for personal information collected through forms, cookies and ad pixels. We configure tags, consent banners and lead flows with privacy in mind and document what data each campaign collects. Your privacy officer should confirm the final compliance position.',
+      },
+      {
+        q: 'What does SEO or digital marketing cost in Montreal?',
+        a: 'Using the ranges in our Canadian digital marketing cost guide, SEO retainers often run about $1,500-$10,000 CAD per month depending on scope, while one-off audits or landing-page projects start lower. You get a fixed scope in CAD after discovery. See our pricing page for project-style work.',
+      },
+      {
+        q: 'Can you improve rankings for competitive Montreal keywords?',
+        a: 'We focus on keywords that match your services and proof — service pages, case studies and technical fixes — not vanity traffic. Our SEO team has ranked 500+ keywords to page one for Canadian clients; timelines depend on competition, site health and how much content you can approve each month.',
+      },
+    ],
+  },
+  'edmonton/branding': {
+    intro:
+      'Branding in Edmonton means earning trust in energy, agriculture and public-sector markets where buyers are skeptical of flashy agencies. Mapletech Labs is headquartered here, so Edmonton branding projects get in-person strategy workshops, identity systems that work on hard hats and board slides alike, and the same senior team from discovery through launch. We build brand strategy, visual identity and guidelines with fixed pricing in CAD — no open-ended hourly billing.',
+    applications: [
+      {
+        industry: 'Oil & Gas',
+        title: 'Brand systems for energy and oilfield services',
+        desc: 'Identity and messaging that carry safety-first and ESG credibility with regulators, investors and field crews — not generic “tech startup” aesthetics pasted onto an industrial business.',
+      },
+      {
+        industry: 'Agriculture Tech',
+        title: 'Positioning for Alberta agri-tech and equipment brands',
+        desc: 'Visual identity and narrative that balance farm heritage with innovation, because producers buy from brands they believe will still be here in ten years.',
+      },
+      {
+        industry: 'Government',
+        title: 'Accessible identity for public-facing Edmonton programs',
+        desc: 'Plain-language standards, bilingual-ready templates and visual systems that stay consistent across departments and meet accessibility expectations on every touchpoint.',
+      },
+      {
+        industry: 'Healthcare',
+        title: 'Trust-led healthcare branding in Alberta',
+        desc: 'Empathetic identity and patient-facing materials designed to stay within accreditation and advertising constraints while still feeling human.',
+      },
+    ],
+    localSections: [
+      {
+        heading: 'Workshops at our Edmonton head office',
+        body:
+          'Brand strategy works best in the room with your leadership. We run positioning and visual direction workshops in Edmonton — at your office or ours — so decisions are made with the people who live the brand every day. After the workshop you get a written scope and fixed price before creative production starts.',
+      },
+      {
+        heading: 'From logo to field-ready templates',
+        body:
+          'Energy and construction clients need more than a PDF brand guide: truck decals, site signage, PowerPoint templates and sales decks that crews and executives actually use. We deliver identity systems with real application examples, not only logo files.',
+      },
+    ],
+    localFaqs: [
+      {
+        q: 'How much does branding cost in Edmonton?',
+        a: 'A logo and basic identity package often runs about $700-$5,000 CAD, a full brand strategy and identity system about $5,000-$20,000, and enterprise rebrands higher depending on research depth and touchpoints. Because we are headquartered in Edmonton, workshops and reviews happen locally without travel markup. You get a fixed quote after discovery.',
+      },
+      {
+        q: 'Can we meet your branding team in person in Edmonton?',
+        a: 'Yes. Mapletech Labs is headquartered in Edmonton. Kickoffs, stakeholder interviews and major creative reviews can all happen in person here, with ongoing work on shared boards and scheduled calls between milestones.',
+      },
+      {
+        q: 'When should an Edmonton energy company consider rebranding?',
+        a: 'Common triggers are a shift into clean energy or new service lines, a merger, outdated visuals that no longer match capability, or a safety/ESG story that the current brand cannot tell. We start with a short brand audit to recommend a full rebrand versus a focused refresh.',
+      },
+      {
+        q: 'Do you handle rebrands without losing Alberta brand equity?',
+        a: 'Yes. We document what to keep — colour recognition, taglines, heritage marks — and what to evolve, then roll out with templates so field and office teams adopt the new system consistently.',
+      },
+    ],
+  },
+  'toronto/cloud-devops': {
+    intro:
+      'Cloud and DevOps work in Toronto usually sits under financial, media or retail uptime pressure: SOC 2 questions from Bay Street buyers, launch-day traffic for streaming and e-commerce, and integration with stacks that already run in AWS or Azure. Mapletech Labs designs landing zones, CI/CD and observability for Toronto teams with Canadian data residency, fixed-scope pricing and senior engineers on the project from day one.',
+    applications: [
+      {
+        industry: 'FinTech',
+        title: 'SOC 2-aligned pipelines for Toronto fintech',
+        desc: 'Segregation of duties, change control, encrypted secrets and disaster recovery you can show an auditor — not a demo environment that never reaches production.',
+      },
+      {
+        industry: 'Banking',
+        title: 'Hybrid cloud for regulated banking workloads',
+        desc: 'Landing zones and deployment automation that respect internal security review, with documentation procurement and vendor risk teams expect.',
+      },
+      {
+        industry: 'Media & Entertainment',
+        title: 'Elastic infra for Toronto media launches',
+        desc: 'CDN, autoscaling and transcoding pipelines sized for premiere-night spikes and sustained streaming load without treating every traffic bump as an incident.',
+      },
+      {
+        industry: 'Retail',
+        title: 'Peak-season checkout resilience',
+        desc: 'Zero-downtime deploys, cache strategy and load testing before Black Friday-scale events so Toronto retailers do not learn about bottlenecks from customers.',
+      },
+    ],
+    localSections: [
+      {
+        heading: 'AWS and Kubernetes for production Toronto workloads',
+        body:
+          'We implement AWS Well-Architected patterns, EKS or ECS deployments, Terraform or CloudFormation baselines and GitHub Actions or GitLab CI pipelines your team can run after handoff. Work starts with a short architecture review of what you run today and what must change for scale or compliance.',
+      },
+      {
+        heading: 'Observability and incident response',
+        body:
+          'Dashboards, alerting and runbooks tied to business metrics — not only CPU graphs — so Toronto on-call teams know when checkout, API latency or batch jobs actually fail, and can trace root cause quickly.',
+      },
+    ],
+    localFaqs: [
+      {
+        q: 'Do you help Toronto fintech teams pass SOC 2 or PCI reviews?',
+        a: 'We implement the infrastructure controls auditors commonly ask for: access management, logging, encryption, backup and tested disaster recovery. We do not issue SOC 2 reports ourselves, but we deliver the evidence and runbooks your assessor needs.',
+      },
+      {
+        q: 'Can our cloud data stay in Canada for Toronto users?',
+        a: 'Yes. We default to Canadian AWS or Azure regions where your workload allows, document data flows and configure services so primary storage and backups remain in-country unless you explicitly need a global edge.',
+      },
+      {
+        q: 'What does cloud and DevOps work cost in Toronto?',
+        a: 'A focused migration or CI/CD engagement often starts in the mid tens of thousands CAD; larger multi-environment platforms run higher. Pricing is the same across Canada — no Toronto premium. You receive a fixed scope and price after an architecture review.',
+      },
+      {
+        q: 'Do you have engineers in Toronto?',
+        a: 'Mapletech Labs is headquartered in Edmonton, and we serve Toronto clients remotely with overlapping hours. We travel to Toronto for kickoffs and major architecture reviews when in-person work helps, with travel agreed up front.',
+      },
+    ],
+  },
+  'calgary/cloud-devops': {
+    intro:
+      'Calgary cloud projects often connect field data, SCADA historians and corporate ERPs across the energy corridor — with seasonal load on logistics platforms and strict expectations around Canadian data residency. Mapletech Labs is an Alberta company headquartered in Edmonton, about three hours from Calgary, so Calgary clients get the same senior engineers with Alberta-aligned hours and on-site architecture workshops when a migration or launch needs them.',
+    applications: [
+      {
+        industry: 'Energy',
+        title: 'High-availability cloud for operations-adjacent workloads',
+        desc: 'Pipelines that ingest sensor and historian data from remote sites, with disaster recovery that has been tested — not only documented — before production cutover.',
+      },
+      {
+        industry: 'Finance',
+        title: 'Secure cloud for Calgary finance and insurance teams',
+        desc: 'Encrypted landing zones, audit logging and backup policies aligned with how Alberta financial firms actually run vendor and internal reviews.',
+      },
+      {
+        industry: 'Transportation',
+        title: 'Real-time telematics and event streaming',
+        desc: 'Ingestion and API layers that keep dispatch and fleet systems running when partner feeds lag or fail, instead of silent data gaps in the yard.',
+      },
+      {
+        industry: 'Logistics',
+        title: 'Seasonal scaling for corridor logistics platforms',
+        desc: 'Infrastructure that scales for harvest and construction peaks and scales down in quiet months so Calgary operators are not paying peak prices year-round.',
+      },
+    ],
+    localSections: [
+      {
+        heading: 'Field-to-cloud data pipelines',
+        body:
+          'We design ingestion from plants, wells and vehicles through secure edge gateways into AWS or Azure, with OT/IT separation your security team can approve and monitoring that flags sync backlog before operations notice.',
+      },
+      {
+        heading: 'Tested disaster recovery for Alberta operators',
+        body:
+          'Runbooks, backup verification and game-day failover exercises — especially for energy and logistics clients — so a region outage does not become a multi-day manual recovery on spreadsheets.',
+      },
+    ],
+    localFaqs: [
+      {
+        q: 'Do you work on-site with Calgary energy and logistics teams?',
+        a: 'Yes. We travel to Calgary for discovery, architecture workshops and major cutovers. Day-to-day delivery runs on shared boards and calls in the Mountain time zone, with the same engineers throughout the project.',
+      },
+      {
+        q: 'Can Calgary cloud workloads stay in Canadian regions?',
+        a: 'Yes. We host primary workloads and backups in Canadian cloud regions by default and document cross-border flows if a global CDN or SaaS tool is required.',
+      },
+      {
+        q: 'What does cloud migration cost for a Calgary company?',
+        a: 'Cost depends on how many environments, integrations and compliance controls you need. A bounded migration with CI/CD often lands in the mid tens of thousands CAD; larger multi-site energy platforms run higher. You get a fixed CAD quote after an architecture review, not open-ended hourly billing.',
+      },
+      {
+        q: 'Why hire an Alberta team for Calgary cloud work?',
+        a: 'We are headquartered in Edmonton and understand Alberta procurement, data residency expectations and the operational rhythm of energy and logistics clients. Calgary projects get senior engineers directly — no offshore handoff — and pricing in CAD with scope fixed up front.',
+      },
+    ],
+  },
+};
 
 /**
  * Lowercase a name for mid-sentence use, but leave acronyms and internally
@@ -382,5 +623,13 @@ export function getCityServiceIntersection(
     },
   ];
 
-  return { intro, applications, localFaqs };
+  const pairKey = `${city.slug}/${service.slug}`;
+  const override = CITY_SERVICE_PAIR_OVERRIDES[pairKey];
+
+  return {
+    intro: override?.intro ?? intro,
+    applications: override?.applications ?? applications,
+    localSections: override?.localSections ?? [],
+    localFaqs: override?.localFaqs ?? localFaqs,
+  };
 }

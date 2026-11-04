@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
@@ -79,6 +80,13 @@ export default function PageClient() {
       wins={wins}
       trends={{ title: "Calgary Tech Focus", items: trends }}
       serviceLinks={serviceLinks}
+      localContent={
+        <section style={{ padding: 'var(--section-y) 0' }}>
+          <div className="cb-container prose-body">
+            <p>Energy and logistics teams modernizing infrastructure often start with cloud architecture and pipelines. See our page on <Link href="/locations/calgary/cloud-devops">cloud and DevOps in Calgary</Link>, or our <Link href="/blog/software-development-companies-calgary">Calgary software development guide</Link> for local costs and how to choose a partner.</p>
+          </div>
+        </section>
+      }
     />
   );
 }

@@ -146,6 +146,22 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           </div>
         </section>
 
+        {p.localSections.length > 0 ? (
+          <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+            <div className="cb-container">
+              <Head title={`${serviceName} in ${cityName}: local context`} />
+              <div className="grid grid--2" style={{ rowGap: 'clamp(22px, 2.6vw, 32px)' }}>
+                {p.localSections.map(s => (
+                  <article key={s.heading} className="tile rise">
+                    <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>{s.heading}</h3>
+                    <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{s.body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         <TechStrip />
         <ProcessSteps title={`How we deliver your ${serviceName} project`} steps={p.steps} />
         <TechBlocks title={`The stack behind your ${serviceName}`} cats={tech} />

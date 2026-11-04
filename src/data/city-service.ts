@@ -32,6 +32,7 @@ export interface CityServicePageData {
   // City x service intersection content
   intro: string;
   applications: IndustryApplication[];
+  localSections: { heading: string; body: string }[];
   // SEO
   title: string;
   description: string;
@@ -128,6 +129,7 @@ export function getCityServiceData(
     sameServiceOtherCities,
     intro: intersection.intro,
     applications: intersection.applications,
+    localSections: intersection.localSections,
     title,
     description,
     canonicalUrl,
