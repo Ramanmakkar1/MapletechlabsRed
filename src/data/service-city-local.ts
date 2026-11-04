@@ -3237,4 +3237,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-kitchener': {
+    title: 'AI Development Company in Kitchener, ON',
+    description: 'AI development company in Kitchener-Waterloo building LLM assistants, AI features and automation. Free consult and a fixed CAD quote up front.',
+    intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, building LLM assistants, AI product features and automation for businesses in Kitchener, Waterloo and Cambridge. We do not have a Kitchener office; we work with Waterloo Region teams remotely. Edmonton is two hours behind Eastern time, so most of your working day overlaps with ours for calls, demos and reviews. You work directly with the senior engineers who build your system, and we agree on a fixed scope and a fixed price in CAD before work starts. Call +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'AI projects Waterloo Region companies ask for',
+        body: [
+          'Waterloo Region is one of Canada’s busiest AI and technology hubs, and the requests we see are practical. Teams want LLM assistants that answer staff questions from internal documents, policies and wikis, with sources cited. SaaS companies want AI features built inside their product, such as summaries, smart search and drafting tools. Insurers and financial firms in Kitchener and Waterloo want document and claims automation that reads intake files, pulls out key details and routes them to a person for review. Manufacturers across Cambridge and the wider region ask for computer vision that checks parts for defects on the line, and many organisations want forecasting for demand, inventory or staffing. We start from the data you already have and the decision your team needs to make.',
+        ],
+      },
+      {
+        heading: 'How we build AI safely',
+        body: [
+          'Most private-sector personal data in Ontario falls under PIPEDA, so we design for privacy from the first workshop: role-based access, encryption, audit logs of what the system was asked and how it answered, and model providers set up so they do not train on your data. We can host your AI system and its data in Canadian cloud regions. Before launch we evaluate it against a test set your team agrees on, so accuracy is measured rather than assumed, and we add human review for uncertain or sensitive outputs. Your privacy officer or lawyer should confirm the final compliance position. See our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' for the full scope.',
+        ],
+      },
+      {
+        heading: 'What AI development costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. A focused first version usually takes weeks rather than months, especially when your documents are already in good shape; projects with many data sources, integrations or custom models take longer. Discovery is free, and your price is fixed in CAD before coding starts.',
+        ],
+      },
+      {
+        heading: 'Working with startups and in-house ML teams',
+        body: [
+          'Waterloo founders and product teams often already have engineers, and some have their own machine learning staff. We can add our engineers to your existing team to build retrieval, evaluation, integrations or the product features around a model, working in your repositories and your sprint process. If the idea is still unproven, we can build a proof of concept first on a representative sample of your data, so you can see real results and decide whether to invest in a full production build. Each phase has its own fixed CAD scope.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Kitchener-Waterloo?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Do you have a Kitchener office?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Kitchener office. We serve Kitchener, Waterloo and Cambridge clients remotely, and Edmonton is only two hours behind Eastern time, so most of the working day overlaps.',
+      },
+      {
+        q: 'How long does an AI proof of concept take?',
+        a: 'A focused first version usually takes weeks rather than months, especially when your documents are already in good shape. Larger projects with many data sources, integrations or custom models take longer. Your written scope includes a timeline with clear milestones.',
+      },
+      {
+        q: 'Is our data private, and where is it stored?',
+        a: 'We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used for training. We design with PIPEDA in mind, with encryption, role-based access and audit logs, and your own privacy officer should confirm the final position.',
+      },
+      {
+        q: 'Who owns the models and code?',
+        a: 'You do. All source code, prompts, fine-tuned models, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team or ML engineers.',
+      },
+    ],
+  },
 };
