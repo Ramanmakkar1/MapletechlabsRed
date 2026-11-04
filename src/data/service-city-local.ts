@@ -3051,4 +3051,62 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-winnipeg': {
+    title: 'SEO Company in Winnipeg',
+    description: 'SEO company in Winnipeg for Manitoba firms: local map-pack, technical SEO and monthly CAD retainers. Call +1-403-604-8692 for a free review.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Winnipeg and Manitoba businesses that want more calls and leads from Google and Bing. We do not have a Winnipeg office. Winnipeg runs on Central time, one hour ahead of Edmonton, so our working days overlap almost completely and account questions get answered the same day. You work directly with the specialists doing keyword research, technical fixes and content, not a salesperson. Retainers are priced in CAD with a fixed monthly scope agreed before work starts. Call +1-403-604-8692 to talk through your Winnipeg search goals.',
+    sections: [
+      {
+        heading: 'How Winnipeg search actually works',
+        body: [
+          'Winnipeg buyers search in several distinct ways. Professional firms in the Exchange District and downtown office towers compete on service and B2B terms, while St. Boniface brings bilingual demand, with some customers searching in French and expecting a French page to answer them. Manufacturing, agribusiness and transportation and logistics firms tied to the city\'s rail, trucking and air-cargo routes fight for industrial, supplier and province-wide queries rather than neighbourhood ones. Trades, clinics and home services win or lose on “near me” searches by neighbourhood, from St. Vital to Transcona. We map the keywords your buyers use in each of these markets, then build pages and profile signals that match those searches instead of one generic Manitoba headline.',
+        ],
+      },
+      {
+        heading: 'What we do for Winnipeg SEO',
+        body: [
+          'We start with a technical audit — Core Web Vitals, crawl coverage, schema and internal links — then fix blockers in your codebase or CMS. Google Business Profile and Bing Places are set up honestly for service-area coverage across Winnipeg and the surrounding region, with categories and NAP that match what you actually operate. Where you serve French-speaking customers, we set up English and French pages with correct hreflang so each language ranks on its own. We build content around real buyer questions, earn relevant links where they are appropriate, and report each month in plain language. The full scope lives on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'SEO costs and reporting in CAD',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Single-location Winnipeg campaigns often sit at the lower end; bilingual sites and national or industrial terms sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next. You can compare our rates on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Winnipeg?',
+        a: 'Most Winnipeg SEO engagements are monthly retainers of about $1,500-$10,000 CAD, the range we publish in our Canadian digital marketing cost guide. A single-location trades or clinic campaign often sits at the lower end; bilingual sites and competitive industrial or national terms sit higher. After a free review of your site and your local competitors, we quote one fixed monthly number in CAD rather than hourly billing.',
+      },
+      {
+        q: 'How long until SEO results show in Winnipeg?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Winnipeg or Manitoba-wide terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress before position charts catch up.',
+      },
+      {
+        q: 'Do we need an office in Winnipeg to rank locally?',
+        a: 'You need a real staffed address in the area or an honest service-area business setup — not a virtual office rented for map-pack gaming. Google suspends fake addresses, so we will not suggest them. If your team serves Winnipeg and nearby communities from elsewhere, we configure your profile as a service-area business, keep NAP consistent across directories and back coverage with location pages and reviews.',
+      },
+      {
+        q: 'Should we have English and French pages for St. Boniface and bilingual searches?',
+        a: 'If you serve French-speaking customers, yes. Separate English and French pages, linked with hreflang, let each language match its own searches instead of one page trying to rank for both. We write the French pages for real customer questions rather than machine-translating the English copy, and keep your business details consistent in both languages.',
+      },
+      {
+        q: 'What is in the monthly SEO report?',
+        a: 'A plain-language summary of keyword movements that matter for your Winnipeg market, organic sessions and leads from analytics, the tasks completed that month, and the plan for the next period. We flag anything needing your sign-off, such as content approvals or profile changes. The format is the same whether you focus on downtown, St. Boniface or province-wide searches.',
+      },
+    ],
+  },
 };
