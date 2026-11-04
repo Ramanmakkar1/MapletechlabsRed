@@ -3,19 +3,24 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
+import { seoTitle } from '@/lib/seo/title';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const title = 'AI Automation Services Canada: Workflows | Mapletech Labs';
+const description = 'Compare AI automation approaches for invoices, email and CRM workflows. Explore cost drivers and plan your Canadian business automation with an engineer.';
+const url = canonicalUrl('/services/ai-ml/ai-automation');
+
 export const metadata: Metadata = {
-  title: 'AI Automation Solutions',
-  description: 'AI-powered automation solutions by Mapletech Labs. Automate workflows, processes, and decision-making with custom artificial intelligence systems.',
+  title: seoTitle(title),
+  description,
   openGraph: {
-    title: 'AI Automation Solutions | Mapletech Labs',
-    description: 'AI-powered automation solutions by Mapletech Labs. Automate workflows, processes, and decision-making with custom artificial intelligence systems.',
-    url: 'https://mapletechlabs.ca/services/ai-ml/ai-automation',
+    title,
+    description,
+    url,
     type: 'website',
   },
   alternates: {
-    canonical: canonicalUrl('/services/ai-ml/ai-automation'),
+    canonical: url,
   },
 };
 
@@ -26,9 +31,9 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'AI Automation Solutions'}
-        description={'AI-powered automation solutions by Mapletech Labs. Automate workflows, processes, and decision-making with custom artificial intelligence systems.'}
-        url={'https://mapletechlabs.ca/services/ai-ml/ai-automation'}
+        name={'AI Automation Services Canada'}
+        description={description}
+        url={url}
       />
       <PageClient />
     </>

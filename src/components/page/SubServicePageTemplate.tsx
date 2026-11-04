@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
@@ -15,8 +16,8 @@ import type { Faq, HeroCopy, ServiceCard, Stat, Step } from './types';
 const heroShots = [officeMedia.desk, officeMedia.meeting, officeMedia.open];
 
 /* Sub-service page: the same sequence, trimmed to what the page has data for. */
-export default function SubServicePageTemplate({ parent, name, copy, stats, services, steps, faqs, capabilitiesTitle }: {
-  parent: { href: string; label: string }; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; faqs: Faq[]; capabilitiesTitle?: string;
+export default function SubServicePageTemplate({ parent, name, copy, stats, services, steps, faqs, capabilitiesTitle, buyerContent }: {
+  parent: { href: string; label: string }; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; faqs: Faq[]; capabilitiesTitle?: string; buyerContent?: ReactNode;
 }) {
   const parentSlug = parent.href.split('/').pop() ?? '';
   const hero = heroShots[name.length % heroShots.length];
@@ -27,6 +28,7 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: parent.label, href: parent.href }, { label: name }]} copy={copy} stats={stats} photo={hero} serviceName={name} />
         <StatRow stats={stats} />
         <ServicesGrid title={capabilitiesTitle ?? `Our ${name} capabilities`} items={services} />
+        {buyerContent}
         <MediaBand media={serviceMedia[parentSlug] ?? defaultMedia} />
         <ProcessSteps title="How we work" steps={steps} />
         <ServiceCityLinks serviceSlug={parentSlug} serviceName={parent.label} />
