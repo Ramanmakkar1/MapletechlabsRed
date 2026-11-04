@@ -662,6 +662,9 @@ export default function AppDevelopmentCostCanadaClient() {
                   Stop guessing what your app will cost. Share your idea with our team and receive a detailed, fixed-price proposal within 48 hours. No commitment. No sales pitch. Just real numbers.
                 </p>
               </div>
+              <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
+                Review delivery scope, platform options and our process through our <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>mobile app development services</Link>.
+              </p>
               <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Free Estimate →</Link>
             </div>
           </div>
