@@ -82,6 +82,7 @@ const loader = `
     return next(spec, ctx);
   }`;
 register("data:text/javascript," + encodeURIComponent(loader));
+const { SERVICE_CITY_LOCAL } = await import(pathToFileURL(join(ROOT, "src/data/service-city-local.ts")).href);
 const { getAllCityServiceParams, getCityServiceData } = await import(pathToFileURL(join(ROOT, "src/data/city-service.ts")).href);
 let generated = 0;
 for (const { city, service } of getAllCityServiceParams()) {
@@ -134,6 +135,10 @@ for (const length of [119, 120, 155, 156]) {
 
 // 4. Meta descriptions (src/app/**/page.tsx literals + src/data/articles.ts).
 let descriptions = 0;
+for (const [slug, entry] of Object.entries(SERVICE_CITY_LOCAL)) {
+  descriptions++;
+  problems.push(...descriptionProblems(entry.description).map((problem) => `${slug}: ${problem}`));
+}
 const descFiles = allPageFiles.filter((file) => readFileSync(join(ROOT, file), "utf8").includes("description"));
 for (const file of descFiles) {
   const src = readFileSync(join(ROOT, file), "utf8");

@@ -1133,7 +1133,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'web-development-company-in-calgary': {
     title: 'Web Development Company in Calgary',
-    description: 'Calgary custom websites and web apps by Mapletech Labs, with a fixed CAD price agreed up front. Get a free quote.',
+    description: 'Web Development Company in Calgary: custom websites and web apps by Mapletech Labs, with a fixed CAD price agreed up front. Get a free quote.',
     intro: 'Mapletech Labs is an Alberta web development team headquartered in Edmonton, building websites and web apps for Calgary businesses. We do not have a Calgary office, but we work in the same time zone and travel to Calgary for in-person workshops when needed. You work directly with the senior engineers building your project, making it easy to discuss decisions and review progress throughout the work. We agree on a fixed scope and price in CAD before work begins, so you know what is included. Call +1-403-604-8692 to discuss your website or web app.',
     sections: [
       {
@@ -1455,7 +1455,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'ui-ux-design-company-in-vancouver': {
     title: 'UI/UX Design Company in Vancouver',
-    description: 'UI/UX design in Vancouver from CAD $1,500, with fixed-price project quotes. Get a free quote.',
+    description: 'UI/UX Design Company in Vancouver: web and mobile product design from CAD $1,500, with fixed-price project quotes. Get a free consultation.',
     intro: 'Mapletech Labs is headquartered in Edmonton, working with Vancouver and Lower Mainland companies that need useful, accessible digital products. Our designers and engineers work on one team, keeping research, screen flows and implementation connected from the first wireframe through handoff. We serve Vancouver clients remotely, with working hours that almost fully overlap, and come to Vancouver for in-person workshops when a milestone needs one, with travel agreed up front. Between meetings, your team can review shared designs and prototypes and discuss decisions directly with the people doing the work. Call +1-403-604-8692 to talk through your project.',
     sections: [
       {
@@ -1517,7 +1517,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'ui-ux-design-company-in-toronto': {
     title: 'UI/UX Design Company in Toronto',
-    description: 'UI/UX design for web and mobile apps in Toronto from Mapletech Labs. Fixed CAD pricing and a free consultation.',
+    description: 'UI/UX Design Company in Toronto: web and mobile app design by Mapletech Labs, with fixed CAD pricing. Book a free project consultation.',
     intro: 'Mapletech Labs is headquartered in Edmonton and partners with Toronto and GTA teams that need UI/UX design for products people actually use. Our designers work beside the engineers who build the software, so research, screen flows and handoff stay on one thread from wireframes through launch. We serve Toronto clients remotely with hours that overlap Eastern time, and we travel to the GTA for discovery and design workshops when in-person work helps, with travel agreed up front. Between visits, you review shared Figma files and talk directly with the people doing the work. Call +1-403-604-8692 to book a free UX audit.',
     sections: [
       {
