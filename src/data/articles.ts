@@ -1244,7 +1244,7 @@ export const articles: Article[] = [
       { q: 'Does my app have to store data in Canada?', a: 'Not always. Many private-sector apps can use services outside Canada if they protect the data and are open about it. Some clients, especially in health and the public sector, require Canadian hosting, and Law 25 expects an assessment before personal information leaves Quebec. Decide this before choosing vendors.' },
       { q: 'Can my app use AI APIs with personal information?', a: 'It can, with care. Check where the provider stores prompts, how long it keeps them and whether they are used for training. Send only the information the task needs, mask identifiers where possible, and tell users how AI is used with their information.' },
     ],
-    cta: { href: '/contact', label: 'Plan a compliant build' },
+    cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
   },
   {
     slug: 'software-maintenance-cost-canada',
@@ -1408,7 +1408,7 @@ export const articles: Article[] = [
       { q: 'Should I build a chatbot or a full agent?', a: 'Start with a chatbot if you need answers from your documents. Move to an agent only when the workflow is multi-step, has clear inputs and outputs, and can be protected with guardrails and human escalation. Agents are more powerful and more expensive to build safely.' },
       { q: 'Do I need Canadian data hosting for AI?', a: 'Not always for private-sector apps, but some clients — especially in health and public sector — require Canadian data residency. Canadian cloud regions exist but can cost slightly more. Plan it in the contract and the architecture from the start.' },
     ],
-    cta: { href: '/tools/cost-estimator', label: 'Estimate your AI build cost' },
+    cta: { href: '/services/ai-ml', label: 'See our AI development services' },
   },
   {
     slug: 'sred-software-development-canada',
@@ -1594,7 +1594,7 @@ export const articles: Article[] = [
       { q: 'Does my Ontario software need to be accessible?', a: 'If your organization is in the public sector, or is a business or non-profit with 50 or more employees in Ontario, AODA generally requires your websites and web content to meet WCAG 2.0 Level AA. Smaller businesses may not be required to, but accessibility helps every user and is far cheaper to build in from the start.' },
       { q: 'Which privacy law applies to my Toronto app?', a: 'Most private-sector businesses in Ontario follow the federal PIPEDA when they collect personal information in commercial activity. If your app handles personal health information for health information custodians, Ontario’s PHIPA also applies. Confirm the details with a privacy professional before the build.' },
     ],
-    cta: { href: '/contact', label: 'Talk to our team' },
+    cta: { href: '/locations/software-development-company-in-toronto', label: 'See our Toronto software services' },
   },
   {
     slug: 'software-development-contract-canada',
