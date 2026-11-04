@@ -2865,4 +2865,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-mississauga': {
+    title: 'Web Development Company in Mississauga',
+    description: 'Custom websites and web apps for Mississauga businesses, fast, accessible and built for SEO by a Canadian team. Fixed CAD quote. Free consult.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton, building websites and web apps for Mississauga and Peel Region businesses. Edmonton is two hours behind Mississauga, so our working days overlap for calls, design reviews and project decisions. Our team also has engineers in Toronto. We work with you to define the people your website needs to serve, the functionality it needs and the content your team will maintain. You receive a fixed CAD quote before work begins, with the scope agreed upfront. Call +1-403-604-8692 to discuss your website or web application.',
+    sections: [
+      {
+        heading: 'Websites for Mississauga\'s logistics, pharma, finance and manufacturing firms',
+        body: [
+          'The area near Pearson airport is home to distribution and life-sciences businesses as well as corporate head offices. We build B2B websites that explain complex services, dealer and customer portals for account access, quoting tools for sales enquiries and e-commerce stores for online orders. We plan the features around the people using them and the systems your business needs to connect.',
+        ],
+      },
+      {
+        heading: 'AODA-ready and built to rank',
+        body: [
+          'We design and test for WCAG 2.1 AA, including keyboard access, screen readers, colour contrast and text resizing. Ontario organisations should confirm how the AODA applies to their websites with their legal team. Core Web Vitals guide performance decisions, while technical SEO, clear URLs and schema help search engines understand your pages. Explore our ',
+          { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
+          ' services.',
+        ],
+      },
+      {
+        heading: 'Custom build or CMS',
+        body: [
+          'Next.js can suit custom web applications and sites with complex integrations, while WordPress or a headless CMS can give your team flexible tools for publishing content. We consider workflows, editing needs and budget when choosing an approach. See our ',
+          { href: '/services/wordpress-cms', label: 'WordPress and CMS development' },
+          ' services and our ',
+          { href: '/blog/web-development-companies-toronto', label: 'guide to Toronto-area web development companies' },
+          ' for questions to ask potential partners.',
+        ],
+      },
+      {
+        heading: 'What a website costs',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). These are typical market estimates. Discovery is free, and your price is fixed in CAD before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Mississauga?',
+        a: 'Typical market estimates are about $2,000-$10,000 CAD (2-4 weeks) for a template or WordPress site, $10,000-$50,000 (4-10 weeks) for a custom business website, $25,000-$100,000 (8-16 weeks) for an e-commerce platform and $100,000-$500,000+ (4-12 months) for an enterprise web application. We agree on a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Do you have a Mississauga office?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Toronto. Most work runs on weekly calls and shared boards, keeping your team involved in reviews and decisions.',
+      },
+      {
+        q: 'Can you make our site AODA compliant?',
+        a: 'We design and test for WCAG 2.1 AA, including keyboard access, screen readers, contrast and text resizing. We can share test results, and your legal team should confirm how the AODA applies to your organisation and website.',
+      },
+      {
+        q: 'Can you redesign our site without losing Google rankings?',
+        a: 'We map existing URLs to their new destinations, set up 301 redirects and preserve content that ranks. These steps help protect search visibility during a redesign, though rankings can still change.',
+      },
+      {
+        q: 'Who owns the website and code?',
+        a: 'You do. The website and its source code belong to you, and you can continue working with us or hand them to your own team.',
+      },
+    ],
+  },
 };
