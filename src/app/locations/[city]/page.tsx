@@ -4,6 +4,7 @@ import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline } from '
 import { getCityServiceData } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { SERVICE_CITY_LOCAL, type ServiceCityLocal } from '@/data/service-city-local';
 
@@ -74,9 +75,11 @@ export default async function ServiceCityPage({ params }: PageProps) {
   const agencyServiceTypes = ['SEO', 'Google Ads (PPC)', 'Social Media Marketing', 'Content Marketing'];
   const serviceLabel = isAgencyPage ? `${serviceName} in ${data.cityName}` : `${combo.label} in ${data.cityName}`;
 
+  const quote = quoteForCity(combo.citySlug);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
+      ...(quote ? [reviewForQuote(quote)] : []),
       {
         '@type': 'Service',
         name: serviceLabel,

@@ -1,7 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import Image from 'next/image';
-import { quotes } from '@/data/testimonials';
+import { quotes, type Quote } from '@/data/testimonials';
 import { humanMedia } from '@/data/media';
 
 /* One quote at a time, set large. No slider full of paragraphs. */
@@ -17,21 +17,7 @@ export default function Testimonial() {
           <Image src={m.src} alt={m.alt} fill sizes="(max-width: 1023px) 100vw, 42vw" style={{ objectFit: 'cover' }} />
         </div>
 
-        <figure style={{ margin: 0, display: 'flex', flexDirection: 'column' }}>
-          <blockquote style={{ margin: 0, fontSize: 'clamp(1.25rem, 2vw, 1.75rem)', color: 'var(--ink)', lineHeight: 1.45, fontWeight: 500, letterSpacing: '-0.02em' }}>
-            &ldquo;{q.text}&rdquo;
-          </blockquote>
-          <figcaption style={{ marginTop: 32, paddingTop: 24, borderTop: '1px solid var(--line)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24, flexWrap: 'wrap' }}>
-            <div>
-              <div style={{ fontWeight: 700, color: 'var(--ink)' }}>{q.name}</div>
-              <div style={{ fontSize: 13.5, color: 'var(--muted)', marginTop: 4 }}>{q.role}</div>
-            </div>
-            <div style={{ textAlign: 'right' }}>
-              <div style={{ fontSize: '1.9rem', fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.045em', lineHeight: 1 }}>{q.metric}</div>
-              <div style={{ fontSize: 12.5, color: 'var(--muted)', marginTop: 4 }}>{q.label}</div>
-            </div>
-          </figcaption>
-
+        <TestimonialQuote quote={q}>
           <div style={{ display: 'flex', gap: 10, marginTop: 28 }}>
             {quotes.map((qq, n) => (
               <button
@@ -43,7 +29,40 @@ export default function Testimonial() {
               />
             ))}
           </div>
-        </figure>
+        </TestimonialQuote>
+      </div>
+    </section>
+  );
+}
+
+export function TestimonialQuote({ quote: q, children }: { quote: Quote; children?: ReactNode }) {
+  return (
+    <figure style={{ margin: 0, display: 'flex', flexDirection: 'column' }}>
+      <blockquote style={{ margin: 0, fontSize: 'clamp(1.25rem, 2vw, 1.75rem)', color: 'var(--ink)', lineHeight: 1.45, fontWeight: 500, letterSpacing: '-0.02em' }}>
+        &ldquo;{q.text}&rdquo;
+      </blockquote>
+      <figcaption style={{ marginTop: 32, paddingTop: 24, borderTop: '1px solid var(--line)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24, flexWrap: 'wrap' }}>
+        <div>
+          <div style={{ fontWeight: 700, color: 'var(--ink)' }}>{q.name}</div>
+          <div style={{ fontSize: 13.5, color: 'var(--muted)', marginTop: 4 }}>{q.role}</div>
+        </div>
+        <div style={{ textAlign: 'right' }}>
+          <div style={{ fontSize: '1.9rem', fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.045em', lineHeight: 1 }}>{q.metric}</div>
+          <div style={{ fontSize: 12.5, color: 'var(--muted)', marginTop: 4 }}>{q.label}</div>
+        </div>
+      </figcaption>
+
+      {children}
+    </figure>
+  );
+}
+
+export function CityTestimonial({ quote, cityName }: { quote: Quote; cityName: string }) {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container">
+        <div className="head"><div><h2>What a {cityName} client says</h2></div></div>
+        <TestimonialQuote quote={quote} />
       </div>
     </section>
   );

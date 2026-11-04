@@ -3,6 +3,8 @@ import type { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
+import { CityTestimonial } from '@/components/home/Testimonial';
+import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import { defaultFaqs } from '@/data/faqs';
@@ -107,6 +109,7 @@ function defaultOverview(cityName: string, industries: string[]) {
 
 /* City page — one honest block sequence shared by every city. */
 export default function LocationPageTemplate(p: LocationProps) {
+  const quote = quoteForCity(p.slug);
   const city = cities.find(c => c.slug === p.slug);
   const name = city?.name ?? p.slug;
   const provinceSlug = city ? provinceSlugForName(city.province) : undefined;
@@ -123,6 +126,12 @@ export default function LocationPageTemplate(p: LocationProps) {
 
   return (
     <>
+      {quote ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@graph': [reviewForQuote(quote)],
+        }) }} />
+      ) : null}
       <Navbar />
       <main id="main-content">
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} />
@@ -187,6 +196,7 @@ export default function LocationPageTemplate(p: LocationProps) {
         <MediaBand media={humanPick(p.slug, 8)} ratio="21 / 7" />
         <CardGrid title={p.trends.title} items={p.trends.items.map(i => ({ title: i.t, desc: i.d }))} variant="rows" />
         {p.localContent}
+        {quote ? <CityTestimonial quote={quote} cityName={name} /> : null}
         <WhyUs />
         <Credentials />
         <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>

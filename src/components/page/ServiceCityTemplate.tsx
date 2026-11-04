@@ -3,6 +3,8 @@ import type { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
+import { CityTestimonial } from '@/components/home/Testimonial';
+import { quoteForCity } from '@/data/testimonials';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import PageHero from './PageHero';
@@ -46,6 +48,7 @@ const balanced = (n: number): string | null =>
 // local adds hand-written sections and case-study proof (from SERVICE_CITY_LOCAL).
 export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string } }) {
   const { cityName, citySlug, province, serviceName, serviceSlug } = p;
+  const quote = quoteForCity(citySlug);
   const provinceSlug = provinceSlugForName(province);
   const services = [
     ...p.largeServices.map(s => ({ title: s.title, desc: s.desc, chips: s.tags })),
@@ -132,6 +135,8 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             </div>
           </section>
         ) : null}
+
+        {quote ? <CityTestimonial quote={quote} cityName={cityName} /> : null}
 
         <MediaBand media={serviceMedia[serviceSlug] ?? defaultMedia} />
         <ServicesGrid title={`${serviceName} services we offer in ${cityName}`} items={services} />
