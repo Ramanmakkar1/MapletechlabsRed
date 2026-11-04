@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
-  expireTime: 600,
+  // Bounded stale-cache window: 300s revalidate, 3600s max age
+   expireTime: 3600,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
