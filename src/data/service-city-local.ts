@@ -2529,4 +2529,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-montreal': {
+    title: 'SaaS Development Company in Montreal',
+    description: 'Mapletech Labs builds multi-tenant SaaS for Montreal startups and businesses, French-first and Law 25 ready, with a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian software team headquartered in Edmonton, building multi-tenant SaaS products for Montreal startups and businesses, from a first MVP to a platform ready to scale. We do not have a Montreal office. Edmonton is two hours behind Montreal, so our working days overlap for product reviews, sprint planning and quick decisions. You work directly with the senior engineers who design and build your platform, not a sales layer. Before development starts, we agree a written scope and a fixed price in CAD, so you know what the first release includes. Call +1-403-604-8692 to talk through your users, integrations and roadmap.',
+    sections: [
+      {
+        heading: 'SaaS products Montreal teams build with us',
+        body: [
+          'Montreal’s SaaS demand comes from several directions. AI and machine learning startups need products that turn models into reliable features customers will pay for, such as dashboards, data pipelines and usage-based plans. Gaming and creative studios need tools for asset review, collaboration and client delivery. Fintech teams need secure account workflows, reporting and transaction views. E-commerce and retail businesses need B2B tools for wholesale ordering, inventory and supplier portals. Whatever the product, we start by defining the core workflow, the tenant boundaries and the subscription model, then plan the roadmap around them.',
+        ],
+      },
+      {
+        heading: 'French-first SaaS and Quebec Law 25',
+        body: [
+          'If your SaaS serves Quebec customers, Quebec’s Charter of the French Language means the French interface needs to be complete, not an afterthought. We build bilingual FR/EN products from the first sprint, covering screens, onboarding, error messages and transactional emails in both languages. For Quebec Law 25, we build consent flows, privacy-by-default settings and a data inventory that records what personal information the product collects and where it is stored. Our ',
+          { href: '/blog/app-privacy-compliance-canada', label: 'Canadian app privacy checklist' },
+          ' supports planning and review, and your legal counsel confirms what applies to your business.',
+        ],
+      },
+      {
+        heading: 'Built for enterprise buyers from day one',
+        body: [
+          'Larger customers ask security and procurement questions before they sign, so we plan the answers into the architecture. SSO/SAML lets employees sign in with their company accounts, role-based access matches permissions to responsibilities, and audit logs record sensitive actions so they can be traced. Tenant isolation keeps each customer’s data separate, and SOC 2-ready testing produces evidence your team can share during security reviews. We plan Canadian data residency across hosting, storage, backups and connected services, and agree these requirements during discovery so enterprise deals are not held up later.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'Canadian SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Your fixed CAD price depends on the integrations, security requirements, bilingual content and the scope of the first release. When you compare partners, our ',
+          { href: '/blog/software-development-companies-montreal', label: 'guide to software development companies in Montreal' },
+          ' explains what to check on scope, delivery and code ownership.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform (Montréal)', note: 'A checkout redesign for Montréal-based NorthStar E-Commerce that lifted conversion from 2.1% to 3.8% in 90 days, on a site with 2M+ monthly visitors.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Montreal?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. We agree the scope and a fixed CAD price with you before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'Our Canadian cost guide gives an MVP timeline of 3 - 4 months. During discovery we define the core workflow, integrations and acceptance criteria, and your written scope sets the timeline for your product.',
+      },
+      {
+        q: 'Can you build a bilingual French and English SaaS product?',
+        a: 'Yes. We build French and English into the product from the start: screens, onboarding, error messages and transactional emails, with a clear way for users to switch languages. We plan the content model during discovery so new features ship in both languages.',
+      },
+      {
+        q: 'Do you have an office in Montreal?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Montreal office. We deliver remotely through video workshops, weekly calls and shared project boards. Edmonton is two hours behind Montreal, so most of the working day overlaps.',
+      },
+      {
+        q: 'Who owns the code?',
+        a: 'You do. The source code and design files we create for your SaaS product belong to you, so you can keep working with us or hand the code to your own team.',
+      },
+    ],
+  },
 };
