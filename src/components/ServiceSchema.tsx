@@ -1,3 +1,6 @@
+import { BUSINESS } from '@/lib/seo/business';
+import { siteOrigin } from '@/lib/seo/canonical';
+
 /**
  * Service structured data for a service, sub-service or industry page.
  *
@@ -28,8 +31,9 @@ export function ServiceSchema({
     ...(serviceType && { serviceType }),
     provider: {
       '@type': 'Organization',
+      '@id': `${siteOrigin()}/#organization`,
       name: 'Mapletech Labs',
-      url: 'https://mapletechlabs.ca',
+      url: siteOrigin(),
     },
     areaServed: {
       '@type': 'Country',
@@ -40,7 +44,7 @@ export function ServiceSchema({
       serviceUrl: url,
       servicePhone: {
         '@type': 'ContactPoint',
-        telephone: '+1-403-604-8692',
+        telephone: BUSINESS.telephone,
         contactType: 'sales',
       },
     },
