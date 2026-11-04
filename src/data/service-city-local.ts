@@ -2467,4 +2467,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-ottawa': {
+    title: 'SaaS Development Company in Ottawa',
+    description: 'SaaS development for Ottawa teams: multi-tenant platforms, subscription billing and a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian software team headquartered in Edmonton, building multi-tenant SaaS products for Ottawa businesses from MVP to scale. We do not have an Ottawa office; Edmonton is two hours behind Ottawa, so our working days overlap for product reviews, planning and decisions. You work directly with the senior engineers building your platform, not a sales layer. We travel to Ottawa for discovery workshops when a project needs it, with travel agreed up front. Your contract is with a Canadian company, priced in CAD, with a fixed scope and price agreed before development starts. Call +1-403-604-8692 to discuss your users, integrations and the first release your business needs.',
+    sections: [
+      {
+        heading: 'SaaS for Ottawa founders and software companies',
+        body: [
+          'Ottawa buyers split into Kanata North B2B software teams building and selling platforms, GovTech products sold to public-sector buyers, and founders backed by Invest Ottawa and the local startup scene who are building an MVP. For Kanata North software teams we build multi-tenant platforms with clear tenant boundaries, onboarding and admin tooling. GovTech products need procurement-ready features: SSO, audit logs and bilingual interfaces, which we plan from the first release. Founders building an MVP get a written scope that defines the core workflow, the subscription model and what ships first, so the first release is something real users will pay for.',
+        ],
+      },
+      {
+        heading: 'Built for enterprise and government buyers',
+        body: [
+          'Enterprise and government procurement questions shape the architecture early. We build SSO with SAML and OIDC for company and agency sign-in, role-based access for different responsibilities, and audit logs that make sensitive actions traceable. Canadian data hosting is planned across hosting, storage, backups and connected services, and we design with PIPEDA in mind: encryption, access control and clear data flows. Customer-facing interfaces work in English and French, and prompts, forms and buttons are tested in both languages. Your own legal and security team confirms the final compliance position before launch.',
+        ],
+      },
+      {
+        heading: 'From MVP to scale',
+        body: [
+          'We start with the MVP scope: the core workflow, tenant boundaries and the first integrations, defined in a written scope with a fixed CAD price. The architecture is multi-tenant from day one, so adding customers does not mean rebuilding. Stripe subscription billing handles plans, upgrades and renewals with GST on Canadian invoices. Product analytics show activation, usage and churn, and we review them with you each release. When usage grows, we scale the platform: performance, tenant limits, support tooling and the roadmap features your customers ask for. For the full service, see our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          '.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'Canadian SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. These are planning ranges, not quotes: integrations, security requirements and the scope of the first release shape your fixed CAD price, which we agree before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Ottawa?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. These are planning ranges, not quotes: we agree on the scope and a fixed CAD price before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'Our Canadian cost guide gives an MVP timeline of 3 - 4 months. Discovery defines the core workflow, integrations and acceptance criteria, and your written scope sets the timeline for your product.',
+      },
+      {
+        q: 'Can you build SaaS that passes enterprise and government security reviews?',
+        a: 'Yes. We build SSO with SAML and OIDC, role-based access and audit logs, plan Canadian data hosting, and design with PIPEDA in mind. We prepare test evidence your security reviewers can examine, and your own legal and security team confirms the final compliance position before launch.',
+      },
+      {
+        q: 'Do you keep documentation SR&ED and IRAP friendly?',
+        a: 'Yes. We keep development logs, technical risk notes and test evidence organised in a way that is friendly to SR&ED and NRC IRAP claims, subject to each program’s requirements. Your accountant or consultant confirms whether your circumstances qualify; we do not promise funding.',
+      },
+      {
+        q: 'Do you have an office in Ottawa?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have an Ottawa office. Edmonton is two hours behind Ottawa, so most of the working day overlaps, and we serve Ottawa clients remotely through video workshops, weekly calls and shared boards. We travel to Ottawa for in-person workshops when a project needs it, and you can reach us on +1-403-604-8692.',
+      },
+    ],
+  },
 };
