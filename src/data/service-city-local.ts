@@ -767,6 +767,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-edmonton': {
+    title: 'Web Development Company in Edmonton',
+    description: 'Mapletech Labs is headquartered in Edmonton and builds custom fast, SEO-ready websites and web apps, with a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for web development you are working with a local team at our head office, not a sales desk for developers somewhere else. We build fast, SEO-ready business websites, e-commerce stores and web apps for Edmonton companies, public bodies and growing teams across the city. You talk directly to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
+    sections: [
+      {
+        heading: 'The websites Edmonton organisations need',
+        body: [
+          'Edmonton runs on energy and industrial services, municipal and post-secondary institutions, healthcare clinics, trades contractors and logistics firms, and each needs a different kind of site. Industrial and field-services teams need clear service pages, safety content and enquiry forms that turn searches into qualified leads. Campus and civic teams need booking flows, resident or student portals and accessible information architecture. Clinics need trustworthy pages that respect privacy expectations, while carriers and trades businesses need dispatch-friendly contact paths, customer portals and, where it fits, e-commerce that ties into how they already sell and schedule work.',
+        ],
+      },
+      {
+        heading: 'Workshops in person, here in Edmonton',
+        body: [
+          'Because our head office is in Edmonton, discovery does not have to happen only over a video call. We can run scoping and design workshops at your office, plant or campus, watch how your staff and customers use your current site today, and sketch page flows with the people who will maintain them. After the workshop you get a written scope with every page, integration and content milestone listed. Demos and content reviews can also be held in person, while day-to-day build progress runs on shared boards and weekly calls with the same engineers who attended the workshop.',
+        ],
+      },
+      {
+        heading: 'Speed, SEO and accessibility from the first commit',
+        body: [
+          'We build on Next.js and React, with server rendering so Google and Bing can read your content on first load. Core Web Vitals guide image sizes, fonts and script loading as we develop, not as a last-minute patch. Clean URLs and structured data (schema) describe your services and locations to search engines, and we design and test to WCAG so keyboard users, screen-reader users and visitors who need strong colour contrast can use the site. A CMS lets your Edmonton team update service details, blog posts and seasonal offers without opening a developer ticket for every change.',
+        ],
+      },
+      {
+        heading: 'What a website costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Edmonton?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After free discovery you get a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Can we meet your team in person in Edmonton?',
+        a: 'Yes. Mapletech Labs is headquartered in Edmonton, so we can hold discovery workshops, design reviews and demos at your office or site. Ongoing work runs on weekly calls and shared project boards, and you can meet in person again whenever a milestone needs it.',
+      },
+      {
+        q: 'How long does it take to build a website?',
+        a: 'A template or WordPress site usually takes 2-4 weeks, a custom business website about 4-10 weeks, an e-commerce platform 8-16 weeks and an enterprise web application 4-12 months, matching the timelines in our Canadian website cost guide. Your written scope includes milestones such as design approval, content lock and launch.',
+      },
+      {
+        q: 'Can you redesign our existing site without losing Google rankings?',
+        a: 'Yes, when we plan the migration carefully. We audit which URLs earn traffic today, keep or redirect them with 301s, preserve titles and headings where they still match search intent, and avoid launching large structural changes without a staging review. Technical SEO checks cover indexation, sitemaps, schema and Core Web Vitals so the new site can inherit authority rather than starting from zero.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
   'web-development-company-in-calgary': {
     title: 'Web Development Company in Calgary',
     description: 'Calgary custom websites and web apps by Mapletech Labs, with a fixed CAD price agreed up front. Get a free quote.',
