@@ -6,6 +6,16 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import { AGENCY_CITIES } from '@/data/serviceCity';
+
+const AGENCY_CITY_NAMES: Record<(typeof AGENCY_CITIES)[number], string> = {
+  edmonton: 'Edmonton',
+  calgary: 'Calgary',
+  toronto: 'Toronto',
+  vancouver: 'Vancouver',
+  ottawa: 'Ottawa',
+  montreal: 'Montreal',
+};
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -622,6 +632,27 @@ export default function DigitalMarketingCostCanadaClient() {
                 <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
                   Compare our <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>digital marketing services</Link> and <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO services</Link>, or see local pages for <Link href="/locations/seo-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Edmonton</Link>, <Link href="/locations/seo-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Calgary</Link>, <Link href="/locations/seo-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Toronto</Link> and <Link href="/locations/seo-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Vancouver</Link>.
                 </p>
+                <nav
+                  aria-label="Digital marketing agency by city"
+                  style={{
+                    marginTop: 20,
+                    width: '100%',
+                    maxWidth: 520,
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))',
+                    gap: 10,
+                  }}
+                >
+                  {AGENCY_CITIES.map(slug => (
+                    <Link
+                      key={slug}
+                      href={`/locations/digital-marketing-agency-in-${slug}`}
+                      style={{ color: 'var(--brand)', textDecoration: 'underline', fontSize: 15, lineHeight: 1.5 }}
+                    >
+                      Digital marketing agency in {AGENCY_CITY_NAMES[slug]}
+                    </Link>
+                  ))}
+                </nav>
               </div>
               <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Custom Quote →</Link>
             </div>
