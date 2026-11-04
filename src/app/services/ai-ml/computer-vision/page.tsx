@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Computer Vision Development',
+  title: 'Computer Vision Development in Canada',
   description: 'Custom computer vision solutions by Mapletech Labs. Image recognition, object detection, OCR, and visual AI for enterprise applications.',
   openGraph: {
-    title: 'Computer Vision Development | Mapletech Labs',
+    title: 'Computer Vision Development in Canada | Mapletech Labs',
     description: 'Custom computer vision solutions by Mapletech Labs. Image recognition, object detection, OCR, and visual AI for enterprise applications.',
     url: 'https://mapletechlabs.ca/services/ai-ml/computer-vision',
     type: 'website',

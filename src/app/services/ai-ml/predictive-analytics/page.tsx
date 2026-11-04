@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Predictive Analytics Services',
+  title: 'Predictive Analytics Services in Canada',
   description: 'Predictive analytics and machine learning services. Mapletech Labs builds data-driven models for forecasting, recommendations, and business intelligence.',
   openGraph: {
-    title: 'Predictive Analytics Services | Mapletech Labs',
+    title: 'Predictive Analytics Services in Canada | Mapletech Labs',
     description: 'Predictive analytics and machine learning services. Mapletech Labs builds data-driven models for forecasting, recommendations, and business intelligence.',
     url: 'https://mapletechlabs.ca/services/ai-ml/predictive-analytics',
     type: 'website',

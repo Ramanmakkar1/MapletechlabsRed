@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'AI Chatbot Development',
+  title: 'AI Chatbot Development Company in Canada',
   description: 'Custom AI chatbot development services. Mapletech Labs builds intelligent conversational agents for customer support, sales, and internal operations.',
   openGraph: {
-    title: 'AI Chatbot Development | Mapletech Labs',
+    title: 'AI Chatbot Development Company in Canada | Mapletech Labs',
     description: 'Custom AI chatbot development services. Mapletech Labs builds intelligent conversational agents for customer support, sales, and internal operations.',
     url: 'https://mapletechlabs.ca/services/ai-ml/ai-chatbots',
     type: 'website',

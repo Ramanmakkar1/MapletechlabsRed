@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'LLM Integration Services',
+  title: 'LLM Integration Services in Canada',
   description: 'LLM and large language model integration services. Mapletech Labs helps you integrate GPT, Claude, and custom AI models into your applications.',
   openGraph: {
-    title: 'LLM Integration Services | Mapletech Labs',
+    title: 'LLM Integration Services in Canada | Mapletech Labs',
     description: 'LLM and large language model integration services. Mapletech Labs helps you integrate GPT, Claude, and custom AI models into your applications.',
     url: 'https://mapletechlabs.ca/services/ai-ml/llm-integration',
     type: 'website',
