@@ -641,6 +641,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-toronto': {
+    title: 'SEO Company in Toronto',
+    description: 'Mapletech Labs runs Toronto SEO from Edmonton: local search, technical fixes and CAD retainers with monthly reporting. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Toronto and GTA businesses that want more calls and leads from Google and Bing. We do not have a Toronto office. Edmonton is two hours behind Toronto, so our working days overlap for most of yours, and we come to Toronto for in-person workshops, audits and milestone reviews when a project needs one, with travel agreed up front. You work directly with the specialists doing the keyword research, technical fixes and content, not a salesperson. Retainers are priced in CAD. Call +1-403-604-8692 to talk through your Toronto search goals.',
+    sections: [
+      {
+        heading: 'Toronto search markets we know',
+        body: [
+          'Toronto is not one search market. Bay Street finance and fintech buyers compare vendors over long, compliance-heavy cycles, tech and SaaS companies chase category terms their competitors already bid on, and clinics, law firms, accountants and other professional services live on “near me” and neighbourhood searches. Real estate teams and trades compete for suburb-level terms across Mississauga, Brampton, Markham and Vaughan. We map both sides: the competitive city-wide terms that put you next to the biggest names in Toronto, and the neighbourhood terms where a smaller budget can win calls first.',
+        ],
+      },
+      {
+        heading: 'Google Business Profile and NAP across the GTA',
+        body: [
+          'For Toronto service businesses the map pack is often where the call starts, so the profile has to be honest. We set your Google Business Profile up as a real service-area business if you serve the GTA from outside downtown, choose categories and service areas that match what you actually cover, and keep the same name, address and phone — NAP — across your site, directories and citations. We will not rent a virtual office on Bay Street or claim a downtown address you do not use; those profiles get suspended and take months to recover. Consistent, truthful listings are what hold their position.',
+        ],
+      },
+      {
+        heading: 'Technical SEO done by engineers',
+        body: [
+          'Mapletech Labs is a software development company first, so the technical work is done by the engineers who build Next.js and WordPress sites every week. We audit Core Web Vitals, crawling and indexation, canonical tags, schema markup and internal linking on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page, then fix what is slowing pages or blocking crawlers. Changes go into your codebase or CMS rather than on top of it with plugins, so they survive the next platform update.',
+        ],
+      },
+      {
+        heading: 'SEO costs and monthly reporting',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Toronto is a competitive market, so we agree the scope in writing before the first invoice. You can compare our rates on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Toronto?',
+        a: 'Most Toronto SEO engagements are monthly retainers of about $1,500-$10,000 CAD, the range we publish in our Canadian digital marketing cost guide. A single-location local campaign in the GTA sits at the lower end; Bay Street finance, SaaS or national-competition keywords sit higher. After a free review of your site and your Toronto competitors, we quote one fixed monthly number in CAD rather than hourly billing.',
+      },
+      {
+        q: 'How long until we see results in Toronto?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Toronto terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress building before the position charts catch up.',
+      },
+      {
+        q: 'Can we rank in the Toronto map pack without a downtown address?',
+        a: 'Yes, if the address and service area are real. You need either a staffed address in the area or a genuine service-area setup. Google removes or down-ranks profiles built on virtual offices and fake addresses, so we will not suggest those. If your team serves Toronto and the GTA from elsewhere, we configure your profile as a service-area business, keep NAP consistent across directories and show coverage through your site, service pages and reviews.',
+      },
+      {
+        q: 'Can we meet your team in Toronto?',
+        a: 'Yes, when it helps. Our team is headquartered in Edmonton and we do not have a Toronto office, so we come to Toronto for discovery meetings, audits and milestone reviews at your office or a convenient location, with travel agreed up front. Day-to-day work runs on calls, shared documents and monthly reports, and you always have direct access to the specialists on your account at +1-403-604-8692.',
+      },
+      {
+        q: 'What is in the monthly SEO report?',
+        a: 'A plain-language summary of the keyword movements that matter for your Toronto market, organic sessions and leads from analytics, the tasks completed that month, and the plan for the next period. We flag anything that needs a decision from your side, such as content approvals or profile changes. It is the same report format whether you serve downtown Toronto, Mississauga or Vaughan.',
+      },
+    ],
+  },
   'web-development-company-in-toronto': {
     title: 'Web Development Company in Toronto',
     description: 'Mapletech Labs builds fast custom websites and web apps for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',
