@@ -66,6 +66,14 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           stats={HONEST_STATS} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
         />
         <StatRow stats={HONEST_STATS} />
+        {p.stats.length > 0 ? (
+          <section style={{ paddingTop: 0 }}>
+            <div className="cb-container">
+              <Head title={`Our track record serving ${cityName}`} />
+              <StatRow stats={p.stats} />
+            </div>
+          </section>
+        ) : null}
         {provinceSlug ? (
           <section style={{ padding: '18px 0', borderBottom: '1px solid var(--line)' }}>
             <div className="cb-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
