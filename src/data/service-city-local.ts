@@ -893,4 +893,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-edmonton': {
+    title: 'UI/UX Design Company in Edmonton',
+    description: 'Mapletech Labs is headquartered in Edmonton and delivers UX research, UI design and prototypes at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is headquartered in Edmonton, so when you hire us for UI/UX design you are working with a local Alberta team, not a remote sales desk. Our designers sit beside the engineers who build the product, which keeps flows, components and handoff aligned from the first wireframe through launch. You get a fixed scope and price in CAD before visual design starts. We run discovery workshops and usability sessions at your Edmonton office, plant or campus when in-person work helps, and day-to-day collaboration runs on shared Figma files and weekly calls. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'What Edmonton teams need designed',
+        body: [
+          'Edmonton organisations ask us to design SaaS dashboards where operators can scan KPIs quickly, field and inspection apps that stay usable on a tablet in cold weather, and patient and resident portals that pass a privacy review. Campus and municipal teams need booking, reporting and service portals that work for staff and the public alike. Every flow is planned for accessible design to WCAG 2.2 AA: contrast, focus states, keyboard paths and screen-reader labels are decided in the design files, not patched in after development.',
+        ],
+      },
+      {
+        heading: 'Our process from discovery to handoff',
+        body: [
+          'We start with discovery and user interviews, a review of analytics and a clear picture of the jobs your product must do. Wireframes map each key screen before visual polish, then we build clickable prototypes and run usability testing on real tasks. What users stumble on gets fixed in the design. We document a design system your developers can implement and stay with the build through annotated specs and review. See our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' and ',
+          { href: '/services/product-design/design-systems', label: 'design systems' },
+          ' pages for how we run research, prototyping and component libraries.',
+        ],
+      },
+      {
+        heading: 'In-person workshops and user testing in Edmonton',
+        body: [
+          'Because our head office is in Edmonton, research does not have to happen only on a video call. We can facilitate discovery workshops at your site, watch how staff use today’s tools and sketch flows with the people who will live in the product. Usability tests can be run in person with local participants when that gives clearer feedback than a remote session. Between visits, you share Figma links, comment on prototypes and join short review calls so decisions do not stall.',
+        ],
+      },
+      {
+        heading: 'Cost and timeline for UI/UX design',
+        body: [
+          'Design is quoted as a fixed price in CAD after a free audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Most projects take 6-11 weeks. Compare how Canadian studios price this work in our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to choosing a UI/UX design company in Canada' },
+          ', and see build ranges on ',
+          { href: '/pricing', label: 'our pricing page' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Edmonton?',
+        a: 'We quote a fixed price in CAD after a free UX audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, interaction complexity, research depth and branding all move the number, and Edmonton projects are priced the same way as our other Alberta work.',
+      },
+      {
+        q: 'How long does a UI/UX design project take in Edmonton?',
+        a: 'Most Edmonton design projects take 6-11 weeks across research, strategy, wireframes, visual design and handoff. A small MVP can finish faster, while a multi-product design system or a large research program takes longer. Your written scope lists milestones and review dates so you know when the prototype and final handoff are due.',
+      },
+      {
+        q: 'Can you also build the product you design for our Edmonton team?',
+        a: 'Yes. The same Mapletech Labs team that designs your product builds it, whether that is a mobile app, a web app or an internal tool. Design tokens map to real components, edge cases are settled with the engineers who will code them, and there is no handoff gap between the Figma prototype and what launches.',
+      },
+      {
+        q: 'Do you design for accessibility standards used in Alberta?',
+        a: 'Yes. We design to WCAG 2.2 AA, which covers contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels in the design files themselves. That supports public-sector and healthcare clients in Edmonton who need accessible portals and apps, alongside requirements such as Ontario’s AODA when you serve users nationally.',
+      },
+      {
+        q: 'Who owns the Figma files when the project ends?',
+        a: 'You do. The editable Figma files, clickable prototypes, component library, design tokens, research findings and usability test notes are handed over and belong to your organisation, with no lock-in. If you have an in-house team, we can run a handoff session in Edmonton or remotely so they can extend the system after launch.',
+      },
+    ],
+  },
 };
