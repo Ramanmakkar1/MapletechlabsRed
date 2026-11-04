@@ -54,7 +54,7 @@ export default function ServiceCityLinks(props: ServiceCityLinksProps) {
               const city = CITIES.find(c => c.slug === slug);
               if (!city) return null;
               return (
-                <Link key={slug} href={`/locations/digital-marketing-agency-in-${slug}`} className="pill">
+                <Link key={slug} href={`/locations/digital-marketing-agency-in-${slug}`} className="pill" style={{ height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box', padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>
                   Digital Marketing Agency in {city.name}
                 </Link>
               );
@@ -81,7 +81,7 @@ function ServiceCitySidebar({ serviceSlug, label, heading }: { serviceSlug: stri
       </p>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         {CITIES.map(c => (
-          <Link key={c.slug} href={serviceCityPath(serviceSlug, c.slug)} className="pill">
+          <Link key={c.slug} href={serviceCityPath(serviceSlug, c.slug)} className="pill" style={{ height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box', padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>
             {`${label} in ${c.name}`}
           </Link>
         ))}

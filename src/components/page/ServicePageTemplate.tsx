@@ -65,7 +65,7 @@ function SubServiceLinks({ slug, name }: { slug: string; name: string }) {
         <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>Explore {name} in detail</h2>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           {cat.links.map(l => (
-            <Link key={l.href} href={l.href} className="pill" style={{ height: 40, padding: '0 20px', fontSize: 14 }}>
+            <Link key={l.href} href={l.href} className="pill" style={{ height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box', padding: '10px 20px', whiteSpace: 'normal', overflowWrap: 'anywhere', fontSize: 14 }}>
               {l.label}
             </Link>
           ))}
