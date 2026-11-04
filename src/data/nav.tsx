@@ -86,6 +86,7 @@ export const serviceCategories = [
     href: '/services/product-design',
     links: [
       { label: 'UI/UX Strategy', href: '/services/product-design/ui-ux-strategy' },
+      { label: 'UX Audit', href: '/services/product-design/ux-audit' },
       { label: 'Wireframing', href: '/services/product-design/wireframing' },
       { label: 'Prototyping', href: '/services/product-design/prototyping' },
       { label: 'Design Systems', href: '/services/product-design/design-systems' },

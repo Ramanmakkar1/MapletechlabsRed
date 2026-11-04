@@ -35,6 +35,7 @@ function slugToTitle(slug: string): string {
     'smart-contracts': 'Smart Contracts',
     'defi-protocols': 'DeFi Protocols',
     'ui-ux-strategy': 'UI/UX Strategy',
+    'ux-audit': 'UX Audit',
     'seo-services': 'SEO Services',
     'google-ads-ppc': 'Google Ads & PPC',
     'social-media-marketing': 'Social Media Marketing',
