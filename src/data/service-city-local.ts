@@ -3487,4 +3487,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-kitchener': {
+    title: 'SEO Company in Kitchener-Waterloo, ON',
+    description: 'SEO company in Kitchener-Waterloo for startups, manufacturers and local firms: map-pack, technical SEO and monthly CAD retainers. Free review.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Kitchener, Waterloo and Cambridge businesses that want more calls, demos and leads from Google and Bing. Waterloo Region search is unusually mixed: tech startups and SaaS companies near the University of Waterloo and Communitech compete for national and even global B2B terms, advanced manufacturers in Kitchener and Cambridge chase supplier and industrial queries, and clinics, trades and professional firms win or lose on local map results. We do not have a Kitchener office. Edmonton is two hours behind Eastern time, so our working days overlap and account questions get answered the same day. You work directly with the specialists doing keyword research, technical fixes and content, and retainers are priced in CAD with a fixed monthly scope agreed before work starts. Call +1-403-604-8692 to talk through your search goals.',
+    sections: [
+      {
+        heading: 'Google Business Profile and the local pack in Kitchener, Waterloo and Cambridge',
+        body: [
+          'Many Waterloo Region customers search with a city name or “near me”, and Google often treats Kitchener, Waterloo and Cambridge as separate markets. A dentist in Uptown Waterloo, a contractor in Cambridge and an accountant in downtown Kitchener each face a different local pack. We set up Google Business Profile and Bing Places honestly, as a staffed address or a service-area business, choose categories that match what you actually offer, keep name, address and phone consistent across directories, and build location pages and review requests that support each city you serve rather than one generic “KW” page.',
+        ],
+      },
+      {
+        heading: 'Technical SEO for SaaS and startup sites',
+        body: [
+          'Waterloo startups often launch on Next.js, React or a headless CMS, and rankings stall when JavaScript hides content from crawlers, docs and app subdomains split authority, or staging pages leak into the index. We audit Core Web Vitals, rendering, crawl coverage, canonicals, schema and internal links, then fix the blockers in your codebase rather than handing you a report. The same work underpins the wider growth programs in our ',
+          { href: '/services/digital-marketing', label: 'digital marketing services' },
+          ', so SEO, paid search and analytics share one clean foundation.',
+        ],
+      },
+      {
+        heading: 'Content that ranks for B2B buyers',
+        body: [
+          'Software and manufacturing buyers search for problems, comparisons and integrations long before they ask for a demo or a quote. We map those searches — category terms, “alternative to” and comparison queries, use-case pages and industry terms — and build service, product and blog pages that answer them with clear proof and a next step. Internal links from articles point authority at the pages that should convert. If you are still comparing providers, our ',
+          { href: '/blog/top-seo-companies-canada', label: 'guide to SEO companies in Canada' },
+          ' covers what to ask before you hire anyone.',
+        ],
+      },
+      {
+        heading: 'Reporting and SEO pricing in CAD',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Single-location Kitchener, Waterloo or Cambridge campaigns often sit at the lower end; national SaaS and industrial B2B terms sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next, in plain language.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Kitchener-Waterloo?',
+        a: 'Most Kitchener-Waterloo SEO engagements are monthly retainers of about $1,500-$10,000 CAD, the range we publish in our Canadian digital marketing cost guide. A single-location clinic, trades or professional-services campaign often sits at the lower end; SaaS companies and manufacturers competing for national B2B terms sit higher. After a free review of your site and competitors, we quote one fixed monthly number in CAD rather than hourly billing.',
+      },
+      {
+        q: 'How long until SEO results show?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive national or category terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress before position charts catch up.',
+      },
+      {
+        q: 'Should a Waterloo startup focus on local or national SEO?',
+        a: 'It depends on where your customers are. A SaaS product sold across Canada or the US needs national, category-level SEO, and a Waterloo address adds little to those searches. Clinics, trades, restaurants and professional firms that serve Kitchener, Waterloo and Cambridge need local map visibility first. Many companies need both, and we recommend the mix based on where your revenue actually comes from.',
+      },
+      {
+        q: 'Are we locked into a long contract?',
+        a: 'No. We work on monthly retainers with a clear scope and reporting, and we do not use multi-year lock-ins. If you need a defined end date, such as a technical audit and fix sprint before a product launch or funding round, we can scope that as a separate project.',
+      },
+      {
+        q: 'What is in the monthly SEO report?',
+        a: 'A plain-language summary of keyword movements that matter for your market, organic sessions and leads or demo requests from analytics, the tasks completed that month, and the plan for the next period. We flag anything needing your sign-off, such as content approvals or profile changes, so your team does not need to be SEO specialists to follow along.',
+      },
+    ],
+  },
 };
