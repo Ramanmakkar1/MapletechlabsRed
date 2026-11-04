@@ -3551,4 +3551,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-winnipeg': {
+    title: 'UI/UX Design Company in Winnipeg, MB',
+    description: 'UI/UX design company for Winnipeg apps, portals and dashboards: UX audits, design systems and WCAG 2.1 AA design. Fixed CAD quote, free audit.',
+    intro: 'Mapletech Labs is a UI/UX design company headquartered in Edmonton, designing web apps, mobile apps, customer portals and internal tools for Winnipeg and Manitoba organizations. Our Winnipeg buyers include insurers and financial firms with policyholder and member portals, agribusiness and logistics companies whose staff use dashboards in the field, on the farm or at the dock, public sector bodies and Crown corporations with large online services, and startups designing a first product for investors and early users. We do not have a Winnipeg office. Winnipeg is one hour ahead of Edmonton, so our working days overlap for research calls, design reviews and sign-offs. Our designers work beside the engineers who build the software, so wireframes, prototypes and developer handoff stay on one thread. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'UX audits of the apps and portals you already run',
+        body: [
+          'Many Winnipeg organizations do not need a brand-new product; they need the one they have to stop confusing people. A policyholder portal where claims get abandoned halfway, a grain or freight dashboard that dispatchers work around with spreadsheets, or a public-facing service form that sends too many people to the phone line are all common starting points. Our free UX audit combines a heuristic review, your analytics and short interviews with real users, then ranks the problems by impact so your team knows what to fix first and what can wait. See how audits, research and prototyping fit together on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Design systems that keep many screens consistent',
+        body: [
+          'Insurers, Crown corporations and growing startups often have several apps built by different teams over many years, each with its own buttons, forms and colours. We build a design system in Figma with components, states, spacing and design tokens, documented so your developers can reuse it instead of redrawing every screen. That makes new features faster to design and build, and it keeps the experience consistent for customers moving between your website, portal and mobile app.',
+        ],
+      },
+      {
+        heading: 'Accessible design for the Accessibility for Manitobans Act and WCAG',
+        body: [
+          'The Accessibility for Manitobans Act sets accessibility standards for Manitoba organizations, including standards for accessible information and communication, and public sector bodies are expected to lead. We design to WCAG 2.1 AA: colour contrast, focus states, keyboard paths, text sizing, plain-language error messages and screen-reader labels are decided in the design files, not patched after development. Your own legal or compliance team should confirm exactly which standards and deadlines apply to your organization.',
+        ],
+      },
+      {
+        heading: 'Research and prototyping remotely from our Edmonton HQ',
+        body: [
+          'Research interviews, design reviews and usability tests run over video with shared Figma files and clickable prototypes, so your staff and customers can test real tasks from their own desks or phones. Findings shape journey maps and wireframes before visual design begins, and every review ends with clear decisions and next steps. Design is quoted as a fixed price in CAD after the free audit; see our ',
+          { href: '/pricing', label: 'pricing page' },
+          ' for how we scope work, and our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          ' to compare how Canadian studios approach it.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a UX audit and design system cost in Winnipeg?',
+        a: 'The first UX audit is free. Design work is then quoted as a fixed price in CAD. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Screen count, research depth and the number of products the system must cover all move the number.',
+      },
+      {
+        q: 'How long does a UI/UX design project take?',
+        a: 'Most projects take 6-11 weeks across research, wireframes, prototyping, visual design and handoff. A focused MVP or a redesign of a few key flows can be faster, while an enterprise design system covering several apps takes longer. Your written scope lists the milestones and review points up front.',
+      },
+      {
+        q: 'What deliverables do we receive?',
+        a: 'You receive the audit findings, journey maps and wireframes, clickable prototypes, usability test notes, final visual designs and the Figma component library with design tokens and annotated developer specs. Everything is handed over and belongs to you, with no lock-in.',
+      },
+      {
+        q: 'Can you work with our existing development team?',
+        a: 'Yes. Many Winnipeg clients already have in-house or vendor developers. We design within your current tech stack, join their planning and review sessions, hand over annotated specs and a component library they can build from, and review the built screens against the design before release. If you need engineers too, our own team can build it.',
+      },
+      {
+        q: 'Will the design meet accessibility requirements in Manitoba?',
+        a: 'We design to WCAG 2.1 AA, with contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels built into the design files and design system, so your developers implement them from the start. Requirements under the Accessibility for Manitobans Act differ by organization type and size, so your legal or compliance team should confirm your specific obligations.',
+      },
+    ],
+  },
 };
