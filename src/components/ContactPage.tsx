@@ -79,7 +79,7 @@ export default function ContactPage() {
             <div>
               <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--faint)', marginBottom: 20 }}>Contact</div>
               <h1 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: '0 0 20px' }}>
-                Tell us about<br /><span style={{ color: 'var(--brand)' }}>your project.</span>
+                Contact Mapletech Labs about your project
               </h1>
               <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, margin: '0 0 44px', maxWidth: 400 }}>
                 Send us the short version: a senior engineer at our Edmonton software development company replies within one working day with next steps, not a sales script.

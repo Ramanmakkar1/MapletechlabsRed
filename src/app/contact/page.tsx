@@ -9,7 +9,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
 
-const TITLE = 'Contact Mapletech Labs | Get a Free Consultation';
+const TITLE = 'Contact Mapletech Labs | Free Project Consultation';
 const DESCRIPTION = 'Contact Mapletech Labs for a free project consultation. Custom software development company in Edmonton, Canada. Response within one working day.';
 
 export const metadata: Metadata = {
