@@ -141,7 +141,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
   return (
     <>
       <Navbar />
-      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)' }}>
+      <main ref={pageRef as React.RefObject<HTMLElement>} id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>
 
         {/* HERO */}
         <section style={{ padding: 'var(--hero-top) 0 clamp(32px, 4vw, 52px)' }}>
