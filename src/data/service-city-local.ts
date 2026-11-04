@@ -511,6 +511,76 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-edmonton': {
+    title: 'Digital Marketing Agency in Edmonton',
+    description: 'Mapletech Labs in Edmonton runs SEO, Google Ads, social and content for Alberta businesses — one local team, CAD retainers. +1-403-604-8692.',
+    intro: 'Mapletech Labs is headquartered in Edmonton, so when you hire us for digital marketing you get one local team covering SEO, Google Ads, social media and content — not a rotating account manager and not separate vendors for each channel. We align search, paid and organic social to the leads you actually need in Alberta, with reporting you can read without a glossary. Call +1-403-604-8692 to talk about your mix.',
+    sections: [
+      {
+        heading: 'One Edmonton team for SEO, Google Ads, social and content',
+        body: [
+          'Your SEO, PPC, social and content work sits with the same specialists who know your site and your market, so messaging stays consistent and budget does not fight itself. We plan campaigns around Edmonton and Alberta search behaviour, seasonality in energy and trades, and the channels that fit your sales cycle. Focused on search only? See our ',
+          { href: '/locations/seo-company-in-edmonton', label: 'SEO Company in Edmonton' },
+          ' page for a SEO-first scope.',
+        ],
+      },
+      {
+        heading: 'How we split your budget across channels',
+        body: [
+          'Most Alberta businesses need a base of technical SEO and local visibility, then paid search or social where competition or speed demands it. We scope ',
+          { href: '/services/digital-marketing/google-ads-ppc', label: 'Google Ads and PPC' },
+          ', ',
+          { href: '/services/digital-marketing/social-media-marketing', label: 'social media marketing' },
+          ', and ',
+          { href: '/services/digital-marketing/content-marketing', label: 'content marketing' },
+          ' as separate line items with clear KPIs, so you can ramp one channel without guessing what the retainer covers.',
+        ],
+      },
+      {
+        heading: 'What digital marketing costs in Edmonton',
+        body: [
+          'Typical Canadian agency ranges — not quotes from us — are published in our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ': SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. After a free review we quote a fixed monthly scope in CAD for the channels you choose.',
+        ],
+      },
+      {
+        heading: 'Reporting you can read',
+        body: [
+          'Each cycle you get rankings, traffic, spend, conversions and the work completed, with plain-language notes on what we changed and what we are testing next. Deeper funnel and attribution views live on our ',
+          { href: '/services/digital-marketing/performance-analytics', label: 'performance analytics' },
+          ' service when you need executive-ready dashboards, not only export screenshots.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does digital marketing cost in Edmonton?',
+        a: 'In our Canadian digital marketing cost guide, SEO typically runs about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month in CAD. Your quote depends on which channels you need and how competitive your market is. We confirm a fixed monthly scope in CAD after a free review.',
+      },
+      {
+        q: 'Is there a minimum contract term?',
+        a: 'We work on monthly retainers with clear scope and reporting. Most clients stay because the work produces measurable traffic and leads, but we do not use multi-year lock-ins. If you need a defined end date for a project phase, such as a technical audit or a one-time campaign build, we can scope that separately.',
+      },
+      {
+        q: 'Should we start with SEO or paid ads?',
+        a: 'If you need leads quickly and have budget for ad spend, Google Ads often complements a thin organic base. If your site has technical blockers or weak local visibility, we usually fix SEO and Google Business Profile first so paid traffic lands on pages that convert. We recommend a mix based on where your revenue comes from today, not a generic package.',
+      },
+      {
+        q: 'How soon will we see results?',
+        a: 'Paid search can produce leads within weeks once campaigns and landing pages are live. SEO and content usually need several months before trend lines are fair to judge; local gains often show in 8-16 weeks when the site has no major technical blockers. We set expectations in the first report and track leading indicators such as impressions and conversions, not only position charts.',
+      },
+      {
+        q: 'Can we meet your team in person in Edmonton?',
+        a: 'Yes. Mapletech Labs is headquartered in Edmonton, so we can hold strategy sessions, reviews and workshops at your office or site. Day-to-day work runs on calls and shared reports, and you can meet in person again whenever a milestone needs it.',
+      },
+    ],
+  },
   'seo-company-in-edmonton': {
     title: 'SEO Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and runs SEO for Alberta businesses: local search, technical fixes and content that ranks. +1-403-604-8692.',
@@ -546,6 +616,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           ', SEO retainers typically run $1,500-$10,000 per month depending on scope. Typical SEO budgets in CAD are outlined in the cost guide above, and you can compare our project prices on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
+        ],
+      },
+      {
+        heading: 'Full-service digital marketing',
+        body: [
+          'Need ads and social too? See our ',
+          { href: '/locations/digital-marketing-agency-in-edmonton', label: 'Digital Marketing Agency in Edmonton' },
+          '.',
         ],
       },
     ],
@@ -612,6 +690,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           ' before you commit, and the scope is confirmed in writing before the first invoice.',
         ],
       },
+      {
+        heading: 'Full-service digital marketing',
+        body: [
+          'Need ads and social too? See our ',
+          { href: '/locations/digital-marketing-agency-in-calgary', label: 'Digital Marketing Agency in Calgary' },
+          '.',
+        ],
+      },
     ],
     proof: [
       { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
@@ -674,6 +760,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Toronto is a competitive market, so we agree the scope in writing before the first invoice. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
+        ],
+      },
+      {
+        heading: 'Full-service digital marketing',
+        body: [
+          'Need ads and social too? See our ',
+          { href: '/locations/digital-marketing-agency-in-toronto', label: 'Digital Marketing Agency in Toronto' },
+          '.',
         ],
       },
     ],
@@ -982,6 +1076,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Metro Vancouver is a competitive market, so we agree the scope in writing before the first invoice. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
+        ],
+      },
+      {
+        heading: 'Full-service digital marketing',
+        body: [
+          'Need ads and social too? See our ',
+          { href: '/locations/digital-marketing-agency-in-vancouver', label: 'Digital Marketing Agency in Vancouver' },
+          '.',
         ],
       },
     ],

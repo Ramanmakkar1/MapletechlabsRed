@@ -44,7 +44,7 @@ const balanced = (n: number): string | null =>
 /* Premium "[service] company in [city]" page — honest facts, no invented proof. */
 // heroTitle / heroDesc let one city+service page target its own search phrase; others keep the shared copy.
 // local adds hand-written sections and case-study proof (from SERVICE_CITY_LOCAL).
-export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal }) {
+export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string } }) {
   const { cityName, citySlug, province, serviceName, serviceSlug } = p;
   const provinceSlug = provinceSlugForName(province);
   const services = [
@@ -79,6 +79,12 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
               <div><h2 style={{ maxWidth: '18ch' }}>{serviceName} in {cityName}, done properly</h2></div>
               <div className="prose-body">
                 <p style={{ fontSize: 'clamp(18px, 1.5vw, 20px)', color: 'var(--ink)', lineHeight: 1.65, fontWeight: 450, margin: 0 }}>{p.intro}</p>
+                {crossPromo ? (
+                  <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.65, margin: '16px 0 0' }}>
+                    {crossPromo.before}
+                    <Link href={crossPromo.href}>{crossPromo.linkLabel}</Link>.
+                  </p>
+                ) : null}
               </div>
             </div>
             <div className="grid grid--2" style={{ marginTop: 'clamp(32px, 4vw, 56px)', rowGap: 'clamp(22px, 2.6vw, 32px)' }}>

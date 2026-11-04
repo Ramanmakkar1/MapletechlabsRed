@@ -30,9 +30,21 @@ export const serviceCityCombos: ServiceCityCombo[] = PRIORITY_SERVICES.flatMap(p
   cities.map(c => ({ slug: `${ps.kw}-company-in-${c.slug}`, citySlug: c.slug, serviceSlug: ps.serviceSlug, label: ps.label }))
 );
 
-const bySlug = new Map(serviceCityCombos.map(c => [c.slug, c]));
+/** “Digital marketing agency in [city]” keyword pages — separate from seo-company URLs. */
+export const AGENCY_CITIES = ['edmonton', 'calgary', 'toronto', 'vancouver'] as const;
+
+export const agencyCombos: ServiceCityCombo[] = AGENCY_CITIES.map(c => ({
+  slug: `digital-marketing-agency-in-${c}`,
+  citySlug: c,
+  serviceSlug: 'digital-marketing',
+  label: 'Digital Marketing Agency',
+}));
+
+const allServiceCityCombos = [...serviceCityCombos, ...agencyCombos];
+
+const bySlug = new Map(allServiceCityCombos.map(c => [c.slug, c]));
 export const getServiceCityCombo = (slug: string): ServiceCityCombo | undefined => bySlug.get(slug);
-export const serviceCitySlugs = serviceCityCombos.map(c => c.slug);
+export const serviceCitySlugs = allServiceCityCombos.map(c => c.slug);
 
 const kwFor: Record<string, string> = Object.fromEntries(PRIORITY_SERVICES.map(p => [p.serviceSlug, p.kw]));
 export const isPriorityService = (serviceSlug: string): boolean => serviceSlug in kwFor;

@@ -11,7 +11,7 @@ import FaqSplit from '@/components/home/FaqSplit';
 import { FaqSchema } from '@/components/ServiceSchema';
 import MediaBand from '@/components/MediaBand';
 import { humanMedia } from '@/data/media';
-import { PRIORITY_SERVICES, serviceCityPath, priorityCompanyHeadline } from '@/data/serviceCity';
+import { PRIORITY_SERVICES, serviceCityPath, priorityCompanyHeadline, AGENCY_CITIES } from '@/data/serviceCity';
 import { cities as allCities } from '@/data/cities';
 
 // Edmonton (HQ) first, then the other major markets.
@@ -190,6 +190,19 @@ export default function LocationsIndexPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>Digital Marketing Agency</h3>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
+              {AGENCY_CITIES.map(slug => {
+                const city = allCities.find(c => c.slug === slug);
+                if (!city) return null;
+                return (
+                  <Link key={slug} href={`/locations/digital-marketing-agency-in-${slug}`} className="pill">
+                    Digital Marketing Agency in {city.name}{city.isHQ ? ' · HQ' : ''}
+                  </Link>
+                );
+              })}
             </div>
 
             <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>All other cities</h3>
