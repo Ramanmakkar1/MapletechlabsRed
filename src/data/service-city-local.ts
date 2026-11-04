@@ -581,6 +581,76 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-calgary': {
+    title: 'Digital Marketing Agency in Calgary',
+    description: 'Calgary digital marketing from one Alberta team: SEO, Google Ads, social and content on clear CAD retainers. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs is an Alberta team headquartered in Edmonton, and we work with Calgary businesses that want one partner for their digital marketing. The same team covers SEO, Google Ads, social media and content, so your channels share one plan and one set of numbers instead of four vendors pointing at each other. When a project needs it, we travel to Calgary for discovery meetings and reviews in person; day-to-day work runs on calls and shared reports. Retainers are priced in CAD with a written monthly scope. Call +1-403-604-8692 to talk about growing your Calgary leads.',
+    sections: [
+      {
+        heading: 'Calgary markets we market for',
+        body: [
+          'Each Calgary industry buys differently, so the channel plan changes with it. Energy and oilfield services firms sell through long B2B buying cycles, where search visibility, LinkedIn and useful technical content keep you on the shortlist for months. Fintech startups need fast paid tests and clear landing pages to prove demand. Construction and trades companies win on the local pack and “near me” searches across Calgary, Airdrie and Cochrane. Real estate teams and professional services firms need steady referral-style leads from search and social. Only need search work? See our ',
+          { href: '/locations/seo-company-in-calgary', label: 'SEO Company in Calgary' },
+          ' page for an SEO-only scope.',
+        ],
+      },
+      {
+        heading: 'Picking the right channel mix',
+        body: [
+          'We do not sell every channel to every client. A Calgary trades company may only need local SEO plus a small search campaign, while a fintech launch may lean on paid ads and content first. We scope ',
+          { href: '/services/digital-marketing/google-ads-ppc', label: 'Google Ads and PPC' },
+          ', ',
+          { href: '/services/digital-marketing/social-media-marketing', label: 'social media marketing' },
+          ' and ',
+          { href: '/services/digital-marketing/content-marketing', label: 'content marketing' },
+          ' as separate line items with their own goals, so you can see what each one returns and move budget to the channel that is working.',
+        ],
+      },
+      {
+        heading: 'What digital marketing costs in Calgary',
+        body: [
+          'These are typical Canadian ranges from our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', not quotes: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Your Calgary scope is quoted in CAD after a free review of your site, ads accounts and competitors.',
+        ],
+      },
+      {
+        heading: 'Reports tied to leads, not vanity numbers',
+        body: [
+          'Every month you see what the budget did: rankings, traffic, ad spend, cost per lead, conversions and the work we completed, with short notes on what we are changing next. When you need attribution across channels or dashboards for leadership, our ',
+          { href: '/services/digital-marketing/performance-analytics', label: 'performance analytics' },
+          ' service connects your ads, analytics and CRM data in one view.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a digital marketing agency cost in Calgary?',
+        a: 'Our Canadian cost guide puts typical monthly ranges at about $1,500-$10,000 for SEO, $2,000-$15,000 for PPC management plus ad spend, $1,000-$8,000 for social media, $2,000-$10,000 for content marketing, and $5,000-$25,000 for full-service packages, all in CAD. These are market ranges, not quotes. Your Calgary price depends on the channels you pick and how competitive your industry is, and we confirm a fixed monthly scope after a free review.',
+      },
+      {
+        q: 'Should a Calgary business start with SEO or Google Ads?',
+        a: 'If you need leads this quarter and have ad budget, Google Ads gets you in front of buyers while SEO builds. If your site is slow, poorly indexed or missing from the Calgary map pack, we usually fix that first so paid clicks land on pages that convert. Many clients run both: a lean search campaign for fast leads and SEO for lower cost per lead over time.',
+      },
+      {
+        q: 'How soon will we see results?',
+        a: 'Google Ads can bring leads within the first few weeks once campaigns and landing pages are live. SEO and content take longer: local map-pack gains often show in 8-16 weeks if the site has no major technical blockers, and competitive terms take several months. Your first report sets clear expectations and tracks early signals such as impressions, calls and form fills.',
+      },
+      {
+        q: 'Can we meet your team in person in Calgary?',
+        a: 'Yes. We are headquartered in Edmonton and drive down to Calgary for discovery meetings, strategy sessions and reviews when your project needs it. Between visits, work runs on video calls and shared reports, so you always know what is happening without waiting for the next meeting.',
+      },
+      {
+        q: 'Do you manage our Google Business Profile for the Calgary map pack?',
+        a: 'Yes. We set up or clean up your Google Business Profile with honest service-area settings, accurate categories and services, and the same name, address and phone across directories. We never create fake Calgary addresses or virtual offices, because those get profiles suspended. A clean profile with consistent citations and real reviews is what keeps you in the map pack.',
+      },
+    ],
+  },
   'seo-company-in-edmonton': {
     title: 'SEO Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and runs SEO for Alberta businesses: local search, technical fixes and content that ranks. +1-403-604-8692.',
