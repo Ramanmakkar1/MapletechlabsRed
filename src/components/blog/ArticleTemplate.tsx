@@ -143,7 +143,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
               <h1 style={{ fontSize: 'clamp(2.1rem, 4.2vw, 3.4rem)', fontWeight: 600, color: 'var(--ink)', lineHeight: 1.08, letterSpacing: '-0.035em', margin: '14px 0 20px', textWrap: 'balance' }}>{a.title}</h1>
               <p style={{ fontSize: 'clamp(17px, 1.5vw, 19px)', color: 'var(--body)', lineHeight: 1.7, marginBottom: 24, maxWidth: '62ch' }}>{a.dek}</p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', fontSize: 14, color: 'var(--muted)' }}>
-                <span style={{ fontWeight: 600, color: 'var(--ink)' }}>Raman Makkar</span>
+                <Link href="/about/raman-makkar" rel="author" style={{ fontWeight: 600, color: 'var(--ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Raman Makkar</Link>
                 <span aria-hidden>&middot;</span><span>{published}</span>
                 <span aria-hidden>&middot;</span><span>{a.readTime}</span>
               </div>
