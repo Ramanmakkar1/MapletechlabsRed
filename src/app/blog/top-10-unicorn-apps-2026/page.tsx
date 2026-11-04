@@ -5,7 +5,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Top 10 Unicorn Apps of 2026';
+const TITLE = 'Unicorn Apps 2026: Top 10 Growth Stories for Founders';
 const DESCRIPTION =
   'The 10 mobile-first apps that became unicorns in 2026: what they build, how they grew past a $1B valuation, and the product lessons for Canadian founders.';
 const SLUG = 'top-10-unicorn-apps-2026';
