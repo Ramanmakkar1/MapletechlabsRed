@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 
 const stats = [
@@ -101,6 +102,28 @@ export default function PageClient() {
       techCategories={techCategories}
       industries={industries}
       faqs={faqs}
+      buyerContent={(
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container" style={{ display: 'grid', gap: 20 }}>
+            <h2>Choose an AI development approach</h2>
+            <p className="lede">Start with the decision or task you want to improve. The right approach depends on whether your team needs reliable answers, coordinated actions or predictions from business data.</p>
+            <h3>Document retrieval and LLM integration</h3>
+            <p className="lede">Choose <Link href="/services/ai-ml/llm-integration">document retrieval and LLM integration</Link> when staff need answers from changing policies, manuals or product documentation. Prepare approved source documents, access permissions and realistic questions with reference answers. Agree how to score answer accuracy and source citations on a shared evaluation set, including questions the documents cannot answer. Define when the assistant should decline or escalate to a person.</p>
+            <h3>Workflow automation</h3>
+            <p className="lede">Choose <Link href="/services/ai-ml/ai-automation">AI workflow automation</Link> for repeatable tasks such as classifying incoming requests and routing them into your CRM for review. Bring sample requests, process rules, exception cases and API documentation. Agree acceptance criteria for correct routing, processing time and error rates. Specify which actions require human approval, who handles failures and how retries avoid duplicate records.</p>
+            <h3>Custom predictive or computer-vision models</h3>
+            <p className="lede">Choose a custom predictive model for demand forecasting from historical sales, or <Link href="/services/ai-ml/computer-vision">computer-vision development</Link> for detecting defects in inspection images. Prepare representative records or labelled images, known outcomes and examples of rare failures. Compare performance against your current process using held-out data. Agree acceptable forecast error or false-positive and missed-defect rates, inference time and human review thresholds before training.</p>
+            <h3>Prepare for a scoping conversation</h3>
+            <ul className="lede" style={{ paddingLeft: 24, margin: 0 }}>
+              <li>Representative data, including difficult cases and permission to use it.</li>
+              <li>Integration requirements: systems, APIs, access and process owners.</li>
+              <li>Hosting constraints: residency, security and deployment environment.</li>
+              <li>A measurable business outcome, such as reduced handling time, with a baseline.</li>
+            </ul>
+            <p className="lede"><Link href="/contact">Discuss your AI project approach and acceptance criteria</Link>.</p>
+          </div>
+        </section>
+      )}
     />
   );
 }
