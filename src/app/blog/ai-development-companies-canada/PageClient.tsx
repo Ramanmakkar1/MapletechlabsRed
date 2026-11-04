@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import ServiceCityLinks from '@/components/ServiceCityLinks';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -540,6 +541,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                       ))}
                     </div>
                   </div>
+                  <ServiceCityLinks serviceSlug="ai-ml" label="AI development" />
                 </div>
               </aside>
 

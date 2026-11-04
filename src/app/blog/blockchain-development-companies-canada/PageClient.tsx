@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import ServiceCityLinks from '@/components/ServiceCityLinks';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -458,6 +459,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                       ))}
                     </div>
                   </div>
+                  <ServiceCityLinks serviceSlug="web-development" label="Web development" heading="Need a web3 front end? Web development by city" />
                 </div>
               </aside>
 

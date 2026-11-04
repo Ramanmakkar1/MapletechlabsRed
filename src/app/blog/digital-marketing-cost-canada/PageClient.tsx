@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import ServiceCityLinks from '@/components/ServiceCityLinks';
 import { AGENCY_CITIES } from '@/data/serviceCity';
 
 const AGENCY_CITY_NAMES: Record<(typeof AGENCY_CITIES)[number], string> = {
@@ -596,6 +597,7 @@ export default function DigitalMarketingCostCanadaClient() {
                       ))}
                     </div>
                   </div>
+                  <ServiceCityLinks serviceSlug="digital-marketing" label="SEO company" heading="Our SEO services by city" />
                 </div>
               </aside>
 

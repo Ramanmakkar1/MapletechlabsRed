@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import ServiceCityLinks from '@/components/ServiceCityLinks';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -423,6 +424,7 @@ export default function SaaSGuide2026Client() {
                       ))}
                     </div>
                   </div>
+                  <ServiceCityLinks serviceSlug="saas-development" label="SaaS development" />
                 </div>
               </aside>
 
