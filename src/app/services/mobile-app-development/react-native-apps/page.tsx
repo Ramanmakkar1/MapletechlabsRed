@@ -6,11 +6,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'React Native App Development in Canada',
-  description: 'React Native app development services by Mapletech Labs. Build cross-platform mobile apps with native performance using JavaScript and React.',
+  title: 'React Native App Development Company',
+  description: 'Hire a React Native app development company in Canada for new iOS and Android builds, existing app extensions and migration assessments. Get a quote.',
   openGraph: {
-    title: 'React Native App Development in Canada | Mapletech Labs',
-    description: 'React Native app development services by Mapletech Labs. Build cross-platform mobile apps with native performance using JavaScript and React.',
+    title: 'React Native App Development Company | Mapletech Labs',
+    description: 'Hire a React Native app development company in Canada for new iOS and Android builds, existing app extensions and migration assessments. Get a quote.',
     url: 'https://mapletechlabs.ca/services/mobile-app-development/react-native-apps',
     type: 'website',
   },
@@ -27,7 +27,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'React Native App Development'}
-        description={'React Native app development services by Mapletech Labs. Build cross-platform mobile apps with native performance using JavaScript and React.'}
+        description={'Hire a React Native app development company in Canada for new iOS and Android builds, existing app extensions and migration assessments. Get a quote.'}
         url={'https://mapletechlabs.ca/services/mobile-app-development/react-native-apps'}
       />
       <PageClient />
