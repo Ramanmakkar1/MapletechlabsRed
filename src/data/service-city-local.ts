@@ -2066,6 +2066,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           ' before you commit.',
         ],
       },
+      {
+        heading: 'Full-service digital marketing',
+        body: [
+          'Need ads and social too? See our ',
+          { href: '/locations/digital-marketing-agency-in-ottawa', label: 'Digital Marketing Agency in Ottawa' },
+          '.',
+        ],
+      },
     ],
     proof: [
       { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
@@ -2312,6 +2320,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           'SEO retainers are typically about $1,500-$10,000 CAD per month, depending on your site, competition and scope. Our ',
           { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
           ' explains the planning range. Each month we report on rankings, organic traffic and conversions, the work completed and the next priorities. We agree on the scope before the campaign starts.',
+        ],
+      },
+      {
+        heading: 'Full-service digital marketing',
+        body: [
+          'Need ads and social too? See our ',
+          { href: '/locations/digital-marketing-agency-in-montreal', label: 'Digital Marketing Agency in Montreal' },
+          '.',
         ],
       },
     ],
