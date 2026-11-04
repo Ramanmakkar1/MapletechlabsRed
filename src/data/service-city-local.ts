@@ -2405,4 +2405,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-montreal': {
+    title: 'UI/UX Design Company in Montreal',
+    description: 'UI/UX design for Montreal companies: French-first, bilingual interfaces, tested prototypes and design systems at a fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design team headquartered in Edmonton, and we design web and mobile products for Montreal startups, studios and established businesses. We do not have a Montreal office; we deliver remotely, and you work directly with the designers and engineers shaping your product. Edmonton is two hours behind Montreal, so most of the working day overlaps for video workshops and reviews in shared Figma files. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your product and book a free UX audit.',
+    sections: [
+      {
+        heading: 'UI/UX design for Montreal companies',
+        body: [
+          'Montreal\'s startup and SaaS teams need product UX that helps people reach their first useful result without a support call. Gaming and creative companies need clear navigation around rich visual experiences, while AI companies need interfaces that explain model outputs and make review steps easy to follow. Retailers and e-commerce teams need product discovery, checkout and account flows that work for French and English shoppers. We map these journeys, simplify onboarding and build design systems so new screens stay consistent as the product grows.',
+        ],
+      },
+      {
+        heading: 'French-first, bilingual interfaces',
+        body: [
+          'We design French layouts first: French text runs about 15-30% longer than English, so navigation, buttons, forms and mobile screens need room before the visual design is settled. We keep French and English versions consistent through shared components, matching interaction states and a clear language switch, then test the key journeys in both languages. Quebec\'s Charter of the French Language and Bill 96 shape French-language requirements for customer-facing interfaces; we plan for French to be at least as available as English. Your legal team confirms how Bill 96 applies to your business and signs off on compliance.',
+        ],
+      },
+      {
+        heading: 'Our design process',
+        body: [
+          'We start with research: a UX audit, analytics review and interviews to understand your users and the tasks that matter. Journey maps lead to wireframes, then a clickable prototype tested with users on realistic tasks before we refine the visual design. Your Figma design system documents components, design tokens, responsive layouts and interaction states for both languages. Developer hand-off includes annotated specifications, edge cases and a working review with the engineers implementing the screens. See our ',
+          { href: '/services/product-design', label: 'UI/UX design services' },
+          ' for how research, prototyping and implementation fit together.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs',
+        body: [
+          'For planning, our published CAD ranges are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. These are planning ranges, not quotes; screen count, interaction complexity, research depth and bilingual content determine the scope. After a free UX audit, we agree a fixed price in CAD before design starts. Compare the ranges and deliverables in our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Montreal?',
+        a: 'Our CAD planning ranges are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. These are not quotes. After a free UX audit, we scope your screens, research and bilingual needs and agree a fixed price in CAD.',
+      },
+      {
+        q: 'How long does a UI/UX design project take?',
+        a: 'Most projects take 6-11 weeks across research, wireframes, prototyping, visual design and developer hand-off. A small MVP can be faster, while a larger design system or research program takes longer. We plan French and English content reviews into the milestones so your Montreal team knows when feedback and translations are needed.',
+      },
+      {
+        q: 'Can you design French-first interfaces for Bill 96?',
+        a: 'Yes. We design French layouts first, allowing for text that runs about 15-30% longer than English, and keep both languages consistent across navigation, forms, error states and onboarding. We plan for French to be at least as available as English under Quebec\'s Charter of the French Language. Your legal team confirms Bill 96 compliance and how the requirements apply to your business.',
+      },
+      {
+        q: 'Do you design accessible interfaces to WCAG?',
+        a: 'Yes. We design to WCAG 2.0 AA, documenting colour contrast, focus indicators, keyboard paths, text sizing and screen-reader labels in the design files. We include accessible component states in the Figma design system and review their implementation with developers. The finished product needs accessibility testing as well as design review, in both French and English.',
+      },
+      {
+        q: 'Do you have an office in Montreal?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Montreal office. We serve Montreal clients remotely through video workshops, weekly calls and shared Figma files, and you work directly with the designers and engineers shaping your product. Edmonton is two hours behind Montreal, so most of the working day overlaps.',
+      },
+    ],
+  },
 };
