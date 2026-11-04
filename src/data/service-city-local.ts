@@ -2031,4 +2031,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-ottawa': {
+    title: 'SEO Company in Ottawa',
+    description: 'SEO services for Ottawa businesses from a Canadian team headquartered in Edmonton. Local, technical and bilingual SEO. Get a free SEO audit.',
+    intro: 'Mapletech Labs is a Canadian SEO and digital marketing team headquartered in Edmonton that works with Ottawa businesses and organisations that want more calls, leads and sales from Google and Bing. We do not have an Ottawa office, but Edmonton is only two hours behind Ottawa, so our working days overlap for most of yours and questions get answered the same day. You work directly with the senior specialists who do the keyword research, technical fixes and content, not a salesperson. Retainers are priced in CAD with monthly reporting. Call +1-403-604-8692 to talk through your Ottawa search goals.',
+    sections: [
+      {
+        heading: 'SEO for Ottawa’s government, tech and service sectors',
+        body: [
+          'Ottawa does not search like one big market. Federal departments buy through suppliers, so government suppliers compete for the terms procurement and contracting managers actually type. Kanata North technology companies fight for category keywords against well-funded competitors. Law firms, accountants, consultants and other professional services live on “near me” and neighbourhood searches, while clinics, local trades and retailers win on suburb-level terms across Nepean, Kanata, Orléans and Barrhaven. We map both sides of that market: the competitive city-wide terms that put you next to the biggest names in Ottawa, and the neighbourhood terms where a smaller budget can win calls first.',
+        ],
+      },
+      {
+        heading: 'Local SEO from Google Business Profile to the Gatineau side',
+        body: [
+          'For Ottawa service businesses the map pack is often where the call starts, so the profile has to be honest. We set up and optimise your Google Business Profile and Bing Places as a real service-area business, choose categories and service areas that match what you actually cover, and keep the same name, address and phone — NAP — across your site, directories and citations. Searches do not stop at the river: Gatineau-side and francophone queries change the wording you need to rank for, and franco-Ontarian customers around the capital search in both languages. Our English and French keyword research covers both sides, so a bilingual audience finds you in the language they actually search in.',
+        ],
+      },
+      {
+        heading: 'Technical SEO and content that answers buyers',
+        body: [
+          'Mapletech Labs is a software development company first, so technical work is done by the engineers who build Next.js and WordPress sites every week. We audit Core Web Vitals, crawling and indexation, canonical tags, schema markup and internal links, then fix what is slowing pages or blocking crawlers in your codebase or CMS, so changes survive the next platform update. On the content side, we build pages around what Ottawa buyers actually search for, answering the questions that come up before they call. Where it helps, that work plugs into our broader ',
+          { href: '/services/digital-marketing', label: 'SEO and digital marketing services' },
+          ', so search, ads and content support each other instead of competing.',
+        ],
+      },
+      {
+        heading: 'SEO costs and monthly reporting',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Ottawa spans government suppliers, professional services and competitive tech keywords, so we agree the scope in writing before the first invoice. You can compare our rates on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Ottawa?',
+        a: 'Most Ottawa SEO engagements are monthly retainers of about $1,500-$10,000 CAD, the range we publish in our Canadian digital marketing cost guide. A single-location local campaign sits at the lower end; government suppliers, Kanata North tech companies or national-competition keywords sit higher. After a free review of your site and your Ottawa competitors, we quote one fixed monthly number in CAD rather than hourly billing.',
+      },
+      {
+        q: 'Do you have an office in Ottawa?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have an Ottawa office. We serve Ottawa clients remotely, with Edmonton two hours behind Ottawa so most of the working day overlaps, through calls, shared documents and monthly reports, and you always have direct access to the specialists on your account at +1-403-604-8692.',
+      },
+      {
+        q: 'How long until we see results in Ottawa?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Ottawa terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress building before the position charts catch up.',
+      },
+      {
+        q: 'Do you do French and bilingual SEO?',
+        a: 'Yes. Ottawa serves a bilingual audience and sits next to a French-speaking market across the river, so our keyword research runs in both English and French, clear about which terms each language actually wins. We build French pages that stand on their own rather than machine-translated duplicates, and keep the site structure and hreflang tidy so search engines show the right page to the right visitor.',
+      },
+      {
+        q: 'Do you optimise for Bing and AI answers like ChatGPT and Perplexity?',
+        a: 'Yes. Bing still powers a meaningful share of Canadian desktop search and it feeds some AI assistants. We submit sitemaps to Bing Webmaster Tools, keep Bing Places current and check how your pages render there. For AI answers we work on what assistants read: clear facts about your business, structured data, straightforward question-and-answer content and consistent NAP, so tools like ChatGPT and Perplexity can quote you accurately.',
+      },
+    ],
+  },
 };
