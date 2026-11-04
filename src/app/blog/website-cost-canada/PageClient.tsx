@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogCityLinks from '@/components/blog/BlogCityLinks';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -608,6 +609,13 @@ export default function WebsiteCostCanadaClient() {
         </section>
 
         <MediaBand media={blogImage(13 + 7)} ratio="21 / 7" />
+
+        {/* ── CITY LINKS ── */}
+        <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
+          <div className="cb-container">
+            <BlogCityLinks serviceSlug="web-development" />
+          </div>
+        </section>
 
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>

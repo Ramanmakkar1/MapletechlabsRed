@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, type ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -94,7 +94,7 @@ function BlockView({ b }: { b: Block }) {
   }
 }
 
-export default function ArticleTemplate({ a, related = [] }: { a: Article; related?: RelatedArticle[] }) {
+export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode }) {
   const pageRef = useReveal();
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
   const hero = humanMedia[a.heroKey as keyof typeof humanMedia] ?? humanMedia.team;
@@ -174,6 +174,8 @@ export default function ArticleTemplate({ a, related = [] }: { a: Article; relat
                     </ul>
                   </div>
                 )}
+
+                {cityLinks}
 
                 {/* Inline CTA */}
                 <div className="reveal" style={{ marginTop: 'clamp(40px, 5vw, 60px)', padding: 'clamp(28px, 3.5vw, 44px)', borderRadius: 'var(--r-lg)', background: 'var(--surface-ink)', color: 'var(--on-ink-body)' }}>
