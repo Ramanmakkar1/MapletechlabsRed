@@ -3811,4 +3811,74 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-kitchener': {
+    title: 'SaaS Developers in Kitchener-Waterloo, ON',
+    description: 'SaaS developers in Kitchener-Waterloo: senior engineers for startups and legacy product rebuilds, with a fixed CAD price agreed up front. Get a quote.',
+    intro: 'Mapletech Labs is a Canadian software team headquartered in Edmonton, building and scaling multi-tenant SaaS products for Kitchener-Waterloo companies. We do not have a Kitchener or Waterloo office. Edmonton is two hours behind Eastern time, so our working days overlap for standups, sprint reviews and product decisions. We work with Waterloo startups from the University of Waterloo, Communitech and Velocity ecosystem that need extra senior engineers, established Kitchener software firms modernizing a legacy product, and regional manufacturers turning internal tools into SaaS their customers can subscribe to. You work directly with the engineers writing your code, with a written scope and a fixed CAD price agreed before development starts. Call +1-403-604-8692 to talk through your product.',
+    sections: [
+      {
+        heading: 'Extra senior engineers for funded Waterloo startups',
+        body: [
+          'Many Waterloo founders already have a technical co-founder and a small team, but the roadmap is moving faster than hiring. In that case we join as a team extension: our senior engineers work inside your repository, your sprint rituals and your code review process, owning clearly defined features such as onboarding, integrations or an admin console. If you do not have an engineering team yet, we run a full build instead, taking the product from discovery through the first paying release and then handing over or continuing with you. Either way, scope, responsibilities and price are written down before work starts. For the full service, see our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Rebuilding or scaling a legacy software product',
+        body: [
+          'Kitchener has a long history of software companies, and many sell products first built as single-customer installs or desktop tools. Moving them to SaaS usually means three pieces of work: a multi-tenant architecture that keeps each customer’s data separate, sign-in that supports company accounts through SSO with SAML or OIDC, and subscription billing that handles plans, seats, upgrades and renewals. We review the existing code first, keep what still works, and migrate customers in stages so current revenue is not put at risk. Manufacturers turning a shop-floor or quoting tool into a product follow the same path. Read how we plan ',
+          { href: '/services/saas-development/billing-subscriptions', label: 'billing and subscriptions' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Delivery that supports SR&ED and IRAP claims',
+        body: [
+          'Kitchener-Waterloo companies often fund product work partly through SR&ED tax credits or NRC IRAP support. We plan delivery so the evidence exists as the work happens: development logs, technical uncertainty and experiment notes, and test results kept alongside the code rather than reconstructed at year end. Our ',
+          { href: '/blog/sred-software-development-canada', label: 'SR&ED guide for software' },
+          ' explains how software claims work, and our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' covers how IRAP projects are structured. Your accountant or consultant confirms eligibility; we do not promise funding.',
+        ],
+      },
+      {
+        heading: 'Pricing and contracts',
+        body: [
+          'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Team-extension work and legacy rebuilds are scoped the same way, with a fixed CAD price for each agreed piece of work. Our contracts assign the code to you and include an NDA on request; our ',
+          { href: '/blog/software-development-contract-canada', label: 'software development contracts guide' },
+          ' explains what to look for in any agreement, and the ',
+          { href: '/pricing', label: 'pricing page' },
+          ' shows how our engagements are structured.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Kitchener-Waterloo?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. We agree on the scope and a fixed CAD price before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'Our Canadian cost guide gives an MVP timeline of 3 - 4 months. Discovery defines the core workflow, integrations and acceptance criteria, and your written scope sets the timeline for your product.',
+      },
+      {
+        q: 'Who owns the code, and will you sign an NDA?',
+        a: 'You own the code. The source code and design files we create for your project belong to you, so you can continue with us or hand the code to your own team. We are happy to sign an NDA before you share product details.',
+      },
+      {
+        q: 'Can you work alongside our in-house engineering team?',
+        a: 'Yes. Our engineers can join your repository, sprint planning and code review, taking ownership of agreed features while your team keeps control of the roadmap. Edmonton is two hours behind Eastern time, so our working days overlap for standups and reviews.',
+      },
+      {
+        q: 'Can you provide documentation for SR&ED or IRAP claims?',
+        a: 'Yes. We keep development logs, technical uncertainty notes and test evidence organised as the work happens, in a form your SR&ED or IRAP consultant can use. Your accountant or consultant confirms whether your project qualifies; we do not promise funding.',
+      },
+    ],
+  },
 };
