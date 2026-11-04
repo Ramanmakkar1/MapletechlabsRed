@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactPage from '@/components/ContactPage';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import ContactInfo, { CONTACT_FAQS } from '@/components/ContactInfo';
 import { FaqSchema } from '@/components/ServiceSchema';
 import Footer from '@/components/Footer';
@@ -32,6 +33,10 @@ export default function ContactRoute() {
         <ContactPage />
         <ContactInfo />
       </main>
+      <BreadcrumbSchema items={[
+        { position: 1, name: 'Home', item: canonicalUrl('/') },
+        { position: 2, name: 'Contact', item: canonicalUrl('/contact') },
+      ]} />
       <FaqSchema faqs={CONTACT_FAQS.map(({ question, answer }) => ({ q: question, a: answer }))} />
       <Footer />
     </>

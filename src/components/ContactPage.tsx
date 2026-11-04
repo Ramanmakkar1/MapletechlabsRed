@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import Breadcrumb from '@/components/Breadcrumb';
 import { submitToSplitForms } from '@/lib/splitforms';
 
 const PROJECT_TYPES = ['Mobile App', 'Web Platform', 'AI / ML Solution', 'Product Design', 'Blockchain / Web3', 'Custom Engineering', 'Other'];
@@ -67,6 +68,7 @@ export default function ContactPage() {
     <div style={{ background: 'var(--surface)', color: 'var(--ink)' }}>
       <section id="contact-form" style={{ padding: 'calc(var(--section-y) + 40px) 0 var(--section-y)', scrollMarginTop: 80 }}>
         <div className="cb-container">
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
           <div className="cp-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.25fr', gap: 'clamp(40px, 6vw, 96px)', alignItems: 'start' }}>
 
             {/* Left — everything you need to reach us */}
