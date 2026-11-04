@@ -9,6 +9,30 @@ import Breadcrumb from '@/components/Breadcrumb';
 import FinalCta from '@/components/home/FinalCta';
 import { humanMedia } from '@/data/media';
 import type { Article, Block, RelatedArticle } from '@/data/articles';
+import { serviceCityPath } from '@/data/serviceCity';
+
+type CityService = { label: string; path: (city: string) => string };
+
+const CATEGORY_SERVICE: Record<string, CityService> = {
+  'AI/ML': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
+  Engineering: { label: 'Web Development', path: c => serviceCityPath('web-development', c) },
+  Business: { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
+};
+
+const SLUG_SERVICE: Record<string, CityService> = {
+  'native-vs-cross-platform-vs-pwa': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'app-privacy-compliance-canada': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'saas-ideas-2026': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
+  'what-profitable-saas-gets-right': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
+  'build-saas-mvp-8-weeks': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
+};
+
+const CITIES = [
+  { slug: 'edmonton', name: 'Edmonton' },
+  { slug: 'calgary', name: 'Calgary' },
+  { slug: 'toronto', name: 'Toronto' },
+  { slug: 'vancouver', name: 'Vancouver' },
+];
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -96,6 +120,7 @@ function BlockView({ b }: { b: Block }) {
 
 export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode }) {
   const pageRef = useReveal();
+  const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
   const hero = humanMedia[a.heroKey as keyof typeof humanMedia] ?? humanMedia.team;
   const published = new Date(a.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -175,7 +200,16 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
                   </div>
                 )}
 
-                {cityLinks}
+                {cityLinks ?? (categoryService && (
+                  <nav aria-label="Hire a team in your city" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
+                    <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Hire a team in your city</h2>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
+                      {CITIES.map(({ slug, name }) => (
+                        <li key={slug}><Link href={categoryService.path(slug)} style={{ display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none' }}>{categoryService.label} company in {name}</Link></li>
+                      ))}
+                    </ul>
+                  </nav>
+                ))}
 
                 {/* Inline CTA */}
                 <div className="reveal" style={{ marginTop: 'clamp(40px, 5vw, 60px)', padding: 'clamp(28px, 3.5vw, 44px)', borderRadius: 'var(--r-lg)', background: 'var(--surface-ink)', color: 'var(--on-ink-body)' }}>
