@@ -7,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: seoTitle('Design System Development | Figma & Storybook'),
+  title: seoTitle('Design System Development in Canada'),
   description: 'Scalable design systems built by Mapletech Labs Toronto. Figma component libraries, Storybook docs, WCAG 2.1 accessibility. 50+ systems delivered in Canada',
   openGraph: {
-    title: 'Design System Development | Mapletech Labs',
+    title: 'Design System Development in Canada | Mapletech Labs',
     description: 'Scalable design systems built by Mapletech Labs Toronto. Figma component libraries, Storybook docs, WCAG 2.1 accessibility. 50+ systems delivered in Canada',
     url: 'https://mapletechlabs.ca/services/product-design/design-systems',
     type: 'website',
@@ -27,7 +27,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Design System Development | Figma & Storybook'}
+        name={'Design System Development'}
         description={'Scalable design systems built by Mapletech Labs Toronto. Figma component libraries, Storybook docs, WCAG 2.1 accessibility. 50+ systems delivered in Canada.'}
         url={'https://mapletechlabs.ca/services/product-design/design-systems'}
       />
