@@ -21,7 +21,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin()),
   title: {
-    default: "Mapletech Labs | Custom Software Development Company",
+    default: "Software Development Company in Canada | Mapletech Labs",
     template: "%s | Mapletech Labs",
   },
   description:
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: siteOrigin(),
     siteName: "Mapletech Labs",
-    title: "Mapletech Labs | Custom Software Development Company",
+    title: "Software Development Company in Canada | Mapletech Labs",
     description:
       "Mapletech Labs builds custom software, web and mobile apps, and AI solutions for Canadian businesses. Edmonton-based, serving clients across Canada.",
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@mapletechlabs",
     creator: "@mapletechlabs",
-    title: "Mapletech Labs | Custom Software Development Company",
+    title: "Software Development Company in Canada | Mapletech Labs",
     description:
       "Mapletech Labs builds custom software, web and mobile apps, and AI solutions for Canadian businesses. Edmonton-based, serving clients across Canada.",
   },

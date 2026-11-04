@@ -25,9 +25,26 @@ const StickyCTA = dynamic(() => import('@/components/StickyCTA'));
 
 export const metadata: Metadata = {
   // `absolute`: the layout's "%s | Mapletech Labs" template would double the brand.
-  title: { absolute: 'Mapletech Labs | Custom Software Development Company' },
+  title: { absolute: 'Software Development Company in Canada | Mapletech Labs' },
   description:
-    'Mapletech Labs builds custom software, web and mobile apps, and AI solutions for Canadian businesses. Edmonton-based, serving clients across Canada.',
+    'Software development company in Canada building custom software, mobile apps, AI and UI/UX design. Teams in Edmonton, Calgary, Toronto and Vancouver.',
+  openGraph: {
+    title: 'Software Development Company in Canada | Mapletech Labs',
+    description:
+      'Software development company in Canada building custom software, mobile apps, AI and UI/UX design. Teams in Edmonton, Calgary, Toronto and Vancouver.',
+    url: 'https://mapletechlabs.ca',
+    type: 'website',
+    siteName: 'Mapletech Labs',
+    locale: 'en_CA',
+    images: [
+      {
+        url: '/images/og-default.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mapletech Labs - Custom Software Development Company',
+      },
+    ],
+  },
   alternates: { canonical: canonicalPath('/') },
 };
 
