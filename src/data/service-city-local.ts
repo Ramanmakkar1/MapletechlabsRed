@@ -721,6 +721,76 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-vancouver': {
+    title: 'Digital Marketing Agency in Vancouver',
+    description: 'Vancouver digital marketing: SEO, Google Ads, social and content from a Canadian team. CAD retainers. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton, serving Vancouver and the Lower Mainland. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap. When a project needs it, we come to Vancouver for workshops and reviews, with travel agreed up front. One team covers SEO, Google Ads, social and content, and retainers are priced in CAD. Call +1-403-604-8692.',
+    sections: [
+      {
+        heading: 'Digital marketing across Vancouver and the Lower Mainland',
+        body: [
+          'Tech and SaaS startups, real estate businesses, tourism and hospitality operators, and e-commerce brands reach different buyers. Searches in Burnaby, Surrey and Richmond can differ from those downtown, so we consider each service area when planning pages and campaigns. Many Vancouver audiences are on Instagram and LinkedIn; the right approach depends on whom you need to reach. For an SEO-only scope, see ',
+          { href: '/locations/seo-company-in-vancouver', label: 'SEO Company in Vancouver' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Choosing channels for your goals',
+        body: [
+          'Search can capture existing demand while paid campaigns test offers and social and content build familiarity with your business. We select and scope the work around your audience and budget, including ',
+          { href: '/services/digital-marketing/google-ads-ppc', label: 'Google Ads and PPC' },
+          ', ',
+          { href: '/services/digital-marketing/social-media-marketing', label: 'social media marketing' },
+          ' and ',
+          { href: '/services/digital-marketing/content-marketing', label: 'content marketing' },
+          ', with a clear role for each channel.',
+        ],
+      },
+      {
+        heading: 'What digital marketing costs in Vancouver',
+        body: [
+          'Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' gives typical Canadian ranges in CAD, not quotes: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Your scope depends on the channels and work you need.',
+        ],
+      },
+      {
+        heading: 'Reporting that guides the next decision',
+        body: [
+          'Reports bring together traffic, rankings, ad spend, conversions and completed work, with context on what changed and where to focus next. For a closer view of campaign and funnel data, explore our ',
+          { href: '/services/digital-marketing/performance-analytics', label: 'performance analytics' },
+          ' service.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does digital marketing cost in Vancouver?',
+        a: 'Typical Canadian monthly ranges in CAD are $1,500-$10,000 for SEO, $2,000-$15,000 for PPC management plus ad spend, $1,000-$8,000 for social media, $2,000-$10,000 for content marketing and $5,000-$25,000 for a full-service package. These are market estimates, not quotes; your scope depends on your goals and channels.',
+      },
+      {
+        q: 'Do you have a Vancouver office?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton. Vancouver is one hour behind Edmonton, so working hours almost fully overlap. We visit Vancouver for workshops and reviews when a project needs them, with travel agreed up front.',
+      },
+      {
+        q: 'Which social channels work for Vancouver businesses?',
+        a: 'Instagram can suit visual products, hospitality and local experiences, while LinkedIn can help reach professional and B2B audiences. Many Vancouver audiences use both; the choice depends on your customers, content and goals.',
+      },
+      {
+        q: 'Should a Vancouver business start with SEO or Google Ads?',
+        a: 'Google Ads can help reach people searching now if you have a suitable ad budget and landing pages. SEO builds organic visibility over time. We assess your site, competition and lead goals before recommending either or a combination.',
+      },
+      {
+        q: 'How soon can Vancouver campaigns show results?',
+        a: 'Google Ads can generate leads within weeks after campaigns and landing pages launch. SEO and content generally take several months to assess, depending on competition and the condition of your site. Reporting tracks early signals as well as conversions.',
+      },
+    ],
+  },
   'seo-company-in-edmonton': {
     title: 'SEO Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and runs SEO for Alberta businesses: local search, technical fixes and content that ranks. +1-403-604-8692.',
