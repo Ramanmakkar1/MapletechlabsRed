@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getServiceCityCombo, serviceCitySlugs } from '@/data/serviceCity';
+import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline } from '@/data/serviceCity';
 import { getCityServiceData } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
@@ -38,7 +38,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!combo) return {};
   const data = getCityServiceData(combo.citySlug, combo.serviceSlug);
   if (!data) return {};
-  const base = `${combo.label} Company in ${data.cityName}`;
+  const headline = priorityCompanyHeadline(combo.serviceSlug, combo.label);
+  const base = `${headline} Company in ${data.cityName}`;
   const override = localFor(slug) ?? META_OVERRIDES[slug];
   const title = override?.title ?? (base.length <= 43 ? base : `${combo.label} in ${data.cityName}`);
   const description = override?.description ?? data.description;
@@ -62,9 +63,10 @@ export default async function ServiceCityPage({ params }: PageProps) {
   // Display the keyword label (e.g. "AI Development") rather than the formal
   // service name, so the H1 and headings match the target query.
   const local = localFor(slug);
+  const serviceName = priorityCompanyHeadline(combo.serviceSlug, combo.label);
   const data = local
-    ? { ...raw, serviceName: combo.label, description: local.description, intro: local.intro, faqs: local.faqs }
-    : { ...raw, serviceName: combo.label };
+    ? { ...raw, serviceName, description: local.description, intro: local.intro, faqs: local.faqs }
+    : { ...raw, serviceName };
   const url = `https://mapletechlabs.ca/locations/${slug}`;
   const cityLanding = `https://mapletechlabs.ca/locations/software-development-company-in-${combo.citySlug}`;
 

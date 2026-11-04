@@ -511,6 +511,72 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-edmonton': {
+    title: 'SEO Company in Edmonton',
+    description: 'Mapletech Labs is headquartered in Edmonton and runs SEO for Alberta businesses: local search, technical fixes and content that ranks. +1-403-604-8692.',
+    intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for SEO you work with a local team that knows how Alberta businesses get found on Google and Bing. We improve local visibility, fix technical issues on Next.js and WordPress sites, and build content and service pages that match what your customers actually search. You talk to the people doing the work, not a rotating account manager. Call us on +1-403-604-8692 to discuss your goals.',
+    sections: [
+      {
+        heading: 'Local SEO and Google Business Profile for Alberta businesses',
+        body: [
+          'Most Edmonton and Alberta leads still start with a map pack or a “near me” search, so we start with Google Business Profile setup and cleanup, NAP consistency across directories, and location pages that reflect the neighbourhoods and cities you serve. We align your site with how people search for your services in Alberta, from Edmonton and Calgary to smaller markets, so local intent sends qualified traffic rather than empty clicks.',
+        ],
+      },
+      {
+        heading: 'Technical SEO for Next.js and WordPress sites',
+        body: [
+          'Rankings stall when the site is slow, poorly structured or hard for crawlers to read. We audit Core Web Vitals, indexation, canonical tags, schema and internal linking on ',
+          { href: '/services/digital-marketing/seo-services', label: 'Next.js, headless and WordPress builds' },
+          ', then fix the issues that block visibility. That includes performance work on modern stacks, not only plugin tweaks on legacy themes.',
+        ],
+      },
+      {
+        heading: 'Content and service-page strategy',
+        body: [
+          'We map the keywords that matter for your services and build or refine pages that answer those searches with clear proof and calls to action. Our approach matches what we outline for Canadian teams in ',
+          { href: '/blog/top-seo-companies-canada', label: 'our guide to SEO companies in Canada' },
+          ', with internal links from blog and service content so authority flows to the pages that should rank.',
+        ],
+      },
+      {
+        heading: 'Reporting and what results to expect',
+        body: [
+          'You get regular reporting on rankings, organic traffic, conversions and the work completed, with plain-language notes on what moved and what we are testing next. SEO is not overnight: local gains often show in a few months, while competitive national terms take longer. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          ', SEO retainers typically run $1,500-$10,000 per month depending on scope. Typical SEO budgets in CAD are outlined in the cost guide above, and you can compare our project prices on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Edmonton?',
+        a: 'In our Canadian digital marketing cost guide, dedicated SEO typically runs about $1,500-$10,000 per month in CAD, depending on competition, site size and whether you need local search, technical work, content or all three. Smaller local campaigns sit at the lower end; multi-location or national programs sit higher. After a free review we quote a fixed monthly retainer or project scope in CAD.',
+      },
+      {
+        q: 'How long until we see rankings improve?',
+        a: 'Local SEO and Google Business Profile work often shows movement in 8-16 weeks when the site has no major technical blockers. New content and competitive national keywords usually need 4-9 months before you can judge trend lines fairly. We set expectations in the first report and track leading indicators such as impressions and indexed pages, not only position charts.',
+      },
+      {
+        q: 'Do you focus on local Edmonton SEO or national campaigns?',
+        a: 'Both, depending on your market. Alberta service businesses usually need strong local and map visibility first, then supporting pages for the provinces and cities you serve. SaaS and e-commerce clients often need national or category-level SEO as well. We recommend a mix based on where your revenue actually comes from, not a one-size package.',
+      },
+      {
+        q: 'Are you locked into a long contract?',
+        a: 'We work on monthly retainers with clear scope and reporting. Most clients stay because the work produces measurable traffic and leads, but we do not use multi-year lock-ins. If you need a defined end date for a project phase, such as a technical audit and fix sprint, we can scope that separately.',
+      },
+      {
+        q: 'What do we see in SEO reports?',
+        a: 'Each reporting cycle covers keyword visibility, organic sessions and conversions, completed tasks and the plan for the next period. We tie metrics to business outcomes where analytics allow, and we explain changes in plain language so your team does not need to be SEO specialists to follow along.',
+      },
+    ],
+  },
   'web-development-company-in-toronto': {
     title: 'Web Development Company in Toronto',
     description: 'Mapletech Labs builds fast custom websites and web apps for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',

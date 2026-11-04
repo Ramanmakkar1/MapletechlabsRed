@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
     // 301 the old mesh URLs so there is no duplicate content / cannibalization.
     const cityHubs = ['edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal', 'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on', 'mississauga', 'hamilton', 'surrey', 'burnaby', 'regina', 'quebec-city', 'brampton', 'markham', 'windsor', 'kelowna', 'laval', 'gatineau'];
     const cityLandingRedirects = cityHubs.map(c => ({ source: `/locations/${c}`, destination: `/locations/software-development-company-in-${c}`, statusCode: 301 as const }));
-    const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development']];
+    const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development'], ['digital-marketing', 'seo'], ['product-design', 'ui-ux-design']];
     const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const })));
     return [
       // The old French locale (/fr/*) no longer exists; 301 to the English pages.
@@ -65,10 +65,18 @@ const nextConfig: NextConfig = {
       { source: '/web-development-company-in-toronto', destination: '/locations/web-development-company-in-toronto', permanent: true },
       { source: '/web-development-company-in-vancouver', destination: '/locations/web-development-company-in-vancouver', permanent: true },
       { source: '/web-development-company-in-calgary', destination: '/locations/web-development-company-in-calgary', permanent: true },
-      { source: '/digital-marketing-company-in-edmonton', destination: '/locations/edmonton/digital-marketing', permanent: true },
-      { source: '/digital-marketing-company-in-toronto', destination: '/locations/toronto/digital-marketing', permanent: true },
-      { source: '/digital-marketing-company-in-vancouver', destination: '/locations/vancouver/digital-marketing', permanent: true },
-      { source: '/digital-marketing-company-in-calgary', destination: '/locations/calgary/digital-marketing', permanent: true },
+      { source: '/digital-marketing-company-in-edmonton', destination: '/locations/seo-company-in-edmonton', permanent: true },
+      { source: '/digital-marketing-company-in-toronto', destination: '/locations/seo-company-in-toronto', permanent: true },
+      { source: '/digital-marketing-company-in-vancouver', destination: '/locations/seo-company-in-vancouver', permanent: true },
+      { source: '/digital-marketing-company-in-calgary', destination: '/locations/seo-company-in-calgary', permanent: true },
+      { source: '/seo-company-in-edmonton', destination: '/locations/seo-company-in-edmonton', permanent: true },
+      { source: '/seo-company-in-toronto', destination: '/locations/seo-company-in-toronto', permanent: true },
+      { source: '/seo-company-in-vancouver', destination: '/locations/seo-company-in-vancouver', permanent: true },
+      { source: '/seo-company-in-calgary', destination: '/locations/seo-company-in-calgary', permanent: true },
+      { source: '/ui-ux-design-company-in-edmonton', destination: '/locations/ui-ux-design-company-in-edmonton', permanent: true },
+      { source: '/ui-ux-design-company-in-toronto', destination: '/locations/ui-ux-design-company-in-toronto', permanent: true },
+      { source: '/ui-ux-design-company-in-vancouver', destination: '/locations/ui-ux-design-company-in-vancouver', permanent: true },
+      { source: '/ui-ux-design-company-in-calgary', destination: '/locations/ui-ux-design-company-in-calgary', permanent: true },
       { source: '/ai-development-company-in-edmonton', destination: '/locations/ai-development-company-in-edmonton', permanent: true },
       { source: '/ai-development-company-in-toronto', destination: '/locations/ai-development-company-in-toronto', permanent: true },
       { source: '/ai-development-company-in-vancouver', destination: '/locations/ai-development-company-in-vancouver', permanent: true },

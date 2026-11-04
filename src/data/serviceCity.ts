@@ -13,7 +13,16 @@ export const PRIORITY_SERVICES = [
   { serviceSlug: 'saas-development', kw: 'saas-development', label: 'SaaS Development' },
   { serviceSlug: 'mobile-app-development', kw: 'app-development', label: 'App Development' },
   { serviceSlug: 'web-development', kw: 'web-development', label: 'Web Development' },
+  { serviceSlug: 'digital-marketing', kw: 'seo', label: 'SEO & Digital Marketing' },
+  { serviceSlug: 'product-design', kw: 'ui-ux-design', label: 'UI/UX Design' },
 ] as const;
+
+/** Headline for “[X] Company in [City]” — keyword pages use the search phrase, not the full service label. */
+export function priorityCompanyHeadline(serviceSlug: string, label: string): string {
+  const ps = PRIORITY_SERVICES.find(p => p.serviceSlug === serviceSlug);
+  if (ps?.kw === 'seo') return 'SEO';
+  return label;
+}
 
 export interface ServiceCityCombo { slug: string; citySlug: string; serviceSlug: string; label: string }
 
