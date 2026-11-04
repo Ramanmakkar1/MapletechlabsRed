@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Flutter App Development Services',
+  title: 'Flutter App Development Company in Canada',
   description: 'Cross-platform Flutter app development by Mapletech Labs. Build beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.',
   openGraph: {
-    title: 'Flutter App Development Services | Mapletech Labs',
+    title: 'Flutter App Development Company in Canada | Mapletech Labs',
     description: 'Cross-platform Flutter app development by Mapletech Labs. Build beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.',
     url: 'https://mapletechlabs.ca/services/mobile-app-development/flutter-development',
     type: 'website',

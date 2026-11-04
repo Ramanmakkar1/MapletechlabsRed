@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Android App Development Services',
+  title: 'Android App Development Company in Canada',
   description: 'Professional Android app development with Kotlin & Jetpack Compose. Mapletech Labs creates scalable apps for phones, tablets, and foldables.',
   openGraph: {
-    title: 'Android App Development Services | Mapletech Labs',
+    title: 'Android App Development Company in Canada | Mapletech Labs',
     description: 'Professional Android app development with Kotlin & Jetpack Compose. Mapletech Labs creates scalable apps for phones, tablets, and foldables.',
     url: 'https://mapletechlabs.ca/services/mobile-app-development/android-app-development',
     type: 'website',

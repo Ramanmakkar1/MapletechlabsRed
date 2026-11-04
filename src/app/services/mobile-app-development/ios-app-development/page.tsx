@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'iOS App Development Services',
+  title: 'iOS App Development Company in Canada',
   description: 'Expert iOS app development with Swift & SwiftUI. Mapletech Labs builds high-performance native iPhone and iPad apps. 200+ iOS apps delivered.',
   openGraph: {
-    title: 'iOS App Development Services | Mapletech Labs',
+    title: 'iOS App Development Company in Canada | Mapletech Labs',
     description: 'Expert iOS app development with Swift & SwiftUI. Mapletech Labs builds high-performance native iPhone and iPad apps. 200+ iOS apps delivered.',
     url: 'https://mapletechlabs.ca/services/mobile-app-development/ios-app-development',
     type: 'website',

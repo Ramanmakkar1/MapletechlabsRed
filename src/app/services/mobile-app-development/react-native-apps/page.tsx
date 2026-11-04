@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'React Native App Development',
+  title: 'React Native App Development in Canada',
   description: 'React Native app development services by Mapletech Labs. Build cross-platform mobile apps with native performance using JavaScript and React.',
   openGraph: {
-    title: 'React Native App Development | Mapletech Labs',
+    title: 'React Native App Development in Canada | Mapletech Labs',
     description: 'React Native app development services by Mapletech Labs. Build cross-platform mobile apps with native performance using JavaScript and React.',
     url: 'https://mapletechlabs.ca/services/mobile-app-development/react-native-apps',
     type: 'website',
