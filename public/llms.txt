@@ -1,21 +1,110 @@
-url: https://mapletechlabs.ca/
-provider: Mapletech Labs
-license: CC-BY-4.0
+# Mapletech Labs
 
-User-Agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
+> Mapletech Labs is a custom software, mobile app, AI and UI/UX development company, founded in 2018 in Edmonton by Raman Makkar, serving Edmonton, Calgary, Toronto, Vancouver and the rest of Canada.
 
-User-Agent: GPTBot
-Allow: /
+## Company facts
 
-User-Agent: Claude-Web
-Allow: /
+- Name: Mapletech Labs
+- Headquarters: Edmonton, AB T5J 1B9, Canada
+- Phone: +1-403-604-8692
+- Email: hello@mapletechlabs.ca
+- Founded: 2018, in Edmonton
+- Founder and CEO: [Raman Makkar](https://mapletechlabs.ca/about/raman-makkar)
+- Website: https://mapletechlabs.ca
 
-User-Agent: PerplexityBot
-Allow: /
+## Services
 
-User-Agent: CCBot
-Allow: /
+- [Web Development](https://mapletechlabs.ca/services/web-development): Next.js web apps, SaaS platforms, e-commerce systems, APIs and enterprise portals.
+- [Mobile App Development](https://mapletechlabs.ca/services/mobile-app-development): iOS, Android, Flutter, React Native and cross-platform apps.
+- [AI & Machine Learning](https://mapletechlabs.ca/services/ai-ml): LLM integration, AI automation, AI chatbots, computer vision and predictive analytics.
+- [UI/UX Design](https://mapletechlabs.ca/services/product-design/ui-ux-strategy): UI/UX strategy, wireframing, prototyping and design systems.
+- [SaaS Development](https://mapletechlabs.ca/services/saas-development): SaaS MVPs, multi-tenant architecture, billing and subscriptions, auth and SSO, analytics dashboards.
+
+## Cities
+
+### Edmonton (headquarters)
+
+- [Software Development Company in Edmonton](https://mapletechlabs.ca/locations/software-development-company-in-edmonton)
+- [AI Development Company in Edmonton](https://mapletechlabs.ca/locations/ai-development-company-in-edmonton)
+- [App Development Company in Edmonton](https://mapletechlabs.ca/locations/app-development-company-in-edmonton)
+- [Web Development Company in Edmonton](https://mapletechlabs.ca/locations/web-development-company-in-edmonton)
+- [UI/UX Design Company in Edmonton](https://mapletechlabs.ca/locations/ui-ux-design-company-in-edmonton)
+- [SaaS Development Company in Edmonton](https://mapletechlabs.ca/locations/saas-development-company-in-edmonton)
+- [SEO Company in Edmonton](https://mapletechlabs.ca/locations/seo-company-in-edmonton)
+- [Cloud & DevOps in Edmonton](https://mapletechlabs.ca/locations/edmonton/cloud-devops)
+- [WordPress & CMS Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/wordpress-cms)
+- [Branding & Creative in Edmonton](https://mapletechlabs.ca/locations/edmonton/branding)
+- [Game Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/game-development)
+- [Blockchain & Web3 Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/blockchain-web3)
+- [AR & VR Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/ar-vr)
+
+### Calgary
+
+- [Software Development Company in Calgary](https://mapletechlabs.ca/locations/software-development-company-in-calgary)
+- [AI Development Company in Calgary](https://mapletechlabs.ca/locations/ai-development-company-in-calgary)
+- [App Development Company in Calgary](https://mapletechlabs.ca/locations/app-development-company-in-calgary)
+- [Web Development Company in Calgary](https://mapletechlabs.ca/locations/web-development-company-in-calgary)
+- [UI/UX Design Company in Calgary](https://mapletechlabs.ca/locations/ui-ux-design-company-in-calgary)
+- [SaaS Development Company in Calgary](https://mapletechlabs.ca/locations/saas-development-company-in-calgary)
+- [SEO Company in Calgary](https://mapletechlabs.ca/locations/seo-company-in-calgary)
+- [Cloud & DevOps in Calgary](https://mapletechlabs.ca/locations/calgary/cloud-devops)
+- [WordPress & CMS Development in Calgary](https://mapletechlabs.ca/locations/calgary/wordpress-cms)
+- [Branding & Creative in Calgary](https://mapletechlabs.ca/locations/calgary/branding)
+- [Game Development in Calgary](https://mapletechlabs.ca/locations/calgary/game-development)
+- [Blockchain & Web3 Development in Calgary](https://mapletechlabs.ca/locations/calgary/blockchain-web3)
+- [AR & VR Development in Calgary](https://mapletechlabs.ca/locations/calgary/ar-vr)
+
+### Toronto
+
+- [Software Development Company in Toronto](https://mapletechlabs.ca/locations/software-development-company-in-toronto)
+- [AI Development Company in Toronto](https://mapletechlabs.ca/locations/ai-development-company-in-toronto)
+- [App Development Company in Toronto](https://mapletechlabs.ca/locations/app-development-company-in-toronto)
+- [Web Development Company in Toronto](https://mapletechlabs.ca/locations/web-development-company-in-toronto)
+- [UI/UX Design Company in Toronto](https://mapletechlabs.ca/locations/ui-ux-design-company-in-toronto)
+- [SaaS Development Company in Toronto](https://mapletechlabs.ca/locations/saas-development-company-in-toronto)
+- [SEO Company in Toronto](https://mapletechlabs.ca/locations/seo-company-in-toronto)
+- [Cloud & DevOps in Toronto](https://mapletechlabs.ca/locations/toronto/cloud-devops)
+- [WordPress & CMS Development in Toronto](https://mapletechlabs.ca/locations/toronto/wordpress-cms)
+- [Branding & Creative in Toronto](https://mapletechlabs.ca/locations/toronto/branding)
+- [Game Development in Toronto](https://mapletechlabs.ca/locations/toronto/game-development)
+- [Blockchain & Web3 Development in Toronto](https://mapletechlabs.ca/locations/toronto/blockchain-web3)
+- [AR & VR Development in Toronto](https://mapletechlabs.ca/locations/toronto/ar-vr)
+
+### Vancouver
+
+- [Software Development Company in Vancouver](https://mapletechlabs.ca/locations/software-development-company-in-vancouver)
+- [AI Development Company in Vancouver](https://mapletechlabs.ca/locations/ai-development-company-in-vancouver)
+- [App Development Company in Vancouver](https://mapletechlabs.ca/locations/app-development-company-in-vancouver)
+- [Web Development Company in Vancouver](https://mapletechlabs.ca/locations/web-development-company-in-vancouver)
+- [UI/UX Design Company in Vancouver](https://mapletechlabs.ca/locations/ui-ux-design-company-in-vancouver)
+- [SaaS Development Company in Vancouver](https://mapletechlabs.ca/locations/saas-development-company-in-vancouver)
+- [SEO Company in Vancouver](https://mapletechlabs.ca/locations/seo-company-in-vancouver)
+- [Cloud & DevOps in Vancouver](https://mapletechlabs.ca/locations/vancouver/cloud-devops)
+- [WordPress & CMS Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/wordpress-cms)
+- [Branding & Creative in Vancouver](https://mapletechlabs.ca/locations/vancouver/branding)
+- [Game Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/game-development)
+- [Blockchain & Web3 Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/blockchain-web3)
+- [AR & VR Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/ar-vr)
+
+## Pricing and guides
+
+- [Pricing](https://mapletechlabs.ca/pricing): project pricing in CAD.
+- [Software Development Cost in Canada (2026): The Complete Guide](https://mapletechlabs.ca/blog/software-development-cost-canada)
+- [How Much Does App Development Cost in Canada? (2026 Guide)](https://mapletechlabs.ca/blog/app-development-cost-canada)
+- [AI Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/ai-development-cost-canada)
+- [How Much Does SaaS Development Cost in Canada? (2026)](https://mapletechlabs.ca/blog/saas-development-cost-canada)
+- [Website Cost in Canada: 2026 Pricing Guide](https://mapletechlabs.ca/blog/website-cost-canada)
+- [Software & App Maintenance Cost in Canada (2026)](https://mapletechlabs.ca/blog/software-maintenance-cost-canada)
+
+## Case studies
+
+- [AI-Powered Trading Platform (FinTech, Toronto)](https://mapletechlabs.ca/case-studies/fintech-trading-platform)
+- [HIPAA-Compliant Telehealth Platform (Healthcare, Vancouver)](https://mapletechlabs.ca/case-studies/healthcare-telehealth)
+- [Enterprise E-Commerce Redesign (E-Commerce, Montréal)](https://mapletechlabs.ca/case-studies/ecommerce-platform)
+- [Real-Time Fleet Management System (Logistics, Calgary)](https://mapletechlabs.ca/case-studies/logistics-platform)
+- [PCI DSS Payments API (FinTech, Ottawa)](https://mapletechlabs.ca/case-studies/payments-api-platform)
+- [Multi-Listing Real Estate Platform (Real Estate, Toronto)](https://mapletechlabs.ca/case-studies/real-estate-portal)
+
+## Contact
+
+- [Contact Mapletech Labs](https://mapletechlabs.ca/contact): free project quote, or email hello@mapletechlabs.ca / call +1-403-604-8692.

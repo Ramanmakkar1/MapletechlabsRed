@@ -88,6 +88,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteOrigin()}/#organization`,
   name: "Mapletech Labs",
   url: siteOrigin(),
   logo: `${siteOrigin()}/logo.png`,
@@ -122,8 +123,16 @@ const organizationSchema = {
     "@type": "Person",
     name: "Raman Makkar",
     jobTitle: "CEO & Founder",
-    url: `${siteOrigin()}/about`,
+    url: `${siteOrigin()}/about/raman-makkar`,
   },
+  knowsAbout: [
+    "Custom software development",
+    "Mobile app development",
+    "AI development",
+    "LLM integration",
+    "UI/UX design",
+    "SaaS development",
+  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Software Development Services",
@@ -142,6 +151,16 @@ const organizationSchema = {
         "@type": "OfferCatalog",
         name: "AI & Machine Learning",
         url: `${siteOrigin()}/services/ai-ml`,
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "UI/UX Design",
+        url: `${siteOrigin()}/services/product-design/ui-ux-strategy`,
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "SaaS Development",
+        url: `${siteOrigin()}/services/saas-development`,
       },
     ],
   },
