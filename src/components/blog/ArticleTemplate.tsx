@@ -173,6 +173,20 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
           <div className="cb-container">
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'clamp(40px, 6vw, 80px)', alignItems: 'start', maxWidth: 1140, margin: '0 auto' }}>
               <article style={{ minWidth: 0 }}>
+                {toc.length > 0 && (
+                  <details className="article-toc-mobile reveal">
+                    <summary className="article-toc-mobile-summary">On this page</summary>
+                    <nav aria-label="On this page" className="article-toc-mobile-nav">
+                      <ul className="article-toc-mobile-list">
+                        {toc.map(h => (
+                          <li key={h.id}>
+                            <a href={`#${h.id}`} className="article-toc-mobile-link">{h.text}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    </nav>
+                  </details>
+                )}
                 <div className="reveal" style={{ marginBottom: 44 }}>
                   {a.intro.map((p, i) => (
                     <p key={i} style={{ fontSize: 18.5, color: i === 0 ? 'var(--ink)' : 'var(--body)', lineHeight: 1.75, marginBottom: 18, fontWeight: i === 0 ? 500 : 400 }} dangerouslySetInnerHTML={{ __html: p }} />
@@ -254,7 +268,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
               </article>
 
               {/* TOC sidebar */}
-              <aside className="hide-mobile">
+              <aside className="article-toc-sidebar">
                 <div style={{ position: 'sticky', top: 100, display: 'grid', gap: 20 }}>
                   <nav aria-label="On this page" style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', padding: 24 }}>
                     <p style={{ fontSize: 12.5, fontWeight: 700, color: 'var(--muted)', letterSpacing: '0.04em', textTransform: 'uppercase', margin: '0 0 14px' }}>On this page</p>
@@ -283,6 +297,88 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
           padding-top: 12px;
           padding-bottom: 12px;
           overflow-wrap: anywhere;
+        }
+        .article-toc-mobile {
+          margin: 0 0 28px;
+          max-width: 100%;
+          border: 1px solid var(--line);
+          border-radius: var(--r-lg);
+          background: var(--surface-alt);
+          overflow: hidden;
+        }
+        .article-toc-mobile-summary {
+          list-style: none;
+          cursor: pointer;
+          font-size: 15px;
+          font-weight: 700;
+          color: var(--ink);
+          padding: 10px 18px;
+          min-height: 44px;
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+        }
+        .article-toc-mobile-summary::-webkit-details-marker {
+          display: none;
+        }
+        .article-toc-mobile-summary::after {
+          content: '';
+          margin-left: auto;
+          width: 8px;
+          height: 8px;
+          border-right: 2px solid var(--muted);
+          border-bottom: 2px solid var(--muted);
+          transform: rotate(45deg);
+          transition: transform 0.15s ease;
+          flex-shrink: 0;
+        }
+        .article-toc-mobile[open] .article-toc-mobile-summary::after {
+          transform: rotate(-135deg);
+        }
+        .article-toc-mobile-summary:focus-visible {
+          outline: 2px solid var(--brand);
+          outline-offset: -2px;
+        }
+        .article-toc-mobile-nav {
+          padding: 0 18px 16px;
+          border-top: 1px solid var(--line);
+        }
+        .article-toc-mobile-list {
+          list-style: none;
+          margin: 14px 0 0;
+          padding: 0;
+          display: grid;
+          gap: 8px;
+        }
+        .article-toc-mobile-link {
+          display: block;
+          font-size: 14px;
+          color: var(--body);
+          line-height: 1.45;
+          padding: 8px 4px;
+          min-height: 44px;
+          box-sizing: border-box;
+          overflow-wrap: anywhere;
+          text-decoration: none;
+        }
+        .article-toc-mobile-link:hover {
+          color: var(--brand);
+        }
+        .article-toc-mobile-link:focus-visible {
+          outline: 2px solid var(--brand);
+          outline-offset: 2px;
+          border-radius: 4px;
+        }
+        .article-toc-sidebar {
+          display: none;
+        }
+        @media (min-width: 1024px) {
+          .article-toc-mobile {
+            display: none;
+          }
+          .article-toc-sidebar {
+            display: block;
+          }
         }
       `}</style>
     </>
