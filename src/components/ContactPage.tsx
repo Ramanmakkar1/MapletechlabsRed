@@ -217,7 +217,7 @@ export default function ContactPage() {
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, maxWidth: 760, margin: '0 0 20px' }}>
             We are based in Edmonton and work with clients across Canada, in person in Alberta and remotely everywhere else. Pick your city or service to see local pricing, case studies and FAQs.
           </p>
-          <ul style={{ display: 'flex', flexWrap: 'wrap', gap: 12, listStyle: 'none', padding: 0, margin: 0 }}>
+          <ul className="cp-service-links" style={{ display: 'flex', flexWrap: 'wrap', gap: 12, listStyle: 'none', padding: 0, margin: 0 }}>
             {[
               { href: '/locations/software-development-company-in-edmonton', label: 'Software development in Edmonton' },
               { href: '/locations/software-development-company-in-calgary', label: 'Software development in Calgary' },
@@ -240,12 +240,16 @@ export default function ContactPage() {
 
       <style>{`
         input::placeholder,textarea::placeholder{color:var(--faint);}
+        .cp-service-links li{min-width:0;max-width:100%;}
+        .cp-service-links a{display:flex;align-items:center;min-height:44px;max-width:100%;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere;}
+        .cp-service-links a:focus-visible{outline:3px solid var(--brand);outline-offset:2px;}
         @media(max-width:1024px){
           .cp-grid{grid-template-columns:1fr!important;gap:44px!important;}
           .cp-steps{grid-template-columns:1fr!important;}
         }
         @media(max-width:560px){
           .cp-form-row{grid-template-columns:1fr!important;}
+          .cp-service-links{flex-direction:column;}
         }
       `}</style>
     </div>
