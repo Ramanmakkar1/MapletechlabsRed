@@ -5,7 +5,8 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Enterprise E-Commerce Platform | Case Study';
+const NAME = 'Enterprise E-Commerce Platform';
+const TITLE = 'E-Commerce Platform Case Study: 3x Revenue Growth';
 const DESCRIPTION = 'Mapletech Labs built a high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.';
 const SLUG = 'ecommerce-platform';
 
@@ -54,7 +55,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(TITLE.split(' | ')[0], SLUG)} />
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(NAME, SLUG)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

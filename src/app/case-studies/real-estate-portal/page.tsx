@@ -5,7 +5,8 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'ML-Powered Real Estate Portal Case Study';
+const NAME = 'ML-Powered Real Estate Portal';
+const TITLE = 'Real Estate Portal Case Study: ML Search, 850K+ Listings';
 const DESCRIPTION = 'How Mapletech Labs built PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.';
 
 const SLUG = 'real-estate-portal';
@@ -52,7 +53,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema items={getCaseStudyBreadcrumbs('ML-Powered Real Estate Portal', 'real-estate-portal')} />
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(NAME, SLUG)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

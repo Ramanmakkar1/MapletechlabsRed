@@ -5,7 +5,8 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Logistics & Fleet Platform | Case Study';
+const NAME = 'Logistics & Fleet Platform';
+const TITLE = 'Logistics Platform Case Study: 15K+ Daily Deliveries';
 const DESCRIPTION = 'How Mapletech Labs built a real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and 98% on-time delivery rate.';
 const SLUG = 'logistics-platform';
 const DATE = '2026-03-14';
@@ -59,7 +60,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(TITLE.split(' | ')[0], SLUG)} />
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(NAME, SLUG)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

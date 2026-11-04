@@ -5,7 +5,8 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'PCI DSS Payments API Case Study';
+const NAME = 'PCI DSS Payments API';
+const TITLE = 'PCI DSS Payments API Case Study: 12M Transactions a Month';
 const DESCRIPTION = 'How Mapletech Labs built PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.';
 
 const SLUG = 'payments-api-platform';
@@ -53,7 +54,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema items={getCaseStudyBreadcrumbs('PCI DSS Payments API', 'payments-api-platform')} />
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(NAME, SLUG)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

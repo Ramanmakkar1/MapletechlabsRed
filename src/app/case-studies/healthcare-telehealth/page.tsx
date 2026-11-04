@@ -5,7 +5,8 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'HIPAA-Compliant Telehealth Platform | Case Study';
+const NAME = 'HIPAA-Compliant Telehealth Platform';
+const TITLE = 'Telehealth Platform Case Study: 200K+ Patient Sessions';
 const DESCRIPTION = 'Mapletech Labs built a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.';
 const SLUG = 'healthcare-telehealth';
 
@@ -54,7 +55,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(TITLE.split(' | ')[0], SLUG)} />
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(NAME, SLUG)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

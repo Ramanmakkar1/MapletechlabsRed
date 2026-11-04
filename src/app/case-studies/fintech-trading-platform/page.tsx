@@ -5,7 +5,8 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Fintech AI Trading Platform | Case Study';
+const NAME = 'Fintech AI Trading Platform';
+const TITLE = 'Fintech Trading Platform Case Study: 99.99% Uptime';
 const DESCRIPTION = 'How Mapletech Labs built an AI-powered trading platform that processes 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.';
 const SLUG = 'fintech-trading-platform';
 
@@ -55,7 +56,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(TITLE.split(' | ')[0], SLUG)} />
+      <BreadcrumbSchema items={getCaseStudyBreadcrumbs(NAME, SLUG)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
