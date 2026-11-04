@@ -2989,4 +2989,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-mississauga': {
+    title: 'App Development Company in Mississauga',
+    description: 'App development company in Mississauga building iOS and Android apps for Peel Region businesses. Fixed CAD quote before work starts. Free consult.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, building iOS and Android apps for Mississauga and Peel Region businesses. Our team also has engineers in Toronto, and we do not have a Mississauga office. Edmonton is two hours behind Mississauga, so our working days overlap for calls, design reviews and release decisions. You work directly with the engineers who build your app, and we agree on who will use it, what it must do and which systems it connects to. You receive a fixed CAD quote before work starts, with the scope agreed upfront. Call +1-403-604-8692 to talk through your app.',
+    sections: [
+      {
+        heading: 'Apps for Mississauga\'s logistics, life-sciences and head-office firms',
+        body: [
+          'The Pearson airport corridor is full of warehouses, freight carriers and distribution centres, and they ask for driver and field apps with route details, proof of delivery photos, barcode scanning and offline mode for dead zones. Pharma and life-sciences companies need internal tools for sales reps, sample tracking and training, with careful handling of personal and health data. Corporate head offices in the Airport Corporate Centre and City Centre want customer portals, employee apps and self-service tools that connect to the ERP, CRM or booking systems they already run. We plan each app around the people using it every day and the data it has to move.',
+        ],
+      },
+      {
+        heading: 'Native or cross-platform: how we choose',
+        body: [
+          'Most Mississauga apps need to reach both iPhone and Android users, so we usually recommend a cross-platform build in React Native or Flutter: one codebase ships to both app stores and typically costs 30-40% less than two separate native apps. If your app depends on device hardware such as Bluetooth scanners, heavy offline data or maximum performance, we build natively in Swift and Kotlin instead. We explain the trade-off in plain language before you commit. See our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development services' },
+          ' for the full scope.',
+        ],
+      },
+      {
+        heading: 'What an app costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Discovery is free, and your price is fixed in CAD before coding starts.',
+        ],
+      },
+      {
+        heading: 'Launch and app store support',
+        body: [
+          'We prepare your App Store and Google Play listings, handle review submissions and fix anything Apple or Google flag before launch. Beta builds go to your team through TestFlight and Google Play testing tracks so drivers, reps or customers can try the app first. After launch we can keep the app updated for new iOS and Android versions, monitor crashes and ship new features on an agreed plan.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Mississauga?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. After a free discovery phase you get a fixed price in CAD, so your budget is set before development begins.',
+      },
+      {
+        q: 'Do you have a Mississauga office?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Toronto. Most work runs on weekly calls and shared boards, keeping your team involved in reviews and decisions.',
+      },
+      {
+        q: 'How long does it take to build an app?',
+        a: 'A simple app with a handful of screens usually takes 8-12 weeks. A mid-size iOS and Android app with payments and an admin panel takes about 12-24 weeks, and complex platforms take 6-18 months. Your written scope includes a timeline with milestones such as beta and launch.',
+      },
+      {
+        q: 'Can you build for iOS and Android from one codebase?',
+        a: 'Yes. For most apps we use React Native or Flutter, so one codebase ships to both the App Store and Google Play, which usually costs less and keeps both versions in step. If your app needs deep hardware access or maximum performance, we recommend native Swift and Kotlin builds and explain why.',
+      },
+      {
+        q: 'Who owns the app and code?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
 };
