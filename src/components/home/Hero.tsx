@@ -48,7 +48,9 @@ export default function Hero() {
           </dl>
         </div>
 
-        <div className="media media--lg fade" style={{ aspectRatio: '4 / 4.4' }}>
+        {/* No `fade` here: this photo is the LCP element, and an opacity
+            animation holds the LCP until it finishes. */}
+        <div className="media media--lg" style={{ aspectRatio: '4 / 4.4' }}>
           <Image src={m.src} alt={m.alt} fill priority sizes="(max-width: 1023px) 100vw, 46vw" style={{ objectFit: 'cover' }} />
         </div>
       </div>

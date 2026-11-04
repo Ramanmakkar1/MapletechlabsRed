@@ -17,7 +17,10 @@ export default function SectionNav() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
+    // Throttled to one run per frame: each run reads offsetTop of 7 sections.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
       setVisible(window.scrollY > window.innerHeight * 1.5);
       const scrollY = window.scrollY + 150;
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -29,9 +32,15 @@ export default function SectionNav() {
       }
       setActive(null);
     };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   if (!visible) return null;

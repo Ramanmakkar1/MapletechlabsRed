@@ -8,12 +8,21 @@ export default function StickyCTA() {
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    // One layout read per frame, not one per scroll event.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
       const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
       setVisible(scrollPercent > 0.25);
     };
+    const handleScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   if (dismissed || !visible) return null;

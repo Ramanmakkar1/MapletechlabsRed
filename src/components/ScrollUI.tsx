@@ -9,15 +9,25 @@ export default function ScrollUI() {
   const [showBackTop, setShowBackTop] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
+    // One update per frame: scroll fires many times a frame, and each run
+    // reads layout and re-renders.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
+      setProgress(docHeight > 0 ? Math.round((scrollTop / docHeight) * 1000) / 10 : 0);
       setShowCTA(scrollTop > window.innerHeight * 0.8);
       setShowBackTop(scrollTop > window.innerHeight * 2);
     };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
