@@ -3,10 +3,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'UI/UX Design Company in Canada',
+  title: 'UI/UX Design Company in Canada: Apps & SaaS',
   description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps & SaaS, with fixed CAD pricing. Get a free design audit.',
   openGraph: {
-    title: 'UI/UX Design Company in Canada | Mapletech Labs',
+    title: 'UI/UX Design Company in Canada: Apps & SaaS | Mapletech Labs',
     description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps & SaaS, with fixed CAD pricing. Get a free design audit.',
     url: 'https://mapletechlabs.ca/services/product-design',
     type: 'website',

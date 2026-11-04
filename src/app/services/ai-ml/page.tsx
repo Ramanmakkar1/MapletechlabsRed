@@ -3,10 +3,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'AI Development Company in Canada',
+  title: 'AI & ML Development Company in Canada',
   description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada. Request a free proposal.',
   openGraph: {
-    title: 'AI Development Company in Canada | Mapletech Labs',
+    title: 'AI & ML Development Company in Canada | Mapletech Labs',
     description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada.',
     url: 'https://mapletechlabs.ca/services/ai-ml',
     type: 'website',
