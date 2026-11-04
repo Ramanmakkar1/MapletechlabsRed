@@ -1267,7 +1267,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'saas-development-company-in-edmonton': {
     title: 'SaaS Development Company in Edmonton',
-    description: 'Mapletech Labs is headquartered in Edmonton and builds multi-tenant SaaS products with a fixed CAD price. Get a free quote',
+    description: 'Mapletech Labs is headquartered in Edmonton and builds multi-tenant SaaS products with a fixed CAD price. Get a free quote.',
     intro: 'Mapletech Labs is headquartered in Edmonton, so your SaaS project is supported by a local team you can meet in person. We build products from an initial MVP through to a platform ready to scale, whether you are testing a new idea or expanding an existing service. You talk directly to the senior engineers who build your product and can work with us in person at discovery workshops. Before development starts, we agree on a fixed scope and price in CAD, so you know what the project includes. Call us on +1-403-604-8692 to discuss your SaaS idea.',
     sections: [
       {
@@ -1388,6 +1388,74 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         q: 'Can you build SaaS that handles health data under PHIPA?',
         a: 'Yes. We can build access controls, audit logs and data handling workflows around the PHIPA requirements identified for your product. We plan Canadian data residency and review hosting, backups and integrations with your team. Your legal team confirms the obligations that apply and reviews the product alongside the technical testing.',
+      },
+      {
+        q: 'Who owns the code?',
+        a: 'You do. The source code and design files we create for your project belong to you, so you can continue with us or hand the code to your own team.',
+      },
+    ],
+  },
+  'saas-development-company-in-calgary': {
+    title: 'SaaS Development Company in Calgary',
+    description:
+      'Mapletech Labs builds multi-tenant SaaS for Calgary energy, logistics and fintech teams, from MVP to scale, with a fixed CAD price. Get a free quote.',
+    intro:
+      'Mapletech Labs is a Canadian software team headquartered in Edmonton, about a three-hour drive from Calgary and in the same time zone. We build multi-tenant SaaS from first MVP through products ready to grow with your customer base. We do not maintain a Calgary office; when it helps, we travel to Calgary for discovery workshops arranged in advance. You speak with the senior engineers who write your code, not a sales layer. A written scope and a fixed price in CAD are agreed before development begins. Call +1-403-604-8692 to discuss your SaaS idea.',
+    sections: [
+      {
+        heading: 'SaaS products Calgary teams build with us',
+        body: [
+          'Calgary companies often need B2B SaaS tied to Alberta industries. We build products for energy and oil and gas services, including field operations dashboards and asset and maintenance tracking that keep crews and equipment aligned. Logistics and transportation teams use our platforms for dispatch, routing and customer visibility. Agtech and fintech founders bring billing, compliance and reporting needs we plan into the architecture. When an internal spreadsheet or portal has outgrown the office, we help teams productize it for paying customers with clear tenant boundaries and onboarding.',
+        ],
+      },
+      {
+        heading: 'SaaS foundations we plan first',
+        body: [
+          'Before features pile up, we align on foundations that keep the product maintainable. Multi-tenant architecture separates each customer\'s data with isolation your security reviewers can trace. SSO and role-based access match how Calgary enterprises sign in and delegate work. Stripe subscription billing includes GST handling suited to Canadian invoices. An admin dashboard lets your staff manage tenants, plans and support without developer tickets. APIs and integrations connect ERP, CRM and industry systems, and automated tests cover the workflows that must not break on release.',
+        ],
+      },
+      {
+        heading: 'Discovery workshops in Calgary',
+        body: [
+          'When an in-person session helps, we come to your Calgary office for discovery. Product owners, operators and our engineers map users, day-to-day workflows, integrations and what belongs in the first release. You leave with decisions captured, not a vague slide deck. After the workshop we deliver a written scope that lists features, assumptions and timeline before coding starts. For how we structure an early release, read ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'our 8-week SaaS MVP playbook' },
+          '. We keep status updates and review calls on a rhythm that fits your team.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'Canadian SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3-4 months, a growth-stage product at $75,000-$200,000 over 4-8 months, and an enterprise platform at $200,000-$500,000+ over 8-18 months. Your scope and integrations affect the estimate; we agree on a fixed CAD price before development. ',
+          { href: '/blog/sred-software-development-canada', label: 'SR&ED' },
+          ' and ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP' },
+          ' may help with eligible work, subject to their requirements.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Calgary?',
+        a: 'Our Canadian cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. Your features and integrations shape the scope, and we agree on a fixed CAD price before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'Our Canadian cost guide gives an MVP timeline of 3-4 months. The written scope sets out the work and timeline for your particular product.',
+      },
+      {
+        q: 'Do you have an office in Calgary?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, about a three-hour drive from Calgary and in the same time zone. We do not have a Calgary office. We travel to Calgary for discovery workshops when you need them, arranged in advance.',
+      },
+      {
+        q: 'Can SR&ED or IRAP help pay for our SaaS build?',
+        a: 'Your project may qualify for SR&ED or NRC IRAP support, depending on the work and program requirements. Your accountant confirms whether your circumstances qualify.',
       },
       {
         q: 'Who owns the code?',
