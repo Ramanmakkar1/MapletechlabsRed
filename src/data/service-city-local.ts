@@ -2741,4 +2741,64 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-winnipeg': {
+    title: 'App Development Company in Winnipeg',
+    description: 'iOS and Android app development for Winnipeg businesses by a Canadian team headquartered in Edmonton, with a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton that builds iOS and Android apps for Winnipeg and Manitoba organisations. Winnipeg is one hour ahead of Edmonton, so our working days almost fully overlap and there is plenty of time to discuss your project. You talk directly to the senior engineers who build your app, from the first workshop through delivery. Your contract is with a Canadian company and priced in CAD, with a fixed scope and price agreed before work starts. Call +1-403-604-8692 to discuss your idea and what it needs to do.',
+    sections: [
+      {
+        heading: 'Apps for Winnipeg’s transport, manufacturing, agriculture, insurance and health sectors',
+        body: [
+          'Winnipeg organisations need apps suited to the work their people do. Trucking and rail logistics teams can use dispatch and tracking tools to coordinate deliveries; manufacturers may need production and inspection apps. Agri-businesses can use field apps to record inspections and sync data when a connection returns. Insurers and credit unions may need customer apps for account access and service requests, while health teams may need secure booking and patient tools. We plan the features around your users and the systems the app needs to connect to.',
+        ],
+      },
+      {
+        heading: 'Privacy and Canadian data hosting',
+        body: [
+          'Private companies should consider PIPEDA when handling personal information, while health apps may also need to meet Manitoba’s Personal Health Information Act (PHIA). We can plan hosting in Canadian cloud regions, with encryption in transit and at rest, role-based access and audit logs. Requirements depend on the information and organisations involved; your own privacy officer should confirm the final compliance position',
+        ],
+      },
+      {
+        heading: 'Native or cross-platform: picking the right build',
+        body: [
+          'Flutter or React Native can share much of the code across iOS and Android, typically costing 30-40% less than separate native apps. Swift and Kotlin may be a better fit when the app relies heavily on device hardware, demanding performance or complex offline work. We discuss the trade-offs against your requirements before choosing the build approach.',
+        ],
+      },
+      {
+        heading: 'What an app costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' gives typical market estimates: a simple app costs $25,000-$50,000 CAD and takes 8-12 weeks; a mid-size app costs $50,000-$150,000 and takes 12-24 weeks; a complex app starts from about $150,000 and takes 6-18 months. Discovery is free, and we agree on a fixed scope and price before work starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Winnipeg?',
+        a: 'Typical market estimates are $25,000-$50,000 CAD and 8-12 weeks for a simple app, $50,000-$150,000 and 12-24 weeks for a mid-size app, and from about $150,000 and 6-18 months for a complex app. Discovery is free, and we agree on a fixed price before work begins.',
+      },
+      {
+        q: 'Do you have developers in Winnipeg?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and does not have a Winnipeg office. We work remotely through workshops, weekly calls and shared project boards. Winnipeg is one hour ahead of Edmonton, so our working days almost fully overlap.',
+      },
+      {
+        q: 'Can you build apps that work offline in the field?',
+        a: 'Yes. We can design an app to store the information field staff need on the device and sync changes when a connection returns. During discovery we plan which data must be available offline and how to handle conflicting updates.',
+      },
+      {
+        q: 'Can you build a health app that meets Manitoba’s PHIA?',
+        a: 'We can build health apps with safeguards such as encryption, role-based access, audit logs and Canadian cloud hosting. PHIA requirements depend on the project and the information involved, so your own privacy officer should confirm the final compliance position.',
+      },
+      {
+        q: 'Who owns the code for our app?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
 };
