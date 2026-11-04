@@ -922,7 +922,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'sred', text: 'SR&ED tax credits' },
       { type: 'p', html: 'If your project involves real technical uncertainty, such as new algorithms, hard performance problems or novel integrations, part of the cost may qualify for the federal Scientific Research and Experimental Development (SR&amp;ED) tax credit, with Ontario credits on top for eligible companies. Eligibility depends on the work, not the industry, and good records kept during the project make a claim much easier. Our <a href="/tools/sred-estimator">SR&amp;ED estimator</a> gives a rough idea of what a claim could be worth.' },
-      { type: 'p', html: 'See how we work with businesses in the capital on our <a href="/locations/software-development-company-in-ottawa">Ottawa software development</a> page.' },
+      { type: 'p', html: 'See how we work with businesses in the capital on our <a href="/locations/software-development-company-in-ottawa">Ottawa software development</a> page, or go straight to our <a href="/locations/app-development-company-in-ottawa">app development company in Ottawa</a>, <a href="/locations/ai-development-company-in-ottawa">AI development company in Ottawa</a>, <a href="/locations/web-development-company-in-ottawa">web development company in Ottawa</a> and <a href="/locations/saas-development-company-in-ottawa">SaaS development company in Ottawa</a> pages.' },
 
       { type: 'h2', id: 'first-call', text: 'Questions to ask on the first call' },
       { type: 'ol', items: [
@@ -1027,7 +1027,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'sred', text: 'SR&ED and Quebec tax credits' },
       { type: 'p', html: 'If your project involves real technical uncertainty, such as new algorithms, hard performance problems or novel AI work, part of the cost may qualify for the federal Scientific Research and Experimental Development (SR&amp;ED) tax credit. Quebec also offers its own provincial credits for eligible research and development, and has offered credits for certain technology and multimedia work. Eligibility depends on the work and the company, and the rules change over time, so check current programs with an accountant. Good records kept during the project make any claim much easier. Our <a href="/tools/sred-estimator">SR&amp;ED estimator</a> gives a rough idea of what a federal claim could be worth.' },
-      { type: 'p', html: 'See how we work with businesses across Quebec on our <a href="/locations/software-development-company-in-montreal">Montreal software development</a> page.' },
+      { type: 'p', html: 'See how we work with businesses across Quebec on our <a href="/locations/software-development-company-in-montreal">Montreal software development</a> page, or go straight to our <a href="/locations/app-development-company-in-montreal">app development company in Montreal</a>, <a href="/locations/ai-development-company-in-montreal">AI development company in Montreal</a>, <a href="/locations/web-development-company-in-montreal">web development company in Montreal</a> and <a href="/locations/saas-development-company-in-montreal">SaaS development company in Montreal</a> pages.' },
 
       { type: 'h2', id: 'first-call', text: 'Questions to ask on the first call' },
       { type: 'ol', items: [
