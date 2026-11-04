@@ -34,6 +34,13 @@ function titleProblems(title) {
   return errors;
 }
 
+function articleTitleProblems(title) {
+  const rendered = resolveTitle(title);
+  const errors = titleProblems(title);
+  if (rendered.length < 50) errors.push(`"${rendered}" is ${rendered.length} chars (min 50)`);
+  return errors;
+}
+
 // Parse only the site's literal/TITLE metadata forms; never execute page source.
 function parseTitle(expr, src) {
   const helper = expr.match(/^seoTitle\((.+)\)$/);
@@ -115,6 +122,16 @@ assert.match(titleProblems(parseTitle("'Contact Mapletech Labs'", ""))[0], /bran
 assert.match(titleProblems(seoTitle("Mapletech Labs | Mapletech Labs"))[0], /brand twice/);
 assert.equal(parseTitle("seoTitle(getTitle())", ""), undefined);
 
+// Article limits apply after branding; unrelated page fixtures keep their rules.
+for (const length of [49, 50, 60, 61]) {
+  const title = seoTitle("x".repeat(length <= MAX ? length - BRAND.length : length));
+  assert.equal(resolveTitle(title).length, length);
+  const errors = articleTitleProblems(title);
+  if (length === 49) assert.match(errors[0], /49 chars \(min 50\)/);
+  else if (length === 61) assert.match(errors[0], /61 chars \(max 60\)/);
+  else assert.deepEqual(errors, []);
+}
+
 function descriptionProblems(text) {
   return text.length < 120 || text.length > 155
     ? [`description is ${text.length} chars (want 120-155)`]
@@ -155,7 +172,7 @@ let articleTitles = 0;
 for (const m of articlesSrc.matchAll(/metaTitle: ('(?:[^'\\]|\\.)*')/g)) {
   const title = parseTitle(`seoTitle(${m[1]})`, "");
   articleTitles++;
-  problems.push(...titleProblems(title).map((problem) => `articles.ts: ${problem}`));
+  problems.push(...articleTitleProblems(title).map((problem) => `articles.ts: ${problem}`));
 }
 const articleDescriptionsFound = articleDescriptions(articlesSrc);
 assert.equal(articleDescriptionsFound.length, articleTitles, "Every article must have a checked description");
@@ -168,4 +185,4 @@ if (problems.length) {
   console.error(`check-titles: ${problems.length} problem(s)\n` + problems.join("\n"));
   process.exit(1);
 }
-console.log(`check-titles: ${files.length} page files + ${articleTitles} article titles + ${generated} generated city x service titles + ${descriptions} descriptions (${articleDescriptionsFound.length} articles) OK (<= ${MAX} chars, 120-155 chars, single brand); resolver and description assertions passed`);
+console.log(`check-titles: ${files.length} page files + ${articleTitles} article titles + ${generated} generated city x service titles + ${descriptions} descriptions (${articleDescriptionsFound.length} articles) OK (<= ${MAX} chars, articles 50-${MAX} chars, 120-155 chars, single brand); resolver and description assertions passed`);
