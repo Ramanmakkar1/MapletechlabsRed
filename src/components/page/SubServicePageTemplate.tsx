@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
+import ServiceCityLinks from '@/components/ServiceCityLinks';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import { defaultFaqs } from '@/data/faqs';
@@ -28,6 +29,7 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
         <ServicesGrid title={capabilitiesTitle ?? `Our ${name} capabilities`} items={services} />
         <MediaBand media={serviceMedia[parentSlug] ?? defaultMedia} />
         <ProcessSteps title="How we work" steps={steps} />
+        <ServiceCityLinks serviceSlug={parentSlug} serviceName={parent.label} />
         <SuccessStories />
         <WhyUs />
         <Credentials />
