@@ -45,6 +45,16 @@ export const LOCAL_BUSINESS_AREA_SERVED = [
       name: 'British Columbia',
     },
   },
+  {
+    '@type': 'City',
+    name: 'Ottawa',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Ontario' },
+  },
+  {
+    '@type': 'City',
+    name: 'Montreal',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Quebec' },
+  },
 ] as const;
 
 export function localServiceSchema(opts: {

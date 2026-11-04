@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
-import { BUSINESS, HQ_ADDRESS } from "@/lib/seo/business";
+import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from "@/lib/seo/business";
 import "./globals.css";
 
 // Hostinger must not keep HTML from an obsolete deployment for a year.
@@ -103,33 +103,7 @@ const organizationSchema = {
     telephone: BUSINESS.telephone,
     email: BUSINESS.email,
   },
-  areaServed: [
-    "CA",
-    "US",
-    {
-      "@type": "City",
-      name: "Edmonton",
-      containedInPlace: { "@type": "AdministrativeArea", name: "Alberta" },
-    },
-    {
-      "@type": "City",
-      name: "Calgary",
-      containedInPlace: { "@type": "AdministrativeArea", name: "Alberta" },
-    },
-    {
-      "@type": "City",
-      name: "Toronto",
-      containedInPlace: { "@type": "AdministrativeArea", name: "Ontario" },
-    },
-    {
-      "@type": "City",
-      name: "Vancouver",
-      containedInPlace: {
-        "@type": "AdministrativeArea",
-        name: "British Columbia",
-      },
-    },
-  ],
+  areaServed: ['CA', 'US', ...LOCAL_BUSINESS_AREA_SERVED],
   foundingDate: "2018",
   foundingLocation: {
     "@type": "Place",
