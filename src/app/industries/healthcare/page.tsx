@@ -4,9 +4,12 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
+
+const TITLE = 'Healthcare Software Development Company in Canada';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Software Development in Canada',
+  title: seoTitle(TITLE),
   description: 'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers.',
   openGraph: {
     title: 'Healthcare Software Development in Canada | Mapletech Labs',
@@ -26,7 +29,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Healthcare Software Development in Canada'}
+        name={TITLE}
         description={'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers.'}
         url={'https://mapletechlabs.ca/industries/healthcare'}
       />

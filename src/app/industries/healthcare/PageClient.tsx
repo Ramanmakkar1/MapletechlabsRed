@@ -40,6 +40,13 @@ const related = [
                 { name: 'SaaS Development', href: '/services/saas-development', desc: 'Multi-tenant health platforms with subscription billing and role-based access control.' },
               ];
 
+const cityLinks = [
+  { label: 'App Development Company in Vancouver', href: serviceCityPath('mobile-app-development', 'vancouver') },
+  { label: 'App Development Company in Edmonton', href: serviceCityPath('mobile-app-development', 'edmonton') },
+  { label: 'AI Development Company in Toronto', href: serviceCityPath('ai-ml', 'toronto') },
+  { label: 'UI/UX Design Company in Toronto', href: serviceCityPath('product-design', 'toronto') },
+];
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -55,6 +62,7 @@ export default function PageClient() {
       related={related}
       cta={{ title: "Build Your Healthcare Platform.", sub: "HIPAA-compliant, audit-ready, clinician-approved. Let's build it together." }}
       faqs={industryFaqs.healthcare}
+      cityLinks={cityLinks}
     />
   );
 }

@@ -4,9 +4,12 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
+
+const TITLE = 'Logistics Software Development Company in Canada';
 
 export const metadata: Metadata = {
-  title: 'Logistics Software Development in Canada',
+  title: seoTitle(TITLE),
   description: 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and tracking.',
   openGraph: {
     title: 'Logistics Software Development in Canada | Mapletech Labs',
@@ -26,7 +29,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Logistics Software Development in Canada'}
+        name={TITLE}
         description={'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and tracking.'}
         url={'https://mapletechlabs.ca/industries/logistics'}
       />

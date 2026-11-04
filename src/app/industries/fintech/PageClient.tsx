@@ -41,6 +41,18 @@ const related = [
                 { name: 'Blockchain Development', href: '/services/blockchain-web3', desc: 'Smart contracts, DeFi protocols and tokenised asset platforms on EVM-compatible chains.' },
               ];
 
+const cityLinks = [
+  { label: 'App Development Company in Toronto', href: serviceCityPath('mobile-app-development', 'toronto') },
+  { label: 'App Development Company in Calgary', href: serviceCityPath('mobile-app-development', 'calgary') },
+  { label: 'App Development Company in Montreal', href: serviceCityPath('mobile-app-development', 'montreal') },
+  { label: 'Web Development Company in Toronto', href: serviceCityPath('web-development', 'toronto') },
+  { label: 'Web Development Company in Calgary', href: serviceCityPath('web-development', 'calgary') },
+  { label: 'Web Development Company in Montreal', href: serviceCityPath('web-development', 'montreal') },
+  { label: 'AI Development Company in Toronto', href: serviceCityPath('ai-ml', 'toronto') },
+  { label: 'AI Development Company in Calgary', href: serviceCityPath('ai-ml', 'calgary') },
+  { label: 'AI Development Company in Montreal', href: serviceCityPath('ai-ml', 'montreal') },
+];
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -56,6 +68,7 @@ export default function PageClient() {
       related={related}
       cta={{ title: "Build Your FinTech Product.", sub: "From MVP to mission-critical infrastructure \u2014 we have the expertise to make it happen." }}
       faqs={industryFaqs.fintech}
+      cityLinks={cityLinks}
     />
   );
 }

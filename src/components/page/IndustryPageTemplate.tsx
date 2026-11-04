@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Credentials from '@/components/home/Credentials';
@@ -21,6 +22,7 @@ export interface IndustryProps {
   related: { name: string; href: string; desc: string }[];
   cta: { title: string; sub: string };
   faqs?: Faq[];
+  cityLinks?: { label: string; href: string }[];
 }
 
 /* Industry page — the reference's sector-page sequence, on white. */
@@ -48,6 +50,19 @@ export default function IndustryPageTemplate(p: IndustryProps) {
         <Credentials />
         <FaqSplit faqs={faqs} />
         <FaqSchema faqs={faqs} />
+        {p.cityLinks?.length ? (
+          <section style={{ padding: 'var(--section-y-sm) 0' }}>
+            <div className="cb-container">
+              <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Hire us in your city</h2>
+              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 18px', maxWidth: 680 }}>Local teams, local pricing guidance and case studies for each city we serve across Canada.</p>
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                {p.cityLinks.map(l => (
+                  <Link key={l.href} href={l.href} className="pill">{l.label}</Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
         <FinalCta title={p.cta.title} sub={p.cta.sub} />
       </main>
       <Footer />

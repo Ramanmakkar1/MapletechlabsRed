@@ -4,9 +4,12 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
+
+const TITLE = 'FinTech App & Software Development Company in Canada';
 
 export const metadata: Metadata = {
-  title: 'FinTech Software Development in Canada',
+  title: seoTitle(TITLE),
   description: 'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.',
   openGraph: {
     title: 'FinTech Software Development in Canada | Mapletech Labs',
@@ -26,7 +29,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'FinTech Software Development in Canada'}
+        name={TITLE}
         description={'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.'}
         url={'https://mapletechlabs.ca/industries/fintech'}
       />

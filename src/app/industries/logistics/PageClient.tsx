@@ -1,5 +1,6 @@
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 import { industryFaqs } from '@/data/industry-faqs';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const heroStats = ([['50M+', 'Shipments Tracked'], ['30%', 'Route Efficiency Gain'], ['99.8%', 'Delivery Accuracy']] as [string, string][]).map(([value, label]) => ({ value, label }));
 const challenges = [
@@ -38,6 +39,13 @@ const related = [
                 { name: 'AR & VR', href: '/services/ar-vr', desc: 'AR-powered warehouse picking, maintenance overlays and immersive training simulations.' },
               ];
 
+const cityLinks = [
+  { label: 'App Development Company in Calgary', href: serviceCityPath('mobile-app-development', 'calgary') },
+  { label: 'App Development Company in Edmonton', href: serviceCityPath('mobile-app-development', 'edmonton') },
+  { label: 'App Development Company in Vancouver', href: serviceCityPath('mobile-app-development', 'vancouver') },
+  { label: 'Software Development Company in Calgary', href: '/locations/software-development-company-in-calgary' },
+];
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -53,6 +61,7 @@ export default function PageClient() {
       related={related}
       cta={{ title: "Build Your Logistics Platform.", sub: "Real-time visibility, smarter routing, and supply chain intelligence \u2014 engineered to last." }}
       faqs={industryFaqs.logistics}
+      cityLinks={cityLinks}
     />
   );
 }

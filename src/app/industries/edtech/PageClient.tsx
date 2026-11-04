@@ -39,6 +39,13 @@ const related = [
                 { name: 'SaaS Development', href: '/services/saas-development', desc: 'Multi-tenant LMS platforms with subscription billing and institutional admin dashboards.' },
               ];
 
+const cityLinks = [
+  { label: 'App Development Company in Toronto', href: serviceCityPath('mobile-app-development', 'toronto') },
+  { label: 'App Development Company in Vancouver', href: serviceCityPath('mobile-app-development', 'vancouver') },
+  { label: 'UI/UX Design Company in Toronto', href: serviceCityPath('product-design', 'toronto') },
+  { label: 'UI/UX Design Company in Vancouver', href: serviceCityPath('product-design', 'vancouver') },
+];
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -54,6 +61,7 @@ export default function PageClient() {
       related={related}
       cta={{ title: "Build Your EdTech Platform.", sub: "Engaging, accessible, and scalable \u2014 learning platforms that change lives." }}
       faqs={industryFaqs.edtech}
+      cityLinks={cityLinks}
     />
   );
 }

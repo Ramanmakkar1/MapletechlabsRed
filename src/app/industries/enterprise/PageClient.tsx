@@ -1,5 +1,6 @@
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 import { industryFaqs } from '@/data/industry-faqs';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const heroStats = ([['5,000+', 'Enterprise Users'], ['SOC II', 'Certified'], ['Zero', 'Critical Downtime']] as [string, string][]).map(([value, label]) => ({ value, label }));
 const challenges = [
@@ -39,6 +40,15 @@ const related = [
                 { name: 'Blockchain Development', href: '/services/blockchain-web3', desc: 'Distributed ledger solutions for supply chain transparency and secure enterprise transactions.' },
               ];
 
+const cityLinks = [
+  { label: 'SaaS Development Company in Toronto', href: serviceCityPath('saas-development', 'toronto') },
+  { label: 'SaaS Development Company in Ottawa', href: serviceCityPath('saas-development', 'ottawa') },
+  { label: 'SaaS Development Company in Calgary', href: serviceCityPath('saas-development', 'calgary') },
+  { label: 'AI Development Company in Toronto', href: serviceCityPath('ai-ml', 'toronto') },
+  { label: 'AI Development Company in Ottawa', href: serviceCityPath('ai-ml', 'ottawa') },
+  { label: 'AI Development Company in Calgary', href: serviceCityPath('ai-ml', 'calgary') },
+];
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -54,6 +64,7 @@ export default function PageClient() {
       related={related}
       cta={{ title: "Build Your Enterprise System.", sub: "Mission-critical software that scales with your organisation and stands the test of time." }}
       faqs={industryFaqs.enterprise}
+      cityLinks={cityLinks}
     />
   );
 }

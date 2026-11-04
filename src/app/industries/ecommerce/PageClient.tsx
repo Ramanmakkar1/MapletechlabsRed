@@ -39,6 +39,14 @@ const related = [
                 { name: 'SaaS Development', href: '/services/saas-development', desc: 'Subscription billing platforms and marketplace infrastructure with multi-vendor support.' },
               ];
 
+const cityLinks = [
+  { label: 'Web Development Company in Edmonton', href: serviceCityPath('web-development', 'edmonton') },
+  { label: 'Web Development Company in Toronto', href: serviceCityPath('web-development', 'toronto') },
+  { label: 'Web Development Company in Montreal', href: serviceCityPath('web-development', 'montreal') },
+  { label: 'SEO Company in Toronto', href: serviceCityPath('digital-marketing', 'toronto') },
+  { label: 'SEO Company in Vancouver', href: serviceCityPath('digital-marketing', 'vancouver') },
+];
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -54,6 +62,7 @@ export default function PageClient() {
       related={related}
       cta={{ title: "Build Your Commerce Platform.", sub: "Performance-engineered storefronts that convert visitors into revenue." }}
       faqs={industryFaqs.ecommerce}
+      cityLinks={cityLinks}
     />
   );
 }
