@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Render <title>/meta/canonical in <head> for ALL user agents (AI crawlers like GPTBot/PerplexityBot/ClaudeBot are not in Next's default list and would otherwise get streamed metadata).
+  htmlLimitedBots: /.*/,
   // Bounded stale-cache window: 300s revalidate, 3600s max age
    expireTime: 3600,
   images: {
