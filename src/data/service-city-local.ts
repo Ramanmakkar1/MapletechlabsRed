@@ -2159,4 +2159,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-montreal': {
+    title: 'App Development Company in Montreal',
+    description: 'App development company in Montreal: our Canadian team builds French-first iOS and Android apps at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton that designs and builds iOS and Android apps for Montreal startups, studios and established companies. Edmonton runs two hours behind Montreal, so your mornings and our afternoons line up for reviews, demos and quick decisions. There is no account manager in the middle: you speak directly with the senior engineers who write your app. You sign a Canadian contract priced in CAD, and the scope and price are fixed before development begins, so there are no surprise invoices. Call us on +1-403-604-8692 to talk through your app idea.',
+    sections: [
+      {
+        heading: 'Apps for Montreal’s AI, gaming, aerospace and life sciences teams',
+        body: [
+          'Montreal has one of Canada’s busiest AI and tech startup scenes, a deep pool of gaming and creative studios, a major aerospace cluster, and a growing life sciences sector, alongside retailers and e-commerce brands selling across Quebec. AI startups need mobile apps that put a model in front of real users with fast, clear interfaces. Studios want companion apps and fan experiences that feel as polished as their main product. Aerospace and manufacturing teams need field, inspection and maintenance apps that work offline on the shop floor. Life sciences companies need study, patient and lab tools with tight access control, and retailers need shopping apps with loyalty, payments and push offers. We scope every build around the people who will use it each day.',
+        ],
+      },
+      {
+        heading: 'French-first and bilingual apps for Quebec',
+        body: [
+          'Quebec’s Charter of the French Language, as updated by Bill 96, means French must be at least as available as English for Quebec users, so we design French-first or fully bilingual apps from the first wireframe: screens, onboarding, push notifications, emails and app store listings. Quebec’s Law 25 shapes how you collect personal information, so we build clear consent screens, privacy-by-default settings and simple ways for users to see or delete their data. When residency matters, app data can be hosted in Canadian cloud regions. We implement these features carefully, but please confirm the final legal position with your own advisers. If you are still comparing vendors, our ',
+          { href: '/blog/software-development-companies-montreal', label: 'guide to software development companies in Montreal' },
+          ' lists what to check before you sign.',
+        ],
+      },
+      {
+        heading: 'Cross-platform or native: choosing your stack',
+        body: [
+          'For most Montreal apps that must launch on iPhone and Android together, a single Flutter or React Native codebase is the practical choice: one team, one release cycle, and a lower total cost than two separate apps. Native Swift for iOS and Kotlin for Android earns its extra cost when an app depends on advanced camera or AR features, heavy graphics, background Bluetooth or the smoothest possible performance, which matters for some gaming and hardware products. We recommend a stack only after we understand your features and budget, and we explain the reasoning in plain terms. For a deeper comparison, read our ',
+          { href: '/blog/native-vs-cross-platform-vs-pwa', label: 'native vs cross-platform vs PWA guide' },
+          '.',
+        ],
+      },
+      {
+        heading: 'What an app costs and how long it takes',
+        body: [
+          'Based on our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ', a simple single-platform app with 5-8 screens costs about $25,000-$50,000 CAD and takes 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Discovery is free, and your price is locked in before any code is written.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month, securely and at scale.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Montreal?',
+        a: 'Our Canadian cost guide puts a simple single-platform app at about $25,000-$50,000 CAD, a mid-size iOS and Android app at about $50,000-$150,000, and a complex platform at $150,000 or more. After a free discovery phase you receive a fixed price in CAD, so your budget is settled before development starts.',
+      },
+      {
+        q: 'Do you have developers in Montreal?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, and we do not have a Montreal office or Montreal-based staff. We work with Montreal clients remotely through video workshops, weekly demos and shared project boards, and with Edmonton two hours behind Montreal, most of the working day overlaps.',
+      },
+      {
+        q: 'Can you build a French-first app that meets Bill 96?',
+        a: 'Yes. We build French-first or bilingual apps where French is at least as available as English: every screen, notification, email and app store listing, with a simple language switch. We plan the content structure during discovery so translations stay easy to maintain. Your own advisers should confirm how Bill 96 applies to your business.',
+      },
+      {
+        q: 'How do you handle Law 25 privacy and keep data in Canada?',
+        a: 'We build in clear consent screens, privacy-by-default settings, access controls and ways for users to view or delete their personal information, and we can host app data in Canadian cloud regions. We document how the app handles personal data for your team, and your legal advisers should confirm the final Law 25 position.',
+      },
+      {
+        q: 'Who owns the code for our app?',
+        a: 'You do. The source code, design files, app store listings and cloud accounts created for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own development team.',
+      },
+    ],
+  },
 };
