@@ -959,4 +959,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-vancouver': {
+    title: 'UI/UX Design Company in Vancouver',
+    description: 'UI/UX design in Vancouver from CAD $1,500, with fixed-price project quotes. Get a free quote.',
+    intro: 'Mapletech Labs is headquartered in Edmonton, working with Vancouver and Lower Mainland companies that need useful, accessible digital products. Our designers and engineers work on one team, keeping research, screen flows and implementation connected from the first wireframe through handoff. We serve Vancouver clients remotely, with working hours that almost fully overlap, and come to Vancouver for in-person workshops when a milestone needs one, with travel agreed up front. Between meetings, your team can review shared designs and prototypes and discuss decisions directly with the people doing the work. Call +1-403-604-8692 to talk through your project.',
+    sections: [
+      {
+        heading: 'Products Vancouver teams ask us to design',
+        body: [
+          'SaaS and tech startups need onboarding, dashboards and workflows that help people reach value quickly. Digital media teams need clear navigation and content experiences across devices, while health tech products need thoughtful patient and provider flows. Clean tech teams may need interfaces for monitoring and managing complex information; tourism and booking businesses need search, availability and reservation journeys that are easy to follow. We shape each product around its users and the tasks they need to complete.',
+        ],
+      },
+      {
+        heading: 'Research, wireframes and clickable prototypes',
+        body: [
+          'We start by learning about your users, business goals and existing product. Research and interviews inform the key journeys, then wireframes make the structure of each screen visible before visual design begins. Clickable prototypes let your team and users try those flows and identify friction early. We refine the design from feedback and document the components and states engineers need for implementation.',
+        ],
+      },
+      {
+        heading: 'Accessible design for BC users',
+        body: [
+          'We design for WCAG 2.1 AA with attention to contrast, keyboard navigation, focus states and screen-reader labels. Multilingual layouts allow space for translated content and clear navigation across languages. Privacy-friendly flows make consent and personal information choices understandable, with BC PIPA requirements considered during planning. Explore our ',
+          { href: '/services/product-design', label: 'UI/UX and product design' },
+          ' page for more on our approach.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Compare Canadian studio pricing in our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Vancouver?',
+        a: 'We quote a fixed price in CAD after a free UX audit. Published ranges start at $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design and $12,000-$30,000+ for an enterprise design system. Screen count, research and accessibility needs shape the scope.',
+      },
+      {
+        q: 'Can we meet your designers in Vancouver?',
+        a: 'Yes. We are headquartered in Edmonton and serve Vancouver remotely, but can come to Vancouver for in-person workshops when a milestone needs one, with travel agreed up front. Between visits, we work through calls and shared design files.',
+      },
+      {
+        q: 'Can you design a booking experience for a Vancouver tourism business?',
+        a: 'Yes. We can map the journey from finding an experience to checking availability and completing a reservation, then test a clickable prototype before development.',
+      },
+      {
+        q: 'How do you approach accessibility and privacy for BC users?',
+        a: 'We consider WCAG 2.1 AA in the design of navigation, contrast, focus states and labels. We also plan privacy-friendly flows with BC PIPA requirements in mind and make choices about personal information clear to users.',
+      },
+      {
+        q: 'Can you build the product for our Lower Mainland team too?',
+        a: 'Yes. Our designers and engineers work on the same team, so the people building the product can help resolve implementation details throughout design and handoff.',
+      },
+    ],
+  },
 };
