@@ -1903,4 +1903,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-montreal': {
+    title: 'Web Development Company in Montreal',
+    description: 'Mapletech Labs offers web development for Montreal businesses: fast, SEO-ready custom sites with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building fast, SEO-ready business websites, e-commerce stores and web apps for Montreal companies across retail, tech and hospitality. We do not have a Montreal office; you work directly with the senior engineers who write your code and join video workshops when a milestone needs your team in the room. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts, so you know what is included from day one. Call us on +1-403-604-8692 to talk through your project.',
+    sections: [
+      {
+        heading: 'Websites for Montreal’s retail, AI and creative sectors',
+        body: [
+          'Montreal’s economy mixes strong retail and e-commerce, AI and tech startups, gaming and creative studios, and tourism and hospitality operators who need sites that convert searches into bookings and sales. Retailers need product catalogs, secure checkout and inventory-friendly storefronts. AI and SaaS teams need marketing sites and product dashboards that explain a complex offer clearly. Creative and gaming studios need portfolio and showcase pages that stay fast with rich media. Hotels, venues and tour operators need seasonal campaigns and booking flows your team can update without a developer for every change.',
+        ],
+      },
+      {
+        heading: 'French-first and Law 25 ready',
+        body: [
+          'Quebec’s Charter of the French Language means French must be available on commercial websites serving Quebec customers. We build bilingual FR/EN from the start, with proper hreflang tags so Google and Bing understand each language version. Quebec Law 25 covers consent banners, privacy policies and how personal data is collected and stored. We implement the consent, cookie and privacy features your site needs; your legal counsel confirms how the law applies to your business and reviews final policy wording. For vendor comparisons, see our ',
+          { href: '/blog/software-development-companies-montreal', label: 'guide to software development companies in Montreal' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Fast, search-ready builds',
+        body: [
+          'We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get readable content on first load. Core Web Vitals guide image sizes, fonts and script loading as we build, not as a last-minute patch. Semantic HTML, clean URLs and structured data describe your services and locations to search engines. A CMS lets your Montreal team publish updates to offers, blog posts and seasonal pages without opening a developer ticket every time, so the site can keep ranking on Google and Bing as your business changes.',
+        ],
+      },
+      {
+        heading: 'What a website costs in Montreal',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). Discovery is free, and your price is fixed in CAD before coding starts, so your team can plan with a clear budget and timeline.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform (Montréal)', note: 'A checkout redesign for Montréal-based NorthStar E-Commerce that lifted conversion from 2.1% to 3.8% in 90 days, on a site with 2M+ monthly visitors.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'ML-powered property recommendations across 850K+ active listings nationwide.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Montreal?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After free discovery you get a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Can you build a bilingual French and English website?',
+        a: 'Yes. When your customers need both languages, we build French and English content into the site from the start: navigation, page copy, forms and metadata, with hreflang tags and a clear way to switch languages. We plan the content model during discovery so translations stay maintainable after launch.',
+      },
+      {
+        q: 'Is the site compliant with Quebec Law 25?',
+        a: 'We build the consent banners, cookie controls and privacy-policy pages your site needs, and we structure data collection so you can explain it to users. Your legal counsel should review how Law 25 applies to your business and sign off on final policy wording; we do not provide legal advice.',
+      },
+      {
+        q: 'Do you have an office in Montreal?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Montreal office. We deliver remotely with video workshops, weekly calls and shared project boards, and you work directly with the senior engineers building your site.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
 };
