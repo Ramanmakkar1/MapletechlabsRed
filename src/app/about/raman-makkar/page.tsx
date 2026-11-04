@@ -1,4 +1,8 @@
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
@@ -34,13 +38,25 @@ export default function RamanPage() {
   };
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <>
+      <Navbar />
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-black text-white">
+      <BreadcrumbSchema items={[
+        { position: 1, name: 'Home', item: canonicalUrl('/') },
+        { position: 2, name: 'About', item: canonicalUrl('/about') },
+        { position: 3, name: 'Raman Makkar', item: profileUrl },
+      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema).replace(/</g, '\\u003c') }}
       />
       <section style={{ paddingTop: '120px', paddingBottom: '80px', paddingLeft: '40px', paddingRight: '40px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <Breadcrumb items={[
+            { label: 'Home', href: '/' },
+            { label: 'About', href: '/about' },
+            { label: 'Raman Makkar' },
+          ]} />
           <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
           <p style={{ fontSize: '24px', color: 'var(--brand)', marginBottom: '32px' }}>Founder & CEO</p>
           
@@ -50,21 +66,21 @@ export default function RamanPage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '32px', marginTop: '48px' }}>
             <div>
-              <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>Background</h3>
+              <h2 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>Background</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
                 Computer Science degree, 15+ years experience. Led engineering at 3 startup exits. Architected fintech platform processing $1B+ annually.
               </p>
             </div>
 
             <div>
-              <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>Expertise</h3>
+              <h2 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>Expertise</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
                 Full-stack: React, Node.js, Python, PostgreSQL, AWS. Specializes in scaling systems, team architecture, and AI integration.
               </p>
             </div>
 
             <div>
-              <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>Philosophy</h3>
+              <h2 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>Philosophy</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
                 Great software starts with deep discovery. We build systems designed to scale, not features. Quality first.
               </p>
@@ -88,6 +104,8 @@ export default function RamanPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
