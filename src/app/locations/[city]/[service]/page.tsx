@@ -5,6 +5,7 @@ import { getCityServiceData, getAllCityServiceParams } from '@/data/city-service
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { isIndexableCityService } from '@/data/serviceCity';
 import { localServiceSchema } from '@/lib/seo/business';
+import { localServiceTitle } from '@/lib/seo/title';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -26,13 +27,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return {};
   const isEdmWeb = isEdmWebPair(city, service);
   const title = isEdmWeb ? EDM_WEB_TITLE : data.title;
+  const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
   const desc = isEdmWeb ? EDM_WEB_DESCRIPTION : data.description;
 
   return {
-    title,
+    title: finalTitle,
     description: desc,
     openGraph: {
-      title: `${title} | Mapletech Labs`,
+      title: `${finalTitle} | Mapletech Labs`,
       description: desc,
       url: data.canonicalUrl,
       type: 'website',

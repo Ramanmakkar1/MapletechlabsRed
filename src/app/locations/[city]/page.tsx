@@ -4,6 +4,7 @@ import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline } from '
 import { getCityServiceData } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import { localServiceTitle } from '@/lib/seo/title';
 import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { SERVICE_CITY_LOCAL, type ServiceCityLocal } from '@/data/service-city-local';
@@ -44,12 +45,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const base = isAgencyPage ? `${headline} in ${data.cityName}` : `${headline} Company in ${data.cityName}`;
   const override = localFor(slug) ?? META_OVERRIDES[slug];
   const title = override?.title ?? (base.length <= 43 ? base : `${combo.label} in ${data.cityName}`);
+  const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
   const description = override?.description ?? data.description;
   const url = canonicalUrl(`/locations/${slug}`);
   return {
-    title,
+    title: finalTitle,
     description,
-    openGraph: { title: `${title} | Mapletech Labs`, description, url, type: 'website' },
+    openGraph: { title: `${finalTitle} | Mapletech Labs`, description, url, type: 'website' },
     alternates: { canonical: url },
   };
 }

@@ -20,3 +20,17 @@ export function seoTitle(title: string): string | { absolute: string } {
   if (trimmed.length + BRAND_SUFFIX.length > MAX_TITLE_LENGTH) return { absolute: trimmed };
   return trimmed;
 }
+
+/**
+ * Lengthen short local service titles toward 50-60 chars (branded) without
+ * keyword stuffing: add the province code, then a click hook, only while the
+ * branded title still fits MAX_TITLE_LENGTH.
+ */
+export function localServiceTitle(title: string, cityName: string, provinceAbbr: string): string {
+  const t = title.trim();
+  const fits = (s: string) => s.length + BRAND_SUFFIX.length <= MAX_TITLE_LENGTH;
+  let out = t;
+  if (provinceAbbr && t.endsWith(` in ${cityName}`) && fits(`${t}, ${provinceAbbr}`)) out = `${t}, ${provinceAbbr}`;
+  if (!/[|$]|quote/i.test(out) && fits(`${out} | Free Quote`)) out = `${out} | Free Quote`;
+  return out;
+}
