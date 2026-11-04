@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { seoTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -6,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Content Marketing Services | Strategy & SEO',
+  title: seoTitle('Content Marketing Agency in Canada'),
   description: 'Strategic content marketing drives organic traffic & conversions. Blog writing, video, email and content distribution for Canadian brands. 400% avg growth.',
   openGraph: {
-    title: 'Content Marketing Services | Mapletech Labs',
+    title: 'Content Marketing Agency in Canada | Mapletech Labs',
     description: 'Strategic content marketing drives organic traffic & conversions. Blog writing, video, email and content distribution for Canadian brands.',
     url: 'https://mapletechlabs.ca/services/digital-marketing/content-marketing',
     type: 'website',
@@ -26,7 +27,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Content Marketing Services | Strategy & SEO'}
+        name={'Content Marketing'}
         description={'Strategic content marketing drives organic traffic and conversions. Blog writing, video, email, and content distribution for Canadian brands. 400% avg growth.'}
         url={'https://mapletechlabs.ca/services/digital-marketing/content-marketing'}
       />

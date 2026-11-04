@@ -7,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: seoTitle('Google Ads & PPC Management Services Toronto'),
+  title: seoTitle('PPC & Google Ads Management in Canada'),
   description: 'Expert Google Ads & PPC management in Toronto. Search, Shopping, Display, and YouTube campaigns with 3.5x avg ROAS. Google Premier Partner agency.',
   openGraph: {
-    title: 'Google Ads & PPC Management | Mapletech Labs',
+    title: 'PPC & Google Ads Management in Canada | Mapletech Labs',
     description: 'Expert Google Ads & PPC management in Toronto. Search, Shopping, Display, and YouTube campaigns with 3.5x avg ROAS.',
     url: 'https://mapletechlabs.ca/services/digital-marketing/google-ads-ppc',
     type: 'website',
@@ -27,7 +27,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Google Ads & PPC Management Services Toronto'}
+        name={'Google Ads & PPC Management'}
         description={'Expert Google Ads & PPC management in Toronto. Search, Shopping, Display, and YouTube campaigns with 3.5x avg ROAS. Google Premier Partner agency.'}
         url={'https://mapletechlabs.ca/services/digital-marketing/google-ads-ppc'}
       />
