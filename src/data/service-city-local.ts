@@ -2801,4 +2801,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-winnipeg': {
+    title: 'Web Development Company in Winnipeg',
+    description: 'Custom websites and web apps for Winnipeg businesses, built for speed and SEO by a Canadian team headquartered in Edmonton. Fixed CAD quote.',
+    intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building websites and web applications for Winnipeg and Manitoba businesses. Winnipeg is one hour ahead of Edmonton, so our working days overlap for project discussions, design reviews and decisions. You talk directly to the senior engineers who build your website, from planning through delivery. Your contract is with a Canadian company and priced in CAD, with a fixed quote agreed before work starts. We define the scope with you so your team knows what to expect. Call +1-403-604-8692 to discuss your website or web application.',
+    sections: [
+      {
+        heading: 'Websites and web apps for Winnipeg businesses',
+        body: [
+          'We build company sites that explain services clearly, customer portals for account access and service requests, and booking and quoting tools that make it easier to do business online. Local retailers may need e-commerce storefronts, while manufacturers, insurers and credit unions may need portals or tools connected to their existing systems. We plan each project around its users and the work it needs to support.',
+        ],
+      },
+      {
+        heading: 'Fast, accessible and built to rank',
+        body: [
+          'We use a mobile-first approach and Core Web Vitals to guide performance, and design and test for WCAG 2.1 AA accessibility. Technical SEO includes readable page structure, clean URLs and schema to help search engines understand your content. For ongoing SEO, see our ',
+          { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
+          ' services.',
+        ],
+      },
+      {
+        heading: 'Custom build or CMS: how we choose',
+        body: [
+          'A custom Next.js build can suit a web application or a site with complex integrations and tailored workflows. WordPress or a headless CMS can make sense when your team needs to publish and update content regularly. We weigh editing needs, integrations and budget before recommending an approach. Explore our ',
+          { href: '/services/wordpress-cms', label: 'WordPress and CMS development' },
+          ' services.',
+        ],
+      },
+      {
+        heading: 'What a website costs',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). These are typical market estimates. Discovery is free, and your price is fixed in CAD before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform (Ottawa)', note: 'A PCI DSS certified payments API for Ottawa-based PayBridge Solutions, processing 12 million transactions a month.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Winnipeg?',
+        a: 'Typical market estimates are about $2,000-$10,000 CAD (2-4 weeks) for a template or WordPress site, $10,000-$50,000 (4-10 weeks) for a custom business website, $25,000-$100,000 (8-16 weeks) for an e-commerce platform and $100,000-$500,000+ (4-12 months) for an enterprise web application. We agree on a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Do you have a Winnipeg office?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and works remotely with Winnipeg businesses. Winnipeg is one hour ahead of Edmonton, so our working days overlap for calls and project reviews.',
+      },
+      {
+        q: 'Will my new website rank on Google?',
+        a: 'We build the technical SEO foundations, including accessible content, clean URLs and schema. Rankings also depend on your content and competition, so we cannot guarantee a particular position.',
+      },
+      {
+        q: 'Can you redesign our existing site without losing rankings?',
+        a: 'We map existing URLs to their new destinations, set up 301 redirects and keep the content that ranks. These steps help preserve search visibility during a redesign, though rankings can still change.',
+      },
+      {
+        q: 'Who owns the website and code?',
+        a: 'You do. The website and its source code belong to you, and you can continue working with us or hand them to your own team.',
+      },
+    ],
+  },
 };
