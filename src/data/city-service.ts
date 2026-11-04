@@ -46,6 +46,21 @@ function replacePlaceholders(text: string, city: CityData): string {
     .replace(/\{provinceAbbr\}/g, city.provinceAbbr);
 }
 
+const META_OFFER: Record<string, string> = {
+  'mobile-app-development': 'designs and builds iOS and Android apps',
+  'web-development': 'designs and builds fast websites and web apps',
+  'ai-ml': 'builds AI and machine learning solutions',
+  'product-design': 'designs UI/UX for web and mobile products',
+  'blockchain-web3': 'builds blockchain and Web3 products',
+  'cloud-devops': 'sets up cloud infrastructure and DevOps',
+  'ar-vr': 'builds AR and VR experiences',
+  'digital-marketing': 'runs SEO and digital marketing campaigns',
+  'wordpress-cms': 'builds WordPress and headless CMS sites',
+  'game-development': 'builds mobile, PC and web games',
+  'branding': 'creates brand identities and creative',
+  'saas-development': 'designs and builds SaaS products',
+};
+
 export function getCityServiceData(
   citySlug: string,
   serviceSlug: string
@@ -101,7 +116,9 @@ export function getCityServiceData(
   const title = withCompany.length <= 43 ? withCompany
     : withoutCompany.length <= 43 ? withoutCompany
     : `${service.shortName} in ${city.name}`;
-  const description = `${service.heroHeadlinePrefix} in ${city.name}, ${city.province}. Mapletech Labs builds custom ${service.shortName.toLowerCase()} with fixed-scope, fixed-price delivery. Get a free quote.`;
+  const offer = META_OFFER[service.slug] ?? `builds ${service.heroHeadlinePrefix.toLowerCase()} solutions`;
+  let description = `${service.heroHeadlinePrefix} in ${city.name}, ${city.provinceAbbr}. Mapletech Labs ${offer} on a fixed scope and price. Get a free quote.`;
+  if (description.length > 155) description = description.replace(' Get a free quote.', ' Free quote.');
   const canonicalUrl = buildCanonicalUrl(`/locations/${city.slug}/${service.slug}`);
 
   return {
