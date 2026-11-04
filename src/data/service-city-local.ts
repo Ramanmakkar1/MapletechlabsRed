@@ -1147,4 +1147,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-toronto': {
+    title: 'SaaS Development Company in Toronto',
+    description: 'Mapletech Labs builds multi-tenant SaaS from MVP to scale for Toronto teams, with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton, building multi-tenant SaaS products for Toronto businesses from MVP to scale. We do not have a Toronto office. Edmonton is two hours behind Toronto, so our working days overlap for product reviews, planning and decisions. You work directly with the senior engineers building your platform, with a written scope and a fixed CAD price agreed before development starts. We can travel to Toronto for discovery workshops, with travel agreed up front. Call +1-403-604-8692 to discuss your users, integrations and the first release your business needs.',
+    sections: [
+      {
+        heading: 'SaaS products Toronto teams build with us',
+        body: [
+          'Toronto product teams bring different workflows to SaaS development: fintech needs transaction tools and reporting, insurtech needs policy and claims workflows, and health tech needs careful handling of patient information. We build B2B SaaS for professional services, including client portals, scheduling and shared workspaces. AI-powered SaaS can add document processing, search or assisted analysis where it serves a clear user need. Together we define the core workflow, tenant boundaries and subscription model before expanding the roadmap.',
+        ],
+      },
+      {
+        heading: 'Built for enterprise buyers from day one',
+        body: [
+          'Enterprise procurement questions shape the architecture early. We plan SSO/SAML for company sign-in, role-based access for different responsibilities and audit logs that make sensitive actions traceable. Tenant isolation and SOC 2-ready testing help prepare the product for security reviews, with test evidence your team can examine. Canadian data residency is planned across hosting, storage, backups and connected services. We agree these requirements during discovery so the first release has a clear path to enterprise adoption as customer needs grow.',
+        ],
+      },
+      {
+        heading: 'Ontario rules your SaaS may need to meet',
+        body: [
+          'For SaaS handling health data, PHIPA requirements can affect access, consent, retention and how information moves between providers. Public-facing parts may need to meet AODA/WCAG 2.0 AA accessibility requirements, including keyboard navigation, readable forms and screen reader support. PIPEDA may also apply to personal information handled through commercial activities. We map data flows and technical controls during discovery, using our ',
+          { href: '/blog/app-privacy-compliance-canada', label: 'Canadian app privacy checklist' },
+          ' to support planning and review; your legal team confirms what applies',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'Canadian SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Integrations, security requirements and the scope of the first release shape your fixed CAD price. Before choosing a partner, use our ',
+          { href: '/blog/software-development-companies-toronto', label: 'guide to choosing a Toronto software company' },
+          ' to compare scope, delivery responsibilities and ownership terms.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Toronto?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. We agree on the scope and a fixed CAD price before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'Our Canadian cost guide gives an MVP timeline of 3 - 4 months. Discovery defines the core workflow, integrations and acceptance criteria, and your written scope sets the timeline for your product.',
+      },
+      {
+        q: 'Do you have an office in Toronto?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Toronto office. Edmonton is two hours behind Toronto, so our working days overlap. We travel to Toronto for workshops when needed, with travel agreed up front.',
+      },
+      {
+        q: 'Can you build SaaS that handles health data under PHIPA?',
+        a: 'Yes. We can build access controls, audit logs and data handling workflows around the PHIPA requirements identified for your product. We plan Canadian data residency and review hosting, backups and integrations with your team. Your legal team confirms the obligations that apply and reviews the product alongside the technical testing.',
+      },
+      {
+        q: 'Who owns the code?',
+        a: 'You do. The source code and design files we create for your project belong to you, so you can continue with us or hand the code to your own team.',
+      },
+    ],
+  },
 };
