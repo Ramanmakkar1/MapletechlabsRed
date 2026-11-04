@@ -3173,6 +3173,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-mississauga': {
+    title: 'AI Development Company in Mississauga',
+    description: 'AI development company in Mississauga building LLM assistants, forecasting and document automation. Fixed CAD quote before work starts.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, building LLM assistants, forecasting tools and document automation for Mississauga and Peel Region businesses. Our team also has engineers in Toronto, and we do not have a Mississauga office. Edmonton is two hours behind Mississauga, so our working days overlap for calls, demos and reviews. You work directly with the senior engineers who build your system, and we agree on a fixed scope and price in CAD before work starts. Call +1-403-604-8692 to talk through your AI project.',
+    sections: [
+      {
+        heading: 'AI for Mississauga\'s logistics, life-sciences and head-office firms',
+        body: [
+          'Freight carriers, warehouses and distribution centres along the Pearson airport corridor ask for demand forecasting to plan inventory and staffing, route optimisation for delivery fleets, and document extraction that reads bills of lading, customs forms and supplier invoices and sends the details to staff for review. Pharma and life-sciences companies want secure search across research files, SOPs and regulatory documents, with careful handling of regulated and personal data. Corporate head offices in the Airport Corporate Centre and City Centre want internal knowledge assistants that answer staff questions from policies and wikis with sources cited, and customer-service automation that drafts replies and routes tickets. We start from the data you already have and the decision your team needs to make.',
+        ],
+      },
+      {
+        heading: 'Privacy, PIPEDA and Canadian data hosting',
+        body: [
+          'Most private-sector personal data in Ontario falls under PIPEDA, and health information handled by Ontario custodians can also fall under Ontario\'s Personal Health Information Protection Act (PHIPA). We design for privacy from the first workshop: role-based access, encryption, audit logs of what the system was asked and how it answered, and Canadian cloud regions for your AI system and its data. Model providers are set up so they do not train on your company data, and sensitive outputs go to a person for review. Requirements depend on your data and organisation; your privacy officer or lawyer confirms the final position.',
+        ],
+      },
+      {
+        heading: 'How we build: proof of concept, then production',
+        body: [
+          'We begin with a small proof of concept on a representative sample of your own data and agree with your team how results will be judged, so accuracy is measured rather than assumed. If it proves its value, we integrate it into production with the ERP, CRM, ticketing or document systems you already run, add permissions and review paths, and set up evaluation and monitoring so quality is tracked after launch. See our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning development services' },
+          ' for the full scope.',
+        ],
+      },
+      {
+        heading: 'What AI development costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. A focused first version usually takes weeks rather than months, especially when your documents are already in good shape; projects with many data sources, integrations or custom models take longer. Discovery is free, and your price is fixed in CAD before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Mississauga?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Can we meet your team in person in Mississauga?',
+        a: 'We do not have a Mississauga office. Mapletech Labs is headquartered in Edmonton, with engineers in Toronto, and most Mississauga projects run on video calls, demos and shared boards. Edmonton is two hours behind Mississauga, so most of the working day overlaps.',
+      },
+      {
+        q: 'Will our company data be used to train public AI models?',
+        a: 'No. We set up model providers so they do not train on your data, keep access limited by role, log what the system is asked, and can host your AI system and data in Canadian cloud regions. Your privacy officer should confirm the final PIPEDA position for your project.',
+      },
+      {
+        q: 'How long does an AI project take?',
+        a: 'A focused proof of concept usually takes weeks rather than months, especially when your documents are already in good shape. Production work with ERP or CRM integrations, many data sources or custom models takes longer. Your written scope includes a timeline with clear milestones.',
+      },
+      {
+        q: 'Who owns the code, models and data?',
+        a: 'You do. Your source code, prompts, fine-tuned models, configuration and data belong to you, so your team can take over or continue working with us after launch.',
+      },
+    ],
+  },
   'app-development-company-in-kitchener': {
     title: 'App Development Company Kitchener-Waterloo',
     description: 'App development company in Kitchener-Waterloo building iOS and Android apps for Waterloo Region businesses. Fixed CAD quote before work starts.',
