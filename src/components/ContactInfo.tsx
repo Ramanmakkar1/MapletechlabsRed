@@ -7,6 +7,8 @@ const CITIES = [
   { slug: 'calgary', name: 'Calgary' },
   { slug: 'toronto', name: 'Toronto' },
   { slug: 'vancouver', name: 'Vancouver' },
+  { slug: 'ottawa', name: 'Ottawa' },
+  { slug: 'montreal', name: 'Montreal' },
 ];
 
 const LOCATION_PAGES = [
@@ -14,12 +16,15 @@ const LOCATION_PAGES = [
   { name: 'Calgary', href: '/locations/software-development-company-in-calgary' },
   { name: 'Toronto', href: '/locations/software-development-company-in-toronto' },
   { name: 'Vancouver', href: '/locations/software-development-company-in-vancouver' },
+  { name: 'Ottawa', href: '/locations/software-development-company-in-ottawa' },
+  { name: 'Montreal', href: '/locations/software-development-company-in-montreal' },
 ];
 
 const CITY_SERVICES = [
   { serviceSlug: 'ai-ml', label: 'AI development' },
   { serviceSlug: 'mobile-app-development', label: 'App development' },
   { serviceSlug: 'web-development', label: 'Web development' },
+  { serviceSlug: 'saas-development', label: 'SaaS development' },
   { serviceSlug: 'product-design', label: 'UI/UX design' },
   { serviceSlug: 'digital-marketing', label: 'SEO' },
 ];
