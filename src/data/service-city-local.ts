@@ -3423,4 +3423,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-kitchener': {
+    title: 'Web Development Company Kitchener-Waterloo',
+    description: 'Web development company in Kitchener-Waterloo building fast, accessible websites, web apps and portals. Fixed CAD price and a free quote up front.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton, building websites, web apps and customer portals for Kitchener, Waterloo and Cambridge businesses. Our Waterloo Region clients range from tech startups near the University of Waterloo and the Communitech hub that need a marketing site or a first web product, to manufacturers and insurers that need secure portals and internal web apps connected to the systems they already run. We do not have a Kitchener office. Edmonton is two hours behind Eastern time, so our working days overlap for calls, design reviews and launch decisions. You work directly with the engineers who build your site, and you receive a fixed CAD price before work starts. Call +1-403-604-8692 for a free quote.',
+    sections: [
+      {
+        heading: 'Marketing sites and web apps for Waterloo startups',
+        body: [
+          'Founders coming out of the University of Waterloo, Wilfrid Laurier University and the Communitech ecosystem usually need two things: a fast marketing site that explains the product to customers and investors, and a web app that real users can sign in to. We build both in Next.js and React, with a content setup your team can update without a developer and a codebase that can grow into a full SaaS product instead of being rewritten after the next funding round. Each release has its own fixed CAD scope. See our ',
+          { href: '/services/web-development', label: 'web development services' },
+          ' for the full range of what we build.',
+        ],
+      },
+      {
+        heading: 'B2B portals for Waterloo Region manufacturing and insurance',
+        body: [
+          'Advanced manufacturers across Kitchener and Cambridge ask for dealer and distributor portals, online quoting and order tracking, and internal web apps that replace spreadsheets on the plant floor. Insurance and financial firms in Waterloo and Kitchener need broker and policyholder portals, claims intake forms and secure document upload with role-based access. We connect these portals to the ERP, CRM or policy systems you already use through APIs, so your staff are not re-keying data, and we plan every screen around the people who use it each day.',
+        ],
+      },
+      {
+        heading: 'Fast, accessible and built to rank',
+        body: [
+          'Core Web Vitals guide our performance decisions: sized and lazy-loaded images, static or cached pages where possible and lean JavaScript, so pages load quickly on mobile. Technical SEO is part of the build, with clean URLs, unique titles and descriptions, schema markup and an XML sitemap. We design and test for WCAG 2.1 AA, including keyboard access, screen readers, colour contrast and text resizing; Ontario organisations should confirm how the AODA applies to their websites with their legal team.',
+        ],
+      },
+      {
+        heading: 'Remote delivery from Edmonton, priced in CAD',
+        body: [
+          'Work runs on weekly video calls, a shared project board and a staging site you can click through at any time, so your team sees progress between meetings. Discovery is free, and the price is fixed in CAD before coding starts. Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). These are typical market estimates; see our ',
+          { href: '/pricing', label: 'pricing page' },
+          ' for how we scope and quote projects.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Kitchener-Waterloo?',
+        a: 'Typical market estimates are about $2,000-$10,000 CAD (2-4 weeks) for a template or WordPress site, $10,000-$50,000 (4-10 weeks) for a custom business website, $25,000-$100,000 (8-16 weeks) for an e-commerce platform and $100,000-$500,000+ (4-12 months) for an enterprise web application. After a free discovery call we agree on a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'How long does it take to build a website or web app?',
+        a: 'A template or WordPress site usually takes 2-4 weeks and a custom business website 4-10 weeks. E-commerce platforms take about 8-16 weeks, and portals or enterprise web applications take 4-12 months depending on integrations. Your written scope includes a timeline with milestones such as design sign-off, staging review and launch.',
+      },
+      {
+        q: 'Do you have a Kitchener office, or can we meet in person?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Kitchener office. We serve Kitchener, Waterloo and Cambridge clients remotely through weekly video calls, shared boards and a live staging site, and Edmonton is only two hours behind Eastern time, so most of the working day overlaps.',
+      },
+      {
+        q: 'Will our website meet AODA accessibility requirements?',
+        a: 'We design and test for WCAG 2.1 AA, including keyboard access, screen readers, colour contrast and text resizing, and we can share the test results. Your legal or compliance team should confirm how the AODA applies to your organisation and website.',
+      },
+      {
+        q: 'Who owns the website and code?',
+        a: 'You do. The website, source code, content and hosting accounts we set up for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
 };
