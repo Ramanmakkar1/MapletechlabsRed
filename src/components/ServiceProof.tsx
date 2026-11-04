@@ -10,6 +10,11 @@ const serviceProjects: Record<string, { slug: string; metric: number }[]> = {
     { slug: 'ecommerce-platform', metric: 1 },
     { slug: 'payments-api-platform', metric: 0 },
   ],
+  'mobile-app-development': [{ slug: 'healthcare-telehealth', metric: 1 }],
+  'saas-development': [
+    { slug: 'logistics-platform', metric: 0 },
+    { slug: 'real-estate-portal', metric: 0 },
+  ],
   'product-design': [{ slug: 'ecommerce-platform', metric: 1 }],
 };
 
