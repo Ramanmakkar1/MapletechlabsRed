@@ -119,6 +119,10 @@ export default function LocationPageTemplate(p: LocationProps) {
   const whyChoose = p.whyChoose ?? DEFAULT_WHYCHOOSE;
   const serviceLinks = p.serviceLinks ?? DEFAULT_SERVICELINKS;
   const faqs = p.localFaqs ?? defaultFaqs;
+  const winsAreCommitments = p.wins?.length === COMMITMENTS.length && p.wins.every(w =>
+    COMMITMENTS.some(c => c.title === w.title && c.metric === w.metric &&
+      w.desc.replace('your Edmonton project', 'your project') === c.desc)
+  );
   const serviceItems = (p.services ?? DEFAULT_SERVICES).map(s => {
     const slug = s.href.split('/').filter(Boolean).pop() ?? '';
     return { ...s, desc: SERVICE_BLURB[slug] ?? s.desc };
@@ -136,6 +140,9 @@ export default function LocationPageTemplate(p: LocationProps) {
       <main id="main-content">
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} />
         <StatRow stats={heroStats} />
+        {p.heroStats && Array.from({ length: Math.ceil(p.heroStats.length / 4) }, (_, i) => (
+          <StatRow key={i} stats={p.heroStats!.slice(i * 4, i * 4 + 4)} />
+        ))}
         {provinceSlug && city ? (
           <section style={{ padding: '18px 0', borderBottom: '1px solid var(--line)' }}>
             <div className="cb-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
@@ -171,6 +178,21 @@ export default function LocationPageTemplate(p: LocationProps) {
         </section>
         <MediaBand media={humanPick(p.slug, 4)} />
         <ServiceCards title={`Our services in ${name}`} items={serviceItems} />
+        {p.numbers && p.numbers.stats.length > 0 && (
+          <section style={{ padding: 'var(--section-y) 0' }}>
+            <div className="cb-container">
+              <div className="head"><div><h2>{p.numbers.title}</h2><p className="lede">{p.numbers.sub}</p></div></div>
+              <div className="grid grid--3">
+                {p.numbers.stats.map((stat, i) => (
+                  <div key={i} className="tile rise">
+                    <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', fontWeight: 700, color: 'var(--brand)' }}>{stat.value}</div>
+                    <p style={{ color: 'var(--body)' }}>{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
         <TechStrip />
         <Industries />
         <Process />
@@ -181,9 +203,9 @@ export default function LocationPageTemplate(p: LocationProps) {
         <AiPractice />
         <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
           <div className="cb-container">
-            <div className="head"><div><h2>What working with us looks like</h2></div></div>
+            <div className="head"><div><h2>{winsAreCommitments ? (p.winsTitle || `Client results in ${name}`) : 'What working with us looks like'}</h2></div></div>
             <div className="grid grid--3">
-              {COMMITMENTS.map(w => (
+              {(winsAreCommitments ? p.wins! : COMMITMENTS).map(w => (
                 <div key={w.title} className="tile rise">
                   <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.04em', lineHeight: 1.05 }}>{w.metric}</div>
                   <h3 style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{w.title}</h3>
@@ -193,6 +215,22 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
+        {p.wins && p.wins.length > 0 && !winsAreCommitments && (
+          <section style={{ padding: 'var(--section-y) 0' }}>
+            <div className="cb-container">
+              <div className="head"><div><h2>{p.winsTitle || `Client results in ${name}`}</h2></div></div>
+              <div className="grid grid--3">
+                {p.wins.map((w, i) => (
+                  <div key={i} className="tile rise">
+                    <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.04em', lineHeight: 1.05 }}>{w.metric}</div>
+                    <h3 style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{w.title}</h3>
+                    <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{w.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
         <MediaBand media={humanPick(p.slug, 8)} ratio="21 / 7" />
         <CardGrid title={p.trends.title} items={p.trends.items.map(i => ({ title: i.t, desc: i.d }))} variant="rows" />
         {p.localContent}
