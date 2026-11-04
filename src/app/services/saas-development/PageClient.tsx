@@ -51,34 +51,33 @@ export default function PageClient() {
       faqs={faqs}
       servicesTitle="Full-Stack SaaS Engineering"
       buyerContent={(
-        <section aria-labelledby="saas-mvp-planning" style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+        <section aria-labelledby="saas-first-release" style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="head">
               <div>
-                <h2 id="saas-mvp-planning">Planning a SaaS MVP that customers can use</h2>
-                <p className="lede">A useful first release completes one valuable customer task. Set its boundaries before estimating features, so discovery can separate launch essentials from later improvements.</p>
+                <h2 id="saas-first-release">What should your first SaaS release include?</h2>
+                <p className="lede">A realistic first release delivers one customer&apos;s core workflow end to end. Decide the boundaries during discovery so launch essentials are separated from later improvements.</p>
               </div>
             </div>
             <div className="grid grid--3" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
               <div className="tile">
-                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 16, color: 'var(--ink)' }}>Choose custom SaaS or configure an existing product</h3>
-                <p>Configure an existing product when its workflows, permissions and integration options meet your needs. Custom SaaS makes sense when the customer experience or business rules are central to your advantage. Compare licensing, configuration, data ownership and ongoing maintenance before deciding. Customer roles add permission paths to design and test; tenant isolation defines how each organisation&apos;s records stay separate. Integrations add dependencies on API access, limits and failure handling. Use our <Link href="/blog/saas-development-cost-canada">SaaS development cost guide for Canada</Link> to understand how these choices affect scope.</p>
+                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 16, color: 'var(--ink)' }}>Define one customer&apos;s core workflow first</h3>
+                <p>Start with a single journey from input to useful outcome, including who creates, approves and views each record. Write observable acceptance criteria before adding dashboards, admin tools or secondary features. Secondary workflows can ship once the first cohort completes the core task reliably. Our <Link href="/blog/saas-development-cost-canada">SaaS development cost guide for Canada</Link> helps compare scope and sequencing decisions.</p>
               </div>
               <div className="tile">
-                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 16, color: 'var(--ink)' }}>Define the first customer workflow and acceptance criteria</h3>
-                <p>Describe one journey from input to useful outcome, including who creates, approves and views each record. Write observable acceptance criteria: an invited user can complete the task, an unauthorised role cannot access it, and another tenant cannot see its data. Include error recovery. Data migration needs source samples, field mapping and validation; reporting needs agreed metrics, filters and access rules. Both can expand an apparently small release. Our <Link href="/blog/build-saas-mvp-8-weeks">guide to scoping an eight-week SaaS MVP</Link> helps frame launch priorities.</p>
+                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 16, color: 'var(--ink)' }}>Decide what belongs in the initial scope</h3>
+                <p>Decide during discovery whether shared infrastructure, isolated tenant data, enterprise SSO and integrations belong in the first release or a later phase. Permissions, tenant isolation and billing requirements should be decided during discovery even when some features ship later, because retrofitting them costs far more. Integrations add dependencies on API access, limits and failure handling that affect timelines.</p>
               </div>
               <div className="tile">
-                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 16, color: 'var(--ink)' }}>Prepare for discovery</h3>
-                <p style={{ marginBottom: 16 }}>Bring a short brief with:</p>
+                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 16, color: 'var(--ink)' }}>Budget for post-launch operations</h3>
+                <p style={{ marginBottom: 16 }}>Plan for hosting, monitoring, support and feature development after launch. A short discovery brief should include:</p>
                 <ul style={{ paddingLeft: 22, marginBottom: 16 }}>
-                  <li>Target users, customer roles and first pilot group.</li>
-                  <li>The core workflow and measurable acceptance criteria.</li>
-                  <li>Existing systems, API documentation and sample migration data.</li>
-                  <li>Launch constraints: deadlines, privacy requirements and dependencies.</li>
-                  <li>Your budget range and features you can defer.</li>
+                  <li>Target users and expected usage.</li>
+                  <li>Core workflows and acceptance criteria.</li>
+                  <li>Integration requirements and sample data.</li>
+                  <li>Launch constraints: deadlines, privacy and dependencies.</li>
                 </ul>
-                <p><Link href="/contact">Discuss your SaaS MVP brief with our team</Link> to clarify assumptions and prioritise the first release.</p>
+                <p><Link href="/contact">Discuss your SaaS release plan with our team</Link> to prioritise the first release and later phases.</p>
               </div>
             </div>
           </div>
