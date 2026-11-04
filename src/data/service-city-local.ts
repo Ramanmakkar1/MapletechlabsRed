@@ -1965,4 +1965,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-montreal': {
+    title: 'AI Development Company in Montreal',
+    description: 'Mapletech Labs offers AI development for Montreal businesses: LLM features, AI chatbots and automation at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build practical AI for Montreal businesses: large language model (LLM) integration, chatbots and AI agents, document automation and predictive models. We do not have a Montreal office; we deliver remotely, and you work directly with the senior engineers who design and build your system, not a sales layer. Our focus is AI that saves staff time and answers from your own data. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'Applied AI for Montreal companies',
+        body: [
+          'Montreal has one of the deepest AI research communities in the world, anchored by Mila, the city’s well-known AI research institute. Research is only half the story, though: most Montreal businesses need AI that works inside their daily operations. Retailers use AI for smarter product search and customer support. Finance teams use it to review documents faster and triage alerts so analysts see the urgent ones first. Logistics companies sort shipping documents and busy inboxes automatically. Health teams turn long intake files into short summaries for a clinician to check. We turn these ideas into working products your staff actually use.',
+        ],
+      },
+      {
+        heading: 'Law 25, French and data residency',
+        body: [
+          'Quebec’s Law 25 sets rules for personal information, including telling people when a decision about them is made only by automated processing and letting them ask for a person to review it. We build in that notice, human review and audit logs from the start. Under Quebec’s Charter of the French Language, customer-facing chatbots and interfaces should work in French, so we design and test them in French and English. We can host your AI system and its data in Canadian cloud regions. Your privacy officer or lawyer should confirm the final compliance position. For vendor comparisons, see our ',
+          { href: '/blog/software-development-companies-montreal', label: 'Montreal software development guide' },
+          '.',
+        ],
+      },
+      {
+        heading: 'From pilot to production',
+        body: [
+          'We start small and prove value before you commit a large budget. First, we build a prototype on your own data, so you can see real answers to real questions within weeks. Next, we measure it against a test set of questions your team agrees on, so accuracy is a number rather than a feeling. Then we add guardrails: sources shown with each answer, permission checks, hand-off to a person when the system is unsure, and logs of what it was asked. Only then do we move to production, with monitoring and a clear plan for updates. Our guide to ',
+          { href: '/blog/agentic-ai-in-production', label: 'agentic AI in production' },
+          ' explains this approach in more depth.',
+        ],
+      },
+      {
+        heading: 'What AI development costs',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. If you are still comparing vendors, our ',
+          { href: '/blog/ai-development-companies-canada', label: 'guide to AI development companies in Canada' },
+          ' lists the questions to ask before you sign. Discovery is free, and your price is fixed before coding starts, so your Montreal team can plan with a clear budget.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month, securely and at scale.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform (Montréal)', note: 'A checkout redesign for Montréal-based NorthStar E-Commerce that lifted conversion from 2.1% to 3.8% in 90 days.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Montreal?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Can you build French-language AI chatbots?',
+        a: 'Yes. Current language models handle French well, and we build and test chatbots in French and English from the start: prompts, answers, buttons and hand-off messages. We check answers with French-speaking reviewers from your team before launch, so the bot sounds natural to your Quebec customers.',
+      },
+      {
+        q: 'How do you handle Law 25 and automated decisions?',
+        a: 'When a decision about a person is made only by automated processing, Law 25 requires telling them and letting them ask for a person to review it. We build in that notice, human review for important decisions, audit logs and Canadian hosting. Your privacy officer or lawyer should confirm the final position; we do not provide legal advice.',
+      },
+      {
+        q: 'Do you have an office in Montreal?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Montreal office. We serve Montreal clients remotely with video workshops, weekly calls and shared project boards, and you work directly with the senior engineers building your system.',
+      },
+      {
+        q: 'Who owns the code, models and data?',
+        a: 'You do. All source code, prompts, fine-tuned models, configuration and your data belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
 };
