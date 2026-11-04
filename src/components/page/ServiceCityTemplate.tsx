@@ -38,6 +38,11 @@ const POINTS = [
 ];
 const COVERS = ['Product strategy & UX', 'Engineering', 'Cloud & DevOps', 'Ongoing support'];
 
+const navigationLinkStyle = {
+  height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box',
+  padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere', lineHeight: 1.4,
+} as const;
+
 const Head = ({ title, sub }: { title: string; sub?: string }) => (
   <div className="head"><div><h2>{title}</h2>{sub && <p className="lede">{sub}</p>}</div></div>
 );
@@ -214,19 +219,19 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Other services in {cityName}</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.relatedCityServices.map(r => <Link key={r.serviceSlug} href={serviceCityPath(r.serviceSlug, r.citySlug)} className="pill">{r.name} in {cityName}</Link>)}
+                {p.relatedCityServices.map(r => <Link key={r.serviceSlug} href={serviceCityPath(r.serviceSlug, r.citySlug)} className="pill" style={navigationLinkStyle}>{r.name} in {cityName}</Link>)}
               </div>
             </div>
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Explore our {serviceName} services</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.relatedSubServices.map(r => <Link key={r.slug} href={`/services/${serviceSlug}/${r.slug}`} className="pill">{r.name}</Link>)}
+                {p.relatedSubServices.map(r => <Link key={r.slug} href={`/services/${serviceSlug}/${r.slug}`} className="pill" style={navigationLinkStyle}>{r.name}</Link>)}
               </div>
             </div>
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>{serviceName} across Canada</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.sameServiceOtherCities.map(c => <Link key={c.citySlug} href={serviceCityPath(c.serviceSlug, c.citySlug)} className="pill">{serviceName} in {c.cityName}</Link>)}
+                {p.sameServiceOtherCities.map(c => <Link key={c.citySlug} href={serviceCityPath(c.serviceSlug, c.citySlug)} className="pill" style={navigationLinkStyle}>{serviceName} in {c.cityName}</Link>)}
               </div>
             </div>
           </div>
