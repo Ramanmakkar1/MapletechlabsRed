@@ -95,7 +95,7 @@ export default function PageClient() {
     <ServicePageTemplate
       slug="product-design"
       name="Product Design"
-      copy={{ badge: "UI/UX Design", title: <>Product Design That Converts<br /><span style={{ color: 'var(--brand)' }}>Users to Customers.</span></>, desc: <>A Canadian product design and UI/UX agency — UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes. Comparing studios? Read our guide to the <Link href="/blog/ui-ux-design-companies-canada" style={{ color: 'var(--brand)' }}>best UI/UX design companies in Canada</Link>.</> }}
+      copy={{ badge: "UI/UX Design", title: <>UI/UX Design Company in Canada<br /><span style={{ color: 'var(--brand)' }}>Turning Users into Customers.</span></>, desc: <>A Canadian product design and UI/UX agency — UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes. Comparing studios? Read our guide to the <Link href="/blog/ui-ux-design-companies-canada" style={{ color: 'var(--brand)' }}>best UI/UX design companies in Canada</Link>.</> }}
       stats={stats}
       services={services}
       steps={steps}
