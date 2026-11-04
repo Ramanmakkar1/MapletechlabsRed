@@ -2343,4 +2343,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-ottawa': {
+    title: 'UI/UX Design Company in Ottawa',
+    description: 'UI/UX design for Ottawa businesses: user research, product design, design systems and accessible, bilingual interfaces at a fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design team headquartered in Edmonton, helping Ottawa organisations build products people can actually use. We do not have an Ottawa office; Edmonton is two hours behind Ottawa, so most of the working day overlaps. You work directly with senior designers and engineers who keep research, screen flows and implementation aligned. We travel to Ottawa for workshops when a project needs it, with travel agreed up front. Your contract is with a Canadian company, priced in CAD, with a fixed scope and price agreed before work starts. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'UI/UX design for Ottawa organisations',
+        body: [
+          'Government suppliers need clear forms and dashboards for procurement and compliance-heavy work, where people must understand what to submit, review and approve. Kanata North software companies need product UX, onboarding and design systems that make complex software easier to learn and extend. Professional services firms need sites that turn visits into enquiries through clear service information, useful navigation and straightforward contact flows. We shape the research and screen flows around the people doing those tasks.',
+        ],
+      },
+      {
+        heading: 'Accessible and bilingual by default',
+        body: [
+          "We target WCAG 2.1 AA and plan accessibility work around the AODA and Accessible Canada Act context relevant to your organisation. English and French layouts are tested for longer French strings in navigation, forms, buttons and error messages. Keyboard and screen-reader checks cover focus order, labels and key user journeys in the implemented interface. Your own team confirms final compliance with the requirements that apply to your organisation before launch.",
+        ],
+      },
+      {
+        heading: 'Our design process',
+        body: [
+          'Research and interviews with your team and users establish the tasks the product needs to support. We turn those findings into wireframes, then a clickable prototype tested with real users so confusing steps can be revised before development. The design system and developer hand-off in Figma document components, states, spacing and interaction details, with designers and engineers reviewing the build together. Read more about our ',
+          { href: '/services/product-design', label: 'UI/UX design services' },
+          '.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs',
+        body: [
+          'Our published CAD ranges are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. These are planning ranges, not quotes. After a free UX audit, we agree a fixed scope and price in CAD before work begins. Compare Canadian pricing in our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Ottawa?',
+        a: 'The planning ranges are about $1,500-$5,000 CAD for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. These are planning ranges, not quotes. Screen count, research depth and interaction complexity affect the scope. After a free UX audit, you get a fixed scope and price in CAD.',
+      },
+      {
+        q: 'How long does a UI/UX design project take?',
+        a: 'Most projects take 6-11 weeks across research, strategy, wireframes, visual design and hand-off. A small MVP can be faster, while a multi-product design system or a large research program takes longer. Your written scope lists the milestones and review points, so your team knows when the prototype and final hand-off are due.',
+      },
+      {
+        q: 'Can you design French and bilingual interfaces for Ottawa?',
+        a: 'Yes. We plan English and French layouts from the start and test longer French strings in navigation, buttons, forms and error messages. We check both language versions in the clickable prototype, and French-speaking reviewers from your team confirm the wording before launch.',
+      },
+      {
+        q: 'Do you design for WCAG and AODA accessibility?',
+        a: 'Yes. We target WCAG 2.1 AA with contrast, visible focus states, keyboard navigation and screen-reader labels considered from the wireframes onward. We check keyboard and screen-reader behaviour in the implemented interface and consider the AODA and Accessible Canada Act context during planning. Your own team confirms final compliance before launch.',
+      },
+      {
+        q: 'Do you have an office in Ottawa?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have an Ottawa office. Edmonton is two hours behind Ottawa, so most of the working day overlaps, and we serve Ottawa clients remotely through video workshops, weekly calls and shared Figma files. We travel to Ottawa for in-person workshops when a project needs it, and you can reach us on +1-403-604-8692.',
+      },
+    ],
+  },
 };
