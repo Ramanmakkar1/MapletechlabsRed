@@ -14,6 +14,8 @@ export default function ClarityAnalytics() {
 
     const start = () => {
       if (cancelled) return;
+      const host = window.location.hostname.replace(/^www\./, "");
+      if (host !== "mapletechlabs.ca") return;
       import("@microsoft/clarity").then(({ default: Clarity }) => {
         if (!cancelled) Clarity.init(process.env.NEXT_PUBLIC_CLARITY_ID || "vw89eha0kr");
       });
