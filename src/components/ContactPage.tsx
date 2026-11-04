@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { BUSINESS, HQ_ADDRESS } from '@/lib/seo/business';
 import { submitToSplitForms } from '@/lib/splitforms';
 
-const PROJECT_TYPES = ['Mobile App', 'Web Platform', 'AI / ML Solution', 'Product Design', 'Blockchain / Web3', 'Custom Engineering', 'Other'];
+const PROJECT_TYPES = ['Mobile App', 'Web Platform', 'AI / ML Solution', 'Product Design', 'Blockchain / Web3', 'Custom Engineering', 'SEO / Digital Marketing', 'Other'];
 const TIMELINES = ['ASAP', '1–3 months', '3–6 months', '6+ months', 'Not sure yet'];
 
 const DETAILS = [

@@ -112,6 +112,18 @@ const HELP_AREAS = [
     href: '/services/ai-ml',
     label: 'Explore AI and machine learning',
   },
+  {
+    title: 'UI/UX design',
+    body: 'If an existing product feels confusing or dated, tell us where users get stuck. We can audit the current experience, map priority user journeys, explore prototypes, and prepare design handoff your engineering team can implement without guesswork.',
+    href: '/services/product-design',
+    label: 'Explore UI/UX and product design services',
+  },
+  {
+    title: 'SEO & digital marketing',
+    body: 'For SEO enquiries, share your website URL, the services and cities you want to be found for, and your current search goals. That helps us see whether you need technical fixes, content planning, or local visibility before we suggest sensible next steps.',
+    href: '/services/digital-marketing/seo-services',
+    label: 'Explore SEO services and digital marketing',
+  },
 ];
 
 function Answer({ text }: { text: string }) {
