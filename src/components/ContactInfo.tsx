@@ -9,6 +9,13 @@ const CITIES = [
   { slug: 'vancouver', name: 'Vancouver' },
 ];
 
+const LOCATION_PAGES = [
+  { name: 'Edmonton', href: '/locations/software-development-company-in-edmonton' },
+  { name: 'Calgary', href: '/locations/software-development-company-in-calgary' },
+  { name: 'Toronto', href: '/locations/software-development-company-in-toronto' },
+  { name: 'Vancouver', href: '/locations/software-development-company-in-vancouver' },
+];
+
 const CITY_SERVICES = [
   { serviceSlug: 'ai-ml', label: 'AI development' },
   { serviceSlug: 'mobile-app-development', label: 'App development' },
@@ -37,7 +44,7 @@ const STEPS = [
 ];
 
 const COST_PREFIX = 'Most engagements start with a short discovery phase, so we scope before we quote instead of guessing. As a rough guide, marketing websites typically land in the tens of thousands, while native apps run higher. Our guides on ';
-const COST_SUFFIX = ' break down real numbers, and our free cost estimator gives you a ballpark in two minutes.';
+const COST_SUFFIX = ' break down real numbers, our pricing page lists typical ranges in CAD, and our free cost estimator gives you a ballpark in two minutes.';
 
 export const CONTACT_FAQS = [
   {
@@ -56,12 +63,21 @@ export const CONTACT_FAQS = [
     question: 'Who owns the code?',
     answer: 'You do. On final payment you own all intellectual property: source code, design files, documentation, and anything we built for you. We hand over the repositories and infrastructure access, so you can take the project to another team at any point without lock-in.',
   },
+  {
+    question: 'Can you work with an existing codebase?',
+    answer: 'Often, yes. We start with a short technical review: architecture, test coverage, deployment, and where the product hurts today. From there we can take over maintenance, ship the next release, or refactor toward something your team can own long term.',
+  },
+  {
+    question: 'Do you work with startups using SR&ED or IRAP?',
+    answer: 'Yes. We document eligible R&D activity, keep time and deliverables audit-friendly, and align milestones with funding cycles where that helps your cash flow. Tell us about your grant or advisor on the form and we will factor it into the proposal.',
+  },
 ];
 
 const COST_LINKS: Record<string, string> = {
   'website cost in Canada': '/blog/website-cost-canada',
   'app development cost in Canada': '/blog/app-development-cost-canada',
   'free cost estimator': '/tools/cost-estimator',
+  'pricing page': '/pricing',
 };
 
 const link: React.CSSProperties = { color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 };
@@ -150,9 +166,10 @@ export default function ContactInfo() {
             {BUSINESS.name} is based in {HQ_ADDRESS.addressLocality}, {HQ_ADDRESS.addressRegion} ({HQ_ADDRESS.postalCode}), and works with clients across Canada.
             {' '}Call us at <a href={'tel:' + BUSINESS.telephone} style={link}>{BUSINESS.telephone}</a> or email{' '}
             <a href={'mailto:' + BUSINESS.email} style={link}>{BUSINESS.email}</a>.
+            {' '}Our team has dedicated engineers in Edmonton, Calgary, Toronto and Vancouver, so there is always someone in your time zone.
             {' '}Most projects run remotely with weekly demos, and we meet in person in Edmonton and Calgary when it helps.
           </p>
-          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 64px', display: 'grid', gap: 22 }}>
+          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'grid', gap: 22 }}>
             {CITIES.map(city => (
               <li key={city.slug} style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
                 <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>{city.name}</strong>
@@ -166,6 +183,15 @@ export default function ContactInfo() {
               </li>
             ))}
           </ul>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 64px' }}>
+            Software development company in{' '}
+            {LOCATION_PAGES.map((loc, i) => (
+              <span key={loc.href}>
+                {i > 0 && ' · '}
+                <Link href={loc.href} style={link}>{loc.name}</Link>
+              </span>
+            ))}
+          </p>
 
           <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
             Common questions
