@@ -6,11 +6,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Fintech Software Development',
-  description: 'Fintech software by Mapletech Labs. Payment platforms, banking apps & compliant trading systems for Canadian finance. Request a free technical proposal.',
+  title: 'FinTech Software Development in Canada',
+  description: 'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.',
   openGraph: {
-    title: 'Fintech Software Development | Mapletech Labs',
-    description: 'Fintech software by Mapletech Labs. Payment platforms, banking apps & compliant trading systems for Canadian finance.',
+    title: 'FinTech Software Development in Canada | Mapletech Labs',
+    description: 'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.',
     url: 'https://mapletechlabs.ca/industries/fintech',
     type: 'website',
   },
@@ -26,8 +26,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Fintech Software Development'}
-        description={'Fintech software by Mapletech Labs. Payment platforms, banking apps & compliant trading systems for Canadian finance. Request a free technical proposal.'}
+        name={'FinTech Software Development in Canada'}
+        description={'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.'}
         url={'https://mapletechlabs.ca/industries/fintech'}
       />
       <PageClient />

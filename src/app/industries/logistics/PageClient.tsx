@@ -26,6 +26,10 @@ const whyUs = [
                 { icon: '📦', title: 'Proven at Scale', desc: 'Our systems process tens of millions of events daily without breaking a sweat. We design for your peak volumes, not your average day.' },
               ];
 const related = [
+  { name: 'Edmonton', href: '/locations/software-development-company-in-edmonton', desc: 'Logistics Software Development services in Edmonton.' },
+  { name: 'Calgary', href: '/locations/software-development-company-in-calgary', desc: 'Logistics Software Development services in Calgary.' },
+  { name: 'Toronto', href: '/locations/software-development-company-in-toronto', desc: 'Logistics Software Development services in Toronto.' },
+  { name: 'Vancouver', href: '/locations/software-development-company-in-vancouver', desc: 'Logistics Software Development services in Vancouver.' },
                 { name: 'Mobile App Development', href: '/services/mobile-app-development', desc: 'Driver-facing delivery apps with GPS tracking, proof-of-delivery and offline support.' },
                 { name: 'AI & Machine Learning', href: '/services/ai-ml', desc: 'ML-powered route optimisation, demand forecasting and anomaly detection for supply chains.' },
                 { name: 'Cloud & DevOps', href: '/services/cloud-devops', desc: 'Scalable cloud infrastructure for real-time tracking with IoT data pipelines and auto-scaling.' },

@@ -1,3 +1,4 @@
+import { serviceCityPath } from '@/data/serviceCity';
 import Link from 'next/link';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 
@@ -27,6 +28,10 @@ const whyUs = [
                 { icon: '✅', title: 'Audit-Ready Code', desc: 'Comprehensive audit logs, access controls, and documentation that makes your compliance team smile during annual reviews.' },
               ];
 const related = [
+  { name: 'Edmonton', href: serviceCityPath('mobile-app-development', 'edmonton'), desc: 'Healthcare Software Development services in Edmonton.' },
+  { name: 'Calgary', href: serviceCityPath('mobile-app-development', 'calgary'), desc: 'Healthcare Software Development services in Calgary.' },
+  { name: 'Toronto', href: serviceCityPath('mobile-app-development', 'toronto'), desc: 'Healthcare Software Development services in Toronto.' },
+  { name: 'Vancouver', href: serviceCityPath('mobile-app-development', 'vancouver'), desc: 'Healthcare Software Development services in Vancouver.' },
                 { name: 'Web Development', href: '/services/web-development', desc: 'HIPAA-compliant patient portals and provider dashboards with secure data handling.' },
                 { name: 'Mobile App Development', href: '/services/mobile-app-development', desc: 'Telehealth apps and patient engagement tools with EHR integration and push notifications.' },
                 { name: 'AI & Machine Learning', href: '/services/ai-ml', desc: 'Clinical decision support, diagnostic imaging AI and predictive care pathway models.' },

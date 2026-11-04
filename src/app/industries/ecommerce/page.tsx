@@ -6,11 +6,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Software Development',
-  description: 'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, payment processing & omnichannel retail for Canadian businesses. Get a free quote.',
+  title: 'E-Commerce Software Development in Canada',
+  description: 'E-commerce software development in Canada by Mapletech Labs: online marketplaces, payment processing and omnichannel retail.',
   openGraph: {
-    title: 'E-Commerce Software Development | Mapletech Labs',
-    description: 'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, payment processing & omnichannel retail for Canadian businesses.',
+    title: 'E-Commerce Software Development in Canada | Mapletech Labs',
+    description: 'E-commerce software development in Canada by Mapletech Labs: online marketplaces, payment processing and omnichannel retail.',
     url: 'https://mapletechlabs.ca/industries/ecommerce',
     type: 'website',
   },
@@ -26,8 +26,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'E-Commerce Software Development'}
-        description={'Custom e-commerce solutions by Mapletech Labs. Online marketplaces, payment processing & omnichannel retail for Canadian businesses. Get a free quote.'}
+        name={'E-Commerce Software Development in Canada'}
+        description={'E-commerce software development in Canada by Mapletech Labs: online marketplaces, payment processing and omnichannel retail.'}
         url={'https://mapletechlabs.ca/industries/ecommerce'}
       />
       <PageClient />

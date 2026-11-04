@@ -1,3 +1,4 @@
+import { serviceCityPath } from '@/data/serviceCity';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 
 const heroStats = ([['500K+', 'Learners Reached'], ['85%', 'Completion Rate'], ['4.8★', 'Learner Rating']] as [string, string][]).map(([value, label]) => ({ value, label }));
@@ -26,6 +27,10 @@ const whyUs = [
                 { icon: '🚀', title: 'Scale from Day 1', desc: 'We architect for the learner counts you want, not the ones you have. Our platforms handle 100 or 10 million users on the same codebase without rearchitecting.' },
               ];
 const related = [
+  { name: 'Edmonton', href: serviceCityPath('saas-development', 'edmonton'), desc: 'EdTech Software Development services in Edmonton.' },
+  { name: 'Calgary', href: serviceCityPath('saas-development', 'calgary'), desc: 'EdTech Software Development services in Calgary.' },
+  { name: 'Toronto', href: serviceCityPath('saas-development', 'toronto'), desc: 'EdTech Software Development services in Toronto.' },
+  { name: 'Vancouver', href: serviceCityPath('saas-development', 'vancouver'), desc: 'EdTech Software Development services in Vancouver.' },
                 { name: 'Web Development', href: '/services/web-development', desc: 'Accessible learning portals with LMS integration, video streaming and real-time collaboration.' },
                 { name: 'Mobile App Development', href: '/services/mobile-app-development', desc: 'Offline-capable learning apps with push notifications and adaptive content delivery.' },
                 { name: 'AI & Machine Learning', href: '/services/ai-ml', desc: 'Adaptive learning engines, AI tutoring assistants and automated assessment grading.' },

@@ -6,11 +6,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Software Development',
-  description: 'HIPAA-compliant healthcare software by Mapletech Labs. Telehealth, EHR & patient portals for Canadian healthcare providers. Book a free consultation.',
+  title: 'Healthcare Software Development in Canada',
+  description: 'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers.',
   openGraph: {
-    title: 'Healthcare Software Development | Mapletech Labs',
-    description: 'HIPAA-compliant healthcare software by Mapletech Labs. Telehealth, EHR & patient portals for Canadian healthcare providers.',
+    title: 'Healthcare Software Development in Canada | Mapletech Labs',
+    description: 'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers.',
     url: 'https://mapletechlabs.ca/industries/healthcare',
     type: 'website',
   },
@@ -26,8 +26,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Healthcare Software Development'}
-        description={'HIPAA-compliant healthcare software by Mapletech Labs. Telehealth, EHR & patient portals for Canadian healthcare providers. Book a free consultation.'}
+        name={'Healthcare Software Development in Canada'}
+        description={'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers.'}
         url={'https://mapletechlabs.ca/industries/healthcare'}
       />
       <PageClient />

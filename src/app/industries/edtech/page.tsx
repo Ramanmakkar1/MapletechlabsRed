@@ -6,11 +6,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'EdTech Software Development',
-  description: 'EdTech software by Mapletech Labs. LMS platforms, virtual classrooms & assessment tools for Canadian educators. Get a free consultation for your project.',
+  title: 'EdTech Software Development in Canada',
+  description: 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and assessment tools for educators.',
   openGraph: {
-    title: 'EdTech Software Development | Mapletech Labs',
-    description: 'EdTech software by Mapletech Labs. LMS platforms, virtual classrooms & assessment tools for Canadian educators.',
+    title: 'EdTech Software Development in Canada | Mapletech Labs',
+    description: 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and assessment tools for educators.',
     url: 'https://mapletechlabs.ca/industries/edtech',
     type: 'website',
   },
@@ -26,8 +26,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'EdTech Software Development'}
-        description={'EdTech software by Mapletech Labs. LMS platforms, virtual classrooms & assessment tools for Canadian educators. Get a free consultation for your project.'}
+        name={'EdTech Software Development in Canada'}
+        description={'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and assessment tools for educators.'}
         url={'https://mapletechlabs.ca/industries/edtech'}
       />
       <PageClient />

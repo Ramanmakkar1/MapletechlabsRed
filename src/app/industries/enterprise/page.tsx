@@ -6,11 +6,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Enterprise Software Development',
-  description: 'Enterprise software by Mapletech Labs. ERP, CRM, workflow automation & BI solutions at scale for Canadian enterprises. Schedule a free consultation today.',
+  title: 'Enterprise Software Development in Canada',
+  description: 'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at scale.',
   openGraph: {
-    title: 'Enterprise Software Development | Mapletech Labs',
-    description: 'Enterprise software by Mapletech Labs. ERP, CRM, workflow automation & BI solutions at scale for Canadian enterprises.',
+    title: 'Enterprise Software Development in Canada | Mapletech Labs',
+    description: 'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at scale.',
     url: 'https://mapletechlabs.ca/industries/enterprise',
     type: 'website',
   },
@@ -26,8 +26,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Enterprise Software Development'}
-        description={'Enterprise software by Mapletech Labs. ERP, CRM, workflow automation & BI solutions at scale for Canadian enterprises. Schedule a free consultation today.'}
+        name={'Enterprise Software Development in Canada'}
+        description={'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at scale.'}
         url={'https://mapletechlabs.ca/industries/enterprise'}
       />
       <PageClient />

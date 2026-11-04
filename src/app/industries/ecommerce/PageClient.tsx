@@ -1,3 +1,4 @@
+import { serviceCityPath } from '@/data/serviceCity';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 
 const heroStats = ([['500K', 'Concurrent Users'], ['2.1s', 'Avg Load Time'], ['38%', 'Avg Conv. Lift']] as [string, string][]).map(([value, label]) => ({ value, label }));
@@ -26,6 +27,10 @@ const whyUs = [
                 { icon: '📈', title: 'Scale Tested', desc: 'Our platforms have survived Black Friday, Super Bowl ads, and influencer drops without a single incident. We plan for your biggest day from day one.' },
               ];
 const related = [
+  { name: 'Edmonton', href: serviceCityPath('web-development', 'edmonton'), desc: 'E-Commerce Software Development services in Edmonton.' },
+  { name: 'Calgary', href: serviceCityPath('web-development', 'calgary'), desc: 'E-Commerce Software Development services in Calgary.' },
+  { name: 'Toronto', href: serviceCityPath('web-development', 'toronto'), desc: 'E-Commerce Software Development services in Toronto.' },
+  { name: 'Vancouver', href: serviceCityPath('web-development', 'vancouver'), desc: 'E-Commerce Software Development services in Vancouver.' },
                 { name: 'Web Development', href: '/services/web-development', desc: 'Headless storefronts with sub-2s load times, Lighthouse 95+ and CMS-driven content.' },
                 { name: 'Mobile App Development', href: '/services/mobile-app-development', desc: 'Native shopping apps with one-tap checkout, push notifications and offline browsing.' },
                 { name: 'Digital Marketing', href: '/services/digital-marketing', desc: 'SEO, paid ads and email campaigns that drive traffic and maximise conversion rates.' },
