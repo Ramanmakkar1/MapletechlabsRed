@@ -23,16 +23,16 @@ function useReveal() {
 }
 
 const companies = [
-  { num: 1, name: 'Mapletech Labs', category: 'AI/ML Integration', emoji: '🍁', metric: 'Production-Grade AI Systems & LLM Integration', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 2, name: 'Townmedialabs', category: 'AI-Powered Web', emoji: '🌐', metric: 'AI-enhanced websites & marketing automation', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 3, name: 'TML', category: 'Intelligent Automation', emoji: '⚡', metric: 'AI-driven growth platforms for startups', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 4, name: 'Element AI (ServiceNow)', category: 'Enterprise AI Research', emoji: '🔬', metric: 'Large-scale enterprise AI transformation', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 5, name: 'Coveo', category: 'AI-Powered Search', emoji: '🔍', metric: 'Intelligent search & recommendation engines', accentColor: 'var(--faint)', bgColor: 'transparent', },
-  { num: 6, name: 'Ada', category: 'Conversational AI', emoji: '💬', metric: 'Enterprise-grade AI chatbot platforms', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 7, name: 'Layer 6 (TD Bank)', category: 'Financial AI', emoji: '🏦', metric: 'Deep learning for financial services', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 8, name: 'Integrate.ai', category: 'Federated Learning', emoji: '🔒', metric: 'Privacy-preserving AI & federated learning', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 9, name: 'Dessa (Square)', category: 'Applied ML & NLP', emoji: '🧠', metric: 'Production ML pipelines & NLP systems', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 10, name: 'Mindbridge', category: 'Financial Auditing AI', emoji: '📊', metric: 'AI-powered anomaly detection for auditing', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 1, id: 'mapletech-labs', name: 'Mapletech Labs', category: 'AI/ML Integration', emoji: '🍁', metric: 'Production-Grade AI Systems & LLM Integration', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 2, id: 'townmedialabs', name: 'Townmedialabs', category: 'AI-Powered Web', emoji: '🌐', metric: 'AI-enhanced websites & marketing automation', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 3, id: 'tml', name: 'TML', category: 'Intelligent Automation', emoji: '⚡', metric: 'AI-driven growth platforms for startups', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 4, id: 'element-ai', name: 'Element AI (ServiceNow)', category: 'Enterprise AI Research', emoji: '🔬', metric: 'Large-scale enterprise AI transformation', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 5, id: 'coveo', name: 'Coveo', category: 'AI-Powered Search', emoji: '🔍', metric: 'Intelligent search & recommendation engines', accentColor: 'var(--faint)', bgColor: 'transparent', },
+  { num: 6, id: 'ada', name: 'Ada', category: 'Conversational AI', emoji: '💬', metric: 'Enterprise-grade AI chatbot platforms', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 7, id: 'layer-6', name: 'Layer 6 (TD Bank)', category: 'Financial AI', emoji: '🏦', metric: 'Deep learning for financial services', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 8, id: 'integrate-ai', name: 'Integrate.ai', category: 'Federated Learning', emoji: '🔒', metric: 'Privacy-preserving AI & federated learning', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 9, id: 'dessa', name: 'Dessa (Square)', category: 'Applied ML & NLP', emoji: '🧠', metric: 'Production ML pipelines & NLP systems', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 10, id: 'mindbridge', name: 'Mindbridge', category: 'Financial Auditing AI', emoji: '📊', metric: 'AI-powered anomaly detection for auditing', accentColor: '#E11900', bgColor: 'transparent', },
 ];
 
 const relatedPosts = [
@@ -461,7 +461,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                       {companies.map(app => (
-                        <a key={app.name} href={`#${app.name.toLowerCase().replace(/[\s\(\)]+/g, '-').replace(/-$/, '')}`} style={{
+                        <a key={app.id} href={`#${app.id}`} style={{
                           fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
                           padding: '6px 10px', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 10,
                           transition: 'all 0.15s',

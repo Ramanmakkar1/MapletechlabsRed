@@ -21,16 +21,16 @@ function useReveal() {
 }
 
 const companies = [
-  { num: 1, name: 'Mapletech Labs', category: 'Enterprise Web Development', emoji: '🍁', metric: 'High-Performance Next.js & SaaS Platforms', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 2, name: 'Townmedialabs', category: 'Digital-First Web Agency', emoji: '🎨', metric: 'Stunning WordPress & Custom Brand Websites', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 3, name: 'TML', category: 'Scalable Web Platforms', emoji: '🚀', metric: 'Growth-Oriented Architecture & Rapid Deployment', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 4, name: 'Myplanet', category: 'Digital Experience Platforms', emoji: '🌐', metric: 'Enterprise DXP & Headless CMS Solutions', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 5, name: 'Nulogy', category: 'Supply Chain Web Apps', emoji: '📦', metric: 'Specialized Supply Chain Management Platforms', accentColor: 'var(--faint)', bgColor: 'transparent', },
-  { num: 6, name: 'Nascent Digital', category: 'E-Commerce Specialists', emoji: '🛒', metric: 'Shopify Plus & Custom E-Commerce Builds', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 7, name: 'Rangle.io', category: 'Angular/React Enterprise Apps', emoji: '⚛️', metric: 'Enterprise Frontend Architecture & Consulting', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 8, name: 'TWG (The Working Group)', category: 'Product Development', emoji: '🛠️', metric: 'End-to-End Digital Product Strategy', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 9, name: 'Architech', category: 'Cloud-Native Web Apps', emoji: '☁️', metric: 'Azure & AWS Cloud-Native Development', accentColor: '#E11900', bgColor: 'transparent', },
-  { num: 10, name: 'Crowdlinker', category: 'Startup Web & Mobile', emoji: '💡', metric: 'Startup MVP & Growth-Stage Development', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 1, id: 'mapletech-labs', name: 'Mapletech Labs', category: 'Enterprise Web Development', emoji: '🍁', metric: 'High-Performance Next.js & SaaS Platforms', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 2, id: 'townmedialabs', name: 'Townmedialabs', category: 'Digital-First Web Agency', emoji: '🎨', metric: 'Stunning WordPress & Custom Brand Websites', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 3, id: 'tml', name: 'TML', category: 'Scalable Web Platforms', emoji: '🚀', metric: 'Growth-Oriented Architecture & Rapid Deployment', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 4, id: 'myplanet', name: 'Myplanet', category: 'Digital Experience Platforms', emoji: '🌐', metric: 'Enterprise DXP & Headless CMS Solutions', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 5, id: 'nulogy', name: 'Nulogy', category: 'Supply Chain Web Apps', emoji: '📦', metric: 'Specialized Supply Chain Management Platforms', accentColor: 'var(--faint)', bgColor: 'transparent', },
+  { num: 6, id: 'nascent-digital', name: 'Nascent Digital', category: 'E-Commerce Specialists', emoji: '🛒', metric: 'Shopify Plus & Custom E-Commerce Builds', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 7, id: 'rangle', name: 'Rangle.io', category: 'Angular/React Enterprise Apps', emoji: '⚛️', metric: 'Enterprise Frontend Architecture & Consulting', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 8, id: 'twg', name: 'TWG (The Working Group)', category: 'Product Development', emoji: '🛠️', metric: 'End-to-End Digital Product Strategy', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 9, id: 'architech', name: 'Architech', category: 'Cloud-Native Web Apps', emoji: '☁️', metric: 'Azure & AWS Cloud-Native Development', accentColor: '#E11900', bgColor: 'transparent', },
+  { num: 10, id: 'crowdlinker', name: 'Crowdlinker', category: 'Startup Web & Mobile', emoji: '💡', metric: 'Startup MVP & Growth-Stage Development', accentColor: '#E11900', bgColor: 'transparent', },
 ];
 
 const relatedPosts = [
@@ -376,7 +376,7 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                     }}>In This Article</p>
                     <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                       {companies.map(app => (
-                        <a key={app.name} href={`#${app.name.toLowerCase().replace(/[\s\(\)]+/g, '-').replace(/-$/, '')}`} style={{
+                        <a key={app.id} href={`#${app.id}`} style={{
                           fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
                           padding: '6px 10px', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 10,
                           transition: 'all 0.15s',
