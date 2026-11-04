@@ -767,4 +767,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-vancouver': {
+    title: 'SEO Company in Vancouver',
+    description: 'Vancouver SEO from Mapletech Labs: local map-pack search, technical fixes and CAD retainers with monthly reporting. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Vancouver and Lower Mainland businesses that want more calls and leads from Google and Bing. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. You work directly with the specialists doing the keyword research, technical fixes and content, not a salesperson, and we come to Vancouver for in-person workshops, audits and milestone reviews when a project needs one, with travel agreed up front. Retainers are priced in CAD. Call +1-403-604-8692 to talk through your Vancouver search goals.',
+    sections: [
+      {
+        heading: 'Vancouver search markets we know',
+        body: [
+          'Vancouver is several search markets stacked on top of each other. Tech and SaaS companies chase category and comparison terms their competitors already bid on, film, VFX and digital media studios get found through portfolio and production-service searches, and tourism and hospitality businesses live on seasonal “near me” and itinerary queries. Real estate teams, clean-tech firms and trades contractors compete at the neighbourhood level across Burnaby, Surrey, Richmond and North Vancouver. Add multilingual searchers — Punjabi, Mandarin, Cantonese and Tagalog among them — and one keyword list is never enough. We map the English and non-English queries that actually produce enquiries, then build the pages and profile signals for each.',
+        ],
+      },
+      {
+        heading: 'Google Business Profile and NAP across Metro Vancouver',
+        body: [
+          'For Vancouver service businesses the map pack often decides who gets the call, so the profile has to be truthful. We set your Google Business Profile up as a genuine service-area business when you serve Metro Vancouver from elsewhere, choose categories and service areas that match the work you actually take, and keep the same name, address and phone — NAP — across your site, directories and citations. We will not rent a virtual office downtown or claim a Vancouver address you do not use. Those profiles get suspended and take months to recover, which is why a clean service-area setup with consistent citations holds its position.',
+        ],
+      },
+      {
+        heading: 'Technical SEO done by engineers',
+        body: [
+          'Mapletech Labs is a software development company first, so the technical work is done by the engineers who build Next.js and WordPress sites every week. We audit Core Web Vitals, crawling and indexation, canonical tags, schema markup and internal linking on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page, then fix what is slowing pages or blocking crawlers. Changes go into your codebase or CMS rather than bolted on with plugins, so they survive the next platform update.',
+        ],
+      },
+      {
+        heading: 'SEO costs and monthly reporting',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Metro Vancouver is a competitive market, so we agree the scope in writing before the first invoice. You can compare our rates on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'What does SEO cost in Vancouver?',
+        a: 'Retainers for Vancouver campaigns usually fall between $1,500 and $10,000 CAD per month, the range we publish in our Canadian digital marketing cost guide. A single-location trades or hospitality business sits near the bottom; SaaS, film and real estate brands fighting for competitive Metro Vancouver terms sit higher. After a free review of your site and your competitors we quote one fixed monthly figure in CAD rather than an hourly estimate.',
+      },
+      {
+        q: 'How long before we see movement in Vancouver search results?',
+        a: 'Profile and technical fixes usually show up within 8-16 weeks for a site without serious blockers. Competitive category terms — SaaS comparisons, real estate or tourism — more often need 4-9 months before the trend is worth judging. The first report already tracks impressions, indexed pages and enquiries, so you can see direction before the position charts catch up.',
+      },
+      {
+        q: 'Can we rank in the Vancouver map pack without a Vancouver address?',
+        a: 'Yes, as long as the address and service area are real. You need either a staffed location in Metro Vancouver or a genuine service-area business setup covering the cities you serve. Virtual offices and invented addresses get profiles suspended or pushed down, so we will not use them. If your crews cover Burnaby, Surrey, Richmond and North Vancouver from elsewhere, we configure the profile honestly, keep your name, address and phone identical everywhere, and back the coverage with location pages and real reviews.',
+      },
+      {
+        q: 'Can we meet your team in person in Vancouver?',
+        a: 'Yes, when a project benefits from it. We are headquartered in Edmonton, keep Vancouver hours that almost match ours, and travel to Vancouver for discovery sessions, audits and milestone reviews. Travel is agreed up front, so there are no surprises on the invoice. Between visits, day-to-day work runs on calls, shared documents and monthly reports, and you can always reach the specialists on your account at +1-403-604-8692.',
+      },
+      {
+        q: 'What is in the monthly Vancouver SEO report?',
+        a: 'A short, plain-language summary of the keyword movements that matter in Metro Vancouver, organic sessions and enquiries from analytics, the tasks finished that month, and what we are testing next. Anything needing your sign-off — content approvals, profile edits, new service pages — is flagged separately. The format is the same whether you serve downtown Vancouver, Surrey or the North Shore.',
+      },
+    ],
+  },
 };
