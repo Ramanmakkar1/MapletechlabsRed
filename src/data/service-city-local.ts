@@ -651,6 +651,76 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-toronto': {
+    title: 'Digital Marketing Agency in Toronto',
+    description: 'SEO, Google Ads, social and content for Toronto and the GTA from one Canadian team. Monthly retainers in CAD. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton, working with Toronto and GTA businesses that want one partner for SEO, Google Ads, social media and content. We do not have a Toronto office. Edmonton is two hours behind Toronto, so most of the working day overlaps, and we come to Toronto for workshops and milestone reviews when a project needs it, with travel agreed up front. One team covers SEO, Google Ads, social and content — not separate vendors for each channel. Retainers are priced in CAD. Call +1-403-604-8692 to talk about your channel mix.',
+    sections: [
+      {
+        heading: 'Why the Toronto and GTA paid-search market is tough',
+        body: [
+          'The GTA is one of Canada\'s most crowded advertising markets: cost per click runs high in finance, legal, real estate and SaaS, and buyers compare vendors before they ever fill a form. Search intent also splits by suburb — what works for downtown Toronto often differs from Mississauga, Brampton, Markham or Vaughan. We plan budgets around those splits instead of one generic metro campaign. Need search only? See our ',
+          { href: '/locations/seo-company-in-toronto', label: 'SEO Company in Toronto' },
+          ' page for an SEO-only scope.',
+        ],
+      },
+      {
+        heading: 'One plan across search, paid and social',
+        body: [
+          'We align organic search, paid campaigns and social posts to the same lead goals, so messaging and landing pages stay consistent when someone moves from an ad to your site or from a post to a service page. Each channel is scoped separately with clear KPIs: ',
+          { href: '/services/digital-marketing/google-ads-ppc', label: 'Google Ads and PPC' },
+          ', ',
+          { href: '/services/digital-marketing/social-media-marketing', label: 'social media marketing' },
+          ', and ',
+          { href: '/services/digital-marketing/content-marketing', label: 'content marketing' },
+          '. You can ramp one channel without guessing what the retainer covers.',
+        ],
+      },
+      {
+        heading: 'What digital marketing costs in Toronto',
+        body: [
+          'Typical Canadian agency ranges — not quotes from us — are published in our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ': SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Ad spend in the GTA often runs higher than smaller markets because clicks are more competitive. After a free review we quote a fixed monthly scope in CAD for the channels you choose.',
+        ],
+      },
+      {
+        heading: 'Reporting you can act on',
+        body: [
+          'Each cycle you get rankings, traffic, ad spend, conversions and the work completed, with plain-language notes on what we changed and what we are testing next. When leadership needs attribution across channels, our ',
+          { href: '/services/digital-marketing/performance-analytics', label: 'performance analytics' },
+          ' service connects ads, analytics and CRM data in one view instead of export screenshots alone.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does digital marketing cost in Toronto?',
+        a: 'In our Canadian digital marketing cost guide, SEO typically runs about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month in CAD. GTA ad spend often sits above smaller cities because clicks cost more. We confirm a fixed monthly scope in CAD after a free review.',
+      },
+      {
+        q: 'Do you have an office in Toronto?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton. We do not maintain a Toronto office. Edmonton is two hours behind Toronto, so most of our working day overlaps with yours for calls and reviews. When a project needs it, we travel to Toronto for workshops and milestone reviews with travel agreed up front.',
+      },
+      {
+        q: 'Should we start with SEO or Google Ads in the GTA?',
+        a: 'In a competitive GTA market, Google Ads can produce leads while SEO and content build. If your site is slow, thin or missing from local search, we usually fix that first so paid traffic lands on pages that convert. Many Toronto clients run both: a focused search campaign for near-term leads and SEO for lower cost per lead over time.',
+      },
+      {
+        q: 'How soon will we see results?',
+        a: 'Paid search can produce leads within weeks once campaigns and landing pages are live. SEO and content usually need several months before trend lines are fair to judge; local gains often show in 8-16 weeks when the site has no major technical blockers. We set expectations in the first report and track leading indicators such as impressions and conversions, not only position charts.',
+      },
+      {
+        q: 'Can you run campaigns for several GTA cities?',
+        a: 'Yes. We build separate landing pages and location targeting per city or suburb — for example Mississauga, Brampton, Markham or Vaughan — so ads and organic pages match local search intent instead of one generic Toronto page. Reporting rolls up to your account level while still showing performance by location.',
+      },
+    ],
+  },
   'seo-company-in-edmonton': {
     title: 'SEO Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and runs SEO for Alberta businesses: local search, technical fixes and content that ranks. +1-403-604-8692.',
