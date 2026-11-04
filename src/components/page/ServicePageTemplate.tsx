@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -20,8 +21,8 @@ import type { Faq, HeroCopy, IndustryCard, ServiceCard, Stat, Step, TechCategory
 const heroShots = [officeMedia.open, officeMedia.desk, officeMedia.meeting];
 
 /* Service-category page, following the reference's service-page sequence. */
-export default function ServicePageTemplate({ slug, name, copy, stats, services, steps, techCategories, industries, results, faqs, servicesTitle = 'Every Layer. Every Complexity.' }: {
-  slug: string; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; techCategories?: TechCategory[]; industries?: IndustryCard[]; results?: { value: string; label: string; sub?: string }[]; faqs?: Faq[]; servicesTitle?: string;
+export default function ServicePageTemplate({ slug, name, copy, stats, services, steps, techCategories, industries, results, faqs, buyerContent, servicesTitle = 'Every Layer. Every Complexity.' }: {
+  slug: string; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; techCategories?: TechCategory[]; industries?: IndustryCard[]; results?: { value: string; label: string; sub?: string }[]; faqs?: Faq[]; buyerContent?: ReactNode; servicesTitle?: string;
 }) {
   const hero = heroShots[slug.length % heroShots.length];
   return (
@@ -37,6 +38,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <MediaBand media={serviceMedia[slug] ?? defaultMedia} />
         <ProcessSteps title={`How we deliver your ${name} project`} steps={steps} />
         <ServicePricing serviceSlug={slug} serviceName={name} />
+        {buyerContent}
         <SuccessStories />
         {results?.length ? <ResultsBand items={results} /> : null}
         <WhyUs />
