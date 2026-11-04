@@ -1463,4 +1463,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-vancouver': {
+    title: 'SaaS Development Company in Vancouver',
+    description:
+      'Mapletech Labs builds multi-tenant SaaS for Vancouver and BC teams, with Canadian data residency and a fixed CAD price agreed up front. Get a free quote.',
+    intro:
+      'Mapletech Labs is a Canadian team headquartered in Edmonton, building multi-tenant SaaS products for Vancouver and BC businesses. We do not have a Vancouver office, but Edmonton is one hour ahead of Vancouver, so our working days almost fully overlap and you rarely wait for an answer. We come to Vancouver for discovery workshops by arrangement, with travel agreed up front. You work directly with the senior engineers who build your platform, and a written scope with a fixed CAD price is agreed before development begins. Call +1-403-604-8692 to discuss your SaaS idea.',
+    sections: [
+      {
+        heading: 'SaaS products Vancouver teams build with us',
+        body: [
+          'Vancouver product teams bring their own mix of B2B SaaS needs. We build platforms for clean tech and sustainability reporting, where customers track emissions, energy use and supply-chain data in one place. Health tech teams need careful handling of patient information and appointment workflows. Creative and media companies ask for tools that manage projects, assets and client reviews. E-commerce operations teams use our platforms for order, inventory and fulfilment visibility. Where AI-assisted features serve a clear user need, we add them, and we define the core workflow, tenant boundaries and subscription model before the roadmap expands.',
+        ],
+      },
+      {
+        heading: 'Ready for enterprise and international customers',
+        body: [
+          'Many Vancouver SaaS companies sell into the US early, so we plan for it from the start. We build SSO/SAML for company sign-in, role-based access for different responsibilities, and audit logs that make sensitive actions traceable. Tenant isolation and SOC 2-ready testing prepare the product for security reviews, with test evidence your team can examine. For billing, we set up multi-currency Stripe so US customers pay in USD, and we plan taxes, including GST and PST in BC, so invoices are correct from the first sale. We agree these requirements during discovery so the first release has a clear path to enterprise adoption.',
+        ],
+      },
+      {
+        heading: 'BC privacy rules your SaaS may need to meet',
+        body: [
+          'SaaS handling personal information in British Columbia usually falls under BC’s Personal Information Protection Act (PIPA), and products sold to BC public bodies also need to meet FIPPA. We plan Canadian data residency across hosting, backups and connected services, and we build in encryption, access control and audit logs from the start. Our ',
+          { href: '/blog/app-privacy-compliance-canada', label: 'Canadian app privacy checklist' },
+          ' covers the basics, but your legal team confirms what applies.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'Canadian SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3-4 months, a growth-stage product at $75,000-$200,000 over 4-8 months, and an enterprise platform at $200,000-$500,000+ over 8-18 months. Integrations, security requirements and the scope of the first release shape your fixed CAD price. If you are still comparing partners, our ',
+          { href: '/blog/software-development-companies-vancouver', label: 'guide to choosing a Vancouver software company' },
+          ' covers the questions to ask before you sign.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Vancouver?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. Your features and integrations shape the scope, and we agree on a fixed CAD price before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'Our Canadian cost guide gives an MVP timeline of 3-4 months. The written scope sets out the work and timeline for your particular product.',
+      },
+      {
+        q: 'Do you have an office in Vancouver?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, one hour ahead of Vancouver, and we do not have a Vancouver office. We come to Vancouver for in-person discovery workshops by arrangement, with travel agreed up front.',
+      },
+      {
+        q: 'Can you keep our SaaS data in Canada?',
+        a: 'Yes. We plan Canadian hosting, storage and backups for your SaaS, and we review connected services with you so personal information stays in Canada where your project needs it.',
+      },
+      {
+        q: 'Who owns the code?',
+        a: 'You do. The source code and design files we create for your project belong to you, so you can continue with us or hand the code to your own team.',
+      },
+    ],
+  },
 };
