@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
+import ServiceProof from '@/components/ServiceProof';
 import { CityTestimonial } from '@/components/home/Testimonial';
 import { quoteForCity } from '@/data/testimonials';
 import Credentials from '@/components/home/Credentials';
@@ -189,6 +190,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
 
         <TechStrip />
         <ProcessSteps title={`How we deliver your ${serviceName} project`} steps={p.steps} />
+        {!local?.proof.length ? <ServiceProof slug={serviceSlug} name={serviceName} /> : null}
         <ServicePricing serviceSlug={serviceSlug} serviceName={serviceName} />
         <TechBlocks title={`The stack behind your ${serviceName}`} cats={tech} />
 
