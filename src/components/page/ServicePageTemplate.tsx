@@ -11,6 +11,7 @@ import InsightsSection from '@/components/InsightsSection';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, IndustryRow, WhyUs, SuccessStories, Voices, ResultsBand } from './Blocks';
+import ServicePricing from './ServicePricing';
 import { serviceMedia, defaultMedia, officeMedia } from '@/data/media';
 import { serviceCategories } from '@/data/nav';
 import type { Faq, HeroCopy, IndustryCard, ServiceCard, Stat, Step, TechCategory } from './types';
@@ -33,6 +34,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <ServiceCityLinks serviceSlug={slug} serviceName={name} />
         <MediaBand media={serviceMedia[slug] ?? defaultMedia} />
         <ProcessSteps title={`How we deliver your ${name} project`} steps={steps} />
+        <ServicePricing serviceSlug={slug} serviceName={name} />
         <SuccessStories />
         {results?.length ? <ResultsBand items={results} /> : null}
         <WhyUs />

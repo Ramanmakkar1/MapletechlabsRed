@@ -10,6 +10,7 @@ import FaqSplit from '@/components/home/FaqSplit';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, WhyUs } from './Blocks';
+import ServicePricing from './ServicePricing';
 import TechStrip from './TechStrip';
 import { serviceMedia, defaultMedia, humanPick } from '@/data/media';
 import { provinceSlugForName } from '@/data/provinces';
@@ -183,6 +184,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
 
         <TechStrip />
         <ProcessSteps title={`How we deliver your ${serviceName} project`} steps={p.steps} />
+        <ServicePricing serviceSlug={serviceSlug} serviceName={serviceName} />
         <TechBlocks title={`The stack behind your ${serviceName}`} cats={tech} />
 
         {/* Honest commitments */}
