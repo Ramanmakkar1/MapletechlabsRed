@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { cities } from '@/data/cities';
 import {
   serviceCityPath,
   isIndexableCityService,
@@ -34,7 +35,8 @@ type ServiceCityLinksProps =
 export default function ServiceCityLinks(props: ServiceCityLinksProps) {
   if ('label' in props) return <ServiceCitySidebar {...props} />;
   const { serviceSlug, serviceName } = props;
-  const links = CITIES.filter(c => isIndexableCityService(c.slug, serviceSlug));
+  const links = (isPriorityService(serviceSlug) ? cities : CITIES)
+    .filter(c => isIndexableCityService(c.slug, serviceSlug));
   if (!links.length) return null;
   return (
     <section style={{ padding: 'var(--section-y-sm) 0' }}>
@@ -43,7 +45,7 @@ export default function ServiceCityLinks(props: ServiceCityLinksProps) {
         <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 18px', maxWidth: 680 }}>Local teams, local pricing guidance and case studies for each city we serve across Canada.</p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           {links.map(c => (
-            <Link key={c.slug} href={serviceCityPath(serviceSlug, c.slug)} className="pill">{cityLinkLabel(serviceSlug, serviceName, c.name)}</Link>
+            <Link key={c.slug} href={serviceCityPath(serviceSlug, c.slug)} className="pill" style={{ height: 'auto', minHeight: 44, maxWidth: '100%', padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>{cityLinkLabel(serviceSlug, serviceName, c.name)}</Link>
           ))}
         </div>
         {serviceSlug === 'digital-marketing' ? (
