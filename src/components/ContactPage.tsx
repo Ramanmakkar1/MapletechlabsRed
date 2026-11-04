@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { submitToSplitForms } from '@/lib/splitforms';
 
 const PROJECT_TYPES = ['Mobile App', 'Web Platform', 'AI / ML Solution', 'Product Design', 'Blockchain / Web3', 'Custom Engineering', 'Other'];
@@ -18,6 +18,17 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const successHeadingRef = useRef<HTMLHeadingElement>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const returningToForm = useRef(false);
+
+  useEffect(() => {
+    if (submitted) successHeadingRef.current?.focus();
+    else if (returningToForm.current) {
+      nameRef.current?.focus();
+      returningToForm.current = false;
+    }
+  }, [submitted]);
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm(p => ({ ...p, [e.target.name]: e.target.value }));
@@ -89,24 +100,25 @@ export default function ContactPage() {
 
             {/* Right — the form */}
             <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 28, padding: 'clamp(24px, 4vw, 44px)' }}>
+              <div role="status" aria-live="polite" style={{ position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0 }}>{isLoading ? 'Sending message...' : ''}</div>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '48px 0' }}>
                   <div style={{ width: 64, height: 64, borderRadius: '50%', border: '1px solid var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg>
                   </div>
-                  <h2 style={{ fontSize: 26, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 12px' }}>Message sent.</h2>
+                  <h2 ref={successHeadingRef} tabIndex={-1} style={{ fontSize: 26, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 12px' }}>Message sent.</h2>
                   <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, maxWidth: 340, margin: '0 auto 28px' }}>
                     We&apos;ve got your details. A senior engineer will be in touch within one working day.
                   </p>
-                  <button onClick={() => setSubmitted(false)} style={{ background: 'none', border: '1px solid var(--line)', borderRadius: 100, padding: '12px 26px', color: 'var(--muted)', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}>
+                  <button onClick={() => { returningToForm.current = true; setSubmitted(false); }} style={{ background: 'none', border: '1px solid var(--line)', borderRadius: 100, padding: '12px 26px', color: 'var(--muted)', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}>
                     Send another →
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+                <form onSubmit={handleSubmit} aria-busy={isLoading} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
                   <div>
                     <label htmlFor="cp-name" style={lbl}>Name *</label>
-                    <input id="cp-name" name="name" value={form.name} onChange={handle} required placeholder="Alex Johnson" style={inp} onFocus={fi} onBlur={fo} />
+                    <input ref={nameRef} id="cp-name" name="name" value={form.name} onChange={handle} required placeholder="Alex Johnson" style={inp} onFocus={fi} onBlur={fo} />
                   </div>
 
                   <div>
