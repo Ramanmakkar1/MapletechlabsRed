@@ -3679,4 +3679,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-kitchener': {
+    title: 'UI/UX Design Company in Kitchener-Waterloo',
+    description: 'UI/UX design company for Kitchener-Waterloo SaaS, startup and manufacturing apps: UX audits, prototypes, WCAG 2.1 AA. Free UX audit, fixed CAD quote.',
+    intro: 'Mapletech Labs is a UI/UX design company headquartered in Edmonton, designing SaaS products, web apps, mobile apps and internal tools for Kitchener, Waterloo and Cambridge organizations. Our Waterloo Region buyers include startups and SaaS teams growing out of the University of Waterloo and Communitech ecosystem, advanced manufacturers in Kitchener and Cambridge whose operators and planners live in dashboards all day, insurers and financial firms with customer and advisor portals, and public-sector bodies running large online services. We do not have a Kitchener office. Edmonton is two hours behind Eastern time, so our working days overlap for research calls, design reviews and sign-offs. Our designers work beside the engineers who build the software, so wireframes, prototypes and developer handoff stay on one thread. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'UX for SaaS products and investor-ready MVPs',
+        body: [
+          'Waterloo founders often need a product that real users can try and investors can click through before the next raise or accelerator demo day. We start with the one workflow your first customers pay for, map it with short user interviews, and turn it into wireframes and a clickable Figma prototype you can put in front of pilot users within weeks. For SaaS teams that already have traction, we fix the onboarding, settings and billing screens where trial users drop off, and we design new features so they fit the product instead of being bolted on. See how research, prototyping and handoff fit together on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Dashboards and operator screens for manufacturers and logistics',
+        body: [
+          'Kitchener and Cambridge manufacturers and the logistics firms along the Highway 401 corridor run on screens that shop-floor operators, schedulers and dispatchers use for whole shifts. We design production dashboards, work-order and quality screens, and shipment tracking views that show the exception first, work on rugged tablets and large wall displays, and keep critical actions one tap away. We sit with the people who use the screens, often over video from the floor, so the design matches how the work is really done rather than how the old system forced it.',
+        ],
+      },
+      {
+        heading: 'Accessible design for the AODA and WCAG 2.1 AA',
+        body: [
+          'The Accessibility for Ontarians with Disabilities Act (AODA) sets accessibility standards for many Ontario organizations, and its web requirements refer to WCAG 2.0 AA. We design to the newer WCAG 2.1 AA: colour contrast, focus states, keyboard paths, text sizing, plain-language error messages and screen-reader labels are decided in the design files and design system, not patched after development. Your own legal team confirms which AODA obligations and deadlines apply to your organization.',
+        ],
+      },
+      {
+        heading: 'Remote research and prototyping from our Edmonton HQ',
+        body: [
+          'Research interviews, design reviews and usability tests run over video with shared Figma files and clickable prototypes, so your users can test real tasks from their own desks, phones or the plant floor. Findings shape journey maps and wireframes before visual design begins, and every review ends with clear decisions and next steps. Design is quoted as a fixed price in CAD after the free audit; see our ',
+          { href: '/pricing', label: 'pricing page' },
+          ' for how we scope work, and our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          ' to compare how Canadian studios approach it.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Kitchener-Waterloo?',
+        a: 'The first UX audit is free. Design work is then quoted as a fixed price in CAD. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Screen count, research depth and the number of user types all move the number.',
+      },
+      {
+        q: 'How long does a UI/UX design project take?',
+        a: 'Most projects take 6-11 weeks across research, wireframes, prototyping, visual design and handoff. A focused MVP prototype for a pilot or investor demo can be faster, while a design system covering several products takes longer. Your written scope lists the milestones and review points up front.',
+      },
+      {
+        q: 'Can you work with our startup\'s in-house developers?',
+        a: 'Yes. Many Waterloo startups already have engineers and just need design. We design within your current tech stack and component library, join sprint planning and reviews, hand over annotated specs and Figma components your developers can build from, and review the built screens against the design before release. If you need more engineering capacity, our own team can build it too.',
+      },
+      {
+        q: 'Do you design dashboards for manufacturing and operations teams?',
+        a: 'Yes. We design production, quality, scheduling and logistics dashboards for the people who use them every shift. That means interviewing operators and supervisors, designing for tablets and wall displays, and putting alerts and exceptions first so problems are seen and acted on quickly.',
+      },
+      {
+        q: 'Will the design meet AODA accessibility requirements?',
+        a: 'We design to WCAG 2.1 AA, with contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels built into the design files and design system, so your developers implement them from the start. AODA requirements differ by organization type and size, so your legal team should confirm your specific obligations.',
+      },
+    ],
+  },
 };
