@@ -44,12 +44,43 @@ export default function PageClient() {
       faqs={faqs}
       capabilitiesTitle="Our SEO Capabilities"
       buyerContent={(
+        <>
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2>What your SEO engagement includes</h2>
+            <p className="lede">Our site audit establishes your organic performance baseline and a prioritised roadmap of crawl, indexation, on-page and off-page opportunities. Keyword mapping connects relevant searches to the pages that should answer them, helping you see which existing service pages need improvement and where content gaps remain.</p>
+            <p className="lede">Technical fixes address the audit findings, including crawl errors, Core Web Vitals, metadata, schema and internal linking. Content recommendations identify pages to update or create, the search intent each page should serve and how it supports your services. Use the roadmap to discuss priorities, implementation dependencies and the content publishing work included in your scope.</p>
+            <p className="lede">Monthly ranking reports and our Looker Studio dashboard connect organic sessions, goal completions and revenue to your SEO investment using Google Analytics 4, Search Console and rank tracking. Review these alongside completed work and upcoming priorities to understand progress beyond individual keyword positions.</p>
+          </div>
+        </section>
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2>SEO pricing and scope in Canada</h2>
+            <p className="lede">Start with the <Link href="/blog/digital-marketing-cost-canada#seo">SEO pricing breakdown in our Canadian digital marketing cost guide</Link> and our <Link href="/pricing">service pricing and engagement options</Link>. Use these to frame a scope discussion around your website and business goals.</p>
+            <p className="lede">Competition affects the depth of keyword research, content and link acquisition needed. Site size affects how many pages and templates need auditing and optimisation. Technical work depends on crawl and indexation issues, performance problems and the changes your platform requires. Content requirements depend on whether existing pages can be improved or new service pages, landing pages and supporting articles are needed.</p>
+            <p className="lede">When comparing proposals, ask which technical fixes, content deliverables and reporting are included, who implements each change and which work is ongoing. An initial repair programme and a continuing content and link-building campaign involve different workloads; agree priorities and responsibilities before starting.</p>
+          </div>
+        </section>
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2>Prepare for your SEO consultation</h2>
+            <p className="lede">Bring the following so we can discuss a relevant audit and scope:</p>
+            <ul className="lede">
+              <li>Your website URL and any related sites or subdomains.</li>
+              <li>The services you want to grow and the cities or regions you serve.</li>
+              <li>Previous SEO work, including audits, content changes and agency reports.</li>
+              <li>How you currently measure enquiries from forms, calls or bookings, including any gaps in tracking.</li>
+            </ul>
+            <p className="lede"><Link href="/contact">Book an SEO consultation to discuss your website, target markets and enquiry goals</Link>.</p>
+          </div>
+        </section>
         <section style={{ padding: 'var(--section-y-sm) 0' }}>
           <div className="cb-container">
             <h2>Need more enquiries from nearby customers?</h2>
             <p className="lede">Explore our <Link href="/services/digital-marketing/local-seo">local SEO services in Canada for Google and Bing</Link>, including Google Business Profile, Bing Places, citation cleanup, service-area content and enquiry tracking.</p>
           </div>
         </section>
+        </>
       )}
     />
   );
