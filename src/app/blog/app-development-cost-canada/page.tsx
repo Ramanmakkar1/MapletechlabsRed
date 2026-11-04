@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'How Much Does App Development Cost in Canada? (2026 Guide)';
-const DESCRIPTION = 'Complete guide to mobile app development costs in Canada for 2026';
+const DESCRIPTION = 'What mobile app development costs in Canada in 2026: CAD price ranges for simple to complex iOS and Android apps, what drives cost, and how to budget.';
 const SLUG = 'app-development-cost-canada';
 const DATE = '2026-01-29';
 

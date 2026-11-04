@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'How Much Does SaaS Development Cost in Canada? (2026)';
-const DESCRIPTION = 'Complete guide to SaaS development costs in Canada for 2026';
+const DESCRIPTION = 'What SaaS development costs in Canada in 2026: MVP to enterprise price ranges in CAD, what drives the budget, timelines, and how to plan your first build.';
 const SLUG = 'saas-development-cost-canada';
 const DATE = '2026-03-06';
 

@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'How to Choose a Software Development Company in Canada';
-const DESCRIPTION = 'Expert guide to selecting the right software development partner in Canada';
+const DESCRIPTION = 'How to choose a software development company in Canada: what to look for, questions to ask, pricing models, red flags, and how to compare your shortlist.';
 const SLUG = 'choose-software-development-company-canada';
 const DATE = '2026-02-05';
 
