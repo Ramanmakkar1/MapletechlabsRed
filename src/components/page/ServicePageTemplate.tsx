@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
+import ServiceProof from '@/components/ServiceProof';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import { defaultFaqs } from '@/data/faqs';
@@ -31,6 +32,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <StatRow stats={stats} />
         <ServicesGrid title={servicesTitle} sub={`Everything ${name} needs, engineered by one accountable team.`} items={services} />
         <SubServiceLinks slug={slug} name={name} />
+        <ServiceProof slug={slug} name={name} />
         <ServiceCityLinks serviceSlug={slug} serviceName={name} />
         <MediaBand media={serviceMedia[slug] ?? defaultMedia} />
         <ProcessSteps title={`How we deliver your ${name} project`} steps={steps} />
