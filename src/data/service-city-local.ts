@@ -1081,4 +1081,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-edmonton': {
+    title: 'SaaS Development Company in Edmonton',
+    description: 'Mapletech Labs is headquartered in Edmonton and builds multi-tenant SaaS products with a fixed CAD price. Get a free quote',
+    intro: 'Mapletech Labs is headquartered in Edmonton, so your SaaS project is supported by a local team you can meet in person. We build products from an initial MVP through to a platform ready to scale, whether you are testing a new idea or expanding an existing service. You talk directly to the senior engineers who build your product and can work with us in person at discovery workshops. Before development starts, we agree on a fixed scope and price in CAD, so you know what the project includes. Call us on +1-403-604-8692 to discuss your SaaS idea.',
+    sections: [
+      {
+        heading: 'SaaS products Edmonton founders and companies build with us',
+        body: [
+          'We build B2B SaaS tools for teams in energy, agriculture, construction, healthcare and education. A product might help customers manage field work, coordinate schedules, share information or track the work that matters to their organisation. We also help companies turn internal tools into products that other businesses can use. Whether the idea starts with a founder or an established team, we shape the first release around the users and workflows it needs to serve.',
+        ],
+      },
+      {
+        heading: 'The SaaS foundations we get right first',
+        body: [
+          'A SaaS product needs foundations that support both its users and the people running it. We plan multi-tenant architecture to separate customer data, authentication and SSO for access, and Stripe billing with GST/HST for subscriptions. An admin dashboard gives your team a place to manage the product, while APIs connect it with other systems. Testing covers the key workflows and integrations, helping the team find problems before customers encounter them and prepare for growth.',
+        ],
+      },
+      {
+        heading: 'Workshops in person, here in Edmonton',
+        body: [
+          'We can hold discovery at your Edmonton office, bringing the people who understand the business and the engineers building the product into the same room. Together we map users, workflows, integrations and the first release. After the workshop, you receive a written scope so the features and decisions are clear before development starts. For a closer look at planning an early release, read ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'our 8-week SaaS MVP playbook' },
+          '. We keep reviews and communication open throughout the build.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'Canadian SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3-4 months, a growth-stage product at $75,000-$200,000 over 4-8 months, and an enterprise platform at $200,000-$500,000+ over 8-18 months. Your scope and integrations affect the estimate; we agree on a fixed CAD price before development. ',
+          { href: '/blog/sred-software-development-canada', label: 'SR&ED' },
+          ' and ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP' },
+          ' may help with eligible work, subject to their requirements and your circumstances.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Edmonton?',
+        a: 'Our Canadian cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. Your features and integrations shape the scope, and we agree on a fixed CAD price before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'Our Canadian cost guide gives an MVP timeline of 3-4 months. The written scope sets out the work and timeline for your particular product.',
+      },
+      {
+        q: 'Can we meet your team in person in Edmonton?',
+        a: 'Yes. We are headquartered in Edmonton and can hold discovery workshops at your office, so your team can discuss the product directly with ours.',
+      },
+      {
+        q: 'Can SR&ED or IRAP help pay for our SaaS build?',
+        a: 'Your project may qualify for SR&ED or NRC IRAP support, depending on the work and program requirements. Your accountant confirms whether your circumstances qualify.',
+      },
+      {
+        q: 'Who owns the code?',
+        a: 'You do. The source code and design files we create for your project belong to you, so you can continue with us or hand the code to your own team.',
+      },
+    ],
+  },
 };
