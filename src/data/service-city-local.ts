@@ -1841,4 +1841,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-ottawa': {
+    title: 'App Development Company in Ottawa',
+    description: 'iOS and Android app development for Ottawa businesses by a Canadian team headquartered in Edmonton, with a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton that builds iOS and Android apps for Ottawa businesses and organisations. Edmonton is two hours behind Ottawa, so most of the working day overlaps and questions get answered the same day. We work with teams in government, tech, health and fintech across the city. You deal directly with the senior engineers who write your code, not account managers passing notes along. Your contract is with a Canadian company, priced in CAD, and you get a fixed scope and price before any work starts. Call us on +1-403-604-8692 to talk through your app idea.',
+    sections: [
+      {
+        heading: 'Apps for Ottawa’s government, tech and health sectors',
+        body: [
+          'Ottawa’s economy mixes federal departments and the suppliers that support them, the Kanata North tech park, fintech and payments companies, and health and university teams that need reliable mobile tools. Field and operations staff need apps that work on the go, sync when a connection returns and respect strict access rules. Product and IT teams at growing software firms need iOS and Android apps that match their web platform. Clinics and campus services need booking, intake and patient or student portals. We scope each build around how your staff and users actually work.',
+        ],
+      },
+      {
+        heading: 'Security, bilingual and accessible by default',
+        body: [
+          'Many Ottawa apps serve the public sector or regulated industries, so security expectations run high from day one. We plan for strong authentication, encryption in transit and at rest, and audit logs that show who changed what. English and French bilingual content is built in when your users need it, not patched on later. We design and test to WCAG 2.1 level AA, the bar Ontario’s Accessibility for Ontarians with Disabilities Act (AODA) expects for many organisations. Personal and operational data can stay in Canadian cloud regions so residency requirements are met. If you are comparing vendors, our ',
+          { href: '/blog/software-development-companies-ottawa', label: 'guide to choosing a software development company in Ottawa' },
+          ' covers the questions worth asking on a first call.',
+        ],
+      },
+      {
+        heading: 'Native or cross-platform: picking the right build',
+        body: [
+          'Most Ottawa projects need to reach both iPhone and Android users, so we usually recommend a cross-platform build in Flutter or React Native. One shared codebase ships to both app stores and is typically 30-40% less expensive than building separate Swift and Kotlin apps. When your product leans on device hardware, Bluetooth sensors, large offline datasets or maximum performance, we build natively instead. We explain that trade-off for your app in plain language before you sign off on a stack, rather than defaulting to one approach every time.',
+        ],
+      },
+      {
+        heading: 'What an app costs and how long it takes',
+        body: [
+          'Based on our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ', a simple single-platform app with 5-8 screens costs about $25,000-$50,000 CAD and takes 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Discovery is free, and your price is locked in before any code is written.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform (Ottawa)', note: 'A PCI DSS certified payments API for Ottawa-based PayBridge Solutions, processing 12 million transactions a month.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Ottawa?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. After a free discovery phase you get a fixed price in CAD, so your budget is set before development begins.',
+      },
+      {
+        q: 'Do you have developers in Ottawa?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have an Ottawa office or Ottawa staff. We work with Ottawa clients through video workshops, weekly calls and shared project boards, with Edmonton two hours behind Ottawa so most of the working day overlaps.',
+      },
+      {
+        q: 'Can you build bilingual English and French apps?',
+        a: 'Yes. When your users need both official languages, we build English and French content into the app from the start: labels, menus, notifications and in-app copy, with a clear way to switch languages. We plan the content model during discovery so translations stay maintainable after launch.',
+      },
+      {
+        q: 'Can you meet public-sector security and Canadian data residency requirements?',
+        a: 'We design for strong authentication, encryption, role-based access and audit logging, and we can host app data in Canadian cloud regions when your project requires it. Public-sector and supplier projects often need extra review steps; we document our approach for your security team, and your own officers should confirm the final compliance position.',
+      },
+      {
+        q: 'Who owns the code for our app?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
 };
