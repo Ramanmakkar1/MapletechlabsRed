@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 
 const stats = [
@@ -101,6 +102,32 @@ export default function PageClient() {
       techCategories={techCategories}
       industries={industries}
       faqs={faqs}
+      buyerContent={(
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2>Choose the right web development approach</h2>
+            <p className="lede">Start with what visitors or staff need to accomplish, then choose the simplest approach that supports those tasks. The number of page types, workflows and connections to other systems will shape the scope.</p>
+            <div className="grid grid--3">
+              <div className="tile">
+                <h3>Marketing website with an editable CMS</h3>
+                <p>Choose this approach when you need to explain your services, publish content and generate enquiries, while giving your team control over routine updates. A <Link href="/services/wordpress-cms">WordPress CMS website</Link> can support pages, articles and other reusable content types.</p>
+                <p>For a quote, list the page types you need, such as service pages, case studies and blog posts. Identify content and images to migrate, who will edit them, any forms or CRM integrations, and your accessibility requirements. Custom layouts, languages and the condition of existing content can affect the work.</p>
+              </div>
+              <div className="tile">
+                <h3>E-commerce storefront</h3>
+                <p>A storefront fits businesses selling products online that need a catalogue, cart and checkout. Scope depends on product variants, shipping and tax rules, promotions and the systems that manage inventory or fulfilment. Explore our <Link href="/services/web-development/ecommerce-systems">e-commerce development services</Link> for more detail.</p>
+                <p>Prepare a sample catalogue, product data and images, and note any content or customer data migration. List payment, shipping, accounting and inventory integrations, along with staff roles and accessibility needs for shopping and checkout.</p>
+              </div>
+              <div className="tile">
+                <h3>Custom web application or portal</h3>
+                <p>Choose a custom application when customers, partners or employees need to complete workflows, access account-specific information or use internal tools. Our <Link href="/services/web-development/enterprise-portals">enterprise portal services</Link> cover this type of connected experience.</p>
+                <p>Before requesting a quote, map the main tasks and user roles, including permissions and approvals. Share examples of existing data, migration needs, integrations, security constraints and accessibility requirements. The number of workflows, business rules and external systems can significantly change the scope.</p>
+              </div>
+            </div>
+            <p className="lede" style={{ marginTop: 24 }}>Compare the factors behind budgets in our <Link href="/blog/website-cost-canada">Canadian website cost guide</Link>, then <Link href="/contact">contact us to discuss your web development scope</Link>.</p>
+          </div>
+        </section>
+      )}
     />
   );
 }
