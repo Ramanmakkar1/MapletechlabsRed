@@ -1,4 +1,21 @@
 import Link from 'next/link';
+import { BUSINESS, HQ_ADDRESS } from '@/lib/seo/business';
+import { serviceCityPath } from '@/data/serviceCity';
+
+const CITIES = [
+  { slug: 'edmonton', name: 'Edmonton' },
+  { slug: 'calgary', name: 'Calgary' },
+  { slug: 'toronto', name: 'Toronto' },
+  { slug: 'vancouver', name: 'Vancouver' },
+];
+
+const CITY_SERVICES = [
+  { serviceSlug: 'ai-ml', label: 'AI development' },
+  { serviceSlug: 'mobile-app-development', label: 'App development' },
+  { serviceSlug: 'web-development', label: 'Web development' },
+  { serviceSlug: 'product-design', label: 'UI/UX design' },
+  { serviceSlug: 'digital-marketing', label: 'SEO' },
+];
 
 const STEPS = [
   {
@@ -122,6 +139,30 @@ export default function ContactInfo() {
                 <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>{area.title}</strong>
                 <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '6px 0 0' }}>{area.body}</p>
                 <Link href={area.href} style={link}>{area.label} →</Link>
+              </li>
+            ))}
+          </ul>
+
+          <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
+            Our office and the cities we serve
+          </h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px' }}>
+            {BUSINESS.name} is based in {HQ_ADDRESS.addressLocality}, {HQ_ADDRESS.addressRegion} ({HQ_ADDRESS.postalCode}), and works with clients across Canada.
+            {' '}Call us at <a href={'tel:' + BUSINESS.telephone} style={link}>{BUSINESS.telephone}</a> or email{' '}
+            <a href={'mailto:' + BUSINESS.email} style={link}>{BUSINESS.email}</a>.
+            {' '}Most projects run remotely with weekly demos, and we meet in person in Edmonton and Calgary when it helps.
+          </p>
+          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 64px', display: 'grid', gap: 22 }}>
+            {CITIES.map(city => (
+              <li key={city.slug} style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
+                <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>{city.name}</strong>
+                <br />
+                {CITY_SERVICES.map((s, i) => (
+                  <span key={s.serviceSlug}>
+                    {i > 0 && ' · '}
+                    <Link href={serviceCityPath(s.serviceSlug, city.slug)} style={link}>{s.label} in {city.name}</Link>
+                  </span>
+                ))}
               </li>
             ))}
           </ul>
