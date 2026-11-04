@@ -8,6 +8,13 @@ import Footer from '@/components/Footer';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
+import { services } from '@/data/services';
+import { cities } from '@/data/cities';
+import { SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
+
+// Allowlists for ?service=&city= enquiry context (validated client-side in ContactPage).
+const SERVICE_OPTIONS = services.filter(s => s.slug in SERVICE_PROJECT_TYPE).map(s => ({ slug: s.slug, name: s.name }));
+const CITY_OPTIONS = cities.map(c => ({ slug: c.slug, name: c.name }));
 
 const TITLE = 'Contact Mapletech Labs | Free Project Consultation';
 const DESCRIPTION = 'Contact Mapletech Labs for a free project consultation. Custom software development company in Edmonton, Canada. Response within one working day.';
@@ -64,7 +71,7 @@ export default function ContactRoute() {
     <>
       <Navbar />
       <main id="main-content" tabIndex={-1}>
-        <ContactPage />
+        <ContactPage serviceOptions={SERVICE_OPTIONS} cityOptions={CITY_OPTIONS} />
         <ContactInfo />
       </main>
       <BreadcrumbSchema items={[

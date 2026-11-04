@@ -16,6 +16,9 @@ import TechStrip from './TechStrip';
 import { serviceMedia, defaultMedia, humanPick } from '@/data/media';
 import { provinceSlugForName } from '@/data/provinces';
 import { serviceCityPath } from '@/data/serviceCity';
+import { services as allServices } from '@/data/services';
+import { cities as allCities } from '@/data/cities';
+import { contactHrefFor } from '@/lib/enquiryContext';
 import type { Stat } from './types';
 import type { CityServicePageData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
@@ -71,6 +74,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: cityName, href: `/locations/software-development-company-in-${citySlug}` }, { label: serviceName }]}
           copy={{ badge: p.badge, title: heroTitle ?? <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>, desc: heroDesc ?? p.heroDescription }}
           stats={HONEST_STATS} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
+          contactHref={contactHrefFor(serviceSlug, citySlug, allServices, allCities)}
         />
         <StatRow stats={HONEST_STATS} />
         {p.stats.length > 0 ? (

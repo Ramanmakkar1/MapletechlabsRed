@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import { BUSINESS, HQ_ADDRESS } from '@/lib/seo/business';
 import { submitToSplitForms } from '@/lib/splitforms';
+import { SERVICE_PROJECT_TYPE, contextFields, readEnquiryContext, type ContextOption } from '@/lib/enquiryContext';
 
 const PROJECT_TYPES = ['Mobile App', 'Web Platform', 'AI / ML Solution', 'Product Design', 'Blockchain / Web3', 'Custom Engineering', 'SEO / Digital Marketing', 'Other'];
 const TIMELINES = ['ASAP', '1–3 months', '3–6 months', '6+ months', 'Not sure yet'];
@@ -18,8 +19,29 @@ const DETAILS = [
 
 const EMPTY = { name: '', email: '', company: '', projectType: '', timeline: '', description: '', botcheck: '' };
 
-export default function ContactPage() {
+export default function ContactPage({ serviceOptions = [], cityOptions = [] }: { serviceOptions?: ContextOption[]; cityOptions?: ContextOption[] }) {
   const [form, setForm] = useState(EMPTY);
+  // Optional service/city context from a service+city page link; only allowlisted slugs survive.
+  const [ctx, setCtx] = useState({ service: '', city: '' });
+  const [showCtx, setShowCtx] = useState(false);
+
+  useEffect(() => {
+    const found = readEnquiryContext(window.location.search, serviceOptions, cityOptions);
+    if (!found.service && !found.city) return;
+    setCtx(found);
+    setShowCtx(true);
+    const mapped = SERVICE_PROJECT_TYPE[found.service];
+    if (mapped) setForm(p => (p.projectType ? p : { ...p, projectType: mapped }));
+    // Read once after mounting; later edits are the visitor's own.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleCtx = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setCtx(p => ({ ...p, [name]: value }));
+    const mapped = name === 'service' ? SERVICE_PROJECT_TYPE[value] : undefined;
+    if (mapped) setForm(p => ({ ...p, projectType: mapped }));
+  };
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -51,6 +73,7 @@ export default function ContactPage() {
         projectType: form.projectType,
         timeline: form.timeline,
         description: form.description,
+        ...contextFields(ctx.service, ctx.city, serviceOptions, cityOptions),
       });
       setSubmitted(true);
       setForm(EMPTY);
@@ -122,6 +145,31 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} aria-busy={isLoading} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+                  {showCtx && (
+                    <fieldset style={{ margin: 0, padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 14, background: 'var(--surface)', minWidth: 0 }}>
+                      <legend style={{ ...lbl, padding: '0 6px', marginBottom: 0 }}>Your enquiry is about</legend>
+                      <div className="cp-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                        <div>
+                          <label htmlFor="cp-ctx-service" style={{ ...lbl, textTransform: 'none', letterSpacing: 0, fontSize: 13 }}>Service</label>
+                          <select id="cp-ctx-service" name="service" value={ctx.service} onChange={handleCtx} style={sel} onFocus={fi} onBlur={fo}>
+                            <option value="">Not specified</option>
+                            {serviceOptions.map(o => <option key={o.slug} value={o.slug}>{o.name}</option>)}
+                          </select>
+                        </div>
+                        <div>
+                          <label htmlFor="cp-ctx-city" style={{ ...lbl, textTransform: 'none', letterSpacing: 0, fontSize: 13 }}>City</label>
+                          <select id="cp-ctx-city" name="city" value={ctx.city} onChange={handleCtx} style={sel} onFocus={fi} onBlur={fo}>
+                            <option value="">Not specified</option>
+                            {cityOptions.map(o => <option key={o.slug} value={o.slug}>{o.name}</option>)}
+                          </select>
+                        </div>
+                      </div>
+                      <button type="button" onClick={() => { setCtx({ service: '', city: '' }); setShowCtx(false); nameRef.current?.focus(); }} style={{ marginTop: 10, minHeight: 44, background: 'none', border: 'none', padding: 0, color: 'var(--brand)', fontSize: 14, cursor: 'pointer', fontFamily: 'inherit', textDecoration: 'underline' }}>
+                        Remove this context
+                      </button>
+                    </fieldset>
+                  )}
+
                   <div>
                     <label htmlFor="cp-name" style={lbl}>Name *</label>
                     <input ref={nameRef} id="cp-name" name="name" value={form.name} onChange={handle} required placeholder="Alex Johnson" style={inp} onFocus={fi} onBlur={fo} />

@@ -21,8 +21,8 @@ const Tick = () => (
 /* Inner-page hero. With a quote form: clean white, copy left, form right —
    the media band below carries the imagery. Without one: copy left, the
    photograph itself on the right, unscrimmed. */
-export default function PageHero({ crumbs, copy, stats, photo, form = true, serviceName }: {
-  crumbs: Crumb[]; copy: HeroCopy; stats?: Stat[]; photo: Media; form?: boolean; serviceName?: string;
+export default function PageHero({ crumbs, copy, stats, photo, form = true, serviceName, contactHref = '/contact' }: {
+  crumbs: Crumb[]; copy: HeroCopy; stats?: Stat[]; photo: Media; form?: boolean; serviceName?: string; contactHref?: string;
 }) {
   return (
     <section style={{ background: 'var(--surface)', padding: 'var(--hero-top) 0 var(--section-y)' }}>
@@ -34,7 +34,7 @@ export default function PageHero({ crumbs, copy, stats, photo, form = true, serv
             <h1 style={{ fontSize: 'var(--fs-display)', fontWeight: 600, letterSpacing: '-0.035em', lineHeight: 1.05, margin: '0 0 20px' }}>{copy.title}</h1>
             <p style={{ fontSize: 'clamp(16px, 1.4vw, 18px)', color: 'var(--body)', lineHeight: 1.7, maxWidth: '58ch', margin: '0 0 30px' }}>{copy.desc}</p>
             <div className="btn-group" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: stats?.length ? 36 : 0 }}>
-              <Link href="/contact" className="btn btn--primary btn--lg">Start Your Project
+              <Link href={contactHref} className="btn btn--primary btn--lg">Start Your Project
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M17 7H9M17 7v8" /></svg>
               </Link>
               <Link href="/case-studies" className="btn btn--ghost btn--lg">View Our Work</Link>
