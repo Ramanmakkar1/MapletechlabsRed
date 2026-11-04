@@ -8,8 +8,8 @@ import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from "@/lib/seo/business";
 import "./globals.css";
 
-// Hostinger must not keep HTML from an obsolete deployment for a year.
-export const revalidate = 300;
+// Bounded regeneration interval for repository-managed content.
+export const revalidate = 1800;
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
