@@ -55,7 +55,7 @@ export default function AppDevelopmentCompaniesEdmontonClient({ localLinks }: { 
   return (
     <>
       <Navbar />
-      <main ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
+      <main id="main-content" tabIndex={-1} ref={pageRef as React.RefObject<HTMLElement>} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
         <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
