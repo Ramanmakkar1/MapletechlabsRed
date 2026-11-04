@@ -3743,4 +3743,72 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-winnipeg': {
+    title: 'SaaS Development Company in Winnipeg, MB',
+    description: 'SaaS development company in Winnipeg: multi-tenant builds, subscription billing and a fixed CAD quote agreed up front. Book a free consult.',
+    intro: 'Mapletech Labs is a Canadian software team headquartered in Edmonton, building multi-tenant SaaS products for Winnipeg businesses from a first MVP to a platform ready to scale. We do not have a Winnipeg office. Winnipeg is one hour ahead of Edmonton, so almost the whole working day overlaps for product reviews, sprint planning and quick decisions. We work with Manitoba insurers and fintechs, agribusiness and logistics software companies, and founders building their first SaaS MVP. You talk directly to the senior engineers who design and build your platform, not a sales layer, and we agree a written scope and a fixed price in CAD before development starts. Call +1-403-604-8692 to talk through your product.',
+    sections: [
+      {
+        heading: 'From MVP to your first paying customers',
+        body: [
+          'Winnipeg founders usually need one thing first: a product that real customers will pay for. We start by defining the core workflow, the subscription model and what ships in the first release, then build it so pilot users can sign up, onboard and get value without hand-holding. Agribusiness and logistics software teams often begin with an internal tool, such as grain contract tracking, dispatch or shipment visibility, and we help turn it into a product other companies can subscribe to. Product analytics show activation, usage and churn, so the next release is planned around what paying customers actually do. For the full service, see our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant architecture, billing and SSO for B2B customers',
+        body: [
+          'B2B buyers, from Manitoba insurers to national distributors, expect each customer’s data to stay separate and sign-in to work with their company accounts. We design the platform as multi-tenant from day one, with clear tenant boundaries, role-based access and admin tooling, so adding customers does not mean rebuilding. SSO with SAML and OIDC lets employees sign in through their own identity provider, audit logs record sensitive actions, and Stripe subscription billing handles plans, upgrades and renewals with GST on Canadian invoices. Read more about how we plan ',
+          { href: '/services/saas-development/multi-tenant-architecture', label: 'multi-tenant architecture' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Canadian data residency and privacy (PIPEDA)',
+        body: [
+          'Insurers, fintechs and their enterprise customers ask where data lives before they sign. We plan Canadian data hosting across hosting, storage, backups and connected services, and we design with PIPEDA in mind: encryption, access control, consent and clear data flows that show what personal information the product collects and where it is stored. We prepare test evidence your security reviewers can examine, and our ',
+          { href: '/blog/app-privacy-compliance-canada', label: 'app privacy compliance checklist for Canada' },
+          ' supports planning and review. Your own legal and security team confirms the final compliance position before launch.',
+        ],
+      },
+      {
+        heading: 'Pricing and funding for your SaaS build',
+        body: [
+          'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. These are planning ranges, not quotes: integrations, security requirements and the scope of the first release shape your fixed CAD price, which we agree before development starts. To plan a lean first release, read our ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'guide to building a SaaS MVP in 8 weeks' },
+          '. Eligible work may qualify for SR&ED or NRC IRAP support; our ',
+          { href: '/blog/sred-software-development-canada', label: 'SR&ED guide for software' },
+          ' explains how claims work, and your accountant confirms whether your circumstances qualify.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Winnipeg?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. These are planning ranges, not quotes: we agree on the scope and a fixed CAD price before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'Our Canadian cost guide gives an MVP timeline of 3 - 4 months. Discovery defines the core workflow, integrations and acceptance criteria, and your written scope sets the timeline for your product.',
+      },
+      {
+        q: 'Who owns the code?',
+        a: 'You do. The source code and design files we create for your project belong to you, so you can continue with us or hand the code to your own team.',
+      },
+      {
+        q: 'Can you take over an existing SaaS codebase?',
+        a: 'Yes. We start by reviewing the code, architecture, hosting and open issues, then give you a written plan covering what to fix first, what to keep and what to rebuild. Ongoing work is scoped and priced in CAD before it starts, so you know what each release includes.',
+      },
+      {
+        q: 'Can SR&ED or IRAP help pay for our SaaS build?',
+        a: 'Your project may qualify for SR&ED or NRC IRAP support, depending on the work and program requirements. We keep development logs, technical risk notes and test evidence organised in a way that is friendly to SR&ED and IRAP claims. Your accountant or consultant confirms whether your circumstances qualify; we do not promise funding.',
+      },
+    ],
+  },
 };
