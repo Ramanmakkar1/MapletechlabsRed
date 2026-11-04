@@ -44,7 +44,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         {industries?.length ? <IndustryRow title={`${name} across every sector`} items={industries} /> : null}
         <Voices />
         <Credentials />
-        <InsightsSection />
+        <InsightsSection serviceSlug={slug} />
         <FaqSplit faqs={faqs} />
         <FaqSchema faqs={faqs ?? defaultFaqs} />
         <FinalCta />

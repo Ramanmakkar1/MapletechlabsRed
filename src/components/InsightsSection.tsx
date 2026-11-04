@@ -39,7 +39,31 @@ const posts = [
   },
 ];
 
-export default function InsightsSection() {
+const servicePosts: Record<string, typeof posts> = {
+  'mobile-app-development': [
+    { tag: 'Business', title: 'App Development Cost in Canada (2026 Guide)', excerpt: 'Compare Canadian app development price ranges, from a focused MVP to a more complex mobile product.', readTime: '8 min read', date: 'Mar 2026', href: '/blog/app-development-cost-canada' },
+    { tag: 'Engineering', title: 'Native vs Cross-Platform vs PWA: Choosing an App Approach', excerpt: 'Understand the trade-offs between native apps, cross-platform development and progressive web apps.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/native-vs-cross-platform-vs-pwa' },
+    { tag: 'Engineering', title: 'Privacy Compliance for Canadian Apps', excerpt: 'Plan for PIPEDA, Quebec Law 25 and provincial health privacy requirements when building an app.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/app-privacy-compliance-canada' },
+  ],
+  'ai-ml': [
+    { tag: 'AI/ML', title: 'AI Development Cost in Canada', excerpt: 'Explore the factors that shape the cost of building and integrating AI products in Canada.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ai-development-cost-canada' },
+    { tag: 'AI/ML', title: 'AI Development Companies in Canada', excerpt: 'Compare Canadian AI development teams, capabilities and areas of specialization.', readTime: '9 min read', date: 'Mar 2026', href: '/blog/ai-development-companies-canada' },
+    { tag: 'AI/ML', title: 'What Is Agentic AI?', excerpt: 'Learn how agentic AI systems plan and carry out multi-step tasks, and where they fit in products.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/what-is-agentic-ai' },
+  ],
+  'product-design': [
+    { tag: 'Business', title: 'UI/UX Design Companies in Canada', excerpt: 'A guide to Canadian product design and UI/UX teams and the work they specialize in.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ui-ux-design-companies-canada' },
+    { tag: 'Engineering', title: 'Native vs Cross-Platform vs PWA: Choosing an App Approach', excerpt: 'See how platform choices affect product experience, reach and design decisions.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/native-vs-cross-platform-vs-pwa' },
+    { tag: 'Business', title: 'Build a SaaS MVP in 8 Weeks', excerpt: 'A practical, week-by-week approach to shaping, designing and launching a focused SaaS MVP.', readTime: '10 min read', date: 'Sep 2026', href: '/blog/build-saas-mvp-8-weeks' },
+  ],
+  'digital-marketing': [
+    { tag: 'Digital Marketing', title: 'Top SEO Companies in Canada (2026)', excerpt: 'Compare leading Canadian SEO agencies and the organic growth work they deliver.', readTime: '9 min read', date: 'Mar 2026', href: '/blog/top-seo-companies-canada' },
+    { tag: 'Digital Marketing', title: 'Digital Marketing Cost in Canada (2026)', excerpt: 'Review typical Canadian budgets for SEO, paid ads, social media and content marketing.', readTime: '7 min read', date: 'Mar 2026', href: '/blog/digital-marketing-cost-canada' },
+    { tag: 'Business', title: 'Website Cost in Canada (2026 Guide)', excerpt: 'Compare website project pricing, from landing pages to custom web applications.', readTime: '7 min read', date: 'Mar 2026', href: '/blog/website-cost-canada' },
+  ],
+};
+
+export default function InsightsSection({ serviceSlug }: { serviceSlug?: string }) {
+  const recommendedPosts = serviceSlug ? servicePosts[serviceSlug] ?? posts : posts;
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -104,7 +128,7 @@ export default function InsightsSection() {
 
         {/* Cards */}
         <div className="insights-grid">
-          {posts.map((post, i) => (
+          {recommendedPosts.map((post, i) => (
             <a
               key={post.title}
               href={post.href}
