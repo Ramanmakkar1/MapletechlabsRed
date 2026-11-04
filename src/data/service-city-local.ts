@@ -2095,4 +2095,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-ottawa': {
+    title: 'Web Development Company in Ottawa',
+    description: 'Web development company in Ottawa: our Canadian team builds fast custom sites and web apps at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building fast, SEO-ready business websites, e-commerce stores and web apps for Ottawa companies. Edmonton is two hours behind Ottawa, so our working days overlap for most of yours, making it simple to review designs and settle decisions together. You work directly with the senior engineers who build your website, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts, so you know what is included from day one. Call us on +1-403-604-8692 to talk through your project.',
+    sections: [
+      {
+        heading: 'Websites and web apps for Ottawa’s government suppliers, Kanata tech firms and professional services',
+        body: [
+          'Ottawa’s economy mixes federal departments and the suppliers that support them, the Kanata North tech park, and health, legal and consulting firms that rely on a dependable online presence. Government suppliers need sites that make credentials, security practices and past work easy for procurement teams to check. Kanata tech firms need marketing sites and product dashboards that explain a complex platform clearly. Health and professional practices need booking, intake and client portals that respect confidentiality. Sellers need fast, secure e-commerce or B2B storefronts. We scope each build around how your Ottawa customers actually find and choose you.',
+        ],
+      },
+      {
+        heading: 'Accessible, bilingual and secure for the capital',
+        body: [
+          'Many Ottawa organisations serve the federal government or the public, so accessibility, bilingualism and security expectations run high from the start. We design and test to WCAG 2.1 level AA, the bar Ontario’s Accessibility for Ontarians with Disabilities Act (AODA) expects for many organisations, covering keyboard access, screen readers, colour contrast and text resizing. When your customers use both official languages, we build English and French content into the site from the start, with hreflang tags so search engines show the right version, rather than patching on translations later. Data can stay in Canadian hosting regions when residency matters. If you are comparing vendors, our ',
+          { href: '/blog/software-development-companies-ottawa', label: 'guide to choosing a software development company in Ottawa' },
+          ' lists the questions worth asking on a first call.',
+        ],
+      },
+      {
+        heading: 'Stack, performance and search-ready structure',
+        body: [
+          'We develop on Next.js and React, rendering key pages on the server so Google, Bing and visitors get readable content on first load. Core Web Vitals guide image sizes, fonts and script loading as we build, not as a last-minute patch, and semantic HTML, clean URLs and structured data describe your services and locations to search engines. A CMS lets your Ottawa team publish updates to services, posts and seasonal pages without opening a developer ticket every time. For the full range of what we build, see our ',
+          { href: '/services/web-development', label: 'web development services' },
+          '.',
+        ],
+      },
+      {
+        heading: 'What a website costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). Discovery is free, and your price is fixed in CAD before coding starts, so your team can plan with a clear budget and timeline.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform (Ottawa)', note: 'A PCI DSS certified payments API for Ottawa-based PayBridge Solutions, processing 12 million transactions a month.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Ottawa?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After free discovery you get a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Do you have developers in Ottawa?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, and we do not have an Ottawa office or Ottawa staff. We build for Ottawa clients remotely through video workshops, weekly calls and shared project boards, with Edmonton two hours behind Ottawa so most of the working day overlaps.',
+      },
+      {
+        q: 'Can you build a bilingual English and French website?',
+        a: 'Yes. When your customers need both official languages, we build English and French content into the site from the start: navigation, page copy, forms and metadata, with hreflang tags and a clear way to switch languages. We plan the content model during discovery so translations stay maintainable after launch.',
+      },
+      {
+        q: 'Will our website meet WCAG and AODA accessibility rules?',
+        a: 'We design and test to WCAG 2.1 level AA, the standard Ontario’s Accessibility for Ontarians with Disabilities Act (AODA) points to for many public websites, covering keyboard access, screen readers, colour contrast and text resizing. We can share our accessibility test results, and your own legal team should confirm how the AODA applies to your organisation.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
 };
