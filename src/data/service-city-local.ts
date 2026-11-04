@@ -577,6 +577,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-calgary': {
+    title: 'SEO Company in Calgary',
+    description: 'Mapletech Labs runs Calgary SEO: local map-pack and “near me” search, technical fixes and CAD retainers. Alberta team. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs is an Alberta SEO team headquartered in Edmonton, and we work with Calgary businesses across energy, construction, real estate and professional services. Calgary clients get the same setup as everyone we serve: you deal directly with the specialists doing the keyword research, the technical fixes and the content, not a salesperson reading a script. When a project calls for it, we travel to Calgary for discovery meetings and audits in person, and day-to-day work runs on calls and shared reports. SEO retainers are priced in CAD with a fixed monthly scope. Call +1-403-604-8692 to talk about your Calgary search goals.',
+    sections: [
+      {
+        heading: 'Calgary search markets we work in',
+        body: [
+          'Calgary buyers search before they call, and the queries change by industry. Energy and oilfield services companies research vendors over long buying cycles, fintech startups compare providers quickly, and construction and trades companies live on local-pack and “near me” searches across Calgary, Airdrie and Cochrane. Real estate agents, mortgage teams and professional services firms search the same way. We map the searches that actually lead to a call in your market first, then build the pages and profile signals that make you visible for them, instead of chasing vanity keywords that never bring work.',
+        ],
+      },
+      {
+        heading: 'Google Business Profile and NAP done honestly',
+        body: [
+          'For Calgary service businesses, the map pack often matters more than the classic blue links, so we start there. That means a properly set up Google Business Profile, category and service-area settings that describe what you really cover, and NAP consistency — the same name, address and phone everywhere — across directories and citations. What we will not do is invent fake Calgary addresses or claim downtown offices that do not exist. Those tricks get profiles suspended and cost you months of visibility. A clean service-area profile with consistent citations keeps ranking and keeps its place.',
+        ],
+      },
+      {
+        heading: 'Technical SEO done by engineers',
+        body: [
+          'Mapletech Labs is a software development company first, so the technical side of your SEO is handled by the engineers who build Next.js and WordPress sites every week. We audit Core Web Vitals, crawling and indexation, canonical tags, schema markup and internal linking on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page, then fix what is actually blocking crawlers or slowing pages. Fixes are made in your codebase or CMS rather than patched over with plugins, so they survive the next platform update instead of quietly unravelling a month later.',
+        ],
+      },
+      {
+        heading: 'Retainers, reporting and what results cost',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. You can sanity-check our rates on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' before you commit, and the scope is confirmed in writing before the first invoice.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Calgary?',
+        a: 'Most Calgary SEO engagements are monthly retainers of about $1,500-$10,000 CAD, the range we publish in our Canadian digital marketing cost guide. A single-location local campaign sits at the lower end; energy-sector B2B or national-competition keywords sit higher. After a free review of your site and your Calgary competitors, we quote one fixed monthly number in CAD rather than hourly billing.',
+      },
+      {
+        q: 'How long until our Calgary rankings move?',
+        a: 'Technical fixes and Google Business Profile cleanup can produce visible movement in 8-16 weeks when the site has no major blockers. Content built for competitive Calgary terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads so you can see progress building before the position charts catch up.',
+      },
+      {
+        q: 'Do I need to be in Calgary to rank in the Calgary map pack?',
+        a: 'You need either a real staffed address in the area or a genuine service-area setup. Google removes or down-ranks profiles built on virtual offices and fake addresses, so we will not suggest those. If your crews serve Calgary, Airdrie and Cochrane from elsewhere in Alberta, we configure your profile as a service-area business, keep NAP consistent across directories and prove coverage through your site and reviews. It is also simply what keeps the profile alive.',
+      },
+      {
+        q: 'Can we meet your team in person in Calgary?',
+        a: 'Yes, when it helps. Our team is headquartered in Edmonton, so for Calgary clients we can drive down for discovery meetings, audits and milestone reviews at your office. Day-to-day work runs on calls, shared documents and monthly reports, and you always have direct access to the specialists on your account at +1-403-604-8692.',
+      },
+      {
+        q: 'What does the monthly SEO report include?',
+        a: 'A plain-language summary of keyword movements that matter for your Calgary market, organic sessions and leads from analytics, the tasks completed that month, and the plan for the next period. We flag anything that needs a decision from your side, such as content approvals or profile changes. It is the same report format whether you serve Calgary, Airdrie or Cochrane.',
+      },
+    ],
+  },
   'web-development-company-in-toronto': {
     title: 'Web Development Company in Toronto',
     description: 'Mapletech Labs builds fast custom websites and web apps for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',
