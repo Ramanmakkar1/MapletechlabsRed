@@ -158,7 +158,7 @@ const organizationSchema = {
       {
         "@type": "OfferCatalog",
         name: "UI/UX Design",
-        url: `${siteOrigin()}/services/product-design/ui-ux-strategy`,
+        url: `${siteOrigin()}/services/product-design`,
       },
       {
         "@type": "OfferCatalog",
