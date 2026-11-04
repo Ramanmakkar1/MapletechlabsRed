@@ -2283,4 +2283,64 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-montreal': {
+    title: 'SEO Company in Montreal',
+    description: 'SEO for Montreal businesses on Google and Bing, with French and English search strategies and clear monthly CAD retainers.',
+    intro: 'Mapletech Labs is a Canadian SEO and digital marketing team headquartered in Edmonton, helping Montreal businesses reach customers searching on Google and Bing. We have no Montreal office, and work remotely with your team through calls and shared documents. Edmonton is two hours behind Montreal, so there is plenty of overlap for planning and reviewing progress together. You work directly with the specialists who research search terms, improve your website and develop content. We agree on the scope and a monthly retainer in CAD before work begins, and report on progress each month. Call +1-403-604-8692 to discuss your Montreal search goals.',
+    sections: [
+      {
+        heading: 'How Montreal searches',
+        body: [
+          'Montreal has French-first searchers alongside people who search in both French and English across the Plateau, Laval, the West Island and the South Shore. The words customers use can change by neighbourhood, language and service. AI and tech startups may need to explain a new product category, while gaming studios reach players and potential partners. Retailers need to connect product searches with nearby stores, and professional services need pages that answer questions before a prospect calls. We research those distinct searches and prioritise pages around the customers and locations you serve.',
+        ],
+      },
+      {
+        heading: 'French SEO and Quebec\'s Charter of the French Language',
+        body: [
+          'French keyword research is done natively, not machine-translated from English terms. We build separate French pages that answer the needs of French-speaking customers and use hreflang to help search engines understand the language versions. We keep Google Business Profile and Bing Places information consistent in both languages, including your business details and services. Your own counsel confirms the legal requirements that apply to your business under Quebec\'s Charter of the French Language.',
+        ],
+      },
+      {
+        heading: 'Technical SEO and content',
+        body: [
+          'We review crawling, indexing, page speed, structured data and internal links so Google and Bing can find and understand your pages. We then address technical barriers and plan useful service and location content around the questions Montreal customers ask. French and English pages each get appropriate titles, descriptions and links, with performance checked as the site changes.',
+        ],
+      },
+      {
+        heading: 'Pricing and reporting',
+        body: [
+          'SEO retainers are typically about $1,500-$10,000 CAD per month, depending on your site, competition and scope. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          ' explains the planning range. Each month we report on rankings, organic traffic and conversions, the work completed and the next priorities. We agree on the scope before the campaign starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Montreal?',
+        a: 'SEO retainers typically run about $1,500-$10,000 CAD per month. The scope depends on your website, languages, locations and competition. We agree on a monthly price before work starts.',
+      },
+      {
+        q: 'How long does SEO take to show results in Montreal?',
+        a: 'Technical and local profile improvements can show movement in 8-16 weeks, while competitive content often takes 4-9 months to judge. Timing depends on your site and competitors, and we track early indicators as well as leads.',
+      },
+      {
+        q: 'Do we need separate French and English pages?',
+        a: 'For a bilingual audience, separate pages let each language answer customer questions naturally. We research French terms natively and use hreflang to connect the language versions. Your counsel can confirm your legal obligations.',
+      },
+      {
+        q: 'How can a Montreal business appear in the local map pack?',
+        a: 'A complete Google Business Profile, accurate business details, suitable categories and relevant local pages help search engines understand your business. We also maintain consistent information in Bing Places. Map placement depends on factors including relevance, distance and prominence.',
+      },
+      {
+        q: 'What will our Montreal SEO reports include?',
+        a: 'Monthly reports cover rankings, organic traffic, conversions, completed work and next steps. We review the results with you so your team can see how the campaign is progressing.',
+      },
+    ],
+  },
 };
