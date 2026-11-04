@@ -2223,4 +2223,64 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-ottawa': {
+    title: 'AI Development Company in Ottawa',
+    description: 'AI development for Ottawa businesses: LLM features, chatbots on your own documents and automation at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build practical AI for Ottawa businesses and organisations: LLM features, chatbots and assistants that answer from your own documents, and workflow automation. We do not have an Ottawa office; Edmonton is two hours behind Ottawa, so our working days overlap for most of yours and questions get answered the same day. You work directly with the senior engineers who design and build your system, not a sales layer. We travel to Ottawa for workshops when a project needs it. Your contract is with a Canadian company, priced in CAD, with a fixed scope and price agreed before work starts. Call us on +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'Applied AI for Ottawa organisations',
+        body: [
+          'Ottawa buyers split into government suppliers bidding on federal procurement, Kanata North technology companies building and selling software, and professional services firms that win on reputation and referral. For government suppliers we build LLM features that search tender documents, past contracts and compliance files so proposals answer faster. Kanata North tech teams add AI chatbots and assistants trained on your own documents to products and internal knowledge bases, with sources shown for every answer. Professional services firms use workflow automation to sort inboxes, draft engagement summaries and route routine requests to the right person. Everything answers from your data, not the open internet.',
+        ],
+      },
+      {
+        heading: 'Security, bilingual and data residency',
+        body: [
+          'Security and data residency come first for Ottawa organisations. We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used to train their models. We design with PIPEDA in mind, with encryption, role-based access and audit logs. Customer-facing interfaces work in English and French, and prompts, answers and buttons are tested in both languages. A person reviews important AI output before it reaches a client or the public, and your own legal team confirms the final compliance position.',
+        ],
+      },
+      {
+        heading: 'From pilot to production',
+        body: [
+          'We start with a short pilot on your own data so you can see real answers to real questions within weeks. Next we evaluate it against a test set your team agrees on, so accuracy is a number, not a feeling. Then we launch to a small group of users with hand-off to a person when the system is unsure. Finally we move to full production with monitoring, logs of every question and answer, and a clear plan for updates.',
+        ],
+      },
+      {
+        heading: 'What AI development costs',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. These are planning ranges, not quotes: after a free discovery call we agree a fixed scope and a fixed price in CAD before work begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month, securely and at scale.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Ottawa?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'How long does a first AI chatbot take?',
+        a: 'A focused first version usually takes weeks rather than months, especially when your documents are already in good shape. Larger projects with many data sources, integrations or custom models take longer. Your written scope includes a timeline with clear milestones.',
+      },
+      {
+        q: 'Can you build French-language AI chatbots for Ottawa?',
+        a: 'Yes. We build and test chatbots in English and French from the start: prompts, answers, buttons and hand-off messages. French-speaking reviewers from your team check answers before launch, so the bot sounds natural to your Ottawa and Gatineau customers.',
+      },
+      {
+        q: 'Does our data stay in Canada?',
+        a: 'It can. We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used for training. We design with PIPEDA in mind, with encryption, role-based access and audit logs. Your own legal team should confirm the final compliance position before launch.',
+      },
+      {
+        q: 'Do you have an office in Ottawa?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have an Ottawa office. Edmonton is two hours behind Ottawa, so most of the working day overlaps, and we serve Ottawa clients remotely through video workshops, weekly calls and shared boards. We travel to Ottawa for in-person workshops when a project needs it, and you can reach us on +1-403-604-8692.',
+      },
+    ],
+  },
 };
