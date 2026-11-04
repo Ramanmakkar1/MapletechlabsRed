@@ -3109,4 +3109,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-winnipeg': {
+    title: 'AI Development Company in Winnipeg',
+    description: 'AI development for Winnipeg businesses: custom chatbots, LLM features and automation at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton. We work remotely with Winnipeg businesses and do not have a Winnipeg office. Winnipeg is one hour ahead of Edmonton, so our working days overlap closely. You have direct access to the senior engineers building your solution, and we agree on a fixed scope and price in CAD before work begins. Call +1-403-604-8692 to discuss your project.',
+    sections: [
+      {
+        heading: 'Practical AI for Winnipeg’s insurance, agriculture, transport and manufacturing sectors',
+        body: [
+          'Insurers and credit unions can use AI to sort claims and documents for staff review. Agri-businesses can summarize crop records and field reports, while trucking and rail teams can automate dispatch tasks and organize shipping documents. Manufacturers can use production data to identify quality issues and predict maintenance needs. We choose a use case around the information your team already has and the decisions people need to make.',
+        ],
+      },
+      {
+        heading: 'Privacy, PHIA and Canadian hosting',
+        body: [
+          'PIPEDA may apply when private organizations handle personal information, and Manitoba’s Personal Health Information Act (PHIA) may apply to health data. We can design for Canadian cloud regions, access controls, audit logs and human review of sensitive outputs. Requirements depend on the data and organizations involved; your privacy officer confirms the final position.',
+        ],
+      },
+      {
+        heading: 'From pilot to production',
+        body: [
+          'We begin with a focused pilot using a representative set of your data and agree on how your team will evaluate the results. Before production, we add safeguards such as permissions, review paths and monitoring, then plan how the system will be maintained. Our guide to ',
+          { href: '/blog/agentic-ai-in-production', label: 'agentic AI in production' },
+          ' explores the steps involved.',
+        ],
+      },
+      {
+        heading: 'What AI development costs',
+        body: [
+          'For Canadian planning ranges, see our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          '. An LLM feature in an existing app is about $10,000-$35,000 CAD; a chatbot using your own documents is about $15,000-$50,000; and custom model training starts around $75,000. Our ',
+          { href: '/blog/ai-development-companies-canada', label: 'guide to AI development companies in Canada' },
+          ' can help you compare providers. Discovery is free, and we agree on a fixed CAD price before coding begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Winnipeg?',
+        a: 'Planning ranges are about $10,000-$35,000 CAD for an LLM feature in an existing app, $15,000-$50,000 for a chatbot on your documents, and from around $75,000 for custom model training. After free discovery, we agree on a fixed CAD price for your scope.',
+      },
+      {
+        q: 'Do you have an office in Winnipeg?',
+        a: 'No. Our Canadian team is headquartered in Edmonton and works with Winnipeg clients remotely. You speak directly with the senior engineers working on your project.',
+      },
+      {
+        q: 'Can AI read our claims or shipping documents?',
+        a: 'Yes. AI can extract and summarize information from these documents and route it to your staff for review. We can test the results against examples your team supplies and build in human review for uncertain or sensitive cases.',
+      },
+      {
+        q: 'How do you handle PHIA and health data?',
+        a: 'We can design safeguards including access controls, audit logs, human review and Canadian cloud hosting. PHIA requirements depend on the project and data; your privacy officer should confirm the final position. We do not provide legal advice.',
+      },
+      {
+        q: 'Who owns the code, models and data?',
+        a: 'You do. Your source code, prompts, fine-tuned models, configuration and data belong to you, so your team can take over or continue working with us after launch.',
+      },
+    ],
+  },
 };
