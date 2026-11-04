@@ -646,7 +646,7 @@ main > section, main > div > section, main > article > section { border-bottom: 
   .hero-container { padding: 20px 14px 36px; }
 }
 @media (min-width: 1024px) {
-  .blog-layout { grid-template-columns: 1fr 320px !important; }
+  .blog-layout { grid-template-columns: minmax(0, 1fr) 320px !important; }
 }
 
 /* ── LARGE DISPLAYS ──────────────────────────────────────

@@ -172,7 +172,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
         <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container">
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'clamp(40px, 6vw, 80px)', alignItems: 'start', maxWidth: 1140, margin: '0 auto' }}>
-              <article>
+              <article style={{ minWidth: 0 }}>
                 <div className="reveal" style={{ marginBottom: 44 }}>
                   {a.intro.map((p, i) => (
                     <p key={i} style={{ fontSize: 18.5, color: i === 0 ? 'var(--ink)' : 'var(--body)', lineHeight: 1.75, marginBottom: 18, fontWeight: i === 0 ? 500 : 400 }} dangerouslySetInnerHTML={{ __html: p }} />
