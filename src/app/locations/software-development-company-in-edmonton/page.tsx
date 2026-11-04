@@ -4,7 +4,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 
 const TITLE = 'Custom Software Development Edmonton | Local Team';
-const DESCRIPTION = 'Custom software development in Edmonton by Mapletech Labs, a software development company headquartered here. Fixed price; a senior engineer replies in 1 day.';
+const DESCRIPTION = 'Custom software development in Edmonton by Mapletech Labs, a software development company headquartered here. Fixed price; senior engineer replies in 1 day';
 
 export const metadata: Metadata = {
   // Brand-free so the hook fits 60 chars; the OG title keeps the brand.

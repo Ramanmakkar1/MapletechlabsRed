@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'HIPAA-Compliant Telehealth Platform | Case Study';
-const DESCRIPTION = 'How Mapletech Labs built a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.';
+const DESCRIPTION = 'Mapletech Labs built a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.';
 const SLUG = 'healthcare-telehealth';
 
 export const metadata: Metadata = {

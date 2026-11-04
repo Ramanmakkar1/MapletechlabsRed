@@ -8,10 +8,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: seoTitle('Design System Development | Figma & Storybook'),
-  description: 'Scalable design systems built by Mapletech Labs Toronto. Figma component libraries, Storybook docs, WCAG 2.1 accessibility. 50+ systems delivered in Canada.',
+  description: 'Scalable design systems built by Mapletech Labs Toronto. Figma component libraries, Storybook docs, WCAG 2.1 accessibility. 50+ systems delivered in Canada',
   openGraph: {
     title: 'Design System Development | Mapletech Labs',
-    description: 'Scalable design systems built by Mapletech Labs Toronto. Figma component libraries, Storybook docs, WCAG 2.1 accessibility. 50+ systems delivered in Canada.',
+    description: 'Scalable design systems built by Mapletech Labs Toronto. Figma component libraries, Storybook docs, WCAG 2.1 accessibility. 50+ systems delivered in Canada',
     url: 'https://mapletechlabs.ca/services/product-design/design-systems',
     type: 'website',
   },

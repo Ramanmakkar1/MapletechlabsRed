@@ -49,7 +49,7 @@ export const articles: Article[] = [
     dek: 'Agents are the loudest idea in software right now. Here is the honest version — what agentic AI is, where it earns its keep, where it quietly fails, and how to put it into production without betting the business on a demo.',
     metaTitle: 'Agentic AI in Production (2026)',
     metaDescription:
-      'A practical, hype-free guide to agentic AI in 2026: what agents really are, the patterns that work in production, where they fail, and how to deploy them safely.',
+      'Agentic AI in production: learn which patterns work, where agents fail, and how to deploy them safely with a practical guide for Canadian teams.',
     date: '2026-09-05',
     dateModified: '2026-09-07',
     readTime: '11 min read',
@@ -1507,7 +1507,7 @@ export const articles: Article[] = [
     title: 'Software Development Companies in Toronto (2026): How to Choose',
     dek: 'Toronto is Canada’s largest tech market, shaped by finance, health and AI. Here is how to choose a software development company in Toronto, which Ontario rules to plan for, what projects typically cost, and how to vet a partner before you sign.',
     metaTitle: 'Software Development Companies in Toronto',
-    metaDescription: 'How to choose a software development company in Toronto in 2026: local vs remote teams, Ontario privacy and accessibility rules, typical costs and a checklist.',
+    metaDescription: 'Compare software development companies in Toronto: local vs remote teams, Ontario privacy and accessibility needs, typical costs, and a hiring checklist.',
     date: '2026-11-03',
     dateModified: '2026-11-03',
     readTime: '9 min read',

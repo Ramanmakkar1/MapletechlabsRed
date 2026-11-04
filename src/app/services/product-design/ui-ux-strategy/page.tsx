@@ -7,10 +7,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'UI/UX Strategy Services | Toronto, Canada',
-  description: 'Data-driven UI/UX strategy from Mapletech Labs in Toronto. User research, UX audits, and design sprints that boost conversions by 40%. Get a free consultation.',
+  description: 'Data-driven UI/UX strategy from Mapletech Labs in Toronto. User research, UX audits, and design sprints that boost conversions by 40%. Free consultation.',
   openGraph: {
     title: 'UI/UX Strategy Services | Mapletech Labs',
-    description: 'Data-driven UI/UX strategy from Mapletech Labs in Toronto. User research, UX audits, and design sprints that boost conversions by 40%. Get a free consultation.',
+    description: 'Data-driven UI/UX strategy from Mapletech Labs in Toronto. User research, UX audits, and design sprints that boost conversions by 40%. Free consultation.',
     url: 'https://mapletechlabs.ca/services/product-design/ui-ux-strategy',
     type: 'website',
   },

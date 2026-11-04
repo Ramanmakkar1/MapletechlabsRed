@@ -7,10 +7,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'AWS Architecture & Cloud Solutions | Canada',
-  description: 'Certified AWS architects at Mapletech Labs Toronto. Cloud migration, cost optimisation, multi-region HA design. $2M+ saved for Canadian businesses. Free audit.',
+  description: 'Certified AWS architects at Mapletech Labs Toronto. Cloud migration, cost control, multi-region HA design. $2M+ saved for Canadian businesses. Free audit.',
   openGraph: {
     title: 'AWS Architecture & Cloud Solutions | Mapletech Labs',
-    description: 'Certified AWS architects at Mapletech Labs Toronto. Cloud migration, cost optimisation, multi-region HA design. $2M+ saved for Canadian businesses. Free audit.',
+    description: 'Certified AWS architects at Mapletech Labs Toronto. Cloud migration, cost control, multi-region HA design. $2M+ saved for Canadian businesses. Free audit.',
     url: 'https://mapletechlabs.ca/services/cloud-devops/aws-architecture',
     type: 'website',
   },

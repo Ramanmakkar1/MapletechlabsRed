@@ -114,6 +114,24 @@ assert.match(titleProblems(parseTitle("'Contact Mapletech Labs'", ""))[0], /bran
 assert.match(titleProblems(seoTitle("Mapletech Labs | Mapletech Labs"))[0], /brand twice/);
 assert.equal(parseTitle("seoTitle(getTitle())", ""), undefined);
 
+function descriptionProblems(text) {
+  return text.length < 120 || text.length > 155
+    ? [`description is ${text.length} chars (want 120-155)`]
+    : [];
+}
+
+function articleDescriptions(src) {
+  return Array.from(src.matchAll(/metaDescription:\s*'((?:[^'\\]|\\.)*)'/g),
+    (m) => m[1].replace(/\\'/g, "'"));
+}
+
+assert.deepEqual(articleDescriptions("metaDescription: \n  'Multiline field'"), ["Multiline field"]);
+assert.deepEqual(articleDescriptions("metaDescription:\t'Inline field'"), ["Inline field"]);
+for (const length of [119, 120, 155, 156]) {
+  const [text] = articleDescriptions(`metaDescription:\n  '${"x".repeat(length)}'`);
+  assert.equal(descriptionProblems(text).length, length < 120 || length > 155 ? 1 : 0);
+}
+
 // 4. Meta descriptions (src/app/**/page.tsx literals + src/data/articles.ts).
 let descriptions = 0;
 const descFiles = allPageFiles.filter((file) => readFileSync(join(ROOT, file), "utf8").includes("description"));
@@ -125,7 +143,7 @@ for (const file of descFiles) {
   if (!m) continue; // dynamic data: no literal to check
   const text = m[1].replace(/\\'/g, "'");
   descriptions++;
-  if (text.length < 120 || text.length > 160) problems.push(`${file}: description is ${text.length} chars (want 120-160)`);
+  problems.push(...descriptionProblems(text).map((problem) => `${file}: ${problem}`));
 }
 const articlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
 let articleTitles = 0;
@@ -134,14 +152,15 @@ for (const m of articlesSrc.matchAll(/metaTitle: ('(?:[^'\\]|\\.)*')/g)) {
   articleTitles++;
   problems.push(...titleProblems(title).map((problem) => `articles.ts: ${problem}`));
 }
-for (const m of articlesSrc.matchAll(/metaDescription: '((?:[^'\\]|\\.)*)'/g)) {
-  const text = m[1].replace(/\\'/g, "'");
+const articleDescriptionsFound = articleDescriptions(articlesSrc);
+assert.equal(articleDescriptionsFound.length, articleTitles, "Every article must have a checked description");
+for (const text of articleDescriptionsFound) {
   descriptions++;
-  if (text.length < 120 || text.length > 160) problems.push(`articles.ts: ${text.slice(0, 40)}... is ${text.length} chars`);
+  problems.push(...descriptionProblems(text).map((problem) => `articles.ts: ${text.slice(0, 40)}... ${problem}`));
 }
 
 if (problems.length) {
   console.error(`check-titles: ${problems.length} problem(s)\n` + problems.join("\n"));
   process.exit(1);
 }
-console.log(`check-titles: ${files.length} page files + ${articleTitles} article titles + ${generated} generated city x service titles + ${descriptions} descriptions OK (<= ${MAX} chars, 120-160 chars, single brand); resolver assertions passed`);
+console.log(`check-titles: ${files.length} page files + ${articleTitles} article titles + ${generated} generated city x service titles + ${descriptions} descriptions (${articleDescriptionsFound.length} articles) OK (<= ${MAX} chars, 120-155 chars, single brand); resolver and description assertions passed`);

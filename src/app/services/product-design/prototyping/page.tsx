@@ -8,10 +8,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: seoTitle('Prototyping & User Testing Services | Toronto'),
-  description: 'Interactive prototyping and usability testing by Mapletech Labs. Figma prototypes, design sprints, and real-user testing. 300+ prototypes built across Canada.',
+  description: 'Interactive prototyping and usability testing by Mapletech Labs. Figma prototypes, design sprints and real-user testing. 300+ prototypes built in Canada.',
   openGraph: {
     title: 'Prototyping & User Testing Services | Mapletech Labs',
-    description: 'Interactive prototyping and usability testing by Mapletech Labs. Figma prototypes, design sprints, and real-user testing. 300+ prototypes built across Canada.',
+    description: 'Interactive prototyping and usability testing by Mapletech Labs. Figma prototypes, design sprints and real-user testing. 300+ prototypes built in Canada.',
     url: 'https://mapletechlabs.ca/services/product-design/prototyping',
     type: 'website',
   },
