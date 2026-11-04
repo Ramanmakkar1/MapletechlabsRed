@@ -7,6 +7,8 @@ const CITIES = [
   { slug: 'calgary', name: 'Calgary' },
   { slug: 'toronto', name: 'Toronto' },
   { slug: 'vancouver', name: 'Vancouver' },
+  { slug: 'ottawa', name: 'Ottawa' },
+  { slug: 'montreal', name: 'Montreal' },
 ];
 
 const card: CSSProperties = {
@@ -15,7 +17,7 @@ const card: CSSProperties = {
 };
 
 /**
- * "Hire us in your city" block for commercial blog posts: links to the four
+ * "Hire us in your city" block for commercial blog posts: links to the
  * priority city pages for one service, plus the national service page.
  * Without a serviceSlug it links the /locations/software-development-company-in-<city> pages.
  */

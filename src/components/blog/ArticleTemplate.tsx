@@ -32,6 +32,8 @@ const CITIES = [
   { slug: 'calgary', name: 'Calgary' },
   { slug: 'toronto', name: 'Toronto' },
   { slug: 'vancouver', name: 'Vancouver' },
+  { slug: 'ottawa', name: 'Ottawa' },
+  { slug: 'montreal', name: 'Montreal' },
 ];
 
 function useReveal() {
