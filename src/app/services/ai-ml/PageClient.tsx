@@ -80,6 +80,15 @@ const industries = [
   { icon: '🏭', title: 'Manufacturing', desc: 'Predictive maintenance, quality control vision systems and supply chain optimisation.' },
 ];
 
+const faqs = [
+  { q: 'How much does AI development cost in Canada?', a: 'Planning ranges in CAD: about $10,000–$35,000 for an LLM feature in an existing app, $15,000–$45,000 for a document chatbot (RAG), $25,000–$80,000 for workflow automation, and $40,000–$150,000+ for custom model training. These are planning ranges based on Canadian market rates, not quotes. After a short discovery call we give you a fixed quote for your scope.' },
+  { q: 'How long does an AI project take?', a: 'A scoped LLM feature or RAG chatbot usually takes 6–12 weeks from discovery to production. Workflow automation and predictive models typically run 10–20 weeks. Custom model training with data preparation is longer, often 3–6 months. You get a timeline with the quote, and we demo working software every sprint.' },
+  { q: 'Can you add AI (ChatGPT, Claude, Llama) to our existing app or website?', a: 'Yes. We integrate GPT-4, Claude, Llama and other models into products that are already live — chat interfaces, RAG over your documents, summarisation, classification and automation. We handle the integration, guardrails, evaluation and monitoring so the feature holds up in production, not just in a demo.' },
+  { q: 'Is our data kept private and in Canada?', a: 'Yes. We plan for Canadian privacy law (PIPEDA) from the start, and you choose the model and hosting — API models, open-weight models, or Canadian cloud regions where data residency matters. We do not train models on your client data unless you ask us to, and data handling is written into the contract.' },
+  { q: 'Do you build AI chatbots and automation for small businesses?', a: 'Yes. We build document chatbots, support assistants and workflow automation for businesses of every size, starting with the narrowest useful feature and expanding from there. Most small-business projects start with an API model so the build is fast and the running cost stays predictable.' },
+  { q: 'Do you work with businesses in Edmonton, Calgary, Toronto and Vancouver?', a: 'Yes. We are based in Edmonton, Alberta, and work with clients across Canada — Edmonton, Calgary, Toronto, Vancouver and beyond — remotely or on site for discovery and launch.' },
+];
+
 export default function PageClient() {
   return (
     <ServicePageTemplate
@@ -91,6 +100,7 @@ export default function PageClient() {
       steps={steps}
       techCategories={techCategories}
       industries={industries}
+      faqs={faqs}
     />
   );
 }

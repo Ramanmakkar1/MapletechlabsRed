@@ -80,6 +80,15 @@ const industries = [
   { icon: '🏢', title: 'Enterprise', desc: 'Internal tools, ERPs, procurement portals and mission-critical business applications.' },
 ];
 
+const faqs = [
+  { q: 'How much does a website cost in Canada?', a: 'A marketing website of 10–20 pages typically runs CAD $15,000–$45,000. E-commerce platforms run higher, and larger web apps, portals and SaaS products are scoped individually. These are planning ranges based on Canadian market rates. After a discovery call we give you a fixed quote for your scope.' },
+  { q: 'How long does it take to build a website or web app?', a: 'A marketing website usually takes about 4–8 weeks from discovery to launch. E-commerce platforms run 8–16 weeks, and custom web apps or SaaS products take longer depending on scope. You get a timeline with the quote, and we demo working software every sprint.' },
+  { q: 'Which technologies do you use?', a: 'We build with the modern stack listed on this page — Next.js and React on the frontend, Node.js, Python, GraphQL and PostgreSQL on the backend, deployed on AWS, Vercel or Cloudflare with Docker and Kubernetes where scale requires it. We pick the tools that fit your project, not the other way around.' },
+  { q: 'Will my website be fast and SEO-ready?', a: 'Yes. Every site we ship is performance-tuned and ships with the SEO foundations in place — clean semantic markup, structured data, fast load times and proper metadata. Search visibility is part of the deliverable, not an afterthought, and we hand over an SEO baseline at launch.' },
+  { q: 'Do you redesign existing websites?', a: 'Yes. We start with an audit of the current site — performance, SEO, analytics and conversion — then deliver a prioritised plan and a redesign that keeps what works and fixes what does not. We can also migrate content and preserve existing rankings during the transition.' },
+  { q: 'Do you work with businesses in Edmonton, Calgary, Toronto and Vancouver?', a: 'Yes. We are based in Edmonton, Alberta, and work with clients across Canada — Edmonton, Calgary, Toronto, Vancouver and beyond — remotely or on site for discovery and launch.' },
+];
+
 export default function PageClient() {
   return (
     <ServicePageTemplate
@@ -91,6 +100,7 @@ export default function PageClient() {
       steps={steps}
       techCategories={techCategories}
       industries={industries}
+      faqs={faqs}
     />
   );
 }
