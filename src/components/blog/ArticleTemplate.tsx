@@ -25,6 +25,8 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'saas-ideas-2026': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
   'what-profitable-saas-gets-right': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
   'build-saas-mvp-8-weeks': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
+  'saas-development-company-canada': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
+  'ui-ux-design-companies-canada': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },
 };
 
 const CITIES = [
