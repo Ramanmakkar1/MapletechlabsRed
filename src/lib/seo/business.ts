@@ -20,6 +20,33 @@ export const HQ_ADDRESS = {
   addressCountry: 'CA',
 } as const;
 
+/** Stable LocalBusiness area — main Canadian markets (page Service nodes carry the city). */
+export const LOCAL_BUSINESS_AREA_SERVED = [
+  {
+    '@type': 'City',
+    name: 'Edmonton',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Alberta' },
+  },
+  {
+    '@type': 'City',
+    name: 'Calgary',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Alberta' },
+  },
+  {
+    '@type': 'City',
+    name: 'Toronto',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Ontario' },
+  },
+  {
+    '@type': 'City',
+    name: 'Vancouver',
+    containedInPlace: {
+      '@type': 'AdministrativeArea',
+      name: 'British Columbia',
+    },
+  },
+] as const;
+
 export function localServiceSchema(opts: {
   cityName: string;
   provinceName: string;
@@ -38,14 +65,8 @@ export function localServiceSchema(opts: {
     logo: BUSINESS.logo,
     priceRange: opts.priceRange ?? '$$-$$$',
     address: HQ_ADDRESS,
-    areaServed: {
-      '@type': 'City',
-      name: opts.cityName,
-      containedInPlace: {
-        '@type': 'AdministrativeArea',
-        name: opts.provinceName,
-      },
-    },
+    parentOrganization: { '@id': 'https://mapletechlabs.ca/#organization' },
+    areaServed: LOCAL_BUSINESS_AREA_SERVED,
     sameAs: BUSINESS.sameAs,
     ...(opts.serviceType ? { serviceType: opts.serviceType } : {}),
     mainEntityOfPage: opts.url,

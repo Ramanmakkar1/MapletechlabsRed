@@ -19,6 +19,7 @@
 - [AI & Machine Learning](https://mapletechlabs.ca/services/ai-ml): LLM integration, AI automation, AI chatbots, computer vision and predictive analytics.
 - [UI/UX Design](https://mapletechlabs.ca/services/product-design/ui-ux-strategy): UI/UX strategy, wireframing, prototyping and design systems.
 - [SaaS Development](https://mapletechlabs.ca/services/saas-development): SaaS MVPs, multi-tenant architecture, billing and subscriptions, auth and SSO, analytics dashboards.
+- [SEO & Digital Marketing](https://mapletechlabs.ca/services/digital-marketing): SEO, Google Ads (PPC), social media marketing, content marketing and analytics.
 
 ## Cities
 
@@ -99,6 +100,8 @@
 - [How Much Does SaaS Development Cost in Canada? (2026)](https://mapletechlabs.ca/blog/saas-development-cost-canada)
 - [Website Cost in Canada: 2026 Pricing Guide](https://mapletechlabs.ca/blog/website-cost-canada)
 - [Software & App Maintenance Cost in Canada (2026)](https://mapletechlabs.ca/blog/software-maintenance-cost-canada)
+- [Digital Marketing Cost in Canada](https://mapletechlabs.ca/blog/digital-marketing-cost-canada)
+- [Top SEO Companies in Canada](https://mapletechlabs.ca/blog/top-seo-companies-canada)
 
 ## Case studies
 

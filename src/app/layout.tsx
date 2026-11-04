@@ -103,7 +103,33 @@ const organizationSchema = {
     telephone: BUSINESS.telephone,
     email: BUSINESS.email,
   },
-  areaServed: ["CA", "US"],
+  areaServed: [
+    "CA",
+    "US",
+    {
+      "@type": "City",
+      name: "Edmonton",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Alberta" },
+    },
+    {
+      "@type": "City",
+      name: "Calgary",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Alberta" },
+    },
+    {
+      "@type": "City",
+      name: "Toronto",
+      containedInPlace: { "@type": "AdministrativeArea", name: "Ontario" },
+    },
+    {
+      "@type": "City",
+      name: "Vancouver",
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: "British Columbia",
+      },
+    },
+  ],
   foundingDate: "2018",
   foundingLocation: {
     "@type": "Place",
@@ -132,6 +158,9 @@ const organizationSchema = {
     "LLM integration",
     "UI/UX design",
     "SaaS development",
+    "Search engine optimization (SEO)",
+    "Digital marketing",
+    "Google Ads management",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -161,6 +190,11 @@ const organizationSchema = {
         "@type": "OfferCatalog",
         name: "SaaS Development",
         url: `${siteOrigin()}/services/saas-development`,
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "SEO & Digital Marketing",
+        url: `${siteOrigin()}/services/digital-marketing`,
       },
     ],
   },
