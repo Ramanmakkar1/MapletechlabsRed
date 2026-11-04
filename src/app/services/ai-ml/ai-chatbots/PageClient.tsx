@@ -29,7 +29,40 @@ const faqs = [
   { q: 'What happens when the bot doesn\'t know the answer?', a: 'We configure explicit handling for low-confidence responses: the bot acknowledges uncertainty rather than hallucinating, offers to escalate to a human agent, and logs the query for knowledge base improvement. Over time, the most frequent unhandled queries get new content added, and bot coverage expands continuously. A good bot that knows its limits is far better than one that confidently gives wrong answers.' },
   { q: 'Which channels can the chatbot be deployed on?', a: 'Our chatbots are built with a channel-agnostic core and deployed to any combination of: web chat widget, WhatsApp Business API, Slack, Microsoft Teams, Facebook Messenger, SMS (via Twilio), iOS/Android apps, and voice (phone/IVR). A single conversation engine handles all channels with appropriate formatting and interaction patterns per channel.' },
   { q: 'How do we measure whether the chatbot is actually working?', a: 'We instrument every deployment with a metrics dashboard covering: containment rate (queries resolved without human), first-response time, user satisfaction (thumbs up/down + CSAT surveys), escalation rate, and topic distribution. We set baseline targets before launch and review metrics weekly for the first 3 months, making data-driven improvements to consistently push resolution rates higher.' },
+  { q: 'How are document updates reflected in chatbot answers?', a: 'The update process depends on the source systems and ingestion design. Documents may be re-indexed on a schedule or after a change is detected; agree on update frequency, deletion handling, and how to verify a new version before relying on it.' },
+  { q: 'What recurring costs should we plan for?', a: 'Separate implementation from ongoing model usage, hosting, channel or integration fees, monitoring, and support. Usage depends on conversation volume, answer length, retrieval, and retries. We estimate these from your expected traffic and agree what maintenance and support cover.' },
+  { q: 'How will our data be handled?', a: 'Data handling is a project decision shaped by the selected model and hosting, what content is sent to each service, retention needs, access controls, and applicable policies. Scope these requirements before choosing an architecture; no single setup is right for every organisation.' },
 ];
+
+function BuyerContent() {
+  return (
+    <section aria-labelledby="chatbot-buying-guide" style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
+      <div className="cb-container" style={{ color: 'var(--body)', lineHeight: 1.7 }}>
+        <h2 id="chatbot-buying-guide">Choose a chatbot approach that fits your business</h2>
+        <p className="lede">Start with the questions people need answered, the information they can use, and what should happen when the bot is unsure. The right scope depends on your channels, controls, and systems.</p>
+        <h3>Hosted chatbot or custom development?</h3>
+        <p>A hosted chatbot can suit a team that needs a standard support or FAQ experience, has compatible content, and can work within the platform’s workflow and data controls. Custom development may fit when you need specialised conversation flows, several channels, citations tied to your own documents, specific permissions, or integrations a hosted tool does not provide. Compare setup effort, control, portability, and ongoing ownership against your requirements.</p>
+        <h3>Ground answers in documents and show sources</h3>
+        <p>Retrieval-augmented generation (RAG) finds relevant passages in approved documents and supplies them as context for an answer. Decide which file types and repositories are in scope, how often changes and deletions are indexed, and what should happen when sources conflict or no useful passage is found. Source citations can link an answer to the retrieved document or passage so users can check it; evaluate citation accuracy as well as answer accuracy.</p>
+        <h3>Plan human handoff and system access</h3>
+        <p>Define when a conversation should reach a person: for example, a user request, low confidence, sensitive topic, or repeated failed answer. Choose the destination, what conversation context transfers, service hours, and the fallback when no agent is available.</p>
+        <p>Read-only knowledge access lets a bot retrieve approved information. Actions such as changing an order, creating a ticket, or updating a customer record require separate integrations, scoped permissions, confirmation rules, and testing. Start with read-only access when answers are the goal; add narrowly defined actions only where the business process needs them.</p>
+        <h3>What goes into a useful quote?</h3>
+        <p>Scope document volume, formats and update frequency; expected conversations and channels; integrations and API availability; user roles and permissions; and evaluation coverage across common, difficult, and sensitive questions. Include handoff rules, acceptance measures, and who owns content review. Estimate implementation separately from model usage, hosting, channel or integration fees, and ongoing support or maintenance. See our <a href="/blog/ai-development-cost-canada">AI development cost guide for Canada</a> for cost factors; a project estimate depends on scope.</p>
+        <h3>Discovery checklist</h3>
+        <ul style={{ paddingLeft: 24, marginBottom: 28 }}>
+          <li>Bring top user questions, target channels, and an estimate of conversation volume.</li>
+          <li>List document repositories, formats, owners, update cadence, and access restrictions.</li>
+          <li>Identify systems to connect and whether the bot needs read-only access or specific actions.</li>
+          <li>Provide representative examples, including unanswered, conflicting, and sensitive questions.</li>
+          <li>Agree on citation expectations, evaluation coverage, handoff rules, and acceptance measures.</li>
+          <li>Name owners for content updates, monitoring, maintenance, and support after launch.</li>
+        </ul>
+        <a href="/contact" className="btn btn--primary">Discuss your chatbot project</a>
+      </div>
+    </section>
+  );
+}
 
 export default function PageClient() {
   return (
@@ -42,6 +75,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
