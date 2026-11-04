@@ -85,9 +85,9 @@ let descriptions = 0;
 const descFiles = allPageFiles.filter((file) => readFileSync(join(ROOT, file), "utf8").includes("description"));
 for (const file of descFiles) {
   const src = readFileSync(join(ROOT, file), "utf8");
-  const m = src.match(/^const DESCRIPTION = '((?:[^'\\]|\\.)*)';$/m)
+  const m = src.match(/^const DESCRIPTION =\s*'((?:[^'\\]|\\.)*)';$/m)
     || src.match(/^  description: '((?:[^'\\]|\\.)*)',$/m)
-    || (src.match(/^  description: DESCRIPTION,$/m) && src.match(/^const DESCRIPTION = '((?:[^'\\]|\\.)*)';$/m)); // two-space indent only: skips openGraph and nested
+    || (src.match(/^  description: DESCRIPTION,$/m) && src.match(/^const DESCRIPTION =\s*'((?:[^'\\]|\\.)*)';$/m)); // two-space indent only: skips openGraph and nested
   if (!m) continue; // dynamic data: no literal to check
   const text = m[1].replace(/\\'/g, "'");
   descriptions++;

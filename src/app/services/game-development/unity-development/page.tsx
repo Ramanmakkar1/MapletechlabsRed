@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: seoTitle('Unity Game Development Services | C# Experts'),
-  description: 'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, and console. HDRP, URP, multiplayer, and cross-platform game studio in Canada.',
+  description: 'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, console. HDRP, URP, multiplayer, cross-platform game studio in Canada.',
   openGraph: {
     title: 'Unity Game Development Services | Mapletech Labs',
     description: 'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, and console. HDRP, URP, and multiplayer.',
@@ -28,7 +28,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Unity Game Development Services | C# Experts'}
-        description={'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, and console. HDRP, URP, multiplayer, and cross-platform game studio in Canada.'}
+        description={'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, console. HDRP, URP, multiplayer, cross-platform game studio in Canada.'}
         url={'https://mapletechlabs.ca/services/game-development/unity-development'}
       />
       <PageClient />

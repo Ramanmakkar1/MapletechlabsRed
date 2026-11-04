@@ -7,10 +7,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'Content Marketing Services | Strategy & SEO',
-  description: 'Strategic content marketing that drives organic traffic and conversions. Blog writing, video, email, and content distribution for Canadian brands. 400% avg growth.',
+  description: 'Strategic content marketing drives organic traffic and conversions. Blog writing, video, email, and content distribution for Canadian brands. 400% avg growth.',
   openGraph: {
     title: 'Content Marketing Services | Mapletech Labs',
-    description: 'Strategic content marketing that drives organic traffic and conversions. Blog writing, video, email, and content distribution for Canadian brands.',
+    description: 'Strategic content marketing drives organic traffic and conversions. Blog writing, video, email, and content distribution for Canadian brands.',
     url: 'https://mapletechlabs.ca/services/digital-marketing/content-marketing',
     type: 'website',
   },
@@ -27,7 +27,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Content Marketing Services | Strategy & SEO'}
-        description={'Strategic content marketing that drives organic traffic and conversions. Blog writing, video, email, and content distribution for Canadian brands. 400% avg growth.'}
+        description={'Strategic content marketing drives organic traffic and conversions. Blog writing, video, email, and content distribution for Canadian brands. 400% avg growth.'}
         url={'https://mapletechlabs.ca/services/digital-marketing/content-marketing'}
       />
       <PageClient />
