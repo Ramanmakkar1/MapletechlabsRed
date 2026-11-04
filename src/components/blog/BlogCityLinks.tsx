@@ -13,7 +13,7 @@ const CITIES = [
 
 const card: CSSProperties = {
   display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)',
-  background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none',
+  background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none', overflowWrap: 'anywhere',
 };
 
 /**
@@ -35,9 +35,9 @@ export default function BlogCityLinks({ serviceSlug, heading = 'Hire us in your 
       <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 16px', maxWidth: '68ch' }}>
         Local teams, pricing guidance and case studies for the Canadian cities we serve most.
       </p>
-      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
+      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
         {links.map(l => (
-          <li key={l.href}><Link href={l.href} style={card}>{l.label}</Link></li>
+          <li key={l.href} style={{ minWidth: 0 }}><Link href={l.href} style={card}>{l.label}</Link></li>
         ))}
       </ul>
       {ps && (

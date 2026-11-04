@@ -216,9 +216,9 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
                 {cityLinks ?? (categoryService && (
                   <nav aria-label="Hire a team in your city" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
                     <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Hire a team in your city</h2>
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
                       {CITIES.map(({ slug, name }) => (
-                        <li key={slug}><Link href={categoryService.path(slug)} style={{ display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none' }}>{categoryService.label} company in {name}</Link></li>
+                        <li key={slug} style={{ minWidth: 0 }}><Link href={categoryService.path(slug)} style={{ display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none', overflowWrap: 'anywhere' }}>{categoryService.label} company in {name}</Link></li>
                       ))}
                     </ul>
                   </nav>
@@ -228,7 +228,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
                 <div className="reveal" style={{ marginTop: 'clamp(40px, 5vw, 60px)', padding: 'clamp(28px, 3.5vw, 44px)', borderRadius: 'var(--r-lg)', background: 'var(--surface-ink)', color: 'var(--on-ink-body)' }}>
                   <h2 style={{ color: 'var(--on-ink)', fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Have a project in mind?</h2>
                   <p style={{ lineHeight: 1.7, margin: '0 0 22px', maxWidth: '52ch' }}>Tell us what you&rsquo;re building. A senior engineer will come back within one working day with a scope, a timeline and a fixed price.</p>
-                  <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                  <div className="article-project-cta" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <Link href="/contact" className="btn btn--on-ink">Start a project</Link>
                     {projectService && (
                       <Link href={projectService.href} className="btn btn--ghost-on-ink">{projectService.label}</Link>
@@ -273,6 +273,18 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
         <FinalCta title="Let's build something worth keeping." sub="Tell us what you're building and a senior engineer will scope it within one working day." />
       </main>
       <Footer />
+      <style jsx>{`
+        .article-project-cta :global(a) {
+          white-space: normal;
+          max-width: 100%;
+          box-sizing: border-box;
+          height: auto;
+          min-height: 44px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          overflow-wrap: anywhere;
+        }
+      `}</style>
     </>
   );
 }
