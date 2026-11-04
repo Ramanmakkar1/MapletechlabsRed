@@ -2659,4 +2659,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-montreal': {
+    title: 'Digital Marketing Agency in Montreal',
+    description: 'Grow your Montreal business with SEO and ads in English and French from a Canadian digital marketing team. Get a free strategy call.',
+    intro: 'Montreal is a French-first market where local businesses compete for attention in Google Maps and search. Its AI and gaming scene also brings technology companies into a crowded market for talent, customers and partners. Quebec\'s Charter of the French Language, including changes made by Bill 96, makes language planning important for commercial content.',
+    sections: [
+      {
+        heading: 'What is included in Montreal digital marketing',
+        body: [
+          'We build a channel plan around your customers and goals, from local SEO and Google Business Profile optimisation to content that answers questions before a buyer calls. Google and Microsoft Ads can reach people searching now while organic visibility grows, and analytics connect campaigns to useful conversion measures. Our ',
+          { href: '/services/digital-marketing', label: 'digital marketing services' },
+          ' cover the wider channel mix; for a search-focused scope, see our ',
+          { href: '/locations/seo-company-in-montreal', label: 'SEO Company in Montreal' },
+          ' page. We agree on priorities and deliverables before work starts.',
+        ],
+      },
+      {
+        heading: 'French-first and bilingual campaigns',
+        body: [
+          'For Quebec-facing pages and ads, we plan French as the default and build English versions where they serve your audience. We research keywords separately in each language, since Montreal customers do not always use direct translations when searching. Separate pages and hreflang fr-CA and en-CA signals help search engines understand the intended language versions. Your counsel can confirm how Quebec\'s Charter of the French Language applies to your commercial content. If your landing pages need development, our ',
+          { href: '/locations/web-development-company-in-montreal', label: 'Montreal web development team' },
+          ' can help.',
+        ],
+      },
+      {
+        heading: 'Quebec Law 25 and campaign tracking',
+        body: [
+          'Measurement needs to account for Quebec Law 25 and the choices visitors make about their data. We plan cookie consent alongside analytics and ad tracking, review which tags collect information, and configure tracking around the consent choices your business implements. We also check conversions after setup so your reports reflect the data available. Your privacy adviser or legal counsel should determine the requirements for your organisation; our work supports the technical setup and does not replace legal advice.',
+        ],
+      },
+      {
+        heading: 'Pricing and process',
+        body: [
+          'Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          ' puts typical SEO at $1,500-$10,000 CAD per month, PPC management at $2,000-$15,000 plus ad spend, and full-service packages at $5,000-$25,000 per month. These are market estimates, not quotes. We start with a review of your site, audience and Montreal competitors, then agree on a monthly scope in CAD. Weekly calls keep work moving, and monthly reports cover traffic, ad spend, conversions, completed work and next steps.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does digital marketing cost in Montreal?',
+        a: 'Typical Canadian market estimates are $1,500-$10,000 CAD per month for SEO, $2,000-$15,000 for PPC management plus ad spend, and $5,000-$25,000 for a full-service package. Your scope, languages and competition affect the price. We agree on a monthly scope in CAD after a review.',
+      },
+      {
+        q: 'Must my Montreal website and ads be in French?',
+        a: 'We plan French as the default for Quebec-facing pages and ads, with English versions where useful for your audience. Quebec\'s Charter of the French Language affects commercial content; your legal counsel can confirm the requirements for your business.',
+      },
+      {
+        q: 'How long does SEO take in Montreal?',
+        a: 'Technical and local profile improvements can show movement in 8-16 weeks, while competitive content often takes 4-9 months to judge. Timing depends on your site and competitors, so we track impressions, traffic and leads along the way.',
+      },
+      {
+        q: 'How does Law 25 affect tracking for Montreal campaigns?',
+        a: 'Law 25 makes privacy and consent planning important for analytics and advertising. We help configure cookie consent and tracking around your chosen setup; your privacy adviser or legal counsel should confirm what applies to your business.',
+      },
+      {
+        q: 'Do you meet in Montreal?',
+        a: 'We work remotely with weekly calls and shared documents. Mapletech Labs is headquartered in Edmonton and does not have a Montreal office; most of the working day overlaps for planning and reviews.',
+      },
+    ],
+  },
 };
