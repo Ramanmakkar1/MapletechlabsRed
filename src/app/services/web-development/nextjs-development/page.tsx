@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Next.js Development Services',
+  title: 'Next.js Development Company in Canada',
   description: 'Expert Next.js development by Mapletech Labs. Build fast, SEO-friendly React applications with server-side rendering and static site generation.',
   openGraph: {
-    title: 'Next.js Development Services | Mapletech Labs',
+    title: 'Next.js Development Company in Canada | Mapletech Labs',
     description: 'Expert Next.js development by Mapletech Labs. Build fast, SEO-friendly React applications with server-side rendering and static site generation.',
     url: 'https://mapletechlabs.ca/services/web-development/nextjs-development',
     type: 'website',

@@ -6,10 +6,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'SaaS Platform Development',
+  title: 'SaaS Platform Development in Canada',
   description: 'Custom SaaS platform development services. Mapletech Labs builds scalable, multi-tenant software-as-a-service applications from concept to launch.',
   openGraph: {
-    title: 'SaaS Platform Development | Mapletech Labs',
+    title: 'SaaS Platform Development in Canada | Mapletech Labs',
     description: 'Custom SaaS platform development services. Mapletech Labs builds scalable, multi-tenant software-as-a-service applications from concept to launch.',
     url: 'https://mapletechlabs.ca/services/web-development/saas-platforms',
     type: 'website',
