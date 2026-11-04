@@ -15,12 +15,14 @@ export function ServiceSchema({
   url,
   serviceType,
   areaServed = 'Canada',
+  areaServedType = 'Country',
 }: {
   name: string;
   description: string;
   url: string;
   serviceType?: string;
   areaServed?: string;
+  areaServedType?: 'Country' | 'AdministrativeArea';
 }) {
   const schema = {
     '@context': 'https://schema.org',
@@ -36,8 +38,11 @@ export function ServiceSchema({
       url: siteOrigin(),
     },
     areaServed: {
-      '@type': 'Country',
+      '@type': areaServedType,
       name: areaServed,
+      ...(areaServedType === 'AdministrativeArea' && {
+        containedInPlace: { '@type': 'Country', name: 'Canada' },
+      }),
     },
     availableChannel: {
       '@type': 'ServiceChannel',

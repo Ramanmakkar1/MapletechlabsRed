@@ -39,6 +39,7 @@ export default function ProvincePageTemplate({ p }: { p: ProvinceData }) {
         url={url}
         serviceType="Custom software development"
         areaServed={p.name}
+        areaServedType="AdministrativeArea"
       />
       <FaqSchema faqs={p.faqs} />
       <Navbar />
