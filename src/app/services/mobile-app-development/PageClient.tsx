@@ -107,23 +107,25 @@ export default function PageClient() {
       buyerContent={
         <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 24px' }}>Choosing an app development approach</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 24px' }}>Choose the right app platform</h2>
             <div className="grid grid--2" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
               <div>
-                <p>Start with where your users are and what they need to do. Native iOS or Android development is a strong choice when platform-specific hardware, operating system features or demanding performance are central to the experience. Separate platform builds also let each app follow the conventions users expect on their device.</p>
-                <p>React Native and Flutter share much of the application code across iOS and Android, making them useful when reaching both app stores is a priority. Some device integrations may still need platform-specific work, so review those requirements before choosing a shared approach.</p>
-                <p>A progressive web app (PWA) can suit browser-first access, especially when users should open a link without visiting a store. Check browser support for the offline behaviour and device capabilities your product needs before relying on them. Our <Link href="/blog/app-development-cost-canada">Canadian app development cost guide</Link> explains how scope affects the budget.</p>
+                <h2 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>Choose native iOS or Android</h2>
+                <p>Choose a native build when the product depends on deep device integrations such as Bluetooth, health sensors, background location or advanced camera features, or needs demanding graphics and real-time performance. Native apps offer direct access to operating-system capabilities and familiar platform conventions. The trade-off is maintaining separate iOS and Android codebases, release cycles and store submissions. Offline support can be tailored closely to device storage and sync needs.</p>
+                <h2 style={{ fontSize: 'var(--fs-h4)', margin: '20px 0 8px', color: 'var(--ink)' }}>Choose React Native or Flutter</h2>
+                <p>A shared codebase is a practical fit when you need both app stores and want one team to deliver features across platforms efficiently. React Native and Flutter support polished app experiences, but specialised integrations can still require native modules and platform expertise. Offline use is achievable, though data storage and sync must be designed deliberately. You still prepare and maintain store releases for both platforms.</p>
+                <h2 style={{ fontSize: 'var(--fs-h4)', margin: '20px 0 8px', color: 'var(--ink)' }}>Choose a progressive web app</h2>
+                <p>A PWA suits browser-first services where a shareable link and no store installation make access easier. It can cache key screens for limited offline use, but browser support for device integrations and background tasks varies. Distribution is simpler because updates go live on the web, while users may need to add the app to their home screen themselves. Our <Link href="/blog/app-development-cost-canada">Canadian app development cost guide</Link> explains how scope affects the budget.</p>
               </div>
               <div>
-                <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 12px', color: 'var(--ink)' }}>Prepare your project scope</h3>
+                <h2 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 12px', color: 'var(--ink)' }}>Bring this consultation checklist</h2>
                 <p>Bring what you know to discovery; a short list of assumptions is useful even if some answers are still open:</p>
                 <ul style={{ paddingLeft: 22, margin: '0 0 16px' }}>
-                  <li>Target users, their devices and the problem they need solved.</li>
-                  <li>Essential launch journeys, such as sign-up, booking or checkout, and features that can wait.</li>
-                  <li>Existing APIs, data sources and third-party services the app must connect to.</li>
-                  <li>Offline access and device needs, including camera, location or notifications.</li>
-                  <li>Available designs, prototypes or brand assets, and any research still needed.</li>
-                  <li>Budget, launch date and constraints such as app store review or internal approvals.</li>
+                  <li>Who the users are, what devices they use and what problem they need solved.</li>
+                  <li>Essential journeys for launch, such as sign-up, booking or checkout.</li>
+                  <li>Required integrations, APIs, data sources and third-party services.</li>
+                  <li>Target platforms and any camera, location, notification or offline requirements.</li>
+                  <li>Launch constraints, including timing, store review, budget and internal approvals.</li>
                 </ul>
                 <p>These details help identify dependencies and trade-offs before a quote. <Link href="/contact#contact-form">Discuss your app project with our team</Link> to plan the next step.</p>
               </div>

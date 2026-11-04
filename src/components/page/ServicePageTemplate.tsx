@@ -33,12 +33,12 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <StatRow stats={stats} />
         <ServicesGrid title={servicesTitle} sub={`Everything ${name} needs, engineered by one accountable team.`} items={services} />
         <SubServiceLinks slug={slug} name={name} />
+        {buyerContent}
         <ServiceProof slug={slug} name={name} />
         <ServiceCityLinks serviceSlug={slug} serviceName={name} />
         <MediaBand media={serviceMedia[slug] ?? defaultMedia} />
         <ProcessSteps title={`How we deliver your ${name} project`} steps={steps} />
         <ServicePricing serviceSlug={slug} serviceName={name} />
-        {buyerContent}
         <SuccessStories />
         {results?.length ? <ResultsBand items={results} /> : null}
         <WhyUs />
