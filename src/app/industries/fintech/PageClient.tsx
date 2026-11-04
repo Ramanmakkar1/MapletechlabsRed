@@ -1,6 +1,7 @@
 import { serviceCityPath } from '@/data/serviceCity';
 import Link from 'next/link';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
+import { industryFaqs } from '@/data/industry-faqs';
 
 const heroStats = ([['$2B+', 'Processed Daily'], ['PCI-DSS', 'Compliant'], ['Sub-50ms', 'Latency']] as [string, string][]).map(([value, label]) => ({ value, label }));
 const challenges = [
@@ -54,6 +55,7 @@ export default function PageClient() {
       whyUs={whyUs}
       related={related}
       cta={{ title: "Build Your FinTech Product.", sub: "From MVP to mission-critical infrastructure \u2014 we have the expertise to make it happen." }}
+      faqs={industryFaqs.fintech}
     />
   );
 }

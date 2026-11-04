@@ -1,5 +1,6 @@
 import { serviceCityPath } from '@/data/serviceCity';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
+import { industryFaqs } from '@/data/industry-faqs';
 
 const heroStats = ([['500K+', 'Learners Reached'], ['85%', 'Completion Rate'], ['4.8★', 'Learner Rating']] as [string, string][]).map(([value, label]) => ({ value, label }));
 const challenges = [
@@ -52,6 +53,7 @@ export default function PageClient() {
       whyUs={whyUs}
       related={related}
       cta={{ title: "Build Your EdTech Platform.", sub: "Engaging, accessible, and scalable \u2014 learning platforms that change lives." }}
+      faqs={industryFaqs.edtech}
     />
   );
 }

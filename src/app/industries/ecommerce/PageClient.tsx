@@ -1,5 +1,6 @@
 import { serviceCityPath } from '@/data/serviceCity';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
+import { industryFaqs } from '@/data/industry-faqs';
 
 const heroStats = ([['500K', 'Concurrent Users'], ['2.1s', 'Avg Load Time'], ['38%', 'Avg Conv. Lift']] as [string, string][]).map(([value, label]) => ({ value, label }));
 const challenges = [
@@ -52,6 +53,7 @@ export default function PageClient() {
       whyUs={whyUs}
       related={related}
       cta={{ title: "Build Your Commerce Platform.", sub: "Performance-engineered storefronts that convert visitors into revenue." }}
+      faqs={industryFaqs.ecommerce}
     />
   );
 }

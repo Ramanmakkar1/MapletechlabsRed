@@ -1,4 +1,5 @@
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
+import { industryFaqs } from '@/data/industry-faqs';
 
 const heroStats = ([['50M+', 'Shipments Tracked'], ['30%', 'Route Efficiency Gain'], ['99.8%', 'Delivery Accuracy']] as [string, string][]).map(([value, label]) => ({ value, label }));
 const challenges = [
@@ -51,6 +52,7 @@ export default function PageClient() {
       whyUs={whyUs}
       related={related}
       cta={{ title: "Build Your Logistics Platform.", sub: "Real-time visibility, smarter routing, and supply chain intelligence \u2014 engineered to last." }}
+      faqs={industryFaqs.logistics}
     />
   );
 }

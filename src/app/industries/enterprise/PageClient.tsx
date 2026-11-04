@@ -1,4 +1,5 @@
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
+import { industryFaqs } from '@/data/industry-faqs';
 
 const heroStats = ([['5,000+', 'Enterprise Users'], ['SOC II', 'Certified'], ['Zero', 'Critical Downtime']] as [string, string][]).map(([value, label]) => ({ value, label }));
 const challenges = [
@@ -52,6 +53,7 @@ export default function PageClient() {
       whyUs={whyUs}
       related={related}
       cta={{ title: "Build Your Enterprise System.", sub: "Mission-critical software that scales with your organisation and stands the test of time." }}
+      faqs={industryFaqs.enterprise}
     />
   );
 }

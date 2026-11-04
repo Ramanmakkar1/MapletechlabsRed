@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
-import { defaultFaqs } from '@/data/faqs';
+import { defaultFaqs, type Faq } from '@/data/faqs';
 import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
 import MediaBand from '@/components/MediaBand';
@@ -20,6 +20,7 @@ export interface IndustryProps {
   whyUs: { icon?: string; title: string; desc: string }[];
   related: { name: string; href: string; desc: string }[];
   cta: { title: string; sub: string };
+  faqs?: Faq[];
 }
 
 /* Industry page — the reference's sector-page sequence, on white. */
@@ -27,6 +28,7 @@ const INDUSTRY_CASE_HREF: Record<string, string> = { fintech: '/case-studies/fin
 const INDUSTRY_WORK_CATEGORIES: Record<string, string[]> = { fintech: ['FinTech'], healthcare: ['Healthcare'], ecommerce: ['E-Commerce'], logistics: ['Logistics'], enterprise: ['Logistics', 'FinTech'] };
 
 export default function IndustryPageTemplate(p: IndustryProps) {
+  const faqs = p.faqs ?? defaultFaqs;
   return (
     <>
       <Navbar />
@@ -44,8 +46,8 @@ export default function IndustryPageTemplate(p: IndustryProps) {
         <WhyUs />
         <CardGrid title={`Services for ${p.name}`} items={p.related.map(r => ({ title: r.name, desc: r.desc, href: r.href }))} />
         <Credentials />
-        <FaqSplit />
-        <FaqSchema faqs={defaultFaqs} />
+        <FaqSplit faqs={faqs} />
+        <FaqSchema faqs={faqs} />
         <FinalCta title={p.cta.title} sub={p.cta.sub} />
       </main>
       <Footer />

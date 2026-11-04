@@ -1,6 +1,7 @@
 import { serviceCityPath } from '@/data/serviceCity';
 import Link from 'next/link';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
+import { industryFaqs } from '@/data/industry-faqs';
 
 const heroStats = ([['100K+', 'Patients Served'], ['HIPAA', 'Compliant'], ['HL7/FHIR', 'Certified']] as [string, string][]).map(([value, label]) => ({ value, label }));
 const challenges = [
@@ -53,6 +54,7 @@ export default function PageClient() {
       whyUs={whyUs}
       related={related}
       cta={{ title: "Build Your Healthcare Platform.", sub: "HIPAA-compliant, audit-ready, clinician-approved. Let's build it together." }}
+      faqs={industryFaqs.healthcare}
     />
   );
 }
