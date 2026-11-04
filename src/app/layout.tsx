@@ -9,7 +9,7 @@ import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from "@/lib/seo/busi
 import "./globals.css";
 
 // Bounded regeneration interval for repository-managed content.
-export const revalidate = 1800;
+export const revalidate = false; // repository content refreshes through deployment
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
