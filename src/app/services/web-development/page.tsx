@@ -20,12 +20,9 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Web Development Services',
+  serviceType: 'Web Development',
   description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. Fixed-price projects. 150+ apps shipped across Canada.',
-  provider: {
-    '@type': 'Organization',
-    name: 'Mapletech Labs',
-    url: 'https://mapletechlabs.ca',
-  },
+  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',
     name: 'Canada',

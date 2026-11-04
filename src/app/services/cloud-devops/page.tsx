@@ -20,12 +20,9 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Cloud & DevOps Services',
+  serviceType: 'Cloud & DevOps',
   description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada.',
-  provider: {
-    '@type': 'Organization',
-    name: 'Mapletech Labs',
-    url: 'https://mapletechlabs.ca',
-  },
+  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',
     name: 'Canada',

@@ -22,7 +22,7 @@ const serviceSchema = {
   name: 'UI/UX Design Services',
   serviceType: 'UI/UX Design',
   description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps and SaaS, with fixed CAD pricing. Book a free design audit.',
-  provider: { '@id': 'https://mapletechlabs.ca/#localbusiness' },
+  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',
     name: 'Canada',

@@ -20,12 +20,9 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI & Machine Learning Services',
+  serviceType: 'AI Development',
   description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada.',
-  provider: {
-    '@type': 'Organization',
-    name: 'Mapletech Labs',
-    url: 'https://mapletechlabs.ca',
-  },
+  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',
     name: 'Canada',

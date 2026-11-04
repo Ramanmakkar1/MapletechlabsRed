@@ -20,12 +20,9 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Blockchain & Web3 Development Services',
+  serviceType: 'Blockchain & Web3 Development',
   description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises.',
-  provider: {
-    '@type': 'Organization',
-    name: 'Mapletech Labs',
-    url: 'https://mapletechlabs.ca',
-  },
+  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',
     name: 'Canada',
