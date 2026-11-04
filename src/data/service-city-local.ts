@@ -2593,4 +2593,70 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-ottawa': {
+    title: 'Digital Marketing Agency in Ottawa',
+    description: 'Ottawa digital marketing agency: SEO, Google and Microsoft Ads and bilingual content from a Canadian team. CAD retainers. Get a free strategy call.',
+    intro: 'Mapletech Labs is a Canadian digital marketing team headquartered in Edmonton, working with Ottawa businesses that want one partner for SEO, paid ads and content. Ottawa is a market on its own: federal government and public sector suppliers buy through procurement, Kanata North tech companies compete for category terms, and local service businesses fight for the map pack in English and French. We do not have an Ottawa office. Edmonton is two hours behind Ottawa, so most of the working day overlaps for calls and reviews. Retainers are priced in CAD. Call +1-403-604-8692 to talk about your channel mix.',
+    sections: [
+      {
+        heading: 'What is included in our Ottawa digital marketing',
+        body: [
+          'We scope the work around the channels that fit your goals: local SEO and Google Business Profile optimisation so you show up for the neighbourhood and service-area searches across Ottawa, Kanata, Nepean, Orleans and Barrhaven; content that answers the questions Ottawa buyers ask before they call; Google and Microsoft Ads for leads while organic search builds; and analytics that tie spend to conversions. Search only? See our ',
+          { href: '/locations/seo-company-in-ottawa', label: 'SEO Company in Ottawa' },
+          ' page for an SEO-only scope, or our ',
+          { href: '/services/digital-marketing', label: 'digital marketing services' },
+          ' for the full range of channels we run.',
+        ],
+      },
+      {
+        heading: 'Bilingual campaigns across Ottawa-Gatineau',
+        body: [
+          'Ottawa and Gatineau sit on either side of the same labour market, so a campaign that only ranks in English leaves leads on the table. We run keyword research in both languages, build French pages that stand on their own rather than machine-translated duplicates, and keep hreflang tags tidy so Google and Bing show the right version to the right visitor. For visitors on the Quebec side, we plan consent for tracking and cookies to fit Quebec Law 25, with your legal counsel confirming what applies to your business. Bilingual targeting also matters for Google Business Profile, where francophone customers search in French for the same local services.',
+        ],
+      },
+      {
+        heading: 'B2B and public-sector lead generation in Ottawa',
+        body: [
+          'Ottawa sales cycles are long and the buyers are different. Federal departments and public sector organisations buy through suppliers and procurement processes, so the content has to make credentials, security practices and past work easy to check before a request for proposal ever lands. Kanata North tech companies and SaaS teams sell to other businesses, where LinkedIn and bottom-of-funnel content do the convincing. We plan the funnel around that: paid search and Microsoft Ads for the high-intent terms, procurement-friendly landing pages for government suppliers, and LinkedIn and email nurture for the deals that take months. If you also need the site itself rebuilt, our ',
+          { href: '/locations/web-development-company-in-ottawa', label: 'Web Development Company in Ottawa' },
+          ' team builds the pages the campaigns point to.',
+        ],
+      },
+      {
+        heading: 'Pricing and how we work',
+        body: [
+          'Digital marketing is quoted as a monthly retainer in CAD, not hourly. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' publishes the typical Canadian ranges: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Ottawa sits between smaller markets and the GTA in click costs, so your quote depends on the channels you choose. After a free review of your site and your Ottawa competitors, we agree a fixed monthly scope in writing before the first invoice, and you get a monthly report with rankings, traffic, ad spend and conversions.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does digital marketing cost in Ottawa?',
+        a: 'In our Canadian digital marketing cost guide, SEO typically runs about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month in CAD. Ottawa click costs sit below the GTA but above smaller cities. We confirm a fixed monthly scope in CAD after a free review.',
+      },
+      {
+        q: 'How long does SEO take in Ottawa?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Ottawa terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress building before the position charts catch up.',
+      },
+      {
+        q: 'Do you run French and bilingual campaigns for Ottawa?',
+        a: 'Yes. Ottawa serves a bilingual audience and sits next to Gatineau across the river, so our keyword research runs in both English and French. We build French pages that stand on their own rather than machine-translated duplicates, keep hreflang tags tidy, and plan cookie consent for Quebec Law 25 where Gatineau visitors are in scope, with your legal counsel confirming what applies.',
+      },
+      {
+        q: 'For an Ottawa service business, Google Ads or SEO first?',
+        a: 'If your site is slow, thin or missing from local search, we usually fix that first so paid traffic lands on pages that convert. For map-pack categories like trades, clinics and professional services, Google Business Profile and local SEO often bring the first calls. Many Ottawa clients run both: a focused search campaign for near-term leads and SEO for a lower cost per lead over time.',
+      },
+      {
+        q: 'Do you meet in Ottawa?',
+        a: 'We work remotely, with weekly calls and shared documents instead of an Ottawa office. Mapletech Labs is headquartered in Edmonton, two hours behind Ottawa, so most of the working day overlaps. When a project needs it, we can travel to Ottawa for workshops and milestone reviews, with travel agreed up front.',
+      },
+    ],
+  },
 };
