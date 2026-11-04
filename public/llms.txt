@@ -11,13 +11,16 @@
 - Founded: 2018, in Edmonton
 - Founder and CEO: [Raman Makkar](https://mapletechlabs.ca/about/raman-makkar)
 - Website: https://mapletechlabs.ca
+- About: https://mapletechlabs.ca/about
+- All locations: https://mapletechlabs.ca/locations
 
 ## Services
 
+- [Software Development](https://mapletechlabs.ca/services): custom software, web and mobile apps, AI and UI/UX for Canadian businesses.
 - [Web Development](https://mapletechlabs.ca/services/web-development): Next.js web apps, SaaS platforms, e-commerce systems, APIs and enterprise portals.
 - [Mobile App Development](https://mapletechlabs.ca/services/mobile-app-development): iOS, Android, Flutter, React Native and cross-platform apps.
 - [AI & Machine Learning](https://mapletechlabs.ca/services/ai-ml): LLM integration, AI automation, AI chatbots, computer vision and predictive analytics.
-- [UI/UX Design](https://mapletechlabs.ca/services/product-design/ui-ux-strategy): UI/UX strategy, wireframing, prototyping and design systems.
+- [UI/UX Design](https://mapletechlabs.ca/services/product-design): UI/UX strategy, wireframing, prototyping and design systems.
 - [SaaS Development](https://mapletechlabs.ca/services/saas-development): SaaS MVPs, multi-tenant architecture, billing and subscriptions, auth and SSO, analytics dashboards.
 - [SEO & Digital Marketing](https://mapletechlabs.ca/services/digital-marketing): SEO, Google Ads (PPC), social media marketing, content marketing and analytics.
 
@@ -91,6 +94,28 @@
 - [Blockchain & Web3 Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/blockchain-web3)
 - [AR & VR Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/ar-vr)
 
+### Ottawa
+
+- [Software Development Company in Ottawa](https://mapletechlabs.ca/locations/software-development-company-in-ottawa)
+- [AI Development Company in Ottawa](https://mapletechlabs.ca/locations/ai-development-company-in-ottawa)
+- [App Development Company in Ottawa](https://mapletechlabs.ca/locations/app-development-company-in-ottawa)
+- [Web Development Company in Ottawa](https://mapletechlabs.ca/locations/web-development-company-in-ottawa)
+- [UI/UX Design Company in Ottawa](https://mapletechlabs.ca/locations/ui-ux-design-company-in-ottawa)
+- [SaaS Development Company in Ottawa](https://mapletechlabs.ca/locations/saas-development-company-in-ottawa)
+- [SEO Company in Ottawa](https://mapletechlabs.ca/locations/seo-company-in-ottawa)
+- [Digital Marketing Agency in Ottawa](https://mapletechlabs.ca/locations/digital-marketing-agency-in-ottawa)
+
+### Montreal
+
+- [Software Development Company in Montreal](https://mapletechlabs.ca/locations/software-development-company-in-montreal)
+- [AI Development Company in Montreal](https://mapletechlabs.ca/locations/ai-development-company-in-montreal)
+- [App Development Company in Montreal](https://mapletechlabs.ca/locations/app-development-company-in-montreal)
+- [Web Development Company in Montreal](https://mapletechlabs.ca/locations/web-development-company-in-montreal)
+- [UI/UX Design Company in Montreal](https://mapletechlabs.ca/locations/ui-ux-design-company-in-montreal)
+- [SaaS Development Company in Montreal](https://mapletechlabs.ca/locations/saas-development-company-in-montreal)
+- [SEO Company in Montreal](https://mapletechlabs.ca/locations/seo-company-in-montreal)
+- [Digital Marketing Agency in Montreal](https://mapletechlabs.ca/locations/digital-marketing-agency-in-montreal)
+
 ## Pricing and guides
 
 - [Pricing](https://mapletechlabs.ca/pricing): project pricing in CAD.
@@ -98,10 +123,18 @@
 - [How Much Does App Development Cost in Canada? (2026 Guide)](https://mapletechlabs.ca/blog/app-development-cost-canada)
 - [AI Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/ai-development-cost-canada)
 - [How Much Does SaaS Development Cost in Canada? (2026)](https://mapletechlabs.ca/blog/saas-development-cost-canada)
-- [Website Cost in Canada: 2026 Pricing Guide](https://mapletechlabs.ca/blog/website-cost-canada)
 - [Software & App Maintenance Cost in Canada (2026)](https://mapletechlabs.ca/blog/software-maintenance-cost-canada)
 - [Digital Marketing Cost in Canada](https://mapletechlabs.ca/blog/digital-marketing-cost-canada)
 - [Top SEO Companies in Canada](https://mapletechlabs.ca/blog/top-seo-companies-canada)
+
+## Industries
+
+- [FinTech](https://mapletechlabs.ca/industries/fintech): FinTech software development.
+- [Healthcare](https://mapletechlabs.ca/industries/healthcare): Healthcare software development.
+- [E-Commerce](https://mapletechlabs.ca/industries/ecommerce): E-Commerce software development.
+- [Logistics](https://mapletechlabs.ca/industries/logistics): Logistics software development.
+- [EdTech](https://mapletechlabs.ca/industries/edtech): EdTech software development.
+- [Enterprise](https://mapletechlabs.ca/industries/enterprise): Enterprise software development.
 
 ## Case studies
 
