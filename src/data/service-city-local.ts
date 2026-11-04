@@ -767,6 +767,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-calgary': {
+    title: 'Web Development Company in Calgary',
+    description: 'Calgary custom websites and web apps by Mapletech Labs, with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is an Alberta web development team headquartered in Edmonton, building websites and web apps for Calgary businesses. We do not have a Calgary office, but we work in the same time zone and travel to Calgary for in-person workshops when needed. You work directly with the senior engineers building your project, making it easy to discuss decisions and review progress throughout the work. We agree on a fixed scope and price in CAD before work begins, so you know what is included. Call +1-403-604-8692 to discuss your website or web app.',
+    sections: [
+      {
+        heading: 'Websites and web apps Calgary businesses ask us for',
+        body: [
+          'Calgary businesses need websites that help customers find information and take action. We build sites and web apps for energy and oilfield services, fintech, logistics, agriculture and professional services, with content and workflows shaped around each project. A field-services business might need clear service pages and enquiry forms, while a logistics team may need a portal for customers and staff. We also develop e-commerce stores that make it easier for customers to browse and buy.',
+        ],
+      },
+      {
+        heading: 'Built for speed and search',
+        body: [
+          'We use Next.js and React with server rendering to make page content accessible to Google and Bing. Core Web Vitals guide our decisions on images, scripts and layout throughout development, so speed is considered from the start. We structure pages with clear URLs and schema to help search engines understand their content. A CMS gives your team a way to update service information and other content without needing a developer for every change.',
+        ],
+      },
+      {
+        heading: 'Same time zone, in-person workshops in Calgary',
+        body: [
+          'Edmonton and Calgary share a time zone, making it easy to schedule calls, reviews and working sessions during your business day. You can speak directly with the senior engineers working on your project as questions come up. When a project benefits from an in-person workshop, we travel down Highway 2 to Calgary, with travel agreed up front. Workshops can bring your team together to discuss requirements, review designs and make decisions before the next stage of work.',
+        ],
+      },
+      {
+        heading: 'What a website costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). The scope and features you need determine where your project falls. Discovery is free, and your price is fixed before coding starts, so your team can plan with a clear budget and timeline.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Calgary?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After free discovery you get a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Do you have an office in Calgary?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and does not have a Calgary office. We work remotely with Calgary clients and travel to Calgary for in-person workshops, with travel agreed up front.',
+      },
+      {
+        q: 'Can we edit the website ourselves?',
+        a: 'Yes. We provide a CMS so your team can edit pages and content without a developer. At handover we train your team to use it, so you can keep your website current after launch.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+      {
+        q: 'Can you build websites for Calgary energy and field-services companies?',
+        a: 'Yes. We can build service pages, enquiry forms and web apps around the information and workflows your energy or field-services business needs to share with customers and staff.',
+      },
+    ],
+  },
   'seo-company-in-vancouver': {
     title: 'SEO Company in Vancouver',
     description: 'Vancouver SEO from Mapletech Labs: local map-pack search, technical fixes and CAD retainers with monthly reporting. Call +1-403-604-8692.',
