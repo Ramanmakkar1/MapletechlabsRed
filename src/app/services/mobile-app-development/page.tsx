@@ -3,10 +3,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development in Canada',
+  title: 'Mobile App Development Company in Canada',
   description: 'iOS, Android, Flutter & React Native app development by Mapletech Labs. 300+ apps shipped across Canada. Get a free consultation for your project today.',
   openGraph: {
-    title: 'Mobile App Development in Canada | Mapletech Labs',
+    title: 'Mobile App Development Company in Canada | Mapletech Labs',
     description: 'iOS, Android, Flutter & React Native app development by Mapletech Labs. 300+ apps shipped across Canada.',
     url: 'https://mapletechlabs.ca/services/mobile-app-development',
     type: 'website',

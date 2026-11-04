@@ -3,10 +3,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services in Canada',
+  title: 'SEO & Digital Marketing Agency in Canada',
   description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada. Get a free marketing audit today.',
   openGraph: {
-    title: 'Digital Marketing Services in Canada | Mapletech Labs',
+    title: 'SEO & Digital Marketing Agency in Canada | Mapletech Labs',
     description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada.',
     url: 'https://mapletechlabs.ca/services/digital-marketing',
     type: 'website',
