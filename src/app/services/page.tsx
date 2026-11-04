@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
@@ -17,5 +18,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PageClient />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { position: 1, name: 'Home', item: canonicalUrl('/') },
+        { position: 2, name: 'Services', item: canonicalUrl('/services') },
+      ]} />
+      <PageClient />
+    </>
+  );
 }
