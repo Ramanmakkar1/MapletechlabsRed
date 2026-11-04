@@ -1143,6 +1143,68 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-toronto': {
+    title: 'UI/UX Design Company in Toronto',
+    description: 'UI/UX design for web and mobile apps in Toronto from Mapletech Labs. Fixed CAD pricing and a free consultation.',
+    intro: 'Mapletech Labs is headquartered in Edmonton and partners with Toronto and GTA teams that need UI/UX design for products people actually use. Our designers work beside the engineers who build the software, so research, screen flows and handoff stay on one thread from wireframes through launch. We serve Toronto clients remotely with hours that overlap Eastern time, and we travel to the GTA for discovery and design workshops when in-person work helps, with travel agreed up front. Between visits, you review shared Figma files and talk directly with the people doing the work. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'What Toronto product teams need designed',
+        body: [
+          'Toronto and GTA companies bring us fintech and banking dashboards where trades, balances and approvals must be scannable under pressure. SaaS teams need onboarding, admin and reporting that cut support load. Health and retail apps need patient, shopper and staff flows that respect privacy and conversion goals alike. Ontario public-facing products often need to meet AODA expectations, so we plan accessible design to WCAG 2.0 AA: contrast, focus states, keyboard paths, text sizing and screen-reader labels are decided in the design files, not patched after development.',
+        ],
+      },
+      {
+        heading: 'Research, wireframes, prototypes and handoff',
+        body: [
+          'We start with a free UX audit: heuristic review, analytics and interviews with the people who use the product. User research and journey mapping inform wireframes for each key screen before visual design begins. Those wireframes become a clickable prototype, and we run usability testing on real tasks so hesitation shows up in Figma, not after launch. We document components and states in a design system your developers can implement, then stay with annotated specs and review through developer handoff.',
+        ],
+      },
+      {
+        heading: 'Design that the same team ships',
+        body: [
+          'Because Mapletech Labs designs and builds on one team, handoff is not a zip file sent to strangers. We keep a component library and design tokens, annotate edge cases and review the build as it is coded. Designs target accessible patterns your engineers can implement without rework. You can see how we run research, prototyping and design systems on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Cost and timeline for UI/UX design',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Most projects take 6-11 weeks. You can compare how Canadian studios price this work in our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Toronto?',
+        a: 'We quote a fixed price in CAD after a free UX audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, interaction complexity, research depth and branding all move the number, and Toronto projects are priced the same way as our Alberta work.',
+      },
+      {
+        q: 'Do you design for AODA and Ontario accessibility requirements?',
+        a: 'Yes. We design to WCAG 2.0 AA, which supports AODA-aligned expectations for public-facing Ontario products: contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels are built into the design files. If your users span provinces, we can note where Ontario requirements differ from other markets during planning.',
+      },
+      {
+        q: 'How long does a UI/UX design project take for a Toronto team?',
+        a: 'Most projects take 6-11 weeks across research, strategy, wireframes, visual design and handoff. A small MVP can be faster, while a multi-product design system or a large research program takes longer. Your written scope lists the milestones and review points, so you know when the prototype and final handoff are due.',
+      },
+      {
+        q: 'Can you also build the web or mobile app you design for our GTA team?',
+        a: 'Yes. The same team that designs the product builds it, whether that is a mobile app, a web app or an internal tool. That means the design system maps to real components, edge cases are settled with the engineers who will code them, and there is no gap between the prototype and what launches. You can see the build side on our UI/UX and product design page.',
+      },
+      {
+        q: 'Who owns the design files when the Toronto project ends?',
+        a: 'You do. The editable Figma files, clickable prototypes, component library, design tokens, research findings and usability test notes are handed over and belong to you, with no lock-in. If you have an in-house team, we can hand off in a working session so they can keep extending the system after launch.',
+      },
+    ],
+  },
   'saas-development-company-in-edmonton': {
     title: 'SaaS Development Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and builds multi-tenant SaaS products with a fixed CAD price. Get a free quote',
