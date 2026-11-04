@@ -19,6 +19,14 @@ const CATEGORY_SERVICE: Record<string, CityService> = {
   Business: { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
 };
 
+/** Direct service link in the project CTA when the secondary button points at a tool. */
+const SLUG_PROJECT_SERVICE: Record<string, { href: string; label: string }> = {
+  'nrc-irap-funding-software-canada': { href: '/services/saas-development', label: 'Custom software and SaaS development' },
+  'sred-software-development-canada': { href: '/services/saas-development', label: 'Custom software and SaaS development' },
+  'software-maintenance-cost-canada': { href: '/services/saas-development', label: 'Software and SaaS development services' },
+  'software-development-contract-canada': { href: '/services/saas-development', label: 'Custom software development services' },
+};
+
 const SLUG_SERVICE: Record<string, CityService> = {
   'native-vs-cross-platform-vs-pwa': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'app-privacy-compliance-canada': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
@@ -125,6 +133,7 @@ function BlockView({ b }: { b: Block }) {
 export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode }) {
   const pageRef = useReveal();
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
+  const projectService = SLUG_PROJECT_SERVICE[a.slug];
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
   const hero = humanMedia[a.heroKey as keyof typeof humanMedia] ?? humanMedia.team;
   const published = new Date(a.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -221,6 +230,9 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
                   <p style={{ lineHeight: 1.7, margin: '0 0 22px', maxWidth: '52ch' }}>Tell us what you&rsquo;re building. A senior engineer will come back within one working day with a scope, a timeline and a fixed price.</p>
                   <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <Link href="/contact" className="btn btn--on-ink">Start a project</Link>
+                    {projectService && (
+                      <Link href={projectService.href} className="btn btn--ghost-on-ink">{projectService.label}</Link>
+                    )}
                     <Link href={a.cta.href} className="btn btn--ghost-on-ink">{a.cta.label}</Link>
                   </div>
                 </div>
