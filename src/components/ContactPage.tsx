@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { BUSINESS, HQ_ADDRESS } from '@/lib/seo/business';
 import { submitToSplitForms } from '@/lib/splitforms';
 
 const PROJECT_TYPES = ['Mobile App', 'Web Platform', 'AI / ML Solution', 'Product Design', 'Blockchain / Web3', 'Custom Engineering', 'Other'];
@@ -9,6 +10,8 @@ const TIMELINES = ['ASAP', '1–3 months', '3–6 months', '6+ months', 'Not sur
 const DETAILS = [
   { label: 'General', value: 'hello@mapletechlabs.ca', href: 'mailto:hello@mapletechlabs.ca' },
   { label: 'Sales', value: 'sales@mapletechlabs.ca', href: 'mailto:sales@mapletechlabs.ca' },
+  { label: 'Phone', value: BUSINESS.telephone, href: 'tel:' + BUSINESS.telephone },
+  { label: 'Office', value: `${HQ_ADDRESS.addressLocality}, ${HQ_ADDRESS.addressRegion}, Canada`, href: null },
   { label: 'Response time', value: 'Within one working day', href: null },
 ];
 
