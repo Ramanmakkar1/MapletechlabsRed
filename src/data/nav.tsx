@@ -151,6 +151,7 @@ export const serviceCategories = [
     href: '/services/digital-marketing',
     links: [
       { label: 'SEO Services', href: '/services/digital-marketing/seo-services' },
+      { label: 'Local SEO Services', href: '/services/digital-marketing/local-seo' },
       { label: 'Google Ads (PPC)', href: '/services/digital-marketing/google-ads-ppc' },
       { label: 'Social Media Marketing', href: '/services/digital-marketing/social-media-marketing' },
       { label: 'Content Marketing', href: '/services/digital-marketing/content-marketing' },

@@ -1,4 +1,5 @@
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import Link from 'next/link';
 
 const stats = [
   { value: '200%', label: 'Avg organic traffic growth' },
@@ -42,6 +43,14 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our SEO Capabilities"
+      buyerContent={(
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2>Need more enquiries from nearby customers?</h2>
+            <p className="lede">Explore our <Link href="/services/digital-marketing/local-seo">local SEO services in Canada for Google and Bing</Link>, including Google Business Profile, Bing Places, citation cleanup, service-area content and enquiry tracking.</p>
+          </div>
+        </section>
+      )}
     />
   );
 }
