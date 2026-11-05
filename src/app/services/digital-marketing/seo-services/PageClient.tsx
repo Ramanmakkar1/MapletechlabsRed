@@ -30,6 +30,7 @@ const faqs = [
   { q: 'How do you build backlinks ethically?', a: 'We use only white-hat methods: editorial outreach to relevant publications, digital PR campaigns that earn genuine coverage, broken link building, and resource page placements. We never buy links or use private blog networks.' },
   { q: 'Local SEO vs national SEO — what is the difference?', a: 'Local SEO targets geo-specific search queries and optimises your visibility in Google Maps and the local pack. National SEO targets broader keyword sets across all regions. Many businesses need both, and we tailor strategy accordingly.' },
   { q: 'How do you track SEO ROI?', a: 'We connect Google Analytics 4, Search Console, and rank tracking tools to a custom Looker Studio dashboard that maps organic sessions, goal completions, and revenue directly to your SEO investment month over month.' },
+  { q: 'How much do SEO services cost in Canada?', a: 'Our Canadian digital marketing cost guide lists typical SEO budgets of $1,500–$10,000 CAD per month. The quoted scope depends on competition, site size and implementation needs — competitive markets need deeper keyword research, content and link acquisition, and larger sites need more pages audited and optimised. See the SEO pricing breakdown in our cost guide for the full range.' },
 ];
 
 export default function PageClient() {
@@ -37,7 +38,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/digital-marketing", label: "Digital Marketing" }}
       name="SEO Services"
-      copy={{ badge: "DIGITAL MARKETING", title: <>SEO That Drives <span style={{ color: 'var(--brand)' }}>Real Growth</span></>, desc: <>Data-driven search engine optimisation that moves you up the rankings, grows organic traffic, and converts visitors into customers — month after month.</> }}
+      copy={{ badge: "DIGITAL MARKETING", title: <>SEO Services in <span style={{ color: 'var(--brand)' }}>Canada</span></>, desc: <>Data-driven search engine optimisation that moves you up the rankings, grows organic traffic, and converts visitors into customers — month after month.</> }}
       stats={stats}
       services={services}
       steps={steps}
@@ -56,7 +57,7 @@ export default function PageClient() {
         <section style={{ padding: 'var(--section-y-sm) 0' }}>
           <div className="cb-container">
             <h2>SEO pricing and scope in Canada</h2>
-            <p className="lede">Start with the <Link href="/blog/digital-marketing-cost-canada#seo">SEO pricing breakdown in our Canadian digital marketing cost guide</Link> and our <Link href="/pricing">service pricing and engagement options</Link>. Use these to frame a scope discussion around your website and business goals.</p>
+            <p className="lede">The <Link href="/blog/digital-marketing-cost-canada#seo">SEO pricing breakdown in our Canadian digital marketing cost guide</Link> lists typical SEO budgets of $1,500–$10,000 CAD per month, and our <Link href="/pricing">service pricing and engagement options</Link> show how to frame a scope discussion around your website and business goals. Your quoted scope depends on competition, site size and implementation needs.</p>
             <p className="lede">Competition affects the depth of keyword research, content and link acquisition needed. Site size affects how many pages and templates need auditing and optimisation. Technical work depends on crawl and indexation issues, performance problems and the changes your platform requires. Content requirements depend on whether existing pages can be improved or new service pages, landing pages and supporting articles are needed.</p>
             <p className="lede">When comparing proposals, ask which technical fixes, content deliverables and reporting are included, who implements each change and which work is ongoing. An initial repair programme and a continuing content and link-building campaign involve different workloads; agree priorities and responsibilities before starting.</p>
           </div>
