@@ -987,6 +987,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
       { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
       { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/blog/seo-companies-toronto', label: "Buyer's guide", note: 'How to choose an SEO company in Toronto: GTA map pack and suburb searches, the first 90 days, CAD pricing, AI answers, red flags and 10 questions to ask.' },
     ],
     faqs: [
       {

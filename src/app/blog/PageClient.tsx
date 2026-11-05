@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'seo-companies-toronto', category: 'Business',
+    title: 'SEO Companies in Toronto: How to Choose One (2026)',
+    excerpt: 'How to choose an SEO company in Toronto: GTA map pack and suburb searches, the first 90 days, CAD pricing, AI answers, red flags and 10 questions to ask.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'web-development-companies-edmonton', category: 'Business',
     title: 'Web Development Companies in Edmonton: How to Choose One (2026)',
     excerpt: 'How to choose a web development company in Edmonton: capital-region SEO, B2B portals, website vs web app, CAD pricing, 30/60/90-day delivery, red flags and 10 questions.',
