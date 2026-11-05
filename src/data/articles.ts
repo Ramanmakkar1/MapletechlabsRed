@@ -39,6 +39,8 @@ export interface Article {
   keyTakeaways: string[];
   faqs: { q: string; a: string }[];
   cta: { href: string; label: string };
+  /** Optional service + city context carried into the /contact enquiry. */
+  enquiryContext?: { serviceSlug: string; citySlug?: string };
 }
 
 export const articles: Article[] = [
@@ -1952,6 +1954,7 @@ export const articles: Article[] = [
       { q: 'Do I need separate pages for St. Albert, Sherwood Park and Spruce Grove?', a: 'If you genuinely serve those areas and customers search for them, a useful page for each area can help you rank there. Each page should say something specific about the work you do in that area, not repeat the same text with the town name swapped.' },
     ],
     cta: { href: '/locations/seo-company-in-edmonton', label: 'See our Edmonton SEO services' },
+    enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'edmonton' },
   },
   {
     slug: 'app-development-companies-calgary',
@@ -2055,6 +2058,7 @@ export const articles: Article[] = [
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
     cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+    enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'calgary' },
   },
   {
     slug: 'app-development-companies-toronto',
@@ -2170,6 +2174,7 @@ export const articles: Article[] = [
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
     cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+    enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'toronto' },
   },
   {
     slug: 'seo-companies-calgary',
@@ -2276,6 +2281,7 @@ export const articles: Article[] = [
       { q: 'Should I choose SEO or Google Ads?', a: 'Google Ads brings traffic as soon as campaigns go live but stops when you stop paying. SEO takes longer but keeps bringing traffic without a cost per click. Many Calgary businesses run ads while SEO builds, then shift budget as organic leads grow.' },
     ],
     cta: { href: '/locations/seo-company-in-calgary', label: 'See our Calgary SEO services' },
+    enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'calgary' },
   },
   {
     slug: 'ai-development-companies-toronto',
@@ -2374,6 +2380,7 @@ export const articles: Article[] = [
       { q: 'Who owns the AI system when the project finishes?', a: 'You should. The contract should assign source code, prompts, configuration and cloud accounts to your business on payment, with no lock-in. You can keep working with the same partner after launch or hand everything to your own team.' },
     ],
     cta: { href: '/locations/ai-development-company-in-toronto', label: 'See our Toronto AI development services' },
+    enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'toronto' },
   },
 ];
 

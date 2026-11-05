@@ -10,6 +10,8 @@ import FinalCta from '@/components/home/FinalCta';
 import { humanMedia } from '@/data/media';
 import type { Article, Block, RelatedArticle } from '@/data/articles';
 import { serviceCityPath } from '@/data/serviceCity';
+import { cities } from '@/data/cities';
+import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 
 type CityService = { label: string; path: (city: string) => string };
 
@@ -36,6 +38,9 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'saas-development-company-canada': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
   'ui-ux-design-companies-canada': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },
 };
+
+/** Service allowlist for the enquiry CTA, from the SERVICE_PROJECT_TYPE keys. */
+const serviceAllowlist = Object.keys(SERVICE_PROJECT_TYPE).map(slug => ({ slug, name: slug }));
 
 const CITIES = [
   { slug: 'edmonton', name: 'Edmonton' },
@@ -139,6 +144,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
   const pageRef = useReveal();
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
   const projectService = SLUG_PROJECT_SERVICE[a.slug];
+  const projectHref = contactHrefFor(a.enquiryContext?.serviceSlug, a.enquiryContext?.citySlug, serviceAllowlist, cities);
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
   const blockHeadings: (string | undefined)[] = [];
   let currentHeading: string | undefined;
@@ -254,7 +260,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
                   <h2 style={{ color: 'var(--on-ink)', fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Have a project in mind?</h2>
                   <p style={{ lineHeight: 1.7, margin: '0 0 22px', maxWidth: '52ch' }}>Tell us what you&rsquo;re building. A senior engineer will come back within one working day with a scope, a timeline and a fixed price.</p>
                   <div className="article-project-cta" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                    <Link href="/contact" className="btn btn--on-ink">Start a project</Link>
+                    <Link href={projectHref} className="btn btn--on-ink">Start a project</Link>
                     {projectService && (
                       <Link href={projectService.href} className="btn btn--ghost-on-ink">{projectService.label}</Link>
                     )}
