@@ -9,6 +9,12 @@ import { siteOrigin } from '@/lib/seo/canonical';
  * sells or where it is sold. Everything below comes from real page metadata —
  * no invented ratings, prices or review counts.
  */
+/** Strip title suffixes (e.g. '| Toronto') so the schema name is the plain service name. */
+export function cleanServiceName(name: string): string {
+  const first = name.split(/\s+[|–—]\s+/)[0].trim();
+  return first.replace(/\s*\|\s*Mapletech Labs$/i, '').trim() || name.trim();
+}
+
 export function ServiceSchema({
   name,
   description,
@@ -27,7 +33,7 @@ export function ServiceSchema({
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name,
+    name: cleanServiceName(name),
     description,
     url,
     ...(serviceType && { serviceType }),
