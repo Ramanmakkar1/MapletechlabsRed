@@ -2382,6 +2382,113 @@ export const articles: Article[] = [
     cta: { href: '/locations/ai-development-company-in-toronto', label: 'See our Toronto AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'toronto' },
   },
+  {
+    slug: 'web-development-companies-edmonton',
+    category: 'Business',
+    title: 'Web Development Companies in Edmonton: How to Choose One (2026)',
+    dek: 'A buyer’s guide for Edmonton businesses hiring a web development company: trades and clinics across the capital region, B2B energy and public-sector portals, e-commerce, website vs web app vs portal, the first 30/60/90 days, CAD pricing, speed and accessibility, red flags and ten questions to ask.',
+    metaTitle: 'Web Development Company Edmonton: How to Choose (2026)',
+    metaDescription: 'How to choose a web development company in Edmonton: capital-region SEO, B2B portals, CAD pricing, the first 30/60/90 days, red flags and 10 questions.',
+    date: '2026-11-05',
+    dateModified: '2026-11-05',
+    readTime: '10 min read',
+    heroKey: 'planning',
+    intro: [
+      'Searching for a web development company in Edmonton returns agencies, freelancers and national firms that all promise fast launches and “SEO included”. Portfolios look similar, and it is hard to tell who will build a site your team can update and that ranks in Google and Bing from who will deliver a theme that slows down every winter when traffic spikes.',
+      'This is a buyer’s guide, not a ranked list. It covers what Edmonton businesses need from a website or web app, the difference between a marketing site, a web application and a portal, what a good company delivers in the first 30, 60 and 90 days, typical Canadian pricing in CAD, speed accessibility and SEO basics, red flags, ten questions to ask, and an FAQ. For budgets by project type, see our <a href="/blog/website-cost-canada">website cost guide for Canada</a>. If you need custom software beyond the site itself, read our <a href="/blog/software-development-companies-edmonton">guide to software development companies in Edmonton</a>. For how we build in the capital region, see our <a href="/locations/web-development-company-in-edmonton">web development company in Edmonton</a> page and our <a href="/services/web-development">web development services</a>.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-edmonton-needs', text: 'What Edmonton businesses need from web development' },
+      { type: 'p', html: 'Edmonton is Alberta’s capital and a spread-out metro area with a heavy B2B economy. That mix means very different web projects depending on who you sell to:' },
+      { type: 'checks', items: [
+        { term: 'Trades and clinics in the capital region', text: 'Roofers, HVAC companies, plumbers, dental, physio and chiropractic clinics win most of their leads from local search and the Google map pack. Your site needs fast service pages, clear calls to action, mobile-friendly forms and content that matches how people search in Edmonton — and in St. Albert, Sherwood Park and Spruce Grove when you genuinely serve those communities. Our <a href="/blog/seo-companies-edmonton">guide to choosing an SEO company in Edmonton</a> explains how search and the site work together.' },
+        { term: 'B2B energy, industrial and public-sector suppliers', text: 'Oilfield services, fabrication, engineering, logistics and vendors selling to municipal, provincial or federal buyers rarely get work from “near me” alone. They need detailed service pages, certification and safety content, enquiry paths for procurement teams, and often a secure portal where customers or staff log in, upload documents or track orders. Those sites must be accessible to keyboard and screen-reader users and hold up under security review.' },
+        { term: 'E-commerce and retail', text: 'Edmonton retailers and distributors — from South Edmonton Common to industrial suppliers — need catalogues, inventory-aware checkout, shipping rules and pages that stay fast when a promotion or season drives traffic. Integrations to ERP, POS or booking tools are common scope items, not afterthoughts.' },
+      ] },
+      { type: 'p', html: 'A good web development company asks which of these you are, which areas you serve and what a lead or order is worth before it proposes a stack or a price.' },
+
+      { type: 'h2', id: 'website-vs-app-vs-portal', text: 'Website vs web app vs portal' },
+      { type: 'p', html: 'These terms get used interchangeably in proposals. They are different products with different costs:' },
+      { type: 'checks', items: [
+        { term: 'Marketing website', text: 'Mostly public pages: services, about, contact, blog and location content. Built so Google and Bing can crawl them, your team can update copy in a CMS, and visitors can call, book or request a quote. This is what most Edmonton trades, clinics and professional firms need first.' },
+        { term: 'Web application', text: 'Software that runs in the browser: dashboards, configurators, multi-step workflows, customer accounts with custom logic, or tools that talk to your APIs. It needs authentication, testing, hosting and ongoing updates like any product, not like a brochure site.' },
+        { term: 'Portal', text: 'A signed-in experience for a defined audience — employees, suppliers, residents or members — with permissions, document upload, status tracking or self-service tasks. Often combines marketing pages with a web app behind login. Public-sector and industrial buyers frequently ask for WCAG-compliant portals that work on shared office machines and phones in the field.' },
+      ] },
+      { type: 'p', html: 'If a vendor quotes a “website” price but your brief includes logins, role-based access or heavy integrations, you are buying a web app or portal. Scope that honestly up front.' },
+
+      { type: 'h2', id: 'first-90-days', text: 'What a good company delivers in the first 30, 60 and 90 days' },
+      { type: 'p', html: 'Timelines vary by size, but a credible Edmonton-facing engagement should show progress you can see and measure:' },
+      { type: 'ol', items: [
+        '<strong>First 30 days — discovery and foundations.</strong> Workshops (in person in Edmonton when it helps), sitemap and page list, content responsibilities, technical choices, accessibility and SEO requirements, and a written scope with a fixed price in CAD. Staging environment, design direction or wireframes for key templates, and migration plan if you are replacing an existing site.',
+        '<strong>Days 31–60 — build and content.</strong> Core templates in code, CMS setup, priority pages built on staging, structured data for your services and locations, image and performance budgets, and forms or portal flows wired to the right inboxes or systems. You should review real URLs on your phone, not only PDF mockups.',
+        '<strong>Days 61–90 — hardening and launch.</strong> Content load or migration, 301 redirects from old URLs that earn traffic, cross-browser and device testing, accessibility checks, Search Console and Bing Webmaster Tools in your name, sitemap submitted, and a launch checklist with rollback plan. For portals, security review, role testing and staff training belong in this window too.',
+      ] },
+      { type: 'p', html: 'A simple marketing site may launch inside 90 days; e-commerce and portals often run longer. The point is a clear sequence — not a big-bang launch with no staging review.' },
+
+      { type: 'h2', id: 'pricing', text: 'Typical web development pricing in Canada (CAD)' },
+      { type: 'p', html: 'Edmonton web projects follow Canadian onshore rates. As approximate ranges from our <a href="/blog/website-cost-canada">website cost guide for Canada</a>, <a href="/pricing">pricing page</a> and the planning numbers we publish for custom builds:' },
+      { type: 'ul', items: [
+        '<strong>Custom business website:</strong> about CAD $10,000&ndash;$50,000, roughly 4&ndash;10 weeks.',
+        '<strong>Web application:</strong> about CAD $25,000&ndash;$100,000, roughly 8&ndash;16 weeks.',
+        '<strong>E-commerce platform:</strong> often about CAD $25,000&ndash;$100,000, roughly 8&ndash;16 weeks depending on catalogue size and integrations.',
+      ] },
+      { type: 'p', html: 'Template or WordPress brochure sites sit lower; large enterprise portals sit higher. Integrations, bilingual content, accessibility remediation and portal security add scope. Discovery should surface those needs before you sign, not as change orders after launch.' },
+
+      { type: 'h2', id: 'speed-accessibility-seo', text: 'Speed, accessibility and SEO basics' },
+      { type: 'p', html: 'These are not optional add-ons for an Edmonton business site — they decide whether people stay, whether procurement teams take you seriously and whether you show up when someone searches in the capital region:' },
+      { type: 'ul', items: [
+        '<strong>Core Web Vitals and mobile performance.</strong> Most local searches happen on phones. Images, fonts and scripts should be chosen so pages load quickly on Alberta mobile networks, not only on office Wi‑Fi.',
+        '<strong>Accessibility (WCAG).</strong> Keyboard navigation, screen-reader labels, colour contrast and clear form errors matter for public-sector and healthcare buyers and for every visitor. Building accessibility in is cheaper than fixing it after launch.',
+        '<strong>SEO foundations.</strong> One clear topic per page, unique titles and descriptions, clean URLs, internal links from blog and location content to service pages, valid Organization or LocalBusiness and Service schema, and indexing in both Google and Bing. Technical SEO pairs with the local and regional content strategy in our <a href="/blog/seo-companies-edmonton">Edmonton SEO buyer’s guide</a>.',
+      ] },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags when hiring a web development company' },
+      { type: 'ul', items: [
+        '<strong>A fixed price before discovery.</strong> A quote before anyone asks about integrations, portals, content or compliance is a brochure, not a plan.',
+        '<strong>Theme sold as custom.</strong> A lightly configured template can work for a tiny site; it is not the same as engineered performance and SEO for a competitive Edmonton market.',
+        '<strong>You do not own the accounts.</strong> Domain, hosting, CMS, analytics, Search Console and source code should be in your name.',
+        '<strong>No staging or redirect plan.</strong> Replacing a site that already earns traffic without 301 redirects and a review window is how companies lose rankings overnight.',
+        '<strong>Accessibility and SEO “later”.</strong> Promising a fast launch now and an accessibility or SEO phase later usually means never.',
+        '<strong>No post-launch support.</strong> Browsers, CMS and security patches keep coming. Ask who handles fixes and updates after go-live.',
+      ] },
+
+      { type: 'h2', id: 'questions', text: '10 questions to ask an Edmonton web development company' },
+      { type: 'ol', items: [
+        'Who will design and build my site, and can I meet them before we sign?',
+        'Is this a marketing website, a web app or a portal — and how does that change scope and price?',
+        'Will you give me a fixed scope and price in CAD before coding starts, and how do change requests work?',
+        'How will you handle searches in St. Albert, Sherwood Park and Spruce Grove without thin copied pages?',
+        'How do you approach Core Web Vitals, WCAG accessibility and SEO during the build, not after?',
+        'Where will the site be hosted, and who owns the domain, code and CMS accounts?',
+        'How will you migrate our existing URLs and preserve Google and Bing rankings?',
+        'What is your plan for the first 30, 60 and 90 days, and what do you need from my team each week?',
+        'What support, security updates and content training are included after launch?',
+        'Can you show case studies or live sites for businesses with similar goals in Edmonton or Alberta?',
+      ] },
+      { type: 'p', html: 'Good answers are specific and in writing. For contract clauses on scope and ownership, see our <a href="/blog/software-development-contract-canada">software development contract guide for Canada</a>.' },
+
+      { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works in Edmonton' },
+      { type: 'p', html: 'Mapletech Labs was founded in Edmonton in 2018 and Edmonton is still our headquarters. When an Edmonton company hires us for web development, the people who scope the work are the people who build it. We run discovery in person when a workshop helps, agree on a fixed scope and fixed price in CAD before coding starts, and you own the code, domain and hosting accounts. Call us on +1-403-604-8692 to talk through your project.' },
+      { type: 'callout', tone: 'brand', title: 'Talk to a web team in Edmonton', text: `See how we work on our <a href="${serviceCityPath('web-development', 'edmonton')}">web development company in Edmonton</a> page, explore our <a href="/services/web-development">web development services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+    ],
+    keyTakeaways: [
+      'Edmonton web work spans capital-region trades and clinics, B2B energy and public-sector portals, and e-commerce — each needs a different scope.',
+      'Know whether you need a marketing website, a web application or a portal before you compare quotes.',
+      'Expect visible progress in 30/60/90 days: scope and staging first, core build and content next, then testing, redirects and launch.',
+      'Plan for about CAD $10,000–$50,000 for a custom business website and $25,000–$100,000 for a typical web app or e-commerce build.',
+      'Insist on speed, WCAG accessibility and SEO during the build, and on owning every account when the project ends.',
+    ],
+    faqs: [
+      { q: 'How much does a website cost in Edmonton?', a: 'Custom business websites in Canada typically run about CAD $10,000 to $50,000 over roughly 4 to 10 weeks. Web applications and e-commerce platforms often fall about $25,000 to $100,000 over 8 to 16 weeks, depending on integrations and catalogue size. After discovery you should receive a fixed price in CAD, not an open-ended estimate.' },
+      { q: 'What is the difference between a website, a web app and a portal?', a: 'A marketing website is mostly public pages that explain your services and generate enquiries. A web application is browser-based software with custom logic, accounts and integrations. A portal is a signed-in experience for employees, customers or suppliers, often combined with public marketing pages.' },
+      { q: 'Do I need separate pages for St. Albert, Sherwood Park and Spruce Grove?', a: 'If you genuinely serve those communities and people search for your service there, useful location or service-area pages can help. Each page should say something specific about your work in that town, not repeat the Edmonton page with the name swapped.' },
+      { q: 'How long does a new website take to launch?', a: 'A focused marketing site can launch within about 4 to 10 weeks when content and decisions keep moving. E-commerce and portal projects usually take longer. A credible company explains the timeline after discovery with milestones for design, content and launch.' },
+      { q: 'Will a new site hurt my Google rankings?', a: 'Not if migration is planned. Audit URLs that earn traffic today, map them to the new structure, use 301 redirects where URLs change, keep titles and headings where they still match search intent, and launch from staging after technical and content review.' },
+      { q: 'Who owns the website when the project finishes?', a: 'You should. The contract should assign source code, design files, the domain and CMS access to your business on payment, with no lock-in. Analytics and Search Console should stay in your name throughout the project.' },
+    ],
+    cta: { href: '/locations/web-development-company-in-edmonton', label: 'See our Edmonton web development services' },
+    enquiryContext: { serviceSlug: 'web-development', citySlug: 'edmonton' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);

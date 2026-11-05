@@ -1101,7 +1101,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         body: [
           'Our ',
           { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
-          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). Discovery is free, and your price is fixed before coding starts.',
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). If you are comparing vendors, our ',
+          { href: '/blog/web-development-companies-edmonton', label: 'guide to choosing a web development company in Edmonton' },
+          ' lists the questions to ask. Discovery is free, and your price is fixed before coding starts.',
         ],
       },
     ],
@@ -1109,6 +1111,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
       { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
       { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/blog/web-development-companies-edmonton', label: "Buyer's guide", note: 'How to choose a web development company in Edmonton: capital-region SEO, B2B portals, CAD pricing, red flags and ten questions to ask.' },
     ],
     faqs: [
       {

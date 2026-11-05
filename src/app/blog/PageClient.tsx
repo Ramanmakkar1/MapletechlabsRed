@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'web-development-companies-edmonton', category: 'Business',
+    title: 'Web Development Companies in Edmonton: How to Choose One (2026)',
+    excerpt: 'How to choose a web development company in Edmonton: capital-region SEO, B2B portals, website vs web app, CAD pricing, 30/60/90-day delivery, red flags and 10 questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'seo-companies-calgary', category: 'Business',
     title: 'SEO Companies in Calgary: A Buyer’s Guide (2026)',
     excerpt: 'How Calgary businesses should choose an SEO company: map pack, Airdrie and Okotoks searches, technical B2B SEO, CAD pricing, AI answers and 10 questions to ask.',
