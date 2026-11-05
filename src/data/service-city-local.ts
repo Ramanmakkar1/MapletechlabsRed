@@ -3787,6 +3787,66 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-hamilton': {
+    title: 'SaaS Development Company in Hamilton, ON',
+    description: 'SaaS development company for Hamilton startups, health-tech and manufacturers: MVPs and multi-tenant platforms at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for Hamilton organisations. We work with Hamilton clients remotely: McMaster University and McMaster Innovation Park spin-outs turning research into a product, health-tech teams working near Hamilton Health Sciences, manufacturing and logistics companies in the steel and port economy that want to sell their internal tools to other firms, and Innovation Factory startups launching their first paid product. We have no Hamilton office, so every project runs on weekly demos of working software, where you see real progress instead of status reports. You talk directly with the engineers who write the code, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'SaaS products Hamilton companies build',
+        body: [
+          'Hamilton\'s steel, advanced manufacturing and port logistics firms often own an internal tool that already runs their business well: a quoting engine, a maintenance and work-order tracker, a yard or dispatch board. Turning it into B2B SaaS lets them sell the same tool to suppliers, carriers and other plants on a monthly plan. Health-tech teams near Hamilton Health Sciences build patient intake, scheduling and remote-monitoring products, where we design PHIPA-aware data handling from the start: role-based access, audit logs and Canadian hosting. Research groups and spin-outs from McMaster University and McMaster Innovation Park need to turn a validated lab method or algorithm into a subscription product that customers can sign up for and pay for. We scope each product around its first paying customer group and the workflow they pay to use.',
+        ],
+      },
+      {
+        heading: 'MVP to multi-tenant: how we build',
+        body: [
+          'We build the one core workflow first, with sign-up, roles and subscription billing, so you can charge real customers early. The data model is multi-tenant from the first release, so each customer\'s records stay separated and you can add the next hundred accounts without a rebuild. Billing covers plans, seats, usage tiers, invoices and Canadian sales tax, with payments through providers such as Stripe. Larger B2B accounts get single sign-on with SAML or OIDC, and we connect the ERPs, CRMs, accounting and transport systems your customers already run. We can host the application, database, file storage and backups in Canadian cloud regions. Our playbook for ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'building a SaaS MVP in 8 weeks' },
+          ' shows what to cut and what to keep in that first version.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Hamilton (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote after free discovery. Hamilton startups and spin-outs often fund part of the build through SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how IRAP projects are structured. See our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' for the full path from MVP to scale.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics platform', note: 'A real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Hamilton?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote before development starts.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'A tightly scoped MVP with one core workflow can launch in about 8 weeks, as our SaaS MVP playbook explains. Most MVPs with billing, roles and a few integrations take 3-4 months, and a growth-stage product takes 4-8 months. Your written scope lists the milestones, from first demo to launch.',
+      },
+      {
+        q: 'Who owns the code and IP of our SaaS?',
+        a: 'You do. The source code, designs, documentation and cloud accounts we create for your project belong to your company, so the IP is yours to raise money on, sell or hand to your own engineering team. There is no lock-in.',
+      },
+      {
+        q: 'Can SR&ED or IRAP help pay for SaaS development?',
+        a: 'Possibly. Work that solves real technical uncertainty may qualify for SR&ED tax credits, and NRC IRAP can fund some innovation projects at Canadian small and medium-sized businesses. We keep development logs, technical uncertainty notes and test evidence as the work happens, but your accountant or SR&ED advisor and your IRAP advisor confirm eligibility; we do not promise funding.',
+      },
+      {
+        q: 'Do we need to meet in person in Hamilton?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Hamilton office. We work with Hamilton clients through video calls, shared boards and weekly demos of working software. Edmonton is two hours behind Hamilton, so most of the working day overlaps.',
+      },
+    ],
+  },
   'seo-company-in-kitchener': {
     title: 'SEO Company in Kitchener-Waterloo, ON',
     description: 'SEO company in Kitchener-Waterloo for startups, manufacturers and local firms: map-pack, technical SEO and monthly CAD retainers. Free review.',
