@@ -58,6 +58,7 @@ const balanced = (n: number): string | null =>
 // local adds hand-written sections and case-study proof (from SERVICE_CITY_LOCAL).
 export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string } }) {
   const { cityName, citySlug, province, serviceName, serviceSlug } = p;
+  const contactHref = contactHrefFor(serviceSlug, citySlug, allServices, allCities);
   const quote = quoteForCity(citySlug);
   const provinceSlug = provinceSlugForName(province);
   const services = [
@@ -74,7 +75,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: cityName, href: `/locations/software-development-company-in-${citySlug}` }, { label: serviceName }]}
           copy={{ badge: p.badge, title: heroTitle ?? <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>, desc: heroDesc ?? p.heroDescription }}
           stats={HONEST_STATS} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
-          contactHref={contactHrefFor(serviceSlug, citySlug, allServices, allCities)}
+          contactHref={contactHref}
         />
         <StatRow stats={HONEST_STATS} />
         {p.stats.length > 0 ? (
@@ -194,7 +195,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
 
         <TechStrip />
         <ProcessSteps title={`How we deliver your ${serviceName} project`} steps={p.steps} />
-        {!local?.proof.length ? <ServiceProof slug={serviceSlug} name={serviceName} /> : null}
+        {!local?.proof.length ? <ServiceProof slug={serviceSlug} name={serviceName} contactHref={contactHref} /> : null}
         <ServicePricing serviceSlug={serviceSlug} serviceName={serviceName} />
         <TechBlocks title={`The stack behind your ${serviceName}`} cats={tech} />
 
@@ -244,6 +245,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
         </section>
 
         <FinalCta
+          contactHref={contactHref}
           title={`Need ${serviceName} in ${cityName}?`}
           sub={`A senior engineer will scope your project and send a fixed price within one working day — ${p.isHQ ? 'from our head office here in ' + cityName : 'with local delivery across ' + province}.`}
         />

@@ -18,7 +18,7 @@ const serviceProjects: Record<string, { slug: string; metric: number }[]> = {
   'product-design': [{ slug: 'ecommerce-platform', metric: 1 }],
 };
 
-export default function ServiceProof({ slug, name }: { slug: string; name: string }) {
+export default function ServiceProof({ slug, name, contactHref = '/contact' }: { slug: string; name: string; contactHref?: string }) {
   const projects = serviceProjects[slug];
   if (!projects) return null;
 
@@ -40,7 +40,7 @@ export default function ServiceProof({ slug, name }: { slug: string; name: strin
             );
           })}
         </div>
-        <Link href="/contact" className="btn btn--primary" style={{ marginTop: 24 }}>Discuss your {name} project</Link>
+        <Link href={contactHref} className="btn btn--primary" style={{ marginTop: 24 }}>Discuss your {name} project</Link>
       </div>
     </section>
   );

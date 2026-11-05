@@ -16,6 +16,9 @@ import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, IndustryRow, WhyUs, Su
 import ServicePricing from './ServicePricing';
 import { serviceMedia, defaultMedia, officeMedia } from '@/data/media';
 import { serviceCategories } from '@/data/nav';
+import { services as servicesAllowlist } from '@/data/services';
+import { cities as citiesAllowlist } from '@/data/cities';
+import { contactHrefFor } from '@/lib/enquiryContext';
 import type { Faq, HeroCopy, IndustryCard, ServiceCard, Stat, Step, TechCategory } from './types';
 
 const heroShots = [officeMedia.open, officeMedia.desk, officeMedia.meeting];
@@ -24,16 +27,17 @@ const heroShots = [officeMedia.open, officeMedia.desk, officeMedia.meeting];
 export default function ServicePageTemplate({ slug, name, copy, stats, services, steps, techCategories, industries, results, faqs, buyerContent, servicesTitle = 'Every Layer. Every Complexity.' }: {
   slug: string; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; techCategories?: TechCategory[]; industries?: IndustryCard[]; results?: { value: string; label: string; sub?: string }[]; faqs?: Faq[]; buyerContent?: ReactNode; servicesTitle?: string;
 }) {
+  const contactHref = contactHrefFor(slug, undefined, servicesAllowlist, citiesAllowlist);
   const hero = heroShots[slug.length % heroShots.length];
   return (
     <>
       <Navbar />
       <main id="main-content">
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: name }]} copy={copy} stats={stats} photo={hero} serviceName={name} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: name }]} copy={copy} stats={stats} photo={hero} serviceName={name} contactHref={contactHref} />
         <StatRow stats={stats} />
         <ServicesGrid title={servicesTitle} sub={`Everything ${name} needs, engineered by one accountable team.`} items={services} />
         <SubServiceLinks slug={slug} name={name} />
-        <ServiceProof slug={slug} name={name} />
+        <ServiceProof slug={slug} name={name} contactHref={contactHref} />
         {buyerContent}
         <ServiceCityLinks serviceSlug={slug} serviceName={name} />
         <MediaBand media={serviceMedia[slug] ?? defaultMedia} />
@@ -49,7 +53,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <InsightsSection serviceSlug={slug} />
         <FaqSplit faqs={faqs} />
         <FaqSchema faqs={faqs ?? defaultFaqs} />
-        <FinalCta />
+        <FinalCta contactHref={contactHref} />
       </main>
       <Footer />
     </>

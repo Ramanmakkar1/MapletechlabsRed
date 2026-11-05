@@ -9,7 +9,8 @@ export default function FinalCta({
   title = 'Let\u2019s build something worth keeping.',
   sub = 'Tell us what you are trying to build. A senior engineer will come back within one working day with a scope, a timeline and a fixed price.',
   cta = 'Start a project',
-}: { title?: string; sub?: string; cta?: string } = {}) {
+  contactHref = '/contact',
+}: { title?: string; sub?: string; cta?: string; contactHref?: string } = {}) {
   return (
     <section style={{ padding: 'var(--section-y-lg) 0', background: 'var(--brand)', color: 'rgba(255,255,255,0.92)', textAlign: 'center' }}>
       <div className="cb-container" style={{ maxWidth: 900 }}>
@@ -20,7 +21,7 @@ export default function FinalCta({
           {sub}
         </p>
         <div className="btn-group" style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" className="btn btn--on-ink btn--lg">{cta} <Arrow /></Link>
+          <Link href={contactHref} className="btn btn--on-ink btn--lg">{cta} <Arrow /></Link>
           <a href="tel:+14036048692" className="btn btn--ghost-on-ink btn--lg">+1 (403) 604-8692</a>
         </div>
       </div>
