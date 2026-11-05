@@ -49,9 +49,9 @@ const faqs = [
 export default function PageClient() {
   return (
     <SubServicePageTemplate
-      parent={{ href: "/services/ar-vr", label: "AR &amp; VR Development" }}
+      parent={{ href: "/services/ar-vr", label: "AR & VR Development" }}
       name="Mobile AR Development"
-      copy={{ badge: "AR &amp; VR DEVELOPMENT", title: <>Mobile AR with <span style={{ color: 'var(--brand)' }}>ARKit &amp; ARCore</span></>, desc: <>We build native iOS and Android augmented reality experiences — from try-on to location-based AR — using the latest ARKit and ARCore capabilities.</> }}
+      copy={{ badge: "AR & VR DEVELOPMENT", title: <>Mobile AR with <span style={{ color: 'var(--brand)' }}>ARKit &amp; ARCore</span></>, desc: <>We build native iOS and Android augmented reality experiences — from try-on to location-based AR — using the latest ARKit and ARCore capabilities.</> }}
       stats={stats}
       services={services}
       steps={steps}

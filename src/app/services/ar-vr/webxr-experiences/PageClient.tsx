@@ -49,9 +49,9 @@ const faqs = [
 export default function PageClient() {
   return (
     <SubServicePageTemplate
-      parent={{ href: "/services/ar-vr", label: "AR &amp; VR Development" }}
+      parent={{ href: "/services/ar-vr", label: "AR & VR Development" }}
       name="WebXR Development"
-      copy={{ badge: "AR &amp; VR DEVELOPMENT", title: <>WebXR That Runs <span style={{ color: 'var(--brand)' }}>In Any Browser</span></>, desc: <>We build browser-native AR and VR experiences using the WebXR API, Three.js, and A-Frame — zero app install required, maximum audience reach.</> }}
+      copy={{ badge: "AR & VR DEVELOPMENT", title: <>WebXR That Runs <span style={{ color: 'var(--brand)' }}>In Any Browser</span></>, desc: <>We build browser-native AR and VR experiences using the WebXR API, Three.js, and A-Frame — zero app install required, maximum audience reach.</> }}
       stats={stats}
       services={services}
       steps={steps}
