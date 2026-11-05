@@ -89,6 +89,8 @@ const localContent = (
           <p>Every engagement starts with a short discovery conversation, in person in Edmonton or on a call. A senior engineer replies within one working day of your enquiry, then works with you to agree on a fixed scope and a fixed price in CAD before any code is written. From there we design, build and release in short cycles so you see working software early and can change direction while it is still cheap to do so. You own all of the code, cloud accounts and intellectual property from day one, and your data stays in Canada.</p>
           <p>Because we are headquartered here, it is easy to sit down together for a workshop downtown, visit your site in Nisku or Sherwood Park, or meet the people who will use the software every day. After launch, the same team stays on for support, hosting and new features, so you are never left with a system nobody understands.</p>
           <p>If your project is mainly a website or web application, see our page on <Link href="/locations/edmonton/web-development">web development in Edmonton</Link>. For brand strategy, visual identity and rebrands, see <Link href="/locations/edmonton/branding">branding in Edmonton</Link>. To talk through an idea, <Link href="/contact">contact our Edmonton team</Link> and tell us what you want to build.</p>
+          <h3>Guides for Edmonton buyers</h3>
+          <p>Comparing options? Read our guides on <Link href="/blog/app-development-companies-edmonton">choosing an app development company in Edmonton</Link> and <Link href="/blog/seo-companies-edmonton">choosing an SEO company in Edmonton</Link>.</p>
         </div>
       </div>
     </div>
