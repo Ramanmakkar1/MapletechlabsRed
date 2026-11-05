@@ -44,6 +44,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'ui-ux-design-companies-toronto', category: 'Business',
+    title: 'UI/UX Design Companies in Toronto: How to Choose One (2026)',
+    excerpt: 'How to choose a UI/UX design company in Toronto: research, prototypes, AODA accessibility, CAD pricing, red flags and 10 questions to ask before you sign.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'app-development-companies-calgary', category: 'Business',
     title: 'App Development Companies in Calgary: How to Choose One (2026)',
     excerpt: 'A buyer’s guide for Calgary businesses hiring an app company: native vs cross-platform vs PWA, Canadian costs in CAD, red flags, privacy and 10 questions to ask.',

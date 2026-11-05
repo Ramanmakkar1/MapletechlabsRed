@@ -1558,6 +1558,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
       { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
       { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/blog/ui-ux-design-companies-toronto', label: "Buyer's guide", note: 'How to choose a UI/UX design company in Toronto: research, prototypes, AODA accessibility, CAD pricing, red flags and ten questions to ask.' },
     ],
     faqs: [
       {
