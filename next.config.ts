@@ -1,7 +1,12 @@
+import path from 'node:path';
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // This repo sits inside another project that has its own package-lock.json.
+  // Pin the root so Next/Turbopack never pick the parent folder.
+  outputFileTracingRoot: path.resolve(__dirname),
+  turbopack: { root: path.resolve(__dirname) },
   // Render <title>/meta/canonical in <head> for ALL user agents (AI crawlers like GPTBot/PerplexityBot/ClaudeBot are not in Next's default list and would otherwise get streamed metadata).
   htmlLimitedBots: /.*/,
   // Bounded stale-cache window: 300s revalidate, 3600s max age
