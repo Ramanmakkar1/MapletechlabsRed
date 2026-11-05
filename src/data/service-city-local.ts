@@ -3720,6 +3720,71 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-hamilton': {
+    title: 'AI Development Company in Hamilton, ON',
+    description: 'AI development company for Hamilton: computer vision, LLM assistants and automation from Edmonton, with a fixed CAD quote. Book a free discovery call.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, building LLM assistants, computer vision systems and workflow automation for Hamilton organisations. We work with Hamilton clients remotely: advanced manufacturing and steel producers, health and hospital groups near McMaster University and Hamilton Health Sciences, insurers and logistics teams around the Port of Hamilton. We have no Hamilton office, so every project runs on video calls, shared demos and direct access to the engineers building your system. Edmonton is two hours behind Hamilton, so most of the working day overlaps. You get a fixed scope and a fixed price in CAD before coding starts. Call +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'AI use cases for Hamilton\'s manufacturing, health and logistics firms',
+        body: [
+          'Hamilton\'s steel and advanced manufacturing base asks for ',
+          { href: '/services/ai-ml/computer-vision', label: 'computer vision' },
+          ' that flags surface defects, misaligned parts or packaging issues on the line, with uncertain cases sent to an operator instead of auto-rejecting good product. Plant teams want ',
+          { href: '/services/ai-ml/predictive-analytics', label: 'predictive analytics' },
+          ' on sensor and maintenance history so they can schedule service before a line stops. Health groups and insurers need document and claims automation that reads intake files, pulls out key fields and routes them to a person for review, with careful handling of personal and health data. Customer-service teams want ',
+          { href: '/services/ai-ml/llm-integration', label: 'LLM integration' },
+          ' for chatbots and internal assistants that answer from policies and manuals with sources cited. Logistics firms around the Port of Hamilton and John C. Munro Hamilton International Airport ask for route and demand forecasting to plan fleets, warehouse labour and delivery windows. We start from the data you already have and the decision your team needs to make.',
+        ],
+      },
+      {
+        heading: 'Data review, proof of concept, then production with human oversight',
+        body: [
+          'Every Hamilton project begins with a data review: we look at sample images, logs, documents or tickets, note quality gaps and agree with your team what "good enough" means before any model is trained. We then build a proof of concept on a representative sample and measure results against that bar, so accuracy is tested rather than assumed. When the PoC proves its value, we integrate into production with the ERP, MES, CRM or ticketing systems you already run, add role-based permissions and review paths for sensitive outputs, and set up monitoring so quality is tracked after launch. Human oversight stays in the loop for edge cases, regulated decisions and anything the model flags as uncertain.',
+        ],
+      },
+      {
+        heading: 'PIPEDA, PHIPA and Canadian cloud hosting',
+        body: [
+          'Most private-sector personal data in Ontario falls under PIPEDA, and personal health information handled by Ontario custodians can fall under Ontario\'s Personal Health Information Protection Act (PHIPA). We design for privacy from the first workshop: encryption, role-based access, audit logs of what the system was asked and how it answered, and model providers configured so they do not train on your company data. We can host your AI system and its data in Canadian cloud regions. Requirements depend on your data and organisation; your privacy officer or lawyer should confirm the final compliance position. We do not provide legal advice.',
+        ],
+      },
+      {
+        heading: 'What AI development costs in Hamilton (CAD)',
+        body: [
+          'AI work is quoted as a fixed price in CAD after free discovery, so your budget is set before coding starts. As a guide, adding an LLM feature to an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. Computer vision and forecasting projects vary with camera count, data volume and integrations. A focused proof of concept usually takes weeks rather than months; production builds with many data sources or plant-floor integrations take longer. Compare typical project ranges on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ', and your written scope lists milestones before work begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'Rebuilt a real-time trading engine from scratch — sub-50ms latency, 75K+ transactions a day, zero data loss, with 99.99% uptime.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'ML-powered property recommendations across 850K+ active listings nationwide.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Hamilton?',
+        a: 'Planning ranges are about $10,000-$35,000 CAD for an LLM feature in an existing app, $15,000-$50,000 for a chatbot on your documents, and from around $75,000 for custom model training. Computer vision and forecasting depend on data and integrations. After a free discovery call you get a fixed price in CAD, not hourly billing.',
+      },
+      {
+        q: 'Do you have an office in Hamilton?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Hamilton office. We serve Hamilton clients remotely through video calls, demos and shared boards. Edmonton is two hours behind Hamilton, so most of the working day overlaps for questions and approvals.',
+      },
+      {
+        q: 'Can AI work on a Hamilton plant floor with poor Wi-Fi?',
+        a: 'Often yes, with the right architecture. Computer vision can run on edge hardware at the line and sync results when a connection returns, and mobile tools can queue tasks offline. We design around your network reality rather than assuming perfect connectivity everywhere.',
+      },
+      {
+        q: 'How do you handle health data for McMaster or hospital-linked projects?',
+        a: 'We can design access controls, audit logs, human review and Canadian cloud hosting with PHIPA and PIPEDA in mind. What applies depends on your role, the data and your agreements. Your privacy officer should confirm the final position; we do not provide legal advice.',
+      },
+      {
+        q: 'Who owns the code, models and prompts?',
+        a: 'You do. All source code, prompts, fine-tuned models, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
   'seo-company-in-kitchener': {
     title: 'SEO Company in Kitchener-Waterloo, ON',
     description: 'SEO company in Kitchener-Waterloo for startups, manufacturers and local firms: map-pack, technical SEO and monthly CAD retainers. Free review.',
