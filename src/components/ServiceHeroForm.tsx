@@ -11,9 +11,11 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
   const [form, setForm] = useState({ name: '', email: '', phone: '', budget: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(false);
     setIsLoading(true);
 
     try {
@@ -31,6 +33,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
       setTimeout(() => setSubmitted(false), 4000);
     } catch (err) {
       console.error(err);
+      setSubmitError(true);
     } finally {
       setIsLoading(false);
     }
@@ -94,7 +97,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
               required
               aria-required="true"
               value={form.name}
-              onChange={e => setForm({ ...form, name: e.target.value })}
+              onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
               style={inputStyle}
               onFocus={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.background = 'var(--surface-sunk)'; }}
               onBlur={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}
@@ -109,7 +112,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
               required
               aria-required="true"
               value={form.email}
-              onChange={e => setForm({ ...form, email: e.target.value })}
+              onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
               style={inputStyle}
               onFocus={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.background = 'var(--surface-sunk)'; }}
               onBlur={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}
@@ -122,7 +125,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
               type="tel"
               placeholder="Phone Number"
               value={form.phone}
-              onChange={e => setForm({ ...form, phone: e.target.value })}
+              onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
               style={inputStyle}
               onFocus={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.background = 'var(--surface-sunk)'; }}
               onBlur={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}
@@ -133,7 +136,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
             <select
               id="shf-budget"
               value={form.budget}
-              onChange={e => setForm({ ...form, budget: e.target.value })}
+              onChange={e => setForm(f => ({ ...f, budget: e.target.value }))}
               style={{ ...inputStyle, color: form.budget ? 'var(--ink)' : 'var(--muted)', appearance: 'none', backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='var(--muted)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }}
               onFocus={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.background = 'var(--surface-sunk)'; }}
               onBlur={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}
@@ -152,12 +155,17 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
               placeholder="Tell us about your project..."
               rows={3}
               value={form.message}
-              onChange={e => setForm({ ...form, message: e.target.value })}
+              onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
               style={{ ...inputStyle, resize: 'none' }}
               onFocus={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.background = 'var(--surface-sunk)'; }}
               onBlur={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.background = 'var(--surface-alt)'; }}
             />
           </div>
+          {submitError ? (
+            <p role="alert" style={{ fontSize: 14, color: 'var(--ink)', margin: 0, lineHeight: 1.5 }}>
+              Sorry, your enquiry could not be sent. Please try again or email us directly.
+            </p>
+          ) : null}
           <button
             type="submit"
             disabled={isLoading}
