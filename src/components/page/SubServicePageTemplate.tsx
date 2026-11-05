@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
+import ServiceProof from '@/components/ServiceProof';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import { defaultFaqs } from '@/data/faqs';
@@ -32,6 +33,7 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: parent.label, href: parent.href }, { label: name }]} copy={copy} stats={stats} photo={hero} serviceName={name} contactHref={contactHref} />
         <StatRow stats={stats} />
         <ServicesGrid title={capabilitiesTitle ?? `Our ${name} capabilities`} items={services} />
+        <ServiceProof slug={parentSlug} name={name} contactHref={contactHref} />
         {buyerContent}
         <MediaBand media={serviceMedia[parentSlug] ?? defaultMedia} />
         <ProcessSteps title="How we work" steps={steps} />
