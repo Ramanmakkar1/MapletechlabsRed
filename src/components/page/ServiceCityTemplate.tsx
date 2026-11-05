@@ -80,6 +80,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: cityName, href: `/locations/software-development-company-in-${citySlug}` }, { label: serviceName }]}
           copy={{ badge: p.badge, title: heroTitle ?? <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>, desc: heroDesc ?? p.heroDescription }}
           stats={HONEST_STATS} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
+          city={cityName}
           contactHref={contactHref}
         />
         <StatRow stats={HONEST_STATS} />

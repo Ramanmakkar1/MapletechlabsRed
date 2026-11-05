@@ -21,8 +21,8 @@ const Tick = () => (
 /* Inner-page hero. With a quote form: clean white, copy left, form right —
    the media band below carries the imagery. Without one: copy left, the
    photograph itself on the right, unscrimmed. */
-export default function PageHero({ crumbs, copy, stats, photo, form = true, serviceName, contactHref = '/contact' }: {
-  crumbs: Crumb[]; copy: HeroCopy; stats?: Stat[]; photo: Media; form?: boolean; serviceName?: string; contactHref?: string;
+export default function PageHero({ crumbs, copy, stats, photo, form = true, serviceName, city, contactHref = '/contact' }: {
+  crumbs: Crumb[]; copy: HeroCopy; stats?: Stat[]; photo: Media; form?: boolean; serviceName?: string; city?: string; contactHref?: string;
 }) {
   return (
     <section style={{ background: 'var(--surface)', padding: 'var(--hero-top) 0 var(--section-y)' }}>
@@ -69,7 +69,7 @@ export default function PageHero({ crumbs, copy, stats, photo, form = true, serv
             ) : null}
           </div>
           {form
-            ? <div><ServiceHeroForm service={serviceName} /></div>
+            ? <div><ServiceHeroForm service={serviceName} city={city} /></div>
             : <div className="media media--lg" style={{ aspectRatio: '4 / 3' }}><Image src={photo.src} alt={photo.alt} fill priority sizes="(max-width: 1023px) 100vw, 46vw" style={{ objectFit: 'cover' }} /></div>}
         </div>
       </div>
