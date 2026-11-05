@@ -52,6 +52,7 @@ export const blogSlugs = [
   'sred-software-development-canada',
   'software-development-contract-canada',
   'ui-ux-design-companies-canada',
+  'seo-companies-edmonton',
 ];
 
 export const citySlugs = [

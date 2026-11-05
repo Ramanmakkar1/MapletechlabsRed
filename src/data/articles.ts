@@ -1756,6 +1756,107 @@ export const articles: Article[] = [
     ],
     cta: { href: '/services/product-design', label: 'See our UI/UX design services' },
   },
+  {
+    slug: 'seo-companies-edmonton',
+    category: 'Business',
+    title: 'SEO Companies in Edmonton: How to Choose One (2026)',
+    dek: 'A buyer’s guide for Edmonton businesses hiring an SEO company: what local SEO should cover, what a good agency does in the first 90 days, typical Canadian pricing, the red flags to avoid and the questions to ask before you sign.',
+    metaTitle: 'SEO Companies in Edmonton: How to Choose One (2026)',
+    metaDescription: 'How to choose an SEO company in Edmonton: what local SEO should cover, the first 90 days, Canadian pricing, red flags and questions to ask before hiring.',
+    date: '2026-11-04',
+    dateModified: '2026-11-04',
+    readTime: '9 min read',
+    heroKey: 'planning',
+    intro: [
+      'Searching for an SEO company in Edmonton turns up dozens of agencies that all promise more traffic. Their websites look alike, their proposals use the same words, and it is hard to tell from the outside who will actually move your rankings and who will send a monthly PDF and little else.',
+      'This is a buyer’s guide, not a ranked list. It covers what Edmonton businesses actually need from SEO, what a good SEO company should do in the first 90 days, typical Canadian pricing, the red flags to avoid, ten questions to ask before hiring, and when Google Ads makes more sense than SEO. For a broader look at budgets, see our <a href="/blog/digital-marketing-cost-canada">digital marketing cost guide for Canada</a>.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-edmonton-needs', text: 'What Edmonton businesses actually need from SEO' },
+      { type: 'p', html: 'SEO is not one product. What you need depends on who your customers are and how they search. Most Edmonton businesses fall into one or more of these groups:' },
+      { type: 'checks', items: [
+        { term: 'Local trades, clinics and services', text: 'Plumbers, roofers, HVAC companies, dental and physio clinics, law firms and salons live or die by the Google map pack and “near me” searches. For them, a complete and active Google Business Profile, consistent name, address and phone number across directories, and steady reviews matter more than anything else.' },
+        { term: 'Businesses serving the wider region', text: 'Many Edmonton companies also work in St. Albert, Sherwood Park, Spruce Grove and the rest of the capital region. Each of those towns is its own search. Useful service-area pages, written for the people in each area rather than copied with the city name swapped, help you show up beyond your own postal code.' },
+        { term: 'B2B and industrial companies', text: 'Energy services, manufacturing, fabrication, logistics and engineering firms rarely get leads from the map pack. They need service pages that match specific technical searches, proof such as projects and certifications, and a site that turns a visit from a procurement manager into an enquiry.' },
+      ] },
+      { type: 'p', html: 'A good SEO company asks which of these you are before it proposes anything. If the first proposal looks the same as one written for any other business, it probably is. Our <a href="/services/digital-marketing/local-seo">local SEO service</a> page explains how we approach map-pack and service-area work.' },
+
+      { type: 'h2', id: 'first-90-days', text: 'What a good SEO company does in the first 90 days' },
+      { type: 'p', html: 'The first three months should be mostly about fixing foundations and setting a plan, not about promises. Expect work in this rough order:' },
+      { type: 'ol', items: [
+        '<strong>Technical audit.</strong> Crawl the site and check speed, mobile layout, broken links, redirects, duplicate pages, canonical tags and structured data. You should get a prioritised list, not a 200-page export.',
+        '<strong>Indexing.</strong> Confirm that Google and Bing can find and index the pages that matter, that the sitemap is clean and that Search Console and Bing Webmaster Tools are set up in your name.',
+        '<strong>Titles and descriptions.</strong> Rewrite page titles and meta descriptions so each page targets one clear search and gives people a reason to click.',
+        '<strong>Google Business Profile and local citations.</strong> Clean up categories, services, hours and photos, and fix inconsistent listings across Canadian directories.',
+        '<strong>Content plan.</strong> Map the searches your customers use to the pages you have, find the gaps, and agree which service, location and blog pages to improve or create first.',
+        '<strong>Reporting.</strong> Agree on the numbers that matter (calls, form leads, organic traffic, rankings for the main services) and set up tracking before the first report, so progress can be measured fairly.',
+      ] },
+      { type: 'p', html: 'Local improvements often show within a few months when the site has no major technical problems. Competitive terms take longer. A company that explains this plainly at the start is easier to trust than one that promises page one in 30 days. See our <a href="/services/digital-marketing/seo-services">SEO services</a> for the technical side of this work.' },
+
+      { type: 'h2', id: 'pricing', text: 'Typical SEO pricing in Canada' },
+      { type: 'p', html: 'SEO in Canada is usually sold as a monthly retainer. As approximate ranges from our <a href="/blog/digital-marketing-cost-canada">Canadian digital marketing cost guide</a>:' },
+      { type: 'ul', items: [
+        '<strong>Dedicated SEO:</strong> about CAD $1,500&ndash;$10,000 per month. The lower end covers on-page optimization, Google Business Profile management and basic keyword targeting; $5,000+ per month usually adds deep technical work, schema, content programs and link building for competitive terms.',
+        '<strong>Single-channel starter packages:</strong> our own digital marketing tiers start at $500&ndash;$1,500 per month for SEO or PPC management on one channel, $1,500&ndash;$3,500 per month for multi-channel growth campaigns, and $3,500&ndash;$8,000+ per month for full-funnel programs.',
+        '<strong>Full-service agency packages:</strong> about $5,000&ndash;$25,000 per month when SEO is bundled with ads, social, content and email.',
+      ] },
+      { type: 'p', html: 'Price depends on how competitive your market is, how large the site is, and whether you need local SEO, technical work, content or all three. A quote under about $1,000 per month for full-service marketing is a warning sign in itself: quality work by skilled people does not fit that budget. Our <a href="/pricing">pricing page</a> shows how we structure engagements.' },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags when hiring an SEO company' },
+      { type: 'ul', items: [
+        '<strong>Guaranteed #1 rankings.</strong> No one controls Google’s results. A guarantee usually means vanity keywords nobody searches, or tactics that can get your site penalised.',
+        '<strong>Long lock-in contracts.</strong> Be careful with 12&ndash;24 month contracts with heavy cancellation penalties. SEO takes time, but a confident agency should be willing to earn your business month by month after a short initial period.',
+        '<strong>You do not own the accounts.</strong> Your Google Business Profile, Search Console, Analytics, ad accounts and website should be in your name, with the agency added as a user. If you leave, you keep the history.',
+        '<strong>Reports you cannot read.</strong> If reports show only rankings for terms nobody searches, or hide what work was done, ask for leads, calls and organic traffic to the pages that earn money.',
+        '<strong>Secret methods and bulk links.</strong> “Proprietary link networks” and hundreds of links for a low monthly fee are a risk to your domain, not an asset.',
+        '<strong>No questions about your business.</strong> A proposal sent before anyone has asked about your services, margins and service area is a template.',
+      ] },
+
+      { type: 'h2', id: 'questions', text: '10 questions to ask before hiring an SEO company' },
+      { type: 'ol', items: [
+        'Who will actually do the work on my account, and can I speak with them?',
+        'What will you do in the first 90 days, in what order, and why?',
+        'Will Google Business Profile, Search Console, Analytics and the website stay in my name?',
+        'How will you handle the areas I serve outside Edmonton, such as St. Albert, Sherwood Park or Spruce Grove?',
+        'Can you fix technical issues on my site yourselves, or will you only send a list to my developer?',
+        'How do you build links, and can you show me examples?',
+        'Which numbers will you report on, and how often?',
+        'How long is the contract, and what is the notice period to cancel?',
+        'What results is it fair to expect at 3, 6 and 12 months for a business like mine?',
+        'Can you show case studies or work for businesses with similar goals?',
+      ] },
+      { type: 'p', html: 'Good answers are specific, in writing, and do not dodge ownership or contract terms.' },
+
+      { type: 'h2', id: 'seo-vs-ads', text: 'Local SEO vs Google Ads' },
+      { type: 'p', html: 'SEO and Google Ads solve different problems, and many Edmonton businesses use both.' },
+      { type: 'checks', items: [
+        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live, and stops when you stop paying. In Canada, ad management fees typically start around $2,000 per month plus your ad spend. Good for launches, seasonal demand, and testing which services and keywords bring leads.' },
+        { term: 'Local SEO', text: 'Takes months to build, but traffic from the map pack and organic results keeps coming without a cost per click. Good for steady, long-term lead flow and for searches where people skip the ads.' },
+      ] },
+      { type: 'p', html: 'A practical approach is to run ads while SEO builds, then use what the ads teach you about converting keywords to decide which pages to grow. If you want both handled by one team, see our <a href="/locations/digital-marketing-agency-in-edmonton">digital marketing agency in Edmonton</a>.' },
+
+      { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works' },
+      { type: 'p', html: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for SEO you work with a local team that knows how Alberta businesses get found on Google and Bing. We improve local visibility, fix technical issues on Next.js and WordPress sites, and build content and service pages that match what your customers actually search. You talk to the people doing the work, not a rotating account manager.' },
+      { type: 'p', html: 'We work on monthly retainers with clear scope and reporting, and we do not use multi-year lock-ins. Our work for clients includes a high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer, and a real-time logistics platform handling 15K+ daily deliveries; see our <a href="/case-studies">case studies</a> for details.' },
+      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team in Edmonton', text: 'See what we do for local businesses on our <a href="/locations/seo-company-in-edmonton">SEO company in Edmonton</a> page, or call us on +1-403-604-8692 to discuss your goals.' },
+    ],
+    keyTakeaways: [
+      'Decide first what kind of SEO you need: map pack for local trades and clinics, service-area pages for the capital region, or B2B lead generation.',
+      'The first 90 days should cover a technical audit, indexing, titles, Google Business Profile and citations, a content plan and agreed reporting.',
+      'Dedicated SEO in Canada typically costs about CAD $1,500–$10,000 per month depending on competition, site size and scope.',
+      'Avoid guaranteed rankings, long lock-in contracts and any setup where the agency owns your accounts.',
+      'Google Ads brings leads quickly while you pay; local SEO builds lasting traffic. Many businesses run both.',
+    ],
+    faqs: [
+      { q: 'How much does an SEO company in Edmonton cost?', a: 'Dedicated SEO in Canada typically runs about CAD $1,500 to $10,000 per month, depending on competition, site size and whether you need local search, technical work, content or all three. Single-channel starter packages can begin around $500 to $1,500 per month, and full-service agency packages with ads and social run higher.' },
+      { q: 'How long does SEO take to work in Edmonton?', a: 'Local SEO and Google Business Profile work often shows movement within a few months when the site has no major technical problems. New content and competitive keywords usually take several months longer before you can judge the trend fairly.' },
+      { q: 'Can an SEO company guarantee first-page rankings?', a: 'No. Nobody controls Google’s or Bing’s results. Treat a ranking guarantee as a red flag; it usually means vanity keywords or risky tactics. Ask instead what work will be done and which leads and traffic numbers will be reported.' },
+      { q: 'Who should own my Google Business Profile and analytics accounts?', a: 'You should. Your Google Business Profile, Search Console, Analytics, ad accounts and website should be in your business’s name, with the agency added as a user. That way you keep the history and access if you change providers.' },
+      { q: 'Should I choose local SEO or Google Ads?', a: 'Google Ads brings traffic as soon as campaigns go live but stops when you stop paying. Local SEO takes longer to build but keeps bringing map-pack and organic traffic without a cost per click. Many Edmonton businesses run ads while SEO builds, then shift budget as organic leads grow.' },
+      { q: 'Do I need separate pages for St. Albert, Sherwood Park and Spruce Grove?', a: 'If you genuinely serve those areas and customers search for them, a useful page for each area can help you rank there. Each page should say something specific about the work you do in that area, not repeat the same text with the town name swapped.' },
+    ],
+    cta: { href: '/locations/seo-company-in-edmonton', label: 'See our Edmonton SEO services' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);

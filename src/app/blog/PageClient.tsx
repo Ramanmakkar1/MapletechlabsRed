@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'seo-companies-edmonton', category: 'Business',
+    title: 'SEO Companies in Edmonton: How to Choose One (2026)',
+    excerpt: 'A buyer’s guide for Edmonton businesses: what local SEO should cover, the first 90 days, typical Canadian pricing, red flags and 10 questions to ask before hiring.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'ui-ux-design-companies-canada', category: 'Business',
     title: 'Best UI/UX Design Companies in Canada (2026): How to Choose, Costs and What to Ask',
     excerpt: 'What a UI/UX company should deliver, CAD costs from MVP design to a design system, a neutral shortlist of Canadian studios, an evaluation checklist and red flags.',
