@@ -4498,4 +4498,72 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-brampton': {
+    title: 'UI/UX Design Company in Brampton',
+    description: 'UI/UX design company in Brampton: UX audit, clickable prototypes and developer handoff for multilingual apps to WCAG 2.1 AA. Fixed CAD pricing.',
+    intro: 'Mapletech Labs is a UI/UX design company headquartered in Edmonton, designing web apps, mobile apps, portals and internal tools for Brampton and Peel Region businesses. Our team also has engineers in Toronto, and we do not have a Brampton office. Edmonton is two hours behind Brampton, so our working days overlap for research calls, design reviews and sign-offs. Our designers work beside the engineers who build the software, so wireframes, prototypes and developer handoff stay on one thread. You review shared Figma files and talk directly with the people doing the work. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'Who needs UX design in Brampton',
+        body: [
+          'Brampton runs on freight, and trucking firms, 3PLs and warehouses near Pearson and along Highways 410 and 407 need dispatch screens and driver apps where loads, stops, delays and proof of delivery are clear on a phone in a cab or a tablet on a loading dock. Manufacturers and distributors want B2B portals where dealers and buyers can check stock, reorder, track shipments and download documents without phoning the office. Clinics and health practices need booking and intake flows that patients of every age can finish on a phone. Retail and e-commerce teams need product pages, cart and checkout flows that cut drop-off on mobile. We design each product around the people using it every day and the task they are trying to finish.',
+        ],
+      },
+      {
+        heading: 'Designing for Brampton\'s multilingual users',
+        body: [
+          'Many Brampton customers, drivers and patients read English alongside Punjabi, Hindi, Urdu or Gujarati, so we write plain-language interface copy with short labels and clear error messages that translate well. Layouts leave room for translated text that runs longer than English, fonts are checked for Gurmukhi, Devanagari, Gujarati and Urdu script, and screens that may be shown in Urdu are designed with right-to-left support so menus, icons and forms mirror correctly. Ontario organizations covered by the AODA are expected to make their websites and web content meet WCAG 2.0 AA, and we design to WCAG 2.1 AA: contrast, focus states, keyboard paths, text sizing and screen-reader labels are decided in the design files, not patched after development.',
+        ],
+      },
+      {
+        heading: 'Our process: UX audit to developer handoff',
+        body: [
+          'We start with a free UX audit: a heuristic review, your analytics and interviews with the people who use the product, whether that is dispatchers, drivers, dealers, clinic staff or customers. Those findings shape user journeys and wireframes before visual design begins. We then turn the wireframes into a clickable prototype and run usability tests on real tasks with your own staff or customers, so confusion shows up in Figma rather than after launch. Everything is documented in a design system with components, states and design tokens, then handed over to your developers with annotated specs and a review of the build. See how we run research, prototyping and design systems on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Cost and timeline for UI/UX design in Brampton',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Most projects take 6-11 weeks. You can compare how Canadian studios price this work in our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          ', or see our ',
+          { href: '/locations/ui-ux-design-company-in-toronto', label: 'Toronto UI/UX design' },
+          ' and ',
+          { href: '/locations/ui-ux-design-company-in-mississauga', label: 'Mississauga UI/UX design' },
+          ' pages. Need the product built too? Our ',
+          { href: '/locations/web-development-company-in-brampton', label: 'Brampton web development' },
+          ' team can take the design from Figma to launch.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a UX audit or UI/UX design cost in Brampton?',
+        a: 'The first UX audit is free. Design is then quoted as a fixed price in CAD. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, research depth and languages all move the number.',
+      },
+      {
+        q: 'Can you design apps for Punjabi, Hindi, Urdu and Gujarati speakers?',
+        a: 'Yes. We write plain-language English copy that translates cleanly, leave room in buttons and forms for longer translated text, check fonts for each script, and design right-to-left layouts for Urdu screens so menus and forms mirror correctly. We can test the prototype with users who read each language, so you see where wording or layout confuses people before development.',
+      },
+      {
+        q: 'Will our design meet AODA accessibility requirements in Ontario?',
+        a: 'We design to WCAG 2.1 AA, which goes beyond the WCAG 2.0 AA level the AODA sets for covered Ontario organizations. Contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels are built into the design files and the design system, so your developers implement them from the start. Your own legal or compliance team should confirm your specific obligations.',
+      },
+      {
+        q: 'How long does a clickable prototype take?',
+        a: 'Most full projects take 6-11 weeks across research, wireframes, prototyping, visual design and handoff, and the clickable prototype usually comes partway through so it can be tested before final visual design. A small MVP can be faster, while a multi-product design system takes longer. Your written scope lists the milestones, so you know when the prototype is due.',
+      },
+      {
+        q: 'Can you work with our own developers, or build it for us?',
+        a: 'Both. If you have an in-house or outside development team, we hand over the editable Figma files, design system, design tokens and annotated specs, walk them through it and review the build. If you need a team to build it, our own engineers can take the design from prototype to launch. Either way, the files and research belong to you, with no lock-in.',
+      },
+    ],
+  },
 };
