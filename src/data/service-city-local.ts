@@ -3487,6 +3487,62 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-hamilton': {
+    title: 'Web Development Company in Hamilton, ON',
+    description: 'Web development company for Hamilton businesses: fast, accessible websites, portals and web apps at a fixed CAD price. Get a free quote today.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds websites and web apps for Hamilton organisations. We work with Hamilton clients remotely: manufacturers and logistics firms that need portals connected to their operations, health and research teams near McMaster University, and downtown shops and restaurants that want a site that turns visitors into bookings. We have no Hamilton office, so every project runs on weekly demos of a live staging site, where you see real progress instead of status reports. You talk directly with the developers doing the work, and the price is fixed in CAD before any code is written. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'Websites and web apps for Hamilton\'s economy',
+        body: [
+          'Hamilton\'s steel and advanced manufacturing base needs more than a brochure site: supplier and customer portals, online quote requests, product catalogues and internal tools that replace paper and spreadsheets. Logistics companies around the Port of Hamilton and the airport ask for shipment tracking, booking forms and dispatch dashboards. Health sciences and research groups linked to McMaster University need secure, accessible information sites and intake forms. Small businesses on James Street North, Locke Street and Ottawa Street need fast mobile sites with online booking, menus or a simple store. We connect each build to the CRM, ERP or booking system you already use.',
+        ],
+      },
+      {
+        heading: 'How a Hamilton project runs',
+        body: [
+          'Every project starts with a free discovery call where we map your pages, features, integrations and launch date. You then receive a written scope and a fixed CAD price, so the budget does not move unless you add work. We build in short cycles and show you a working staging site in a weekly demo, which lets your team test real screens and give feedback early. As a guide, our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' lists typical Canadian price ranges, and our ',
+          { href: '/services/web-development', label: 'web development services' },
+          ' page explains what each type of build includes.',
+        ],
+      },
+      {
+        heading: 'Performance, AODA accessibility and SEO built in',
+        body: [
+          'Speed, accessibility and search are part of the build, not extras added later. We aim for good Core Web Vitals with properly sized images, cached or static pages and lean JavaScript, so your site loads quickly on phones. Because Ontario organisations work under the AODA, we design and test against WCAG 2.1 AA: keyboard navigation, screen reader labels, colour contrast and readable text sizes. Technical SEO ships with every site, including clean URLs, unique titles and descriptions, schema markup and an XML sitemap, so Hamilton customers can find you on Google and Bing.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Hamilton?',
+        a: 'Typical market estimates are about $2,000-$10,000 CAD (2-4 weeks) for a template or WordPress site, $10,000-$50,000 (4-10 weeks) for a custom business website, $25,000-$100,000 (8-16 weeks) for an e-commerce platform and $100,000-$500,000+ (4-12 months) for an enterprise web application. Hamilton projects get the same fixed CAD price after a free discovery call.',
+      },
+      {
+        q: 'How long will our Hamilton website or web app take?',
+        a: 'Most template or WordPress sites take 2-4 weeks and custom business websites 4-10 weeks. E-commerce platforms usually need 8-16 weeks, and portals or enterprise web apps 4-12 months, depending on how many systems they connect to. Your scope lists the milestones, from design approval to staging review and launch.',
+      },
+      {
+        q: 'Will our site meet AODA requirements in Ontario?',
+        a: 'We build and test to WCAG 2.1 AA, covering keyboard use, screen readers, colour contrast and text resizing, and we share what we tested. Please have your legal or compliance team confirm exactly how the AODA applies to your organisation.',
+      },
+      {
+        q: 'Do we need to meet in person in Hamilton?',
+        a: 'No. Mapletech Labs is based in Edmonton and has no Hamilton office. We work with Hamilton clients through video calls, a shared project board and weekly demos on a live staging site. Edmonton is two hours behind Hamilton, so most of the working day overlaps.',
+      },
+      {
+        q: 'Who owns the code and the website?',
+        a: 'You own everything: the source code, the content, the domain and the hosting accounts set up for your project. There is no lock-in, so after launch you can keep us for support or hand the project to your own team.',
+      },
+    ],
+  },
   'seo-company-in-kitchener': {
     title: 'SEO Company in Kitchener-Waterloo, ON',
     description: 'SEO company in Kitchener-Waterloo for startups, manufacturers and local firms: map-pack, technical SEO and monthly CAD retainers. Free review.',
