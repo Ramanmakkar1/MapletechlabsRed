@@ -10,6 +10,11 @@ import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import CaseStudyRelated from '@/components/CaseStudyRelated';
+import { contactHrefFor } from '@/lib/enquiryContext';
+import { services as servicesAllowlist } from '@/data/services';
+import { cities as citiesAllowlist } from '@/data/cities';
+
+const contactHref = contactHrefFor('saas-development', 'ottawa', servicesAllowlist, citiesAllowlist);
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -275,8 +280,8 @@ export default function PaymentsCaseStudyClient() {
                   Whether it&apos;s payments, crypto, or compliance-heavy fintech — we engineer secure, scalable systems. Let&apos;s talk about your next project.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Get in Touch →
+              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
+                Discuss your payments platform →
               </Link>
             </div>
           </div>

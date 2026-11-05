@@ -10,6 +10,11 @@ import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import CaseStudyRelated from '@/components/CaseStudyRelated';
+import { contactHrefFor } from '@/lib/enquiryContext';
+import { services as servicesAllowlist } from '@/data/services';
+import { cities as citiesAllowlist } from '@/data/cities';
+
+const contactHref = contactHrefFor('mobile-app-development', 'calgary', servicesAllowlist, citiesAllowlist);
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -275,8 +280,8 @@ export default function HealthcareCaseStudyClient() {
                   We specialize in HIPAA-compliant, patient-first digital health solutions. Let&apos;s discuss how we can help transform your healthcare delivery.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Get in Touch →
+              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
+                Discuss your healthcare app →
               </Link>
             </div>
           </div>

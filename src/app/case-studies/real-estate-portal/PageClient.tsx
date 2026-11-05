@@ -10,6 +10,11 @@ import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import CaseStudyRelated from '@/components/CaseStudyRelated';
+import { contactHrefFor } from '@/lib/enquiryContext';
+import { services as servicesAllowlist } from '@/data/services';
+import { cities as citiesAllowlist } from '@/data/cities';
+
+const contactHref = contactHrefFor('web-development', 'toronto', servicesAllowlist, citiesAllowlist);
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -274,8 +279,8 @@ export default function RealEstateCaseStudyClient() {
                   Whether it&apos;s real estate, e-commerce, or any data-driven platform — we build ML systems that scale and drive business results.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Get in Touch →
+              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
+                Discuss your real estate portal →
               </Link>
             </div>
           </div>

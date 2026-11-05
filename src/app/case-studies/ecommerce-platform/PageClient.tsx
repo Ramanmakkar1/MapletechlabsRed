@@ -10,6 +10,11 @@ import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import CaseStudyRelated from '@/components/CaseStudyRelated';
+import { contactHrefFor } from '@/lib/enquiryContext';
+import { services as servicesAllowlist } from '@/data/services';
+import { cities as citiesAllowlist } from '@/data/cities';
+
+const contactHref = contactHrefFor('web-development', 'edmonton', servicesAllowlist, citiesAllowlist);
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -275,8 +280,8 @@ export default function EcommerceCaseStudyClient() {
                   From legacy migrations to headless commerce builds, we engineer platforms that drive real revenue. Let&apos;s discuss your growth goals.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Get in Touch →
+              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
+                Discuss your e-commerce platform →
               </Link>
             </div>
           </div>
