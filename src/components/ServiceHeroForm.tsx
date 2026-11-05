@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { submitToSplitForms } from '@/lib/splitforms';
 
 interface ServiceHeroFormProps {
@@ -12,6 +12,25 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const confirmationRef = useRef<HTMLHeadingElement>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const focusNameOnReset = useRef(false);
+
+  useEffect(() => {
+    if (submitted) {
+      confirmationRef.current?.focus();
+    } else if (focusNameOnReset.current) {
+      nameRef.current?.focus();
+      focusNameOnReset.current = false;
+    }
+  }, [submitted]);
+
+  const handleReset = () => {
+    setForm({ name: '', email: '', phone: '', budget: '', message: '' });
+    setSubmitError(false);
+    focusNameOnReset.current = true;
+    setSubmitted(false);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,7 +49,6 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
       });
 
       setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 4000);
     } catch (err) {
       console.error(err);
       setSubmitError(true);
@@ -79,12 +97,19 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
       {submitted ? (
         <div role="status" aria-live="polite" style={{ textAlign: 'center', padding: '40px 20px' }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>&#10003;</div>
-          <h3 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
+          <h3 ref={confirmationRef} tabIndex={-1} style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
             Request Received!
           </h3>
           <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto' }}>
             A senior engineer will review your project details and respond within one working day with a custom assessment.
           </p>
+          <button
+            type="button"
+            onClick={handleReset}
+            style={{ ...inputStyle, marginTop: 20, cursor: 'pointer' }}
+          >
+            Send another enquiry
+          </button>
         </div>
       ) : (
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -92,6 +117,7 @@ export default function ServiceHeroForm({ service, city }: ServiceHeroFormProps 
             <label htmlFor="shf-name" className="sr-only">Full Name</label>
             <input
               id="shf-name"
+              ref={nameRef}
               type="text"
               placeholder="Full Name"
               required
