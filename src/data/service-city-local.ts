@@ -3543,6 +3543,62 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-hamilton': {
+    title: 'App Development Company in Hamilton, ON',
+    description: 'App development company for Hamilton businesses building iOS & Android apps at a fixed CAD price. Get a free quote today.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, building iOS and Android apps for Hamilton organisations. We work with Hamilton clients remotely: manufacturers that need field and plant-floor apps, logistics teams around the Port of Hamilton and John C. Munro Hamilton International Airport, health and research groups near McMaster University and Hamilton Health Sciences, and local businesses that want booking or loyalty apps on the phone. We have no Hamilton office, so every project runs on weekly demos of working iOS and Android builds, where you see real progress instead of slide decks. You talk directly with the engineers who write the code, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'Apps for Hamilton\'s manufacturers, port logistics and health sector',
+        body: [
+          'Hamilton\'s steel and advanced manufacturing base needs more than a consumer app with a logo: field inspection, safety and work-order tools that keep working on the plant floor with poor Wi-Fi and sync when a connection returns. Logistics companies around the Port of Hamilton and Hamilton\'s airport ask for driver, dispatch and shipment-tracking apps their teams open dozens of times a day. Patient-facing and research apps linked to McMaster University and Hamilton Health Sciences need careful handling of personal data and straightforward journeys for staff and patients. Restaurants, salons and retailers on James Street North, Locke Street and across the lower city want booking, loyalty and reorder apps that turn repeat visits into revenue. We plan each build around the people using it daily and the systems it must connect to.',
+        ],
+      },
+      {
+        heading: 'Native or cross-platform: how we choose',
+        body: [
+          'Most Hamilton projects need to reach both iPhone and Android users, so we usually recommend a cross-platform build in Flutter or React Native: one codebase ships to both app stores and typically costs 30-40% less than two separate native apps. If your app depends on device hardware such as Bluetooth scanners or plant-floor sensors, heavy offline data or maximum performance, we build natively in Swift and Kotlin instead. We explain the trade-off in plain language before you commit, rather than picking a stack by habit.',
+        ],
+      },
+      {
+        heading: 'What a Hamilton app costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Discovery is free, and your price is fixed in CAD before coding starts. See our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development services' },
+          ' for what each type of build includes.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Hamilton?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. After a free discovery phase you get a fixed price in CAD, so your budget is set before development begins.',
+      },
+      {
+        q: 'How long does it take to build an app?',
+        a: 'A simple app with a handful of screens usually takes 8-12 weeks. A mid-size iOS and Android app with payments and an admin panel takes about 12-24 weeks, and complex platforms take 6-18 months. Your written scope includes a timeline with milestones such as beta and launch.',
+      },
+      {
+        q: 'Should we build for iOS, Android or both?',
+        a: 'Most Hamilton apps need both platforms. We usually use React Native or Flutter so one codebase ships to the App Store and Google Play, which typically costs less and keeps both versions in step. If your app needs deep hardware access, heavy offline data or maximum performance, we recommend native Swift and Kotlin builds and explain why before you commit.',
+      },
+      {
+        q: 'Do we need to meet in person in Hamilton?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Hamilton office. We work with Hamilton clients through video calls, shared boards and weekly demos of working builds. Edmonton is two hours behind Hamilton, so most of the working day overlaps.',
+      },
+      {
+        q: 'Who owns the app, code and app store accounts?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
   'seo-company-in-kitchener': {
     title: 'SEO Company in Kitchener-Waterloo, ON',
     description: 'SEO company in Kitchener-Waterloo for startups, manufacturers and local firms: map-pack, technical SEO and monthly CAD retainers. Free review.',
