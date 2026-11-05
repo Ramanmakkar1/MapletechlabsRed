@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'seo-companies-calgary', category: 'Business',
+    title: 'SEO Companies in Calgary: A Buyer’s Guide (2026)',
+    excerpt: 'How Calgary businesses should choose an SEO company: map pack, Airdrie and Okotoks searches, technical B2B SEO, CAD pricing, AI answers and 10 questions to ask.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'app-development-companies-calgary', category: 'Business',
     title: 'App Development Companies in Calgary: How to Choose One (2026)',
     excerpt: 'A buyer’s guide for Calgary businesses hiring an app company: native vs cross-platform vs PWA, Canadian costs in CAD, red flags, privacy and 10 questions to ask.',

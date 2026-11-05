@@ -1875,7 +1875,7 @@ export const articles: Article[] = [
         { term: 'Businesses serving the wider region', text: 'Many Edmonton companies also work in St. Albert, Sherwood Park, Spruce Grove and the rest of the capital region. Each of those towns is its own search. Useful service-area pages, written for the people in each area rather than copied with the city name swapped, help you show up beyond your own postal code.' },
         { term: 'B2B and industrial companies', text: 'Energy services, manufacturing, fabrication, logistics and engineering firms rarely get leads from the map pack. They need service pages that match specific technical searches, proof such as projects and certifications, and a site that turns a visit from a procurement manager into an enquiry.' },
       ] },
-      { type: 'p', html: 'A good SEO company asks which of these you are before it proposes anything. If the first proposal looks the same as one written for any other business, it probably is. Our <a href="/services/digital-marketing/local-seo">local SEO service</a> page explains how we approach map-pack and service-area work.' },
+      { type: 'p', html: 'A good SEO company asks which of these you are before it proposes anything. If the first proposal looks the same as one written for any other business, it probably is. Our <a href="/services/digital-marketing/local-seo">local SEO service</a> page explains how we approach map-pack and service-area work. If you also serve southern Alberta, our <a href="/blog/seo-companies-calgary">guide to choosing an SEO company in Calgary</a> covers the Calgary market.' },
 
       { type: 'h2', id: 'first-90-days', text: 'What a good SEO company does in the first 90 days' },
       { type: 'p', html: 'The first three months should be mostly about fixing foundations and setting a plan, not about promises. Expect work in this rough order:' },
@@ -2055,6 +2055,112 @@ export const articles: Article[] = [
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
     cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+  },
+  {
+    slug: 'seo-companies-calgary',
+    category: 'Business',
+    title: 'SEO Companies in Calgary: A Buyer’s Guide (2026)',
+    dek: 'A buyer’s guide for Calgary businesses hiring an SEO company: map-pack work for trades and clinics, separate searches in Airdrie, Cochrane, Okotoks and Chestermere, technical B2B searches, the first 90 days, Canadian pricing, AI-answer visibility, red flags and ten questions to ask.',
+    metaTitle: 'SEO Company Calgary: How to Choose the Right One (2026)',
+    metaDescription: 'How to choose an SEO company in Calgary: map pack and suburb searches, the first 90 days, CAD pricing, AI answers, red flags and 10 questions to ask.',
+    date: '2026-11-04',
+    dateModified: '2026-11-04',
+    readTime: '10 min read',
+    heroKey: 'planning',
+    intro: [
+      'Calgary has no shortage of SEO companies, from one-person consultants to large agencies downtown and in the Beltline. Most of their proposals promise the same things, and from the outside it is hard to tell who understands how Calgary customers actually search: a homeowner in Okotoks looking for a furnace repair, a patient in the northwest looking for a physio clinic, or a procurement lead looking for a pipeline inspection contractor.',
+      'This is a buyer’s guide, not a ranked list. It covers what Calgary businesses need from SEO, what a good SEO company does in the first 90 days, typical Canadian pricing, how to show up in AI answers from ChatGPT and Perplexity, the red flags to avoid, ten questions to ask and when Google Ads makes more sense. If you are comparing agencies in the capital region instead, see our <a href="/blog/seo-companies-edmonton">guide to choosing an SEO company in Edmonton</a>.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-calgary-needs', text: 'What Calgary businesses need from SEO' },
+      { type: 'p', html: 'Calgary is a large, spread-out city with fast-growing commuter towns around it and a big B2B economy. That mix means very different SEO jobs depending on who you sell to:' },
+      { type: 'checks', items: [
+        { term: 'Local trades and clinics in the map pack', text: 'Roofers dealing with hail claims, furnace and HVAC companies in winter, plumbers, dental, physio and chiropractic clinics, and other neighbourhood services win most of their leads from the Google map pack and “near me” searches. Calgary is large enough that the map pack changes from quadrant to quadrant, so a complete Google Business Profile, accurate service areas, real photos and a steady flow of reviews matter more than anything else.' },
+        { term: 'Airdrie, Cochrane, Okotoks and Chestermere as separate searches', text: 'People in the surrounding towns search for “dentist Airdrie” or “electrician Cochrane”, not “Calgary”. If you genuinely serve those towns, each one needs its own useful page that explains what you do there, how quickly you can get there and which jobs you have done nearby. Copying the Calgary page and swapping the town name does not work and can hurt you.' },
+        { term: 'B2B energy, engineering and tech firms', text: 'Oil and gas service companies, engineering consultancies, environmental firms, industrial suppliers and Calgary’s growing tech sector rarely get work from the map pack. Their buyers search for specific technical services, standards and equipment. They need detailed service pages written for engineers and procurement teams, project examples, certifications and safety records, and a site that turns a visit into a request for proposal.' },
+      ] },
+      { type: 'p', html: 'A good SEO company asks which of these you are, which areas you really serve and what a lead is worth to you before it proposes anything. Our <a href="/services/digital-marketing/local-seo">local SEO service</a> page explains how we approach map-pack and service-area work.' },
+
+      { type: 'h2', id: 'first-90-days', text: 'What a good SEO company does in the first 90 days' },
+      { type: 'p', html: 'The first three months should fix foundations and set a plan you can check. Expect work in roughly this order:' },
+      { type: 'ol', items: [
+        '<strong>Technical audit.</strong> Crawl the site for speed, mobile layout, broken links, redirect chains, duplicate pages, canonical tags and structured data, then agree a short prioritised fix list.',
+        '<strong>Indexing in Google and Bing.</strong> Set up Google Search Console and Bing Webmaster Tools in your name, submit a clean sitemap and confirm your money pages are indexed in both. Bing also feeds results into other tools people use, so it is worth more than its market share suggests.',
+        '<strong>Titles and descriptions.</strong> Give each page one clear search target, such as “commercial roofing Calgary” or “pipeline integrity engineering Alberta”, and a description that gives people a reason to click.',
+        '<strong>Google Business Profile and citations.</strong> Fix categories, services, service areas, hours and photos, and make your name, address and phone number match across Canadian directories, industry associations and map apps.',
+        '<strong>Content plan.</strong> Map the searches customers use, including the town and technical searches above, to existing pages, then agree which service, area and guide pages to improve or create first.',
+        '<strong>Tracking.</strong> Set up call tracking, form-lead tracking and analytics goals before the first report, and agree which numbers count: calls, enquiries, organic traffic to service pages and rankings for the main services.',
+      ] },
+      { type: 'p', html: 'Local improvements often show within a few months when the site has no major technical problems; competitive and technical B2B terms take longer. See our <a href="/services/digital-marketing/seo-services">SEO services</a> for the technical side of this work.' },
+
+      { type: 'h2', id: 'pricing', text: 'Typical SEO pricing in Canada' },
+      { type: 'p', html: 'Calgary SEO is usually sold as a monthly retainer at Canadian rates. As approximate ranges from our <a href="/blog/digital-marketing-cost-canada">Canadian digital marketing cost guide</a> and <a href="/pricing">pricing page</a>:' },
+      { type: 'ul', items: [
+        '<strong>Dedicated SEO:</strong> about CAD $1,500&ndash;$10,000 per month. The lower end covers on-page optimization, Google Business Profile management and basic keyword targeting; $5,000+ per month usually adds deep technical work, schema, content programs and link building for competitive terms.',
+        '<strong>Our digital marketing tiers:</strong> $500&ndash;$1,500 per month for SEO or PPC management on one channel, $1,500&ndash;$3,500 per month for multi-channel growth campaigns, and $3,500&ndash;$8,000+ per month for full-funnel programs.',
+        '<strong>Full-service agency packages:</strong> about $5,000&ndash;$25,000 per month when SEO is bundled with ads, social, content and email.',
+      ] },
+      { type: 'p', html: 'A local clinic with one location sits at a very different point in these ranges from an engineering firm targeting technical searches across Western Canada. A quote under about $1,000 per month for full-service marketing is a warning sign in itself.' },
+
+      { type: 'h2', id: 'ai-answers', text: 'Showing up in AI answers (ChatGPT and Perplexity)' },
+      { type: 'p', html: 'More buyers now ask ChatGPT, Perplexity or Copilot for “a good roofer in Calgary” or “engineering firms in Calgary that do pipeline inspection”. These tools build answers from websites, directories, reviews and search indexes such as Bing. A good SEO company should help you be easy for them to understand:' },
+      { type: 'ul', items: [
+        '<strong>Clear entity facts.</strong> An about page and service pages that state plainly who you are, what you do, where you are based, which areas you serve and since when, in plain sentences rather than slogans.',
+        '<strong>Schema markup.</strong> Valid Organization or LocalBusiness, Service and FAQPage structured data that matches what the page shows.',
+        '<strong>Consistent NAP.</strong> The same business name, address and phone number on your site, Google Business Profile, Bing Places, directories and association listings.',
+        '<strong>Indexing in Bing.</strong> Several AI assistants lean on Bing’s index, so a site that is missing from Bing is easy for them to miss.',
+      ] },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags when hiring an SEO company' },
+      { type: 'ul', items: [
+        '<strong>Guaranteed #1 rankings.</strong> No one controls Google’s or Bing’s results. Guarantees usually mean vanity keywords or risky tactics.',
+        '<strong>Dozens of copy-paste town pages.</strong> Pages for every community from Airdrie to Strathmore with the same text and a swapped name are doorway pages, not local SEO.',
+        '<strong>Long lock-in contracts.</strong> Watch for 12&ndash;24 month terms with heavy cancellation penalties.',
+        '<strong>You do not own the accounts.</strong> Google Business Profile, Search Console, Bing Webmaster Tools, Analytics and the website should be in your name.',
+        '<strong>Reports without leads.</strong> Rankings for terms nobody searches mean little; ask for calls, enquiries and organic traffic to the pages that earn money.',
+        '<strong>Bulk or secret links.</strong> “Proprietary networks” and hundreds of cheap links are a risk to your domain.',
+      ] },
+
+      { type: 'h2', id: 'questions', text: '10 questions to ask a Calgary SEO company' },
+      { type: 'ol', items: [
+        'Who will do the work on my account, and can I speak with them?',
+        'What will you do in the first 90 days, in what order, and why?',
+        'Will my Google Business Profile, Search Console, Bing Webmaster Tools and analytics stay in my name?',
+        'How will you handle searches in Airdrie, Cochrane, Okotoks or Chestermere without thin, copied pages?',
+        'How do you write for technical buyers in energy, engineering or tech, if that is my market?',
+        'Can you fix technical issues on my site yourselves, or only send a list to my developer?',
+        'How will you help my business show up in AI answers from ChatGPT and Perplexity?',
+        'Which numbers will you report, and how often?',
+        'How long is the contract, and what is the notice period to cancel?',
+        'Can you show case studies or work for businesses with similar goals?',
+      ] },
+      { type: 'p', html: 'Good answers are specific, in writing, and clear about ownership and contract terms.' },
+
+      { type: 'h2', id: 'seo-vs-ads', text: 'SEO vs Google Ads in Calgary' },
+      { type: 'checks', items: [
+        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live and stops when you stop paying. In Canada, ad management fees typically start around $2,000 per month plus ad spend. Useful for seasonal demand such as hail repairs or furnace season, launches, and testing which services bring leads.' },
+        { term: 'SEO', text: 'Takes months to build, but map-pack and organic traffic keeps coming without a cost per click. Useful for steady lead flow and for technical B2B searches where buyers research for weeks before they get in touch.' },
+      ] },
+      { type: 'p', html: 'Many Calgary businesses run ads while SEO builds, then use what the ads reveal about converting keywords to decide which pages to grow.' },
+
+      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Calgary business', text: `See our <a href="${serviceCityPath('digital-marketing', 'calgary')}">SEO company in Calgary</a> page and our <a href="/locations/digital-marketing-agency-in-calgary">digital marketing agency in Calgary</a> page, or explore our <a href="/services/digital-marketing/local-seo">local SEO</a> and <a href="/services/digital-marketing/seo-services">SEO services</a>.` },
+    ],
+    keyTakeaways: [
+      'Decide first which SEO job you need: map pack for Calgary trades and clinics, separate pages for Airdrie, Cochrane, Okotoks and Chestermere, or technical B2B searches.',
+      'The first 90 days should cover a technical audit, indexing in Google and Bing, titles, Google Business Profile and citations, a content plan and tracking.',
+      'Dedicated SEO in Canada typically costs about CAD $1,500–$10,000 per month depending on competition, site size and scope.',
+      'Clear entity facts, valid schema and consistent name, address and phone help AI assistants like ChatGPT and Perplexity recommend you.',
+      'Avoid guaranteed rankings, copy-paste town pages, long lock-ins and any setup where the agency owns your accounts.',
+    ],
+    faqs: [
+      { q: 'How much does an SEO company in Calgary cost?', a: 'Dedicated SEO in Canada typically runs about CAD $1,500 to $10,000 per month, depending on competition, site size and scope. Single-channel packages can start around $500 to $1,500 per month, and full-service agency packages with ads and social run about $5,000 to $25,000 per month.' },
+      { q: 'Do I need separate pages for Airdrie, Cochrane, Okotoks and Chestermere?', a: 'If you genuinely serve those towns and people search for your service there, a useful page for each can help you rank. Each page should say something specific about your work in that town, not repeat the Calgary page with the name swapped.' },
+      { q: 'How does SEO work for energy and engineering firms in Calgary?', a: 'B2B buyers search for specific technical services, standards and equipment rather than “near me”. Detailed service pages, project examples, certifications and content written for engineers and procurement teams usually matter more than the map pack.' },
+      { q: 'Does Bing matter for a Calgary business?', a: 'Yes. Bing has its own share of searches, and several AI assistants draw on its index. Setting up Bing Webmaster Tools and Bing Places takes little time and makes sure you are not invisible there.' },
+      { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and where, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
+      { q: 'Should I choose SEO or Google Ads?', a: 'Google Ads brings traffic as soon as campaigns go live but stops when you stop paying. SEO takes longer but keeps bringing traffic without a cost per click. Many Calgary businesses run ads while SEO builds, then shift budget as organic leads grow.' },
+    ],
+    cta: { href: '/locations/seo-company-in-calgary', label: 'See our Calgary SEO services' },
   },
 ];
 
