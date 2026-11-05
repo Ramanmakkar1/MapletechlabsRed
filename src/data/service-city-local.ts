@@ -4360,4 +4360,74 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-brampton': {
+    title: 'SEO Company in Brampton',
+    description: 'SEO company for Brampton businesses: Google map-pack visibility, a technical audit first and monthly CAD retainers. Get a free SEO audit today.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Brampton and Peel Region businesses that want more calls and leads from Google and Bing. We do not have a Brampton office. Brampton runs on Eastern time, two hours ahead of Edmonton, so our working days overlap and account questions get answered the same day. You work directly with the specialists doing keyword research, technical fixes and content, and retainers are priced in CAD with a fixed monthly scope agreed before work starts. Call +1-403-604-8692 to talk through your Brampton search goals.',
+    sections: [
+      {
+        heading: 'Local search in Brampton and Peel Region',
+        body: [
+          'Most Brampton customers start on Google Maps or a "near me" search, and the local pack changes from one neighbourhood to the next. A plumber who shows up for searches in Bramalea may be missing in Springdale, Mount Pleasant or Heart Lake. Many searchers also type in Punjabi, Hindi or Urdu, or mix languages in one query, so English-only pages can miss a large share of local demand. We set up Google Business Profile and Bing Places honestly, as a staffed address or a service-area business that reflects where you really work, keep your name, address and phone consistent across citations, and help you earn real reviews with follow-up that fits your team.',
+        ],
+      },
+      {
+        heading: 'Industries that search for services in Brampton',
+        body: [
+          'Brampton search demand follows its economy. Logistics, trucking and warehousing firms along Highways 410 and 407 and near Pearson compete for freight, 3PL and cross-dock terms that buyers across the GTA type. Manufacturers and food processors need category pages that win B2B searches beyond the city. Trades and home services contractors, clinics, dentists and retailers win on neighbourhood and "near me" intent, often against pages that say Mississauga or Toronto instead of Brampton. We map the keywords your buyers use, then build pages that match those searches instead of one generic GTA headline. If you serve nearby cities too, see our ',
+          { href: '/locations/seo-company-in-mississauga', label: 'Mississauga SEO' },
+          ' and ',
+          { href: '/locations/seo-company-in-toronto', label: 'Toronto SEO' },
+          ' pages.',
+        ],
+      },
+      {
+        heading: 'What the first 90 days include',
+        body: [
+          'We start with a technical audit of Core Web Vitals, crawl coverage, schema and internal links, then fix blockers in your codebase or CMS. Next we tighten titles and meta descriptions on the pages that should bring leads, clean up your Google Business Profile, and add service-area pages for the Brampton and Peel neighbourhoods you actually serve. From there we set up a review request process and publish content around real buyer questions, with internal links pointing authority at the pages that convert. The full scope lives on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page, and our ',
+          { href: '/blog/seo-companies-calgary', label: 'guide to choosing an SEO company' },
+          ' lists the questions to ask any agency before you sign.',
+        ],
+      },
+      {
+        heading: 'SEO costs and reporting in CAD',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Single-location Brampton campaigns often sit at the lower end; logistics, manufacturing and brands competing across the GTA or nationally sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next. You can compare our rates on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Brampton?',
+        a: 'Most Brampton SEO engagements are monthly retainers of about $1,500-$10,000 CAD, the range we publish in our Canadian digital marketing cost guide. A single-location trades, clinic or retail campaign often sits at the lower end; logistics firms, manufacturers and brands competing across the GTA sit higher. After a free review of your site and local competitors, we quote one fixed monthly number in CAD rather than hourly billing.',
+      },
+      {
+        q: 'How long does local SEO take in Brampton?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Peel or GTA terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages, calls and form leads, so you can see progress before position charts catch up.',
+      },
+      {
+        q: 'Do we need to be based in Brampton to rank there?',
+        a: 'For the map pack, you need a real staffed address in the area or an honest service-area business setup, not a virtual office rented to game rankings. Google suspends fake addresses, so we will not suggest them. If you serve Brampton from Mississauga, Caledon or elsewhere in the GTA, we set your profile up as a service-area business and back that coverage with location pages and reviews.',
+      },
+      {
+        q: 'Should we have Punjabi, Hindi or Urdu pages?',
+        a: 'If a real share of your customers search or call in those languages, yes. Separate, properly translated pages with their own URLs and hreflang tags can rank for searches English pages miss, and they make families more comfortable calling. We do not machine-translate and publish; a fluent speaker on your team or a translator should review every page. We start with your top services, then expand once leads show it is working.',
+      },
+      {
+        q: 'Can you help us rank across Peel Region, not just Brampton?',
+        a: 'Yes. Many Brampton businesses serve the whole city, from Bramalea and Springdale to Mount Pleasant and Heart Lake, plus Caledon and Mississauga. We build one useful page per area you genuinely serve, with local details and real job examples, rather than copies with the city name swapped. Internal links connect the set, and your Google Business Profile service areas match the same list so Google sees a consistent picture.',
+      },
+    ],
+  },
 };
