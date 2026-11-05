@@ -5,12 +5,15 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const description =
+  'Hire a Flutter app development company in Canada for new iOS and Android apps, extensions and phased native migrations. One codebase. Get a quote.';
+
 export const metadata: Metadata = {
-  title: 'Flutter App Development Company in Canada',
-  description: 'Cross-platform Flutter app development by Mapletech Labs. Build beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.',
+  title: 'Flutter App Development Company Canada — Get Quote',
+  description,
   openGraph: {
-    title: 'Flutter App Development Company in Canada | Mapletech Labs',
-    description: 'Cross-platform Flutter app development by Mapletech Labs. Build beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.',
+    title: 'Flutter App Development Company Canada — Get Quote | Mapletech Labs',
+    description,
     url: 'https://mapletechlabs.ca/services/mobile-app-development/flutter-development',
     type: 'website',
   },
@@ -27,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Flutter App Development Services'}
-        description={'Cross-platform Flutter app development by Mapletech Labs. Build beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.'}
+        description={description}
         url={'https://mapletechlabs.ca/services/mobile-app-development/flutter-development'}
       />
       <PageClient />
