@@ -86,9 +86,29 @@ const industries = [
   { icon: '🏥', title: 'HealthTech', desc: 'Accessible, HIPAA-aware interfaces that reduce cognitive load for patients and clinicians alike.' },
   { icon: '📱', title: 'Consumer Apps', desc: 'Habit-forming, delightful mobile experiences designed to maximise retention and NPS.' },
   { icon: '☁️', title: 'SaaS', desc: 'Complex feature surfaces made simple through progressive disclosure and strong IA.' },
-  { icon: '🛍️', title: 'E-Commerce', desc: 'Conversion-optimised product pages, checkout flows and personalisation systems.' },
+  { icon: '🛍️', title: 'E-commerce', desc: 'Conversion-optimised product pages, checkout flows and personalisation systems.' },
   { icon: '🏢', title: 'Enterprise', desc: 'Data-dense internal tools and dashboards that empower rather than overwhelm.' },
 ];
+
+function BuyerContent() {
+  return (
+    <section aria-labelledby="product-design-hiring-guide" style={{ padding: 'var(--section-y-sm) 0', background: 'var(--surface-alt)' }}>
+      <div className="cb-container" style={{ maxWidth: 960, color: 'var(--body)', lineHeight: 1.7 }}>
+        <h2 id="product-design-hiring-guide">Planning a UI/UX redesign or new product design engagement</h2>
+        <p className="lede">Whether you are fixing a live product or designing from zero, the right starting point saves budget and shortens time to launch. Use this guide to match scope to outcomes before you request a quote.</p>
+        <h3>UX audit versus a full redesign</h3>
+        <p className="lede">Choose a <Link href="/services/product-design/ux-audit">UX audit</Link> when the product mostly works but metrics, support tickets or stakeholder feedback point to friction you cannot prioritise alone. You get heuristic review, analytics context and a ranked fix list — ideal before a phased rollout. A full redesign fits when information architecture, branding or core journeys need rethinking across many screens, or when you are launching a new platform and need research through handoff in one programme.</p>
+        <h3>What drives scope: screens, roles, research and systems</h3>
+        <p className="lede">Screen count and unique templates multiply wireframe, visual and QA effort — cap phase one to revenue-critical paths. Distinct user roles (customer, admin, partner) add flows, permissions and empty states. Depth of UX research — interviews, jobs-to-be-done, competitive teardowns — scales with uncertainty in your roadmap. An existing <Link href="/services/product-design/design-systems">design system</Link> speeds visual design and dev handoff; starting without components means building or extending a library as part of the engagement.</p>
+        <h3>What to bring to a consultation</h3>
+        <p className="lede">Share business goals, primary personas, analytics or support themes, and links to the current product or brief. Note platforms (web, iOS, Android), accessibility expectations, brand assets, engineering stack and target launch dates. If you only have hypotheses, say so — we will recommend research or audit work first.</p>
+        <h3>Deliverables aligned to our process</h3>
+        <p className="lede">Engagements typically include prioritised user journeys and information architecture from strategy, lo-fi and tested flows from wireframing, interactive <Link href="/services/product-design/prototyping">prototypes validated with users</Link>, hi-fi UI with responsive variants, and developer handoff: Figma with auto-layout, annotated specs, assets and component documentation. Exact artefacts are fixed in your statement of work based on the scope above.</p>
+        <p className="lede"><Link href="/contact?service=product-design">Book a product design consultation</Link> with your goals, screen list and constraints so we can recommend audit, phased redesign or full product design and provide a fixed quote.</p>
+      </div>
+    </section>
+  );
+}
 
 export default function PageClient() {
   return (
@@ -102,6 +122,7 @@ export default function PageClient() {
       techCategories={techCategories}
       industries={industries}
       faqs={faqs}
+      buyerContent={<BuyerContent />}
     />
   );
 }
