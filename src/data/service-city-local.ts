@@ -4299,4 +4299,62 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-development-company-in-brampton': {
+    title: 'Web Development Company in Brampton, ON',
+    description: 'Web development company for Brampton businesses: fast, mobile-first, SEO-ready sites at fixed CAD pricing. Get a free quote today.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton, building websites and web apps for Brampton and Peel Region businesses. We do not have a Brampton office. Brampton runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for calls, design reviews and launch decisions. Our team also has engineers in Toronto. We work with trades and home services contractors, logistics and warehousing firms near Highways 410 and 407 and Pearson, manufacturers, clinics, and restaurants and retailers downtown and on Queen Street. You receive fast, mobile-first, SEO-ready sites with fixed CAD pricing agreed before work begins. You talk directly with the developers building your site, and weekly demos on a live staging site keep your team in the loop. Call +1-403-604-8692 to discuss your website.',
+    sections: [
+      {
+        heading: 'Websites Brampton businesses need to win leads',
+        body: [
+          'Trades and home services firms across Brampton need service-area pages, click-to-call buttons, quote forms and before-and-after galleries that turn mobile searches into booked jobs. Brampton\'s diverse customer base often needs multilingual pages—English plus Punjabi, Hindi or Urdu—so families can read services and pricing in the language they prefer. Logistics and warehousing companies along the 410/407 corridor and near Pearson ask for B2B sites with online quote requests, customer portals and shipment-status tools tied to the WMS or TMS they already run. Manufacturers want product catalogues, distributor finders and secure document areas instead of PDFs emailed back and forth. Restaurants and retailers downtown and on Queen Street need menus, hours, online ordering or simple stores that load fast on phones.',
+        ],
+      },
+      {
+        heading: 'Speed, SEO and accessibility standards for Ontario',
+        body: [
+          'Core Web Vitals guide how we size images, cache pages and keep JavaScript lean so Brampton visitors on mobile data see content quickly. Because Ontario organisations work under the AODA, we design and test against WCAG 2.0 AA—keyboard navigation, screen reader labels, colour contrast and readable text—so residents and staff of every ability can use your site. Technical SEO ships with every build: clean URLs, unique titles and meta descriptions, schema markup, XML sitemaps and sensible internal links so Google and Bing understand your services. Local SEO basics—honest service-area coverage, consistent name-address-phone and location-aware content—help Peel Region customers find you. See our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' for ongoing search work after launch.',
+        ],
+      },
+      {
+        heading: 'What a Brampton website costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). These are typical market estimates for Brampton and Peel Region projects. Discovery is free, your price is fixed in CAD before coding starts, and our ',
+          { href: '/services/web-development', label: 'web development services' },
+          ' page explains what each type of build includes.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Brampton?',
+        a: 'Typical market estimates are about $2,000-$10,000 CAD (2-4 weeks) for a template or WordPress site, $10,000-$50,000 (4-10 weeks) for a custom business website, $25,000-$100,000 (8-16 weeks) for an e-commerce platform and $100,000-$500,000+ (4-12 months) for an enterprise web application. After a free discovery call we agree on a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'How long will our Brampton website take to launch?',
+        a: 'Most template or WordPress sites take 2-4 weeks and custom business websites 4-10 weeks. E-commerce platforms usually need 8-16 weeks, and portals or enterprise web apps 4-12 months, depending on integrations and content. Your written scope lists milestones from design approval through staging review to go-live.',
+      },
+      {
+        q: 'Do you handle SEO and hosting for Brampton sites?',
+        a: 'Every build includes technical SEO basics—titles, schema, sitemaps and Core Web Vitals-friendly performance—and we can quote ongoing SEO as a monthly retainer if you want Peel Region rankings tracked after launch. We recommend Canadian hosting with SSL, backups and staging, set accounts up in your name during the project, and can stay on for updates or hand everything to your IT team.',
+      },
+      {
+        q: 'Can we meet your team in person in Brampton?',
+        a: 'We do not maintain a Brampton office. Mapletech Labs is headquartered in Edmonton and works with Peel Region clients through video calls, shared boards and weekly demos on a live staging site. Eastern time is two hours ahead of Edmonton, so most business hours overlap for questions and approvals.',
+      },
+      {
+        q: 'Who owns the Brampton website and source code?',
+        a: 'You do. The website, content, domain, hosting accounts and source code belong to you, with no lock-in. You can keep us for support and new features or hand the project to your own developers whenever you choose.',
+      },
+    ],
+  },
 };
