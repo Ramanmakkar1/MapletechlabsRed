@@ -32,6 +32,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'ai-development-companies-toronto', category: 'Technology',
+    title: 'AI Development Companies in Toronto: How to Choose One (2026)',
+    excerpt: 'How to choose an AI development company in Toronto: LLM and RAG builds, PIPEDA and OSFI rules, CAD cost ranges, red flags and 10 questions to ask.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'app-development-companies-calgary', category: 'Business',
     title: 'App Development Companies in Calgary: How to Choose One (2026)',
     excerpt: 'A buyer’s guide for Calgary businesses hiring an app company: native vs cross-platform vs PWA, Canadian costs in CAD, red flags, privacy and 10 questions to ask.',
