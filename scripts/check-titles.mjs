@@ -71,7 +71,10 @@ for (const file of files) {
   if (!m) continue;
   const title = parseTitle(m[1], src);
   if (title === undefined) continue; // Dynamic metadata is checked at its data source.
-  problems.push(...titleProblems(title).map((problem) => `${file}: ${problem}`));
+  const isArticle = file.startsWith(join("src", "app", "blog") + sep)
+    && file !== join("src", "app", "blog", "page.tsx");
+  const checkTitle = isArticle ? articleTitleProblems : titleProblems;
+  problems.push(...checkTitle(title).map((problem) => `${file}: ${problem}`));
 }
 
 // 2. Generated city x service titles (src/data/city-service.ts) — resolve the
