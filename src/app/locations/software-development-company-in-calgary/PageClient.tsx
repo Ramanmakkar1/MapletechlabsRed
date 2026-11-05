@@ -84,6 +84,7 @@ export default function PageClient() {
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container prose-body">
             <p>Energy and logistics teams modernizing infrastructure often start with cloud architecture and pipelines. See our page on <Link href="/locations/calgary/cloud-devops">cloud and DevOps in Calgary</Link>, or our <Link href="/blog/software-development-companies-calgary">Calgary software development guide</Link> for local costs and how to choose a partner.</p>
+            <p>Planning a mobile app? Read our guide on <Link href="/blog/app-development-companies-calgary">choosing an app development company in Calgary</Link>.</p>
           </div>
         </section>
       }

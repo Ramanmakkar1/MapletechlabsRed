@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'app-development-companies-calgary', category: 'Business',
+    title: 'App Development Companies in Calgary: How to Choose One (2026)',
+    excerpt: 'A buyer’s guide for Calgary businesses hiring an app company: native vs cross-platform vs PWA, Canadian costs in CAD, red flags, privacy and 10 questions to ask.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'software-development-companies-edmonton', category: 'Business',
     title: 'Software Development Companies in Edmonton: How to Choose (2026)',
     excerpt: 'A buyer’s guide for Edmonton businesses hiring custom software: fixed CAD pricing, typical costs, red flags, and 10 questions to ask before you sign.',

@@ -34,6 +34,7 @@ const companies = [
 ];
 
 const relatedPosts = [
+  { slug: 'app-development-companies-calgary', title: 'App Development Companies in Calgary: How to Choose One', category: 'Business', readTime: '9 min' },
   { slug: 'app-development-companies-edmonton', title: 'Top App Development Companies in Edmonton', category: 'Business', readTime: '8 min' },
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '9 min' },
   { slug: 'app-development-cost-canada', title: 'How Much Does App Development Cost in Canada?', category: 'Business', readTime: '10 min' },

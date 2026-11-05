@@ -1953,6 +1953,109 @@ export const articles: Article[] = [
     ],
     cta: { href: '/locations/seo-company-in-edmonton', label: 'See our Edmonton SEO services' },
   },
+  {
+    slug: 'app-development-companies-calgary',
+    category: 'Business',
+    title: 'App Development Companies in Calgary: How to Choose One (2026)',
+    dek: 'A buyer’s guide for Calgary businesses hiring an app development company: what local companies build, native vs cross-platform vs PWA, what a good team does from discovery to launch, Canadian costs in CAD, red flags and ten questions to ask before you sign.',
+    metaTitle: 'App Development Company Calgary: How to Choose (2026)',
+    metaDescription: 'How to choose an app development company in Calgary: native vs cross-platform, CAD cost ranges, red flags and 10 questions to ask before you sign.',
+    date: '2026-11-04',
+    dateModified: '2026-11-04',
+    readTime: '9 min read',
+    heroKey: 'planning',
+    intro: [
+      'Searching for an app development company in Calgary turns up agencies, freelancers and national firms that all promise beautiful apps on a fast timeline. Their portfolios look alike, and from the outside it is hard to tell who will ship an app your users keep and your team can maintain, and who will hand over a demo that breaks on the first OS update.',
+      'This is a buyer’s guide, not a ranked list. It covers what Calgary businesses actually build, how to pick between native, cross-platform and a progressive web app, what a good app company does at each stage, typical Canadian costs in CAD, red flags, ten questions to ask before signing, and the privacy rules that apply in Alberta. For a deeper look at budgets, see our <a href="/blog/app-development-cost-canada">app development cost guide for Canada</a>.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-calgary-builds', text: 'What Calgary businesses build with apps' },
+      { type: 'p', html: 'App projects in Calgary cluster around a few sectors, and each one changes what a good build looks like:' },
+      { type: 'checks', items: [
+        { term: 'Energy and oilfield field apps', text: 'Crews at well sites, pipelines and plants need inspection forms, safety checklists, work orders and asset logs that work offline, sync when the device is back in range, and handle photos, GPS and signatures.' },
+        { term: 'Agtech', text: 'Growers, ranchers and agribusiness suppliers use apps for field records, equipment and sensor data, and logistics across large rural areas where connectivity is patchy.' },
+        { term: 'Fintech', text: 'Payments, lending, wealth and insurance apps need strong authentication, audit trails, secure data handling and integrations with banks and payment processors.' },
+        { term: 'Logistics and transportation', text: 'Calgary’s role as a distribution hub drives driver apps, dispatch tools, proof-of-delivery and real-time tracking that must stay reliable at peak volume.' },
+        { term: 'Customer-facing apps', text: 'Retail, hospitality, healthcare and service businesses build booking, loyalty, ordering and account apps where speed, accessibility and App Store polish decide whether people keep the app installed.' },
+      ] },
+      { type: 'p', html: 'A good partner asks which of these you are before proposing a stack or a price. If the first proposal could apply to any city or industry, it probably will.' },
+
+      { type: 'h2', id: 'native-cross-platform-pwa', text: 'Native vs cross-platform vs PWA' },
+      { type: 'p', html: 'The platform decision shapes cost, timeline and what the app can do:' },
+      { type: 'checks', items: [
+        { term: 'Native (Swift for iOS, Kotlin for Android)', text: 'Best performance and full access to device hardware, at the cost of two codebases. A good fit for heavy offline work, Bluetooth equipment and demanding interfaces.' },
+        { term: 'Cross-platform (Flutter or React Native)', text: 'One codebase for iOS and Android, which usually lowers cost and keeps both apps in step. The right default for most business and customer apps.' },
+        { term: 'Progressive web app (PWA)', text: 'Runs in the browser and can be installed from a link, with no app store review. Good for internal tools and simple customer flows; weaker for deep hardware access and some iOS features.' },
+      ] },
+      { type: 'p', html: 'Our guide to <a href="/blog/native-vs-cross-platform-vs-pwa">native vs cross-platform vs PWA</a> compares the three in detail. Be wary of a company that only ever recommends the one approach it happens to sell.' },
+
+      { type: 'h2', id: 'what-good-looks-like', text: 'What a good app development company does' },
+      { type: 'ol', items: [
+        '<strong>Discovery.</strong> Interviews with users and stakeholders, a clear list of features for the first release, integrations, data and privacy needs, and a written scope you can price against.',
+        '<strong>Design.</strong> User flows, wireframes and a clickable prototype tested with real users before development, plus a design system that maps directly to code.',
+        '<strong>Build.</strong> Short sprints with working builds on your own devices every week or two, code in a repository you own, and honest updates when something takes longer than planned.',
+        '<strong>QA.</strong> Testing on real iOS and Android devices, offline and poor-network cases, accessibility checks and security review, not just a quick click-through before launch.',
+        '<strong>Launch and support.</strong> App Store and Google Play submission under your accounts, crash and analytics monitoring, and a clear plan and price for bug fixes, OS updates and new features after go-live.',
+      ] },
+
+      { type: 'h2', id: 'pricing', text: 'Typical app development costs in Canada' },
+      { type: 'p', html: 'Calgary app projects follow Canadian onshore rates. As approximate ranges from our <a href="/pricing">pricing page</a> and <a href="/blog/app-development-cost-canada">app development cost guide</a>:' },
+      { type: 'ul', items: [
+        'Mobile app overall: about CAD $30,000&ndash;$200,000, roughly 10&ndash;24 weeks.',
+        'Native iOS only: about CAD $40,000&ndash;$180,000; native Android only: about CAD $35,000&ndash;$160,000.',
+        'Cross-platform (Flutter or React Native) for both stores: about CAD $30,000&ndash;$200,000, roughly 10&ndash;24 weeks.',
+        'Separate native iOS and Android apps: about CAD $75,000&ndash;$340,000, roughly 16&ndash;32 weeks.',
+        'Canadian onshore development rates typically run about $100&ndash;$200 per hour.',
+      ] },
+      { type: 'p', html: 'Budget for running costs too: app store fees, cloud hosting, monitoring and ongoing feature updates continue after launch. Integrations with field equipment, payment systems or existing back-office software add scope, so include them from the start.' },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags when hiring an app development company' },
+      { type: 'ul', items: [
+        '<strong>A fixed price before discovery.</strong> A quote given before anyone asks about users, integrations, offline needs or privacy is a template, not a plan.',
+        '<strong>You do not know the real team.</strong> Senior people in the pitch and an unknown team on the build is a common failure mode. Ask for names and continuity.',
+        '<strong>Vendor-owned accounts.</strong> If the code, cloud hosting or App Store and Google Play listings sit in the agency’s name, you do not truly own the app.',
+        '<strong>No device testing plan.</strong> Testing only in simulators misses the crashes, slow screens and offline bugs your users will find.',
+        '<strong>Vague answers on privacy.</strong> Hand-waving about where personal data lives or which laws apply is a problem for fintech, healthcare and any app that collects customer data.',
+        '<strong>No plan after launch.</strong> Every iOS and Android release can break something. A company with no support offer is planning to walk away.',
+      ] },
+
+      { type: 'h2', id: 'questions', text: '10 questions to ask before signing' },
+      { type: 'ol', items: [
+        'Who will design and build my app, and can I meet them before we sign?',
+        'Do you recommend native, cross-platform or a PWA for my app, and why?',
+        'Will you give me a fixed scope and price in CAD for the first release, and how do change requests work?',
+        'Who owns the code, designs, cloud accounts and app store listings when the project ends?',
+        'How will the app handle offline use and poor connectivity?',
+        'How often will I get a working build on my own phone?',
+        'Which real devices do you test on, and how do you test security and accessibility?',
+        'Where will personal data be stored, and how will the app meet PIPEDA and Alberta PIPA?',
+        'What support, OS updates and bug fixes are included after launch, and what do they cost?',
+        'Can you put me in touch with two recent clients with similar apps?',
+      ] },
+      { type: 'p', html: 'Good answers are specific and in writing. Before you sign, check the contract clauses on scope, IP and support in our <a href="/blog/software-development-contract-canada">software development contract guide for Canada</a>.' },
+
+      { type: 'h2', id: 'privacy', text: 'Privacy: PIPEDA and Alberta PIPA' },
+      { type: 'p', html: 'Most private-sector apps in Calgary handle personal information, so privacy law applies from day one. Alberta’s Personal Information Protection Act (PIPA) covers personal information handled by private organisations in the province, and the federal PIPEDA applies to commercial activity across provinces and borders. In practice, your app company should help you collect only the data you need, explain it in a clear privacy notice, get meaningful consent, secure data in storage and in transit, and know which cloud regions and third-party services touch it.' },
+      { type: 'p', html: 'Our <a href="/blog/app-privacy-compliance-canada">app privacy compliance guide for Canada</a> covers what to plan for. Treat it as practical guidance, not legal advice, and involve your own lawyer for regulated data.' },
+
+      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Calgary project', text: `See how we work on our <a href="${serviceCityPath('mobile-app-development', 'calgary')}">app development company in Calgary</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or visit our <a href="/locations/software-development-company-in-calgary">software development company in Calgary</a> page.` },
+    ],
+    keyTakeaways: [
+      'Calgary app demand spans energy and oilfield field apps, agtech, fintech, logistics and customer-facing apps, and each needs a different build.',
+      'Pick native, cross-platform or a PWA based on hardware, offline and budget needs; cross-platform is the right default for most business apps.',
+      'Canadian mobile apps typically cost about CAD $30,000–$200,000, with separate native iOS and Android apps running about $75,000–$340,000.',
+      'Own your code and store accounts, insist on real-device testing and a support plan, and confirm how the app meets PIPEDA and Alberta PIPA.',
+    ],
+    faqs: [
+      { q: 'How much does it cost to build an app in Calgary?', a: 'Calgary projects follow Canadian onshore rates. As approximate ranges, a mobile app runs about CAD $30,000 to $200,000; a cross-platform app for both stores sits in the same range, and separate native iOS and Android apps run about $75,000 to $340,000. Integrations, offline sync and compliance work add to the scope.' },
+      { q: 'How long does app development take?', a: 'Most mobile apps take roughly 10 to 24 weeks from discovery to launch. Separate native iOS and Android apps often take 16 to 32 weeks. A credible company gives you a timeline after discovery, not before.' },
+      { q: 'Should I build a native app, a cross-platform app or a PWA?', a: 'Cross-platform (Flutter or React Native) suits most business and customer apps because one codebase serves both stores. Native suits apps with heavy hardware, offline or performance needs. A PWA suits internal tools and simple flows that do not need an app store.' },
+      { q: 'Do I need an app company with an office in Calgary?', a: 'Not always. A local team makes workshops and site visits easy, but a Canadian team elsewhere in Alberta or Canada can deliver the same quality remotely with planned overlap in Mountain Time. Focus on a named senior contact and experience in your sector.' },
+      { q: 'Which privacy laws apply to an app built in Calgary?', a: 'Alberta’s Personal Information Protection Act (PIPA) covers personal information handled by private organisations in Alberta, and PIPEDA applies to commercial activity across provinces and borders. Your app should collect only what it needs, get clear consent and secure the data.' },
+      { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
+    ],
+    cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);
