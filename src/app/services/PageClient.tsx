@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { officeMedia, serviceMedia, humanMedia } from '@/data/media';
+import { serviceCityPath } from '@/data/serviceCity';
 import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
@@ -232,6 +233,21 @@ const services: ServiceCategory[] = [
   },
 ];
 
+const CITY_CARDS = [
+  { name: 'Edmonton', slug: 'edmonton' },
+  { name: 'Calgary', slug: 'calgary' },
+  { name: 'Toronto', slug: 'toronto' },
+  { name: 'Vancouver', slug: 'vancouver' },
+];
+
+const CITY_SERVICE_ITEMS = [
+  { label: 'Software development', serviceSlug: null as string | null },
+  { label: 'App development', serviceSlug: 'mobile-app-development' },
+  { label: 'AI development', serviceSlug: 'ai-ml' },
+  { label: 'UI/UX design', serviceSlug: 'product-design' },
+  { label: 'SEO', serviceSlug: 'digital-marketing' },
+];
+
 export default function ServicesIndexPage() {
   const heroRef = useRef<HTMLElement>(null);
   const s1 = useReveal() as React.RefObject<HTMLElement>;
@@ -288,6 +304,31 @@ export default function ServicesIndexPage() {
                     Learn More &rarr;
                   </Link>
                 </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CITY LINKS */}
+        <section className="section-padding">
+          <div className="cb-container">
+            <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Find services in your city</h2>
+            </div>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+              {CITY_CARDS.map(city => (
+                <div key={city.slug} style={{ border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', padding: 'clamp(1.25rem, 3vw, 2rem)', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', marginBottom: '0.5rem' }}>{city.name}</h3>
+                  {CITY_SERVICE_ITEMS.map(item => (
+                    <Link
+                      key={item.label}
+                      href={item.serviceSlug ? serviceCityPath(item.serviceSlug, city.slug) : `/locations/software-development-company-in-${city.slug}`}
+                      style={{ color: 'var(--body)', textDecoration: 'none', fontSize: 14.5, lineHeight: 1.6, minHeight: 44, display: 'flex', alignItems: 'center', whiteSpace: 'normal', overflowWrap: 'anywhere', wordBreak: 'break-word' }}
+                    >
+                      {item.label} in {city.name}
+                    </Link>
+                  ))}
+                </div>
               ))}
             </div>
           </div>
