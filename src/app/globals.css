@@ -599,7 +599,12 @@ main > section, main > div > section, main > article > section { border-bottom: 
   .comparison-table-inner { min-width: 520px !important; }
   .portfolio-grid, .services-large-grid { grid-template-columns: 1fr; }
   .tech-categories-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats-strip-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .stats-strip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .stats-strip-grid > * { min-width: 0; overflow-wrap: anywhere; padding: clamp(18px, 4.5vw, 28px) !important; }
+  .stats-strip-grid > :nth-child(odd) { border-left: 0 !important; }
+  .stats-strip-grid > :nth-child(even) { border-left: 1px solid var(--line) !important; }
+  .stats-strip-grid > :nth-child(n+3) { border-top: 1px solid var(--line); }
+  .stats-strip-grid > :only-child { grid-column: 1 / -1; }
   .faq-question-btn { padding: clamp(16px, 3vw, 28px) 0 !important; min-height: 44px; }
   .sticky-cta-text { font-size: 13px !important; }
   .process-step { padding-left: clamp(16px, 4vw, 48px) !important; }
@@ -644,6 +649,11 @@ main > section, main > div > section, main > article > section { border-bottom: 
 @media (max-width: 360px) {
   .cb-container { padding-left: 14px !important; padding-right: 14px !important; }
   .hero-container { padding: 20px 14px 36px; }
+}
+@media (max-width: 399.98px) {
+  .stats-strip-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .stats-strip-grid > :nth-child(n) { border-left: 0 !important; }
+  .stats-strip-grid > :nth-child(n+2) { border-top: 1px solid var(--line); }
 }
 @media (min-width: 1024px) {
   .blog-layout { grid-template-columns: minmax(0, 1fr) 320px !important; }
