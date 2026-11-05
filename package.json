@@ -9,7 +9,8 @@
     "lint": "eslint",
     "submit-urls": "npx tsx scripts/submit-to-search-engines.ts",
     "submit:search-engines": "npx tsx scripts/submit-to-search-engines.ts",
-    "seo:titles": "node --experimental-strip-types --no-warnings scripts/check-titles.mjs"
+    "seo:titles": "node --experimental-strip-types --no-warnings scripts/check-titles.mjs",
+    "check:meta": "node scripts/check-meta-lengths.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
