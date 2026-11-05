@@ -37,6 +37,13 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'build-saas-mvp-8-weeks': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
   'saas-development-company-canada': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
   'ui-ux-design-companies-canada': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },
+  'app-development-companies-calgary': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'app-development-companies-toronto': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'seo-companies-edmonton': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
+  'seo-companies-calgary': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
+  'seo-companies-toronto': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
+  'ui-ux-design-companies-toronto': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },
+  'web-development-companies-edmonton': { label: 'Web Development', path: c => serviceCityPath('web-development', c) },
 };
 
 /** Service allowlist for the enquiry CTA, from the SERVICE_PROJECT_TYPE keys. */
