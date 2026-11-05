@@ -1,4 +1,57 @@
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import Link from 'next/link';
+import { PROJECT_PRICING } from '@/data/pricing';
+
+function BuyerContent() {
+  const cad = (amount: number) => new Intl.NumberFormat('en-CA', {
+    style: 'currency', currency: 'CAD', maximumFractionDigits: 0,
+  }).format(amount);
+  const planningRange = (range: typeof PROJECT_PRICING.website | typeof PROJECT_PRICING.webapp) =>
+    `${cad(range.low)}–${cad(range.high)} CAD over ${range.weeksLow}–${range.weeksHigh} weeks`;
+
+  return (
+    <section className="section-padding-sm" aria-labelledby="nextjs-engagements">
+      <div className="cb-container">
+        <div className="head">
+          <div>
+            <h2 id="nextjs-engagements">Plan your Next.js project or migration</h2>
+            <p className="lede">Choose an engagement around what you need to launch. Share your scope, target date and budget so we can agree on priorities, deliverables and acceptance criteria before development starts.</p>
+          </div>
+        </div>
+        <div className="grid grid--3">
+          <div className="tile">
+            <h3>New marketing website</h3>
+            <p>General website planning range: {planningRange(PROJECT_PRICING.website)}.</p>
+            <p>For a quote, share your sitemap, page types, brand assets, content readiness, CMS editing needs, lead forms, integrations and accessibility requirements.</p>
+            <p>You receive responsive Next.js page templates, the agreed CMS and form integrations, search metadata, a tested deployment and an editing handover for your team.</p>
+          </div>
+          <div className="tile">
+            <h3>Web application</h3>
+            <p>General web application planning range: {planningRange(PROJECT_PRICING.webapp)}.</p>
+            <p>For a quote, map your user roles, permissions and essential workflows. Include API documentation, sample data, integration dependencies, expected traffic and security requirements.</p>
+            <p>You receive the agreed application workflows, connected APIs and data, role-based access, validation of key user journeys, a production deployment and technical handover.</p>
+          </div>
+          <div className="tile">
+            <h3>Incremental React / Pages Router migration</h3>
+            <p>Move an existing React application to Next.js, or migrate Pages Router routes to App Router, in agreed stages while keeping the rest of your application running.</p>
+            <p>For a quote, share repository access, framework versions, a route inventory, client-only libraries, integrations, hosting constraints, analytics and current performance measurements.</p>
+            <p>You receive a dependency and routing assessment, a phased migration plan, migrated routes, a redirect map where needed, regression checks and a rollout and rollback plan.</p>
+          </div>
+        </div>
+        <p className="lede">These are general project budget and timeline ranges, not a migration quote. Migration cost and timing depend on the existing code, route count and compatibility work identified during assessment. Compare <Link href="/pricing">project pricing</Link> and our <Link href="/blog/website-cost-canada">Canadian website cost guide</Link> before setting your budget.</p>
+        <h2 style={{ marginTop: 'var(--gap)' }}>Agree on migration acceptance criteria</h2>
+        <p className="lede">Before launch, we check the agreed migration scope against a shared checklist:</p>
+        <ul>
+          <li>Preserve existing URLs, or provide and test permanent redirects to the closest matching pages.</li>
+          <li>Verify page titles, descriptions, indexability and canonical URLs on migrated pages.</li>
+          <li>Validate key user journeys, including sign-in, forms and business-critical workflows, on mobile and desktop.</li>
+          <li>Measure performance against the existing site using comparable pages and conditions, and review Core Web Vitals against agreed targets before launch.</li>
+        </ul>
+        <p className="lede"><Link href="/contact?service=web-development">Discuss your Next.js project or migration with our Web Development team</Link>. Include your current site and launch priorities so we can scope the right next step.</p>
+      </div>
+    </section>
+  );
+}
 
 const stats = [
   { value: '120+', label: 'Next.js Projects' },
@@ -42,6 +95,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Full-Stack Next.js Expertise"
+      buyerContent={<BuyerContent />}
     />
   );
 }
