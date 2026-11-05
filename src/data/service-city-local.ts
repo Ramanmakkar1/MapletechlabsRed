@@ -4430,4 +4430,72 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-brampton': {
+    title: 'AI Development Company in Brampton',
+    description: 'AI development company in Brampton building practical AI for logistics, manufacturing and clinic operations. CAD pricing and a free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, building practical AI for Brampton and Peel Region businesses: load and route planning, document extraction, forecasting and staff assistants. Our team also has engineers in Toronto, and we do not have a Brampton office. Edmonton is two hours behind Brampton, so our working days overlap for calls, demos and reviews. You work directly with the senior engineers who build your system, and we agree on a fixed scope and price in CAD before work starts. Call +1-403-604-8692 to talk through your AI project.',
+    sections: [
+      {
+        heading: 'Where AI helps Brampton logistics, manufacturing and clinics',
+        body: [
+          'Brampton is one of Canada\'s busiest freight hubs, and trucking firms, 3PLs and warehouses near Pearson and along Highways 410 and 407 ask us for route and load planning that cuts empty kilometres, document extraction that reads bills of lading, proofs of delivery and carrier invoices and sends the details to staff for review, and demand forecasting to plan inventory, dock slots and drivers. Manufacturers and food processors want vision-based quality checks on the line and maintenance prediction from machine sensor data, so problems are caught before a shift is lost. Healthcare clinics and professional services firms want help with patient or client intake, scheduling, and document chatbots that answer staff questions from policies and files with sources cited. We start from the data you already have and the decision your team needs to make.',
+        ],
+      },
+      {
+        heading: 'Privacy, PIPEDA and Canadian data hosting',
+        body: [
+          'Most private-sector personal data in Ontario falls under PIPEDA, and health information handled by Ontario custodians, such as Brampton clinics, can also fall under Ontario\'s Personal Health Information Protection Act (PHIPA). We design for privacy from the first workshop: role-based access, encryption, audit logs of what the system was asked and how it answered, and Canadian cloud regions for your AI system and its data. Model providers are set up so they do not train on your company data, and sensitive outputs go to a person for review. Requirements depend on your data and organisation; your privacy officer or lawyer confirms the final position.',
+        ],
+      },
+      {
+        heading: 'How an AI engagement runs: discovery to monitoring',
+        body: [
+          'We begin with free discovery to pick one problem worth solving, such as reading BOLs or forecasting weekly volumes. Next comes a small proof of concept on a representative sample of your own data, with your team agreeing how results will be judged, so accuracy is measured rather than assumed. If it proves its value, we move it into production with the TMS, ERP, CRM or document systems you already run, add permissions and human review paths, and set up evaluation and monitoring so quality is tracked after launch. See our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning development services' },
+          ' for the full scope.',
+        ],
+      },
+      {
+        heading: 'What AI development costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. A focused first version usually takes weeks rather than months, especially when your documents are already in good shape; projects with many data sources, integrations or custom models take longer. Discovery is free, and your price is fixed in CAD before coding starts. Comparing options across the GTA? Read our ',
+          { href: '/blog/ai-development-companies-toronto', label: 'guide to AI development companies in Toronto' },
+          ', or see our ',
+          { href: '/locations/ai-development-company-in-toronto', label: 'Toronto AI development' },
+          ' and ',
+          { href: '/locations/ai-development-company-in-mississauga', label: 'Mississauga AI development' },
+          ' pages.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'Can AI help a Brampton trucking or logistics company?',
+        a: 'Yes. Common first projects are reading bills of lading, proofs of delivery and carrier invoices into your TMS, suggesting route and load plans, and forecasting weekly volumes so you can plan drivers and dock slots. We test each idea on a sample of your own documents and data first, and staff review the outputs before anything changes in your systems.',
+      },
+      {
+        q: 'Where is our data hosted?',
+        a: 'We can host your AI system and its data in Canadian cloud regions. Model providers are set up so they do not train on your company data, access is limited by role, and we log what the system is asked and how it answers. Your privacy officer should confirm the final PIPEDA, and where relevant PHIPA, position for your project.',
+      },
+      {
+        q: 'How long does an AI proof of concept take?',
+        a: 'A focused proof of concept usually takes weeks rather than months, especially when your documents are already in good shape. Production work with TMS, ERP or CRM integrations, many data sources or custom models takes longer. Your written scope includes a timeline with clear milestones, so you know when results will be ready to judge.',
+      },
+      {
+        q: 'How much does AI development cost in Brampton?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Can we meet your team in person in Brampton?',
+        a: 'We do not have a Brampton office. Mapletech Labs is headquartered in Edmonton, with engineers in Toronto, and most Brampton projects run on video calls, demos and shared boards. Edmonton is two hours behind Brampton, so most of the working day overlaps for workshops, reviews and quick questions.',
+      },
+    ],
+  },
 };
