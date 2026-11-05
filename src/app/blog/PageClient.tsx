@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'software-development-companies-edmonton', category: 'Business',
+    title: 'Software Development Companies in Edmonton: How to Choose (2026)',
+    excerpt: 'A buyer’s guide for Edmonton businesses hiring custom software: fixed CAD pricing, typical costs, red flags, and 10 questions to ask before you sign.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'seo-companies-edmonton', category: 'Business',
     title: 'SEO Companies in Edmonton: How to Choose One (2026)',
     excerpt: 'A buyer’s guide for Edmonton businesses: what local SEO should cover, the first 90 days, typical Canadian pricing, red flags and 10 questions to ask before hiring.',
