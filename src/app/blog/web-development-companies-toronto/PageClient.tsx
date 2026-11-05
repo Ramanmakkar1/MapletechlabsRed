@@ -180,7 +180,8 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                     But Toronto is also saturated with web development agencies. Hundreds of shops claim to build &quot;world-class&quot; websites, making it nearly impossible to separate genuine engineering talent from template resellers and offshore middlemen.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    We evaluated over 80 Toronto-area web development companies based on portfolio quality, technical capabilities, client retention, team size, and industry reputation to compile this definitive ranking of the <strong>Top 10 Web Development Companies in Toronto</strong> for 2026.
+                    We evaluated over 80 Toronto-area web development companies based on portfolio quality, technical capabilities, client retention, team size, and industry reputation to compile this definitive ranking of the <strong>Top 10 Web Development Companies in Toronto</strong> for 2026. If you are comparing agencies against how we scope Toronto web projects, see our{' '}
+                    <Link href="/locations/web-development-company-in-toronto" style={{ color: 'var(--brand)' }}>web development company in Toronto</Link> page.
                   </p>
                 </div>
 

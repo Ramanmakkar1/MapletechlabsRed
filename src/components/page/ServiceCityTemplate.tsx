@@ -22,6 +22,7 @@ import { contactHrefFor } from '@/lib/enquiryContext';
 import type { Stat } from './types';
 import type { CityServicePageData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
+import { buyerGuideFor, buyerGuideLinkText } from '@/data/buyer-guides';
 
 // Honest, company-wide facts — no invented per-city metrics.
 const HONEST_STATS: Stat[] = [
@@ -66,6 +67,10 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
     ...p.smallServices.map(s => ({ title: s.title, desc: s.desc })),
   ];
   const tech = p.techCategories.map(t => ({ label: t.title, chips: t.items }));
+  const buyerGuide = buyerGuideFor(serviceSlug, citySlug);
+  const buyerGuideInProof = buyerGuide
+    ? local?.proof.some(pr => pr.href === buyerGuide.href)
+    : false;
 
   return (
     <>
@@ -218,6 +223,25 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
         <MediaBand media={humanPick(citySlug + serviceSlug, 8)} ratio="21 / 7" />
         <WhyUs />
         <Credentials />
+
+        {buyerGuide && !buyerGuideInProof ? (
+          <section style={{ padding: '0 0 var(--section-y)' }}>
+            <div className="cb-container">
+              <div className="tile rise" style={{ padding: 'clamp(22px, 2.6vw, 32px)', border: '1px solid var(--line)' }}>
+                <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 10px', color: 'var(--ink)' }}>
+                  Comparing {buyerGuide.label} companies in {cityName}?
+                </h3>
+                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>
+                  Our buyer&apos;s guide covers typical costs in CAD, red flags and questions to ask before you sign with any {cityName} team.
+                </p>
+                <Link href={buyerGuide.href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>
+                  {buyerGuideLinkText(serviceSlug, cityName)}
+                </Link>
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         <FaqSplit faqs={p.faqs} title={`${serviceName} in ${cityName}: your questions`} />
 
         {/* Internal linking mesh */}
