@@ -3599,6 +3599,64 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'seo-company-in-hamilton': {
+    title: 'SEO Company in Hamilton, ON',
+    description: 'SEO company for Hamilton businesses: local map-pack and technical SEO with monthly CAD retainers from Edmonton. Get a free SEO audit.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Hamilton businesses that want more calls and leads from Google and Bing. We help manufacturers, port and logistics firms, health groups, trades and retailers across Hamilton and nearby communities. We do not have a Hamilton office; projects run remotely with video calls and shared boards. Edmonton is two hours behind Hamilton, so our working days overlap and account questions get answered the same day. You work directly with the specialists doing keyword research, technical fixes and content. Retainers are priced in CAD with a fixed monthly scope agreed before work starts, and you receive a plain-language report each month on rankings, traffic and completed tasks. Call +1-403-604-8692 to talk through your Hamilton search goals.',
+    sections: [
+      {
+        heading: 'Local search in Hamilton',
+        body: [
+          'Many Hamilton customers start on Google Maps or a “near me” search, and the local pack often splits by neighbourhood and corridor — downtown and James Street North, Stoney Creek, Ancaster, Dundas and firms that also serve Burlington across the harbour. We set up Google Business Profile and Bing Places honestly, as a staffed address or a service-area business that reflects where you really work, choose categories that match your services, and keep your name, address and phone consistent across local citations. We help you earn reviews the right way, with follow-up that fits your team, not bought or fake ratings that get profiles suspended.',
+        ],
+      },
+      {
+        heading: 'Technical SEO and content that wins Hamilton searches',
+        body: [
+          'Rankings stall when the site is slow, poorly indexed or missing the pages buyers expect. We audit Core Web Vitals, crawl coverage and internal links, fix indexing blockers, tighten titles and meta descriptions, add schema where it helps, and build service and city pages that answer Hamilton-specific searches — from port logistics and industrial suppliers to clinic, legal and trade queries. Content targets what your market actually types, with internal links pointing authority at the pages that should convert. See our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' for the full scope, and our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          ' for typical monthly retainer ranges in CAD.',
+        ],
+      },
+      {
+        heading: 'How we report results',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Single-location Hamilton campaigns often sit at the lower end; manufacturers and brands competing across the Golden Horseshoe or nationally sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next, in plain language.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Hamilton?',
+        a: 'Most Hamilton SEO engagements are monthly retainers of about $1,500-$10,000 CAD, the range we publish in our Canadian digital marketing cost guide. A single-location clinic, trades or professional-services campaign often sits at the lower end; manufacturers and brands competing for regional or national terms sit higher. After a free review of your site and competitors, we quote one fixed monthly number in CAD rather than hourly billing.',
+      },
+      {
+        q: 'How long until SEO results show in Hamilton?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Golden Horseshoe or national terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress before position charts catch up.',
+      },
+      {
+        q: 'Should a Hamilton business focus on local or national SEO?',
+        a: 'It depends on where your customers are. A manufacturer or B2B supplier selling across Canada needs category and national SEO, and a Hamilton address alone will not win those searches. Clinics, trades, restaurants and professional firms that serve Hamilton, Stoney Creek, Ancaster and Dundas need local map visibility first. Many companies need both, and we recommend the mix based on where your revenue actually comes from.',
+      },
+      {
+        q: 'Do we need to meet in person in Hamilton?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Hamilton office. We work with Hamilton clients through video calls, shared boards and monthly reports. Edmonton is two hours behind Hamilton, so most of the working day overlaps for questions and approvals.',
+      },
+      {
+        q: 'Who owns the content, accounts and SEO work?',
+        a: 'You do. Your website, Google Business Profile, analytics and ad accounts stay in your name. Blog posts, landing pages and other content we write for your site belong to you, and we do not withhold logins or tie you to a multi-year contract. You can keep us on a monthly retainer or move accounts to another provider whenever you choose.',
+      },
+    ],
+  },
   'seo-company-in-kitchener': {
     title: 'SEO Company in Kitchener-Waterloo, ON',
     description: 'SEO company in Kitchener-Waterloo for startups, manufacturers and local firms: map-pack, technical SEO and monthly CAD retainers. Free review.',
