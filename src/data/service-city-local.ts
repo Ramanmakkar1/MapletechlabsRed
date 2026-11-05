@@ -4241,4 +4241,62 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-brampton': {
+    title: 'App Development Company in Brampton, ON',
+    description: 'App development company in Brampton for Peel Region firms: iOS and Android apps at a fixed CAD price. Call for a free quote today.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, building iOS and Android apps for Brampton and Peel Region businesses. We do not have a Brampton office. Brampton runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for standups, design reviews and release decisions. We work with logistics and warehousing teams along Highways 410 and 407 and near Toronto Pearson, manufacturers across the city, health groups tied to Brampton Civic Hospital and William Osler Health System, Sheridan College\'s Davis campus, and the many small businesses in Brampton\'s large South Asian community—plus retailers and restaurants downtown and along Queen Street. You talk directly with the engineers writing your code, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'Apps for Brampton\'s logistics, manufacturing, health and local retail',
+        body: [
+          'Brampton sits beside major freight corridors and Pearson airport, so carriers and warehouse operators ask for driver, dispatch and yard apps with live status, proof of delivery and barcode scanning that still work when signal drops. The city\'s large manufacturing base needs field inspection, maintenance and work-order tools that sync when a connection returns. Patient-facing and staff apps linked to Brampton Civic Hospital and William Osler Health System need clear journeys and careful handling of personal data. Downtown and Queen Street retailers, salons and restaurants want booking, loyalty and reorder apps, and many family-run firms in Brampton\'s South Asian business community need customer apps in English plus Punjabi, Hindi or Urdu. We plan each build around daily users and the ERP, WMS or booking systems you already run.',
+        ],
+      },
+      {
+        heading: 'Native or cross-platform: how we choose',
+        body: [
+          'Most Brampton projects need iPhone and Android users on the same release, so we often start with Flutter or React Native: one codebase reaches both app stores and usually costs 30-40% less than separate native builds. That fits driver and dispatch apps, multilingual customer ordering and loyalty tools where both platforms matter equally. When you need Bluetooth scanners on the dock, heavy offline queues or maximum performance on older phones, we build in Swift and Kotlin instead. We walk through Brampton-specific examples—such as a dispatch board your planners open all day versus a Punjabi-language reorder flow—and explain the trade-off before you sign off. See our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development services' },
+          ' for the full scope.',
+        ],
+      },
+      {
+        heading: 'What a Brampton app costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Those ranges apply whether you are a Brampton warehouse, manufacturer or retailer planning your first release. Discovery is free, and your price is fixed in CAD before coding starts. See our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development services' },
+          ' for what each type of build includes.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'What should a Brampton business budget for a custom app?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. After a free discovery call we put a fixed price in CAD in writing, so you know the budget before any coding starts.',
+      },
+      {
+        q: 'How long from kickoff to App Store and Google Play launch?',
+        a: 'A focused app with roughly 5-8 screens often ships in 8-12 weeks. A mid-size iOS and Android build with payments and an admin panel usually needs 12-24 weeks, and large platforms with integrations or compliance work can run 6-18 months. Your scope document lists milestones such as beta, store submission and launch dates.',
+      },
+      {
+        q: 'We need both iOS and Android—do you build one app or two?',
+        a: 'For most Brampton projects we use React Native or Flutter so one codebase updates both stores, which keeps driver apps and multilingual customer flows in sync and typically costs less than two native codebases. If you need deep hardware hooks or maximum performance on the plant floor, we recommend separate Swift and Kotlin builds and explain why before you choose.',
+      },
+      {
+        q: 'Can we meet your team in Brampton?',
+        a: 'We do not maintain a Brampton office. Mapletech Labs is headquartered in Edmonton and works with Peel Region clients through video calls, shared boards and weekly demos of working builds. Eastern time is two hours ahead of Edmonton, so most business hours overlap for questions and approvals.',
+      },
+      {
+        q: 'After launch, who holds the source code and store accounts?',
+        a: 'You do. Source code, design files, app store listings, cloud accounts and credentials we set up for your Brampton project belong to you, with no lock-in clause. You can extend the engagement for updates or hand everything to an in-house team whenever you prefer.',
+      },
+    ],
+  },
 };
