@@ -223,43 +223,9 @@ export default function ContactPage({ serviceOptions = [], cityOptions = [] }: {
         </div>
       </section>
 
-      <section aria-labelledby="cp-next" style={{ padding: '0 0 var(--section-y)' }}>
+      <section aria-labelledby="cp-cities" style={{ padding: '0 0 var(--section-y)' }}>
         <div className="cb-container">
-          <h2 id="cp-next" style={{ fontSize: 'var(--fs-h3, 28px)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 24px' }}>
-            What happens after you get in touch
-          </h2>
-          <ol
-            className="cp-steps"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: 24,
-              listStyle: 'none',
-              padding: 0,
-              margin: '0 0 48px',
-            }}
-          >
-            <li style={{ padding: 24, border: '1px solid var(--line)', borderRadius: 20 }}>
-              <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: '0 0 8px' }}>Reply within one working day</h3>
-              <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                A senior engineer reads your message and replies with clarifying questions and a suggested next step. You will not get an automated sales sequence.
-              </p>
-            </li>
-            <li style={{ padding: 24, border: '1px solid var(--line)', borderRadius: 20 }}>
-              <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: '0 0 8px' }}>Free 30-minute discovery call</h3>
-              <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                We talk through your goals, users, budget range and timeline, then say honestly whether custom software, an off-the-shelf tool or a smaller first release fits best.
-              </p>
-            </li>
-            <li style={{ padding: 24, border: '1px solid var(--line)', borderRadius: 20 }}>
-              <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--ink)', margin: '0 0 8px' }}>Fixed-scope proposal</h3>
-              <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                You get a written scope with milestones, a fixed price and a delivery plan, usually within a week. Your idea stays under NDA the whole time.
-              </p>
-            </li>
-          </ol>
-
-          <h2 style={{ fontSize: 'var(--fs-h3, 28px)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 24px' }}>
+          <h2 id="cp-cities" style={{ fontSize: 'var(--fs-h3, 28px)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 24px' }}>
             Software, app, AI and UI/UX teams across Canada
           </h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, maxWidth: 760, margin: '0 0 20px' }}>
@@ -293,7 +259,6 @@ export default function ContactPage({ serviceOptions = [], cityOptions = [] }: {
         .cp-service-links a:focus-visible{outline:3px solid var(--brand);outline-offset:2px;}
         @media(max-width:1024px){
           .cp-grid{grid-template-columns:1fr!important;gap:44px!important;}
-          .cp-steps{grid-template-columns:1fr!important;}
         }
         @media(max-width:560px){
           .cp-form-row{grid-template-columns:1fr!important;}

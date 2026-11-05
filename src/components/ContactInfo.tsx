@@ -32,15 +32,15 @@ const CITY_SERVICES = [
 const STEPS = [
   {
     title: 'We reply within one working day',
-    body: 'A senior engineer — not a salesperson — reads your brief and replies with honest first thoughts, relevant experience, and the questions that actually matter for a build like yours.',
+    body: 'A senior engineer — not a salesperson — reads your brief and replies with honest first thoughts, relevant experience, and the questions that actually matter for a build like yours. There is no automated sales sequence behind that reply.',
   },
   {
     title: 'Free 30-minute discovery call',
-    body: 'We talk through your goals, the users you are serving, technical or budget constraints, and your timeline. You leave with a clearer picture of the scope, whether or not we work together.',
+    body: 'We talk through your goals, the users you are serving, technical or budget constraints, and your timeline, then say honestly whether custom software, an off-the-shelf tool, or a smaller first release fits best. You leave with a clearer picture of the scope, whether or not we work together.',
   },
   {
     title: 'Written scope and estimate',
-    body: 'Within a few days you get a fixed-price or phased proposal: deliverables, milestones, a schedule, and a breakdown of where every dollar goes. Signed under NDA before any details are exchanged.',
+    body: 'Within a few days — usually no more than a week — you get a fixed-price or phased proposal: scope, deliverables, milestones, a schedule, a delivery plan, and a breakdown of where every dollar goes. Your idea stays under NDA from the first conversation, and the proposal is signed before any further details are exchanged.',
   },
   {
     title: 'Kick-off',
