@@ -308,7 +308,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
           </div>
         </section>
 
-        <FinalCta title="Let's build something worth keeping." sub="Tell us what you're building and a senior engineer will scope it within one working day." />
+        <FinalCta title="Let's build something worth keeping." sub="Tell us what you're building and a senior engineer will scope it within one working day." contactHref={projectHref} />
       </main>
       <Footer />
       <style jsx>{`
