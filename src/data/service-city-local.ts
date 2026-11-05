@@ -3657,6 +3657,69 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-hamilton': {
+    title: 'UI/UX Design Company in Hamilton, ON',
+    description: 'UI/UX design for Hamilton and GTHA teams: web and mobile app design from an Edmonton studio, with a free UX audit and fixed CAD pricing.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing digital products for Hamilton and GTHA teams. We work with Hamilton clients remotely: advanced manufacturing and steel companies that need operator, maintenance and supplier portals, health and hospital research groups near McMaster University and Hamilton Health Sciences, McMaster spin-offs and startups, logistics teams around the Port of Hamilton, and municipal service teams. We have no Hamilton office, so every project runs on weekly demos of a Figma prototype, where you see real progress, not status reports. You talk directly with the designers doing the work, and the price is fixed in CAD before design starts. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'Products Hamilton organisations need designed',
+        body: [
+          'Hamilton\'s advanced manufacturing and steel companies bring us operator dashboards, maintenance and work-order tools, and supplier portals where production status must be scannable on a shop floor. Health and hospital research groups near McMaster University and Hamilton Health Sciences need patient, staff and research flows that handle sensitive data with clear, low-stress journeys. McMaster spin-offs and startups need their first product designed end to end, from user research to a design system their engineers can build from. Logistics teams around the Port of Hamilton ask for dispatch, tracking and booking interfaces their crews open dozens of times a day. Municipal service teams need accessible public-facing sites and forms that residents of every age can complete. We design each around the people who use it daily.',
+        ],
+      },
+      {
+        heading: 'UX audit, journeys, wireframes, prototype and handoff',
+        body: [
+          'Every Hamilton project starts with a free UX audit: a heuristic review of your current product, analytics and interviews with the people who use it. The findings shape user journey maps for each key task, which become wireframes for every screen before visual design begins. Those wireframes become a clickable prototype, and we run usability testing on real tasks so hesitation shows up in Figma, not after launch. We document components, states and tokens in a design system your developers can implement, then stay with annotated specs and design reviews through developer handoff. You can see how we run the ',
+          { href: '/services/product-design/ux-audit', label: 'UX audit' },
+          ' and the ',
+          { href: '/services/product-design/design-systems', label: 'design systems' },
+          ' work on our service pages.',
+        ],
+      },
+      {
+        heading: 'AODA and WCAG 2.1 AA accessibility for Ontario',
+        body: [
+          'Accessibility is not an add-on for Ontario products. Because Ontario organisations work under the Accessibility for Ontarians with Disabilities Act, we design and test to WCAG 2.1 AA: colour contrast, visible focus states, full keyboard paths, readable text sizes and screen-reader labels are decided in the design files, not patched after development. This matters for Hamilton\'s public-facing products in particular — municipal services, hospital and clinic patient flows, and forms that residents of every age and ability must complete. We document what we tested in each prototype and hand your team the results, and we keep the design system accessible as it grows so new screens inherit the same patterns. Please have your legal or compliance team confirm exactly how the AODA applies to your organisation.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Hamilton (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, so your budget is set before design starts. As a guide, our ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' lists the ranges we publish: about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Screen count, interaction complexity, research depth and branding all move the number, and Hamilton projects are priced the same way as our Alberta work. Most projects take 6-11 weeks, and your written scope lists the milestones and review points.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A checkout redesign for 2M+ monthly visitors that lifted conversion from 2.1% to 3.8% in 90 days.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA- and PIPEDA-compliant patient platform serving 450K+ patient records, with 40% less admin overhead.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Hamilton?',
+        a: 'We quote a fixed price in CAD after a free UX audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, interaction complexity, research depth and branding all move the number, and Hamilton projects are priced the same way as our Alberta work.',
+      },
+      {
+        q: 'How long does a UI/UX design project take for a Hamilton team?',
+        a: 'Most projects take 6-11 weeks across research, strategy, wireframes, visual design and handoff. A small MVP can be faster, while a multi-product design system or a large research program takes longer. Your written scope lists the milestones and review points, so you know when the prototype and final handoff are due.',
+      },
+      {
+        q: 'Do we need to meet in person in Hamilton?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Hamilton office. We work with Hamilton clients through video calls, shared boards and weekly demos of a live Figma prototype. Edmonton is two hours behind Hamilton, so most of the working day overlaps.',
+      },
+      {
+        q: 'Do you design for AODA and Ontario accessibility requirements?',
+        a: 'Yes. We design and test to WCAG 2.1 AA, which supports AODA-aligned expectations for public-facing Ontario products: colour contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels are built into the design files. Please have your legal or compliance team confirm exactly how the AODA applies to your organisation.',
+      },
+      {
+        q: 'Can you work with our own developers, or do you build the product too?',
+        a: 'Both. The same team that designs the product can build it, so the design system maps to real components and edge cases are settled with the engineers who will code them. If you have an in-house team, we hand off a design system, annotated specs and a working session so your developers can keep extending the system after launch, with no lock-in.',
+      },
+    ],
+  },
   'seo-company-in-kitchener': {
     title: 'SEO Company in Kitchener-Waterloo, ON',
     description: 'SEO company in Kitchener-Waterloo for startups, manufacturers and local firms: map-pack, technical SEO and monthly CAD retainers. Free review.',
