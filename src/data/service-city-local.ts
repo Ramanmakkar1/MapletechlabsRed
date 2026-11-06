@@ -5265,4 +5265,128 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-surrey': {
+    title: 'UI/UX Design Company in Surrey, BC',
+    description: 'UI/UX design for Surrey health, logistics and startup teams: research, prototypes and WCAG 2.1 AA design at a fixed CAD price. Book a free UX audit.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, with engineers based in Vancouver, a short drive from Surrey, but we do not have a Surrey office. Surrey runs on Pacific time, one hour behind Edmonton, so your team and ours share nearly the whole working day. We design web and mobile products for the teams that shape Surrey\'s economy: health-tech companies around City Centre and Innovation Boulevard, trucking and logistics firms along the Fraser corridor, construction and trades companies, retailers, and the SaaS founders and startups growing near SFU Surrey. Every project runs on weekly demos of a Figma prototype, you talk directly with the designers doing the work, and the price is fixed in CAD before design starts. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'Who in Surrey needs UX design work',
+        body: [
+          'Health-tech teams near City Centre and Innovation Boulevard, and providers working alongside Fraser Health, need patient and clinician flows that keep sensitive information clear and calm to use. Logistics and warehousing firms bring us dispatch boards, driver screens and shipper portals that people open dozens of times a shift, often on a phone in a truck cab or a busy yard. Construction and trades companies need estimating, scheduling and job-site tools that crews can use quickly with big tap targets. Retailers want product pages, carts and checkouts that turn mobile browsers into buyers, and many family-run businesses want screens that work in English and Punjabi. SaaS founders and startups near SFU Surrey usually need their first product designed end to end, from user research to a design system their engineers can build from.',
+        ],
+      },
+      {
+        heading: 'Research, user journeys, prototypes and handoff',
+        body: [
+          'Every Surrey project starts with research: a free UX audit of your current product, a look at your analytics and short interviews with the people who use it. We turn the findings into user journeys for each key task, such as a driver closing a delivery or a patient booking a visit, then wireframe every screen before visual design begins. Those wireframes become a clickable prototype, and we run usability testing on real tasks so confusion shows up in Figma, not after launch. Finally we hand off a documented design system with components, states and tokens, plus annotated specs and design reviews while your developers build. See how this work is scoped on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'WCAG 2.1 AA and the Accessible British Columbia Act',
+        body: [
+          'British Columbia\'s Accessible British Columbia Act asks more and more organisations in the province to find and remove barriers, and digital products are a big part of that. We design and test to WCAG 2.1 AA from the first wireframe: colour contrast, visible focus states, full keyboard paths, readable text sizes, clear error messages and screen-reader labels are decided in the design files, not patched after development. That matters most for Surrey\'s patient portals, public-facing booking flows and multilingual sites, where layouts also need room for translated text. We document what we tested in each prototype and keep the design system accessible as it grows. Please have your legal or compliance team confirm exactly how the Act applies to your organisation.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Surrey (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, so your budget is set before design starts. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. A driver app plus dispatch dashboard usually lands in the full product band. Surrey projects are priced the same way as our Alberta work, and most take 6-11 weeks. To compare Canadian studios before you choose, read our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Surrey?',
+        a: 'We quote a fixed price in CAD after a free UX audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, interaction complexity, research depth and branding all move the number.',
+      },
+      {
+        q: 'Do you have an office in Surrey?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers based in Vancouver, and we do not have a Surrey office. Surrey is on Pacific time, one hour behind Edmonton, so we work with Surrey clients remotely with almost the whole working day in common, and we can meet in person in Surrey by arrangement, with any travel agreed up front.',
+      },
+      {
+        q: 'Can you design screens for drivers and dispatchers?',
+        a: 'Yes. We map how drivers, dispatchers and customers each use the product, then design large, simple driver screens that work one-handed and in poor signal, and dense but scannable dispatch dashboards. We test the prototype with real crew members before development starts.',
+      },
+      {
+        q: 'How do you handle accessibility for BC organisations?',
+        a: 'We design and test to WCAG 2.1 AA, which supports the barrier-removal goals of the Accessible British Columbia Act: contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels are built into the design files. Please have your legal or compliance team confirm exactly how the Act applies to your organisation.',
+      },
+      {
+        q: 'Who owns the design files?',
+        a: 'You do. The Figma files, design system, prototypes and research notes for your Surrey project belong to your business, with no lock-in. You can keep us on for new features or hand everything to your own designers and developers.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-markham': {
+    title: 'UI/UX Design Company in Markham, ON',
+    description: 'UI/UX design for Markham software, fintech and health teams: research, prototypes, design systems and AODA-ready screens at a fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, with dedicated engineers in Toronto, designing digital products for Markham and York Region teams. We do not have a Markham office. Markham runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for design reviews and sign-offs. Markham is one of Canada\'s largest tech clusters, and much of our work there is for enterprise software companies with product managers and in-house developers, fintech and insurance teams with complex customer portals, and health app teams connected to Markham Stouffville Hospital and Oak Valley Health. Every project runs on weekly demos of a Figma prototype, you talk directly with the designers doing the work, and the price is fixed in CAD before design starts. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'Who in Markham needs UX design work',
+        body: [
+          'Markham\'s enterprise software companies often have powerful products that have grown screen by screen for years. They bring us admin consoles, reporting dashboards and settings areas that need clearer navigation, consistent patterns and a design system their engineers can follow across teams. Fintech and insurance companies ask for customer portals, quote and claims flows, and onboarding with identity checks, where every extra step costs completions and every unclear label creates a support call. Health app teams, including those working alongside Markham Stouffville Hospital and Oak Valley Health, need patient and staff journeys that handle personal data carefully and stay easy for people under stress. Startups around ventureLAB and the Markham Convergence Centre need a first product designed well enough to put in front of investors and early customers.',
+        ],
+      },
+      {
+        heading: 'Research, user journeys, prototypes and design-system handoff',
+        body: [
+          'We begin with research: a free UX audit of the current product, a review of analytics and support tickets, and interviews with the people who use it, from claims adjusters to clinic staff. Those findings become user journeys for each key task, then wireframes for every screen before visual design begins. We build a clickable prototype and run usability testing on real tasks, so problems in a multi-step quote or onboarding flow surface in Figma rather than in production. For enterprise teams we deliver a documented design system with components, states and tokens that maps to your front-end library, then join your sprint reviews on Eastern time during handoff. See the full scope on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'AODA and WCAG 2.1 AA accessibility for Markham products',
+        body: [
+          'Ontario organisations work under the Accessibility for Ontarians with Disabilities Act, so we design and test to WCAG 2.1 AA: colour contrast, visible focus states, full keyboard paths, readable text sizes, clear error messages and screen-reader labels are decided in the design files, not patched after development. This matters for Markham\'s customer-facing portals in particular, from insurance claims forms to patient booking, and for enterprise tools sold to public-sector buyers who ask for accessibility evidence. We document what we tested in each prototype, and multilingual layouts leave room for Chinese and other translated text. Please have your legal or compliance team confirm exactly how the AODA applies to your organisation.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Markham (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, so your budget is set before design starts. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Markham software and fintech teams with several products often sit in the enterprise band. Most projects take 6-11 weeks. To compare Canadian studios before you choose, read our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A checkout redesign for 2M+ monthly visitors that lifted conversion from 2.1% to 3.8% in 90 days.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Markham?',
+        a: 'We quote a fixed price in CAD after a free UX audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, interaction complexity, research depth and branding all move the number.',
+      },
+      {
+        q: 'Do you have an office in Markham?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and has dedicated engineers in Toronto, but we do not maintain a Markham office. York Region clients work with us through video calls, shared boards and weekly demos of a live Figma prototype. Eastern time is two hours ahead of Edmonton, so most business hours overlap for questions and approvals.',
+      },
+      {
+        q: 'Can you redesign a complex enterprise or insurance portal?',
+        a: 'Yes. We start by auditing the current portal and interviewing the people who use it, then redesign the highest-traffic journeys first, such as quotes, claims or reporting, so improvements reach users early. A shared design system keeps new and old screens consistent while your developers move across in stages.',
+      },
+      {
+        q: 'Do you design for AODA and Ontario accessibility requirements?',
+        a: 'Yes. We design and test to WCAG 2.1 AA, which supports AODA-aligned expectations for public-facing Ontario products: colour contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels are built into the design files. Please have your legal or compliance team confirm exactly how the AODA applies to your organisation.',
+      },
+      {
+        q: 'Who owns the design files?',
+        a: 'You do. The Figma files, design system, prototypes and research notes for your Markham project belong to your business, with no lock-in. You can keep us on for new work or hand everything to your in-house designers and developers whenever you prefer.',
+      },
+    ],
+  },
 };
