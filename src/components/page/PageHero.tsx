@@ -21,8 +21,8 @@ const Tick = () => (
 /* Inner-page hero. With a quote form: clean white, copy left, form right —
    the media band below carries the imagery. Without one: copy left, the
    photograph itself on the right, unscrimmed. */
-export default function PageHero({ crumbs, copy, stats, photo, form = true, serviceName, city, contactHref = '/contact' }: {
-  crumbs: Crumb[]; copy: HeroCopy; stats?: Stat[]; photo: Media; form?: boolean; serviceName?: string; city?: string; contactHref?: string;
+export default function PageHero({ crumbs, copy, stats, photo, form = true, serviceName, city, contactHref = '/contact', costHref }: {
+  crumbs: Crumb[]; copy: HeroCopy; stats?: Stat[]; photo: Media; form?: boolean; serviceName?: string; city?: string; contactHref?: string; costHref?: string;
 }) {
   return (
     <section style={{ background: 'var(--surface)', padding: 'var(--hero-top) 0 var(--section-y)' }}>
@@ -38,6 +38,9 @@ export default function PageHero({ crumbs, copy, stats, photo, form = true, serv
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M17 7H9M17 7v8" /></svg>
               </Link>
               <Link href="/case-studies" className="btn btn--ghost btn--lg">View Our Work</Link>
+              {costHref ? (
+                <a href={costHref} className="link-arrow" style={{ alignSelf: 'center', fontSize: 14.5 }}>See typical costs and timelines</a>
+              ) : null}
             </div>
             {stats?.length ? (
               <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(stats.length, 3)}, 1fr)`, gap: 'clamp(12px, 2vw, 32px)' }}>

@@ -11,7 +11,8 @@ import FaqSplit from '@/components/home/FaqSplit';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, WhyUs } from './Blocks';
-import ServicePricing from './ServicePricing';
+import ServicePricing, { hasServicePricing } from './ServicePricing';
+import { COST_RANGE_ANCHOR } from './CostRangeSection';
 import TechStrip from './TechStrip';
 import { serviceMedia, defaultMedia, humanPick } from '@/data/media';
 import { provinceSlugForName } from '@/data/provinces';
@@ -82,6 +83,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           stats={HONEST_STATS} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
           city={cityName}
           contactHref={contactHref}
+          costHref={hasServicePricing(serviceSlug) ? `#${COST_RANGE_ANCHOR}` : undefined}
         />
         <StatRow stats={HONEST_STATS} />
         {p.stats.length > 0 ? (

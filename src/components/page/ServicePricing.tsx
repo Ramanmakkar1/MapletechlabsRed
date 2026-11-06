@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { PROJECT_PRICING, type ProjectPricingKey } from '@/data/pricing';
 import { getServiceBySlug } from '@/data/services';
+import { COST_RANGE_ANCHOR } from './CostRangeSection';
 
 const cad = (amount: number) => `$${amount.toLocaleString('en-CA')}`;
 
@@ -32,12 +33,18 @@ const gridStyle = {
   width: '100%',
 } as const;
 
+/** True when ServicePricing renders a block for this service slug. */
+export function hasServicePricing(serviceSlug: string): boolean {
+  if (KEYS_BY_SERVICE[serviceSlug]?.length) return true;
+  return DATA_TIER_SLUGS.has(serviceSlug) && !!getServiceBySlug(serviceSlug)?.pricingTiers?.length;
+}
+
 /** Shared ballpark pricing from PROJECT_PRICING — null when the service has no mapped tiers. */
 export default function ServicePricing({ serviceSlug, serviceName }: { serviceSlug: string; serviceName: string }) {
   const keys = KEYS_BY_SERVICE[serviceSlug];
   if (keys?.length) {
     return (
-      <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <section id={COST_RANGE_ANCHOR} style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)', scrollMarginTop: 80 }}>
         <div className="cb-container" style={{ maxWidth: '100%' }}>
           <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 12px' }}>
             Typical {serviceName} pricing (CAD)
@@ -95,7 +102,7 @@ export default function ServicePricing({ serviceSlug, serviceName }: { serviceSl
     : 'These are typical, scope-dependent ballparks in Canadian dollars — not quotes. Screen count, research depth and design-system scope move a project within or beyond these ranges; we agree a fixed price after discovery.';
 
   return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+    <section id={COST_RANGE_ANCHOR} style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)', scrollMarginTop: 80 }}>
       <div className="cb-container" style={{ maxWidth: '100%' }}>
         <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 12px' }}>{h2}</h2>
         <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 22px', maxWidth: 720 }}>{intro}</p>

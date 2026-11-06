@@ -10,6 +10,7 @@ import FaqSplit from '@/components/home/FaqSplit';
 import { defaultFaqs } from '@/data/faqs';
 import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
+import CostRangeSection, { COST_RANGE_ANCHOR } from './CostRangeSection';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, CardGrid, WhyUs } from './Blocks';
 import TechStrip from './TechStrip';
@@ -138,7 +139,7 @@ export default function LocationPageTemplate(p: LocationProps) {
       ) : null}
       <Navbar />
       <main id="main-content">
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} costHref={`#${COST_RANGE_ANCHOR}`} />
         <StatRow stats={heroStats} />
         {p.heroStats && Array.from({ length: Math.ceil(p.heroStats.length / 4) }, (_, i) => (
           <StatRow key={i} stats={p.heroStats!.slice(i * 4, i * 4 + 4)} />
@@ -196,6 +197,7 @@ export default function LocationPageTemplate(p: LocationProps) {
         <TechStrip />
         <Industries />
         <Process />
+        <CostRangeSection title={`Typical software project costs in ${name} (CAD)`} />
         <CardGrid title={`Why choose Mapletech Labs in ${name}`} items={whyChoose} variant="rows" />
         <CardGrid title={p.whyCity.title} sub={p.whyCity.intro} items={p.whyCity.items.map(i => ({ title: i.t, desc: i.d }))} />
         <MediaBand media={humanPick(p.slug, 6)} ratio="21 / 7" />
