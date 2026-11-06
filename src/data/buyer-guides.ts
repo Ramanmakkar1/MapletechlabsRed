@@ -6,6 +6,7 @@ const BLOG_SLUGS = new Set([
   'app-development-companies-edmonton',
   'app-development-companies-toronto',
   'choose-software-development-company-canada',
+  'digital-marketing-agencies-edmonton',
   'saas-development-company-canada',
   'seo-companies-calgary',
   'seo-companies-edmonton',
@@ -43,6 +44,15 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
   },
 };
 
+/** Per-page overrides keyed by the /locations/<page-key> slug; they win over CITY_GUIDE_SLUG. */
+const PAGE_GUIDE: Partial<Record<string, { slug: string; label: string; linkText: string }>> = {
+  'digital-marketing-agency-in-edmonton': {
+    slug: 'digital-marketing-agencies-edmonton',
+    label: 'digital marketing',
+    linkText: 'Read our guide to choosing a digital marketing agency in Edmonton',
+  },
+};
+
 const NATIONAL_GUIDE_SLUG: Partial<Record<string, string>> = {
   'ai-ml': 'ai-development-companies-canada',
   'product-design': 'ui-ux-design-companies-canada',
@@ -62,7 +72,7 @@ const COMPARE_LABEL: Partial<Record<string, string>> = {
   'saas-development': 'SaaS development',
 };
 
-export type BuyerGuide = { href: string; label: string; isCity: boolean };
+export type BuyerGuide = { href: string; label: string; isCity: boolean; linkText?: string };
 
 function slugToHref(slug: string | undefined): string | undefined {
   if (!slug || !BLOG_SLUGS.has(slug)) return undefined;
@@ -70,9 +80,15 @@ function slugToHref(slug: string | undefined): string | undefined {
 }
 
 /** City-specific buyer guide when live, otherwise the national guide for that service. */
-export function buyerGuideFor(serviceSlug: string, citySlug: string): BuyerGuide | undefined {
+export function buyerGuideFor(serviceSlug: string, citySlug: string, pageKey?: string): BuyerGuide | undefined {
   const compareLabel = COMPARE_LABEL[serviceSlug];
   if (!compareLabel) return undefined;
+
+  const pageGuide = pageKey ? PAGE_GUIDE[pageKey] : undefined;
+  const pageHref = slugToHref(pageGuide?.slug);
+  if (pageGuide && pageHref) {
+    return { href: pageHref, label: pageGuide.label, isCity: true, linkText: pageGuide.linkText };
+  }
 
   const cityHref = slugToHref(CITY_GUIDE_SLUG[serviceSlug]?.[citySlug]);
   const href = cityHref ?? slugToHref(NATIONAL_GUIDE_SLUG[serviceSlug]);

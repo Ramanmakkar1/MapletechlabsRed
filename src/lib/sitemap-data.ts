@@ -53,6 +53,7 @@ export const blogSlugs = [
   'software-development-contract-canada',
   'ui-ux-design-companies-canada',
   'seo-companies-edmonton',
+  'digital-marketing-agencies-edmonton',
   'software-development-companies-edmonton',
   'app-development-companies-calgary',
   'app-development-companies-toronto',

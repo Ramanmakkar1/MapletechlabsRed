@@ -124,6 +124,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
       <ServiceCityTemplate
         data={data}
         local={local}
+        pageKey={slug}
         heroTitle={
           isAgencyPage ? (
             <>

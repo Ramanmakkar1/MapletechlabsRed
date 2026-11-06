@@ -80,6 +80,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
   },
   {
+    slug: 'digital-marketing-agencies-edmonton', category: 'Business',
+    title: 'Digital Marketing Agencies in Edmonton: How to Choose',
+    excerpt: 'A buyer’s guide for Edmonton businesses: which channels a full-service agency should cover, CAD retainer pricing, the first 90 days, red flags and 10 questions to ask.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'ui-ux-design-companies-canada', category: 'Business',
     title: 'Best UI/UX Design Companies in Canada (2026): How to Choose, Costs and What to Ask',
     excerpt: 'What a UI/UX company should deliver, CAD costs from MVP design to a design system, a neutral shortlist of Canadian studios, an evaluation checklist and red flags.',

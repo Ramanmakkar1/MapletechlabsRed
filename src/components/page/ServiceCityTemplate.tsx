@@ -57,7 +57,7 @@ const balanced = (n: number): string | null =>
 /* Premium "[service] company in [city]" page — honest facts, no invented proof. */
 // heroTitle / heroDesc let one city+service page target its own search phrase; others keep the shared copy.
 // local adds hand-written sections and case-study proof (from SERVICE_CITY_LOCAL).
-export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string } }) {
+export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo, pageKey }: { data: CityServicePageData; pageKey?: string; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string } }) {
   const { cityName, citySlug, province, serviceName, serviceSlug } = p;
   const contactHref = contactHrefFor(serviceSlug, citySlug, allServices, allCities);
   const quote = quoteForCity(citySlug);
@@ -67,7 +67,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
     ...p.smallServices.map(s => ({ title: s.title, desc: s.desc })),
   ];
   const tech = p.techCategories.map(t => ({ label: t.title, chips: t.items }));
-  const buyerGuide = buyerGuideFor(serviceSlug, citySlug);
+  const buyerGuide = buyerGuideFor(serviceSlug, citySlug, pageKey);
   const buyerGuideInProof = buyerGuide
     ? local?.proof.some(pr => pr.href === buyerGuide.href)
     : false;
@@ -236,7 +236,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
                   Our buyer&apos;s guide covers typical costs in CAD, red flags and questions to ask before you sign with any {cityName} team.
                 </p>
                 <Link href={buyerGuide.href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>
-                  {buyerGuideLinkText(serviceSlug, cityName, buyerGuide.isCity)}
+                  {buyerGuide.linkText ?? buyerGuideLinkText(serviceSlug, cityName, buyerGuide.isCity)}
                 </Link>
               </div>
             </div>
