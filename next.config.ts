@@ -37,10 +37,21 @@ const nextConfig: NextConfig = {
     const cityLandingRedirects = cityHubs.map(c => ({ source: `/locations/${c}`, destination: `/locations/software-development-company-in-${c}`, statusCode: 301 as const }));
     const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development'], ['digital-marketing', 'seo'], ['product-design', 'ui-ux-design']];
     const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const })));
+    // /fr versions of the same rules, pointing straight at the final keyword URLs so
+    // old French URLs redirect in ONE hop instead of chaining through /fr/:path*
+    // (e.g. /fr/locations/calgary/digital-marketing -> /locations/seo-company-in-calgary).
+    const frServiceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/fr/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const })));
+    const frCityLandingRedirects = cityHubs.map(c => ({ source: `/fr/locations/${c}`, destination: `/locations/software-development-company-in-${c}`, statusCode: 301 as const }));
+    const frKeywordRedirects = cityHubs.flatMap(c => priority.map(([, kw]) => ({ source: `/fr/locations/${kw}-company-in-${c}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const })));
     return [
       // The old French locale (/fr/*) no longer exists; 301 to the English pages.
       // Destinations never start with /fr, so this cannot loop.
       { source: '/fr', destination: '/', permanent: true },
+      // /fr mesh + landing + keyword rules go BEFORE the generic /fr/:path* catch-all
+      // so old French URLs land on the final keyword URL in one hop (no 2-hop chain).
+      ...frServiceCityMeshRedirects,
+      ...frCityLandingRedirects,
+      ...frKeywordRedirects,
       { source: '/fr/:path*', destination: '/:path*', permanent: true },
       ...serviceCityMeshRedirects,
       // City landing pages live at keyword URLs; 301 the bare /locations/<city> paths.
