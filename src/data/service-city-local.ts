@@ -4568,4 +4568,174 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-victoria': {
+    title: 'App Development Company in Victoria, BC',
+    description: 'Victoria app development by Mapletech Labs: iOS & Android apps for BC government suppliers, tourism and marine firms, with a fixed CAD price. Free quote.',
+    intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, with our engineers based in Vancouver, and we build iOS and Android apps for Victoria organizations. We do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. We work with BC provincial government suppliers, tourism and hospitality operators, tech firms around downtown and the University of Victoria and Camosun campuses, ocean and marine companies, and healthcare teams serving Island Health patients. You speak directly with the senior engineers who build your app, and you sign with a Canadian company, priced in CAD, with a fixed scope and a fixed price before any work starts. Call us on +1-403-604-8692 to talk about your app.',
+    sections: [
+      {
+        heading: 'Apps Victoria organizations actually need',
+        body: [
+          'Victoria’s economy gives us a distinctive mix of app work. Companies that supply the BC provincial government need field, permitting and citizen-service tools designed to pass a privacy review. Tourism and hospitality operators on the Inner Harbour and across the Island need booking, visitor guide and loyalty apps that hold up through a peak season. Ocean and marine firms need vessel tracking, inspection and safety apps that keep working off the coast with no signal and sync when a connection returns. Clinics and health providers serving Island Health patients need appointment and patient apps that respect personal health information, and startups around downtown and the University of Victoria and Camosun campuses need a lean MVP to put in front of early users and investors. You can see the full scope on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'BC privacy rules your app has to meet',
+        body: [
+          'Privacy works differently in British Columbia. Private-sector apps that collect personal information fall under BC’s Personal Information Protection Act (PIPA), while apps built for BC public bodies, where data residency is often a requirement in the contract, fall under the Freedom of Information and Protection of Privacy Act (FIPPA). We plan for Canadian data hosting where your project needs it, and we build in encryption, access control and audit logs from the start. Your own privacy officer should confirm the final compliance position for your organization before launch.',
+        ],
+      },
+      {
+        heading: 'What an app costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Victoria?',
+        a: 'Based on the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. After a free discovery phase you get a fixed price in CAD, so your budget is settled before development begins.',
+      },
+      {
+        q: 'Do you have an office in Victoria?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with our engineers based in Vancouver, and we do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so we serve Victoria clients remotely with working days that almost fully overlap, and we can hold in-person workshops in Victoria by arrangement, with travel agreed up front.',
+      },
+      {
+        q: 'Will our app meet BC privacy rules?',
+        a: 'We build with BC’s PIPA in mind for private-sector apps, and FIPPA for apps used by BC public bodies, where data residency is often required. We plan Canadian data hosting where needed, with encryption, access control and audit logs, and we can document how your app handles personal information. Your lawyer or privacy officer should confirm the final compliance position.',
+      },
+      {
+        q: 'How long does it take to build an app?',
+        a: 'A simple app with a handful of screens usually takes 8-12 weeks. A mid-size iOS and Android app with payments and an admin panel takes about 12-24 weeks, and complex platforms take 6-18 months. Your written scope includes a timeline with milestones such as beta and launch.',
+      },
+      {
+        q: 'Who owns the code for our app?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
+  'web-development-company-in-victoria': {
+    title: 'Web Development Company in Victoria, BC',
+    description: 'Victoria web development by Mapletech Labs: custom business sites, e-commerce and web apps with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, with our engineers based in Vancouver, and we build business websites, e-commerce stores and web apps for Victoria companies. We do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. We work with BC provincial government suppliers, tourism and hospitality operators, tech firms around downtown and the University of Victoria and Camosun campuses, ocean and marine firms, and healthcare teams serving Island Health patients. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your project.',
+    sections: [
+      {
+        heading: 'Websites and web apps Victoria organizations ask us for',
+        body: [
+          'Companies supplying the BC provincial government need accessible service portals and proposal-backed sites that stand up in a tender process. Tourism and hospitality operators need booking pages and seasonal campaigns that stay easy to update between seasons. Tech startups around downtown and the University of Victoria and Camosun campuses need marketing sites and product dashboards that explain a complex offer and convert trials into accounts. Ocean and marine firms need shipment tracking and customer portals, clinics serving Island Health patients need clear, fast information sites, and e-commerce brands need storefronts that tie cleanly into inventory and fulfilment. You can see the full scope on our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Built for speed and search, under BC privacy rules',
+        body: [
+          'We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get fast first loads, and Core Web Vitals shape image sizes, fonts and script loading as we build. Private-sector websites that collect personal information in British Columbia fall under BC’s Personal Information Protection Act (PIPA), while sites for BC public bodies fall under the Freedom of Information and Protection of Privacy Act (FIPPA), which carries its own expectations on keeping personal information in Canada. We plan Canadian hosting for your site, database and backups where residency matters, we document data flows so review is straightforward, and your privacy officer confirms the final position.',
+        ],
+      },
+      {
+        heading: 'What a website costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Victoria?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After free discovery you get a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Do you have an office in Victoria?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with our engineers based in Vancouver, and we do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so we serve Victoria clients remotely with working days that almost fully overlap, and we can hold in-person workshops in Victoria by arrangement, with travel agreed up front.',
+      },
+      {
+        q: 'How do you handle BC privacy rules (PIPA and FIPPA)?',
+        a: 'Private-sector sites that collect personal information in British Columbia fall under BC’s PIPA, and public-body sites fall under FIPPA, which carries additional data-residency expectations. We plan Canadian hosting, encryption and access controls where your project needs them and document how data flows, and your privacy officer confirms the final position for your organization.',
+      },
+      {
+        q: 'Can we edit the website ourselves?',
+        a: 'Yes. We provide a CMS so your team can edit pages and content without a developer. At handover we train your team to use it, so you can keep your website current after launch.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
+  'seo-company-in-victoria': {
+    title: 'SEO Company in Victoria, BC',
+    description: 'Victoria SEO from Mapletech Labs: local map-pack search, technical fixes and CAD retainers with monthly reporting you can read. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, with our specialists based in Vancouver, and we work with Victoria businesses that want more calls and leads from Google and Bing. We do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. We know the search side of BC provincial government supply, Victoria’s tourism and hospitality operators, the tech firms around downtown and the University of Victoria and Camosun campuses, ocean and marine companies, and clinics serving Island Health patients. You work directly with the specialists doing the keyword research, technical fixes and content, not a salesperson, and retainers are priced in CAD. Call +1-403-604-8692 to talk through your Victoria search goals.',
+    sections: [
+      {
+        heading: 'Victoria search markets we know',
+        body: [
+          'Victoria is quieter than Metro Vancouver but the search stories are just as different. Tourism and hospitality operators live on seasonal “near me” and itinerary queries that shift with the cruise and travel season. Companies that supply the BC provincial government search for firms that understand procurement-sensitive work, so trust signals on the page matter as much as keywords. Tech startups around downtown and the University of Victoria and Camosun campuses chase the same category and comparison terms as bigger-city competitors, ocean and marine firms compete on technical product search, and clinics and practices serving Island Health patients need accurate local visibility. We map the queries that actually produce enquiries, then build the pages and profile signals to win them.',
+        ],
+      },
+      {
+        heading: 'Google Business Profile and NAP done honestly',
+        body: [
+          'For Victoria service businesses the map pack often decides who gets the call, so the profile has to be truthful. Because we do not have a Victoria office, we set our expectations the same way for you: your Google Business Profile is set up as a genuine service-area business when you serve Victoria from elsewhere, with categories and service areas that match the work you actually take, and the same name, address and phone — NAP — across your site, directories and citations. We will not rent a virtual office downtown or claim an address someone does not use. Those profiles get suspended and take months to recover, which is why a clean setup with consistent citations holds its position. For the local side of the work, see our ',
+          { href: '/services/digital-marketing/local-seo', label: 'local SEO' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Technical SEO by engineers, quoted in CAD',
+        body: [
+          'Mapletech Labs is a software development company first, so the technical work is done by the engineers who build Next.js and WordPress sites every week. We audit Core Web Vitals, crawling and indexation, canonical tags, schema markup and internal linking on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page, then fix what is slowing pages or blocking crawlers — changes go into your codebase or CMS, not bolted on with plugins. SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a plain-language report with rankings, organic traffic and conversions, the work completed, and what we are testing next.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'What does SEO cost in Victoria?',
+        a: 'Retainers for Victoria campaigns usually fall between $1,500 and $10,000 CAD per month, the range we publish in our Canadian digital marketing cost guide. A single-location tourism or hospitality business sits near the bottom; government suppliers, marine firms and tech companies fighting for competitive terms sit higher. After a free review of your site and your competitors we quote one fixed monthly figure in CAD rather than an hourly estimate.',
+      },
+      {
+        q: 'How long before we see movement in Victoria search results?',
+        a: 'Profile and technical fixes usually show up within 8-16 weeks for a site without serious blockers. Competitive category terms — SaaS comparisons, tourism or provincial supply terms — more often need 4-9 months before the trend is worth judging. The first report already tracks impressions, indexed pages and enquiries, so you can see direction before the position charts catch up.',
+      },
+      {
+        q: 'Can we rank in the Victoria map pack without a Victoria address?',
+        a: 'Yes, as long as the address and service area are real. You need either a staffed location in Victoria or a genuine service-area business setup covering the city you serve. Virtual offices and invented addresses get profiles suspended or pushed down, so we will not use them — we do not use one ourselves. We configure the profile honestly, keep your name, address and phone identical everywhere, and back the coverage with location pages and real reviews.',
+      },
+      {
+        q: 'Can we meet your team in person in Victoria?',
+        a: 'Yes, when a project benefits from it. We are headquartered in Edmonton, with specialists based in Vancouver one hour ahead of Victoria, and we travel to Victoria for discovery sessions, audits and milestone reviews. Travel is agreed up front. Between visits, day-to-day work runs on calls, shared documents and monthly reports, and you can always reach the specialists on your account at +1-403-604-8692.',
+      },
+      {
+        q: 'What is in the monthly Victoria SEO report?',
+        a: 'A short, plain-language summary of the keyword movements that matter in Victoria, organic sessions and enquiries from analytics, the tasks finished that month, and what we are testing next. Anything needing your sign-off — content approvals, profile edits, new service pages — is flagged separately, so you always know what we are doing on your behalf.',
+      },
+    ],
+  },
 };
