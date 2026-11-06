@@ -26,6 +26,7 @@ export default function MediaBand({
             alt={media.alt}
             fill
             priority={priority}
+            loading={priority ? 'eager' : 'lazy'}
             sizes="(max-width: 1023px) 100vw, 1224px"
             style={{ objectFit: 'cover' }}
           />

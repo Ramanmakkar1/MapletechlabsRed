@@ -1,7 +1,5 @@
-'use client';
 import Image from 'next/image';
 import { blogImage } from '@/data/media';
-import { useRef, useEffect } from 'react';
 
 const featuredCaseStudy = {
   tag: 'Case Study',
@@ -64,19 +62,9 @@ const servicePosts: Record<string, typeof posts> = {
 
 export default function InsightsSection({ serviceSlug }: { serviceSlug?: string }) {
   const recommendedPosts = serviceSlug ? servicePosts[serviceSlug] ?? posts : posts;
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.1 }
-    );
-    ref.current?.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    return () => io.disconnect();
-  }, []);
 
   return (
-    <section ref={ref} id="insights" className="section-padding" style={{ background: 'var(--surface)', borderTop: '1px solid var(--line)' }}>
+    <section id="insights" className="section-padding" style={{ background: 'var(--surface)', borderTop: '1px solid var(--line)' }}>
       <div className="cb-container">
 
         {/* Header */}
@@ -87,10 +75,7 @@ export default function InsightsSection({ serviceSlug }: { serviceSlug?: string 
               From the<br /><span style={{ color: 'var(--faint)' }}>Engineering Desk.</span>
             </h2>
           </div>
-          <a href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 48, padding: '0 28px', borderRadius: 100, border: '1px solid var(--line)', color: 'var(--muted)', fontSize: 13, fontWeight: 600, textDecoration: 'none', transition: '0.3s', whiteSpace: 'nowrap' }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--line-strong)'; e.currentTarget.style.color = 'var(--ink)'; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.color = 'var(--muted)'; }}
-          >
+          <a href="/blog" className="insights-link" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 48, padding: '0 28px', borderRadius: 100, border: '1px solid var(--line)', color: 'var(--muted)', fontSize: 13, fontWeight: 600, textDecoration: 'none', transition: '0.3s', whiteSpace: 'nowrap' }}>
             View All Articles
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
           </a>
@@ -99,7 +84,7 @@ export default function InsightsSection({ serviceSlug }: { serviceSlug?: string 
         {/* Featured Case Study */}
         <a
           href={featuredCaseStudy.href}
-          className="reveal"
+          className="reveal insights-featured"
           style={{
             display: 'flex',
             border: '1px solid var(--brand)',
@@ -110,8 +95,6 @@ export default function InsightsSection({ serviceSlug }: { serviceSlug?: string 
             background: 'var(--surface) 100%)',
             marginBottom: 40,
           }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.10)'; }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
         >
           <div style={{ padding: 'clamp(20px, 4vw, 32px) clamp(16px, 4vw, 40px)', display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, width: 'fit-content', padding: '6px 14px', borderRadius: 100, background: 'transparent', border: '1px solid var(--brand)' }}>
@@ -132,7 +115,7 @@ export default function InsightsSection({ serviceSlug }: { serviceSlug?: string 
             <a
               key={post.title}
               href={post.href}
-              className={`reveal reveal-d${i + 1}`}
+              className={`reveal insights-card reveal-d${i + 1}`}
               style={{
                 border: '1px solid var(--line)',
                 borderRadius: 'clamp(20px, 4vw, 32px)',
@@ -143,8 +126,6 @@ export default function InsightsSection({ serviceSlug }: { serviceSlug?: string 
                 transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
                 background: 'var(--surface-alt)',
               }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 48px rgba(0,0,0,0.10)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--line)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
             >
               {/* Photo header with the category chip over it */}
               <div className="media media--flat media--zoom" style={{ height: 200 }}>
@@ -152,6 +133,7 @@ export default function InsightsSection({ serviceSlug }: { serviceSlug?: string 
                   src={blogImage(i).src}
                   alt={blogImage(i).alt}
                   fill
+                  loading="lazy"
                   sizes="(max-width: 1023px) 100vw, 33vw"
                   style={{ objectFit: 'cover' }}
                 />

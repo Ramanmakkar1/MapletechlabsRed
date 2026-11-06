@@ -1,5 +1,3 @@
-'use client';
-import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -19,19 +17,6 @@ const MAJOR_CITY_SLUGS = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa
 const majorCities = MAJOR_CITY_SLUGS.flatMap(slug => allCities.filter(c => c.slug === slug));
 const otherCities = allCities.filter(c => !MAJOR_CITY_SLUGS.includes(c.slug));
 
-function useReveal() {
-  const ref = useRef<HTMLElement>(null);
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.08 }
-    );
-    ref.current?.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-  return ref;
-}
-
 const cardBase: React.CSSProperties = {
   border: '1px solid var(--line)',
   borderRadius: 24,
@@ -40,20 +25,11 @@ const cardBase: React.CSSProperties = {
   transition: 'border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s',
 };
 
-const cardHover: React.CSSProperties = {
-  borderColor: 'var(--brand)',
-  background: 'transparent',
-  transform: 'translateY(-4px)',
-  boxShadow: '0 24px 60px rgba(0,0,0,0.10)',
-};
-
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
-  const [hovered, setHovered] = useState(false);
   return (
     <div
-      style={{ ...cardBase, ...(hovered ? cardHover : {}), ...style }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      className="locations-card"
+      style={{ ...cardBase, ...style }}
     >
       {children}
     </div>
@@ -95,14 +71,6 @@ const locationFaqs = [
 ];
 
 export default function LocationsIndexPage() {
-  const heroRef = useRef<HTMLElement>(null);
-  const s1 = useReveal() as React.RefObject<HTMLElement>;
-  const s2 = useReveal() as React.RefObject<HTMLElement>;
-
-  useEffect(() => {
-    heroRef.current?.querySelectorAll('.reveal').forEach(n => setTimeout(() => n.classList.add('visible'), 100));
-  }, []);
-
   return (
     <>
       <Navbar />
@@ -127,7 +95,7 @@ export default function LocationsIndexPage() {
         </section>
 
         {/* PROVINCES — the hub → province → city layer */}
-        <section ref={s1} className="section-padding">
+        <section className="section-padding">
           <div className="cb-container">
             <div className="head">
               <div>
@@ -152,7 +120,7 @@ export default function LocationsIndexPage() {
             </div>
 
             <div className="head"><div><h2>All cities</h2></div></div>
-            <div className="reveal grid grid--3">
+            <div className="grid grid--3">
               {cities.map(city => (
                 <Link key={city.slug} href={`/locations/software-development-company-in-${city.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>

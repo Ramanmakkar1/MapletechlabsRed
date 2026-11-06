@@ -431,6 +431,9 @@ textarea.field { height: auto; padding: 14px 18px; resize: vertical; min-height:
 }
 .tile > .tile__foot { margin-top: auto; }
 a.tile:hover, .tile--hover:hover { border-color: var(--ink); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.locations-card:hover { border-color: var(--brand) !important; background: transparent !important; transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,0.10); }
+.insights-link:hover { border-color: var(--line-strong) !important; color: var(--ink) !important; }
+.insights-featured:hover, .insights-card:hover { border-color: var(--brand) !important; transform: translateY(-4px); box-shadow: 0 24px 48px rgba(0,0,0,0.10); }
 
 /* Section head: one heading, one optional lede, one optional action. */
 .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap; margin-bottom: clamp(32px, 4vw, 56px); }
