@@ -114,6 +114,14 @@ export default function ProvincePageTemplate({ p }: { p: ProvinceData }) {
                 </Link>
               )}
             </div>
+            {p.slug === 'alberta' && (
+              <p style={{ marginTop: 24, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
+                Headquartered in Edmonton:{' '}
+                <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton web development</Link>{' '}
+                and{' '}
+                <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development in Edmonton</Link>
+              </p>
+            )}
           </div>
         </section>
 

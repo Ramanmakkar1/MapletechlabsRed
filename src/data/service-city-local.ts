@@ -1075,8 +1075,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     ],
   },
   'web-development-company-in-edmonton': {
-    title: 'Web Development Company in Edmonton',
-    description: 'Mapletech Labs is headquartered in Edmonton and builds custom fast, SEO-ready websites and web apps, with a fixed CAD price. Get a free quote.',
+    title: 'Website Development Edmonton | Free Quote',
+    description:
+      'Edmonton website developers: Mapletech Labs, a local Edmonton web development company. Website builder services — fast, SEO-ready sites. Free quote.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for web development you are working with a local team at our head office, not a sales desk for developers somewhere else. We build fast, SEO-ready business websites, e-commerce stores and web apps for Edmonton companies, public bodies and growing teams across the city. You talk directly to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
     sections: [
       {
@@ -1134,6 +1135,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         q: 'Who owns the website code and domain?',
         a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+      {
+        q: 'Are you a website builder in Edmonton?',
+        a: 'We are a custom web development team, not a drag-and-drop builder. For Edmonton businesses that need a site that is fast, SEO-ready and easy to update, we build on Next.js with a CMS your team can edit. If you only need a simple brochure site, a builder may be enough; if you need e-commerce, portals or integrations, custom development is the better fit, and we will tell you which you need before you pay.',
+      },
+      {
+        q: 'Do you work as website developers for Edmonton businesses?',
+        a: 'Yes. Mapletech Labs is headquartered in Edmonton, so our web developers are local. We build and maintain websites and web apps for Edmonton companies, public bodies and startups, with in-person workshops at your office or site and a fixed CAD price agreed before work starts.',
       },
     ],
   },
