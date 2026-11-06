@@ -6915,4 +6915,153 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-kelowna': {
+    title: 'App Development Company in Kelowna, BC',
+    description: 'App development company in Kelowna: iOS and Android apps for Okanagan startups, wineries and tourism, with weekly demos and a fixed CAD quote.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, and we build iOS, Android and cross-platform apps for businesses across Kelowna and the Okanagan. We do not have a Kelowna office. Okanagan clients work with us remotely: you see a working build in a weekly demo, follow progress on a shared board and talk directly with the senior engineers writing your code. We build for Okanagan tech startups and scale-ups, aerospace maintenance and manufacturing teams, wineries and orchards, tourism operators and health providers. Scope and a fixed CAD price are agreed in writing before development begins, and you own all of the code and IP.',
+    sections: [
+      {
+        heading: 'Apps for Okanagan startups, aerospace and wine country',
+        body: [
+          'Kelowna has one of the fastest-growing technology sectors in British Columbia outside Vancouver, and many of its startups need a first mobile product that proves traction before the next funding round. We build those MVPs lean, then harden them as users arrive. Aerospace firms around the city ask for maintenance, inspection and parts-tracking apps where every sign-off is recorded and easy to audit. Wineries and orchards want apps for harvest logs, block-by-block traceability and wine club members who reorder from their phones. Tourism operators need booking and guest apps, and health clinics need patient scheduling and reminder tools that staff actually enjoy using.',
+        ],
+      },
+      {
+        heading: 'Summer peaks, vineyard field work and BC privacy rules',
+        body: [
+          'Kelowna\'s busiest stretch runs from early summer through harvest, when visitors fill tasting rooms, lakeside rentals and golf courses. Booking and ordering apps have to absorb that rush, so we load-test for peak demand and use cloud hosting that scales up in July and back down in January. Vineyard and orchard crews often work where the signal fades, so field apps store entries on the device and sync once coverage returns. Private businesses in BC collect and use personal information under the province\'s Personal Information Protection Act (PIPA), so we build in clear consent screens, encryption, access controls and Canadian hosting where needed. Your privacy lead signs off before launch.',
+        ],
+      },
+      {
+        heading: 'What an app costs for a Kelowna business',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          ' sets out the ranges we quote from: about $25,000-$50,000 CAD and 8-12 weeks for a simple single-platform app of 5-8 screens, $50,000-$150,000 and 12-24 weeks for a mid-size iOS and Android app with payments and an admin panel, and $150,000 or more over 6-18 months for complex platforms with AI, IoT or compliance work. A wine club app linked to an existing online shop, or an aerospace app tied to a maintenance system, can push a project into a higher band. Discovery is free and the price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to build an app in Kelowna?',
+        a: 'Using our Canadian cost guide, a simple single-platform app is about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform with AI, IoT or compliance work $150,000 or more. After a free discovery phase you get one fixed CAD price.',
+      },
+      {
+        q: 'Can a booking or ordering app handle the Okanagan summer rush?',
+        a: 'Yes. We load-test booking, ticketing and wine-ordering apps against peak-season traffic before launch and host them on cloud infrastructure that scales up for July and August, then scales back down so you are not paying for idle servers in winter.',
+      },
+      {
+        q: 'How long does a startup MVP take to build?',
+        a: 'A focused MVP for a Kelowna startup usually takes 8-12 weeks, covering one platform and the core feature that proves the business. Larger iOS and Android apps take 12-24 weeks. You see a working build at every weekly demo, so there are no surprises at the end.',
+      },
+      {
+        q: 'Can we meet in person in Kelowna?',
+        a: 'We are headquartered in Edmonton and do not have a Kelowna office. Okanagan clients work with us through weekly demos, video calls and a shared board, and when an in-person discovery or design workshop would help, we can travel to Kelowna with costs agreed up front.',
+      },
+    ],
+  },
+  'web-development-company-in-kelowna': {
+    title: 'Web Development Company in Kelowna, BC',
+    description: 'Web development company in Kelowna: fast websites, winery online shops and booking sites for Okanagan businesses. Fixed CAD price. Free quote.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds business websites, online stores, booking systems and custom web applications for Kelowna and the wider Okanagan. We do not have an office in Kelowna. Okanagan clients work with us remotely through video calls, staging links and a weekly demo where you click through the real site as it takes shape. We know the needs of local tech startups, aerospace suppliers, wineries and farm producers, tourism operators and health clinics. Every project has a fixed scope and a fixed CAD price agreed in writing before development starts, and you deal directly with the developers.',
+    sections: [
+      {
+        heading: 'Online shops and direct-to-consumer sales for wineries',
+        body: [
+          'Many Okanagan wineries, cideries and orchards now sell straight to customers rather than relying only on the tasting room. We build online shops with age confirmation at checkout, wine club sign-ups, shipping rules by province and pickup options for local buyers. Product pages carry tasting notes, vintages and stock that stays in sync with your cellar or point-of-sale system. Farm producers can add traceability pages that show where and when a product was grown, which builds trust with buyers and retailers. Your team can update wines, prices and events from a simple admin, so the shop stays current through every release and harvest.',
+        ],
+      },
+      {
+        heading: 'Booking sites, startup platforms and BC privacy',
+        body: [
+          'Tourism is a big part of Kelowna\'s economy, so many of our web projects centre on bookings: tours, rentals, golf, events and wine tastings. We build availability calendars, deposits and confirmation emails that hold up when summer traffic spikes, and pages render on the server so they load quickly on a visitor\'s phone. Okanagan tech startups need marketing sites and web apps that grow with them, while aerospace suppliers want capability pages and secure document portals. Forms that collect names, emails or health details for a private BC business fall under the province\'s Personal Information Protection Act (PIPA), so we limit what is collected, explain why and store it securely.',
+        ],
+      },
+      {
+        heading: 'Kelowna website pricing and timelines',
+        body: [
+          'We price every Kelowna project from our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          ': roughly $2,000-$10,000 CAD over 2-4 weeks for a template or WordPress site, $10,000-$50,000 over 4-10 weeks for a custom business website, $25,000-$100,000 over 8-16 weeks for e-commerce, and $100,000-$500,000+ over 4-12 months for an enterprise web application. A winery shop with wine club billing, or a booking site tied to an existing reservation system, usually sits in the e-commerce band. Discovery is free and the quote is fixed before development. Plan launches for spring, ahead of the summer season.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost for a Kelowna business?',
+        a: 'Based on our Canadian website cost guide, a template or WordPress site is about $2,000-$10,000 CAD, a custom business website $10,000-$50,000, an online store $25,000-$100,000 and an enterprise web application $100,000-$500,000+. You get one fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build an online shop for our winery?',
+        a: 'Yes. We build winery shops with age confirmation, wine club sign-ups and billing, shipping rules by province and local pickup, and we can connect stock to your cellar or point-of-sale system. Your team confirms the liquor licensing and shipping rules that apply to your business.',
+      },
+      {
+        q: 'When should a Kelowna tourism business launch a new website?',
+        a: 'Aim to launch in spring, before the summer season starts. A custom booking site usually takes 8-16 weeks, so starting in the winter gives time to test calendars, payments and confirmation emails before visitor traffic peaks in July and August.',
+      },
+      {
+        q: 'Do you have an office in Kelowna?',
+        a: 'No. We are headquartered in Edmonton and work with Kelowna and Okanagan clients remotely through video calls, staging links and a weekly demo. If a planning or content workshop in person would help, we can travel to Kelowna with costs agreed up front.',
+      },
+    ],
+  },
+  'seo-company-in-kelowna': {
+    title: 'SEO Company in Kelowna, BC',
+    description: 'SEO company in Kelowna: rank for Okanagan searches before the summer rush, with technical fixes by engineers and clear monthly reports. Free review.',
+    intro: 'Mapletech Labs is a Canadian SEO company headquartered in Edmonton, helping Kelowna and Okanagan businesses win more bookings, orders and enquiries from Google and Bing. We do not have a Kelowna office. Okanagan clients work with us remotely, with a weekly demo of the changes we have made, a short call and a plain monthly report. We understand search for wineries and farm producers, tourism and hospitality operators, health clinics, aerospace suppliers and Okanagan tech startups. The specialists who research keywords, fix your site\'s technical issues and write content are the people you speak with, and retainers are a fixed monthly figure in CAD.',
+    sections: [
+      {
+        heading: 'How Kelowna customers search, season by season',
+        body: [
+          'Search demand in Kelowna moves with the seasons. Visitors start planning summer trips in spring, searching for wine tours, lake rentals, golf and things to do, then harvest and ski season bring new waves. Tourism and wine businesses need pages ranking before those peaks, not after. Locals search for clinics, trades and services through "near me" searches and the map pack all year. Wineries selling direct to consumers compete on product and varietal terms across Canada, and Okanagan tech and aerospace firms need to be found by buyers who never type the word Kelowna. We plan keywords and content around each of these groups.',
+        ],
+      },
+      {
+        heading: 'Technical SEO from engineers, with honest local listings',
+        body: [
+          'Because we build software every day, our engineers fix the technical side directly in your code or CMS: page speed and Core Web Vitals, crawl errors, indexing, canonical tags, structured data and internal links. Online shops and booking sites get product, event and FAQ markup where it fits the page. Your Google Business Profile and Bing Places listing show only a real address or a genuine service area, and your name, address and phone match everywhere online. Analytics and contact forms respect BC\'s Personal Information Protection Act (PIPA), so clinics and other private businesses only collect what they need. Our full scope is on the ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Monthly CAD retainers and clear reporting',
+        body: [
+          'SEO retainers for Kelowna businesses usually fall between $1,500 and $10,000 CAD a month, depending on how competitive your terms are and how much content you need. A single-location clinic or trade sits near the lower end, while a winery shop or tourism operator competing across BC needs more. We start with a free review, then quote one fixed monthly figure. Each month you get a plain report covering rankings, organic traffic, calls, bookings and form leads, the work we finished and what we will test next. For seasonal businesses we schedule new pages and fixes in the off-season.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Kelowna?',
+        a: 'Most Kelowna SEO retainers sit between $1,500 and $10,000 CAD per month. A single clinic or trade business is usually near the lower end, while wineries and tourism operators competing across BC or Canada sit higher. After a free review we quote one fixed monthly figure.',
+      },
+      {
+        q: 'When should a tourism or wine business start SEO before summer?',
+        a: 'Start by the previous fall or winter. New pages and technical fixes often take 8-16 weeks to show movement, so work done in the off-season is in place when visitors begin planning trips in spring and searches peak in summer.',
+      },
+      {
+        q: 'Can my business show in the Kelowna map pack without a storefront?',
+        a: 'Yes, if you genuinely serve Kelowna. A service-area business profile can cover Kelowna, West Kelowna and nearby Okanagan towns without showing an address. We never use virtual offices or made-up locations, because those profiles get suspended.',
+      },
+      {
+        q: 'Do you meet Kelowna clients in person?',
+        a: 'We are headquartered in Edmonton and do not have a Kelowna office. Kelowna SEO accounts run remotely through weekly demos, short calls and monthly reports, and we can arrange a visit for a strategy or content workshop when it helps, with travel agreed up front.',
+      },
+    ],
+  },
 };
