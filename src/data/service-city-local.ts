@@ -6435,4 +6435,165 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-london-on': {
+    title: 'App Development Company in London, ON',
+    description: 'App development company in London, Ontario: iOS and Android apps for healthcare, insurance and agri-food teams by senior engineers, at a fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, and we build iOS and Android apps for organizations in London, Ontario. We do not have a London office; London clients work with us remotely. London runs on Eastern Time, two hours ahead of Edmonton, so our mornings line up with your late mornings and afternoons for calls and reviews. We build for health-tech teams near London Health Sciences Centre, education and research groups linked to Western University, insurers and brokers, manufacturers, and agri-food businesses across Southwestern Ontario. Senior engineers build your app, you see a working build at a demo every week, and the scope and CAD price are fixed in writing before development starts.',
+    sections: [
+      {
+        heading: 'Apps London, Ontario organizations ask us to build',
+        body: [
+          'London\'s biggest employers shape the apps we get asked for. Health-tech founders and clinical teams around London Health Sciences Centre want patient-facing apps for appointments, remote check-ins and follow-up care. Groups connected to Western University need student, event and research data collection apps that work for thousands of users at the start of term. Insurers and brokers want claims apps where a customer can photograph damage, upload documents and follow a claim to settlement. Manufacturers along the 401 corridor need shop-floor apps for inspections, maintenance requests and parts tracking, and agri-food processors need traceability apps that follow a product from farm to shelf. The full scope is on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'PIPEDA, PHIPA and data your customers trust',
+        body: [
+          'Private businesses in Ontario that collect personal information through an app fall under federal PIPEDA, which means clear consent, a stated purpose for each piece of data and a plan for breaches. Apps that touch personal health information for Ontario health information custodians, such as hospitals, clinics and practitioners, must also respect Ontario\'s Personal Health Information Protection Act (PHIPA). Insurance apps hold claims history and banking details that deserve the same care. We design consent screens, role-based access, encryption and audit logs into the first sprint, keep regulated data on Canadian hosting where the project needs it, and document data flows so your privacy officer can confirm compliance before launch. Our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page covers our wider work in the province.',
+        ],
+      },
+      {
+        heading: 'What a London app costs and how long it takes',
+        body: [
+          'Budgets in London follow the same national ranges in our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          '. A focused single-platform app with 5-8 screens is about $25,000-$50,000 CAD and takes 8-12 weeks. An app for both iOS and Android with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Platforms with AI features, device integrations or heavy compliance work start near $150,000 and run 6-18 months. Discovery is free, the price is fixed before coding begins, and the weekly demo shows exactly where your budget is going.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in London, Ontario?',
+        a: 'Based on our Canadian cost guide, a simple single-platform app is about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. Discovery is free and you receive a fixed CAD quote before any development starts.',
+      },
+      {
+        q: 'How long does it take to build an app for a London business?',
+        a: 'A focused first version usually takes 8-12 weeks, a mid-size app for both platforms 12-24 weeks, and a complex regulated platform 6-18 months. You see a working build at a demo every week, so you can test features as they land rather than waiting for launch.',
+      },
+      {
+        q: 'Can we meet your team in person in London?',
+        a: 'We are headquartered in Edmonton and do not have a London office, so most work happens through video workshops, weekly demos and a shared project board. If your project needs an in-person kickoff or a session with your clinical or operations staff, we can arrange a visit to London with travel costs agreed up front.',
+      },
+      {
+        q: 'Can you build an app that handles patient health information under PHIPA?',
+        a: 'Yes. We build health apps with consent records, role-based access, encryption, audit logs and Canadian hosting, and we document how personal health information moves through the system. Your privacy officer or legal advisor confirms the final PHIPA position, and you own all source code and accounts we create.',
+      },
+    ],
+  },
+  'web-development-company-in-london-on': {
+    title: 'Web Development Company in London, ON',
+    description: 'Web development company in London, Ontario: fast websites, portals and e-commerce built by senior engineers, with a fixed CAD quote. Get a free estimate.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton, building websites, customer portals and web applications for businesses in London, Ontario. We do not have an office in London, so London clients work with us remotely through video calls, a shared project board and staging links. London is two hours ahead of Edmonton on Eastern Time, which still leaves most of the working day for meetings and quick changes. Our clients there include health and life sciences teams, education and research groups around Western University, insurance firms, manufacturers and agri-food companies. You deal directly with the senior engineers building your site, review it at a weekly demo, and sign a fixed scope and fixed CAD price before work begins.',
+    sections: [
+      {
+        heading: 'Web projects London, Ontario businesses bring to us',
+        body: [
+          'Each of London\'s main sectors needs something different from the web. Insurers and brokers want quote forms, policy self-service and claims portals that cut phone volume. Health and life sciences organizations near London Health Sciences Centre need accessible sites that explain services clearly and booking or referral forms that handle personal details carefully. Education and research groups tied to Western University need event, program and recruitment sites that stay fast during busy intake periods. Manufacturers need B2B catalogues, dealer portals and quote requests, and agri-food companies across Southwestern Ontario need wholesale ordering and e-commerce. Everything we build is listed on our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Accessible, fast and privacy-ready under Ontario rules',
+        body: [
+          'Ontario organizations also have accessibility duties under the AODA, so we build to WCAG 2.0 AA with proper headings, keyboard navigation, colour contrast and labelled forms. Pages are built in Next.js and React with server rendering, so they load quickly on phones and show up cleanly in search results. Forms and portals that collect personal information from customers fall under federal PIPEDA, and any site that handles personal health information for an Ontario hospital, clinic or practitioner must also respect PHIPA. For those projects we use Canadian hosting, encrypted storage, access controls and clear consent text, and we map where every field goes so your privacy lead can approve it. More on our provincial work is on our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Website budgets and timelines for London projects',
+        body: [
+          'London website pricing follows the ranges in our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '. A template or WordPress site costs about $2,000-$10,000 CAD and takes 2-4 weeks. A custom business website is $10,000-$50,000 over 4-10 weeks, an e-commerce platform $25,000-$100,000 over 8-16 weeks, and an enterprise web application or insurance-style customer portal $100,000-$500,000+ over 4-12 months. Discovery is free, your quote is fixed in writing before development, and every week you click through the latest version on a staging link.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in London, Ontario?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business site at $10,000-$50,000, e-commerce at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. You get a fixed CAD quote after a free discovery phase.',
+      },
+      {
+        q: 'How long will our new website take?',
+        a: 'Most custom business websites take 4-10 weeks from discovery to launch, and e-commerce builds 8-16 weeks. Larger portals and web applications take 4-12 months. You review progress at a weekly demo, so content and feedback can move in parallel with development.',
+      },
+      {
+        q: 'Do you meet London clients in person?',
+        a: 'We are based in Edmonton and do not have a London office. Day-to-day work runs over video calls, weekly demos and staging links, which most London clients find faster than travelling to meetings. For a kickoff workshop or launch planning session we can visit London by arrangement, with travel costs agreed in advance.',
+      },
+      {
+        q: 'Will our website meet AODA and privacy requirements?',
+        a: 'We build to WCAG 2.0 AA, the standard used for AODA website compliance, and design forms and data storage around PIPEDA, plus PHIPA where personal health information is involved. Your legal or privacy advisor gives final sign-off, and you own the code, design files and domain outright.',
+      },
+    ],
+  },
+  'seo-company-in-london-on': {
+    title: 'SEO Company in London, ON',
+    description: 'SEO company in London, Ontario: technical SEO by senior engineers, honest local listings and a fixed monthly CAD retainer with clear reports. Free quote.',
+    intro: 'Mapletech Labs is a Canadian SEO and web engineering company headquartered in Edmonton, helping businesses in London, Ontario earn more calls and leads from Google and Bing. We do not have a London office and work with London clients remotely. London is on Eastern Time, two hours ahead of Edmonton, and we answer account questions the same business day. We know how buyers search for insurance firms, clinics and health practices near London Health Sciences Centre, education providers around Western University, manufacturers and agri-food companies in Southwestern Ontario. Senior specialists do your keyword research, technical fixes and content themselves, you get a short review call every week, and your retainer is a fixed monthly amount in CAD.',
+    sections: [
+      {
+        heading: 'What London, Ontario customers search for',
+        body: [
+          'London search demand behaves differently by sector. Home services, dental and physiotherapy clinics, restaurants and retailers live or die on map-pack results for searches like “near me” across London, St. Thomas and Strathroy. Insurance brokers compete on quote and coverage searches where national carriers spend heavily, so they win with helpful local pages and strong reviews. Manufacturers and agri-food suppliers sell to buyers across Ontario and beyond, which means ranking for product and capability terms rather than the city name. Education and training providers near Western University need program pages that match how students search. We map your customers to the right group before choosing keywords. Local map work is on our ',
+          { href: '/services/digital-marketing/local-seo', label: 'local SEO' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Technical SEO done by engineers',
+        body: [
+          'Mapletech Labs is a software company first, so your technical audit is run by engineers who build Next.js and WordPress sites every week. We fix Core Web Vitals, crawl errors, duplicate pages, canonical tags, schema markup and internal links directly in your code or CMS instead of adding more plugins. For London healthcare practices we check that analytics, chat widgets and forms do not leak patient details, since personal health information is covered by Ontario\'s PHIPA and other personal data by PIPEDA. The full list of what we handle is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page, and every change is logged so your team can see what moved and why.',
+        ],
+      },
+      {
+        heading: 'Honest local listings and SEO pricing in CAD',
+        body: [
+          'We do not have a London office, and we will not invent one for you either. If you serve London from a location in the region, your Google Business Profile and Bing Places listing are set up as a real storefront or service-area business, with categories that match your actual work and the same name, address and phone everywhere online. Virtual offices and fake addresses get listings suspended, so we never use them. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' puts typical SEO retainers at $1,500-$10,000 CAD per month; your figure depends on competition and site size, and it is fixed before work starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost for a London, Ontario business?',
+        a: 'Typical SEO retainers run $1,500-$10,000 CAD per month, the range in our Canadian digital marketing cost guide. A single clinic or home-service business in London usually sits near the low end, while insurance brokers and manufacturers chasing province-wide terms sit higher. After a free review of your site and competitors, we quote one fixed monthly price.',
+      },
+      {
+        q: 'How soon will we see results from SEO in London?',
+        a: 'When a site has no major blockers, technical fixes and listing cleanup often show movement in 8-16 weeks. Competitive terms such as insurance quotes usually take 4-9 months before the trend is clear. Your monthly report tracks impressions, rankings, calls and form leads so you can judge progress early.',
+      },
+      {
+        q: 'Do we need to meet in person to start SEO?',
+        a: 'No. We are headquartered in Edmonton with no London office, and SEO work runs well remotely: a kickoff call, access to your analytics and Search Console, and a short weekly review. If you want an in-person strategy session in London, we can arrange one with travel agreed up front.',
+      },
+      {
+        q: 'Who owns the content and accounts you create?',
+        a: 'You do. Every page, article, Google Business Profile, Bing Places listing, analytics and Search Console account stays in your name. If you stop working with us, you keep all of it and your rankings stay with your site.',
+      },
+    ],
+  },
 };
