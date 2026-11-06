@@ -28,6 +28,7 @@ const BLOG_SLUGS = new Set([
   'ui-ux-design-companies-edmonton',
   'web-development-companies-toronto',
   'web-development-companies-edmonton',
+  'web-development-companies-vancouver',
   'website-development-company-canada',
 ]);
 
@@ -56,6 +57,7 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
   'web-development': {
     toronto: 'web-development-companies-toronto',
     edmonton: 'web-development-companies-edmonton',
+    vancouver: 'web-development-companies-vancouver',
   },
 };
 

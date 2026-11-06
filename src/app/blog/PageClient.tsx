@@ -92,6 +92,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
   },
   {
+    slug: 'web-development-companies-vancouver', category: 'Business',
+    title: 'Web Development Companies in Vancouver: How to Choose One (2026)',
+    excerpt: 'How to choose a web development company in Vancouver: marketing site vs web app vs e-commerce, Next.js and headless CMS, CAD pricing, red flags and 10 questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'app-development-companies-toronto', category: 'Business',
     title: 'App Development Companies in Toronto: How to Choose One (2026)',
     excerpt: 'How to choose an app development company in Toronto: fintech, health and retail apps, AODA accessibility, PIPEDA and PHIPA, CAD costs, red flags and 10 questions.',
