@@ -12,6 +12,7 @@ const BLOG_SLUGS = new Set([
   'seo-companies-calgary',
   'seo-companies-edmonton',
   'seo-companies-toronto',
+  'seo-companies-vancouver',
   'software-development-companies-calgary',
   'software-development-companies-edmonton',
   'software-development-companies-montreal',
@@ -39,6 +40,7 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
     calgary: 'seo-companies-calgary',
     edmonton: 'seo-companies-edmonton',
     toronto: 'seo-companies-toronto',
+    vancouver: 'seo-companies-vancouver',
   },
   'product-design': {
     toronto: 'ui-ux-design-companies-toronto',

@@ -64,6 +64,7 @@ export const blogSlugs = [
   'seo-companies-toronto',
   'ui-ux-design-companies-vancouver',
   'app-development-companies-vancouver',
+  'seo-companies-vancouver',
 ];
 
 export const citySlugs = [

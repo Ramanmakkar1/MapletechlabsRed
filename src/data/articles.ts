@@ -3059,6 +3059,122 @@ export const articles: Article[] = [
     cta: { href: '/locations/seo-company-in-toronto', label: 'See our Toronto SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'toronto' },
   },
+  {
+    slug: 'seo-companies-vancouver',
+    relatedTopic: 'seo',
+    category: 'Business',
+    title: 'SEO Companies in Vancouver: How to Choose One (2026)',
+    dek: 'A buyer’s guide for Vancouver and Lower Mainland businesses hiring an SEO company: the Metro Vancouver map pack, Burnaby, Surrey, Richmond and North Vancouver searches, multilingual SEO, the first 90 days, Canadian pricing in CAD, AI-answer visibility, red flags and ten questions to ask.',
+    metaTitle: 'SEO Companies in Vancouver: How to Choose the Right One',
+    metaDescription: 'How to choose an SEO company in Vancouver: Metro Vancouver map pack, suburb and multilingual searches, CAD pricing, AI answers, red flags and 10 questions.',
+    date: '2026-11-06',
+    dateModified: '2026-11-06',
+    readTime: '10 min read',
+    heroKey: 'planning',
+    intro: [
+      'Search “SEO company Vancouver” and you get pages of agencies, consultants and freelancers, all promising more traffic. What is harder to see from the outside is who understands how people across Metro Vancouver actually search: a homeowner in Burnaby looking for a roofer, a Richmond clinic searching in Mandarin or English, a Surrey contractor competing for “near me” calls, or a SaaS buyer downtown comparing vendors before a demo.',
+      'This is a buyer’s guide, not a ranked list. It covers what Vancouver businesses need from SEO, how the Metro Vancouver map pack and suburb searches work, multilingual search, what a good SEO company does in the first 90 days, typical Canadian pricing, how to show up in AI answers from ChatGPT and Perplexity, red flags, ten questions to ask and when Google Ads makes more sense. For national context, see our <a href="/blog/top-seo-companies-canada">guide to top SEO companies in Canada</a>, or compare the <a href="/blog/seo-companies-toronto">Toronto SEO buyer’s guide</a> and <a href="/blog/seo-companies-calgary">Calgary SEO buyer’s guide</a>. For how we run SEO for Lower Mainland clients, see our <a href="/locations/seo-company-in-vancouver">SEO company in Vancouver</a> page.',
+    ],
+    body: [
+      { type: 'h2', id: 'what-vancouver-needs', text: 'What Vancouver businesses need from SEO' },
+      { type: 'p', html: 'Vancouver is several search markets stacked on top of each other. The keywords, competitors and pages that rank change between a downtown SaaS company, a North Shore tourism operator and a trades business in Surrey. Most Lower Mainland businesses need one or more of these SEO jobs:' },
+      { type: 'checks', items: [
+        { term: 'Metro Vancouver map pack', text: 'Clinics, trades, restaurants, real estate teams and other local services win most of their calls from the Google map pack and “near me” searches. A complete Google Business Profile with real categories, honest service areas, photos and steady reviews usually matters more here than publishing more blog posts.' },
+        { term: 'Suburb searches as their own markets', text: 'People search “plumber Burnaby”, “dentist Richmond”, “roofing Surrey” or “accountant North Vancouver”, not just “Vancouver”. If you genuinely serve those cities, each needs a useful page that says what you do there and which jobs you take. Copying the Vancouver page and swapping the city name is a doorway tactic, not local SEO.' },
+        { term: 'Category and comparison searches', text: 'Tech and SaaS companies chase category and comparison terms competitors already bid on, film, VFX and digital media studios get found through portfolio and production-service searches, and tourism and hospitality businesses depend on seasonal and itinerary queries. These need detailed service pages, proof and fast technical foundations, not only map-pack work.' },
+      ] },
+      { type: 'p', html: 'A good SEO company asks which of these you are, which cities you really serve and what a lead is worth before it proposes anything. Our <a href="/services/digital-marketing/local-seo">local SEO service</a> page explains how we approach map-pack and service-area work.' },
+
+      { type: 'h2', id: 'multilingual', text: 'Multilingual and bilingual searches' },
+      { type: 'p', html: 'Metro Vancouver has large communities who search in Punjabi, Mandarin, Cantonese and Tagalog as well as English, and in many categories those searches bring higher-intent calls with less competition. One English keyword list misses them. A credible SEO company should:' },
+      { type: 'ul', items: [
+        '<strong>Research real queries in each language.</strong> Check which non-English searches people actually use for your service before writing anything, rather than translating an English keyword list.',
+        '<strong>Build proper language pages.</strong> Written or reviewed by a fluent speaker, with their own URL, title and description, and hreflang tags so Google and Bing show the right version.',
+        '<strong>Match the profile to the service.</strong> If staff speak a language, say so on the page and in your Google Business Profile; do not claim languages your team cannot serve.',
+      ] },
+      { type: 'p', html: 'Machine-translated pages with no review read poorly to customers and add little in search. It is better to launch one good language page for your main service than ten thin ones.' },
+
+      { type: 'h2', id: 'first-90-days', text: 'What a good SEO company does in the first 90 days' },
+      { type: 'p', html: 'The first three months should fix foundations and set a plan you can check. Expect work in roughly this order:' },
+      { type: 'ol', items: [
+        '<strong>Technical audit.</strong> Check Core Web Vitals, mobile layout, crawling and indexation, canonical tags, schema markup and internal linking, then agree a short prioritised fix list. Fixes should go into your codebase or CMS, not plugins that break on the next update. See our <a href="/services/digital-marketing/seo-services">SEO services</a> page for how technical work is scoped.',
+        '<strong>Indexing in Google and Bing.</strong> Set up Google Search Console and Bing Webmaster Tools in your name, submit a clean sitemap and confirm your money pages are indexed in both.',
+        '<strong>Titles and descriptions.</strong> Give each page one clear search target, for example “emergency plumber Burnaby” or “Vancouver SaaS SEO agency”, and a description that gives people a reason to click.',
+        '<strong>Google Business Profile and NAP.</strong> Set the profile up as a real location or a genuine service-area business, choose categories and service areas that match the work you take, and keep the same name, address and phone across your site, directories and citations.',
+        '<strong>Content plan.</strong> Map the English and non-English searches customers use in Vancouver, Burnaby, Surrey, Richmond and North Vancouver to existing pages, then agree which service, area and language pages to improve or create first.',
+        '<strong>Tracking.</strong> Set up call and form-lead tracking and analytics goals before the first report, and agree which numbers count: calls, enquiries, organic traffic to service pages and rankings for the main services.',
+      ] },
+      { type: 'p', html: 'Profile and technical fixes usually show movement within 8–16 weeks for a site without serious blockers. Competitive category terms such as SaaS comparisons, real estate or tourism more often need 4–9 months before the trend is worth judging. A team that says that up front is easier to trust than one that promises page one in 30 days.' },
+
+      { type: 'h2', id: 'pricing', text: 'Typical SEO pricing in Canada' },
+      { type: 'p', html: 'Vancouver SEO is usually sold as a monthly retainer at Canadian rates. As approximate ranges from our <a href="/blog/digital-marketing-cost-canada">Canadian digital marketing cost guide</a> and <a href="/pricing">pricing page</a>:' },
+      { type: 'ul', items: [
+        '<strong>Dedicated SEO:</strong> about CAD $1,500&ndash;$10,000 per month. The lower end covers on-page optimization, Google Business Profile management and basic keyword targeting; $5,000+ per month usually adds deep technical work, schema, content programs and link building for competitive terms. A single-location trades or hospitality business sits near the bottom; SaaS, film and real estate brands fighting for competitive Metro Vancouver terms sit higher.',
+        '<strong>Our digital marketing tiers:</strong> $500&ndash;$1,500 per month for SEO or PPC management on one channel, $1,500&ndash;$3,500 per month for multi-channel growth campaigns, and $3,500&ndash;$8,000+ per month for full-funnel programs.',
+        '<strong>Full-service agency packages:</strong> about $5,000&ndash;$25,000 per month when SEO is bundled with ads, social, content and email.',
+      ] },
+      { type: 'p', html: 'Ask for one fixed monthly figure in CAD with the scope in writing. A quote under about $1,000 per month for full-service marketing is a warning sign in itself.' },
+
+      { type: 'h2', id: 'ai-answers', text: 'Showing up in AI answers (ChatGPT and Perplexity)' },
+      { type: 'p', html: 'More buyers now ask ChatGPT, Perplexity or Copilot for “a good SEO company in Vancouver” or “an electrician in Burnaby”. These tools build answers from websites, directories, reviews and search indexes such as Bing. A good SEO company should help you be easy for them to understand:' },
+      { type: 'ul', items: [
+        '<strong>Clear entity facts.</strong> An about page and service pages that state plainly who you are, what you do, where you are based and which Lower Mainland cities you serve, in plain sentences rather than slogans.',
+        '<strong>Schema markup.</strong> Valid Organization or LocalBusiness, Service and FAQPage structured data that matches what the page shows.',
+        '<strong>Consistent NAP.</strong> The same business name, address and phone number on your site, Google Business Profile, Bing Places and directories.',
+        '<strong>Indexing in Bing.</strong> Several AI assistants lean on Bing’s index, so a site that is missing from Bing is easy for them to miss.',
+      ] },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags when hiring an SEO company' },
+      { type: 'ul', items: [
+        '<strong>Guaranteed #1 rankings.</strong> No one controls Google’s or Bing’s results. Guarantees usually mean vanity keywords or risky tactics.',
+        '<strong>A virtual office downtown.</strong> Renting an address you do not use to get into the Vancouver map pack gets profiles suspended, and recovery can take months.',
+        '<strong>Copy-paste suburb or language pages.</strong> Dozens of pages with the same text and a swapped city name, or machine-translated pages nobody reviewed, are not local SEO.',
+        '<strong>Long lock-in contracts.</strong> Watch for 12&ndash;24 month terms with heavy cancellation penalties.',
+        '<strong>You do not own the accounts.</strong> Google Business Profile, Search Console, Bing Webmaster Tools, analytics and the website should be in your name.',
+        '<strong>Reports without leads.</strong> Rankings for terms nobody searches mean little; ask for calls, enquiries and organic traffic to the pages that earn money.',
+      ] },
+
+      { type: 'h2', id: 'questions', text: '10 questions to ask a Vancouver SEO company' },
+      { type: 'ol', items: [
+        'Who will do the work on my account, and can I speak with them?',
+        'What will you do in the first 90 days, in what order, and why?',
+        'Will my Google Business Profile, Search Console, Bing Webmaster Tools and analytics stay in my name?',
+        'How will you handle Burnaby, Surrey, Richmond and North Vancouver searches without thin, copied pages?',
+        'Do you research searches in Punjabi, Mandarin, Cantonese or other languages my customers use?',
+        'Can you fix technical issues on my site yourselves, or only send a list to my developer?',
+        'How will you help my business show up in AI answers from ChatGPT and Perplexity?',
+        'Which numbers will you report each month, and what is in the report?',
+        'How long is the contract, and what is the notice period to cancel?',
+        'Can you show case studies or work for businesses with similar goals?',
+      ] },
+      { type: 'p', html: 'Good answers are specific, in writing, and clear about ownership and contract terms.' },
+
+      { type: 'h2', id: 'seo-vs-ads', text: 'SEO vs Google Ads in Vancouver' },
+      { type: 'checks', items: [
+        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live and stops when you stop paying. Useful for launches, seasonal tourism and hospitality demand, and testing which services and languages bring leads.' },
+        { term: 'SEO', text: 'Takes months to build, but map-pack and organic traffic keeps coming without a cost per click. Useful for steady lead flow across Metro Vancouver and for B2B searches where buyers research for weeks before they get in touch.' },
+      ] },
+      { type: 'p', html: 'Many Vancouver businesses run ads while SEO builds, then use what the ads reveal about converting keywords to decide which pages to grow. If you want ads and SEO under one roof, see our <a href="/locations/digital-marketing-agency-in-vancouver">digital marketing agency in Vancouver</a> page.' },
+
+      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Vancouver business', text: `Mapletech Labs is headquartered in Edmonton, one hour ahead of Vancouver, and travels to Vancouver for workshops, audits and milestone reviews when a project needs it. See our <a href="${serviceCityPath('digital-marketing', 'vancouver')}">SEO company in Vancouver</a> page and our <a href="/locations/digital-marketing-agency-in-vancouver">digital marketing agency in Vancouver</a> page, or explore our <a href="/services/digital-marketing/seo-services">SEO services</a>.` },
+    ],
+    keyTakeaways: [
+      'Decide first which SEO job you need: the Metro Vancouver map pack, useful pages for Burnaby, Surrey, Richmond and North Vancouver, or competitive category and comparison searches.',
+      'Multilingual searches in Punjabi, Mandarin, Cantonese and Tagalog can bring high-intent leads; they need real research and reviewed pages, not machine translation.',
+      'The first 90 days should cover a technical audit, indexing in Google and Bing, titles, Google Business Profile and NAP, a content plan and tracking.',
+      'Dedicated SEO in Canada typically costs about CAD $1,500–$10,000 per month depending on competition, site size and scope.',
+      'Avoid guaranteed rankings, virtual-office addresses, copy-paste suburb pages, long lock-ins and any setup where the agency owns your accounts.',
+    ],
+    faqs: [
+      { q: 'How much does an SEO company in Vancouver cost?', a: 'Most Vancouver SEO retainers fall between about $1,500 and $10,000 CAD per month, the range we publish in our Canadian digital marketing cost guide. A single-location trades or hospitality business sits near the bottom; SaaS, film and real estate brands fighting for competitive Metro Vancouver terms sit higher. Single-channel packages can start around $500 to $1,500 per month.' },
+      { q: 'Do I need separate pages for Burnaby, Surrey and Richmond?', a: 'If you genuinely serve those cities and people search for your service there, a useful page for each can help you rank. Each page should say something specific about your work in that city, not repeat the Vancouver page with the name swapped.' },
+      { q: 'Can we rank in the Vancouver map pack without a Vancouver address?', a: 'Yes, as long as the address and service area are real. You need either a staffed location in Metro Vancouver or a genuine service-area business setup covering the cities you serve. Virtual offices and invented addresses get profiles suspended or pushed down.' },
+      { q: 'How long until Vancouver SEO shows results?', a: 'Profile and technical fixes usually show movement within 8 to 16 weeks for a site without serious blockers. Competitive category terms such as SaaS comparisons, real estate or tourism more often need 4 to 9 months before the trend is worth judging.' },
+      { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and which Lower Mainland cities you serve, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
+    ],
+    cta: { href: '/locations/seo-company-in-vancouver', label: 'See our Vancouver SEO services' },
+    enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'vancouver' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);
