@@ -6915,6 +6915,167 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-regina': {
+    title: 'AI Development Company in Regina, SK',
+    description: 'AI development company in Regina, Saskatchewan: chatbots, LLM features and automation for agri-tech, insurance and public-sector teams. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features, prediction models and workflow automation for organizations in Regina, Saskatchewan. We have no Regina office and serve Regina clients remotely through video calls, weekly demos and a shared project board. Regina stays on Central Standard Time all year, the same as Edmonton in summer and one hour ahead in winter, so a full working day of overlap is easy to hold. We work with agriculture and agri-tech companies, potash and energy operators and their contractors, insurers and brokers, teams connected to the University of Regina, and businesses that supply the provincial government and Crown corporations such as SaskTel, SaskPower and SGI — that is the market we understand, not a list of clients. Senior engineers build your system, you see it working at a weekly demo, and scope and a fixed CAD price are agreed in writing before any work starts.',
+    sections: [
+      {
+        heading: 'Where AI helps Regina\'s agriculture, energy and public-sector teams',
+        body: [
+          'Regina\'s AI questions come from the data its sectors already hold. Agriculture and agri-tech firms, equipment dealers and grain operations keep years of crop, soil, yield and weather records and ask for models that flag field problems early, input-demand forecasts and assistants that answer producer questions from product manuals. Potash and energy operators, and the contractors who serve them, want predictive maintenance that reads sensor and equipment logs to warn before a pump, conveyor or haul truck fails, plus tools that make long safety procedures searchable in plain language. Insurers and brokers want claims triage that reads incoming documents and photos, pulls out key fields and routes simple files faster while an adjuster still makes every decision. Businesses that supply the provincial government and Crown corporations such as SaskTel, SaskPower and SGI need document search over tenders, policies and procedure manuals, and teams connected to the University of Regina work on research-data tools. Every model we ship keeps a person in the loop. The full scope of what we build is on our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Grounded answers, PIPEDA and Saskatchewan\'s HIPA',
+        body: [
+          'We build chatbots with retrieval-augmented generation (RAG): the system first finds the right passages in your claims manuals, safety procedures, agronomy guides or research notes, then writes its reply from those passages and shows the source for each answer. Access rules decide which documents each person can draw on, and questions the system cannot answer go to a person instead of getting a guess. Private businesses in Saskatchewan handle personal information under federal PIPEDA, and any project touching personal health information for a Saskatchewan trustee must also respect the province\'s Health Information Protection Act (HIPA), so consent, purpose and breach planning are designed in from the start. We can keep data in Canadian cloud regions, stop model providers training on it, and add encryption, role-based access and audit logs; your privacy officer confirms the final position. Our ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan software development' },
+          ' page covers the wider provincial picture.',
+        ],
+      },
+      {
+        heading: 'What AI development costs for a Regina project (CAD)',
+        body: [
+          'Regina budgets follow the national planning ranges in our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          '. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents, with cited sources, access control and hand-off to staff, is about $15,000-$50,000. Custom model training, such as a defect-detection model for a production line or a claims-triage model built on your historical files, starts around $75,000. These are planning figures, not quotes. After a free discovery call we check whether your data is ready, then agree a fixed scope and a fixed CAD price before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Regina?',
+        a: 'Using our Canadian AI cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. After a free discovery call you get one fixed price in CAD.',
+      },
+      {
+        q: 'Do you have an office in Regina?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, one province over, and we do not have a Regina office. Regina clients work with us remotely through video calls, weekly demos and a shared board, and an in-person kickoff in Regina can be arranged with travel agreed up front.',
+      },
+      {
+        q: 'How does the time zone work between Regina and Edmonton?',
+        a: 'Regina stays on Central Standard Time all year, the same clock as Edmonton in summer and one hour ahead in winter. Our working days overlap almost completely, so standups, model reviews and weekly demos are easy to schedule.',
+      },
+      {
+        q: 'Can you build AI that handles health information under Saskatchewan\'s HIPA?',
+        a: 'Yes. We build tools that work on de-identified or access-controlled data, keep regulated data on Canadian hosting, and add encryption, role-based access and audit logs while outside model providers do not train on it. We document how personal health information moves through the system so your privacy officer can review it before launch; private business data stays under federal PIPEDA.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-regina': {
+    title: 'UI/UX Design Company in Regina, SK',
+    description: 'UI/UX design company in Regina, Saskatchewan: research, Figma prototypes and WCAG 2.1 AA design for agri-tech, insurance and public-sector teams.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing apps, portals and dashboards for organizations in Regina, Saskatchewan. We do not have a Regina office; Regina clients work with us remotely through Figma, video workshops and remote usability sessions. Regina stays on Central Standard Time all year, the same as Edmonton in summer and one hour ahead in winter, so design reviews land in your late morning or afternoon and revised files are ready the same day. We design for agriculture and agri-tech companies, potash and energy operators and their contractors, insurers and brokers, suppliers to the provincial government and Crown corporations, and teams at the University of Regina. You work directly with the designers doing the work, see a clickable prototype every week, and agree a fixed CAD price before design starts.',
+    sections: [
+      {
+        heading: 'Design work Regina organizations bring to us',
+        body: [
+          'Every Regina sector puts a different person in front of a screen. Producers, agronomists and equipment operators need field tools that stay readable in bright prairie sun, work with gloves on and keep the next step obvious when the signal drops in the middle of a quarter section. Energy and potash crews need inspection and safety screens with large touch targets and short forms that survive a shift at a remote site. Insurance customers need claim and quote flows that explain each step and save progress, because a confusing form becomes a phone call. Businesses that supply the provincial government and Crown corporations such as SaskTel, SaskPower and SGI need portal screens that pass an accessibility review, and research teams at the University of Regina need dashboards that turn study data into views a scientist can scan quickly. Our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page shows the full scope.',
+        ],
+      },
+      {
+        heading: 'Research, accessibility and privacy by design',
+        body: [
+          'Each project starts with a free UX audit: a heuristic review, a look at your analytics and short interviews with real users. For field tools we test the prototype outdoors on real phones, because glare, cold hands and weak signal show problems a desk test misses. We then map journeys, move to wireframes and a clickable Figma prototype, and usability-test it on real tasks so problems surface before development. We design to WCAG 2.1 AA or higher from the first wireframe, with contrast, focus states, keyboard paths and screen-reader labels set in the files, which supports the accessibility expectations written into public-sector and Crown corporation contracts. Where a form collects personal information the flow follows federal PIPEDA rules, and screens that show personal health information for a Saskatchewan trustee are designed with the province\'s Health Information Protection Act (HIPA) in mind; your compliance lead confirms the final position. Our ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan software development' },
+          ' page covers the wider province.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Regina (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit. Our published ranges are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. A claims portal or patient booking flow usually lands in the full product band, while a multi-team research platform or university-wide design system can reach the enterprise band. Screen count, research depth and branding move the number, and the audit tells you which band fits before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Regina?',
+        a: 'We quote a fixed CAD price after a free UX audit. Published ranges are about $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design with 30+ screens and research, and $12,000-$30,000+ for an enterprise design system.',
+      },
+      {
+        q: 'Will the design meet accessibility rules for public-sector and Crown corporation work?',
+        a: 'We design to WCAG 2.1 AA or higher from the first wireframe, so contrast, focus states, keyboard order and screen-reader labels are specified in the Figma files and developers build them correctly. We also supply the contrast, keyboard and screen-reader test notes your contract review asks for. Your legal or accessibility advisor gives the final sign-off.',
+      },
+      {
+        q: 'Can you run usability tests with Regina field and office users?',
+        a: 'Yes. We run remote moderated sessions over video with your real users, such as producers, crop scouts, adjusters, contractors or researchers, and record what they struggle with. When on-site testing matters, for example on a plant floor or in the cab of equipment, we can arrange a visit with travel agreed up front.',
+      },
+      {
+        q: 'Do you have an office in Regina?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, one province over, and we do not have a Regina office. Regina clients work with us through video workshops, weekly prototype demos and a shared board, and an in-person kickoff in Regina can be arranged with travel agreed up front.',
+      },
+    ],
+  },
+  'saas-development-company-in-regina': {
+    title: 'SaaS Development Company in Regina, SK',
+    description: 'SaaS development company in Regina, Saskatchewan building MVPs and multi-tenant platforms for agri-tech, insurtech and public-sector suppliers.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for founders and companies in Regina, Saskatchewan. We do not have a Regina office and serve Regina remotely through video calls, weekly demos and a shared project board. Regina stays on Central Standard Time all year, the same as Edmonton in summer and one hour ahead in winter, leaving most of the working day for standups and reviews. Our Regina buyers include agri-tech companies turning crop, soil and grain data into tools producers pay for, software firms serving potash and energy operators, insurtech teams packaging broker and claims tools, and spin-outs from the University of Regina. You work with the senior engineers writing the code, see working software every week, and get a fixed CAD price before development starts.',
+    sections: [
+      {
+        heading: 'SaaS ideas growing out of Regina\'s industry and research',
+        body: [
+          'Many Regina SaaS products start as a tool built for one team. Agri-tech companies turn their own field-record, agronomy or grain-marketing tools into subscriptions sold to farms and dealers across the Prairies. Service contractors supporting potash and energy operations package the inspection, safety and maintenance workflows they built for one site into products other operators license. Insurance professionals turn broker, quoting or claims tools into software other agencies buy. Businesses that supply the provincial government and Crown corporations such as SaskTel, SaskPower and SGI sometimes productize supplier, training or compliance tools, and research groups at the University of Regina spin out study or lab software that needs accounts and billing before it earns money. Most of these founders need one focused MVP for their first paying customers, not a full platform. Our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page covers the full path.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant architecture with PIPEDA and Saskatchewan\'s HIPA',
+        body: [
+          'We build the core workflow first, with sign-up, roles and subscription billing. The data model is multi-tenant from release one, so each farm, agency or site keeps its records separate and you can add customers without a rebuild. Billing covers plans, seats, usage tiers and Canadian sales tax through providers such as Stripe, and enterprise buyers get single sign-on with SAML or OIDC. We can host everything in Canadian cloud regions. Private businesses in Saskatchewan handle personal information under federal PIPEDA, and products used by Saskatchewan health trustees to manage personal health information must also meet the province\'s Health Information Protection Act (HIPA), so we design encryption, access control and audit logs for that from day one; your privacy officer confirms the final position. See our ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan software development' },
+          ' page for more.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Regina (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Health system integrations, insurance carrier connections, farm equipment data and security reviews move your price within those ranges. Regina founders often fund part of the build with SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how. After a free discovery call you receive one fixed CAD quote, so your runway is planned before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Regina?',
+        a: 'Our Canadian SaaS cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000 and an enterprise platform at $200,000-$500,000+. Integrations, billing rules and compliance work move the figure, and you get a fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Do you have an office in Regina?',
+        a: 'No. We are headquartered in Edmonton, one province over, and we do not have a Regina office. Regina founders work with us remotely through weekly demos, video standups and a shared board, and an in-person planning session in Regina can be arranged with travel agreed up front.',
+      },
+      {
+        q: 'How does the time zone work between Regina and Edmonton?',
+        a: 'Regina stays on Central Standard Time all year, the same clock as Edmonton in summer and one hour ahead in winter. Our working days overlap almost completely, so standups, reviews and demos are easy to schedule.',
+      },
+      {
+        q: 'Can you build SaaS that meets privacy requirements for Saskatchewan health data?',
+        a: 'Yes. We build multi-tenant products with Canadian hosting, encryption, role-based access, audit logs and documented data flows. Private business data is handled under federal PIPEDA, and products used by Saskatchewan health trustees are designed with the Health Information Protection Act (HIPA) in mind. Your privacy officer confirms the final position, and we help prepare vendor security questionnaires.',
+      },
+    ],
+  },
   'app-development-company-in-kelowna': {
     title: 'App Development Company in Kelowna, BC',
     description: 'App development company in Kelowna: iOS and Android apps for Okanagan startups, wineries and tourism, with weekly demos and a fixed CAD quote.',
