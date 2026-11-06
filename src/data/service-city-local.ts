@@ -5701,6 +5701,130 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-surrey': {
+    title: 'SaaS Development Company in Surrey, BC',
+    description: 'SaaS developers for Surrey health-tech, manufacturing and clean-tech teams: MVPs, multi-tenant billing and BC PIPA-ready hosting. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver. We do not have a Surrey office, but our Vancouver engineers work on Pacific time, the same clock as Surrey, so your standups and reviews happen inside a normal working day. Surrey is one of the fastest-growing cities in Canada, and its subscription software buyers reflect that: health-technology companies along Innovation Boulevard, founders and researchers around Simon Fraser University\'s Surrey campus, advanced manufacturers, agriculture businesses and clean-tech firms that want to sell their know-how as software. You see working software in a demo every week, and the build is priced as a fixed CAD amount before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'SaaS products Surrey companies build',
+        body: [
+          'Surrey\'s software buyers tend to come from its strongest sectors. Health-tech teams in the Innovation Boulevard cluster, close to the city\'s hospitals, want clinical and patient products such as booking, remote monitoring or care-coordination tools that other clinics can license. Advanced manufacturers want to package their quality, maintenance or production-tracking systems so suppliers and customers can log in and pay for access. Agriculture businesses look for subscription tools for crop records, traceability and farm operations, and clean-tech companies need dashboards that turn energy or emissions data into reports their customers rely on. Founders coming out of SFU Surrey usually need one sharp first product they can put in front of paying users. Each of these starts with the workflow a customer will pay for, and the full scope is on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'MVP to multi-tenant, with Canadian privacy',
+        body: [
+          'A Surrey MVP starts with accounts, user roles, subscription billing and the single workflow your first customers asked for, so revenue can begin before the roadmap is finished. Tenant separation is built into the database from day one, which means a new clinic, plant or farm becomes a new account instead of a new deployment. As you grow we add seat and usage pricing, invoices with Canadian sales tax through payment providers such as Stripe, admin consoles, and SAML or OIDC single sign-on for larger buyers. Application data, files and backups can stay in Canadian cloud regions. Private-sector organizations in British Columbia handle personal information under BC PIPA, so we plan consent, access control, encryption and audit logs around it; health products get extra care around patient records, and your privacy officer confirms the final position. To see what belongs in a first release, read our guide to ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'building a SaaS MVP in 8 weeks' },
+          '.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Surrey (CAD)',
+        body: [
+          'Surrey projects use the same published ranges as the rest of Canada. Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Where you land depends on integrations (for example with clinical, ERP or equipment systems), billing complexity and security needs, and the fixed CAD quote follows a free discovery call. Many BC product companies offset part of the cost with SR&ED tax credits or NRC IRAP support, and our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' walks through how IRAP-backed projects work. Surrey is part of our ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' work, and the stages from MVP to scale are laid out on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics platform', note: 'A real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Surrey?',
+        a: 'We use the same Canadian ranges for Surrey: an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. Integrations, billing rules and security requirements decide where your product falls, and you receive a fixed CAD quote before any development begins.',
+      },
+      {
+        q: 'Do you have an office in Surrey?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we have no Surrey office. Our Vancouver engineers work on Pacific time like you do, and we run the project through video calls, weekly demos and shared boards. In-person sessions in Surrey can be arranged when a workshop needs it.',
+      },
+      {
+        q: 'Can you build health-tech SaaS for the Innovation Boulevard cluster?',
+        a: 'Yes. We design patient and clinician products with role-based access, encryption, audit logs and Canadian hosting, planned around BC PIPA and the expectations of health partners. Our telehealth case study shows a platform that has served 200K+ patient sessions. Your privacy officer or legal team confirms the final compliance position; we do not provide legal advice.',
+      },
+      {
+        q: 'Who owns the code and IP of our SaaS?',
+        a: 'Your company does. Everything we create for the project, including source code, designs, documentation and cloud accounts, is handed over to you, so you can raise money on it, sell it or move it to an in-house team without lock-in.',
+      },
+    ],
+  },
+  'saas-development-company-in-markham': {
+    title: 'SaaS Development Company in Markham, ON',
+    description: 'SaaS development for Markham tech, fintech and life-sciences firms: multi-tenant platforms, SSO and PIPEDA-ready Canadian hosting. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver. We do not have a Markham office; our Toronto engineers are nearby in the GTA and work on Eastern time, the same as Markham, so meetings fit your normal day. Markham, in York Region, is often called Canada\'s high-tech capital, with one of the country\'s highest concentrations of technology companies alongside fintech firms, life-sciences companies, advanced manufacturers and corporate head offices. Those buyers expect software done well, so every project runs on weekly demos of working features and a fixed CAD price agreed before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'SaaS products Markham companies build',
+        body: [
+          'Markham buyers often already know software. Technology and software companies come to us to add a new subscription product line, rebuild an aging single-tenant tool as a modern multi-tenant platform, or add engineering capacity for a launch. Fintech teams need secure customer portals, payment and reconciliation workflows and APIs their partners can integrate with. Life-sciences companies want products for lab, study or quality data where access and audit trails matter. Advanced manufacturers and corporate head offices look to turn internal operations tools into platforms their suppliers, dealers or subsidiaries subscribe to. We scope each one around the workflow customers will pay for first; the full range is on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'MVP to multi-tenant, with Canadian privacy',
+        body: [
+          'For a new product we ship the core workflow first, with sign-up, roles and subscription billing, so you can sell to real customers while the rest of the roadmap is built. For an existing tool we plan the move to multi-tenancy in stages, so current customers keep working while tenant data is separated. Enterprise buyers in Markham usually ask for single sign-on with SAML or OIDC, granular permissions, audit logs and data export, and we treat those as part of the product rather than add-ons. Billing covers plans, seats, usage tiers and invoices with Canadian sales tax through providers such as Stripe, and hosting, storage and backups can stay in Canadian cloud regions. Private-sector personal information in Ontario falls under federal PIPEDA, and products that handle personal health information may also need to meet Ontario PHIPA, so encryption and access controls are designed with both in mind; your privacy officer confirms the final position. Our guide to ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'building a SaaS MVP in 8 weeks' },
+          ' covers what a lean first release should include.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Markham (CAD)',
+        body: [
+          'Pricing for Markham follows our published Canadian ranges. The ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Enterprise SSO, compliance work, data migration from an older system and the number of integrations push a project higher in its band, and you get a fixed CAD quote after free discovery. Ontario product companies often use SR&ED tax credits or NRC IRAP to cover part of the build; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how those projects are set up. Markham is part of our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' practice, and the path from MVP to scale is on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics platform', note: 'A real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Markham?',
+        a: 'Markham projects use our Canadian ranges: an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. Integrations, enterprise SSO, compliance needs and data migration move the final number, and the price is fixed in CAD before development begins.',
+      },
+      {
+        q: 'Do you have an office in Markham?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Markham office. Our Toronto engineers are close by in the GTA on Eastern time, so we work with Markham teams through video calls, weekly demos and shared boards, and can meet in person when a workshop calls for it.',
+      },
+      {
+        q: 'Can you build fintech or payments SaaS?',
+        a: 'Yes. Our payments API case study for PayBridge Solutions is a PCI DSS certified platform processing 12 million transactions a month. For Markham fintech teams we design secure portals, reconciliation workflows and partner APIs with encryption, audit logs and Canadian hosting. Your compliance team confirms regulatory requirements; we do not provide legal advice.',
+      },
+      {
+        q: 'Can you turn our existing single-tenant product into multi-tenant SaaS?',
+        a: 'Yes. We review the current code and data model, then move to multi-tenancy in stages so existing customers keep working, adding tenant isolation, subscription billing and SSO along the way. The plan and fixed CAD price are agreed after discovery, before any code changes.',
+      },
+      {
+        q: 'Who owns the code and IP of our SaaS?',
+        a: 'You do. Source code, designs, documentation and the cloud accounts set up for the project belong to your company, with no lock-in, so you can raise funding, sell the product or bring development in-house.',
+      },
+    ],
+  },
   'ui-ux-design-company-in-surrey': {
     title: 'UI/UX Design Company in Surrey, BC',
     description: 'UI/UX design for Surrey health, logistics and startup teams: research, prototypes and WCAG 2.1 AA design at a fixed CAD price. Book a free UX audit.',
