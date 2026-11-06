@@ -13,6 +13,7 @@
 - Website: https://mapletechlabs.ca
 - About: https://mapletechlabs.ca/about
 - All locations: https://mapletechlabs.ca/locations
+- Full index (every service, service + city page and buyer guide): https://mapletechlabs.ca/llms-full.txt
 
 ## Services
 

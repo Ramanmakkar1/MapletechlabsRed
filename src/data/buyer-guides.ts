@@ -29,6 +29,9 @@ const BLOG_SLUGS = new Set([
   'website-development-company-canada',
 ]);
 
+/** Every live buyer-guide blog slug (used by /llms-full.txt). */
+export const buyerGuideSlugs: readonly string[] = [...BLOG_SLUGS];
+
 const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
   'mobile-app-development': {
     toronto: 'app-development-companies-toronto',
