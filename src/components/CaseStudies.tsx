@@ -126,18 +126,10 @@ export default function CaseStudies() {
         <div className="flex-1 flex items-center overflow-visible">
           <div ref={trackRef} className="h-scroll-container gap-8 pl-2 pr-24">
             {projects.map((project) => (
-              <div
+              <Link
                 key={project.id}
-                className="case-card flex-shrink-0 w-[min(480px,85vw)] lg:w-[560px] h-[min(460px,80vh)] rounded-3xl overflow-hidden relative group cursor-default"
-                style={{ transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-6px)';
-                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.3)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
+                href={project.href}
+                className="case-card flex-shrink-0 block w-[min(480px,85vw)] lg:w-[560px] h-[min(460px,80vh)] rounded-3xl overflow-hidden relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)]"
               >
                 {/* Gradient bg */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-90`} />
@@ -169,18 +161,15 @@ export default function CaseStudies() {
                       ))}
                     </div>
 
-                    <Link
-                      href={project.href}
-                      className="inline-flex items-center gap-2 text-sm font-bold text-white hover:gap-4 transition-all duration-300"
-                    >
+                    <span className="inline-flex items-center gap-2 text-sm font-bold text-white group-hover:gap-4 transition-all duration-300">
                       View Case Study
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
-                    </Link>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

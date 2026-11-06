@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
-import ContactPage from '@/components/ContactPage';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import ContactInfo, { CONTACT_FAQS } from '@/components/ContactInfo';
 import { FaqSchema } from '@/components/ServiceSchema';
 import Footer from '@/components/Footer';
+
+const ContactPage = dynamic(() => import('@/components/ContactPage'), {
+  loading: () => <div aria-hidden="true" style={{ minHeight: 720 }} />,
+});
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
