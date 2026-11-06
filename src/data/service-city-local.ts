@@ -5093,4 +5093,176 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-halifax': {
+    title: 'App Development Company in Halifax, NS',
+    description: 'App development company in Halifax: iOS and Android apps for ocean tech, logistics, health and tourism teams, with a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we build iOS and Android apps for Halifax organizations. We do not have a Halifax office. Halifax runs on Atlantic time, three hours ahead of Edmonton, so a Halifax afternoon lines up with an Edmonton morning and there is a shared block of hours every working day for calls, reviews and fixes. We work with ocean technology companies, port and logistics operators, startups coming out of Dalhousie, Saint Mary’s and the Volta hub, suppliers working around defence and shipbuilding, health teams and tourism operators. You speak directly with the senior engineers who build your app, and you sign with a Canadian company, priced in CAD, with a fixed scope and a fixed price before any work starts. Call us on +1-403-604-8692 to talk about your app.',
+    sections: [
+      {
+        heading: 'Apps Halifax teams ask us to build',
+        body: [
+          'Halifax has one of the most unusual app markets in the country. Ocean technology firms, including the companies connected to the Centre for Ocean Ventures & Entrepreneurship (COVE) on the Dartmouth waterfront, need field apps that collect sensor and vessel data at sea, keep working with no signal and sync once a connection returns. Shipping, trucking and warehouse operators around the Port of Halifax need dispatch, tracking and proof-of-delivery apps for drivers and yard crews. Founders from Dalhousie, Saint Mary’s and the Volta startup hub need a focused MVP they can put in front of early users and investors. Tourism operators need booking and visitor apps that cope with the summer and cruise-season rush. The full scope of what we build is on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Security and privacy for health and defence-adjacent apps',
+        body: [
+          'Some of the most demanding Halifax projects sit near the health system or near defence. Apps used alongside Nova Scotia Health services handle personal health information, and suppliers working around the Department of National Defence and the shipbuilding programme are often asked about where data lives and who can reach it. Private-sector personal data in Nova Scotia falls under federal PIPEDA, so we plan consent, access and breach handling from the first sprint, keep regulated data on Canadian hosting where your project needs it, and build in encryption, role-based access and audit logs. Your own privacy or security lead confirms the final compliance position before launch. Our ',
+          { href: '/locations/nova-scotia', label: 'Nova Scotia software development' },
+          ' page covers the wider provincial picture.',
+        ],
+      },
+      {
+        heading: 'Halifax app budgets and timelines',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Discovery is free, and your price is fixed before coding starts, so a Halifax budget is settled in writing before the first line of code.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to build an app in Halifax?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. Discovery is free, and you get a fixed CAD price before development starts.',
+      },
+      {
+        q: 'Do you have an office in Halifax?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Halifax office. We work with Halifax clients remotely through workshops, weekly calls and a shared project board, and in-person sessions in Halifax can be arranged with travel agreed up front.',
+      },
+      {
+        q: 'How does the time difference with Halifax work?',
+        a: 'Halifax is on Atlantic time, three hours ahead of Edmonton. When it is 1 pm in Halifax it is 10 am in Edmonton, so Halifax afternoons overlap with our mornings. We book standups, demos and reviews in that shared window, and you see progress on the project board before your next morning.',
+      },
+      {
+        q: 'Can you build apps that work offshore or with no signal?',
+        a: 'Yes. For ocean, marine and port work we design offline-first apps that store data on the device, keep working without a connection and sync safely when the phone or tablet is back in range. We test these cases on real devices before launch, not only in a simulator.',
+      },
+      {
+        q: 'Who owns the app and its source code?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
+  'web-development-company-in-halifax': {
+    title: 'Web Development Company in Halifax, NS',
+    description: 'Web development company in Halifax: fast business sites, e-commerce and web apps for ocean tech, port and tourism firms, at a fixed CAD price. Free quote.',
+    intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we build business websites, e-commerce stores and web apps for Halifax companies. We do not have a Halifax office. Halifax is on Atlantic time, three hours ahead of Edmonton, so your afternoon is our morning and we plan calls and reviews in those shared hours. We work with ocean technology firms, port and logistics companies, university spin-outs and Volta startups, defence and shipbuilding suppliers, health providers and tourism operators across the city. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your project.',
+    sections: [
+      {
+        heading: 'Websites and web apps Halifax businesses need',
+        body: [
+          'Halifax buyers ask us for very different kinds of sites. Ocean technology companies, many of them linked to COVE, need sites that explain a technical product clearly to buyers, partners and investors around the world. Logistics and shipping firms working through the Port of Halifax need customer portals with shipment tracking, quotes and document uploads. Startups from Dalhousie, Saint Mary’s and Volta need a marketing site and product dashboard that turn visits into sign-ups. Suppliers bidding on defence and shipbuilding work need credible, accessible company sites, and hotels, tour companies and restaurants need booking pages that hold up in the busy summer season. The full scope is on our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Fast pages, clean code and Canadian privacy',
+        body: [
+          'We build on Next.js and React and render key pages on the server, so search engines and visitors get quick first loads on phones and on slower rural connections across Nova Scotia. Core Web Vitals guide our choices on images, fonts and scripts from the start, not as a cleanup job later. Websites that collect personal information in Nova Scotia fall under federal PIPEDA, so contact forms, booking flows and customer portals get clear consent, secure storage and access controls. Where your work touches health or defence-adjacent data, we keep the site, database and backups on Canadian hosting and document how data moves so your privacy lead can sign off.',
+        ],
+      },
+      {
+        heading: 'Website prices and timelines for Halifax projects',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). Discovery is free, and the price is fixed in writing before any development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Halifax?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After a free discovery phase you get a fixed CAD price before coding starts.',
+      },
+      {
+        q: 'Do you have a Halifax office?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Halifax office. Halifax clients work with us through video calls, a shared project board and staging links, and we can travel to Halifax for workshops by arrangement, with costs agreed up front.',
+      },
+      {
+        q: 'How do you work across the Atlantic time difference?',
+        a: 'Halifax is three hours ahead of Edmonton, so 1 pm in Halifax is 10 am for us. We hold meetings in your afternoon, which is our morning, and changes made during our day are on the staging site for you to review the next morning.',
+      },
+      {
+        q: 'Can our team update the website after launch?',
+        a: 'Yes. We set up a CMS so your staff can edit pages, news and seasonal offers without a developer, and we train your team at handover. If you prefer, we can also stay on for ongoing updates and support.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
+  'seo-company-in-halifax': {
+    title: 'SEO Company in Halifax, NS',
+    description: 'SEO company in Halifax: technical SEO, honest Google map-pack setup and monthly CAD retainers with plain-language reports. Call +1-403-604-8692 today.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we work with Halifax businesses that want more calls and leads from Google and Bing. We do not have a Halifax office. Halifax is on Atlantic time, three hours ahead of Edmonton, so Halifax afternoons overlap with our mornings and account questions get answered the same working day. We understand the search side of Halifax’s ocean technology companies, port and logistics firms, Dalhousie and Saint Mary’s spin-outs, defence and shipbuilding suppliers, clinics and tourism operators. You work directly with the specialists doing the keyword research, technical fixes and content, not a salesperson, and retainers are priced in CAD. Call +1-403-604-8692 to talk through your Halifax search goals.',
+    sections: [
+      {
+        heading: 'How people search for Halifax businesses',
+        body: [
+          'Search demand in Halifax splits into three groups. Tourism, hospitality and local service businesses depend on “near me” and map-pack searches, and much of that demand rises and falls with the summer and cruise season. Ocean technology firms, port and logistics companies and defence and shipbuilding suppliers sell to buyers far outside the city, so they win on technical product and category searches where “Halifax” may never appear. Clinics and health practices need accurate local listings so patients can find hours, services and locations. We work out which group your customers fall into, then build pages and profile signals around the searches that bring enquiries. Map-pack work is covered on our ',
+          { href: '/services/digital-marketing/local-seo', label: 'local SEO' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'An honest Google Business Profile and consistent NAP',
+        body: [
+          'For many Halifax service businesses the map pack decides who gets the call, so the profile must be accurate. We do not have a Halifax office ourselves, and we hold your profile to the same standard: if you serve Halifax and Dartmouth from somewhere else, it is set up as a genuine service-area business, with categories and service areas that match the work you really do. Your name, address and phone (NAP) stay the same on your website, Bing Places, directories and citations. We will not rent a virtual office address or list a location nobody works from, because those profiles get suspended and take months to recover.',
+        ],
+      },
+      {
+        heading: 'Technical SEO by engineers, priced in CAD',
+        body: [
+          'Mapletech Labs builds software first, so the engineers who build Next.js and WordPress sites every week handle the technical audit: Core Web Vitals, crawling and indexing, canonical tags, schema markup and internal links. Fixes go into your codebase or CMS rather than a stack of plugins. The full scope is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page. SEO is quoted as a monthly retainer in CAD, and our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' puts typical SEO retainers at $1,500-$10,000 CAD per month, depending on competition, site size and scope. Every month you get a plain-language report with rankings, organic traffic, enquiries, the work completed and what we are testing next.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Halifax?',
+        a: 'Most Halifax SEO retainers fall between $1,500 and $10,000 CAD per month, the range in our Canadian digital marketing cost guide. A single-location tourism, clinic or trades business usually sits near the lower end; ocean tech, logistics and B2B firms competing for national category terms sit higher. After a free review of your site and competitors we quote one fixed monthly figure in CAD.',
+      },
+      {
+        q: 'How long does SEO take to work in Halifax?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement within 8-16 weeks when a site has no major blockers. Competitive category terms usually need 4-9 months before the trend is fair to judge. From the first report we track impressions, indexed pages, calls and form leads, so you can see direction early.',
+      },
+      {
+        q: 'Can we show in the Halifax map pack without a Halifax address?',
+        a: 'Yes, if your service area is real. You need either a staffed location in Halifax or a genuine service-area business setup that covers the areas you serve. Virtual offices and made-up addresses get profiles suspended, so we will not use them. We set the profile up honestly, keep your NAP identical everywhere and support it with location pages and real customer reviews.',
+      },
+      {
+        q: 'How do you handle the time difference with Halifax?',
+        a: 'Halifax is three hours ahead of Edmonton, so 1 pm in Halifax is 10 am for our team. We book calls and report reviews in your afternoon, which is our morning, and you can reach the specialists on your account at +1-403-604-8692.',
+      },
+      {
+        q: 'What is in the monthly Halifax SEO report?',
+        a: 'A short, plain-language summary of the keyword movements that matter for your Halifax customers, organic sessions and enquiries from analytics, the work finished that month and what we plan to test next. Anything needing your approval, such as new pages or profile edits, is listed separately.',
+      },
+    ],
+  },
 };
