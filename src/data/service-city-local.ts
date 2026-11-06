@@ -7064,4 +7064,165 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-kelowna': {
+    title: 'AI Development Company in Kelowna, BC',
+    description: 'AI development company in Kelowna: chatbots, LLM features and automation for Okanagan SaaS, winery, tourism and health teams. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features, forecasting models and workflow automation for organizations in Kelowna and the Okanagan. We have no Kelowna office and serve Kelowna clients remotely. Kelowna is on Pacific Time, one hour behind Edmonton, so our working days overlap almost completely and model reviews fit easily into your morning or afternoon. We work with Okanagan tech and SaaS companies, wineries and tourism operators, orchards and agri-food producers, health clinics, and construction and real estate firms. Senior engineers build your system, you see it working at a weekly demo, and scope and CAD price are fixed in writing before any work starts.',
+    sections: [
+      {
+        heading: 'Where AI helps Okanagan tech, wine, farm and health teams',
+        body: [
+          'Kelowna\'s AI questions come from the work its sectors already do. The Okanagan has a growing tech and SaaS startup scene, supported by groups such as Accelerate Okanagan, and many of those companies want LLM features inside their own products: smart search, summaries, drafting help or support assistants. Wineries and tourism operators want assistants that answer booking, tasting and wine club questions around the clock in peak season, and demand forecasts that help plan staffing and inventory. Orchards and agri-food producers want yield and harvest forecasts from field and weather data. Clinics want tools that draft notes and sort referrals, with a clinician approving every output. Construction and real estate firms want document search across specs, contracts and listings. Our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page lists everything we build.',
+        ],
+      },
+      {
+        heading: 'PIPA BC, FIPPA and grounded answers',
+        body: [
+          'We build chatbots with retrieval-augmented generation (RAG): the system finds the right passages in your policies, product docs, booking rules or project files, writes its reply from them and cites each source. Access rules control which documents each user can reach, and questions it cannot answer go to a person. Private businesses in BC handle personal information under the province\'s Personal Information Protection Act (PIPA BC), while public bodies such as health authorities, municipalities and UBC Okanagan research teams work under the Freedom of Information and Protection of Privacy Act (FIPPA). We can keep data in Canadian cloud regions, stop model providers training on it, and add encryption, role-based access and audit logs; your privacy officer confirms the final position. See our ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' page for wider provincial work.',
+        ],
+      },
+      {
+        heading: 'What AI development costs for a Kelowna project (CAD)',
+        body: [
+          'Kelowna budgets follow the national planning ranges in our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          '. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents, with cited sources, access control and hand-off to staff, is about $15,000-$50,000. Custom model training, such as a harvest-yield forecast built on years of orchard records or a demand model for a seasonal tourism business, starts around $75,000. These are planning figures, not quotes. After a free discovery call we check whether your data is ready, then agree a fixed scope and a fixed CAD price before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Kelowna?',
+        a: 'Using our Canadian AI cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. After a free discovery call you get one fixed price in CAD.',
+      },
+      {
+        q: 'Can you add AI features to our Okanagan SaaS product?',
+        a: 'Yes. We add LLM features such as search, summaries, drafting help and support assistants to existing products, with per-customer data separation so one tenant never sees another\'s records. We measure answer quality before launch and keep costs predictable with usage limits and caching.',
+      },
+      {
+        q: 'Which BC privacy law applies to our AI project?',
+        a: 'Private businesses in BC follow PIPA BC, while public bodies such as health authorities, municipalities and universities follow FIPPA. We design Canadian hosting, access control, audit logs and no training by outside model providers, and document data flows so your privacy officer can confirm the final position.',
+      },
+      {
+        q: 'Do you have an office in Kelowna?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and serves Kelowna clients remotely through video workshops, weekly demos and a shared project board. Kelowna is one hour behind Edmonton, so our days overlap. If your team wants an in-person kickoff, we can arrange a visit with travel costs agreed up front.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-kelowna': {
+    title: 'UI/UX Design Company in Kelowna, BC',
+    description: 'UI/UX design company in Kelowna: research, Figma prototypes and accessible design for Okanagan SaaS, winery, tourism and health teams. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing apps, portals and dashboards for organizations in Kelowna and the Okanagan. We do not have a Kelowna office; Kelowna clients work with us remotely through Figma, video workshops and remote usability sessions. Kelowna is on Pacific Time, one hour behind Edmonton, so design reviews fit inside your normal day and revised files are usually ready the same afternoon. We design for Okanagan tech and SaaS startups, wineries and tourism operators, orchards and agri-food businesses, health clinics, and construction and real estate firms. You work directly with the designers doing the work, see a clickable prototype every week, and agree a fixed CAD price before design starts.',
+    sections: [
+      {
+        heading: 'Design work Okanagan organizations bring to us',
+        body: [
+          'Every Kelowna sector puts different people in front of a screen. SaaS founders in the Okanagan startup scene, the community that groups such as Accelerate Okanagan support, need onboarding and dashboards that turn a trial into a paying account. Winery and tourism guests need booking, tasting and wine club flows that work on a phone in a parking lot, in bright sun, with one hand. Orchard and packing-house crews need field screens with large targets and offline-friendly states. Clinic patients need booking and follow-up screens that older adults can read without help. Construction and real estate teams need project, listing and document views that stay clear on a tablet at a job site. Our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page shows the full scope.',
+        ],
+      },
+      {
+        heading: 'Research, accessibility and seasonal peaks',
+        body: [
+          'Each project starts with a free UX audit: a heuristic review, a look at your analytics and short interviews with real users. We then map journeys, move to wireframes and a clickable Figma prototype, and usability-test it on real tasks so problems surface before development. We design to WCAG 2.1 AA from the first wireframe, with contrast, focus states, keyboard paths and screen-reader labels set in the files, which also helps teams preparing for the Accessible British Columbia Act. For tourism and wine businesses we test the busiest summer journeys first, so a booking or checkout flow stays simple when traffic peaks. Where a form collects personal information, the flow follows BC consent rules; your compliance lead confirms the final position. Our ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' page covers the wider province.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Kelowna (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit. Our published ranges are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. A winery booking and wine club flow or a SaaS onboarding redesign usually lands in the full product band, while a multi-product SaaS platform can reach the enterprise band. Screen count, research depth and branding move the number, and the audit tells you which band fits before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Kelowna?',
+        a: 'We quote a fixed CAD price after a free UX audit. Published ranges are about $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design with 30+ screens and research, and $12,000-$30,000+ for an enterprise design system.',
+      },
+      {
+        q: 'Can you redesign our SaaS onboarding to improve trial conversions?',
+        a: 'Yes. We review where trial users drop off in your analytics, interview a few of them, then prototype and test a shorter onboarding path with clearer first steps. Your developers get annotated Figma files, or we can build the changes with you.',
+      },
+      {
+        q: 'Can you run usability tests with our Kelowna users?',
+        a: 'Yes. We run remote moderated sessions over video with your real users, such as winery guests, clinic patients, SaaS customers or field crews, and record what they struggle with. If testing on site in Kelowna matters, we can arrange a visit with travel agreed up front.',
+      },
+      {
+        q: 'Do you have an office in Kelowna?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and works with Kelowna clients remotely through Figma, video workshops and weekly prototype reviews. Kelowna is one hour behind Edmonton, so our days overlap. You own all design files, prototypes and research notes with no lock-in.',
+      },
+    ],
+  },
+  'saas-development-company-in-kelowna': {
+    title: 'SaaS Development Company in Kelowna, BC',
+    description: 'SaaS development company in Kelowna building MVPs and multi-tenant platforms for Okanagan founders in tourism, agri-tech and proptech. Free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for founders and companies in Kelowna and the Okanagan. We do not have a Kelowna office and serve Kelowna remotely through video calls, weekly demos and a shared project board. Kelowna is on Pacific Time, one hour behind Edmonton, so standups and reviews fit easily into a shared working day. Our Okanagan buyers include early-stage SaaS founders, tourism and hospitality software teams, agri-tech and winery software companies, health-tech groups and construction and real estate technology firms. You work with the senior engineers writing the code, see working software every week, and get a fixed CAD price before development starts.',
+    sections: [
+      {
+        heading: 'SaaS ideas growing out of the Okanagan',
+        body: [
+          'Kelowna has an active tech and SaaS startup scene, and organizations such as Accelerate Okanagan help local founders turn ideas into companies. Many of those products start as a tool built for one local business. A winery or tourism operator builds a booking, tasting or wine club system that other operators want to license. Orchard and agri-food teams package harvest, traceability or packing-house tools for growers across BC. Clinic teams turn scheduling or intake workflows into products for other practices, and UBC Okanagan researchers and graduates spin out lab or teaching software. Construction and real estate professionals sell project tracking, bid or property management tools to other firms. Most of these founders need one focused MVP for their first paying customers, not a full platform. Our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page covers the full path.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant architecture with PIPA BC and FIPPA in mind',
+        body: [
+          'We build the core workflow first, with sign-up, roles and subscription billing. The data model is multi-tenant from release one, so each winery, clinic or contractor keeps its records separate and you can add customers without a rebuild. Billing covers plans, seats, usage tiers and Canadian sales tax including BC PST through providers such as Stripe, and enterprise buyers get single sign-on with SAML or OIDC. We can host everything in Canadian cloud regions. SaaS products used by private BC businesses fall under the Personal Information Protection Act (PIPA BC), and products sold to public bodies such as health authorities, school districts or municipalities must help them meet FIPPA, so we design encryption, access control and audit logs for that from day one; your privacy officer confirms the final position. See our ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' page for more.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Kelowna (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Booking and payment integrations, point-of-sale connections, field data from farms or job sites and security reviews move your price within those ranges. Kelowna founders often fund part of the build with SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how. After a free discovery call you receive one fixed CAD quote, so your runway is planned before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Kelowna?',
+        a: 'Our Canadian SaaS cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000 and an enterprise platform at $200,000-$500,000+. Integrations, billing rules and compliance work move the figure, and you get a fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build SaaS that BC public bodies can buy?',
+        a: 'Yes. We build multi-tenant products with Canadian hosting, encryption, role-based access, audit logs and documented data flows, which public-sector privacy reviews under FIPPA ask for. Your privacy officer or legal advisor confirms the final position, and we help prepare answers for vendor questionnaires.',
+      },
+      {
+        q: 'Can an early-stage Okanagan startup work with you?',
+        a: 'Yes. We often start with a narrow MVP that proves one paid workflow, then grow it into a full product. You own all the code and IP, which matters for investors, accelerator programs and any later funding round.',
+      },
+      {
+        q: 'Do you have an office in Kelowna?',
+        a: 'No. We are headquartered in Edmonton and work with Kelowna founders remotely through weekly demos, video standups and a shared board. Kelowna is one hour behind Edmonton, so our days overlap. If you want an in-person planning session in Kelowna, we can arrange one with travel agreed up front.',
+      },
+    ],
+  },
 };
