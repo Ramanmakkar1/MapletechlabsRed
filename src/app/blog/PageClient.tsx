@@ -68,6 +68,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'ui-ux-design-companies-edmonton', category: 'Business',
+    title: 'UI/UX Design Companies in Edmonton: How to Choose One (2026)',
+    excerpt: 'How to choose a UI/UX design company in Edmonton: research, prototypes, usability testing, WCAG accessibility, CAD pricing, red flags and 10 questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'ui-ux-design-companies-toronto', category: 'Business',
     title: 'UI/UX Design Companies in Toronto: How to Choose One (2026)',
     excerpt: 'How to choose a UI/UX design company in Toronto: research, prototypes, AODA accessibility, CAD pricing, red flags and 10 questions to ask before you sign.',

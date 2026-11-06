@@ -46,6 +46,7 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'seo-companies-toronto': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
   'seo-companies-vancouver': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
   'ui-ux-design-companies-toronto': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },
+  'ui-ux-design-companies-edmonton': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },
   'web-development-companies-edmonton': { label: 'Web Development', path: c => serviceCityPath('web-development', c) },
   'ai-development-companies-edmonton': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
   'ai-development-companies-calgary': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
