@@ -4747,4 +4747,174 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-surrey': {
+    title: 'App Development Company in Surrey, BC',
+    description: 'App development company in Surrey: iOS & Android apps for logistics, health-tech and trades firms, with a fixed CAD price. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs builds iOS and Android apps for Surrey businesses. We are a Canadian development team headquartered in Edmonton, with engineers based in Vancouver, a short drive from Surrey, but we do not have a Surrey office. Surrey runs on Pacific time, one hour behind Edmonton, so your team and ours share nearly the whole working day. As British Columbia’s second-largest city, Surrey has a business mix that shapes the apps we get asked for: trucking, logistics and warehousing firms along the Fraser corridor, construction and trades companies, the health-tech cluster around City Centre and Innovation Boulevard, and a large South Asian business community running family firms that are ready to go digital. You talk directly to the senior engineers writing your code, and you get a fixed scope and a fixed price in CAD before anything is built. Call +1-403-604-8692 to discuss your app.',
+    sections: [
+      {
+        heading: 'Apps we build for Surrey businesses',
+        body: [
+          'A lot of Surrey’s economy moves on wheels, so dispatch, driver and proof-of-delivery apps are a common request: drivers capture signatures and photos, dispatchers see loads in real time, and the app keeps working in a yard or on the highway with weak signal. Construction and trades companies want job-site apps for timesheets, safety checklists, quotes and photo reports that crews can fill in with gloves on. Health-tech teams near City Centre and Innovation Boulevard, and providers working alongside Fraser Health, need patient-facing and clinical apps with careful handling of health data. Founders coming out of SFU Surrey and KPU usually need a focused MVP they can test with real users. Family-run businesses often want booking, ordering or loyalty apps their customers can use in English and Punjabi. The full scope is on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Offline, multilingual and privacy-ready from day one',
+        body: [
+          'Surrey apps often have to work in places where connections drop, such as warehouses, truck cabs and active job sites, so we design offline-first: data is saved on the device and synced when the network returns, with clear conflict handling. Where your customers or crews speak more than one language, we plan translated screens and content from the first sprint rather than bolting them on later. Apps that collect personal information from British Columbians fall under BC’s Personal Information Protection Act (PIPA), and health data needs extra care. We build in encryption, role-based access and audit logs, plan Canadian hosting where your project needs it, and your privacy officer confirms the final compliance position before launch.',
+        ],
+      },
+      {
+        heading: 'App development cost and timeline in Surrey',
+        body: [
+          'Pricing for Surrey projects follows our ',
+          { href: '/blog/app-development-cost-canada', label: 'guide to app development costs in Canada' },
+          '. A simple single-platform app with 5-8 screens is about $25,000-$50,000 CAD and takes 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. A fleet or dispatch app with GPS tracking, offline sync and a back office usually lands in the mid-size band. Discovery is free, and the price is fixed before coding begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to build an app in Surrey?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app is about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. Surrey clients pay the same CAD rates as everyone else, and after a free discovery phase you get one fixed price before development starts.',
+      },
+      {
+        q: 'Do you have an office in Surrey?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers based in Vancouver, and we do not have a Surrey office. Surrey is on Pacific time, one hour behind Edmonton, so we work with Surrey clients remotely with almost the whole working day in common, and we can meet in person in Surrey by arrangement, with any travel agreed up front.',
+      },
+      {
+        q: 'Can you build a dispatch or delivery app for a trucking or logistics company?',
+        a: 'Yes. Driver apps, dispatch dashboards, GPS tracking, proof of delivery with photos and signatures, and offline sync are all work we take on. Our logistics platform case study handles 15K+ daily deliveries. We scope your routes, users and integrations in discovery, then give you a fixed price and timeline.',
+      },
+      {
+        q: 'Can our app support Punjabi or other languages?',
+        a: 'Yes. iOS and Android both support multiple languages, including right-to-left and non-Latin scripts. We plan translated text, layouts and notifications from the start, so adding Punjabi, Hindi or another language does not mean rebuilding screens later. You supply or approve the translations so the wording is right for your customers.',
+      },
+      {
+        q: 'Who owns the app and its code?',
+        a: 'You do. The source code, app store listings, cloud accounts and design files for your project all belong to your business, with no lock-in. After launch you can keep us on for support and new features, or hand everything to your own developers.',
+      },
+    ],
+  },
+  'web-development-company-in-surrey': {
+    title: 'Web Development Company in Surrey, BC',
+    description: 'Web development in Surrey: fast custom websites, online stores and web apps for local firms, with a fixed CAD price agreed up front. Get a free quote.',
+    intro: 'Mapletech Labs designs and builds business websites, e-commerce stores and web applications for companies in Surrey. Our team is Canadian, headquartered in Edmonton, with engineers based in Vancouver next door, and we do not have a Surrey office. Surrey is on Pacific time, one hour behind Edmonton, so our days line up with yours and replies come the same day. Surrey is British Columbia’s second-largest city and still growing fast, and its websites have to serve very different buyers: shippers looking for a carrier along the Fraser corridor, homeowners hiring a contractor, patients and partners of the health-tech cluster near City Centre, and customers of the city’s large South Asian business community. You work with the developers who build your site, and the scope and price are fixed in CAD before work begins. Call +1-403-604-8692 to talk about your website.',
+    sections: [
+      {
+        heading: 'Websites and web apps Surrey companies ask us for',
+        body: [
+          'Trucking, logistics and warehousing firms usually need more than a brochure: quote request forms that capture lane and load details, shipment tracking pages and customer portals that cut down phone calls. Construction and trades companies need project galleries, service-area pages and estimate forms that turn local searches into booked jobs. Health-tech companies around Innovation Boulevard need clear product sites and secure dashboards, while clinics need fast, accessible information pages. Retailers and food businesses want online stores and ordering connected to their inventory, and many family-run firms want a site that speaks to customers in both English and Punjabi. Startups linked to SFU Surrey and KPU need a launch site and a web app that can grow with them. See everything we build on our ',
+          { href: '/services/web-development', label: 'custom web development services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Fast pages that rank and convert',
+        body: [
+          'Surrey buyers often compare several local firms on a phone before they call, so speed and clarity decide who gets the enquiry. We build on Next.js and React with key pages rendered on the server, so search engines and visitors get fast first loads, and we size images, fonts and scripts against Core Web Vitals as we go. Each service and service-area page gets its own title, heading structure, schema markup and internal links, and multilingual sites get proper language tags so the right version shows in search. Forms that collect personal information are built with BC’s Personal Information Protection Act (PIPA) in mind, with Canadian hosting where it matters and documented data flows, and your privacy officer signs off the final position.',
+        ],
+      },
+      {
+        heading: 'Website cost and timeline in Surrey',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canadian businesses' },
+          ' sets out the ranges we quote from. A template or WordPress site is about $2,000-$10,000 CAD (2-4 weeks), a custom business website $10,000-$50,000 (4-10 weeks), an e-commerce platform $25,000-$100,000 (8-16 weeks), and an enterprise web application $100,000-$500,000+ (4-12 months). A logistics customer portal or a multilingual site with booking usually falls in the custom or e-commerce band. Discovery is free, and your price is fixed before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Surrey?',
+        a: 'Based on our Canadian website cost guide, a template or WordPress site is about $2,000-$10,000 CAD, a custom business website $10,000-$50,000, an e-commerce platform $25,000-$100,000, and an enterprise web application $100,000-$500,000+. After a free discovery call we give you a fixed CAD price before any code is written.',
+      },
+      {
+        q: 'Do you have an office in Surrey?',
+        a: 'No. We are headquartered in Edmonton, with engineers based in Vancouver, and we do not have a Surrey office. Surrey is on Pacific time, one hour behind Edmonton, so we serve Surrey businesses remotely with nearly the full working day in common, and we can meet you in Surrey by arrangement, with travel agreed up front.',
+      },
+      {
+        q: 'Can you build a customer portal for our trucking or warehousing company?',
+        a: 'Yes. We build quote request flows, shipment tracking pages, document uploads and customer logins that connect to your existing dispatch or warehouse systems where they offer an API. Our logistics platform case study shows the kind of real-time tracking we work with. Discovery maps your workflows before we fix the price.',
+      },
+      {
+        q: 'Can our website be in English and Punjabi?',
+        a: 'Yes. We build multilingual sites with a language switcher, separate URLs for each language and the right language tags, so Google can show each version to the right searchers. You supply or approve the translations, and the CMS lets your team update both languages.',
+      },
+      {
+        q: 'Will we own the website and be able to edit it?',
+        a: 'Yes. The source code, design files and domain belong to you, with no lock-in. We set up a CMS so your team can edit pages and content without a developer, and we train you on it at handover.',
+      },
+    ],
+  },
+  'seo-company-in-surrey': {
+    title: 'SEO Company in Surrey, BC',
+    description: 'SEO company in Surrey: local map-pack rankings, technical fixes by engineers and clear monthly reports, priced in CAD. Call +1-403-604-8692.',
+    intro: 'Mapletech Labs helps Surrey businesses get more calls, quote requests and sales from Google and Bing. We are a Canadian SEO team headquartered in Edmonton, with specialists based in Vancouver, and we do not have a Surrey office. Surrey is on Pacific time, one hour behind Edmonton, so our working hours overlap almost completely. Search in Surrey is crowded and very local: trucking and logistics firms along the Fraser corridor compete for shipper searches, contractors and trades fight for “near me” terms in Newton, Fleetwood and South Surrey, health-tech companies around City Centre chase specialist B2B keywords, and many businesses in the city’s large South Asian community also want to be found by customers searching in Punjabi. You work directly with the specialists doing your keyword research, technical fixes and content, and retainers are priced in CAD. Call +1-403-604-8692 to talk about your goals.',
+    sections: [
+      {
+        heading: 'How search works in Surrey',
+        body: [
+          'Surrey is big enough that a searcher in Cloverdale and one in Whalley can see different map results for the same query, so we plan visibility neighbourhood by neighbourhood instead of treating the city as one place. Logistics, trucking and warehousing companies need pages for the services and lanes shippers actually search for. Construction and trades firms win on map-pack presence, reviews and service-area pages. Health-tech and medical companies around Innovation Boulevard need content that answers technical buyer questions and earns trust. Businesses serving Surrey’s South Asian community often get extra demand from searches in Punjabi or Hindi that competitors ignore. We research the queries that turn into enquiries, then build the pages, links and profile signals to win them. The full approach is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Local SEO and Google Business Profile in Surrey',
+        body: [
+          'In Surrey the map pack often decides who gets the call, so your Google Business Profile has to be accurate and honest. If you have a real Surrey location, we optimise that listing with the right categories, services, photos and review requests. If you serve Surrey from somewhere else, we set the profile up as a genuine service-area business. We keep your name, address and phone — NAP — identical across your site, directories and citations, and we never use virtual offices or addresses you do not occupy; we do not claim a Surrey address ourselves. Profiles built on fake addresses get suspended, while clean setups hold their place. Read more about this work on our ',
+          { href: '/services/digital-marketing/local-seo', label: 'local SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Technical SEO and pricing for Surrey businesses',
+        body: [
+          'Mapletech Labs is a software company first, so the engineers who build Next.js and WordPress sites every week handle your technical SEO. We fix crawl and indexing problems, slow pages and Core Web Vitals, canonical tags, schema markup and internal links in your codebase or CMS, not with stacks of plugins, and we set up proper language tags for multilingual sites. SEO is a monthly retainer in CAD. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          ' shows SEO retainers typically running $1,500-$10,000 CAD per month, depending on competition, site size and scope. Every month you get a plain-language report on rankings, organic traffic and leads, plus the work done and what comes next.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Surrey?',
+        a: 'Surrey retainers usually fall between $1,500 and $10,000 CAD per month, the range in our Canadian digital marketing cost guide. A single-location trade or retail business tends to sit near the lower end, while logistics firms, health-tech companies and multi-location businesses competing for broader terms sit higher. After a free review of your site and competitors, we quote one fixed monthly price in CAD.',
+      },
+      {
+        q: 'How long does SEO take to work in Surrey?',
+        a: 'Google Business Profile and technical fixes usually show results within 8-16 weeks if the site has no serious problems. Competitive terms, such as trucking, contractor or B2B health-tech keywords, often need 4-9 months before the trend is clear. Your first report already tracks impressions, indexed pages and enquiries, so you can see progress early.',
+      },
+      {
+        q: 'Can we rank in the Surrey map pack without a Surrey address?',
+        a: 'Yes, if your service area is real. You need either a staffed location in Surrey or a genuine service-area business profile that covers Surrey. Virtual offices and made-up addresses get profiles suspended, so we do not use them, and we do not use one ourselves. We set up your profile honestly, keep your name, address and phone the same everywhere, and support it with location pages and real customer reviews.',
+      },
+      {
+        q: 'Can you help us rank for searches in Punjabi?',
+        a: 'Yes. If your customers search in Punjabi or Hindi, we research those keywords, build translated pages with the correct language tags and add them to your sitemap, so Google can show the right version. You supply or approve the translations so the wording sounds natural to your customers.',
+      },
+      {
+        q: 'Do you have an office in Surrey?',
+        a: 'No. We are headquartered in Edmonton, with specialists based in Vancouver, and we do not have a Surrey office. Surrey is on Pacific time, one hour behind Edmonton, so day-to-day work runs on calls, shared documents and monthly reports, and we can meet in Surrey by arrangement, with travel agreed up front. You can reach the team on your account at +1-403-604-8692.',
+      },
+    ],
+  },
 };
