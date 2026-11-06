@@ -7712,4 +7712,166 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-windsor': {
+    title: 'AI Development Company in Windsor, ON',
+    description: 'AI development company in Windsor, Ontario: quality inspection, predictive maintenance and customs automation for plants and carriers. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build computer vision systems, large language model (LLM) features, forecasting models and workflow automation for organizations in Windsor, Ontario. We do not have a Windsor office and serve Windsor clients remotely. Windsor runs on Eastern Time, two hours ahead of Edmonton, so your mornings overlap our early hours and model reviews still land inside your working day. We work with automotive suppliers and advanced manufacturers, cross-border logistics teams and customs brokers moving freight through the Ambassador Bridge, health providers, groups connected to the University of Windsor and St. Clair College, and businesses that sell into both Canada and the US. Senior engineers build your system, you see it working at a weekly demo, and scope and CAD price are fixed in writing before any work starts.',
+    sections: [
+      {
+        heading: 'Where AI helps Windsor plants, carriers, clinics and campuses',
+        body: [
+          'Windsor\'s AI requests come out of the work the region already does. Automotive suppliers and advanced manufacturers want vision-based quality inspection on the line, catching defects, missing clips or bad welds before a part ships, and predictive maintenance that reads machine and sensor data to flag a failing press or robot before it stops production. Cross-border logistics companies and customs brokers want the paperwork automated: classifying goods, checking bills of lading against commercial invoices and pulling data out of customs declarations so entries clear faster. Distributors, retailers and restaurant groups want demand forecasts that keep the right stock without over-ordering. Clinics want drafting and document-routing tools with a clinician approving every output, and teams at the University of Windsor and St. Clair College want to turn research and capstone data into something people can use. Our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page lists everything we build.',
+        ],
+      },
+      {
+        heading: 'PIPEDA, PHIPA, FIPPA and grounded answers',
+        body: [
+          'We build document assistants with retrieval-augmented generation (RAG): the system finds the right passages in your quality manuals, customs paperwork, policies or product files, writes its reply from them and cites each source, while access rules decide which documents each user can reach. Private businesses in Ontario handle personal information under federal PIPEDA, and anything touching personal health information held by hospitals, clinics or practitioners must also respect Ontario\'s Personal Health Information Protection Act (PHIPA). Public bodies, including municipalities, school boards and post-secondary institutions such as the University of Windsor, work under FIPPA and MFIPPA. We can keep data in Canadian cloud regions, stop outside model providers training on it, and add encryption, role-based access and audit logs; your privacy officer confirms the final position. Our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page covers our wider work in the province.',
+        ],
+      },
+      {
+        heading: 'What AI development costs for a Windsor project (CAD)',
+        body: [
+          'Windsor budgets follow the national planning ranges in our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          '. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot built on your own documents, with cited sources, access control and hand-off to staff, is about $15,000-$50,000. Custom model training, such as a predictive-maintenance model built on machine sensor history or an inspection model trained on your own defect images, starts around $75,000. These are planning figures, not quotes. After a free discovery call we check whether your data is ready, then agree a fixed scope and a fixed CAD price before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Windsor, Ontario?',
+        a: 'Using our Canadian AI cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. After a free discovery call you get one fixed price in CAD.',
+      },
+      {
+        q: 'Can you build vision-based quality inspection for a Windsor plant?',
+        a: 'Yes. We build inspection systems with cameras on the line that flag defects, missing parts or bad welds, and we tune the model against your quality team\'s calls so borderline cases route to a person instead of guessing. Results integrate with the machines and reports you already use, so they reach the people who act on them.',
+      },
+      {
+        q: 'Which privacy laws apply to an AI project in Ontario?',
+        a: 'Private businesses follow PIPEDA, health custodians such as hospitals and clinics must also meet PHIPA for personal health information, and public bodies work under FIPPA and MFIPPA. We design Canadian hosting, access control, audit logs and no training on your data by outside model providers, and document data flows so your privacy officer can confirm the final position.',
+      },
+      {
+        q: 'Do you have an office in Windsor?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and serves Windsor clients remotely through video workshops, weekly demos and a shared project board. Windsor is two hours ahead of Edmonton on Eastern Time, which still leaves most of the working day in common. If your team wants an in-person kickoff, we can arrange a visit with travel costs agreed up front.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-windsor': {
+    title: 'UI/UX Design Company in Windsor, ON',
+    description: 'UI/UX design company in Windsor, Ontario: research, Figma prototypes and AODA-accessible design for automotive, logistics and clinics. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing apps, portals and dashboards for organizations in Windsor, Ontario. We do not have a Windsor office; Windsor clients work with us remotely through Figma, video workshops and remote usability sessions. Windsor runs on Eastern Time, two hours ahead of Edmonton, so design reviews fit inside your normal day and revised files are usually waiting by your next morning. We design for automotive suppliers and advanced manufacturers, cross-border logistics teams, health providers, groups tied to the University of Windsor and St. Clair College, and businesses serving customers in both Canada and the US. You work directly with the designers doing the work, see a clickable prototype every week, and agree a fixed CAD price before design starts.',
+    sections: [
+      {
+        heading: 'Design work Windsor organizations bring to us',
+        body: [
+          'Every Windsor sector puts different people in front of a screen. Shop-floor teams at suppliers and plants need screens built for gloves, noise and standing work: large targets, high contrast and the fewest possible steps to log a defect or close a work order. Dispatchers, brokers and drivers moving freight through the Ambassador Bridge need tracking and dispatch screens that stay readable on a phone in a cab or at a dock. Clinic patients and staff need booking, referral and follow-up flows older adults can finish without help, and campus teams at the University of Windsor and St. Clair College need program, event and student portals that hold up during intake periods. Businesses selling across the border need quote and order flows that read naturally for bilingual customers in two countries. Our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page shows the full scope.',
+        ],
+      },
+      {
+        heading: 'Research, AODA accessibility and Ontario privacy',
+        body: [
+          'Each project starts with a free UX audit: a heuristic review, a look at your analytics and short interviews with the people who use the system. We then map journeys, move to wireframes and a clickable Figma prototype, and usability-test it on real tasks so problems surface before development. We design to WCAG 2.1 AA from the first wireframe, with contrast, focus states, keyboard paths and screen-reader labels set in the files, which also supports organizations meeting their duties under Ontario\'s Accessibility for Ontarians with Disabilities Act (AODA). Where a screen collects personal information we follow PIPEDA for private businesses, and patient-facing flows also need PHIPA handling; your compliance lead confirms the final position. Our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page covers the wider province.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Windsor (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit. Our published ranges are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. A clinic booking and referral flow or a supplier portal redesign usually lands in the full product band, while a multi-portal platform spanning plant, dispatch and customer screens can reach the enterprise band. Screen count, research depth and branding move the number, and the audit tells you which band fits before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Windsor, Ontario?',
+        a: 'We quote a fixed CAD price after a free UX audit. Published ranges are about $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design with 30+ screens and research, and $12,000-$30,000+ for an enterprise design system.',
+      },
+      {
+        q: 'Can you design shop-floor and dispatch screens that work with gloves and in poor light?',
+        a: 'Yes. We design for the real conditions: large touch targets, high contrast, plain language and the fewest steps to finish a task, then test the screens with the staff who use them on the floor or in a cab. If a screen has to work offline or on a rugged device, we plan those states with your developers.',
+      },
+      {
+        q: 'Do your designs meet AODA requirements?',
+        a: 'We design to WCAG 2.1 AA from the first wireframe, with contrast, focus states, keyboard paths and screen-reader labels built into the Figma files, which supports the accessibility duties Ontario organizations carry under the AODA. Your accessibility or compliance lead gives final sign-off, and we hand over annotated files your developers can build from.',
+      },
+      {
+        q: 'Do you have an office in Windsor?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and works with Windsor clients remotely through Figma, video workshops and weekly prototype reviews. Windsor is two hours ahead of Edmonton, so our days overlap well. You own all design files, prototypes and research notes with no lock-in.',
+      },
+    ],
+  },
+  'saas-development-company-in-windsor': {
+    title: 'SaaS Development Company in Windsor, ON',
+    description: 'SaaS development company in Windsor, Ontario: MVPs and multi-tenant platforms for automotive, logistics and health-tech teams. Fixed CAD quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for founders and companies in Windsor, Ontario. We do not have a Windsor office and serve Windsor clients remotely through video calls, weekly demos and a shared project board. Windsor runs on Eastern Time, two hours ahead of Edmonton, so standups and reviews fit into a shared working day. Our Windsor buyers include software teams inside automotive suppliers and manufacturers, cross-border logistics and customs-tech companies, health-tech groups working with local providers, and founders from University of Windsor and St. Clair College projects. You work with the senior engineers writing the code, see working software every week, and get a fixed CAD price before development starts.',
+    sections: [
+      {
+        heading: 'SaaS ideas growing out of Windsor',
+        body: [
+          'Windsor\'s software products usually start as a tool built for one local business. A supplier or plant builds an inspection, quality or maintenance tracker that sister sites then want to license. A customs broker or carrier packages paperwork automation, classifying goods, checking entries and tracking shipments across the Ambassador Bridge, as a product for other brokers. A clinic team turns scheduling or intake software into something other practices can buy, and founders from University of Windsor and St. Clair College projects spin research and capstone work into companies. Cross-border sellers need catalogue, pricing and order tools that handle customers in two countries. Most of these teams need one focused MVP for their first paying customers rather than a full platform. Our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page covers the full path.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant architecture with PIPEDA, PHIPA and FIPPA in mind',
+        body: [
+          'We build the core workflow first, with sign-up, roles and subscription billing. The data model is multi-tenant from release one, so each plant, practice or brokerage keeps its records separate and you can add customers without a rebuild. Billing covers plans, seats, usage tiers and Canadian sales tax through providers such as Stripe, and enterprise buyers get single sign-on with SAML or OIDC. We can host everything in Canadian cloud regions. Products sold to private Ontario businesses handle personal information under PIPEDA, anything holding personal health information must also respect PHIPA, and products sold to public bodies such as school boards, municipalities or post-secondary institutions must help them meet FIPPA and MFIPPA, so we design encryption, access control and audit logs for that from day one; your privacy officer confirms the final position. See our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page for more.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Windsor (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Billing and payment integrations, customs or carrier data feeds, machine data from plants and security reviews move your price within those ranges. Windsor founders often fund part of the build with federal SR&ED tax credits or NRC IRAP contributions; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how. After a free discovery call you receive one fixed CAD quote, so your runway is planned before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Windsor, Ontario?',
+        a: 'Our Canadian SaaS cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000 and an enterprise platform at $200,000-$500,000+. Integrations, billing rules and compliance work move the figure, and you get a fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build SaaS that Ontario public bodies can buy?',
+        a: 'Yes. We build multi-tenant products with Canadian hosting, encryption, role-based access, audit logs and documented data flows, which public-sector privacy reviews under FIPPA and MFIPPA ask for. Your privacy officer or legal advisor confirms the final position, and we help prepare answers for vendor questionnaires.',
+      },
+      {
+        q: 'Can an early-stage Windsor startup work with you?',
+        a: 'Yes. We often start with a narrow MVP that proves one paid workflow, then grow it into a full product. You own all the code and IP, which matters for investors, accelerator programs and any later funding round, and we can point you to SR&ED and IRAP funding that fits early builds.',
+      },
+      {
+        q: 'Do you have an office in Windsor?',
+        a: 'No. We are headquartered in Edmonton and work with Windsor founders remotely through weekly demos, video standups and a shared board. Windsor is two hours ahead of Edmonton, so our days overlap. If you want an in-person planning session, we can arrange one with travel agreed up front.',
+      },
+    ],
+  },
 };
