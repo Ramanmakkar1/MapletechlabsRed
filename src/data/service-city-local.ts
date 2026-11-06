@@ -5515,4 +5515,134 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-surrey': {
+    title: 'AI Development Company in Surrey, BC',
+    description: 'AI development company in Surrey: LLM assistants, computer vision and forecasting for logistics, health and agri-food firms. Book a free discovery call.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, with engineers based in Vancouver, a short drive from Surrey, building LLM assistants, computer vision systems and forecasting tools for Surrey organisations. We do not have a Surrey office. Surrey runs on Pacific time, one hour behind Edmonton, so your team and ours share nearly the whole working day. The AI work we get asked for in Surrey follows the city\'s economy: trucking, warehousing and distribution firms along the Fraser River and the Highway 1, Highway 99 and South Fraser Perimeter Road corridors, health and care providers working alongside Fraser Health, agri-food growers and processors in Cloverdale and Campbell Heights, and construction and trades companies building across the Lower Mainland. You talk directly to the engineers building your system, and you get a fixed scope and a fixed price in CAD before coding starts. Call +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'AI for Surrey logistics, warehousing and agri-food',
+        body: [
+          'Surrey\'s distribution centres and cross-docks sit between the Port of Vancouver terminals, the US border crossings and the rest of the Lower Mainland, so demand and capacity swing hard week to week. Warehouse and trucking teams ask for ',
+          { href: '/services/ai-ml/predictive-analytics', label: 'predictive analytics' },
+          ' that forecasts inbound volume, dock appointments and labour needs from shipment history, and flags late loads before a customer calls. Yards and loading docks use ',
+          { href: '/services/ai-ml/computer-vision', label: 'computer vision' },
+          ' to read trailer and container numbers, count pallets and spot damaged freight from camera feeds. Agri-food growers and processors want the same tools for grading produce, checking packaging and planning harvest and cold-storage space, with uncertain cases sent to a person instead of auto-rejecting good product. We start from the data you already collect in your WMS, TMS or ERP and the decision your team needs to make each day.',
+        ],
+      },
+      {
+        heading: 'Assistants and document AI for health, construction and back offices',
+        body: [
+          'Health and care providers working alongside Fraser Health, and the health-tech teams around City Centre and Innovation Boulevard, ask for intake and referral automation that reads forms, pulls out key fields and routes each file to a person for review. Construction and trades companies want assistants that answer crew questions from safety manuals, specs and past job notes, and tools that turn site photos and daily logs into structured reports. Office teams across Surrey want ',
+          { href: '/services/ai-ml/llm-integration', label: 'LLM integration' },
+          ' for customer-service chatbots and internal search that answer from your own policies with sources cited. Every project starts with a data review and a proof of concept measured against a bar your team agrees, then moves to production with role-based permissions, review paths for sensitive outputs and monitoring after launch.',
+        ],
+      },
+      {
+        heading: 'BC PIPA, PIPEDA and Canadian cloud hosting',
+        body: [
+          'Personal information collected by most BC private-sector organisations falls under British Columbia\'s Personal Information Protection Act (PIPA), while PIPEDA can apply to federally regulated work and to data that crosses provincial or national borders, which is common for Surrey logistics firms shipping into the US. Public bodies and health authorities have their own rules. We design for privacy from the first workshop: encryption, role-based access, audit logs of what the system was asked and how it answered, and model providers configured so they do not train on your company data. We can host your AI system and its data in Canadian cloud regions. Requirements depend on your data and organisation; your privacy officer or lawyer should confirm the final compliance position. We do not provide legal advice.',
+        ],
+      },
+      {
+        heading: 'What AI development costs in Surrey (CAD)',
+        body: [
+          'AI work is quoted as a fixed price in CAD after free discovery, so your budget is set before coding starts. As a guide, adding an LLM feature to an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. Yard cameras, freight forecasting and produce grading vary with camera count, data volume and how many systems we connect to. A focused proof of concept usually takes weeks rather than months. Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'guide to AI development costs in Canada' },
+          ' explains what moves the number, and your written scope lists milestones before work begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'ML-powered property recommendations across 850K+ active listings nationwide.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Surrey?',
+        a: 'Planning ranges are about $10,000-$35,000 CAD for an LLM feature in an existing app, $15,000-$50,000 for a chatbot on your documents, and from around $75,000 for custom model training. Computer vision and forecasting depend on cameras, data and integrations. After a free discovery call you get a fixed price in CAD, not hourly billing.',
+      },
+      {
+        q: 'Do you have an office in Surrey?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers based in Vancouver, and we do not have a Surrey office. Surrey is on Pacific time, one hour behind Edmonton, so we work with Surrey clients remotely with almost the whole working day in common, and we can meet in person in Surrey by arrangement, with any travel agreed up front.',
+      },
+      {
+        q: 'Can AI forecast freight volumes for our Surrey warehouse or trucking firm?',
+        a: 'Usually, if you have a year or more of shipment, order or dock history. We test a forecasting model against your past weeks first, so you can see how accurate it would have been before you rely on it for labour or fleet planning. Our logistics platform case study handles 15K+ daily deliveries.',
+      },
+      {
+        q: 'Which privacy law applies to an AI project in Surrey?',
+        a: 'For most BC private-sector organisations it is BC PIPA, with PIPEDA applying to federally regulated work and some cross-border data, and separate rules for public bodies and health authorities such as Fraser Health. We build in access controls, audit logs and Canadian hosting. Your privacy officer should confirm the final position; we do not provide legal advice.',
+      },
+      {
+        q: 'Who owns the code, models and prompts?',
+        a: 'You do. All source code, prompts, fine-tuned models, configuration and cloud accounts we create for your Surrey project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
+  'ai-development-company-in-markham': {
+    title: 'AI Development Company in Markham, ON',
+    description: 'AI development company in Markham: LLM features, document AI and forecasting for software firms, insurers and health teams. Free discovery call.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, with dedicated engineers in Toronto, building LLM features, document automation and predictive models for Markham and York Region organisations. We do not have a Markham office. Markham runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for standups, model reviews and release decisions. Markham is one of Canada\'s largest tech clusters, so much of our AI work there is for software companies that want to add AI to an existing product, alongside insurers and banks with large operations and back-office teams in York Region, and health groups connected to Markham Stouffville Hospital and Oak Valley Health. You talk directly with the engineers building your system, and the price is fixed in CAD before coding starts. Call +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'Adding AI to Markham software and SaaS products',
+        body: [
+          'Markham\'s enterprise software companies, and the startups around ventureLAB and the Markham Convergence Centre, usually already have a product, a roadmap and in-house developers. What they ask us for is ',
+          { href: '/services/ai-ml/llm-integration', label: 'LLM integration' },
+          ' inside that product: an in-app assistant that answers from customer data and help docs with sources cited, summaries of long records and tickets, natural-language search and report building, and agents that draft actions for a user to approve. We work in your repositories and follow your code review, CI and release process, and we add evaluation tests so answer quality is measured on every release instead of judged by feel. Usage, cost per request and model choice are tracked from day one so the feature stays affordable as your customer base grows.',
+        ],
+      },
+      {
+        heading: 'Document AI and forecasting for insurers, banks and back offices',
+        body: [
+          'Insurance and banking operations teams in Markham handle huge volumes of claims, applications, statements and correspondence. We build document AI that classifies incoming files, extracts key fields, checks them against your rules and sends anything uncertain to a person, so staff review exceptions instead of retyping forms. Operations and finance teams use ',
+          { href: '/services/ai-ml/predictive-analytics', label: 'predictive analytics' },
+          ' to forecast claim volumes, call-centre demand and staffing, or to flag accounts and transactions that need a closer look. Every project starts with a data review and a proof of concept measured against a bar your team agrees, then moves to production with role-based permissions, full audit trails and monitoring, because regulated decisions always keep a human in the loop.',
+        ],
+      },
+      {
+        heading: 'PIPEDA, Ontario PHIPA and Canadian cloud hosting',
+        body: [
+          'Most private-sector personal data in Ontario falls under PIPEDA, and personal health information handled by Ontario custodians, such as hospitals and clinics in York Region, can fall under Ontario\'s Personal Health Information Protection Act (PHIPA). Banks and insurers also work to their own regulators\' and internal model-risk rules. We design for privacy from the first workshop: encryption, role-based access, audit logs of what the system was asked and how it answered, and model providers configured so they do not train on your company data. We can host your AI system and its data in Canadian cloud regions. Requirements depend on your data and organisation; your privacy officer or lawyer should confirm the final compliance position. We do not provide legal advice.',
+        ],
+      },
+      {
+        heading: 'What AI development costs in Markham (CAD)',
+        body: [
+          'AI work is quoted as a fixed price in CAD after free discovery, so your budget is set before coding starts. As a guide, adding an LLM feature to an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. Markham software teams adding an assistant to an existing product often sit in the first band; document AI for claims or applications depends on document types, volume and the systems we connect to. Compare typical project ranges on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ', and your written scope lists milestones before work begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'ML-powered property recommendations across 850K+ active listings nationwide.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Markham?',
+        a: 'Planning ranges are about $10,000-$35,000 CAD for an LLM feature in an existing app, $15,000-$50,000 for a chatbot on your documents, and from around $75,000 for custom model training. Document AI and forecasting depend on data and integrations. After a free discovery call you get a fixed price in CAD, not hourly billing.',
+      },
+      {
+        q: 'Do you have an office in Markham?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and has dedicated engineers in Toronto, but we do not maintain a Markham office. York Region clients work with us through video calls, shared boards and weekly demos of working builds. Eastern time is two hours ahead of Edmonton, so most business hours overlap for questions and approvals.',
+      },
+      {
+        q: 'Can you add an AI assistant to our existing software product?',
+        a: 'Yes. Most of our Markham AI work is inside products that already exist. We work in your repositories alongside your developers, connect the assistant to your data and permissions, add evaluation tests to your CI, and hand over documentation so your team can own the feature after launch.',
+      },
+      {
+        q: 'How do you handle health or financial data for a Markham AI project?',
+        a: 'We design access controls, audit logs, human review and Canadian cloud hosting with PIPEDA and, for health data, Ontario PHIPA in mind, and we configure model providers so they do not train on your data. What applies depends on your role, the data and your agreements. Your privacy officer should confirm the final position; we do not provide legal advice.',
+      },
+      {
+        q: 'Who owns the code, models and prompts?',
+        a: 'You do. All source code, prompts, fine-tuned models, configuration and cloud accounts we create for your Markham project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
 };
