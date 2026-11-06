@@ -6596,4 +6596,165 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-london-on': {
+    title: 'AI Development Company in London, ON',
+    description: 'AI development company in London, Ontario: chatbots, LLM features and automation for health, insurance and manufacturing teams at a fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features, prediction models and workflow automation for organizations in London, Ontario. We have no London office and serve London clients remotely. Eastern Time puts London two hours ahead of Edmonton, so your afternoon is our late morning and model reviews fit easily into a shared day. We work with health research teams, groups connected to Western University, insurers, manufacturers and agri-food companies across Southwestern Ontario. Senior engineers build your system, you see it working at a weekly demo, and scope and CAD price are fixed in writing before any work starts.',
+    sections: [
+      {
+        heading: 'Where AI helps London\'s health, insurance and industrial teams',
+        body: [
+          'London\'s AI questions come from the data its sectors already hold. Health research groups near Robarts Research Institute and London Health Sciences Centre ask for tools that search study protocols, summarize literature and help clean and label imaging or clinical research datasets. Teams connected to Western University want assistants that answer student and staff questions from policy documents instead of an overloaded inbox. Insurers and brokers want claims triage that reads incoming documents, pulls out key fields and routes simple files faster, with an adjuster making every decision. Manufacturers want models that spot quality defects or predict machine downtime from sensor logs, and agri-food processors want demand forecasts and traceability checks. Our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page lists everything we build.',
+        ],
+      },
+      {
+        heading: 'PIPEDA, PHIPA and grounded answers',
+        body: [
+          'We build chatbots with retrieval-augmented generation (RAG): the system finds the right passages in your claims manuals, research protocols or plant procedures, writes its reply from them and cites each source. Access rules control which documents each user can reach, and questions it cannot answer go to a person. Ontario businesses handling personal information fall under federal PIPEDA, and any system that touches personal health information for a hospital, clinic or research custodian must also respect Ontario\'s Personal Health Information Protection Act (PHIPA). We can keep data in Canadian cloud regions, stop model providers training on it, and add encryption, role-based access and audit logs; your privacy officer confirms the final position. See our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page for wider provincial work.',
+        ],
+      },
+      {
+        heading: 'What AI development costs for a London project (CAD)',
+        body: [
+          'London budgets follow the national planning ranges in our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          '. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents, with cited sources, access control and hand-off to staff, is about $15,000-$50,000. Custom model training, such as a defect-detection model for a production line or a claims-triage model built on your historical files, starts around $75,000. These are planning figures, not quotes. After a free discovery call we check whether your data is ready, then agree a fixed scope and a fixed CAD price before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in London, Ontario?',
+        a: 'Using our Canadian AI cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. After a free discovery call you get one fixed price in CAD.',
+      },
+      {
+        q: 'Can you build AI tools for health research data under PHIPA?',
+        a: 'Yes. For research groups and clinics we build tools with de-identified or access-controlled data, Canadian hosting, audit logs and no training by outside model providers. We document how personal health information moves through the system so your privacy office or research ethics board can review it before launch.',
+      },
+      {
+        q: 'Can AI speed up insurance claims without replacing adjusters?',
+        a: 'Yes. We build claims triage that reads incoming documents and photos, extracts key fields, flags missing items and sorts files by complexity. An adjuster still makes every coverage and payment decision, and each AI suggestion shows the source it came from so it can be checked.',
+      },
+      {
+        q: 'Do you have an office in London, Ontario?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and serves London clients remotely through video workshops, weekly demos and a shared project board. If your team wants an in-person kickoff in London, we can arrange a visit with travel costs agreed up front.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-london-on': {
+    title: 'UI/UX Design Company in London, ON',
+    description: 'UI/UX design company in London, Ontario: research, Figma prototypes and AODA-ready design for health, insurance and campus teams. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing apps, portals and dashboards for organizations in London, Ontario. We do not have a London office; London clients work with us remotely through Figma, video workshops and remote usability sessions. London is two hours ahead of Edmonton on Eastern Time, so design reviews land in your late morning or afternoon and revised files are ready the same day. We design for health research and clinical teams, Western University groups, insurers and brokers, manufacturers and agri-food businesses. You work directly with the designers doing the work, see a clickable prototype every week, and agree a fixed CAD price before design starts.',
+    sections: [
+      {
+        heading: 'Design work London organizations bring to us',
+        body: [
+          'Every London sector puts different people in front of a screen. Research coordinators near Robarts Research Institute and staff at London Health Sciences Centre need study and clinical tools with clear data entry, fewer clicks and no room for a wrong selection. Patients need booking and follow-up screens that older adults can read without help. Western University groups need student and research portals that first-year students understand on day one. Insurance customers need claim and quote flows that explain each step and save progress, because a confusing form becomes a phone call. Manufacturing and agri-food teams need shop-floor and traceability screens with large targets that work on tablets in a plant. Our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page shows the full scope.',
+        ],
+      },
+      {
+        heading: 'Research, accessibility and privacy by design',
+        body: [
+          'Each project starts with a free UX audit: a heuristic review, a look at your analytics and short interviews with real users. We then map journeys, move to wireframes and a clickable Figma prototype, and usability-test it on real tasks so problems surface before development. Ontario organizations have accessibility duties under the AODA, so we design to WCAG 2.0 AA or higher from the first wireframe, with contrast, focus states, keyboard paths and screen-reader labels set in the files. Where a form collects personal information, the flow follows PIPEDA consent rules, and screens that show personal health information for an Ontario custodian are designed with PHIPA in mind. Your compliance lead confirms the final position. Our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page covers the wider province.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in London (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit. Our published ranges are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. A claims portal or patient booking flow usually lands in the full product band, while a multi-team research platform or university-wide design system can reach the enterprise band. Screen count, research depth and branding move the number, and the audit tells you which band fits before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in London, Ontario?',
+        a: 'We quote a fixed CAD price after a free UX audit. Published ranges are about $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design with 30+ screens and research, and $12,000-$30,000+ for an enterprise design system.',
+      },
+      {
+        q: 'Will the design meet AODA accessibility rules?',
+        a: 'We design to WCAG 2.0 AA, the standard behind AODA web requirements, and often to WCAG 2.1 AA. Contrast, focus states, keyboard order and screen-reader labels are specified in the Figma files so developers build them correctly. Your legal or accessibility advisor gives the final sign-off.',
+      },
+      {
+        q: 'Can you run usability tests with our London users?',
+        a: 'Yes. We run remote moderated sessions over video with your real users, such as patients, adjusters, students or plant staff, and record what they struggle with. If testing on site in London matters, for example on a production floor, we can arrange a visit with travel agreed up front.',
+      },
+      {
+        q: 'Who owns the design files for our London project?',
+        a: 'You do. Figma files, the design system, prototypes and research notes belong to your organization with no lock-in, so you can hand them to your own developers or keep working with us on the build.',
+      },
+    ],
+  },
+  'saas-development-company-in-london-on': {
+    title: 'SaaS Development Company in London, ON',
+    description: 'SaaS development company in London, Ontario building MVPs and multi-tenant platforms for health-tech, insurtech and manufacturing founders. Free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for founders and companies in London, Ontario. We do not have a London office and serve London remotely through video calls, weekly demos and a shared project board. London is two hours ahead of Edmonton on Eastern Time, leaving most of the working day for standups and reviews. Our London buyers include health-tech startups with roots in Western University and London\'s hospital research community, insurtech teams, manufacturing software firms and agri-food technology companies across Southwestern Ontario. You work with the senior engineers writing the code, see working software every week, and get a fixed CAD price before development starts.',
+    sections: [
+      {
+        heading: 'SaaS ideas growing out of London\'s research and industry',
+        body: [
+          'Many London SaaS products start as a tool built for one team. A research group at Robarts Research Institute or a clinic team at London Health Sciences Centre builds a workflow that other hospitals and labs want to license. Western University founders spin out study, teaching or lab-data software that needs accounts and billing before it earns money. Insurance professionals package broker, quoting or claims tools for other agencies. Manufacturers turn their own maintenance, inspection or quality systems into products for plants across Ontario, and agri-food firms sell traceability and food-safety records software to growers and processors. Most of these founders need one focused MVP for their first paying customers, not a full platform. Our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page covers the full path.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant architecture with PIPEDA and PHIPA in mind',
+        body: [
+          'We build the core workflow first, with sign-up, roles and subscription billing. The data model is multi-tenant from release one, so each hospital, agency or plant keeps its records separate and you can add customers without a rebuild. Billing covers plans, seats, usage tiers and Canadian sales tax through providers such as Stripe, and enterprise buyers get single sign-on with SAML or OIDC. We can host everything in Canadian cloud regions. Ontario SaaS products that handle personal information fall under PIPEDA, and products used by hospitals, clinics or research custodians to manage personal health information must also meet PHIPA obligations, so we design encryption, access control and audit logs for that from day one; your privacy officer confirms the final position. See our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page for more.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in London (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Hospital system integrations, insurance carrier connections, plant equipment data and security reviews move your price within those ranges. London founders often fund part of the build with SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how. After a free discovery call you receive one fixed CAD quote, so your runway is planned before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in London, Ontario?',
+        a: 'Our Canadian SaaS cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000 and an enterprise platform at $200,000-$500,000+. Integrations, billing rules and compliance work move the figure, and you get a fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build health-tech SaaS that hospitals in Ontario will accept?',
+        a: 'Yes. We build multi-tenant health products with Canadian hosting, encryption, role-based access, audit logs and documented data flows, which hospital privacy and security reviews ask for. Your privacy officer or legal advisor confirms the final PHIPA position, and we help prepare the answers for vendor questionnaires.',
+      },
+      {
+        q: 'Can a Western University spin-out work with you?',
+        a: 'Yes. We often start with a narrow MVP that proves one paid workflow, then grow it into a full product. You own all the code and IP, which matters for investors and for any licensing terms you agree with the university.',
+      },
+      {
+        q: 'Do you have an office in London, Ontario?',
+        a: 'No. We are headquartered in Edmonton and work with London founders remotely through weekly demos, video standups and a shared board. If you want an in-person planning session in London, we can arrange one with travel agreed up front.',
+      },
+    ],
+  },
 };
