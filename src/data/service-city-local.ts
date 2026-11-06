@@ -7382,6 +7382,167 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-burnaby': {
+    title: 'AI Development Company in Burnaby, BC',
+    description: 'AI development company in Burnaby: LLM features, chatbots and forecasting for tech studios, health and retail teams. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build LLM features, document chatbots, forecasting models and workflow automation for organizations in Burnaby and the rest of Metro Vancouver. We do not have a Burnaby office; Burnaby clients work with us remotely. Burnaby is on Pacific Time, one hour behind Edmonton, so our working days overlap almost completely and model reviews fit into your morning without a late call at either end. The sectors we see most in Burnaby are video game and technology studios around Metrotown and Brentwood, research and student projects tied to SFU and BCIT, health and life sciences companies, logistics and warehousing operators, and retail businesses. Senior engineers build the system, you see it working at a weekly demo, and scope and CAD price are fixed in writing before development begins.',
+    sections: [
+      {
+        heading: 'Where AI helps Burnaby studios, labs, warehouses and shops',
+        body: [
+          'Burnaby\'s AI requests arrive from the work its industries already do. Video game and technology studios around Metrotown and Brentwood want search, asset tagging, playtest summarisation and support assistants inside their own products and internal tools. Teams connected to SFU and BCIT want to turn research data or a lab workflow into a working model, and student-led startups want a lean first AI feature they can demo to customers and investors. Health and life sciences companies want drafting, triage and document-routing tools that a clinician or scientist approves every time. Logistics and warehousing operators want volume, dwell-time and demand forecasts from their own shipment and scan data. Retailers want recommendations, stock forecasts and assistants that answer product and order questions at any hour. Our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page lists everything we build.',
+        ],
+      },
+      {
+        heading: 'PIPA BC, FIPPA and grounded answers',
+        body: [
+          'We build chatbots with retrieval-augmented generation (RAG): the system finds the right passages in your product docs, policies, scan records or research files, writes its reply from them and cites each source. Access rules decide which documents each user can reach, and anything the system cannot answer goes to a person. Private businesses in BC handle personal information under the province\'s Personal Information Protection Act (PIPA BC), while public bodies such as health authorities, municipalities and public institutions such as SFU and BCIT work under the Freedom of Information and Protection of Privacy Act (FIPPA). We can keep data in Canadian cloud regions, stop outside model providers training on it, and add encryption, role-based access and audit logs; your privacy officer confirms the final position. Our ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' page covers our wider work in the province.',
+        ],
+      },
+      {
+        heading: 'What AI development costs for a Burnaby project (CAD)',
+        body: [
+          'Burnaby budgets follow the same national planning ranges in our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          '. Adding an LLM feature to an existing product is about $10,000-$35,000 CAD. A chatbot built on your own documents, with cited sources, access control and hand-off to staff, is about $15,000-$50,000. Custom model training, such as a dwell-time forecast built on warehousing scan data or a demand model for a retail chain, starts around $75,000. These are planning figures, not quotes. After a free discovery call we check whether your data is ready, then agree a fixed scope and a fixed CAD price before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Burnaby?',
+        a: 'Using our Canadian AI cost guide, an LLM feature in an existing product is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. After a free discovery call you get one fixed price in CAD.',
+      },
+      {
+        q: 'Can you add AI features to our Burnaby software product?',
+        a: 'Yes. We add LLM features such as search, summaries, drafting help and support assistants to existing products, with per-customer data separation so one tenant never sees another\'s records. We measure answer quality before launch and keep costs predictable with usage limits and caching.',
+      },
+      {
+        q: 'Which BC privacy law applies to our AI project?',
+        a: 'Private businesses in BC follow PIPA BC, while public bodies such as health authorities, municipalities, SFU and BCIT follow FIPPA. We design Canadian hosting, access control, audit logs and no training by outside model providers, and document data flows so your privacy officer can confirm the final position.',
+      },
+      {
+        q: 'Do you have an office in Burnaby?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and serves Burnaby clients remotely through video workshops, weekly demos and a shared project board. Burnaby is one hour behind Edmonton, so our days overlap. If your team wants an in-person kickoff, we can arrange a visit with travel costs agreed up front.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-burnaby': {
+    title: 'UI/UX Design Company in Burnaby, BC',
+    description: 'UI/UX design company in Burnaby: research, Figma prototypes and accessible screens for retail, tech and health teams. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing apps, portals and dashboards for organizations in Burnaby and the wider Metro Vancouver area. We do not have a Burnaby office; Burnaby clients work with us remotely through Figma, video workshops and remote usability sessions. Burnaby is on Pacific Time, one hour behind Edmonton, so design reviews fit inside your normal day and revised files are usually ready the same afternoon. We design for video game and technology studios, SFU and BCIT research and student projects, health and life sciences companies, logistics and warehousing operators, and retail businesses. You work directly with the designers doing the work, see a clickable prototype every week, and agree a fixed CAD price before design starts.',
+    sections: [
+      {
+        heading: 'Design work Burnaby organizations bring to us',
+        body: [
+          'Every Burnaby sector puts different people in front of a screen. Studios around Metrotown and Brentwood need internal tools, companion apps and editor views that stay usable during a crunch week. SFU and BCIT research groups need data collection and dashboard screens that survive a real lab or classroom, and student startups need a clean interface they can show alongside their pitch. Health and life sciences teams need clinical and lab screens where the right detail is visible at a glance and nothing is misread. Warehouse and logistics staff need large-target screens that work with gloves, on a trolley, in poor light. Retailers need checkout, loyalty and order-tracking flows that work on a phone while a shopper is standing in the aisle. Our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page shows the full scope.',
+        ],
+      },
+      {
+        heading: 'Research, accessibility and BC privacy',
+        body: [
+          'Each project starts with a free UX audit: a heuristic review, a look at your analytics and short interviews with real users. We then map journeys, move to wireframes and a clickable Figma prototype, and usability-test it on real tasks so problems surface before development. We design to WCAG 2.1 AA from the first wireframe, with contrast, focus states, keyboard paths and screen-reader labels set in the files, which also helps teams preparing for the Accessible British Columbia Act. Where a form or portal collects personal information about a customer, patient or resident, we follow BC\'s Personal Information Protection Act (PIPA) for private businesses and design data flows that help public bodies meet FIPPA; your compliance lead confirms the final position. Our ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' page covers the wider province.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Burnaby (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit. Our published ranges are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. A retail checkout and loyalty redesign or a lab data collection interface usually lands in the full product band, while a multi-product studio toolchain can reach the enterprise band. Screen count, research depth and branding move the number, and the audit tells you which band fits before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Burnaby?',
+        a: 'We quote a fixed CAD price after a free UX audit. Published ranges are about $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design with 30+ screens and research, and $12,000-$30,000+ for an enterprise design system.',
+      },
+      {
+        q: 'Can you redesign our retail checkout or loyalty flow?',
+        a: 'Yes. We review where shoppers drop off in your analytics, interview a few of them, then prototype and test a shorter path with clearer steps. Your developers get annotated Figma files, or we can build the changes with you.',
+      },
+      {
+        q: 'Can you run usability tests with our Burnaby users?',
+        a: 'Yes. We run remote moderated sessions over video with your real users, such as shoppers, lab staff, warehouse workers or clinic patients, and record what they struggle with. If testing on site in Burnaby matters, we can arrange a visit with travel agreed up front.',
+      },
+      {
+        q: 'Do you have an office in Burnaby?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and works with Burnaby clients remotely through Figma, video workshops and weekly prototype reviews. Burnaby is one hour behind Edmonton, so our days overlap. You own all design files, prototypes and research notes with no lock-in.',
+      },
+    ],
+  },
+  'saas-development-company-in-burnaby': {
+    title: 'SaaS Development Company in Burnaby, BC',
+    description: 'SaaS development company in Burnaby: MVPs and multi-tenant platforms for tech, health and logistics teams. Fixed CAD quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for founders and companies in Burnaby and Metro Vancouver. We do not have a Burnaby office and serve Burnaby clients remotely through video calls, weekly demos and a shared project board. Burnaby is on Pacific Time, one hour behind Edmonton, so standups and reviews fit easily into a shared working day. Our Burnaby buyers include video game and technology studios, teams spun out of SFU and BCIT research and student projects, health and life sciences companies, logistics and warehousing operators, and retail businesses. You work with the senior engineers writing the code, see working software every week, and get a fixed CAD price before development starts.',
+    sections: [
+      {
+        heading: 'SaaS ideas growing out of Burnaby',
+        body: [
+          'Burnaby has a dense technology scene around Metrotown and Brentwood, and many local products start as a tool built for one business. A technology studio packages the pipeline or asset tooling it built for itself and sells it to other studios. An SFU or BCIT research group turns a lab or teaching workflow into software that other departments and institutions license. A health or life sciences company turns intake, sample tracking or compliance reporting into a product for peer organizations. A logistics operator sells its scheduling or dwell-time tool to other carriers and warehouses, and a retailer licenses its stock and ordering system to other locations. Most of these teams need one focused MVP for their first paying customers, not a full platform. Our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page covers the full path.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant architecture with PIPA BC and FIPPA in mind',
+        body: [
+          'We build the core workflow first, with sign-up, roles and subscription billing. The data model is multi-tenant from release one, so each studio, clinic, lab, warehouse or store keeps its records separate and you can add customers without a rebuild. Billing covers plans, seats, usage tiers and Canadian sales tax including BC PST through providers such as Stripe, and enterprise buyers get single sign-on with SAML or OIDC. We can host everything in Canadian cloud regions. SaaS products sold to private BC businesses fall under the Personal Information Protection Act (PIPA BC), and products sold to public bodies such as health authorities, municipalities or public colleges and universities must help them meet FIPPA, so we design encryption, access control and audit logs for that from day one; your privacy officer confirms the final position. Our ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' page has more.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Burnaby (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Studio tooling integrations, sample or shipment data feeds, payment rails and security reviews move your price within those ranges. Burnaby founders often fund part of the build with SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how. After a free discovery call you receive one fixed CAD quote, so your runway is planned before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Burnaby?',
+        a: 'Our Canadian SaaS cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000 and an enterprise platform at $200,000-$500,000+. Integrations, billing rules and compliance work move the figure, and you get a fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build SaaS that BC public bodies can buy?',
+        a: 'Yes. We build multi-tenant products with Canadian hosting, encryption, role-based access, audit logs and documented data flows, which public-sector privacy reviews under FIPPA ask for. Your privacy officer or legal advisor confirms the final position, and we help prepare answers for vendor questionnaires.',
+      },
+      {
+        q: 'Can an early-stage Burnaby startup work with you?',
+        a: 'Yes. We often start with a narrow MVP that proves one paid workflow, then grow it into a full product. You own all the code and IP, which matters for investors, accelerator programs and any later funding round.',
+      },
+      {
+        q: 'Do you have an office in Burnaby?',
+        a: 'No. We are headquartered in Edmonton and work with Burnaby founders remotely through weekly demos, video standups and a shared board. Burnaby is one hour behind Edmonton, so our days overlap. If you want an in-person planning session in Burnaby, we can arrange one with travel agreed up front.',
+      },
+    ],
+  },
   'app-development-company-in-windsor': {
     title: 'App Development Company in Windsor, ON',
     description: 'App development company in Windsor, Ontario: iOS and Android apps for automotive, cross-border and healthcare teams at a fixed CAD price.',
