@@ -7,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: seoTitle('SEO Services Company in Canada | Technical & Local SEO'),
+  title: seoTitle('SEO Services Canada | Technical & Local SEO'),
   description: 'Results-driven SEO services in Toronto & across Canada. Technical SEO, link building, local SEO, and content strategy. 200% avg organic traffic growth.',
   openGraph: {
-    title: 'SEO Services Company in Canada | Technical & Local SEO | Mapletech Labs',
+    title: 'SEO Services Canada | Technical & Local SEO | Mapletech Labs',
     description: 'Results-driven SEO services in Toronto & across Canada. Technical SEO, link building, local SEO, and content strategy.',
     url: 'https://mapletechlabs.ca/services/digital-marketing/seo-services',
     type: 'website',
