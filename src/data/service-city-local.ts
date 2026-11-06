@@ -7382,4 +7382,173 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-windsor': {
+    title: 'App Development Company in Windsor, ON',
+    description: 'App development company in Windsor, Ontario: iOS and Android apps for automotive, cross-border and healthcare teams at a fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, and we build iOS and Android apps for organizations in Windsor, Ontario. We do not have a Windsor office; Windsor clients work with us remotely. Windsor runs on Eastern Time, two hours ahead of Edmonton, so our mornings line up with your late mornings and afternoons for calls and reviews. We build for automotive suppliers and advanced manufacturers, cross-border logistics teams at the Ambassador Bridge and the Gordie Howe International Bridge, health providers, groups linked to the University of Windsor and St. Clair College, and cross-border businesses selling to customers in both Canada and the US. Senior engineers build your app, you see a working build at a demo every week, and the scope and CAD price are fixed in writing before development starts.',
+    sections: [
+      {
+        heading: 'Apps Windsor, Ontario organizations ask us to build',
+        body: [
+          'Windsor\'s economy runs on automotive manufacturing and its supplier base, and most of the apps we get asked to build serve that world. Tier-one and tier-two suppliers want inspection, quality and maintenance apps for the shop floor and tooling, plus parts-tracking apps that follow a component through a plant. Cross-border logistics teams moving freight through the Ambassador Bridge and the Gordie Howe International Bridge want dispatch, customs and shipment-tracking apps their drivers open every day. Health providers want patient-facing apps for appointments, remote check-ins and follow-up care, and groups connected to the University of Windsor and St. Clair College want student, event and research data collection apps that hold up at the start of term. Cross-border businesses selling into both countries need quote and order flows that work for bilingual customers in Canada and the US. The full scope is on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'PIPEDA, PHIPA and data your customers trust',
+        body: [
+          'Private businesses in Ontario that collect personal information through an app fall under federal PIPEDA, which means clear consent, a stated purpose for each piece of data and a plan for breaches. Apps that touch personal health information for Ontario health information custodians, such as hospitals, clinics and practitioners, must also respect Ontario\'s Personal Health Information Protection Act (PHIPA). Apps used by customers on both sides of the border need the same care, so we map where every piece of personal information is stored and who can see it. We design consent screens, role-based access, encryption and audit logs into the first sprint, keep regulated data on Canadian hosting where the project needs it, and document data flows so your privacy officer can confirm compliance before launch. Our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page covers our wider work in the province.',
+        ],
+      },
+      {
+        heading: 'What a Windsor app costs and how long it takes',
+        body: [
+          'Budgets in Windsor follow the same national ranges in our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          '. A focused single-platform app with 5-8 screens is about $25,000-$50,000 CAD and takes 8-12 weeks. An app for both iOS and Android with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Platforms with AI features, device integrations or heavy compliance work start near $150,000 and run 6-18 months. Discovery is free, the price is fixed before coding begins, and the weekly demo shows exactly where your budget is going. When the app is the front end of a bigger platform, our ',
+          { href: '/locations/software-development-company-in-windsor', label: 'software development in Windsor' },
+          ' page covers the rest.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Windsor, Ontario?',
+        a: 'Based on our Canadian cost guide, a simple single-platform app is about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. Discovery is free and you receive a fixed CAD quote before any development starts.',
+      },
+      {
+        q: 'How long does it take to build an app for a Windsor business?',
+        a: 'A focused first version usually takes 8-12 weeks, a mid-size app for both platforms 12-24 weeks, and a complex regulated platform 6-18 months. You see a working build at a demo every week, so you can test features as they land rather than waiting for launch.',
+      },
+      {
+        q: 'Do you have an office in Windsor?',
+        a: 'No. We are headquartered in Edmonton and do not have a Windsor office. Windsor projects run remotely through video workshops, weekly demos and a shared project board; Eastern Time is two hours ahead of Edmonton, which still overlaps most of the working day. If your project needs an in-person kickoff or a session with your plant, logistics or clinical staff, we can arrange a visit to Windsor with travel costs agreed up front.',
+      },
+      {
+        q: 'Can you build an app that handles patient health information under PHIPA?',
+        a: 'Yes. We build health apps with consent records, role-based access, encryption, audit logs and Canadian hosting, and we document how personal health information moves through the system. Your privacy officer or legal advisor confirms the final PHIPA position, and you own all source code and accounts we create.',
+      },
+    ],
+  },
+  'web-development-company-in-windsor': {
+    title: 'Web Development Company in Windsor, ON',
+    description: 'Web development company in Windsor, Ontario: fast websites, portals and e-commerce built by senior engineers, with a fixed CAD quote. Get a free estimate.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton, building websites, customer portals and web applications for businesses in Windsor, Ontario. We do not have an office in Windsor, so Windsor clients work with us remotely through video calls, a shared project board and staging links. Windsor is two hours ahead of Edmonton on Eastern Time, which still leaves most of the working day for meetings and quick changes. We build for automotive suppliers and manufacturers, cross-border logistics and customs teams, health and life sciences organizations, groups tied to the University of Windsor and St. Clair College, and cross-border businesses selling to customers in Canada and the US. You deal directly with the senior engineers building your site, review it at a weekly demo, and sign a fixed scope and fixed CAD price before work begins.',
+    sections: [
+      {
+        heading: 'Web projects Windsor, Ontario businesses bring to us',
+        body: [
+          'Each of Windsor\'s main sectors needs something different from the web. Automotive suppliers and manufacturers want B2B catalogues, parts and dealer portals, and quote or RFQ forms that shorten sales cycles with buyers in Ontario, Michigan and beyond. Cross-border logistics companies want service pages, shipment-tracking portals and customer dashboards that stay fast on a phone at a loading dock. Health organizations need accessible sites that explain services clearly and booking or referral forms that handle personal details carefully. Groups connected to the University of Windsor and St. Clair College need program, event and recruitment sites that hold up during busy intake periods, and retailers across Windsor-Essex need e-commerce. Everything we build is listed on our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Accessible, fast and privacy-ready under Ontario rules',
+        body: [
+          'Ontario organizations also have accessibility duties under the AODA, so we build to WCAG 2.0 AA with proper headings, keyboard navigation, colour contrast and labelled forms. Pages are built in Next.js and React with server rendering, so they load quickly on phones and show up cleanly in search results. Forms and portals that collect personal information from customers fall under federal PIPEDA, and any site that handles personal health information for an Ontario hospital, clinic or practitioner must also respect PHIPA. Sites that sell across the border need the same care with customer details that move between two countries, and pages that read naturally for bilingual audiences. For those projects we use Canadian hosting, encrypted storage, access controls and clear consent text, and we map where every field goes so your privacy lead can approve it. More on our provincial work is on our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Website budgets and timelines for Windsor projects',
+        body: [
+          'Windsor website pricing follows the ranges in our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '. A template or WordPress site costs about $2,000-$10,000 CAD and takes 2-4 weeks. A custom business website is $10,000-$50,000 over 4-10 weeks, an e-commerce platform $25,000-$100,000 over 8-16 weeks, and an enterprise web application or customer portal $100,000-$500,000+ over 4-12 months. Discovery is free, your quote is fixed in writing before development, and every week you click through the latest version on a staging link. When the website is the front end of something bigger, our ',
+          { href: '/locations/software-development-company-in-windsor', label: 'software development in Windsor' },
+          ' page lists the portals, dashboards and platforms we also build.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Windsor, Ontario?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business site at $10,000-$50,000, e-commerce at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. You get a fixed CAD quote after a free discovery phase.',
+      },
+      {
+        q: 'How long will our new website take?',
+        a: 'Most custom business websites take 4-10 weeks from discovery to launch, and e-commerce builds 8-16 weeks. Larger portals and web applications take 4-12 months. You review progress at a weekly demo, so content and feedback can move in parallel with development.',
+      },
+      {
+        q: 'Do you have an office in Windsor?',
+        a: 'No. We are headquartered in Edmonton and do not have a Windsor office. Day-to-day work runs over video calls, weekly demos and staging links, which most Windsor clients find faster than travelling to meetings, and Eastern Time keeps our hours close to yours. For a kickoff workshop or launch planning session we can visit Windsor by arrangement, with travel costs agreed in advance.',
+      },
+      {
+        q: 'Will our website meet AODA and privacy requirements?',
+        a: 'We build to WCAG 2.0 AA, the standard used for AODA website compliance, and design forms and data storage around PIPEDA, plus PHIPA where personal health information is involved. Your legal or privacy advisor gives final sign-off, and you own the code, design files and domain outright.',
+      },
+    ],
+  },
+  'seo-company-in-windsor': {
+    title: 'SEO Company in Windsor, ON',
+    description: 'SEO company in Windsor, Ontario: technical SEO by senior engineers, honest local listings and a fixed monthly CAD retainer with clear reports. Free quote.',
+    intro: 'Mapletech Labs is a Canadian SEO and web engineering company headquartered in Edmonton, helping businesses in Windsor, Ontario earn more calls and leads from Google and Bing. We do not have a Windsor office and work with Windsor clients remotely. Windsor is on Eastern Time, two hours ahead of Edmonton, and we answer account questions the same business day. We know how buyers search for automotive suppliers and manufacturers, cross-border logistics and customs services, clinics and health practices, education programs at the University of Windsor and St. Clair College, and cross-border businesses selling to Canada and the US in two languages. Senior specialists do your keyword research, technical fixes and content themselves, you get a short review call every week, and your retainer is a fixed monthly amount in CAD.',
+    sections: [
+      {
+        heading: 'What Windsor-Essex customers search for',
+        body: [
+          'Windsor search demand behaves differently by sector. Home services, dental and physiotherapy clinics, restaurants and retailers live or die on map-pack results for "near me" searches across Windsor, Amherstburg, LaSalle and the rest of Essex County, and those results are decided mostly by the state of your Google Business Profile. We set up and maintain your Google Business Profile and Bing Places listing with the right categories, services, photos and posts, help you ask happy customers for reviews, and keep your name, address and phone identical across directories. Your profile shows only a real address or a genuine service area, never a virtual office. Automotive suppliers and manufacturers sell to buyers who search for products and capabilities rather than the word Windsor, so those campaigns target procurement and technical terms across Ontario and into the US. Cross-border businesses need pages that speak to bilingual Canada/US customers. Local map work is on our ',
+          { href: '/services/digital-marketing/local-seo', label: 'local SEO' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Technical SEO done by engineers',
+        body: [
+          'Mapletech Labs is a software company first, so your technical audit is run by engineers who build Next.js and WordPress sites every week. We fix Core Web Vitals, crawl errors, duplicate pages, canonical tags, schema markup and internal links directly in your code or CMS instead of adding more plugins. For Windsor healthcare practices we check that analytics, chat widgets and forms do not leak patient details, since personal health information is covered by Ontario\'s PHIPA and other personal data by PIPEDA. Sites that sell into the US also need careful language targeting so the right page appears for shoppers in each country. The full list of what we handle is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page. If your site needs rebuilding first, our ',
+          { href: '/locations/software-development-company-in-windsor', label: 'software development in Windsor' },
+          ' page covers the wider build and our ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' page covers the province; every change is logged so your team can see what moved and why.',
+        ],
+      },
+      {
+        heading: 'Honest local listings and SEO pricing in CAD',
+        body: [
+          'We do not have a Windsor office, and we will not invent one for you either. If you serve Windsor from a location in the region, your Google Business Profile and Bing Places listing are set up as a real storefront or service-area business, with categories that match your actual work and the same name, address and phone everywhere online. Virtual offices and fake addresses get listings suspended, so we never use them. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' puts typical SEO retainers at $1,500-$10,000 CAD per month; your figure depends on competition and site size, and it is fixed before work starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost for a Windsor, Ontario business?',
+        a: 'Typical SEO retainers run $1,500-$10,000 CAD per month, the range in our Canadian digital marketing cost guide. A single clinic or home-service business in Windsor usually sits near the low end, while manufacturers and cross-border firms chasing province-wide or US terms sit higher. After a free review of your site and competitors, we quote one fixed monthly price.',
+      },
+      {
+        q: 'How soon will we see results from SEO in Windsor?',
+        a: 'When a site has no major blockers, technical fixes and listing cleanup often show movement in 8-16 weeks. Competitive terms such as industrial products usually take 4-9 months before the trend is clear. Your monthly report tracks impressions, rankings, calls and form leads so you can judge progress early.',
+      },
+      {
+        q: 'How do we show up for "near me" searches in Windsor?',
+        a: 'Keep a complete, accurate Google Business Profile with the right categories and services, earn steady genuine reviews, keep your name, address and phone the same everywhere, and have a useful page on your site for each main service. We handle each of these and report on map pack visibility monthly.',
+      },
+      {
+        q: 'Do you have an office in Windsor?',
+        a: 'No. We are headquartered in Edmonton and do not have a Windsor office. Windsor SEO accounts run remotely on Eastern Time, two hours ahead of Edmonton, through a kickoff call, access to your analytics and Search Console, a weekly review and a plain monthly report. If you want an in-person strategy session in Windsor, we can arrange one with travel agreed up front.',
+      },
+    ],
+  },
 };
