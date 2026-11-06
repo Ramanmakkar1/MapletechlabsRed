@@ -4917,4 +4917,180 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-markham': {
+    title: 'App Development Company in Markham, ON',
+    description: 'App development company in Markham for York Region tech, health and retail firms: iOS and Android apps at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, with dedicated engineers in Toronto, building iOS and Android apps for Markham and York Region businesses. We do not have a Markham office. Markham runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for standups, design reviews and release decisions. Markham is one of Canada\'s largest tech clusters, so many of the teams we talk to already have product managers and in-house developers and want extra engineering capacity. We also work with healthcare groups connected to Markham Stouffville Hospital and Oak Valley Health, distributors along the Highway 404 and 407 corridor, and family-run firms in Markham\'s large Chinese-Canadian and South Asian business communities. You talk directly with the engineers writing your code, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'Apps for Markham\'s tech companies, healthcare and local business',
+        body: [
+          'Markham\'s software and hardware companies, and the startups around the Markham Convergence Centre and ventureLAB, often need a mobile companion to an existing web product: a customer app for a SaaS platform, a field app for device installers, or an internal tool that reads from the same APIs. We fit into your release process, code review and CI rather than asking you to adopt ours. Patient and staff apps linked to Markham Stouffville Hospital and Oak Valley Health need clear journeys and careful handling of personal data. Distributors and service firms on the 404/407 corridor ask for ordering, dispatch and proof-of-service apps that keep working when signal drops. Restaurants, retailers and professional firms in Markham\'s Chinese-Canadian and South Asian communities often want booking, loyalty and ordering apps in English plus Chinese, Tamil or other languages their customers prefer.',
+        ],
+      },
+      {
+        heading: 'Native or cross-platform: how we choose',
+        body: [
+          'Most Markham projects need iPhone and Android users on the same release, so we often start with Flutter or React Native: one codebase reaches both app stores and usually costs 30-40% less than separate native builds. That suits customer apps for SaaS products, multilingual ordering and loyalty apps, and internal tools where both platforms matter equally. When an app pairs with Bluetooth hardware, needs heavy offline storage or must squeeze every frame out of older phones, we build in Swift and Kotlin instead. If your Markham team already ships a web product in React, we explain how much of that knowledge carries over before you decide. See our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development services' },
+          ' for the full scope.',
+        ],
+      },
+      {
+        heading: 'What a Markham app costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Those ranges apply whether you are a Markham tech company adding a mobile product, a clinic or a family business planning its first app. Discovery is free, and your price is fixed in CAD before coding starts. See our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development services' },
+          ' for what each type of build includes.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'What should a Markham business budget for a custom app?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. After a free discovery call we put a fixed price in CAD in writing, so your Markham team knows the budget before any coding starts.',
+      },
+      {
+        q: 'Can you work alongside our in-house developers?',
+        a: 'Yes. Many Markham tech companies already have engineers and a product roadmap, and want help shipping a mobile app without hiring a full team. We work in your repositories, follow your code review and branching rules, join your sprint rituals on Eastern time and hand over documentation so your developers can own the app after launch.',
+      },
+      {
+        q: 'How long from kickoff to App Store and Google Play launch?',
+        a: 'A focused app with roughly 5-8 screens often ships in 8-12 weeks. A mid-size iOS and Android build with payments and an admin panel usually needs 12-24 weeks, and large platforms with integrations or compliance work can run 6-18 months. Your scope document lists milestones such as beta, store submission and launch dates.',
+      },
+      {
+        q: 'Do you have an office in Markham?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and has dedicated engineers in Toronto, but we do not maintain a Markham office. York Region clients work with us through video calls, shared boards and weekly demos of working builds. Eastern time is two hours ahead of Edmonton, so most business hours overlap for questions and approvals.',
+      },
+      {
+        q: 'Who owns the source code and app store accounts?',
+        a: 'You do. Source code, design files, app store listings, cloud accounts and credentials we set up for your Markham project belong to you, with no lock-in clause. You can keep us on for updates or hand everything to your in-house team whenever you prefer.',
+      },
+    ],
+  },
+  'web-development-company-in-markham': {
+    title: 'Web Development Company in Markham, ON',
+    description: 'Web development company for Markham and York Region businesses: fast, mobile-first, SEO-ready sites and web apps at fixed CAD pricing. Free quote.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton, building websites and web apps for Markham and York Region businesses. We do not have a Markham office. Markham runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for calls, design reviews and launch decisions. Our team also has engineers in Toronto. We work with software and hardware companies in one of Canada\'s largest tech clusters, distributors and professional firms along Highways 404 and 407, clinics and healthcare providers, and restaurants and retailers serving Markham\'s Chinese-Canadian and South Asian communities. You receive fast, mobile-first, SEO-ready sites with fixed CAD pricing agreed before work begins. You talk directly with the developers building your site, and weekly demos on a live staging site keep your team in the loop. Call +1-403-604-8692 to discuss your website.',
+    sections: [
+      {
+        heading: 'Websites and web apps Markham businesses rely on',
+        body: [
+          'Markham tech companies usually need more than a brochure site: product pages that explain technical offerings clearly, documentation and resource hubs, demo-request flows tied to their CRM, and customer portals or dashboards built on the same APIs as their software. Startups coming out of ventureLAB and the Markham Convergence Centre often need a fast marketing site and a first web app they can show investors and early customers. Distributors and B2B firms on the 404/407 corridor ask for online catalogues, dealer logins and quote requests instead of emailed price lists. Clinics want clear service pages and online booking, and restaurants and retailers serving Markham\'s Chinese-Canadian and South Asian communities often need bilingual or multilingual pages, menus and simple online stores that load fast on phones.',
+        ],
+      },
+      {
+        heading: 'Speed, SEO and accessibility standards for Ontario',
+        body: [
+          'We build with Core Web Vitals in mind: right-sized images, sensible caching and lean JavaScript, so Markham visitors on mobile data see content quickly. Ontario organisations work under the AODA, so we design and test against WCAG 2.0 AA, covering keyboard navigation, screen reader labels, colour contrast and readable text. Technical SEO ships with every build: clean URLs, unique titles and meta descriptions, schema markup, XML sitemaps and internal links that help Google and Bing understand your services. Where you publish in more than one language, we set up separate URLs and hreflang tags so each version can rank on its own. See our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' for ongoing search work after launch.',
+        ],
+      },
+      {
+        heading: 'What a Markham website costs and how long it takes',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). These are typical market estimates for Markham and York Region projects. Discovery is free, your price is fixed in CAD before coding starts, and our ',
+          { href: '/services/web-development', label: 'web development services' },
+          ' page explains what each type of build includes.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Markham?',
+        a: 'Typical market estimates are about $2,000-$10,000 CAD (2-4 weeks) for a template or WordPress site, $10,000-$50,000 (4-10 weeks) for a custom business website, $25,000-$100,000 (8-16 weeks) for an e-commerce platform and $100,000-$500,000+ (4-12 months) for an enterprise web application. After a free discovery call we agree on a fixed price in CAD before coding starts.',
+      },
+      {
+        q: 'Can you build a customer portal or dashboard for our software?',
+        a: 'Yes. Many Markham tech companies need a web app on top of their existing product, such as a customer portal, admin dashboard or self-serve onboarding flow. We connect to your current APIs and authentication, work in your repositories if you prefer, and document everything so your own developers can maintain it.',
+      },
+      {
+        q: 'Can our Markham site be in English and Chinese?',
+        a: 'Yes. We build multilingual sites with a separate URL for each language and hreflang tags so Google and Bing show the right version. Your team or a professional translator supplies or approves the translated text, because machine translation alone rarely reads naturally to customers. The same setup works for other languages your customers use.',
+      },
+      {
+        q: 'Do you have an office in Markham?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and has engineers in Toronto, but we do not maintain a Markham office. York Region clients work with us through video calls, shared boards and weekly demos on a live staging site. Eastern time is two hours ahead of Edmonton, so most business hours overlap for questions and approvals.',
+      },
+      {
+        q: 'Who owns the Markham website and source code?',
+        a: 'You do. The website, content, domain, hosting accounts and source code belong to you, with no lock-in. You can keep us for support and new features or hand the project to your own developers whenever you choose.',
+      },
+    ],
+  },
+  'seo-company-in-markham': {
+    title: 'SEO Company in Markham, ON',
+    description: 'SEO company in Markham for York Region businesses: technical SEO, Google map-pack visibility and monthly CAD retainers. Get a free SEO review today.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Markham and York Region businesses that want more calls and leads from Google and Bing. We do not have a Markham office. Markham runs on Eastern time, two hours ahead of Edmonton, so our working days overlap and account questions get answered the same day. You work directly with the specialists doing keyword research, technical fixes and content, not a salesperson. Retainers are priced in CAD with a fixed monthly scope agreed before work starts. Call +1-403-604-8692 to talk through your Markham search goals.',
+    sections: [
+      {
+        heading: 'How Markham search works',
+        body: [
+          'Markham has two very different kinds of search demand. Its tech companies sell software, hardware and services to buyers across Canada and beyond, so they compete on product and category terms where the city name rarely appears. Local businesses (clinics, dentists, trades, restaurants, tutoring centres and professional firms) win on map-pack and “near me” searches, often against competitors in Richmond Hill, Scarborough or Vaughan. Many Markham customers also search in Chinese or other languages, so English-only pages can miss part of the demand. We work out which kind of search brings your customers, then build pages and profile signals that match it. For map-pack work, see our ',
+          { href: '/services/digital-marketing/local-seo', label: 'local SEO services' },
+          '.',
+        ],
+      },
+      {
+        heading: 'What we do for Markham SEO',
+        body: [
+          'We start with a technical audit of Core Web Vitals, crawl coverage, schema and internal links, then fix blockers in your codebase or CMS. For tech companies, that often means cleaning up JavaScript-heavy product sites so search engines can read them, and building category and comparison pages around what buyers actually search. For local businesses, we set up Google Business Profile and Bing Places honestly as a staffed address or service-area business, keep your name, address and phone consistent, and help you earn real reviews. Where your customers search in more than one language, we add properly translated pages with hreflang tags. The full scope lives on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'SEO costs and reporting in CAD',
+        body: [
+          'SEO is quoted as a monthly retainer in CAD. In our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. A single-location Markham clinic or trades campaign often sits at the lower end; tech companies competing for national or international category terms sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next. You can compare our rates on ',
+          { href: '/pricing', label: 'our pricing page' },
+          ' before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Markham?',
+        a: 'Most Markham SEO engagements are monthly retainers of about $1,500-$10,000 CAD, the range we publish in our Canadian digital marketing cost guide. A single-location clinic, trades or retail campaign often sits at the lower end; tech companies chasing national category terms sit higher. After a free review of your site and competitors, we quote one fixed monthly number in CAD rather than hourly billing.',
+      },
+      {
+        q: 'How long until SEO results show in Markham?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive York Region or GTA terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages, calls and form leads, so you can see progress before position charts catch up.',
+      },
+      {
+        q: 'Our Markham tech company sells nationally. Do we need local SEO?',
+        a: 'Usually less than you think. If buyers find you by product or category, most of the gains come from technical fixes, product and comparison pages, and content that answers their questions. A correct Google Business Profile still matters for hiring and brand searches, but we put most of the budget where your revenue comes from.',
+      },
+      {
+        q: 'Should we have Chinese-language pages?',
+        a: 'If a real share of your customers search or call in Chinese, yes. Separate, properly translated pages with their own URLs and hreflang tags can rank for searches English pages miss. We do not machine-translate and publish; a fluent speaker on your team or a translator should review every page. We start with your top services and expand once leads show it is working.',
+      },
+      {
+        q: 'Do you have an office in Markham?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Markham office. York Region clients work with us through calls, shared documents and monthly reports. Eastern time is two hours ahead of Edmonton, so most business hours overlap. You can reach the team at +1-403-604-8692.',
+      },
+    ],
+  },
 };
