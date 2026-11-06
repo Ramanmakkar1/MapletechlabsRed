@@ -8035,4 +8035,162 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-quebec-city': {
+    title: 'App Development Company in Quebec City, QC',
+    description: 'App development company in Quebec City: iOS and Android apps for government, insurance, games and optics teams, bilingual FR/EN, fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, and we build iOS and Android apps for organizations across Quebec City. We do not have a Quebec City office; Quebec City clients work with us remotely. Quebec City is the provincial capital, with an economy led by government and a strong insurance and finance sector, plus a well-known video-game cluster and a world-recognised optics and photonics industry. Université Laval and a busy tourism season shape the rest of the market. Quebec City runs on Eastern Time, two hours ahead of Edmonton, so our afternoons line up with your mornings for demos and quick decisions. Quebec\'s Charter of the French Language (Bill 96) means apps serving Quebec users must be available in French, so we build French-first or fully bilingual apps, and we design for Quebec\'s Law 25 privacy rules from the first sprint. Scope and a fixed CAD price are agreed in writing before development begins, and you own all of the code and IP.',
+    sections: [
+      {
+        heading: 'Apps for Quebec City\'s government, insurance, games and optics teams',
+        body: [
+          'Government and public-sector teams need apps that work in French and English and stand up to privacy and security review: resident services, permits, booking and case-management tools with the audit trail an examiner expects. Insurers and brokers want claims and policy apps where a customer photographs damage, uploads documents and follows a file to settlement. The city\'s video-game studios ask for companion apps, build-tracking tools and event apps that feel as polished as the games themselves. Optics and photonics manufacturers need inspection, calibration and measurement apps that record every reading on the shop floor. Université Laval research groups need data-collection apps that hold up at the start of term, and tourism operators want booking and visitor apps in both languages. The full scope is on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'French-first builds, Law 25 privacy and Canadian data',
+        body: [
+          'Quebec\'s Charter of the French Language, as updated by Bill 96, means French must be at least as available as English for Quebec users, so we design French-first or fully bilingual apps from the first wireframe: screens, onboarding, push notifications, emails and app store listings. Quebec\'s Law 25 shapes how you collect personal information, so we build clear consent screens, privacy-by-default settings and simple ways for users to see or delete their data. When residency matters, app data can be hosted in Canadian cloud regions. We plan the translation copy during discovery and confirm wording with French-speaking reviewers on your team before launch. We implement these features carefully, but your own advisers confirm the final legal position. More on our provincial work is on our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What an app costs for a Quebec City project',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          ' sets out the ranges we quote from: about $25,000-$50,000 CAD and 8-12 weeks for a simple single-platform app with 5-8 screens, $50,000-$150,000 and 12-24 weeks for a mid-size iOS and Android app with payments and an admin panel, and $150,000 or more over 6-18 months for complex platforms with AI, IoT or compliance work. Bilingual content, insurance-system integrations and security reviews move a project within those bands. Discovery is free and the price is fixed before coding starts, so your budget is settled before the first release.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to build an app in Quebec City?',
+        a: 'Using our Canadian cost guide, a simple single-platform app is about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform with AI, IoT or compliance work $150,000 or more. After a free discovery phase you get one fixed CAD price.',
+      },
+      {
+        q: 'Can you build a French-first app that meets Bill 96?',
+        a: 'Yes. We build French-first or bilingual apps where French is at least as available as English: every screen, notification, email and app store listing, with a simple language switch. We plan the content structure during discovery, and French-speaking reviewers on your team confirm the wording before launch. Your own advisers should confirm how Bill 96 applies to your business.',
+      },
+      {
+        q: 'How do you handle Law 25 privacy and keep data in Canada?',
+        a: 'We build in clear consent screens, privacy-by-default settings, access controls and ways for users to view or delete their personal information, and we can host app data in Canadian cloud regions. We document how the app handles personal data for your team, and your legal advisers should confirm the final Law 25 position.',
+      },
+      {
+        q: 'Do you have an office in Quebec City?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Quebec City office. Quebec City clients work with us remotely through video workshops, weekly demos and a shared project board, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. If an in-person kickoff or planning workshop would help, we can travel to Quebec City with costs agreed up front.',
+      },
+    ],
+  },
+  'web-development-company-in-quebec-city': {
+    title: 'Web Development Company in Quebec City, QC',
+    description: 'Web development company in Quebec City: fast bilingual FR/EN websites, portals and online stores for Quebec teams. Fixed CAD price, free quote.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds business websites, customer portals, online stores and web applications for organizations in Quebec City. We do not have a Quebec City office; Quebec City clients work with us remotely through video workshops, staging links and a weekly demo where you click through the real site as it takes shape. Quebec City is the provincial capital, and its government and public bodies sit alongside insurers and financial firms, video-game studios, optics and photonics manufacturers, Université Laval and tourism operators. Quebec City is on Eastern Time, two hours ahead of Edmonton, so reviews and decisions fit comfortably into your working day. Because Quebec\'s Charter of the French Language means French must be available on commercial sites serving Quebec customers, we build bilingual French and English websites with proper hreflang, and we design for Quebec\'s Law 25 from the start. Every project has a fixed scope and a fixed CAD price agreed in writing before development starts, and you deal directly with the developers.',
+    sections: [
+      {
+        heading: 'Websites and portals for Quebec City\'s sectors',
+        body: [
+          'Government and public-sector teams need accessible bilingual service pages and secure portals where residents complete forms, book appointments and find information, with the privacy reviews a capital-city project attracts. Insurers and brokers want quote forms, policy self-service and claims portals that cut phone volume. Video-game studios need recruitment, showcase and community sites that stay fast with rich media. Optics and photonics manufacturers need catalogue and capability pages written for technical buyers who search product terms, not the city name. Université Laval faculties and student groups need program, event and research sites that hold up during busy intake periods, and tourism operators need bilingual booking and visitor sites they can update for every festival and season. Everything we build is listed on our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'French-first, Law 25 ready websites',
+        body: [
+          'Quebec\'s Charter of the French Language, as updated by Bill 96, means French must be available on commercial websites serving Quebec customers, so we build bilingual FR/EN from the start, with proper hreflang tags so Google and Bing understand each language version. Quebec Law 25 covers consent banners, privacy policies and how personal data is collected and stored, so we implement the consent, cookie and privacy features your site needs and structure data collection so you can explain it. Your legal counsel confirms how the law applies to your business and reviews final policy wording; we do not provide legal advice. Forms and portals can be hosted in Canadian regions when residency matters. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers the wider provincial work.',
+        ],
+      },
+      {
+        heading: 'Website pricing and timelines for Quebec City',
+        body: [
+          'We price every Quebec City project from our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          ': roughly $2,000-$10,000 CAD over 2-4 weeks for a template or WordPress site, $10,000-$50,000 over 4-10 weeks for a custom business website, $25,000-$100,000 over 8-16 weeks for e-commerce, and $100,000-$500,000+ over 4-12 months for an enterprise web application or a secure customer portal. Bilingual content and integrations with insurance or reservation systems usually sit in the higher bands. Discovery is free, the quote is fixed before development, and every week you review the latest version on a staging link. Plan tourism and festival launches ahead of the season.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Quebec City?',
+        a: 'Based on our Canadian website cost guide, a template or WordPress site is about $2,000-$10,000 CAD, a custom business website $10,000-$50,000, an online store $25,000-$100,000 and an enterprise web application $100,000-$500,000+. You get one fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build a bilingual French and English website?',
+        a: 'Yes. When your customers need both languages, we build French and English content into the site from the start: navigation, page copy, forms and metadata, with hreflang tags and a clear way to switch languages. We plan the content model during discovery so translations stay maintainable after launch.',
+      },
+      {
+        q: 'Does a Quebec City website need to meet Law 25?',
+        a: 'Law 25 sets strict rules for personal information in Quebec, and commercial sites serving Quebec customers need consent banners, privacy policies and clear data practices. We build those features in, and your legal counsel should review how Law 25 applies to your business and sign off on final policy wording; we do not provide legal advice.',
+      },
+      {
+        q: 'Do you have an office in Quebec City?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Quebec City office. We deliver remotely through video workshops, staging links and a weekly demo, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. For a kickoff or planning workshop in person, we can travel to Quebec City with costs agreed up front.',
+      },
+    ],
+  },
+  'seo-company-in-quebec-city': {
+    title: 'SEO Company in Quebec City, QC',
+    description: 'SEO company in Quebec City: French and English keyword research, technical fixes by engineers and clear monthly CAD retainers. Free review.',
+    intro: 'Mapletech Labs is a Canadian SEO and digital marketing company headquartered in Edmonton, helping Quebec City businesses win more calls, applications and sales from Google and Bing. We do not have a Quebec City office; Quebec City accounts run remotely, and with Eastern Time two hours ahead of Edmonton most of your working day overlaps, so questions get answered the same business day. We understand search for government and public-sector suppliers, insurers and financial firms, video-game studios, optics and photonics companies, Université Laval programs and tourism operators. The specialists who research keywords, fix your site\'s technical issues and write content are the people you speak with, and retainers are a fixed monthly figure in CAD.',
+    sections: [
+      {
+        heading: 'How Quebec City customers search',
+        body: [
+          'Quebec City does not search like one generic market. Government and public-sector buyers look for suppliers and services in French, so the wording you need is often different from an English search. Insurers and financial firms compete on quote and coverage terms where national brands spend heavily, and they win with clear local pages and strong reviews. Video-game studios reach candidates, players and partners on terms that rarely include the city name. Optics and photonics companies sell to buyers who search product, component and capability terms across Canada and beyond. Tourism is seasonal, so pages must rank before visitors start planning trips for the winter carnival and the summer festival season. Université Laval brings program and student searches, and trades, clinics and restaurants live on "near me" and map-pack results. We plan keywords and content around each of these groups.',
+        ],
+      },
+      {
+        heading: 'French-language keyword research and technical SEO',
+        body: [
+          'French keyword research is done natively, not machine-translated from English terms. We build separate French pages that answer the questions French-speaking customers actually ask, use hreflang so Google and Bing understand each language version, and keep your Google Business Profile and Bing Places information consistent in both languages. Because we build software every day, our engineers fix the technical side directly in your code or CMS: Core Web Vitals, crawling and indexing, canonical tags, structured data and internal links. Analytics, chat widgets and contact forms are set up around Quebec Law 25 consent, so your site only collects what it needs; your privacy adviser or legal counsel confirms what applies to your business. The full scope is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Monthly CAD retainers and clear reporting',
+        body: [
+          'SEO retainers for Quebec City businesses usually fall between $1,500 and $10,000 CAD a month, depending on how competitive your terms are and how much content you need. A single-location clinic, restaurant or trade sits near the lower end, while bilingual sites, insurance and tourism operators competing across Quebec and national technical terms sit higher. We start with a free review, then quote one fixed monthly figure. Each month you get a plain report covering rankings, organic traffic, calls, bookings and form leads, the work we finished and what we will test next. For seasonal tourism businesses we schedule new pages and fixes in the off-season so they are in place before searches peak.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Quebec City?',
+        a: 'Most Quebec City SEO retainers sit between $1,500 and $10,000 CAD per month. A single-location local business is usually near the lower end, while bilingual sites and campaigns competing across Quebec or on national technical terms sit higher. After a free review we quote one fixed monthly figure.',
+      },
+      {
+        q: 'Do you do French-language keyword research?',
+        a: 'Yes. Our keyword research runs in both English and French, native to each language rather than translated word for word, so a francophone audience finds you in the language they actually search in. We build French pages that stand on their own instead of machine-translated duplicates, and keep hreflang tidy so search engines show the right page to the right visitor.',
+      },
+      {
+        q: 'How does Law 25 affect SEO work like analytics and forms?',
+        a: 'Law 25 makes consent and privacy planning important for analytics, ad tracking and lead forms. We configure cookie consent and tracking around the choices your business implements and review which tags collect information, so your reports reflect the data available. Your privacy adviser or legal counsel confirms what applies; we do not provide legal advice.',
+      },
+      {
+        q: 'Do you have an office in Quebec City?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Quebec City office. Quebec City accounts run remotely through weekly demos, short calls and monthly reports, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. We can arrange a visit for a strategy or content workshop when it helps, with travel agreed up front.',
+      },
+    ],
+  },
 };
