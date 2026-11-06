@@ -5391,6 +5391,122 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-halifax': {
+    title: 'AI Development Company in Halifax, NS',
+    description: 'AI development company in Halifax: chatbots, LLM features and automation for ocean tech, port, health and tourism teams at a fixed CAD price. Free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we build AI chatbots, large language model (LLM) features and workflow automation for Halifax organizations. We do not have a Halifax office. Halifax runs on Atlantic time, three hours ahead of Edmonton, so a Halifax afternoon lines up with an Edmonton morning and there is a shared block of hours every working day for calls, reviews and fixes. We work with ocean technology companies, port and logistics operators, health teams, researchers and startups around Dalhousie, Saint Mary’s and the Volta hub, and tourism operators. You talk directly with the senior engineers who build your system, and you get a fixed scope and a fixed price in CAD before any work starts. Call us on +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'AI use cases for Halifax ocean tech, port, health and tourism teams',
+        body: [
+          'Ocean technology firms, including companies connected to COVE on the Dartmouth waterfront, collect huge amounts of sensor, sonar and vessel data, and ask us for tools that summarize survey logs, flag unusual readings for a person to check and let engineers search years of technical reports in plain English. Shipping, trucking and warehouse operators around the Port of Halifax want document processing that reads bills of lading, customs paperwork and delivery forms and pulls out the key fields, plus assistants that answer dispatcher and customer questions about shipments. Health teams working alongside Nova Scotia Health need help with intake forms, appointment reminders and documentation, built to handle personal health information with care. Researchers and founders from Dalhousie, Saint Mary’s and Volta often want an LLM feature added to an early product, and tourism operators want chatbots that answer visitor questions through the summer and cruise-season rush. The full scope of what we build is on our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Chatbots on your own documents, with Canadian privacy',
+        body: [
+          'A useful business chatbot answers from what your company actually knows, not from whatever the open internet says. We build it with retrieval-augmented generation (RAG): the system first looks up the right passages in your manuals, procedures, shipment records or knowledge base, then writes its reply from those passages and shows where each answer came from. Access rules decide which documents each person can draw on, and questions outside what the bot knows go to a person rather than getting a made-up answer. Private-sector personal data in Nova Scotia falls under federal PIPEDA, and health projects add the province’s Personal Health Information Act, so we can host your AI system and its data in Canadian cloud regions, set up model providers so they do not train on your data, and add encryption, role-based access and audit logs. Your privacy officer should confirm the final compliance position. Our ',
+          { href: '/locations/nova-scotia', label: 'Nova Scotia software development' },
+          ' page covers the wider provincial picture.',
+        ],
+      },
+      {
+        heading: 'What AI development costs in Halifax (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents, with sources, access control and hand-off, is about $15,000-$50,000. Custom model training starts around $75,000. These are planning ranges, not quotes: after a free discovery call we agree a fixed scope and a fixed price in CAD before work begins, so a Halifax budget is settled in writing before the first line of code.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Halifax?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Do you have an office in Halifax?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Halifax office. We work with Halifax clients remotely through workshops, weekly calls and a shared project board, and in-person sessions in Halifax can be arranged with travel agreed up front.',
+      },
+      {
+        q: 'How does the time difference with Halifax work?',
+        a: 'Halifax is on Atlantic time, three hours ahead of Edmonton. When it is 1 pm in Halifax it is 10 am in Edmonton, so Halifax afternoons overlap with our mornings. We book standups, demos and reviews in that shared window, and you see progress on the project board before your next morning.',
+      },
+      {
+        q: 'Can our data stay in Canada?',
+        a: 'Yes. We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used for training. We design with PIPEDA in mind, and with Nova Scotia’s Personal Health Information Act for health projects, using encryption, role-based access and audit logs. Your privacy officer should confirm the final position; we do not provide legal advice.',
+      },
+      {
+        q: 'Who owns the code, prompts and models?',
+        a: 'You do. All source code, prompts, fine-tuned models, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-halifax': {
+    title: 'UI/UX Design Company in Halifax, NS',
+    description: 'UI/UX design company in Halifax: research, prototypes and WCAG 2.1 AA design for ocean tech, health and tourism teams at a fixed CAD price. Free UX audit.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we design digital products for Halifax organizations. We do not have a Halifax office. Halifax runs on Atlantic time, three hours ahead of Edmonton, so a Halifax afternoon lines up with an Edmonton morning and there is a shared block of hours every working day for design reviews and feedback. We work with ocean technology companies, port and logistics operators, health teams, startups coming out of Dalhousie, Saint Mary’s and the Volta hub, and tourism operators. Every project runs on weekly demos of a Figma prototype, you talk directly with the designers doing the work, and the price is fixed in CAD before design starts. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'Products Halifax organisations need designed',
+        body: [
+          'Ocean technology firms, including companies connected to COVE on the Dartmouth waterfront, need dashboards that turn sensor and vessel data into screens a crew or a buyer can read at a glance, and field tools with large touch targets that still work on a tablet on a moving deck. Shipping, trucking and warehouse operators around the Port of Halifax need dispatch, tracking and proof-of-delivery screens that drivers and yard crews can use quickly in poor light and bad weather. Health teams working alongside Nova Scotia Health need patient apps and clinician portals with clear, low-stress journeys. Founders from Dalhousie, Saint Mary’s and Volta need a first product designed well enough to put in front of early users and investors, and tourism operators need booking and visitor apps that hold up in the summer and cruise-season rush. You can see the full scope on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Research, prototypes and accessible design for Nova Scotia',
+        body: [
+          'Every Halifax project starts with a free UX audit: a heuristic review of your current product, a look at your analytics and short interviews with the people who use it. We turn the findings into user journeys for each key task, then wireframes, then a clickable prototype that we usability-test on real tasks so problems show up in Figma, not after launch. We design and test to WCAG 2.1 AA from the first wireframe: colour contrast, visible focus states, full keyboard paths, readable text sizes and screen-reader labels are decided in the design files. That supports Nova Scotia’s Accessibility Act goals for public-facing services; please have your legal or compliance team confirm exactly how it applies to you. Finally we hand off a documented design system with components, states and tokens. Our ',
+          { href: '/locations/nova-scotia', label: 'Nova Scotia software development' },
+          ' page covers the wider provincial picture.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Halifax (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, so your budget is set before design starts. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Port and logistics tools and health portals often land in the full product band. See how this work is scoped on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Halifax?',
+        a: 'We quote a fixed price in CAD after a free UX audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, interaction complexity, research depth and branding all move the number.',
+      },
+      {
+        q: 'Do you have an office in Halifax?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Halifax office. We work with Halifax clients remotely through workshops, weekly calls and a shared project board, and in-person sessions in Halifax can be arranged with travel agreed up front.',
+      },
+      {
+        q: 'How does the time difference with Halifax work?',
+        a: 'Halifax is on Atlantic time, three hours ahead of Edmonton. When it is 1 pm in Halifax it is 10 am in Edmonton, so Halifax afternoons overlap with our mornings. We book design reviews and prototype demos in that shared window, and you see updated Figma files before your next morning.',
+      },
+      {
+        q: 'Can you design tools for crews working at sea or on the docks?',
+        a: 'Yes. For ocean, marine and port work we design for gloves, glare and motion: large touch targets, high-contrast screens, short task flows and clear offline and sync states, and we test the prototype on real devices before handoff.',
+      },
+      {
+        q: 'Who owns the design files for our Halifax project?',
+        a: 'You do. The Figma files, design system, prototypes and research notes for your project belong to your business, with no lock-in. You can keep us on for new work or hand everything to your own designers and developers whenever you prefer.',
+      },
+    ],
+  },
   'ui-ux-design-company-in-surrey': {
     title: 'UI/UX Design Company in Surrey, BC',
     description: 'UI/UX design for Surrey health, logistics and startup teams: research, prototypes and WCAG 2.1 AA design at a fixed CAD price. Book a free UX audit.',
