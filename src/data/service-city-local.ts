@@ -6079,4 +6079,180 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-saskatoon': {
+    title: 'App Development Company in Saskatoon, SK',
+    description: 'App development company in Saskatoon: iOS and Android apps for mining, ag-tech, biotech and research teams, at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we build iOS and Android apps for Saskatoon organizations. We do not have a Saskatoon office. Saskatchewan stays on Central Standard Time all year, so for part of the year Saskatoon and Edmonton share the same clock and for the rest Saskatoon is one hour ahead, which leaves a full working day of overlap for calls, reviews and fixes. We work with potash and uranium mining operators, agriculture and ag-tech companies, biotech and research teams around the University of Saskatchewan, Innovation Place and the Canadian Light Source, and local startups. You speak directly with the senior engineers who build your app, see a working demo every week, and sign with a Canadian company for a fixed scope and a fixed CAD price before any work starts. Call us on +1-403-604-8692 to talk about your app.',
+    sections: [
+      {
+        heading: 'Apps Saskatoon teams ask us to build',
+        body: [
+          'Saskatoon app projects tend to follow the industries that built the city. Potash and uranium mine operators and their contractors need safety, inspection and equipment-tracking apps that crews can use underground or at remote sites, store data on the device and sync once a connection returns. Grain farms, input dealers and ag-tech companies need apps for field scouting, crop monitoring and grain logistics that cope with patchy rural coverage across the Prairies. Biotech and research groups at Innovation Place and the University of Saskatchewan need sample tracking, lab and field data collection apps that keep records clean and traceable. Founders need a focused MVP they can put in front of early users and investors. The full scope of what we build is on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Privacy and security for research, health and industrial data',
+        body: [
+          'Private-sector personal data in Saskatchewan falls under federal PIPEDA, and apps that handle personal health information for Saskatchewan trustees, such as clinics and health organizations, also have to respect the province\'s Health Information Protection Act (HIPA). Mining and research clients often care just as much about operational and research data: who can see it, where it is stored and how it is logged. We plan consent, access and breach handling from the first sprint, keep regulated data on Canadian hosting where your project needs it, and build in encryption, role-based access and audit logs. Your own privacy or security lead confirms the final compliance position before launch. Our ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan software development' },
+          ' page covers the wider provincial picture.',
+        ],
+      },
+      {
+        heading: 'Saskatoon app budgets and timelines',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
+          ' puts a simple single-platform app with 5-8 screens at about $25,000-$50,000 CAD over 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Discovery is free, your price is fixed before coding starts, and you see a working build at a demo every week, so a Saskatoon budget is settled in writing and progress is visible throughout.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to build an app in Saskatoon?',
+        a: 'Using the ranges in our Canadian cost guide, a simple single-platform app costs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform $150,000 or more. Discovery is free, and you get a fixed CAD price before development starts.',
+      },
+      {
+        q: 'Do you have an office in Saskatoon?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Saskatoon office. We work with Saskatoon clients remotely through workshops, weekly demos and a shared project board, and in-person sessions in Saskatoon can be arranged with travel agreed up front.',
+      },
+      {
+        q: 'How does the time zone work between Saskatoon and Edmonton?',
+        a: 'Saskatchewan uses Central Standard Time all year and does not change its clocks. While Alberta is on daylight time, Saskatoon and Edmonton show the same time; for the rest of the year Saskatoon is one hour ahead. Either way our working days overlap almost completely, so standups, demos and reviews are easy to book.',
+      },
+      {
+        q: 'Can you build apps that work at mine sites or in the field with no signal?',
+        a: 'Yes. For mining, farm and field research work we design offline-first apps that store data on the device, keep working without a connection and sync safely when the phone or tablet is back in range. We test these cases on real devices before launch, not only in a simulator.',
+      },
+      {
+        q: 'Who owns the app and its source code?',
+        a: 'You do. All source code, app store accounts, cloud accounts and design files we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand the code to your own team.',
+      },
+    ],
+  },
+  'web-development-company-in-saskatoon': {
+    title: 'Web Development Company in Saskatoon, SK',
+    description: 'Web development company in Saskatoon: fast sites, e-commerce and web apps for mining, ag-tech and biotech firms at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we build business websites, e-commerce stores and web apps for Saskatoon companies. We do not have a Saskatoon office. Saskatchewan keeps Central Standard Time all year, so Saskatoon matches Edmonton time for part of the year and is one hour ahead for the rest, and our working days overlap almost entirely. We work with mining suppliers and contractors, agriculture and ag-tech companies, biotech firms and research groups linked to the University of Saskatchewan and Innovation Place, and local service businesses. Your contract is with a Canadian company for a fixed scope and a fixed CAD price agreed before work starts, and you review progress at a weekly demo. Call us on +1-403-604-8692 to talk through your project.',
+    sections: [
+      {
+        heading: 'Websites and web apps Saskatoon businesses need',
+        body: [
+          'Saskatoon buyers ask us for very different kinds of sites. Mining suppliers and service contractors working around Saskatchewan\'s potash and uranium operations need credible company sites and portals for safety documents, bids and work orders. Agriculture and ag-tech companies need product sites that explain their technology to producers, plus dealer and customer portals for orders and grain logistics. Biotech firms and research teams at Innovation Place, near the Canadian Light Source, need sites that explain technical work clearly to partners, funders and recruits. Local retailers and service firms need e-commerce and booking pages that turn visits into sales. The full scope is on our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Fast pages, clean code and Canadian privacy',
+        body: [
+          'We build on Next.js and React and render key pages on the server, so search engines and visitors get quick first loads on phones and on slower rural connections across Saskatchewan. Core Web Vitals guide our choices on images, fonts and scripts from the start, not as a cleanup job later. Websites that collect personal information in Saskatchewan fall under federal PIPEDA, so contact forms, booking flows and customer portals get clear consent, secure storage and access controls. Where a site handles personal health information for a clinic or health organization, Saskatchewan\'s Health Information Protection Act (HIPA) also applies, so we keep the site, database and backups on Canadian hosting and document how data moves so your privacy lead can sign off. Our ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan software development' },
+          ' page covers the wider provincial picture.',
+        ],
+      },
+      {
+        heading: 'Website prices and timelines for Saskatoon projects',
+        body: [
+          'Our ',
+          { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
+          ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). Discovery is free, the price is fixed in writing before any development begins, and you see the site take shape at a demo every week.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Saskatoon?',
+        a: 'Our Canadian website cost guide puts a template or WordPress site at about $2,000-$10,000 CAD, a custom business website at $10,000-$50,000, an e-commerce platform at $25,000-$100,000 and an enterprise web application at $100,000-$500,000+. After a free discovery phase you get a fixed CAD price before coding starts.',
+      },
+      {
+        q: 'Do you have a Saskatoon office?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Saskatoon office. Saskatoon clients work with us through video calls, weekly demos, a shared project board and staging links, and we can travel to Saskatoon for workshops by arrangement, with costs agreed up front.',
+      },
+      {
+        q: 'How do you work with Saskatoon\'s time zone?',
+        a: 'Saskatchewan stays on Central Standard Time all year. When Alberta is on daylight time, Saskatoon and Edmonton show the same time; the rest of the year Saskatoon is one hour ahead. Our business hours overlap almost fully, so meetings are easy to book and changes made during the day are on the staging site for you to review.',
+      },
+      {
+        q: 'Can our team update the website after launch?',
+        a: 'Yes. We set up a CMS so your staff can edit pages, news and product updates without a developer, and we train your team at handover. If you prefer, we can also stay on for ongoing updates and support.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
+  'seo-company-in-saskatoon': {
+    title: 'SEO Company in Saskatoon, SK',
+    description: 'SEO company in Saskatoon: technical SEO, honest Google map-pack setup and monthly CAD retainers with plain-language reports. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we work with Saskatoon businesses that want more calls and leads from Google and Bing. We do not have a Saskatoon office. Saskatchewan stays on Central Standard Time all year, so Saskatoon shares Edmonton\'s clock for part of the year and is one hour ahead for the rest, and account questions get answered the same working day. We understand the search side of mining suppliers and contractors, agriculture and ag-tech companies, biotech and research firms around Innovation Place and the University of Saskatchewan, clinics and local service businesses. You work directly with the specialists doing the keyword research, technical fixes and content, not a salesperson, with retainers priced in CAD and a short review call every week. Call +1-403-604-8692 to talk through your Saskatoon search goals.',
+    sections: [
+      {
+        heading: 'How people search for Saskatoon businesses',
+        body: [
+          'Search demand in Saskatoon splits into three groups. Trades, retailers, restaurants and other local service businesses depend on “near me” and map-pack searches from people across the city and nearby towns. Mining suppliers, ag-tech companies and biotech firms sell to buyers across Canada and abroad, so they win on technical product and category searches where “Saskatoon” may never appear. Clinics and health practices need accurate local listings so patients can find hours, services and locations. We work out which group your customers fall into, then build pages and profile signals around the searches that bring enquiries. Map-pack work is covered on our ',
+          { href: '/services/digital-marketing/local-seo', label: 'local SEO' },
+          ' page, and our ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan' },
+          ' page covers our wider work in the province.',
+        ],
+      },
+      {
+        heading: 'An honest Google Business Profile and consistent NAP',
+        body: [
+          'For many Saskatoon service businesses the map pack decides who gets the call, so the profile must be accurate. We do not have a Saskatoon office ourselves, and we hold your profile to the same standard: if you serve Saskatoon from a yard or office outside the city, it is set up as a genuine service-area business, with categories and service areas that match the work you really do. Your name, address and phone (NAP) stay the same on your website, Bing Places, directories and citations. We will not rent a virtual office address or list a location nobody works from, because those profiles get suspended and take months to recover. Health practices that publish patient stories or forms online also need to respect PIPEDA and Saskatchewan\'s Health Information Protection Act (HIPA), so we keep tracking and forms privacy-safe.',
+        ],
+      },
+      {
+        heading: 'Technical SEO by engineers, priced in CAD',
+        body: [
+          'Mapletech Labs builds software first, so the engineers who build Next.js and WordPress sites every week handle the technical audit: Core Web Vitals, crawling and indexing, canonical tags, schema markup and internal links. Fixes go into your codebase or CMS rather than a stack of plugins. The full scope is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page. SEO is quoted as a monthly retainer in CAD, and our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' puts typical SEO retainers at $1,500-$10,000 CAD per month, depending on competition, site size and scope. Every month you get a plain-language report with rankings, organic traffic, enquiries, the work completed and what we are testing next.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Saskatoon?',
+        a: 'Most Saskatoon SEO retainers fall between $1,500 and $10,000 CAD per month, the range in our Canadian digital marketing cost guide. A single-location trades, clinic or retail business usually sits near the lower end; mining suppliers, ag-tech and biotech firms competing for national category terms sit higher. After a free review of your site and competitors we quote one fixed monthly figure in CAD.',
+      },
+      {
+        q: 'How long does SEO take to work in Saskatoon?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement within 8-16 weeks when a site has no major blockers. Competitive category terms usually need 4-9 months before the trend is fair to judge. From the first report we track impressions, indexed pages, calls and form leads, so you can see direction early.',
+      },
+      {
+        q: 'Can we show in the Saskatoon map pack without a Saskatoon address?',
+        a: 'Yes, if your service area is real. You need either a staffed location in Saskatoon or a genuine service-area business setup that covers the areas you serve. Virtual offices and made-up addresses get profiles suspended, so we will not use them. We set the profile up honestly, keep your NAP identical everywhere and support it with location pages and real customer reviews.',
+      },
+      {
+        q: 'How do you handle the time zone with Saskatoon?',
+        a: 'Saskatchewan stays on Central Standard Time all year, so Saskatoon matches Edmonton while Alberta is on daylight time and is one hour ahead the rest of the year. Our business days overlap almost fully, and you can reach the specialists on your account at +1-403-604-8692.',
+      },
+      {
+        q: 'What is in the monthly Saskatoon SEO report?',
+        a: 'A short, plain-language summary of the keyword movements that matter for your Saskatoon customers, organic sessions and enquiries from analytics, the work finished that month and what we plan to test next. Anything needing your approval, such as new pages or profile edits, is listed separately.',
+      },
+    ],
+  },
 };
