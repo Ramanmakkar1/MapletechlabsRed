@@ -4747,6 +4747,132 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ui-ux-design-company-in-victoria': {
+    title: 'UI/UX Design Company in Victoria, BC',
+    description: 'UI/UX design for Victoria tourism, health and tech teams: research, prototypes, WCAG 2.1 AA and Accessible BC compliance at a fixed CAD price. Free audit.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, with engineers based in Vancouver, and we design digital products for Victoria organizations. We do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so our working days almost fully overlap. We work with BC provincial government suppliers, tourism and hospitality operators, tech firms around downtown and the University of Victoria and Camosun campuses, ocean and marine companies, and healthcare teams serving Island Health patients. Every project runs on weekly demos of a Figma prototype, you talk directly with the designers doing the work, and the price is fixed in CAD before design starts. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'Products Victoria organisations need designed',
+        body: [
+          'Tourism and hospitality operators across the Inner Harbour and the Greater Victoria area need booking, visitor guide and loyalty apps that stay fresh between seasons and work well on a mobile screen in a crowded lobby queue. BC provincial government suppliers need accessibility-ready citizen portals and tender submission tools that pass a privacy and accessibility review under PIPA and FIPPA. Ocean and marine firms need dispatch, field and maintenance tools that keep working off the coast of the Juan de Fuca and sync when a connection returns. Health teams serving Island Health patients need patient apps and clinician portals with clear, low-stress journeys. Tech startups emerging from downtown and the University of Victoria and Camosun campuses need first products designed well enough to put in front of early users and investors. You can see the full scope on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Research, user journeys, prototypes and design-system handoff',
+        body: [
+          'Every Victoria project starts with a free UX audit: a heuristic review of your current product, a look at your analytics and short interviews with the people who use it. We turn the findings into user journeys for each key task, then wireframes for every screen before visual design begins. Those wireframes become a clickable prototype, and we run usability testing on real tasks so problems show up in Figma, not after launch. Finally we hand off a documented design system with components, states and tokens, plus annotated specs and design reviews while your developers build. See how this work is scoped on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'WCAG 2.1 AA and the Accessible British Columbia Act',
+        body: [
+          'British Columbia\'s Accessible British Columbia Act asks more and more organisations in the province to find and remove barriers, and digital products are a big part of that. We design and test to WCAG 2.1 AA from the first wireframe: colour contrast, visible focus states, full keyboard paths, readable text sizes, clear error messages and screen-reader labels are decided in the design files, not patched after development. That matters most for Victoria\'s tourism booking flows, government portals and health apps, where layouts also need room for translated text or larger fonts. We document what we tested in each prototype and keep the design system accessible as it grows. Please have your legal or compliance team confirm exactly how the Act applies to your organisation.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Victoria (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, so your budget is set before design starts. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Tourism booking apps and government portals often land in the full product band. Victoria projects are priced the same way as our BC work, and most take 6-11 weeks. To compare Canadian studios before you choose, read our ',
+          { href: '/blog/ui-ux-design-companies-canada', label: 'guide to UI/UX design companies in Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Victoria?',
+        a: 'We quote a fixed price in CAD after a free UX audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, interaction complexity, research depth and branding all move the number.',
+      },
+      {
+        q: 'Do you have an office in Victoria?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers based in Vancouver, and we do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so we work with Victoria clients remotely with almost the full working day in common, and we can meet in person in Victoria by arrangement, with any travel agreed up front.',
+      },
+      {
+        q: 'Do you design for the Accessible British Columbia Act?',
+        a: 'Yes. We design and test to WCAG 2.1 AA, which supports the barrier-removal goals of the Accessible British Columbia Act: contrast, focus indicators, keyboard navigation, text sizing and screen-reader labels are built into the design files. Please have your legal or compliance team confirm exactly how the Act applies to your organisation.',
+      },
+      {
+        q: 'Can you design accessible tourism or health apps?',
+        a: 'Yes. We design booking flows, patient portals and citizen services to WCAG 2.1 AA from the start, so accessibility is built in from wireframe to handoff rather than patched after development. We can also add accessibility testing reports for your compliance team.',
+      },
+      {
+        q: 'Who owns the design files for our Victoria project?',
+        a: 'You do. The Figma files, design system, prototypes and research notes for your project belong to your business, with no lock-in. You can keep us on for new work or hand everything to your own designers and developers whenever you prefer.',
+      },
+    ],
+  },
+  'ai-development-company-in-victoria': {
+    title: 'AI Development Company in Victoria, BC',
+    description: 'AI development in Victoria: chatbots, LLM features and automation from an Edmonton team, with BC privacy compliance and fixed CAD pricing. Free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, with engineers based in Vancouver, and we build AI chatbots, large language model (LLM) features and workflow automation for Victoria organizations. We do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. We work with BC provincial government suppliers, tourism and hospitality operators, ocean and marine firms, tech startups around downtown and the University of Victoria and Camosun campuses, and healthcare teams serving Island Health patients. You talk directly with the senior engineers who build your system, and you get a fixed scope and a fixed price in CAD before any work starts. Call us on +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'AI use cases for Victoria\'s government, tourism and health teams',
+        body: [
+          'BC provincial government suppliers need AI tools that can search through procurement specs, compliance guides and technical manuals for answers quickly, with sources cited so reviewers can verify facts. Tourism and hospitality operators ask for chatbots that answer guest questions in multiple languages, summarize booking policies and help with check-in or cancellation. Ocean and marine firms need chatbots or assistants that pull up safety procedures, maintenance logs and client instructions, and document processing that reads intake forms and extracts key fields. Health teams serving Island Health patients need AI features for patient intake, appointment reminders and documentation, built to handle personal health information with care. Tech startups around the University of Victoria and Camosun campuses often want to add an LLM feature to their existing product or build a research assistant that answers questions from academic papers.',
+        ],
+      },
+      {
+        heading: 'Chatbots on your own documents, with sources',
+        body: [
+          'A useful business chatbot answers from what your company actually knows, not from whatever the open internet says. We build it with retrieval-augmented generation (RAG): when someone asks a question, the system first looks up the right passages in your policies, manuals, booking systems or knowledge base, then writes its reply from those passages and shows where each answer came from. Access rules decide which documents each person can draw on. If a question falls outside what the bot knows, it passes the conversation to a person rather than making something up.',
+        ],
+      },
+      {
+        heading: 'BC PIPA and FIPPA privacy for private and public AI projects',
+        body: [
+          'Private-sector organisations in British Columbia fall under BC\'s Personal Information Protection Act (PIPA) for personal data collection. BC public bodies, including government suppliers and health teams, fall under the Freedom of Information and Protection of Privacy Act (FIPPA), which has its own rules on storing personal information outside Canada. We can host your AI system and its data in Canadian cloud regions and set up model providers so they do not train on your data, with encryption, role-based access and audit logs. Your privacy officer should confirm the final compliance position.',
+        ],
+      },
+      {
+        heading: 'What AI development costs in Victoria (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents, with sources, access control and hand-off, is about $15,000-$50,000. Custom model training starts around $75,000. These are planning ranges, not quotes: after a free discovery call we agree a fixed scope and a fixed price in CAD before work begins. For more, see our ',
+          { href: '/services/ai-ml/llm-integration', label: 'LLM integration services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Victoria?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Do you have an office in Victoria?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers based in Vancouver, and we do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so we serve Victoria clients remotely with working days that almost fully overlap, and we can meet in person in Victoria by arrangement, with travel agreed up front.',
+      },
+      {
+        q: 'Can our data stay in Canada under BC rules?',
+        a: 'Yes. We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used for training. We design with BC\'s PIPA for private-sector projects and FIPPA for public-body projects, with encryption, role-based access and audit logs. Your privacy officer should confirm the final position.',
+      },
+      {
+        q: 'How do you handle health data for Island Health projects?',
+        a: 'We can design access controls, audit logs, human review and Canadian cloud hosting with PIPA and FIPPA in mind. Health-related personal data needs careful handling: encryption, role-based access and documented data flows. Your privacy officer or lawyer should confirm the final compliance position; we do not provide legal advice.',
+      },
+      {
+        q: 'Who owns the code, prompts and models?',
+        a: 'You do. All source code, prompts, fine-tuned models, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
   'app-development-company-in-surrey': {
     title: 'App Development Company in Surrey, BC',
     description: 'App development company in Surrey: iOS & Android apps for logistics, health-tech and trades firms, with a fixed CAD price. Call +1-403-604-8692.',
