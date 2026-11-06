@@ -6757,4 +6757,162 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-regina': {
+    title: 'App Development Company in Regina, SK',
+    description: 'App development company in Regina: accessible, secure iOS and Android apps for public-sector, agri-tech and insurance teams. Fixed CAD quote.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, one province over from Regina, and we design and build iOS, Android and cross-platform apps for Regina organizations. We do not have a Regina office. Projects run remotely through weekly demos and a shared project board, and we can travel to Regina for discovery or design workshops when meeting in person helps. We build for teams connected to government and Crown corporations, agriculture and agri-tech, energy and potash, insurance and manufacturing. You talk directly with the senior engineers building your app, and the scope and CAD price are fixed in writing before any code is written.',
+    sections: [
+      {
+        heading: 'Mobile apps for Regina\'s capital-city economy',
+        body: [
+          'Regina\'s economy gives app projects a distinct mix. Suppliers and partners of the provincial government and Crown corporations need field-service, inspection and customer self-serve apps that hold up to public-sector review. Agriculture and agri-tech firms want apps for equipment data, grain contracts, input orders and traceability that keep working on a weak signal in the middle of a field. Energy and potash contractors need safety checklists and work-order apps for crews at remote sites. Insurers based in the city ask for claims, quoting and policyholder apps, and manufacturers want shop-floor apps for quality checks and inventory counts. Everything we build is listed on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Accessibility, security and privacy for public-sector work',
+        body: [
+          'Apps that serve the public or are built for a Crown corporation are usually held to accessibility and security expectations written into the contract. We design to WCAG 2.1 AA from the first wireframe, test with screen readers on iOS and Android, and support larger text and high-contrast settings. On security we use encryption in transit and at rest, role-based access, audit logs and Canadian hosting where the data calls for it, and we document all of it for vendor security reviews. Private businesses in Saskatchewan handle personal information under federal PIPEDA, and apps that touch personal health information must also respect Saskatchewan\'s Health Information Protection Act. Your privacy lead confirms the final position before launch.',
+        ],
+      },
+      {
+        heading: 'What an app costs for a Regina project',
+        body: [
+          'Every Regina estimate starts from the ranges in our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          ': around $25,000-$50,000 CAD and 8-12 weeks for a simple single-platform app of 5-8 screens, $50,000-$150,000 and 12-24 weeks for a mid-size iOS and Android app with 15-30 screens, payments and an admin panel, and $150,000 or more over 6-18 months for complex platforms with AI, IoT or compliance work. Connections to farm equipment data, insurance policy systems or government sign-in services can move a project between those bands. Discovery costs nothing, the price is locked in writing before development, and you see a working build every week.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does app development cost in Regina?',
+        a: 'Based on our Canadian cost guide, a simple single-platform app runs about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform with AI, IoT or compliance work $150,000 or more. After free discovery you get one fixed CAD price before development starts.',
+      },
+      {
+        q: 'Do you have an office in Regina?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, one province over, and we do not have a Regina office. Regina clients work with us through video calls, weekly demos and a shared board, and we can come to Regina for discovery or design workshops when that is useful, with travel agreed up front.',
+      },
+      {
+        q: 'Can you build apps that meet Crown corporation accessibility and security requirements?',
+        a: 'Yes. We design and test to WCAG 2.1 AA, and we build in encryption, role-based access, audit logs and Canadian hosting where needed. We also help your team answer vendor security and privacy questionnaires, while your own security and privacy leads make the final sign-off.',
+      },
+      {
+        q: 'Will the app work for farm and field crews outside Regina with weak cell coverage?',
+        a: 'Yes. For agriculture, energy and potash field work we build offline-first apps that save entries on the device, keep running without a signal and sync safely once coverage returns. We test those cases on real phones and tablets, not only in a simulator.',
+      },
+    ],
+  },
+  'web-development-company-in-regina': {
+    title: 'Web Development Company in Regina, SK',
+    description: 'Web development company in Regina: accessible, secure websites, portals and online stores for public-sector suppliers and agri-tech. Free quote.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton, one province over from Regina, building business websites, online stores, portals and custom web applications for Regina organizations. We do not have a Regina office. Projects run through video calls, staging links and a weekly demo, and our team can come to Regina for a planning or content workshop when that saves time. We know the needs of suppliers to government and Crown corporations, agriculture and agri-tech companies, energy and potash service firms, insurers and manufacturers. Each project has a fixed scope and a fixed CAD price agreed in writing before development begins, and you deal directly with the developers.',
+    sections: [
+      {
+        heading: 'Websites built around how Regina does business',
+        body: [
+          'Regina\'s mix of employers shapes the sites we build. Firms that bid on provincial government or Crown corporation work need clear capability pages, document libraries and secure supplier portals. Agri-tech companies and equipment dealers need product sites with spec sheets, dealer locators and online ordering for producers. Energy and potash service firms want careers pages and safety-document portals for contractors. Insurers and brokers need quote forms and policyholder dashboards that connect to their existing systems, and manufacturers need B2B catalogues and request-a-quote flows that pass leads straight to sales. Our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page lists the full range of web work.',
+        ],
+      },
+      {
+        heading: 'Accessible, secure sites that pass public-sector review',
+        body: [
+          'If your site serves the public or supports a government or Crown corporation contract, expect accessibility and security to be checked. We build to WCAG 2.1 AA with semantic HTML, keyboard navigation, visible focus states and tested colour contrast, and key pages render on the server so they load quickly on phones and rural connections. Security covers hardened hosting, HTTPS everywhere, regular dependency updates, role-based access to admin areas and logged changes. Forms that collect personal information for a private business fall under federal PIPEDA, and any portal holding personal health information must also meet Saskatchewan\'s Health Information Protection Act, so we document data flows and keep data on Canadian servers when required.',
+        ],
+      },
+      {
+        heading: 'Regina website pricing and timelines',
+        body: [
+          'For budgeting, our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          ' gives the ranges we quote from: about $2,000-$10,000 CAD over 2-4 weeks for a template or WordPress site, $10,000-$50,000 over 4-10 weeks for a custom business website, $25,000-$100,000 over 8-16 weeks for e-commerce, and $100,000-$500,000+ over 4-12 months for an enterprise web application. A supplier portal tied to an ERP, or an insurance quoting tool, usually lands in the upper bands. Discovery is free, the quote is fixed before development, and staging links let your team review every page as it is built.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Regina?',
+        a: 'Using our Canadian website cost guide, a template or WordPress site is about $2,000-$10,000 CAD, a custom business website $10,000-$50,000, an e-commerce store $25,000-$100,000 and an enterprise web application $100,000-$500,000+. You get a fixed CAD quote after a free discovery phase.',
+      },
+      {
+        q: 'Do you have a Regina office?',
+        a: 'No. We are headquartered in Edmonton, one province over, and do not have an office in Regina. Regina projects run through video calls, weekly demos and staging links, and we can visit Regina for planning or content workshops when they are useful, with travel costs agreed up front.',
+      },
+      {
+        q: 'Can you build a website that meets accessibility rules for a government or Crown corporation contract?',
+        a: 'Yes. We build and test to WCAG 2.1 AA, including keyboard navigation, screen-reader labels and colour contrast, and we can share an accessibility checklist and security summary for your contract review. Your procurement or compliance team confirms the final requirements.',
+      },
+      {
+        q: 'Can agri-tech companies and equipment dealers in Regina take orders online?',
+        a: 'Yes. We build product catalogues, dealer locators, quote requests and online ordering that connect to your inventory or ERP, so producers can check specs and order parts or products without calling in.',
+      },
+    ],
+  },
+  'seo-company-in-regina': {
+    title: 'SEO Company in Regina, SK',
+    description: 'SEO company in Regina: technical fixes by engineers, honest local listings and monthly CAD retainers with clear reports. Get a free SEO review.',
+    intro: 'Mapletech Labs is a Canadian SEO company headquartered in Edmonton, one province over from Regina, helping Regina businesses earn more calls, quote requests and leads from Google and Bing. We do not have a Regina office, so accounts run remotely with a short weekly call and a monthly report, and we can visit Regina for a strategy or content workshop when it is useful. We understand search for firms serving government and Crown corporations, agriculture and agri-tech, energy and potash, insurance and manufacturing, as well as local trades and clinics. The specialists who research keywords, fix technical issues and write content are the people you talk to, and retainers are priced in CAD.',
+    sections: [
+      {
+        heading: 'What Regina customers search for',
+        body: [
+          'Search in Regina follows its economy. Homeowners and local businesses look for trades, clinics, lawyers and repair shops through “near me” searches and the map pack. Agri-tech firms, equipment makers and manufacturers sell well beyond the city, so they need to rank for product and category terms that never mention Regina. Insurance brokers compete on quote and coverage searches across Saskatchewan. Companies that supply government and Crown corporations need clear capability pages that buyers find while researching vendors. We match your keywords to the group your buyers belong to, then plan pages and content around those searches. The full scope is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Accessible, privacy-safe pages and an honest local profile',
+        body: [
+          'Search engines and public-sector buyers reward the same things: pages that load fast, read clearly and work for everyone. Our technical audit fixes heading structure, alt text, colour contrast and keyboard access against WCAG 2.1 AA, which also helps when a government or Crown corporation buyer reviews your site. Your Google Business Profile and Bing Places listing show only a real address or a genuine service area, and your name, address and phone match everywhere. Tracking and forms respect PIPEDA for private businesses, and clinics handling personal health information also respect Saskatchewan\'s Health Information Protection Act, so analytics never capture patient details. Map-pack work is covered on our ',
+          { href: '/services/digital-marketing/local-seo', label: 'local SEO' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Technical SEO from engineers, with monthly CAD retainers',
+        body: [
+          'Because we build software every day, our engineers handle the technical side directly in your code or CMS: Core Web Vitals, crawl errors, indexing, canonical tags, structured data and internal links. Content work follows, with service and location pages written for Regina buyers rather than copied from other cities. Retainers are a fixed monthly figure in CAD, and our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' puts typical SEO retainers at $1,500-$10,000 CAD per month depending on competition and scope. Each month you get a plain report showing rankings, organic traffic, calls and form leads, the work completed and the next tests.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Regina?',
+        a: 'Most Regina SEO retainers sit between $1,500 and $10,000 CAD per month, the range in our Canadian digital marketing cost guide. A single-location trade or clinic is usually near the lower end, while agri-tech, insurance and manufacturing firms chasing provincial or national terms sit higher. After a free review we quote one fixed monthly figure.',
+      },
+      {
+        q: 'Can my business show in the Regina map pack without a Regina storefront?',
+        a: 'Yes, if you really serve Regina. A genuine service-area business profile can cover the city and nearby towns without showing an address. We never use virtual offices or invented locations, because those profiles get suspended, and we keep your name, address and phone identical on every listing.',
+      },
+      {
+        q: 'How long before SEO brings results for a Regina business?',
+        a: 'Technical fixes and profile cleanup often show movement within 8-16 weeks if the site has no major blockers. Competitive terms in insurance, agri-tech or manufacturing usually need 4-9 months before the trend is fair to judge, and we report impressions, calls and form leads from the first month.',
+      },
+      {
+        q: 'Do you have an office in Regina?',
+        a: 'No. We are headquartered in Edmonton, one province over, and run Regina SEO accounts remotely with weekly calls and monthly reports. When a strategy or content workshop in Regina would help, we can arrange a visit with travel agreed up front.',
+      },
+    ],
+  },
 };
