@@ -1,0 +1,226 @@
+
+> mapletechlabs-web@0.1.0 build
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 8.5s
+  Running TypeScript ...
+  Collecting page data using 23 workers ...
+  Generating static pages using 23 workers (0/631) ...
+  Generating static pages using 23 workers (157/631) 
+  Generating static pages using 23 workers (315/631) 
+  Generating static pages using 23 workers (473/631) 
+✓ Generating static pages using 23 workers (631/631) in 3.7s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /about/raman-makkar
+├ ○ /blog
+├ ƒ /blog-sitemap.xml
+├ ○ /blog/agentic-ai-in-production
+├ ○ /blog/ai-development-companies-canada
+├ ○ /blog/ai-development-companies-toronto
+├ ○ /blog/ai-development-cost-canada
+├ ○ /blog/app-development-companies-calgary
+├ ○ /blog/app-development-companies-edmonton
+├ ○ /blog/app-development-companies-toronto
+├ ○ /blog/app-development-cost-canada
+├ ○ /blog/app-privacy-compliance-canada
+├ ○ /blog/blockchain-development-companies-canada
+├ ○ /blog/build-saas-mvp-8-weeks
+├ ○ /blog/choose-software-development-company-canada
+├ ○ /blog/custom-software-vs-off-the-shelf
+├ ○ /blog/digital-marketing-cost-canada
+├ ○ /blog/native-vs-cross-platform-vs-pwa
+├ ○ /blog/nrc-irap-funding-software-canada
+├ ○ /blog/run-ai-models-locally-free
+├ ○ /blog/saas-development-company-canada
+├ ○ /blog/saas-development-cost-canada
+├ ○ /blog/saas-guide
+├ ○ /blog/saas-ideas-2026
+├ ○ /blog/seo-companies-calgary
+├ ○ /blog/seo-companies-edmonton
+├ ○ /blog/seo-companies-toronto
+├ ○ /blog/software-development-companies-calgary
+├ ○ /blog/software-development-companies-edmonton
+├ ○ /blog/software-development-companies-montreal
+├ ○ /blog/software-development-companies-ottawa
+├ ○ /blog/software-development-companies-toronto
+├ ○ /blog/software-development-companies-vancouver
+├ ○ /blog/software-development-contract-canada
+├ ○ /blog/software-maintenance-cost-canada
+├ ○ /blog/sred-software-development-canada
+├ ○ /blog/top-10-unicorn-apps-2026
+├ ○ /blog/top-seo-companies-canada
+├ ○ /blog/top-software-development-companies-canada
+├ ○ /blog/ui-ux-design-companies-canada
+├ ○ /blog/ui-ux-design-companies-toronto
+├ ○ /blog/use-claude-for-free
+├ ○ /blog/web-development-companies-edmonton
+├ ○ /blog/web-development-companies-toronto
+├ ○ /blog/website-cost-canada
+├ ○ /blog/website-development-company-canada
+├ ○ /blog/what-is-agentic-ai
+├ ○ /blog/what-profitable-saas-gets-right
+├ ○ /case-studies
+├ ○ /case-studies/ecommerce-platform
+├ ○ /case-studies/fintech-trading-platform
+├ ○ /case-studies/healthcare-telehealth
+├ ○ /case-studies/logistics-platform
+├ ○ /case-studies/payments-api-platform
+├ ○ /case-studies/real-estate-portal
+├ ○ /contact
+├ ○ /cookies
+├ ○ /faq
+├ ○ /industries
+├ ○ /industries/ecommerce
+├ ○ /industries/edtech
+├ ○ /industries/enterprise
+├ ○ /industries/fintech
+├ ○ /industries/healthcare
+├ ○ /industries/logistics
+├ ƒ /industry-sitemap.xml
+├ ƒ /legal-sitemap.xml
+├ ƒ /local-seo-sitemap.xml
+├ ƒ /location-sitemap.xml
+├ ○ /locations
+├ ● /locations/[city]
+│ ├ /locations/ai-development-company-in-edmonton
+│ ├ /locations/ai-development-company-in-toronto
+│ ├ /locations/ai-development-company-in-vancouver
+│ └ [+147 more paths]
+├ ● /locations/[city]/[service]
+│ ├ /locations/edmonton/mobile-app-development
+│ ├ /locations/edmonton/web-development
+│ ├ /locations/edmonton/ai-ml
+│ └ [+285 more paths]
+├ ○ /locations/alberta
+├ ○ /locations/british-columbia
+├ ○ /locations/manitoba
+├ ○ /locations/nova-scotia
+├ ○ /locations/ontario
+├ ○ /locations/quebec
+├ ○ /locations/saskatchewan
+├ ○ /locations/software-development-company-in-brampton
+├ ○ /locations/software-development-company-in-burnaby
+├ ○ /locations/software-development-company-in-calgary
+├ ○ /locations/software-development-company-in-edmonton
+├ ○ /locations/software-development-company-in-gatineau
+├ ○ /locations/software-development-company-in-halifax
+├ ○ /locations/software-development-company-in-hamilton
+├ ○ /locations/software-development-company-in-kelowna
+├ ○ /locations/software-development-company-in-kitchener
+├ ○ /locations/software-development-company-in-laval
+├ ○ /locations/software-development-company-in-london-on
+├ ○ /locations/software-development-company-in-markham
+├ ○ /locations/software-development-company-in-mississauga
+├ ○ /locations/software-development-company-in-montreal
+├ ○ /locations/software-development-company-in-ottawa
+├ ○ /locations/software-development-company-in-quebec-city
+├ ○ /locations/software-development-company-in-regina
+├ ○ /locations/software-development-company-in-saskatoon
+├ ○ /locations/software-development-company-in-surrey
+├ ○ /locations/software-development-company-in-toronto
+├ ○ /locations/software-development-company-in-vancouver
+├ ○ /locations/software-development-company-in-victoria
+├ ○ /locations/software-development-company-in-windsor
+├ ○ /locations/software-development-company-in-winnipeg
+├ ƒ /page-sitemap.xml
+├ ○ /pricing
+├ ○ /privacy
+├ ○ /robots.txt
+├ ƒ /service-sitemap.xml
+├ ○ /services
+├ ○ /services/ai-ml
+├ ○ /services/ai-ml/ai-automation
+├ ○ /services/ai-ml/ai-chatbots
+├ ○ /services/ai-ml/computer-vision
+├ ○ /services/ai-ml/llm-integration
+├ ○ /services/ai-ml/predictive-analytics
+├ ○ /services/ar-vr
+├ ○ /services/ar-vr/apple-vision-pro
+├ ○ /services/ar-vr/industrial-ar
+├ ○ /services/ar-vr/mobile-ar
+├ ○ /services/ar-vr/vr-applications
+├ ○ /services/ar-vr/webxr-experiences
+├ ○ /services/blockchain-web3
+├ ○ /services/blockchain-web3/crypto-wallets
+├ ○ /services/blockchain-web3/defi-protocols
+├ ○ /services/blockchain-web3/nft-platforms
+├ ○ /services/blockchain-web3/smart-contracts
+├ ○ /services/blockchain-web3/web3-dapps
+├ ○ /services/branding
+├ ○ /services/branding/brand-guidelines
+├ ○ /services/branding/brand-strategy
+├ ○ /services/branding/logo-visual-identity
+├ ○ /services/branding/motion-video-branding
+├ ○ /services/branding/rebranding
+├ ○ /services/cloud-devops
+├ ○ /services/cloud-devops/aws-architecture
+├ ○ /services/cloud-devops/ci-cd-pipelines
+├ ○ /services/cloud-devops/infrastructure-as-code
+├ ○ /services/cloud-devops/kubernetes-docker
+├ ○ /services/cloud-devops/performance-scaling
+├ ○ /services/digital-marketing
+├ ○ /services/digital-marketing/content-marketing
+├ ○ /services/digital-marketing/google-ads-ppc
+├ ○ /services/digital-marketing/local-seo
+├ ○ /services/digital-marketing/performance-analytics
+├ ○ /services/digital-marketing/seo-services
+├ ○ /services/digital-marketing/social-media-marketing
+├ ○ /services/game-development
+├ ○ /services/game-development/hyper-casual-games
+├ ○ /services/game-development/mobile-games
+├ ○ /services/game-development/multiplayer-liveops
+├ ○ /services/game-development/unity-development
+├ ○ /services/game-development/unreal-engine
+├ ○ /services/mobile-app-development
+├ ○ /services/mobile-app-development/android-app-development
+├ ○ /services/mobile-app-development/cross-platform-apps
+├ ○ /services/mobile-app-development/flutter-development
+├ ○ /services/mobile-app-development/ios-app-development
+├ ○ /services/mobile-app-development/react-native-apps
+├ ○ /services/product-design
+├ ○ /services/product-design/brand-identity
+├ ○ /services/product-design/design-systems
+├ ○ /services/product-design/prototyping
+├ ○ /services/product-design/ui-ux-strategy
+├ ○ /services/product-design/ux-audit
+├ ○ /services/product-design/wireframing
+├ ○ /services/saas-development
+├ ○ /services/saas-development/analytics-dashboards
+├ ○ /services/saas-development/auth-sso
+├ ○ /services/saas-development/billing-subscriptions
+├ ○ /services/saas-development/multi-tenant-architecture
+├ ○ /services/saas-development/saas-mvp-development
+├ ○ /services/web-development
+├ ○ /services/web-development/api-backend
+├ ○ /services/web-development/ecommerce-systems
+├ ○ /services/web-development/enterprise-portals
+├ ○ /services/web-development/nextjs-development
+├ ○ /services/web-development/saas-platforms
+├ ○ /services/wordpress-cms
+├ ○ /services/wordpress-cms/custom-wordpress-themes
+├ ○ /services/wordpress-cms/headless-wordpress
+├ ○ /services/wordpress-cms/site-speed-optimisation
+├ ○ /services/wordpress-cms/strapi-sanity-cms
+├ ○ /services/wordpress-cms/woocommerce-stores
+├ ○ /sitemap.xml
+├ ƒ /subservice-sitemap.xml
+├ ○ /terms
+├ ○ /tools
+├ ○ /tools/cost-estimator
+├ ○ /tools/in-house-vs-agency
+├ ○ /tools/project-brief
+└ ○ /tools/sred-estimator
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
