@@ -48,6 +48,7 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'ui-ux-design-companies-toronto': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },
   'web-development-companies-edmonton': { label: 'Web Development', path: c => serviceCityPath('web-development', c) },
   'ai-development-companies-edmonton': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
+  'ai-development-companies-calgary': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
 };
 
 /** Service allowlist for the enquiry CTA, from the SERVICE_PROJECT_TYPE keys. */

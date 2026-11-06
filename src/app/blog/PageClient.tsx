@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'ai-development-companies-calgary', category: 'Technology',
+    title: 'AI Development Companies in Calgary: How to Choose One (2026)',
+    excerpt: 'How to choose an AI development company in Calgary: RAG and LLM apps for energy and fintech, Alberta PIPA, data residency, CAD costs and 10 questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'ai-development-companies-edmonton', category: 'Technology',
     title: 'AI Development Companies in Edmonton: How to Choose One (2026)',
     excerpt: 'How to choose an AI development company in Edmonton: LLM and RAG builds, Alberta PIPA and PIPEDA, data residency, CAD costs and 10 questions to ask.',
