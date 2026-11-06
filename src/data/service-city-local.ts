@@ -8193,4 +8193,168 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-gatineau': {
+    title: 'App Development Company in Gatineau, QC',
+    description: 'App development company in Gatineau: bilingual iOS and Android apps for federal suppliers, IT and tourism teams. Fixed CAD price, free quote.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, and we build iOS, Android and cross-platform apps for organizations across Gatineau and the National Capital Region. We do not have a Gatineau office; Gatineau clients work with us remotely. Gatineau sits across the river from Ottawa, and that shapes almost every project we take on here: federal departments and agencies, the contractors and suppliers who bid on their work, a busy IT services sector, and tourism operators whose season runs all summer. Most of the teams we serve work in French first and in English with federal colleagues on the other side of the river, so we build French-first or fully bilingual apps from the first sprint. Gatineau is on Eastern Time, two hours ahead of Edmonton, so our afternoons overlap your mornings for demos and quick decisions. Quebec\'s Law 25 governs how private organizations collect personal information, and the Charter of the French Language, as updated by Bill 96, sets the French-first expectations for apps serving Quebec users. Scope and a fixed CAD price are agreed in writing before development begins, and you own all of the code and IP.',
+    sections: [
+      {
+        heading: 'Apps for Gatineau\'s federal, contracting and IT services teams',
+        body: [
+          'Gatineau\'s work revolves around the federal public service and the private sector that supports it. Department and agency teams need internal and public-facing apps in French first and English second, with the privacy handling and audit trail a federal reviewer expects. Contractors and suppliers building for federal clients need field and project apps that record sign-offs, stay usable on a site with no signal and sync when coverage returns. IT services firms in the city want internal tools, dispatch and staff apps, and client portals that match the platforms they already run. Tourism operators along the river and in the parks need booking, event and visitor apps that switch languages properly rather than defaulting to English. The full scope is on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'French-first builds, Law 25 privacy and federal expectations',
+        body: [
+          'The Charter of the French Language, as updated by Bill 96, means French must be at least as available as English for Quebec users, so we design French-first or fully bilingual apps from the first wireframe: screens, onboarding, push notifications, emails and app store listings. Law 25 shapes how your app collects personal information, so we build clear consent screens, privacy-by-default settings and simple ways for users to see or delete their data, with Canadian cloud regions available when residency matters. Suppliers who deliver to federal clients also face accessibility and security expectations, so we design and test to WCAG 2.1 level AA and plan for encryption in transit and at rest, role-based access and audit logs from the first sprint. We implement these features carefully, but your own security and legal advisers confirm the final position. More on our provincial work is on our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page, and for teams on the Ontario side of the river we also list our ',
+          { href: '/locations/app-development-company-in-ottawa', label: 'app development company in Ottawa' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What an app costs for a Gatineau project',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          ' sets out the ranges we quote from: about $25,000-$50,000 CAD and 8-12 weeks for a simple single-platform app with 5-8 screens, $50,000-$150,000 and 12-24 weeks for a mid-size iOS and Android app with payments and an admin panel, and $150,000 or more over 6-18 months for complex platforms with AI, IoT or compliance work. Bilingual content, security reviews and integrations with federal or contracting systems move a project within those bands. Discovery is free and the price is fixed before coding starts, so your budget is settled before the first release.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to build an app in Gatineau?',
+        a: 'Using our Canadian cost guide, a simple single-platform app is about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform with AI, IoT or compliance work $150,000 or more. After a free discovery phase you get one fixed CAD price.',
+      },
+      {
+        q: 'Can you build a French-first app that meets Bill 96?',
+        a: 'Yes. We build French-first or bilingual apps where French is at least as available as English: every screen, notification, email and app store listing, with a simple language switch. We plan the content structure during discovery, and French-speaking reviewers on your team confirm the wording before launch. Your own advisers should confirm how Bill 96 applies to your business.',
+      },
+      {
+        q: 'Do you work with federal suppliers on security and accessibility expectations?',
+        a: 'Yes. Suppliers delivering to federal clients face accessibility and security expectations, so we design and test to WCAG 2.1 level AA, plan for encryption in transit and at rest, role-based access and audit logs, and can host data in Canadian cloud regions. Your own security and legal advisers confirm the final position for your contract.',
+      },
+      {
+        q: 'Do you have an office in Gatineau?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Gatineau office. Gatineau clients work with us remotely through video workshops, weekly demos and a shared project board, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. If an in-person kickoff or planning workshop would help, we can travel to Gatineau with costs agreed up front.',
+      },
+    ],
+  },
+  'web-development-company-in-gatineau': {
+    title: 'Web Development Company in Gatineau, QC',
+    description: 'Web development company in Gatineau: bilingual FR/EN websites, portals and online stores for federal, IT and tourism teams. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds business websites, customer portals, online stores and web applications for organizations in Gatineau and across the National Capital Region. We do not have a Gatineau office; Gatineau clients work with us remotely through video workshops, staging links and a weekly demo where you click through the real site as it takes shape. Gatineau\'s economy runs on the federal public service, the contractors and suppliers who work on both sides of the river, a busy IT services sector and a summer tourism season, and each of those markets needs a site that works in French first and English second. Gatineau is on Eastern Time, two hours ahead of Edmonton, so reviews and decisions fit comfortably into your working day. Because the Charter of the French Language requires French on commercial sites serving Quebec customers, we build bilingual French and English websites with proper hreflang, and we design for Quebec\'s Law 25 from the start. Every project has a fixed scope and a fixed CAD price agreed in writing before development starts, and you deal directly with the developers.',
+    sections: [
+      {
+        heading: 'Bilingual sites and portals for Gatineau\'s sectors',
+        body: [
+          'Federal departments and agencies need accessible bilingual service pages and secure portals where residents complete forms, book appointments and find information, and suppliers need capability and qualification sites that stand up to a procurement review. Contractors working both sides of the river need sites that speak to French-first Quebec clients and English federal buyers from one content model. IT services firms need marketing sites and customer portals that sit alongside the platforms they already run, and tourism operators need booking and event sites they can update for every festival and season. We render pages on the server so they load quickly on a phone over a mobile connection. Everything we build is listed on our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'French-first, Law 25 ready and accessible by default',
+        body: [
+          'The Charter of the French Language, as updated by Bill 96, means French must be available on commercial websites serving Quebec customers, so we build bilingual FR/EN from the start, with hreflang tags so Google and Bing understand each language version. Law 25 covers consent banners, privacy policies and how personal data is collected and stored, so we implement the consent, cookie and privacy features your site needs and structure data collection so you can explain it. Suppliers working with federal clients also need to meet accessibility and security expectations, so we build to WCAG 2.1 level AA, secure forms and portals, and Canadian hosting where residency matters. Your legal counsel confirms how the law applies to your business and reviews final policy wording; we do not provide legal advice. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers the wider provincial work, and for teams on the Ontario side of the river we also list our ',
+          { href: '/locations/web-development-company-in-ottawa', label: 'web development company in Ottawa' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Website pricing and timelines for Gatineau',
+        body: [
+          'We price every Gatineau project from our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          ': roughly $2,000-$10,000 CAD over 2-4 weeks for a template or WordPress site, $10,000-$50,000 over 4-10 weeks for a custom business website, $25,000-$100,000 over 8-16 weeks for e-commerce, and $100,000-$500,000+ over 4-12 months for an enterprise web application or a secure customer portal. Bilingual content and integrations with contracting or reservation systems usually sit in the higher bands. Discovery is free, the quote is fixed before development, and every week you review the latest version on a staging link. Plan tourism launches ahead of the season.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Gatineau?',
+        a: 'Based on our Canadian website cost guide, a template or WordPress site is about $2,000-$10,000 CAD, a custom business website $10,000-$50,000, an online store $25,000-$100,000 and an enterprise web application $100,000-$500,000+. You get one fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build a bilingual French and English website?',
+        a: 'Yes. When your customers need both languages, we build French and English content into the site from the start: navigation, page copy, forms and metadata, with hreflang tags and a clear way to switch languages. We plan the content model during discovery so translations stay maintainable after launch.',
+      },
+      {
+        q: 'Does a Gatineau website need to meet Law 25?',
+        a: 'Law 25 sets strict rules for personal information in Quebec, and commercial sites serving Quebec customers need consent banners, privacy policies and clear data practices. We build those features in, and your legal counsel should review how Law 25 applies to your business and sign off on final policy wording; we do not provide legal advice.',
+      },
+      {
+        q: 'Do you have an office in Gatineau?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Gatineau office. We deliver remotely through video workshops, staging links and a weekly demo, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. For a kickoff or planning workshop in person, we can travel to Gatineau with costs agreed up front.',
+      },
+    ],
+  },
+  'seo-company-in-gatineau': {
+    title: 'SEO Company in Gatineau, QC',
+    description: 'SEO company in Gatineau: French and English search visibility for federal suppliers, IT and tourism teams. Monthly CAD retainers, free review.',
+    intro: 'Mapletech Labs is a Canadian SEO and digital marketing company headquartered in Edmonton, helping Gatineau businesses win more calls, applications and sales from Google and Bing. We do not have a Gatineau office; Gatineau accounts run remotely, and because Gatineau is on Eastern Time, two hours ahead of Edmonton, most of your working day overlaps so questions get answered the same business day. We understand search for federal departments and the suppliers who serve them, IT services firms, contractors who quote work on both sides of the river, and tourism operators whose demand arrives in summer. The specialists who research keywords, fix your site\'s technical issues and write content are the people you speak with, and retainers are a fixed monthly figure in CAD.',
+    sections: [
+      {
+        heading: 'How Gatineau customers search on both sides of the river',
+        body: [
+          'Gatineau does not search like one generic market. Francophone customers search in French, often with different wording than an English search, and many local buyers expect a French-first site before they call. Federal procurement buyers look for suppliers and services in both official languages, and the terms they type rarely include a city name at all. Contractors and suppliers are found by capability and by where they work, so a firm serving clients in Ottawa and Gatineau needs pages that satisfy both markets. Tourism is seasonal, so pages have to rank before visitors start planning summer trips along the river and in the parks, while local trades and clinics live on "near me" and map-pack results. For teams on the Ontario side of the river, our ',
+          { href: '/locations/seo-company-in-ottawa', label: 'SEO company in Ottawa' },
+          ' page covers that market. We plan keywords and content around each of these groups.',
+        ],
+      },
+      {
+        heading: 'French-language keyword research and technical SEO',
+        body: [
+          'French keyword research is done natively, not machine-translated from English terms. We build separate French pages that answer the questions French-speaking customers actually ask, use hreflang so Google and Bing understand each language version, and keep your Google Business Profile and Bing Places information consistent in both languages, showing only a real address or a genuine service area. Because we build software every day, our engineers fix the technical side directly in your code or CMS: Core Web Vitals, crawling and indexing, canonical tags, structured data and internal links. Analytics, chat widgets and contact forms are set up around Quebec Law 25 consent, so your site only collects what it needs; your privacy adviser or legal counsel confirms what applies to your business. The full scope is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Monthly CAD retainers and clear reporting',
+        body: [
+          'SEO retainers for Gatineau businesses usually fall between $1,500 and $10,000 CAD a month, depending on how competitive your terms are and how much content you need. A single-location clinic or trade sits near the lower end, while bilingual campaigns, federal-supplier capability terms and tourism operators competing across the region sit higher. We start with a free review, then quote one fixed monthly figure. Each month you get a plain report covering rankings, organic traffic, calls, bookings and form leads, the work we finished and what we will test next. For seasonal tourism businesses we schedule new pages and fixes in the off-season so they are in place before searches peak.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Gatineau?',
+        a: 'Most Gatineau SEO retainers sit between $1,500 and $10,000 CAD per month. A single-location local business is usually near the lower end, while bilingual campaigns and terms that compete across the region or nationally sit higher. After a free review we quote one fixed monthly figure.',
+      },
+      {
+        q: 'Do you do French-language keyword research?',
+        a: 'Yes. Our keyword research runs in both English and French, native to each language rather than translated word for word, so a francophone audience finds you in the language they actually search in. We build French pages that stand on their own instead of machine-translated duplicates, and keep hreflang tidy so search engines show the right page to the right visitor.',
+      },
+      {
+        q: 'Can my business show in the Gatineau map pack without a storefront?',
+        a: 'Yes, if you genuinely serve Gatineau. A service-area business profile can cover Gatineau, its districts and nearby Outaouais towns without showing an address, and we can set it up for cross-river clients too. We never use virtual offices or made-up locations, because those profiles get suspended.',
+      },
+      {
+        q: 'Do you have an office in Gatineau?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Gatineau office. Gatineau accounts run remotely through weekly demos, short calls and monthly reports, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. We can arrange a visit for a strategy or content workshop when it helps, with travel agreed up front.',
+      },
+    ],
+  },
 };
