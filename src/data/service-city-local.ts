@@ -5507,6 +5507,200 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'saas-development-company-in-brampton': {
+    title: 'SaaS Development Company in Brampton, ON',
+    description: 'SaaS development company in Brampton building MVPs and multi-tenant platforms for logistics, warehousing and manufacturing teams. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for Brampton and Peel Region organizations. Our Brampton buyers include carriers, 3PL operators and warehouse teams around the Pearson airport and the 410/407 corridor that want to sell their dispatch and shipment-tracking tools to other firms, manufacturers and food processors turning plant-floor systems into products, and the small and family-run businesses that make up so much of Peel Region. We do not have a Brampton office: our engineers are in Edmonton, Calgary, Toronto and Vancouver. Brampton runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for demos and decisions. Every project runs on weekly demos of working software, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'SaaS products Brampton companies build',
+        body: [
+          'Brampton is one of Canada\'s busiest logistics markets, and many carriers, freight brokers and warehouse operators here already run an internal dispatch board, a yard tracker or a proof-of-delivery tool that only works for them. Turning it into B2B SaaS lets them sell the same tool to shippers, other carriers and 3PLs on a monthly plan. Manufacturers and food processors in the city often want to productize maintenance, scheduling or quality tools, and Peel Region\'s large base of small and family-run businesses need simple software for booking, billing and customer follow-up. We scope each product around the first paying customer group and the workflow they pay to use. The full scope is on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'MVP to multi-tenant: how we build',
+        body: [
+          'We build the one core workflow first, with sign-up, roles and subscription billing, so you can charge real customers early. The data model is multi-tenant from the first release, so each customer\'s records stay separated and you can add the next hundred accounts without a rebuild. Billing covers plans, seats, usage tiers, invoices and Canadian sales tax, with payments through providers such as Stripe. Larger B2B accounts get single sign-on with SAML or OIDC, and we connect the ERPs, CRMs, accounting and fleet systems your customers already run, and we can host the application, database, file storage and backups in Canadian cloud regions. Our playbook for ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'building a SaaS MVP in 8 weeks' },
+          ' shows what to cut and what to keep in that first version.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Brampton (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote after free discovery. Brampton startups and small businesses often fund part of the build through SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how IRAP projects are structured. Mapletech Labs is part of our wider ',
+          { href: '/locations/ontario', label: 'Ontario software development' },
+          ' practice, and you can see the full path from MVP to scale on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics platform', note: 'A real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Brampton?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote before development starts.',
+      },
+      {
+        q: 'Do you have an office in Brampton?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Brampton office. We serve Brampton clients remotely through video calls, demos and shared boards. Brampton is two hours ahead of Edmonton, so most of the working day overlaps for questions and approvals, and we can arrange in-person sessions in Brampton with travel agreed up front.',
+      },
+      {
+        q: 'How does the time difference with Brampton work?',
+        a: 'Brampton is on Eastern time, two hours ahead of Edmonton. When it is 1 pm in Brampton it is 11 am in Edmonton, so Brampton afternoons overlap with our mornings. We book demos, sprint reviews and release decisions in that shared window, and you can reach your team on +1-403-604-8692.',
+      },
+      {
+        q: 'Who owns the code and IP of our SaaS?',
+        a: 'You do. The source code, designs, documentation and cloud accounts we create for your project belong to your company, so the IP is yours to raise money on, sell or hand to your own engineering team. There is no lock-in.',
+      },
+      {
+        q: 'Can you turn our internal dispatch or warehouse tool into a product?',
+        a: 'Yes, and Brampton\'s logistics and manufacturing firms often start there. We look at the workflow your team already uses, decide what a paying customer outside your company would need, and build the sign-up, roles, billing and tenant separation that turns an internal tool into B2B SaaS. Discovery is free and you get a written scope and a fixed CAD price before development starts.',
+      },
+    ],
+  },
+  'saas-development-company-in-victoria': {
+    title: 'SaaS Development Company in Victoria, BC',
+    description: 'SaaS development company in Victoria building MVPs and multi-tenant platforms for tech startups, the BC public sector and tourism. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for Victoria and Vancouver Island organizations. Our Victoria buyers include tech startups launching their first paid product, BC public sector teams and Crown corporations that need accessible, Canadian-hosted services and careful procurement, and tourism and hospitality operators whose booking and guest tools have to hold up through the summer and cruise season. We do not have a Victoria office: our engineers are in Edmonton, Calgary, Toronto and Vancouver. Victoria runs on Pacific time, one hour behind Edmonton, so your team and ours share almost the whole working day. Every project runs on weekly demos of working software, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'SaaS products Victoria teams build',
+        body: [
+          'Victoria\'s tech scene is smaller and more product-led than Vancouver\'s, so we often work with founders and small teams who need one focused, well-built product rather than a large platform on day one. Startups here bring ideas in software, ocean and clean technology and digital media, and want the MVP scoped so they can reach first revenue fast. BC public sector teams and Crown corporations need services that are accessible, keep personal information in Canada and fit a formal procurement process. Tourism and hospitality operators want booking, availability, payments and guest-communication tools that stay reliable through the summer and cruise-season rush. Whatever the sector, we scope the product around its first paying customer group and the workflow they pay to use. The full scope is on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Built for BC privacy and public-sector buyers',
+        body: [
+          'SaaS handling personal information in British Columbia usually falls under BC\'s Personal Information Protection Act (PIPA), and products sold to BC public bodies also need to meet FIPPA. We plan Canadian data residency across hosting, backups and connected services, and we build in encryption, access control and audit logs from the start. For public-sector work we also design to WCAG 2.1 AA from the first screen, so keyboard paths, contrast and screen-reader labels are in the product rather than patched later. Our ',
+          { href: '/blog/app-privacy-compliance-canada', label: 'Canadian app privacy checklist' },
+          ' covers the basics, but your legal team confirms what applies to your product. Our playbook for ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'building a SaaS MVP in 8 weeks' },
+          ' shows what to cut and what to keep in that first version.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Victoria (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote after free discovery. Victoria startups and small teams often fund part of the build through SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how IRAP projects are structured. Mapletech Labs is part of our wider ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' practice, and you can see the full path from MVP to scale on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Victoria?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote before development starts.',
+      },
+      {
+        q: 'Do you have an office in Victoria?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Victoria office. We serve Victoria clients remotely through video calls, demos and shared boards. Victoria is one hour behind Edmonton, so our working days almost fully overlap, and we can arrange in-person sessions in Victoria with travel agreed up front.',
+      },
+      {
+        q: 'How does the time difference with Victoria work?',
+        a: 'Victoria is on Pacific time, one hour behind Edmonton. When it is 9 am in Victoria it is 10 am in Edmonton, so your team and ours share almost the whole working day. That makes scheduling demos and product reviews straightforward, and you can reach your team on +1-403-604-8692.',
+      },
+      {
+        q: 'Who owns the code and IP of our SaaS?',
+        a: 'You do. The source code, designs, documentation and cloud accounts we create for your project belong to your company, so the IP is yours to raise money on, sell or hand to your own engineering team. There is no lock-in.',
+      },
+      {
+        q: 'Can you build software for a BC public-sector or Crown corporation?',
+        a: 'We can. We build accessible, Canadian-hosted services with the audit logging, role-based access and data-residency controls public-sector buyers ask for, and we work within formal procurement and security-review processes. FIPPA and PIPA obligations depend on your organization and the data involved, so your legal or compliance team confirms the final position; we do not provide legal advice.',
+      },
+    ],
+  },
+  'saas-development-company-in-halifax': {
+    title: 'SaaS Development Company in Halifax, NS',
+    description: 'SaaS development company in Halifax building MVPs and multi-tenant platforms for ocean tech, health and university spin-outs. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for Halifax and Atlantic Canada organizations. Our Halifax buyers include ocean technology companies connected to COVE on the Dartmouth waterfront that want to sell sensor, survey or vessel-data tools to other operators, port and logistics teams around the Port of Halifax turning dispatch and document workflows into products, health teams working alongside Nova Scotia Health, and researchers and spin-outs from Dalhousie University, Saint Mary\'s University and the Volta hub launching paid products. We do not have a Halifax office: our engineers are in Edmonton, Calgary, Toronto and Vancouver. Halifax runs on Atlantic time, three hours ahead of Edmonton, so a Halifax afternoon lines up with our morning and there is a shared block of hours every working day. Every project runs on weekly demos of working software, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'SaaS products Halifax companies build',
+        body: [
+          'Halifax has a distinct mix of software builders. Ocean technology firms around COVE collect sensor, sonar and vessel data and often want to turn an internal analysis tool into a product other operators will pay a subscription for. Port, shipping and logistics operators want dispatch, tracking and document tools that read bills of lading and customs paperwork, packaged so other carriers and 3PLs can use them too. Health teams need patient intake, scheduling and documentation products built to handle personal health information carefully. University researchers and founders from Dalhousie, Saint Mary\'s and the Volta hub usually need one focused MVP scoped around their first paying customers rather than a full platform. We scope each product around the workflow its first customers pay to use. The full scope is on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'MVP to multi-tenant, with Canadian privacy',
+        body: [
+          'We build the one core workflow first, with sign-up, roles and subscription billing, so you can charge real customers early. The data model is multi-tenant from the first release, so each customer\'s records stay separated and you can add the next hundred accounts without a rebuild. Billing covers plans, seats, usage tiers, invoices and Canadian sales tax, with payments through providers such as Stripe, and larger B2B accounts get single sign-on with SAML or OIDC. We can host the application, database, file storage and backups in Canadian cloud regions. Private-sector personal data in Nova Scotia falls under federal PIPEDA, and health projects add the province\'s Personal Health Information Act, so we design access control, encryption and audit logs with those in mind; your privacy officer confirms the final position. Our playbook for ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'building a SaaS MVP in 8 weeks' },
+          ' shows what to cut and what to keep in that first version.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Halifax (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote after free discovery. Halifax startups and spin-outs often fund part of the build through SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how IRAP projects are structured. Mapletech Labs is part of our wider ',
+          { href: '/locations/nova-scotia', label: 'Nova Scotia software development' },
+          ' practice, and you can see the full path from MVP to scale on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics platform', note: 'A real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Halifax?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote before development starts.',
+      },
+      {
+        q: 'Do you have an office in Halifax?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Halifax office. We serve Halifax clients remotely through video calls, demos and shared boards. Halifax is three hours ahead of Edmonton, so a Halifax afternoon overlaps our morning, and we can arrange in-person sessions in Halifax with travel agreed up front.',
+      },
+      {
+        q: 'How does the time difference with Halifax work?',
+        a: 'Halifax is on Atlantic time, three hours ahead of Edmonton. When it is 1 pm in Halifax it is 10 am in Edmonton, so Halifax afternoons overlap with our mornings. We book standups, demos and reviews in that shared window, and you can reach your team on +1-403-604-8692.',
+      },
+      {
+        q: 'Who owns the code and IP of our SaaS?',
+        a: 'You do. The source code, designs, documentation and cloud accounts we create for your project belong to your company, so the IP is yours to raise money on, sell or hand to your own engineering team. There is no lock-in.',
+      },
+      {
+        q: 'Can you build SaaS for ocean-tech or health data?',
+        a: 'Yes. For ocean and port clients we build tools that turn sensor, survey and shipment data into products other operators can subscribe to, with dashboards that work on a deck or in a yard. For health clients we can design access controls, audit logs, role-based access and Canadian hosting with PIPEDA and Nova Scotia\'s Personal Health Information Act in mind. Your privacy officer confirms the final position; we do not provide legal advice.',
+      },
+    ],
+  },
   'ui-ux-design-company-in-surrey': {
     title: 'UI/UX Design Company in Surrey, BC',
     description: 'UI/UX design for Surrey health, logistics and startup teams: research, prototypes and WCAG 2.1 AA design at a fixed CAD price. Book a free UX audit.',
