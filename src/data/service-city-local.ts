@@ -7225,4 +7225,161 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-burnaby': {
+    title: 'App Development Company in Burnaby, BC',
+    description: 'App development company in Burnaby: iOS and Android apps for retail, tech, health and property teams, with weekly demos and a fixed CAD quote.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, and we build iOS, Android and cross-platform apps for businesses across Burnaby and Metro Vancouver. We do not have a Burnaby office. Burnaby clients work with us remotely on Pacific Time, which is one hour behind Edmonton, so our working days overlap almost completely. You see a working build in a weekly demo, follow progress on a shared board and talk directly with the senior engineers writing your code. Scope and a fixed CAD price are agreed in writing before development begins, and you own all of the code and IP.',
+    sections: [
+      {
+        heading: 'Apps for Metrotown retail, tech studios and life sciences',
+        body: [
+          'Burnaby mixes very different kinds of businesses within a few SkyTrain stops. Retailers and restaurants around Metrotown want loyalty, ordering and click-and-collect apps that bring shoppers back. The city\'s cluster of video game and technology studios often needs internal tools, companion apps or a partner who can take on a mobile build while their own team stays on the core product. Health and life sciences companies ask for patient, clinic and lab apps where access is controlled and every action is logged. Startups spun out of SFU and BCIT usually need a lean first version that proves the idea before they raise more money. For larger custom systems behind an app, see our ',
+          { href: '/locations/software-development-company-in-burnaby', label: 'software development in Burnaby' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Property apps, privacy and competing with Vancouver',
+        body: [
+          'New towers around Lougheed and Brentwood bring developers, property managers and strata councils who need resident apps for amenity bookings, notices, parcel alerts and maintenance requests. Those apps hold personal information, and private businesses in BC handle it under the province\'s Personal Information Protection Act (PIPA), so we build in clear consent screens, encryption, access controls and Canadian hosting where needed. Burnaby businesses also compete with Vancouver firms for the same customers, so a fast, well-reviewed app on the App Store and Google Play is often what sets them apart. Your privacy lead signs off before launch.',
+        ],
+      },
+      {
+        heading: 'What an app costs for a Burnaby business',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          ' sets out the ranges we quote from: about $25,000-$50,000 CAD and 8-12 weeks for a simple single-platform app of 5-8 screens, $50,000-$150,000 and 12-24 weeks for a mid-size iOS and Android app with payments and an admin panel, and $150,000 or more over 6-18 months for complex platforms with AI, IoT or compliance work. A retail app tied to an existing point-of-sale system, or a health app with strict access rules, can push a project into a higher band. Discovery is free and the price is fixed before coding starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to build an app in Burnaby?',
+        a: 'Using our Canadian cost guide, a simple single-platform app is about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform with AI, IoT or compliance work $150,000 or more. After a free discovery phase you get one fixed CAD price.',
+      },
+      {
+        q: 'Can you work alongside our in-house studio or tech team?',
+        a: 'Yes. Many Burnaby tech and game studios keep their own engineers on the core product. We can take on a mobile app, companion app or internal tool, follow your code standards and review process, and hand everything over with documentation when the work is done.',
+      },
+      {
+        q: 'How long does a startup MVP take to build?',
+        a: 'A focused MVP for a Burnaby startup usually takes 8-12 weeks, covering one platform and the core feature that proves the business. Larger iOS and Android apps take 12-24 weeks. You see a working build at every weekly demo, so there are no surprises at the end.',
+      },
+      {
+        q: 'Do you have an office in Burnaby?',
+        a: 'No. We are headquartered in Edmonton and do not have a Burnaby office. Burnaby clients work with us remotely on Pacific Time, one hour behind Edmonton, through weekly demos, video calls and a shared board. If an in-person workshop would help, we can travel with costs agreed up front.',
+      },
+    ],
+  },
+  'web-development-company-in-burnaby': {
+    title: 'Web Development Company in Burnaby, BC',
+    description: 'Web development company in Burnaby: fast websites, online stores and web apps for retail, tech, health and property firms. Fixed CAD price. Free quote.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds business websites, online stores, portals and custom web applications for Burnaby and the rest of Metro Vancouver. We do not have an office in Burnaby. Burnaby clients work with us remotely on Pacific Time, one hour behind Edmonton, through video calls, staging links and a weekly demo where you click through the real site as it takes shape. Every project has a fixed scope and a fixed CAD price agreed in writing before development starts, and you deal directly with the developers.',
+    sections: [
+      {
+        heading: 'Websites for Metrotown retail, studios and life sciences',
+        body: [
+          'Retailers and restaurants near Metrotown need sites and online stores that show live stock, store hours and pickup options, and that load quickly on a shopper\'s phone. Video game and technology studios want careers pages, product sites and press kits that look as polished as their work. Health and life sciences companies need clear service pages, secure contact forms and portals where only the right people can see each document. Young companies from SFU and BCIT often need a marketing site and a first web app that can grow with them. If your project is more of a custom system than a website, our ',
+          { href: '/locations/software-development-company-in-burnaby', label: 'software development in Burnaby' },
+          ' page covers that work.',
+        ],
+      },
+      {
+        heading: 'Property sites, BC privacy and speed against Vancouver rivals',
+        body: [
+          'Growth around Lougheed and Brentwood means more developers, presales teams and property managers who need project sites, floor plan pages, registration forms and resident portals. Forms that collect names, emails or financial details for a private BC business fall under the province\'s Personal Information Protection Act (PIPA), so we limit what is collected, explain why and store it securely. Burnaby businesses usually compete with Vancouver firms for the same searches, so we build pages that render on the server, pass Core Web Vitals and carry clean structured data, giving your site a fair chance to rank and convert.',
+        ],
+      },
+      {
+        heading: 'Burnaby website pricing and timelines',
+        body: [
+          'We price every Burnaby project from our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          ': roughly $2,000-$10,000 CAD over 2-4 weeks for a template or WordPress site, $10,000-$50,000 over 4-10 weeks for a custom business website, $25,000-$100,000 over 8-16 weeks for e-commerce, and $100,000-$500,000+ over 4-12 months for an enterprise web application. A retail store synced with point-of-sale stock, or a presales site with a buyer registration portal, usually sits in the e-commerce band or above. Discovery is free and the quote is fixed before development.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost for a Burnaby business?',
+        a: 'Based on our Canadian website cost guide, a template or WordPress site is about $2,000-$10,000 CAD, a custom business website $10,000-$50,000, an online store $25,000-$100,000 and an enterprise web application $100,000-$500,000+. You get one fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build a presales or resident portal for a property project?',
+        a: 'Yes. We build project sites with floor plans and buyer registration, plus resident portals for amenity bookings, notices and maintenance requests. Personal information is collected only where needed and stored securely, in line with BC privacy rules your team confirms.',
+      },
+      {
+        q: 'How long does a new website take?',
+        a: 'A custom business website usually takes 4-10 weeks and an online store 8-16 weeks, depending on content, integrations and how quickly feedback comes back. You see progress on a staging link at every weekly demo, so launch dates stay realistic.',
+      },
+      {
+        q: 'Do you have an office in Burnaby?',
+        a: 'No. We are headquartered in Edmonton and work with Burnaby clients remotely on Pacific Time, one hour behind Edmonton, through video calls, staging links and a weekly demo. If a planning or content workshop in person would help, we can travel to Burnaby with costs agreed up front.',
+      },
+    ],
+  },
+  'seo-company-in-burnaby': {
+    title: 'SEO Company in Burnaby, BC',
+    description: 'SEO company in Burnaby: win "near me" searches across Metro Vancouver with Google Business Profile work, technical fixes and clear monthly reports.',
+    intro: 'Mapletech Labs is a Canadian SEO company headquartered in Edmonton, helping Burnaby businesses win more calls, bookings and enquiries from Google and Bing. We do not have a Burnaby office. Burnaby clients work with us remotely on Pacific Time, one hour behind Edmonton, with a weekly demo of the changes we have made, a short call and a plain monthly report. The specialists who research keywords, fix your site\'s technical issues and write content are the people you speak with, and retainers are a fixed monthly figure in CAD.',
+    sections: [
+      {
+        heading: 'Local SEO for "near me" searches across Burnaby and Metro Vancouver',
+        body: [
+          'Most Burnaby customers search with their phone and the words "near me", or with a neighbourhood such as Metrotown, Brentwood or Lougheed. Those searches are decided in the map pack, and Burnaby businesses often compete with Vancouver, New Westminster and Coquitlam firms for the same spots. We set up and maintain your Google Business Profile with the right categories, services, photos and posts, help you ask happy customers for reviews, and keep your name, address and phone identical across directories. Your profile shows only a real address or a genuine service area, never a virtual office. Retailers, clinics, trades and property firms each get a keyword plan built on how their own customers search.',
+        ],
+      },
+      {
+        heading: 'Technical SEO from engineers, for tech and life sciences too',
+        body: [
+          'Because we build software every day, our engineers fix the technical side directly in your code or CMS: page speed and Core Web Vitals, crawl errors, indexing, canonical tags, structured data and internal links. Burnaby\'s tech studios and health and life sciences companies often sell to buyers who never type the word Burnaby, so we also plan content for the product and industry terms those buyers use. Analytics and contact forms respect BC\'s Personal Information Protection Act (PIPA). Our full scope is on the ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page, and if your site needs rebuilding first, see our ',
+          { href: '/locations/software-development-company-in-burnaby', label: 'software development in Burnaby' },
+          ' page or our ',
+          { href: '/locations/british-columbia', label: 'British Columbia software development' },
+          ' overview.',
+        ],
+      },
+      {
+        heading: 'Monthly CAD retainers and clear reporting',
+        body: [
+          'SEO retainers for Burnaby businesses usually fall between $1,500 and $10,000 CAD a month, depending on how competitive your terms are and how much content you need. A single-location clinic or trade sits near the lower end, while a retailer or property firm competing across Metro Vancouver needs more. We start with a free review, then quote one fixed monthly figure. Each month you get a plain report covering rankings, map pack visibility, organic traffic, calls and form leads, the work we finished and what we will test next.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Burnaby?',
+        a: 'Most Burnaby SEO retainers sit between $1,500 and $10,000 CAD per month. A single clinic or trade business is usually near the lower end, while retailers and property firms competing across Metro Vancouver sit higher. After a free review we quote one fixed monthly figure.',
+      },
+      {
+        q: 'How do I show up for "near me" searches in Burnaby?',
+        a: 'Keep a complete, accurate Google Business Profile with the right categories and services, earn steady genuine reviews, keep your name, address and phone the same everywhere, and have a useful page on your site for each main service. We handle each of these and report on map pack visibility monthly.',
+      },
+      {
+        q: 'Can a Burnaby business outrank Vancouver competitors?',
+        a: 'For searches made in and around Burnaby, yes. Google weighs distance, relevance and prominence, so a nearby business with a strong profile, good reviews and a fast, relevant site can beat larger Vancouver firms. Results usually start showing within 8-16 weeks of the first fixes.',
+      },
+      {
+        q: 'Do you have an office in Burnaby?',
+        a: 'No. We are headquartered in Edmonton and do not have a Burnaby office. Burnaby SEO accounts run remotely on Pacific Time, one hour behind Edmonton, through weekly demos, short calls and monthly reports, and we can arrange a visit for a strategy workshop when it helps, with travel agreed up front.',
+      },
+    ],
+  },
 };
