@@ -6255,4 +6255,184 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-saskatoon': {
+    title: 'AI Development Company in Saskatoon, SK',
+    description: 'AI development company in Saskatoon: chatbots, LLM features and automation for ag-tech, mining and research teams at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we build AI chatbots, large language model (LLM) features, prediction models and workflow automation for Saskatoon organizations. We do not have a Saskatoon office. Saskatchewan stays on Central Standard Time all year, so Saskatoon shares Edmonton\'s clock while Alberta is on daylight time and is one hour ahead the rest of the year, which leaves almost a full working day of overlap. We work with agriculture and ag-tech companies, potash and uranium mining operators and their contractors, and research teams around the University of Saskatchewan, Innovation Place and the Canadian Light Source. You talk directly with the senior engineers who build your system, and you get a fixed scope and a fixed price in CAD before any work starts. Call us on +1-403-604-8692 to talk through your idea.',
+    sections: [
+      {
+        heading: 'AI use cases for Saskatoon ag-tech, mining and research teams',
+        body: [
+          'Saskatoon AI work follows the data its industries already collect. Ag-tech companies, input dealers and grain operations hold years of crop, soil, yield and weather records and ask us for models that flag field problems early, tools that summarize agronomy notes and assistants that answer producer questions from product manuals. Potash and uranium mine operators and their contractors want predictive maintenance that reads sensor and equipment logs to warn before a pump, conveyor or haul truck fails, and safety tools that sort incident reports, spot repeat hazards and make long procedure manuals searchable in plain English. Research groups at the University of Saskatchewan and teams using beamline data from the Canadian Light Source need help cleaning, labelling and searching large research datasets so scientists spend less time on file handling. Every model we ship keeps a person in the loop for decisions that matter. The full scope of what we build is on our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Grounded answers and Canadian privacy for Saskatchewan data',
+        body: [
+          'A business chatbot is only useful if it answers from what your organization actually knows. We build it with retrieval-augmented generation (RAG): the system first finds the right passages in your safety procedures, agronomy guides, equipment manuals or research notes, then writes its reply from those passages and shows the source for each answer. Access rules decide which documents each person can draw on, and questions the system cannot answer go to a person instead of getting a guess. Private-sector personal data in Saskatchewan falls under federal PIPEDA, and projects that handle personal health information for Saskatchewan trustees also have to respect the province\'s Health Information Protection Act (HIPA). We can host your AI system and its data in Canadian cloud regions, set up model providers so they do not train on your data, and add encryption, role-based access and audit logs; your privacy officer confirms the final position. Our ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan software development' },
+          ' page covers the wider provincial picture.',
+        ],
+      },
+      {
+        heading: 'What AI development costs in Saskatoon (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
+          ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents, with sources, access control and hand-off, is about $15,000-$50,000. Custom model training, such as a crop or equipment-failure model built on your own historical data, starts around $75,000. These are planning ranges, not quotes: after a free discovery call we agree a fixed scope and a fixed price in CAD, so a Saskatoon budget is settled in writing before the first line of code.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Saskatoon?',
+        a: 'Using the planning ranges in our AI development cost guide, an LLM feature in an existing app is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. These are not quotes. After a free discovery call you get a fixed price in CAD.',
+      },
+      {
+        q: 'Do you have an office in Saskatoon?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Saskatoon office. We work with Saskatoon clients remotely through workshops, weekly demos and a shared project board, and in-person sessions in Saskatoon can be arranged with travel agreed up front.',
+      },
+      {
+        q: 'How does the time zone work between Saskatoon and Edmonton?',
+        a: 'Saskatchewan uses Central Standard Time all year and does not change its clocks. While Alberta is on daylight time, Saskatoon and Edmonton show the same time; for the rest of the year Saskatoon is one hour ahead. Our working days overlap almost completely, so standups, model reviews and demos are easy to book.',
+      },
+      {
+        q: 'Can AI help with predictive maintenance or crop data?',
+        a: 'Yes, when you have enough history to learn from. For mining and industrial clients we build models on sensor and maintenance logs that flag equipment likely to need attention, and for ag-tech clients we work with crop, soil and yield records. We start by checking your data in discovery and tell you honestly if it is not yet ready for a model.',
+      },
+      {
+        q: 'Who owns the code, prompts and models?',
+        a: 'You do. All source code, prompts, trained models, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-saskatoon': {
+    title: 'UI/UX Design Company in Saskatoon, SK',
+    description: 'UI/UX design company in Saskatoon: research, prototypes and WCAG 2.1 AA design for farm, mining and research teams at a fixed CAD price. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we design digital products for Saskatoon organizations. We do not have a Saskatoon office. Saskatchewan keeps Central Standard Time all year, so Saskatoon matches Edmonton time for part of the year and is one hour ahead for the rest, and our design reviews fit easily into a shared working day. We design for agriculture and ag-tech companies, mining operators and suppliers, research groups at the University of Saskatchewan, Innovation Place and the Canadian Light Source, and public-sector and community organizations. Every project runs on weekly demos of a Figma prototype, you talk directly with the designers doing the work, and the price is fixed in CAD before design starts. Call +1-403-604-8692 to book a free UX audit.',
+    sections: [
+      {
+        heading: 'Products Saskatoon organizations need designed',
+        body: [
+          'A lot of Saskatoon software is used outdoors, on a phone, by someone with their hands full. Producers, agronomists and crop scouts need field and farm apps that stay readable in bright prairie sun, work with gloves on and make the next step obvious when signal drops out in the middle of a quarter section. Mine site crews need inspection and safety screens with large touch targets and short forms. Research teams at the University of Saskatchewan and labs at Innovation Place need dashboards that turn instrument, sample and experiment data into views a scientist can scan quickly and a funder can understand. Public-sector bodies and community organizations need portals that every resident can use, including people on older phones, screen readers or limited data plans. You can see the full scope on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Research, prototypes and accessible design for Saskatchewan',
+        body: [
+          'Every Saskatoon project starts with a free UX audit: a heuristic review of your current product, a look at your analytics and short interviews with the people who use it. For field apps we test the prototype outside on real phones, because glare, cold hands and weak signal show problems a desk test misses. We then map user journeys for each key task, move to wireframes and a clickable prototype, and usability-test it on real tasks so issues show up in Figma, not after launch. We design and test to WCAG 2.1 AA from the first wireframe: colour contrast, visible focus states, full keyboard paths, readable text sizes and screen-reader labels are set in the design files. That supports the goals of The Accessible Saskatchewan Act for public-facing services; your legal or compliance team confirms exactly how it applies to you. Where a portal collects personal or health information, the flows are designed with PIPEDA and Saskatchewan\'s Health Information Protection Act (HIPA) in mind. Our ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan software development' },
+          ' page covers the wider provincial picture.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Saskatoon (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, so your budget is set before design starts. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. Farm and field apps with offline states and research dashboards often land in the full product band, and public-sector portals with accessibility audits can reach the enterprise band. See how this work is scoped on our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Saskatoon?',
+        a: 'We quote a fixed price in CAD after a free UX audit. The ranges we publish are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system. Screen count, offline and field states, research depth and branding all move the number.',
+      },
+      {
+        q: 'Do you have an office in Saskatoon?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Saskatoon office. We work with Saskatoon clients remotely through workshops, weekly calls and a shared project board, and in-person sessions in Saskatoon can be arranged with travel agreed up front.',
+      },
+      {
+        q: 'How does the time zone work between Saskatoon and Edmonton?',
+        a: 'Saskatchewan stays on Central Standard Time all year. While Alberta is on daylight time, Saskatoon and Edmonton show the same time; the rest of the year Saskatoon is one hour ahead. Our days overlap almost fully, so design reviews and prototype demos are easy to schedule and updated Figma files are ready the same day.',
+      },
+      {
+        q: 'Can you design apps that farmers and field crews use outdoors?',
+        a: 'Yes. For farm, mine and field research work we design for sun glare, gloves and weak signal: high-contrast screens, large touch targets, short task flows and clear offline and sync states. We test the prototype on real phones outdoors before handoff, not only on a desktop.',
+      },
+      {
+        q: 'Who owns the design files for our Saskatoon project?',
+        a: 'You do. The Figma files, design system, prototypes and research notes for your project belong to your organization, with no lock-in. You can keep us on for new work or hand everything to your own designers and developers whenever you prefer.',
+      },
+    ],
+  },
+  'saas-development-company-in-saskatoon': {
+    title: 'SaaS Development Company in Saskatoon, SK',
+    description: 'SaaS development company in Saskatoon building MVPs and multi-tenant platforms for ag-tech, mining and Innovation Place spin-outs. Get a free quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for Saskatoon and Saskatchewan organizations. Our Saskatoon buyers include ag-tech companies turning crop, soil and grain data into tools producers and dealers pay for, mining technology firms and suppliers packaging safety, inspection and maintenance workflows for other operators, and spin-outs from Innovation Place and the University of Saskatchewan launching their first paid product. We do not have a Saskatoon office: our engineers are in Edmonton, Calgary, Toronto and Vancouver. Saskatchewan stays on Central Standard Time all year, so Saskatoon shares Edmonton\'s clock for part of the year and is one hour ahead for the rest, and our working days overlap almost fully. Every project runs on weekly demos of working software, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
+    sections: [
+      {
+        heading: 'SaaS products Saskatoon companies build',
+        body: [
+          'Saskatoon\'s software scene grows out of agriculture, mining and research. Ag-tech companies, many of them with roots at Innovation Place, want field records, agronomy recommendations, input planning or grain marketing tools sold on subscription to farms and dealers across the Prairies. Mining technology firms and service contractors that support Saskatchewan\'s potash and uranium operations want to turn the inspection, safety and equipment tools they built for one site into products other mines can license. Research groups at the University of Saskatchewan and teams working with the Canadian Light Source sometimes spin out data or lab software that needs accounts, billing and support before it can earn revenue. Most of these founders need one focused MVP built around their first paying customers, not a full platform on day one. The full scope is on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'MVP to multi-tenant, with Canadian privacy',
+        body: [
+          'We build the one core workflow first, with sign-up, roles and subscription billing, so you can charge real customers early. Farm and mine-site products get offline-friendly mobile screens that sync once a connection returns. The data model is multi-tenant from the first release, so each customer\'s fields, sites and records stay separated and you can add the next hundred accounts without a rebuild. Billing covers plans, seats, usage tiers, invoices and Canadian sales tax, with payments through providers such as Stripe, and larger B2B accounts get single sign-on with SAML or OIDC. We can host the application, database, file storage and backups in Canadian cloud regions. Private-sector personal data in Saskatchewan falls under federal PIPEDA, and products that handle personal health information for Saskatchewan trustees add the province\'s Health Information Protection Act (HIPA), so we design access control, encryption and audit logs with those in mind; your privacy officer confirms the final position. Our playbook for ',
+          { href: '/blog/build-saas-mvp-8-weeks', label: 'building a SaaS MVP in 8 weeks' },
+          ' shows what to cut and what to keep in that first version.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Saskatoon (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Integrations with farm equipment data, mine-site systems or lab instruments, billing rules and security requirements move your price within those ranges, and you get a fixed CAD quote after free discovery. Saskatoon startups and spin-outs often fund part of the build through SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how IRAP projects are structured. Mapletech Labs is part of our wider ',
+          { href: '/locations/saskatchewan', label: 'Saskatchewan software development' },
+          ' practice, and you can see the full path from MVP to scale on our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics platform', note: 'A real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Saskatoon?',
+        a: 'Our Canadian SaaS development cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000, and an enterprise platform at $200,000-$500,000+. The number of integrations, billing rules and security requirements moves your price within those ranges, and you get a fixed CAD quote before development starts.',
+      },
+      {
+        q: 'Do you have an office in Saskatoon?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton, with engineers in Edmonton, Calgary, Toronto and Vancouver, and we do not have a Saskatoon office. We serve Saskatoon clients remotely through video calls, weekly demos and shared boards, and we can arrange in-person sessions in Saskatoon with travel agreed up front.',
+      },
+      {
+        q: 'How does the time zone work between Saskatoon and Edmonton?',
+        a: 'Saskatchewan uses Central Standard Time all year. While Alberta is on daylight time, Saskatoon and Edmonton show the same time; the rest of the year Saskatoon is one hour ahead. Our working days overlap almost completely, and you can reach your team on +1-403-604-8692.',
+      },
+      {
+        q: 'Who owns the code and IP of our SaaS?',
+        a: 'You do. The source code, designs, documentation and cloud accounts we create for your project belong to your company, so the IP is yours to raise money on, sell or hand to your own engineering team. There is no lock-in.',
+      },
+      {
+        q: 'Can you build SaaS for ag-tech or mining companies?',
+        a: 'Yes. For ag-tech clients we build products that turn field, crop and grain data into subscriptions farms and dealers can use, with mobile screens that cope with weak rural signal. For mining clients we build multi-site inspection, safety and maintenance tools with role-based access and audit logs, hosted in Canada where your customers require it.',
+      },
+    ],
+  },
 };
