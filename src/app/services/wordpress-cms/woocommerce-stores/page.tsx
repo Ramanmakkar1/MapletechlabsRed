@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { seoTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -6,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'WooCommerce Store Development',
+  title: seoTitle('WooCommerce Store Development in Canada'),
   description: 'WooCommerce store development services. Mapletech Labs builds high-converting online stores with custom plugins, payment gateways, and integrations.',
   openGraph: {
-    title: 'WooCommerce Store Development | Mapletech Labs',
+    title: 'WooCommerce Store Development in Canada | Mapletech Labs',
     description: 'WooCommerce store development services. Mapletech Labs builds high-converting online stores with custom plugins, payment gateways, and integrations.',
     url: 'https://mapletechlabs.ca/services/wordpress-cms/woocommerce-stores',
     type: 'website',

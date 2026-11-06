@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { seoTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -6,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Logo & Visual Identity Design',
+  title: seoTitle('Logo & Visual Identity Design in Canada'),
   description: 'Professional logo and visual identity design by Mapletech Labs. Memorable logos, color systems, and typography that define your brand.',
   openGraph: {
-    title: 'Logo & Visual Identity Design | Mapletech Labs',
+    title: 'Logo & Visual Identity Design in Canada | Mapletech Labs',
     description: 'Professional logo and visual identity design by Mapletech Labs. Memorable logos, color systems, and typography that define your brand.',
     url: 'https://mapletechlabs.ca/services/branding/logo-visual-identity',
     type: 'website',

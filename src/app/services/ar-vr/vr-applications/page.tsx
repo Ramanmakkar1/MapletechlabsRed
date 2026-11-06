@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { seoTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -6,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'VR Application Development',
+  title: seoTitle('VR Application Development in Canada'),
   description: 'Virtual reality application development for Meta Quest, HTC Vive, and enterprise. Mapletech Labs creates immersive VR training and experiences.',
   openGraph: {
-    title: 'VR Application Development | Mapletech Labs',
+    title: 'VR Application Development in Canada | Mapletech Labs',
     description: 'Virtual reality application development for Meta Quest, HTC Vive, and enterprise. Mapletech Labs creates immersive VR training and experiences.',
     url: 'https://mapletechlabs.ca/services/ar-vr/vr-applications',
     type: 'website',

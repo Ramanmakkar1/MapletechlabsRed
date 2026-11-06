@@ -7,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: seoTitle('Crypto Wallet Development Services | Toronto'),
+  title: seoTitle('Crypto Wallet Development Company Toronto'),
   description: 'Custom crypto wallet development: multi-chain support, HD key management, and hardware wallet integration. Mapletech Labs builds secure wallets in Canada.',
   openGraph: {
-    title: 'Crypto Wallet Development Services | Mapletech Labs',
+    title: 'Crypto Wallet Development Company Toronto | Mapletech Labs',
     description: 'Custom crypto wallet development: multi-chain support, HD key management, and hardware wallet integration.',
     url: 'https://mapletechlabs.ca/services/blockchain-web3/crypto-wallets',
     type: 'website',

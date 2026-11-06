@@ -3,14 +3,14 @@ import FAQPageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Frequently Asked Questions | Mapletech Labs';
+const TITLE = 'FAQ: Custom Software Projects in Canada';
 const DESCRIPTION = 'Get answers to common questions about working with Mapletech Labs — pricing, timelines, tech stack, IP ownership, support, and more.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
-    title: TITLE,
+    title: `${TITLE} | Mapletech Labs`,
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/faq',
   },
