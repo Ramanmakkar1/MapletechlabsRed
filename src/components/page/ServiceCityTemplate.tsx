@@ -236,7 +236,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
                   Our buyer&apos;s guide covers typical costs in CAD, red flags and questions to ask before you sign with any {cityName} team.
                 </p>
                 <Link href={buyerGuide.href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>
-                  {buyerGuideLinkText(serviceSlug, cityName)}
+                  {buyerGuideLinkText(serviceSlug, cityName, buyerGuide.isCity)}
                 </Link>
               </div>
             </div>

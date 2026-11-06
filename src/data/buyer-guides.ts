@@ -9,8 +9,16 @@ const BLOG_SLUGS = new Set([
   'saas-development-company-canada',
   'seo-companies-calgary',
   'seo-companies-edmonton',
+  'seo-companies-toronto',
+  'software-development-companies-calgary',
+  'software-development-companies-edmonton',
+  'software-development-companies-montreal',
+  'software-development-companies-ottawa',
+  'software-development-companies-toronto',
+  'software-development-companies-vancouver',
   'top-seo-companies-canada',
   'ui-ux-design-companies-canada',
+  'ui-ux-design-companies-toronto',
   'web-development-companies-toronto',
   'web-development-companies-edmonton',
   'website-development-company-canada',
@@ -26,7 +34,9 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
   'digital-marketing': {
     calgary: 'seo-companies-calgary',
     edmonton: 'seo-companies-edmonton',
+    toronto: 'seo-companies-toronto',
   },
+  'product-design': { toronto: 'ui-ux-design-companies-toronto' },
   'web-development': {
     toronto: 'web-development-companies-toronto',
     edmonton: 'web-development-companies-edmonton',
@@ -52,7 +62,7 @@ const COMPARE_LABEL: Partial<Record<string, string>> = {
   'saas-development': 'SaaS development',
 };
 
-export type BuyerGuide = { href: string; label: string };
+export type BuyerGuide = { href: string; label: string; isCity: boolean };
 
 function slugToHref(slug: string | undefined): string | undefined {
   if (!slug || !BLOG_SLUGS.has(slug)) return undefined;
@@ -64,29 +74,28 @@ export function buyerGuideFor(serviceSlug: string, citySlug: string): BuyerGuide
   const compareLabel = COMPARE_LABEL[serviceSlug];
   if (!compareLabel) return undefined;
 
-  const citySlugKey = CITY_GUIDE_SLUG[serviceSlug]?.[citySlug];
-  const href =
-    slugToHref(citySlugKey) ??
-    slugToHref(NATIONAL_GUIDE_SLUG[serviceSlug]);
+  const cityHref = slugToHref(CITY_GUIDE_SLUG[serviceSlug]?.[citySlug]);
+  const href = cityHref ?? slugToHref(NATIONAL_GUIDE_SLUG[serviceSlug]);
   if (!href) return undefined;
 
-  return { href, label: compareLabel };
+  return { href, label: compareLabel, isCity: Boolean(cityHref) };
 }
 
-/** Descriptive anchor text for the buyer-guide card link. */
-export function buyerGuideLinkText(serviceSlug: string, cityName: string): string {
+/** Descriptive anchor text for the buyer-guide card link. National guides say "in Canada", not the city. */
+export function buyerGuideLinkText(serviceSlug: string, cityName: string, isCity: boolean): string {
+  const place = isCity ? cityName : 'Canada';
   switch (serviceSlug) {
     case 'digital-marketing':
-      return `Read our guide to choosing an SEO company in ${cityName}`;
+      return `Read our guide to choosing an SEO company in ${place}`;
     case 'ai-ml':
-      return `Read our guide to choosing an AI development company in ${cityName}`;
+      return `Read our guide to choosing an AI development company in ${place}`;
     case 'web-development':
-      return `Read our guide to choosing a web development company in ${cityName}`;
+      return `Read our guide to choosing a web development company in ${place}`;
     case 'product-design':
-      return `Read our guide to choosing a UI/UX design company in ${cityName}`;
+      return `Read our guide to choosing a UI/UX design company in ${place}`;
     case 'saas-development':
-      return `Read our guide to choosing a SaaS development company in ${cityName}`;
+      return `Read our guide to choosing a SaaS development company in ${place}`;
     default:
-      return `Read our guide to choosing an app development company in ${cityName}`;
+      return `Read our guide to choosing an app development company in ${place}`;
   }
 }

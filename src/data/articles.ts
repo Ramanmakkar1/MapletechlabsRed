@@ -823,7 +823,7 @@ export const articles: Article[] = [
     heroKey: 'whiteboard',
     intro: [
       'Vancouver is one of Canada&rsquo;s busiest technology markets, with gaming, film and VFX, clean tech and SaaS companies all competing for engineering talent. For a business that needs software built, that is good news and bad news: there are plenty of capable firms, and plenty of ways to pick the wrong one.',
-      'This guide completes our city series alongside <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers how to choose a Vancouver development partner, what projects typically cost in Canada, a short list of well-known Vancouver-area firms described only by public facts, and the questions that reveal the most on a first call.',
+      'This guide completes our city series alongside <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers how to choose a Vancouver development partner, what projects typically cost in Canada, a short list of well-known Vancouver-area firms described only by public facts, and the questions that reveal the most on a first call. If you already know you want a partner, see our page for a <a href="/locations/software-development-company-in-vancouver">software development company in Vancouver</a>.',
     ],
     body: [
       { type: 'h2', id: 'how-to-choose', text: 'How to choose a Vancouver development partner' },
@@ -898,7 +898,7 @@ export const articles: Article[] = [
     heroKey: 'whiteboard',
     intro: [
       'Ottawa is not like other Canadian tech markets. As the national capital, it is home to federal departments and agencies, and around them a large community of defence, telecom and cybersecurity companies, many of them in the Kanata North tech park. For a business or agency that needs software built, that shapes what a good partner looks like.',
-      'This guide continues our city series alongside <a href="/blog/software-development-companies-vancouver">Vancouver</a> and <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers what makes Ottawa different, local versus remote teams, security and compliance for public-sector work, bilingual and accessible builds, typical Canadian costs, SR&amp;ED, and the questions that reveal the most on a first call.',
+      'This guide continues our city series alongside <a href="/blog/software-development-companies-vancouver">Vancouver</a> and <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers what makes Ottawa different, local versus remote teams, security and compliance for public-sector work, bilingual and accessible builds, typical Canadian costs, SR&amp;ED, and the questions that reveal the most on a first call. If you already know you want a partner, see our page for a <a href="/locations/software-development-company-in-ottawa">software development company in Ottawa</a>.',
     ],
     body: [
       { type: 'h2', id: 'why-ottawa', text: 'Why Ottawa is different' },
@@ -995,7 +995,7 @@ export const articles: Article[] = [
     heroKey: 'whiteboard',
     intro: [
       'Montreal is one of the most distinctive tech markets in Canada. It is known worldwide for artificial intelligence research, it has a large video game industry, and it is a long-standing centre for aerospace and financial services. It is also in Quebec, which has its own rules on privacy and on the use of French. For a business that needs software built, both sides shape what a good partner looks like.',
-      'This guide continues our city series alongside <a href="/blog/software-development-companies-vancouver">Vancouver</a>, <a href="/blog/software-development-companies-ottawa">Ottawa</a> and <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers the Montreal tech scene, local versus remote teams, Quebec Law 25, French-language requirements, typical Canadian costs, SR&amp;ED and Quebec credits, and the questions that reveal the most on a first call.',
+      'This guide continues our city series alongside <a href="/blog/software-development-companies-vancouver">Vancouver</a>, <a href="/blog/software-development-companies-ottawa">Ottawa</a> and <a href="/blog/software-development-companies-calgary">Calgary</a>. It covers the Montreal tech scene, local versus remote teams, Quebec Law 25, French-language requirements, typical Canadian costs, SR&amp;ED and Quebec credits, and the questions that reveal the most on a first call. If you already know you want a partner, see our page for a <a href="/locations/software-development-company-in-montreal">software development company in Montreal</a>.',
     ],
     body: [
       { type: 'h2', id: 'montreal-tech-scene', text: 'Montreal’s tech scene' },
@@ -1540,7 +1540,7 @@ export const articles: Article[] = [
     heroKey: 'planning',
     intro: [
       'Toronto is the largest tech market in Canada. Banks, insurers, hospitals, research institutes and thousands of startups all buy and build software here, which means there is no shortage of development companies to choose from. The hard part is finding the one that fits your project, your budget and the rules your product has to follow.',
-      'This guide continues our city series alongside <a href="/blog/software-development-companies-vancouver">Vancouver</a>, <a href="/blog/software-development-companies-ottawa">Ottawa</a>, <a href="/blog/software-development-companies-montreal">Montreal</a> and <a href="/blog/software-development-companies-calgary">Calgary</a>. If you only need a website, see our separate guide to <a href="/blog/web-development-companies-toronto">web development companies in Toronto</a>. To be upfront: Mapletech Labs is headquartered in Edmonton, and we work with Toronto clients remotely.',
+      'This guide continues our city series alongside <a href="/blog/software-development-companies-vancouver">Vancouver</a>, <a href="/blog/software-development-companies-ottawa">Ottawa</a>, <a href="/blog/software-development-companies-montreal">Montreal</a> and <a href="/blog/software-development-companies-calgary">Calgary</a>. If you only need a website, see our separate guide to <a href="/blog/web-development-companies-toronto">web development companies in Toronto</a>. To be upfront: Mapletech Labs is headquartered in Edmonton, and we work with Toronto clients remotely; see our page for a <a href="/locations/software-development-company-in-toronto">software development company in Toronto</a>.',
     ],
     body: [
       { type: 'h2', id: 'toronto-market', text: 'The Toronto software market' },

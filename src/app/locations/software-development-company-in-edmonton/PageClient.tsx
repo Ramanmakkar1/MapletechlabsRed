@@ -90,7 +90,8 @@ const localContent = (
           <p>Because we are headquartered here, it is easy to sit down together for a workshop downtown, visit your site in Nisku or Sherwood Park, or meet the people who will use the software every day. After launch, the same team stays on for support, hosting and new features, so you are never left with a system nobody understands.</p>
           <p>If your project is mainly a website or web application, see our page on <Link href="/locations/edmonton/web-development">web development in Edmonton</Link>. For brand strategy, visual identity and rebrands, see <Link href="/locations/edmonton/branding">branding in Edmonton</Link>. To talk through an idea, <Link href="/contact">contact our Edmonton team</Link> and tell us what you want to build.</p>
           <h3>Guides for Edmonton buyers</h3>
-          <p>Comparing options? Read our guides on <Link href="/blog/app-development-companies-edmonton">choosing an app development company in Edmonton</Link> and <Link href="/blog/seo-companies-edmonton">choosing an SEO company in Edmonton</Link>.</p>
+          <p>Comparing software development companies in Edmonton? Read our <Link href="/blog/software-development-companies-edmonton">guide to choosing a software development company in Edmonton</Link>.</p>
+          <p>Comparing other options? Read our guides on <Link href="/blog/app-development-companies-edmonton">choosing an app development company in Edmonton</Link> and <Link href="/blog/seo-companies-edmonton">choosing an SEO company in Edmonton</Link>.</p>
         </div>
       </div>
     </div>
