@@ -4027,6 +4027,46 @@ export const articles: Article[] = [
     cta: { href: '/locations/seo-company-in-vancouver', label: 'See our Vancouver SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'vancouver' },
   },
+  {
+    slug: 'freelancer-vs-agency-vs-in-house-canada',
+    relatedTopic: 'software',
+    category: 'Business',
+    title: 'Freelancer vs Agency vs In-House Team in Canada (2026)',
+    dek: 'Freelancer, software agency, or in-house team: how to choose the right build model for your Canadian project based on budget, timeline, complexity, and post-launch support.',
+    metaTitle: 'Freelancer vs Agency vs In-House in Canada',
+    metaDescription: 'Freelancer vs software agency vs in-house team in Canada: cost models, speed, risk, team depth, ownership, and support after launch.',
+    date: '2026-11-07',
+    dateModified: '2026-11-07',
+    readTime: '9 min read',
+    heroKey: 'team',
+    intro: [
+      'Choosing who builds your software is one of the first and most important decisions a Canadian business makes. A freelancer, a software agency, and an in-house team each fit a different shape of project, and picking the wrong model is a common cause of missed timelines and budget overruns.',
+      'This guide explains when each model works, how they compare on cost, speed, risk, intellectual property, and support after launch, and the questions to ask any vendor before you commit.',
+    ],
+    body: [
+      { type: 'h2', id: 'when-a-freelancer-fits', text: 'When a Freelancer Fits' },
+      { type: 'p', html: 'A freelancer is usually the right starting point when the work is well-defined, short-term, and does not require a full product team — for example a landing page, a single integration, a prototype, or one feature added to an existing product. You pay only for the hours or a fixed project fee, without carrying salaries between projects. The trade-off is capacity and continuity: one person has limited specialties and is a single point of failure if they become unavailable.' },
+      { type: 'h2', id: 'when-a-software-agency-fits', text: 'When a Software Agency Fits' },
+      { type: 'p', html: 'An agency tends to fit when you need a whole product team — product design, development, QA, and project management — without hiring and managing each role yourself. It suits an MVP, a SaaS platform, or a customer-facing portal with several moving parts. The trade-off is cost and control, so confirm who will actually build the product and that the contract assigns the code and IP to you.' },
+      { type: 'h2', id: 'when-an-in-house-team-fits', text: 'When an In-House Team Fits' },
+      { type: 'p', html: 'An in-house team tends to fit when development is continuous rather than project-based, and when you need the team embedded in your day-to-day operations — a platform that ships weekly changes, runs experiments, and needs immediate incident response. The trade-off is fixed cost and slower start: salary, benefits, equipment, and overhead run regardless of how much building happens in a month, and hiring takes weeks to months.' },
+      { type: 'h2', id: 'side-by-side', text: 'Freelancer vs Agency vs In-House: Side by Side' },
+      { type: 'table', html: '<table><thead><tr><th>Factor</th><th>Freelancer</th><th>Software agency</th><th>In-house team</th></tr></thead><tbody><tr><td>Cost model</td><td>Hourly rate or fixed project fee</td><td>Fixed project price or monthly retainer</td><td>Salary plus benefits, equipment, overhead</td></tr><tr><td>Team depth</td><td>One person; limited specialties</td><td>Design, development, QA, project management</td><td>Whoever you hire; depth grows with headcount</td></tr><tr><td>Speed to start</td><td>Usually fast, subject to availability</td><td>Quickly once the scope is agreed</td><td>Slowest; hiring takes weeks to months</td></tr><tr><td>Risk</td><td>Availability, capacity, single point of failure</td><td>Contract and SLA define responsibilities</td><td>Highest fixed cost; hiring and retention risk</td></tr><tr><td>IP and ownership</td><td>Must be assigned in writing</td><td>Must be assigned in writing</td><td>Normally assigned to the employer</td></tr><tr><td>Support after launch</td><td>Often limited or none</td><td>Maintenance packages or retainers common</td><td>Team owns updates directly</td></tr></tbody></table>' },
+    ],
+    keyTakeaways: [
+      'Match the model to the project: freelancer for small, well-defined work; agency for a full product team; in-house for continuous, long-term development.',
+      'The cheapest hourly rate is not necessarily the lowest total cost once rework, management, and post-launch support are factored in.',
+      'Confirm who actually does the work, who owns the code and IP, and who maintains the product after launch before you sign.',
+    ],
+    faqs: [
+      { q: 'Should I hire a freelancer, an agency, or an in-house team?', a: 'It depends on your budget, timeline, and how much ongoing development you need. Freelancers tend to fit small, well-defined projects; agencies fit products that need a full team; in-house teams fit continuous, long-term work. Match the model to the project rather than forcing every project into one model.' },
+      { q: 'How do the costs compare in Canada?', a: 'Freelancers usually bill by the hour, agencies tend to quote a fixed project price or a monthly retainer, and in-house means salary plus benefits, equipment, and overhead. The cheapest hourly rate is not necessarily the lowest total cost once rework, management, and post-launch support are factored in.' },
+      { q: 'Who owns the code and intellectual property?', a: 'You should. A freelancer or agency contract must explicitly assign the code and IP to you once you have paid, and you should receive repository access and deployment credentials. With an in-house team, employment agreements normally assign IP to the employer.' },
+      { q: 'What happens after the product launches?', a: 'Software needs ongoing maintenance, security updates, and bug fixes. Freelancers may offer limited support, agencies often sell maintenance packages or retainers, and an in-house team owns updates directly. Decide who will support the product before you sign.' },
+      { q: 'Can Mapletech Labs help me choose?', a: 'Yes. We can review your project scope and help you compare freelancer, agency, and in-house options for your situation. See our pricing page or book a consultation to discuss your project.' },
+    ],
+    cta: { href: '/contact', label: 'Book a Consultation' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);
