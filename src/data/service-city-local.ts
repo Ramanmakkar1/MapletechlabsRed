@@ -8887,4 +8887,186 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-laval': {
+    title: 'AI Development Company in Laval, QC',
+    description: 'AI development company in Laval: French-language LLM chatbots, biotech data tools and demand forecasts for distributors, built for Law 25. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build LLM features, document chatbots, forecasting models and workflow automation for businesses in Laval and across Greater Montreal. We do not have a Laval office; Laval clients work with us remotely. Laval is on Eastern Time, two hours ahead of Edmonton, so our afternoons overlap your mornings for model reviews and quick decisions. Most of the AI work we see in Laval comes from three places: life-sciences and biotech teams around the Cité de la Biotech that sit on large volumes of lab, study and quality data; manufacturers and distributors along Highways 15 and 440 that want better demand forecasts; and companies that want an assistant answering staff and customers in French from their own documents. Senior engineers build the system, you see it working at a weekly demo, and scope and CAD price are fixed in writing before development begins.',
+    sections: [
+      {
+        heading: 'AI for Laval\'s biotech teams, distributors and French-speaking staff',
+        body: [
+          'Life-sciences companies around the Cité de la Biotech want help with the data they already collect: searching study reports, protocols and standard operating procedures, extracting fields from lab and supplier documents, flagging unusual results for a scientist to check, and summarising long technical files without losing the source. Every output keeps a person in charge and leaves an audit trail a quality reviewer can follow. Distributors and manufacturers want demand forecasts built on their own order history, seasonality and promotions, so purchasing and warehouse teams can plan stock and staffing with fewer shortages and less dead inventory. Retailers near Carrefour Laval and Centropolis and family-owned service firms want assistants that answer customer questions in French at any hour and pass anything unusual to staff. Our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page lists everything we build.',
+        ],
+      },
+      {
+        heading: 'French-language answers grounded in your documents, with Law 25 in mind',
+        body: [
+          'We build chatbots with retrieval-augmented generation (RAG): the system finds the right passages in your manuals, policies, product sheets or study files, writes its reply from them in French or English and cites each source, so staff can check the answer instead of trusting it blindly. Access rules decide which documents each user can reach, and questions the system cannot answer go to a person. Under the Charter of the French Language, as updated by Bill 96, Quebec users expect French to be at least as available as English, so prompts, answers and the interface are tested in French first. Quebec\'s Law 25 sets rules for personal information, including privacy impact assessments and transparency when a decision is made by automated processing, so we document data flows, keep data in Canadian cloud regions when you need it, stop outside model providers training on it, and add encryption, role-based access and audit logs. Your privacy officer confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers our wider work in the province, and for teams with offices on the island we also list our ',
+          { href: '/locations/ai-development-company-in-montreal', label: 'AI development company in Montreal' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What AI development costs for a Laval project (CAD)',
+        body: [
+          'Laval budgets follow the same national planning ranges in our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          '. Adding an LLM feature to an existing product is about $10,000-$35,000 CAD. A chatbot built on your own documents, with cited sources, access control and hand-off to staff, is about $15,000-$50,000. Custom model training, such as a demand forecast for a distributor or a classifier built on a biotech team\'s lab records, starts around $75,000. French-first answers, data clean-up, security reviews and validation work move a project within those ranges. These are planning figures, not quotes. After a free discovery call we check whether your data is ready, then agree a fixed scope and a fixed CAD price before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Laval?',
+        a: 'Using our Canadian AI cost guide, an LLM feature in an existing product is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. After a free discovery call you get one fixed price in CAD.',
+      },
+      {
+        q: 'Can your chatbot answer in French from our own documents?',
+        a: 'Yes. We build assistants that search your French and English documents, answer in the language the user writes in and cite the source passage, so staff can check every answer. We test answer quality in French first, and French-speaking reviewers on your team confirm the wording before launch.',
+      },
+      {
+        q: 'Can you build AI tools for life-sciences teams at the Cité de la Biotech?',
+        a: 'Yes. We build document search, data extraction and review tools that keep a scientist or quality reviewer in charge of every decision, with encryption, role-based access, audit logs and Canadian hosting. Your own quality, regulatory and privacy advisers confirm what your organization requires.',
+      },
+      {
+        q: 'Can you build a demand forecast for a Laval distributor?',
+        a: 'Yes. We build forecasting models on your own order history, seasonality and promotions, connected to the ERP or inventory system you already use. We start by checking whether your data is complete enough, and you see forecast accuracy against real past months before anything goes live.',
+      },
+      {
+        q: 'Do you have an office in Laval?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and serves Laval clients remotely through video workshops, weekly demos and a shared project board. Laval is two hours ahead of Edmonton, so most of the working day overlaps. If your team wants an in-person kickoff, we can arrange a visit with travel costs agreed up front.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-laval': {
+    title: 'UI/UX Design Company in Laval, QC',
+    description: 'UI/UX design company in Laval: French-first, WCAG 2.1 AA app and portal design for biotech, manufacturing and retail teams. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing apps, portals and dashboards for businesses in Laval and across Greater Montreal. We do not have a Laval office; Laval clients work with us remotely through Figma, video workshops and remote usability sessions. Laval is on Eastern Time, two hours ahead of Edmonton, so design reviews fit into your day and revised files are usually ready the same afternoon. We design for life-sciences companies around the Cité de la Biotech, manufacturers and distributors along Highways 15 and 440, retailers near Carrefour Laval and Centropolis, and the family-owned service businesses that serve the North Shore. Because most Laval users read and work in French, every interface starts French-first, and every screen is designed to WCAG 2.1 level AA. You work directly with the designers doing the work, see a clickable prototype every week, and agree a fixed CAD price before design starts.',
+    sections: [
+      {
+        heading: 'Design work Laval businesses bring to us',
+        body: [
+          'Each Laval sector puts a different person in front of the screen. Life-sciences teams need lab, study and partner portals where a scientist can find a record fast and a quality reviewer can follow every step without confusion. Manufacturers and distributors need dealer ordering portals, warehouse screens and technician apps with large tap targets and clear status colours that work with gloves on, on a dock or a shop floor. Retailers and restaurants need checkout, loyalty and booking flows that a shopper can finish on a phone in the parking lot at Carrefour Laval. Family-owned service businesses need quoting and scheduling screens that office staff learn in an afternoon. In every case we design around the real task and test it with the people who will use it. Our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page shows the full scope.',
+        ],
+      },
+      {
+        heading: 'French-first layouts for Bill 96 and WCAG 2.1 AA accessibility',
+        body: [
+          'Each project starts with a free UX audit: a heuristic review, a look at your analytics and short interviews with real users. We then map journeys, move to wireframes and a clickable Figma prototype, and usability-test it on real tasks in French first, then English, so problems surface before development. Under the Charter of the French Language, as updated by Bill 96, French must be at least as available as English for Quebec users, so French is the default language in our layouts, every button, menu and form is sized for French strings that often run 20-30% longer, and the language switch is easy to find. We design to WCAG 2.1 level AA from the first wireframe, with contrast, focus states, keyboard paths and screen-reader labels set in the files, so accessibility is not a late fix. Where a form collects personal information, we design consent and privacy screens with Quebec\'s Law 25 in mind; your compliance lead confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers the wider province, and for teams with offices on the island we also list our ',
+          { href: '/locations/ui-ux-design-company-in-montreal', label: 'UI/UX design company in Montreal' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Laval (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, using the ranges on our ',
+          { href: '/pricing', label: 'pricing page' },
+          ': about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. A bilingual dealer portal or a retail booking flow usually lands in the full product band, while a design system shared across several life-sciences or manufacturing products can reach the enterprise band. Screen count, research depth and bilingual testing move the number, and the audit tells you which band fits before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Laval?',
+        a: 'We quote a fixed CAD price after a free UX audit. Published ranges are about $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design with 30+ screens and research, and $12,000-$30,000+ for an enterprise design system.',
+      },
+      {
+        q: 'Can you design a French-first interface that meets Bill 96?',
+        a: 'Yes. We design with French as the default language, size every button, menu and form for longer French text, and add a clear language switch. French-speaking reviewers on your team confirm the wording, and your own advisers confirm how Bill 96 applies to your business.',
+      },
+      {
+        q: 'Do you design to WCAG 2.1 AA?',
+        a: 'Yes. We design to WCAG 2.1 level AA from the first wireframe, with contrast, focus order, keyboard paths and screen-reader labels documented in the Figma files, and we check the built screens against them. Your own accessibility lead or auditor confirms conformance.',
+      },
+      {
+        q: 'Can you design portals and shop-floor screens for Laval manufacturers?',
+        a: 'Yes. We design dealer ordering portals, warehouse screens and technician apps with large tap targets, clear status colours and short flows, and test them with the staff who will use them on the floor. French-first labels are sized from the first wireframe.',
+      },
+      {
+        q: 'Do you have an office in Laval?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and works with Laval clients remotely through Figma, video workshops and weekly prototype reviews. Laval is two hours ahead of Edmonton, so most of the working day overlaps. You own all design files, prototypes and research notes with no lock-in.',
+      },
+    ],
+  },
+  'saas-development-company-in-laval': {
+    title: 'SaaS Development Company in Laval, QC',
+    description: 'SaaS development company in Laval: bilingual B2B MVPs and multi-tenant platforms for startups serving manufacturers, with Law 25 Canadian hosting.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for founders and companies in Laval and across Greater Montreal. We do not have a Laval office and serve Laval clients remotely through video calls, weekly demos and a shared project board. Laval is on Eastern Time, two hours ahead of Edmonton, so standups and reviews fit into a shared working day. Many of the Laval products we hear about are B2B: startups and software teams selling to the manufacturers and distributors of the Montreal area, life-sciences companies packaging a tool they built for their own lab, and service businesses turning their scheduling or quoting system into a product. Every product is planned French-first and bilingual, with Quebec\'s Law 25 and Canadian data residency designed in from the start. You work with the senior engineers writing the code, see working software every week, and get a fixed CAD price before development starts.',
+    sections: [
+      {
+        heading: 'B2B SaaS from Laval for Montreal-area manufacturers',
+        body: [
+          'Greater Montreal has a deep base of manufacturers and distributors, and Laval sits right in the middle of it, along Highways 15 and 440. That makes it a natural home for B2B software: production scheduling, maintenance and inspection tracking, supplier and quality portals, dealer ordering, and field service tools sold to plants across the region. Many of these products start inside one company, as a tool built for its own floor that other plants then ask to buy. Life-sciences teams around the Cité de la Biotech do the same with sample tracking or document workflows. Most of these teams need one focused MVP that integrates with the ERP their first customers already run, not a full platform on day one. Our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page covers the full path.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant architecture, Law 25 and Canadian data residency',
+        body: [
+          'We build the core workflow first, with sign-up, roles and subscription billing. The data model is multi-tenant from release one, so each plant, distributor or lab keeps its records separate and you can add customers without a rebuild. Billing covers plans, seats, usage tiers and Canadian sales tax including GST and QST through providers such as Stripe, and enterprise buyers get single sign-on with SAML or OIDC. Manufacturers often ask where their data lives before they sign, so we can host the application, database, backups and logs in Canadian cloud regions and document it for their vendor questionnaire. SaaS sold to Quebec businesses has to help them meet Law 25, so we design consent, encryption, access control, audit logs and data export and deletion from day one. Under the Charter of the French Language, as updated by Bill 96, the product, emails and help content are French-first and fully bilingual. Your privacy officer confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page has more, and for teams with offices on the island we also list our ',
+          { href: '/locations/saas-development-company-in-montreal', label: 'SaaS development company in Montreal' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Laval (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. ERP integrations, single sign-on for larger buyers, bilingual content and security reviews move your price within those ranges. Laval founders often fund part of the build with SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how. After a free discovery call you receive one fixed CAD quote, so your runway is planned before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Laval?',
+        a: 'Our Canadian SaaS cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000 and an enterprise platform at $200,000-$500,000+. Integrations, billing rules and compliance work move the figure, and you get a fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build B2B SaaS for manufacturers and distributors?',
+        a: 'Yes. We build multi-tenant products for production, maintenance, quality, ordering and field service workflows, with single sign-on and integrations to the ERP and inventory systems your customers already run. We start with one focused MVP for your first paying customers.',
+      },
+      {
+        q: 'Can our SaaS data stay in Canada for Law 25?',
+        a: 'Yes. We can host the application, database, backups and logs in Canadian cloud regions and design consent, encryption, role-based access, audit logs and data export and deletion from day one. Your privacy officer or legal adviser confirms the final position, and we help prepare answers for vendor questionnaires.',
+      },
+      {
+        q: 'Can you build a French-first, bilingual SaaS product?',
+        a: 'Yes. We build French-first, fully bilingual products where each user picks their language and every screen, email and invoice follows it, as the Charter of the French Language expects for Quebec customers. Billing handles GST and QST, plus HST for customers outside Quebec.',
+      },
+      {
+        q: 'Do you have an office in Laval?',
+        a: 'No. We are headquartered in Edmonton and work with Laval founders remotely through weekly demos, video standups and a shared board. Laval is two hours ahead of Edmonton, so most of the working day overlaps. If you want an in-person planning session in Laval, we can arrange one with travel agreed up front.',
+      },
+    ],
+  },
 };
