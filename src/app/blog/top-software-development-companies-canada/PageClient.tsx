@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
+import SoftwareCompanyLinks from '@/components/SoftwareCompanyLinks';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -564,6 +565,7 @@ export default function BlogPostPageClient() {
                       ))}
                     </div>
                   </div>
+                  <SoftwareCompanyLinks />
                 </div>
               </aside>
 
