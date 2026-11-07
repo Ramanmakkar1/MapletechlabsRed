@@ -1,3 +1,12 @@
+export const AUTHOR_PERSON_ID = 'https://mapletechlabs.ca/about/raman-makkar#person';
+export const BLOG_AUTHOR = {
+  '@type': 'Person',
+  '@id': AUTHOR_PERSON_ID,
+  name: 'Raman Makkar',
+  jobTitle: 'Founder & CEO',
+  url: 'https://mapletechlabs.ca/about/raman-makkar',
+} as const;
+
 export const BUSINESS = {
   name: 'Mapletech Labs',
   url: 'https://mapletechlabs.ca',

@@ -1,3 +1,4 @@
+import { BLOG_AUTHOR } from '@/lib/seo/business';
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import { getArticle, getRelatedArticles } from '@/data/articles';
@@ -31,7 +32,7 @@ const jsonLd = {
   description: a.metaDescription,
   datePublished: a.date,
   dateModified: a.dateModified,
-  author: { '@type': 'Person', name: 'Raman Makkar', jobTitle: 'CEO', url: 'https://mapletechlabs.ca/about' },
+  author: BLOG_AUTHOR,
   publisher: { '@type': 'Organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
   url: URL,
   mainEntityOfPage: URL,

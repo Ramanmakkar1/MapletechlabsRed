@@ -120,8 +120,9 @@ const organizationSchema = {
   },
   founder: {
     "@type": "Person",
+    "@id": `${siteOrigin()}/about/raman-makkar#person`,
     name: "Raman Makkar",
-    jobTitle: "CEO & Founder",
+    jobTitle: "Founder & CEO",
     url: `${siteOrigin()}/about/raman-makkar`,
   },
   knowsAbout: [

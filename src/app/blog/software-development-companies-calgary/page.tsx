@@ -1,3 +1,4 @@
+import { BLOG_AUTHOR } from '@/lib/seo/business';
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
@@ -33,12 +34,7 @@ const jsonLd = {
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-03-06',
-  author: {
-    '@type': 'Person',
-    name: 'Raman Makkar',
-    jobTitle: 'CEO',
-    url: 'https://mapletechlabs.ca/about',
-  },
+  author: BLOG_AUTHOR,
   publisher: {
     '@type': 'Organization',
     name: 'Mapletech Labs',
