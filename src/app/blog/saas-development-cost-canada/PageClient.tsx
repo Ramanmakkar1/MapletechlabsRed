@@ -40,7 +40,7 @@ const relatedPosts = [
   { slug: 'website-cost-canada', title: 'How Much Does a Website Cost in Canada?', category: 'Business', readTime: '8 min' },
 ];
 
-export default function SaasDevelopmentCostCanadaClient() {
+export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: string }) {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -165,6 +165,16 @@ export default function SaasDevelopmentCostCanadaClient() {
             </div>
           </div>
         </section>
+
+        {/* QUICK ANSWER BOX */}
+        {answer && (
+          <section aria-labelledby="article-answer-heading" style={{ background: 'var(--surface-alt)', borderBottom: '1px solid var(--line)', padding: 'clamp(24px, 3vw, 32px)' }}>
+            <div className="cb-container" style={{ maxWidth: 900 }}>
+              <h2 id="article-answer-heading" style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--ink)', margin: '0 0 12px' }}>Quick answer</h2>
+              <p style={{ fontSize: '1rem', color: 'var(--body)', lineHeight: 1.6, margin: 0 }}>{answer}</p>
+            </div>
+          </section>
+        )}
 
         <MediaBand media={blogImage(6)} />
 
