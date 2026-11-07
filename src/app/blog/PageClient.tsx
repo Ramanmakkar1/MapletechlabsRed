@@ -32,6 +32,18 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
   },
   {
+    slug: 'ai-development-companies-vancouver', category: 'Technology',
+    title: 'AI Development Companies in Vancouver: How to Choose One (2026)',
+    excerpt: 'How to choose an AI development company in Vancouver: portfolio, discovery, who owns the code, CAD pricing, BC PIPA and FIPPA, and post-launch support.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
+  },
+  {
+    slug: 'ui-ux-design-companies-calgary', category: 'Business',
+    title: 'UI/UX Design Companies in Calgary: How to Choose One (2026)',
+    excerpt: 'Choosing a UI/UX design company in Calgary? Compare portfolios, discovery, design-system ownership, CAD pricing and post-launch support before you sign.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
+  },
+  {
     slug: 'ai-development-companies-calgary', category: 'Technology',
     title: 'AI Development Companies in Calgary: How to Choose One (2026)',
     excerpt: 'How to choose an AI development company in Calgary: RAG and LLM apps for energy and fintech, Alberta PIPA, data residency, CAD costs and 10 questions.',

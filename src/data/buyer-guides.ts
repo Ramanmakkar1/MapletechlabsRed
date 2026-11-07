@@ -4,6 +4,7 @@ const BLOG_SLUGS = new Set([
   'ai-development-companies-toronto',
   'ai-development-companies-edmonton',
   'ai-development-companies-calgary',
+  'ai-development-companies-vancouver',
   'app-development-companies-calgary',
   'app-development-companies-edmonton',
   'app-development-companies-toronto',
@@ -30,6 +31,7 @@ const BLOG_SLUGS = new Set([
   'ui-ux-design-companies-toronto',
   'ui-ux-design-companies-vancouver',
   'ui-ux-design-companies-edmonton',
+  'ui-ux-design-companies-calgary',
   'web-development-companies-toronto',
   'web-development-companies-edmonton',
   'web-development-companies-vancouver',
@@ -46,7 +48,7 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
     edmonton: 'app-development-companies-edmonton',
     vancouver: 'app-development-companies-vancouver',
   },
-  'ai-ml': { toronto: 'ai-development-companies-toronto', edmonton: 'ai-development-companies-edmonton', calgary: 'ai-development-companies-calgary' },
+  'ai-ml': { toronto: 'ai-development-companies-toronto', edmonton: 'ai-development-companies-edmonton', calgary: 'ai-development-companies-calgary', vancouver: 'ai-development-companies-vancouver' },
   'digital-marketing': {
     calgary: 'seo-companies-calgary',
     edmonton: 'seo-companies-edmonton',
@@ -57,6 +59,7 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
     toronto: 'ui-ux-design-companies-toronto',
     vancouver: 'ui-ux-design-companies-vancouver',
     edmonton: 'ui-ux-design-companies-edmonton',
+    calgary: 'ui-ux-design-companies-calgary',
   },
   'web-development': {
     toronto: 'web-development-companies-toronto',
