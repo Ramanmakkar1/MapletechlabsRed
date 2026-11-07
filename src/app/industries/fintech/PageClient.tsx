@@ -53,6 +53,26 @@ const cityLinks = [
   { label: 'AI Development Company in Montreal', href: serviceCityPath('ai-ml', 'montreal') },
 ];
 
+const linkStyle = { color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 } as const;
+
+const extra = (
+  <section style={{ padding: 'var(--section-y-sm) 0' }}>
+    <div className="cb-container">
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Related work</h2>
+      <ul style={{ margin: '0 0 16px', paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/case-studies/fintech-trading-platform" style={linkStyle}>Fintech trading platform case study</Link></li>
+        <li><Link href="/case-studies/payments-api-platform" style={linkStyle}>PCI DSS payments API case study</Link></li>
+      </ul>
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Services for this sector</h2>
+      <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/services/web-development" style={linkStyle}>Web development</Link></li>
+        <li><Link href="/services/mobile-app-development" style={linkStyle}>Mobile app development</Link></li>
+        <li><Link href="/services/ai-ml" style={linkStyle}>AI & machine learning</Link></li>
+      </ul>
+    </div>
+  </section>
+);
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -69,6 +89,7 @@ export default function PageClient() {
       cta={{ title: "Build Your FinTech Product.", sub: "From MVP to mission-critical infrastructure \u2014 we have the expertise to make it happen." }}
       faqs={industryFaqs.fintech}
       cityLinks={cityLinks}
+      extra={extra}
     />
   );
 }

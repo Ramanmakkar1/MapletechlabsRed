@@ -26,6 +26,8 @@ export interface IndustryProps {
   cityLinks?: { label: string; href: string }[];
   /** Optional industry-specific buyer content, rendered after the systems grid. */
   buyerContent?: ReactNode;
+  /** Optional extra sections (related work, services) rendered before the final CTA. */
+  extra?: ReactNode;
 }
 
 /* Industry page — the reference's sector-page sequence, on white. */
@@ -67,6 +69,7 @@ export default function IndustryPageTemplate(p: IndustryProps) {
             </div>
           </section>
         ) : null}
+        {p.extra ?? null}
         <FinalCta title={p.cta.title} sub={p.cta.sub} />
       </main>
       <Footer />

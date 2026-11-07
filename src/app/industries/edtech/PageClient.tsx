@@ -1,4 +1,5 @@
 import { serviceCityPath } from '@/data/serviceCity';
+import Link from 'next/link';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 import { industryFaqs } from '@/data/industry-faqs';
 
@@ -46,6 +47,21 @@ const cityLinks = [
   { label: 'UI/UX Design Company in Vancouver', href: serviceCityPath('product-design', 'vancouver') },
 ];
 
+const linkStyle = { color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 } as const;
+
+const extra = (
+  <section style={{ padding: 'var(--section-y-sm) 0' }}>
+    <div className="cb-container">
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Services for this sector</h2>
+      <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/services/web-development" style={linkStyle}>Web development</Link></li>
+        <li><Link href="/services/mobile-app-development" style={linkStyle}>Mobile app development</Link></li>
+        <li><Link href="/services/ai-ml" style={linkStyle}>AI & machine learning</Link></li>
+      </ul>
+    </div>
+  </section>
+);
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -62,6 +78,7 @@ export default function PageClient() {
       cta={{ title: "Build Your EdTech Platform.", sub: "Engaging, accessible, and scalable \u2014 learning platforms that change lives." }}
       faqs={industryFaqs.edtech}
       cityLinks={cityLinks}
+      extra={extra}
     />
   );
 }

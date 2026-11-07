@@ -1,4 +1,5 @@
 import { serviceCityPath } from '@/data/serviceCity';
+import Link from 'next/link';
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
 import { industryFaqs } from '@/data/industry-faqs';
 
@@ -47,6 +48,25 @@ const cityLinks = [
   { label: 'SEO Company in Vancouver', href: serviceCityPath('digital-marketing', 'vancouver') },
 ];
 
+const linkStyle = { color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 } as const;
+
+const extra = (
+  <section style={{ padding: 'var(--section-y-sm) 0' }}>
+    <div className="cb-container">
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Related work</h2>
+      <ul style={{ margin: '0 0 16px', paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/case-studies/ecommerce-platform" style={linkStyle}>E-commerce platform case study</Link></li>
+      </ul>
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Services for this sector</h2>
+      <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/services/web-development" style={linkStyle}>Web development</Link></li>
+        <li><Link href="/services/mobile-app-development" style={linkStyle}>Mobile app development</Link></li>
+        <li><Link href="/services/digital-marketing" style={linkStyle}>Digital marketing</Link></li>
+      </ul>
+    </div>
+  </section>
+);
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -63,6 +83,7 @@ export default function PageClient() {
       cta={{ title: "Build Your Commerce Platform.", sub: "Performance-engineered storefronts that convert visitors into revenue." }}
       faqs={industryFaqs.ecommerce}
       cityLinks={cityLinks}
+      extra={extra}
     />
   );
 }

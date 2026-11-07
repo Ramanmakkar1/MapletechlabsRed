@@ -1,4 +1,5 @@
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
+import Link from 'next/link';
 import { industryFaqs } from '@/data/industry-faqs';
 import { serviceCityPath } from '@/data/serviceCity';
 
@@ -46,6 +47,25 @@ const cityLinks = [
   { label: 'Software Development Company in Calgary', href: '/locations/software-development-company-in-calgary' },
 ];
 
+const linkStyle = { color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 } as const;
+
+const extra = (
+  <section style={{ padding: 'var(--section-y-sm) 0' }}>
+    <div className="cb-container">
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Related work</h2>
+      <ul style={{ margin: '0 0 16px', paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/case-studies/logistics-platform" style={linkStyle}>Logistics platform case study</Link></li>
+      </ul>
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Services for this sector</h2>
+      <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/services/mobile-app-development" style={linkStyle}>Mobile app development</Link></li>
+        <li><Link href="/services/ai-ml" style={linkStyle}>AI & machine learning</Link></li>
+        <li><Link href="/services/cloud-devops" style={linkStyle}>Cloud & DevOps</Link></li>
+      </ul>
+    </div>
+  </section>
+);
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -62,6 +82,7 @@ export default function PageClient() {
       cta={{ title: "Build Your Logistics Platform.", sub: "Real-time visibility, smarter routing, and supply chain intelligence \u2014 engineered to last." }}
       faqs={industryFaqs.logistics}
       cityLinks={cityLinks}
+      extra={extra}
     />
   );
 }

@@ -1,4 +1,5 @@
 import IndustryPageTemplate from '@/components/page/IndustryPageTemplate';
+import Link from 'next/link';
 import { industryFaqs } from '@/data/industry-faqs';
 import { serviceCityPath } from '@/data/serviceCity';
 
@@ -49,6 +50,25 @@ const cityLinks = [
   { label: 'AI Development Company in Calgary', href: serviceCityPath('ai-ml', 'calgary') },
 ];
 
+const linkStyle = { color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 } as const;
+
+const extra = (
+  <section style={{ padding: 'var(--section-y-sm) 0' }}>
+    <div className="cb-container">
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Related work</h2>
+      <ul style={{ margin: '0 0 16px', paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/case-studies/logistics-platform" style={linkStyle}>Logistics platform case study</Link></li>
+      </ul>
+      <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Services for this sector</h2>
+      <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
+        <li><Link href="/services/web-development" style={linkStyle}>Web development</Link></li>
+        <li><Link href="/services/cloud-devops" style={linkStyle}>Cloud & DevOps</Link></li>
+        <li><Link href="/services/saas-development" style={linkStyle}>SaaS development</Link></li>
+      </ul>
+    </div>
+  </section>
+);
+
 export default function PageClient() {
   return (
     <IndustryPageTemplate
@@ -65,6 +85,7 @@ export default function PageClient() {
       cta={{ title: "Build Your Enterprise System.", sub: "Mission-critical software that scales with your organisation and stands the test of time." }}
       faqs={industryFaqs.enterprise}
       cityLinks={cityLinks}
+      extra={extra}
     />
   );
 }
