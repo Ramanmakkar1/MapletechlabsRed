@@ -79,7 +79,8 @@ export const metadata: Metadata = {
     "theme-color": "#ffffff",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
-    "build-sha": (process.env.VERCEL_GIT_COMMIT_SHA || "local").slice(0, 7),
+    "build-sha": process.env.BUILD_SHA || "unknown",
+    "build-time": process.env.BUILD_TIME || "unknown",
   },
 };
 

@@ -1,8 +1,20 @@
 import path from 'node:path';
+import { execSync } from 'node:child_process';
 import type { NextConfig } from "next";
+
+function buildSha(): string {
+  const fromEnv = process.env.BUILD_SHA || process.env.VERCEL_GIT_COMMIT_SHA || process.env.GIT_COMMIT || process.env.SOURCE_COMMIT;
+  if (fromEnv) return fromEnv.slice(0, 7);
+  try {
+    return execSync('git rev-parse --short=7 HEAD', { cwd: __dirname, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim() || 'unknown';
+  } catch {
+    return 'unknown';
+  }
+}
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  env: { BUILD_SHA: buildSha(), BUILD_TIME: new Date().toISOString() },
   // This repo sits inside another project that has its own package-lock.json.
   // Pin the root so Next/Turbopack never pick the parent folder.
   outputFileTracingRoot: path.resolve(__dirname),
