@@ -5,7 +5,7 @@ import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Website Cost in Canada: 2026 Pricing and Budget Guide';
+const TITLE = 'Website Cost in Canada: 2026 Guide';
 const DESCRIPTION = 'Website cost in Canada 2026: real price ranges for templates, custom builds and e-commerce, what drives cost, and how to budget your project wisely.';
 const SLUG = 'website-cost-canada';
 const DATE = '2026-01-22';
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
-    title: TITLE,
+    title: `${TITLE} | Mapletech Labs`,
     description: DESCRIPTION,
     type: 'article',
     publishedTime: DATE,
