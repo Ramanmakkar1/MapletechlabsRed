@@ -9,6 +9,7 @@ import { FaqSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import BriefClient from './BriefClient';
+import ToolServiceCta from '@/components/ToolServiceCta';
 
 const TITLE = 'Software Project Brief Builder (Free)';
 const DESCRIPTION = 'Free tool for Canadian businesses: fill in a short form about your app, website or AI feature and get a clear project brief to copy, download or send.';
@@ -101,7 +102,16 @@ export default function ProjectBriefPage() {
 
             <BriefClient />
 
-            <div style={{ maxWidth: 820, marginTop: 'var(--section-y)' }}>
+            <ToolServiceCta
+              title="Ready to turn your brief into a product?"
+              copy="Work with our team on product design and end-to-end SaaS engineering in Canada."
+              links={[
+                { href: '/services/product-design', label: 'Product Design Services' },
+                { href: '/services/saas-development', label: 'SaaS Development Services' },
+              ]}
+            />
+
+            <div style={{ maxWidth: 820, marginTop: 48 }}>
               <p style={p}>
                 Not sure about the budget? Check our <Link href="/pricing" style={a}>pricing</Link> or try the{' '}
                 <Link href="/tools/cost-estimator" style={a}>app and software cost estimator</Link> before you send your

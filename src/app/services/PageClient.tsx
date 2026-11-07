@@ -334,6 +334,30 @@ export default function ServicesIndexPage() {
           </div>
         </section>
 
+        {/* RELATED TOOLS */}
+        <section className="section-padding" style={{ paddingTop: 0 }}>
+          <div className="cb-container">
+            <div style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Free planning tools</h2>
+              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)' }}>Calculators to help you estimate costs and plan your project before getting started.</p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+              {[
+                { name: 'Cost Estimator', href: '/tools/cost-estimator', desc: 'Ballpark development costs in CAD' },
+                { name: 'SR&ED Estimator', href: '/tools/sred-estimator', desc: 'R&D tax incentive ranges' },
+                { name: 'In-House vs Agency', href: '/tools/in-house-vs-agency', desc: 'Compare developer hiring costs' },
+                { name: 'Project Brief Builder', href: '/tools/project-brief', desc: 'Structured scope builder' },
+              ].map(tool => (
+                <Link key={tool.href} href={tool.href} style={{ border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', padding: 'clamp(1.25rem, 3vw, 2rem)', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', color: 'var(--ink)', margin: 0 }}>{tool.name}</h3>
+                  <p style={{ color: 'var(--body)', fontSize: 14.5, lineHeight: 1.6, margin: 0, flexGrow: 1 }}>{tool.desc}</p>
+                  <span style={{ color: 'var(--brand)', fontSize: '0.9rem', fontWeight: 600, marginTop: '0.5rem' }}>Open tool →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <MediaBand media={humanMedia.planning} ratio="21 / 8" />
         <FinalCta title="Not sure which service you need?" sub="Describe the outcome you’re after and we’ll tell you what it actually takes — scope, timeline and fixed price, within one working day." />

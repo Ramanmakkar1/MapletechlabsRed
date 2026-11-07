@@ -9,6 +9,7 @@ import { FaqSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import EstimatorClient from './EstimatorClient';
+import ToolServiceCta from '@/components/ToolServiceCta';
 
 const TITLE = 'SR&ED Tax Credit Estimator (Canada)';
 const DESCRIPTION = 'Free SR&ED tax credit estimator for Canadian software teams. Enter salaries, contractors and materials to see a rough federal and provincial credit range.';
@@ -88,7 +89,16 @@ export default function SredEstimatorPage() {
 
             <EstimatorClient />
 
-            <div style={{ maxWidth: 820, marginTop: 'var(--section-y)' }}>
+            <ToolServiceCta
+              title="Planning software R&D in Canada?"
+              copy="Learn how SR&ED tax incentives apply to software development or explore our custom SaaS builds."
+              links={[
+                { href: '/services/saas-development', label: 'SaaS Development Services' },
+                { href: '/blog/sred-software-development-canada', label: 'SR&ED Software Development Guide' },
+              ]}
+            />
+
+            <div style={{ maxWidth: 820, marginTop: 48 }}>
               <h2 style={h2}>How we calculate this</h2>
               <p style={p}>
                 Qualified spend is your eligible salaries, plus 80% of arm&apos;s-length contractor costs, plus materials.

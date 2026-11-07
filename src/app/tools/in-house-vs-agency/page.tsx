@@ -9,6 +9,7 @@ import { FaqSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import CalculatorClient from './CalculatorClient';
+import ToolServiceCta from '@/components/ToolServiceCta';
 
 const TITLE = 'In-House vs Agency Dev Cost Calculator';
 const DESCRIPTION = 'Free calculator for Canadian businesses: compare the fully loaded cost of in-house developers, including hiring time, with an agency project range in CAD.';
@@ -91,7 +92,16 @@ export default function InHouseVsAgencyPage() {
 
             <CalculatorClient />
 
-            <div style={{ maxWidth: 820, marginTop: 'var(--section-y)' }}>
+            <ToolServiceCta
+              title="Compare delivery models for your project"
+              copy="Explore our dedicated SaaS development services or read our Canadian hiring comparison guide."
+              links={[
+                { href: '/services/saas-development', label: 'SaaS Development Services' },
+                { href: '/blog/freelancer-vs-agency-vs-in-house-canada', label: 'Freelancer vs Agency vs In-House Guide' },
+              ]}
+            />
+
+            <div style={{ maxWidth: 820, marginTop: 48 }}>
               <h2 style={h2}>What a fully loaded developer costs</h2>
               <p style={p}>
                 Salary is only the starting point. On top of it, an employer pays its share of CPP and EI contributions,

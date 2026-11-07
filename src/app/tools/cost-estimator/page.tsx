@@ -9,6 +9,7 @@ import { FaqSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import EstimatorClient from './EstimatorClient';
+import ToolServiceCta from '@/components/ToolServiceCta';
 
 const TITLE = 'App & Software Cost Estimator (Canada, CAD)';
 const DESCRIPTION = 'Free cost estimator for websites, web apps, SaaS and mobile apps in Canada. Pick your features and get a ballpark CAD range and timeline in seconds.';
@@ -87,7 +88,16 @@ export default function CostEstimatorPage() {
 
             <EstimatorClient />
 
-            <div style={{ maxWidth: 820, marginTop: 'var(--section-y)' }}>
+            <ToolServiceCta
+              title="Explore our software development services"
+              copy="Compare scope, architecture, and engineering options for your web or mobile app."
+              links={[
+                { href: '/services/web-development', label: 'Web Development Services' },
+                { href: '/services/mobile-app-development', label: 'Mobile App Development' },
+              ]}
+            />
+
+            <div style={{ maxWidth: 820, marginTop: 48 }}>
               <h2 style={h2}>How we calculate this</h2>
               <p style={p}>
                 Each project type starts from the base range in our Canadian cost guides: custom websites, web apps,
