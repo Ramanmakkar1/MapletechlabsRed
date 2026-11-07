@@ -8193,6 +8193,182 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-quebec-city': {
+    title: 'AI Development Company in Quebec City, QC',
+    description: 'AI development company in Quebec City: French-first chatbots, LLM features and forecasting built for Law 25. Fixed CAD price, free quote.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build LLM features, document chatbots, forecasting models and workflow automation for organizations in Quebec City. We do not have a Quebec City office; Quebec City clients work with us remotely. Quebec City is on Eastern Time, two hours ahead of Edmonton, so our afternoons overlap your mornings for model reviews and quick decisions. The work we see here comes from the provincial government and the suppliers who serve it, insurers and financial groups such as Beneva, iA Financial Group and Promutuel, research teams and startups linked to Université Laval, video game studios, tourism operators and businesses tied to the Port of Québec. Almost every project needs French-first answers and careful handling of personal information under Quebec\'s Law 25. Senior engineers build the system, you see it working at a weekly demo, and scope and CAD price are fixed in writing before development begins.',
+    sections: [
+      {
+        heading: 'Where AI helps Quebec City insurers, public bodies, studios and tourism',
+        body: [
+          'Quebec City\'s AI requests come from the work its biggest employers already do. Insurers and financial groups want claim and policy document assistants, underwriting summaries and call-centre tools that help an agent find the right clause in seconds, with a person approving every decision. Ministries, agencies and the suppliers who bid on provincial contracts want search and drafting help across large bodies of French regulations, forms and correspondence. Research groups and spin-offs tied to Université Laval want to turn lab or field data into a working model they can show to partners. Video game studios want asset tagging, playtest summaries and support assistants inside their own tools. Tourism operators and hotels want booking and visitor assistants that answer in French and English through the winter carnival and the summer festival season, and businesses around the port want shipment and volume forecasts from their own records. Our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page lists everything we build.',
+        ],
+      },
+      {
+        heading: 'Law 25, French-first answers and grounded chatbots',
+        body: [
+          'We build chatbots with retrieval-augmented generation (RAG): the system finds the right passages in your policies, claim files, regulations or product documents, writes its reply from them and cites each source. Access rules decide which documents each user can reach, and anything the system cannot answer goes to a person. Answers are produced in French first, with English available, and we test answer quality in both languages, because the Charter of the French Language, as updated by Bill 96, expects French-first service for Quebec users. Quebec\'s Law 25 sets rules for how private organizations collect and use personal information, including privacy impact assessments when data leaves Quebec and transparency when a decision is made automatically, and public bodies follow Quebec\'s access to information and privacy act. We can keep data in Canadian cloud regions, stop outside model providers training on it, and add encryption, role-based access and audit logs; your privacy officer confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers our wider work in the province.',
+        ],
+      },
+      {
+        heading: 'What AI development costs for a Quebec City project (CAD)',
+        body: [
+          'Quebec City budgets follow the same national planning ranges in our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          '. Adding an LLM feature to an existing product is about $10,000-$35,000 CAD. A chatbot built on your own documents, with cited sources, access control and hand-off to staff, is about $15,000-$50,000. Custom model training, such as a claims triage model for an insurer or a volume forecast built on port and shipment data, starts around $75,000. Bilingual answer testing and Law 25 documentation are planned into the scope rather than added later. These are planning figures, not quotes. After a free discovery call we check whether your data is ready, then agree a fixed scope and a fixed CAD price before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Quebec City?',
+        a: 'Using our Canadian AI cost guide, an LLM feature in an existing product is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. After a free discovery call you get one fixed price in CAD.',
+      },
+      {
+        q: 'Can your chatbot answer in French first?',
+        a: 'Yes. We build assistants that answer in French by default and switch to English when the user asks, and we test answer quality in both languages before launch. Source documents can stay in French, and every answer cites the passage it came from so staff can check it.',
+      },
+      {
+        q: 'How does Quebec Law 25 affect an AI project?',
+        a: 'Law 25 sets rules for consent, privacy impact assessments when personal information leaves Quebec, and telling people when a decision about them is made automatically. We design Canadian hosting, access control, audit logs and no training by outside model providers, and document data flows so your privacy officer can confirm the final position.',
+      },
+      {
+        q: 'How long does an AI project take?',
+        a: 'An LLM feature added to an existing product usually takes 4 to 8 weeks. A chatbot on your own documents with access control and staff hand-off takes about 6 to 12 weeks, and custom model training depends on how ready your data is, which we check during free discovery.',
+      },
+      {
+        q: 'Do you have an office in Quebec City?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and serves Quebec City clients remotely through video workshops, weekly demos and a shared project board. Quebec City is two hours ahead of Edmonton, so our afternoons overlap your mornings. If your team wants an in-person kickoff, we can arrange a visit with travel costs agreed up front.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-quebec-city': {
+    title: 'UI/UX Design Company in Quebec City, QC',
+    description: 'UI/UX design company in Quebec City: French-first research, Figma prototypes and accessible screens for insurers and public bodies. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing apps, portals and dashboards for organizations in Quebec City. We do not have a Quebec City office; Quebec City clients work with us remotely through Figma, video workshops and remote usability sessions. Quebec City is on Eastern Time, two hours ahead of Edmonton, so design reviews fit into your morning and revised files are usually ready the same day. We design for provincial government teams and their suppliers, insurers and financial groups such as Beneva, iA Financial Group and Promutuel, Université Laval research and student projects, video game studios, and tourism operators. Most of these screens are used in French first, so we design French-first layouts with room for longer French labels, and bilingual versions where English users need them. You work directly with the designers doing the work, see a clickable prototype every week, and agree a fixed CAD price before design starts.',
+    sections: [
+      {
+        heading: 'Design work Quebec City organizations bring to us',
+        body: [
+          'Each Quebec City sector puts different people in front of a screen. Insurers and financial groups need quote, claim and policyholder portals that a customer can finish on a phone without calling an agent, and advisor dashboards that show the right file at a glance. Ministries, agencies and their suppliers need citizen-facing forms and internal case tools that are plain, accessible and correct in French. Université Laval research groups need data collection and dashboard screens that survive a real lab or classroom, and student startups need a clean interface to show beside their pitch. Video game studios need internal tools, editor views and companion apps that stay usable through a crunch week. Tourism operators and hotels need booking and visitor flows that work on a phone in the street during the winter carnival or a summer festival. Our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page shows the full scope.',
+        ],
+      },
+      {
+        heading: 'French-first design, accessibility and Law 25',
+        body: [
+          'Each project starts with a free UX audit: a heuristic review, a look at your analytics and short interviews with real users. We then map journeys, move to wireframes and a clickable Figma prototype, and usability-test it on real tasks so problems surface before development. French is the default language in our files, not a translation pass at the end: French labels often run 20-30% longer than English, so buttons, menus and forms are sized for them from the first wireframe, in line with the French-first expectations of the Charter of the French Language as updated by Bill 96. We design to WCAG 2.1 AA, with contrast, focus states, keyboard paths and screen-reader labels set in the files. Where a form or portal collects personal information, we design clear consent screens and collect only what is needed under Quebec\'s Law 25; your compliance lead confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers the wider province.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Quebec City (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, using the ranges on our ',
+          { href: '/pricing', label: 'pricing page' },
+          '. They are about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. An insurance quote and claim portal or a tourism booking redesign usually lands in the full product band, while a bilingual design system shared across several public-sector or financial products can reach the enterprise band. Screen count, research depth, language versions and branding move the number, and the audit tells you which band fits before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Quebec City?',
+        a: 'We quote a fixed CAD price after a free UX audit. Published ranges are about $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design with 30+ screens and research, and $12,000-$30,000+ for an enterprise design system.',
+      },
+      {
+        q: 'Do you design in French first?',
+        a: 'Yes. Our Figma files use French as the default language, with layouts sized for longer French labels, and we add an English version where your users need it. Usability tests run in the language your users actually work in.',
+      },
+      {
+        q: 'How long does a UI/UX design project take?',
+        a: 'An MVP design usually takes 2 to 4 weeks. A full product design with research, 30+ screens and a design system foundation takes about 6 to 10 weeks, and you see a clickable prototype at every weekly review.',
+      },
+      {
+        q: 'Can you run usability tests with our Quebec City users?',
+        a: 'Yes. We run remote moderated sessions over video with your real users, such as policyholders, advisors, public servants or visitors, in French or English, and record what they struggle with. If testing on site in Quebec City matters, we can arrange a visit with travel agreed up front.',
+      },
+      {
+        q: 'Do you have an office in Quebec City?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and works with Quebec City clients remotely through Figma, video workshops and weekly prototype reviews. Quebec City is two hours ahead of Edmonton, so our days overlap. You own all design files, prototypes and research notes with no lock-in.',
+      },
+    ],
+  },
+  'saas-development-company-in-quebec-city': {
+    title: 'SaaS Development Company in Quebec City',
+    description: 'SaaS development company in Quebec City: bilingual MVPs and multi-tenant platforms built for Law 25 and Bill 96. Fixed CAD quote after free discovery.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for founders and companies in Quebec City. We do not have a Quebec City office and serve Quebec City clients remotely through video calls, weekly demos and a shared project board. Quebec City is on Eastern Time, two hours ahead of Edmonton, so standups and reviews fit easily into a shared working day. Our Quebec City buyers include suppliers to the provincial government and public sector, insurance and financial services teams in a market shaped by groups such as Beneva, iA Financial Group and Promutuel, startups spun out of Université Laval, video game studios, and tourism and port-related businesses. Products sold here need a French-first interface, bilingual content and privacy handling that fits Quebec\'s Law 25. You work with the senior engineers writing the code, see working software every week, and get a fixed CAD price before development starts.',
+    sections: [
+      {
+        heading: 'SaaS ideas growing out of Quebec City',
+        body: [
+          'Many Quebec City products start as a tool built for one organization. A supplier to provincial ministries turns its case tracking or reporting tool into a product other public bodies and municipalities can subscribe to. An insurance broker or financial services firm packages its quoting, claims follow-up or compliance tracking into software for other brokers and advisors. A Université Laval research group or student startup turns a lab or teaching workflow into a product other institutions license. A video game studio sells the pipeline or QA tooling it built for itself to other studios, and a tourism or port-related business licenses its booking, scheduling or shipment tracking system to peers. Most of these teams need one focused MVP for their first paying customers, not a full platform. Our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page covers the full path.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant, French-first SaaS built for Law 25',
+        body: [
+          'We build the core workflow first, with sign-up, roles and subscription billing. The data model is multi-tenant from release one, so each insurer, public body, studio or hotel keeps its records separate and you can add customers without a rebuild. The interface is French-first with full English support, including French emails, invoices and help content, because the Charter of the French Language, as updated by Bill 96, expects French-first products for Quebec customers. Billing covers plans, seats, usage tiers and Canadian sales tax including GST and QST through providers such as Stripe, and enterprise buyers get single sign-on with SAML or OIDC. We can host everything in Canadian cloud regions. Quebec\'s Law 25 asks your customers for privacy impact assessments and clear consent, so we design encryption, access control, audit logs and documented data flows from day one; your privacy officer confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page has more.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Quebec City (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Bilingual content, insurance or government system integrations, payment rails and security reviews move your price within those ranges. Quebec City founders often fund part of the build with SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how. After a free discovery call you receive one fixed CAD quote, so your runway is planned before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Quebec City?',
+        a: 'Our Canadian SaaS cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000 and an enterprise platform at $200,000-$500,000+. Integrations, billing rules, bilingual content and compliance work move the figure, and you get a fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build a French-first SaaS product for Quebec customers?',
+        a: 'Yes. We build the interface, emails, invoices and help content in French first with full English support, so Quebec customers get the French-first experience Bill 96 expects and English users still get a complete product.',
+      },
+      {
+        q: 'Can you build SaaS that Quebec insurers and public bodies can buy?',
+        a: 'Yes. We build multi-tenant products with Canadian hosting, encryption, role-based access, audit logs and documented data flows, which Law 25 privacy impact assessments and vendor security reviews ask for. Your privacy officer or legal advisor confirms the final position, and we help prepare answers for vendor questionnaires.',
+      },
+      {
+        q: 'How long does it take to build a SaaS MVP?',
+        a: 'A focused MVP usually takes 3 to 4 months, a growth-stage product 4 to 8 months, and an enterprise platform 8 to 18 months. You see working software at a demo every week, so you can start selling to first customers before the full product is finished.',
+      },
+      {
+        q: 'Do you have an office in Quebec City?',
+        a: 'No. We are headquartered in Edmonton and work with Quebec City founders remotely through weekly demos, video standups and a shared board. Quebec City is two hours ahead of Edmonton, so our days overlap. If you want an in-person planning session in Quebec City, we can arrange one with travel agreed up front.',
+      },
+    ],
+  },
   'app-development-company-in-gatineau': {
     title: 'App Development Company in Gatineau, QC',
     description: 'App development company in Gatineau: bilingual iOS and Android apps for federal suppliers, IT and tourism teams. Fixed CAD price, free quote.',
