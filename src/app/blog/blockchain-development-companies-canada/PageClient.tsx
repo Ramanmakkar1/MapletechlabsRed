@@ -188,7 +188,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                 {/* Company 1: Mapletech Labs (Highlighted) */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-labs">
                   <div style={{
-                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
+                    background: 'var(--surface)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 0, position: 'relative', overflow: 'hidden'
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />
@@ -219,6 +219,9 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       What sets Mapletech Labs apart is our full-stack approach. We do not just write Solidity — we architect entire decentralized ecosystems, from on-chain logic and tokenomics design to the React frontends and Node.js backends that make Web3 applications accessible to mainstream users. Our team maintains deep expertise in ERC-20, ERC-721, ERC-1155 token standards, cross-chain bridges, and Layer 2 scaling solutions.
+                    </p>
+                    <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.75, marginTop: 16, position: 'relative', zIndex: 1 }}>
+                      See our <Link href="/services/blockchain-web3" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>blockchain and Web3 development services</Link>, or meet our <Link href="/locations/toronto/blockchain-web3" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>blockchain developers in Toronto</Link> and <Link href="/locations/vancouver/blockchain-web3" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>Vancouver</Link>.
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
