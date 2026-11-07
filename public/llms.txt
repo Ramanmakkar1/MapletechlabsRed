@@ -127,6 +127,16 @@
 - [Software & App Maintenance Cost in Canada (2026)](https://mapletechlabs.ca/blog/software-maintenance-cost-canada)
 - [Digital Marketing Cost in Canada](https://mapletechlabs.ca/blog/digital-marketing-cost-canada)
 - [Top SEO Companies in Canada](https://mapletechlabs.ca/blog/top-seo-companies-canada)
+- [UI/UX Design Cost in Canada (2026 Guide)](https://mapletechlabs.ca/blog/ui-ux-design-cost-canada): what UI/UX design projects cost in CAD, by project type and scope.
+- [Freelancer vs Agency vs In-House Team in Canada (2026)](https://mapletechlabs.ca/blog/freelancer-vs-agency-vs-in-house-canada): how to choose the right build model for your budget, timeline and post-launch support.
+- [Top 10 Blockchain Development Companies in Canada (2026)](https://mapletechlabs.ca/blog/blockchain-development-companies-canada): how to choose a blockchain and Web3 development partner.
+- [Software Development Contracts in Canada (2026)](https://mapletechlabs.ca/blog/software-development-contract-canada): fixed price vs time and materials, IP ownership and a pre-signing checklist.
+- [SR&ED Tax Credits for Software Development in Canada (2026 Guide)](https://mapletechlabs.ca/blog/sred-software-development-canada): how Canadian R&D tax credits work for software projects.
+- [How to Choose a SaaS Development Company in Canada (2026)](https://mapletechlabs.ca/blog/saas-development-company-canada): engagement models, red flags and questions to ask before hiring.
+- [Best UI/UX Design Companies in Canada (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-canada): how to choose a studio, typical CAD costs and what to ask.
+- [Digital Marketing Agencies in Calgary: How to Choose](https://mapletechlabs.ca/blog/digital-marketing-agencies-calgary): buyer's guide for Calgary businesses hiring an agency.
+- [Digital Marketing Agencies in Toronto: How to Choose](https://mapletechlabs.ca/blog/digital-marketing-agencies-toronto): buyer's guide for Toronto and GTA businesses hiring an agency.
+- [Digital Marketing Agencies in Vancouver: How to Choose](https://mapletechlabs.ca/blog/digital-marketing-agencies-vancouver): buyer's guide for Lower Mainland businesses hiring an agency.
 
 ## Industries
 
@@ -145,6 +155,13 @@
 - [Real-Time Fleet Management System (Logistics, Calgary)](https://mapletechlabs.ca/case-studies/logistics-platform)
 - [PCI DSS Payments API (FinTech, Ottawa)](https://mapletechlabs.ca/case-studies/payments-api-platform)
 - [Multi-Listing Real Estate Platform (Real Estate, Toronto)](https://mapletechlabs.ca/case-studies/real-estate-portal)
+
+## Free tools
+
+- [App & Software Cost Estimator (Canada, CAD)](https://mapletechlabs.ca/tools/cost-estimator): estimate what your app or software project will cost in CAD.
+- [In-House vs Agency Dev Cost Calculator](https://mapletechlabs.ca/tools/in-house-vs-agency): compare the real cost of building in-house vs hiring an agency.
+- [Software Project Brief Builder (Free)](https://mapletechlabs.ca/tools/project-brief): write a structured project brief you can send to any development company.
+- [SR&ED Tax Credit Estimator (Canada)](https://mapletechlabs.ca/tools/sred-estimator): estimate potential SR&ED credits for your Canadian software project.
 
 ## Contact
 
