@@ -7,7 +7,7 @@ import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Unicorn Apps 2026: Top 10 Growth Stories for Founders';
 const DESCRIPTION =
-  'Top 10 unicorn apps of 2026: how they grew past $1B, the product and engineering decisions behind them, and lessons for Canadian founders.';
+  'Top 10 unicorn apps of 2026: how each one crossed $1B, the product and engineering calls behind the growth, and what Canadian founders can copy.';
 const SLUG = 'top-10-unicorn-apps-2026';
 const DATE = '2026-01-15';
 

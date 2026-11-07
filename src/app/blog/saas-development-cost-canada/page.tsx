@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'SaaS Development Cost in Canada (2026)';
-const DESCRIPTION = 'SaaS development cost in Canada 2026: MVP to enterprise price ranges in CAD, what drives the budget, timelines, and how to plan your first build.';
+const DESCRIPTION = 'SaaS development cost in Canada 2026: honest price ranges from MVP to enterprise in CAD, what drives your budget, timelines, and how to plan the build.';
 const SLUG = 'saas-development-cost-canada';
 const DATE = '2026-03-06';
 
