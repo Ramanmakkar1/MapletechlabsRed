@@ -5,10 +5,13 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
+import type { CSSProperties } from 'react';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
+
+const LINK: CSSProperties = { color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' };
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -32,6 +35,7 @@ const tocItems = [
   { id: 'tech-stack', label: 'The Tech Stack That Matters', emoji: '🛠️' },
   { id: 'funding', label: 'Canadian SaaS Funding', emoji: '🇨🇦' },
   { id: 'our-process', label: 'How Mapletech Labs Builds SaaS', emoji: '🚀' },
+  { id: 'work-with-us', label: 'Work with us', emoji: '🤝' },
 ];
 
 const relatedPosts = [
@@ -473,6 +477,17 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                       </div>
                     </div>
                   ))}
+                </div>
+
+                <div className="reveal" style={{ marginBottom: 56 }} id="work-with-us">
+                  <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 24 }}>Planning a SaaS build in Canada?</h2>
+                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
+                    Our <Link href="/services/saas-development" style={LINK}>SaaS development services</Link> cover discovery, multi-tenant architecture, billing and launch. We work with founders across the country, including as a{' '}
+                    <Link href="/locations/saas-development-company-in-toronto" style={LINK}>SaaS development company in Toronto</Link>,{' '}
+                    <Link href="/locations/saas-development-company-in-vancouver" style={LINK}>Vancouver</Link>,{' '}
+                    <Link href="/locations/saas-development-company-in-calgary" style={LINK}>Calgary</Link> and{' '}
+                    <Link href="/locations/saas-development-company-in-edmonton" style={LINK}>Edmonton</Link>. If AI features are on your roadmap, see our <Link href="/services/ai-ml" style={LINK}>AI development services</Link>.
+                  </p>
                 </div>
 
               </article>
