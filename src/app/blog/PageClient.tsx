@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'ui-ux-design-cost-canada', category: 'Business',
+    title: 'UI/UX Design Cost in Canada (2026 Guide)',
+    excerpt: 'What UI/UX design actually costs in Canada in 2026: CAD ranges for MVP, full product and enterprise design, the five cost drivers, and what each tier includes.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
+  },
+  {
     slug: 'ai-development-companies-calgary', category: 'Technology',
     title: 'AI Development Companies in Calgary: How to Choose One (2026)',
     excerpt: 'How to choose an AI development company in Calgary: RAG and LLM apps for energy and fintech, Alberta PIPA, data residency, CAD costs and 10 questions.',

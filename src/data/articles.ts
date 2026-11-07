@@ -1786,6 +1786,72 @@ export const articles: Article[] = [
     cta: { href: '/services/product-design', label: 'See our UI/UX design services' },
   },
   {
+    slug: 'ui-ux-design-cost-canada',
+    relatedTopic: 'design',
+    category: 'Business',
+    title: 'UI/UX Design Cost in Canada (2026 Guide)',
+    dek: 'What UI/UX design actually costs in Canada in 2026: CAD ranges for MVP, full product and enterprise design, the five cost drivers, and exactly what each tier includes, so you can compare quotes on equal footing.',
+    metaTitle: 'UI/UX Design Cost in Canada (2026 Guide)',
+    metaDescription: 'UI/UX design cost in Canada in 2026: CAD ranges for MVP, full product and enterprise design, the cost drivers, and what each tier includes.',
+    date: '2026-11-07',
+    dateModified: '2026-11-07',
+    readTime: '8 min read',
+    heroKey: 'whiteboard',
+    intro: [
+      'Hiring a UI/UX designer and being quoted anywhere from a few thousand to tens of thousands of dollars is normal. The range is wide because &ldquo;UI/UX design&rdquo; covers everything from a five-screen MVP to a multi-product design system, and the price moves with the number of screens, the depth of research and how much testing you ask for.',
+      'This guide gives you the real Canadian numbers, what drives the price, and what each tier should include, so you can compare agency quotes on equal footing. The ranges below are the same CAD figures we publish on our <a href="/services/product-design">UI/UX and product design</a> page and our UI/UX city pages. If you also need the product built, our <a href="/blog/app-development-cost-canada">app development cost guide for Canada</a> covers the development side.',
+    ],
+    body: [
+      { type: 'h2', id: 'how-much-ui-ux-design-costs', text: 'How much UI/UX design costs in Canada (2026)' },
+      { type: 'p', html: 'Prices vary with the number of screens, how complex the interactions are, how much research is involved and whether a design system is part of the scope. These are the CAD ranges we publish on our <a href="/services/product-design">UI/UX service page</a>, so you can use them as a reference point when comparing quotes:' },
+      { type: 'table', html: '<table><thead><tr><th>Engagement</th><th>What it usually covers</th><th>Typical range (CAD)</th></tr></thead><tbody><tr><td>UX audit</td><td>Heuristic review of an existing app or website plus analytics, ending in a prioritised fix list</td><td>Free with us, before a fixed quote</td></tr><tr><td>MVP design</td><td>Up to about 15 screens, basic user research, an interactive prototype, responsive layouts and file handoff</td><td>$1,500&ndash;$5,000</td></tr><tr><td>Full product design</td><td>30+ screens, in-depth research and usability testing, a design system foundation, interaction design and developer handoff support</td><td>$5,000&ndash;$12,000</td></tr><tr><td>Design system (enterprise)</td><td>Multi-product design system, a full UX research program, accessibility compliance work and an embedded design team</td><td>$12,000&ndash;$30,000+</td></tr></tbody></table>' },
+      { type: 'p', html: 'Most projects take 6 to 11 weeks across research, strategy, wireframes, visual design and handoff; small MVPs can be faster. A design quote that is far below these ranges usually means research and testing have been left out; one far above them should come with a clear explanation of the extra scope.' },
+
+      { type: 'h2', id: 'what-each-tier-includes', text: 'What each tier includes' },
+      { type: 'p', html: 'The price is only useful if you know what you are buying. Here is what each tier should deliver, so a quote at the same price can be compared on substance, not just the number:' },
+      { type: 'table', html: '<table><thead><tr><th>Tier</th><th>What is included</th></tr></thead><tbody><tr><td>MVP design</td><td>Up to about 15 screens, basic user research, low-fidelity wireframes, an interactive prototype of the main flows, responsive layouts and a developer-ready file handoff</td></tr><tr><td>Full product design</td><td>30+ screens, in-depth user research, usability testing with real users, a design system foundation (components, colour and type tokens), interaction design and ongoing developer handoff support</td></tr><tr><td>Enterprise design system</td><td>A multi-product design system, a full UX research program, accessibility (WCAG 2.1/2.2 AA) compliance work and an embedded design team that scales with your product</td></tr></tbody></table>' },
+      { type: 'p', html: 'If a quote sits in a tier but is missing one of the items above, that is the gap to ask about before you sign. Research and usability testing are the two items most often quietly dropped to hit a lower price.' },
+
+      { type: 'h2', id: 'cost-drivers', text: 'The five things that drive UI/UX design cost' },
+      { type: 'p', html: 'Two products with the same number of screens can differ by several times in design cost. These are the levers that move the price the most:' },
+      { type: 'checks', items: [
+        { term: 'User research', text: 'Interviews, analytics review and competitor analysis before any screens are drawn. More users, more markets and more decision-stakes mean more research time. This is the first thing cut when a quote is rushed.' },
+        { term: 'Wireframes and flows', text: 'Low-fidelity layouts of every key screen and flow. The more complex the user journeys (checkouts, dashboards, multi-step forms), the more wireframe work it takes to get the structure right cheaply.' },
+        { term: 'Design system', text: 'A library of reusable components, colours, type styles and spacing tokens. A one-off MVP needs little; a product that will grow across screens and teams needs a real system, which is the main step up in price.' },
+        { term: 'Number of screens', text: 'The most direct driver. Every additional screen, state and responsive breakpoint adds design time. A 15-screen MVP and a 60-screen platform are not the same job, even if both are &ldquo;an app.&rdquo;' },
+        { term: 'Usability testing', text: 'Watching real users try the prototype on set tasks and fixing where they hesitate. Running two or three rounds of testing with five to eight users each is what catches the expensive mistakes, and it is the step most often skipped.' },
+      ] },
+
+      { type: 'h2', id: 'design-vs-development', text: 'UI/UX design cost vs development cost' },
+      { type: 'p', html: 'Design is a fraction of the total cost of a product, not the whole thing. A full product design in the $5,000&ndash;$12,000 range typically sits on top of a development build that runs from the tens of thousands to the hundreds of thousands of dollars, depending on scope. Skipping design to save a few thousand dollars usually costs more later in rework, because developers end up guessing at the screens.' },
+      { type: 'p', html: 'For the development side of the budget, see our <a href="/pricing">pricing page</a> and our <a href="/blog/app-development-cost-canada">app development cost guide for Canada</a>. A good partner will give you a combined design-plus-build number so you are not surprised by the total.' },
+
+      { type: 'h2', id: 'our-services', text: 'Where our UI/UX services fit' },
+      { type: 'p', html: 'We break the work into the stages above so you can buy exactly what you need. Our <a href="/services/product-design/ui-ux-strategy">UI/UX strategy</a> service covers the research and direction, our <a href="/services/product-design/wireframing">wireframing</a> service covers the low-fidelity structure, and our <a href="/services/product-design/design-systems">design systems</a> service covers the reusable component library that keeps a growing product consistent.' },
+
+      { type: 'h2', id: 'ui-ux-design-in-your-city', text: 'UI/UX design in your city' },
+      { type: 'p', html: 'Most Canadian design teams work remotely, so the city matters less than the process. If you would like to meet the team in person, we work with clients across the country and have local pages for a <a href="/locations/ui-ux-design-company-in-toronto">UI/UX design company in Toronto</a>, a <a href="/locations/ui-ux-design-company-in-vancouver">UI/UX design company in Vancouver</a>, a <a href="/locations/ui-ux-design-company-in-calgary">UI/UX design company in Calgary</a> and a <a href="/locations/ui-ux-design-company-in-edmonton">UI/UX design company in Edmonton</a>.' },
+
+      { type: 'h2', id: 'next-steps', text: 'Get a fixed UI/UX design quote' },
+      { type: 'callout', tone: 'brand', title: 'Talk to our UI/UX design team', text: 'Every project starts with a free UX audit and a fixed quote. See how we run research, wireframes, design systems and handoff on our <a href="/services/product-design">UI/UX and product design</a> page, or read our <a href="/blog/ui-ux-design-companies-canada">guide to choosing a UI/UX design company in Canada</a>.' },
+    ],
+    keyTakeaways: [
+      'UI/UX design in Canada runs roughly CAD $1,500–$5,000 for an MVP, $5,000–$12,000 for a full product and $12,000–$30,000+ for an enterprise design system.',
+      'The price is driven by research depth, wireframe complexity, whether a design system is included, the number of screens and how much usability testing you run.',
+      'Compare quotes on what is included, not just the number — research and usability testing are the items most often quietly dropped.',
+      'Design is a fraction of the total product cost; skipping it to save a few thousand dollars usually costs more in rework.',
+    ],
+    faqs: [
+      { q: 'How much does UI/UX design cost in Canada?', a: 'As a guide, an MVP design with up to about 15 screens runs roughly CAD $1,500 to $5,000, a full product design with 30+ screens about $5,000 to $12,000, and an enterprise design system $12,000 to $30,000 or more. The number of screens, interaction complexity, research depth and branding drive the price.' },
+      { q: 'What is the biggest factor in UI/UX design cost?', a: 'The number of screens is the most direct driver, but the depth of user research and the amount of usability testing move the price just as much. A quote that is cheap usually means research and testing were left out.' },
+      { q: 'How long does a UI/UX design project take?', a: 'Most projects take 6 to 11 weeks across research, strategy, wireframes, visual design and handoff. Small MVPs can be faster, and projects with a large research program or a multi-product design system can take longer.' },
+      { q: 'Do I need a design system for my product?', a: 'If you are building a one-off MVP, a light component set is enough. If the product will grow across many screens, teams or platforms, a real design system pays for itself by keeping the product consistent and speeding up future work.' },
+      { q: 'Is UI/UX design cheaper than development?', a: 'Yes. Design is a fraction of the total cost of a product. A full product design in the $5,000 to $12,000 range sits on top of a development build that typically costs several times more, depending on scope.' },
+      { q: 'Should the same company design and build my product?', a: 'It often helps. When designers and developers sit in one team, the design system maps directly to code and fewer details are lost in handoff. If you use separate firms, insist on a detailed handoff file and a designer who stays available during the build.' },
+    ],
+    cta: { href: '/services/product-design', label: 'See our UI/UX design services' },
+  },
+  {
     slug: 'software-development-companies-edmonton',
     relatedTopic: 'software',
     category: 'Business',
