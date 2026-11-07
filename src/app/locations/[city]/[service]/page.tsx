@@ -6,6 +6,7 @@ import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { isIndexableCityService } from '@/data/serviceCity';
 import { localServiceSchema } from '@/lib/seo/business';
 import { localServiceTitle } from '@/lib/seo/title';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -97,9 +98,9 @@ export default async function CityServicePage({ params }: PageProps) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
-          { '@type': 'ListItem', position: 3, name: data.cityName, item: `https://mapletechlabs.ca/locations/software-development-company-in-${data.citySlug}` },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: canonicalUrl('/') },
+          { '@type': 'ListItem', position: 2, name: 'Locations', item: canonicalUrl('/locations') },
+          { '@type': 'ListItem', position: 3, name: data.cityName, item: canonicalUrl(`/locations/software-development-company-in-${data.citySlug}`) },
           { '@type': 'ListItem', position: 4, name: data.serviceName, item: data.canonicalUrl },
         ],
       },
