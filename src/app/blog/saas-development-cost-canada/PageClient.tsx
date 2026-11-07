@@ -222,9 +222,9 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                     Every SaaS product falls into one of three cost tiers. Where yours lands depends on the number of features, integrations, compliance requirements, and the scale you need to support at launch.
                   </p>
 
-                  {/* Tier 1: MVP */}
+                   {/* Tier 1: MVP */}
                   <div style={{
-                    background: 'var(--surface) 100%)',
+                    background: 'var(--surface)',
                     border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>
@@ -384,7 +384,7 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                   </p>
 
                   <div style={{
-                    background: 'var(--surface) 100%)',
+                    background: 'var(--surface)',
                     border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, marginBottom: 24,
                   }}>

@@ -92,7 +92,7 @@ export default function InsightsSection({ serviceSlug }: { serviceSlug?: string 
             overflow: 'hidden',
             textDecoration: 'none',
             transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
-            background: 'var(--surface) 100%)',
+            background: 'var(--surface)',
             marginBottom: 40,
           }}
         >

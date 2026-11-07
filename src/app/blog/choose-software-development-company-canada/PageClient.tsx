@@ -396,7 +396,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                 {/* Section 6: How Mapletech Labs Stands Apart */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-difference">
                   <div style={{
-                    background: 'var(--surface) 100%)', border: '1px solid var(--brand)',
+                    background: 'var(--surface)', border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
                     <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, background: 'transparent', filter: 'blur(30px)' }} />

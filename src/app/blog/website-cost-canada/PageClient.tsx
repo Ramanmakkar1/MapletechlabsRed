@@ -358,8 +358,8 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
                     </p>
                   </div>
 
-                  <div style={{
-                    background: 'var(--surface) 100%)',
+                   <div style={{
+                    background: 'var(--surface)',
                     border: '1px solid var(--brand)',
                     borderRadius: 20, padding: 28,
                   }}>
@@ -413,7 +413,7 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
                 {/* Why Next.js */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="why-nextjs">
                   <div style={{
-                    background: 'var(--surface) 100%)',
+                    background: 'var(--surface)',
                     border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
@@ -497,7 +497,7 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
                     The most common budgeting mistake we see from Canadian businesses is allocating 100% of their budget to the initial build and leaving nothing for maintenance, content, and iteration. A website is not a one-time purchase; it is a living asset that requires ongoing investment.
                   </p>
                   <div style={{
-                    background: 'var(--surface) 100%)',
+                    background: 'var(--surface)',
                     border: '1px solid var(--brand)',
                     borderRadius: 20, padding: 28, marginBottom: 20,
                   }}>

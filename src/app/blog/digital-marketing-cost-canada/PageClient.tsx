@@ -431,7 +431,7 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
                 {/* Mapletech Labs Approach */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-approach">
                   <div style={{
-                    background: 'var(--surface) 100%)',
+                    background: 'var(--surface)',
                     border: '1px solid var(--brand)',
                     borderRadius: 24, padding: 36, position: 'relative', overflow: 'hidden',
                   }}>
