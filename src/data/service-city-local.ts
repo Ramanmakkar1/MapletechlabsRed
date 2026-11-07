@@ -8707,4 +8707,184 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'app-development-company-in-laval': {
+    title: 'App Development Company in Laval, QC',
+    description: 'App development company in Laval: French-first iOS and Android apps for life-sciences, manufacturing and retail teams. Fixed CAD price, free quote.',
+    intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, and we build iOS, Android and cross-platform apps for businesses in Laval and across Greater Montreal. We do not have a Laval office; Laval clients work with us remotely. Laval is Quebec\'s third-largest city, on Île Jésus just north of Montreal, and its economy is unusually mixed: the Cité de la Biotech and the life-sciences companies around it, manufacturers and distributors along Highways 15 and 440, big retail around Carrefour Laval and Centropolis, and a long list of family-owned service businesses that grew up with the city. Most of the people using these apps work and shop in French, so we build French-first or fully bilingual apps from the first sprint, with Quebec\'s Law 25 privacy rules and the Charter of the French Language, as updated by Bill 96, planned in from discovery. Laval is on Eastern Time, two hours ahead of Edmonton, so our afternoons overlap your mornings for demos and quick decisions. Scope and a fixed CAD price are agreed in writing before development begins, and you own all of the code and IP.',
+    sections: [
+      {
+        heading: 'Apps for Laval\'s life-sciences, industrial and retail businesses',
+        body: [
+          'Life-sciences teams around the Cité de la Biotech need apps that handle sensitive data carefully: study and sample tracking, lab and field data capture, and portals for partners and clinicians, with the audit trail a quality reviewer expects. Manufacturers and distributors along Highways 15 and 440 need warehouse, delivery and technician apps that scan, record sign-offs and keep working on a shop floor or loading dock with weak signal. Retailers and restaurants near Carrefour Laval and Centropolis want loyalty, ordering and booking apps that bring shoppers back between visits. Family-owned service businesses, from renovation and cleaning firms to clinics and daycares, need simple booking, quoting and scheduling apps their staff can learn in an afternoon. The full scope is on our ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'French-first builds and Law 25 privacy for Laval users',
+        body: [
+          'The Charter of the French Language, as updated by Bill 96, means French must be at least as available as English for Quebec users, so we design French-first or fully bilingual apps from the first wireframe: screens, onboarding, push notifications, emails and app store listings. Law 25 shapes how your app collects personal information, so we build clear consent screens, privacy-by-default settings and simple ways for users to see or delete their data, with Canadian cloud regions available when residency matters. Life-sciences and health-related apps also get encryption in transit and at rest, role-based access and audit logs from the first sprint. We implement these features carefully, but your own legal and compliance advisers confirm the final position. More on our provincial work is on our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page, and for teams with offices on both sides of the Rivière des Prairies we also list our ',
+          { href: '/locations/app-development-company-in-montreal', label: 'app development company in Montreal' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What an app costs for a Laval project',
+        body: [
+          'Our ',
+          { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
+          ' sets out the ranges we quote from: about $25,000-$50,000 CAD and 8-12 weeks for a simple single-platform app with 5-8 screens, $50,000-$150,000 and 12-24 weeks for a mid-size iOS and Android app with payments and an admin panel, and $150,000 or more over 6-18 months for complex platforms with AI, IoT or compliance work. Bilingual content, life-sciences data handling and integrations with ERP, inventory or point-of-sale systems move a project within those bands. Discovery is free and the price is fixed before coding starts, so your budget is settled before the first release.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does it cost to build an app in Laval?',
+        a: 'Using our Canadian cost guide, a simple single-platform app is about $25,000-$50,000 CAD, a mid-size iOS and Android app about $50,000-$150,000, and a complex platform with AI, IoT or compliance work $150,000 or more. After a free discovery phase you get one fixed CAD price.',
+      },
+      {
+        q: 'Can you build a French-first app that meets Bill 96?',
+        a: 'Yes. We build French-first or bilingual apps where French is at least as available as English: every screen, notification, email and app store listing, with a simple language switch. We plan the content structure during discovery, and French-speaking reviewers on your team confirm the wording before launch. Your own advisers should confirm how Bill 96 applies to your business.',
+      },
+      {
+        q: 'Can you build apps for life-sciences teams at the Cité de la Biotech?',
+        a: 'Yes. For life-sciences and health-related apps we plan encryption in transit and at rest, role-based access, audit logs and Canadian data hosting from the first sprint, and we design consent and data access around Quebec Law 25. Your own quality, legal and compliance advisers confirm the final position for your organization.',
+      },
+      {
+        q: 'Do you build warehouse and delivery apps for Laval distributors?',
+        a: 'Yes. For manufacturers and distributors we build scanning, picking, delivery and technician apps that record proof of delivery and sign-offs, keep working offline and sync when the connection returns. They connect to the ERP, inventory or accounting system you already use, so your office and drivers see the same data.',
+      },
+      {
+        q: 'Do you have an office in Laval?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Laval office. Laval clients work with us remotely through video workshops, weekly demos and a shared project board, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. If an in-person kickoff or planning workshop would help, we can travel to Laval with costs agreed up front.',
+      },
+    ],
+  },
+  'web-development-company-in-laval': {
+    title: 'Web Development Company in Laval, QC',
+    description: 'Web development company in Laval: bilingual FR/EN websites, portals and online stores for biotech, manufacturers and retailers. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds business websites, customer portals, online stores and web applications for businesses in Laval and across Greater Montreal. We do not have a Laval office; Laval clients work with us remotely through video workshops, staging links and a weekly demo where you click through the real site as it takes shape. Laval is Quebec\'s third-largest city, on Île Jésus north of Montreal, and its businesses range from life-sciences firms around the Cité de la Biotech to manufacturers and distributors along Highways 15 and 440, retailers near Carrefour Laval and Centropolis, and family-owned service companies that serve the whole North Shore. Each of them needs a site that works in French first and English second. Laval is on Eastern Time, two hours ahead of Edmonton, so reviews and decisions fit comfortably into your working day. Because the Charter of the French Language requires French on commercial sites serving Quebec customers, we build bilingual French and English websites with proper hreflang, and we design for Quebec\'s Law 25 from the start. Every project has a fixed scope and a fixed CAD price agreed in writing before development starts.',
+    sections: [
+      {
+        heading: 'Websites, portals and stores for Laval\'s sectors',
+        body: [
+          'Life-sciences companies need credible bilingual sites that explain their science to partners, investors and recruits, plus secure portals for documents and partner access. Manufacturers and distributors need product catalogues, dealer and B2B ordering portals, and quote request forms that send clean leads to sales. Retailers and restaurants near Carrefour Laval and Centropolis need online stores, click-and-collect and menu or booking pages they can update for every season and promotion. Family-owned service businesses, from contractors and movers to clinics and daycares, need fast sites with clear service areas, online booking and quote forms that ring the phone. We render pages on the server so they load quickly on a phone over a mobile connection. Everything we build is listed on our ',
+          { href: '/services/web-development', label: 'web development' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'French-first, Law 25 ready and accessible by default',
+        body: [
+          'The Charter of the French Language, as updated by Bill 96, means French must be available on commercial websites serving Quebec customers, so we build bilingual FR/EN from the start, with hreflang tags so Google and Bing understand each language version. Law 25 covers consent banners, privacy policies and how personal data is collected and stored, so we implement the consent, cookie and privacy features your site needs and structure data collection so you can explain it. We build to WCAG 2.1 level AA, secure forms and portals, and offer Canadian hosting where residency matters. Your legal counsel confirms how the law applies to your business and reviews final policy wording; we do not provide legal advice. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers the wider provincial work, and for teams that also sell on the island we list our ',
+          { href: '/locations/web-development-company-in-montreal', label: 'web development company in Montreal' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Website pricing and timelines for Laval',
+        body: [
+          'We price every Laval project from our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          ': roughly $2,000-$10,000 CAD over 2-4 weeks for a template or WordPress site, $10,000-$50,000 over 4-10 weeks for a custom business website, $25,000-$100,000 over 8-16 weeks for e-commerce, and $100,000-$500,000+ over 4-12 months for an enterprise web application or a secure customer portal. Bilingual content, B2B ordering and integrations with ERP or point-of-sale systems usually sit in the higher bands. Discovery is free, the quote is fixed before development, and every week you review the latest version on a staging link. Retailers should plan launches well ahead of the holiday shopping season.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does a website cost in Laval?',
+        a: 'Based on our Canadian website cost guide, a template or WordPress site is about $2,000-$10,000 CAD, a custom business website $10,000-$50,000, an online store $25,000-$100,000 and an enterprise web application $100,000-$500,000+. You get one fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build a bilingual French and English website?',
+        a: 'Yes. When your customers need both languages, we build French and English content into the site from the start: navigation, page copy, forms and metadata, with hreflang tags and a clear way to switch languages. We plan the content model during discovery so translations stay maintainable after launch.',
+      },
+      {
+        q: 'Does a Laval website need to meet Law 25?',
+        a: 'Law 25 sets strict rules for personal information in Quebec, and commercial sites serving Quebec customers need consent banners, privacy policies and clear data practices. We build those features in, and your legal counsel should review how Law 25 applies to your business and sign off on final policy wording; we do not provide legal advice.',
+      },
+      {
+        q: 'Can you build a B2B ordering portal for a Laval manufacturer or distributor?',
+        a: 'Yes. We build dealer and B2B portals with customer-specific pricing, reorder lists, order tracking and invoice downloads, connected to the ERP or inventory system you already run. Scope and integrations are set during free discovery, and the portal is priced as a fixed CAD quote.',
+      },
+      {
+        q: 'Do you have an office in Laval?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Laval office. We deliver remotely through video workshops, staging links and a weekly demo, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. For a kickoff or planning workshop in person, we can travel to Laval with costs agreed up front.',
+      },
+    ],
+  },
+  'seo-company-in-laval': {
+    title: 'SEO Company in Laval, QC',
+    description: 'SEO company in Laval: French and English local search, Google Business Profile and Bing Places for retail, biotech and service firms. Free review.',
+    intro: 'Mapletech Labs is a Canadian SEO and digital marketing company headquartered in Edmonton, helping Laval businesses win more calls, bookings and sales from Google and Bing. We do not have a Laval office; Laval accounts run remotely, and because Laval is on Eastern Time, two hours ahead of Edmonton, most of your working day overlaps so questions get answered the same business day. Laval is Quebec\'s third-largest city, on Île Jésus north of Montreal, and its search market is crowded: Montreal competitors rank for the same terms, retailers around Carrefour Laval and Centropolis fight for shoppers, manufacturers and distributors along Highways 15 and 440 are found by capability, and life-sciences firms around the Cité de la Biotech need to be found by partners and recruits. Family-owned service businesses live on the map pack. The specialists who research keywords, fix your site\'s technical issues and write content are the people you speak with, and retainers are a fixed monthly figure in CAD.',
+    sections: [
+      {
+        heading: 'How Laval customers search in French and English',
+        body: [
+          'Most Laval customers search in French, often with different wording than an English search, and many expect a French-first site before they call. A renovation firm, clinic or daycare is found through "near me" and map-pack results across Chomedey, Vimont, Sainte-Rose and the rest of the island, while buyers looking for a manufacturer or distributor search by product and capability and rarely type a city name at all. Retailers compete with Montreal stores and national chains for the same shopping searches, and life-sciences firms need pages that answer partners and job seekers in both languages. Because so many searches cross the bridge, Laval pages also have to hold their own against Montreal results; our ',
+          { href: '/locations/seo-company-in-montreal', label: 'SEO company in Montreal' },
+          ' page covers that market. We plan keywords and content around each of these groups.',
+        ],
+      },
+      {
+        heading: 'French keyword research, Google Business Profile and Bing Places',
+        body: [
+          'French keyword research is done natively, not machine-translated from English terms. We build separate French pages that answer the questions French-speaking customers actually ask, use hreflang so Google and Bing understand each language version, and keep your Google Business Profile and Bing Places listings complete and consistent in both languages, with the right categories, hours, services and photos, showing only a real address or a genuine service area. Because we build software every day, our engineers fix the technical side directly in your code or CMS: Core Web Vitals, crawling and indexing, canonical tags, structured data and internal links. Analytics, chat widgets and contact forms are set up around Quebec Law 25 consent; your privacy adviser or legal counsel confirms what applies to your business. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers our wider provincial work, and the full scope is on our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'Monthly CAD retainers and clear reporting',
+        body: [
+          'SEO retainers for Laval businesses usually fall between $1,500 and $10,000 CAD a month, depending on how competitive your terms are and how much content you need. A single-location service business sits near the lower end, while bilingual campaigns, retailers competing with Montreal and national chains, and manufacturers targeting buyers across Canada sit higher. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' explains how those budgets break down. We start with a free review, then quote one fixed monthly figure. Each month you get a plain report covering rankings, organic traffic, calls, bookings and form leads, the work we finished and what we will test next.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SEO cost in Laval?',
+        a: 'Most Laval SEO retainers sit between $1,500 and $10,000 CAD per month. A single-location local business is usually near the lower end, while bilingual campaigns and terms that compete with Montreal or nationally sit higher. After a free review we quote one fixed monthly figure.',
+      },
+      {
+        q: 'Do you do French-language keyword research?',
+        a: 'Yes. Our keyword research runs in both English and French, native to each language rather than translated word for word, so a francophone audience finds you in the language they actually search in. We build French pages that stand on their own instead of machine-translated duplicates, and keep hreflang tidy so search engines show the right page to the right visitor.',
+      },
+      {
+        q: 'Do you manage Google Business Profile and Bing Places for Laval businesses?',
+        a: 'Yes. We set up or clean up both listings in French and English, with accurate categories, hours, services, photos and a real address or genuine service area, and keep your name, address and phone consistent across directories. We never use virtual offices or made-up locations, because those profiles get suspended.',
+      },
+      {
+        q: 'Can a Laval business outrank Montreal competitors?',
+        a: 'Often, yes, for searches made in or about Laval. Google and Bing weigh the searcher\'s location, so a well-built Laval page, a complete business profile and genuine local reviews can beat larger Montreal sites in the Laval map pack and local results. Broader terms take longer and more content, which we plan in the retainer.',
+      },
+      {
+        q: 'Do you have an office in Laval?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Laval office. Laval accounts run remotely through weekly calls and monthly reports, and with Eastern Time two hours ahead of Edmonton most of the working day overlaps. We can arrange a visit for a strategy or content workshop when it helps, with travel agreed up front.',
+      },
+    ],
+  },
 };
