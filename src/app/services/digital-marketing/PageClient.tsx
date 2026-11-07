@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '300%', label: 'Avg ROI' },
@@ -42,6 +43,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="digital-marketing"
+      caseStudySlugs={serviceCaseMap['digital-marketing']}
       name="Digital Marketing"
       copy={{ badge: "Digital Marketing", title: <>Digital Marketing That <span style={{ color: 'var(--brand)' }}>Gets You Found.</span></>, desc: <>A Canadian digital marketing agency — SEO, Google Ads, social media and paid advertising — data-driven strategies that fill your pipeline.</> }}
       stats={stats}

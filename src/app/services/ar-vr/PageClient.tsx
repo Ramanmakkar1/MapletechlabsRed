@@ -1,4 +1,5 @@
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '60+', label: 'XR Apps Launched' },
@@ -41,6 +42,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="ar-vr"
+      caseStudySlugs={serviceCaseMap['ar-vr']}
       name="AR & VR Development"
       copy={{ badge: "AR & VR Development", title: <>AR/VR Development That <span style={{ color: 'var(--brand)' }}>Wows.</span></>, desc: <>An AR/VR development company in Canada building augmented, virtual and mixed reality applications for mobile, headset and web — engineered for real-world impact.</> }}
       stats={stats}

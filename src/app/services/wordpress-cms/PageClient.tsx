@@ -1,4 +1,5 @@
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '500+', label: 'Sites Launched' },
@@ -41,6 +42,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="wordpress-cms"
+      caseStudySlugs={serviceCaseMap['wordpress-cms']}
       name="WordPress & CMS"
       copy={{ badge: "WordPress & CMS", title: <>WordPress Development<br />That <span style={{ color: 'var(--brand)' }}>Sells.</span></>, desc: <>A Canadian WordPress and CMS development company — custom WordPress sites, headless CMS platforms and WooCommerce stores that are fast, secure and easy to manage.</> }}
       stats={stats}

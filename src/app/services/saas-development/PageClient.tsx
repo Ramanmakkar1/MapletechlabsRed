@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '50+', label: 'SaaS Products Shipped' },
@@ -42,6 +43,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="saas-development"
+      caseStudySlugs={serviceCaseMap['saas-development']}
       name="SaaS Development"
       copy={{ badge: "SaaS Development", title: <>SaaS Development<br />That <span style={{ color: 'var(--brand)' }}>Scales.</span></>, desc: <>A Canadian SaaS development company building multi-tenant platforms with billing, auth and analytics — engineered to grow from zero to Series A and beyond.</> }}
       stats={stats}

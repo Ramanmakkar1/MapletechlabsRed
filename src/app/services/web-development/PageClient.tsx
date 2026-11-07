@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '200+', label: 'Web Projects' },
@@ -94,6 +95,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="web-development"
+      caseStudySlugs={serviceCaseMap['web-development']}
       name="Web Development"
       copy={{ badge: "Web Development", title: <>Web Development<br />That <span style={{ color: 'var(--brand)' }}>Scales.</span></>, desc: <>A Canadian web development company engineering fast, secure and beautiful web platforms — from SaaS products to enterprise portals — that grow with your business.</> }}
       stats={stats}

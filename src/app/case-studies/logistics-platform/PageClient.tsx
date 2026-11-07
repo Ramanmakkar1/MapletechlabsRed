@@ -249,6 +249,7 @@ export default function LogisticsCaseStudyClient() {
         <CaseStudyRelated
           intro="Planning a logistics platform in Vancouver? See our web and mobile development work for Vancouver teams."
           services={[
+            { label: 'SaaS Development', href: '/services/saas-development' },
             { label: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
             { label: 'Mobile App Development', href: '/services/mobile-app-development' },
             { label: 'App Development in Vancouver', href: '/locations/app-development-company-in-vancouver' },

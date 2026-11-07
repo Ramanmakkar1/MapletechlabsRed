@@ -1,4 +1,5 @@
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '80+', label: 'Games Shipped' },
@@ -41,6 +42,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="game-development"
+      caseStudySlugs={serviceCaseMap['game-development']}
       name="Game Development"
       copy={{ badge: "Game Development", title: <>Game Development That <span style={{ color: 'var(--brand)' }}>Players Love.</span></>, desc: <>A Canadian game development studio building mobile games, PC and console titles and web-based experiences — engineered for engagement, retention and monetisation.</> }}
       stats={stats}

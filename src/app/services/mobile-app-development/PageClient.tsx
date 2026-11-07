@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '300+', label: 'Apps Shipped' },
@@ -95,6 +96,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="mobile-app-development"
+      caseStudySlugs={serviceCaseMap['mobile-app-development']}
       name="Mobile App Development"
       copy={{ badge: "Mobile App Development", title: <>Mobile App Development<br />That Drives <span style={{ color: 'var(--brand)' }}>Real Revenue.</span></>, desc: <>A Canadian mobile app development company building iOS, Android and cross-platform apps — from MVP to millions of users, engineered for the app stores and loved by your customers.</> }}
       stats={stats}

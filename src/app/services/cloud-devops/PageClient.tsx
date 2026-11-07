@@ -1,4 +1,5 @@
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '99.99%', label: 'Uptime Delivered' },
@@ -84,6 +85,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="cloud-devops"
+      caseStudySlugs={serviceCaseMap['cloud-devops']}
       name="Cloud &amp; DevOps"
       copy={{ badge: "Cloud & DevOps", title: <>Cloud &amp; DevOps<br />That <span style={{ color: 'var(--brand)' }}>Never Sleeps.</span></>, desc: <>A Canadian cloud and DevOps company — cloud architecture, CI/CD pipelines and DevSecOps engineered for zero downtime, infinite scale and full observability.</> }}
       stats={stats}

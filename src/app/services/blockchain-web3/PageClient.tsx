@@ -1,4 +1,5 @@
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '80+', label: 'Contracts Audited' },
@@ -84,6 +85,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="blockchain-web3"
+      caseStudySlugs={serviceCaseMap['blockchain-web3']}
       name="Blockchain &amp; Web3"
       copy={{ badge: "Blockchain & Web3", title: <>Blockchain Development<br />Built for <span style={{ color: 'var(--brand)' }}>Web3.</span></>, desc: <>A Canadian blockchain development company building smart contracts, DeFi protocols, NFT marketplaces and decentralised apps — engineered for security, scale and real-world adoption.</> }}
       stats={stats}

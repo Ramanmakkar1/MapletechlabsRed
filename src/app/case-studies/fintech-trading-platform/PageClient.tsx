@@ -249,6 +249,7 @@ export default function FintechCaseStudyClient() {
         <CaseStudyRelated
           intro="Building something similar in Toronto? See our web development and cloud DevOps services for Toronto fintech teams."
           services={[
+            { label: 'AI & Machine Learning', href: '/services/ai-ml' },
             { label: 'Web Development', href: '/services/web-development' },
             { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
             { label: 'Web Development in Toronto', href: '/locations/web-development-company-in-toronto' },

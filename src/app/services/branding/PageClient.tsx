@@ -1,4 +1,5 @@
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '200+', label: 'Brands Built' },
@@ -41,6 +42,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="branding"
+      caseStudySlugs={serviceCaseMap['branding']}
       name="Branding & Identity"
       copy={{ badge: "Branding & Identity", title: <>Branding &amp; Identity People <span style={{ color: 'var(--brand)' }}>Remember.</span></>, desc: <>A Canadian branding agency — logo, visual identity, brand strategy and guidelines that make your company instantly recognisable.</> }}
       stats={stats}

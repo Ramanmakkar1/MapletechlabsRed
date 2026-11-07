@@ -15,6 +15,7 @@ import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, IndustryRow, WhyUs, SuccessStories, Voices, ResultsBand } from './Blocks';
 import ServicePricing from './ServicePricing';
 import { serviceMedia, defaultMedia, officeMedia } from '@/data/media';
+import { work, type WorkItem } from '@/data/work';
 import { serviceCategories } from '@/data/nav';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
@@ -24,8 +25,8 @@ import type { Faq, HeroCopy, IndustryCard, ServiceCard, Stat, Step, TechCategory
 const heroShots = [officeMedia.open, officeMedia.desk, officeMedia.meeting];
 
 /* Service-category page, following the reference's service-page sequence. */
-export default function ServicePageTemplate({ slug, name, copy, stats, services, steps, techCategories, industries, results, faqs, buyerContent, servicesTitle = 'Every Layer. Every Complexity.' }: {
-  slug: string; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; techCategories?: TechCategory[]; industries?: IndustryCard[]; results?: { value: string; label: string; sub?: string }[]; faqs?: Faq[]; buyerContent?: ReactNode; servicesTitle?: string;
+export default function ServicePageTemplate({ slug, name, copy, stats, services, steps, techCategories, industries, results, faqs, buyerContent, servicesTitle = 'Every Layer. Every Complexity.', caseStudySlugs }: {
+  slug: string; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; techCategories?: TechCategory[]; industries?: IndustryCard[]; results?: { value: string; label: string; sub?: string }[]; faqs?: Faq[]; buyerContent?: ReactNode; servicesTitle?: string; caseStudySlugs?: string[];
 }) {
   const contactHref = contactHrefFor(slug, undefined, servicesAllowlist, citiesAllowlist);
   const hero = heroShots[slug.length % heroShots.length];
@@ -45,6 +46,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <ServicePricing serviceSlug={slug} serviceName={name} />
         <SuccessStories />
         {results?.length ? <ResultsBand items={results} /> : null}
+        {caseStudySlugs?.length ? <ClientWork slugs={caseStudySlugs} /> : null}
         <WhyUs />
         {techCategories?.length ? <TechBlocks cats={techCategories} /> : null}
         {industries?.length ? <IndustryRow title={`${name} across every sector`} items={industries} /> : null}
@@ -57,6 +59,33 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
       </main>
       <Footer />
     </>
+  );
+}
+
+/* "Client work" — links the service page to the case studies that prove it.
+   Copy comes straight from src/data/work.ts; nothing is reworded here. */
+function ClientWork({ slugs }: { slugs: string[] }) {
+  const items = slugs
+    .map(s => work.find(w => w.slug === s))
+    .filter((w): w is WorkItem => Boolean(w));
+  if (!items.length) return null;
+  return (
+    <section style={{ padding: 'var(--section-y-sm) 0' }}>
+      <div className="cb-container">
+        <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>Client work</h2>
+        <div className="grid grid--3">
+          {items.map(w => (
+            <div key={w.slug} className="tile">
+              <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand)', margin: '0 0 8px' }}>{w.category}</p>
+              <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>
+                <Link href={w.href} style={{ color: 'var(--ink)', textDecoration: 'none' }}>{w.title}</Link>
+              </h3>
+              <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>{w.client} &middot; {w.city}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '50+', label: 'AI Products Shipped' },
@@ -94,6 +95,7 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="ai-ml"
+      caseStudySlugs={serviceCaseMap['ai-ml']}
       name="AI & Machine Learning"
       copy={{ badge: "AI & Machine Learning", title: <>AI Development<br />That Moves Your <span style={{ color: 'var(--brand)' }}>Business Forward.</span></>, desc: <>An AI development company in Canada building custom AI models, LLM-powered products and intelligent automation — engineered for production, not demos. For a rough cost estimate, see our <a href="/blog/ai-development-cost-canada">AI development cost guide</a>.</> }}
       stats={stats}
