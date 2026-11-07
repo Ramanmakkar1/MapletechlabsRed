@@ -380,7 +380,8 @@ export default function AppDevelopmentCompaniesEdmontonClient({ localLinks }: { 
                     Developer salaries in Edmonton run 20-35% lower than Toronto or Vancouver, meaning your budget goes significantly further without sacrificing quality. The Alberta government offers generous R&D tax credits through the Scientific Research and Experimental Development (SR&ED) program, and the province has no PST, reducing operational overhead for tech companies.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    Combined with a growing startup ecosystem anchored by incubators like Edmonton Unlimited and Startup Edmonton, the city is primed to become Western Canada&apos;s next major tech hub. If you are building a mobile app in 2026, Edmonton deserves a serious look.
+                    Combined with a growing startup ecosystem anchored by incubators like Edmonton Unlimited and Startup Edmonton, the city is primed to become Western Canada&apos;s next major tech hub. If you are building a mobile app in 2026, Edmonton deserves a serious look. Still choosing a framework? Read our{' '}
+                    <Link href="/blog/flutter-vs-react-native-canada">Flutter vs React Native comparison for Canadian businesses</Link>.
                   </p>
                 </div>
 

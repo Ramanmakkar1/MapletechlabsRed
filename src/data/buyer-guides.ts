@@ -10,6 +10,7 @@ const BLOG_SLUGS = new Set([
   'app-development-companies-vancouver',
   'choose-software-development-company-canada',
   'digital-marketing-agencies-edmonton',
+  'flutter-vs-react-native-canada',
   'digital-marketing-agencies-calgary',
   'digital-marketing-agencies-toronto',
   'digital-marketing-agencies-vancouver',

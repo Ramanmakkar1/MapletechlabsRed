@@ -230,6 +230,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Sep 2026', readTime: '9 min read',
   },
   {
+    slug: 'flutter-vs-react-native-canada', category: 'Engineering',
+    title: 'Flutter vs React Native in Canada (2026): Which Should You Choose?',
+    excerpt: 'Flutter or React Native? A plain comparison of language, UI, performance, hiring in Canada, time to MVP and cost, plus when native Swift or Kotlin still wins.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
+  },
+  {
     slug: 'custom-software-vs-off-the-shelf', category: 'Business',
     title: 'Custom Software vs Off-the-Shelf: How to Decide (2026)',
     excerpt: 'Building custom when you could have bought is expensive — and so is forcing your business into software that does not fit. An honest framework for deciding which is right.',
