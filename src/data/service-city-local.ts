@@ -8533,4 +8533,178 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'ai-development-company-in-gatineau': {
+    title: 'AI Development Company in Gatineau, QC',
+    description: 'AI development company in Gatineau: bilingual chatbots and LLM features for federal suppliers and IT firms, built for Law 25. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build LLM features, document chatbots, forecasting models and workflow automation for organizations in Gatineau and across the Ottawa-Gatineau region. We do not have a Gatineau office; Gatineau clients work with us remotely. Gatineau is on Eastern Time, two hours ahead of Edmonton, so our afternoons overlap your mornings for model reviews and quick decisions. Most of the AI work we see here comes from the federal public service and the contractors and IT services firms around it, from teams selling into the cross-river Ottawa market, and from research and student projects tied to the Université du Québec en Outaouais (UQO). Because Gatineau users expect French first, we build assistants that read, answer and cite sources in French and English. Senior engineers build the system, you see it working at a weekly demo, and scope and CAD price are fixed in writing before development begins.',
+    sections: [
+      {
+        heading: 'Where AI helps Gatineau\'s federal suppliers, IT firms and researchers',
+        body: [
+          'Gatineau\'s AI requests come from the work the region already does. Contractors and suppliers who bid on federal work want tools that search past proposals, summarise long statements of work and draft first versions of bilingual responses for a person to finish. IT services firms want support assistants, ticket triage and internal knowledge search inside the platforms they already run for clients on both sides of the river. Teams that serve departments and agencies want document classification and routing that keeps a human reviewer in charge of every decision. Researchers and student founders connected to UQO want to turn a dataset or a lab workflow into a working model they can demo. Tourism and retail operators want demand forecasts and assistants that answer customer questions in French and English at any hour. Our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning services' },
+          ' page lists everything we build.',
+        ],
+      },
+      {
+        heading: 'Law 25, French-first answers and grounded chatbots',
+        body: [
+          'We build chatbots with retrieval-augmented generation (RAG): the system finds the right passages in your policies, proposals, manuals or case files, writes its reply from them and cites each source. Access rules decide which documents each user can reach, and anything the system cannot answer goes to a person. Quebec\'s Law 25 sets rules for personal information, including privacy impact assessments and transparency when a decision is made by automated processing, so we document data flows, keep data in Canadian cloud regions when you need it, stop outside model providers training on it, and add encryption, role-based access and audit logs. Under the Charter of the French Language, as updated by Bill 96, Quebec users expect French to be at least as available as English, so prompts, answers and the interface are tested in both languages. Your privacy officer confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers our wider work in the province, and for teams on the Ontario side of the river we also list our ',
+          { href: '/locations/ai-development-company-in-ottawa', label: 'AI development company in Ottawa' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What AI development costs for a Gatineau project (CAD)',
+        body: [
+          'Gatineau budgets follow the same national planning ranges in our ',
+          { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+          '. Adding an LLM feature to an existing product is about $10,000-$35,000 CAD. A chatbot built on your own documents, with cited sources, access control and hand-off to staff, is about $15,000-$50,000. Custom model training, such as a demand forecast for a tourism operator or a classifier built on an IT firm\'s ticket history, starts around $75,000. Bilingual answers, security reviews and federal-client requirements move a project within those ranges. These are planning figures, not quotes. After a free discovery call we check whether your data is ready, then agree a fixed scope and a fixed CAD price before development begins.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does AI development cost in Gatineau?',
+        a: 'Using our Canadian AI cost guide, an LLM feature in an existing product is about $10,000-$35,000 CAD, a chatbot on your own documents about $15,000-$50,000, and custom model training starts around $75,000. After a free discovery call you get one fixed price in CAD.',
+      },
+      {
+        q: 'Can your chatbot answer in French and English?',
+        a: 'Yes. We build assistants that search French and English documents, answer in the language the user writes in and cite the source passage. We test answer quality in both languages before launch, and French-speaking reviewers on your team confirm the wording.',
+      },
+      {
+        q: 'How does Quebec Law 25 affect an AI project?',
+        a: 'Law 25 covers how personal information is collected, used and kept, and asks for transparency when decisions are made by automated processing. We design Canadian hosting, access control, audit logs and no training by outside model providers, and document data flows so your privacy officer can confirm the final position.',
+      },
+      {
+        q: 'Do you work with federal suppliers in the Ottawa-Gatineau region?',
+        a: 'Yes. We build AI tools for contractors and IT firms that serve federal clients, with human review of every output, encryption, role-based access and audit logs. Your own security and legal advisers confirm what your contract requires.',
+      },
+      {
+        q: 'Do you have an office in Gatineau?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and serves Gatineau clients remotely through video workshops, weekly demos and a shared project board. Gatineau is two hours ahead of Edmonton, so most of the working day overlaps. If your team wants an in-person kickoff, we can arrange a visit with travel costs agreed up front.',
+      },
+    ],
+  },
+  'ui-ux-design-company-in-gatineau': {
+    title: 'UI/UX Design Company in Gatineau, QC',
+    description: 'UI/UX design company in Gatineau: French-first, WCAG 2.1 AA screens and Figma prototypes for federal suppliers and IT firms. Fixed CAD price.',
+    intro: 'Mapletech Labs is a Canadian UI/UX design company headquartered in Edmonton, designing apps, portals and dashboards for organizations in Gatineau and the wider Ottawa-Gatineau region. We do not have a Gatineau office; Gatineau clients work with us remotely through Figma, video workshops and remote usability sessions. Gatineau is on Eastern Time, two hours ahead of Edmonton, so design reviews fit into your day and revised files are usually ready the same afternoon. We design for the federal public service and the contractors and IT services firms that work with it, for businesses selling into the cross-river Ottawa market, for research and student projects at the Université du Québec en Outaouais (UQO), and for tourism operators. Every interface starts French-first and accessible. You work directly with the designers doing the work, see a clickable prototype every week, and agree a fixed CAD price before design starts.',
+    sections: [
+      {
+        heading: 'Design work Gatineau organizations bring to us',
+        body: [
+          'Each Gatineau market puts different people in front of a screen. Contractors and suppliers delivering to federal clients need portals, forms and dashboards that a reviewer can check against accessibility and bilingual requirements without a redesign late in the contract. IT services firms need admin consoles and client portals that stay clear when users switch between French and English, where French labels often run 20-30% longer. Businesses selling to customers on both sides of the river need one design system that works for a French-first Quebec buyer and an English-first Ontario buyer. UQO researchers and student founders need clean data collection screens and a prototype they can show to users and investors. Tourism operators need booking and event flows that work on a phone, in both languages, while a visitor is already on the move. Our ',
+          { href: '/services/product-design', label: 'UI/UX and product design services' },
+          ' page shows the full scope.',
+        ],
+      },
+      {
+        heading: 'WCAG 2.1 AA, French-first layouts and Law 25',
+        body: [
+          'Each project starts with a free UX audit: a heuristic review, a look at your analytics and short interviews with real users. We then map journeys, move to wireframes and a clickable Figma prototype, and usability-test it on real tasks in French and English so problems surface before development. Federal clients expect digital services to meet WCAG 2.1 level AA, so we design to it from the first wireframe, with contrast, focus states, keyboard paths and screen-reader labels set in the files. Under the Charter of the French Language, as updated by Bill 96, French must be at least as available as English for Quebec users, so French is the default language in our layouts and every component is sized for the longer French string. Where a form collects personal information, we design consent and privacy screens with Quebec\'s Law 25 in mind; your compliance lead confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page covers the wider province, and for teams on the Ontario side of the river we also list our ',
+          { href: '/locations/ui-ux-design-company-in-ottawa', label: 'UI/UX design company in Ottawa' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What UI/UX design costs in Gatineau (CAD)',
+        body: [
+          'Design is quoted as a fixed price in CAD after the free UX audit, using the ranges on our ',
+          { href: '/pricing', label: 'pricing page' },
+          ': about $1,500-$5,000 for an MVP design of up to roughly 15 screens, $5,000-$12,000 for a full product design with 30+ screens, research and a design system foundation, and $12,000-$30,000+ for an enterprise design system with a full research program and accessibility work. A bilingual supplier portal or a tourism booking flow usually lands in the full product band, while a design system shared across several federal-facing products can reach the enterprise band. Screen count, research depth and bilingual testing move the number, and the audit tells you which band fits before you commit.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does UI/UX design cost in Gatineau?',
+        a: 'We quote a fixed CAD price after a free UX audit. Published ranges are about $1,500-$5,000 for an MVP design, $5,000-$12,000 for a full product design with 30+ screens and research, and $12,000-$30,000+ for an enterprise design system.',
+      },
+      {
+        q: 'Do you design to WCAG 2.1 AA for federal clients?',
+        a: 'Yes. We design to WCAG 2.1 level AA from the first wireframe, with contrast, focus order, keyboard paths and screen-reader labels documented in the Figma files, and we check the built screens against them. Your own accessibility lead or auditor confirms conformance for your contract.',
+      },
+      {
+        q: 'Can you design a French-first interface that meets Bill 96?',
+        a: 'Yes. We design with French as the default language, size every button, menu and form for longer French text, and add a clear language switch. French-speaking reviewers on your team confirm the wording, and your own advisers confirm how Bill 96 applies to your business.',
+      },
+      {
+        q: 'Do you have an office in Gatineau?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and works with Gatineau clients remotely through Figma, video workshops and weekly prototype reviews. Gatineau is two hours ahead of Edmonton, so most of the working day overlaps. You own all design files, prototypes and research notes with no lock-in.',
+      },
+    ],
+  },
+  'saas-development-company-in-gatineau': {
+    title: 'SaaS Development Company in Gatineau, QC',
+    description: 'SaaS development company in Gatineau: bilingual MVPs and multi-tenant platforms for federal suppliers and IT firms, Law 25 ready. Fixed CAD quote.',
+    intro: 'Mapletech Labs is a Canadian SaaS development company headquartered in Edmonton, building subscription software for founders and companies in Gatineau and the Ottawa-Gatineau region. We do not have a Gatineau office and serve Gatineau clients remotely through video calls, weekly demos and a shared project board. Gatineau is on Eastern Time, two hours ahead of Edmonton, so standups and reviews fit into a shared working day. Our Gatineau buyers include IT services firms and contractors that grew up around the federal public service, companies selling to customers in both Quebec and Ontario across the river, founders coming out of the Université du Québec en Outaouais (UQO), and tourism businesses. Every product is planned French-first and bilingual. You work with the senior engineers writing the code, see working software every week, and get a fixed CAD price before development starts.',
+    sections: [
+      {
+        heading: 'SaaS ideas growing out of Gatineau',
+        body: [
+          'Many Gatineau products start as a tool built for one contract or one client. An IT services firm packages the reporting or ticketing tool it built for a federal-facing project and sells it to other suppliers. A contractor turns its proposal, compliance or timesheet tracking into software for other firms that bid on government work. A company that already serves customers in Ottawa and Gatineau needs one bilingual product that both markets can buy. A UQO researcher or student founder turns a lab or teaching workflow into software other institutions license, and a tourism operator sells its booking and scheduling system to other operators in the region. Most of these teams need one focused MVP for their first paying customers, not a full platform. Our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' page covers the full path.',
+        ],
+      },
+      {
+        heading: 'Multi-tenant architecture with Law 25 and Bill 96 in mind',
+        body: [
+          'We build the core workflow first, with sign-up, roles and subscription billing. The data model is multi-tenant from release one, so each supplier, firm, institution or operator keeps its records separate and you can add customers without a rebuild. Billing covers plans, seats, usage tiers and Canadian sales tax including GST and QST through providers such as Stripe, and enterprise buyers get single sign-on with SAML or OIDC. We can host everything in Canadian cloud regions. SaaS sold to Quebec businesses has to help them meet Law 25, so we design consent, encryption, access control, audit logs and data export and deletion from day one. Under the Charter of the French Language, as updated by Bill 96, the product, emails and help content are French-first and fully bilingual, and federal-facing buyers can expect WCAG 2.1 AA screens. Your privacy officer confirms the final position. Our ',
+          { href: '/locations/quebec', label: 'Quebec software development' },
+          ' page has more, and for teams on the Ontario side of the river we also list our ',
+          { href: '/locations/saas-development-company-in-ottawa', label: 'SaaS development company in Ottawa' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What SaaS development costs in Gatineau (CAD)',
+        body: [
+          'Our ',
+          { href: '/blog/saas-development-cost-canada', label: 'SaaS development cost guide' },
+          ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Bilingual content, single sign-on for larger buyers, security reviews and integrations move your price within those ranges. Gatineau founders often fund part of the build with SR&ED tax credits or NRC IRAP; our ',
+          { href: '/blog/nrc-irap-funding-software-canada', label: 'NRC IRAP funding guide' },
+          ' explains how. After a free discovery call you receive one fixed CAD quote, so your runway is planned before development starts.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/healthcare-telehealth', label: 'Telehealth platform', note: 'A compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a Canadian healthcare provider.' },
+      { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does SaaS development cost in Gatineau?',
+        a: 'Our Canadian SaaS cost guide puts an MVP at $30,000-$75,000 CAD, a growth-stage product at $75,000-$200,000 and an enterprise platform at $200,000-$500,000+. Integrations, billing rules and compliance work move the figure, and you get a fixed CAD quote after free discovery.',
+      },
+      {
+        q: 'Can you build a bilingual SaaS product for Quebec and Ontario customers?',
+        a: 'Yes. We build French-first, fully bilingual products where each user picks their language and every screen, email and invoice follows it. Billing handles GST, QST and HST, so one product can serve customers in Gatineau and Ottawa.',
+      },
+      {
+        q: 'Can you build SaaS that meets Law 25 and federal buyer expectations?',
+        a: 'Yes. We build multi-tenant products with Canadian hosting, encryption, role-based access, audit logs, consent records and data export and deletion, and design screens to WCAG 2.1 AA. Your privacy officer or legal advisor confirms the final position, and we help prepare answers for vendor questionnaires.',
+      },
+      {
+        q: 'Do you have an office in Gatineau?',
+        a: 'No. We are headquartered in Edmonton and work with Gatineau founders remotely through weekly demos, video standups and a shared board. Gatineau is two hours ahead of Edmonton, so most of the working day overlaps. If you want an in-person planning session in Gatineau, we can arrange one with travel agreed up front.',
+      },
+    ],
+  },
 };
