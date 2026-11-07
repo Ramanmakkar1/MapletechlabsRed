@@ -122,6 +122,24 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'digital-marketing-agencies-calgary', category: 'Business',
+    title: 'Digital Marketing Agencies in Calgary: How to Choose',
+    excerpt: 'A buyer’s guide for Calgary businesses: how to judge agency fit by industry, what SEO, paid search and social cost in CAD, proposal must-haves and red flags.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
+    slug: 'digital-marketing-agencies-toronto', category: 'Business',
+    title: 'Digital Marketing Agencies in Toronto: How to Choose',
+    excerpt: 'A buyer’s guide for Toronto and GTA businesses: how the market changes the plan, CAD costs for SEO, paid search and social, proposal terms and red flags.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
+    slug: 'digital-marketing-agencies-vancouver', category: 'Business',
+    title: 'Digital Marketing Agencies in Vancouver: How to Choose',
+    excerpt: 'A buyer’s guide for Vancouver businesses: matching an agency to your audience, CAD costs for SEO, paid search and social, proposal checklist and red flags.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'ui-ux-design-companies-canada', category: 'Business',
     title: 'Best UI/UX Design Companies in Canada (2026): How to Choose, Costs and What to Ask',
     excerpt: 'What a UI/UX company should deliver, CAD costs from MVP design to a design system, a neutral shortlist of Canadian studios, an evaluation checklist and red flags.',
