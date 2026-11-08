@@ -12,6 +12,7 @@ const BLOG_SLUGS = new Set([
   'choose-software-development-company-canada',
   'digital-marketing-agencies-edmonton',
   'flutter-vs-react-native-canada',
+  'wordpress-vs-headless-cms-canada',
   'digital-marketing-agencies-calgary',
   'digital-marketing-agencies-toronto',
   'digital-marketing-agencies-vancouver',
@@ -98,6 +99,7 @@ const NATIONAL_GUIDE_SLUG: Partial<Record<string, string>> = {
   'digital-marketing': 'top-seo-companies-canada',
   'saas-development': 'saas-development-company-canada',
   'web-development': 'website-development-company-canada',
+  'wordpress-cms': 'wordpress-vs-headless-cms-canada',
   'mobile-app-development': 'choose-software-development-company-canada',
 };
 
@@ -109,6 +111,7 @@ const COMPARE_LABEL: Partial<Record<string, string>> = {
   'web-development': 'web development',
   'product-design': 'UI/UX design',
   'saas-development': 'SaaS development',
+  'wordpress-cms': 'WordPress & CMS',
 };
 
 export type BuyerGuide = { href: string; label: string; isCity: boolean; linkText?: string };
@@ -150,6 +153,8 @@ export function buyerGuideLinkText(serviceSlug: string, cityName: string, isCity
       return `Read our guide to choosing a UI/UX design company in ${place}`;
     case 'saas-development':
       return `Read our guide to choosing a SaaS development company in ${place}`;
+    case 'wordpress-cms':
+      return `Read our WordPress vs headless CMS comparison for ${place}`;
     default:
       return `Read our guide to choosing an app development company in ${place}`;
   }

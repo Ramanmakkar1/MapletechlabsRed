@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -42,6 +43,15 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={(
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2>Traditional WordPress or headless?</h2>
+            <p className="lede">Not sure whether to keep WordPress as the front end or go headless with Next.js? Compare cost, speed, SEO, editor experience and maintenance, and see when each fits.</p>
+            <p>Read our <Link href="/blog/wordpress-vs-headless-cms-canada">WordPress vs headless CMS comparison for Canadian businesses</Link>.</p>
+          </div>
+        </section>
+      )}
     />
   );
 }

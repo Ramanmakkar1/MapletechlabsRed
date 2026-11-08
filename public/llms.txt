@@ -121,6 +121,7 @@
 
 - [Pricing](https://mapletechlabs.ca/pricing): project pricing in CAD.
 - [Website Cost in Canada: 2026 Pricing Guide](https://mapletechlabs.ca/blog/website-cost-canada)
+- [WordPress vs Headless CMS in Canada](https://mapletechlabs.ca/blog/wordpress-vs-headless-cms-canada): compare cost, speed, SEO, editor experience and maintenance to pick the right CMS for your Canadian business.
 - [How Much Does App Development Cost in Canada? (2026 Guide)](https://mapletechlabs.ca/blog/app-development-cost-canada)
 - [AI Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/ai-development-cost-canada)
 - [How Much Does SaaS Development Cost in Canada? (2026)](https://mapletechlabs.ca/blog/saas-development-cost-canada)

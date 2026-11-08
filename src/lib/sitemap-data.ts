@@ -30,7 +30,7 @@ export const industrySlugs = ['fintech', 'healthcare', 'ecommerce', 'logistics',
 
 export const blogSlugs = [
   'what-is-agentic-ai', 'build-saas-mvp-8-weeks', 'freelancer-vs-agency-vs-in-house-canada',
-  'native-vs-cross-platform-vs-pwa', 'flutter-vs-react-native-canada', 'custom-software-vs-off-the-shelf',
+  'native-vs-cross-platform-vs-pwa', 'flutter-vs-react-native-canada', 'wordpress-vs-headless-cms-canada', 'custom-software-vs-off-the-shelf',
   'use-claude-for-free', 'run-ai-models-locally-free',
   'saas-development-company-canada', 'website-development-company-canada',
   'agentic-ai-in-production', 'saas-ideas-2026', 'what-profitable-saas-gets-right',

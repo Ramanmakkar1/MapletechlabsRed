@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 import { serviceCaseMap } from '@/data/service-case-map';
 
@@ -51,6 +52,15 @@ export default function PageClient() {
       results={results}
       faqs={faqs}
       servicesTitle="WordPress & CMS Services"
+      buyerContent={(
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2>Traditional WordPress or headless?</h2>
+            <p className="lede">Not sure whether to build on WordPress or go headless with a Next.js frontend? Compare cost, speed, SEO, editor experience and maintenance, and see when each fits.</p>
+            <p>Read our <Link href="/blog/wordpress-vs-headless-cms-canada">WordPress vs headless CMS comparison for Canadian businesses</Link>.</p>
+          </div>
+        </section>
+      )}
     />
   );
 }
