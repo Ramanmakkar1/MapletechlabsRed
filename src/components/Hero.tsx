@@ -15,8 +15,29 @@ export default function Hero() {
   const ref = useRef<HTMLElement>(null);
   const [i, setI] = useState(0);
   const [show, setShow] = useState(true);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
+  // DEFERRED ANIMATION - Wait for LCP to fire first
   useEffect(() => {
+    // Wait until after initial page paint
+    // Use requestIdleCallback if available, fallback to setTimeout
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(
+        () => {
+          setShouldAnimate(true);
+        },
+        { timeout: 2500 } // Max 2.5s
+      );
+    } else {
+      // Fallback for older browsers
+      const timer = setTimeout(() => setShouldAnimate(true), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  // Start the rotating word animation AFTER shouldAnimate is true
+  useEffect(() => {
+    if (!shouldAnimate) return;
     const id = setInterval(() => {
       setShow(false);
       setTimeout(() => {
@@ -25,7 +46,7 @@ export default function Hero() {
       }, 340);
     }, 2900);
     return () => clearInterval(id);
-  }, []);
+  }, [shouldAnimate]);
 
   return (
     <section
@@ -61,7 +82,7 @@ export default function Hero() {
           >
             <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--brand)', boxShadow: '0 0 0 4px transparent' }} />
             <span style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--brand-deep)', letterSpacing: '-0.005em', textTransform: 'none' }}>
-              Canadian Software &amp; AI Engineering Partner
+              Canadian Software & AI Engineering Partner
             </span>
           </div>
 
@@ -92,8 +113,8 @@ export default function Hero() {
           </h1>
 
           <p style={{ fontSize: 'clamp(16px, 1.5vw, 18.5px)', color: 'var(--body)', maxWidth: 520, lineHeight: 1.7, margin: '0 0 clamp(28px, 4vw, 40px)' }}>
-            Mapletech Labs engineers world-class digital products for companies ready to lead
-            their industry — on time, on budget, every time.
+            Mapletech Labs engineers world-class digital products for companies ready to
+            lead their industry — on time, on budget, every time.
           </p>
 
           <div className="h-btns btn-group" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 'clamp(36px, 5vw, 56px)' }}>

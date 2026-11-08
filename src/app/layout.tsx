@@ -189,6 +189,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-CA">
+      <head>
+        {/* Preload critical LCP image and preconnect to third-party origins */}
+        <link rel="preload" as="image" href="/images/og-default.jpg" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://clarity.ms" />
+        <link rel="dns-prefetch" href="https://clarity.ms" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={jakarta.variable}>
         <a href="#main-content" className="sr-only-focusable">Skip to main content</a>
         {/* Organization Schema - defer to avoid blocking render */}
