@@ -386,7 +386,7 @@ const posts = [
   {
     slug: 'website-cost-canada',
     category: 'Business',
-    title: 'How Much Does a Website Cost in Canada? (2026 Guide)',
+    title: 'Website Cost in Canada: 2026 Guide',
     excerpt: 'From simple landing pages to complex web applications — a complete guide to website development costs across Canada with real pricing benchmarks.',
     author: 'RM',
     authorName: 'Raman Makkar',
@@ -406,7 +406,7 @@ const posts = [
   {
     slug: 'web-development-companies-toronto',
     category: 'Engineering',
-    title: 'Top 10 Web Development Companies in Toronto (2026)',
+    title: 'Top Web Development Companies in Toronto',
     excerpt: 'Ranking the best web development companies in Toronto — from Next.js specialists to full-stack agencies building enterprise-grade digital products.',
     author: 'RM',
     authorName: 'Raman Makkar',
@@ -416,7 +416,7 @@ const posts = [
   {
     slug: 'saas-development-cost-canada',
     category: 'Business',
-    title: 'How Much Does SaaS Development Cost in Canada? (2026)',
+    title: 'SaaS Development Cost in Canada (2026)',
     excerpt: 'Complete cost breakdown for building a SaaS product in Canada — MVP pricing, scaling costs, and what drives development budgets in 2026.',
     author: 'RM',
     authorName: 'Raman Makkar',
