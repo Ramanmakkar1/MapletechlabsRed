@@ -25,11 +25,11 @@ const StickyCTA = dynamic(() => import('@/components/StickyCTA'));
 
 export const metadata: Metadata = {
   // `absolute`: the layout's "%s | Mapletech Labs" template would double the brand.
-  title: { absolute: 'Software Development Company in Canada | Mapletech Labs' },
+  title: { absolute: 'Custom Software Development in Canada | Mapletech Labs' },
   description:
     'Software development company in Canada building custom software, mobile apps, AI and UI/UX design. Teams in Edmonton, Calgary, Toronto and Vancouver.',
   openGraph: {
-    title: 'Software Development Company in Canada | Mapletech Labs',
+    title: 'Custom Software Development in Canada | Mapletech Labs',
     description:
       'Software development company in Canada building custom software, mobile apps, AI and UI/UX design. Teams in Edmonton, Calgary, Toronto and Vancouver.',
     url: 'https://mapletechlabs.ca',
