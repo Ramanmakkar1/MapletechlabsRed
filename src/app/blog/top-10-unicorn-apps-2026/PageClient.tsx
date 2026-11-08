@@ -595,6 +595,31 @@ export default function BlogPostPageClient() {
                   </div>
                 </div>
 
+                {/* ── CONTEXTUAL APP DEVELOPMENT LINKS ── */}
+                <div className="reveal" style={{ marginBottom: 64 }}>
+                  <h2 style={{
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
+                    letterSpacing: '-0.03em', marginBottom: 20,
+                  }}>
+                    Building an app like these in Canada?
+                  </h2>
+                  <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
+                    If one of these products sparked an idea, it helps to start with a clear scope and the right team. Mapletech Labs is headquartered in Edmonton and works with clients across Canada through{' '}
+                    <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>mobile app development services</Link>
+                    {' '}and{' '}
+                    <Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI development</Link>.
+                    {' '}You can also review{' '}
+                    <Link href="/blog/app-development-cost-canada" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>what an app costs to build in Canada</Link>
+                    {' '}to plan your budget before you begin.
+                  </p>
+                  <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8 }}>
+                    Looking for local project support? Explore how we help businesses as an{' '}
+                    <Link href="/locations/app-development-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>app development company in Toronto</Link>
+                    {' '}and an{' '}
+                    <Link href="/locations/app-development-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>app development company in Vancouver</Link>.
+                  </p>
+                </div>
+
               </article>
 
               {/* ── SIDEBAR ── */}
