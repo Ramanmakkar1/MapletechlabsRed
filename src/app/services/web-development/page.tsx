@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 
 export const metadata: Metadata = {
   title: 'Web Development Company in Canada',
@@ -16,19 +17,12 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
+const serviceSchema = serviceHubSchema({
+  slug: 'web-development',
   name: 'Web Development Services',
   serviceType: 'Web Development',
   description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. Fixed-price projects. 150+ apps shipped across Canada.',
-  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Canada',
-  },
-  url: 'https://mapletechlabs.ca/services/web-development',
-};
+});
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

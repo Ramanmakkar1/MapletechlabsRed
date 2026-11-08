@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 
 export const metadata: Metadata = {
   title: 'UI/UX Design Company in Canada: Apps & SaaS',
@@ -16,19 +17,12 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
+const serviceSchema = serviceHubSchema({
+  slug: 'product-design',
   name: 'UI/UX Design Services',
   serviceType: 'UI/UX Design',
   description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps & SaaS, with fixed CAD pricing. Get a free design audit.',
-  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Canada',
-  },
-  url: 'https://mapletechlabs.ca/services/product-design',
-};
+});
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

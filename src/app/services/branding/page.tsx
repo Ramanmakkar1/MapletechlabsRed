@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 
 export const metadata: Metadata = {
   title: 'Branding & Identity Services in Canada',
@@ -16,19 +17,12 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
+const serviceSchema = serviceHubSchema({
+  slug: 'branding',
   name: 'Branding & Identity Services',
   serviceType: 'Branding & Identity',
   description: 'Strategic branding by Mapletech Labs. Logo design, visual identity & brand guidelines for businesses in Canada.',
-  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Canada',
-  },
-  url: 'https://mapletechlabs.ca/services/branding',
-};
+});
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

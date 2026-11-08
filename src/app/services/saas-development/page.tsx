@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 
 export const metadata: Metadata = {
   title: 'SaaS Development Company in Canada',
@@ -16,19 +17,12 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
+const serviceSchema = serviceHubSchema({
+  slug: 'saas-development',
   name: 'SaaS Development Services',
   serviceType: 'SaaS Development',
   description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture & billing systems for startups in Canada.',
-  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Canada',
-  },
-  url: 'https://mapletechlabs.ca/services/saas-development',
-};
+});
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
