@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getCityServiceData, getAllCityServiceParams } from '@/data/city-service';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { isIndexableCityService } from '@/data/serviceCity';
 import { localServiceSchema } from '@/lib/seo/business';
 import { localServiceTitle } from '@/lib/seo/title';
-import { canonicalUrl } from '@/lib/seo/canonical';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -57,6 +59,18 @@ export default async function CityServicePage({ params }: PageProps) {
   }
   const isEdmWeb = isEdmWebPair(city, service);
   const desc = isEdmWeb ? EDM_WEB_DESCRIPTION : data.description;
+  const servicePageExists = existsSync(join(process.cwd(), 'src', 'app', 'services', data.serviceSlug));
+  const breadcrumbItems = [
+    { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
+    { position: 2, name: 'Services', item: 'https://mapletechlabs.ca/services' },
+    ...(servicePageExists
+      ? [{ position: 3, name: data.serviceName, item: `https://mapletechlabs.ca/services/${data.serviceSlug}` }]
+      : []),
+    {
+      position: servicePageExists ? 4 : 3,
+      name: `${data.serviceName} in ${data.cityName}`,
+    },
+  ];
 
   // Combined JSON-LD schema (single @graph to avoid duplicate field errors)
   const jsonLd = {
@@ -95,15 +109,6 @@ export default async function CityServicePage({ params }: PageProps) {
           },
         })),
       },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: canonicalUrl('/') },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: canonicalUrl('/locations') },
-          { '@type': 'ListItem', position: 3, name: data.cityName, item: canonicalUrl(`/locations/software-development-company-in-${data.citySlug}`) },
-          { '@type': 'ListItem', position: 4, name: data.serviceName, item: data.canonicalUrl },
-        ],
-      },
     ],
   };
 
@@ -113,6 +118,7 @@ export default async function CityServicePage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbSchema items={breadcrumbItems} />
       {isEdmWeb ? (
         <ServiceCityTemplate
           data={data}
