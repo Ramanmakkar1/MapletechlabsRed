@@ -34,6 +34,8 @@ export interface Article {
   dek: string;
   metaTitle: string;
   metaDescription: string;
+  /** Optional short direct answer (AEO); prepended to the schema description. */
+  answer?: string;
   date: string;         // ISO
   dateModified: string; // ISO
   readTime: string;
