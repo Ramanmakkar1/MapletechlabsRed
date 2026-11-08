@@ -8,6 +8,7 @@ import { CityTestimonial } from '@/components/home/Testimonial';
 import { quoteForCity } from '@/data/testimonials';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
+import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, WhyUs } from './Blocks';
@@ -245,6 +246,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           </section>
         ) : null}
 
+        <FaqSchema faqs={p.faqs ?? []} />
         <FaqSplit faqs={p.faqs} title={`${serviceName} in ${cityName}: your questions`} />
 
         {/* Internal linking mesh */}
