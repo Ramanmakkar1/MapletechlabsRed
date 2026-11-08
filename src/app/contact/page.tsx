@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import ContactInfo, { CONTACT_FAQS } from '@/components/ContactInfo';
@@ -77,6 +78,18 @@ export default function ContactRoute() {
       <main id="main-content" tabIndex={-1}>
         <ContactPage serviceOptions={SERVICE_OPTIONS} cityOptions={CITY_OPTIONS} />
         <ContactInfo />
+        <section aria-labelledby="contact-next-steps">
+          <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you get in touch</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Tell us about your project idea during our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>free project consultation</Link>. Our senior engineer will read your brief and get back with honest first thoughts and questions that matter, responding within one working day. This initial conversation helps us understand whether custom software, an off-the-shelf solution, or a smaller first release best fits your goals.
+          </p>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            If the project looks like a good fit, we schedule a 30-minute discovery call to discuss users, technical constraints, timeline, and budget. You leave with a clearer picture of the scope and whether we should work together. When you accept, we assign your team, set up environments, and plan the first sprint so you see working software early and often.
+          </p>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Our headquarters is in Edmonton, Alberta, and our team has dedicated engineers in Edmonton, Calgary, Toronto, and Vancouver, so there&#8217;s always someone in your time zone. Most projects run remotely with weekly demos, and we meet in person when it helps. We work with clients across Canada, including Calgary, Toronto, Vancouver, Ottawa, and Montreal. <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Explore our complete service catalog</Link> to learn about the custom software development, mobile apps, AI & automation, and other solutions we offer.
+          </p>
+        </section>
       </main>
       <BreadcrumbSchema items={[
         { position: 1, name: 'Home', item: canonicalUrl('/') },
