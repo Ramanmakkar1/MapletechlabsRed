@@ -275,6 +275,16 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '20px' }}>Experience and recent work</h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                Raman leads software development, app development, AI development, and UI/UX work for Canadian businesses. The projects in the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link> show the range of that work. The AI-Powered Trading Platform rebuilt a real-time trading engine from scratch — sub-50ms latency, 75K+ transactions a day, zero data loss. The HIPAA-Compliant Telehealth Platform was built with HIPAA and PIPEDA compliance from day one, serving 450K+ patient records. The Enterprise E-Commerce Redesign lifted conversion from 2.1% to 3.8% in 90 days for 2M+ monthly visitors. The Real-Time Fleet Management System tracked 500 trucks and 15K+ daily deliveries, cutting fuel cost by 25%.
+              </p>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                These results reflect the services Raman and the team deliver: turning complex business requirements into reliable products, from a <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link> project to an AI-powered platform or a high-traffic e-commerce experience. The work also includes a PCI DSS Payments API handling 12M+ monthly transactions and a Multi-Listing Real Estate Platform with ML-powered property recommendations across 850K+ active listings nationwide.
+              </p>
+            </section>
+
+            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
               <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '20px' }}>Published articles</h2>
               <div style={{ display: 'grid', gap: '12px', maxWidth: '800px' }}>
                 {[
