@@ -4337,6 +4337,103 @@ export const articles: Article[] = [
     ],
     cta: { href: '/contact', label: 'Book a Consultation' },
   },
+  {
+    slug: 'mobile-app-development-company-canada',
+    relatedTopic: 'apps',
+    category: 'Business',
+    title: 'How to Choose a Mobile App Development Company in Canada',
+    dek: 'A buyer-focused guide for Canadian businesses: when to hire an app development company, which platform fits, what the process includes, how CAD pricing works and what to ask before signing.',
+    metaTitle: 'Mobile App Development Canada Guide',
+    metaDescription: 'Choose a mobile app development company in Canada: compare native and cross-platform options, CAD costs, process, ownership and support.',
+    answer: 'The right Canadian app development company explains platform trade-offs, scopes discovery before quoting, shows relevant shipped apps, puts ownership in writing and supports the product after launch.',
+    date: '2026-11-09',
+    dateModified: '2026-11-09',
+    readTime: '9 min read',
+    heroKey: 'app',
+    intro: [
+      'Hiring a mobile app development company is a product decision, not just a coding decision. The partner you choose will influence the platform, the first-release scope, the quality of the user experience, the cost of change and what happens when Apple or Google updates the operating system.',
+      'This buyer hub is for Canadian businesses comparing app teams. It explains when an app company is the right hire, how native and cross-platform approaches differ, what a discovery-to-launch engagement should include, how existing Canadian CAD ranges are affected by scope, and how to check whether a portfolio shows relevant shipped work rather than polished concepts.',
+    ],
+    body: [
+      { type: 'h2', id: 'when-to-hire', text: 'When to hire a mobile app development company' },
+      { type: 'p', html: 'An app company is a good fit when the product needs a real iOS or Android experience, device features, offline workflows, app-store distribution, or integrations that your internal team does not have the capacity to own. It is also useful when you need product discovery and technical judgement before committing to a build. If a responsive website or a simple internal form would solve the problem, a mobile app may not be the right first investment.' },
+      { type: 'checks', items: [
+        { term: 'You have a defined business outcome', text: 'Know which user problem the first release solves and what action should improve: booking, ordering, field work, account access or another measurable workflow.' },
+        { term: 'The product needs mobile context', text: 'Camera, location, notifications, Bluetooth, offline use or a frequent on-the-go workflow can justify a dedicated app.' },
+        { term: 'You need a partner beyond implementation', text: 'A capable team should help reduce scope, identify integration and privacy dependencies, and explain trade-offs before it prices the build.' },
+      ] },
+      { type: 'p', html: 'Start with our <a href="/services/mobile-app-development">mobile app development services</a> to compare the delivery model, then review <a href="/services/mobile-app-development/ios-app-development">iOS</a>, <a href="/services/mobile-app-development/android-app-development">Android</a> and <a href="/services/mobile-app-development/cross-platform-apps">cross-platform app development</a>.' },
+
+      { type: 'h2', id: 'platform-choice', text: 'Native vs cross-platform: the buyer trade-off' },
+      { type: 'cards', items: [
+        { title: 'Native iOS or Android', text: 'Choose native when deep device access, demanding graphics, platform-specific behaviour or maximum performance matters. The trade-off is separate codebases, release work and maintenance for each platform.' },
+        { title: 'Cross-platform', text: 'Flutter or React Native can serve both stores from one codebase and are a practical fit for most business and customer apps. Some specialised device features may still need native modules.' },
+        { title: 'Progressive web app', text: 'A PWA can be the better first step for browser-first workflows that do not need an app-store listing or deep hardware access. It is not a substitute for every mobile product.' },
+      ] },
+      { type: 'p', html: 'Ask the company to connect its recommendation to your users, integrations, device features, offline needs and internal team. A vendor that recommends one stack before asking those questions is showing you a sales preference, not product judgement. Our <a href="/blog/native-vs-cross-platform-vs-pwa">native, cross-platform and PWA comparison</a> gives a fuller decision framework.' },
+
+      { type: 'h2', id: 'process', text: 'What discovery to launch should look like' },
+      { type: 'ol', items: [
+        '<strong>Discovery and strategy.</strong> Clarify users, business goals, launch scope, integrations, privacy needs, device requirements and success measures. The output should be a written product and technical brief.',
+        '<strong>UX design and prototyping.</strong> Map the key journeys, test wireframes and create a clickable prototype before development. Account for accessibility, empty states, errors and offline behaviour where relevant.',
+        '<strong>Development.</strong> Work in short sprints with working builds, code review, a repository you can access and a clear process for scope changes.',
+        '<strong>QA and release readiness.</strong> Test on real devices and networks, cover authentication and integrations, review performance and accessibility, and prepare App Store and Google Play materials.',
+        '<strong>Launch and support.</strong> Release through accounts you control, monitor crashes and analytics, handle store feedback, and agree the warranty, OS updates, bug fixes and feature work before go-live.',
+      ] },
+      { type: 'p', html: 'A useful proposal names deliverables and decision points in each stage. Mapletech Labs describes its mobile process as discovery, UX and prototyping, agile development, QA and performance, then launch and growth; the <a href="/services/mobile-app-development">mobile app service page</a> lets buyers compare the delivery model.' },
+
+      { type: 'h2', id: 'pricing', text: 'Canadian app pricing in CAD: what changes the number' },
+      { type: 'p', html: 'Use ranges as a scope conversation, not as a quote. Existing Canadian benchmarks on this site put a mobile app overall at about <strong>CAD $30,000&ndash;$200,000</strong>; native iOS only at about <strong>CAD $40,000&ndash;$180,000</strong>; native Android only at about <strong>CAD $35,000&ndash;$160,000</strong>; cross-platform for both stores at about <strong>CAD $30,000&ndash;$200,000</strong>; and separate native iOS and Android apps at about <strong>CAD $75,000&ndash;$340,000</strong>. Canadian onshore development rates typically run about <strong>$100&ndash;$200 per hour</strong>.' },
+      { type: 'checks', items: [
+        { term: 'Platforms and devices', text: 'One native platform, two native apps, or one cross-platform codebase changes build and maintenance effort. Device breadth and older OS support add testing scope.' },
+        { term: 'Core workflows and integrations', text: 'Authentication, payments, maps, health data, Bluetooth, back-office systems, analytics and offline sync each add design, engineering and QA work.' },
+        { term: 'Data, privacy and release needs', text: 'Sensitive data, security review, accessibility, store requirements and a more involved launch plan need to be scoped rather than assumed.' },
+        { term: 'Post-launch ownership', text: 'Budget for monitoring, bug fixes, OS updates and new features after launch. Ask which work is included in the warranty and what support costs afterward.' },
+      ] },
+      { type: 'p', html: 'The ranges above are the same approved ranges used in our <a href="/blog/app-development-companies-calgary">Canadian app buyer guidance</a>. A credible quote should explain where your scope sits inside a range and what would move it, instead of promising a fixed number before discovery.' },
+
+      { type: 'h2', id: 'ownership-support', text: 'Ownership and support questions to ask' },
+      { type: 'ul', items: [
+        'Will the contract assign the custom code, designs and project files to our business on payment?',
+        'Will the source repository, cloud accounts, analytics and App Store and Google Play listings be created in accounts we control?',
+        'What third-party libraries or services remain licensed separately, and how will access be transferred?',
+        'What is covered by the post-launch warranty, how are bugs prioritised, and what do OS updates and ongoing support cost?',
+        'Who responds if a store rejects a release or a production crash appears after launch?',
+      ] },
+      { type: 'p', html: 'You should be able to leave with the code, credentials, design files and operational knowledge needed to run the product. Ownership is not just an IP clause: it includes access to the systems that keep the app live.' },
+
+      { type: 'h2', id: 'evaluate-work', text: 'How to evaluate relevant shipped work' },
+      { type: 'p', html: 'Ask to see products that are live in the App Store or Google Play, not only concept screens. Then ask what the team actually shipped, which parts it owned, how the product was tested, what happened after launch and whether the client can discuss the engagement. Look for relevance to your users, integrations, compliance needs, device constraints and scale.' },
+      { type: 'checks', items: [
+        { term: 'A live product', text: 'Request a store link, the client and the team’s role. A screenshot deck cannot show release quality, crash handling or the product’s current state.' },
+        { term: 'A comparable problem', text: 'A telehealth workflow, field app, fintech product or retail app may reveal more than a visually similar portfolio piece if it shares your data, integration or reliability constraints.' },
+        { term: 'A specific result', text: 'Ask what changed for the client and how it was measured, while respecting confidentiality. The answer should distinguish the agency’s work from the client’s wider business result.' },
+      ] },
+      { type: 'p', html: 'Mapletech Labs’ published work includes a telehealth platform for ClinicFlow Health with 450K+ patient records, an e-commerce platform for NorthStar E-Commerce that lifted conversion from 2.1% to 3.8% for 2M+ monthly visitors, and an AI trading platform for Axion Capital with sub-50ms latency and 75K+ daily transactions. Review the <a href="/case-studies">case studies</a> and ask which example best matches your product.' },
+
+      { type: 'h2', id: 'city-pages', text: 'Find app development services by Canadian city' },
+      { type: 'p', html: 'Mapletech Labs is headquartered in Edmonton and serves Canadian businesses remotely and on site. Compare the relevant city pages for <a href="/locations/app-development-company-in-edmonton">Edmonton</a>, <a href="/locations/app-development-company-in-calgary">Calgary</a>, <a href="/locations/app-development-company-in-toronto">Toronto</a> and <a href="/locations/app-development-company-in-vancouver">Vancouver</a>, then use the main <a href="/services/mobile-app-development">mobile app development service</a> page to review platforms, process and app-related case studies.' },
+      { type: 'callout', tone: 'brand', title: 'A useful next step', text: 'Bring your target users, launch platform, essential workflows, integrations and budget range to discovery. <a href="/contact">Contact Mapletech Labs</a> for a conversation about the right first release.' },
+    ],
+    keyTakeaways: [
+      'Hire an app development company when the product needs mobile-specific workflows, device features, app-store distribution or product and technical judgement beyond implementation.',
+      'Native suits demanding performance and deep platform needs; cross-platform suits most business apps that need both stores; a PWA can fit simpler browser-first workflows.',
+      'Discovery should produce a written scope before development, followed by tested design, working builds, real-device QA, store launch and a named support plan.',
+      'Approved Canadian ranges run from CAD $30,000–$200,000 for a mobile app overall or cross-platform build, with separate native iOS and Android apps at about $75,000–$340,000.',
+      'Verify live shipped work, relevant constraints, client outcomes, source-code ownership, account access and post-launch support before signing.',
+    ],
+    faqs: [
+      { q: 'When should a Canadian business hire an app development company?', a: 'Hire one when you need an iOS or Android product with mobile-specific workflows, device features, offline use, app-store distribution or integrations your internal team cannot own. If a responsive website solves the problem, start there instead.' },
+      { q: 'Should we build a native or cross-platform app?', a: 'Native is a strong fit for demanding performance, deep device access or platform-specific behaviour. Flutter or React Native is a practical fit for most business apps that need both stores from one codebase. The recommendation should follow your users, integrations and device requirements.' },
+      { q: 'How much does mobile app development cost in Canada?', a: 'Existing Canadian ranges on this site put a mobile app overall and cross-platform build at about CAD $30,000 to $200,000. Native iOS only runs about $40,000 to $180,000, native Android only about $35,000 to $160,000, and separate native iOS and Android apps about $75,000 to $340,000. Scope determines where a project lands.' },
+      { q: 'What should discovery include before we sign?', a: 'Discovery should clarify users, first-release scope, integrations, privacy and security needs, device and offline requirements, success measures, milestones and the assumptions behind the price. It should produce a written product and technical brief.' },
+      { q: 'Who should own the app source code and accounts?', a: 'Your business should receive the custom code, designs and project files on payment, with the source repository, cloud accounts, analytics and App Store and Google Play listings in accounts you control. Ask how third-party licences are handled too.' },
+      { q: 'What support should an app company provide after launch?', a: 'Confirm the warranty period, bug-priority process, crash monitoring, store-submission help, OS-update support and the cost of ongoing maintenance and feature work. Also ask who responds if a release is rejected or a production crash appears.' },
+      { q: 'How do we evaluate an app company’s portfolio?', a: 'Ask for live store links, the client’s permission to discuss the work, the agency’s exact role, relevant integrations and evidence of post-launch support. A product with constraints similar to yours is more useful than a visually similar concept.' },
+    ],
+    cta: { href: '/services/mobile-app-development', label: 'Explore our mobile app development services' },
+    enquiryContext: { serviceSlug: 'mobile-app-development' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);
