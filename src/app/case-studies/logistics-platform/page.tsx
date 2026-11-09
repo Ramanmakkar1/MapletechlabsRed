@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
-    title: TITLE,
+    title: seoTitle(TITLE),
     description: DESCRIPTION,
     url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
     type: 'article',
