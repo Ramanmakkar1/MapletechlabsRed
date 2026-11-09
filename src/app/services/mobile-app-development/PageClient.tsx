@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 import { serviceCaseMap } from '@/data/service-case-map';
+import { work } from '@/data/work';
 
 const stats = [
   { value: '300+', label: 'Apps Shipped' },
@@ -92,6 +93,11 @@ const faqs = [
   { q: 'Do you sign NDAs?', a: 'Always — on Day 1, before any project discussion. Your idea and IP are protected from the very first conversation.' },
 ];
 
+const appCaseStudies = serviceCaseMap['mobile-app-development'].flatMap(slug => {
+  const item = work.find(project => project.slug === slug);
+  return item ? [item] : [];
+});
+
 export default function PageClient() {
   return (
     <ServicePageTemplate
@@ -107,6 +113,7 @@ export default function PageClient() {
       faqs={faqs}
       servicesTitle="Every Platform. Every Screen."
       buyerContent={
+        <>
         <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
             <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 24px' }}>Choose the right app platform</h2>
@@ -134,6 +141,33 @@ export default function PageClient() {
             </div>
           </div>
         </section>
+        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container">
+            <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand)', margin: '0 0 12px' }}>Mobile app case studies</p>
+            <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 16px' }}>Find the right fit for your app project</h2>
+            <p style={{ maxWidth: 700, lineHeight: 1.7, color: 'var(--body)', margin: '0 0 28px' }}>
+              See how our existing app-related work maps to different product needs, from a HIPAA-compliant telehealth platform to high-scale e-commerce and fintech products. Read the full case studies, then <Link href="/services/mobile-app-development">return to our mobile app development service</Link> to compare platforms and delivery options.
+            </p>
+            <div className="grid grid--3">
+              {appCaseStudies.map(project => (
+                <article key={project.slug} className="tile">
+                  <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand)', margin: '0 0 8px' }}>{project.category}</p>
+                  <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>
+                    <Link href={project.href} style={{ color: 'var(--ink)', textDecoration: 'none' }}>{project.title}</Link>
+                  </h3>
+                  <p style={{ fontSize: 13, color: 'var(--faint)', margin: '0 0 12px' }}>{project.client} · {project.city}</p>
+                  <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{project.desc}</p>
+                </article>
+              ))}
+            </div>
+            <div style={{ marginTop: 28 }}>
+              <Link href="/contact#contact-form" className="btn btn--primary" style={{ textDecoration: 'none' }}>
+                Discuss your app project →
+              </Link>
+            </div>
+          </div>
+        </section>
+        </>
       }
     />
   );
