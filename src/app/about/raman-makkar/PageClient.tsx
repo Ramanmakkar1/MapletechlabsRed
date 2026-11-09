@@ -50,6 +50,16 @@ export default function RamanMakkarPageClient() {
               </p>
             </div>
 
+            <div style={{ marginTop: 48 }}>
+              <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20 }}>How Raman Works With Clients</h2>
+              <p style={{ fontSize: 16, lineHeight: 1.8, marginBottom: 24 }}>
+                Working with Raman starts with a free consultation directly with the founder. The first conversation is about your vision, market, business problem, users, technical requirements, timeline, and budget. This discovery conversation creates a clearer picture of the project scope and whether the teams should work together. It is a practical way to discuss what you are building and the outcome you need before any code is written.
+              </p>
+              <p style={{ fontSize: 16, lineHeight: 1.8, marginBottom: 24 }}>
+                From discovery, Raman and the team define the requirements, user flows, integrations, hosting, and scalability needs. You get a detailed scope, timeline, and fixed-price proposal, so you know the cost and timeline before a line of code is written. When you accept, the team is assigned, environments are set up, and the first sprint is planned. Delivery then runs in short, agile cycles with working software early and often. Most projects run remotely with regular weekly demos, giving you visibility into progress and feedback throughout the build.
+              </p>
+            </div>
+
             {/* Expertise */}
             <div style={{ marginTop: 48 }}>
               <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20 }}>Areas of Expertise</h2>
@@ -85,6 +95,13 @@ export default function RamanMakkarPageClient() {
                   </a>
                 ))}
               </div>
+            </div>
+
+            <div style={{ marginTop: 48 }}>
+              <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20 }}>Where to See Raman’s Work</h2>
+              <p style={{ fontSize: 16, lineHeight: 1.8, marginBottom: 24 }}>
+                Explore the <a href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>case studies</a> to see project work, review the <a href="/services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>software development services</a> available from Mapletech Labs, or <a href="/contact" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>contact the team</a> about your project. For practical guidance, read <a href="/blog/choose-software-development-company-canada" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>the guide to choosing a software development company in Canada</a>. See the custom web applications, mobile apps, AI/ML solutions, cloud infrastructure, and SaaS platforms Raman and the team build for clients across Canada and internationally.
+              </p>
             </div>
 
             {/* CTA */}
