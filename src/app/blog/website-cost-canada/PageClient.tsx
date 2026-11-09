@@ -517,6 +517,14 @@ At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/
                       </p>
                     </div>
 
+                  {/* Related services */}
+                  <div className="reveal" style={{ marginBottom: 56 }}>
+                    <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 16 }}>Related services</p>
+                    <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
+                      Need a team to build it? Explore our <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>web development services in Canada</Link> and our <Link href="/services/web-development/ecommerce-systems" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>ecommerce website development</Link> expertise.
+                    </p>
+                  </div>
+
               </article>
 
               {/* ── SIDEBAR ── */}

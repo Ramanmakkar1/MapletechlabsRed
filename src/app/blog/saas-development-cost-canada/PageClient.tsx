@@ -490,6 +490,14 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                   </p>
                 </div>
 
+                  {/* Related services */}
+                  <div className="reveal" style={{ marginBottom: 56 }}>
+                    <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 16 }}>Related services</p>
+                    <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
+                      Ready to build? See our <Link href="/services/saas-development" style={LINK}>SaaS development services in Canada</Link> and learn how we <Link href="/blog/build-saas-mvp-8-weeks" style={LINK}>build a SaaS MVP in 8 weeks</Link>.
+                    </p>
+                  </div>
+
               </article>
 
               {/* ── SIDEBAR ── */}
