@@ -68,6 +68,8 @@ const caseStudies = [
     title: 'PCI DSS Payments API',
     client: 'PayBridge Solutions \u00b7 Ottawa',
     description: 'Engineered secure payments processing API handling 12M+ monthly transactions with PCI DSS compliance.',
+    serviceHref: '/services/web-development',
+    serviceLabel: 'Web development',
     metric: { value: '12M+', label: 'Monthly Transactions' },
     tech: ['Node.js', 'PostgreSQL', 'Redis', 'AWS KMS'],
     },
@@ -210,7 +212,6 @@ export default function CaseStudiesPageClient() {
                         display: 'flex',
                         flexDirection: 'column',
                         transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
-                        cursor: 'pointer',
                       }}
                       onMouseEnter={e => {
                         (e.currentTarget as HTMLElement).style.borderColor = 'var(--brand)';
