@@ -90,6 +90,13 @@ export default function ContactRoute() {
             Our headquarters is in Edmonton, Alberta, and our team has dedicated engineers in Edmonton, Calgary, Toronto, and Vancouver, so there&#8217;s always someone in your time zone. Most projects run remotely with weekly demos, and we meet in person when it helps. We work with clients across Canada, including Calgary, Toronto, Vancouver, Ottawa, and Montreal. <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Explore our complete service catalog</Link> to learn about the custom software development, mobile apps, AI & automation, and other solutions we offer.
           </p>
         </section>
+
+        <section aria-labelledby="contact-include-in-message">
+          <h2 id="contact-include-in-message" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What to include in your message</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            To help us reply with useful first thoughts, include the type of project you have in mind, a rough budget range, and your timeline. You do not need exact figures: our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>pricing page lists typical project ranges in CAD</Link> so you can see where your budget sits, and our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development services</Link> show the kinds of work we take on. Share what you know so far and we will confirm the rest on the call.
+          </p>
+        </section>
       </main>
       <BreadcrumbSchema items={[
         { position: 1, name: 'Home', item: canonicalUrl('/') },
