@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import cityDescription from '@/lib/seo/city-meta';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Vancouver',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Vancouver, British Columbia. Get a free quote today.',
+  description: cityDescription('Vancouver', 'British Columbia', 'Metro Vancouver businesses'),
   openGraph: {
     title: 'Software Development Company in Vancouver | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Vancouver, British Columbia. Get a free quote today.',
+    description: cityDescription('Vancouver', 'British Columbia', 'Metro Vancouver businesses'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-vancouver',
     type: 'website',
   },

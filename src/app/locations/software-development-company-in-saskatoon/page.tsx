@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import cityDescription from '@/lib/seo/city-meta';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Saskatoon',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Saskatoon, Saskatchewan. Get a free quote today.',
+  description: cityDescription('Saskatoon', 'Saskatchewan', 'Saskatoon startups'),
   openGraph: {
     title: 'Software Development Company in Saskatoon | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Saskatoon, Saskatchewan. Get a free quote today.',
+    description: cityDescription('Saskatoon', 'Saskatchewan', 'Saskatoon startups'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-saskatoon',
     type: 'website',
   },

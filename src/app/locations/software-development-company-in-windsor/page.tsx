@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import cityDescription from '@/lib/seo/city-meta';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Windsor',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Windsor, Ontario. Get a free quote today.',
+  description: cityDescription('Windsor', 'Ontario', 'Windsor businesses'),
   openGraph: {
     title: 'Software Development Company in Windsor | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Windsor, Ontario. Get a free quote today.',
+    description: cityDescription('Windsor', 'Ontario', 'Windsor businesses'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-windsor',
     type: 'website',
   },
