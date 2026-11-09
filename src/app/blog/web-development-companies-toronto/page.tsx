@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Top Web Development Companies in Toronto';
-const DESCRIPTION = 'Top web development companies in Toronto for 2026, compared by services and track record, with a checklist for choosing the right agency.';
+const DESCRIPTION = 'Web development companies in Toronto for 2026, compared by services and track record, with a checklist for choosing the right team.';
 const SLUG = 'web-development-companies-toronto';
 const DATE = '2026-02-19';
 
