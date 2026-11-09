@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import cityDescription from '@/lib/seo/city-meta';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Markham',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Markham, Ontario. Get a free quote today.',
+  description: cityDescription('Markham', 'Ontario', 'York Region businesses'),
   openGraph: {
     title: 'Software Development Company in Markham | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Markham, Ontario. Get a free quote today.',
+    description: cityDescription('Markham', 'Ontario', 'York Region businesses'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-markham',
     type: 'website',
   },

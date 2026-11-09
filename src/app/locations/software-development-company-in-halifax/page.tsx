@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import cityDescription from '@/lib/seo/city-meta';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Halifax',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Halifax, Nova Scotia. Get a free quote today.',
+  description: cityDescription('Halifax', 'Nova Scotia', 'Halifax businesses'),
   openGraph: {
     title: 'Software Development Company in Halifax | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI solutions, and web development in Halifax, Nova Scotia. Get a free quote today.',
+    description: cityDescription('Halifax', 'Nova Scotia', 'Halifax businesses'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-halifax',
     type: 'website',
   },

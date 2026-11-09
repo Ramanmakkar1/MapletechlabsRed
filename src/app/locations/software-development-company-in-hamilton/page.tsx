@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import cityDescription from '@/lib/seo/city-meta';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Hamilton',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Hamilton, Ontario. Get a free quote today.',
+  description: cityDescription('Hamilton', 'Ontario', 'Hamilton businesses'),
   openGraph: {
     title: 'Software Development Company in Hamilton | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Hamilton, Ontario. Get a free quote today.',
+    description: cityDescription('Hamilton', 'Ontario', 'Hamilton businesses'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-hamilton',
     type: 'website',
   },

@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import cityDescription from '@/lib/seo/city-meta';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Mississauga',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Mississauga, Ontario. Get a free quote today.',
+  description: cityDescription('Mississauga', 'Ontario', 'Greater Toronto Area teams'),
   openGraph: {
     title: 'Software Development Company in Mississauga | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Mississauga, Ontario. Get a free quote today.',
+    description: cityDescription('Mississauga', 'Ontario', 'Greater Toronto Area teams'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-mississauga',
     type: 'website',
   },

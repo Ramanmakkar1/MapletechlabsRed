@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import cityDescription from '@/lib/seo/city-meta';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Gatineau',
-  description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Gatineau, Quebec. Get a free quote today.',
+  description: cityDescription('Gatineau', 'Quebec', 'Outaouais businesses'),
   openGraph: {
     title: 'Software Development Company in Gatineau | Mapletech Labs',
-    description: 'Mapletech Labs delivers custom software development, mobile apps, AI and web development in Gatineau, Quebec. Get a free quote today.',
+    description: cityDescription('Gatineau', 'Quebec', 'Outaouais businesses'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-gatineau',
     type: 'website',
   },
