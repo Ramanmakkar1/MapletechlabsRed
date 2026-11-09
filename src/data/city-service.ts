@@ -39,6 +39,12 @@ export interface CityServicePageData {
   canonicalUrl: string;
 }
 
+// The route asks for the same payload from both generateMetadata and the page
+// render. Keep the repository-managed result in memory so those two passes do
+// not rebuild all related links, FAQs, and intersection copy. The inputs are
+// immutable catalog slugs, so sharing the result is safe for every request.
+const cityServiceCache = new Map<string, CityServicePageData | null>();
+
 function replacePlaceholders(text: string, city: CityData): string {
   return text
     .replace(/\{city\}/g, city.name)
@@ -65,10 +71,16 @@ export function getCityServiceData(
   citySlug: string,
   serviceSlug: string
 ): CityServicePageData | null {
+  const cacheKey = `${citySlug}:${serviceSlug}`;
+  if (cityServiceCache.has(cacheKey)) return cityServiceCache.get(cacheKey) ?? null;
+
   const city = getCityBySlug(citySlug);
   const service = getServiceBySlug(serviceSlug);
 
-  if (!city || !service) return null;
+  if (!city || !service) {
+    cityServiceCache.set(cacheKey, null);
+    return null;
+  }
 
   // Every other service in this city, not a fixed first-four slice. The slice
   // meant all 144 pages pointed at the same 4 destinations, so the remaining
@@ -121,7 +133,7 @@ export function getCityServiceData(
   if (description.length > 155) description = description.replace(' Get a free quote.', ' Free quote.');
   const canonicalUrl = buildCanonicalUrl(`/locations/${city.slug}/${service.slug}`);
 
-  return {
+  const data: CityServicePageData = {
     cityName: city.name,
     citySlug: city.slug,
     province: city.province,
@@ -151,6 +163,9 @@ export function getCityServiceData(
     description,
     canonicalUrl,
   };
+
+  cityServiceCache.set(cacheKey, data);
+  return data;
 }
 
 // Generate all possible city+service combinations for static params
