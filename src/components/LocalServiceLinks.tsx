@@ -22,6 +22,12 @@ export default function LocalServiceLinks({ citySlug, cityName }: { citySlug: st
         Our services in {cityName}
       </p>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+        <Link href="/" className="pill" style={navigationLinkStyle}>
+          Mapletech Labs home
+        </Link>
+        <Link href="/services" className="pill" style={navigationLinkStyle}>
+          All software services
+        </Link>
         <Link href={`/locations/software-development-company-in-${citySlug}`} className="pill" style={navigationLinkStyle}>
           Software development in {cityName}
         </Link>

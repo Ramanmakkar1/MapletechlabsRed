@@ -48,12 +48,32 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalPath('/') },
 };
 
+const homepageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://mapletechlabs.ca/#webpage',
+  url: 'https://mapletechlabs.ca/',
+  name: 'Custom Software Development in Canada | Mapletech Labs',
+  description: metadata.description,
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://mapletechlabs.ca/#website',
+    name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca/',
+  },
+  about: { '@id': 'https://mapletechlabs.ca/#organization' },
+};
+
 /* One continuous story rather than a stack of card grids: the rhythm
    alternates split / grid / full-bleed photograph / timeline / ink band
    so no two neighbouring sections share a shape. */
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
+      />
       <Navbar />
       <ScrollUI />
       <main id="main-content">

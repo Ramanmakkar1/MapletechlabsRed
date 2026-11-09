@@ -239,6 +239,19 @@ export default function LocationPageTemplate(p: LocationProps) {
         {quote ? <CityTestimonial quote={quote} cityName={name} /> : null}
         <WhyUs />
         <Credentials />
+        <section style={{ padding: 'var(--section-y) 0 0', background: 'var(--surface)' }}>
+          <div className="cb-container">
+            <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Explore Mapletech Labs</h3>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              <Link href="/" className="pill">Mapletech Labs home</Link>
+              <Link href="/services/web-development" className="pill">Web development</Link>
+              <Link href="/services/mobile-app-development" className="pill">Mobile app development</Link>
+              <Link href="/services/ai-ml" className="pill">AI development</Link>
+              <Link href="/services/product-design" className="pill">UI/UX design</Link>
+              <Link href="/services/digital-marketing" className="pill">SEO and digital marketing</Link>
+            </div>
+          </div>
+        </section>
         <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
           <div className="cb-container">
             <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Every service we offer in {name}</h3>

@@ -276,6 +276,22 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
                   </nav>
                 ))}
 
+                <nav aria-label="Mapletech Labs services" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
+                  <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Explore Mapletech Labs</h2>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    {[
+                      { href: '/', label: 'Mapletech Labs home' },
+                      { href: '/services/web-development', label: 'Web development' },
+                      { href: '/services/mobile-app-development', label: 'Mobile app development' },
+                      { href: '/services/ai-ml', label: 'AI development' },
+                      { href: '/services/product-design', label: 'UI/UX design' },
+                      { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
+                    ].map(link => (
+                      <li key={link.href}><Link href={link.href} className="pill">{link.label}</Link></li>
+                    ))}
+                  </ul>
+                </nav>
+
                 {/* Inline CTA */}
                 <div className="reveal" style={{ marginTop: 'clamp(40px, 5vw, 60px)', padding: 'clamp(28px, 3.5vw, 44px)', borderRadius: 'var(--r-lg)', background: 'var(--surface-ink)', color: 'var(--on-ink-body)' }}>
                   <h2 style={{ color: 'var(--on-ink)', fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Have a project in mind?</h2>

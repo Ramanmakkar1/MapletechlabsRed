@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="cb-container hero-split">
         <div>
           <h1 style={{ marginBottom: 24, maxWidth: '15ch' }}>
-            Custom software that moves Canadian business forward.
+            Custom software development for Canadian businesses.
           </h1>
           <p className="lede" style={{ marginTop: 0, marginBottom: 16, maxWidth: '46ch' }}>
             Mapletech Labs is a custom software development company in Canada, designing and building the digital products ambitious companies
