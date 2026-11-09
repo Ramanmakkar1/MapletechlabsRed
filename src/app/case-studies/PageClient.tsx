@@ -1,16 +1,18 @@
 'use client';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { caseStudyMedia, workMedia } from '@/data/media';
 
 import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import MediaBand from '@/components/MediaBand';
-import FinalCta from '@/components/home/FinalCta';
-import FaqSplit from '@/components/home/FaqSplit';
 import { FaqSchema } from '@/components/ServiceSchema';
+
+const Footer = dynamic(() => import('@/components/Footer'));
+const FinalCta = dynamic(() => import('@/components/home/FinalCta'));
+const FaqSplit = dynamic(() => import('@/components/home/FaqSplit'));
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -229,9 +231,11 @@ export default function CaseStudiesPageClient() {
                         <Image
                           src={caseStudyMedia[cs.slug]?.src ?? workMedia.fintech.src}
                           alt={caseStudyMedia[cs.slug]?.alt ?? cs.title}
-                          fill
+                          width={1200}
+                          height={675}
+                          loading="lazy"
                           sizes="(max-width: 640px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                          style={{ objectFit: 'cover' }}
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                         <div className="media__scrim" aria-hidden />
                         <div style={{ position: 'absolute', left: 20, bottom: 16, zIndex: 1 }}>

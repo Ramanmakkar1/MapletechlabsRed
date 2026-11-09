@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { officeMedia } from '@/data/media';
 import PageHero from '@/components/page/PageHero';
+
+const Footer = dynamic(() => import('@/components/Footer'));
 
 const categories = [
   {
