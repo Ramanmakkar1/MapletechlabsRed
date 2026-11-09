@@ -8,7 +8,14 @@ import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const a = getArticle('software-maintenance-cost-canada')!;
+const source = getArticle('software-maintenance-cost-canada')!;
+const a = {
+  ...source,
+  intro: [
+    ...source.intro,
+    'Need a team for this work? Our <a href="/services/software-maintenance">software maintenance and support service</a> explains what an engagement includes and how it is scoped.',
+  ],
+};
 const URL = `https://mapletechlabs.ca/blog/software-maintenance-cost-canada`;
 
 export const metadata: Metadata = {
