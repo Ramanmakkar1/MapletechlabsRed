@@ -232,6 +232,49 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>How Raman works with clients</h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                Tell us about your project idea during a free project consultation. A senior engineer reads your brief and gets back with honest first thoughts and questions that matter, responding within one working day. This initial conversation helps determine whether custom software, an off-the-shelf solution, or a smaller first release best fits your goals.
+              </p>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                When the project looks like a good fit, the next step is a 30-minute discovery call focused on users, technical constraints, timeline, and budget. This creates a clearer picture of the scope and whether the teams should work together.
+              </p>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                Once you accept, the team is assigned, environments are set up, and the first sprint is planned so you see working software early and often. Most projects run remotely with weekly demos, with in-person meetings when they help.
+              </p>
+            </section>
+
+            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Selected client work</h2>
+              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>AI-Powered Trading Platform</Link>:
+                  a real-time algorithmic trading system powered by machine learning and built for institutional-grade reliability.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)' }}>Enterprise E-Commerce Platform</Link>:
+                  a modern headless architecture that tripled revenue, handles millions of monthly visitors, and delivers fast page loads during peak sales.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/healthcare-telehealth" style={{ color: 'var(--brand)' }}>HIPAA-Compliant Telehealth Platform</Link>:
+                  a compliant telehealth platform connecting patients with specialists through encrypted video, EHR workflows, and a mobile experience.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/logistics-platform" style={{ color: 'var(--brand)' }}>Real-Time Logistics &amp; Fleet Management</Link>:
+                  an intelligent logistics platform combining IoT fleet tracking, ML route optimization, and a real-time operations dashboard.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/payments-api-platform" style={{ color: 'var(--brand)' }}>PCI DSS Payments API</Link>:
+                  a production-grade payments processing API certified for PCI DSS compliance and built to handle transactions securely and reliably.
+                </li>
+                <li>
+                  <Link href="/case-studies/real-estate-portal" style={{ color: 'var(--brand)' }}>ML-Powered Real Estate Platform</Link>:
+                  a multi-listing real estate portal with machine-learning property recommendations serving active listings across Canada.
+                </li>
+              </ul>
+            </section>
+
+            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
               <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '20px' }}>Published articles</h2>
               <div style={{ display: 'grid', gap: '12px', maxWidth: '800px' }}>
                 {[
