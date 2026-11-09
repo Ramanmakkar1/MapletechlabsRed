@@ -40,6 +40,18 @@ const nextConfig: NextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         ],
       },
+      // Other HTML pages. Middleware no longer runs on them; browsers still
+      // revalidate and the CDN keeps the copy for 1 h. /api, /_next and files
+      // are excluded so they keep Next's own cache headers. The key pages
+      // below replace this value.
+      {
+        source: '/((?!api|_next|.*\\..*).*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/',
+        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
+      },
       {
         source: '/case-studies',
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
@@ -49,7 +61,7 @@ const nextConfig: NextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
       },
       {
-        source: '/industries/fintech',
+        source: '/industries/:slug',
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' }],
       },
       {
