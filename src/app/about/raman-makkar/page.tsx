@@ -229,7 +229,7 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Areas of focus</h2>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Services Raman leads</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 Raman and the Mapletech Labs team deliver custom digital products and long-term engineering support for
                 businesses across Canada. Explore the work through <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>{' '}
@@ -243,6 +243,10 @@ export default function RamanPage() {
                 or <Link href="/contact" style={{ color: 'var(--brand)' }}>contact the team</Link> to discuss a project.
               </p>
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/services/saas-development" style={{ color: 'var(--brand)' }}>custom SaaS development services</Link>:
+                  build and scale subscription software products and SaaS platforms for growing businesses.
+                </li>
                 <li style={{ marginBottom: '12px' }}>
                   <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>Custom software and web development</Link>:
                   build scalable web applications, portals, and SaaS products tailored to real business workflows.
@@ -311,10 +315,14 @@ export default function RamanPage() {
             </div>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Work and case studies</h2>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Selected work</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 Explore the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>{' '}
                 for project details and results, or start with one of the selected examples below.
+              </p>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Learn more about the company on the <Link href="/about" style={{ color: 'var(--brand)' }}>Mapletech Labs about page</Link>,
+                or <Link href="/contact" style={{ color: 'var(--brand)' }}>contact the team</Link> to discuss a similar project.
               </p>
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
                 <li style={{ marginBottom: '12px' }}>
