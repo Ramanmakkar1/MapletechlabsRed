@@ -162,7 +162,7 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
   }
 }
 
-export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode }) {
+export default function ArticleTemplate({ a, related = [], cityLinks, extraBlock }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode; extraBlock?: ReactNode }) {
   const pageRef = useReveal();
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
   const projectService = SLUG_PROJECT_SERVICE[a.slug];
@@ -276,6 +276,8 @@ export default function ArticleTemplate({ a, related = [], cityLinks }: { a: Art
                     </ul>
                   </nav>
                 ))}
+
+                {extraBlock}
 
                 <nav aria-label="Mapletech Labs services" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
                   <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Explore Mapletech Labs</h2>

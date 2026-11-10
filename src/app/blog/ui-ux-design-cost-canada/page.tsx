@@ -1,5 +1,6 @@
 import { BLOG_AUTHOR } from '@/lib/seo/business';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
@@ -44,7 +45,18 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'ui-ux-design-cost-canada')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} />
+      <ArticleTemplate
+        a={a}
+        related={getRelatedArticles(a.slug)}
+        extraBlock={
+          <div className="reveal" style={{ marginBottom: 56 }}>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 16 }}>Related services</p>
+            <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
+              Need a team to design it? Explore our <Link href="/services/product-design/ui-ux-strategy" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>UI/UX strategy services in Canada</Link>.
+            </p>
+          </div>
+        }
+      />
     </>
   );
 }
