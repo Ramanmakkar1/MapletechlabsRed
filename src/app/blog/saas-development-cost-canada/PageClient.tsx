@@ -10,6 +10,8 @@ import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
+import GuideFaq from '@/components/blog/GuideFaq';
+import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 const LINK: CSSProperties = { color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' };
 
@@ -610,6 +612,13 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
         <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
           <div className="cb-container">
             <BlogCityLinks serviceSlug="saas-development" />
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section style={{ paddingBottom: 'var(--section-y)' }}>
+          <div className="cb-container">
+            <GuideFaq faqs={GUIDE_FAQS['saas-development-cost-canada']} />
           </div>
         </section>
 

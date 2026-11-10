@@ -9,6 +9,8 @@ import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import { AGENCY_CITIES } from '@/data/serviceCity';
+import GuideFaq from '@/components/blog/GuideFaq';
+import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 const AGENCY_CITY_NAMES: Record<(typeof AGENCY_CITIES)[number], string> = {
   edmonton: 'Edmonton',
@@ -618,6 +620,13 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
               </aside>
 
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section style={{ paddingBottom: 'var(--section-y)' }}>
+          <div className="cb-container">
+            <GuideFaq faqs={GUIDE_FAQS['digital-marketing-cost-canada']} />
           </div>
         </section>
 
