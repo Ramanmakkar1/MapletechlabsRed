@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'SaaS Development Cost in Canada (2026)';
 const DESCRIPTION = 'SaaS development cost in Canada: compare CAD ranges from an MVP to enterprise, plus budget drivers, timelines, and how to plan the build before you hire.';
@@ -13,7 +14,7 @@ const DATE = '2026-03-06';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: ogTitle(TITLE),
     description: DESCRIPTION,

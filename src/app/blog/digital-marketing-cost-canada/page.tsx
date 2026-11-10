@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'How Much Does Digital Marketing Cost in Canada? (2026)';
 const DESCRIPTION = 'Digital marketing cost in Canada for 2026: monthly CAD ranges for SEO, Google Ads, social media and content, plus what drives the price before you hire.';
@@ -13,7 +14,7 @@ const DATE = '2026-03-10';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Top 10 AI Development Companies in Canada';
 const DESCRIPTION = 'A researched ranking of the best AI and machine-learning development companies in Canada for 2026, with how to choose the right partner for your project.';
@@ -13,7 +14,7 @@ const DATE = '2026-02-14';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

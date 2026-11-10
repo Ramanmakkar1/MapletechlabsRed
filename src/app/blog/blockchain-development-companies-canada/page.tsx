@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Top 10 Blockchain Development Companies in Canada (2026)';
 const DESCRIPTION = 'The best blockchain and Web3 development companies in Canada for 2026, compared on services and track record, plus how to choose the right partner.';
@@ -13,7 +14,7 @@ const DATE = '2026-03-03';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

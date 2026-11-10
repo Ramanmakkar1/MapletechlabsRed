@@ -7,13 +7,14 @@ import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const a = getArticle('sred-software-development-canada')!;
 const URL = `https://mapletechlabs.ca/blog/sred-software-development-canada`;
 
 export const metadata: Metadata = {
   title: seoTitle(a.metaTitle),
-  description: a.metaDescription,
+  description: seoDescription(a.metaDescription),
   openGraph: {
     title: a.metaTitle,
     description: a.metaDescription,

@@ -6,6 +6,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Top 10 Edmonton App Development Companies';
 const DESCRIPTION = 'The best mobile app development companies in Edmonton, Alberta for 2026, compared on services and track record, plus how to pick the right app team.';
@@ -14,7 +15,7 @@ const DATE = '2026-02-24';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: ogTitle(TITLE),
     description: DESCRIPTION,

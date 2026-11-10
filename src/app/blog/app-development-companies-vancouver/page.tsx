@@ -9,13 +9,14 @@ import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const a = getArticle('app-development-companies-vancouver')!;
 const URL = `https://mapletechlabs.ca/blog/app-development-companies-vancouver`;
 
 export const metadata: Metadata = {
   title: seoTitle(a.metaTitle),
-  description: a.metaDescription,
+  description: seoDescription(a.metaDescription),
   openGraph: {
     title: a.metaTitle,
     description: a.metaDescription,

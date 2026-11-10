@@ -5,6 +5,7 @@ import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'From Idea to MRR: How to Build a Profitable SaaS in 2026';
 const DESCRIPTION = 'From validating an idea to your first paying customers: a practical, Canadian founder\u2019s guide to building a profitable SaaS product in 2026.';
@@ -13,7 +14,7 @@ const DATE = '2026-01-08';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

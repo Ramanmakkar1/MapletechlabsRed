@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'How to Choose a Software Development Company in Canada';
 const DESCRIPTION = 'How to choose a software development company in Canada: what to look for, questions to ask, pricing models, red flags, and how to compare your shortlist.';
@@ -13,7 +14,7 @@ const DATE = '2026-02-05';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

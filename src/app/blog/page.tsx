@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { articles } from '@/data/articles';
 
 const TITLE = 'Software Development Blog: Costs, Guides & Rankings';
@@ -13,7 +14,7 @@ const LAST_MODIFIED = articles.reduce(
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
