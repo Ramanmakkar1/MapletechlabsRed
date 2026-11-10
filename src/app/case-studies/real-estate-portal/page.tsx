@@ -7,7 +7,7 @@ import { seoTitle } from '@/lib/seo/title';
 
 const NAME = 'ML-Powered Real Estate Portal';
 const TITLE = 'Real Estate Portal Case Study: ML Search, 850K+ Listings';
-const DESCRIPTION = 'How Mapletech Labs built PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.';
+const DESCRIPTION = 'How Mapletech Labs built PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings. See the results.';
 
 const SLUG = 'real-estate-portal';
 
