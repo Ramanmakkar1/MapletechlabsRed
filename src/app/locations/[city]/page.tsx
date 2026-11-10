@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { cache } from 'react';
 import { notFound } from 'next/navigation';
 import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline } from '@/data/serviceCity';
 import { getCityServiceData } from '@/data/city-service';
@@ -30,12 +31,15 @@ const META_OVERRIDES: Record<string, { title: string; description: string }> = {
 // Keep the large hand-written copy catalog out of the route's initial server
 // chunk. The module is loaded only for keyword pages that need local copy, and
 // remains cached by the server module loader for subsequent requests.
-const localFor = async (slug: string): Promise<ServiceCityLocal | undefined> => {
+const localFor = cache(async (slug: string): Promise<ServiceCityLocal | undefined> => {
   const { SERVICE_CITY_LOCAL } = await import('@/data/service-city-local');
   return Object.prototype.hasOwnProperty.call(SERVICE_CITY_LOCAL, slug)
     ? SERVICE_CITY_LOCAL[slug]
     : undefined;
-};
+});
+
+const getCombo = cache((slug: string) => getServiceCityCombo(slug));
+const getData = cache((citySlug: string, serviceSlug: string) => getCityServiceData(citySlug, serviceSlug));
 
 export function generateStaticParams() {
   return serviceCitySlugs.map(slug => ({ city: slug }));
@@ -46,9 +50,9 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { city: slug } = await params;
-  const combo = getServiceCityCombo(slug);
+  const combo = getCombo(slug);
   if (!combo) return {};
-  const data = getCityServiceData(combo.citySlug, combo.serviceSlug);
+  const data = getData(combo.citySlug, combo.serviceSlug);
   if (!data) return {};
   const isAgencyPage = combo.slug.startsWith('digital-marketing-agency-in-');
   const headline = isAgencyPage ? 'Digital Marketing Agency' : priorityCompanyHeadline(combo.serviceSlug, combo.label);
@@ -68,10 +72,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ServiceCityPage({ params }: PageProps) {
   const { city: slug } = await params;
-  const combo = getServiceCityCombo(slug);
+  const combo = getCombo(slug);
   if (!combo) notFound();
 
-  const raw = getCityServiceData(combo.citySlug, combo.serviceSlug);
+  const raw = getData(combo.citySlug, combo.serviceSlug);
   if (!raw) notFound();
 
   // Display the keyword label (e.g. "AI Development") rather than the formal
