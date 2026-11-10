@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'shopify-vs-custom-ecommerce-canada', category: 'Business',
+    title: 'Shopify vs Custom Ecommerce: A Canadian Decision Guide',
+    excerpt: 'Shopify vs custom ecommerce in Canada: when Shopify fits, when custom development is justified, costs, integrations, scaling and a decision checklist.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'ui-ux-design-cost-canada', category: 'Business',
     title: 'UI/UX Design Cost in Canada (2026 Guide)',
     excerpt: 'What UI/UX design actually costs in Canada in 2026: CAD ranges for MVP, full product and enterprise design, the five cost drivers, and what each tier includes.',
