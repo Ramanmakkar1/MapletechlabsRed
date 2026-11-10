@@ -19,7 +19,7 @@ import { work, type WorkItem } from '@/data/work';
 import { serviceCategories } from '@/data/nav';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
-import { contactHrefFor } from '@/lib/enquiryContext';
+import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 import type { Faq, HeroCopy, IndustryCard, ServiceCard, Stat, Step, TechCategory } from './types';
 
 const heroShots = [officeMedia.open, officeMedia.desk, officeMedia.meeting];
@@ -43,6 +43,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <ServiceCityLinks serviceSlug={slug} serviceName={name} />
         <MediaBand media={serviceMedia[slug] ?? defaultMedia} />
         <ProcessSteps title={`How we deliver your ${name} project`} steps={steps} />
+        <DiscoveryScoping slug={slug} name={name} contactHref={contactHref} />
         <ServicePricing serviceSlug={slug} serviceName={name} />
         <SuccessStories />
         {results?.length ? <ResultsBand items={results} /> : null}
@@ -59,6 +60,52 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
       </main>
       <Footer />
     </>
+  );
+}
+
+/* Discovery and fixed-price scoping. Reuses the process already described on
+   /contact and /pricing; it does not repeat price ranges or FAQ answers. */
+function DiscoveryScoping({ slug, name, contactHref }: { slug: string; name: string; contactHref: string }) {
+  const projectType = SERVICE_PROJECT_TYPE[slug];
+  const items = [
+    {
+      title: 'Free 30-minute discovery call',
+      body: 'A senior engineer talks through your goals, the users you are serving, technical or budget constraints and your timeline, then says honestly whether custom software, an off-the-shelf tool or a smaller first release fits best.',
+    },
+    {
+      title: 'Written scope and fixed price',
+      body: 'Within a few days, usually no more than a week, you get a fixed-price or phased proposal: scope, deliverables, milestones, a schedule and a breakdown of where every dollar goes.',
+    },
+    {
+      title: 'A clear answer on project fit',
+      body: 'If we are not the right team for the job, we will say so on the call. Your idea stays under NDA from the first conversation, and the proposal is signed before any further details are exchanged.',
+    },
+  ];
+  return (
+    <section style={{ padding: 'var(--section-y-sm) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container">
+        <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 12px' }}>
+          Discovery, scope and a fixed price before we build
+        </h2>
+        <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 24px', maxWidth: 760 }}>
+          Every {name} project starts with a free 30-minute discovery call. We use it to understand your users, technical constraints, timeline and budget, then agree a written scope and a fixed price in CAD before any code is written.
+        </p>
+        <div className="grid grid--3">
+          {items.map(item => (
+            <article key={item.title} className="tile" style={{ padding: 'clamp(18px, 3vw, 22px)', minWidth: 0 }}>
+              <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>{item.title}</h3>
+              <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.65, margin: 0 }}>{item.body}</p>
+            </article>
+          ))}
+        </div>
+        <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '22px 0 0' }}>
+          <Link href={contactHref} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'none' }}>
+            Start a {name} enquiry
+          </Link>
+          {projectType ? ` — the form opens with ${projectType} selected, so the right team picks it up.` : '.'}
+        </p>
+      </div>
+    </section>
   );
 }
 
