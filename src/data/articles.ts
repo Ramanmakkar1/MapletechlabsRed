@@ -45,6 +45,8 @@ export interface Article {
   keyTakeaways: string[];
   faqs: { q: string; a: string }[];
   cta: { href: string; label: string };
+  /** Optional matching service page for internal linking from the article. */
+  relatedService?: { href: string; label: string };
   /** Optional service + city context carried into the /contact enquiry. */
   enquiryContext?: { serviceSlug: string; citySlug?: string };
 }
@@ -53,6 +55,7 @@ export const articles: Article[] = [
   {
     slug: 'healthcare-software-development-canada',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Engineering',
     title: 'Healthcare Software Development in Canada: A Buyer’s Guide',
     dek: 'A practical guide for Canadian healthcare buyers: choose the right project, frame privacy and data residency questions for counsel, plan EHR integration, define a testable scope and compare development partners.',
@@ -152,6 +155,7 @@ export const articles: Article[] = [
   {
     slug: 'agentic-ai-in-production',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'AI/ML',
     title: 'Agentic AI in Production: What Actually Works in 2026',
     dek: 'Agents are the loudest idea in software right now. Here is the honest version — what agentic AI is, where it earns its keep, where it quietly fails, and how to put it into production without betting the business on a demo.',
@@ -230,6 +234,7 @@ export const articles: Article[] = [
   {
     slug: 'saas-ideas-2026',
     relatedTopic: 'saas',
+    relatedService: { href: '/services/saas-development', label: 'SaaS development' },
     category: 'Business',
     title: '12 SaaS Ideas Worth Building in 2026 (and Why)',
     dek: 'Not a listicle of app names, but a way to find ideas that can actually become a business — the shape of a good SaaS opportunity in 2026, with twelve concrete directions grounded in real Canadian market gaps.',
@@ -304,6 +309,7 @@ export const articles: Article[] = [
   {
     slug: 'what-profitable-saas-gets-right',
     relatedTopic: 'saas',
+    relatedService: { href: '/services/saas-development', label: 'SaaS development' },
     category: 'Business',
     title: 'What the Most Profitable SaaS Products Get Right',
     dek: 'The durable SaaS businesses are not the ones with the flashiest features. They win on a handful of unglamorous fundamentals \u2014 retention, expansion, and a moat that deepens over time. Here is what they actually get right.',
@@ -365,6 +371,7 @@ export const articles: Article[] = [
   {
     slug: 'use-claude-for-free',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'AI/ML',
     title: 'How to Use Claude for Free in 2026: A Practical Guide',
     dek: 'Claude is one of the most capable AI assistants available, and you can use a lot of it without paying anything. Here is exactly how the free access works in 2026, what you get, where the limits sit, and how to get more out of every message.',
@@ -434,6 +441,7 @@ export const articles: Article[] = [
   {
     slug: 'run-ai-models-locally-free',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'AI/ML',
     title: 'How to Run AI Models Locally for Free in 2026',
     dek: 'You can run genuinely capable AI models on your own computer — no subscription, nothing leaving your machine. Here is the honest, practical guide: the tools, the open models worth downloading, the hardware you actually need, and where local hits its limits.',
@@ -516,6 +524,7 @@ export const articles: Article[] = [
   {
     slug: 'saas-development-company-canada',
     relatedTopic: 'saas',
+    relatedService: { href: '/services/saas-development', label: 'SaaS development' },
     category: 'Business',
     title: 'How to Choose a SaaS Development Company in Canada (2026)',
     dek: 'The right SaaS development partner decides whether your product scales or stalls. Here is what genuinely separates a strong Canadian SaaS development company from an expensive mistake — and the questions to ask before you sign anything.',
@@ -592,6 +601,7 @@ export const articles: Article[] = [
   {
     slug: 'website-development-company-canada',
     relatedTopic: 'web',
+    relatedService: { href: '/services/web-development', label: 'web development' },
     category: 'Engineering',
     title: 'How to Choose a Website Development Company in Canada (2026)',
     dek: 'Your website is often the first real impression of your business — and the gap between a good build and a cheap one shows up in speed, search rankings and sales. Here is how to choose a website development company in Canada that earns its fee.',
@@ -665,6 +675,7 @@ export const articles: Article[] = [
   {
     slug: 'what-is-agentic-ai',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'AI/ML',
     title: 'What Is Agentic AI? A Plain-English Guide for Business Leaders',
     dek: 'Agentic AI is the phrase behind most of 2026’s AI hype. Here is what it actually means, in plain English — where it genuinely helps a business, where it quietly fails, and how to decide whether it belongs in your operations yet.',
@@ -730,6 +741,7 @@ export const articles: Article[] = [
   {
     slug: 'build-saas-mvp-8-weeks',
     relatedTopic: 'saas',
+    relatedService: { href: '/services/saas-development', label: 'SaaS development' },
     category: 'Business',
     title: 'How to Build a SaaS MVP in 8 Weeks: A Founder’s Playbook',
     dek: 'Eight weeks is enough to launch a real SaaS MVP — but only with ruthless scope and the right decisions early. Here is the week-by-week playbook we use, what to cut, and the honest cases where eight weeks is not realistic.',
@@ -796,6 +808,7 @@ export const articles: Article[] = [
   {
     slug: 'native-vs-cross-platform-vs-pwa',
     relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
     category: 'Engineering',
     title: 'Native vs Cross-Platform vs PWA: Choosing Your App Approach (2026)',
     dek: 'Native, cross-platform or a progressive web app? The wrong choice costs you months and money. Here is a clear, honest way to decide — what each approach is best at, where each falls down, and a simple decision framework.',
@@ -856,6 +869,7 @@ export const articles: Article[] = [
   {
     slug: 'flutter-vs-react-native-canada',
     relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
     category: 'Engineering',
     title: 'Flutter vs React Native in Canada (2026): Which Should You Choose?',
     dek: 'Flutter and React Native both ship iOS and Android apps from one codebase. The right pick depends on your team, your existing code and your product, not on hype. Here is a plain comparison for Canadian businesses.',
@@ -918,6 +932,7 @@ export const articles: Article[] = [
   {
     slug: 'wordpress-vs-headless-cms-canada',
     relatedTopic: 'web',
+    relatedService: { href: '/services/wordpress-cms', label: 'WordPress and CMS development' },
     category: 'Engineering',
     title: 'WordPress vs Headless CMS in Canada: Which to Choose?',
     dek: 'WordPress and headless WordPress share the same admin — but one renders your site while the other powers a Next.js frontend. A plain comparison of cost, speed, SEO, editor experience and maintenance for Canadian businesses.',
@@ -963,6 +978,7 @@ export const articles: Article[] = [
   {
     slug: 'custom-software-vs-off-the-shelf',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'Custom Software vs Off-the-Shelf: How to Decide (2026)',
     dek: 'Building custom software when you could have bought a tool is an expensive mistake — and so is forcing your business into software that does not fit. Here is an honest framework for deciding which is right.',
@@ -1021,6 +1037,7 @@ export const articles: Article[] = [
   {
     slug: 'shopify-vs-custom-ecommerce-canada',
     relatedTopic: 'web',
+    relatedService: { href: '/services/web-development', label: 'custom ecommerce and web development' },
     category: 'Business',
     title: 'Shopify vs Custom Ecommerce: A Canadian Decision Guide',
     dek: 'Shopify is the right answer for most Canadian stores, but not every store. Here is a practical guide to when the platform fits, when custom development may be justified, and how to compare the real costs.',
@@ -1118,6 +1135,7 @@ export const articles: Article[] = [
   {
     slug: 'software-development-companies-vancouver',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'Software Development Companies in Vancouver (2026)',
     dek: 'Vancouver has no shortage of software studios, but the right partner depends on where your team works, who your users are and where your data has to live. Here is how to choose a software development company in Vancouver, what it typically costs, and what to ask on the first call.',
@@ -1193,6 +1211,7 @@ export const articles: Article[] = [
   {
     slug: 'software-development-companies-ottawa',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'Software Development Companies in Ottawa (2026)',
     dek: 'Ottawa is a software market shaped by the federal government, defence, telecom and cybersecurity. Here is how to choose a software development company in Ottawa, what public-sector security and bilingual builds involve, what projects typically cost, and what to ask on the first call.',
@@ -1290,6 +1309,7 @@ export const articles: Article[] = [
   {
     slug: 'software-development-companies-montreal',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'Software Development Companies in Montreal (2026)',
     dek: 'Montreal is a software market shaped by AI research, gaming, aerospace and fintech, and by Quebec rules on privacy and the French language. Here is how to choose a software development company in Montreal, what Law 25 and French-language rules mean for your product, what projects typically cost, and what to ask on the first call.',
@@ -1397,6 +1417,7 @@ export const articles: Article[] = [
   {
     slug: 'nrc-irap-funding-software-canada',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'NRC IRAP Funding for Software Projects in Canada (2026)',
     dek: 'NRC IRAP can help Canadian small and medium-sized businesses pay for technology innovation, including some software projects. Here is what IRAP is, who usually qualifies, how the process works, what software work tends to fit, and how IRAP funding interacts with your SR&ED claim.',
@@ -1493,6 +1514,7 @@ export const articles: Article[] = [
   {
     slug: 'app-privacy-compliance-canada',
     relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
     category: 'Engineering',
     title: 'Privacy Compliance Checklist for Canadian Apps: PIPEDA, Quebec Law 25 and PHIPA (2026)',
     dek: 'Canadian apps answer to more than one privacy law. Here is which law applies to your product, a build checklist for developers covering consent, data residency, breaches, access requests and AI vendors, and what compliance means for your budget and timeline.',
@@ -1577,6 +1599,7 @@ export const articles: Article[] = [
   {
     slug: 'software-maintenance-cost-canada',
     relatedTopic: 'software',
+    relatedService: { href: '/services/software-maintenance', label: 'software maintenance' },
     category: 'Business',
     title: 'Software & App Maintenance Cost in Canada (2026)',
     dek: 'Launch is not the last bill. Here is what software and app maintenance covers, how much Canadian businesses typically budget each month in CAD, how retainers compare with pay-as-you-go and in-house teams, and how to keep the cost down.',
@@ -1669,6 +1692,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-chatbot-development-cost-canada',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'AI/ML',
     title: 'AI Chatbot Development Cost in Canada (2026 Guide)',
     dek: 'What an AI chatbot costs in Canada, which scope decisions change the price, and the buyer questions to ask before you approve a build.',
@@ -1752,6 +1776,7 @@ export const articles: Article[] = [
     {
     slug: 'ai-development-cost-canada',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'AI/ML',
     title: 'AI Development Cost in Canada (2026): Chatbots, LLM Integration and Custom Models',
     dek: 'How much AI development costs in Canada in 2026: ballpark CAD ranges for chatbots, LLM features, automation, vision and custom models, plus what drives the price up or down.',
@@ -1836,6 +1861,7 @@ export const articles: Article[] = [
   {
     slug: 'sred-software-development-canada',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'SR&ED Tax Credits for Software Development in Canada (2026 Guide)',
     dek: 'The SR&ED program can return part of what Canadian companies spend solving real technical problems in software. Here is what qualifies, who can claim and at what rate, which costs count, what records to keep, when to file, and how SR&ED works with agencies and IRAP.',
@@ -1928,6 +1954,7 @@ export const articles: Article[] = [
   {
     slug: 'software-development-companies-toronto',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'Software Development Companies in Toronto (2026): How to Choose',
     dek: 'Toronto is Canada’s largest tech market, shaped by finance, health and AI. Here is how to choose a software development company in Toronto, which Ontario rules to plan for, what projects typically cost, and how to vet a partner before you sign.',
@@ -2024,6 +2051,7 @@ export const articles: Article[] = [
   {
     slug: 'software-development-contract-canada',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'Software Development Contracts in Canada (2026): Fixed Price vs Time & Materials, IP Ownership and a Pre-Signing Checklist',
     dek: 'Before you sign with a software development company, make sure the contract matches how the work will really run. Here is how the three engagement models compare, who owns the code, the clauses to check and the red flags to walk away from.',
@@ -2098,6 +2126,7 @@ export const articles: Article[] = [
   {
     slug: 'ui-ux-design-companies-canada',
     relatedTopic: 'design',
+    relatedService: { href: '/services/product-design', label: 'UI/UX design' },
     category: 'Business',
     title: 'Best UI/UX Design Companies in Canada (2026): How to Choose, Costs and What to Ask',
     dek: 'A UI/UX company should hand you more than nice screens. Here is what a good Canadian design partner actually delivers, what it costs in CAD, a neutral shortlist of well-known studios, and the checklist and red flags that separate real product design from pretty mock-ups.',
@@ -2187,6 +2216,7 @@ export const articles: Article[] = [
   {
     slug: 'ui-ux-design-cost-canada',
     relatedTopic: 'design',
+    relatedService: { href: '/services/product-design', label: 'UI/UX design' },
     category: 'Business',
     title: 'UI/UX Design Cost in Canada (2026 Guide)',
     dek: 'What UI/UX design actually costs in Canada in 2026: CAD ranges for MVP, full product and enterprise design, the five cost drivers, and exactly what each tier includes, so you can compare quotes on equal footing.',
@@ -2253,6 +2283,7 @@ export const articles: Article[] = [
   {
     slug: 'software-development-companies-edmonton',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'Software Development Companies in Edmonton: How to Choose (2026)',
     dek: 'A buyer’s guide for Edmonton businesses hiring a software development company: what custom software should cover for local sectors, what to look for in a partner, typical Canadian costs in CAD, red flags to avoid and ten questions to ask before you sign.',
@@ -2350,6 +2381,7 @@ export const articles: Article[] = [
   {
     slug: 'seo-companies-edmonton',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'SEO Companies in Edmonton: How to Choose One (2026)',
     dek: 'A buyer’s guide for Edmonton businesses hiring an SEO company: what local SEO should cover, what a good agency does in the first 90 days, typical Canadian pricing, the red flags to avoid and the questions to ask before you sign.',
@@ -2453,6 +2485,7 @@ export const articles: Article[] = [
   {
     slug: 'digital-marketing-agencies-edmonton',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'Digital Marketing Agencies in Edmonton: How to Choose',
     dek: 'A buyer’s guide for Edmonton businesses hiring a digital marketing agency: which channels a full-service team should cover, local market realities, retainer pricing in CAD, the first 90 days, red flags and the questions to ask before you sign.',
@@ -2570,6 +2603,7 @@ export const articles: Article[] = [
   {
     slug: 'digital-marketing-agencies-ottawa',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'Digital Marketing Agencies in Ottawa: How to Choose',
     dek: 'A practical buyer guide for Ottawa businesses comparing digital marketing agencies: how to judge SEO, paid campaigns, reporting, engagement scope and budget factors, with the questions to ask before you sign.',
@@ -2704,6 +2738,7 @@ export const articles: Article[] = [
   {
     slug: 'digital-marketing-agencies-calgary',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'Digital Marketing Agencies in Calgary: How to Choose',
     dek: 'A buyer’s guide for Calgary businesses comparing digital marketing agencies: how to judge fit for energy, construction, fintech and service firms, what SEO, Google Ads and social work cost in CAD, what a proposal must spell out, and the red flags to walk away from.',
@@ -2799,6 +2834,7 @@ export const articles: Article[] = [
   {
     slug: 'digital-marketing-agencies-toronto',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'Digital Marketing Agencies in Toronto: How to Choose',
     dek: 'A buyer’s guide for Toronto and GTA businesses comparing digital marketing agencies: how to cut through a crowded market, what SEO, paid search and social work cost in CAD, what a proposal should commit to, and the warning signs that cost companies money.',
@@ -2893,6 +2929,7 @@ export const articles: Article[] = [
   {
     slug: 'digital-marketing-agencies-vancouver',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'Digital Marketing Agencies in Vancouver: How to Choose',
     dek: 'A buyer’s guide for Vancouver and Lower Mainland businesses comparing digital marketing agencies: how to match an agency to tech, tourism, real estate and e-commerce audiences, what SEO, paid search and social cost in CAD, and the red flags to avoid.',
@@ -2988,6 +3025,7 @@ export const articles: Article[] = [
   {
     slug: 'app-development-companies-calgary',
     relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
     category: 'Business',
     title: 'App Development Companies in Calgary: How to Choose One (2026)',
     dek: 'A buyer’s guide for Calgary businesses hiring an app development company: what local companies build, native vs cross-platform vs PWA, what a good team does from discovery to launch, Canadian costs in CAD, red flags and ten questions to ask before you sign.',
@@ -3093,6 +3131,7 @@ export const articles: Article[] = [
   {
     slug: 'app-development-companies-vancouver',
     relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
     category: 'Business',
     title: 'App Development Companies in Vancouver: How to Choose One (2026)',
     dek: 'A buyer’s guide for Vancouver and BC businesses hiring an app development company: what a good team delivers, native vs cross-platform vs PWA, BC PIPA and PIPEDA privacy, Canadian costs in CAD, red flags and ten questions to ask before you sign.',
@@ -3192,6 +3231,7 @@ export const articles: Article[] = [
   {
     slug: 'web-development-companies-vancouver',
     relatedTopic: 'web',
+    relatedService: { href: '/services/web-development', label: 'web development' },
     category: 'Business',
     title: 'Web Development Companies in Vancouver: How to Choose One (2026)',
     dek: 'A buyer’s guide for Vancouver and BC businesses hiring a web development company: marketing sites vs web apps vs e-commerce and portals, Next.js and headless CMS stack questions, Core Web Vitals and SEO-readiness, WCAG 2.1 AA accessibility, BC PIPA and PIPEDA, CAD cost ranges, code and hosting ownership, red flags and ten questions to ask.',
@@ -3332,6 +3372,7 @@ export const articles: Article[] = [
   {
     slug: 'app-development-companies-toronto',
     relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
     category: 'Business',
     title: 'App Development Companies in Toronto: How to Choose One (2026)',
     dek: 'A buyer’s guide for Toronto and GTA businesses hiring an app development company: fintech, health and retail apps, local vs remote teams, native vs cross-platform vs PWA, AODA accessibility, Ontario privacy law, CAD costs, red flags and ten questions to ask.',
@@ -3449,6 +3490,7 @@ export const articles: Article[] = [
   {
     slug: 'seo-companies-calgary',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'SEO Companies in Calgary: A Buyer’s Guide (2026)',
     dek: 'A buyer’s guide for Calgary businesses hiring an SEO company: map-pack work for trades and clinics, separate searches in Airdrie, Cochrane, Okotoks and Chestermere, technical B2B searches, the first 90 days, Canadian pricing, AI-answer visibility, red flags and ten questions to ask.',
@@ -3557,6 +3599,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-development-companies-toronto',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'Business',
     title: 'AI Development Companies in Toronto: How to Choose One (2026)',
     dek: 'A buyer’s guide for Toronto and GTA businesses hiring an AI development company: LLM features, RAG chatbots on your documents, automation and vision, local vs remote teams, PIPEDA, PHIPA and OSFI rules, CAD cost ranges, red flags and ten questions to ask.',
@@ -3657,6 +3700,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-development-companies-edmonton',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'Business',
     title: 'AI Development Companies in Edmonton: How to Choose One (2026)',
     dek: 'A buyer’s guide for Edmonton and Alberta organisations hiring an AI development company: LLM apps, RAG chatbots, automation, vision and forecasting, Alberta PIPA and PIPEDA, Canadian data residency, CAD costs, SR&ED and IRAP funding, red flags and ten questions to ask.',
@@ -3764,6 +3808,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-development-companies-calgary',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'Business',
     title: 'AI Development Companies in Calgary: How to Choose One (2026)',
     dek: 'A buyer’s guide for Calgary energy, agtech, fintech and logistics companies hiring an AI development company: LLM and RAG apps, automation, forecasting, Alberta PIPA and PIPEDA, Canadian data residency, CAD costs, SR&ED and IRAP funding, red flags and ten questions to ask.',
@@ -3876,6 +3921,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-development-companies-vancouver',
     relatedTopic: 'ai',
+    relatedService: { href: '/services/ai-ml', label: 'AI development' },
     category: 'Technology',
     title: 'AI Development Companies in Vancouver: How to Choose One (2026)',
     dek: 'A buyer’s guide for Vancouver and BC businesses hiring an AI development company: chatbots on your own documents, AI features for SaaS, film and VFX asset search, port and logistics paperwork, BC PIPA and FIPPA, Canadian data residency, CAD costs and five FAQs.',
@@ -3958,6 +4004,7 @@ export const articles: Article[] = [
   {
     slug: 'ui-ux-design-companies-toronto',
     relatedTopic: 'design',
+    relatedService: { href: '/services/product-design', label: 'UI/UX design' },
     category: 'Business',
     title: 'UI/UX Design Companies in Toronto: How to Choose One (2026)',
     dek: 'A buyer’s guide for Toronto and GTA teams hiring a UI/UX design company: what you should receive from research through handoff, fintech and SaaS context, AODA and WCAG 2.0 AA, CAD pricing, red flags and ten questions to ask.',
@@ -4053,6 +4100,7 @@ export const articles: Article[] = [
   {
     slug: 'ui-ux-design-companies-vancouver',
     relatedTopic: 'design',
+    relatedService: { href: '/services/product-design', label: 'UI/UX design' },
     category: 'Business',
     title: 'UI/UX Design Companies in Vancouver: How to Choose',
     dek: 'A practical buyer’s guide for Vancouver and Lower Mainland product teams: what a UI/UX engagement should include, SaaS, gaming, health tech and clean-tech context, WCAG and the Accessible British Columbia Act, portfolio checks, CAD pricing, red flags and questions to ask.',
@@ -4163,6 +4211,7 @@ export const articles: Article[] = [
   {
     slug: 'ui-ux-design-companies-edmonton',
     relatedTopic: 'design',
+    relatedService: { href: '/services/product-design', label: 'UI/UX design' },
     category: 'Business',
     title: 'UI/UX Design Companies in Edmonton: How to Choose One (2026)',
     dek: 'A buyer’s guide for Edmonton and Alberta teams hiring a UI/UX design company: what research, wireframes, prototypes and design systems include, usability testing with real users, WCAG 2.1 AA and public-sector expectations, CAD pricing, red flags and ten questions to ask.',
@@ -4306,6 +4355,7 @@ export const articles: Article[] = [
   {
     slug: 'ui-ux-design-companies-calgary',
     relatedTopic: 'design',
+    relatedService: { href: '/services/product-design', label: 'UI/UX design' },
     category: 'Business',
     title: 'UI/UX Design Companies in Calgary: How to Choose One (2026)',
     dek: 'A buyer’s guide for Calgary teams hiring a UI/UX design company: field tools for energy crews, fintech and trading dashboards, dispatch screens, how to judge a portfolio and a discovery process, who owns the design system, fixed CAD pricing, post-launch support and five FAQs.',
@@ -4388,6 +4438,7 @@ export const articles: Article[] = [
   {
     slug: 'web-development-companies-edmonton',
     relatedTopic: 'web',
+    relatedService: { href: '/services/web-development', label: 'web development' },
     category: 'Business',
     title: 'Web Development Companies in Edmonton: How to Choose One (2026)',
     dek: 'A buyer’s guide for Edmonton businesses hiring a web development company: trades and clinics across the capital region, B2B energy and public-sector portals, e-commerce, website vs web app vs portal, the first 30/60/90 days, CAD pricing, speed and accessibility, red flags and ten questions to ask.',
@@ -4496,6 +4547,7 @@ export const articles: Article[] = [
   {
     slug: 'seo-companies-toronto',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'SEO Companies in Toronto: How to Choose One (2026)',
     dek: 'A buyer’s guide for Toronto and GTA businesses hiring an SEO company: downtown vs suburb searches, Google Business Profile and the map pack, technical SEO, content and links, the first 90 days, Canadian pricing in CAD, AI-answer visibility, red flags and ten questions to ask.',
@@ -4611,6 +4663,7 @@ export const articles: Article[] = [
   {
     slug: 'seo-companies-vancouver',
     relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
     category: 'Business',
     title: 'SEO Companies in Vancouver: How to Choose One (2026)',
     dek: 'A buyer’s guide for Vancouver and Lower Mainland businesses hiring an SEO company: the Metro Vancouver map pack, Burnaby, Surrey, Richmond and North Vancouver searches, multilingual SEO, the first 90 days, Canadian pricing in CAD, AI-answer visibility, red flags and ten questions to ask.',
@@ -4767,6 +4820,7 @@ export const articles: Article[] = [
   {
     slug: 'mobile-app-development-company-canada',
     relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
     category: 'Business',
     title: 'How to Choose a Mobile App Development Company in Canada',
     dek: 'A buyer-focused guide for Canadian businesses: when to hire an app development company, which platform fits, what the process includes, how CAD pricing works and what to ask before signing.',
