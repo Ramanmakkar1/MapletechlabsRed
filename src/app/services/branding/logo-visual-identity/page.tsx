@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: seoTitle('Logo & Visual Identity Design in Canada'),
-  description: 'Professional logo and visual identity design by Mapletech Labs. Memorable logos, color systems, and typography that define your brand. 200+ logos. Book now',
+  description: 'Logo and visual identity design for Canadian brands by Mapletech Labs. Memorable logos, colour systems, and typography that define your brand. 200+ logos.',
   openGraph: {
     title: 'Logo & Visual Identity Design in Canada | Mapletech Labs',
     description: 'Professional logo and visual identity design by Mapletech Labs. Memorable logos, color systems, and typography that define your brand.',
