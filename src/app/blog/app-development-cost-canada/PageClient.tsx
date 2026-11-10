@@ -8,6 +8,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
+import GuideFaq from '@/components/blog/GuideFaq';
+import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -697,6 +699,12 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
         </section>
 
         <MediaBand media={blogImage(2 + 7)} ratio="21 / 7" />
+
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
+            <GuideFaq faqs={GUIDE_FAQS['app-development-cost-canada']} />
+          </div>
+        </section>
 
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
