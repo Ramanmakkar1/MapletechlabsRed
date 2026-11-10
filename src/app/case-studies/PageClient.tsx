@@ -238,7 +238,7 @@ export default function CaseStudiesPageClient() {
                           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                         <div className="media__scrim" aria-hidden />
-                        <div style={{ position: 'absolute', left: 20, bottom: 16, zIndex: 1 }}>
+                        <div style={{ position: 'absolute', left: 20, bottom: 16, zIndex: 1, pointerEvents: 'none' }}>
                           <div style={{
                             fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 800, color: '#fff',
                             letterSpacing: '-0.03em', lineHeight: 1, textShadow: '0 2px 12px rgba(0,0,0,.4)',
