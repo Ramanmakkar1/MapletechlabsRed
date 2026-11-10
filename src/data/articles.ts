@@ -2615,6 +2615,7 @@ export const articles: Article[] = [
   {
     slug: 'app-development-companies-ottawa',
     relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
     category: 'Business',
     title: 'App Development Companies in Ottawa: How to Choose One (2026)',
     dek: 'A buyer\'s guide for Ottawa and National Capital Region businesses hiring an app development company: government and defence apps, cybersecurity and telecom builds, bilingual and accessibility requirements, native vs cross-platform vs PWA, Ontario and federal privacy law, CAD costs, red flags and ten questions to ask.',
@@ -5155,6 +5156,7 @@ export const articles: Article[] = [
   {
     slug: 'freelancer-vs-agency-vs-in-house-canada',
     relatedTopic: 'software',
+    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
     category: 'Business',
     title: 'Freelancer vs Agency vs In-House Team in Canada (2026)',
     dek: 'Freelancer, software agency, or in-house team: how to choose the right build model for your Canadian project based on budget, timeline, complexity, and post-launch support.',
