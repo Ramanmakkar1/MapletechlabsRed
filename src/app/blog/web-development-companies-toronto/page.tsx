@@ -5,9 +5,9 @@ import LocalServiceLinks from '@/components/LocalServiceLinks';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Web Development Companies in Toronto (2026)';
+const TITLE = 'Web Development Companies in Toronto 2026';
 const DESCRIPTION = 'Web development companies in Toronto for 2026, compared by services and track record, plus a checklist for choosing the right team and questions to ask.';
 const SLUG = 'web-development-companies-toronto';
 const DATE = '2026-02-19';
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
-    title: `${TITLE} | Mapletech Labs`,
+    title: ogTitle(TITLE),
     description: DESCRIPTION,
     type: 'article',
     publishedTime: DATE,
