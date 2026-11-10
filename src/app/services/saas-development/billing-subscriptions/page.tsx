@@ -7,10 +7,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'SaaS Billing & Subscription Integration',
-  description: 'Stripe billing integration for SaaS with subscriptions, dunning, and self-serve portals. Mapletech Labs builds payment infrastructure from Toronto, Canada.',
+  description: 'Stripe billing for SaaS with subscriptions, dunning, and self-serve portals. Mapletech Labs builds infrastructure in Toronto, Canada. Start a project.',
   openGraph: {
     title: 'SaaS Billing & Subscription Integration | Mapletech Labs',
-    description: 'Stripe billing integration for SaaS with subscriptions, dunning, and self-serve portals.',
+    description: 'Stripe billing for SaaS with subscriptions, dunning, and self-serve portals. Mapletech Labs builds infrastructure in Toronto, Canada. Start a project.',
     url: 'https://mapletechlabs.ca/services/saas-development/billing-subscriptions',
     type: 'website',
   },

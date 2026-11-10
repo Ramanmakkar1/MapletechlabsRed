@@ -7,10 +7,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'SaaS Analytics & Dashboard Development',
-  description: 'Product analytics, MRR dashboards, and embedded customer analytics for SaaS. Mapletech Labs builds data-driven SaaS tools from Toronto, Canada.',
+  description: 'SaaS analytics dashboards with product analytics, MRR tracking, and embedded reporting. Mapletech Labs builds tools in Toronto, Canada. Start a project.',
   openGraph: {
     title: 'SaaS Analytics & Dashboard Development | Mapletech Labs',
-    description: 'Product analytics, MRR dashboards, and embedded customer analytics for SaaS.',
+    description: 'SaaS analytics dashboards with product analytics, MRR tracking, and embedded reporting. Mapletech Labs builds tools in Toronto, Canada. Start a project.',
     url: 'https://mapletechlabs.ca/services/saas-development/analytics-dashboards',
     type: 'website',
   },
