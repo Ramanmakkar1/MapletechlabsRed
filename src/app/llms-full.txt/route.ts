@@ -22,7 +22,7 @@ const LEGACY_GUIDE_TITLES: Record<string, string> = {
   'choose-software-development-company-canada': 'How to Choose a Software Development Company in Canada',
   'software-development-companies-calgary': 'Top 10 Software Development Companies in Calgary (2026)',
   'top-seo-companies-canada': 'Top 10 SEO Companies in Canada (2026)',
-  'web-development-companies-toronto': 'Top Web Development Companies in Toronto',
+  'web-development-companies-toronto': 'Top Web Development Companies in Toronto (2026)',
 };
 
 function buildText(): string {

@@ -7,7 +7,7 @@ import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Top Web Development Companies in Toronto';
+const TITLE = 'Top Web Development Companies in Toronto (2026)';
 const DESCRIPTION = 'Web development companies in Toronto for 2026, compared by services and track record, with a checklist for choosing the right team.';
 const SLUG = 'web-development-companies-toronto';
 const DATE = '2026-02-19';
