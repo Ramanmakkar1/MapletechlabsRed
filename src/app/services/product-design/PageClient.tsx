@@ -10,6 +10,9 @@ const stats = [
 ];
 
 const faqs = [
+  { q: 'What can a UI/UX engagement include?', a: 'A UI/UX engagement can include user research and strategy, information architecture, wireframes, interactive prototypes, high-fidelity UI, a design system and developer handoff. It can also include a UX audit, accessibility review and post-launch usability testing, depending on where your product is today.' },
+  { q: 'Should I start with a UX audit or a full redesign?', a: 'Start with a UX audit when the product works but friction, support tickets or metrics show problems you cannot prioritise alone; it gives you a ranked fix list before you commit to a rebuild. A full redesign fits when journeys, information architecture or branding need rethinking across many screens, or when you are launching a new product.' },
+  { q: 'What affects UI/UX project scope and cost?', a: 'Scope and cost are driven by screen count and unique templates, the number of user roles, depth of research, whether a design system already exists, accessibility requirements and timeline. We fix the scope and price in a statement of work after a free audit.' },
   { q: 'How much does UI/UX design cost in Canada?', a: 'UI/UX design ranges from roughly $1,500 CAD for a startup MVP design up to $30,000+ CAD for an enterprise design system. Cost depends on the number of screens, interaction complexity, depth of user research and whether branding is included. We provide a fixed quote after a free audit.' },
   { q: 'How long does a UI/UX design project take?', a: 'Most projects take 6–11 weeks across research, strategy, wireframes, visual design and handoff. Small MVPs can be faster.' },
   { q: 'What do I get at the end of a design project?', a: 'You get Figma files with auto-layout, an interactive prototype, a component library or design system, annotated specs and assets ready for developers.' },
@@ -96,6 +99,7 @@ function BuyerContent() {
     <section aria-labelledby="product-design-hiring-guide" style={{ padding: 'var(--section-y-sm) 0', background: 'var(--surface-alt)' }}>
       <div className="cb-container" style={{ maxWidth: 960, color: 'var(--body)', lineHeight: 1.7 }}>
         <h2 id="product-design-hiring-guide">Planning a UI/UX redesign or new product design engagement</h2>
+        <p className="lede">A UI/UX engagement can include <Link href="/services/product-design/ui-ux-strategy">UX research and strategy</Link>, information architecture, wireframes, interactive prototypes, high-fidelity UI, a design system and developer handoff. Start with a UX audit when the product works but friction is unclear; choose a full redesign when journeys or branding need rethinking across many screens.</p>
         <p className="lede">Whether you are fixing a live product or designing from zero, the right starting point saves budget and shortens time to launch. Use this guide to match scope to outcomes before you request a quote.</p>
         <h3>UX audit versus a full redesign</h3>
         <p className="lede">Choose a <Link href="/services/product-design/ux-audit">UX audit</Link> when the product mostly works but metrics, support tickets or stakeholder feedback point to friction you cannot prioritise alone. You get heuristic review, analytics context and a ranked fix list — ideal before a phased rollout. A full redesign fits when information architecture, branding or core journeys need rethinking across many screens, or when you are launching a new platform and need research through handoff in one programme.</p>
