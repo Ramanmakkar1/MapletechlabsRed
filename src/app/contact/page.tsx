@@ -97,6 +97,39 @@ export default function ContactRoute() {
             <li>Service areas: Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal, with remote work across Canada</li>
           </ul>
         </section>
+        <section aria-labelledby="contact-options">
+          <h2 id="contact-options" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Which way should you contact Mapletech Labs?</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Use the contact form for a detailed project brief, call for an urgent question or a quick scoping chat, or email if you need to send files and existing documents. The form and email get a reply within one working day, and a senior engineer reads every message.
+          </p>
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <caption style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, textAlign: 'left', paddingBottom: '12px' }}>Mapletech Labs contact channels at a glance</caption>
+            <thead>
+              <tr>
+                <th scope="col" style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Channel</th>
+                <th scope="col" style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Best for</th>
+                <th scope="col" style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>What to expect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Contact form on this page</td>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Detailed project briefs, with a service and city preselected from the URL</td>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>A senior engineer replies within one working day</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Phone <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a></td>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Urgent questions or a quick scoping chat</td>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Ask for the free 30-minute discovery call</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a></td>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Sending files, specs or existing documents</td>
+                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Reply within one working day</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
         <section aria-labelledby="contact-next-steps">
           <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you get in touch</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
