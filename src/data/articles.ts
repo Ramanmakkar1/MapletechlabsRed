@@ -10,6 +10,7 @@
  */
 
 import { serviceCityPath } from './serviceCity';
+import { seoDescription } from '@/lib/seo/description';
 
 export type Block =
   | { type: 'h2'; id: string; text: string }
@@ -5041,7 +5042,8 @@ export const articles: Article[] = [
 
 export const articleSlugs = articles.map(a => a.slug);
 export function getArticle(slug: string): Article | undefined {
-  return articles.find(a => a.slug === slug);
+  const found = articles.find(a => a.slug === slug);
+  return found && { ...found, metaDescription: seoDescription(found.metaDescription) };
 }
 
 export interface RelatedArticle {
