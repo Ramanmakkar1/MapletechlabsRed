@@ -112,6 +112,14 @@ export default function SredEstimatorPage() {
                 figures with your accountant.
               </p>
 
+              <h2 style={{ ...h2, marginTop: 48 }}>Next step</h2>
+              <p style={p}>
+                If this R&amp;D is part of a larger build, the next step is to scope it with an engineering team. Our{' '}
+                <Link href="/services" style={{ color: 'var(--ink)', textDecoration: 'underline' }}>software development services in Canada</Link>{' '}
+                cover custom software and SaaS products, and we can help you plan the work so your SR&amp;ED claim reflects
+                real, eligible development.
+              </p>
+
               <h2 style={{ ...h2, marginTop: 48 }}>Frequently asked questions</h2>
               {FAQS.map(f => (
                 <div key={f.q} style={{ borderTop: '1px solid var(--line)', padding: '20px 0' }}>

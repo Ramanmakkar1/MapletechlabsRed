@@ -139,6 +139,13 @@ export default function InHouseVsAgencyPage() {
               </p>
               <Link href="/contact" className="btn btn--primary" style={{ marginTop: 8 }}>Talk to us about your project</Link>
 
+              <h2 style={{ ...h2, marginTop: 48 }}>Next step</h2>
+              <p style={p}>
+                If the numbers point to an agency, the next step is to talk through your project with an engineering team.
+                Our <Link href="/services" style={a}>software development services in Canada</Link> cover custom software,
+                mobile apps and SaaS builds, so you can compare a real quote against the in-house cost above.
+              </p>
+
               <h2 style={{ ...h2, marginTop: 48 }}>Frequently asked questions</h2>
               {FAQS.map(f => (
                 <div key={f.q} style={{ borderTop: '1px solid var(--line)', padding: '20px 0' }}>
