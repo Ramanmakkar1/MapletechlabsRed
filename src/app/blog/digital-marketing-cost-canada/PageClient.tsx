@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
@@ -116,6 +117,11 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
+            <Breadcrumb items={[
+              { label: 'Home', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'How Much Does Digital Marketing Cost in Canada? (2026 Guide)' },
+            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',

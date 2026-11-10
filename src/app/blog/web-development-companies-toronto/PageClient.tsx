@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 
@@ -65,6 +66,11 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
+            <Breadcrumb items={[
+              { label: 'Home', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'Web Development Companies in Toronto 2026' },
+            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
