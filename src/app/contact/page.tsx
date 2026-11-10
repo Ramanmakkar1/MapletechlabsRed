@@ -116,6 +116,19 @@ export default function ContactRoute() {
             To help us reply with useful first thoughts, include the type of project you have in mind, a rough budget range, and your timeline. You do not need exact figures: our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>pricing page lists typical project ranges in CAD</Link> so you can see where your budget sits, and our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development services</Link> show the kinds of work we take on. Share what you know so far and we will confirm the rest on the call.
           </p>
         </section>
+
+        <section aria-labelledby="contact-project-types">
+          <h2 id="contact-project-types" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Which Mapletech Labs service fits your project?</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            The contact form can take a service and a city from the URL, so the quickest way to reach the right team is to pick the closest service from the list below. Choose the option that sounds most like your project, even if it is not an exact match. Each service page explains the work involved, the technology we use and the kind of problems we solve, so it is a useful place to start before you write your brief. If two services seem relevant, mention both in your message. A senior engineer reads every message, and the team confirms the real scope, timeline and budget on the free 30-minute discovery call.
+          </p>
+          <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            {services.slice(0, 8).map(s => <li key={s.slug}><Link href={`/services/${s.slug}`} style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>{s.name}</Link></li>)}
+          </ul>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Not sure which one fits? Describe the problem in the form above and we will point you to the <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>right service</Link> on the call.
+          </p>
+        </section>
       </main>
       <BreadcrumbSchema items={[
         { position: 1, name: 'Home', item: canonicalUrl('/') },
