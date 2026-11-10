@@ -35,105 +35,105 @@
 
 ### Edmonton (headquarters)
 
-- [Software Development Company in Edmonton](https://mapletechlabs.ca/locations/software-development-company-in-edmonton)
-- [AI Development Company in Edmonton](https://mapletechlabs.ca/locations/ai-development-company-in-edmonton)
-- [App Development Company in Edmonton](https://mapletechlabs.ca/locations/app-development-company-in-edmonton)
-- [Web Development Company in Edmonton](https://mapletechlabs.ca/locations/web-development-company-in-edmonton)
-- [UI/UX Design Company in Edmonton](https://mapletechlabs.ca/locations/ui-ux-design-company-in-edmonton)
-- [SaaS Development Company in Edmonton](https://mapletechlabs.ca/locations/saas-development-company-in-edmonton)
-- [SEO Company in Edmonton](https://mapletechlabs.ca/locations/seo-company-in-edmonton)
-- [Digital Marketing Agency in Edmonton](https://mapletechlabs.ca/locations/digital-marketing-agency-in-edmonton)
-- [Cloud & DevOps in Edmonton](https://mapletechlabs.ca/locations/edmonton/cloud-devops)
-- [WordPress & CMS Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/wordpress-cms)
-- [Branding & Creative in Edmonton](https://mapletechlabs.ca/locations/edmonton/branding)
-- [Game Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/game-development)
-- [Blockchain & Web3 Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/blockchain-web3)
-- [AR & VR Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/ar-vr)
+- [Software Development Company in Edmonton](https://mapletechlabs.ca/locations/software-development-company-in-edmonton): Custom software, web and mobile app development for Edmonton businesses, with AI, SaaS, cloud and digital marketing expertise.
+- [AI Development Company in Edmonton](https://mapletechlabs.ca/locations/ai-development-company-in-edmonton): AI and machine learning development for Edmonton businesses building LLM integrations, workflow automation, computer vision or predictive analytics.
+- [App Development Company in Edmonton](https://mapletechlabs.ca/locations/app-development-company-in-edmonton): iOS, Android and cross-platform app development for Edmonton startups and enterprises planning mobile products or MVPs.
+- [Web Development Company in Edmonton](https://mapletechlabs.ca/locations/web-development-company-in-edmonton): Website and web application development for Edmonton businesses needing marketing sites, SaaS platforms, e-commerce systems or portals.
+- [UI/UX Design Company in Edmonton](https://mapletechlabs.ca/locations/ui-ux-design-company-in-edmonton): UI/UX strategy, user research, wireframing and design systems for Edmonton teams building intuitive web or mobile products.
+- [SaaS Development Company in Edmonton](https://mapletechlabs.ca/locations/saas-development-company-in-edmonton): SaaS product development for Edmonton businesses launching MVPs or scaling multi-tenant platforms with billing, authentication and analytics.
+- [SEO Company in Edmonton](https://mapletechlabs.ca/locations/seo-company-in-edmonton): SEO and digital marketing services for Edmonton businesses seeking stronger search visibility, qualified leads and measurable campaign results.
+- [Digital Marketing Agency in Edmonton](https://mapletechlabs.ca/locations/digital-marketing-agency-in-edmonton): SEO, Google Ads, social media and content marketing for Edmonton businesses seeking qualified leads and measurable campaign results.
+- [Cloud & DevOps in Edmonton](https://mapletechlabs.ca/locations/edmonton/cloud-devops): Cloud architecture, migration, Kubernetes and DevOps automation for Edmonton businesses scaling infrastructure, deployments and application performance.
+- [WordPress & CMS Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/wordpress-cms): WordPress, WooCommerce and headless CMS development for Edmonton businesses needing fast, secure, easily managed websites.
+- [Branding & Creative in Edmonton](https://mapletechlabs.ca/locations/edmonton/branding): Brand strategy, visual identity and creative assets for Edmonton businesses launching, repositioning or refreshing their brand.
+- [Game Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/game-development): Mobile, PC and console game development for Edmonton teams creating Unity, Unreal or multiplayer experiences.
+- [Blockchain & Web3 Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/blockchain-web3): Blockchain and Web3 development for Edmonton businesses building smart contracts, DeFi protocols, NFT marketplaces or decentralized applications.
+- [AR & VR Development in Edmonton](https://mapletechlabs.ca/locations/edmonton/ar-vr): AR and VR development for Edmonton businesses creating mobile, WebXR, training, marketing, real estate or entertainment experiences.
 
 ### Calgary
 
-- [Software Development Company in Calgary](https://mapletechlabs.ca/locations/software-development-company-in-calgary)
-- [AI Development Company in Calgary](https://mapletechlabs.ca/locations/ai-development-company-in-calgary)
-- [App Development Company in Calgary](https://mapletechlabs.ca/locations/app-development-company-in-calgary)
-- [Web Development Company in Calgary](https://mapletechlabs.ca/locations/web-development-company-in-calgary)
-- [UI/UX Design Company in Calgary](https://mapletechlabs.ca/locations/ui-ux-design-company-in-calgary)
-- [SaaS Development Company in Calgary](https://mapletechlabs.ca/locations/saas-development-company-in-calgary)
-- [SEO Company in Calgary](https://mapletechlabs.ca/locations/seo-company-in-calgary)
-- [Digital Marketing Agency in Calgary](https://mapletechlabs.ca/locations/digital-marketing-agency-in-calgary)
-- [Cloud & DevOps in Calgary](https://mapletechlabs.ca/locations/calgary/cloud-devops)
-- [WordPress & CMS Development in Calgary](https://mapletechlabs.ca/locations/calgary/wordpress-cms)
-- [Branding & Creative in Calgary](https://mapletechlabs.ca/locations/calgary/branding)
-- [Game Development in Calgary](https://mapletechlabs.ca/locations/calgary/game-development)
-- [Blockchain & Web3 Development in Calgary](https://mapletechlabs.ca/locations/calgary/blockchain-web3)
-- [AR & VR Development in Calgary](https://mapletechlabs.ca/locations/calgary/ar-vr)
+- [Software Development Company in Calgary](https://mapletechlabs.ca/locations/software-development-company-in-calgary): Custom software, web and mobile app development for Calgary businesses, with AI, SaaS, cloud and digital marketing expertise.
+- [AI Development Company in Calgary](https://mapletechlabs.ca/locations/ai-development-company-in-calgary): AI and machine learning development for Calgary businesses building LLM integrations, workflow automation, computer vision or predictive analytics.
+- [App Development Company in Calgary](https://mapletechlabs.ca/locations/app-development-company-in-calgary): iOS, Android and cross-platform app development for Calgary startups and enterprises planning mobile products or MVPs.
+- [Web Development Company in Calgary](https://mapletechlabs.ca/locations/web-development-company-in-calgary): Website and web application development for Calgary businesses needing marketing sites, SaaS platforms, e-commerce systems or portals.
+- [UI/UX Design Company in Calgary](https://mapletechlabs.ca/locations/ui-ux-design-company-in-calgary): UI/UX strategy, user research, wireframing and design systems for Calgary teams building intuitive web or mobile products.
+- [SaaS Development Company in Calgary](https://mapletechlabs.ca/locations/saas-development-company-in-calgary): SaaS product development for Calgary businesses launching MVPs or scaling multi-tenant platforms with billing, authentication and analytics.
+- [SEO Company in Calgary](https://mapletechlabs.ca/locations/seo-company-in-calgary): SEO and digital marketing services for Calgary businesses seeking stronger search visibility, qualified leads and measurable campaign results.
+- [Digital Marketing Agency in Calgary](https://mapletechlabs.ca/locations/digital-marketing-agency-in-calgary): SEO, Google Ads, social media and content marketing for Calgary businesses seeking qualified leads and measurable campaign results.
+- [Cloud & DevOps in Calgary](https://mapletechlabs.ca/locations/calgary/cloud-devops): Cloud architecture, migration, Kubernetes and DevOps automation for Calgary businesses scaling infrastructure, deployments and application performance.
+- [WordPress & CMS Development in Calgary](https://mapletechlabs.ca/locations/calgary/wordpress-cms): WordPress, WooCommerce and headless CMS development for Calgary businesses needing fast, secure, easily managed websites.
+- [Branding & Creative in Calgary](https://mapletechlabs.ca/locations/calgary/branding): Brand strategy, visual identity and creative assets for Calgary businesses launching, repositioning or refreshing their brand.
+- [Game Development in Calgary](https://mapletechlabs.ca/locations/calgary/game-development): Mobile, PC and console game development for Calgary teams creating Unity, Unreal or multiplayer experiences.
+- [Blockchain & Web3 Development in Calgary](https://mapletechlabs.ca/locations/calgary/blockchain-web3): Blockchain and Web3 development for Calgary businesses building smart contracts, DeFi protocols, NFT marketplaces or decentralized applications.
+- [AR & VR Development in Calgary](https://mapletechlabs.ca/locations/calgary/ar-vr): AR and VR development for Calgary businesses creating mobile, WebXR, training, marketing, real estate or entertainment experiences.
 
 ### Toronto
 
-- [Software Development Company in Toronto](https://mapletechlabs.ca/locations/software-development-company-in-toronto)
-- [AI Development Company in Toronto](https://mapletechlabs.ca/locations/ai-development-company-in-toronto)
-- [App Development Company in Toronto](https://mapletechlabs.ca/locations/app-development-company-in-toronto)
-- [Web Development Company in Toronto](https://mapletechlabs.ca/locations/web-development-company-in-toronto)
-- [UI/UX Design Company in Toronto](https://mapletechlabs.ca/locations/ui-ux-design-company-in-toronto)
-- [SaaS Development Company in Toronto](https://mapletechlabs.ca/locations/saas-development-company-in-toronto)
-- [SEO Company in Toronto](https://mapletechlabs.ca/locations/seo-company-in-toronto)
-- [Digital Marketing Agency in Toronto](https://mapletechlabs.ca/locations/digital-marketing-agency-in-toronto)
-- [Cloud & DevOps in Toronto](https://mapletechlabs.ca/locations/toronto/cloud-devops)
-- [WordPress & CMS Development in Toronto](https://mapletechlabs.ca/locations/toronto/wordpress-cms)
-- [Branding & Creative in Toronto](https://mapletechlabs.ca/locations/toronto/branding)
-- [Game Development in Toronto](https://mapletechlabs.ca/locations/toronto/game-development)
-- [Blockchain & Web3 Development in Toronto](https://mapletechlabs.ca/locations/toronto/blockchain-web3)
-- [AR & VR Development in Toronto](https://mapletechlabs.ca/locations/toronto/ar-vr)
+- [Software Development Company in Toronto](https://mapletechlabs.ca/locations/software-development-company-in-toronto): Custom software, web and mobile app development for Toronto businesses, with AI, SaaS, cloud and digital marketing expertise.
+- [AI Development Company in Toronto](https://mapletechlabs.ca/locations/ai-development-company-in-toronto): AI and machine learning development for Toronto businesses building LLM integrations, workflow automation, computer vision or predictive analytics.
+- [App Development Company in Toronto](https://mapletechlabs.ca/locations/app-development-company-in-toronto): iOS, Android and cross-platform app development for Toronto startups and enterprises planning mobile products or MVPs.
+- [Web Development Company in Toronto](https://mapletechlabs.ca/locations/web-development-company-in-toronto): Website and web application development for Toronto businesses needing marketing sites, SaaS platforms, e-commerce systems or portals.
+- [UI/UX Design Company in Toronto](https://mapletechlabs.ca/locations/ui-ux-design-company-in-toronto): UI/UX strategy, user research, wireframing and design systems for Toronto teams building intuitive web or mobile products.
+- [SaaS Development Company in Toronto](https://mapletechlabs.ca/locations/saas-development-company-in-toronto): SaaS product development for Toronto businesses launching MVPs or scaling multi-tenant platforms with billing, authentication and analytics.
+- [SEO Company in Toronto](https://mapletechlabs.ca/locations/seo-company-in-toronto): SEO and digital marketing services for Toronto businesses seeking stronger search visibility, qualified leads and measurable campaign results.
+- [Digital Marketing Agency in Toronto](https://mapletechlabs.ca/locations/digital-marketing-agency-in-toronto): SEO, Google Ads, social media and content marketing for Toronto businesses seeking qualified leads and measurable campaign results.
+- [Cloud & DevOps in Toronto](https://mapletechlabs.ca/locations/toronto/cloud-devops): Cloud architecture, migration, Kubernetes and DevOps automation for Toronto businesses scaling infrastructure, deployments and application performance.
+- [WordPress & CMS Development in Toronto](https://mapletechlabs.ca/locations/toronto/wordpress-cms): WordPress, WooCommerce and headless CMS development for Toronto businesses needing fast, secure, easily managed websites.
+- [Branding & Creative in Toronto](https://mapletechlabs.ca/locations/toronto/branding): Brand strategy, visual identity and creative assets for Toronto businesses launching, repositioning or refreshing their brand.
+- [Game Development in Toronto](https://mapletechlabs.ca/locations/toronto/game-development): Mobile, PC and console game development for Toronto teams creating Unity, Unreal or multiplayer experiences.
+- [Blockchain & Web3 Development in Toronto](https://mapletechlabs.ca/locations/toronto/blockchain-web3): Blockchain and Web3 development for Toronto businesses building smart contracts, DeFi protocols, NFT marketplaces or decentralized applications.
+- [AR & VR Development in Toronto](https://mapletechlabs.ca/locations/toronto/ar-vr): AR and VR development for Toronto businesses creating mobile, WebXR, training, marketing, real estate or entertainment experiences.
 
 ### Vancouver
 
-- [Software Development Company in Vancouver](https://mapletechlabs.ca/locations/software-development-company-in-vancouver)
-- [AI Development Company in Vancouver](https://mapletechlabs.ca/locations/ai-development-company-in-vancouver)
-- [App Development Company in Vancouver](https://mapletechlabs.ca/locations/app-development-company-in-vancouver)
-- [Web Development Company in Vancouver](https://mapletechlabs.ca/locations/web-development-company-in-vancouver)
-- [UI/UX Design Company in Vancouver](https://mapletechlabs.ca/locations/ui-ux-design-company-in-vancouver)
-- [SaaS Development Company in Vancouver](https://mapletechlabs.ca/locations/saas-development-company-in-vancouver)
-- [SEO Company in Vancouver](https://mapletechlabs.ca/locations/seo-company-in-vancouver)
-- [Digital Marketing Agency in Vancouver](https://mapletechlabs.ca/locations/digital-marketing-agency-in-vancouver)
-- [Cloud & DevOps in Vancouver](https://mapletechlabs.ca/locations/vancouver/cloud-devops)
-- [WordPress & CMS Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/wordpress-cms)
-- [Branding & Creative in Vancouver](https://mapletechlabs.ca/locations/vancouver/branding)
-- [Game Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/game-development)
-- [Blockchain & Web3 Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/blockchain-web3)
-- [AR & VR Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/ar-vr)
+- [Software Development Company in Vancouver](https://mapletechlabs.ca/locations/software-development-company-in-vancouver): Custom software, web and mobile app development for Vancouver businesses, with AI, SaaS, cloud and digital marketing expertise.
+- [AI Development Company in Vancouver](https://mapletechlabs.ca/locations/ai-development-company-in-vancouver): AI and machine learning development for Vancouver businesses building LLM integrations, workflow automation, computer vision or predictive analytics.
+- [App Development Company in Vancouver](https://mapletechlabs.ca/locations/app-development-company-in-vancouver): iOS, Android and cross-platform app development for Vancouver startups and enterprises planning mobile products or MVPs.
+- [Web Development Company in Vancouver](https://mapletechlabs.ca/locations/web-development-company-in-vancouver): Website and web application development for Vancouver businesses needing marketing sites, SaaS platforms, e-commerce systems or portals.
+- [UI/UX Design Company in Vancouver](https://mapletechlabs.ca/locations/ui-ux-design-company-in-vancouver): UI/UX strategy, user research, wireframing and design systems for Vancouver teams building intuitive web or mobile products.
+- [SaaS Development Company in Vancouver](https://mapletechlabs.ca/locations/saas-development-company-in-vancouver): SaaS product development for Vancouver businesses launching MVPs or scaling multi-tenant platforms with billing, authentication and analytics.
+- [SEO Company in Vancouver](https://mapletechlabs.ca/locations/seo-company-in-vancouver): SEO and digital marketing services for Vancouver businesses seeking stronger search visibility, qualified leads and measurable campaign results.
+- [Digital Marketing Agency in Vancouver](https://mapletechlabs.ca/locations/digital-marketing-agency-in-vancouver): SEO, Google Ads, social media and content marketing for Vancouver businesses seeking qualified leads and measurable campaign results.
+- [Cloud & DevOps in Vancouver](https://mapletechlabs.ca/locations/vancouver/cloud-devops): Cloud architecture, migration, Kubernetes and DevOps automation for Vancouver businesses scaling infrastructure, deployments and application performance.
+- [WordPress & CMS Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/wordpress-cms): WordPress, WooCommerce and headless CMS development for Vancouver businesses needing fast, secure, easily managed websites.
+- [Branding & Creative in Vancouver](https://mapletechlabs.ca/locations/vancouver/branding): Brand strategy, visual identity and creative assets for Vancouver businesses launching, repositioning or refreshing their brand.
+- [Game Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/game-development): Mobile, PC and console game development for Vancouver teams creating Unity, Unreal or multiplayer experiences.
+- [Blockchain & Web3 Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/blockchain-web3): Blockchain and Web3 development for Vancouver businesses building smart contracts, DeFi protocols, NFT marketplaces or decentralized applications.
+- [AR & VR Development in Vancouver](https://mapletechlabs.ca/locations/vancouver/ar-vr): AR and VR development for Vancouver businesses creating mobile, WebXR, training, marketing, real estate or entertainment experiences.
 
 ### Ottawa
 
-- [Software Development Company in Ottawa](https://mapletechlabs.ca/locations/software-development-company-in-ottawa)
-- [AI Development Company in Ottawa](https://mapletechlabs.ca/locations/ai-development-company-in-ottawa)
-- [App Development Company in Ottawa](https://mapletechlabs.ca/locations/app-development-company-in-ottawa)
-- [Web Development Company in Ottawa](https://mapletechlabs.ca/locations/web-development-company-in-ottawa)
-- [UI/UX Design Company in Ottawa](https://mapletechlabs.ca/locations/ui-ux-design-company-in-ottawa)
-- [SaaS Development Company in Ottawa](https://mapletechlabs.ca/locations/saas-development-company-in-ottawa)
-- [SEO Company in Ottawa](https://mapletechlabs.ca/locations/seo-company-in-ottawa)
-- [Digital Marketing Agency in Ottawa](https://mapletechlabs.ca/locations/digital-marketing-agency-in-ottawa)
+- [Software Development Company in Ottawa](https://mapletechlabs.ca/locations/software-development-company-in-ottawa): Custom software, web and mobile app development for Ottawa businesses, with AI, SaaS, cloud and digital marketing expertise.
+- [AI Development Company in Ottawa](https://mapletechlabs.ca/locations/ai-development-company-in-ottawa): AI and machine learning development for Ottawa businesses building LLM integrations, workflow automation, computer vision or predictive analytics.
+- [App Development Company in Ottawa](https://mapletechlabs.ca/locations/app-development-company-in-ottawa): iOS, Android and cross-platform app development for Ottawa startups and enterprises planning mobile products or MVPs.
+- [Web Development Company in Ottawa](https://mapletechlabs.ca/locations/web-development-company-in-ottawa): Website and web application development for Ottawa businesses needing marketing sites, SaaS platforms, e-commerce systems or portals.
+- [UI/UX Design Company in Ottawa](https://mapletechlabs.ca/locations/ui-ux-design-company-in-ottawa): UI/UX strategy, user research, wireframing and design systems for Ottawa teams building intuitive web or mobile products.
+- [SaaS Development Company in Ottawa](https://mapletechlabs.ca/locations/saas-development-company-in-ottawa): SaaS product development for Ottawa businesses launching MVPs or scaling multi-tenant platforms with billing, authentication and analytics.
+- [SEO Company in Ottawa](https://mapletechlabs.ca/locations/seo-company-in-ottawa): SEO and digital marketing services for Ottawa businesses seeking stronger search visibility, qualified leads and measurable campaign results.
+- [Digital Marketing Agency in Ottawa](https://mapletechlabs.ca/locations/digital-marketing-agency-in-ottawa): SEO, Google Ads, social media and content marketing for Ottawa businesses seeking qualified leads and measurable campaign results.
 
 ### Montreal
 
-- [Software Development Company in Montreal](https://mapletechlabs.ca/locations/software-development-company-in-montreal)
-- [AI Development Company in Montreal](https://mapletechlabs.ca/locations/ai-development-company-in-montreal)
-- [App Development Company in Montreal](https://mapletechlabs.ca/locations/app-development-company-in-montreal)
-- [Web Development Company in Montreal](https://mapletechlabs.ca/locations/web-development-company-in-montreal)
-- [UI/UX Design Company in Montreal](https://mapletechlabs.ca/locations/ui-ux-design-company-in-montreal)
-- [SaaS Development Company in Montreal](https://mapletechlabs.ca/locations/saas-development-company-in-montreal)
-- [SEO Company in Montreal](https://mapletechlabs.ca/locations/seo-company-in-montreal)
-- [Digital Marketing Agency in Montreal](https://mapletechlabs.ca/locations/digital-marketing-agency-in-montreal)
+- [Software Development Company in Montreal](https://mapletechlabs.ca/locations/software-development-company-in-montreal): Custom software, web and mobile app development for Montreal businesses, with AI, SaaS, cloud and digital marketing expertise.
+- [AI Development Company in Montreal](https://mapletechlabs.ca/locations/ai-development-company-in-montreal): AI and machine learning development for Montreal businesses building LLM integrations, workflow automation, computer vision or predictive analytics.
+- [App Development Company in Montreal](https://mapletechlabs.ca/locations/app-development-company-in-montreal): iOS, Android and cross-platform app development for Montreal startups and enterprises planning mobile products or MVPs.
+- [Web Development Company in Montreal](https://mapletechlabs.ca/locations/web-development-company-in-montreal): Website and web application development for Montreal businesses needing marketing sites, SaaS platforms, e-commerce systems or portals.
+- [UI/UX Design Company in Montreal](https://mapletechlabs.ca/locations/ui-ux-design-company-in-montreal): UI/UX strategy, user research, wireframing and design systems for Montreal teams building intuitive web or mobile products.
+- [SaaS Development Company in Montreal](https://mapletechlabs.ca/locations/saas-development-company-in-montreal): SaaS product development for Montreal businesses launching MVPs or scaling multi-tenant platforms with billing, authentication and analytics.
+- [SEO Company in Montreal](https://mapletechlabs.ca/locations/seo-company-in-montreal): SEO and digital marketing services for Montreal businesses seeking stronger search visibility, qualified leads and measurable campaign results.
+- [Digital Marketing Agency in Montreal](https://mapletechlabs.ca/locations/digital-marketing-agency-in-montreal): SEO, Google Ads, social media and content marketing for Montreal businesses seeking qualified leads and measurable campaign results.
 
 ## Pricing and guides
 
 - [Pricing](https://mapletechlabs.ca/pricing): project pricing in CAD.
-- [Website Cost in Canada: 2026 Guide](https://mapletechlabs.ca/blog/website-cost-canada)
+- [Website Cost in Canada: 2026 Guide](https://mapletechlabs.ca/blog/website-cost-canada): 2026 website cost guide for Canadian businesses comparing template, custom and e-commerce builds, CAD ranges and budget factors.
 - [WordPress vs Headless CMS in Canada](https://mapletechlabs.ca/blog/wordpress-vs-headless-cms-canada): compare cost, speed, SEO, editor experience and maintenance to pick the right CMS for your Canadian business.
-- [How Much Does App Development Cost in Canada? (2026 Guide)](https://mapletechlabs.ca/blog/app-development-cost-canada)
-- [AI Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/ai-development-cost-canada)
-- [SaaS Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/saas-development-cost-canada)
-- [Software & App Maintenance Cost in Canada (2026)](https://mapletechlabs.ca/blog/software-maintenance-cost-canada)
-- [Digital Marketing Cost in Canada](https://mapletechlabs.ca/blog/digital-marketing-cost-canada)
-- [Top SEO Companies in Canada](https://mapletechlabs.ca/blog/top-seo-companies-canada)
+- [How Much Does App Development Cost in Canada? (2026 Guide)](https://mapletechlabs.ca/blog/app-development-cost-canada): 2026 app development cost guide for Canadian businesses comparing iOS and Android project ranges, cost drivers and budgeting steps.
+- [AI Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/ai-development-cost-canada): AI development cost guide for Canadian businesses comparing chatbots, LLM integration, automation, computer vision and custom models in CAD.
+- [SaaS Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/saas-development-cost-canada): SaaS development cost guide for Canadian businesses comparing MVP and enterprise CAD ranges, timelines, budget drivers and build planning.
+- [Software & App Maintenance Cost in Canada (2026)](https://mapletechlabs.ca/blog/software-maintenance-cost-canada): Software and app maintenance guide for Canadian businesses covering monthly CAD ranges, retainers, in-house teams and hidden costs.
+- [Digital Marketing Cost in Canada](https://mapletechlabs.ca/blog/digital-marketing-cost-canada): Digital marketing cost guide for Canadian businesses comparing monthly SEO, Google Ads, social media and content budgets in CAD.
+- [Top SEO Companies in Canada](https://mapletechlabs.ca/blog/top-seo-companies-canada): Data-driven comparison of ten Canadian SEO companies for businesses evaluating agency strengths and choosing an SEO partner.
 - [UI/UX Design Cost in Canada (2026 Guide)](https://mapletechlabs.ca/blog/ui-ux-design-cost-canada): what UI/UX design projects cost in CAD, by project type and scope.
 - [Freelancer vs Agency vs In-House Team in Canada (2026)](https://mapletechlabs.ca/blog/freelancer-vs-agency-vs-in-house-canada): how to choose the right build model for your budget, timeline and post-launch support.
 - [Top 10 Blockchain Development Companies in Canada (2026)](https://mapletechlabs.ca/blog/blockchain-development-companies-canada): how to choose a blockchain and Web3 development partner.
@@ -161,12 +161,12 @@
 
 ## Case studies
 
-- [AI-Powered Trading Platform (FinTech, Toronto)](https://mapletechlabs.ca/case-studies/fintech-trading-platform)
-- [HIPAA-Compliant Telehealth Platform (Healthcare, Vancouver)](https://mapletechlabs.ca/case-studies/healthcare-telehealth)
-- [Enterprise E-Commerce Redesign (E-Commerce, Montréal)](https://mapletechlabs.ca/case-studies/ecommerce-platform)
-- [Real-Time Fleet Management System (Logistics, Calgary)](https://mapletechlabs.ca/case-studies/logistics-platform)
-- [PCI DSS Payments API (FinTech, Ottawa)](https://mapletechlabs.ca/case-studies/payments-api-platform)
-- [Multi-Listing Real Estate Platform (Real Estate, Toronto)](https://mapletechlabs.ca/case-studies/real-estate-portal)
+- [AI-Powered Trading Platform (FinTech, Toronto)](https://mapletechlabs.ca/case-studies/fintech-trading-platform): Toronto fintech case study covering an AI trading platform processing 50K+ daily transactions with 99.99% uptime.
+- [HIPAA-Compliant Telehealth Platform (Healthcare, Vancouver)](https://mapletechlabs.ca/case-studies/healthcare-telehealth): Vancouver healthcare case study covering a HIPAA-compliant telehealth platform with 200K+ patient sessions and 99.97% uptime.
+- [Enterprise E-Commerce Redesign (E-Commerce, Montréal)](https://mapletechlabs.ca/case-studies/ecommerce-platform): Montréal e-commerce case study covering a platform supporting 2M+ monthly visitors and driving 3x revenue growth.
+- [Real-Time Fleet Management System (Logistics, Calgary)](https://mapletechlabs.ca/case-studies/logistics-platform): Calgary logistics case study covering real-time fleet management, 15K+ daily deliveries, 25% fuel savings and 98% on-time delivery.
+- [PCI DSS Payments API (FinTech, Ottawa)](https://mapletechlabs.ca/case-studies/payments-api-platform): Ottawa fintech case study covering a PCI DSS certified payments API processing 12 million transactions monthly.
+- [Multi-Listing Real Estate Platform (Real Estate, Toronto)](https://mapletechlabs.ca/case-studies/real-estate-portal): Toronto real estate case study covering ML-powered property recommendations across 850,000+ active listings.
 
 ## Free tools
 
