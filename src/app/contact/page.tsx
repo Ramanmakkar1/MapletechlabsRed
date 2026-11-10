@@ -162,6 +162,21 @@ export default function ContactRoute() {
             Not sure which one fits? Describe the problem in the form above and we will point you to the <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>right service</Link> on the call.
           </p>
         </section>
+
+        <section aria-labelledby="contact-service-areas">
+          <h2 id="contact-service-areas" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Where Mapletech Labs works with clients</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Mapletech Labs is a software development company with its head office in Edmonton, Alberta. Our team has dedicated engineers in Edmonton, Calgary, Toronto and Vancouver, and we work with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal and across Canada. Most projects run remotely with weekly demos, so you can see working software and give feedback as the work moves forward. When a project benefits from meeting in person, we arrange it. Wherever you are in Canada, the first step is the same: send a short project brief and a senior engineer replies within one working day. Choose your city below to see how we work with local businesses.
+          </p>
+          <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            <li><Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Edmonton</Link></li>
+            <li><Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Calgary</Link></li>
+            <li><Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Toronto</Link></li>
+            <li><Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Vancouver</Link></li>
+            <li><Link href="/locations/software-development-company-in-ottawa" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Ottawa</Link></li>
+            <li><Link href="/locations/software-development-company-in-montreal" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Montreal</Link></li>
+          </ul>
+        </section>
       </main>
       <BreadcrumbSchema items={[
         { position: 1, name: 'Home', item: canonicalUrl('/') },
