@@ -10,6 +10,8 @@ const TITLE = 'E-Commerce Platform Case Study: 3x Revenue Growth';
 const DESCRIPTION = 'Mapletech Labs built a high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.';
 const SLUG = 'ecommerce-platform';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,

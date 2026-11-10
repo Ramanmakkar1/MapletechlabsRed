@@ -11,6 +11,8 @@ const DESCRIPTION = 'How Mapletech Labs built PayBridge Solutions\' PCI DSS cert
 
 const SLUG = 'payments-api-platform';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,

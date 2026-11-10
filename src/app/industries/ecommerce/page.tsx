@@ -7,6 +7,8 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'E-Commerce Development Company in Canada';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: TITLE,
   description: 'E-commerce software development in Canada by Mapletech Labs: online marketplaces, payment processing and omnichannel retail built to convert.',

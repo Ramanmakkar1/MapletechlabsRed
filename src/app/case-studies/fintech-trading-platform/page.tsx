@@ -10,6 +10,8 @@ const TITLE = 'Fintech Trading Platform Case Study: 99.99% Uptime';
 const DESCRIPTION = 'How Mapletech Labs built an AI-powered trading platform that processes 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.';
 const SLUG = 'fintech-trading-platform';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,

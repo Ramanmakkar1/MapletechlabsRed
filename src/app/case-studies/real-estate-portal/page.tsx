@@ -12,6 +12,8 @@ const DESCRIPTION = 'How Mapletech Labs built PropConnect Canada\'s real estate 
 
 const SLUG = 'real-estate-portal';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),

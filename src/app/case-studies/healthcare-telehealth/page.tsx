@@ -10,6 +10,8 @@ const TITLE = 'Telehealth Platform Case Study: 200K+ Patient Sessions';
 const DESCRIPTION = 'Mapletech Labs built a HIPAA-compliant telehealth platform with 200K+ patient sessions and 99.97% uptime for a leading Canadian healthcare provider.';
 const SLUG = 'healthcare-telehealth';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,

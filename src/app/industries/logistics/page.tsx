@@ -8,6 +8,8 @@ import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Logistics Software Development Company in Canada';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and real-time shipment tracking.',

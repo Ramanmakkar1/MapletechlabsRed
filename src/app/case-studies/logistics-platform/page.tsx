@@ -11,6 +11,8 @@ const DESCRIPTION = 'Mapletech Labs built a real-time logistics platform handlin
 const SLUG = 'logistics-platform';
 const DATE = '2026-03-14';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,

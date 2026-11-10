@@ -8,6 +8,8 @@ import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Healthcare Software Development Company in Canada';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: 'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers, with HL7/FHIR integration.',
