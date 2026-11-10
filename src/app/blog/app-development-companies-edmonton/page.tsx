@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Top 10 Edmonton App Development Companies';
+const TITLE = 'Edmonton App Development Companies: Top 10';
 const DESCRIPTION = 'The best mobile app development companies in Edmonton, Alberta for 2026, compared on services and track record, plus how to pick the right app team.';
 const SLUG = 'app-development-companies-edmonton';
 const DATE = '2026-02-24';

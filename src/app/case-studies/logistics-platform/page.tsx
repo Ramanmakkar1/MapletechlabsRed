@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 const NAME = 'Logistics & Fleet Platform';
-const TITLE = 'Logistics Platform: 15K+ Daily Deliveries';
+const TITLE = 'Logistics Platform: 15K+ Deliveries a Day';
 const DESCRIPTION = 'How Mapletech Labs built a real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and 98% on-time delivery rate.';
 const SLUG = 'logistics-platform';
 const DATE = '2026-03-14';
