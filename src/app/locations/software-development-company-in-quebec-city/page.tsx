@@ -4,6 +4,8 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 import cityDescription from '@/lib/seo/city-meta';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Software Development Company in Quebec City',
   description: cityDescription('Quebec City', 'Quebec', 'Quebec City organizations'),

@@ -3,6 +3,8 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 
+export const dynamic = 'force-static';
+
 const TITLE = 'Software Development Company Calgary | Alberta Team';
 const DESCRIPTION = 'Software development company serving Calgary from our Edmonton HQ, 3 hours away. Custom software, web and mobile apps by Mapletech Labs at a fixed price.';
 

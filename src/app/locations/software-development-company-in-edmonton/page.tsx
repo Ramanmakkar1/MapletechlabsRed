@@ -3,6 +3,8 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 
+export const dynamic = 'force-static';
+
 const TITLE = 'Custom Software Development Edmonton | Local Team';
 const DESCRIPTION = 'Custom software development in Edmonton by Mapletech Labs, headquartered here. Fixed price, and a senior engineer replies in 1 day. Get a free quote.';
 
