@@ -61,6 +61,14 @@ const nextConfig: NextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
+        source: '/blog/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+      },
+      {
+        source: '/services/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+      },
+      {
         source: '/faq',
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
