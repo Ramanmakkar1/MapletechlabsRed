@@ -9,7 +9,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Website Cost in Canada (2026): CAD Price Ranges Guide';
+const TITLE = 'Website Cost in Canada: 2026 CAD Prices';
 const DESCRIPTION = 'Website cost in Canada for 2026: compare CAD ranges for template, custom and e-commerce builds, see what drives the price, and how to plan your budget.';
 const SLUG = 'website-cost-canada';
 const DATE = '2026-01-22';
