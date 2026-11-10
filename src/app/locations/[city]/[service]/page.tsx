@@ -24,6 +24,7 @@ export async function generateStaticParams() {
   return getAllCityServiceParams();
 }
 
+export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

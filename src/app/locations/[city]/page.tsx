@@ -41,6 +41,7 @@ export function generateStaticParams() {
   return serviceCitySlugs.map(slug => ({ city: slug }));
 }
 
+export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
