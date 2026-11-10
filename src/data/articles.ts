@@ -737,6 +737,7 @@ export const articles: Article[] = [
         'Is your product mostly content or simple workflows, and do you value speed, low cost and instant updates over deep device access? → <strong>PWA.</strong>',
       ] },
       { type: 'callout', tone: 'brand', title: 'The honest default', text: 'For most businesses, start cross-platform. It gives you both app stores from one codebase, and you can add native modules exactly where you need them. Reach for native only when performance truly is the product, and for a PWA when the app store is not.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Ready to choose an approach? See our <a href="/services/mobile-app-development/">mobile app development services</a>, read how we built a <a href="/case-studies/healthcare-telehealth">HIPAA-compliant telehealth platform</a> and a <a href="/case-studies/logistics-platform">real-time logistics platform</a>, or <a href="/contact/">tell us about your project</a> and we will recommend the right fit.' },
     ],
     keyTakeaways: [
       'Native means separate iOS and Android apps: top performance and full device access, at the cost of two codebases.',
@@ -795,6 +796,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'how-we-choose', text: 'How we choose between them' },
       { type: 'p', html: 'From our Edmonton headquarters, we start each app project by looking at your team, your existing code, your design and your integrations before we recommend a framework. If you already run React on the web, we usually lean towards React Native; if the product calls for a fully custom UI built from scratch, we often lean towards Flutter. We build with both: see our <a href="/services/mobile-app-development/flutter-development">Flutter app development services</a> and our <a href="/services/mobile-app-development/react-native-apps">React Native app development services</a>.' },
       { type: 'callout', tone: 'brand', title: 'The honest default', text: 'Pick the framework your team can maintain. Both are mature in 2026, and a well-built app in either will serve most businesses well for years.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Still deciding? See our <a href="/services/mobile-app-development/">mobile app development services</a>, read our <a href="/case-studies/healthcare-telehealth">telehealth platform case study</a> and <a href="/case-studies/logistics-platform">logistics platform case study</a>, or <a href="/contact/">send us your app details</a> and we will recommend Flutter, React Native or native for your team.' },
     ],
     keyTakeaways: [
       'Flutter and React Native both build iOS and Android apps from one codebase with near-native performance for typical business apps.',
