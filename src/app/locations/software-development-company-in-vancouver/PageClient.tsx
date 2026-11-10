@@ -83,7 +83,7 @@ export default function PageClient() {
       localContent={
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container prose-body">
-            <p>Comparing development partners in Vancouver? Read our guide to <Link href="/blog/software-development-companies-vancouver">software development companies in Vancouver</Link> for what to look for, typical costs and the questions to ask on the first call.</p>
+            <p>Comparing development partners in Vancouver? Read our guide to <Link href="/blog/software-development-companies-vancouver">software development companies in Vancouver</Link> for what to look for, typical costs and the questions to ask on the first call. If you are planning a mobile product, see our <Link href="/services/mobile-app-development/vancouver">mobile app development company in Vancouver</Link> page for platforms, process and pricing guidance.</p>
           </div>
         </section>
       }

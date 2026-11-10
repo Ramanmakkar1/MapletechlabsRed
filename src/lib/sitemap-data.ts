@@ -178,11 +178,17 @@ export function blogSitemapEntries(): SitemapEntry[] {
 }
 
 export function serviceSitemapEntries(): SitemapEntry[] {
-  return serviceSlugs.map(slug => ({
+  const services = serviceSlugs.map(slug => ({
     loc: `${BASE_URL}/services/${slug}`,
     changefreq: 'monthly',
     priority: '0.9',
   }));
+  const cityServices = ['vancouver'].map(city => ({
+    loc: `${BASE_URL}/services/mobile-app-development/${city}`,
+    changefreq: 'monthly',
+    priority: '0.85',
+  }));
+  return [...services, ...cityServices];
 }
 
 export function subserviceSitemapEntries(): SitemapEntry[] {
