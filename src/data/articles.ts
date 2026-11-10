@@ -215,6 +215,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'getting-started', text: 'How to start without betting the business' },
       { type: 'p', html: 'The right first agentic project is small, internal, and easy to check. Pick a task your team already does by hand that is high-volume and low-stakes — ticket triage, first-draft research, data tidying. Build the agent with a human in the loop from day one, instrument everything, and measure it against how the manual process actually performs.' },
       { type: 'p', html: 'If it beats the manual baseline on your own numbers, widen its scope carefully. If it does not, you have learned that cheaply, on a task where a wrong move costs nothing. That is the whole discipline: agentic AI is not a leap of faith, it is a series of small, verifiable bets, each one earning the right to the next.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/ai-ml/">AI and machine learning development</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'An agent is a model that plans and uses tools in a loop — use one only when the steps are not known in advance and a human can check the result.',
@@ -291,6 +292,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'next', text: 'From idea to something real' },
       { type: 'p', html: 'The gap between an idea on this list and a product people pay for is almost entirely validation and disciplined building. Before writing a line of code, get a handful of real potential buyers to tell you the pain is worth paying to remove. Then build the smallest thing that proves it — an MVP that solves the core problem and nothing else.' },
       { type: 'p', html: 'That is the part we help with most: taking a validated idea and engineering it into a product that can scale, on architecture you own, without the eighteen-month detour that sinks most first attempts. The idea is the easy half. The build, and the judgement about what not to build, is the rest.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/saas-development/">SaaS development</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'A SaaS idea is only a business if the pain is expensive, the buyer is reachable, you have a wedge, and it gets stickier over time.',
@@ -353,6 +355,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'foundation', text: 'They are built to not fall over' },
       { type: 'p', html: 'None of the above survives a product that breaks. Retention collapses after an outage, expansion stalls when the software cannot scale, and the moat means nothing if a security incident sends customers running. The unglamorous engineering foundations \u2014 reliability, security, performance, the ability to scale without a rewrite \u2014 are what let the business fundamentals compound.' },
       { type: 'p', html: 'This is the part founders most often underestimate, and it is where a serious build pays for itself. A SaaS product engineered properly from the start &mdash; real architecture, real security, real observability &mdash; is not a cost centre. It is what makes durable retention, expansion and trust possible in the first place.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/saas-development/">SaaS development</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'Retention beats acquisition: the revenue you keep matters more than the revenue you win, and net revenue retention above 100% is the quiet engine of durable SaaS.',
@@ -582,6 +585,7 @@ export const articles: Article[] = [
         'What happens after launch — how do you support and evolve the product?',
       ] },
       { type: 'p', html: 'The answers, and how directly they come, will tell you more than any portfolio. A partner who answers plainly and pushes back where you are wrong is worth far more than one who agrees with everything.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/saas-development/">SaaS development</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'SaaS is a product that runs reliably for paying customers — hire product engineers, not just coders.',
@@ -656,6 +660,7 @@ export const articles: Article[] = [
         'Who maintains and updates the site after launch, and at what cost?',
       ] },
       { type: 'p', html: 'The answers separate a company that builds lasting business assets from one that ships a good-looking page and moves on. Choose the one that treats your website as infrastructure, because that is what it is.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/web-development/">web development</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'Match the build to the need: a template for a simple site, a CMS for content-heavy ones, custom when performance, design or scale matter.',
@@ -723,6 +728,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'A simple test: find a task that is repetitive, rule-heavy, done many times a day, and where a wrong result is caught before it does damage. If you have one, agentic AI can probably remove real work from it now. If your candidate task is rare, high-stakes and hard to check, wait — or keep a human firmly in the loop. The technology is real and improving fast, but the returns come from matching it to the right job, not from adopting it because a competitor issued a press release.' },
       { type: 'p', html: 'If you want the builder’s view of how these systems are put into production safely, we wrote that up in <a href="/blog/agentic-ai-in-production">Agentic AI in Production</a>.' },
       { type: 'p', html: 'For a rough cost estimate on building or integrating AI, see our <a href="/blog/ai-development-cost-canada">AI development cost guide</a>.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/ai-ml/">AI and machine learning development</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'An AI agent is a model plus tools plus a loop: it takes actions step by step, where a chatbot only answers.',
@@ -790,6 +796,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'when-not', text: 'When eight weeks is not realistic — honestly' },
       { type: 'p', html: 'We will tell you up front when your idea does not fit the timeline, because promising eight weeks and missing it helps no one. Eight weeks is not realistic when the product needs heavy regulatory or compliance work before launch, when it depends on complex integrations with slow third parties, when there is real hardware or on-device machine learning involved, or when the “MVP” is genuinely several products wearing one name. In those cases the right move is a longer, honestly scoped plan — or a smaller first slice that still proves something real.' },
       { type: 'p', html: 'For the bigger picture on turning an MVP into a business, see our guide on <a href="/blog/saas-guide">building a profitable SaaS</a>.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/saas-development/saas-mvp-development/">SaaS MVP development</a> service, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'An MVP is the smallest real, well-built slice that tests your riskiest assumption — not a cheap version of everything.',
@@ -960,6 +967,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Traditional WordPress is simpler and cheaper to maintain &mdash; one system, with core and plugin updates, backups and security monitoring; our maintenance packages start at $100/month. Headless adds a Next.js front end to maintain: dependency updates, hosting on platforms such as Vercel or Netlify, ISR revalidation triggered by WordPress publish events, and a team comfortable with React. It is worthwhile only when the performance gain justifies the extra upkeep.' },
       { type: 'h2', id: 'when-each-fits', text: 'When each fits' },
       { type: 'p', html: 'Choose traditional WordPress for content sites, blogs, brochure sites and small business websites where a small team edits content in the admin and wants the lowest cost and simplest upkeep. Choose headless WordPress when you need maximum front-end performance, are building a complex web application, need to deliver content to multiple channels from one WordPress back end, or already have a React or Next.js team. A Canadian business with a straightforward marketing site should usually start with traditional WordPress and move to headless only if speed or architecture demands it.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/wordpress-cms/">WordPress and CMS development</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'WordPress and headless WordPress share the same admin &mdash; the difference is whether WordPress also renders the front end.',
@@ -1019,6 +1027,7 @@ export const articles: Article[] = [
         'Will licence costs balloon as you grow? → lean <strong>build</strong> (or a hybrid).',
       ] },
       { type: 'p', html: 'If the honest answer is “buy,” buy — and if it is “build the 20% that matters and connect the rest,” that is the work we most enjoy.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/web-development/">custom software and web development</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'Buy off-the-shelf for common, solved problems where your business is not special — payroll, accounting, CRM basics.',
@@ -1671,6 +1680,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'canada', text: 'Canadian points to plan for' },
       { type: 'p', html: 'Ask for maintenance quotes in Canadian dollars. Many hosting and SaaS tools bill in US dollars, so exchange rates can move your monthly bill even when usage stays the same.' },
       { type: 'p', html: 'If you handle personal information, where it is hosted matters. PIPEDA does not always require Canadian hosting, but some clients, especially in health and the public sector, will ask for data to stay in Canada, and Canadian cloud regions can cost a little more. Our <a href="/blog/app-privacy-compliance-canada">privacy compliance checklist for Canadian apps</a> explains what to plan for.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/software-maintenance/">software maintenance</a> team, or <a href="/contact/">tell us about your project</a>.' },
     ],
     keyTakeaways: [
       'Maintenance covers bug fixes, OS and framework updates, security patches, hosting, monitoring and small features.',
