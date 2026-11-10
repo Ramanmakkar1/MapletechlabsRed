@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'SaaS Development Cost in Canada (2026)';
 const DESCRIPTION = 'SaaS development cost in Canada: compare CAD ranges from an MVP to enterprise, plus budget drivers, timelines, and how to plan the build.';
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
-    title: `${TITLE} | Mapletech Labs`,
+    title: ogTitle(TITLE),
     description: DESCRIPTION,
     type: 'article',
     publishedTime: DATE,

@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Website Cost in Canada: 2026 Guide';
 const DESCRIPTION = 'Website cost in Canada for 2026: compare CAD ranges for template, custom, and e-commerce builds, and what drives the price.';
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
-    title: `${TITLE} | Mapletech Labs`,
+    title: ogTitle(TITLE),
     description: DESCRIPTION,
     type: 'article',
     publishedTime: DATE,

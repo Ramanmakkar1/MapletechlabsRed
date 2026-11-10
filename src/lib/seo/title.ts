@@ -14,6 +14,12 @@
 export const BRAND_SUFFIX = ' | Mapletech Labs';
 export const MAX_TITLE_LENGTH = 60;
 
+export function ogTitle(title: string): string {
+  const trimmed = title.trim();
+  const branded = `${trimmed}${BRAND_SUFFIX}`;
+  return branded.length <= MAX_TITLE_LENGTH ? branded : trimmed;
+}
+
 export function seoTitle(title: string): string | { absolute: string } {
   const trimmed = title.trim();
   if (/Mapletech Labs/i.test(trimmed)) return { absolute: trimmed };
