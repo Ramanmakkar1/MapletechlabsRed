@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Free Software Planning Tools (Canada)';
-const DESCRIPTION = 'Free tools for Canadian businesses planning software: estimate your app or website cost in CAD and get a rough SR&ED tax credit range for your R&D work.';
+const DESCRIPTION = 'Free tools for teams planning software: estimate app or website cost in CAD, check your SR&ED range, and compare in-house vs agency. See our services.';
 const URL = canonicalUrl('/tools');
 
 export const metadata: Metadata = {
