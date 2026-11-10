@@ -6,6 +6,10 @@ import { articles } from '@/data/articles';
 
 const TITLE = 'Software Development Blog: Costs, Guides & Rankings';
 const DESCRIPTION = 'Software development guides from Mapletech Labs: app and website cost in Canada, top agency rankings by city, AI how-tos and advice on hiring a dev team.';
+const LAST_MODIFIED = articles.reduce(
+  (latest, a) => (a.dateModified > latest ? a.dateModified : latest),
+  '',
+);
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
@@ -30,6 +34,7 @@ const jsonLd = {
       url: canonicalUrl('/blog'),
       name: TITLE,
       description: DESCRIPTION,
+      dateModified: LAST_MODIFIED,
       publisher: { '@id': 'https://mapletechlabs.ca/#organization' },
       inLanguage: 'en-CA',
       mainEntity: { '@id': `${canonicalUrl('/blog')}#list` },
