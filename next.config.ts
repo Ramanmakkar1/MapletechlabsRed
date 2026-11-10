@@ -65,11 +65,23 @@ const nextConfig: NextConfig = {
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
+        source: '/pricing',
+        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+      },
+      {
         source: '/industries/:slug',
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
+        source: '/industries/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+      },
+      {
         source: '/locations',
+        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+      },
+      {
+        source: '/locations/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       // The keyword city pages and the city+service mesh are the slowest
