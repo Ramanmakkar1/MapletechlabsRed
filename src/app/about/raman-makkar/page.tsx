@@ -9,7 +9,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const profileUrl = canonicalUrl('/about/raman-makkar');
-const title = 'Raman Makkar, Founder & CEO of Mapletech Labs';
+const title = 'Raman Makkar, Founder & CEO of Mapletech Labs, Edmonton';
 const description =
   'Raman Makkar founded Mapletech Labs in Edmonton in 2018. 15+ years in software engineering and 500+ projects shipped across Canada. Meet the founder.';
 
