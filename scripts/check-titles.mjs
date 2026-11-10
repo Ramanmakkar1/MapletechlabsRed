@@ -119,21 +119,24 @@ assert.deepEqual(titleProblems(parseTitle("seoTitle('Contact Mapletech Labs')", 
 assert.equal(resolveTitle(parseTitle("{ absolute: TITLE }", fixture)), "x".repeat(50));
 assert.equal(resolveTitle(parseTitle("{ absolute: 'Short title' }", "")), "Short title");
 assert.match(titleProblems(parseTitle("{ absolute: '" + "x".repeat(61) + "' }", ""))[0], /61 chars/);
-assert.match(titleProblems(seoTitle("x".repeat(61)))[0], /61 chars/);
+assert.deepEqual(titleProblems(seoTitle("x".repeat(61))), []);
+assert.equal(resolveTitle(seoTitle("x".repeat(61))).length, MAX);
 assert.match(titleProblems(parseTitle("TITLE", fixture))[0], /67 chars/);
 assert.match(titleProblems(parseTitle("'Contact Mapletech Labs'", ""))[0], /brand twice/);
 assert.match(titleProblems(seoTitle("Mapletech Labs | Mapletech Labs"))[0], /brand twice/);
 assert.equal(parseTitle("seoTitle(getTitle())", ""), undefined);
 
 // Article limits apply after branding; unrelated page fixtures keep their rules.
-for (const length of [49, 50, 60, 61]) {
-  const title = seoTitle("x".repeat(length <= MAX ? length - BRAND.length : length));
+for (const length of [49, 50, 60]) {
+  const title = seoTitle("x".repeat(length - BRAND.length));
   assert.equal(resolveTitle(title).length, length);
   const errors = articleTitleProblems(title);
   if (length === 49) assert.match(errors[0], /49 chars \(min 50\)/);
-  else if (length === 61) assert.match(errors[0], /61 chars \(max 60\)/);
   else assert.deepEqual(errors, []);
 }
+const overlong = { absolute: "x".repeat(61) };
+assert.equal(resolveTitle(overlong).length, 61);
+assert.match(articleTitleProblems(overlong)[0], /61 chars \(max 60\)/);
 
 function descriptionProblems(text) {
   return text.length < 120 || text.length > 155
