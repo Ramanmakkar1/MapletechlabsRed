@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'AR & VR development by Mapletech Labs. Mobile AR, WebXR, Apple Vision Pro & industrial solutions in Canada. Book a free immersive tech consultation.',
   openGraph: {
     title: 'AR & VR Development Company in Canada | Mapletech Labs',
-    description: 'AR & VR development by Mapletech Labs. Mobile AR, WebXR, Apple Vision Pro & industrial solutions in Canada.',
+    description: 'AR & VR development by Mapletech Labs. Mobile AR, WebXR, Apple Vision Pro & industrial solutions in Canada. Book a free immersive tech consultation.',
     url: 'https://mapletechlabs.ca/services/ar-vr',
     type: 'website',
   },

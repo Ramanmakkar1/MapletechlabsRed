@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Unity & Unreal Engine game development by Mapletech Labs. Mobile, hyper-casual & multiplayer games built in Canada. Request a free project estimate today.',
   openGraph: {
     title: 'Game Development Services in Canada | Mapletech Labs',
-    description: 'Unity & Unreal Engine game development by Mapletech Labs. Mobile, hyper-casual & multiplayer games built in Canada.',
+    description: 'Unity & Unreal Engine game development by Mapletech Labs. Mobile, hyper-casual & multiplayer games built in Canada. Request a free project estimate today.',
     url: 'https://mapletechlabs.ca/services/game-development',
     type: 'website',
   },

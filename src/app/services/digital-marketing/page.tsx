@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada. Get a free marketing audit today.',
   openGraph: {
     title: 'SEO & Digital Marketing Agency in Canada | Mapletech Labs',
-    description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada.',
+    description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada. Get a free marketing audit today.',
     url: 'https://mapletechlabs.ca/services/digital-marketing',
     type: 'website',
   },

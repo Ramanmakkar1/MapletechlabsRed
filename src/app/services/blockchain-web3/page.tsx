@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises. Schedule a free technical consultation.',
   openGraph: {
     title: 'Blockchain & Web3 Development in Canada | Mapletech Labs',
-    description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises.',
+    description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises. Schedule a free technical consultation.',
     url: 'https://mapletechlabs.ca/services/blockchain-web3',
     type: 'website',
   },

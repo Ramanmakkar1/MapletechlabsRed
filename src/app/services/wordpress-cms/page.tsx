@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'WordPress & headless CMS development by Mapletech Labs. Custom themes, WooCommerce & Strapi for Canadian businesses. Get a free quote for your project.',
   openGraph: {
     title: 'WordPress & CMS Development in Canada | Mapletech Labs',
-    description: 'WordPress & headless CMS development by Mapletech Labs. Custom themes, WooCommerce & Strapi for Canadian businesses.',
+    description: 'WordPress & headless CMS development by Mapletech Labs. Custom themes, WooCommerce & Strapi for Canadian businesses. Get a free quote for your project.',
     url: 'https://mapletechlabs.ca/services/wordpress-cms',
     type: 'website',
   },

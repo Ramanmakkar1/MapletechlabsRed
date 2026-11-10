@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. Fixed-price projects. 150+ apps shipped across Canada. Get a free quote today.',
   openGraph: {
     title: 'Web Development Company in Canada | Mapletech Labs',
-    description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. 150+ apps shipped across Canada.',
+    description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. Fixed-price projects. 150+ apps shipped across Canada. Get a free quote today.',
     url: 'https://mapletechlabs.ca/services/web-development',
     type: 'website',
   },
