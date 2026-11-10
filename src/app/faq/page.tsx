@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import FAQPageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
-import { FAQ_CATEGORIES } from '@/data/faq-categories';
+import { FAQ_JSON_LD } from '@/data/faq-categories';
 
 const TITLE = 'FAQ: Custom Software Projects in Canada';
 const DESCRIPTION = 'Get answers to common questions about working with Mapletech Labs: pricing, timelines, tech stack, IP ownership, post-launch support and NDAs.';
@@ -22,27 +22,12 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = FAQ_CATEGORIES.flatMap(c => c.faqs);
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map(faq => ({
-    '@type': 'Question',
-    name: faq.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: faq.a,
-    },
-  })),
-};
-
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
       />
       <FAQPageClient />
     </>

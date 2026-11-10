@@ -1,4 +1,14 @@
-export const FAQ_CATEGORIES = [
+export interface FaqItem {
+  q: string;
+  a: string;
+}
+
+export interface FaqCategory {
+  name: string;
+  faqs: FaqItem[];
+}
+
+export const FAQ_CATEGORIES: FaqCategory[] = [
   {
     name: 'General',
     faqs: [
@@ -30,3 +40,21 @@ export const FAQ_CATEGORIES = [
     ],
   },
 ];
+
+// Derived once when the module loads. The FAQ page and its FAQPage JSON-LD
+// reuse these values instead of rebuilding the flat list and schema on every
+// render, so the static route does no request-time data work.
+export const FAQ_ITEMS: FaqItem[] = FAQ_CATEGORIES.flatMap(category => category.faqs);
+
+export const FAQ_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map(faq => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+};
