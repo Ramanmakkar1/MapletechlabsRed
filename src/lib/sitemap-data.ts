@@ -74,6 +74,7 @@ export const blogSlugs = [
   'ai-development-companies-edmonton',
   'ai-development-companies-calgary',
   'ui-ux-design-companies-calgary',
+  'ui-ux-design-companies-ottawa',
   'ai-development-companies-vancouver',
 ];
 

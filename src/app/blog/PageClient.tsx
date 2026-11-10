@@ -44,6 +44,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
   },
   {
+    slug: 'ui-ux-design-companies-ottawa', category: 'Business',
+    title: 'UI/UX Design Companies in Ottawa: How to Choose One (2026)',
+    excerpt: 'Choosing a UI/UX design company in Ottawa? Compare research, prototypes, accessibility, design-system ownership, CAD pricing and 10 evaluation questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'ai-development-companies-calgary', category: 'Technology',
     title: 'AI Development Companies in Calgary: How to Choose One (2026)',
     excerpt: 'How to choose an AI development company in Calgary: RAG and LLM apps for energy and fintech, Alberta PIPA, data residency, CAD costs and 10 questions.',
