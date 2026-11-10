@@ -1,5 +1,6 @@
 import { BLOG_AUTHOR } from '@/lib/seo/business';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import { getArticle, getRelatedArticles } from '@/data/articles';
@@ -45,7 +46,14 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'ai-development-cost-canada')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<BlogCityLinks serviceSlug="ai-ml" />} />
+      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<BlogCityLinks serviceSlug="ai-ml" />} extraBlock={
+        <div className="reveal" style={{ marginBottom: 56 }}>
+          <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 16 }}>Related services</p>
+          <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
+            Planning an AI feature? See our <Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>AI and machine learning development services in Canada</Link>.
+          </p>
+        </div>
+      } />
     </>
   );
 }
