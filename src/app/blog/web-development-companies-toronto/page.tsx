@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Web Development Companies Toronto 2026';
+const TITLE = 'Web Development Companies in Toronto 2026';
 const DESCRIPTION = 'Web development companies in Toronto for 2026, compared by services and track record, plus a checklist for choosing the right team and key questions.';
 const SLUG = 'web-development-companies-toronto';
 const DATE = '2026-02-19';
