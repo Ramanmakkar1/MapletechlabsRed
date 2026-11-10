@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const breadcrumbs = getIndustryBreadcrumbs('Fintech', 'fintech');
+  const breadcrumbs = getIndustryBreadcrumbs('FinTech', 'fintech');
 
   return (
     <>
