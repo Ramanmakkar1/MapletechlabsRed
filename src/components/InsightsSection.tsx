@@ -46,6 +46,7 @@ const servicePosts: Record<string, typeof posts> = {
   ],
   'ai-ml': [
     { tag: 'AI/ML', title: 'AI Development Cost in Canada', excerpt: 'Explore the factors that shape the cost of building and integrating AI products in Canada.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ai-development-cost-canada' },
+    { tag: 'AI/ML', title: 'AI Chatbot Development Cost in Canada', excerpt: 'See what an AI chatbot costs in Canada and which scope decisions change the price.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ai-chatbot-development-cost-canada' },
     { tag: 'AI/ML', title: 'AI Development Companies in Canada', excerpt: 'Compare Canadian AI development teams, capabilities and areas of specialization.', readTime: '9 min read', date: 'Mar 2026', href: '/blog/ai-development-companies-canada' },
     { tag: 'AI/ML', title: 'What Is Agentic AI?', excerpt: 'Learn how agentic AI systems plan and carry out multi-step tasks, and where they fit in products.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/what-is-agentic-ai' },
     { tag: 'Engineering', title: 'Healthcare Software Development in Canada: A Buyer’s Guide', excerpt: 'Learn how to scope AI-assisted and other healthcare software with privacy, EHR integration and vendor checks.', readTime: '10 min read', date: 'Nov 2026', href: '/blog/healthcare-software-development-canada' },
