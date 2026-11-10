@@ -14,17 +14,25 @@
 export const BRAND_SUFFIX = ' | Mapletech Labs';
 export const MAX_TITLE_LENGTH = 60;
 
+function clampTitle(title: string): string {
+  if (title.length <= MAX_TITLE_LENGTH) return title;
+  const spaceIndex = title.lastIndexOf(' ', MAX_TITLE_LENGTH);
+  const cut = spaceIndex === -1 ? title.slice(0, MAX_TITLE_LENGTH) : title.slice(0, spaceIndex);
+  return cut.replace(/[ :|\-,&(]+$/, '').trim();
+}
+
 export function ogTitle(title: string): string {
   const trimmed = title.trim();
   const branded = `${trimmed}${BRAND_SUFFIX}`;
-  return branded.length <= MAX_TITLE_LENGTH ? branded : trimmed;
+  return branded.length > MAX_TITLE_LENGTH ? clampTitle(branded) : branded;
 }
 
 export function seoTitle(title: string): string | { absolute: string } {
   const trimmed = title.trim();
   if (/Mapletech Labs/i.test(trimmed)) return { absolute: trimmed };
-  if (trimmed.length + BRAND_SUFFIX.length > MAX_TITLE_LENGTH) return { absolute: trimmed };
-  return trimmed;
+  const clamped = clampTitle(trimmed);
+  if (clamped.length + BRAND_SUFFIX.length > MAX_TITLE_LENGTH) return { absolute: clamped };
+  return clamped;
 }
 
 /**
