@@ -104,17 +104,6 @@ export default async function CityServicePage({ params }: PageProps) {
         url: data.canonicalUrl,
         serviceType: [data.serviceName],
       }),
-      {
-        '@type': 'FAQPage',
-        mainEntity: data.faqs.map(faq => ({
-          '@type': 'Question',
-          name: faq.q,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.a,
-          },
-        })),
-      },
     ],
   };
 
