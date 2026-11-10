@@ -108,7 +108,19 @@ export default function ContactPage({ serviceOptions = [], cityOptions = [] }: {
                 Send us the short version: a senior engineer at our Edmonton software development company replies within one working day with next steps, not a sales script.
               </p>
 
-              <p style={{ fontSize: 15, color: 'var(--body)', margin: '-24px 0 36px' }}>
+              <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
+                What happens after you send a message
+              </h2>
+              <ol style={{ margin: '0 0 20px', paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <li style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7 }}>A senior engineer reads your brief and replies within one working day with next steps.</li>
+                <li style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7 }}>We walk through your scope on a call or video chat and say clearly which parts can be fixed-price.</li>
+                <li style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7 }}>If you want confidentiality first, we sign an NDA before any details are shared.</li>
+              </ol>
+              <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 36px', maxWidth: 400 }}>
+                <a href="/services" style={{ color: 'var(--brand)' }}>See our software development services</a> or <a href="/pricing" style={{ color: 'var(--brand)' }}>check our pricing</a> before you write.
+              </p>
+
+              <p style={{ fontSize: 15, color: 'var(--body)', margin: '0 0 36px' }}>
                 <a href="/pricing" style={{ color: 'var(--brand)' }}>See pricing</a> · <a href="/tools/cost-estimator" style={{ color: 'var(--brand)' }}>Cost estimator</a>
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 22, marginBottom: 36 }}>
