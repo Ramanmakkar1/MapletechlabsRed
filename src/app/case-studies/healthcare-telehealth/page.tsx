@@ -7,7 +7,7 @@ import { seoTitle } from '@/lib/seo/title';
 
 const NAME = 'HIPAA-Compliant Telehealth Platform';
 const TITLE = 'Telehealth Platform Case Study: 200K+ Patient Sessions';
-const DESCRIPTION = 'Mapletech Labs built a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider.';
+const DESCRIPTION = 'Mapletech Labs built a HIPAA-compliant telehealth platform with 200K+ patient sessions and 99.97% uptime for a leading Canadian healthcare provider.';
 const SLUG = 'healthcare-telehealth';
 
 export const metadata: Metadata = {
