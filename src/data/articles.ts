@@ -2276,7 +2276,7 @@ export const articles: Article[] = [
         { term: 'Retail, e-commerce and distribution', text: 'South Edmonton Common, the west end and regional distributors need platforms that survive seasonal peaks, integrate inventory and payments, and stay fast under load.' },
         { term: 'AI startups and research spinouts', text: 'The University of Alberta and Amii produce models and prototypes that still need a production-grade product: APIs, admin tools, hosting in Canada and integrations with the systems customers already use.' },
       ] },
-      { type: 'p', html: 'A strong partner asks which of these you are before proposing a stack or a timeline. If the first proposal could apply to any city, it probably will. For web-heavy work, see our <a href="/locations/edmonton/web-development">web development in Edmonton</a> page; for mobile-first products, read our guide to <a href="/blog/app-development-companies-edmonton">choosing an app development company in Edmonton</a>.' },
+      { type: 'p', html: 'A strong partner asks which of these you are before proposing a stack or a timeline. If the first proposal could apply to any city, it probably will. For web-heavy work, see our <a href="/locations/web-development-company-in-edmonton">web development in Edmonton</a> page; for mobile-first products, read our guide to <a href="/blog/app-development-companies-edmonton">choosing an app development company in Edmonton</a>.' },
 
       { type: 'h2', id: 'what-to-look-for', text: 'What to look for in a software development company' },
       { type: 'p', html: 'Technical buzzwords matter less than how the engagement will run. These are the signals that separate a partner from a vendor:' },
