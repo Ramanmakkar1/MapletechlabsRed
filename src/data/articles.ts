@@ -1618,12 +1618,21 @@ export const articles: Article[] = [
       { type: 'h2', id: 'privacy', text: 'Canadian privacy and hosting' },
       { type: 'p', html: 'If the AI feature handles personal information, data location and consent matter under PIPEDA, Quebec Law 25 and provincial health rules. Our <a href="/blog/app-privacy-compliance-canada">privacy compliance checklist</a> covers what to plan for, including AI vendor data handling and Canadian hosting options.' },
 
+      { type: 'h2', id: 'focused-vs-custom', text: 'Focused integration or custom AI build?' },
+      { type: 'p', html: 'Cost follows scope, and scope is driven less by the model you pick than by four things: how ready your data is, how deeply the feature must integrate with your product, whether it answers single questions or runs multi-step workflows, and how much evaluation and safety testing your industry demands. Most projects take one of two shapes:' },
+      { type: 'cards', items: [
+        { title: 'Focused AI integration', text: 'An AI feature added to an existing product — an LLM feature, chatbot or automation built on hosted API models. Our scoped AI-feature ballpark is $10,000–$35,000 over about 3 weeks. Best when the use case is narrow and your data is close to ready.' },
+        { title: 'Custom AI build', text: 'A larger build around your own data and workflows — custom model training, computer vision or predictive analytics with stricter accuracy, privacy or integration requirements. Custom model training starts around $40,000 and reaches $150,000+ once data engineering, evaluation and hosting are included.' },
+      ] },
+      { type: 'p', html: 'For most businesses the focused integration is the smarter first step: prove value on one workflow, then expand. Compare both shapes with our other project ranges on the <a href="/pricing">pricing page</a>, see what we build in this area on the <a href="/services/ai-ml">AI & ML services</a> page, or <a href="/contact">contact us</a> for a scope read on your project.' },
+
       { type: 'h2', id: 'cta', text: 'Next step' },
       { type: 'p', html: 'If you need a rough number for your scope, our <a href="/tools/cost-estimator">cost estimator</a> and <a href="/pricing">pricing page</a> are the best starting point. For a custom AI or LLM integration, see our <a href="/services/ai-ml">AI &amp; ML services</a>, <a href="/services/ai-ml/llm-integration">LLM integration</a>, <a href="/services/ai-ml/ai-chatbots">AI chatbots</a> and <a href="/services/ai-ml/ai-automation">AI automation</a> pages.' },
     ],
     keyTakeaways: [
       'AI build costs in Canada range from about $10k for a simple API feature to $150k+ for custom model training.',
       'The biggest drivers are data preparation, integration, guardrails and hosting — not just the model call.',
+      'Focused AI integration ($10k–$35k, 3 weeks) suits narrow use cases; custom AI builds ($40k–$150k+) handle specialized needs.',
       'Ongoing costs (API tokens, GPU hosting, monitoring, re-evaluation) determine whether the feature lasts.',
       'Start narrow, use APIs first, and consider open-weight or local hosting to control running cost.',
       'Real technical uncertainty can qualify for SR&amp;ED and IRAP — confirm with an advisor.',
@@ -1635,6 +1644,7 @@ export const articles: Article[] = [
       { q: 'What is the hidden cost of AI after launch?', a: 'API token usage, GPU hosting for open-weight or custom models, monitoring and drift detection, periodic re-evaluation, and compliance updates. These often exceed the initial build over a one- to two-year period.' },
       { q: 'Can SR&ED or IRAP help pay for AI development?', a: 'Yes, when the work involves real technological uncertainty — for example, designing a new pipeline, improving model performance where standard approaches fail, or integrating with undocumented systems. Routine configuration, UI or standard API usage usually does not qualify. Confirm with a qualified advisor.' },
       { q: 'Should I build a chatbot or a full agent?', a: 'Start with a chatbot if you need answers from your documents. Move to an agent only when the workflow is multi-step, has clear inputs and outputs, and can be protected with guardrails and human escalation. Agents are more powerful and more expensive to build safely.' },
+      { q: 'What is the difference between a focused AI feature and a custom AI build?', a: 'A focused integration is an AI feature added to an existing product — typically $10,000–$35,000 for 3 weeks using hosted API models. A custom AI build is a new product or major expansion with specialized needs like proprietary data or custom models, typically $40,000–$150,000+. Most Canadian businesses should start with a narrow integration to prove value before scaling to a custom build.' },
       { q: 'Do I need Canadian data hosting for AI?', a: 'Not always for private-sector apps, but some clients — especially in health and public sector — require Canadian data residency. Canadian cloud regions exist but can cost slightly more. Plan it in the contract and the architecture from the start.' },
     ],
     cta: { href: '/services/ai-ml', label: 'See our AI development services' },
