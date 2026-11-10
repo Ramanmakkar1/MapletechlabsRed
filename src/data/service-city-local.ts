@@ -14,6 +14,14 @@ export interface ServiceCityLocal {
   description: string;
   intro: string;
   sections: { heading: string; body: LocalTextPart[] }[];
+  /** Optional answer-first comparison table rendered after the local sections. */
+  comparison?: {
+    heading: string;
+    intro: string;
+    caption: string;
+    headers: string[];
+    rows: string[][];
+  };
   proof: { href: string; label: string; note: string }[];
   faqs: { q: string; a: string }[];
 }
@@ -419,10 +427,29 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           { href: '/blog/ai-development-companies-toronto', label: 'guide to choosing an AI development company in Toronto' },
           ' and our ',
           { href: '/blog/ai-development-companies-canada', label: 'guide to AI development companies in Canada' },
-          ' list the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+          ' list the questions to ask. For chatbot-specific planning, see our ',
+          { href: '/blog/ai-chatbot-development-cost-canada', label: 'AI chatbot development cost guide' },
+          '. Discovery is free, and your price is fixed before coding starts.',
+        ],
+      },
+      {
+        heading: 'How to compare the three approaches',
+        body: [
+          'Judge each option on four things. Data access: can you use representative documents, records or images, and do you have permission to use them? Privacy: where will the data be stored and processed, who can see it, and does the provider train on it? Integration effort: which systems, APIs and permissions must connect, and who owns each step? Ongoing operating costs: what usage, hosting, monitoring and maintenance will the system need each month? Score the options against those four before you compare features.',
         ],
       },
     ],
+    comparison: {
+      heading: 'Build custom AI, integrate an existing model, or automate a workflow?',
+      intro: 'Start with the task, not the technology. Integrate an existing model when a general model already answers the question, automate a workflow when the steps repeat and the rules are clear, and build custom AI when your own data or decisions are the advantage.',
+      caption: 'AI approaches compared on data access, privacy, integration effort and ongoing operating cost',
+      headers: ['Approach', 'Best when', 'Data access', 'Privacy and control', 'Integration effort', 'Ongoing operating cost'],
+      rows: [
+        ['Integrate an existing model', 'You need chat, summarisation or classification and a general model is good enough.', 'Public or low-sensitivity content; no training on your data.', 'Provider terms and region choices decide where data goes.', 'Low: an API, a prompt layer and guardrails.', 'Per-use API fees plus monitoring; predictable at low volume.'],
+        ['Automate a workflow', 'Steps repeat, rules are known, and staff approve exceptions.', 'Access to the systems the workflow touches, such as CRM or ticketing.', 'Permissions follow existing roles; audit logs record actions.', 'Medium: APIs, retries and human approval steps.', 'Hosting and maintenance; cost grows with volume and integrations.'],
+        ['Build custom AI', 'Your own data or decisions are the advantage and no general model fits.', 'Representative labelled data you have the rights to use.', 'You choose hosting and residency; model and data stay under your control.', 'High: data pipelines, training, evaluation and deployment.', 'Hosting, retraining and monitoring; highest upfront and ongoing effort.'],
+      ],
+    },
     proof: [
       { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
       { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'A PCI DSS certified payments API processing 12 million transactions a month, securely and at scale.' },
@@ -448,6 +475,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         q: 'Who owns the code and prompts?',
         a: 'You do. All source code, prompts, configuration and cloud accounts we create for your project belong to you, with no lock-in. You can keep working with us after launch or hand everything to your own team.',
+      },
+      {
+        q: 'Should we build custom AI, integrate an existing model, or automate a workflow?',
+        a: 'Start with the task. Integrate an existing model when a general model already answers the question, such as chat, summarisation or classification. Automate a workflow when the steps repeat and the rules are clear, with staff approving exceptions. Build custom AI when your own data or decisions are the advantage and no general model fits. We recommend the smallest approach that meets the outcome.',
+      },
+      {
+        q: 'What should we check before choosing an AI approach?',
+        a: 'Check four things: data access, privacy, integration effort and ongoing operating costs. Confirm you can use representative data and have permission to use it. Agree where data is stored and processed, who can see it and whether the provider trains on it. List the systems, APIs and permissions the work must connect. Then estimate the monthly usage, hosting, monitoring and maintenance the system will need.',
       },
     ],
   },

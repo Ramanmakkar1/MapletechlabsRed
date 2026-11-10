@@ -152,6 +152,29 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
                   </article>
                 ))}
               </div>
+              {local.comparison ? (
+                <div style={{ marginTop: 'clamp(36px, 4vw, 52px)' }}>
+                  <h3 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>{local.comparison.heading}</h3>
+                  <p className="lede" style={{ marginBottom: 16 }}>{local.comparison.intro}</p>
+                  <div role="region" aria-label={local.comparison.caption} tabIndex={0} style={{ overflowX: 'auto', maxWidth: '100%' }}>
+                    <table style={{ width: '100%', minWidth: 720, borderCollapse: 'collapse', textAlign: 'left' }}>
+                      <caption style={{ textAlign: 'left', paddingBottom: 12 }}>{local.comparison.caption}</caption>
+                      <thead>
+                        <tr>{local.comparison.headers.map(label => <th key={label} scope="col" style={{ padding: 14, borderBottom: '2px solid var(--line)' }}>{label}</th>)}</tr>
+                      </thead>
+                      <tbody>
+                        {local.comparison.rows.map(row => (
+                          <tr key={row[0]}>
+                            {row.map((cell, i) => i === 0
+                              ? <th key={i} scope="row" style={{ padding: 14, borderBottom: '1px solid var(--line)' }}>{cell}</th>
+                              : <td key={i} style={{ padding: 14, borderBottom: '1px solid var(--line)' }}>{cell}</td>)}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              ) : null}
               <h3 style={{ fontSize: 'var(--fs-h3)', margin: 'clamp(36px, 4vw, 52px) 0 16px' }}>Proof from our case studies</h3>
               <div className="grid grid--3">
                 {local.proof.map(pr => (
