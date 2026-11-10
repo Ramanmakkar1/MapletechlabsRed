@@ -14,7 +14,7 @@ import { contactHrefFor } from '@/lib/enquiryContext';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
 
-const contactHref = contactHrefFor('web-development', 'toronto', servicesAllowlist, citiesAllowlist);
+const contactHref = contactHrefFor('ai-ml', 'toronto', servicesAllowlist, citiesAllowlist);
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
