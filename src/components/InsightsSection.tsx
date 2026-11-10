@@ -42,11 +42,13 @@ const servicePosts: Record<string, typeof posts> = {
     { tag: 'Business', title: 'App Development Cost in Canada (2026 Guide)', excerpt: 'Compare Canadian app development price ranges, from a focused MVP to a more complex mobile product.', readTime: '8 min read', date: 'Mar 2026', href: '/blog/app-development-cost-canada' },
     { tag: 'Engineering', title: 'Native vs Cross-Platform vs PWA: Choosing an App Approach', excerpt: 'Understand the trade-offs between native apps, cross-platform development and progressive web apps.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/native-vs-cross-platform-vs-pwa' },
     { tag: 'Engineering', title: 'Privacy Compliance for Canadian Apps', excerpt: 'Plan for PIPEDA, Quebec Law 25 and provincial health privacy requirements when building an app.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/app-privacy-compliance-canada' },
+    { tag: 'Engineering', title: 'Healthcare Software Development in Canada: A Buyer’s Guide', excerpt: 'Plan project scope, privacy questions, EHR integration and vendor selection for Canadian healthcare software.', readTime: '10 min read', date: 'Nov 2026', href: '/blog/healthcare-software-development-canada' },
   ],
   'ai-ml': [
     { tag: 'AI/ML', title: 'AI Development Cost in Canada', excerpt: 'Explore the factors that shape the cost of building and integrating AI products in Canada.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ai-development-cost-canada' },
     { tag: 'AI/ML', title: 'AI Development Companies in Canada', excerpt: 'Compare Canadian AI development teams, capabilities and areas of specialization.', readTime: '9 min read', date: 'Mar 2026', href: '/blog/ai-development-companies-canada' },
     { tag: 'AI/ML', title: 'What Is Agentic AI?', excerpt: 'Learn how agentic AI systems plan and carry out multi-step tasks, and where they fit in products.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/what-is-agentic-ai' },
+    { tag: 'Engineering', title: 'Healthcare Software Development in Canada: A Buyer’s Guide', excerpt: 'Learn how to scope AI-assisted and other healthcare software with privacy, EHR integration and vendor checks.', readTime: '10 min read', date: 'Nov 2026', href: '/blog/healthcare-software-development-canada' },
   ],
   'product-design': [
     { tag: 'Business', title: 'UI/UX Design Companies in Canada', excerpt: 'A guide to Canadian product design and UI/UX teams and the work they specialize in.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ui-ux-design-companies-canada' },
