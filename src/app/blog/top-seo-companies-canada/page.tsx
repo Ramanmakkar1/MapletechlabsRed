@@ -7,7 +7,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Top 10 SEO Companies in Canada (2026)';
+const TITLE = 'Top 10 SEO Companies in Canada for 2026: How to Compare';
 const DESCRIPTION = 'A data-driven ranking of the top 10 SEO companies in Canada for 2026, with what each agency does best and how to choose the right SEO partner for you.';
 const SLUG = 'top-seo-companies-canada';
 const DATE = '2026-03-14';

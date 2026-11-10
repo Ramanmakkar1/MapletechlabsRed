@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Freelancer vs Agency vs In-House in Canada';
+const TITLE = 'Freelancer vs Agency vs In-House Developers in Canada (2026)';
 const DESCRIPTION =
   'Freelancer vs software agency vs in-house team in Canada: compare cost, speed, risk, team depth, code ownership and post-launch support before you hire.';
 const SLUG = 'freelancer-vs-agency-vs-in-house-canada';

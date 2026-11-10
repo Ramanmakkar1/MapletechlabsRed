@@ -7,7 +7,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Top 10 AI Development Companies in Canada';
+const TITLE = 'Top 10 AI Development Companies in Canada (2026 Guide)';
 const DESCRIPTION = 'A researched ranking of the best AI and machine-learning development companies in Canada for 2026, with how to choose the right partner for your project.';
 const SLUG = 'ai-development-companies-canada';
 const DATE = '2026-02-14';
