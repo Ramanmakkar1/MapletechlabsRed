@@ -177,11 +177,11 @@ export default function ContactInfo() {
           </ul>
 
           <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
-            Our office and the cities we serve
+            Office location and contact details
           </h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px' }}>
             {BUSINESS.name} is based in {HQ_ADDRESS.addressLocality}, {HQ_ADDRESS.addressRegion} ({HQ_ADDRESS.postalCode}), and works with clients across Canada.
-            {' '}Call us at <a href={'tel:' + BUSINESS.telephone} style={link}>{BUSINESS.telephone}</a> or email{' '}
+            {' '}You can reach our team by phone or by email, and we reply within one working day: call us at <a href={'tel:' + BUSINESS.telephone} style={link}>{BUSINESS.telephone}</a> or email{' '}
             <a href={'mailto:' + BUSINESS.email} style={link}>{BUSINESS.email}</a>.
             {' '}Our team has dedicated engineers in Edmonton, Calgary, Toronto and Vancouver, so there is always someone in your time zone.
             {' '}Most projects run remotely with weekly demos, and we meet in person in Edmonton and Calgary when it helps.
