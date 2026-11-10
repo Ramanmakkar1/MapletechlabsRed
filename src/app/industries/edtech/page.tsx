@@ -10,10 +10,10 @@ const TITLE = 'EdTech Software Development Company in Canada';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and assessment tools for educators.',
+  description: 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and accessible assessment tools for educators and learners.',
   openGraph: {
     title: 'EdTech Software Development in Canada | Mapletech Labs',
-    description: 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and assessment tools for educators.',
+    description: 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and accessible assessment tools for educators and learners.',
     url: 'https://mapletechlabs.ca/industries/edtech',
     type: 'website',
   },

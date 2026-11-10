@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Mapletech Labs is a Canadian software development company. 300+ projects delivered, 150+ engineers, serving clients in 12 countries. Meet our team today.',
   openGraph: {
     title: TITLE,
-    description: 'Mapletech Labs is a Canadian software development company. 300+ projects delivered, 150+ engineers, serving clients in 12 countries.',
+    description: 'Mapletech Labs is a Canadian software development company. 300+ projects delivered, 150+ engineers, serving clients in 12 countries. Meet our team today.',
     url: 'https://mapletechlabs.ca/about',
     type: 'website',
   },

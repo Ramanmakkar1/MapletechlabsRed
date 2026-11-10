@@ -10,10 +10,10 @@ const TITLE = 'Enterprise Software Development Company in Canada';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: 'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at enterprise scale.',
+  description: 'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at enterprise scale, built for security.',
   openGraph: {
     title: 'Enterprise Software Development in Canada | Mapletech Labs',
-    description: 'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at enterprise scale.',
+    description: 'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at enterprise scale, built for security.',
     url: 'https://mapletechlabs.ca/industries/enterprise',
     type: 'website',
   },

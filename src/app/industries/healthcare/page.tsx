@@ -10,10 +10,10 @@ const TITLE = 'Healthcare Software Development Company in Canada';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: 'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers.',
+  description: 'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers, with HL7/FHIR integration.',
   openGraph: {
     title: 'Healthcare Software Development in Canada | Mapletech Labs',
-    description: 'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers.',
+    description: 'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers, with HL7/FHIR integration.',
     url: 'https://mapletechlabs.ca/industries/healthcare',
     type: 'website',
   },

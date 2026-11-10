@@ -9,10 +9,10 @@ const TITLE = 'E-Commerce Development Company in Canada';
 
 export const metadata: Metadata = {
   title: TITLE,
-  description: 'E-commerce software development in Canada by Mapletech Labs: online marketplaces, payment processing and omnichannel retail.',
+  description: 'E-commerce software development in Canada by Mapletech Labs: online marketplaces, payment processing and omnichannel retail built to convert.',
   openGraph: {
     title: 'E-Commerce Software Development in Canada | Mapletech Labs',
-    description: 'E-commerce software development in Canada by Mapletech Labs: online marketplaces, payment processing and omnichannel retail.',
+    description: 'E-commerce software development in Canada by Mapletech Labs: online marketplaces, payment processing and omnichannel retail built to convert.',
     url: 'https://mapletechlabs.ca/industries/ecommerce',
     type: 'website',
   },

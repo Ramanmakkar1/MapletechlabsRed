@@ -10,10 +10,10 @@ const TITLE = 'Logistics Software Development Company in Canada';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and tracking.',
+  description: 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and real-time shipment tracking.',
   openGraph: {
     title: 'Logistics Software Development in Canada | Mapletech Labs',
-    description: 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and tracking.',
+    description: 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and real-time shipment tracking.',
     url: 'https://mapletechlabs.ca/industries/logistics',
     type: 'website',
   },
