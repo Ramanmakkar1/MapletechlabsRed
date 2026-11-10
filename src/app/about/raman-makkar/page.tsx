@@ -38,6 +38,10 @@ const faqs = [
     q: 'Can I talk to Raman about my project?',
     a: 'Yes. You can book a free consultation through the Mapletech Labs contact page to discuss your project directly with the founder.',
   },
+  {
+    q: 'What does Mapletech Labs build?',
+    a: 'Mapletech Labs builds custom web applications, mobile apps, AI/ML solutions, cloud infrastructure, and SaaS platforms. The team works with clients in fintech, healthcare, e-commerce, logistics, edtech, and enterprise. Its projects range from custom software and mobile apps to AI-powered platforms.',
+  },
 ];
 
 export default function RamanPage() {
@@ -120,6 +124,12 @@ export default function RamanPage() {
             />
             <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
             <p style={{ fontSize: '24px', color: 'var(--brand)', marginBottom: '32px' }}>Founder &amp; CEO</p>
+            <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '32px', color: 'var(--body)', maxWidth: '800px' }}>
+              Raman Makkar is the founder and CEO of Mapletech Labs, a software development company in Edmonton,
+              Alberta. He founded the company in 2018 and has 15+ years of experience in software engineering. Under
+              his leadership, the 25+ member team has delivered 500+ projects for clients across Canada and
+              internationally.
+            </p>
 
             <section aria-labelledby="raman-at-a-glance" style={{ marginBottom: '32px' }}>
               <h2
@@ -321,6 +331,16 @@ export default function RamanPage() {
               </p>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
                 These results reflect the services Raman and the team deliver: turning complex business requirements into reliable products, from a <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link> project to an AI-powered platform or a high-traffic e-commerce experience. The work also includes a PCI DSS Payments API handling 12M+ monthly transactions and a Multi-Listing Real Estate Platform with ML-powered property recommendations across 850K+ active listings nationwide.
+              </p>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                Raman and the team turn complex business requirements into reliable products through{' '}
+                <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>custom software and web development</Link>,{' '}
+                <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>,{' '}
+                <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link>, and{' '}
+                <Link href="/services/product-design" style={{ color: 'var(--brand)' }}>UI/UX design</Link>. This work
+                covers custom web applications, mobile apps, AI/ML solutions, cloud infrastructure, and SaaS platforms
+                for startups and growing teams. Clients can explore project details and results in the{' '}
+                <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>.
               </p>
             </section>
 
