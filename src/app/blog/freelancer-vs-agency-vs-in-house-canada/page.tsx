@@ -9,7 +9,7 @@ import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'Freelancer vs Agency vs In-House in Canada';
 const DESCRIPTION =
-  'Freelancer vs software agency vs in-house team in Canada: cost models, speed, risk, team depth, ownership, and support after launch.';
+  'Freelancer vs software agency vs in-house team in Canada: compare cost, speed, risk, team depth, code ownership and post-launch support before you hire.';
 const SLUG = 'freelancer-vs-agency-vs-in-house-canada';
 const DATE = '2026-11-07';
 
