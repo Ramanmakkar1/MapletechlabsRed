@@ -8,6 +8,8 @@ import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'FinTech App & Software Development Company in Canada';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: 'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.',

@@ -4,6 +4,8 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { PRIORITY_SERVICES, serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Software Development Company Across Canada',
   description: 'Mapletech Labs builds software for companies in twelve Canadian cities, from Vancouver to Halifax. Local delivery, national engineering bench.',

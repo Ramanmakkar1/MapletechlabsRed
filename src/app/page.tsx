@@ -1,27 +1,29 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import nextDynamic from 'next/dynamic';
 import { canonicalPath } from '@/lib/seo/canonical';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/home/Hero';
 import TrustStrip from '@/components/home/TrustStrip';
 
 // Below the fold: loaded lazily so the hero paints first.
-const WhatWeBuild = dynamic(() => import('@/components/home/WhatWeBuild'));
-const EditorialBand = dynamic(() => import('@/components/home/EditorialBand'));
-const FeaturedWork = dynamic(() => import('@/components/home/FeaturedWork'));
-const Industries = dynamic(() => import('@/components/home/Industries'));
-const Process = dynamic(() => import('@/components/home/Process'));
-const AiPractice = dynamic(() => import('@/components/home/AiPractice'));
-const WhyUs = dynamic(() => import('@/components/home/WhyUs'));
-const TechStack = dynamic(() => import('@/components/home/TechStack'));
-const Credentials = dynamic(() => import('@/components/home/Credentials'));
-const Testimonial = dynamic(() => import('@/components/home/Testimonial'));
-const FaqSplit = dynamic(() => import('@/components/home/FaqSplit'));
-const FinalCta = dynamic(() => import('@/components/home/FinalCta'));
-const FAQSchema = dynamic(() => import('@/components/FAQSchema'));
-const Footer = dynamic(() => import('@/components/Footer'));
-const ScrollUI = dynamic(() => import('@/components/ScrollUI'));
-const StickyCTA = dynamic(() => import('@/components/StickyCTA'));
+const WhatWeBuild = nextDynamic(() => import('@/components/home/WhatWeBuild'));
+const EditorialBand = nextDynamic(() => import('@/components/home/EditorialBand'));
+const FeaturedWork = nextDynamic(() => import('@/components/home/FeaturedWork'));
+const Industries = nextDynamic(() => import('@/components/home/Industries'));
+const Process = nextDynamic(() => import('@/components/home/Process'));
+const AiPractice = nextDynamic(() => import('@/components/home/AiPractice'));
+const WhyUs = nextDynamic(() => import('@/components/home/WhyUs'));
+const TechStack = nextDynamic(() => import('@/components/home/TechStack'));
+const Credentials = nextDynamic(() => import('@/components/home/Credentials'));
+const Testimonial = nextDynamic(() => import('@/components/home/Testimonial'));
+const FaqSplit = nextDynamic(() => import('@/components/home/FaqSplit'));
+const FinalCta = nextDynamic(() => import('@/components/home/FinalCta'));
+const FAQSchema = nextDynamic(() => import('@/components/FAQSchema'));
+const Footer = nextDynamic(() => import('@/components/Footer'));
+const ScrollUI = nextDynamic(() => import('@/components/ScrollUI'));
+const StickyCTA = nextDynamic(() => import('@/components/StickyCTA'));
+
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   // `absolute`: the layout's "%s | Mapletech Labs" template would double the brand.

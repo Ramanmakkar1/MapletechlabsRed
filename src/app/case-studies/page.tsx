@@ -6,6 +6,8 @@ import { seoTitle } from '@/lib/seo/title';
 const TITLE = 'Software Development Case Studies';
 const DESCRIPTION = 'See how Mapletech Labs has helped Canadian businesses build scalable software. Real results from fintech, healthcare, e-commerce, and logistics projects.';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,

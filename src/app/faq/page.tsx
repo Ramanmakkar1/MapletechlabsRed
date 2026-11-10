@@ -6,6 +6,8 @@ import { seoTitle } from '@/lib/seo/title';
 const TITLE = 'FAQ: Custom Software Projects in Canada';
 const DESCRIPTION = 'Get answers to common questions about working with Mapletech Labs — pricing, timelines, tech stack, IP ownership, support, and more.';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
