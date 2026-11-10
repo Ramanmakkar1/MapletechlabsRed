@@ -1,5 +1,6 @@
 import { BLOG_AUTHOR } from '@/lib/seo/business';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
 import { getArticle, getRelatedArticles } from '@/data/articles';
@@ -45,7 +46,13 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'app-development-companies-vancouver')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="vancouver" cityName="Vancouver" />} />
+      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="vancouver" cityName="Vancouver" />} extraBlock={
+        <p style={{ marginTop: 24, lineHeight: 1.7 }}>
+          Need a team to build it? See our{' '}
+          <Link href="/services/mobile-app-development/vancouver">mobile app development company in Vancouver</Link>{' '}
+          page for platforms, process, CAD pricing and case studies.
+        </p>
+      } />
     </>
   );
 }
