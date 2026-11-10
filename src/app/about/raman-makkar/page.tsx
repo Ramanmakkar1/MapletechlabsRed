@@ -126,9 +126,9 @@ export default function RamanPage() {
             <p style={{ fontSize: '24px', color: 'var(--brand)', marginBottom: '32px' }}>Founder &amp; CEO</p>
             <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '32px', color: 'var(--body)', maxWidth: '800px' }}>
               Raman Makkar is the founder and CEO of Mapletech Labs, a software development company in Edmonton,
-              Alberta, founded in 2018. He leads a team of 25+ engineers, designers and strategists that builds custom
-              web applications, mobile apps, AI/ML solutions, cloud infrastructure and SaaS platforms for clients
-              across Canada and internationally.
+              Alberta, founded in 2018, serving clients in Edmonton, Calgary, Toronto, and Vancouver. He leads a team
+              of 25+ engineers, designers and strategists that builds custom web applications, mobile apps, AI/ML
+              solutions, cloud infrastructure and SaaS platforms for clients across Canada and internationally.
             </p>
             <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '32px', color: 'var(--body)', maxWidth: '800px' }}>
               Raman Makkar is the founder and CEO of Mapletech Labs, a software development company in Edmonton,
@@ -226,7 +226,7 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>What Raman works on</h2>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Areas of focus</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 Raman and the Mapletech Labs team deliver custom digital products and long-term engineering support for
                 businesses across Canada. Explore the work through <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>{' '}
@@ -308,7 +308,11 @@ export default function RamanPage() {
             </div>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Selected client work</h2>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Work and case studies</h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Explore the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>{' '}
+                for project details and results, or start with one of the selected examples below.
+              </p>
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
                 <li style={{ marginBottom: '12px' }}>
                   <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>AI-Powered Trading Platform</Link>:
