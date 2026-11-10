@@ -1,6 +1,4 @@
-'use client';
-
-import { useRef, useEffect, type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -72,19 +70,6 @@ const CITIES = [
   { slug: 'ottawa', name: 'Ottawa' },
   { slug: 'montreal', name: 'Montreal' },
 ];
-
-function useReveal() {
-  const ref = useRef<HTMLElement>(null);
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.05 },
-    );
-    ref.current?.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-  return ref;
-}
 
 const Check = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden><polyline points="20 6 9 17 4 12" /></svg>
@@ -163,7 +148,6 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
 }
 
 export default function ArticleTemplate({ a, related = [], cityLinks, extraBlock }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode; extraBlock?: ReactNode }) {
-  const pageRef = useReveal();
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
   const projectService = SLUG_PROJECT_SERVICE[a.slug];
   const projectHref = contactHrefFor(a.enquiryContext?.serviceSlug, a.enquiryContext?.citySlug, serviceAllowlist, cities);
@@ -180,7 +164,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, extraBlock
   return (
     <>
       <Navbar />
-      <main ref={pageRef as React.RefObject<HTMLElement>} id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>
+      <main id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>
 
         {/* HERO */}
         <section style={{ padding: 'var(--hero-top) 0 clamp(32px, 4vw, 52px)' }}>
@@ -344,115 +328,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, extraBlock
         <FinalCta title="Let's build something worth keeping." sub="Tell us what you're building and a senior engineer will scope it within one working day." contactHref={projectHref} />
       </main>
       <Footer />
-      <style jsx>{`
-        .article-project-cta :global(a) {
-          white-space: normal;
-          max-width: 100%;
-          box-sizing: border-box;
-          height: auto;
-          min-height: 44px;
-          padding-top: 12px;
-          padding-bottom: 12px;
-          overflow-wrap: anywhere;
-        }
-        .article-toc-mobile {
-          margin: 0 0 28px;
-          max-width: 100%;
-          border: 1px solid var(--line);
-          border-radius: var(--r-lg);
-          background: var(--surface-alt);
-          overflow: hidden;
-        }
-        .article-toc-mobile-summary {
-          list-style: none;
-          cursor: pointer;
-          font-size: 15px;
-          font-weight: 700;
-          color: var(--ink);
-          padding: 10px 18px;
-          min-height: 44px;
-          display: flex;
-          align-items: center;
-          box-sizing: border-box;
-        }
-        .article-toc-mobile-summary::-webkit-details-marker {
-          display: none;
-        }
-        .article-toc-mobile-summary::after {
-          content: '';
-          margin-left: auto;
-          width: 8px;
-          height: 8px;
-          border-right: 2px solid var(--muted);
-          border-bottom: 2px solid var(--muted);
-          transform: rotate(45deg);
-          transition: transform 0.15s ease;
-          flex-shrink: 0;
-        }
-        .article-toc-mobile[open] .article-toc-mobile-summary::after {
-          transform: rotate(-135deg);
-        }
-        .article-toc-mobile-summary:focus-visible {
-          outline: 2px solid var(--brand);
-          outline-offset: -2px;
-        }
-        .article-toc-mobile-nav {
-          padding: 0 18px 16px;
-          border-top: 1px solid var(--line);
-        }
-        .article-toc-mobile-list {
-          list-style: none;
-          margin: 14px 0 0;
-          padding: 0;
-          display: grid;
-          gap: 8px;
-        }
-        .article-toc-mobile-link {
-          display: block;
-          font-size: 14px;
-          color: var(--body);
-          line-height: 1.45;
-          padding: 8px 4px;
-          min-height: 44px;
-          box-sizing: border-box;
-          overflow-wrap: anywhere;
-          text-decoration: none;
-        }
-        .article-toc-mobile-link:hover {
-          color: var(--brand);
-        }
-        .article-toc-mobile-link:focus-visible {
-          outline: 2px solid var(--brand);
-          outline-offset: 2px;
-          border-radius: 4px;
-        }
-        .article-toc-sidebar {
-          display: none;
-        }
-        article :global(.article-table:focus-visible) {
-          outline: 2px solid var(--brand);
-          outline-offset: 2px;
-        }
-        article :global(.article-table-hint) {
-          display: none;
-          margin: 0 0 8px;
-          font-size: 13px;
-          color: var(--muted);
-        }
-        @media (max-width: 767px) {
-          article :global(.article-table-hint) {
-            display: block;
-          }
-        }
-        @media (min-width: 1024px) {
-          .article-toc-mobile {
-            display: none;
-          }
-          .article-toc-sidebar {
-            display: block;
-          }
-        }
-      `}</style>
+
     </>
   );
 }

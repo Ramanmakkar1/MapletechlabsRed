@@ -190,8 +190,9 @@ export default function RootLayout({
   return (
     <html lang="en-CA">
       <head>
-        {/* Preload critical LCP image and preconnect to third-party origins */}
-        <link rel="preload" as="image" href="/images/og-default.jpg" />
+        {/* Preconnect to third-party origins. The OG image is not preloaded:
+            it is only used by social crawlers, so preloading it on every page
+            competed with the real LCP image. */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://clarity.ms" />
