@@ -232,6 +232,9 @@ const nextConfig: NextConfig = {
       { source: '/hospitality-app-development-company', destination: '/services/mobile-app-development', permanent: true },
       { source: '/travel-app-development-company', destination: '/services/mobile-app-development', permanent: true },
       { source: '/sports-app-development-company', destination: '/services/mobile-app-development', permanent: true },
+      // Location URLs that error: 301 to the closest working page.
+      { source: '/locations/toronto/game-development', destination: '/services/game-development', permanent: true },
+      { source: '/locations/saas-development-company-in-windsor', destination: '/locations/software-development-company-in-windsor', permanent: true },
       // Old .com domain paths (catch common patterns)
       { source: '/mobile-app-development-:city', destination: '/locations/app-development-company-in-:city', permanent: true },
       { source: '/web-development-:city', destination: '/locations/web-development-company-in-:city', permanent: true },

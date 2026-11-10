@@ -5,6 +5,12 @@ import { siteOrigin } from '@/lib/seo/canonical';
 
 export const BASE_URL = siteOrigin();
 
+/** Location URLs that 301 elsewhere, so they must not appear in the sitemap. */
+const REDIRECTED_LOCATION_SLUGS = new Set([
+  '/locations/toronto/game-development',
+  '/locations/saas-development-company-in-windsor',
+]);
+
 export const serviceSlugs = [
   'mobile-app-development', 'ai-ml', 'web-development', 'product-design',
   'blockchain-web3', 'cloud-devops', 'ar-vr', 'digital-marketing',
@@ -226,11 +232,13 @@ export function locationSitemapEntries(): SitemapEntry[] {
     changefreq: 'monthly' as const,
     priority: '0.7',
   }));
-  const serviceCities = [...serviceCityCombos, ...agencyCombos].map(c => ({
-    loc: `${BASE_URL}/locations/${c.slug}`,
-    changefreq: 'monthly' as const,
-    priority: '0.85',
-  }));
+  const serviceCities = [...serviceCityCombos, ...agencyCombos]
+    .filter(c => !REDIRECTED_LOCATION_SLUGS.has(`/locations/${c.slug}`))
+    .map(c => ({
+      loc: `${BASE_URL}/locations/${c.slug}`,
+      changefreq: 'monthly' as const,
+      priority: '0.85',
+    }));
   return [...provinces, ...cities, ...serviceCities];
 }
 
@@ -239,11 +247,14 @@ export function localSeoSitemapEntries(): SitemapEntry[] {
   // their old mesh URLs are excluded here to avoid duplicate listings. Niche
   // pairs that the page itself marks noindex are excluded as well.
   return citySlugs.flatMap(city =>
-    serviceSlugs.filter(s => !isPriorityService(s) && isIndexableCityService(city, s)).map(service => ({
-      loc: `${BASE_URL}/locations/${city}/${service}`,
-      changefreq: 'monthly',
-      priority: '0.85',
-    }))
+    serviceSlugs
+      .filter(s => !isPriorityService(s) && isIndexableCityService(city, s))
+      .filter(s => !REDIRECTED_LOCATION_SLUGS.has(`/locations/${city}/${s}`))
+      .map(service => ({
+        loc: `${BASE_URL}/locations/${city}/${service}`,
+        changefreq: 'monthly',
+        priority: '0.85',
+      }))
   );
 }
 
