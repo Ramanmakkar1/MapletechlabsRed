@@ -10,6 +10,7 @@
  *      Webmaster flags those, and the useful part gets truncated in SERPs.
  *
  * Titles that fit are returned unchanged so the template still brands them.
+ * Brand-containing titles are also clamped to 60 characters.
  */
 export const BRAND_SUFFIX = ' | Mapletech Labs';
 export const MAX_TITLE_LENGTH = 60;
@@ -28,9 +29,8 @@ export function ogTitle(title: string): string {
 }
 
 export function seoTitle(title: string): string | { absolute: string } {
-  const trimmed = title.trim();
-  if (/Mapletech Labs/i.test(trimmed)) return { absolute: trimmed };
-  const clamped = clampTitle(trimmed);
+  const clamped = clampTitle(title.trim());
+  if (/Mapletech Labs/i.test(clamped)) return { absolute: clamped };
   if (clamped.length + BRAND_SUFFIX.length > MAX_TITLE_LENGTH) return { absolute: clamped };
   return clamped;
 }
