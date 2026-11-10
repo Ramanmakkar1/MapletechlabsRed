@@ -24,6 +24,58 @@ import type { Faq, HeroCopy, IndustryCard, ServiceCard, Stat, Step, TechCategory
 
 const heroShots = [officeMedia.open, officeMedia.desk, officeMedia.meeting];
 
+/* Service-specific fit and preparation notes for the first conversation. */
+const PROJECT_FIT: Record<string, { fit: string; prepare: string[] }> = {
+  'mobile-app-development': {
+    fit: 'A good fit if you need a native or cross-platform app for iOS and Android, an MVP to put in front of real users, or a rebuild of an app that has outgrown its current codebase.',
+    prepare: ['The main user journey and the problem the app solves', 'Which platforms you need first: iOS, Android or both', 'Any existing designs, APIs or backend systems', 'Your target launch window and budget range'],
+  },
+  'web-development': {
+    fit: 'A good fit if you need a marketing site, e-commerce store, web application or internal portal that is easy to update and built to grow with your business.',
+    prepare: ['The pages or workflows the site must support', 'Any existing brand assets, content or CMS', 'The integrations you need, such as payments, CRM or analytics', 'Your launch date and budget range'],
+  },
+  'ai-ml': {
+    fit: 'A good fit if you have a repetitive workflow, a document-heavy process or a product idea that could use AI, and you want a production-ready solution rather than a demo.',
+    prepare: ['The workflow or decision you want to improve', 'What data you already have and where it lives', 'Any privacy, security or compliance requirements', 'Your timeline and budget range'],
+  },
+  'product-design': {
+    fit: 'A good fit if you need user research, UI/UX design, a design system or a clearer product experience before or alongside development.',
+    prepare: ['The product or feature you want to design', 'Who your users are and what they struggle with', 'Any existing research, analytics or brand guidelines', 'Your timeline and budget range'],
+  },
+  'blockchain-web3': {
+    fit: 'A good fit if you need smart contracts, a dApp, an NFT or DeFi platform, or a clear assessment of whether blockchain is the right tool for your idea.',
+    prepare: ['The problem you want blockchain to solve', 'Which chain or ecosystem you are considering, if any', 'Any token, wallet or compliance requirements', 'Your timeline and budget range'],
+  },
+  'cloud-devops': {
+    fit: 'A good fit if you need to migrate to the cloud, stabilise infrastructure, automate deployments or bring cloud costs and reliability under control.',
+    prepare: ['Your current hosting, cloud provider and architecture', 'The main reliability, cost or deployment problems', 'Any security, compliance or uptime requirements', 'Your timeline and budget range'],
+  },
+  'ar-vr': {
+    fit: 'A good fit if you need an augmented, virtual or mixed reality experience for training, sales, field work or a customer-facing product.',
+    prepare: ['The experience you want to build and who will use it', 'The devices or headsets your audience has', 'Any 3D assets, content or existing systems to connect', 'Your timeline and budget range'],
+  },
+  'digital-marketing': {
+    fit: 'A good fit if you need SEO, local search, content, paid media or analytics support that is tied to leads and revenue rather than vanity metrics.',
+    prepare: ['Your website, target markets and main competitors', 'The services or products you want more enquiries for', 'Any analytics, Search Console or ad account access', 'Your timeline and budget range'],
+  },
+  'wordpress-cms': {
+    fit: 'A good fit if you need a WordPress site, a headless CMS, a WooCommerce store or a rebuild of an existing WordPress site.',
+    prepare: ['The pages, content types and templates you need', 'Any existing WordPress site, plugins or theme', 'The integrations you need, such as payments or CRM', 'Your timeline and budget range'],
+  },
+  'game-development': {
+    fit: 'A good fit if you need a game prototype, a mobile or PC title, a serious game for training, or Unity or Unreal development support.',
+    prepare: ['The game concept, genre and target platforms', 'Any existing art, design or technical assets', 'The scope of the first playable build', 'Your timeline and budget range'],
+  },
+  branding: {
+    fit: 'A good fit if you need a brand strategy, logo, visual identity or brand guidelines that give your company a consistent, recognisable presence.',
+    prepare: ['What your company does and who it serves', 'Any existing logo, colours or brand materials', 'Where the brand will appear, online and offline', 'Your timeline and budget range'],
+  },
+  'saas-development': {
+    fit: 'A good fit if you need a SaaS MVP, a multi-tenant platform, subscription billing, authentication or a rebuild of an existing SaaS product.',
+    prepare: ['The core workflow your users will pay for', 'Any existing product, designs or codebase', 'The integrations you need, such as billing or SSO', 'Your timeline and budget range'],
+  },
+};
+
 /* Service-category page, following the reference's service-page sequence. */
 export default function ServicePageTemplate({ slug, name, copy, stats, services, steps, techCategories, industries, results, faqs, buyerContent, servicesTitle = 'Every Layer. Every Complexity.', caseStudySlugs }: {
   slug: string; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; techCategories?: TechCategory[]; industries?: IndustryCard[]; results?: { value: string; label: string; sub?: string }[]; faqs?: Faq[]; buyerContent?: ReactNode; servicesTitle?: string; caseStudySlugs?: string[];
@@ -44,6 +96,7 @@ export default function ServicePageTemplate({ slug, name, copy, stats, services,
         <MediaBand media={serviceMedia[slug] ?? defaultMedia} />
         <ProcessSteps title={`How we deliver your ${name} project`} steps={steps} />
         <DiscoveryScoping slug={slug} name={name} contactHref={contactHref} />
+        <ProjectFit slug={slug} name={name} contactHref={contactHref} />
         <ServicePricing serviceSlug={slug} serviceName={name} />
         <SuccessStories />
         {results?.length ? <ResultsBand items={results} /> : null}
@@ -104,6 +157,34 @@ function DiscoveryScoping({ slug, name, contactHref }: { slug: string; name: str
           </Link>
           {projectType ? ` — the form opens with ${projectType} selected, so the right team picks it up.` : '.'}
         </p>
+      </div>
+    </section>
+  );
+}
+
+/* Project fit and first-conversation preparation. The CTA carries the same
+   validated service context as the discovery section above. */
+function ProjectFit({ slug, name, contactHref }: { slug: string; name: string; contactHref: string }) {
+  const fit = PROJECT_FIT[slug];
+  if (!fit) return null;
+  return (
+    <section style={{ padding: 'var(--section-y-sm) 0' }}>
+      <div className="cb-container">
+        <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 12px' }}>
+          When {name} is the right fit
+        </h2>
+        <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 24px', maxWidth: 760 }}>
+          {fit.fit}
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 12px', color: 'var(--ink)' }}>
+          What to prepare for the first conversation
+        </h3>
+        <ul style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 24px', paddingLeft: 22, maxWidth: 760 }}>
+          {fit.prepare.map(item => <li key={item} style={{ marginBottom: 6 }}>{item}</li>)}
+        </ul>
+        <Link href={contactHref} className="btn btn--primary">
+          Talk to us about {name}
+        </Link>
       </div>
     </section>
   );
