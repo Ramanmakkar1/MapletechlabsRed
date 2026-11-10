@@ -90,16 +90,16 @@ const nextConfig: NextConfig = {
     return [
       // The old French locale (/fr/*) no longer exists; 301 to the English pages.
       // Destinations never start with /fr, so this cannot loop.
-      { source: '/fr', destination: '/', permanent: true },
+      { source: '/fr', destination: '/', statusCode: 301 as const },
       // Trailing-slash variant of the French homepage, in one hop (the :path*
       // catch-all below can be ambiguous about an empty path after the slash).
-      { source: '/fr/', destination: '/', permanent: true },
+      { source: '/fr/', destination: '/', statusCode: 301 as const },
       // /fr mesh + landing + keyword rules go BEFORE the generic /fr/:path* catch-all
       // so old French URLs land on the final keyword URL in one hop (no 2-hop chain).
       ...frServiceCityMeshRedirects,
       ...frCityLandingRedirects,
       ...frKeywordRedirects,
-      { source: '/fr/:path*', destination: '/:path*', permanent: true },
+      { source: '/fr/:path*', destination: '/:path*', statusCode: 301 as const },
       ...serviceCityMeshRedirects,
       // City landing pages live at keyword URLs; 301 the bare /locations/<city> paths.
       // Exact path only, so the /locations/<city>/<service> mesh is unaffected.
