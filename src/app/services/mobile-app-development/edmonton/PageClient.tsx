@@ -191,6 +191,13 @@ export default function PageClient({ faqs, contactHref }: { faqs: Faq[]; contact
               </Link>
               , or <Link href={contactHref}>talk to us about your app project</Link>.
             </p>
+            <p style={{ ...body, marginTop: 12 }}>
+              Comparing local teams? Our{' '}
+              <Link href="/locations/app-development-company-in-edmonton">
+                app development company in Edmonton
+              </Link>{' '}
+              page covers local pricing guidance, sectors we serve and Edmonton FAQs.
+            </p>
           </div>
         </section>
 

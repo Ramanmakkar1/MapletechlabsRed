@@ -188,6 +188,13 @@ export default function PageClient({ faqs, contactHref }: { faqs: Faq[]; contact
               page for the wider engineering service, or{' '}
               <Link href={contactHref}>talk to us about your app project</Link>.
             </p>
+            <p style={{ ...body, marginTop: 12 }}>
+              Comparing local teams? Our{' '}
+              <Link href="/locations/app-development-company-in-vancouver">
+                app development company in Vancouver
+              </Link>{' '}
+              page covers local pricing guidance, sectors we serve and Vancouver FAQs.
+            </p>
           </div>
         </section>
 
