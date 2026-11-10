@@ -146,7 +146,7 @@ export default function RamanPage() {
               </h2>
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
                 <li style={{ marginBottom: '8px' }}>Role: Founder &amp; CEO of Mapletech Labs</li>
-                <li style={{ marginBottom: '8px' }}>Founded: 2018, the company began as TML Branding Agency</li>
+                <li style={{ marginBottom: '8px' }}>Company: Mapletech Labs, founded in 2018 as TML Branding Agency</li>
                 <li style={{ marginBottom: '8px' }}>Based in: Edmonton, Alberta</li>
                 <li style={{ marginBottom: '8px' }}>
                   Experience: 15+ years in software engineering, product development and digital transformation
@@ -154,7 +154,15 @@ export default function RamanPage() {
                 <li style={{ marginBottom: '8px' }}>
                   Team: 25+ engineers, designers and strategists serving clients across Canada and internationally
                 </li>
-                <li>Projects delivered: 500+ for clients across Canada and internationally</li>
+                <li style={{ marginBottom: '8px' }}>Projects delivered: 500+ for clients across Canada and internationally</li>
+                <li style={{ marginBottom: '8px' }}>
+                  Main services: custom web applications, mobile apps, AI/ML solutions, cloud infrastructure and SaaS
+                  platforms
+                </li>
+                <li>
+                  Sectors and clients: fintech, healthcare, e-commerce, logistics, edtech and enterprise, with clients in
+                  Edmonton, Calgary, Toronto, Vancouver and internationally
+                </li>
               </ul>
             </section>
 
