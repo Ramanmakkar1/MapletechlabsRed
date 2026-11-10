@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: seoTitle('Smart Contract Development in Canada'),
-  description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds secure DeFi, NFT, and DAO smart contracts.',
+  description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds secure DeFi, NFT, and DAO smart contracts. 100+ audits. Book now',
   openGraph: {
     title: 'Smart Contract Development in Canada | Mapletech Labs',
     description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds secure DeFi, NFT, and DAO smart contracts.',

@@ -8,7 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: seoTitle('WebXR Development Services in Canada'),
-  description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web applications accessible on any device.',
+  description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web applications accessible on any device. 20+ built. Book a call.',
   openGraph: {
     title: 'WebXR Development Services in Canada | Mapletech Labs',
     description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web applications accessible on any device.',
