@@ -41,6 +41,8 @@ export function generateStaticParams() {
   return serviceCitySlugs.map(slug => ({ city: slug }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { city: slug } = await params;
   const combo = getServiceCityCombo(slug);
