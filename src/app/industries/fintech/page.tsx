@@ -7,15 +7,16 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'FinTech App & Software Development Company in Canada';
+const DESCRIPTION = 'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems. Fixed-price, Edmonton-based team.';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: 'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.',
+  description: DESCRIPTION,
   openGraph: {
     title: 'FinTech Software Development in Canada | Mapletech Labs',
-    description: 'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/industries/fintech',
     type: 'website',
   },
@@ -32,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={TITLE}
-        description={'FinTech software development in Canada by Mapletech Labs: payment platforms, banking apps and compliant trading systems.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/industries/fintech'}
       />
       <PageClient />
