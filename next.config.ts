@@ -21,8 +21,12 @@ const nextConfig: NextConfig = {
   turbopack: { root: path.resolve(__dirname) },
   // Next's default bot list plus the AI, search and social bots, so those crawlers get the full HTML head before streaming.
   htmlLimitedBots: /[\w-]+-Google|Google-[\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight|Googlebot|GPTBot|ChatGPT-User|OAI-SearchBot|PerplexityBot|ClaudeBot|anthropic-ai|Bytespider/i,
-  // ISR expire time in seconds (this is not a 300 s revalidate).
-  expireTime: 3600,
+  // ISR expire time in seconds (this is not a 300 s revalidate). Repository
+  // content only changes on deploy, so keep prerendered pages in the cache for
+  // a week instead of evicting them every hour. The daily audit was hitting a
+  // cold cache miss on the location, FAQ and case-study templates and measuring
+  // the full server render (7-10 s) as the response time.
+  expireTime: 604800,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
