@@ -179,7 +179,7 @@ export default function CaseStudiesPageClient() {
                 A case study is easy to inflate. We try not to. Each project below leads with the outcome the client actually cared about &mdash; latency cut from 100ms to sub-50ms, checkout conversion moved from 2.1% to 3.8%, admin overhead down 40% &mdash; because that is the only measure of whether the engineering was worth it.
               </p>
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
-                They span the industries we know best: fintech and payments, healthcare, e-commerce, logistics and real estate. Different sectors, different regulations, one pattern &mdash; understand the business, ship something people use, and stay accountable for how it performs after launch. Filter by industry, or read them all.
+                They span the industries we know best: fintech and payments, healthcare, e-commerce, logistics and real estate. Different sectors, different regulations, one pattern &mdash; understand the business, ship something people use, and stay accountable for how it performs after launch. Filter by industry, or read them all. If you are looking for a team in the capital region, see our <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link> page.
               </p>
             </div>
           </div>

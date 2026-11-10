@@ -66,6 +66,7 @@ const serviceLinks = [
 // Edmonton-specific questions first, then the shared ones. This one list is
 // rendered on the page and sent to the FAQPage schema, so the two always match.
 const edmontonFaqs = [
+  { q: 'What is custom software development in Edmonton?', a: 'Custom software development in Edmonton is the design and build of software tailored to a specific business\'s workflows, rather than an off-the-shelf product. Mapletech Labs has provided it from our Edmonton headquarters since 2018, building web platforms, mobile apps and AI systems for Alberta organisations, with a fixed scope and price agreed before any code is written.' },
   { q: 'Is Mapletech Labs actually based in Edmonton?', a: 'Yes. Mapletech Labs was founded in Edmonton in 2018 and Edmonton is still our headquarters. Edmonton clients work directly with our leadership and senior engineers, and we can meet in person anywhere in the Edmonton metro area, from downtown to Sherwood Park and St. Albert.' },
   { q: 'What kinds of custom software do you build for Edmonton businesses?', a: 'Web platforms and customer portals, mobile apps for field crews and customers, internal tools that replace spreadsheets, e-commerce systems and AI features built into existing software. Most of our Edmonton work comes from energy and clean-tech operators, healthcare providers, retailers and local startups.' },
   { q: 'How does pricing work for custom software development in Edmonton?', a: 'Every project is scoped and priced up front in CAD. You approve a fixed scope and a fixed price before we write any code, so there is no open-ended hourly billing. Tell us what you need and a senior engineer replies within one working day with an approach and a price.' },
@@ -107,7 +108,7 @@ export default function PageClient() {
       services={services}
       overview={{
         title: 'Your software and app development partner in Edmonton',
-        lead: 'Mapletech Labs is a custom software development company based in Edmonton, building web platforms, mobile apps and AI systems for Alberta businesses. From our headquarters here we work with energy and clean-tech operators, University of Alberta and Amii-adjacent AI teams, healthcare providers, public-sector groups and a fast-growing base of local startups &mdash; the Edmonton organisations that need software built properly the first time.',
+        lead: 'Custom software development in Edmonton is the design and build of software around a business&apos;s own workflows, and Mapletech Labs has done exactly that from our Edmonton headquarters since 2018. We build web platforms, mobile apps and AI systems for Alberta businesses, working with energy and clean-tech operators, University of Alberta and Amii-adjacent AI teams, healthcare providers, public-sector groups and a fast-growing base of local startups &mdash; the Edmonton organisations that need software built properly the first time.',
         points: [
           { t: 'Senior engineers, directly', d: 'You work with senior engineers from day one, never a sales layer in front of a junior team.' },
           { t: 'Fixed scope, fixed price', d: 'Every engagement is scoped and priced up front, so there are no open-ended hours or surprises.' },
