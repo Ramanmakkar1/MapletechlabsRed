@@ -186,13 +186,19 @@ export default function FreelancerVsAgencyVsInHouseClient({
                     fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
                     marginBottom: 20,
                   }}>
+                    The short answer: hire a freelancer for small, well-defined work, a software agency when you need a full product team, and an in-house team when development is continuous and long-term. Match the model to your budget, timeline, and how much ongoing work you have after launch.
+                  </p>
+                  <p style={{
+                    fontSize: 18, color: 'var(--body)', lineHeight: 1.8,
+                    marginBottom: 20,
+                  }}>
                     Choosing who builds your software is one of the first and most important decisions a Canadian business makes. The three main options — a freelancer, a software agency, or an in-house team — each fit a different shape of project, and picking the wrong one is a common cause of missed timelines and budget overruns.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     A freelancer is one person you contract. An agency is a team you buy capacity from. An in-house team is people you employ. None is universally better; each is the right answer for a different combination of budget, timeline, complexity, and how much ongoing development you need after launch.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    This guide explains when each model works, how they compare on cost, speed, risk, intellectual property, and support after launch, and the questions to ask any vendor before you commit. It is general guidance, not a quote: actual prices depend on scope, seniority, and location.
+                    This guide explains when each model works, how they compare on cost structure, control, speed, and fit, and the questions to ask any vendor before you commit. It is general guidance, not a quote: actual prices depend on scope, seniority, and location.
                   </p>
                 </div>
 
@@ -263,7 +269,7 @@ export default function FreelancerVsAgencyVsInHouseClient({
                     The trade-off is cost and control. Agencies charge more than a single freelancer, and you rely on the agency&apos;s staffing decisions. Before signing, confirm who will actually build the product — employees or subcontractors — and that the contract assigns the code and IP to you.
                   </p>
                   <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    For context on evaluating a development partner end to end, see our <Link href="/blog/choose-software-development-company-canada" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>guide to choosing a software development company in Canada</Link>, and our <Link href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>case studies</Link> show real work we have shipped for Canadian clients.
+                    For context on evaluating a development partner end to end, see our <Link href="/blog/choose-software-development-company-canada" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>guide to choosing a software development company in Canada</Link>, and our <Link href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>case studies</Link> show real work we have shipped for Canadian clients. You can also explore our <Link href="/services/software-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>software development services</Link> and <Link href="/services/software-discovery" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>software discovery</Link> to see how we scope and deliver a build.
                   </p>
                 </div>
 
@@ -335,28 +341,28 @@ export default function FreelancerVsAgencyVsInHouseClient({
                       </thead>
                       <tbody>
                         <tr style={{ borderBottom: '1px solid var(--line)' }}>
-                          <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>Cost model</td>
+                          <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>Cost structure</td>
                           <td style={{ padding: '12px 16px' }}>Hourly rate or fixed project fee</td>
                           <td style={{ padding: '12px 16px' }}>Fixed project price or monthly retainer</td>
                           <td style={{ padding: '12px 16px' }}>Salary plus benefits, equipment, overhead</td>
                         </tr>
                         <tr style={{ borderBottom: '1px solid var(--line)' }}>
-                          <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>Team depth</td>
-                          <td style={{ padding: '12px 16px' }}>One person; limited specialties</td>
-                          <td style={{ padding: '12px 16px' }}>Design, development, QA, project management</td>
-                          <td style={{ padding: '12px 16px' }}>Whoever you hire; depth grows with headcount</td>
+                          <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>Control</td>
+                          <td style={{ padding: '12px 16px' }}>You manage the freelancer directly</td>
+                          <td style={{ padding: '12px 16px' }}>Agency owns staffing and process; you approve milestones</td>
+                          <td style={{ padding: '12px 16px' }}>You direct the team day to day</td>
                         </tr>
                         <tr style={{ borderBottom: '1px solid var(--line)' }}>
-                          <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>Speed to start</td>
-                          <td style={{ padding: '12px 16px' }}>Usually fast, subject to availability</td>
-                          <td style={{ padding: '12px 16px' }}>Quickly once the scope is agreed</td>
+                          <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>Speed</td>
+                          <td style={{ padding: '12px 16px' }}>Fast to start, subject to availability</td>
+                          <td style={{ padding: '12px 16px' }}>Quick once the scope is agreed</td>
                           <td style={{ padding: '12px 16px' }}>Slowest; hiring takes weeks to months</td>
                         </tr>
                         <tr style={{ borderBottom: '1px solid var(--line)' }}>
-                          <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>Risk</td>
-                          <td style={{ padding: '12px 16px' }}>Availability, capacity, single point of failure</td>
-                          <td style={{ padding: '12px 16px' }}>Contract and SLA define responsibilities</td>
-                          <td style={{ padding: '12px 16px' }}>Highest fixed cost; hiring and retention risk</td>
+                          <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>Best fit</td>
+                          <td style={{ padding: '12px 16px' }}>Small, well-defined tasks</td>
+                          <td style={{ padding: '12px 16px' }}>Full product builds needing design, development, QA, and project management</td>
+                          <td style={{ padding: '12px 16px' }}>Continuous, long-term product work</td>
                         </tr>
                         <tr style={{ borderBottom: '1px solid var(--line)' }}>
                           <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink)' }}>IP and ownership</td>
@@ -374,7 +380,7 @@ export default function FreelancerVsAgencyVsInHouseClient({
                     </table>
                   </div>
                   <p style={{ fontSize: 14, color: 'var(--muted)', marginTop: 16, lineHeight: 1.7 }}>
-                    We are based in Edmonton and work with clients across Canada; our founder Raman Makkar leads engineering strategy. For how we price engagements, see our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>pricing</Link>, and for SaaS scoped builds, our <Link href="/services/saas-development/saas-mvp-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SaaS MVP development</Link> page.
+                    We are based in Edmonton and work with clients across Canada; our founder Raman Makkar leads engineering strategy. For how we price engagements, see our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>pricing</Link>, and for SaaS scoped builds, our <Link href="/services/saas-development/saas-mvp-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SaaS MVP development</Link> page. If you want help choosing a model, <Link href="/contact" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>book a consultation</Link>.
                   </p>
                 </div>
 

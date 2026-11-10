@@ -40,6 +40,16 @@ const FAQS = [
       'Software needs ongoing maintenance, security updates, and bug fixes. Freelancers may offer limited support, agencies often sell maintenance packages or retainers, and an in-house team owns updates directly. Decide who will support the product before you sign.',
   },
   {
+    q: 'Is a freelancer cheaper than an agency?',
+    a:
+      'A freelancer usually has a lower hourly rate, but the total cost can be higher if the work needs design, QA, project management, or rework. An agency costs more per hour but brings a full team and a defined process. Compare the total cost to launch and support, not just the rate.',
+  },
+  {
+    q: 'How long does it take to hire an in-house developer in Canada?',
+    a:
+      'Hiring an in-house developer commonly takes several weeks to a few months, including posting, interviews, offers, and notice periods. If you need to start sooner, a freelancer or agency can begin once the scope is agreed.',
+  },
+  {
     q: 'Can Mapletech Labs help me choose?',
     a:
       'Yes. We can review your project scope and help you compare freelancer, agency, and in-house options for your situation. See our pricing page or book a consultation to discuss your project.',
