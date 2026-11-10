@@ -121,6 +121,27 @@ export default function RamanPage() {
             <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
             <p style={{ fontSize: '24px', color: 'var(--brand)', marginBottom: '32px' }}>Founder &amp; CEO</p>
 
+            <section aria-labelledby="raman-at-a-glance" style={{ marginBottom: '32px' }}>
+              <h2
+                id="raman-at-a-glance"
+                style={{ fontSize: '28px', fontWeight: 600, color: 'var(--ink)', marginBottom: '16px' }}
+              >
+                Raman Makkar at a glance
+              </h2>
+              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '8px' }}>Role: Founder &amp; CEO of Mapletech Labs</li>
+                <li style={{ marginBottom: '8px' }}>Founded: 2018, the company began as TML Branding Agency</li>
+                <li style={{ marginBottom: '8px' }}>Based in: Edmonton, Alberta</li>
+                <li style={{ marginBottom: '8px' }}>
+                  Experience: 15+ years in software engineering, product development and digital transformation
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  Team: 25+ engineers, designers and strategists serving clients across Canada and internationally
+                </li>
+                <li>Projects delivered: 500+ for clients across Canada and internationally</li>
+              </ul>
+            </section>
+
             <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '24px', color: 'var(--body)', maxWidth: '800px' }}>
               Founded Mapletech Labs in 2018 with a mission to build world-class software without compromise. With 15+
               years in software engineering, Raman Makkar has architected systems processing billions of transactions,
