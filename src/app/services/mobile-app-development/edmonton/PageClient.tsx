@@ -185,8 +185,11 @@ export default function PageClient({ faqs, contactHref }: { faqs: Faq[]; contact
               <Link href="/locations/software-development-company-in-edmonton">
                 software development company in Edmonton
               </Link>{' '}
-              page for the wider engineering service, or{' '}
-              <Link href={contactHref}>talk to us about your app project</Link>.
+              page for the wider engineering service, read our guide to{' '}
+              <Link href="/blog/app-development-companies-edmonton">
+                choosing an app development company in Edmonton
+              </Link>
+              , or <Link href={contactHref}>talk to us about your app project</Link>.
             </p>
           </div>
         </section>

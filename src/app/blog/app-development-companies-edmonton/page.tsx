@@ -1,63 +1,52 @@
 import { BLOG_AUTHOR } from '@/lib/seo/business';
-import { Metadata } from 'next';
-import PageClient from './PageClient';
+import type { Metadata } from 'next';
+import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
+import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Edmonton App Development Companies: Top 10';
-const DESCRIPTION = 'The best mobile app development companies in Edmonton, Alberta for 2026, compared on services and track record, plus how to pick the right app team.';
-const SLUG = 'app-development-companies-edmonton';
-const DATE = '2026-02-24';
+const a = getArticle('app-development-companies-edmonton')!;
+const URL = `https://mapletechlabs.ca/blog/app-development-companies-edmonton`;
 
 export const metadata: Metadata = {
-  title: seoTitle(TITLE),
-  description: seoDescription(DESCRIPTION),
+  title: seoTitle(a.metaTitle),
+  description: seoDescription(a.metaDescription),
   openGraph: {
-    title: ogTitle(TITLE),
-    description: DESCRIPTION,
+    title: a.metaTitle,
+    description: a.metaDescription,
     type: 'article',
-    publishedTime: DATE,
-    url: `https://mapletechlabs.ca/blog/${SLUG}`,
+    publishedTime: a.date,
+    modifiedTime: a.dateModified,
+    url: URL,
   },
-  alternates: {
-    canonical: canonicalUrl(`/blog/${SLUG}`),
-  },
+  alternates: { canonical: canonicalUrl('/blog/app-development-companies-edmonton') },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
-  description: DESCRIPTION,
-  datePublished: DATE,
-  dateModified: '2026-03-03',
+  headline: a.title,
+  description: a.metaDescription,
+  datePublished: a.date,
+  dateModified: a.dateModified,
   author: BLOG_AUTHOR,
-  publisher: {
-    '@type': 'Organization',
-    name: 'Mapletech Labs',
-    url: 'https://mapletechlabs.ca',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://mapletechlabs.ca/logo.png',
-    },
-  },
-  url: `https://mapletechlabs.ca/blog/${SLUG}`,
-  mainEntityOfPage: `https://mapletechlabs.ca/blog/${SLUG}`,
+  publisher: { '@type': 'Organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
+  url: URL,
+  mainEntityOfPage: URL,
 };
 
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema items={getBlogBreadcrumbs(TITLE, SLUG)} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <PageClient localLinks={<LocalServiceLinks citySlug="edmonton" cityName="Edmonton" />} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'app-development-companies-edmonton')} />
+      <FaqSchema faqs={a.faqs} />
+      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="edmonton" cityName="Edmonton" />} />
     </>
   );
 }
