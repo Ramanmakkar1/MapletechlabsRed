@@ -7,7 +7,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'How Much Does Digital Marketing Cost in Canada? (2026)';
-const DESCRIPTION = 'Digital marketing cost in Canada: compare monthly CAD ranges for SEO, Google Ads, social, and content before you hire an agency.';
+const DESCRIPTION = 'Digital marketing cost in Canada for 2026: monthly CAD ranges for SEO, Google Ads, social media and content, plus what drives the price before you hire.';
 const SLUG = 'digital-marketing-cost-canada';
 const DATE = '2026-03-10';
 
