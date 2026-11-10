@@ -226,11 +226,18 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>What Raman and the team build</h2>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>What Raman works on</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 Raman and the Mapletech Labs team deliver custom digital products and long-term engineering support for
                 businesses across Canada. Explore the work through <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>{' '}
                 and the service areas below.
+              </p>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                His work covers the full range of Mapletech Labs services, from custom web applications and mobile apps
+                to AI/ML solutions, cloud infrastructure and SaaS platforms. You can review the{' '}
+                <Link href="/services" style={{ color: 'var(--brand)' }}>custom software development services</Link>,
+                see the results in the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>,
+                or <Link href="/contact" style={{ color: 'var(--brand)' }}>contact the team</Link> to discuss a project.
               </p>
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
                 <li style={{ marginBottom: '12px' }}>
