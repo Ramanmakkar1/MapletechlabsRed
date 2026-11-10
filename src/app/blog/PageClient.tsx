@@ -342,7 +342,7 @@ const posts = [
     excerpt: 'Learn the exact blueprint non-technical founders use to build, launch, and scale successful B2B SaaS applications, and why custom architecture matters.',
     author: 'RM',
     authorName: 'Raman Makkar',
-    date: 'Mar 2026',
+    date: 'Jan 2026',
     readTime: '7 min read',
   },
   {
@@ -362,7 +362,7 @@ const posts = [
     excerpt: 'Canada has emerged as a global powerhouse in technology. We ranked the absolute top 10 software companies doing the best engineering work across the country.',
     author: 'RM',
     authorName: 'Raman Makkar',
-    date: 'Mar 2026',
+    date: 'Feb 2026',
     readTime: '10 min read',
   },
   {
@@ -372,7 +372,7 @@ const posts = [
     excerpt: 'Complete breakdown of mobile app development costs in Canada — from simple MVPs to enterprise-grade platforms. Real pricing data from Canadian agencies.',
     author: 'RM',
     authorName: 'Raman Makkar',
-    date: 'Mar 2026',
+    date: 'Feb 2026',
     readTime: '8 min read',
   },
   {
@@ -382,7 +382,7 @@ const posts = [
     excerpt: 'Ranking the best AI and machine learning development companies in Canada, from LLM integration specialists to computer vision experts.',
     author: 'RM',
     authorName: 'Raman Makkar',
-    date: 'Mar 2026',
+    date: 'Feb 2026',
     readTime: '9 min read',
   },
   {
@@ -402,7 +402,7 @@ const posts = [
     excerpt: 'From simple landing pages to complex web applications — a complete guide to website development costs across Canada with real pricing benchmarks.',
     author: 'RM',
     authorName: 'Raman Makkar',
-    date: 'Mar 2026',
+    date: 'Feb 2026',
     readTime: '7 min read',
   },
   {
@@ -412,7 +412,7 @@ const posts = [
     excerpt: 'Expert guide to selecting the right software development partner — what to look for, red flags to avoid, and questions every CTO should ask.',
     author: 'RM',
     authorName: 'Raman Makkar',
-    date: 'Mar 2026',
+    date: 'Feb 2026',
     readTime: '8 min read',
   },
   {
@@ -422,7 +422,7 @@ const posts = [
     excerpt: 'Ranking the best web development companies in Toronto — from Next.js specialists to full-stack agencies building enterprise-grade digital products.',
     author: 'RM',
     authorName: 'Raman Makkar',
-    date: 'Mar 2026',
+    date: 'Feb 2026',
     readTime: '9 min read',
   },
   {
