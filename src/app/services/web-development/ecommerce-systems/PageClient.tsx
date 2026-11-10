@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -29,7 +30,38 @@ const faqs = [
   { q: 'Which payment gateway do you recommend?', a: 'Stripe is our default recommendation — it has the best developer experience, the broadest payment method support (cards, wallets, buy now pay later, bank transfers), and excellent fraud tooling with Stripe Radar. For international markets we sometimes supplement with local gateways or Adyen for enterprise-scale merchants.' },
   { q: 'Can you migrate our existing WooCommerce store?', a: 'Yes. We have a structured migration process covering product catalogue and media, customer accounts, order history, SEO URL preservation with redirects, and payment method migration. We run parallel systems during the transition to ensure zero downtime and validate every product, price, and image before cutover.' },
   { q: 'How do you improve conversion rates?', a: 'We analyse your funnel using session recordings, heatmaps, and Google Analytics to identify drop-off points, then run structured A/B tests on high-impact elements — hero images, CTA copy, checkout steps, trust badges, and upsell placement. Our clients typically see 15–40% conversion rate improvements within 90 days of launch.' },
+  { q: 'Is my store a good fit for a custom e-commerce build?', a: 'A custom build fits when your storefront needs unique UX, complex B2B or multi-vendor workflows, unusual pricing, or deep ERP, PIM or 3PL integration. A standard retail catalogue with straightforward requirements is often better served by Shopify. We assess your catalogue, order flow and integrations before recommending either path.' },
+  { q: 'Which commerce systems can you integrate with?', a: 'We integrate payment gateways such as Stripe, PayPal, Klarna and Afterpay, plus inventory, order management, shipping, email marketing, analytics, ERP, PIM and 3PL systems. We also connect product search through Algolia or Elasticsearch and commerce backends such as Shopify or Commercetools.' },
+  { q: 'Who owns the storefront code and accounts?', a: 'You do. We sign an IP assignment agreement on day one, and on final payment you receive full source code, design files, documentation and credentials. Repositories and infrastructure access transfer to you, so you can take the store to another team without lock-in.' },
+  { q: 'How do you price an e-commerce project?', a: 'We work on a fixed-scope, fixed-price model. After discovery we share a scoped, fixed-price proposal covering deliverables, milestones and timeline before any build starts, so you know the cost before we write code.' },
 ];
+
+function BuyerContent() {
+  return (
+    <section aria-labelledby="ecommerce-buyer-guide" style={{ padding: 'var(--section-y-sm) 0', background: 'var(--surface-alt)' }}>
+      <div className="cb-container" style={{ maxWidth: 960, color: 'var(--body)', lineHeight: 1.7 }}>
+        <h2 id="ecommerce-buyer-guide">Planning a custom e-commerce build or replatform</h2>
+        <p className="lede">A custom e-commerce build gives you a storefront designed around your catalogue, checkout and back-office systems instead of a fixed theme. It fits when standard retail tooling cannot support your pricing, order flow or integrations; a simpler catalogue often launches faster on Shopify.</p>
+
+        <h3>Custom storefronts</h3>
+        <p className="lede">We build custom storefronts with Next.js Commerce or bespoke architecture, tailored to your brand with mobile-first product pages and a checkout built to convert. Our <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)' }}>enterprise e-commerce platform case study</Link> shows a headless rebuild that tripled revenue, serves 2M+ monthly visitors at 99.9% uptime, and held zero downtime through Black Friday peak traffic.</p>
+
+        <h3>Commerce integrations</h3>
+        <p className="lede">Your storefront is only as good as the systems behind it. We connect payment gateways such as Stripe, PayPal, Klarna and Afterpay, plus inventory and order management, shipping, email marketing, analytics, ERP, PIM and 3PL providers. Product search can run on Algolia or Elasticsearch, and commerce backends can include Shopify or Commercetools.</p>
+
+        <h3>Migration considerations</h3>
+        <p className="lede">A migration has to protect revenue, rankings and customer history. We have a structured migration process covering product catalogue and media, customer accounts, order history, SEO URL preservation with redirects, and payment method migration. We run parallel systems during the transition to ensure zero downtime and validate every product, price, and image before cutover.</p>
+
+        <h3>Project scope and delivery</h3>
+        <p className="lede">Scope is driven by catalogue size, number of unique templates, checkout complexity, integrations and data migration. We define the catalogue structure, payment and fulfilment strategy and technology stack first, then build and test every integration end to end. Our storefront delivery benchmark is 4 weeks, with larger replatforms scoped separately. We share a scoped, fixed-price proposal before any build starts.</p>
+
+        <h3>Shopify versus custom: how to evaluate</h3>
+        <p className="lede">Choose Shopify for standard retail with straightforward requirements, fast time to market and a rich app ecosystem. Choose a custom or headless build when you need unique UX, complex B2B workflows, unusual pricing models or deep ERP integration. We evaluate both options objectively against your requirements and budget, and you can see the wider team&apos;s work on our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services page</Link>.</p>
+        <p className="lede"><Link href="/contact?service=web-development">Book an e-commerce consultation</Link> with your catalogue size, current platform and integration list so we can recommend Shopify, headless or bespoke and provide a fixed quote.</p>
+      </div>
+    </section>
+  );
+}
 
 export default function PageClient() {
   return (
@@ -42,6 +74,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Commerce Solutions That Drive Revenue"
+      buyerContent={<BuyerContent />}
     />
   );
 }
