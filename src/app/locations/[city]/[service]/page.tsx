@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getCityServiceData, getAllCityServiceParams } from '@/data/city-service';
+import { services } from '@/data/services';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { isIndexableCityService } from '@/data/serviceCity';
@@ -62,7 +61,11 @@ export default async function CityServicePage({ params }: PageProps) {
   }
   const isEdmWeb = isEdmWebPair(city, service);
   const desc = isEdmWeb ? EDM_WEB_DESCRIPTION : data.description;
-  const servicePageExists = existsSync(join(process.cwd(), 'src', 'app', 'services', data.serviceSlug));
+  // Check the in-memory service catalog instead of the filesystem on every
+  // render. Every service in the catalog has a /services/<slug> page, so this
+  // keeps the breadcrumb link while removing a synchronous fs call from the
+  // render path.
+  const servicePageExists = services.some(s => s.slug === data.serviceSlug);
   const breadcrumbItems = [
     { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
     { position: 2, name: 'Services', item: 'https://mapletechlabs.ca/services' },
