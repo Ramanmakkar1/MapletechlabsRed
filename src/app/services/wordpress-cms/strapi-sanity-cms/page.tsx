@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Expert Strapi and Sanity headless CMS setup with Next.js integration, live preview, and content migration. Mapletech Labs, Toronto. 30+ CMS projects.',
   openGraph: {
     title: 'Strapi & Sanity CMS Development | Mapletech Labs',
-    description: 'Modern headless CMS solutions with Strapi and Sanity — flexible schemas, real-time preview, and seamless Next.js integration.',
+    description: 'Strapi and Sanity headless CMS setup with Next.js integration, live preview, and content migration. Mapletech Labs, Toronto. 30+ CMS projects delivered',
     url: 'https://mapletechlabs.ca/services/wordpress-cms/strapi-sanity-cms',
     type: 'website',
   },

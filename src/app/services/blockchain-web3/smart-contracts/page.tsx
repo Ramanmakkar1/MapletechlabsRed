@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds secure DeFi, NFT, and DAO smart contracts. 100+ audits. Book now',
   openGraph: {
     title: 'Smart Contract Development in Canada | Mapletech Labs',
-    description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds secure DeFi, NFT, and DAO smart contracts.',
+    description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds DeFi, NFT, and DAO contracts, 100+ audits, $500M+ TVL secured',
     url: 'https://mapletechlabs.ca/services/blockchain-web3/smart-contracts',
     type: 'website',
   },

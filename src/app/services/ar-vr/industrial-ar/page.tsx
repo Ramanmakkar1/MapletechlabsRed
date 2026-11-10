@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Enterprise industrial AR for manufacturing and maintenance. HoloLens 2, digital twins, and IoT overlays by Mapletech Labs in Toronto, Canada.',
   openGraph: {
     title: 'Industrial AR Solutions | Mapletech Labs',
-    description: 'Enterprise industrial AR for manufacturing and maintenance with HoloLens 2 and digital twins.',
+    description: 'Enterprise industrial AR for manufacturing and maintenance. HoloLens 2, digital twins and IoT overlays, 15+ deployments, 40% average error reduction',
     url: 'https://mapletechlabs.ca/services/ar-vr/industrial-ar',
     type: 'website',
   },

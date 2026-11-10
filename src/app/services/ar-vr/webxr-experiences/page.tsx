@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web applications accessible on any device. 20+ built. Book a call.',
   openGraph: {
     title: 'WebXR Development Services in Canada | Mapletech Labs',
-    description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web applications accessible on any device.',
+    description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web apps accessible on any device, no install needed. 20+ built',
     url: 'https://mapletechlabs.ca/services/ar-vr/webxr-experiences',
     type: 'website',
   },
