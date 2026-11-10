@@ -131,6 +131,15 @@ export function getCityServiceData(
   const offer = META_OFFER[service.slug] ?? `builds ${service.heroHeadlinePrefix.toLowerCase()} solutions`;
   let description = `${service.heroHeadlinePrefix} in ${city.name}, ${city.provinceAbbr}. Mapletech Labs ${offer} on a fixed scope and price. Get a free quote.`;
   if (description.length > 155) description = description.replace(' Get a free quote.', ' Free quote.');
+  if (description.length < 140) {
+    for (const suffix of [' Clear milestones and no hidden fees.', ' Clear milestones, no hidden fees.', ' No hidden fees.']) {
+      const candidate = `${description}${suffix}`;
+      if (candidate.length >= 140 && candidate.length <= 155) {
+        description = candidate;
+        break;
+      }
+    }
+  }
   const canonicalUrl = buildCanonicalUrl(`/locations/${city.slug}/${service.slug}`);
 
   const data: CityServicePageData = {
