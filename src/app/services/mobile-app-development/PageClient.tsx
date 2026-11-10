@@ -84,12 +84,13 @@ const industries = [
 ];
 
 const faqs = [
+  { q: 'Should I launch on iOS, Android, or both?', a: 'If your audience skews heavily to one platform, start native for best performance. If you need both platforms with a tighter budget, Flutter or React Native delivers 90% of native quality at significantly lower cost. Discovery establishes the launch scope, roadmap and milestones.' },
+  { q: 'What are the tradeoffs between React Native and native development?', a: 'Native iOS and Android provide direct access to operating-system capabilities but require separate codebases and release cycles. React Native uses a shared codebase for both stores, although specialised integrations can still require native modules and platform expertise.' },
+  { q: 'Will you handle App Store and Google Play submission?', a: 'Absolutely. We manage the full submission process for both App Store and Google Play — including screenshots, descriptions, metadata, rating compliance and any review feedback.' },
+  { q: 'Can you integrate the app with our backend and existing APIs?', a: 'Yes. API integration is part of Agile Development, and Discovery & Strategy produces a technical spec. We regularly audit and extend existing apps, conducting a code review during discovery and giving you an honest assessment before committing to a scope.' },
+  { q: 'What maintenance does an app need after launch?', a: 'Crash analytics are set up during QA & Performance, and launch analytics in our Launch & Growth step. Every engagement includes a 30-day post-launch warranty. Beyond that, we offer flexible SLA retainers covering monitoring, bug fixes, OS updates and feature development.' },
+  { q: 'What factors affect mobile app project pricing?', a: 'Platform choice, feature set and backend or API integrations affect scope. Simple MVPs typically start at $2,500 CAD. Consumer apps with full feature sets range $8,000–$25,000. Enterprise apps with complex integrations vary. You receive a fixed-price quote after our discovery call.' },
   { q: 'How long does it take to build a mobile app?', a: 'Most MVPs ship in 8–12 weeks from discovery kickoff. Full-featured consumer apps typically run 4–6 months. You receive a detailed milestone plan before development begins.' },
-  { q: 'iOS, Android, or cross-platform — which should I choose?', a: 'If your audience skews heavily to one platform, start native for best performance. If you need both platforms with a tighter budget, Flutter or React Native delivers 90% of native quality at significantly lower cost.' },
-  { q: 'Do you provide post-launch support?', a: 'Yes — every engagement includes a 30-day post-launch warranty. Beyond that, we offer flexible SLA retainers covering monitoring, bug fixes, OS updates and feature development.' },
-  { q: 'How much does a mobile app cost?', a: 'Simple MVPs typically start at $2,500 CAD. Consumer apps with full feature sets range $8,000–$25,000. Enterprise apps with complex integrations vary. You receive a fixed-price quote after our discovery call.' },
-  { q: 'Will you handle App Store submission?', a: 'Absolutely. We manage the full submission process for both App Store and Google Play — including screenshots, descriptions, metadata, rating compliance and any review feedback.' },
-  { q: 'Can you work with our existing codebase?', a: 'Yes. We regularly audit and extend existing apps. We\'ll conduct a code review in our discovery phase and give you an honest assessment before committing to a scope.' },
   { q: 'Do you sign NDAs?', a: 'Always — on Day 1, before any project discussion. Your idea and IP are protected from the very first conversation.' },
 ];
 
@@ -119,12 +120,12 @@ export default function PageClient() {
             <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 24px' }}>Choose the right app platform</h2>
             <div className="grid grid--2" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
               <div>
-                <h2 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>Choose native iOS or Android</h2>
+                <h2 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>Choose native <Link href="/services/mobile-app-development/ios-app-development">iOS</Link> or <Link href="/services/mobile-app-development/android-app-development">Android</Link></h2>
                 <p>Choose a native build when the product depends on deep device integrations such as Bluetooth, health sensors, background location or advanced camera features, or needs demanding graphics and real-time performance. Native apps offer direct access to operating-system capabilities and familiar platform conventions. The trade-off is maintaining separate iOS and Android codebases, release cycles and store submissions. Offline support can be tailored closely to device storage and sync needs.</p>
-                <h2 style={{ fontSize: 'var(--fs-h4)', margin: '20px 0 8px', color: 'var(--ink)' }}>Choose React Native or Flutter</h2>
-                <p>A shared codebase is a practical fit when you need both app stores and want one team to deliver features across platforms efficiently. React Native and Flutter support polished app experiences, but specialised integrations can still require native modules and platform expertise. Offline use is achievable, though data storage and sync must be designed deliberately. You still prepare and maintain store releases for both platforms.</p>
+                <h2 style={{ fontSize: 'var(--fs-h4)', margin: '20px 0 8px', color: 'var(--ink)' }}>Choose <Link href="/services/mobile-app-development/react-native-apps">React Native</Link> or Flutter</h2>
+                <p>A <Link href="/services/mobile-app-development/cross-platform-apps">shared codebase</Link> is a practical fit when you need both app stores and want one team to deliver features across platforms efficiently. React Native and Flutter support polished app experiences, but specialised integrations can still require native modules and platform expertise. Offline use is achievable, though data storage and sync must be designed deliberately. You still prepare and maintain store releases for both platforms.</p>
                 <h2 style={{ fontSize: 'var(--fs-h4)', margin: '20px 0 8px', color: 'var(--ink)' }}>Choose a progressive web app</h2>
-                <p>A PWA suits browser-first services where a shareable link and no store installation make access easier. It can cache key screens for limited offline use, but browser support for device integrations and background tasks varies. Distribution is simpler because updates go live on the web, while users may need to add the app to their home screen themselves. Our <Link href="/blog/app-development-cost-canada">Canadian app development cost guide</Link> explains how scope affects the budget. For a practical buying checklist, read our <Link href="/blog/mobile-app-development-company-canada">mobile app development company guide for Canada</Link>.</p>
+                <p>A PWA suits browser-first services where a shareable link and no store installation make access easier. It can cache key screens for limited offline use, but browser support for device integrations and background tasks varies. Distribution is simpler because updates go live on the web, while users may need to add the app to their home screen themselves. Our <Link href="/blog/app-development-cost-canada">Canadian app development cost guide</Link> explains how scope affects the budget. For a practical buying checklist, read our <Link href="/blog/mobile-app-development-company-canada">mobile app development company guide for Canada</Link>, then compare delivery approaches in our <Link href="#mobile-app-case-studies">mobile app case-study hub</Link>.</p>
               </div>
               <div>
                 <h2 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 12px', color: 'var(--ink)' }}>Bring this consultation checklist</h2>
@@ -141,7 +142,7 @@ export default function PageClient() {
             </div>
           </div>
         </section>
-        <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+        <section id="mobile-app-case-studies" style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
             <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--brand)', margin: '0 0 12px' }}>Mobile app case studies</p>
             <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 16px' }}>Find the right fit for your app project</h2>
