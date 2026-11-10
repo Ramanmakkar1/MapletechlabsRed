@@ -80,7 +80,7 @@
 - [Cloud & DevOps in Toronto](https://mapletechlabs.ca/locations/toronto/cloud-devops): Cloud architecture, migration, Kubernetes and DevOps automation for Toronto businesses scaling infrastructure, deployments and application performance.
 - [WordPress & CMS Development in Toronto](https://mapletechlabs.ca/locations/toronto/wordpress-cms): WordPress, WooCommerce and headless CMS development for Toronto businesses needing fast, secure, easily managed websites.
 - [Branding & Creative in Toronto](https://mapletechlabs.ca/locations/toronto/branding): Brand strategy, visual identity and creative assets for Toronto businesses launching, repositioning or refreshing their brand.
-- [Game Development in Toronto](https://mapletechlabs.ca/locations/toronto/game-development): Mobile, PC and console game development for Toronto teams creating Unity, Unreal or multiplayer experiences.
+- [Game Development in Toronto](https://mapletechlabs.ca/services/game-development): Mobile, PC and console game development for Toronto teams creating Unity, Unreal or multiplayer experiences.
 - [Blockchain & Web3 Development in Toronto](https://mapletechlabs.ca/locations/toronto/blockchain-web3): Blockchain and Web3 development for Toronto businesses building smart contracts, DeFi protocols, NFT marketplaces or decentralized applications.
 - [AR & VR Development in Toronto](https://mapletechlabs.ca/locations/toronto/ar-vr): AR and VR development for Toronto businesses creating mobile, WebXR, training, marketing, real estate or entertainment experiences.
 
