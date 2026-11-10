@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Professional mobile game development for iOS and Android. From hyper-casual to mid-core games with proven monetization. 50+ games shipped, 10M+ downloads.',
   openGraph: {
     title: 'Mobile Game Development | Mapletech Labs',
-    description: 'Professional mobile game development for iOS and Android. From hyper-casual to mid-core games with proven monetization. 50+ games shipped.',
+    description: 'Professional mobile game development for iOS and Android. From hyper-casual to mid-core games with proven monetization. 50+ games shipped, 10M+ downloads.',
     url: 'https://mapletechlabs.ca/services/game-development/mobile-games',
     type: 'website',
   },

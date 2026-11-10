@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Custom crypto wallet development: multi-chain support, HD key management, and hardware wallet integration. Mapletech Labs builds secure wallets in Canada.',
   openGraph: {
     title: 'Crypto Wallet Development Company Toronto | Mapletech Labs',
-    description: 'Custom crypto wallet development: multi-chain support, HD key management, and hardware wallet integration.',
+    description: 'Custom crypto wallet development: multi-chain support, HD key management, and hardware wallet integration. Mapletech Labs builds secure wallets in Canada.',
     url: 'https://mapletechlabs.ca/services/blockchain-web3/crypto-wallets',
     type: 'website',
   },

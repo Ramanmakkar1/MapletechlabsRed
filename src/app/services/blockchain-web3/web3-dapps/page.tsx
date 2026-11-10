@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Full-stack Web3 dApp development with wallet integration, on-chain indexing and cross-chain UX. Mapletech Labs ships production dApps from Toronto, Canada.',
   openGraph: {
     title: 'Web3 dApp Development Services | Mapletech Labs',
-    description: 'Full-stack Web3 dApp development with wallet integration, on-chain indexing and cross-chain UX.',
+    description: 'Full-stack Web3 dApp development with wallet integration, on-chain indexing and cross-chain UX. Mapletech Labs ships production dApps from Toronto, Canada.',
     url: 'https://mapletechlabs.ca/services/blockchain-web3/web3-dapps',
     type: 'website',
   },

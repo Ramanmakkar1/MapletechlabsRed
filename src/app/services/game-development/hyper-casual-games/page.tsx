@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'We build and publish hyper-casual games fast — from 3-day prototypes to CPI-validated launches. 50M+ downloads shipped by our Toronto-based game studio.',
   openGraph: {
     title: 'Hyper-Casual Game Development | Mapletech Labs',
-    description: 'Rapid hyper-casual game prototyping, CPI testing, and publishing. 40+ games shipped with 50M+ downloads.',
+    description: 'We build and publish hyper-casual games fast — from 3-day prototypes to CPI-validated launches. 40+ games shipped with 50M+ downloads from Toronto.',
     url: 'https://mapletechlabs.ca/services/game-development/hyper-casual-games',
     type: 'website',
   },

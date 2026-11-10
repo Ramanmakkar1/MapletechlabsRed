@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Unreal Engine 5 game development with Lumen, Nanite, and Chaos Physics. AAA-quality games, simulations, and archviz. 30+ UE5 projects delivered in Canada.',
   openGraph: {
     title: 'Unreal Engine 5 Development | Mapletech Labs',
-    description: 'Unreal Engine 5 game development with Lumen, Nanite, and Chaos Physics. AAA-quality games, simulations, and architectural visualization.',
+    description: 'Unreal Engine 5 game development with Lumen, Nanite, and Chaos Physics. AAA-quality games, simulations, and archviz. 30+ UE5 projects delivered in Canada.',
     url: 'https://mapletechlabs.ca/services/game-development/unreal-engine',
     type: 'website',
   },

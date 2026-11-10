@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.',
   openGraph: {
     title: 'Multiplayer & LiveOps Development | Mapletech Labs',
-    description: 'We build scalable multiplayer game servers, matchmaking, and LiveOps systems that keep players engaged.',
+    description: 'Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.',
     url: 'https://mapletechlabs.ca/services/game-development/multiplayer-liveops',
     type: 'website',
   },
