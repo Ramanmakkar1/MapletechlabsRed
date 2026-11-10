@@ -53,6 +53,7 @@ export default function PageClient() {
       faqs={faqs}
       servicesTitle="Full-Stack SaaS Engineering"
       buyerContent={(
+        <>
         <section aria-labelledby="saas-first-release" style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="head">
@@ -84,6 +85,24 @@ export default function PageClient() {
             </div>
           </div>
         </section>
+        <section aria-labelledby="software-development-cities" style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container">
+            <div className="head">
+              <div>
+                <h2 id="software-development-cities">Software development in major Canadian cities</h2>
+                <p className="lede">Mapletech Labs builds custom software for clients across Canada. Pick your city to see local details.</p>
+              </div>
+            </div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
+              <li><Link href="/locations/software-development-company-in-toronto">Software development company in Toronto</Link></li>
+              <li><Link href="/locations/software-development-company-in-vancouver">Software development company in Vancouver</Link></li>
+              <li><Link href="/locations/software-development-company-in-calgary">Software development company in Calgary</Link></li>
+              <li><Link href="/locations/software-development-company-in-edmonton">Software development company in Edmonton</Link></li>
+              <li><Link href="/locations/software-development-company-in-montreal">Software development company in Montreal</Link></li>
+            </ul>
+          </div>
+        </section>
+        </>
       )}
     />
   );
