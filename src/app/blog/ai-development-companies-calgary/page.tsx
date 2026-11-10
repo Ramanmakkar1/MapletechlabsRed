@@ -2,6 +2,7 @@ import { BLOG_AUTHOR } from '@/lib/seo/business';
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
+import RelatedServices from '@/components/RelatedServices';
 import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
@@ -46,7 +47,20 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'ai-development-companies-calgary')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="calgary" cityName="Calgary" />} />
+      <ArticleTemplate
+        a={a}
+        related={getRelatedArticles(a.slug)}
+        cityLinks={<LocalServiceLinks citySlug="calgary" cityName="Calgary" />}
+        relatedServices={
+          <RelatedServices
+            links={[
+              { href: '/services/ai-ml', label: 'AI development services in Calgary' },
+              { href: '/services/ai-ml/ai-chatbots', label: 'AI chatbot development services' },
+              { href: '/locations/software-development-company-in-calgary', label: 'Software development company in Calgary' },
+            ]}
+          />
+        }
+      />
     </>
   );
 }

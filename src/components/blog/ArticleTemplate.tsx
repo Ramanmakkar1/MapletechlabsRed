@@ -147,7 +147,7 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
   }
 }
 
-export default function ArticleTemplate({ a, related = [], cityLinks, extraBlock }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode; extraBlock?: ReactNode }) {
+export default function ArticleTemplate({ a, related = [], cityLinks, relatedServices, extraBlock }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode; relatedServices?: ReactNode; extraBlock?: ReactNode }) {
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
   const projectService = SLUG_PROJECT_SERVICE[a.slug];
   const projectHref = contactHrefFor(a.enquiryContext?.serviceSlug, a.enquiryContext?.citySlug, serviceAllowlist, cities);
@@ -244,6 +244,8 @@ export default function ArticleTemplate({ a, related = [], cityLinks, extraBlock
                     </p>
                   </div>
                 )}
+
+                {relatedServices}
 
                 {/* FAQ */}
                 {a.faqs.length > 0 && (
