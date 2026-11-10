@@ -109,6 +109,30 @@ export default function PageClient() {
           <div className="cb-container" style={{ display: 'grid', gap: 20 }}>
             <h2>Choose an AI development approach</h2>
             <p className="lede">Start with the decision or task you want to improve. The right approach depends on whether your team needs reliable answers, coordinated actions or predictions from business data.</p>
+            <h3 id="ai-project-fit">Which AI development service fits your project?</h3>
+            <p id="ai-project-fit-help">Compare common business needs below; scroll horizontally on smaller screens.</p>
+            <div role="region" aria-labelledby="ai-project-fit" aria-describedby="ai-project-fit-help" tabIndex={0} style={{ overflowX: 'auto', maxWidth: '100%', marginBottom: 32 }}>
+              <table style={{ width: '100%', minWidth: 640, borderCollapse: 'collapse', textAlign: 'left' }}>
+                <caption style={{ textAlign: 'left', paddingBottom: 12 }}>AI project needs and the service that fits each one</caption>
+                <thead>
+                  <tr>{['Project need', 'Suitable approach', 'Where to start'].map(label => <th key={label} scope="col" style={{ padding: 14, borderBottom: '2px solid var(--line)' }}>{label}</th>)}</tr>
+                </thead>
+                <tbody>
+                  {[
+                    ['Customers need instant answers to common questions, 24/7', 'AI chatbot or virtual assistant', <Link key="chatbots" href="/services/ai-ml/ai-chatbots">AI chatbot development</Link>],
+                    ['Staff need reliable answers from policies, manuals or product documentation', 'Document retrieval and LLM integration (RAG)', <Link key="llm" href="/services/ai-ml/llm-integration">LLM integration</Link>],
+                    ['Repeatable tasks such as triage, routing or data entry consume staff time', 'AI workflow automation', <Link key="automation" href="/services/ai-ml/ai-automation">AI automation</Link>],
+                    ['You need forecasts, churn scores or demand predictions from business data', 'Custom predictive analytics model', <Link key="predictive" href="/services/ai-ml/predictive-analytics">Predictive analytics</Link>],
+                  ].map(([need, approach, link]) => (
+                    <tr key={String(need)}>
+                      <th scope="row" style={{ padding: 14, borderBottom: '1px solid var(--line)' }}>{need}</th>
+                      <td style={{ padding: 14, borderBottom: '1px solid var(--line)' }}>{approach}</td>
+                      <td style={{ padding: 14, borderBottom: '1px solid var(--line)' }}>{link}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
             <h3>Document retrieval and LLM integration</h3>
             <p className="lede">Choose <Link href="/services/ai-ml/llm-integration">document retrieval and LLM integration</Link> when staff need answers from changing policies, manuals or product documentation. Prepare approved source documents, access permissions and realistic questions with reference answers. Agree how to score answer accuracy and source citations on a shared evaluation set, including questions the documents cannot answer. Define when the assistant should decline or escalate to a person.</p>
             <h3>Workflow automation</h3>
