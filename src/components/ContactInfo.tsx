@@ -142,6 +142,9 @@ export default function ContactInfo() {
     <section style={{ padding: '0 0 var(--section-y)', background: 'var(--surface)' }}>
       <div className="cb-container">
         <div style={{ maxWidth: 760 }}>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px' }}>
+            {BUSINESS.name} is a software development company based in {HQ_ADDRESS.addressLocality}, {HQ_ADDRESS.addressRegion}, and we offer a free project consultation to anyone planning a new build. Send us a short message and a senior engineer will reply within one working day.
+          </p>
           <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
             What happens after you reach out
           </h2>
@@ -157,6 +160,32 @@ export default function ContactInfo() {
               </li>
             ))}
           </ol>
+
+          <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
+            What to prepare before you call
+          </h2>
+          <ul style={{ margin: '0 0 64px', paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
+              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>The problem you want solved</strong>
+              {' — '}
+              Describe what is not working today, or <Link href="/tools/project-brief" style={link}>write a short project brief</Link> if you are starting from an idea.
+            </li>
+            <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
+              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Your target users</strong>
+              {' — '}
+              Tell us who will use the product and what they need to get done.
+            </li>
+            <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
+              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>A rough budget range or budget stage</strong>
+              {' — '}
+              A ballpark figure or a note on where you are with funding helps us suggest a sensible scope.
+            </li>
+            <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
+              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>A target launch date or deadline</strong>
+              {' — '}
+              Share any fixed date so we can tell you what is realistic.
+            </li>
+          </ul>
 
           <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
             What we can help with
