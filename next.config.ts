@@ -19,10 +19,10 @@ const nextConfig: NextConfig = {
   // Pin the root so Next/Turbopack never pick the parent folder.
   outputFileTracingRoot: path.resolve(__dirname),
   turbopack: { root: path.resolve(__dirname) },
-  // Render <title>/meta/canonical in <head> for ALL user agents (AI crawlers like GPTBot/PerplexityBot/ClaudeBot are not in Next's default list and would otherwise get streamed metadata).
-  htmlLimitedBots: /.*/,
-  // Bounded stale-cache window: 300s revalidate, 3600s max age
-   expireTime: 3600,
+  // Next's default bot list plus the AI, search and social bots, so those crawlers get the full HTML head before streaming.
+  htmlLimitedBots: /[\w-]+-Google|Google-[\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight|Googlebot|GPTBot|ChatGPT-User|OAI-SearchBot|PerplexityBot|ClaudeBot|anthropic-ai|Bytespider/i,
+  // ISR expire time in seconds (this is not a 300 s revalidate).
+  expireTime: 3600,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
