@@ -298,6 +298,55 @@ export default function RamanPage() {
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
                 Once you accept, the team is assigned, environments are set up, and the first sprint is planned so you see working software early and often. Most projects run remotely with weekly demos, with in-person meetings when they help.
               </p>
+              <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginTop: '24px', marginBottom: '12px' }}>
+                What to expect in the first sprint
+              </h3>
+              <ol style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '8px' }}>
+                  A free project consultation, with a senior engineer reading your brief and replying within one working day.
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  A 30-minute discovery call covering users, technical constraints, timeline, and budget.
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  A named team, set-up environments, and a planned first sprint so working software appears early.
+                </li>
+                <li>
+                  Weekly demos and direct access to Raman from discovery through delivery, with in-person meetings when they help.
+                </li>
+              </ol>
+            </section>
+
+            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '20px' }}>Raman&apos;s software engineering experience</h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Raman&apos;s 15+ years in software engineering cover hands-on product building, team leadership, and
+                technical strategy. He holds a Computer Science degree and has led engineering at 3 startup exits.
+              </p>
+              <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>
+                Full-stack engineering
+              </h3>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Raman works across the stack with React, Node.js, Python, PostgreSQL, and AWS. That range covers custom
+                web applications, mobile apps, AI/ML solutions, cloud infrastructure, and SaaS platforms, so technical
+                decisions stay connected to the product and the business.
+              </p>
+              <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>
+                Scaling systems and teams
+              </h3>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                He has architected systems processing billions of transactions and a fintech platform processing $1B+
+                annually. He has also scaled engineering teams and mentored builders across fintech, healthcare, and
+                enterprise, which shapes how Mapletech Labs plans architecture and team structure for growing products.
+              </p>
+              <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>
+                AI integration and product strategy
+              </h3>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                Raman specializes in scaling systems, team architecture, and AI integration. His product work includes
+                SaaS product strategy, product design, and cloud architecture on AWS and GCP, with AI and machine
+                learning applied to practical features rather than isolated experiments.
+              </p>
             </section>
 
             <div style={{ marginTop: 48 }}>
