@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 };
 
 const caseStudies = [
-  { slug: 'fintech-trading-platform', name: 'Fintech AI Trading Platform' },
+  { slug: 'fintech-trading-platform', name: 'AI-Powered Trading Platform' },
   { slug: 'healthcare-telehealth', name: 'HIPAA-Compliant Telehealth Platform' },
-  { slug: 'ecommerce-platform', name: 'Enterprise E-Commerce Platform' },
-  { slug: 'logistics-platform', name: 'Logistics & Fleet Platform' },
+  { slug: 'ecommerce-platform', name: 'Enterprise E-Commerce Redesign' },
+  { slug: 'logistics-platform', name: 'Real-Time Fleet Management System' },
   { slug: 'payments-api-platform', name: 'PCI DSS Payments API' },
-  { slug: 'real-estate-portal', name: 'ML-Powered Real Estate Portal' },
+  { slug: 'real-estate-portal', name: 'Multi-Listing Real Estate Platform' },
 ];
 
 const jsonLd = {
