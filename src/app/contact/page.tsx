@@ -83,6 +83,25 @@ export default function ContactRoute() {
             To get a free project consultation from Mapletech Labs, send a short project brief using the form on this page, call <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a>, or email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a>. A senior engineer replies within one working day, and the first call is a free 30-minute discovery call. Our team is based in Edmonton, Alberta and works with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal, and across Canada.
           </p>
         </section>
+        <section aria-labelledby="contact-brief-consultation">
+          <h2 id="contact-brief-consultation" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What to include in a project brief and what to expect in the free consultation</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            A good project brief tells us the problem, who it is for, your rough budget and your target date, and in return the free consultation gives you honest first thoughts, a clearer scope and a recommendation on the best next step. You do not need a finished specification to get started.
+          </p>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Include these five points in your message:
+          </p>
+          <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            <li>The problem you want solved, or the idea you want to build.</li>
+            <li>Who will use it and what they need to get done.</li>
+            <li>The closest fit from our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development services</Link>, such as <Link href="/services/saas-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>custom software</Link>, <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>mobile apps</Link> or <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>web development</Link>.</li>
+            <li>A rough budget range or budget stage, using the typical CAD ranges on our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>pricing page</Link> as a guide.</li>
+            <li>Any fixed launch date or deadline, plus links or documents that help explain the project.</li>
+          </ul>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            In the free 30-minute consultation, a senior engineer talks through your goals, users, technical constraints, timeline and budget. You leave with a clearer picture of the scope, an honest view of whether custom software, an off-the-shelf tool or a smaller first release fits best, and whether we should work together. If the project is a fit, we follow up with a written scope and estimate, usually within a week, and your idea stays under NDA from the first conversation.
+          </p>
+        </section>
         <ContactInfo />
         <section aria-labelledby="contact-quick-facts">
           <h2 id="contact-quick-facts" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Contact Mapletech Labs at a glance</h2>
