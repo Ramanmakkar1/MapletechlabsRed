@@ -643,6 +643,53 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
           </div>
         </section>
 
+        {/* ── NEXT STEPS ── */}
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
+            <div className="reveal" style={{ maxWidth: 840 }}>
+              <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 24 }}>Next steps</h2>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>Ready to move from research to a real plan? Here is what we recommend:</p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 16 }}>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 16 }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                  <div>
+                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}><Link href="/services/mobile-app-development" style={{ color: 'var(--ink)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--ink)'}>Explore our mobile app development services</Link></p>
+                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>See our process, tech stacks, and delivery model for Canadian businesses.</p>
+                  </div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 16 }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                  <div>
+                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}><Link href="/case-studies/healthcare-telehealth" style={{ color: 'var(--ink)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--ink)'}>See our HIPAA-compliant telehealth app for ClinicFlow Health</Link></p>
+                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>450K+ patient records, built with PIPEDA compliance from day one.</p>
+                  </div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 16 }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                  <div>
+                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}><Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--ink)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--ink)'}>Read our enterprise e-commerce platform for NorthStar E-Commerce</Link></p>
+                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>Lifted conversion from 2.1% to 3.8% for 2M+ monthly visitors.</p>
+                  </div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 16 }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                  <div>
+                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}><Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--ink)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--ink)'}>Discover our AI-powered trading platform for Axion Capital</Link></p>
+                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>Sub-50ms latency, 75K+ daily transactions, zero data loss.</p>
+                  </div>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'transparent', border: '1px solid var(--brand)', borderRadius: 16 }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                  <div>
+                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', margin: '0 0 4px' }}><Link href="/contact" style={{ color: 'var(--brand)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--ink)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--brand)'}>Get a free app cost estimate for your project</Link></p>
+                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>A senior engineer scopes your idea and delivers a fixed-price proposal in 48 hours.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <MediaBand media={blogImage(2 + 7)} ratio="21 / 7" />
 
         {/* ── BOTTOM CTA ── */}
