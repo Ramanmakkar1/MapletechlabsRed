@@ -1,5 +1,7 @@
 import { BASE_URL, SITEMAP_CHILDREN, SITEMAP_HEADERS, newestLastmod, xmlEscape } from '@/lib/sitemap-data';
 
+export const dynamic = 'force-static';
+
 export function GET() {
   // A child's lastmod is the newest lastmod among its own URLs. Children whose
   // URLs carry no real dates are listed without <lastmod> rather than with the
