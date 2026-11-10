@@ -51,6 +51,23 @@ export default function RamanMakkarPageClient() {
             </div>
 
             <div style={{ marginTop: 48 }}>
+              <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20 }}>Raman Makkar at a Glance</h2>
+              <ul style={{ fontSize: 16, lineHeight: 1.8, color: 'var(--body)', paddingLeft: 20, margin: 0 }}>
+                <li style={{ marginBottom: 10 }}>Role: CEO and Founder of Mapletech Labs</li>
+                <li style={{ marginBottom: 10 }}>Base: Edmonton, Alberta</li>
+                <li style={{ marginBottom: 10 }}>Experience: over a decade in software engineering, product development and digital transformation</li>
+                <li style={{ marginBottom: 10 }}>Projects: 500+ projects delivered for clients across Canada and internationally</li>
+                <li style={{ marginBottom: 10 }}>Team: 25+ engineers, designers and strategists</li>
+                <li style={{ marginBottom: 10 }}>Focus: custom web applications, mobile apps, AI/ML solutions, cloud infrastructure and SaaS platforms, with expertise in React, Next.js, Node.js, Python, AWS and AI/ML engineering</li>
+                <li style={{ marginBottom: 10 }}>Company: full-service software development company</li>
+                <li style={{ marginBottom: 10 }}>Sectors served: fintech, healthcare, e-commerce, logistics, edtech and enterprise</li>
+                <li style={{ marginBottom: 10 }}>Approach: client-first, combining deep technical expertise with strategic thinking</li>
+                <li style={{ marginBottom: 10 }}>Goal: deliver solutions that drive measurable results</li>
+                <li>Clients in Toronto, Vancouver, Calgary, Ottawa and Montréal, plus the US and Europe</li>
+              </ul>
+            </div>
+
+            <div style={{ marginTop: 48 }}>
               <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20 }}>How Raman Works With Clients</h2>
               <p style={{ fontSize: 16, lineHeight: 1.8, marginBottom: 24 }}>
                 Working with Raman starts with a free consultation directly with the founder. The first conversation is about your vision, market, business problem, users, technical requirements, timeline, and budget. This discovery conversation creates a clearer picture of the project scope and whether the teams should work together. It is a practical way to discuss what you are building and the outcome you need before any code is written.
