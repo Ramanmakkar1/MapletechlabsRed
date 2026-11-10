@@ -24,6 +24,12 @@
 - [UI/UX Design](https://mapletechlabs.ca/services/product-design): UI/UX strategy, wireframing, prototyping and design systems.
 - [SaaS Development](https://mapletechlabs.ca/services/saas-development): SaaS MVPs, multi-tenant architecture, billing and subscriptions, auth and SSO, analytics dashboards.
 - [SEO & Digital Marketing](https://mapletechlabs.ca/services/digital-marketing): SEO, Google Ads (PPC), social media marketing, content marketing and analytics.
+- [Blockchain & Web3](https://mapletechlabs.ca/services/blockchain-web3): smart contracts, DeFi protocols, NFT platforms, crypto wallets and Web3 dApps.
+- [Cloud & DevOps](https://mapletechlabs.ca/services/cloud-devops): AWS architecture, Kubernetes and Docker, CI/CD pipelines, infrastructure as code and performance scaling.
+- [AR & VR Development](https://mapletechlabs.ca/services/ar-vr): mobile AR, VR applications, WebXR experiences, Apple Vision Pro and industrial AR.
+- [Game Development](https://mapletechlabs.ca/services/game-development): mobile games, Unity and Unreal Engine titles, hyper-casual games and multiplayer LiveOps.
+- [Branding & Identity](https://mapletechlabs.ca/services/branding): brand strategy, logo and visual identity, brand guidelines, rebranding and motion branding.
+- [WordPress & CMS](https://mapletechlabs.ca/services/wordpress-cms): custom WordPress themes, WooCommerce stores, headless WordPress, Strapi/Sanity CMS and site speed optimisation.
 
 ## Cities
 
