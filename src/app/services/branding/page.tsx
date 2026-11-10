@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Strategic branding by Mapletech Labs. Logo design, visual identity & brand guidelines for businesses in Canada. Request a free brand consultation today.',
   openGraph: {
     title: 'Branding & Identity Services in Canada | Mapletech Labs',
-    description: 'Strategic branding by Mapletech Labs. Logo design, visual identity & brand guidelines for businesses in Canada.',
+    description: 'Strategic branding by Mapletech Labs. Logo design, visual identity & brand guidelines for businesses in Canada. Request a free brand consultation today.',
     url: 'https://mapletechlabs.ca/services/branding',
     type: 'website',
   },

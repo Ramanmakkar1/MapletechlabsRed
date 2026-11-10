@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada. Request a free proposal.',
   openGraph: {
     title: 'AI & ML Development Company in Canada | Mapletech Labs',
-    description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada.',
+    description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada. Request a free proposal.',
     url: 'https://mapletechlabs.ca/services/ai-ml',
     type: 'website',
   },

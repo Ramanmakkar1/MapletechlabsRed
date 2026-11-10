@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada. Get a free infrastructure audit.',
   openGraph: {
     title: 'Cloud & DevOps Services Company in Canada | Mapletech Labs',
-    description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada.',
+    description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada. Get a free infrastructure audit.',
     url: 'https://mapletechlabs.ca/services/cloud-devops',
     type: 'website',
   },

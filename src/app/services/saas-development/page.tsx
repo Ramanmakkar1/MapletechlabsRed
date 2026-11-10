@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture & billing systems for startups in Canada. Book a free strategy call.',
   openGraph: {
     title: 'SaaS Development Company in Canada | Mapletech Labs',
-    description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture & billing systems for startups in Canada.',
+    description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture & billing systems for startups in Canada. Book a free strategy call.',
     url: 'https://mapletechlabs.ca/services/saas-development',
     type: 'website',
   },

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'iOS, Android, Flutter & React Native app development by Mapletech Labs. 300+ apps shipped across Canada. Get a free consultation for your project today.',
   openGraph: {
     title: 'Mobile App Development Company in Canada | Mapletech Labs',
-    description: 'iOS, Android, Flutter & React Native app development by Mapletech Labs. 300+ apps shipped across Canada.',
+    description: 'iOS, Android, Flutter & React Native app development by Mapletech Labs. 300+ apps shipped across Canada. Get a free consultation for your project today.',
     url: 'https://mapletechlabs.ca/services/mobile-app-development',
     type: 'website',
   },
