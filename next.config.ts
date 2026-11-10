@@ -81,6 +81,17 @@ const nextConfig: NextConfig = {
     const cityLandingRedirects = cityHubs.map(c => ({ source: `/locations/${c}`, destination: `/locations/software-development-company-in-${c}`, statusCode: 301 as const }));
     const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development'], ['digital-marketing', 'seo'], ['product-design', 'ui-ux-design']];
     const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const })));
+    // Niche services (blockchain-web3, ar-vr, game-development) are not in the priority
+    // keyword list. For non-major cities, their /locations/<city>/<service> mesh pages
+    // are not indexable and return errors. Redirect them to the core service page.
+    const majorTechCities = new Set(['toronto', 'vancouver', 'montreal', 'calgary', 'edmonton', 'ottawa']);
+    const nicheServices = ['blockchain-web3', 'ar-vr', 'game-development'] as const;
+    const nicheMeshRedirects = cityHubs
+      .filter(c => !majorTechCities.has(c))
+      .flatMap(c => nicheServices.map(svc => ({ source: `/locations/${c}/${svc}`, destination: `/services/${svc}`, statusCode: 301 as const })));
+    const frNicheMeshRedirects = cityHubs
+      .filter(c => !majorTechCities.has(c))
+      .flatMap(c => nicheServices.map(svc => ({ source: `/fr/locations/${c}/${svc}`, destination: `/services/${svc}`, statusCode: 301 as const })));
     // /fr versions of the same rules, pointing straight at the final keyword URLs so
     // old French URLs redirect in ONE hop instead of chaining through /fr/:path*
     // (e.g. /fr/locations/calgary/digital-marketing -> /locations/seo-company-in-calgary).
@@ -99,8 +110,10 @@ const nextConfig: NextConfig = {
       ...frServiceCityMeshRedirects,
       ...frCityLandingRedirects,
       ...frKeywordRedirects,
+      ...frNicheMeshRedirects,
       { source: '/fr/:path*', destination: '/:path*', statusCode: 301 as const },
       ...serviceCityMeshRedirects,
+      ...nicheMeshRedirects,
       // City landing pages live at keyword URLs; 301 the bare /locations/<city> paths.
       // Exact path only, so the /locations/<city>/<service> mesh is unaffected.
       ...cityLandingRedirects,

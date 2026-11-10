@@ -57,7 +57,7 @@ export const isPriorityService = (serviceSlug: string): boolean => serviceSlug i
  * but are kept out of the index and the sitemap so crawl budget goes to the
  * core service pages.
  */
-const NICHE_SERVICES = new Set(['ar-vr', 'blockchain-web3']);
+const NICHE_SERVICES = new Set(['ar-vr', 'blockchain-web3', 'game-development']);
 const MAJOR_TECH_CITIES = new Set(['toronto', 'vancouver', 'montreal', 'calgary', 'edmonton', 'ottawa']);
 
 /** Whether a /locations/<city>/<service> mesh page should be indexed and listed in the sitemap. */
