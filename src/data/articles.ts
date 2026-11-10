@@ -2511,6 +2511,7 @@ export const articles: Article[] = [
       'This is a buyer’s guide, not a ranked list. It explains what a full-service agency should cover and when you really need each channel, what is different about marketing in the Edmonton region, how retainer and project pricing work in Canada, what the first 90 days and monthly reports should look like, the red flags to avoid, ten questions to ask, and when Google Ads beats SEO. If search is your main channel, our <a href="/blog/seo-companies-edmonton">guide to choosing an SEO company in Edmonton</a> goes deeper on that one service.',
     ],
     body: [
+      { type: 'p', html: '<strong>Quick answer:</strong> A digital marketing agency in Edmonton costs about CAD $5,000 to $25,000 per month for a full-service package covering SEO, Google Ads and social media; single channels cost less. Choose one that separates fees from ad spend, keeps your accounts in your name and answers the 10 questions in this guide.' },
       { type: 'h2', id: 'what-full-service-covers', text: 'What a full-service agency should cover' },
       { type: 'p', html: 'A full-service agency is not valuable because it offers many channels. It is valuable when one team decides how budget moves between those channels based on what produces leads. Here is what each channel does and when an Edmonton business typically needs it:' },
       { type: 'checks', items: [
@@ -2746,6 +2747,7 @@ export const articles: Article[] = [
       'This is a buyer guide, not a ranked list. It gives you a framework for comparing agencies on the work that produces enquiries, then covers the Ottawa and National Capital Region details worth asking about, the red flags to avoid, and the questions to ask in a first meeting. If search is your main channel, our <a href="/blog/top-seo-companies-canada">guide to the top SEO companies in Canada</a> goes deeper on that service.',
     ],
     body: [
+      { type: 'p', html: '<strong>Quick answer:</strong> A digital marketing agency in Ottawa costs about CAD $5,000 to $25,000 per month for a full-service package covering SEO, Google Ads and social media; single channels cost less. Choose one that puts its plan in writing, keeps accounts in your name and answers the 10 questions in this guide.' },
       { type: 'h2', id: 'framework', text: 'A five-part framework for comparing Ottawa agencies' },
       { type: 'p', html: 'Most proposals look similar at a glance: a channel list, a monthly fee and a promise of more leads. Compare them instead on five areas that decide whether the work holds up after month three.' },
       { type: 'checks', items: [
@@ -2881,6 +2883,7 @@ export const articles: Article[] = [
       'This guide is written for that decision. It covers how to judge an agency’s fit for Calgary’s main industries, what SEO, paid search and social work typically cost in Canada, what a proposal should contain before you sign, the red flags that should end a conversation, and the questions worth asking in the first meeting. If your main goal is organic search, our <a href="/blog/seo-companies-calgary">guide to choosing an SEO company in Calgary</a> goes deeper on that single channel.',
     ],
     body: [
+      { type: 'p', html: '<strong>Quick answer:</strong> A digital marketing agency in Calgary costs about CAD $5,000 to $25,000 per month for a full-service package covering SEO, Google Ads and social media; single channels cost less. Choose one that names its deliverables in writing, keeps accounts in your name and answers the 7 questions in this guide.' },
       { type: 'h2', id: 'calgary-fit', text: 'Judge fit by how your Calgary buyers search' },
       { type: 'p', html: 'An agency does not need to have worked in your exact niche, but it must understand the way your customers make decisions. In Calgary, that varies sharply by sector:' },
       { type: 'checks', items: [
@@ -2977,6 +2980,7 @@ export const articles: Article[] = [
       'This guide helps you compare agencies on what actually predicts results. It explains how the Toronto market changes the plan, what SEO, paid search and social work typically cost in Canada, what a written proposal should commit to, the red flags to watch for, and the questions that reveal how an agency really works. If organic search is your priority, our <a href="/blog/seo-companies-toronto">guide to choosing an SEO company in Toronto</a> covers that channel in more depth.',
     ],
     body: [
+      { type: 'p', html: '<strong>Quick answer:</strong> A digital marketing agency in Toronto costs about CAD $5,000 to $25,000 per month for a full-service package covering SEO, Google Ads and social media; single channels cost less. Choose one that commits to named deliverables, keeps accounts in your name and answers the 7 questions in this guide.' },
       { type: 'h2', id: 'toronto-market', text: 'How the Toronto market changes the plan' },
       { type: 'p', html: 'A plan that works in a smaller city often fails in the GTA. Before comparing agencies, it helps to know what makes this market different:' },
       { type: 'checks', items: [
@@ -3072,6 +3076,7 @@ export const articles: Article[] = [
       'This guide helps you choose with that in mind. It covers how to match an agency to your audience, what SEO, paid search and social work typically cost in Canada, what to ask for in a written proposal, the red flags to avoid and the questions to ask before you sign. If organic search is your main goal, read our <a href="/blog/seo-companies-vancouver">guide to choosing an SEO company in Vancouver</a> as well.',
     ],
     body: [
+      { type: 'p', html: '<strong>Quick answer:</strong> A digital marketing agency in Vancouver costs about CAD $5,000 to $25,000 per month for a full-service package covering SEO, Google Ads and social media; single channels cost less. Choose one that matches your audience, keeps accounts in your name and answers the 7 questions in this guide.' },
       { type: 'h2', id: 'vancouver-audiences', text: 'Match the agency to your Vancouver audience' },
       { type: 'p', html: 'Start by being clear about who your customers are, then look for an agency whose strengths line up with them:' },
       { type: 'checks', items: [
