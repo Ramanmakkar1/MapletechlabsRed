@@ -18,14 +18,16 @@ const serviceProjects: Record<string, { slug: string; metric: number }[]> = {
   'product-design': [{ slug: 'ecommerce-platform', metric: 1 }],
 };
 
-export default function ServiceProof({ slug, name, contactHref = '/contact' }: { slug: string; name: string; contactHref?: string }) {
-  const projects = serviceProjects[slug];
+export default function ServiceProof({ slug, name, contactHref = '/contact', caseStudySlugs, heading = 'Relevant project results' }: { slug: string; name: string; contactHref?: string; caseStudySlugs?: string[]; heading?: string }) {
+  const projects = caseStudySlugs?.length
+    ? caseStudySlugs.map(projectSlug => ({ slug: projectSlug, metric: 0 }))
+    : serviceProjects[slug];
   if (!projects) return null;
 
   return (
     <section style={{ padding: 'var(--section-y-sm) 0' }}>
       <div className="cb-container">
-        <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>Relevant project results</h2>
+        <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>{heading}</h2>
         <div className="grid grid--2" style={{ gap: 20 }}>
           {projects.map(({ slug: projectSlug, metric }) => {
             const project = work.find(item => item.slug === projectSlug);

@@ -25,6 +25,7 @@ import type { Stat } from './types';
 import type { CityServicePageData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
 import { buyerGuideFor, buyerGuideLinkText } from '@/data/buyer-guides';
+import { serviceCaseMap } from '@/data/service-case-map';
 
 // Honest, company-wide facts — no invented per-city metrics.
 const HONEST_STATS: Stat[] = [
@@ -227,7 +228,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
 
         <TechStrip />
         <ProcessSteps title={`How we deliver your ${serviceName} project`} steps={p.steps} />
-        {!local?.proof.length ? <ServiceProof slug={serviceSlug} name={serviceName} contactHref={contactHref} /> : null}
+        {!local?.proof.length ? <ServiceProof slug={serviceSlug} name={serviceName} contactHref={contactHref} caseStudySlugs={serviceCaseMap[serviceSlug]?.slice(0, 2)} heading="Relevant project work" /> : null}
         <ServicePricing serviceSlug={serviceSlug} serviceName={serviceName} />
         <TechBlocks title={`The stack behind your ${serviceName}`} cats={tech} />
 
