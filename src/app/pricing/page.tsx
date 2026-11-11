@@ -65,7 +65,7 @@ export default function PricingPage() {
               <tbody>{Object.values(PROJECT_PRICING).map(item => <tr key={item.label}>
                 <th scope="row" style={{ padding: 14, borderBottom: '1px solid var(--line)', color: 'var(--ink)' }}>{item.serviceHref ? <Link href={item.serviceHref}>{item.label}</Link> : item.label}</th>
                 <td style={{ padding: 14, borderBottom: '1px solid var(--line)', color: 'var(--body)' }}>{cad(item.low)}–{cad(item.high)}</td>
-                <td style={{ padding: 14, borderBottom: '1px solid var(--line)', color: 'var(--body)' }}>{item.weeksLow}–{item.weeksHigh} weeks</td>
+                <td style={{ padding: 14, borderBottom: '1px solid var(--line)', color: 'var(--body)' }}>{item.weeksLow === item.weeksHigh ? `About ${item.weeksLow} weeks` : `${item.weeksLow}–${item.weeksHigh} weeks`}</td>
                 <td style={{ padding: 14, borderBottom: '1px solid var(--line)', color: 'var(--body)' }}>{item.guideHref ? <Link href={item.guideHref} aria-label={`Read the ${item.label} cost guide`}>Read guide</Link> : '—'}</td>
               </tr>)}</tbody>
             </table></div>
@@ -96,7 +96,7 @@ export default function PricingPage() {
             <p style={p}>Scope, platform, business rules, integrations and quality requirements all shape the effort. More screens, edge cases, custom design and testing increase the work. Building for multiple platforms or connecting several external systems can also shift a project toward the higher end. Compare details in our <Link href="/blog/app-development-cost-canada">app</Link>, <Link href="/blog/saas-development-cost-canada">SaaS</Link> and <Link href="/blog/website-cost-canada">website</Link> cost guides.</p>
           </section>
           <section style={{ marginBottom: 64 }}><h2 style={h2}>Ways to lower cost</h2>
-            <ul style={{ ...p, paddingLeft: 22 }}><li><strong>Start with an MVP:</strong> focus first on the core user journey, then prioritise additions using what you learn.</li><li><strong>Consider cross-platform:</strong> a shared mobile codebase may suit products targeting both iOS and Android.</li><li><strong>Explore SR&amp;ED:</strong> qualifying development work may be eligible for Canadian tax credits. <Link href="/blog/sred-tax-credit-software-development">Learn about the SR&amp;ED tax credit</Link>.</li></ul>
+            <ul style={{ ...p, paddingLeft: 22 }}><li><strong>Start with an MVP:</strong> focus first on the core user journey, then prioritise additions using what you learn.</li><li><strong>Consider cross-platform:</strong> a shared mobile codebase may suit products targeting both iOS and Android.</li><li><strong>Explore SR&amp;ED:</strong> qualifying development work may be eligible for Canadian tax credits. <Link href="/blog/sred-software-development-canada">Learn about the SR&amp;ED tax credit</Link> or estimate your claim with the <Link href="/tools/sred-estimator">SR&amp;ED estimator</Link>.</li></ul>
           </section>
           <section style={{ marginBottom: 64 }}><h2 style={h2}>Pricing FAQs</h2>{FAQS.map(f => <article key={f.q} style={{ borderBottom: '1px solid var(--line)', padding: '18px 0' }}><h3 style={{ color: 'var(--ink)', margin: '0 0 8px' }}>{f.q}</h3><p style={{ ...p, margin: 0 }}>{f.a}</p></article>)}</section>
         </div>
