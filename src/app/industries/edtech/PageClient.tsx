@@ -48,6 +48,80 @@ const cityLinks = [
 ];
 
 const linkStyle = { color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 } as const;
+const cardStyle = { border: '1px solid var(--line, #e5e7eb)', borderRadius: 12, padding: 'clamp(16px, 4vw, 28px)', scrollMarginTop: 96, minWidth: 0 } as const;
+const pStyle = { fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 12px' } as const;
+
+const buyerTracks = [
+  {
+    id: 'lms-development',
+    title: 'LMS development',
+    start: 'You sell or deliver courses on a generic tool and need your own branded learning platform with your rules for enrolment, progress and certificates.',
+    workflow: 'One course end to end: enrol, lessons, quiz, progress tracking, certificate.',
+    access: 'Existing course content and formats (video, SCORM, xAPI), student records, payment provider and any school or HR system to sync with.',
+    accept: 'A learner enrols, completes a course on a phone, progress and scores reach the admin report, and content works with Canvas, Moodle or Google Classroom where agreed.',
+    extra: <>We build the platform itself with our <Link href="/services/saas-development" style={linkStyle}>SaaS development</Link> and <Link href="/services/web-development" style={linkStyle}>web development</Link> teams.</>,
+  },
+  {
+    id: 'e-learning-app-development',
+    title: 'E-learning app development',
+    start: 'Learners are on phones and drop off on a web-only course.',
+    workflow: 'Sign-in, daily lesson, offline download, reminders and streaks.',
+    access: 'Content library, push notification accounts, Apple and Google developer accounts.',
+    accept: 'Lessons play offline and sync later, reminders arrive, and completion is tracked per learner.',
+    extra: <>See our <Link href="/services/mobile-app-development" style={linkStyle}>mobile app development</Link> service and the <Link href="/blog/native-vs-cross-platform-vs-pwa" style={linkStyle}>native vs cross-platform vs PWA guide</Link> before choosing a build approach.</>,
+  },
+  {
+    id: 'virtual-classroom-development',
+    title: 'Virtual classroom and live tutoring',
+    start: 'Live classes run on a general video tool with no link to attendance, recordings or homework.',
+    workflow: 'One live class type: schedule, join, whiteboard, recording, follow-up.',
+    access: 'Timetable or booking system, tutor list, storage for recordings.',
+    accept: 'Students join from a browser, attendance is recorded, recordings are available to the right class only.',
+    extra: <>Tutoring assistants and auto-grading use our <Link href="/services/ai-ml" style={linkStyle}>AI and machine learning</Link> work, and the class experience is shaped by <Link href="/services/product-design" style={linkStyle}>UI/UX design</Link>.</>,
+  },
+];
+
+const checklist = [
+  ['Learners and roles', 'Who signs in (learners, tutors, admins, parents or managers) and what each role may see, change or approve.'],
+  ['Content formats and ownership', 'Which formats you already have (video, SCORM, xAPI, PDF), who owns the content and how it is updated after launch.'],
+  ['Existing systems (LMS, SIS, HR)', 'The student information, HR or LMS tools in use today and which one is the source of truth for each record.'],
+  ['Student privacy', 'What learner data you collect, who may access it and which consent and retention rules apply, using the Canadian privacy checklist.'],
+  ['Accessibility (WCAG 2.2 AA)', 'The accessibility standard you must meet and the devices and assistive technology your learners rely on.'],
+  ['Scale and peak times (exams, term start)', 'Expected learner numbers, concurrent exams and term-start spikes so hosting and support are sized for them.'],
+  ['Support after launch', 'Support hours, who triages learner issues, uptime targets, release windows and how incidents are reported.'],
+];
+
+const buyerContent = (
+  <section aria-labelledby="edtech-buyer-guide" style={{ padding: 'var(--section-y-sm) 0' }}>
+    <div className="cb-container">
+      <h2 id="edtech-buyer-guide" style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Scoping an EdTech or LMS development project</h2>
+      <p style={{ ...pStyle, maxWidth: 720 }}>Mapletech Labs is an EdTech software development company in Canada. We build learning management systems (LMS), e-learning apps and virtual classrooms for schools, training companies and EdTech startups, from our Edmonton head office.</p>
+      <p style={{ ...pStyle, maxWidth: 720 }}>Most EdTech buyers come to us for one of three projects. Jump to <a href="#lms-development" style={linkStyle}>LMS development</a>, <a href="#e-learning-app-development" style={linkStyle}>e-learning app development</a>, <a href="#virtual-classroom-development" style={linkStyle}>virtual classrooms and live tutoring</a> or the <a href="#edtech-procurement-checklist" style={linkStyle}>procurement checklist</a>.</p>
+      <div style={{ display: 'grid', gap: 20, gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', marginTop: 20 }}>
+        {buyerTracks.map(t => (
+          <article key={t.id} id={t.id} style={cardStyle}>
+            <h3 style={{ marginTop: 0, marginBottom: 12 }}>{t.title}</h3>
+            <p style={pStyle}><strong>Starting point:</strong> {t.start}</p>
+            <p style={pStyle}><strong>First workflow to scope:</strong> {t.workflow}</p>
+            <p style={pStyle}><strong>System access needed:</strong> {t.access}</p>
+            <p style={pStyle}><strong>Acceptance criteria:</strong> {t.accept}</p>
+            <p style={{ ...pStyle, marginBottom: 0 }}>{t.extra}</p>
+          </article>
+        ))}
+      </div>
+      <div id="edtech-procurement-checklist" style={{ ...cardStyle, marginTop: 28 }}>
+        <h3 style={{ marginTop: 0, marginBottom: 8 }}>EdTech procurement checklist</h3>
+        <p style={pStyle}>Agree these requirements in discovery so the quote, timeline and statement of work reflect your real environment. Your privacy and compliance team stays the authority on legal obligations; we build to the requirements you confirm.</p>
+        <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 10 }}>
+          {checklist.map(([k, v]) => (
+            <li key={k} style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}><strong>{k}:</strong> {v}</li>
+          ))}
+        </ul>
+        <p style={{ ...pStyle, marginTop: 16, marginBottom: 0 }}>Budgeting an EdTech build? Compare <Link href="/pricing" style={linkStyle}>typical project price ranges in CAD</Link>, book a <Link href="/services/software-discovery" style={linkStyle}>software discovery sprint</Link> to scope it properly, and read our <Link href="/blog/app-privacy-compliance-canada" style={linkStyle}>PIPEDA and Law 25 privacy checklist</Link> before you collect learner data.</p>
+      </div>
+    </div>
+  </section>
+);
 
 const extra = (
   <section style={{ padding: 'var(--section-y-sm) 0' }}>
@@ -78,6 +152,7 @@ export default function PageClient() {
       cta={{ title: "Build Your EdTech Platform.", sub: "Engaging, accessible, and scalable \u2014 learning platforms that change lives." }}
       faqs={industryFaqs.edtech}
       cityLinks={cityLinks}
+      buyerContent={buyerContent}
       extra={extra}
     />
   );
