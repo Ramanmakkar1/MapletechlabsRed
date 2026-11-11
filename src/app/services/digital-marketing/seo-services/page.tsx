@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -7,10 +7,10 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: seoTitle('SEO Services in Canada: Technical & Local'),
+  title: seoTitle('SEO Services in Canada: Technical and Local'),
   description: 'Results-driven SEO services in Toronto & across Canada. Technical SEO, link building, local SEO, and content strategy. 200% avg organic traffic growth.',
   openGraph: {
-    title: 'SEO Services in Canada: Technical & Local | Mapletech Labs',
+    title: ogTitle('SEO Services in Canada: Technical and Local'),
     description: 'Results-driven SEO services in Toronto & across Canada. Technical SEO, link building, local SEO, and content strategy.',
     url: 'https://mapletechlabs.ca/services/digital-marketing/seo-services',
     type: 'website',
