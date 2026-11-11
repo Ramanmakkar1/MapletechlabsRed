@@ -130,6 +130,22 @@ const nextConfig: NextConfig = {
     // 301 the old mesh URLs so there is no duplicate content / cannibalization.
     const cityHubs = ['edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal', 'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on', 'mississauga', 'hamilton', 'surrey', 'burnaby', 'regina', 'quebec-city', 'brampton', 'markham', 'windsor', 'kelowna', 'laval', 'gatineau'];
     const cityLandingRedirects = cityHubs.map(c => ({ source: `/locations/${c}`, destination: `/locations/software-development-company-in-${c}`, statusCode: 301 as const }));
+    // Exact old French URLs still reported as 404 in Search Console. The generated
+    // rules below cover most of them, but these explicit entries guarantee a single
+    // 301 to a live English page even if a city or keyword is missing from a list.
+    const legacyFrRedirects: { source: string; destination: string; statusCode: 301 }[] = [
+      { source: '/fr/locations/saas-development-company-in-calgary', destination: '/locations/saas-development-company-in-calgary', statusCode: 301 },
+      { source: '/fr/locations/winnipeg/digital-marketing', destination: '/locations/seo-company-in-winnipeg', statusCode: 301 },
+      { source: '/fr/locations/quebec-city/digital-marketing', destination: '/locations/seo-company-in-quebec-city', statusCode: 301 },
+      { source: '/fr/locations/web-development-company-in-winnipeg', destination: '/locations/web-development-company-in-winnipeg', statusCode: 301 },
+      { source: '/fr/locations/calgary/digital-marketing', destination: '/locations/seo-company-in-calgary', statusCode: 301 },
+      { source: '/fr/locations/saas-development-company-in-hamilton', destination: '/locations/saas-development-company-in-hamilton', statusCode: 301 },
+      { source: '/fr/locations/saas-development-company-in-kelowna', destination: '/locations/saas-development-company-in-kelowna', statusCode: 301 },
+      { source: '/fr/locations/vancouver/cloud-devops', destination: '/locations/vancouver/cloud-devops', statusCode: 301 },
+      { source: '/fr/locations/laval/product-design', destination: '/locations/ui-ux-design-company-in-laval', statusCode: 301 },
+      { source: '/fr/locations/ai-development-company-in-burnaby', destination: '/locations/ai-development-company-in-burnaby', statusCode: 301 },
+      { source: '/fr/locations/app-development-company-in-vancouver', destination: '/locations/app-development-company-in-vancouver', statusCode: 301 },
+    ];
     const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development'], ['digital-marketing', 'seo'], ['product-design', 'ui-ux-design']];
     const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const })));
     // Niche services (blockchain-web3, ar-vr, game-development) are not in the priority
@@ -158,6 +174,7 @@ const nextConfig: NextConfig = {
       { source: '/fr/', destination: '/', statusCode: 301 as const },
       // /fr mesh + landing + keyword rules go BEFORE the generic /fr/:path* catch-all
       // so old French URLs land on the final keyword URL in one hop (no 2-hop chain).
+      ...legacyFrRedirects,
       ...frServiceCityMeshRedirects,
       ...frCityLandingRedirects,
       ...frKeywordRedirects,
@@ -219,6 +236,8 @@ const nextConfig: NextConfig = {
       // Each 301s to its closest current equivalent so the link equity is kept
       // and the "Not found (404)" report drains instead of growing.
       { source: '/contact-us', destination: '/contact', permanent: true },
+      { source: '/contacts', destination: '/contact', statusCode: 301 as const },
+      { source: '/kontakt', destination: '/contact', statusCode: 301 as const },
       { source: '/mobile-app-development', destination: '/services/mobile-app-development', permanent: true },
       { source: '/mobile-app-development-in-edmonton', destination: '/locations/app-development-company-in-edmonton', permanent: true },
       { source: '/custom-android-apps-2', destination: '/services/mobile-app-development/android-app-development', permanent: true },
