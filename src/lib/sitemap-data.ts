@@ -197,7 +197,7 @@ export function serviceSitemapEntries(): SitemapEntry[] {
     changefreq: 'monthly',
     priority: '0.9',
   }));
-  const cityServices = ['vancouver'].map(city => ({
+  const cityServices = ['toronto', 'vancouver'].map(city => ({
     loc: `${BASE_URL}/services/mobile-app-development/${city}`,
     changefreq: 'monthly',
     priority: '0.85',
