@@ -46,10 +46,32 @@ export const metadata: Metadata = {
 const h2 = { fontSize: 'var(--fs-h3)', fontWeight: 600 as const, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 20px' };
 const p = { fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, margin: '0 0 16px' };
 
+const pricingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${URL}#service`,
+  name: 'Custom software development pricing in Canada',
+  description: DESCRIPTION,
+  url: URL,
+  provider: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca' },
+  areaServed: { '@type': 'Country', name: 'Canada' },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Typical project ranges (CAD)',
+    itemListElement: Object.values(PROJECT_PRICING).map(item => ({
+      '@type': 'Offer',
+      name: `${item.label} development`,
+      url: canonicalUrl(item.serviceHref),
+      priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'CAD', minPrice: item.low, maxPrice: item.high },
+    })),
+  },
+};
+
 export default function PricingPage() {
   return <>
     <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: canonicalUrl('/') }, { position: 2, name: 'Pricing', item: URL }]} />
     <FaqSchema faqs={FAQS} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
     <Navbar />
     <main>
       <section style={{ paddingTop: 'clamp(100px, 12vw, 140px)', paddingBottom: 'var(--section-y)' }}>
