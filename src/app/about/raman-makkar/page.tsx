@@ -347,6 +347,26 @@ export default function RamanPage() {
                 SaaS product strategy, product design, and cloud architecture on AWS and GCP, with AI and machine
                 learning applied to practical features rather than isolated experiments.
               </p>
+              <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>
+                Leadership and team building
+              </h3>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Raman has scaled engineering teams and mentored builders across fintech, healthcare, and enterprise, and
+                today leads a 25+ member team of engineers, designers, and strategists. He works directly with clients
+                from discovery through delivery, runs projects in short agile cycles with weekly demos, and mentors
+                engineering teams and founders on architecture and scaling decisions.
+              </p>
+              <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>
+                Engineering results he has delivered
+              </h3>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                Across the 500+ projects Raman has led, the work includes a real-time trading engine with sub-50ms
+                latency and 75K+ transactions a day, a HIPAA and PIPEDA-compliant telehealth platform serving 450K+
+                patient records, an e-commerce redesign that lifted conversion from 2.1% to 3.8% in 90 days, a fleet
+                system tracking 500 trucks and 15K+ daily deliveries while cutting fuel cost by 25%, a PCI DSS payments
+                API handling 12M+ monthly transactions, and an ML-powered real estate portal covering 850K+ active
+                listings.
+              </p>
             </section>
 
             <div style={{ marginTop: 48 }}>
