@@ -30,6 +30,7 @@ export const subServices: Record<string, string[]> = {
   'game-development': ['mobile-games', 'unity-development', 'unreal-engine', 'hyper-casual-games', 'multiplayer-liveops'],
   'branding': ['brand-strategy', 'logo-visual-identity', 'brand-guidelines', 'rebranding', 'motion-video-branding'],
   'saas-development': ['saas-mvp-development', 'multi-tenant-architecture', 'billing-subscriptions', 'auth-sso', 'analytics-dashboards'],
+  'software-development': ['legacy-software-modernization'],
 };
 
 export const industrySlugs = ['fintech', 'healthcare', 'ecommerce', 'logistics', 'edtech', 'enterprise'];

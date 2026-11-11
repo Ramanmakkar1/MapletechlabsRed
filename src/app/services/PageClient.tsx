@@ -89,6 +89,7 @@ const services: ServiceCategory[] = [
       { name: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
       { name: 'API & Backend', href: '/services/web-development/api-backend' },
       { name: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
+      { name: 'Legacy Software Modernization', href: '/services/software-development/legacy-software-modernization' },
       { name: 'Software Maintenance', href: '/services/software-maintenance' },
     ],
   },

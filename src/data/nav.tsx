@@ -41,6 +41,7 @@ export const serviceCategories = [
       { label: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
       { label: 'API & Backend', href: '/services/web-development/api-backend' },
       { label: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
+      { label: 'Legacy Software Modernization', href: '/services/software-development/legacy-software-modernization' },
       { label: 'Software Maintenance', href: '/services/software-maintenance' },
     ],
   },

@@ -20,8 +20,8 @@ import type { Faq, HeroCopy, ServiceCard, Stat, Step } from './types';
 const heroShots = [officeMedia.desk, officeMedia.meeting, officeMedia.open];
 
 /* Sub-service page: the same sequence, trimmed to what the page has data for. */
-export default function SubServicePageTemplate({ parent, name, copy, stats, services, steps, faqs, capabilitiesTitle, buyerContent }: {
-  parent: { href: string; label: string }; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; faqs: Faq[]; capabilitiesTitle?: string; buyerContent?: ReactNode;
+export default function SubServicePageTemplate({ parent, name, copy, stats, services, steps, faqs, capabilitiesTitle, buyerContent, caseStudySlugs }: {
+  parent: { href: string; label: string }; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; faqs: Faq[]; capabilitiesTitle?: string; buyerContent?: ReactNode; caseStudySlugs?: string[];
 }) {
   const parentSlug = parent.href.split('/').pop() ?? '';
   const contactHref = contactHrefFor(parentSlug, undefined, servicesAllowlist, citiesAllowlist);
@@ -33,7 +33,7 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: parent.label, href: parent.href }, { label: name }]} copy={copy} stats={stats} photo={hero} serviceName={name} contactHref={contactHref} />
         <StatRow stats={stats} />
         <ServicesGrid title={capabilitiesTitle ?? `Our ${name} capabilities`} items={services} />
-        <ServiceProof slug={parentSlug} name={name} contactHref={contactHref} />
+        <ServiceProof slug={parentSlug} name={name} contactHref={contactHref} caseStudySlugs={caseStudySlugs} />
         {buyerContent}
         <MediaBand media={serviceMedia[parentSlug] ?? defaultMedia} />
         <ProcessSteps title="How we work" steps={steps} />
