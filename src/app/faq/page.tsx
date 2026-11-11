@@ -8,6 +8,9 @@ const TITLE = 'FAQ: Custom Software Projects in Canada';
 const DESCRIPTION = 'Get answers to common questions about working with Mapletech Labs: pricing, timelines, tech stack, IP ownership, post-launch support and NDAs.';
 
 export const dynamic = 'force-static';
+// Keep the prerendered FAQ HTML cached until the next deploy so the audit does
+// not measure a cold server render as the response time.
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
