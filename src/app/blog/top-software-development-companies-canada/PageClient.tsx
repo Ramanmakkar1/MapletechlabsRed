@@ -36,13 +36,48 @@ const companies = [
   { num: 10, name: 'Descartes Systems Group', category: 'Logistics', emoji: '🚚', metric: 'Global Logistics Technology & Routing' },
 ];
 
+type Faq = { q: string; a: string };
+
+const comparisonRows = [
+  {
+    criterion: 'Specialization',
+    check: 'Which industries and platforms do they know best?',
+    good: 'Recent work in your sector, senior engineers on the team, and a clear yes or no on fit.',
+  },
+  {
+    criterion: 'Discovery',
+    check: 'How do they turn an idea into a scoped plan?',
+    good: 'Structured discovery, written requirements, identified risks, and a realistic timeline before the build.',
+  },
+  {
+    criterion: 'Delivery process',
+    check: 'How will you see progress each week?',
+    good: 'Short iterations, a demo cadence, a shared backlog, and working software rather than status reports alone.',
+  },
+  {
+    criterion: 'Ownership and hand-off',
+    check: 'Who owns the code, designs, and accounts?',
+    good: 'Written IP assignment, full repository access, documentation, and a hand-off plan from day one.',
+  },
+  {
+    criterion: 'Support',
+    check: 'What happens after launch?',
+    good: 'A defined warranty period, response times, monitoring, and an optional maintenance agreement.',
+  },
+  {
+    criterion: 'Budget fit',
+    check: 'How is the price tied to scope?',
+    good: 'Transparent estimates, fixed milestones or a clear time-and-materials cap, and change control before extra work.',
+  },
+];
+
 const relatedPosts = [
   { slug: 'top-10-unicorn-apps-2026', title: 'Top 10 Unicorn Apps of 2026', category: 'Business', readTime: '8 min' },
   { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
-export default function BlogPostPageClient() {
+export default function BlogPostPageClient({ faqs }: { faqs: Faq[] }) {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -186,6 +221,68 @@ export default function BlogPostPageClient() {
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     We ranked these top firms based on actual technical prowess, the scale of platforms they&apos;ve delivered, engineering velocity, and client retention. Whether you&apos;re an ambitious scale-up or an established enterprise, these are the teams you call when your code needs to be flawless.
+                  </p>
+                </div>
+
+                {/* Answer-first summary */}
+                <div className="reveal" style={{
+                  marginBottom: 56, padding: 28, borderRadius: 20,
+                  border: '1px solid var(--brand)', background: 'var(--surface-alt)',
+                }}>
+                  <p style={{
+                    fontSize: 13, fontWeight: 700, color: 'var(--brand)',
+                    textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 12,
+                  }}>Quick answer</p>
+                  <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
+                    The top software development companies in Canada in 2026 include Mapletech Labs, Townmedialabs, TML, Shopify Engineering, OpenText, CGI Group, Constellation Software, Kinaxis, Lightspeed Commerce and Descartes Systems Group. The best partner for your project depends less on the ranking and more on six checks: specialization, discovery, delivery process, ownership and hand-off, support, and budget fit.
+                  </p>
+                </div>
+
+                {/* Comparison table */}
+                <div className="reveal" style={{ marginBottom: 56 }}>
+                  <h2 style={{
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
+                    letterSpacing: '-0.03em', marginBottom: 16,
+                  }}>
+                    How to Compare Software Development Companies
+                  </h2>
+                  <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
+                    Use this table to compare shortlisted companies on what you can verify in a proposal, a reference call, or a discovery workshop.
+                  </p>
+                  <div style={{ overflowX: 'auto', border: '1px solid var(--line)', borderRadius: 16 }}>
+                    <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 640, fontSize: 15 }}>
+                      <thead>
+                        <tr style={{ background: 'var(--surface-alt)' }}>
+                          {['Selection criterion', 'What to check', 'What good looks like'].map(heading => (
+                            <th key={heading} scope="col" style={{
+                              textAlign: 'left', padding: '14px 18px', color: 'var(--ink)',
+                              fontWeight: 700, borderBottom: '1px solid var(--line)',
+                            }}>{heading}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {comparisonRows.map(row => (
+                          <tr key={row.criterion}>
+                            <th scope="row" style={{
+                              textAlign: 'left', padding: '14px 18px', color: 'var(--ink)',
+                              fontWeight: 600, borderBottom: '1px solid var(--line)', verticalAlign: 'top',
+                            }}>{row.criterion}</th>
+                            <td style={{
+                              padding: '14px 18px', color: 'var(--body)',
+                              borderBottom: '1px solid var(--line)', verticalAlign: 'top',
+                            }}>{row.check}</td>
+                            <td style={{
+                              padding: '14px 18px', color: 'var(--body)',
+                              borderBottom: '1px solid var(--line)', verticalAlign: 'top',
+                            }}>{row.good}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginTop: 20 }}>
+                    Then match the work to the right service: <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development</Link>, <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>, or <Link href="/services/saas-development" style={{ color: 'var(--brand)' }}>SaaS development</Link>. You can also review how we handled a <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>fintech trading platform</Link>, a <Link href="/case-studies/healthcare-telehealth" style={{ color: 'var(--brand)' }}>healthcare telehealth product</Link>, and a <Link href="/case-studies/logistics-platform" style={{ color: 'var(--brand)' }}>logistics platform</Link>.
                   </p>
                 </div>
 
@@ -452,6 +549,25 @@ export default function BlogPostPageClient() {
                     </div>
                   </div>
                 ))}
+
+                {/* ── FAQ ── */}
+                <div className="reveal" style={{ marginBottom: 48 }}>
+                  <h2 style={{
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
+                    letterSpacing: '-0.03em', marginBottom: 8,
+                  }}>
+                    Frequently Asked Questions
+                  </h2>
+                  {faqs.map(faq => (
+                    <div key={faq.q} style={{ borderTop: '1px solid var(--line)', padding: '20px 0' }}>
+                      <h3 style={{
+                        fontSize: 17, fontWeight: 600, color: 'var(--ink)',
+                        marginBottom: 8, lineHeight: 1.4,
+                      }}>{faq.q}</h3>
+                      <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, margin: 0 }}>{faq.a}</p>
+                    </div>
+                  ))}
+                </div>
 
                 {/* ── CONCLUSION ── */}
                 <div className="reveal" style={{ marginBottom: 48 }}>
