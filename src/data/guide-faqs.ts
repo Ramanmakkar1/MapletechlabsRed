@@ -103,4 +103,58 @@ export const GUIDE_FAQS: Record<string, { q: string; a: string }[]> = {
       a: 'A good rule is to set aside 15-20% of the initial project cost each year for maintenance and improvements. On a $50,000 build, that means budgeting $7,500 to $10,000 per year for hosting, security updates, content changes and performance monitoring.',
     },
   ],
+  'software-development-companies-calgary': [
+    {
+      q: 'What is the best software development company in Calgary?',
+      a: "Mapletech Labs ranks first in this 2026 guide to Calgary software development companies. Its Calgary office serves Alberta's energy, fintech and logistics sectors, building Next.js web apps, mobile platforms, AI solutions and cloud infrastructure. The rest of the top 10 includes Townmedialabs, TML, Absorb Software, Symend, Benevity, Solium, Neo Financial, Helcim and Attabotics.",
+    },
+    {
+      q: 'How much does custom software development cost in Calgary?',
+      a: "This guide does not list fixed Calgary software development prices because cost depends on scope. It does say Calgary-based development teams are 20-30% cheaper than their Toronto and Vancouver counterparts while delivering the same quality of work. Alberta's zero provincial sales tax, no payroll tax and low corporate tax rate add to the savings.",
+    },
+    {
+      q: 'How do I choose a software development company in Calgary?',
+      a: 'Choose a Calgary software development company by comparing technical expertise, client portfolio, innovation track record, team size and industry reputation. Ask for recent work in your sector and confirm who will do the work. This guide used those same criteria to rank the top 10 firms in the city for 2026.',
+    },
+    {
+      q: 'Which industries do Calgary software companies serve?',
+      a: "Calgary software companies serve industries including energy, fintech and logistics, which Mapletech Labs' Calgary office focuses on. The wider top 10 also covers digital products, startup tech, learning management, behavioural AI, corporate social responsibility, equity management, payments and warehouse robotics. That range means you can usually find a Calgary team with relevant sector experience.",
+    },
+  ],
+  'web-development-companies-toronto': [
+    {
+      q: 'What is the best web development company in Toronto?',
+      a: "Mapletech Labs ranks first in this 2026 guide to Toronto web development companies. Its Toronto office is the company's central hub for enterprise web development, building high-performance Next.js applications, SaaS platforms and complex e-commerce systems. The rest of the top 10 includes Townmedialabs, TML, Myplanet, Nulogy, Nascent Digital, Rangle.io, TWG, Architech and Crowdlinker.",
+    },
+    {
+      q: 'How much does a website cost in Toronto?',
+      a: 'This guide does not list fixed Toronto website prices because cost depends on scope. It focuses on how to compare agencies instead. Mapletech Labs offers a fixed-price proposal within 48 hours, and its Toronto team builds Next.js applications, SaaS platforms and complex e-commerce systems without templates or outsourcing.',
+    },
+    {
+      q: 'How long does it take to build a website?',
+      a: 'This guide does not give a fixed timeline for building a website because duration depends on scope. A marketing site, a SaaS platform and a complex e-commerce system each take different amounts of work. Mapletech Labs provides a fixed-price proposal within 48 hours so you can confirm scope and timing before work starts.',
+    },
+    {
+      q: 'How do I choose a web development company in Toronto?',
+      a: 'Choose a Toronto web development company by comparing portfolio quality, technical capabilities, client retention, team size and industry reputation. Ask whether the developers are in-house employees or offshore subcontractors, and whether the agency uses templates. This guide evaluated more than 80 Toronto-area companies on those criteria to build its 2026 ranking.',
+    },
+  ],
+  'choose-software-development-company-canada': [
+    {
+      q: 'How do I choose a software development company in Canada?',
+      a: 'Choose a software development company in Canada by defining your project scope first, then comparing specialization, delivery process, code ownership, support and budget fit. Ask for references, a written scope and a fixed-price or milestone-based quote. This guide also lists seven red flags and seven green flags to help you judge each shortlist.',
+    },
+    {
+      q: 'What questions should I ask a software development company?',
+      a: 'Ask who will work on your project and whether they are employees, for three references in a similar industry, and about the project management method. Also ask how scope changes are handled, who owns the source code, what post-launch support includes, and what the payment milestones are. This guide lists fifteen questions to bring to every discovery call.',
+    },
+    {
+      q: 'What pricing models do software companies use?',
+      a: 'Software companies in Canada mainly use fixed-price or hourly and time-and-materials pricing. This guide warns that hourly-only billing with no ceiling transfers financial risk to you, and treats transparent fixed-price quoting with milestone payments as a green flag. Mapletech Labs uses a detailed statement of work, milestone payments and a hard budget ceiling.',
+    },
+    {
+      q: 'What are the red flags when hiring a software development company?',
+      a: 'Common red flags include no portfolio or case studies, refusing to share references, unclear or hourly-only pricing, no dedicated project manager, outsourcing everything offshore, no post-launch support plan, and quotes that are too cheap to be true. This guide says any one should make you pause, and two or more mean you should walk away.',
+    },
+  ],
 };

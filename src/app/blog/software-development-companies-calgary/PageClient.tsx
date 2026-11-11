@@ -7,6 +7,8 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import GuideFaq from '@/components/blog/GuideFaq';
+import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -365,6 +367,8 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }
                     </div>
                   </div>
                 ))}
+
+                <GuideFaq faqs={GUIDE_FAQS['software-development-companies-calgary']} />
 
               </article>
 

@@ -3,7 +3,9 @@ import { Metadata } from 'next';
 import PageClient from './PageClient';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
+import { GUIDE_FAQS } from '@/data/guide-faqs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
@@ -34,7 +36,7 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: '2026-03-06',
+  dateModified: '2026-11-10',
   author: BLOG_AUTHOR,
   publisher: {
     '@type': 'Organization',
@@ -53,6 +55,7 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={getBlogBreadcrumbs(TITLE, SLUG)} />
+      <FaqSchema faqs={GUIDE_FAQS['software-development-companies-calgary']} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

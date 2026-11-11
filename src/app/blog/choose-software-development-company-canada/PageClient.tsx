@@ -9,6 +9,8 @@ import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import SoftwareCompanyLinks from '@/components/SoftwareCompanyLinks';
+import GuideFaq from '@/components/blog/GuideFaq';
+import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -473,6 +475,8 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                     Note: These are approximate ranges based on Canadian market averages. Final pricing depends on complexity, integrations, and specific requirements. Contact Mapletech Labs for a precise, fixed-price quote tailored to your project.
                   </p>
                 </div>
+
+                <GuideFaq faqs={GUIDE_FAQS['choose-software-development-company-canada']} />
 
               </article>
 
