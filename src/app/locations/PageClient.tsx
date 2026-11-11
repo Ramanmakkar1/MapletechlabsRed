@@ -17,6 +17,24 @@ const MAJOR_CITY_SLUGS = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa
 const majorCities = MAJOR_CITY_SLUGS.flatMap(slug => allCities.filter(c => c.slug === slug));
 const otherCities = allCities.filter(c => !MAJOR_CITY_SLUGS.includes(c.slug));
 
+// Ordered by buyer intent, with software development first because its city
+// landing pages are the main /locations/software-development-company-in-<city>
+// URLs rather than serviceCityPath keyword URLs.
+const BUYER_INTENT_SERVICES = [
+  { serviceSlug: 'software-development', label: 'Software Development' },
+  { serviceSlug: 'mobile-app-development', label: 'App Development' },
+  { serviceSlug: 'ai-ml', label: 'AI Development' },
+  { serviceSlug: 'product-design', label: 'UI/UX Design' },
+  { serviceSlug: 'web-development', label: 'Web Development' },
+  { serviceSlug: 'digital-marketing', label: 'SEO & Digital Marketing' },
+  { serviceSlug: 'saas-development', label: 'SaaS Development' },
+] as const;
+
+const buyerIntentPath = (serviceSlug: string, citySlug: string) =>
+  serviceSlug === 'software-development'
+    ? `/locations/software-development-company-in-${citySlug}`
+    : serviceCityPath(serviceSlug, citySlug);
+
 const cardBase: React.CSSProperties = {
   border: '1px solid var(--line)',
   borderRadius: 24,
@@ -85,6 +103,9 @@ export default function LocationsIndexPage() {
             <div><h2 style={{ maxWidth: '16ch' }}>One engineering bench, delivered locally across Canada</h2></div>
             <div className="prose-body">
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
+                <strong>Need a software development, app development, AI, UI/UX, web development or SEO company in Edmonton, Calgary, Toronto or Vancouver?</strong> Mapletech Labs delivers all of them for companies in those cities and across Canada, from our Edmonton headquarters.
+              </p>
+              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
                 Mapletech Labs is headquartered in Edmonton and works with companies in twenty-four cities across seven provinces. Our distributed model means you get a team that understands your local market &mdash; the regulators you answer to, the industries around you, the way business actually gets done in your province &mdash; backed by the depth of a national engineering bench.
               </p>
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
@@ -119,7 +140,7 @@ export default function LocationsIndexPage() {
               ))}
             </div>
 
-            <div className="head"><div><h2>All cities</h2></div></div>
+            <div className="head"><div><h2>Choose a city</h2><p className="lede">Pick your city for local delivery details, or use the service links below to go straight to your service.</p></div></div>
             <div className="grid grid--3">
               {cities.map(city => (
                 <Link key={city.slug} href={`/locations/software-development-company-in-${city.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -145,15 +166,15 @@ export default function LocationsIndexPage() {
                 <p className="lede">Mapletech Labs is headquartered in Edmonton and works with companies in twenty-four cities across seven provinces. Every city gets the same national engineering bench for AI, SaaS, app and web development, SEO and UI/UX design. Pick your city and service below.</p>
               </div>
             </div>
-            <div className="grid grid--3">
-              {majorCities.map(city => (
-                <div key={city.slug} className="tile">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 16, marginBottom: 14 }}>
-                    <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)' }}>{city.name}{city.isHQ ? ' · HQ' : ''}</Link>
-                  </div>
+            <div className="grid grid--2">
+              {BUYER_INTENT_SERVICES.map(service => (
+                <div key={service.serviceSlug} className="tile">
+                  <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', marginBottom: 14 }}>{service.label} Company by City</h3>
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                    {PRIORITY_SERVICES.map(ps => (
-                      <Link key={ps.serviceSlug} href={serviceCityPath(ps.serviceSlug, city.slug)} className="pill">{ps.label} in {city.name}</Link>
+                    {majorCities.map(city => (
+                      <Link key={city.slug} href={buyerIntentPath(service.serviceSlug, city.slug)} className="pill">
+                        {service.label} in {city.name}{city.isHQ ? ' · HQ' : ''}
+                      </Link>
                     ))}
                   </div>
                 </div>
