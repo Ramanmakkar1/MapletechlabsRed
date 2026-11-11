@@ -77,6 +77,39 @@ for (const file of files) {
   problems.push(...checkTitle(title).map((problem) => `${file}: ${problem}`));
 }
 
+// 1b. Regression guard for the six pages in the 2026-11-11 "titles over 60
+//     characters" audit. They must stay at 50-60 chars with the brand once.
+const AUDIT_PAGES = [
+  "src/app/blog/app-development-companies-edmonton/page.tsx",
+  "src/app/blog/saas-development-cost-canada/page.tsx",
+  "src/app/blog/web-development-companies-toronto/page.tsx",
+  "src/app/blog/website-cost-canada/page.tsx",
+  "src/app/case-studies/logistics-platform/page.tsx",
+  "src/app/services/digital-marketing/seo-services/page.tsx",
+];
+const auditArticlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
+for (const file of AUDIT_PAGES) {
+  const src = readFileSync(join(ROOT, file), "utf8");
+  const m = src.match(/^  title: (.+),$/m);
+  let title = m && parseTitle(m[1], src);
+  if (!title && m?.[1] === "seoTitle(a.metaTitle)") {
+    const slug = file.split(/[\\/]/).at(-2);
+    const block = auditArticlesSrc.match(new RegExp(`slug: '${slug}'[\\s\\S]*?metaTitle: ('(?:[^'\\\\]|\\\\.)*')`));
+    if (block) title = parseTitle(`seoTitle(${block[1]})`, "");
+  }
+  if (!title) {
+    problems.push(`${file}: audit page title could not be resolved`);
+    continue;
+  }
+  const rendered = resolveTitle(title);
+  if (rendered.length < 50 || rendered.length > MAX) {
+    problems.push(`${file}: audit title "${rendered}" is ${rendered.length} chars (want 50-${MAX})`);
+  }
+  if ((rendered.match(/Mapletech Labs/gi) || []).length !== 1) {
+    problems.push(`${file}: audit title must name the brand once`);
+  }
+}
+
 // 2. Generated city x service titles (src/data/city-service.ts) — resolve the
 //    "@/..." alias so the TS data modules load directly.
 const loader = `
