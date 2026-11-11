@@ -3,7 +3,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Canadian Software Development Case Studies by Mapletech Labs';
+const TITLE = 'Software Development Case Studies in Canada';
 const DESCRIPTION = 'See how Mapletech Labs has helped Canadian businesses build scalable software. Real results from fintech, healthcare, e-commerce, and logistics projects.';
 
 export const dynamic = 'force-static';
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
-    title: TITLE,
+    title: `${TITLE} | Mapletech Labs`,
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/case-studies',
     type: 'website',
