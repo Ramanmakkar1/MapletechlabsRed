@@ -88,6 +88,7 @@ export const blogSlugs = [
   'ai-chatbot-development-cost-canada',
   'mobile-app-development-company-canada',
   'digital-marketing-agencies-ottawa',
+  'custom-software-development-cost-canada',
 ];
 
 export const citySlugs = [

@@ -26,6 +26,12 @@ const FEATURED = 'top-10-unicorn-apps-2026';
 
 const posts = [
   {
+    slug: 'custom-software-development-cost-canada', category: 'Business',
+    title: 'Custom Software Development Cost in Canada (2026 Guide)',
+    excerpt: 'What custom software costs in Canada: CAD ranges, cost drivers, discovery and build stages, example scope tiers and the questions to ask when comparing quotes.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'shopify-vs-custom-ecommerce-canada', category: 'Business',
     title: 'Shopify vs Custom Ecommerce: A Canadian Decision Guide',
     excerpt: 'Shopify vs custom ecommerce in Canada: when Shopify fits, when custom development is justified, costs, integrations, scaling and a decision checklist.',
