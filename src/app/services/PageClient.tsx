@@ -293,6 +293,12 @@ const CHOOSE_GUIDE = [
     linkLabel: 'Software discovery',
   },
   {
+    need: 'An existing product that needs support',
+    advice: 'Choose software maintenance for bug fixes, security and dependency updates, monitoring, compatibility work and a monthly retainer.',
+    href: '/services/software-maintenance',
+    linkLabel: 'Software maintenance',
+  },
+  {
     need: 'An iPhone or Android app',
     advice: 'Choose mobile app development for native iOS, Android or cross-platform apps built with Swift, Kotlin, Flutter or React Native.',
     href: '/services/mobile-app-development',
