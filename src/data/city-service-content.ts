@@ -532,6 +532,62 @@ const CITY_SERVICE_PAIR_OVERRIDES: Record<string, CityServicePairOverride> = {
       },
     ],
   },
+  'montreal/cloud-devops': {
+    intro:
+      'Montreal cloud and DevOps work usually means keeping a bilingual product online for retail, gaming, AI and aerospace teams while meeting Quebec data expectations. Mapletech Labs designs landing zones, CI/CD pipelines and observability for Montreal companies, with Canadian data residency, a fixed CAD price and senior engineers on the project from day one.',
+    applications: [
+      {
+        industry: 'Gaming',
+        title: 'Launch-day infrastructure for Montreal game studios',
+        desc: 'Autoscaling, CDN and deployment pipelines sized for a live-service launch, with rollback and monitoring so a patch does not become an outage.',
+      },
+      {
+        industry: 'AI/ML',
+        title: 'GPU-ready cloud for Montreal AI teams',
+        desc: 'Reproducible environments, cost controls and secure data handling for model training and inference, with Canadian regions where residency matters.',
+      },
+      {
+        industry: 'Retail',
+        title: 'Peak-season resilience for Montreal retailers',
+        desc: 'Zero-downtime deploys, cache strategy and load testing before holiday traffic, so checkout stays up when it matters most.',
+      },
+      {
+        industry: 'Aerospace',
+        title: 'Controlled cloud for aerospace and manufacturing',
+        desc: 'Landing zones and change control that respect security review, with documentation procurement and vendor-risk teams expect.',
+      },
+    ],
+    localSections: [
+      {
+        heading: 'AWS, Azure and Kubernetes for Montreal workloads',
+        body:
+          'We implement AWS Well-Architected or Azure landing-zone patterns, EKS or AKS deployments, Terraform baselines and GitHub Actions or GitLab CI pipelines your team can run after handoff. Work starts with a short architecture review of what you run today and what must change for scale or compliance.',
+      },
+      {
+        heading: 'Observability and incident response',
+        body:
+          'Dashboards, alerting and runbooks tied to business metrics, not only CPU graphs, so Montreal on-call teams know when checkout, API latency or batch jobs actually fail and can trace root cause quickly.',
+      },
+    ],
+    localFaqs: [
+      {
+        q: 'Do you provide DevOps services for Montreal companies?',
+        a: 'Yes. We set up cloud infrastructure, CI/CD pipelines, infrastructure as code, monitoring and incident runbooks for Montreal teams, and we can take over an existing AWS, Azure or Kubernetes setup. You get a fixed CAD scope after an architecture review.',
+      },
+      {
+        q: 'Can our cloud data stay in Canada for Montreal users?',
+        a: 'Yes. We default to Canadian AWS or Azure regions where your workload allows, document data flows and configure services so primary storage and backups remain in-country unless you explicitly need a global edge.',
+      },
+      {
+        q: 'What does cloud and DevOps work cost in Montreal?',
+        a: 'A focused migration or CI/CD engagement often starts in the mid tens of thousands CAD; larger multi-environment platforms run higher. Pricing is the same across Canada, with no Montreal premium, and you receive a fixed scope and price after an architecture review.',
+      },
+      {
+        q: 'Do you have an office in Montreal?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and serves Montreal clients remotely with overlapping hours. We travel to Montreal for kickoffs and major architecture reviews when in-person work helps, with travel agreed up front.',
+      },
+    ],
+  },
 };
 
 /**

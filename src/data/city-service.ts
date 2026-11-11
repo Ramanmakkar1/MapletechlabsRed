@@ -67,6 +67,27 @@ const META_OFFER: Record<string, string> = {
   'saas-development': 'designs and builds SaaS products',
 };
 
+/**
+ * One extra FAQ per service family that the city pages were missing. Kept here
+ * so both the keyword route and the /locations/[city]/[service] mesh route
+ * render the same visible answer and FAQPage schema.
+ */
+export function serviceCityExtraFaqs(serviceSlug: string, cityName: string): { q: string; a: string }[] {
+  if (serviceSlug === 'web-development') {
+    return [{
+      q: `Do you build WordPress sites in ${cityName}?`,
+      a: `Yes. We build WordPress sites for ${cityName} businesses that need to update their own pages, blog or small store without a developer. You get a custom theme, a clean editor, fast pages and a fixed CAD price agreed before work starts; if a WordPress site would outgrow itself, we recommend a custom build instead.`,
+    }];
+  }
+  if (serviceSlug === 'ai-ml') {
+    return [{
+      q: `Can you build AI agents for ${cityName} businesses?`,
+      a: `Yes. We build AI agents for ${cityName} teams that need to automate a repeated workflow, such as answering from internal documents, triaging requests or drafting replies. The agent uses your own data and permissions, keeps a person in the loop for sensitive decisions, and is scoped and priced in CAD before work starts.`,
+    }];
+  }
+  return [];
+}
+
 export function getCityServiceData(
   citySlug: string,
   serviceSlug: string
@@ -113,6 +134,7 @@ export function getCityServiceData(
       a: replacePlaceholders(faq.a, city),
     })),
     ...intersection.localFaqs,
+    ...serviceCityExtraFaqs(service.slug, city.name),
   ];
 
   // Build hero description with city context

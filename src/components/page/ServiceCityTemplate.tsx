@@ -81,7 +81,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
       <main id="main-content">
         <PageHero
           crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: cityName, href: `/locations/software-development-company-in-${citySlug}` }, { label: serviceName }]}
-          copy={{ badge: p.badge, title: heroTitle ?? <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>, desc: heroDesc ?? p.heroDescription }}
+          copy={{ badge: p.badge, title: heroTitle ?? (local ? <>{local.title}</> : <>{serviceName} Company<br />in <span style={{ color: 'var(--brand)' }}>{cityName}</span></>), desc: heroDesc ?? p.heroDescription }}
           stats={HONEST_STATS} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
           city={cityName}
           contactHref={contactHref}
@@ -111,6 +111,9 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             <div className="prose-split">
               <div><h2 style={{ maxWidth: '18ch' }}>{serviceName} in {cityName}, done properly</h2></div>
               <div className="prose-body">
+                {local?.answer ? (
+                  <p style={{ fontSize: 'clamp(18px, 1.5vw, 20px)', color: 'var(--ink)', lineHeight: 1.65, fontWeight: 450, margin: '0 0 16px' }}>{local.answer}</p>
+                ) : null}
                 <p style={{ fontSize: 'clamp(18px, 1.5vw, 20px)', color: 'var(--ink)', lineHeight: 1.65, fontWeight: 450, margin: 0 }}>{p.intro}</p>
                 {crossPromo ? (
                   <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.65, margin: '16px 0 0' }}>
@@ -184,6 +187,27 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
                     <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{pr.note}</p>
                   </Link>
                 ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {/* WordPress is a common request on web-development city pages, so give it
+            its own short section instead of burying it in the pricing copy. */}
+        {serviceSlug === 'web-development' ? (
+          <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+            <div className="cb-container">
+              <Head title={`WordPress websites for ${cityName} businesses`} />
+              <div className="prose-split">
+                <div><h2 style={{ maxWidth: '18ch' }}>WordPress, when it is the right fit</h2></div>
+                <div className="prose-body">
+                  <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>
+                    We build WordPress sites for {cityName} businesses that need to publish and update content without a developer: brochure sites, service pages, blogs and small online stores. You get a custom theme, a clean editor, fast pages and the same fixed CAD price agreed before work starts.
+                  </p>
+                  <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
+                    When a WordPress site would outgrow itself, we say so and recommend a custom build instead. For content-led sites that change often, WordPress is often the practical choice, and we can connect it to your CRM, booking system or store.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -277,7 +301,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container" style={{ display: 'grid', gap: 40 }}>
             <div>
-              <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Other services in {cityName}</h3>
+              <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Related services in {cityName}</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {p.relatedCityServices.map(r => <Link key={r.serviceSlug} href={serviceCityPath(r.serviceSlug, r.citySlug)} className="pill" style={navigationLinkStyle}>{r.name} in {cityName}</Link>)}
               </div>

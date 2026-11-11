@@ -12,6 +12,8 @@ export interface ServiceCityLocal {
   title: string;
   /** Meta description, 155 characters or less. */
   description: string;
+  /** Optional answer-first lead: two plain sentences naming the service, city and what the client gets. */
+  answer?: string;
   intro: string;
   sections: { heading: string; body: LocalTextPart[] }[];
   /** Optional answer-first comparison table rendered after the local sections. */
@@ -272,6 +274,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'ai-development-company-in-calgary': {
     title: 'AI Development Company in Calgary',
     description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Calgary companies, from an Alberta team with fixed CAD pricing. Get a free quote.',
+    answer: 'Mapletech Labs provides AI development in Calgary, building chatbots, LLM features, AI agents and workflow automation for local companies. You get a system built on your own documents and data, a fixed CAD price and senior engineers working directly with your team.',
     intro: 'Mapletech Labs is an Alberta company headquartered in Edmonton, roughly a three-hour drive north of Calgary and in the same time zone, so our working days line up with yours. We build AI chatbots, large language model (LLM) features and workflow automation for Calgary businesses that want AI to take routine work off their staff. You work directly with the senior engineers who design and build your system, with no sales layer in between. Scope and price are fixed in CAD before any work begins, so your budget stays put. Call us on +1-403-604-8692 to discuss your project.',
     sections: [
       {
@@ -1762,6 +1765,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     title: 'SaaS Development Company in Calgary',
     description:
       'Mapletech Labs builds multi-tenant SaaS for Calgary energy, logistics and fintech teams, from MVP to scale, with a fixed CAD price. Get a free quote.',
+    answer: 'Mapletech Labs provides SaaS development in Calgary, building multi-tenant products from first MVP through to scale for energy, logistics and fintech teams. You get a written scope, a fixed CAD price and senior engineers who stay with the product after launch.',
     intro:
       'Mapletech Labs is a Canadian software team headquartered in Edmonton, about a three-hour drive from Calgary and in the same time zone. We build multi-tenant SaaS from first MVP through products ready to grow with your customer base. We do not maintain a Calgary office; when it helps, we travel to Calgary for discovery workshops arranged in advance. You speak with the senior engineers who write your code, not a sales layer. A written scope and a fixed price in CAD are agreed before development begins. Call +1-403-604-8692 to discuss your SaaS idea.',
     sections: [
@@ -3161,8 +3165,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     ],
   },
   'ai-development-company-in-winnipeg': {
-    title: 'AI Development Company in Winnipeg',
+    title: 'Custom AI Development in Winnipeg',
     description: 'AI development for Winnipeg businesses: custom chatbots, LLM features and automation at a fixed CAD price from our Edmonton team. Get a free quote.',
+    answer: 'Mapletech Labs provides custom AI development in Winnipeg, building chatbots, LLM features and workflow automation for local businesses. You get a working pilot on your own data, a fixed CAD price and senior engineers who stay on the project through launch.',
     intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton. We work remotely with Winnipeg businesses and do not have a Winnipeg office. Winnipeg is one hour ahead of Edmonton, so our working days overlap closely. You have direct access to the senior engineers building your solution, and we agree on a fixed scope and price in CAD before work begins. Call +1-403-604-8692 to discuss your project.',
     sections: [
       {
@@ -3539,8 +3544,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     ],
   },
   'web-development-company-in-hamilton': {
-    title: 'Web Development Company in Hamilton, ON',
+    title: 'WordPress & Web Development in Hamilton, ON',
     description: 'Web development company for Hamilton businesses: fast, accessible websites, portals and web apps at a fixed CAD price. Get a free quote today.',
+    answer: 'Mapletech Labs provides web development in Hamilton, ON, building fast, accessible websites, portals and web apps for local manufacturers, logistics firms, health groups and small businesses. You get a fixed CAD price, a weekly demo of the live staging site and direct access to the developers doing the work.',
     intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds websites and web apps for Hamilton organisations. We work with Hamilton clients remotely: manufacturers and logistics firms that need portals connected to their operations, health and research teams near McMaster University, and downtown shops and restaurants that want a site that turns visitors into bookings. We have no Hamilton office, so every project runs on weekly demos of a live staging site, where you see real progress instead of status reports. You talk directly with the developers doing the work, and the price is fixed in CAD before any code is written. Call +1-403-604-8692 to get a free quote.',
     sections: [
       {
@@ -3595,8 +3601,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     ],
   },
   'app-development-company-in-hamilton': {
-    title: 'App Development Company in Hamilton, ON',
+    title: 'Mobile App Development in Hamilton, ON',
     description: 'App development company for Hamilton businesses building iOS & Android apps at a fixed CAD price from our Edmonton team. Get a free quote today.',
+    answer: 'Mapletech Labs provides mobile app development in Hamilton, ON, building iOS and Android apps for local manufacturers, logistics teams, health groups and small businesses. You get a fixed scope, a fixed CAD price and direct access to the senior engineers who write the code.',
     intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, building iOS and Android apps for Hamilton organisations. We work with Hamilton clients remotely: manufacturers that need field and plant-floor apps, logistics teams around the Port of Hamilton and John C. Munro Hamilton International Airport, health and research groups near McMaster University and Hamilton Health Sciences, and local businesses that want booking or loyalty apps on the phone. We have no Hamilton office, so every project runs on weekly demos of working iOS and Android builds, where you see real progress instead of slide decks. You talk directly with the engineers who write the code, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
     sections: [
       {
@@ -4613,8 +4620,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     ],
   },
   'app-development-company-in-victoria': {
-    title: 'App Development Company in Victoria, BC',
+    title: 'Mobile App Development in Victoria, BC',
     description: 'Victoria app development by Mapletech Labs: iOS & Android apps for BC government suppliers, tourism and marine firms, with a fixed CAD price. Free quote.',
+    answer: 'Mapletech Labs provides mobile app development in Victoria, BC, building iOS and Android apps for local organizations. You get a fixed scope, a fixed CAD price and direct access to the senior engineers who design and build your app.',
     intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, with our engineers based in Vancouver, and we build iOS and Android apps for Victoria organizations. We do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. We work with BC provincial government suppliers, tourism and hospitality operators, tech firms around downtown and the University of Victoria and Camosun campuses, ocean and marine companies, and healthcare teams serving Island Health patients. You speak directly with the senior engineers who build your app, and you sign with a Canadian company, priced in CAD, with a fixed scope and a fixed price before any work starts. Call us on +1-403-604-8692 to talk about your app.',
     sections: [
       {
@@ -8463,6 +8471,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'web-development-company-in-gatineau': {
     title: 'Web Development Company in Gatineau, QC',
     description: 'Web development company in Gatineau: bilingual FR/EN websites, portals and online stores for federal, IT and tourism teams. Fixed CAD price.',
+    answer: 'Mapletech Labs provides web development in Gatineau, QC, building bilingual French and English websites, portals and online stores for federal suppliers, IT firms and tourism operators. You get a site built for both Quebec and federal audiences, a fixed CAD price and a weekly demo of the real site as it takes shape.',
     intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds business websites, customer portals, online stores and web applications for organizations in Gatineau and across the National Capital Region. We do not have a Gatineau office; Gatineau clients work with us remotely through video workshops, staging links and a weekly demo where you click through the real site as it takes shape. Gatineau\'s economy runs on the federal public service, the contractors and suppliers who work on both sides of the river, a busy IT services sector and a summer tourism season, and each of those markets needs a site that works in French first and English second. Gatineau is on Eastern Time, two hours ahead of Edmonton, so reviews and decisions fit comfortably into your working day. Because the Charter of the French Language requires French on commercial sites serving Quebec customers, we build bilingual French and English websites with proper hreflang, and we design for Quebec\'s Law 25 from the start. Every project has a fixed scope and a fixed CAD price agreed in writing before development starts, and you deal directly with the developers.',
     sections: [
       {
@@ -8803,8 +8812,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     ],
   },
   'web-development-company-in-laval': {
-    title: 'Web Development Company in Laval, QC',
+    title: 'WordPress & Web Development in Laval, QC',
     description: 'Web development company in Laval: bilingual FR/EN websites, portals and online stores for biotech, manufacturers and retailers. Fixed CAD price.',
+    answer: 'Mapletech Labs provides web development in Laval, QC, building bilingual French and English websites, customer portals and online stores for local businesses. You get a site built for Quebec customers, a fixed CAD price and a weekly demo of the real site as it takes shape.',
     intro: 'Mapletech Labs is a Canadian web development company headquartered in Edmonton that builds business websites, customer portals, online stores and web applications for businesses in Laval and across Greater Montreal. We do not have a Laval office; Laval clients work with us remotely through video workshops, staging links and a weekly demo where you click through the real site as it takes shape. Laval is Quebec\'s third-largest city, on Île Jésus north of Montreal, and its businesses range from life-sciences firms around the Cité de la Biotech to manufacturers and distributors along Highways 15 and 440, retailers near Carrefour Laval and Centropolis, and family-owned service companies that serve the whole North Shore. Each of them needs a site that works in French first and English second. Laval is on Eastern Time, two hours ahead of Edmonton, so reviews and decisions fit comfortably into your working day. Because the Charter of the French Language requires French on commercial sites serving Quebec customers, we build bilingual French and English websites with proper hreflang, and we design for Quebec\'s Law 25 from the start. Every project has a fixed scope and a fixed CAD price agreed in writing before development starts.',
     sections: [
       {

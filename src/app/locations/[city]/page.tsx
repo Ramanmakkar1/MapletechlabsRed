@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { cache } from 'react';
 import { notFound } from 'next/navigation';
 import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline } from '@/data/serviceCity';
-import { getCityServiceData } from '@/data/city-service';
+import { getCityServiceData, serviceCityExtraFaqs } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 import { localServiceTitle } from '@/lib/seo/title';
@@ -83,8 +83,18 @@ export default async function ServiceCityPage({ params }: PageProps) {
   const local = await localFor(slug);
   const isAgencyPage = combo.slug.startsWith('digital-marketing-agency-in-');
   const serviceName = isAgencyPage ? 'Digital Marketing Agency' : priorityCompanyHeadline(combo.serviceSlug, combo.label);
+  const extraFaqs = serviceCityExtraFaqs(combo.serviceSlug, raw.cityName);
   const data = local
-    ? { ...raw, serviceName, description: local.description, intro: local.intro, faqs: local.faqs }
+    ? {
+        ...raw,
+        serviceName,
+        description: local.description,
+        intro: local.intro,
+        faqs: [
+          ...local.faqs,
+          ...extraFaqs.filter(f => !local.faqs.some(existing => existing.q === f.q)),
+        ],
+      }
     : { ...raw, serviceName };
   const url = `https://mapletechlabs.ca/locations/${slug}`;
   const cityLanding = `https://mapletechlabs.ca/locations/software-development-company-in-${combo.citySlug}`;
