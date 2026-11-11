@@ -1802,6 +1802,7 @@ export const articles: Article[] = [
       'The figures below are ballpark ranges in Canadian dollars, drawn from our pricing ranges and from typical Canadian build patterns. They are for planning, not quotes. Your project may sit inside the range or outside it depending on scope, integration complexity and data quality.',
     ],
     body: [
+      { type: 'p', html: '<strong>Quick answer:</strong> AI development in Canada typically costs CAD $10,000–$35,000 for an LLM feature, $15,000–$45,000 for a document-based chatbot, and $40,000–$150,000+ for custom model training. Data preparation, integrations, evaluation and guardrails drive the price.' },
       { type: 'h2', id: 'what-you-pay-for', text: 'What you are actually paying for' },
       { type: 'p', html: 'An AI feature is not one purchase. It is several stages that each take time, expertise and testing. The main ones:' },
       { type: 'checks', items: [
@@ -5315,6 +5316,7 @@ export const articles: Article[] = [
       'This guide explains what moves the price, what discovery and the build stages should include, example scope tiers using ranges published on this site, and the questions to ask when comparing quotes. For the contract itself, see our <a href="/blog/software-development-contract-canada">software development contract guide for Canada</a>.',
     ],
     body: [
+      { type: 'p', html: '<strong>Quick answer:</strong> Custom software development in Canada typically costs about CAD $30,000–$200,000 for a focused first release, with enterprise systems reaching $200,000–$500,000+. Scope, integrations, data quality and compliance work drive the price.' },
       { type: 'h2', id: 'cost-drivers', text: 'What drives custom software development cost in Canada?' },
       { type: 'p', html: 'Two projects with the same number of screens can differ by hundreds of thousands of dollars. These are the drivers that matter most:' },
       { type: 'checks', items: [
