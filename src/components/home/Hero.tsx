@@ -20,12 +20,12 @@ export default function Hero() {
     <section style={{ padding: 'var(--hero-top) 0 var(--section-y)' }}>
       <div className="cb-container hero-split">
         <div>
-          <h1 style={{ marginBottom: 24, maxWidth: '15ch' }}>
-            Custom software development for Canadian businesses.
+          <h1 style={{ marginBottom: 24, maxWidth: '18ch' }}>
+            Custom software and application development company in Canada.
           </h1>
           <p className="lede" style={{ marginTop: 0, marginBottom: 16, maxWidth: '46ch' }}>
-            Mapletech Labs is a custom software development company in Canada, designing and building the digital products ambitious companies
-            run on &mdash; web platforms, mobile apps and AI systems, engineered to last.
+            Mapletech Labs is a Canadian custom software and application development company for startups and enterprises. We design and build
+            the digital products ambitious teams run on &mdash; web platforms, mobile apps and AI systems, engineered to last.
           </p>
           <p style={{ marginTop: 0, marginBottom: 36, fontSize: 15, color: 'var(--muted)' }}>
             Headquartered in Alberta: <Link href="/locations/software-development-company-in-edmonton">Custom Software Development Edmonton</Link>

@@ -19,8 +19,12 @@ export const defaultFaqs: Faq[] = [
     a: 'We work on a fixed-scope, fixed-price model. No hourly billing, no scope-creep surprises. You know exactly what you are getting and what it costs before we write a line of code.',
   },
   {
-    q: 'Do you work with startups or only enterprises?',
-    a: 'Both. We have a Rapid Launch programme for early-stage startups (8 weeks, fixed price) and dedicated enterprise teams for complex multi-year engagements.',
+    q: 'What does a custom application development company do?',
+    a: 'A custom application development company designs, builds and maintains software made for your business instead of selling off-the-shelf tools. Mapletech Labs handles discovery, UI/UX, development, launch and support.',
+  },
+  {
+    q: 'Do you work with startups?',
+    a: 'Yes. Our Rapid Launch programme gives early-stage startups a fixed-price MVP in about 8 weeks, and we also build with enterprise teams on complex multi-year engagements.',
   },
   {
     q: 'Who owns the code and IP?',

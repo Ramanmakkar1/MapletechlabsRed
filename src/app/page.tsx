@@ -27,13 +27,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   // `absolute`: the layout's "%s | Mapletech Labs" template would double the brand.
-  title: { absolute: 'Custom Software Development in Canada | Mapletech Labs' },
+  title: { absolute: 'Custom Software Development Company in Canada | Mapletech' },
   description:
-    'Software development company in Canada building custom software, mobile apps, AI and UI/UX design. Teams in Edmonton, Calgary, Toronto and Vancouver.',
+    'Mapletech Labs builds custom software and apps for Canadian startups and enterprises. Get a fixed-price plan and launch in 8–12 weeks. Book a free call.',
   openGraph: {
-    title: 'Custom Software Development in Canada | Mapletech Labs',
+    title: 'Custom Software Development Company in Canada | Mapletech',
     description:
-      'Software development company in Canada building custom software, mobile apps, AI and UI/UX design. Teams in Edmonton, Calgary, Toronto and Vancouver.',
+      'Mapletech Labs builds custom software and apps for Canadian startups and enterprises. Get a fixed-price plan and launch in 8–12 weeks. Book a free call.',
     url: 'https://mapletechlabs.ca',
     type: 'website',
     siteName: 'Mapletech Labs',
@@ -55,7 +55,7 @@ const homepageSchema = {
   '@type': 'WebPage',
   '@id': 'https://mapletechlabs.ca/#webpage',
   url: 'https://mapletechlabs.ca/',
-  name: 'Custom Software Development in Canada | Mapletech Labs',
+  name: 'Custom Software Development Company in Canada | Mapletech',
   description: metadata.description,
   isPartOf: {
     '@type': 'WebSite',
