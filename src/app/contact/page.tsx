@@ -98,7 +98,7 @@ export default function ContactRoute() {
             <li>The problem you want solved, or the idea you want to build.</li>
             <li>Who will use it and what they need to get done.</li>
             <li>The closest fit from our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development services</Link>, such as <Link href="/services/saas-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>custom software</Link>, <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>mobile apps</Link> or <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>web development</Link>.</li>
-            <li>A rough budget range or budget stage, using the typical CAD ranges on our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>pricing page</Link> as a guide.</li>
+            <li>A rough budget range or budget stage; our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>pricing page lists typical project ranges in CAD</Link> so you can see where your budget sits.</li>
             <li>Any fixed launch date or deadline, plus links or documents that help explain the project.</li>
           </ul>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
@@ -107,18 +107,12 @@ export default function ContactRoute() {
         </section>
         <section aria-labelledby="contact-discovery-call">
           <h2 id="contact-discovery-call" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens during the free 30-minute discovery call</h2>
-          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            The call is a working session with a senior engineer, not a sales pitch. It follows the brief you send, so the time goes into the decisions that shape the build.
-          </p>
           <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             <li><strong>Goals and users.</strong> We confirm the problem you want solved, who will use the product and what a successful outcome looks like.</li>
             <li><strong>Technical constraints.</strong> We review existing systems, integrations, platforms and any security or data needs.</li>
             <li><strong>Timeline and budget.</strong> We compare custom software, an off-the-shelf tool and a smaller first release against your launch date and rough budget range.</li>
             <li><strong>Recommendation and next step.</strong> We say honestly whether the project is a fit and agree what happens next, including a written scope and estimate after the call if it is.</li>
           </ul>
-          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            You do not need a finished specification or exact figures before the call. Bring what you know so far, plus any links or documents that help explain the project, and we will fill in the rest together.
-          </p>
         </section>
             </div>
           </div>
@@ -181,17 +175,10 @@ export default function ContactRoute() {
             Tell us about your project idea during our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>free project consultation</Link>. Our senior engineer will read your brief and get back with honest first thoughts and questions that matter, responding within one working day. This initial conversation helps us understand whether custom software, an off-the-shelf solution, or a smaller first release best fits your goals.
           </p>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            If the project looks like a good fit, we schedule a 30-minute discovery call to discuss users, technical constraints, timeline, and budget. You leave with a clearer picture of the scope and whether we should work together. When you accept, we assign your team, set up environments, and plan the first sprint so you see working software early and often.
+            If the project looks like a good fit, we schedule a 30-minute discovery call to discuss users, technical constraints, timeline, and budget. You leave with a clearer picture of the scope and whether we should work together. If the project is a fit, we follow up with a written scope and estimate, usually within a week, and your idea stays under NDA from the first conversation. When you accept, we assign your team, set up environments, and plan the first sprint so you see working software early and often.
           </p>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Our headquarters is in Edmonton, Alberta, and our team has dedicated engineers in Edmonton, Calgary, Toronto, and Vancouver, so there&#8217;s always someone in your time zone. Most projects run remotely with weekly demos, and we meet in person when it helps. We work with clients across Canada, including Calgary, Toronto, Vancouver, Ottawa, and Montreal. <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Explore our complete service catalog</Link> to learn about the custom software development, mobile apps, AI & automation, and other solutions we offer.
-          </p>
-        </section>
-
-        <section aria-labelledby="contact-include-in-message">
-          <h2 id="contact-include-in-message" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What to include in your message</h2>
-          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            To help us reply with useful first thoughts, include the type of project you have in mind, a rough budget range, and your timeline. You do not need exact figures: our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>pricing page lists typical project ranges in CAD</Link> so you can see where your budget sits, and our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development services</Link> show the kinds of work we take on. Share what you know so far and we will confirm the rest on the call.
           </p>
         </section>
 
