@@ -27,7 +27,7 @@ const jsonLd = {
   datePublished: a.date,
   dateModified: a.dateModified,
   author: BLOG_AUTHOR,
-  publisher: { '@type': 'Organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
+  publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
   url: URL,
   mainEntityOfPage: URL,
 };

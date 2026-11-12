@@ -39,6 +39,7 @@ const jsonLd = {
   author: BLOG_AUTHOR,
   publisher: {
     '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
     name: 'Mapletech Labs',
     url: 'https://mapletechlabs.ca',
     logo: {
