@@ -197,12 +197,17 @@ export function serviceSitemapEntries(): SitemapEntry[] {
     changefreq: 'monthly',
     priority: '0.9',
   }));
-  const cityServices = ['toronto', 'vancouver'].map(city => ({
+  const cityServices = ['edmonton', 'calgary', 'toronto', 'vancouver'].map(city => ({
     loc: `${BASE_URL}/services/mobile-app-development/${city}`,
     changefreq: 'monthly',
     priority: '0.85',
   }));
-  return [...services, ...cityServices];
+  const standaloneServices = ['ai-consulting', 'software-maintenance', 'software-discovery'].map(slug => ({
+    loc: `${BASE_URL}/services/${slug}`,
+    changefreq: 'monthly',
+    priority: '0.9',
+  }));
+  return [...services, ...standaloneServices, ...cityServices];
 }
 
 export function subserviceSitemapEntries(): SitemapEntry[] {
