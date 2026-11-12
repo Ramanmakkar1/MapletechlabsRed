@@ -260,7 +260,10 @@ export function localSeoSitemapEntries(): SitemapEntry[] {
       .map(service => ({
         loc: `${BASE_URL}/locations/${city}/${service}`,
         changefreq: 'monthly',
-        priority: '0.85',
+        // Thin city/niche pairs: keep them discoverable but below the service
+        // and priority city-service pages so crawlers spend budget on pages
+        // that can rank and convert.
+        priority: '0.3',
       }))
   );
 }

@@ -8,6 +8,7 @@ import TrustStrip from '@/components/home/TrustStrip';
 // Below the fold: loaded lazily so the hero paints first.
 const WhatWeBuild = nextDynamic(() => import('@/components/home/WhatWeBuild'));
 const EditorialBand = nextDynamic(() => import('@/components/home/EditorialBand'));
+const EssentialGuides = nextDynamic(() => import('@/components/home/EssentialGuides'));
 const FeaturedWork = nextDynamic(() => import('@/components/home/FeaturedWork'));
 const Industries = nextDynamic(() => import('@/components/home/Industries'));
 const Process = nextDynamic(() => import('@/components/home/Process'));
@@ -83,6 +84,7 @@ export default function Home() {
         <TrustStrip />
         <WhatWeBuild />
         <EditorialBand />
+        <EssentialGuides />
         <FeaturedWork />
         <Industries />
         <Process />
