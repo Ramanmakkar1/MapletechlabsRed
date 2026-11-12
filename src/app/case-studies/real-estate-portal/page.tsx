@@ -11,6 +11,7 @@ const TITLE = 'Real Estate Portal Case Study: ML Search, 850K+ Listings';
 const DESCRIPTION = 'How Mapletech Labs built PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings. See the results.';
 
 const SLUG = 'real-estate-portal';
+const DATE = '2026-03-14';
 
 export const dynamic = 'force-static';
 
@@ -31,9 +32,13 @@ const jsonLd = {
   '@type': 'Article',
   headline: 'ML-Powered Real Estate Portal - Case Study',
   description: DESCRIPTION,
+  datePublished: DATE,
+  dateModified: '2026-11-12',
   author: {
     '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
     name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
   },
   publisher: {
     '@type': 'Organization',

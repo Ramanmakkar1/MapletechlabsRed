@@ -4,6 +4,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const NAME = 'Logistics & Fleet Platform';
 const TITLE = 'Logistics Platform: 15K+ Deliveries a Day';
@@ -15,7 +16,7 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: ogTitle(TITLE),
     description: DESCRIPTION,
@@ -34,9 +35,10 @@ const jsonLd = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: DATE,
-  dateModified: DATE,
+  dateModified: '2026-11-12',
   author: {
     '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
     name: 'Mapletech Labs',
     url: 'https://mapletechlabs.ca',
   },

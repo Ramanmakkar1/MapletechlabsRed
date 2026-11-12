@@ -4,18 +4,20 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const NAME = 'PCI DSS Payments API';
 const TITLE = 'PCI DSS Payments API Case Study: 12M Transactions a Month';
 const DESCRIPTION = 'How Mapletech Labs built PayBridge Solutions\' PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.';
 
 const SLUG = 'payments-api-platform';
+const DATE = '2026-03-14';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -30,9 +32,13 @@ const jsonLd = {
   '@type': 'Article',
   headline: 'PCI DSS Payments API - Case Study',
   description: DESCRIPTION,
+  datePublished: DATE,
+  dateModified: '2026-11-12',
   author: {
     '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
     name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
   },
   publisher: {
     '@type': 'Organization',
