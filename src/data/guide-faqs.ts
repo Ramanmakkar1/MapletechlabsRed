@@ -139,6 +139,64 @@ export const GUIDE_FAQS: Record<string, { q: string; a: string }[]> = {
       a: 'Choose a Toronto web development company by comparing portfolio quality, technical capabilities, client retention, team size and industry reputation. Ask whether the developers are in-house employees or offshore subcontractors, and whether the agency uses templates. This guide evaluated more than 80 Toronto-area companies on those criteria to build its 2026 ranking.',
     },
   ],
+  'top-software-development-companies-canada': [
+    {
+      q: 'What is the best software development company in Canada?',
+      a: 'This 2026 guide ranks Mapletech Labs first among the top 10 software development companies in Canada, followed by Townmedialabs, TML, Shopify Engineering, OpenText, CGI Group, Constellation Software, Kinaxis, Lightspeed Commerce and Descartes Systems Group. The guide says the best partner depends on six checks: specialization, discovery, delivery process, ownership and hand-off, support, and budget fit.',
+    },
+    {
+      q: 'How do I compare software development companies in Canada?',
+      a: 'Start with six criteria: specialization, discovery, delivery process, ownership and hand-off, support, and budget fit. Ask each shortlisted company for recent work in your sector, a written scope, a demo schedule, and the exact terms for code ownership and post-launch support.',
+    },
+    {
+      q: 'What should I ask about code ownership and hand-off?',
+      a: 'Ask who owns the source code, designs, cloud accounts, and third-party subscriptions, and when that ownership transfers. A good partner provides written IP assignment, full repository access, technical documentation, and a hand-off plan before the project starts.',
+    },
+    {
+      q: 'How do I judge whether a company fits my budget?',
+      a: 'Compare what each quote includes, not just the total. Ask whether discovery, design, testing, deployment, and post-launch support are included, how change requests are priced, and whether work is billed by fixed milestone or by time and materials.',
+    },
+    {
+      q: 'Should I choose a local Canadian company or an offshore team?',
+      a: 'Location matters most when you need overlapping time zones, in-person workshops, or Canadian procurement and privacy requirements. Otherwise, judge every company on the same six criteria and ask for references you can contact.',
+    },
+  ],
+  'ai-development-companies-canada': [
+    {
+      q: 'Which are the top AI development companies in Canada?',
+      a: 'This 2026 guide ranks Mapletech Labs first among the top 10 AI development companies in Canada, followed by Townmedialabs, TML, Element AI (ServiceNow), Coveo, Ada, Layer 6 (TD Bank), Integrate.ai, Dessa (Square) and Mindbridge. The ranking was compiled after evaluating over 80 AI development firms across Canada.',
+    },
+    {
+      q: 'How much does AI development cost in Canada?',
+      a: 'This guide does not list fixed AI development prices in Canada. It instead ranks the top 10 AI development companies and describes what each does best, from LLM integration and computer vision to predictive analytics, RAG pipelines and AI agents.',
+    },
+    {
+      q: 'How do I choose an AI development company?',
+      a: 'Choose an AI development company by looking for one that builds production-grade AI systems rather than prototypes or demos. This guide highlights Mapletech Labs for LLM integration, computer vision, predictive analytics, custom model fine-tuning, RAG pipelines and AI agents, and it ranks nine other Canadian firms by their AI specialty.',
+    },
+    {
+      q: 'How long does an AI project take?',
+      a: 'This guide does not give a fixed timeline for an AI project. It focuses on the top 10 AI development companies in Canada and what each one builds, from LLM integration and computer vision to predictive analytics, RAG pipelines and AI agents.',
+    },
+  ],
+  'top-seo-companies-canada': [
+    {
+      q: 'What is the best SEO company in Canada?',
+      a: "This 2026 guide ranks Mapletech Labs first among the top 10 SEO companies in Canada, followed by Major Tom, Ignite Digital, BlueHat Marketing, Let's Get Optimized, Search Engine People (SEP), Social Media 55, Kinex Media, TechWyse and 1st on the List. The ranking was compiled after reviewing over 100 digital marketing agencies across Toronto, Vancouver, Calgary and Montreal.",
+    },
+    {
+      q: 'How much do SEO services cost in Canada?',
+      a: 'This guide does not list fixed SEO service prices in Canada. It ranks the top 10 SEO companies and describes what each does best, from technical SEO and link building to local SEO, e-commerce optimization and conversion rate optimization.',
+    },
+    {
+      q: 'How long does SEO take to show results?',
+      a: 'This guide does not give a fixed timeline for SEO results. It focuses on ranking the top 10 SEO companies in Canada and explaining what each does best, from technical SEO and link building to local SEO, e-commerce optimization and conversion rate optimization.',
+    },
+    {
+      q: 'How do I choose an SEO company in Canada?',
+      a: "Choose an SEO company by matching its specialty to your main problem. This guide ranks firms by what they do best: Mapletech Labs for technical SEO and Next.js performance, Ignite Digital for link building, Let's Get Optimized for local SEO, BlueHat and Kinex for e-commerce, and TechWyse for lead generation and conversion optimization.",
+    },
+  ],
   'choose-software-development-company-canada': [
     {
       q: 'How do I choose a software development company in Canada?',

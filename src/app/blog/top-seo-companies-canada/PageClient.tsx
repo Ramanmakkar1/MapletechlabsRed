@@ -8,6 +8,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
+import GuideFaq from '@/components/blog/GuideFaq';
+import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -363,6 +365,8 @@ export default function TopSeoCompaniesCanadaClient() {
                     </div>
                   </div>
                 ))}
+
+                <GuideFaq faqs={GUIDE_FAQS['top-seo-companies-canada']} />
 
               </article>
 

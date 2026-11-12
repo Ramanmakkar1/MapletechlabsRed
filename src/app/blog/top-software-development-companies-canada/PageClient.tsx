@@ -9,6 +9,8 @@ import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import SoftwareCompanyLinks from '@/components/SoftwareCompanyLinks';
+import GuideFaq from '@/components/blog/GuideFaq';
+import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -35,8 +37,6 @@ const companies = [
   { num: 9, name: 'Lightspeed Commerce', category: 'POS Systems', emoji: '💳', metric: 'Cloud-based commerce for SMBs globally' },
   { num: 10, name: 'Descartes Systems Group', category: 'Logistics', emoji: '🚚', metric: 'Global Logistics Technology & Routing' },
 ];
-
-type Faq = { q: string; a: string };
 
 const comparisonRows = [
   {
@@ -77,7 +77,7 @@ const relatedPosts = [
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
-export default function BlogPostPageClient({ faqs }: { faqs: Faq[] }) {
+export default function BlogPostPageClient() {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -550,25 +550,6 @@ export default function BlogPostPageClient({ faqs }: { faqs: Faq[] }) {
                   </div>
                 ))}
 
-                {/* ── FAQ ── */}
-                <div className="reveal" style={{ marginBottom: 48 }}>
-                  <h2 style={{
-                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
-                    letterSpacing: '-0.03em', marginBottom: 8,
-                  }}>
-                    Frequently Asked Questions
-                  </h2>
-                  {faqs.map(faq => (
-                    <div key={faq.q} style={{ borderTop: '1px solid var(--line)', padding: '20px 0' }}>
-                      <h3 style={{
-                        fontSize: 17, fontWeight: 600, color: 'var(--ink)',
-                        marginBottom: 8, lineHeight: 1.4,
-                      }}>{faq.q}</h3>
-                      <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, margin: 0 }}>{faq.a}</p>
-                    </div>
-                  ))}
-                </div>
-
                 {/* ── CONCLUSION ── */}
                 <div className="reveal" style={{ marginBottom: 48 }}>
                   <h2 style={{
@@ -587,6 +568,8 @@ export default function BlogPostPageClient({ faqs }: { faqs: Faq[] }) {
                     When selecting your software development partner, prioritize teams that treat code not as a commodity to get out the door, but as the foundational moat for your entire business.
                   </p>
                 </div>
+
+                <GuideFaq faqs={GUIDE_FAQS['top-software-development-companies-canada']} />
 
               </article>
 
