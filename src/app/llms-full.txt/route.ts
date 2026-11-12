@@ -69,6 +69,9 @@ function buildText(): string {
   out.push(...lines(services.map(s =>
     link(s.name, `/services/${s.slug}`, s.relatedSubServices.map(r => r.name).join(', '))
   )));
+  out.push(...lines([
+    link('Healthcare Software Development', '/services/software-development/healthcare-software', 'telehealth, patient portals, clinical workflow tools and EHR integration for Canadian healthcare providers'),
+  ]));
   out.push('');
 
   out.push('## Software development by city');

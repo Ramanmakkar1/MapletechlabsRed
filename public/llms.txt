@@ -18,6 +18,7 @@
 ## Services
 
 - [Software Development](https://mapletechlabs.ca/services): custom software, web and mobile apps, AI and UI/UX for Canadian businesses.
+- [Healthcare Software Development](https://mapletechlabs.ca/services/software-development/healthcare-software): telehealth, patient portals, clinical workflow tools and EHR integration for Canadian healthcare providers, with privacy, security and interoperability planned in.
 - [Web Development](https://mapletechlabs.ca/services/web-development): Next.js web apps, SaaS platforms, e-commerce systems, APIs and enterprise portals.
 - [Mobile App Development](https://mapletechlabs.ca/services/mobile-app-development): iOS, Android, Flutter, React Native and cross-platform apps.
 - [AI & Machine Learning](https://mapletechlabs.ca/services/ai-ml): LLM integration, AI automation, AI chatbots, computer vision and predictive analytics.

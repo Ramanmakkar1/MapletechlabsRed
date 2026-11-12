@@ -1,6 +1,7 @@
 import { BLOG_AUTHOR } from '@/lib/seo/business';
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
+import RelatedServices from '@/components/RelatedServices';
 import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
@@ -45,7 +46,19 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'healthcare-software-development-canada')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} />
+      <ArticleTemplate
+        a={a}
+        related={getRelatedArticles(a.slug)}
+        relatedServices={
+          <RelatedServices
+            links={[
+              { href: '/services/software-development/healthcare-software', label: 'Healthcare software development services' },
+              { href: '/industries/healthcare', label: 'Healthcare software development in Canada' },
+              { href: '/case-studies/healthcare-telehealth', label: 'Healthcare telehealth platform case study' },
+            ]}
+          />
+        }
+      />
     </>
   );
 }
