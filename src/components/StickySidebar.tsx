@@ -1,5 +1,7 @@
 'use client';
 
+import { BUSINESS } from '@/lib/seo/business';
+
 export default function StickySidebar() {
   return (
     <div style={{
@@ -12,14 +14,7 @@ export default function StickySidebar() {
       gap: 15,
       zIndex: 1000,
     }} className="hide-mobile">
-      <a href="https://wa.me/16475551234" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp" style={{
-        width: 54, height: 54, borderRadius: '50%', background: '#E11900',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        boxShadow: '0 10px 25px transparent', transition: '0.3s'
-      }} onMouseEnter={e=>(e.currentTarget.style.transform='scale(1.1)')} onMouseLeave={e=>(e.currentTarget.style.transform='scale(1)')}>
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--ink)"><path d="M12.012 2c-5.508 0-9.987 4.479-9.987 9.987 0 1.758.463 3.472 1.342 4.977l-1.43 5.213 5.334-1.4c1.454.793 3.09 1.21 4.743 1.21 5.508 0 9.988-4.479 9.988-9.987 0-5.508-4.479-9.987-9.988-9.987zm0 18.291c-1.554 0-3.078-.42-4.409-1.213l-.316-.188-3.273.858.873-3.184-.207-.33c-.87-1.385-1.328-2.996-1.328-4.647 0-4.654 3.785-8.439 8.439-8.439 4.654 0 8.439 3.785 8.439 8.439s-3.785 8.439-8.439 8.439z"/></svg>
-      </a>
-      <a href="tel:+16475551234" aria-label="Call us" style={{
+      <a href={`tel:${BUSINESS.telephone.replace(/[^+\d]/g, '')}`} aria-label="Call us" style={{
         width: 54, height: 54, borderRadius: '50%', background: '#E11900',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         boxShadow: '0 10px 25px transparent', transition: '0.3s'
