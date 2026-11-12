@@ -77,6 +77,9 @@ export default function ContactRoute() {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <ContactPage serviceOptions={SERVICE_OPTIONS} cityOptions={CITY_OPTIONS} />
+        <section style={{ padding: '0 0 var(--section-y)' }}>
+          <div className="cb-container">
+            <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
         <section aria-labelledby="contact-answer">
           <h2 id="contact-answer" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How to get a free project consultation from Mapletech Labs</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
@@ -117,7 +120,13 @@ export default function ContactRoute() {
             You do not need a finished specification or exact figures before the call. Bring what you know so far, plus any links or documents that help explain the project, and we will fill in the rest together.
           </p>
         </section>
+            </div>
+          </div>
+        </section>
         <ContactInfo />
+        <section style={{ padding: '0 0 var(--section-y)' }}>
+          <div className="cb-container">
+            <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
         <section aria-labelledby="contact-quick-facts">
           <h2 id="contact-quick-facts" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Contact Mapletech Labs at a glance</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
@@ -136,33 +145,35 @@ export default function ContactRoute() {
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Use the contact form for a detailed project brief, call for an urgent question or a quick scoping chat, or email if you need to send files and existing documents. The form and email get a reply within one working day, and a senior engineer reads every message.
           </p>
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <div className="contact-channels">
+          <table>
             <caption style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, textAlign: 'left', paddingBottom: '12px' }}>Mapletech Labs contact channels at a glance</caption>
             <thead>
               <tr>
-                <th scope="col" style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Channel</th>
-                <th scope="col" style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Best for</th>
-                <th scope="col" style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>What to expect</th>
+                <th scope="col">Channel</th>
+                <th scope="col">Best for</th>
+                <th scope="col">What to expect</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Contact form on this page</td>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Detailed project briefs, with a service and city preselected from the URL</td>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>A senior engineer replies within one working day</td>
+                <td data-label="Channel">Contact form on this page</td>
+                <td data-label="Best for">Detailed project briefs, with a service and city preselected from the URL</td>
+                <td data-label="What to expect">A senior engineer replies within one working day</td>
               </tr>
               <tr>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Phone <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a></td>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Urgent questions or a quick scoping chat</td>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Ask for the free 30-minute discovery call</td>
+                <td data-label="Channel">Phone <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a></td>
+                <td data-label="Best for">Urgent questions or a quick scoping chat</td>
+                <td data-label="What to expect">Ask for the free 30-minute discovery call</td>
               </tr>
               <tr>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a></td>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Sending files, specs or existing documents</td>
-                <td style={{ padding: '12px 14px', textAlign: 'left', borderBottom: '1px solid var(--line, #e5e7eb)' }}>Reply within one working day</td>
+                <td data-label="Channel">Email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a></td>
+                <td data-label="Best for">Sending files, specs or existing documents</td>
+                <td data-label="What to expect">Reply within one working day</td>
               </tr>
             </tbody>
           </table>
+          </div>
         </section>
         <section aria-labelledby="contact-next-steps">
           <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you get in touch</h2>
@@ -210,6 +221,9 @@ export default function ContactRoute() {
             <li><Link href="/locations/software-development-company-in-ottawa" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Ottawa</Link></li>
             <li><Link href="/locations/software-development-company-in-montreal" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Montreal</Link></li>
           </ul>
+        </section>
+            </div>
+          </div>
         </section>
       </main>
       <BreadcrumbSchema items={[

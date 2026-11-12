@@ -1113,6 +1113,21 @@ a:hover .media--zoom > img,
 .article-table-hint { display: none; margin: 0 0 8px; font-size: 13px; color: var(--muted); }
 @media (max-width: 767px) { .article-table-hint { display: block; } }
 
+/* Contact page channel table: bounded on desktop, stacked cards on mobile. */
+.contact-channels { width: 100%; }
+.contact-channels table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.7; color: var(--body); }
+.contact-channels th, .contact-channels td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line, #e5e7eb); }
+.contact-channels thead th { color: var(--ink); font-weight: 600; }
+.contact-channels tbody tr:last-child td { border-bottom: 0; }
+@media (max-width: 640px) {
+  .contact-channels table, .contact-channels thead, .contact-channels tbody, .contact-channels tr, .contact-channels td { display: block; width: 100%; }
+  .contact-channels thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .contact-channels tr { padding: 14px 0; border-bottom: 1px solid var(--line, #e5e7eb); }
+  .contact-channels tbody tr:last-child { border-bottom: 0; }
+  .contact-channels td { padding: 2px 0; border-bottom: 0; overflow-wrap: anywhere; }
+  .contact-channels td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+}
+
 /* Article CTA buttons and mobile table of contents (ArticleTemplate). */
 .article-project-cta a {
   white-space: normal;
