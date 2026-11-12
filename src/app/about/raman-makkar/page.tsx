@@ -333,17 +333,6 @@ export default function RamanPage() {
                 from discovery through delivery, runs projects in short agile cycles with weekly demos, and mentors
                 engineering teams and founders on architecture and scaling decisions.
               </p>
-              <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>
-                Engineering results he has delivered
-              </h3>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
-                Across the 500+ projects Raman has led, the work includes a real-time trading engine with sub-50ms
-                latency and 75K+ transactions a day, a HIPAA and PIPEDA-compliant telehealth platform serving 450K+
-                patient records, an e-commerce redesign that lifted conversion from 2.1% to 3.8% in 90 days, a fleet
-                system tracking 500 trucks and 15K+ daily deliveries while cutting fuel cost by 25%, a PCI DSS payments
-                API handling 12M+ monthly transactions, and an ML-powered real estate portal covering 850K+ active
-                listings.
-              </p>
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
@@ -385,22 +374,18 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '20px' }}>Experience and recent work</h2>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '20px' }}>Results from recent projects</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
-                Raman leads software development, app development, AI development, and UI/UX work for Canadian businesses. The projects in the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link> show the range of that work. The AI-Powered Trading Platform rebuilt a real-time trading engine from scratch — sub-50ms latency, 75K+ transactions a day, zero data loss. The HIPAA-Compliant Telehealth Platform was built with HIPAA and PIPEDA compliance from day one, serving 450K+ patient records. The Enterprise E-Commerce Redesign lifted conversion from 2.1% to 3.8% in 90 days for 2M+ monthly visitors. The Real-Time Fleet Management System tracked 500 trucks and 15K+ daily deliveries, cutting fuel cost by 25%.
-              </p>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
-                These results reflect the services Raman and the team deliver: turning complex business requirements into reliable products, from a <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link> project to an AI-powered platform or a high-traffic e-commerce experience. The work also includes a PCI DSS Payments API handling 12M+ monthly transactions and a Multi-Listing Real Estate Platform with ML-powered property recommendations across 850K+ active listings nationwide.
-              </p>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
-                Raman and the team turn complex business requirements into reliable products through{' '}
-                <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>custom software and web development</Link>,{' '}
-                <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>,{' '}
-                <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link>, and{' '}
-                <Link href="/services/product-design" style={{ color: 'var(--brand)' }}>UI/UX design</Link>. This work
-                covers custom web applications, mobile apps, AI/ML solutions, cloud infrastructure, and SaaS platforms
-                for startups and growing teams. Clients can explore project details and results in the{' '}
-                <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>.
+                Across the 500+ projects Raman has led, the work includes a real-time trading engine with sub-50ms
+                latency and 75K+ transactions a day with zero data loss, a HIPAA and PIPEDA-compliant telehealth
+                platform serving 450K+ patient records, an e-commerce redesign that lifted conversion from 2.1% to 3.8%
+                in 90 days for 2M+ monthly visitors, a fleet system tracking 500 trucks and 15K+ daily deliveries while
+                cutting fuel cost by 25%, a PCI DSS payments API handling 12M+ monthly transactions, and an ML-powered
+                real estate portal with property recommendations across 850K+ active listings. The projects in the{' '}
+                <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link> show the
+                range of that work, from a{' '}
+                <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>{' '}
+                project to an AI-powered platform or a high-traffic e-commerce experience.
               </p>
             </section>
 
