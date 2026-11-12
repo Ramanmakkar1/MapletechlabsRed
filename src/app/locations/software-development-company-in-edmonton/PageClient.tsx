@@ -70,6 +70,9 @@ const edmontonFaqs = [
   { q: 'Is Mapletech Labs actually based in Edmonton?', a: 'Yes. Mapletech Labs was founded in Edmonton in 2018 and Edmonton is still our headquarters. Edmonton clients work directly with our leadership and senior engineers, and we can meet in person anywhere in the Edmonton metro area, from downtown to Sherwood Park and St. Albert.' },
   { q: 'What kinds of custom software do you build for Edmonton businesses?', a: 'Web platforms and customer portals, mobile apps for field crews and customers, internal tools that replace spreadsheets, e-commerce systems and AI features built into existing software. Most of our Edmonton work comes from energy and clean-tech operators, healthcare providers, retailers and local startups.' },
   { q: 'How does pricing work for custom software development in Edmonton?', a: 'Every project is scoped and priced up front in CAD. You approve a fixed scope and a fixed price before we write any code, so there is no open-ended hourly billing. Tell us what you need and a senior engineer replies within one working day with an approach and a price.' },
+  { q: 'How much does custom software development cost in Edmonton?', a: 'Typical Edmonton projects cost CAD $10,000–$50,000 for a website, $25,000–$100,000 for a web app, $30,000–$75,000 for a SaaS MVP and $30,000–$200,000 for a mobile app. These are scope-dependent ballparks, not quotes; we agree a fixed price after discovery.' },
+  { q: 'How long does custom software development take in Edmonton?', a: 'Most Edmonton web apps take 8–16 weeks from discovery to launch, a website 4–10 weeks, a SaaS MVP 8–13 weeks and a mobile app 10–24 weeks depending on scope. You get a timeline with your fixed-price quote, and we demo working software every sprint.' },
+  { q: 'Which industries do you serve in Edmonton?', a: 'We build custom software for energy and clean-tech operators, healthcare providers, retailers, public-sector groups, University of Alberta and Amii-adjacent AI teams, and local startups. Our Edmonton work includes web platforms, customer portals, field-crew apps, internal tools, e-commerce systems and AI features.' },
 ];
 const faqs = [...edmontonFaqs, ...defaultFaqs];
 
@@ -103,7 +106,7 @@ export default function PageClient() {
   return (
     <LocationPageTemplate
       slug="edmonton"
-      copy={{ badge: 'Software development in Edmonton', title: <>Custom Software Development <span style={{ color: 'var(--brand)' }}>Edmonton</span></>, desc: <>Edmonton is where Mapletech Labs was founded, and it is still our headquarters. We are a custom software development company serving Alberta&apos;s energy sector, the University of Alberta&apos;s AI ecosystem and a fast-growing base of Edmonton startups.</> }}
+      copy={{ badge: 'Software development in Edmonton', title: <>Custom Software Development Company in <span style={{ color: 'var(--brand)' }}>Edmonton</span></>, desc: <>Mapletech Labs provides custom software development in Edmonton from our headquarters here, building web platforms, mobile apps and AI systems for Alberta businesses. Typical Edmonton web apps cost CAD $25,000&ndash;$100,000 and take 8&ndash;16 weeks, with a fixed scope and price agreed before any code is written. Edmonton is where Mapletech Labs was founded, and it is still our headquarters. We are a custom software development company serving Alberta&apos;s energy sector, the University of Alberta&apos;s AI ecosystem and a fast-growing base of Edmonton startups.</> }}
       heroStats={heroStats}
       services={services}
       overview={{
