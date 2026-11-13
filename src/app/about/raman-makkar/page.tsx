@@ -397,13 +397,15 @@ export default function RamanPage() {
               <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '20px' }}>Published articles</h2>
               <div style={{ display: 'grid', gap: '12px', maxWidth: '800px' }}>
                 {[
-                  { title: 'Top 10 AI Development Companies in Canada', href: '/blog/ai-development-companies-canada' },
-                  { title: 'How Much Does a Custom Website Cost in Canada?', href: '/blog/website-cost-canada' },
+                  { title: 'Top 10 AI Development Companies in Canada (2026 Guide)', href: '/blog/ai-development-companies-canada' },
+                  { title: 'Website Cost in Canada: 2026 CAD Prices', href: '/blog/website-cost-canada' },
                   { title: 'How to Choose a Software Development Company in Canada', href: '/blog/choose-software-development-company-canada' },
-                  { title: 'SaaS Development Cost in Canada (2026)', href: '/blog/saas-development-cost-canada' },
-                  { title: 'Top 10 Unicorn Apps of 2026', href: '/blog/top-10-unicorn-apps-2026' },
-                  { title: 'Software Development Companies in Edmonton', href: '/blog/software-development-companies-edmonton' },
-                  { title: 'How to Build a SaaS MVP in 8 Weeks', href: '/blog/build-saas-mvp-8-weeks' },
+                  { title: 'SaaS Development Cost in Canada: 2026 CAD', href: '/blog/saas-development-cost-canada' },
+                  { title: 'Unicorn Apps 2026: Top 10 Growth Stories for Founders', href: '/blog/top-10-unicorn-apps-2026' },
+                  { title: 'Software Development Companies in Edmonton: How to Choose (2026)', href: '/blog/software-development-companies-edmonton' },
+                  { title: 'How to Build a SaaS MVP in 8 Weeks: A Founder’s Playbook', href: '/blog/build-saas-mvp-8-weeks' },
+                  { title: 'UI/UX Design Cost in Canada (2026 Guide)', href: '/blog/ui-ux-design-cost-canada' },
+                  { title: 'AI Development Cost in Canada (2026): Chatbots, LLM Integration and Custom Models', href: '/blog/ai-development-cost-canada' },
                 ].map((post) => (
                   <Link
                     key={post.href}
