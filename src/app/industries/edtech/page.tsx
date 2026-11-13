@@ -4,18 +4,20 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'EdTech Software Development Company in Canada';
+const DESCRIPTION = 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and accessible assessment tools for educators and learners.';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and accessible assessment tools for educators and learners.',
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'EdTech Software Development in Canada | Mapletech Labs',
-    description: 'EdTech software development in Canada by Mapletech Labs: LMS platforms, virtual classrooms and accessible assessment tools for educators and learners.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/industries/edtech',
     type: 'website',
   },

@@ -4,18 +4,20 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getIndustryBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Logistics Software Development Company in Canada';
+const DESCRIPTION = 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and real-time shipment tracking.';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and real-time shipment tracking.',
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Logistics Software Development in Canada | Mapletech Labs',
-    description: 'Logistics software development in Canada by Mapletech Labs: supply chain software, fleet management, route optimization and real-time shipment tracking.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/industries/logistics',
     type: 'website',
   },
