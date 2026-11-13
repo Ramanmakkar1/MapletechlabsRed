@@ -55,6 +55,9 @@ export default function Page() {
             <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
               Need a team to design it? Explore our <Link href="/services/product-design/ui-ux-strategy" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>UI/UX strategy services in Canada</Link>.
             </p>
+            <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginTop: 12 }}>
+              Want a local team? See our UI/UX design company pages for <Link href="/locations/ui-ux-design-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Edmonton</Link>, <Link href="/locations/ui-ux-design-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Calgary</Link>, <Link href="/locations/ui-ux-design-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Toronto</Link> and <Link href="/locations/ui-ux-design-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Vancouver</Link>, or our full <Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>UI/UX and product design services</Link>.
+            </p>
           </div>
         }
       />
