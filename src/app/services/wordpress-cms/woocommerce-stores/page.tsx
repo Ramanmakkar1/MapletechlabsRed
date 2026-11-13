@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'WooCommerce Store Development in Canada';
+const DESCRIPTION = 'WooCommerce store development in Canada: online stores with custom plugins, Canadian payment gateways and shipping integrations. Get a free quote.';
+
 export const metadata: Metadata = {
-  title: seoTitle('WooCommerce Store Development in Canada'),
-  description: 'WooCommerce store development services. Mapletech Labs builds high-converting online stores with custom plugins, payment gateways, and integrations.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'WooCommerce Store Development in Canada | Mapletech Labs',
-    description: 'WooCommerce store development services. Mapletech Labs builds high-converting online stores with custom plugins, payment gateways, and integrations.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/wordpress-cms/woocommerce-stores',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'WooCommerce Store Development'}
-        description={'WooCommerce store development services. Mapletech Labs builds high-converting online stores with custom plugins, payment gateways, and integrations.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/wordpress-cms/woocommerce-stores'}
       />
       <PageClient />

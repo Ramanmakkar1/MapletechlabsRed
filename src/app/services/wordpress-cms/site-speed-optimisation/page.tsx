@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'WordPress Speed Optimisation Services in Canada';
+const DESCRIPTION = 'WordPress speed optimisation in Canada: Core Web Vitals fixes, caching, CDN and image optimisation that turn slow sites into 90+ Lighthouse performers.';
 
 export const metadata: Metadata = {
-  title: 'WordPress Site Speed Optimisation Services',
-  description: 'Transform slow WordPress sites into 90+ Lighthouse performers. Core Web Vitals fixes, caching, CDN setup, and image optimisation by Mapletech Labs, Canada.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'WordPress Speed Optimisation | Mapletech Labs',
-    description: 'Transform WordPress sites into 90+ Lighthouse performers. Core Web Vitals fixes, caching, CDN, and image optimisation by Mapletech Labs. 100% CWV passing',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/wordpress-cms/site-speed-optimisation',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'WordPress Site Speed Optimisation Services'}
-        description={'Transform slow WordPress sites into 90+ Lighthouse performers. Core Web Vitals fixes, caching, CDN setup, and image optimisation by Mapletech Labs, Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/wordpress-cms/site-speed-optimisation'}
       />
       <PageClient />

@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Next.js Development Company in Canada';
+const DESCRIPTION = 'Next.js development company in Canada: fast, SEO-friendly React sites with server rendering, static generation and Core Web Vitals built in. Get a quote.';
 
 export const metadata: Metadata = {
-  title: 'Next.js Development Company in Canada',
-  description: 'Expert Next.js development by Mapletech Labs. Build fast, SEO-friendly React applications with server-side rendering and static site generation.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Next.js Development Company in Canada | Mapletech Labs',
-    description: 'Expert Next.js development by Mapletech Labs. Build fast, SEO-friendly React applications with server-side rendering and static site generation.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/web-development/nextjs-development',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Next.js Development Services'}
-        description={'Expert Next.js development by Mapletech Labs. Build fast, SEO-friendly React applications with server-side rendering and static site generation.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/web-development/nextjs-development'}
       />
       <PageClient />

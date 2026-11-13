@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'SaaS Platform Development in Canada';
+const DESCRIPTION = 'SaaS platform development in Canada: scalable multi-tenant software-as-a-service apps with billing, auth and dashboards. Get a free quote today.';
 
 export const metadata: Metadata = {
-  title: 'SaaS Platform Development in Canada',
-  description: 'Custom SaaS platform development services. Mapletech Labs builds scalable, multi-tenant software-as-a-service applications from concept to launch.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'SaaS Platform Development in Canada | Mapletech Labs',
-    description: 'Custom SaaS platform development services. Mapletech Labs builds scalable, multi-tenant software-as-a-service applications from concept to launch.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/web-development/saas-platforms',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'SaaS Platform Development'}
-        description={'Custom SaaS platform development services. Mapletech Labs builds scalable, multi-tenant software-as-a-service applications from concept to launch.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/web-development/saas-platforms'}
       />
       <PageClient />
