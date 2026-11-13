@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'AR & VR Development Company in Canada';
+const DESCRIPTION = 'AR and VR development in Canada from an Edmonton-based team: mobile AR, WebXR, Apple Vision Pro and industrial training apps. Book a free immersive tech consultation.';
 
 export const metadata: Metadata = {
-  title: 'AR & VR Development Company in Canada',
-  description: 'AR & VR development by Mapletech Labs. Mobile AR, WebXR, Apple Vision Pro & industrial solutions in Canada. Book a free immersive tech consultation.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'AR & VR Development Company in Canada | Mapletech Labs',
-    description: 'AR & VR development by Mapletech Labs. Mobile AR, WebXR, Apple Vision Pro & industrial solutions in Canada. Book a free immersive tech consultation.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/ar-vr',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'AR & VR Development Services',
   serviceType: 'AR & VR Development',
-  description: 'AR & VR development by Mapletech Labs. Mobile AR, WebXR, Apple Vision Pro & industrial solutions in Canada.',
+  description: seoDescription(DESCRIPTION),
   provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',

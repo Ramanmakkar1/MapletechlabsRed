@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Blockchain & Web3 Development in Canada';
+const DESCRIPTION = 'Blockchain and Web3 development in Canada from an Edmonton-based team: smart contracts, DeFi protocols and dApps for Canadian businesses. Book a free consultation.';
 
 export const metadata: Metadata = {
-  title: 'Blockchain & Web3 Development in Canada',
-  description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises. Schedule a free technical consultation.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Blockchain & Web3 Development in Canada | Mapletech Labs',
-    description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises. Schedule a free technical consultation.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/blockchain-web3',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Blockchain & Web3 Development Services',
   serviceType: 'Blockchain & Web3 Development',
-  description: 'Blockchain & Web3 development by Mapletech Labs. Smart contracts, DeFi protocols & dApps for Canadian enterprises.',
+  description: seoDescription(DESCRIPTION),
   provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',
