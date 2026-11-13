@@ -1,18 +1,23 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { PRIORITY_SERVICES, serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const dynamic = 'force-static';
 
+const TITLE = 'Software Development Company Across Canada';
+const DESCRIPTION = 'Mapletech Labs builds software from 12 locations across Canada, including Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal. Find your local team.';
+
 export const metadata: Metadata = {
-  title: 'Software Development Company Across Canada',
-  description: 'Mapletech Labs builds software for companies in twelve Canadian cities, from Vancouver to Halifax. Local delivery, national engineering bench.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Software Development Company Across Canada | Mapletech Labs',
-    description: 'Mapletech Labs operates from 12 locations across Canada including Edmonton, Toronto, Vancouver, Calgary, Ottawa, and Montreal. Find a software development team near you.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/locations',
     type: 'website',
   },
