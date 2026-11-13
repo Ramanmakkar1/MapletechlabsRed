@@ -36,6 +36,14 @@ const faqs = [
     a: 'Raman Makkar is based in Edmonton, Alberta. He works with clients in Toronto, Vancouver, Calgary, Ottawa, Montreal, the US and Europe.',
   },
   {
+    q: 'What is Raman Makkar\'s background?',
+    a: 'Raman Makkar holds a Computer Science degree and has 15+ years of experience in software engineering. He led engineering at 3 startup exits, architected a fintech platform processing $1B+ annually, and founded Mapletech Labs in Edmonton in 2018.',
+  },
+  {
+    q: 'How big is the Mapletech Labs team that Raman leads?',
+    a: 'Raman leads a 25+ member team of engineers, designers and strategists at Mapletech Labs. The team has delivered 500+ projects for clients across Canada and internationally, from custom web applications and mobile apps to AI/ML solutions, cloud infrastructure and SaaS platforms.',
+  },
+  {
     q: 'Can I talk to Raman about my project?',
     a: 'Yes. You can book a free consultation through the Mapletech Labs contact page to discuss your project directly with the founder.',
   },
@@ -179,8 +187,10 @@ export default function RamanPage() {
                   Background
                 </h3>
                 <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
-                  Computer Science degree, 15+ years experience. Led engineering at 3 startup exits. Architected fintech
-                  platform processing $1B+ annually.
+                  Raman Makkar holds a Computer Science degree and has more than 15 years of experience in software
+                  engineering. He led engineering at 3 startup exits and architected a fintech platform that processes
+                  $1B+ annually. That background is why Mapletech Labs plans every project for real production load from
+                  day one.
                 </p>
               </div>
 
@@ -189,8 +199,9 @@ export default function RamanPage() {
                   Expertise
                 </h3>
                 <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
-                  Full-stack: React, Node.js, Python, PostgreSQL, AWS. Specializes in scaling systems, team
-                  architecture, and AI integration.
+                  Raman is a full-stack engineer who works with React, Node.js, Python, PostgreSQL and AWS. He
+                  specializes in scaling systems, team architecture and AI integration, and he helps clients choose a
+                  stack that their own team can maintain after launch.
                 </p>
               </div>
 
@@ -199,8 +210,9 @@ export default function RamanPage() {
                   Philosophy
                 </h3>
                 <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
-                  Great software starts with deep discovery. We build systems designed to scale, not features. Quality
-                  first.
+                  Raman believes great software starts with deep discovery. Mapletech Labs builds systems designed to
+                  scale, not just a list of features, and quality comes first at every stage. That is why every project
+                  starts with a discovery call and a written scope before any code is written.
                 </p>
               </div>
               </div>
