@@ -32,6 +32,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'app-development-company-in-edmonton': {
     title: 'App Development Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and builds iOS & Android apps for Alberta teams, with a fixed CAD price agreed up front. Get a free quote.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and provides app development there, building iOS and Android apps for Edmonton companies, public bodies and startups. You get a fixed scope and price agreed up front, senior engineers writing your code, and in-person workshops at your office.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for app development you are hiring a local team, not a sales office for developers somewhere else. We design and build iOS and Android apps for Edmonton companies, public bodies and startups, from field tools that work offline on a job site to patient and customer apps that need to pass a privacy review. You talk to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
     sections: [
       {
@@ -92,6 +93,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'app-development-company-in-calgary': {
     title: 'App Development Company in Calgary',
     description: 'iOS and Android app development for Calgary companies by Mapletech Labs, an Alberta team with on-site workshops and a fixed CAD price. Get a free quote.',
+    answer: 'Mapletech Labs provides app development in Calgary, building iOS and Android apps for energy firms, fintech startups, carriers and growing businesses. You get a fixed scope and price in CAD, senior engineers writing your code, and on-site workshops in Calgary.',
     intro: 'Mapletech Labs is an Alberta app development team headquartered in Edmonton, about three hours up the highway from Calgary, and we work with Calgary companies in person when a project needs it. We design and build iOS and Android apps for energy firms, fintech startups, carriers and growing businesses across the city. You work directly with the senior engineers who write your code, not account managers passing notes along. Before any work starts you get a fixed scope and a fixed price in CAD, so the budget does not drift. Call us on +1-403-604-8692 to talk through your app idea.',
     sections: [
       {
@@ -152,6 +154,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'ai-development-company-in-edmonton': {
     title: 'AI Development Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and builds AI chatbots, LLM features and automation for Alberta teams at a fixed CAD price. Get a free quote.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and provides AI development there, building AI chatbots, LLM features and workflow automation for Edmonton companies and health providers. You get a fixed scope and price in CAD, senior engineers building your system, and AI that answers from your own documents.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for AI development you work with a local team. We build AI chatbots, large language model (LLM) features and workflow automation for Edmonton companies, public bodies and health providers. Our focus is practical AI that saves your staff time, answers from your own documents and keeps your data under control. You work directly with the senior engineers who build it, not a sales layer. Scope and price are fixed in CAD before any work starts, so the budget does not drift. Call us on +1-403-604-8692 to talk through your idea.',
     sections: [
       {
@@ -212,6 +215,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'app-development-company-in-toronto': {
     title: 'App Development Company in Toronto',
     description: 'Mapletech Labs is a Canadian team building iOS and Android apps for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',
+    answer: 'Mapletech Labs provides app development in Toronto, building iOS and Android apps for fintech firms, retailers, health providers and SaaS companies. You get a fixed CAD price agreed up front, senior engineers writing your code, and a Canadian contract.',
     intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, and we build iOS and Android apps for Toronto businesses. Edmonton is only two hours behind Toronto, so our working days overlap for most of yours and questions get answered the same day. We work with fintech firms, retailers, health providers and SaaS companies across the city. You deal directly with the senior engineers who write your code, and your contract is with a Canadian company, priced in CAD. Before any work starts you get a fixed scope and a fixed price. Call us on +1-403-604-8692 to talk through your app.',
     sections: [
       {
@@ -337,6 +341,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'app-development-company-in-vancouver': {
     title: 'App Development Company in Vancouver',
     description: 'Mapletech Labs builds iOS and Android apps for Vancouver and BC businesses, with a Canadian contract and a fixed CAD price up front. Get a free quote.',
+    answer: 'Mapletech Labs provides app development in Vancouver, building iOS and Android apps for Vancouver startups, retailers, health providers and creative companies. You get a fixed CAD price up front, senior engineers building your app, and a Canadian contract.',
     intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, and we build iOS and Android apps for Vancouver businesses. Edmonton is just one hour ahead of Vancouver, so our working days almost fully overlap and you rarely wait for an answer. We work with Vancouver startups, retailers, health providers, tourism operators and film and creative companies. You speak directly with the senior engineers who build your app, and you sign with a Canadian company, priced in CAD. Scope and price are fixed before any work starts. Call us on +1-403-604-8692 to talk about your app.',
     sections: [
       {
@@ -401,6 +406,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'ai-development-company-in-toronto': {
     title: 'AI Development Company in Toronto',
     description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',
+    answer: 'Mapletech Labs provides AI development in Toronto, building AI chatbots, LLM features and workflow automation for Toronto businesses. You get a fixed CAD price agreed up front, senior engineers building your system, and AI that answers from your own documents.',
     intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features and workflow automation for Toronto businesses. Edmonton is two hours behind Toronto, so most of your working day overlaps with ours and questions get answered the same day. We focus on practical AI that saves staff time and answers from your own documents. You work directly with the senior engineers who build your system, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your idea.',
     sections: [
       {
@@ -492,6 +498,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'ai-development-company-in-vancouver': {
     title: 'AI Development Company in Vancouver',
     description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Vancouver and BC businesses, with a fixed CAD price agreed up front. Free quote.',
+    answer: 'Mapletech Labs provides AI development in Vancouver, building AI chatbots, LLM features and workflow automation for Vancouver businesses. You get a fixed CAD price agreed up front, senior engineers building your system, and AI that answers from your own documents.',
     intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features and workflow automation for Vancouver businesses. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. You work directly with the senior engineers who design and build your system, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your idea.',
     sections: [
       {
@@ -554,6 +561,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'digital-marketing-agency-in-edmonton': {
     title: 'Digital Marketing Agency in Edmonton',
     description: 'Mapletech Labs in Edmonton runs SEO, Google Ads, social and content for Alberta businesses — one local team, CAD retainers. +1-403-604-8692.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and provides digital marketing there, running SEO, Google Ads, social media and content for Alberta businesses. You get one local team covering every channel, reporting you can read without a glossary, and fixed monthly retainers in CAD.',
     intro: 'Mapletech Labs is headquartered in Edmonton, so when you hire us for digital marketing you get one local team covering SEO, Google Ads, social media and content — not a rotating account manager and not separate vendors for each channel. We align search, paid and organic social to the leads you actually need in Alberta, with reporting you can read without a glossary. Call +1-403-604-8692 to talk about your mix.',
     sections: [
       {
@@ -624,6 +632,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'digital-marketing-agency-in-calgary': {
     title: 'Digital Marketing Agency in Calgary',
     description: 'Calgary digital marketing from one Alberta team: SEO, Google Ads, social and content on clear CAD retainers and a written scope. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs provides digital marketing in Calgary, running SEO, Google Ads, social media and content for Calgary businesses. You get one Alberta team sharing one plan, a written monthly scope in CAD, and in-person discovery meetings when a project needs them.',
     intro: 'Mapletech Labs is an Alberta team headquartered in Edmonton, and we work with Calgary businesses that want one partner for their digital marketing. The same team covers SEO, Google Ads, social media and content, so your channels share one plan and one set of numbers instead of four vendors pointing at each other. When a project needs it, we travel to Calgary for discovery meetings and reviews in person; day-to-day work runs on calls and shared reports. Retainers are priced in CAD with a written monthly scope. Call +1-403-604-8692 to talk about growing your Calgary leads.',
     sections: [
       {
@@ -694,6 +703,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'digital-marketing-agency-in-toronto': {
     title: 'Digital Marketing Agency in Toronto',
     description: 'SEO, Google Ads, social and content for Toronto and the GTA from one Canadian team. Monthly retainers in CAD and a written scope. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs provides digital marketing in Toronto and the GTA, running SEO, Google Ads, social media and content for Toronto businesses. You get one Canadian team covering every channel, monthly retainers in CAD, and a written scope.',
     intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton, working with Toronto and GTA businesses that want one partner for SEO, Google Ads, social media and content. We do not have a Toronto office. Edmonton is two hours behind Toronto, so most of the working day overlaps, and we come to Toronto for workshops and milestone reviews when a project needs it, with travel agreed up front. One team covers SEO, Google Ads, social and content — not separate vendors for each channel. Retainers are priced in CAD. Call +1-403-604-8692 to talk about your channel mix.',
     sections: [
       {
@@ -764,6 +774,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'digital-marketing-agency-in-vancouver': {
     title: 'Digital Marketing Agency in Vancouver',
     description: 'Vancouver digital marketing: SEO, Google Ads, social and content from a Canadian team. CAD retainers with a written monthly scope. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs provides digital marketing in Vancouver, running SEO, Google Ads, social media and content for Vancouver businesses. You get one Canadian team covering every channel, CAD retainers with a written monthly scope, and workshops in Vancouver when a project needs them.',
     intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton, serving Vancouver and the Lower Mainland. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap. When a project needs it, we come to Vancouver for workshops and reviews, with travel agreed up front. One team covers SEO, Google Ads, social and content, and retainers are priced in CAD. Call +1-403-604-8692.',
     sections: [
       {
@@ -834,6 +845,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'seo-company-in-edmonton': {
     title: 'SEO Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and runs SEO for Alberta businesses: local search, technical fixes and content that ranks. +1-403-604-8692.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and provides SEO there, improving local search visibility and fixing technical issues for Alberta businesses. You get local map-pack and near-me results, Next.js and WordPress technical SEO, and content built around how your customers search.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for SEO you work with a local team that knows how Alberta businesses get found on Google and Bing. We improve local visibility, fix technical issues on Next.js and WordPress sites, and build content and service pages that match what your customers actually search. You talk to the people doing the work, not a rotating account manager. Call us on +1-403-604-8692 to discuss your goals.',
     sections: [
       {
@@ -908,6 +920,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'seo-company-in-calgary': {
     title: 'SEO Company in Calgary',
     description: 'Mapletech Labs runs Calgary SEO: local map-pack and “near me” search, technical fixes and CAD retainers. Alberta team. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs provides SEO in Calgary, winning local map-pack and “near me” searches for Calgary businesses. You get technical SEO done by engineers, a fixed monthly CAD retainer, and audits in Calgary when a project calls for it.',
     intro: 'Mapletech Labs is an Alberta SEO team headquartered in Edmonton, and we work with Calgary businesses across energy, construction, real estate and professional services. Calgary clients get the same setup as everyone we serve: you deal directly with the specialists doing the keyword research, the technical fixes and the content, not a salesperson reading a script. When a project calls for it, we travel to Calgary for discovery meetings and audits in person, and day-to-day work runs on calls and shared reports. SEO retainers are priced in CAD with a fixed monthly scope. Call +1-403-604-8692 to talk about your Calgary search goals.',
     sections: [
       {
@@ -980,6 +993,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'seo-company-in-toronto': {
     title: 'SEO Company in Toronto',
     description: 'Mapletech Labs runs Toronto SEO from Edmonton: local search, technical fixes and CAD retainers with monthly reporting. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs provides SEO in Toronto, driving local search calls and leads from Google and Bing for Toronto businesses. You get technical fixes done by engineers, CAD retainers with monthly reporting, and in-person Toronto workshops when a project needs one.',
     intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Toronto and GTA businesses that want more calls and leads from Google and Bing. We do not have a Toronto office. Edmonton is two hours behind Toronto, so our working days overlap for most of yours, and we come to Toronto for in-person workshops, audits and milestone reviews when a project needs one, with travel agreed up front. You work directly with the specialists doing the keyword research, technical fixes and content, not a salesperson. Retainers are priced in CAD. Call +1-403-604-8692 to talk through your Toronto search goals.',
     sections: [
       {
@@ -1053,6 +1067,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'web-development-company-in-toronto': {
     title: 'Web Development Company in Toronto',
     description: 'Mapletech Labs builds fast custom websites and web apps for Toronto businesses, with a fixed CAD price agreed up front from Edmonton. Get a free quote.',
+    answer: 'Mapletech Labs provides web development in Toronto, building custom websites, e-commerce stores and web apps for Toronto businesses. You get a fixed CAD price agreed up front, senior engineers building your site, and Next.js pages built for speed and search.',
     intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building business websites, e-commerce stores and web apps for Toronto companies. Edmonton is two hours behind Toronto, so our working days overlap for most of yours, making it straightforward to review designs and discuss decisions together. You work directly with the senior engineers who build your website. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts, so you know what is included. Call us on +1-403-604-8692 to talk through your project.',
     sections: [
       {
@@ -1116,6 +1131,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     title: 'Website Development Edmonton | Free Quote',
     description:
       'Edmonton website developers: Mapletech Labs, a local Edmonton web development company. Website builder services — fast, SEO-ready sites. Free quote.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and provides web development there, building fast SEO-ready websites, e-commerce stores and web apps for Edmonton companies. You get a fixed scope and price before work starts, senior engineers writing your code, and in-person workshops at your office.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for web development you are working with a local team at our head office, not a sales desk for developers somewhere else. We build fast, SEO-ready business websites, e-commerce stores and web apps for Edmonton companies, public bodies and growing teams across the city. You talk directly to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
     sections: [
       {
@@ -1187,6 +1203,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'web-development-company-in-calgary': {
     title: 'Web Development Company in Calgary',
     description: 'Web Development Company in Calgary: custom websites and web apps by Mapletech Labs, with a fixed CAD price agreed up front. Get a free quote.',
+    answer: 'Mapletech Labs provides web development in Calgary, building custom websites and web apps for Calgary businesses. You get a fixed CAD price agreed up front, senior engineers building your project, and in-person workshops in Calgary.',
     intro: 'Mapletech Labs is an Alberta web development team headquartered in Edmonton, building websites and web apps for Calgary businesses. We do not have a Calgary office, but we work in the same time zone and travel to Calgary for in-person workshops when needed. You work directly with the senior engineers building your project, making it easy to discuss decisions and review progress throughout the work. We agree on a fixed scope and price in CAD before work begins, so you know what is included. Call +1-403-604-8692 to discuss your website or web app.',
     sections: [
       {
@@ -1247,6 +1264,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'web-development-company-in-vancouver': {
     title: 'Web Development Company in Vancouver',
     description: 'Mapletech Labs builds custom websites and web apps for Vancouver businesses, with a fixed CAD price agreed up front from Edmonton. Get a free quote.',
+    answer: 'Mapletech Labs provides web development in Vancouver, building custom websites, e-commerce stores and web apps for Vancouver businesses. You get a fixed CAD price agreed up front, senior engineers building your site, and Canadian hosting where residency matters.',
     intro: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building business websites, e-commerce stores and web apps for Vancouver companies. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. You work directly with the senior engineers who build your website, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your project.',
     sections: [
       {
@@ -1309,6 +1327,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'seo-company-in-vancouver': {
     title: 'SEO Company in Vancouver',
     description: 'Vancouver SEO from Mapletech Labs: local map-pack search, technical fixes and CAD retainers with monthly reporting from Edmonton. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs provides SEO in Vancouver, winning local map-pack searches and more calls from Google and Bing for Vancouver businesses. You get technical SEO done by engineers, CAD retainers with monthly reporting, and in-person Vancouver workshops when a project needs one.',
     intro: 'Mapletech Labs is a Canadian SEO team headquartered in Edmonton, working with Vancouver and Lower Mainland businesses that want more calls and leads from Google and Bing. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. You work directly with the specialists doing the keyword research, technical fixes and content, not a salesperson, and we come to Vancouver for in-person workshops, audits and milestone reviews when a project needs one, with travel agreed up front. Retainers are priced in CAD. Call +1-403-604-8692 to talk through your Vancouver search goals.',
     sections: [
       {
@@ -1381,6 +1400,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'ui-ux-design-company-in-calgary': {
     title: 'UI/UX Design Company in Calgary',
     description: 'UX research, UI design and clickable prototypes for Calgary teams from an Alberta studio, at a fixed CAD price, travel agreed up front. Get a free quote.',
+    answer: 'Mapletech Labs provides UI/UX design in Calgary, building research, wireframes and clickable prototypes for Calgary teams. You get a fixed CAD price, designers who sit with the engineers shipping your product, and in-person workshops in Calgary when it helps.',
     intro: 'Mapletech Labs is an Alberta UI/UX design team headquartered in Edmonton, and we work with Calgary companies that need software people can actually use. We do not have a Calgary office. Our designers sit with the engineers who build the product, so what we draw is what gets shipped, not a set of screens thrown over a wall. When a project calls for it, we travel to Calgary for research and design workshops in person, with travel agreed up front. Day-to-day work runs on calls and shared Figma files. Call +1-403-604-8692.',
     sections: [
       {
@@ -1443,6 +1463,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'ui-ux-design-company-in-edmonton': {
     title: 'UI/UX Design Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and delivers UX research, UI design and prototypes at a fixed CAD price from Edmonton. Get a free quote.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and provides UI/UX design there, delivering UX research, UI design and clickable prototypes. You get a fixed CAD price agreed up front, designers sitting beside the engineers building your product, and in-person workshops at your Edmonton office.',
     intro: 'Mapletech Labs is headquartered in Edmonton, so when you hire us for UI/UX design you are working with a local Alberta team, not a remote sales desk. Our designers sit beside the engineers who build the product, which keeps flows, components and handoff aligned from the first wireframe through launch. You get a fixed scope and price in CAD before visual design starts. We run discovery workshops and usability sessions at your Edmonton office, plant or campus when in-person work helps, and day-to-day collaboration runs on shared Figma files and weekly calls. Call +1-403-604-8692 to book a free UX audit.',
     sections: [
       {
@@ -1509,6 +1530,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'ui-ux-design-company-in-vancouver': {
     title: 'UI/UX Design Company in Vancouver',
     description: 'UI/UX Design Company in Vancouver: web and mobile product design from CAD $1,500, with fixed-price project quotes in CAD. Get a free consultation.',
+    answer: 'Mapletech Labs provides UI/UX design in Vancouver, building web and mobile product design for Vancouver companies. You get fixed-price project quotes in CAD, designers and engineers on one team, and in-person Vancouver workshops when a milestone needs one.',
     intro: 'Mapletech Labs is headquartered in Edmonton, working with Vancouver and Lower Mainland companies that need useful, accessible digital products. Our designers and engineers work on one team, keeping research, screen flows and implementation connected from the first wireframe through handoff. We serve Vancouver clients remotely, with working hours that almost fully overlap, and come to Vancouver for in-person workshops when a milestone needs one, with travel agreed up front. Between meetings, your team can review shared designs and prototypes and discuss decisions directly with the people doing the work. Call +1-403-604-8692 to talk through your project.',
     sections: [
       {
@@ -1571,6 +1593,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'ui-ux-design-company-in-toronto': {
     title: 'UI/UX Design Company in Toronto',
     description: 'UI/UX Design Company in Toronto: web and mobile app design by Mapletech Labs, with fixed CAD pricing from Edmonton. Book a free project consultation.',
+    answer: 'Mapletech Labs provides UI/UX design in Toronto, building web and mobile app design for Toronto teams. You get fixed CAD pricing from Edmonton, designers working beside the engineers who build your software, and GTA workshops when in-person work helps.',
     intro: 'Mapletech Labs is headquartered in Edmonton and partners with Toronto and GTA teams that need UI/UX design for products people actually use. Our designers work beside the engineers who build the software, so research, screen flows and handoff stay on one thread from wireframes through launch. We serve Toronto clients remotely with hours that overlap Eastern time, and we travel to the GTA for discovery and design workshops when in-person work helps, with travel agreed up front. Between visits, you review shared Figma files and talk directly with the people doing the work. Call +1-403-604-8692 to book a free UX audit.',
     sections: [
       {
@@ -1634,6 +1657,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'saas-development-company-in-edmonton': {
     title: 'SaaS Development Company in Edmonton',
     description: 'Mapletech Labs is headquartered in Edmonton and builds multi-tenant SaaS products with a fixed CAD price from our Edmonton team. Get a free quote.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and provides SaaS development there, building multi-tenant products from MVP to scale for Edmonton teams. You get a fixed CAD price agreed up front, senior engineers building your product, and in-person discovery workshops at your Edmonton office.',
     intro: 'Mapletech Labs is headquartered in Edmonton, so your SaaS project is supported by a local team you can meet in person. We build products from an initial MVP through to a platform ready to scale, whether you are testing a new idea or expanding an existing service. You talk directly to the senior engineers who build your product and can work with us in person at discovery workshops. Before development starts, we agree on a fixed scope and price in CAD, so you know what the project includes. Call us on +1-403-604-8692 to discuss your SaaS idea.',
     sections: [
       {
@@ -1700,6 +1724,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'saas-development-company-in-toronto': {
     title: 'SaaS Development Company in Toronto',
     description: 'Mapletech Labs builds multi-tenant SaaS from MVP to scale for Toronto teams, with a fixed CAD price agreed up front from Edmonton. Get a free quote.',
+    answer: 'Mapletech Labs provides SaaS development in Toronto, building multi-tenant products from MVP to scale for Toronto teams. You get a fixed CAD price agreed up front, senior engineers building your platform, and written scope agreed before development starts.',
     intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton, building multi-tenant SaaS products for Toronto businesses from MVP to scale. We do not have a Toronto office. Edmonton is two hours behind Toronto, so our working days overlap for product reviews, planning and decisions. You work directly with the senior engineers building your platform, with a written scope and a fixed CAD price agreed before development starts. We can travel to Toronto for discovery workshops, with travel agreed up front. Call +1-403-604-8692 to discuss your users, integrations and the first release your business needs.',
     sections: [
       {
@@ -1834,6 +1859,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     title: 'SaaS Development Company in Vancouver',
     description:
       'Mapletech Labs builds multi-tenant SaaS for Vancouver and BC teams, with Canadian data residency and a fixed CAD price agreed up front. Get a free quote.',
+    answer: 'Mapletech Labs provides SaaS development in Vancouver, building multi-tenant products for Vancouver and BC teams. You get Canadian data residency, a fixed CAD price agreed up front, and senior engineers building your platform.',
     intro:
       'Mapletech Labs is a Canadian team headquartered in Edmonton, building multi-tenant SaaS products for Vancouver and BC businesses. We do not have a Vancouver office, but Edmonton is one hour ahead of Vancouver, so our working days almost fully overlap and you rarely wait for an answer. We come to Vancouver for discovery workshops by arrangement, with travel agreed up front. You work directly with the senior engineers who build your platform, and a written scope with a fixed CAD price is agreed before development begins. Call +1-403-604-8692 to discuss your SaaS idea.',
     sections: [
