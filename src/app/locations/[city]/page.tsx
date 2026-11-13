@@ -32,6 +32,8 @@ const localFor = cache(async (slug: string): Promise<ServiceCityLocal | undefine
 const getCombo = cache((slug: string) => getServiceCityCombo(slug));
 const getData = cache((citySlug: string, serviceSlug: string) => getCityServiceData(citySlug, serviceSlug));
 
+const MOBILE_CITY_PAGES = ['edmonton', 'calgary', 'toronto', 'vancouver'];
+
 export function generateStaticParams() {
   return serviceCitySlugs.map(slug => ({ city: slug }));
 }
@@ -133,7 +135,9 @@ export default async function ServiceCityPage({ params }: PageProps) {
       ? { before: 'Need custom software beyond a website? See our ', href: '/locations/software-development-company-in-edmonton', linkLabel: 'Custom Software Development in Edmonton' }
       : isAgencyPage && !local
         ? { before: 'Focused on SEO only? See our ', href: `/locations/seo-company-in-${combo.citySlug}`, linkLabel: `SEO Company in ${data.cityName}` }
-        : undefined;
+        : slug === `app-development-company-in-${combo.citySlug}` && MOBILE_CITY_PAGES.includes(combo.citySlug)
+          ? { before: 'Planning a native or cross-platform app? See our ', href: `/services/mobile-app-development/${combo.citySlug}`, linkLabel: `iOS, Android and Flutter app development in ${data.cityName}` }
+          : undefined;
 
   return (
     <>
