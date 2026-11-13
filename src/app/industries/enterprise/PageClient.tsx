@@ -59,7 +59,7 @@ const projectTypes = [
     id: 'erp-crm',
     title: 'Custom ERP and CRM systems',
     desc: 'Multi-department workflow automation, approval chains and reporting dashboards tailored to how your organisation actually operates.',
-    extra: <>Delivered by our <Link href="/services/software-development" style={linkStyle}>custom software development</Link> team.</>,
+    extra: <>Delivered by our <Link href="/services/web-development" style={linkStyle}>custom software development</Link> team.</>,
   },
   {
     id: 'legacy-modernization',
