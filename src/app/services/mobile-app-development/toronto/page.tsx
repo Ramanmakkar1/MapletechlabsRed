@@ -5,6 +5,8 @@ import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { getCityServiceData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Mobile App Development Company in Toronto';
 const DESCRIPTION = 'Mapletech Labs builds iOS, Android and cross-platform apps for Toronto fintech, retail and health teams, with fixed-scope quotes from discovery to launch.';
@@ -73,6 +75,11 @@ const local: ServiceCityLocal = {
         ' Comparing local teams? See our ',
         { href: '/locations/app-development-company-in-toronto', label: 'app development company in Toronto' },
         ' page for Toronto pricing guidance and FAQs.',
+        ' Need more than an app? Our ',
+        { href: '/locations/software-development-company-in-toronto', label: 'software development company in Toronto' },
+        ' page covers custom software, web platforms and AI work for Toronto teams, and our guide to ',
+        { href: '/blog/app-development-companies-toronto', label: 'choosing an app development company in Toronto' },
+        ' lists the questions to ask before you sign.',
       ],
     },
   ],
@@ -97,11 +104,11 @@ const local: ServiceCityLocal = {
 };
 
 export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: URL,
     type: 'website',
   },
