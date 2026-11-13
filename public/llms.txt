@@ -10,6 +10,16 @@
 - Email: hello@mapletechlabs.ca
 - Founded: 2018, in Edmonton
 - Founder and CEO: [Raman Makkar](https://mapletechlabs.ca/about/raman-makkar)
+- Former name: TML Branding Agency (founded 2018 in Edmonton)
+- Team: 25+ engineers, designers and strategists
+- Projects delivered: 500+ for clients across Canada and internationally
+- Founder experience: 15+ years in software engineering
+- What we build: custom software, web applications, iOS and Android apps, AI/ML solutions, UI/UX design, SaaS platforms and cloud infrastructure
+- Industries: fintech, healthcare, e-commerce, logistics, edtech, real estate and enterprise
+- Main cities served: Edmonton (head office), Calgary, Toronto, Vancouver, Ottawa and Montreal, plus remote work across Canada, the US and Europe
+- How to start: free project consultation at https://mapletechlabs.ca/contact; a senior engineer replies within one working day
+- Case studies: https://mapletechlabs.ca/case-studies
+- Pricing (CAD ranges): https://mapletechlabs.ca/pricing
 - Website: https://mapletechlabs.ca
 - About: https://mapletechlabs.ca/about
 - All locations: https://mapletechlabs.ca/locations
