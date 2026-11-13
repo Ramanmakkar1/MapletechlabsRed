@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Brand Guidelines Development in Canada';
+const DESCRIPTION = 'Brand guidelines development in Canada: usage rules, asset libraries and style guides that keep your brand consistent across every touchpoint. Get a quote.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Brand Guidelines Development in Canada'),
-  description: 'Comprehensive brand guidelines by Mapletech Labs. Usage rules, asset libraries, and style guides that maintain brand consistency across all touchpoints.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Brand Guidelines Development in Canada | Mapletech Labs',
-    description: 'Comprehensive brand guidelines by Mapletech Labs. Usage rules, asset libraries, and style guides that maintain brand consistency across all touchpoints.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/branding/brand-guidelines',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Brand Guidelines Development'}
-        description={'Comprehensive brand guidelines by Mapletech Labs. Usage rules, asset libraries, and style guides that maintain brand consistency across all touchpoints.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/branding/brand-guidelines'}
       />
       <PageClient />

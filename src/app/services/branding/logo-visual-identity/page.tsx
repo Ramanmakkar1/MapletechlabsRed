@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Logo & Visual Identity Design in Canada';
+const DESCRIPTION = 'Logo and visual identity design in Canada: memorable logos, colour systems and typography that define your brand, with 200+ logos designed by our team.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Logo & Visual Identity Design in Canada'),
-  description: 'Logo and visual identity design for Canadian brands by Mapletech Labs. Memorable logos, colour systems, and typography that define your brand. 200+ logos.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Logo & Visual Identity Design in Canada | Mapletech Labs',
-    description: 'Professional logo and visual identity design by Mapletech Labs. Memorable logos, color systems, and typography that define your brand.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/branding/logo-visual-identity',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Logo & Visual Identity Design'}
-        description={'Professional logo and visual identity design by Mapletech Labs. Memorable logos, color systems, and typography that define your brand.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/branding/logo-visual-identity'}
       />
       <PageClient />
