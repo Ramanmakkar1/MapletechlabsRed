@@ -8,7 +8,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Hyper-Casual Game Development Services';
-const DESCRIPTION = 'Hyper-casual game development in Canada: 3-day prototypes to CPI-validated launches. 40+ games shipped, 50M+ downloads, from our Edmonton head office.';
+const DESCRIPTION = 'Hyper-casual game development from 3-day prototypes to CPI-validated launches: 40+ games shipped and 50M+ downloads by our Edmonton-based studio.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),

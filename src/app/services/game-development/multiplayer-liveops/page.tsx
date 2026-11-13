@@ -4,13 +4,15 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 export const metadata: Metadata = {
-  title: 'Multiplayer & LiveOps Game Development',
-  description: 'Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.',
+  title: seoTitle('Multiplayer & LiveOps Game Development'),
+  description: seoDescription('Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.'),
   openGraph: {
-    title: 'Multiplayer & LiveOps Development | Mapletech Labs',
-    description: 'Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.',
+    title: ogTitle('Multiplayer & LiveOps Development'),
+    description: seoDescription('Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.'),
     url: 'https://mapletechlabs.ca/services/game-development/multiplayer-liveops',
     type: 'website',
   },
