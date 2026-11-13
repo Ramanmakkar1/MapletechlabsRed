@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'AI Chatbot Development Company in Canada';
+const DESCRIPTION = 'AI chatbot development in Canada: custom support, sales and internal chatbots grounded in your documents, with human handoff and CRM integrations.';
 
 export const metadata: Metadata = {
-  title: 'AI Chatbot Development Company in Canada',
-  description: 'Custom AI chatbot development services. Mapletech Labs builds intelligent conversational agents for customer support, sales, and internal operations.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'AI Chatbot Development Company in Canada | Mapletech Labs',
-    description: 'Custom AI chatbot development services. Mapletech Labs builds intelligent conversational agents for customer support, sales, and internal operations.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/ai-ml/ai-chatbots',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'AI Chatbot Development'}
-        description={'Custom AI chatbot development services. Mapletech Labs builds intelligent conversational agents for customer support, sales, and internal operations.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/ai-ml/ai-chatbots'}
       />
       <PageClient />
