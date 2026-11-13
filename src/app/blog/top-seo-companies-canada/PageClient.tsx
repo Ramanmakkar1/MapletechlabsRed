@@ -9,6 +9,7 @@ import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
+import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
@@ -477,6 +478,12 @@ export default function TopSeoCompaniesCanadaClient() {
 
         <MediaBand media={blogImage(10 + 7)} ratio="21 / 7" />
 
+        <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
+          <div className="cb-container">
+            <BlogCityLinks serviceSlug="digital-marketing" />
+          </div>
+        </section>
+
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
@@ -504,7 +511,7 @@ export default function TopSeoCompaniesCanadaClient() {
                   Stop losing traffic to competitors with inferior products but faster websites. Let Mapletech Labs engineer an SEO strategy built into your source code.
                 </p>
                 <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
-                  See our <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO services</Link>, or our local pages for <Link href="/locations/seo-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Edmonton</Link>, <Link href="/locations/seo-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Calgary</Link> and <Link href="/locations/seo-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Toronto</Link>.
+                  See our <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO services</Link>, or our local pages for <Link href="/locations/seo-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Edmonton</Link>, <Link href="/locations/seo-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Calgary</Link>, <Link href="/locations/seo-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Toronto</Link> and <Link href="/locations/seo-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO in Vancouver</Link>.
                 </p>
               </div>
               <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Schedule an SEO Technical Audit →</Link>

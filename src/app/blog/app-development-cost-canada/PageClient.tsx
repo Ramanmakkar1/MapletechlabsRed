@@ -9,6 +9,7 @@ import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
+import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
@@ -703,6 +704,12 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <GuideFaq faqs={GUIDE_FAQS['app-development-cost-canada']} />
+          </div>
+        </section>
+
+        <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
+          <div className="cb-container">
+            <BlogCityLinks serviceSlug="mobile-app-development" />
           </div>
         </section>
 
