@@ -6,12 +6,14 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const DESCRIPTION = 'Social media marketing across Canada, Edmonton to Toronto: strategy, content creation, community management and paid social. 50M+ impressions generated.';
+
 export const metadata: Metadata = {
   title: seoTitle('Social Media Marketing Agency in Canada'),
-  description: 'Full-service social media marketing in Toronto. Strategy, content creation, community management, and paid social campaigns. 50M+ impressions generated.',
+  description: DESCRIPTION,
   openGraph: {
     title: 'Social Media Marketing Agency in Canada | Mapletech Labs',
-    description: 'Full-service social media marketing in Toronto. Strategy, content creation, community management, and paid social campaigns.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/digital-marketing/social-media-marketing',
     type: 'website',
   },
@@ -28,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Social Media Marketing'}
-        description={'Full-service social media marketing in Toronto. Strategy, content creation, community management, and paid social campaigns. 50M+ impressions generated.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/digital-marketing/social-media-marketing'}
       />
       <PageClient />

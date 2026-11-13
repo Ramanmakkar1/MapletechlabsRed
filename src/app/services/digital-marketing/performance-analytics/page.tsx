@@ -6,12 +6,14 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const DESCRIPTION = 'GA4 setup, conversion tracking, attribution and custom dashboards. Certified analytics experts serving Canada, Edmonton to Toronto. 30% avg CPA reduction.';
+
 export const metadata: Metadata = {
   title: seoTitle('GA4 Setup & Marketing Analytics in Canada'),
-  description: 'GA4 setup, conversion tracking, attribution modelling and custom dashboards. Certified analytics experts serving Toronto & Canada. 30% avg CPA reduction.',
+  description: DESCRIPTION,
   openGraph: {
     title: 'GA4 Setup & Marketing Analytics in Canada | Mapletech Labs',
-    description: 'GA4 setup, conversion tracking, attribution modelling and custom dashboards. Certified analytics experts serving Toronto & Canada.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/digital-marketing/performance-analytics',
     type: 'website',
   },
@@ -28,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Marketing Analytics & GA4 Setup'}
-        description={'GA4 setup, conversion tracking, attribution modelling, and custom dashboards. Certified analytics specialists serving Toronto and Canada. 30% avg CPA reduction.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/digital-marketing/performance-analytics'}
       />
       <PageClient />

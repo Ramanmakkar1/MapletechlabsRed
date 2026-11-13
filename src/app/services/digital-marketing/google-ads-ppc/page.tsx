@@ -6,12 +6,14 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const DESCRIPTION = 'Google Ads & PPC management across Canada, Edmonton to Toronto: Search, Shopping, Display and YouTube campaigns, 3.5x avg ROAS. Google Premier Partner.';
+
 export const metadata: Metadata = {
   title: seoTitle('PPC & Google Ads Management in Canada'),
-  description: 'Expert Google Ads & PPC management in Toronto. Search, Shopping, Display, and YouTube campaigns with 3.5x avg ROAS. Google Premier Partner agency.',
+  description: DESCRIPTION,
   openGraph: {
     title: 'PPC & Google Ads Management in Canada | Mapletech Labs',
-    description: 'Expert Google Ads & PPC management in Toronto. Search, Shopping, Display, and YouTube campaigns with 3.5x avg ROAS.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/digital-marketing/google-ads-ppc',
     type: 'website',
   },
@@ -28,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Google Ads & PPC Management'}
-        description={'Expert Google Ads & PPC management in Toronto. Search, Shopping, Display, and YouTube campaigns with 3.5x avg ROAS. Google Premier Partner agency.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/digital-marketing/google-ads-ppc'}
       />
       <PageClient />
