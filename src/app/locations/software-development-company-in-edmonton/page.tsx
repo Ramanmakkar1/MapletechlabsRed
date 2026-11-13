@@ -9,11 +9,11 @@ const TITLE = 'Custom Software Development in Edmonton | Mapletech';
 const DESCRIPTION = 'Custom software development in Edmonton by Mapletech Labs, headquartered here. Fixed price, and a senior engineer replies in 1 day. Get a free quote.';
 
 export const metadata: Metadata = {
-  // Brand-free so the hook fits 60 chars; the OG title keeps the brand.
+  // Brand-free so the hook fits 60 chars; OG reuses the same title.
   title: { absolute: TITLE },
   description: DESCRIPTION,
   openGraph: {
-    title: 'Custom Software Development in Edmonton | Mapletech Labs',
+    title: TITLE,
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton',
     type: 'website',
