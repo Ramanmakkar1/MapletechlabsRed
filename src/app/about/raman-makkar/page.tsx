@@ -162,18 +162,21 @@ export default function RamanPage() {
               </ul>
             </section>
 
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                gap: '32px',
-                marginTop: '48px',
-              }}
-            >
+            <section aria-labelledby="raman-background" style={{ marginTop: '48px' }}>
+              <h2 id="raman-background" style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>
+                Background, expertise and approach
+              </h2>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                  gap: '32px',
+                }}
+              >
               <div>
-                <h2 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>
                   Background
-                </h2>
+                </h3>
                 <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
                   Computer Science degree, 15+ years experience. Led engineering at 3 startup exits. Architected fintech
                   platform processing $1B+ annually.
@@ -181,9 +184,9 @@ export default function RamanPage() {
               </div>
 
               <div>
-                <h2 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>
                   Expertise
-                </h2>
+                </h3>
                 <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
                   Full-stack: React, Node.js, Python, PostgreSQL, AWS. Specializes in scaling systems, team
                   architecture, and AI integration.
@@ -191,23 +194,24 @@ export default function RamanPage() {
               </div>
 
               <div>
-                <h2 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--brand)', marginBottom: '12px' }}>
                   Philosophy
-                </h2>
+                </h3>
                 <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)' }}>
                   Great software starts with deep discovery. We build systems designed to scale, not features. Quality
                   first.
                 </p>
               </div>
-            </div>
+              </div>
+            </section>
 
-            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Speaking &amp; Thought Leadership</h2>
+            <section aria-labelledby="raman-speaking" style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 id="raman-speaking" style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Speaking &amp; Thought Leadership</h2>
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', listStyle: 'none', paddingLeft: '0' }}>
-                <li style={{ marginBottom: '12px' }}>✓ Regular speaker at tech conferences (React Summit, Node Conf, Canadian tech events)</li>
-                <li style={{ marginBottom: '12px' }}>✓ Published articles on software architecture, scaling, and AI integration</li>
-                <li style={{ marginBottom: '12px' }}>✓ Guest on podcasts discussing software development best practices</li>
-                <li>✓ Mentor to engineering teams and founders</li>
+                <li style={{ marginBottom: '12px' }}><span aria-hidden="true" style={{ color: 'var(--brand)', fontWeight: 700, marginRight: '8px' }}>✓</span>Regular speaker at tech conferences (React Summit, Node Conf, Canadian tech events)</li>
+                <li style={{ marginBottom: '12px' }}><span aria-hidden="true" style={{ color: 'var(--brand)', fontWeight: 700, marginRight: '8px' }}>✓</span>Published articles on software architecture, scaling, and AI integration</li>
+                <li style={{ marginBottom: '12px' }}><span aria-hidden="true" style={{ color: 'var(--brand)', fontWeight: 700, marginRight: '8px' }}>✓</span>Guest on podcasts discussing software development best practices</li>
+                <li><span aria-hidden="true" style={{ color: 'var(--brand)', fontWeight: 700, marginRight: '8px' }}>✓</span>Mentor to engineering teams and founders</li>
               </ul>
             </section>
 
@@ -448,7 +452,7 @@ export default function RamanPage() {
                   fontSize: '16px',
                 }}
               >
-                Get In Touch
+                Book a free consultation with Raman
               </Link>
             </div>
           </div>
