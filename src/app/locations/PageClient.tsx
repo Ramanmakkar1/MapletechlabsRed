@@ -111,6 +111,9 @@ export default function LocationsIndexPage() {
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
                 That matters because software is not built in a vacuum. An Alberta energy operator, a Toronto fintech, a Montréal studio under Law 25 and a Halifax ocean-tech company each need something different, and each answers to different rules. Start with your province below, or jump straight to your city.
               </p>
+              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginTop: 20 }}>
+                Looking for our home market? Read about <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Custom Software Development in Edmonton</Link>, where our headquarters and most experienced engineers are based.
+              </p>
             </div>
           </div>
         </section>

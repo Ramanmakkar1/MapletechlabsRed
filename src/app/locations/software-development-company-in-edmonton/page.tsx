@@ -5,7 +5,7 @@ import { localServiceSchema } from '@/lib/seo/business';
 
 export const dynamic = 'force-static';
 
-const TITLE = 'Custom Software Development Company in Edmonton | Mapletech';
+const TITLE = 'Custom Software Development in Edmonton | Mapletech';
 const DESCRIPTION = 'Custom software development in Edmonton by Mapletech Labs, headquartered here. Fixed price, and a senior engineer replies in 1 day. Get a free quote.';
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   openGraph: {
-    title: 'Custom Software Development Company in Edmonton | Mapletech Labs',
+    title: 'Custom Software Development in Edmonton | Mapletech Labs',
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton',
     type: 'website',

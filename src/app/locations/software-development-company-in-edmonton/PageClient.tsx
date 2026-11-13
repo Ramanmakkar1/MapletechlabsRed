@@ -106,7 +106,7 @@ export default function PageClient() {
   return (
     <LocationPageTemplate
       slug="edmonton"
-      copy={{ badge: 'Software development in Edmonton', title: <>Custom Software Development Company in <span style={{ color: 'var(--brand)' }}>Edmonton</span></>, desc: <>Mapletech Labs provides custom software development in Edmonton from our headquarters here, building web platforms, mobile apps and AI systems for Alberta businesses. Typical Edmonton web apps cost CAD $25,000&ndash;$100,000 and take 8&ndash;16 weeks, with a fixed scope and price agreed before any code is written. Edmonton is where Mapletech Labs was founded, and it is still our headquarters. We are a custom software development company serving Alberta&apos;s energy sector, the University of Alberta&apos;s AI ecosystem and a fast-growing base of Edmonton startups.</> }}
+      copy={{ badge: 'Software development in Edmonton', title: <>Custom Software Development in <span style={{ color: 'var(--brand)' }}>Edmonton</span></>, desc: <>Mapletech Labs provides custom software development in Edmonton from our headquarters here, building web platforms, mobile apps and AI systems for Alberta businesses. Typical Edmonton web apps cost CAD $25,000&ndash;$100,000 and take 8&ndash;16 weeks, with a fixed scope and price agreed before any code is written. Edmonton is where Mapletech Labs was founded, and it is still our headquarters. We are a custom software development company serving Alberta&apos;s energy sector, the University of Alberta&apos;s AI ecosystem and a fast-growing base of Edmonton startups.</> }}
       heroStats={heroStats}
       services={services}
       overview={{

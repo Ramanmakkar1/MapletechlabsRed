@@ -137,10 +137,12 @@ export default async function ServiceCityPage({ params }: PageProps) {
     ],
   };
 
-  const agencyCrossLink =
-    isAgencyPage && !local
-      ? { before: 'Focused on SEO only? See our ', href: `/locations/seo-company-in-${combo.citySlug}`, linkLabel: `SEO Company in ${data.cityName}` }
-      : undefined;
+  const crossLink =
+    slug === 'web-development-company-in-edmonton'
+      ? { before: 'Need custom software beyond a website? See our ', href: '/locations/software-development-company-in-edmonton', linkLabel: 'Custom Software Development in Edmonton' }
+      : isAgencyPage && !local
+        ? { before: 'Focused on SEO only? See our ', href: `/locations/seo-company-in-${combo.citySlug}`, linkLabel: `SEO Company in ${data.cityName}` }
+        : undefined;
 
   return (
     <>
@@ -171,7 +173,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
             </>
           ) : undefined
         }
-        crossPromo={agencyCrossLink}
+        crossPromo={crossLink}
       />
     </>
   );
