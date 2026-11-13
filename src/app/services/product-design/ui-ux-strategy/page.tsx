@@ -6,12 +6,14 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const DESCRIPTION = 'Data-driven UI/UX strategy by Edmonton-based Mapletech Labs: user research, UX audits and design sprints that lift conversions by 40%. Free consultation.';
+
 export const metadata: Metadata = {
   title: seoTitle('UI/UX Strategy & Design Services in Canada'),
-  description: 'Data-driven UI/UX strategy from Mapletech Labs in Toronto. User research, UX audits, and design sprints that boost conversions by 40%. Free consultation.',
+  description: DESCRIPTION,
   openGraph: {
     title: 'UI/UX Strategy & Design Services in Canada | Mapletech Labs',
-    description: 'Data-driven UI/UX strategy from Mapletech Labs in Toronto. User research, UX audits, and design sprints that boost conversions by 40%. Free consultation.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/product-design/ui-ux-strategy',
     type: 'website',
   },
@@ -28,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'UI/UX Strategy & Design'}
-        description={'Data-driven UI/UX strategy from Mapletech Labs in Toronto. User research, UX audits, and design sprints that boost conversions by 40%. Get a free consultation.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/product-design/ui-ux-strategy'}
       />
       <PageClient />

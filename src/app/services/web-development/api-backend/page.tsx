@@ -7,7 +7,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 const url = canonicalUrl('/services/web-development/api-backend');
 const title = 'API Development Services in Canada | Mapletech Labs';
-const description = 'Scalable REST and GraphQL APIs with sub-100ms latency and 99.9% uptime. Secure backend engineering by Mapletech Labs, Toronto. 200+ APIs delivered.';
+const description = 'Scalable REST and GraphQL APIs with sub-100ms latency and 99.9% uptime. Secure backend engineering by Edmonton-based Mapletech Labs. 200+ APIs delivered.';
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -31,7 +31,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'API & Backend Development Services'}
-        description={'Scalable REST and GraphQL APIs with sub-100ms latency and 99.9% uptime. Secure backend engineering by Mapletech Labs, Toronto. 200+ APIs delivered.'}
+        description={description}
         url={'https://mapletechlabs.ca/services/web-development/api-backend'}
       />
       <PageClient />
