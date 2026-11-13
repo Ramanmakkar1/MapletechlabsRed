@@ -38,6 +38,10 @@ export function generateStaticParams() {
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
+// Keep the prerendered keyword pages in the cache until the next deploy. The
+// slow-page audit was measuring a cold ISR render (7-40 s) as the server
+// response time when these pages expired in place.
+export const revalidate = false;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { city: slug } = await params;
