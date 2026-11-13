@@ -1859,7 +1859,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     title: 'SaaS Development Company in Vancouver',
     description:
       'Mapletech Labs builds multi-tenant SaaS for Vancouver and BC teams, with Canadian data residency and a fixed CAD price agreed up front. Get a free quote.',
-    answer: 'Mapletech Labs provides SaaS development in Vancouver, building multi-tenant products for Vancouver and BC teams. You get Canadian data residency, a fixed CAD price agreed up front, and senior engineers building your platform.',
+    answer: 'Mapletech Labs provides SaaS development in Vancouver, building multi-tenant products from MVP to enterprise scale for Vancouver and BC teams. You get Canadian data residency, a fixed CAD price agreed up front, and senior engineers building your platform.',
     intro:
       'Mapletech Labs is a Canadian team headquartered in Edmonton, building multi-tenant SaaS products for Vancouver and BC businesses. We do not have a Vancouver office, but Edmonton is one hour ahead of Vancouver, so our working days almost fully overlap and you rarely wait for an answer. We come to Vancouver for discovery workshops by arrangement, with travel agreed up front. You work directly with the senior engineers who build your platform, and a written scope with a fixed CAD price is agreed before development begins. Call +1-403-604-8692 to discuss your SaaS idea.',
     sections: [
