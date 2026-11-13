@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import ServiceCityLinks from '@/components/ServiceCityLinks';
 import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
@@ -96,6 +97,7 @@ const industries = [
 
 function BuyerContent() {
   return (
+    <>
     <section aria-labelledby="product-design-hiring-guide" style={{ padding: 'var(--section-y-sm) 0', background: 'var(--surface-alt)' }}>
       <div className="cb-container" style={{ maxWidth: 960, color: 'var(--body)', lineHeight: 1.7 }}>
         <h2 id="product-design-hiring-guide">Planning a UI/UX redesign or new product design engagement</h2>
@@ -112,6 +114,18 @@ function BuyerContent() {
         <p className="lede"><Link href="/contact?service=product-design">Book a product design consultation</Link> with your goals, screen list and constraints so we can recommend audit, phased redesign or full product design and provide a fixed quote.</p>
       </div>
     </section>
+    <ServiceCityLinks
+      id="ui-ux-cities"
+      heading="UI/UX design in Edmonton, Calgary, Toronto and Vancouver"
+      intro="See local pricing guidance, process and FAQs for our UI/UX design work in your city:"
+      links={[
+        { href: '/locations/ui-ux-design-company-in-edmonton', label: 'UI/UX design company in Edmonton', note: 'Headquartered in Edmonton, with in-person discovery workshops and usability testing available.' },
+        { href: '/locations/ui-ux-design-company-in-calgary', label: 'UI/UX design company in Calgary', note: 'Alberta team that travels to Calgary for research and design workshops.' },
+        { href: '/locations/ui-ux-design-company-in-toronto', label: 'UI/UX design company in Toronto', note: 'Remote design work for GTA teams, with in-person workshops when needed.' },
+        { href: '/locations/ui-ux-design-company-in-vancouver', label: 'UI/UX design company in Vancouver', note: 'Remote UI/UX design for Lower Mainland teams, with workshops on request.' },
+      ]}
+    />
+    </>
   );
 }
 

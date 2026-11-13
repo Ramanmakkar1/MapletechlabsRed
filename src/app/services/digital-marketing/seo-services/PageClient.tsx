@@ -79,6 +79,7 @@ export default function PageClient() {
           <div className="cb-container">
             <h2>Need more enquiries from nearby customers?</h2>
             <p className="lede">Explore our <Link href="/services/digital-marketing/local-seo">local SEO services in Canada for Google and Bing</Link>, including Google Business Profile, Bing Places, citation cleanup, service-area content and enquiry tracking.</p>
+            <p className="lede">Looking for a local team? See our SEO company pages for <Link href="/locations/seo-company-in-edmonton">SEO company in Edmonton</Link>, <Link href="/locations/seo-company-in-calgary">Calgary</Link>, <Link href="/locations/seo-company-in-toronto">Toronto</Link> and <Link href="/locations/seo-company-in-vancouver">Vancouver</Link>.</p>
           </div>
         </section>
         </>

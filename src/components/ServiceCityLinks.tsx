@@ -28,11 +28,15 @@ function cityLinkLabel(serviceSlug: string, serviceName: string, cityName: strin
   return `${serviceName} in ${cityName}`;
 }
 
+type CityLink = { href: string; label: string; note?: string };
+
 type ServiceCityLinksProps =
   | { serviceSlug: string; label: string; heading?: string }
-  | { serviceSlug: string; serviceName: string };
+  | { serviceSlug: string; serviceName: string }
+  | { id?: string; heading: string; intro?: string; links: CityLink[] };
 
 export default function ServiceCityLinks(props: ServiceCityLinksProps) {
+  if ('links' in props) return <ServiceCityLinkList {...props} />;
   if ('label' in props) return <ServiceCitySidebar {...props} />;
   const { serviceSlug, serviceName } = props;
   const links = (isPriorityService(serviceSlug) ? cities : CITIES)
@@ -61,6 +65,26 @@ export default function ServiceCityLinks(props: ServiceCityLinksProps) {
             })}
           </div>
         ) : null}
+      </div>
+    </section>
+  );
+}
+
+/** Inline city links with a short factual note for each city. */
+function ServiceCityLinkList({ id, heading, intro, links }: { id?: string; heading: string; intro?: string; links: CityLink[] }) {
+  return (
+    <section id={id} aria-labelledby={id ? `${id}-heading` : undefined} style={{ padding: 'var(--section-y-sm) 0' }}>
+      <div className="cb-container">
+        <h2 id={id ? `${id}-heading` : undefined} style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>{heading}</h2>
+        {intro ? <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 18px', maxWidth: 680 }}>{intro}</p> : null}
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
+          {links.map(link => (
+            <li key={link.href} style={{ lineHeight: 1.6 }}>
+              <Link href={link.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>{link.label}</Link>
+              {link.note ? <span style={{ color: 'var(--body)' }}> — {link.note}</span> : null}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
