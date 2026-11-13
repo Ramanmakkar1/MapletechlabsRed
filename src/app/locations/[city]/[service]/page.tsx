@@ -8,6 +8,7 @@ import { isIndexableCityService } from '@/data/serviceCity';
 import { localServiceSchema } from '@/lib/seo/business';
 import { localServiceTitle, ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -61,6 +62,7 @@ export default async function CityServicePage({ params }: PageProps) {
   }
   const isEdmWeb = isEdmWebPair(city, service);
   const desc = isEdmWeb ? EDM_WEB_DESCRIPTION : data.description;
+  const quote = quoteForCity(city);
   const breadcrumbItems = [
     { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
     { position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
@@ -72,6 +74,7 @@ export default async function CityServicePage({ params }: PageProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
+      ...(quote ? [reviewForQuote(quote)] : []),
       {
         '@type': 'Service',
         name: `${data.serviceName} in ${data.cityName}`,
