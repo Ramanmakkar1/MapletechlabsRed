@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 const a = getArticle('ui-ux-design-companies-ottawa')!;
 const URL = `https://mapletechlabs.ca/blog/ui-ux-design-companies-ottawa`;
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: seoTitle(a.metaTitle),
   description: a.metaDescription,
   openGraph: {
-    title: a.metaTitle,
+    title: ogTitle(a.metaTitle),
     description: a.metaDescription,
     type: 'article',
     publishedTime: a.date,
