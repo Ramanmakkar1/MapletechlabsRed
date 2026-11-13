@@ -7,10 +7,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'SaaS Authentication & SSO Development',
-  description: 'SaaS SSO and auth with SAML, MFA, RBAC, and audit logs for enterprise products. Mapletech Labs builds auth systems in Toronto, Canada. Start a project.',
+  description: 'SaaS SSO and auth with SAML, MFA, RBAC, and audit logs for enterprise products. Mapletech Labs builds auth systems in Edmonton, Canada. Start a project.',
   openGraph: {
     title: 'SaaS Authentication & SSO Development | Mapletech Labs',
-    description: 'SaaS SSO and auth with SAML, MFA, RBAC, and audit logs for enterprise products. Mapletech Labs builds auth systems in Toronto, Canada. Start a project.',
+    description: 'SaaS SSO and auth with SAML, MFA, RBAC, and audit logs for enterprise products. Mapletech Labs builds auth systems in Edmonton, Canada. Start a project.',
     url: 'https://mapletechlabs.ca/services/saas-development/auth-sso',
     type: 'website',
   },
@@ -27,7 +27,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'SaaS Authentication & SSO Development'}
-        description={'Enterprise-ready auth with SAML SSO, MFA, RBAC, and audit logs for SaaS products. Mapletech Labs builds secure auth systems from Toronto, Canada.'}
+        description={'Enterprise-ready auth with SAML SSO, MFA, RBAC, and audit logs for SaaS products. Mapletech Labs builds secure auth systems from Edmonton, Canada.'}
         url={'https://mapletechlabs.ca/services/saas-development/auth-sso'}
       />
       <PageClient />

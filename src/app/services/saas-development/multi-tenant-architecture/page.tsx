@@ -6,11 +6,11 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: 'Multi-Tenant SaaS Architecture | Toronto',
-  description: 'Multi-tenant SaaS architecture with tenant isolation, RBAC, and custom domains. Mapletech Labs builds platforms in Toronto, Canada. Start a project.',
+  title: 'Multi-Tenant SaaS Architecture in Canada',
+  description: 'Multi-tenant SaaS architecture with tenant isolation, RBAC, and custom domains. Mapletech Labs builds platforms in Edmonton, Canada. Start a project.',
   openGraph: {
     title: 'Multi-Tenant SaaS Architecture | Mapletech Labs',
-    description: 'Multi-tenant SaaS architecture with tenant isolation, RBAC, and custom domains. Mapletech Labs builds platforms in Toronto, Canada. Start a project.',
+    description: 'Multi-tenant SaaS architecture with tenant isolation, RBAC, and custom domains. Mapletech Labs builds platforms in Edmonton, Canada. Start a project.',
     url: 'https://mapletechlabs.ca/services/saas-development/multi-tenant-architecture',
     type: 'website',
   },
@@ -26,8 +26,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Multi-Tenant SaaS Architecture | Toronto'}
-        description={'Scalable multi-tenant architecture with tenant isolation, RBAC, and custom domains. Mapletech Labs builds enterprise SaaS platforms from Toronto, Canada.'}
+        name={'Multi-Tenant SaaS Architecture'}
+        description={'Scalable multi-tenant architecture with tenant isolation, RBAC, and custom domains. Mapletech Labs builds enterprise SaaS platforms from Edmonton, Canada.'}
         url={'https://mapletechlabs.ca/services/saas-development/multi-tenant-architecture'}
       />
       <PageClient />
