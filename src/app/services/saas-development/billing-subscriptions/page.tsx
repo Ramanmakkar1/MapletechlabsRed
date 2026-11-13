@@ -4,13 +4,19 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'SaaS Billing & Subscription Integration';
+const DESCRIPTION =
+  'SaaS billing and subscription integration: Stripe subscriptions, dunning and self-serve portals, built by our Edmonton team for SaaS teams across Canada.';
 
 export const metadata: Metadata = {
-  title: 'SaaS Billing & Subscription Integration',
-  description: 'Stripe billing for SaaS with subscriptions, dunning, and self-serve portals. Mapletech Labs builds infrastructure in Edmonton, Canada. Start a project.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'SaaS Billing & Subscription Integration | Mapletech Labs',
-    description: 'Stripe billing for SaaS with subscriptions, dunning, and self-serve portals. Mapletech Labs builds infrastructure in Edmonton, Canada. Start a project.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/saas-development/billing-subscriptions',
     type: 'website',
   },
@@ -27,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'SaaS Billing & Subscription Integration'}
-        description={'Stripe billing integration for SaaS with subscriptions, dunning, and self-serve portals. Mapletech Labs builds payment infrastructure from Edmonton, Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/saas-development/billing-subscriptions'}
       />
       <PageClient />

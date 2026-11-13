@@ -4,13 +4,19 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'SaaS MVP Development in 8 Weeks, Canada';
+const DESCRIPTION =
+  'SaaS MVP development in 8 weeks with production-quality code, built by our Edmonton team for startups across Canada ready to launch to paying customers.';
 
 export const metadata: Metadata = {
-  title: 'SaaS MVP Development in 8 Weeks, Canada',
-  description: 'SaaS MVP development in 8 weeks with production-quality code. Mapletech Labs helps Canadian startups launch to paying customers. Start a project.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'SaaS MVP Development in 8 Weeks | Mapletech Labs',
-    description: 'SaaS MVP development in 8 weeks with production-quality code. Mapletech Labs helps Canadian startups launch to paying customers. Start a project.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/saas-development/saas-mvp-development',
     type: 'website',
   },
@@ -27,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'SaaS MVP Development in 8 Weeks'}
-        description={'Launch your SaaS MVP in 8 weeks with production-quality code. Mapletech Labs builds scalable MVPs for startups from Edmonton, Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/saas-development/saas-mvp-development'}
       />
       <PageClient />

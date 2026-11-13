@@ -4,13 +4,19 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'SaaS Analytics & Dashboard Development';
+const DESCRIPTION =
+  'SaaS analytics and dashboard development: product analytics, MRR tracking and embedded reporting, built by our Edmonton team for SaaS teams across Canada.';
 
 export const metadata: Metadata = {
-  title: 'SaaS Analytics & Dashboard Development',
-  description: 'SaaS analytics dashboards with product analytics, MRR tracking, and embedded reporting. Mapletech Labs builds tools in Edmonton, Canada. Start a project.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'SaaS Analytics & Dashboard Development | Mapletech Labs',
-    description: 'SaaS analytics dashboards with product analytics, MRR tracking, and embedded reporting. Mapletech Labs builds tools in Edmonton, Canada. Start a project.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/saas-development/analytics-dashboards',
     type: 'website',
   },
@@ -27,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'SaaS Analytics & Dashboard Development'}
-        description={'Product analytics, MRR dashboards, and embedded customer analytics for SaaS. Mapletech Labs builds data-driven SaaS tools from Edmonton, Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/saas-development/analytics-dashboards'}
       />
       <PageClient />

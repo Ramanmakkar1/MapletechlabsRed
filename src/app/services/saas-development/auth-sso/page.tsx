@@ -4,13 +4,19 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'SaaS Authentication & SSO Development';
+const DESCRIPTION =
+  'SaaS authentication and SSO development: SAML, MFA, RBAC and audit logs for enterprise-ready products, built by our Edmonton team for SaaS across Canada.';
 
 export const metadata: Metadata = {
-  title: 'SaaS Authentication & SSO Development',
-  description: 'SaaS SSO and auth with SAML, MFA, RBAC, and audit logs for enterprise products. Mapletech Labs builds auth systems in Edmonton, Canada. Start a project.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'SaaS Authentication & SSO Development | Mapletech Labs',
-    description: 'SaaS SSO and auth with SAML, MFA, RBAC, and audit logs for enterprise products. Mapletech Labs builds auth systems in Edmonton, Canada. Start a project.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/saas-development/auth-sso',
     type: 'website',
   },
@@ -27,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'SaaS Authentication & SSO Development'}
-        description={'Enterprise-ready auth with SAML SSO, MFA, RBAC, and audit logs for SaaS products. Mapletech Labs builds secure auth systems from Edmonton, Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/saas-development/auth-sso'}
       />
       <PageClient />
