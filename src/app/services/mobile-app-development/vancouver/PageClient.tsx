@@ -104,7 +104,7 @@ export default function PageClient({ faqs, contactHref }: { faqs: Faq[]; contact
             badge: 'Mobile app development in Vancouver',
             title: (
               <>
-                Mobile App Development Company in <span style={{ color: 'var(--brand)' }}>Vancouver</span>
+                Mobile App Development in <span style={{ color: 'var(--brand)' }}>Vancouver</span>
               </>
             ),
             desc: (

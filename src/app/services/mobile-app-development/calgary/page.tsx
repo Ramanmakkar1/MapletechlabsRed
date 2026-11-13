@@ -8,7 +8,7 @@ import { contactHrefFor } from '@/lib/enquiryContext';
 import { services } from '@/data/services';
 import { cities } from '@/data/cities';
 
-const TITLE = 'Mobile App Development Company in Calgary | Mapletech Labs';
+const TITLE = 'Mobile App Development in Calgary: iOS, Android & Flutter';
 const DESCRIPTION = 'Mapletech Labs builds iOS, Android and cross-platform apps for Calgary businesses from our Edmonton HQ, with fixed-scope quotes from discovery to launch.';
 const URL = 'https://mapletechlabs.ca/services/mobile-app-development/calgary';
 

@@ -5,10 +5,10 @@ import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { getCityServiceData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Mobile App Development Company in Toronto';
+const TITLE = 'Mobile App Development in Toronto: iOS, Android & Flutter';
 const DESCRIPTION = 'Mapletech Labs builds iOS, Android and cross-platform apps for Toronto fintech, retail and health teams, with fixed-scope quotes from discovery to launch.';
 const URL = 'https://mapletechlabs.ca/services/mobile-app-development/toronto';
 
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: ogTitle(TITLE),
+    title: TITLE,
     description: seoDescription(DESCRIPTION),
     url: URL,
     type: 'website',
