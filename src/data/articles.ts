@@ -5381,6 +5381,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'next-step', text: 'How to get a useful quote' },
       { type: 'p', html: 'Bring the workflow you want to improve, the systems it touches, the people who will use it and your budget range. A short discovery is usually the fastest way to turn that into a scope and a price you can trust.' },
+      { type: 'p', html: 'Prefer a local team? See our <a href="/locations/software-development-company-in-edmonton">software development company in Edmonton</a>, <a href="/locations/software-development-company-in-calgary">Calgary</a>, <a href="/locations/software-development-company-in-toronto">Toronto</a> and <a href="/locations/software-development-company-in-vancouver">Vancouver</a> pages for local process, pricing guidance and FAQs.' },
       { type: 'callout', tone: 'brand', title: 'Talk through your project', text: 'See our <a href="/services/saas-development">SaaS development services</a>, start with <a href="/services/software-discovery">software discovery</a>, or <a href="/contact">contact Mapletech Labs</a> to discuss scope and budget.' },
     ],
     keyTakeaways: [
