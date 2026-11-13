@@ -1,13 +1,19 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'SEO & Digital Marketing Agency in Canada';
+const DESCRIPTION =
+  'SEO and digital marketing agency in Canada: data-driven SEO, Google Ads and social media marketing from our Edmonton team. Get a free marketing audit.';
 
 export const metadata: Metadata = {
-  title: 'SEO & Digital Marketing Agency in Canada',
-  description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada. Get a free marketing audit today.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'SEO & Digital Marketing Agency in Canada | Mapletech Labs',
-    description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada. Get a free marketing audit today.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/digital-marketing',
     type: 'website',
   },
@@ -21,7 +27,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Digital Marketing Services',
   serviceType: 'SEO and Digital Marketing',
-  description: 'Data-driven SEO, Google Ads & social media marketing by Mapletech Labs. Grow your business online across Canada.',
+  description: DESCRIPTION,
   provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',
