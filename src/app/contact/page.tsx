@@ -172,11 +172,14 @@ export default function ContactRoute() {
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-next-steps">
           <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you get in touch</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            After your free project consultation, if the project is a fit, we follow up with a written scope and estimate, usually within a week, and your idea stays under NDA from the first conversation. When you accept, we assign your team, set up environments and plan the first sprint so you see working software early and often.
+            After you get in touch, a senior engineer replies within one working day, and the project moves through four clear steps.
           </p>
-          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            Our headquarters is in Edmonton, Alberta, and our team has dedicated engineers in Edmonton, Calgary, Toronto, and Vancouver, so there&#8217;s always someone in your time zone. Most projects run remotely with weekly demos, and we meet in person when it helps. We work with clients across Canada, including Calgary, Toronto, Vancouver, Ottawa, and Montreal. <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Explore our complete service catalog</Link> to learn about the custom software development, mobile apps, AI & automation, and other solutions we offer.
-          </p>
+          <ol style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            <li><strong>Reply within one working day.</strong> A senior engineer reads your brief and comes back with honest first thoughts and the questions that matter. Start with the <Link href="#contact-form" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>free project consultation</Link> form above.</li>
+            <li><strong>Free 30-minute discovery call.</strong> If the project looks like a good fit, we talk through users, technical constraints, timeline and budget, and whether custom software, an off-the-shelf solution or a smaller first release fits best.</li>
+            <li><strong>Written scope and estimate.</strong> If the project is a fit, we send a written scope and estimate, usually within a week, and your idea stays under NDA from the first conversation.</li>
+            <li><strong>Kick-off.</strong> When you accept, we assign your team, set up environments and plan the first sprint, so you see working software early and often, with weekly demos.</li>
+          </ol>
         </section>
 
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-project-types">
@@ -195,7 +198,7 @@ export default function ContactRoute() {
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-service-areas">
           <h2 id="contact-service-areas" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Where Mapletech Labs works with clients</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            Mapletech Labs is a software development company with its head office in Edmonton, Alberta. Our team has dedicated engineers in Edmonton, Calgary, Toronto and Vancouver, and we work with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal and across Canada. Most projects run remotely with weekly demos, so you can see working software and give feedback as the work moves forward. When a project benefits from meeting in person, we arrange it. Wherever you are in Canada, the first step is the same: send a short project brief and a senior engineer replies within one working day. Choose your city below to see how we work with local businesses.
+            Mapletech Labs is a software development company with its head office in Edmonton, Alberta. Our team has dedicated engineers in Edmonton, Calgary, Toronto and Vancouver, so there is always someone in your time zone, and we work with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal and across Canada. Most projects run remotely with weekly demos, so you can see working software and give feedback as the work moves forward. When a project benefits from meeting in person, we arrange it. Wherever you are in Canada, the first step is the same: send a short project brief and a senior engineer replies within one working day. Choose your city below to see how we work with local businesses.
           </p>
           <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             <li><Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Edmonton</Link></li>
