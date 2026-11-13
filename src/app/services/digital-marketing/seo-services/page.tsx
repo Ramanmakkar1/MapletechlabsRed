@@ -7,7 +7,7 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const TITLE = 'SEO Services in Canada: Technical and Local';
+const TITLE = 'SEO Services in Canada: Local SEO Experts';
 const DESCRIPTION = 'SEO services in Canada from an Edmonton-based team: technical SEO, local SEO, link building and content strategy. 200% avg organic traffic growth.';
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: seoDescription(DESCRIPTION),
   openGraph: {
     title: ogTitle(TITLE),
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/digital-marketing/seo-services',
     type: 'website',
   },
@@ -32,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'SEO Services'}
-        description={DESCRIPTION}
+        description={seoDescription(DESCRIPTION)}
         url={'https://mapletechlabs.ca/services/digital-marketing/seo-services'}
       />
       <PageClient />
