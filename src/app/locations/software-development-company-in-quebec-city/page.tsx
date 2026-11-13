@@ -3,14 +3,17 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 import cityDescription from '@/lib/seo/city-meta';
+import { ogTitle } from '@/lib/seo/title';
 
 export const dynamic = 'force-static';
 
+const TITLE = 'Software Development Company in Quebec City';
+
 export const metadata: Metadata = {
-  title: 'Software Development Company in Quebec City',
+  title: TITLE,
   description: cityDescription('Quebec City', 'Quebec', 'Quebec City organizations'),
   openGraph: {
-    title: 'Software Development Company in Quebec City | Mapletech Labs',
+    title: ogTitle(TITLE),
     description: cityDescription('Quebec City', 'Quebec', 'Quebec City organizations'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-quebec-city',
     type: 'website',

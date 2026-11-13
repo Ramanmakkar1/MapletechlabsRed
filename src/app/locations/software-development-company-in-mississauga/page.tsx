@@ -3,14 +3,17 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 import cityDescription from '@/lib/seo/city-meta';
+import { ogTitle } from '@/lib/seo/title';
 
 export const dynamic = 'force-static';
 
+const TITLE = 'Software Development Company in Mississauga';
+
 export const metadata: Metadata = {
-  title: 'Software Development Company in Mississauga',
+  title: TITLE,
   description: cityDescription('Mississauga', 'Ontario', 'Greater Toronto Area teams'),
   openGraph: {
-    title: 'Software Development Company in Mississauga | Mapletech Labs',
+    title: ogTitle(TITLE),
     description: cityDescription('Mississauga', 'Ontario', 'Greater Toronto Area teams'),
     url: 'https://mapletechlabs.ca/locations/software-development-company-in-mississauga',
     type: 'website',

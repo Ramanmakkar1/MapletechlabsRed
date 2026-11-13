@@ -2,12 +2,15 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
+import { ogTitle } from '@/lib/seo/title';
+
+const TITLE = 'UI/UX Design Company in Canada: Apps & SaaS';
 
 export const metadata: Metadata = {
-  title: 'UI/UX Design Company in Canada: Apps & SaaS',
+  title: TITLE,
   description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps & SaaS, with fixed CAD pricing. Get a free design audit.',
   openGraph: {
-    title: 'UI/UX Design Company in Canada: Apps & SaaS | Mapletech Labs',
+    title: ogTitle(TITLE),
     description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps & SaaS, with fixed CAD pricing. Get a free design audit.',
     url: 'https://mapletechlabs.ca/services/product-design',
     type: 'website',

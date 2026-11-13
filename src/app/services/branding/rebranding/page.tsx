@@ -1,16 +1,18 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Rebranding Services for Canadian Businesses';
+
 export const metadata: Metadata = {
-  title: seoTitle('Rebranding Services for Canadian Businesses'),
+  title: seoTitle(TITLE),
   description: 'Strategic rebranding services by Mapletech Labs. Refresh your brand identity, messaging, and visual language to stay relevant and competitive.',
   openGraph: {
-    title: 'Rebranding Services for Canadian Businesses | Mapletech Labs',
+    title: ogTitle(TITLE),
     description: 'Strategic rebranding services by Mapletech Labs. Refresh your brand identity, messaging, and visual language to stay relevant and competitive.',
     url: 'https://mapletechlabs.ca/services/branding/rebranding',
     type: 'website',

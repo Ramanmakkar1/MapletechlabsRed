@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description,
   openGraph: {
     title,
-    description: 'We design and build robust REST and GraphQL APIs with bulletproof security and enterprise-grade performance.',
+    description,
     url,
     type: 'website',
   },
