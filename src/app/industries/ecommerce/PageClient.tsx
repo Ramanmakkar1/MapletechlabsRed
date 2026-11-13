@@ -181,7 +181,7 @@ const buyerContent = (
           <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}><strong>Design:</strong> a bespoke brand experience and content-heavy pages cost more than a tuned theme.</li>
           <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}><strong>Post-launch support:</strong> monitoring, releases and ongoing optimisation after launch.</li>
         </ul>
-        <p style={{ ...pStyle, marginTop: 16, marginBottom: 0 }}>We quote fixed-scope projects in CAD. The FAQ below covers typical ranges and timelines. For a first release, see our <Link href="/services/software-development/mvp-development" style={linkStyle}>MVP development</Link> service.</p>
+        <p style={{ ...pStyle, marginTop: 16, marginBottom: 0 }}>We quote fixed-scope projects in CAD. The FAQ below covers typical ranges and timelines. For a first release, see our <Link href="/services/saas-development/saas-mvp-development" style={linkStyle}>SaaS MVP development</Link> service.</p>
       </div>
     </div>
   </section>

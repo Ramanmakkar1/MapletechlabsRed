@@ -187,7 +187,7 @@ const buyerContent = (
           <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}><strong>Security assurance:</strong> penetration testing, remediation and the depth of review your regulator or partners require.</li>
           <li style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}><strong>Platforms and support:</strong> web, iOS and Android, plus the monitoring and release cadence you need after launch.</li>
         </ul>
-        <p style={{ ...pStyle, marginTop: 16, marginBottom: 0 }}>We quote fixed-scope projects in CAD, so the price is agreed before we write code. The FAQ below covers typical ranges and timelines. For a first release, see our <Link href="/services/software-development/mvp-development" style={linkStyle}>MVP development</Link> service.</p>
+        <p style={{ ...pStyle, marginTop: 16, marginBottom: 0 }}>We quote fixed-scope projects in CAD, so the price is agreed before we write code. The FAQ below covers typical ranges and timelines. For a first release, see our <Link href="/services/saas-development/saas-mvp-development" style={linkStyle}>SaaS MVP development</Link> service.</p>
       </div>
     </div>
   </section>

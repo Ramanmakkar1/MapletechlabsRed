@@ -202,6 +202,7 @@ const nextConfig: NextConfig = {
       // Legacy modernization lives under a software-development parent; send the
       // bare parent URL to the live software development hub.
       { source: '/services/software-development', destination: '/services/web-development', statusCode: 301 as const },
+      { source: '/services/software-development/mvp-development', destination: '/services/saas-development/saas-mvp-development', statusCode: 301 as const },
       // Old root-level slugs -> final keyword URLs (one hop, no chains)
       { source: '/software-development-company-in-edmonton', destination: '/locations/software-development-company-in-edmonton', permanent: true },
       { source: '/software-development-company-in-toronto', destination: '/locations/software-development-company-in-toronto', permanent: true },
