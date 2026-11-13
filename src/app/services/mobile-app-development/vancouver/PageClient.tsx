@@ -193,7 +193,7 @@ export default function PageClient({ faqs, contactHref }: { faqs: Faq[]; contact
               <Link href="/locations/app-development-company-in-vancouver">
                 app development company in Vancouver
               </Link>{' '}
-              page covers local pricing guidance, sectors we serve and Vancouver FAQs.
+              page covers local pricing guidance, sectors we serve and Vancouver FAQs.{' '}Before you sign with anyone, read our guide to{' '}<Link href="/blog/app-development-companies-vancouver">choosing an app development company in Vancouver</Link>{' '}for the questions to ask.
             </p>
           </div>
         </section>

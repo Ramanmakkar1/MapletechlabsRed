@@ -3,6 +3,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoDescription } from '@/lib/seo/description';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import { services } from '@/data/services';
 import { cities } from '@/data/cities';
@@ -38,10 +39,10 @@ const contactHref = contactHrefFor('mobile-app-development', 'calgary', services
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     url: URL,
     type: 'website',
   },

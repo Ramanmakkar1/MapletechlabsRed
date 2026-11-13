@@ -193,7 +193,7 @@ export default function PageClient({ faqs, contactHref }: { faqs: Faq[]; contact
               <Link href="/locations/app-development-company-in-calgary">
                 app development company in Calgary
               </Link>{' '}
-              page covers local pricing guidance, sectors we serve and Calgary FAQs.
+              page covers local pricing guidance, sectors we serve and Calgary FAQs.{' '}Before you sign with anyone, read our guide to{' '}<Link href="/blog/app-development-companies-calgary">choosing an app development company in Calgary</Link>{' '}for the questions to ask.
             </p>
           </div>
         </section>
