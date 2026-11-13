@@ -187,6 +187,44 @@
 - [UI/UX Design Company Toronto: How to Choose (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-toronto): how to choose a UI/UX design company in Toronto, covering research, prototypes, AODA accessibility, CAD pricing, red flags and questions to ask.
 - [UI/UX Design Companies in Vancouver: How to Choose](https://mapletechlabs.ca/blog/ui-ux-design-companies-vancouver): what to expect from a UI/UX design company in Vancouver from research to handoff, covering WCAG and BC accessibility, pricing, red flags and questions to ask.
 
+### Cost guides
+
+- [Custom Software Development Cost in Canada (2026 Guide)](https://mapletechlabs.ca/blog/custom-software-development-cost-canada): custom software development in Canada typically costs CAD $30,000 to $200,000, driven by scope, integrations, data quality and compliance.
+- [AI Chatbot Development Cost in Canada (2026 Guide)](https://mapletechlabs.ca/blog/ai-chatbot-development-cost-canada): AI chatbot development in Canada starts around $3,500 for a focused build and can reach $80,000+ for an enterprise assistant.
+- [How to Choose a Software Development Company in Canada](https://mapletechlabs.ca/blog/choose-software-development-company-canada): what to look for, questions to ask, pricing models, red flags and how to compare a shortlist.
+- [How to Choose a Mobile App Development Company in Canada](https://mapletechlabs.ca/blog/mobile-app-development-company-canada): compare native and cross-platform options, CAD costs, process, code ownership and post-launch support.
+- [How to Choose a Website Development Company in Canada (2026)](https://mapletechlabs.ca/blog/website-development-company-canada): compare custom and template builds, SEO and speed standards, real costs and red flags.
+- [Healthcare Software Development in Canada: A Buyer’s Guide](https://mapletechlabs.ca/blog/healthcare-software-development-canada): compare project types, privacy and data residency questions, EHR integration, scope and vendor selection.
+
+### City buyer guides
+
+- [SEO Companies in Edmonton: How to Choose One (2026)](https://mapletechlabs.ca/blog/seo-companies-edmonton): what local SEO should cover, the first 90 days, CAD pricing, red flags and questions to ask before hiring.
+- [SEO Company Calgary: How to Choose the Right One (2026)](https://mapletechlabs.ca/blog/seo-companies-calgary): map pack and suburb searches, the first 90 days, CAD pricing, AI answers, red flags and 10 questions to ask.
+- [SEO Company Toronto: How to Choose the Right One (2026)](https://mapletechlabs.ca/blog/seo-companies-toronto): GTA map pack and suburb searches, the first 90 days, CAD pricing, AI answers, red flags and 10 questions to ask.
+- [SEO Companies in Vancouver: How to Choose the Right One](https://mapletechlabs.ca/blog/seo-companies-vancouver): Metro Vancouver map pack, suburb and multilingual searches, CAD pricing, AI answers, red flags and 10 questions to ask.
+- [App Development Companies in Edmonton 2026](https://mapletechlabs.ca/blog/app-development-companies-edmonton): discovery, platform choice, portfolio evidence, code ownership, support and questions to ask.
+- [App Development Company Calgary: How to Choose (2026)](https://mapletechlabs.ca/blog/app-development-companies-calgary): native vs cross-platform, CAD cost ranges, red flags and 10 questions to ask before you sign.
+- [App Development Company Toronto: How to Choose (2026)](https://mapletechlabs.ca/blog/app-development-companies-toronto): native vs cross-platform, AODA accessibility, CAD cost ranges, red flags and 10 questions to ask.
+- [App Development Companies in Vancouver: How to Choose](https://mapletechlabs.ca/blog/app-development-companies-vancouver): native vs cross-platform, BC privacy (PIPA), CAD cost ranges, red flags and 10 questions to ask.
+- [App Development Company Ottawa: How to Choose (2026)](https://mapletechlabs.ca/blog/app-development-companies-ottawa): choose a bilingual team for government apps with WCAG 2.1 AA, PIPEDA, CAD cost ranges and 10 questions to ask.
+- [AI Development Companies in Edmonton: How to Choose](https://mapletechlabs.ca/blog/ai-development-companies-edmonton): LLM and RAG builds, Alberta PIPA and PIPEDA, data residency, CAD costs and 10 questions to ask.
+- [AI Development Companies in Calgary: How to Choose](https://mapletechlabs.ca/blog/ai-development-companies-calgary): RAG and LLM apps for energy and fintech, Alberta PIPA, data residency, CAD costs and 10 questions.
+- [AI Development Company Toronto: How to Choose (2026)](https://mapletechlabs.ca/blog/ai-development-companies-toronto): LLM and RAG builds, PIPEDA and OSFI rules, CAD cost ranges, red flags and 10 questions to ask.
+- [AI Development Companies in Vancouver: How to Choose](https://mapletechlabs.ca/blog/ai-development-companies-vancouver): portfolio, discovery, code ownership, CAD pricing, BC PIPA and FIPPA, and post-launch support.
+- [Software Development Companies in Edmonton](https://mapletechlabs.ca/blog/software-development-companies-edmonton): what to look for, typical CAD costs, red flags and 10 questions to ask before you sign.
+- [Top 10 Software Development Companies in Calgary (2026)](https://mapletechlabs.ca/blog/software-development-companies-calgary): the best software development companies in Calgary, Alberta, compared on services, industries and track record, plus how to choose a team.
+- [Software Development Companies in Toronto](https://mapletechlabs.ca/blog/software-development-companies-toronto): local vs remote teams, Ontario privacy and accessibility needs, typical costs and a hiring checklist.
+- [Software Development Companies in Vancouver](https://mapletechlabs.ca/blog/software-development-companies-vancouver): compare local and remote teams, BC data residency, costs, timelines and key questions.
+- [Software Development Companies in Ottawa](https://mapletechlabs.ca/blog/software-development-companies-ottawa): public-sector security, bilingual and accessible builds, typical costs and a checklist.
+- [Software Development Companies in Montreal](https://mapletechlabs.ca/blog/software-development-companies-montreal): Quebec Law 25 privacy, French-language rules, AI talent, typical costs and a checklist.
+- [UI/UX Design Companies in Edmonton: How to Choose (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-edmonton): research, prototypes, WCAG accessibility, CAD pricing, red flags and 10 questions to ask before you sign.
+- [UI/UX Design Companies in Calgary: How to Choose (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-calgary): compare portfolios, discovery, design-system ownership, CAD pricing and post-launch support before you sign.
+- [UI/UX Design Company Toronto: How to Choose (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-toronto): research, prototypes, AODA accessibility, CAD pricing, red flags and 10 questions to ask before you sign.
+- [UI/UX Design Companies in Vancouver: How to Choose](https://mapletechlabs.ca/blog/ui-ux-design-companies-vancouver): what to expect from research to handoff, WCAG and BC accessibility, pricing, red flags and questions to ask.
+- [UI/UX Design Companies in Ottawa: How to Choose (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-ottawa): choose a bilingual team with WCAG 2.1 AA, GC Cloud, CAD pricing bands, red flags and 10 questions to ask.
+- [Web Development Companies in Edmonton](https://mapletechlabs.ca/blog/web-development-companies-edmonton): compare capital-region SEO, B2B portals, CAD pricing, 30/60/90-day plans, red flags and key questions.
+- [Web Development Companies in Vancouver: How to Choose](https://mapletechlabs.ca/blog/web-development-companies-vancouver): marketing site vs web app vs e-commerce, tech stack and hosting questions, CAD costs and red flags.
+
 ## Industries
 
 - [FinTech](https://mapletechlabs.ca/industries/fintech): FinTech software development.
