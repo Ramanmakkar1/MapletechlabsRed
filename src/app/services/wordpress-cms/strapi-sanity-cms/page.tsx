@@ -5,14 +5,16 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoDescription } from '@/lib/seo/description';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 const DESCRIPTION = 'Expert Strapi and Sanity headless CMS setup with Next.js integration, live preview, and content migration. Edmonton-based Mapletech Labs. 30+ CMS projects.';
+const TITLE = 'Strapi & Sanity CMS Development in Canada';
 
 export const metadata: Metadata = {
-  title: 'Strapi & Sanity CMS Development Services',
+  title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Strapi & Sanity CMS Development | Mapletech Labs',
+    title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/wordpress-cms/strapi-sanity-cms',
     type: 'website',
