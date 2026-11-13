@@ -11,7 +11,7 @@ import { serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 
-type CityService = { label: string; path: (city: string) => string };
+type CityService = { label: string; path: (city: string) => string; noun?: string };
 
 const CATEGORY_SERVICE: Record<string, CityService> = {
   'AI/ML': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
@@ -41,11 +41,21 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'app-development-companies-calgary': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'app-development-companies-toronto': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'app-development-companies-vancouver': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'app-development-companies-edmonton': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'app-development-companies-ottawa': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'software-development-companies-edmonton': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
+  'software-development-companies-calgary': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
+  'software-development-companies-toronto': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
+  'software-development-companies-vancouver': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
+  'software-development-companies-ottawa': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
+  'software-development-companies-montreal': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
+  'shopify-vs-custom-ecommerce-canada': { label: 'Web Development', path: c => serviceCityPath('web-development', c) },
   'seo-companies-edmonton': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
-  'digital-marketing-agencies-edmonton': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
-  'digital-marketing-agencies-calgary': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
-  'digital-marketing-agencies-toronto': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
-  'digital-marketing-agencies-vancouver': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
+  'digital-marketing-agencies-edmonton': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
+  'digital-marketing-agencies-calgary': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
+  'digital-marketing-agencies-toronto': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
+  'digital-marketing-agencies-vancouver': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
+  'digital-marketing-agencies-ottawa': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
   'seo-companies-calgary': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
   'seo-companies-toronto': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
   'seo-companies-vancouver': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
@@ -152,6 +162,8 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
 
 export default function ArticleTemplate({ a, related = [], cityLinks, relatedServices, extraBlock }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode; relatedServices?: ReactNode; extraBlock?: ReactNode }) {
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
+  const postCity = CITIES.find(c => a.slug.endsWith(`-${c.slug}`));
+  const primaryLocal = cityLinks && categoryService && postCity ? { href: categoryService.path(postCity.slug), text: `${categoryService.label} ${categoryService.noun ?? 'company'} in ${postCity.name}`, city: postCity.name } : null;
   const projectService = SLUG_PROJECT_SERVICE[a.slug];
   const projectHref = contactHrefFor(a.enquiryContext?.serviceSlug, a.enquiryContext?.citySlug, serviceAllowlist, cities);
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
@@ -265,12 +277,16 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                   </div>
                 )}
 
+                {primaryLocal && (
+                  <aside aria-label="Our service in this city" style={{ marginTop: 'clamp(40px, 5vw, 60px)', border: '1px solid var(--brand)', borderRadius: 16, padding: 'clamp(20px, 2.4vw, 28px)' }}><p style={{ fontSize: 16, color: 'var(--ink)', lineHeight: 1.7, margin: 0 }}>Hiring in {primaryLocal.city}? See Mapletech Labs&apos; <Link href={primaryLocal.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>{primaryLocal.text}</Link> page for services, process and a free quote.</p></aside>
+                )}
+
                 {cityLinks ?? (categoryService && (
                   <nav aria-label="Hire a team in your city" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
                     <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Hire a team in your city</h2>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
                       {CITIES.map(({ slug, name }) => (
-                        <li key={slug} style={{ minWidth: 0 }}><Link href={categoryService.path(slug)} style={{ display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none', overflowWrap: 'anywhere' }}>{categoryService.label} company in {name}</Link></li>
+                        <li key={slug} style={{ minWidth: 0 }}><Link href={categoryService.path(slug)} style={{ display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none', overflowWrap: 'anywhere' }}>{categoryService.label} {categoryService.noun ?? 'company'} in {name}</Link></li>
                       ))}
                     </ul>
                   </nav>
