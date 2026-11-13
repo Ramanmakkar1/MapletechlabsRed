@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Cross-Platform App Development in Canada';
+const DESCRIPTION = 'Cross-platform app development in Canada: one shared codebase for iOS and Android with native performance, built in Flutter or React Native. Get a quote.';
 
 export const metadata: Metadata = {
-  title: 'Cross-Platform App Development in Canada',
-  description: 'Cross-platform mobile app development services. Mapletech Labs builds apps that run on iOS and Android with shared codebases and native performance.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Cross-Platform App Development in Canada | Mapletech Labs',
-    description: 'Cross-platform mobile app development services. Mapletech Labs builds apps that run on iOS and Android with shared codebases and native performance.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/mobile-app-development/cross-platform-apps',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Cross-Platform App Development'}
-        description={'Cross-platform mobile app development services. Mapletech Labs builds apps that run on iOS and Android with shared codebases and native performance.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/mobile-app-development/cross-platform-apps'}
       />
       <PageClient />

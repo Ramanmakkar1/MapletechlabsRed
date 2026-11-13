@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Android App Development Company in Canada';
+const DESCRIPTION = 'Android app development company in Canada: Kotlin and Jetpack Compose apps for phones, tablets and foldables, built to scale on Google Play. Get a quote.';
 
 export const metadata: Metadata = {
-  title: 'Android App Development Company in Canada',
-  description: 'Professional Android app development with Kotlin & Jetpack Compose. Mapletech Labs creates scalable apps for phones, tablets, and foldables.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Android App Development Company in Canada | Mapletech Labs',
-    description: 'Professional Android app development with Kotlin & Jetpack Compose. Mapletech Labs creates scalable apps for phones, tablets, and foldables.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/mobile-app-development/android-app-development',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Android App Development Services'}
-        description={'Professional Android app development with Kotlin & Jetpack Compose. Mapletech Labs creates scalable apps for phones, tablets, and foldables.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/mobile-app-development/android-app-development'}
       />
       <PageClient />

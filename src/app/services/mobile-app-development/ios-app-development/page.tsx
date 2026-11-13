@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'iOS App Development Company in Canada';
+const DESCRIPTION = 'iOS app development company in Canada: native iPhone and iPad apps in Swift and SwiftUI, from MVP to launch. 200+ iOS apps delivered. Get a quote.';
 
 export const metadata: Metadata = {
-  title: 'iOS App Development Company in Canada',
-  description: 'Expert iOS app development with Swift & SwiftUI. Mapletech Labs builds high-performance native iPhone and iPad apps. 200+ iOS apps delivered.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'iOS App Development Company in Canada | Mapletech Labs',
-    description: 'Expert iOS app development with Swift & SwiftUI. Mapletech Labs builds high-performance native iPhone and iPad apps. 200+ iOS apps delivered.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/mobile-app-development/ios-app-development',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'iOS App Development Services'}
-        description={'Expert iOS app development with Swift & SwiftUI. Mapletech Labs builds high-performance native iPhone and iPad apps. 200+ iOS apps delivered.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/mobile-app-development/ios-app-development'}
       />
       <PageClient />
