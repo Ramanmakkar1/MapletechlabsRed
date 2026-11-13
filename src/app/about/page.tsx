@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { FaqSchema } from '@/components/ServiceSchema';
+import { ABOUT_FAQS } from '@/data/about';
 
 const TITLE = 'About Mapletech Labs: Edmonton Software Developers';
 
@@ -48,6 +50,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema).replace(/</g, '\\u003c') }}
       />
+      <FaqSchema faqs={ABOUT_FAQS} />
       <PageClient />
     </>
   );
