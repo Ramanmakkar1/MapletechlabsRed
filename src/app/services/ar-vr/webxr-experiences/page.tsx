@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'WebXR Development Services in Canada';
+const DESCRIPTION = 'WebXR development in Canada: browser-based AR/VR on any device, no install needed, with 20+ built by Mapletech Labs in Edmonton for immersive experiences.';
+
 export const metadata: Metadata = {
-  title: seoTitle('WebXR Development Services in Canada'),
-  description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web applications accessible on any device. 20+ built. Book a call.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'WebXR Development Services in Canada | Mapletech Labs',
-    description: 'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web apps accessible on any device, no install needed. 20+ built',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/ar-vr/webxr-experiences',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'WebXR Development Services'}
-        description={'Browser-based AR and VR experiences with WebXR. Mapletech Labs builds immersive 3D web applications accessible on any device.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/ar-vr/webxr-experiences'}
       />
       <PageClient />

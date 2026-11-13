@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Mobile AR App Development in Canada';
+const DESCRIPTION = 'Mobile AR app development in Canada: ARKit and ARCore apps for iOS and Android, built by Mapletech Labs in Edmonton for augmented reality experiences.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Mobile AR App Development in Canada'),
-  description: 'Mobile augmented reality development with ARKit and ARCore. Mapletech Labs builds immersive AR experiences for iOS and Android applications.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Mobile AR App Development in Canada | Mapletech Labs',
-    description: 'Mobile augmented reality development with ARKit and ARCore. Mapletech Labs builds immersive AR experiences for iOS and Android applications.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/ar-vr/mobile-ar',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Mobile AR Development'}
-        description={'Mobile augmented reality development with ARKit and ARCore. Mapletech Labs builds immersive AR experiences for iOS and Android applications.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/ar-vr/mobile-ar'}
       />
       <PageClient />
