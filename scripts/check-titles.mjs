@@ -90,6 +90,10 @@ const AUDIT_PAGES = [
 const EXPECTED_AUDIT_TITLES = new Map([
   ["src/app/blog/app-development-companies-edmonton/page.tsx", "App Development Companies in Edmonton 2026 | Mapletech Labs"],
   ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost in Canada: 2026 CAD | Mapletech Labs"],
+  ["src/app/blog/web-development-companies-toronto/page.tsx", "Web Development Companies in Toronto 2026 | Mapletech Labs"],
+  ["src/app/blog/website-cost-canada/page.tsx", "Website Cost in Canada: 2026 CAD Prices | Mapletech Labs"],
+  ["src/app/case-studies/logistics-platform/page.tsx", "Logistics Platform: 15K+ Deliveries a Day | Mapletech Labs"],
+  ["src/app/services/digital-marketing/seo-services/page.tsx", "SEO Services in Canada: Technical and Local | Mapletech Labs"],
 ]);
 const auditArticlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
 for (const file of AUDIT_PAGES) {
@@ -186,8 +190,8 @@ function descriptionProblems(text) {
 }
 
 function articleDescriptions(src) {
-  return Array.from(src.matchAll(/metaDescription:\s*'((?:[^'\\]|\\.)*)'/g),
-    (m) => m[1].replace(/\\'/g, "'"));
+  return Array.from(src.matchAll(/metaDescription:\s*(['"])((?:(?!\1)[^\\]|\\.)*)\1/g),
+    (m) => m[2].replace(/\\(['"])/g, "$1"));
 }
 
 assert.deepEqual(articleDescriptions("metaDescription: \n  'Multiline field'"), ["Multiline field"]);
