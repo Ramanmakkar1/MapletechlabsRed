@@ -6,7 +6,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const profileUrl = canonicalUrl('/about/raman-makkar');
 const title = 'Raman Makkar, Founder & CEO of Mapletech Labs, Edmonton';
@@ -15,11 +16,11 @@ const description =
 
 export const metadata: Metadata = {
   title: seoTitle(title),
-  description,
+  description: seoDescription(description),
   alternates: { canonical: profileUrl },
   openGraph: {
-    title,
-    description,
+    title: ogTitle(title),
+    description: seoDescription(description),
     url: profileUrl,
     type: 'profile',
   },

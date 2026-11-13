@@ -3,7 +3,7 @@ import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const NAME = 'HIPAA-Compliant Telehealth Platform';
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
     type: 'article',
   },
