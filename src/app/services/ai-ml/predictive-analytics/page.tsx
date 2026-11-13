@@ -4,13 +4,19 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Predictive Analytics Services in Canada';
+const DESCRIPTION =
+  'Predictive analytics services in Canada: Mapletech Labs builds machine learning models for forecasting, recommendations and business intelligence.';
 
 export const metadata: Metadata = {
-  title: 'Predictive Analytics Services in Canada',
-  description: 'Predictive analytics and machine learning services. Mapletech Labs builds data-driven models for forecasting, recommendations, and business intelligence.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Predictive Analytics Services in Canada | Mapletech Labs',
-    description: 'Predictive analytics and machine learning services. Mapletech Labs builds data-driven models for forecasting, recommendations, and business intelligence.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/ai-ml/predictive-analytics',
     type: 'website',
   },
@@ -27,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Predictive Analytics Services'}
-        description={'Predictive analytics and machine learning services. Mapletech Labs builds data-driven models for forecasting, recommendations, and business intelligence.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/ai-ml/predictive-analytics'}
       />
       <PageClient />

@@ -4,13 +4,19 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'LLM Integration Services in Canada';
+const DESCRIPTION =
+  'LLM integration services in Canada: Mapletech Labs connects GPT, Claude and open-source models to apps and documents with RAG and production deployment.';
 
 export const metadata: Metadata = {
-  title: 'LLM Integration Services in Canada',
-  description: 'LLM and large language model integration services. Mapletech Labs helps you integrate GPT, Claude, and custom AI models into your applications.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'LLM Integration Services in Canada | Mapletech Labs',
-    description: 'LLM and large language model integration services. Mapletech Labs helps you integrate GPT, Claude, and custom AI models into your applications.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/ai-ml/llm-integration',
     type: 'website',
   },
@@ -27,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'LLM Integration Services'}
-        description={'LLM and large language model integration services. Mapletech Labs helps you integrate GPT, Claude, and custom AI models into your applications.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/ai-ml/llm-integration'}
       />
       <PageClient />

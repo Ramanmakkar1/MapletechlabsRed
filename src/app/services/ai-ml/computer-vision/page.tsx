@@ -4,13 +4,19 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Computer Vision Development in Canada';
+const DESCRIPTION =
+  'Computer vision development in Canada: image recognition, object detection, OCR and visual AI for enterprise apps. Mapletech Labs deployed 40+ CV systems.';
 
 export const metadata: Metadata = {
-  title: 'Computer Vision Development in Canada',
-  description: 'Custom computer vision solutions by Mapletech Labs. Image recognition, object detection, OCR, and visual AI for enterprise applications. 40+ live. Book now',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Computer Vision Development in Canada | Mapletech Labs',
-    description: 'Custom computer vision solutions by Mapletech Labs. Image recognition, object detection, OCR, and visual AI for enterprise applications.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/ai-ml/computer-vision',
     type: 'website',
   },
@@ -27,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Computer Vision Development'}
-        description={'Custom computer vision solutions by Mapletech Labs. Image recognition, object detection, OCR, and visual AI for enterprise applications.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/ai-ml/computer-vision'}
       />
       <PageClient />
