@@ -4,7 +4,7 @@ import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Top 10 Blockchain Development Companies in Canada (2026)';
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     type: 'article',
     publishedTime: DATE,
     url: `https://mapletechlabs.ca/blog/${SLUG}`,

@@ -7,7 +7,7 @@ import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { GUIDE_FAQS } from '@/data/guide-faqs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Top 10 Software Development Companies in Calgary (2026)';
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     type: 'article',
     publishedTime: DATE,
     url: `https://mapletechlabs.ca/blog/${SLUG}`,

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: seoDescription(a.metaDescription),
   openGraph: {
     title: ogTitle(a.metaTitle),
-    description: a.metaDescription,
+    description: seoDescription(a.metaDescription),
     type: 'article',
     publishedTime: a.date,
     modifiedTime: a.dateModified,

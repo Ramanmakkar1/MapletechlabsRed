@@ -15,7 +15,7 @@ const URL = 'https://mapletechlabs.ca/blog/mobile-app-development-company-canada
 export const metadata: Metadata = {
   title: seoTitle(a.metaTitle),
   description: seoDescription(a.metaDescription),
-  openGraph: { title: ogTitle(a.metaTitle), description: a.metaDescription, type: 'article', publishedTime: a.date, modifiedTime: a.dateModified, url: URL },
+  openGraph: { title: ogTitle(a.metaTitle), description: seoDescription(a.metaDescription), type: 'article', publishedTime: a.date, modifiedTime: a.dateModified, url: URL },
   alternates: { canonical: canonicalUrl('/blog/mobile-app-development-company-canada') },
 };
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: seoDescription(DESCRIPTION),
   openGraph: {
     title: ogTitle(TITLE),
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     type: 'article',
     publishedTime: DATE,
     url: `https://mapletechlabs.ca/blog/${SLUG}`,

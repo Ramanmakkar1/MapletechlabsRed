@@ -1,5 +1,6 @@
 import { BLOG_AUTHOR } from '@/lib/seo/business';
 import type { Metadata } from 'next';
+import { seoDescription } from '@/lib/seo/description';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
 import { getArticle, getRelatedArticles } from '@/data/articles';
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   description: a.metaDescription,
   openGraph: {
     title: ogTitle(a.metaTitle),
-    description: a.metaDescription,
+    description: seoDescription(a.metaDescription),
     type: 'article',
     publishedTime: a.date,
     modifiedTime: a.dateModified,
