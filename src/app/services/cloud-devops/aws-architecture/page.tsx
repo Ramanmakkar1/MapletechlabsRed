@@ -4,13 +4,16 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoDescription } from '@/lib/seo/description';
+
+const DESCRIPTION = 'Certified AWS architects at Edmonton-based Mapletech Labs: cloud migration, cost control, multi-region HA. $2M+ saved for Canadian businesses. Free audit.';
 
 export const metadata: Metadata = {
   title: 'AWS Architecture & Cloud Solutions | Canada',
-  description: 'Certified AWS architects at Mapletech Labs Toronto. Cloud migration, cost control, multi-region HA design. $2M+ saved for Canadian businesses. Free audit.',
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: 'AWS Architecture & Cloud Solutions | Mapletech Labs',
-    description: 'Certified AWS architects at Mapletech Labs Toronto. Cloud migration, cost control, multi-region HA design. $2M+ saved for Canadian businesses. Free audit.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/cloud-devops/aws-architecture',
     type: 'website',
   },
@@ -27,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'AWS Architecture & Cloud Solutions | Canada'}
-        description={'Certified AWS architects at Mapletech Labs Toronto. Cloud migration, cost optimisation, multi-region HA design. $2M+ saved for Canadian businesses. Free audit.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/cloud-devops/aws-architecture'}
       />
       <PageClient />

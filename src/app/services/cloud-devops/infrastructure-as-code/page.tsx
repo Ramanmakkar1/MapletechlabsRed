@@ -4,13 +4,16 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoDescription } from '@/lib/seo/description';
+
+const DESCRIPTION = 'Terraform and Pulumi IaC by Edmonton-based Mapletech Labs: GitOps workflows, state management and security scanning. 70+ IaC projects delivered in Canada.';
 
 export const metadata: Metadata = {
   title: 'Infrastructure as Code Services | Terraform',
-  description: 'Terraform and Pulumi IaC by Mapletech Labs Toronto. GitOps workflows, state management and security scanning. 70+ IaC projects delivered in Canada.',
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: 'Infrastructure as Code Services | Mapletech Labs',
-    description: 'Terraform and Pulumi IaC by Mapletech Labs Toronto. GitOps workflows, state management and security scanning. 70+ IaC projects delivered in Canada.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/cloud-devops/infrastructure-as-code',
     type: 'website',
   },
@@ -27,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Infrastructure as Code Services | Terraform'}
-        description={'Terraform and Pulumi IaC services by Mapletech Labs Toronto. GitOps workflows, state management and security scanning. 70+ IaC projects delivered across Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/cloud-devops/infrastructure-as-code'}
       />
       <PageClient />

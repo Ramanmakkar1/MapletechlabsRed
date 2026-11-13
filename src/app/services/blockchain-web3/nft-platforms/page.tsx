@@ -4,13 +4,16 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoDescription } from '@/lib/seo/description';
+
+const DESCRIPTION = 'Gas-optimized NFT minting contracts, custom marketplaces, and royalty systems. 500K+ NFTs minted across 30+ platforms by Edmonton-based Mapletech Labs.';
 
 export const metadata: Metadata = {
   title: 'NFT Platform & Marketplace Development',
-  description: 'Gas-optimized NFT minting contracts, custom marketplaces, and royalty systems. 500K+ NFTs minted across 30+ platforms by Mapletech Labs in Toronto.',
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: 'NFT Platform Development | Mapletech Labs',
-    description: 'Gas-optimized NFT minting contracts, custom marketplaces, and royalty systems. 500K+ NFTs minted across 30+ platforms by Mapletech Labs in Toronto.',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/blockchain-web3/nft-platforms',
     type: 'website',
   },
@@ -27,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'NFT Platform & Marketplace Development'}
-        description={'Gas-optimized NFT minting contracts, custom marketplaces, and royalty systems. 500K+ NFTs minted across 30+ platforms by Mapletech Labs in Toronto.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/blockchain-web3/nft-platforms'}
       />
       <PageClient />

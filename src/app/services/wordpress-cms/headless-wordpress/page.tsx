@@ -4,13 +4,16 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoDescription } from '@/lib/seo/description';
+
+const DESCRIPTION = 'Headless WordPress with Next.js frontends for blazing-fast performance. WPGraphQL, ISR, CDN delivery by Edmonton-based Mapletech Labs. 40+ projects shipped';
 
 export const metadata: Metadata = {
   title: 'Headless WordPress Development Services',
-  description: 'Headless WordPress with Next.js frontends for blazing-fast performance. WPGraphQL, ISR, and CDN delivery by Mapletech Labs, Toronto. 40+ projects shipped.',
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: 'Headless WordPress Development | Mapletech Labs',
-    description: 'Headless WordPress with Next.js frontends for blazing-fast performance. WPGraphQL, ISR, and CDN delivery by Mapletech Labs, Toronto. 40+ projects shipped',
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/wordpress-cms/headless-wordpress',
     type: 'website',
   },
@@ -27,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Headless WordPress Development Services'}
-        description={'Headless WordPress with Next.js frontends for blazing-fast performance. WPGraphQL, ISR, and CDN delivery by Mapletech Labs, Toronto. 40+ projects shipped.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/wordpress-cms/headless-wordpress'}
       />
       <PageClient />
