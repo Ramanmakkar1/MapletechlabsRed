@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Unity Game Development Company in Canada';
+const DESCRIPTION = 'Unity game development company in Canada: C# experts for mobile, PC and console, with HDRP, URP and multiplayer. 80+ Unity projects delivered. Get a quote.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Unity Game Development Company in Canada'),
-  description: 'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, console. HDRP, URP, multiplayer, cross-platform game studio in Canada.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Unity Game Development Company in Canada | Mapletech Labs',
-    description: 'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, console. HDRP, URP, multiplayer, cross-platform game studio in Canada.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/game-development/unity-development',
     type: 'website',
   },
@@ -27,8 +31,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Unity Game Development Services | C# Experts'}
-        description={'Expert Unity game development with deep C# skills. 80+ projects across mobile, PC, console. HDRP, URP, multiplayer, cross-platform game studio in Canada.'}
+        name={TITLE}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/game-development/unity-development'}
       />
       <PageClient />

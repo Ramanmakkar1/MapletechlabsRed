@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Unreal Engine 5 Development Studio in Canada';
+const DESCRIPTION = 'Unreal Engine 5 development studio in Canada: AAA-quality games, simulations and archviz with Lumen, Nanite and Chaos Physics. 30+ UE5 projects delivered.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Unreal Engine 5 Development | AAA Game Studio'),
-  description: 'Unreal Engine 5 game development with Lumen, Nanite, and Chaos Physics. AAA-quality games, simulations, and archviz. 30+ UE5 projects delivered in Canada.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Unreal Engine 5 Development | Mapletech Labs',
-    description: 'Unreal Engine 5 game development with Lumen, Nanite, and Chaos Physics. AAA-quality games, simulations, and archviz. 30+ UE5 projects delivered in Canada.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/game-development/unreal-engine',
     type: 'website',
   },
@@ -27,8 +31,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Unreal Engine 5 Development | AAA Game Studio'}
-        description={'Unreal Engine 5 game development with Lumen, Nanite, and Chaos Physics. AAA-quality games, simulations, and archviz. 30+ UE5 projects delivered in Canada.'}
+        name={TITLE}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/game-development/unreal-engine'}
       />
       <PageClient />

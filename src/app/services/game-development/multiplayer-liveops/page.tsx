@@ -7,12 +7,15 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
+const TITLE = 'Multiplayer & LiveOps Game Development in Canada';
+const DESCRIPTION = 'Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Multiplayer & LiveOps Game Development'),
-  description: seoDescription('Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.'),
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: ogTitle('Multiplayer & LiveOps Development'),
-    description: seoDescription('Real-time multiplayer infrastructure & LiveOps systems built for scale. Netcode, matchmaking, seasonal events and anti-cheat from a Canadian game dev team.'),
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/game-development/multiplayer-liveops',
     type: 'website',
   },
@@ -28,8 +31,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Multiplayer & LiveOps Game Development'}
-        description={'Real-time multiplayer infrastructure and LiveOps systems built for scale. Netcode, matchmaking, seasonal events, and anti-cheat from a Canadian game dev team.'}
+        name={TITLE}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/game-development/multiplayer-liveops'}
       />
       <PageClient />
