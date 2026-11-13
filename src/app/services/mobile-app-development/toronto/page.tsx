@@ -6,7 +6,7 @@ import { getCityServiceData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const TITLE = 'Mobile App Development Company in Toronto | Mapletech Labs';
+const TITLE = 'Mobile App Development Company in Toronto';
 const DESCRIPTION = 'Mapletech Labs builds iOS, Android and cross-platform apps for Toronto fintech, retail and health teams, with fixed-scope quotes from discovery to launch.';
 const URL = 'https://mapletechlabs.ca/services/mobile-app-development/toronto';
 
@@ -97,7 +97,7 @@ const local: ServiceCityLocal = {
 };
 
 export const metadata: Metadata = {
-  title: { absolute: TITLE },
+  title: TITLE,
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,
