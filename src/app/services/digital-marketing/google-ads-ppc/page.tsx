@@ -1,19 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const DESCRIPTION = 'Google Ads & PPC management across Canada, Edmonton to Toronto: Search, Shopping, Display and YouTube campaigns, 3.5x avg ROAS. Google Premier Partner.';
+const TITLE = 'PPC & Google Ads Management in Canada';
+const DESCRIPTION = 'Google Ads and PPC management in Canada: Search, Shopping, Display and YouTube campaigns with a 3.5x average ROAS from a Google Premier Partner agency.';
 
 export const metadata: Metadata = {
-  title: seoTitle('PPC & Google Ads Management in Canada'),
-  description: DESCRIPTION,
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'PPC & Google Ads Management in Canada | Mapletech Labs',
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/digital-marketing/google-ads-ppc',
     type: 'website',
   },

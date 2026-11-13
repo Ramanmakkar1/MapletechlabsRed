@@ -1,19 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const DESCRIPTION = 'GA4 setup, conversion tracking, attribution and custom dashboards. Certified analytics experts serving Canada, Edmonton to Toronto. 30% avg CPA reduction.';
+const TITLE = 'GA4 Setup & Marketing Analytics in Canada';
+const DESCRIPTION = 'GA4 setup, conversion tracking, attribution and dashboards for Edmonton, Toronto and Canada, with 30% average CPA reduction by certified analytics experts.';
 
 export const metadata: Metadata = {
-  title: seoTitle('GA4 Setup & Marketing Analytics in Canada'),
-  description: DESCRIPTION,
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'GA4 Setup & Marketing Analytics in Canada | Mapletech Labs',
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/digital-marketing/performance-analytics',
     type: 'website',
   },

@@ -1,19 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const DESCRIPTION = 'Social media marketing across Canada, Edmonton to Toronto: strategy, content creation, community management and paid social. 50M+ impressions generated.';
+const TITLE = 'Social Media Marketing Agency in Canada';
+const DESCRIPTION = 'Social media marketing in Canada: strategy, content creation, community management and paid social from our Edmonton team, with 50M+ impressions generated.';
 
 export const metadata: Metadata = {
-  title: seoTitle('Social Media Marketing Agency in Canada'),
-  description: DESCRIPTION,
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Social Media Marketing Agency in Canada | Mapletech Labs',
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/digital-marketing/social-media-marketing',
     type: 'website',
   },
