@@ -118,7 +118,7 @@ export default function AboutPage() {
         <article>
 
         {/* ── HERO ── */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "About Mapletech Labs", title: <>We Build Software<br />That Matters.</>, desc: <>A world-class engineering firm headquartered in Edmonton, Canada. Founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={humanMedia.workshop} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "Software Development Company · Edmonton", title: <>About Mapletech Labs<br /><span style={{ color: 'var(--brand)' }}>We Build Software That Matters.</span></>, desc: <>Mapletech Labs is a custom software, app, AI and UI/UX development company headquartered in Edmonton, Canada, founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={humanMedia.workshop} form={false} />
 
         {/* ── MISSION STATEMENT ── */}
         <section style={{
