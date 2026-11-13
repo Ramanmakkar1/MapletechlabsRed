@@ -7,10 +7,10 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'Apple Vision Pro App Development | Canada',
-  description: 'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds spatial computing apps for Apple Vision Pro from Toronto, Canada.',
+  description: 'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds spatial computing apps for Apple Vision Pro from Edmonton, Canada.',
   openGraph: {
     title: 'Apple Vision Pro App Development | Mapletech Labs',
-    description: 'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds immersive spatial computing apps for Apple Vision Pro from Toronto, Canada',
+    description: 'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds immersive spatial computing apps for Apple Vision Pro from Edmonton, Canada.',
     url: 'https://mapletechlabs.ca/services/ar-vr/apple-vision-pro',
     type: 'website',
   },
@@ -26,8 +26,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Apple Vision Pro App Development | Canada'}
-        description={'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds spatial computing apps for Apple Vision Pro from Toronto, Canada.'}
+        name={'Apple Vision Pro App Development'}
+        description={'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds spatial computing apps for Apple Vision Pro from Edmonton, Canada.'}
         url={'https://mapletechlabs.ca/services/ar-vr/apple-vision-pro'}
       />
       <PageClient />

@@ -7,7 +7,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
-  title: seoTitle('Kubernetes & Docker Services | Toronto, Canada'),
+  title: seoTitle('Kubernetes & Docker Consulting in Canada'),
   description: 'Production-grade Kubernetes & Docker by Mapletech Labs. EKS, GKE, AKS setup, Helm charts and container security. 60+ K8s clusters deployed in Canada.',
   openGraph: {
     title: 'Kubernetes & Docker Services | Mapletech Labs',
@@ -27,7 +27,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Kubernetes & Docker Services | Toronto, Canada'}
+        name={'Kubernetes & Docker Services'}
         description={'Production-grade Kubernetes and Docker by Mapletech Labs. EKS, GKE, AKS cluster setup, Helm charts, and container security. 60+ K8s clusters deployed in Canada.'}
         url={'https://mapletechlabs.ca/services/cloud-devops/kubernetes-docker'}
       />
