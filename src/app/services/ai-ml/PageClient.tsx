@@ -147,7 +147,13 @@ export default function PageClient() {
               <li>A measurable business outcome, such as reduced handling time, with a baseline.</li>
             </ul>
             <p className="lede">Not sure where AI fits yet? Our <Link href="/services/ai-consulting">AI consulting services</Link> help you pick the right use cases, check your data readiness and decide whether to build or buy before any development starts.</p>
-            <p className="lede">Toronto businesses can see local use cases, privacy considerations and FAQs on our <Link href="/locations/ai-development-company-in-toronto">AI development company in Toronto</Link> page.</p>
+            <p className="lede">Mapletech Labs is based in Edmonton and builds AI models, LLM-powered products and automation for businesses across Canada. See local use cases, privacy considerations and FAQs for your city:</p>
+            <ul className="lede" style={{ paddingLeft: 24, margin: 0 }}>
+              <li style={{ marginBottom: 8 }}><Link href="/locations/ai-development-company-in-edmonton">AI development company in Edmonton</Link>: our home city, with in-person discovery workshops available.</li>
+              <li style={{ marginBottom: 8 }}><Link href="/locations/ai-development-company-in-calgary">AI development company in Calgary</Link>: local AI projects supported remotely or on site.</li>
+              <li style={{ marginBottom: 8 }}><Link href="/locations/ai-development-company-in-toronto">AI development company in Toronto</Link>: local use cases, privacy considerations and FAQs for Toronto businesses.</li>
+              <li style={{ marginBottom: 8 }}><Link href="/locations/ai-development-company-in-vancouver">AI development company in Vancouver</Link>: AI development for Vancouver businesses, delivered remotely or on site.</li>
+            </ul>
             <p className="lede"><Link href="/contact">Discuss your AI project approach and acceptance criteria</Link>.</p>
           </div>
         </section>

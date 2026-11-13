@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import ServiceCityLinks from '@/components/page/ServiceCityLinks';
 import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
@@ -105,6 +106,7 @@ export default function PageClient() {
       industries={industries}
       faqs={faqs}
       buyerContent={(
+        <>
         <section style={{ padding: 'var(--section-y-sm) 0' }}>
           <div className="cb-container">
             <h2>Choose the right web development approach</h2>
@@ -129,6 +131,18 @@ export default function PageClient() {
             <p className="lede" style={{ marginTop: 24 }}>Compare the factors behind budgets in our <Link href="/blog/website-cost-canada">Canadian website cost guide</Link>, then <Link href="/contact">contact us to discuss your web development scope</Link>. Planning a project in the Alberta capital? See our <Link href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</Link> page.</p>
           </div>
         </section>
+        <ServiceCityLinks
+          id="web-dev-cities"
+          heading="Web development in Edmonton, Calgary, Toronto and Vancouver"
+          intro="Mapletech Labs is based in Edmonton and builds websites, web apps and portals for businesses across Canada. See local pricing, process and FAQs for your city:"
+          links={[
+            { href: '/locations/web-development-company-in-edmonton', label: 'Web development company in Edmonton', note: 'our home city, with in-person discovery workshops available' },
+            { href: '/locations/web-development-company-in-calgary', label: 'Web development company in Calgary', note: 'local web projects supported remotely or on site' },
+            { href: '/locations/web-development-company-in-toronto', label: 'Web development company in Toronto', note: 'web development for Toronto businesses, delivered remotely or on site' },
+            { href: '/locations/web-development-company-in-vancouver', label: 'Web development company in Vancouver', note: 'web development for Vancouver businesses, delivered remotely or on site' },
+          ]}
+        />
+        </>
       )}
     />
   );
