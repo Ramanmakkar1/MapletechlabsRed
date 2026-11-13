@@ -59,6 +59,7 @@ export const serviceCategories = [
       { label: 'Computer Vision', href: '/services/ai-ml/computer-vision' },
       { label: 'Predictive Analytics', href: '/services/ai-ml/predictive-analytics' },
       { label: 'AI Chatbots', href: '/services/ai-ml/ai-chatbots' },
+      { label: 'AI Consulting', href: '/services/ai-consulting' },
     ],
   },
   {
