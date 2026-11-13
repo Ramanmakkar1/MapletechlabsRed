@@ -2,13 +2,18 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Custom Web Development Company in Canada';
+const DESCRIPTION = 'Custom web development company in Canada: React, Next.js and Node.js web apps, fixed-price projects and 150+ apps shipped. Get a free quote from our team.';
 
 export const metadata: Metadata = {
-  title: 'Custom Web Development Company in Canada',
-  description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. Fixed-price projects. 150+ apps shipped across Canada. Get a free quote today.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Custom Web Development Company in Canada | Mapletech Labs',
-    description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. Fixed-price projects. 150+ apps shipped across Canada. Get a free quote today.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/web-development',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = serviceHubSchema({
   slug: 'web-development',
   name: 'Web Development Services',
   serviceType: 'Web Development',
-  description: 'Custom web development by Mapletech Labs. React, Next.js & Node.js experts. Fixed-price projects. 150+ apps shipped across Canada.',
+  description: DESCRIPTION,
 });
 
 const breadcrumbSchema = {

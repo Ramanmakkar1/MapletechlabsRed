@@ -2,13 +2,18 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'SaaS Development Company in Canada';
+const DESCRIPTION = 'SaaS development company in Canada: MVP launch, multi-tenant architecture, subscription billing and SSO for startups. Book a free strategy call.';
 
 export const metadata: Metadata = {
-  title: 'SaaS Development Company in Canada',
-  description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture & billing systems for startups in Canada. Book a free strategy call.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'SaaS Development Company in Canada | Mapletech Labs',
-    description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture & billing systems for startups in Canada. Book a free strategy call.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/saas-development',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = serviceHubSchema({
   slug: 'saas-development',
   name: 'SaaS Development Services',
   serviceType: 'SaaS Development',
-  description: 'End-to-end SaaS development by Mapletech Labs. MVP launch, multi-tenant architecture & billing systems for startups in Canada.',
+  description: DESCRIPTION,
 });
 
 const breadcrumbSchema = {

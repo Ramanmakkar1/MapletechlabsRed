@@ -2,13 +2,18 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'AI & ML Development Company in Canada';
+const DESCRIPTION = 'AI development company in Canada: custom LLM apps, AI chatbots, automation, computer vision and predictive models, with 50+ AI products shipped.';
 
 export const metadata: Metadata = {
-  title: 'AI & ML Development Company in Canada',
-  description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada. Request a free proposal.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'AI & ML Development Company in Canada | Mapletech Labs',
-    description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada. Request a free proposal.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/ai-ml',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = serviceHubSchema({
   slug: 'ai-ml',
   name: 'AI & Machine Learning Services',
   serviceType: 'AI Development',
-  description: 'Custom AI & ML solutions by Mapletech Labs. LLM integration, computer vision & predictive analytics for enterprises in Canada.',
+  description: DESCRIPTION,
 });
 
 const breadcrumbSchema = {

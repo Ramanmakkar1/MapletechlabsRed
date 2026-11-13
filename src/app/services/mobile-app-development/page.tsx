@@ -2,13 +2,18 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Mobile App Development Company in Canada';
+const DESCRIPTION = 'Mobile app development company in Canada: iOS, Android, Flutter and React Native apps from an Edmonton team, with 300+ apps shipped. Free consultation.';
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development Company in Canada',
-  description: 'iOS, Android, Flutter & React Native app development by Mapletech Labs. 300+ apps shipped across Canada. Get a free consultation for your project today.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Mobile App Development Company in Canada | Mapletech Labs',
-    description: 'iOS, Android, Flutter & React Native app development by Mapletech Labs. 300+ apps shipped across Canada. Get a free consultation for your project today.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/mobile-app-development',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = serviceHubSchema({
   slug: 'mobile-app-development',
   name: 'Mobile App Development',
   serviceType: 'Mobile App Development',
-  description: 'iOS, Android, Flutter & React Native app development by Mapletech Labs. 300+ apps shipped across Canada. Get a free consultation for your project today.',
+  description: DESCRIPTION,
 });
 
 const breadcrumbSchema = {
