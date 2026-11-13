@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
+
+const TITLE = 'Hyper-Casual Game Development Services';
+const DESCRIPTION = 'Hyper-casual game development in Canada: 3-day prototypes to CPI-validated launches. 40+ games shipped, 50M+ downloads, from our Edmonton head office.';
 
 export const metadata: Metadata = {
-  title: 'Hyper-Casual Game Development Services',
-  description: 'We build and publish hyper-casual games fast — from 3-day prototypes to CPI-validated launches. 50M+ downloads shipped by our Toronto-based game studio.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Hyper-Casual Game Development | Mapletech Labs',
-    description: 'We build and publish hyper-casual games fast — from 3-day prototypes to CPI-validated launches. 40+ games shipped with 50M+ downloads from Toronto.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/game-development/hyper-casual-games',
     type: 'website',
   },
@@ -26,8 +31,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Hyper-Casual Game Development Services'}
-        description={'We build and publish hyper-casual games fast — from 3-day prototypes to CPI-validated launches. 50M+ downloads shipped by our Toronto-based game studio.'}
+        name={TITLE}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/game-development/hyper-casual-games'}
       />
       <PageClient />
