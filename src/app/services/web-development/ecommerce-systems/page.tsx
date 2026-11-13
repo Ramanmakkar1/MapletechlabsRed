@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const DESCRIPTION = 'Custom e-commerce stores built to convert and scale. Shopify, headless commerce, and Next.js storefronts by Edmonton-based Mapletech Labs. 80+ stores launched for Toronto and Canada-wide teams.';
+
 export const metadata: Metadata = {
   title: 'E-Commerce Development Services | Canada',
-  description: 'Custom e-commerce stores built to convert and scale. Shopify, headless commerce, and Next.js storefronts by Mapletech Labs in Toronto. 80+ stores launched.',
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: 'E-Commerce Development Services | Mapletech Labs',
     description: 'High-converting online stores with Shopify, headless commerce, and custom Next.js storefronts. $50M+ GMV processed.',
@@ -27,7 +30,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'E-Commerce Development Services | Canada'}
-        description={'Custom e-commerce stores built to convert and scale. Shopify, headless commerce, and Next.js storefronts by Mapletech Labs in Toronto. 80+ stores launched.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/web-development/ecommerce-systems'}
       />
       <PageClient />
