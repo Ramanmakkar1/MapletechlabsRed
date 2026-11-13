@@ -3,6 +3,7 @@ import FAQPageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import { FAQ_JSON_LD } from '@/data/faq-categories';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 const TITLE = 'FAQ: Custom Software Projects in Canada';
 const DESCRIPTION = 'Get answers to common questions about working with Mapletech Labs: pricing, timelines, tech stack, IP ownership, post-launch support and NDAs.';
@@ -32,6 +33,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
       />
+      <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: 'https://mapletechlabs.ca' }, { position: 2, name: 'FAQ', item: 'https://mapletechlabs.ca/faq' }]} />
       <FAQPageClient />
     </>
   );

@@ -3,6 +3,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { PRIORITY_SERVICES, serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const dynamic = 'force-static';
 
@@ -38,6 +39,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesByCityJsonLd).replace(/</g, '\\u003c') }} />
+      <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: 'https://mapletechlabs.ca' }, { position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' }]} />
       <PageClient />
     </>
   );

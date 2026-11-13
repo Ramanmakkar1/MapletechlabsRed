@@ -75,6 +75,7 @@ export default async function CityServicePage({ params }: PageProps) {
     {
       position: servicePageExists ? 4 : 3,
       name: `${data.serviceName} in ${data.cityName}`,
+      item: data.canonicalUrl,
     },
   ];
 
