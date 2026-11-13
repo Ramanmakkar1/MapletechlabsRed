@@ -122,10 +122,6 @@ export default async function ServiceCityPage({ params }: PageProps) {
         serviceType: isAgencyPage ? agencyServiceTypes : [combo.label],
       }),
       {
-        '@type': 'FAQPage',
-        mainEntity: data.faqs.map(faq => ({ '@type': 'Question', name: faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.a } })),
-      },
-      {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
