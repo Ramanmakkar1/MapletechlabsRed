@@ -393,6 +393,9 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
                     Hiring a separate design partner too? Our guide to the <Link href="/blog/ui-ux-design-companies-canada" style={{ color: 'var(--brand)' }}>best UI/UX design companies in Canada</Link> covers costs, a checklist and the red flags to watch for.
                   </p>
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
+                    Comparing us too? See our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>custom software and web development services</Link>, <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link> and <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link>, or meet our local teams for <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>software development in Edmonton</Link>, <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)' }}>Calgary</Link>, <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)' }}>Toronto</Link> and <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)' }}>Vancouver</Link>.
+                  </p>
                 </div>
 
                 {/* Section 6: How Mapletech Labs Stands Apart */}
