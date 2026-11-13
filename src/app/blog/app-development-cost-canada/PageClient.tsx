@@ -619,7 +619,7 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related Articles</p>
+                    }}>Related guides</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{

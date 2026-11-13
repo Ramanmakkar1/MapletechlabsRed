@@ -110,6 +110,8 @@ const contacts = [
 const guides: { label: string; href: string }[] = [
   { label: 'About Mapletech Labs', href: '/about' },
   { label: 'App development cost in Canada', href: '/blog/app-development-cost-canada' },
+  { label: 'Build a SaaS MVP in 8 weeks', href: '/blog/build-saas-mvp-8-weeks' },
+  { label: 'Agentic AI in production', href: '/blog/agentic-ai-in-production' },
   { label: 'Choosing a SaaS development company', href: '/blog/saas-development-company-canada' },
   { label: 'How to choose a software company', href: '/blog/choose-software-development-company-canada' },
   { label: 'Custom software vs off-the-shelf', href: '/blog/custom-software-vs-off-the-shelf' },

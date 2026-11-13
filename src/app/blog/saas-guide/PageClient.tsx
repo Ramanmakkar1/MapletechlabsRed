@@ -407,7 +407,7 @@ export default function SaaSGuide2026Client() {
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related Articles</p>
+                    }}>Related guides</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -473,10 +473,10 @@ export default function SaaSGuide2026Client() {
           </div>
         </section>
 
-        {/* Related Articles */}
+        {/* Related guides */}
         <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related Articles</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related guides</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {[
                 { title: 'SaaS Development Cost in Canada', href: '/blog/saas-development-cost-canada' },

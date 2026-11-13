@@ -307,8 +307,8 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                   </div>
                 </div>
                 {related.length > 0 && (
-                  <nav aria-label="Related articles" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
-                    <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 16px' }}>Related articles</h2>
+                  <nav aria-label="Related guides" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
+                    <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 16px' }}>Related guides</h2>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
                       {related.map(r => (
                         <li key={r.slug}>

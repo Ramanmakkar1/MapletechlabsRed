@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-/* Five high-intent guides, linked from the homepage so crawlers reach the
+/* Six high-intent guides, linked from the homepage so crawlers reach the
    money pages through a strong hub instead of only through the blog index. */
 const guides = [
   {
@@ -12,6 +12,16 @@ const guides = [
     href: '/blog/app-development-cost-canada',
     t: 'App development cost in Canada',
     d: 'What drives the price of an app, with realistic ranges for each build stage.',
+  },
+  {
+    href: '/blog/build-saas-mvp-8-weeks',
+    t: 'How to build a SaaS MVP in 8 weeks',
+    d: 'A practical week-by-week plan for scoping, building and launching a focused SaaS product.',
+  },
+  {
+    href: '/blog/agentic-ai-in-production',
+    t: 'Agentic AI in production: what works',
+    d: 'Where AI agents earn their keep, where they fail and how to deploy them with the right guardrails.',
   },
   {
     href: '/blog/saas-development-company-canada',

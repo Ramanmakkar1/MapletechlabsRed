@@ -517,7 +517,7 @@ export default function FreelancerVsAgencyVsInHouseClient({
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related Articles</p>
+                    }}>Related guides</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {[
                         { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
