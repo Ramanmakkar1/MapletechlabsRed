@@ -5,7 +5,7 @@ import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline } from '
 import { getCityServiceData, serviceCityExtraFaqs } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
-import { localServiceTitle } from '@/lib/seo/title';
+import { localServiceTitle, ogTitle } from '@/lib/seo/title';
 import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import type { ServiceCityLocal } from '@/data/service-city-local';
@@ -17,16 +17,6 @@ interface PageProps {
 // Single-segment /locations/<slug> handles the priority "[service] company in [city]"
 // keyword pages. Static city-landing and province folders take precedence for their
 // own paths; old bare /locations/<city> paths are 301-redirected in next.config.
-// Hand-written CTR copy for combos that earn impressions but few clicks. The
-// exact query leads; the hook (price, timeline) comes from the page's own
-// pricing tiers and FAQ. Titles stay <= 43 chars so the branded title fits 60.
-const META_OVERRIDES: Record<string, { title: string; description: string }> = {
-  'web-development-company-in-edmonton': {
-    title: 'Web Development Edmonton, From $850 CAD',
-    description: 'Web development in Edmonton by Mapletech Labs, headquartered here. Business websites from $850 CAD in 4-8 weeks, plus web apps and portals. Free quote.',
-  },
-};
-
 // Hand-written local copy (title, intro, sections, proof, FAQs) for selected combos.
 // Keep the large hand-written copy catalog out of the route's initial server
 // chunk. The module is loaded only for keyword pages that need local copy, and
@@ -57,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isAgencyPage = combo.slug.startsWith('digital-marketing-agency-in-');
   const headline = isAgencyPage ? 'Digital Marketing Agency' : priorityCompanyHeadline(combo.serviceSlug, combo.label);
   const base = isAgencyPage ? `${headline} in ${data.cityName}` : `${headline} Company in ${data.cityName}`;
-  const override = (await localFor(slug)) ?? META_OVERRIDES[slug];
+  const override = await localFor(slug);
   const title = override?.title ?? (base.length <= 43 ? base : `${combo.label} in ${data.cityName}`);
   const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
   const description = override?.description ?? data.description;
@@ -65,7 +55,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: finalTitle,
     description,
-    openGraph: { title: `${finalTitle} | Mapletech Labs`, description, url, type: 'website' },
+    openGraph: { title: ogTitle(finalTitle), description, url, type: 'website' },
     alternates: { canonical: url },
   };
 }

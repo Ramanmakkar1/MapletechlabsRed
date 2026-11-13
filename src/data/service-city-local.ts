@@ -1130,7 +1130,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'web-development-company-in-edmonton': {
     title: 'Website Development Edmonton | Free Quote',
     description:
-      'Edmonton website developers: Mapletech Labs, a local Edmonton web development company. Website builder services — fast, SEO-ready sites. Free quote.',
+      'Web development in Edmonton by Mapletech Labs, headquartered here. Business websites from $850 CAD, plus web apps, e-commerce and portals. Free quote.',
     answer: 'Mapletech Labs is headquartered in Edmonton and provides web development there, building fast SEO-ready websites, e-commerce stores and web apps for Edmonton companies. You get a fixed scope and price before work starts, senior engineers writing your code, and in-person workshops at your office.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for web development you are working with a local team at our head office, not a sales desk for developers somewhere else. We build fast, SEO-ready business websites, e-commerce stores and web apps for Edmonton companies, public bodies and growing teams across the city. You talk directly to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
     sections: [
