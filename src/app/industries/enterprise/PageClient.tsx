@@ -29,10 +29,10 @@ const whyUs = [
                 { icon: '🤝', title: 'Long-term Partnership', desc: 'We don\'t disappear after launch. Our retainer teams provide ongoing development, support, and strategic guidance as your business evolves.' },
               ];
 const related = [
-  { name: 'Edmonton', href: '/locations/software-development-company-in-edmonton', desc: 'Enterprise Software Development services in Edmonton.' },
-  { name: 'Calgary', href: '/locations/software-development-company-in-calgary', desc: 'Enterprise Software Development services in Calgary.' },
-  { name: 'Toronto', href: '/locations/software-development-company-in-toronto', desc: 'Enterprise Software Development services in Toronto.' },
-  { name: 'Vancouver', href: '/locations/software-development-company-in-vancouver', desc: 'Enterprise Software Development services in Vancouver.' },
+  { name: 'Software Development Company in Edmonton', href: '/locations/software-development-company-in-edmonton', desc: 'Internal tools, portals and integrations from our Edmonton development team.' },
+  { name: 'Software Development Company in Calgary', href: '/locations/software-development-company-in-calgary', desc: 'Internal tools, portals and integrations from our Calgary development team.' },
+  { name: 'Software Development Company in Toronto', href: '/locations/software-development-company-in-toronto', desc: 'Internal tools, portals and integrations from our Toronto development team.' },
+  { name: 'Software Development Company in Vancouver', href: '/locations/software-development-company-in-vancouver', desc: 'Internal tools, portals and integrations from our Vancouver development team.' },
   { name: 'Real estate portal case study', href: '/case-studies/real-estate-portal', desc: 'Explore the project case study.' },
                 { name: 'Web Development', href: '/services/web-development', desc: 'Internal tools, admin dashboards and employee portals built for thousands of concurrent users.' },
                 { name: 'Cloud & DevOps', href: '/services/cloud-devops', desc: 'Enterprise cloud migrations, Kubernetes orchestration and CI/CD pipelines for large teams.' },

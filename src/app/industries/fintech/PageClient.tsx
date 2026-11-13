@@ -29,10 +29,10 @@ const whyUs = [
                 { icon: '📋', title: 'Regulatory Guidance', desc: 'We stay current with PCI-DSS, SOX, MiFID II, and emerging frameworks so your product launches compliant, not scrambling.' },
               ];
 const related = [
-  { name: 'Edmonton', href: serviceCityPath('mobile-app-development', 'edmonton'), desc: 'FinTech Software Development services in Edmonton.' },
-  { name: 'Calgary', href: serviceCityPath('mobile-app-development', 'calgary'), desc: 'FinTech Software Development services in Calgary.' },
-  { name: 'Toronto', href: serviceCityPath('mobile-app-development', 'toronto'), desc: 'FinTech Software Development services in Toronto.' },
-  { name: 'Vancouver', href: serviceCityPath('mobile-app-development', 'vancouver'), desc: 'FinTech Software Development services in Vancouver.' },
+  { name: 'App Development Company in Edmonton', href: serviceCityPath('mobile-app-development', 'edmonton'), desc: 'FinTech, banking and payment apps from our app development team in Edmonton.' },
+  { name: 'App Development Company in Calgary', href: serviceCityPath('mobile-app-development', 'calgary'), desc: 'FinTech, banking and payment apps from our app development team in Calgary.' },
+  { name: 'App Development Company in Toronto', href: serviceCityPath('mobile-app-development', 'toronto'), desc: 'FinTech, banking and payment apps from our app development team in Toronto.' },
+  { name: 'App Development Company in Vancouver', href: serviceCityPath('mobile-app-development', 'vancouver'), desc: 'FinTech, banking and payment apps from our app development team in Vancouver.' },
   { name: 'Payments API case study', href: '/case-studies/payments-api-platform', desc: 'Explore the project case study.' },
                 { name: 'Web Development', href: '/services/web-development', desc: 'High-performance trading dashboards and financial portals built with modern frameworks.' },
                 { name: 'Mobile App Development', href: '/services/mobile-app-development', desc: 'Secure mobile banking and wallet apps with biometric auth and real-time notifications.' },
