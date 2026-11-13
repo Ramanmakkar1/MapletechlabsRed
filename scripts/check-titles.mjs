@@ -87,6 +87,10 @@ const AUDIT_PAGES = [
   "src/app/case-studies/logistics-platform/page.tsx",
   "src/app/services/digital-marketing/seo-services/page.tsx",
 ];
+const EXPECTED_AUDIT_TITLES = new Map([
+  ["src/app/blog/app-development-companies-edmonton/page.tsx", "App Development Companies in Edmonton 2026 | Mapletech Labs"],
+  ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost in Canada: 2026 CAD | Mapletech Labs"],
+]);
 const auditArticlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
 for (const file of AUDIT_PAGES) {
   const src = readFileSync(join(ROOT, file), "utf8");
@@ -102,6 +106,10 @@ for (const file of AUDIT_PAGES) {
     continue;
   }
   const rendered = resolveTitle(title);
+  const expected = EXPECTED_AUDIT_TITLES.get(file);
+  if (expected && rendered !== expected) {
+    problems.push(`${file}: audit title "${rendered}" must remain "${expected}"`);
+  }
   if (rendered.length < 50 || rendered.length > MAX) {
     problems.push(`${file}: audit title "${rendered}" is ${rendered.length} chars (want 50-${MAX})`);
   }
