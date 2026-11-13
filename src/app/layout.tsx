@@ -89,10 +89,11 @@ const organizationSchema = {
   "@type": "Organization",
   "@id": `${siteOrigin()}/#organization`,
   name: "Mapletech Labs",
+  alternateName: ["TML Branding Agency"],
   url: siteOrigin(),
   logo: `${siteOrigin()}/logo.png`,
   description:
-    "Custom software development company founded by Raman Makkar in Edmonton, Canada, with 12 locations across Canada and an experienced remote engineering team.",
+    "Mapletech Labs is a custom software development company founded by Raman Makkar in Edmonton, Alberta in 2018 (formerly TML Branding Agency). Its team of 25+ engineers, designers and strategists has delivered 500+ projects, building web and mobile apps, AI solutions, SaaS platforms, UI/UX design and SEO for clients across Canada, with 12 locations across Canada and an experienced remote engineering team.",
   address: { ...HQ_ADDRESS },
   sameAs: [...BUSINESS.sameAs],
   contactPoint: {
@@ -141,34 +142,52 @@ const organizationSchema = {
     name: "Software Development Services",
     itemListElement: [
       {
-        "@type": "OfferCatalog",
-        name: "Web Development",
-        url: `${siteOrigin()}/services/web-development`,
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Web Development",
+          url: `${siteOrigin()}/services/web-development`,
+        },
       },
       {
-        "@type": "OfferCatalog",
-        name: "Mobile App Development",
-        url: `${siteOrigin()}/services/mobile-app-development`,
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Mobile App Development",
+          url: `${siteOrigin()}/services/mobile-app-development`,
+        },
       },
       {
-        "@type": "OfferCatalog",
-        name: "AI & Machine Learning",
-        url: `${siteOrigin()}/services/ai-ml`,
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AI & Machine Learning",
+          url: `${siteOrigin()}/services/ai-ml`,
+        },
       },
       {
-        "@type": "OfferCatalog",
-        name: "UI/UX Design",
-        url: `${siteOrigin()}/services/product-design`,
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "UI/UX Design",
+          url: `${siteOrigin()}/services/product-design`,
+        },
       },
       {
-        "@type": "OfferCatalog",
-        name: "SaaS Development",
-        url: `${siteOrigin()}/services/saas-development`,
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "SaaS Development",
+          url: `${siteOrigin()}/services/saas-development`,
+        },
       },
       {
-        "@type": "OfferCatalog",
-        name: "SEO & Digital Marketing",
-        url: `${siteOrigin()}/services/digital-marketing`,
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "SEO & Digital Marketing",
+          url: `${siteOrigin()}/services/digital-marketing`,
+        },
       },
     ],
   },
@@ -194,10 +213,9 @@ export default function RootLayout({
       </head>
       <body className={jakarta.variable}>
         <a href="#main-content" className="sr-only-focusable">Skip to main content</a>
-        {/* Organization Schema - defer to avoid blocking render */}
+        {/* Organization Schema */}
         <script
           type="application/ld+json"
-          defer
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}
