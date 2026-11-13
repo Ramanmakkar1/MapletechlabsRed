@@ -1223,7 +1223,7 @@ export const articles: Article[] = [
       { q: 'Does my BC project need Canadian data hosting?', a: 'It depends on the project. Health and public-sector work in British Columbia often comes with rules on where personal information is stored and accessed, including FIPPA obligations for public bodies. Confirm your requirements early and make sure the partner can host in Canada if needed.' },
       { q: 'How long does a software project take in Vancouver?', a: 'As approximate Canadian ranges, a marketing website takes about 4 to 8 weeks, an e-commerce platform 8 to 16 weeks, a mobile app 12 to 24 weeks, a SaaS MVP 16 to 28 weeks, and an enterprise system 24 to 52 weeks.' },
     ],
-    cta: { href: '/services/web-development', label: 'Explore our web development services' },
+    cta: { href: '/locations/software-development-company-in-vancouver', label: 'See our Vancouver software development services' },
   },
   {
     slug: 'software-development-companies-ottawa',
@@ -1321,7 +1321,7 @@ export const articles: Article[] = [
       { q: 'Does my Ottawa project need to be bilingual and accessible?', a: 'Federal institutions publish in English and French and expect websites to meet WCAG 2.1 AA. Private businesses are not always required to, but many Ottawa and Gatineau companies serve both language groups, and accessibility helps every user. Building both in from the start costs much less than adding them later.' },
       { q: 'Can SR&ED tax credits help pay for software development?', a: 'Possibly. Work that resolves real technical uncertainty may qualify for the federal SR&ED tax credit, and eligible Ontario companies may also claim provincial credits. Routine development usually does not qualify, so keep good records of the technical problems you solve.' },
     ],
-    cta: { href: '/services/web-development', label: 'Explore our web development services' },
+    cta: { href: '/locations/software-development-company-in-ottawa', label: 'See our Ottawa software development services' },
   },
   {
     slug: 'software-development-companies-montreal',
@@ -1429,7 +1429,7 @@ export const articles: Article[] = [
       { q: 'Do I need a software company with an office in Montreal?', a: 'Not always. A local team makes in-person sessions easier and may work in French every day. A Canadian team elsewhere can deliver the same work remotely if it handles French content well and understands Quebec rules. Focus on time-zone overlap, a named senior contact and clear communication.' },
       { q: 'Can SR&ED and Quebec tax credits help pay for software development?', a: 'Possibly. Work that resolves real technical uncertainty may qualify for the federal SR&ED tax credit, and Quebec offers its own credits for eligible research and development. Routine development usually does not qualify, and the rules change, so check current programs with an accountant and keep good records of the technical problems you solve.' },
     ],
-    cta: { href: '/services/web-development', label: 'Explore our web development services' },
+    cta: { href: '/locations/software-development-company-in-montreal', label: 'See our Montreal software development services' },
   },
   {
     slug: 'nrc-irap-funding-software-canada',
@@ -2065,7 +2065,7 @@ export const articles: Article[] = [
       { q: 'Does my Ontario software need to be accessible?', a: 'If your organization is in the public sector, or is a business or non-profit with 50 or more employees in Ontario, AODA generally requires your websites and web content to meet WCAG 2.0 Level AA. Smaller businesses may not be required to, but accessibility helps every user and is far cheaper to build in from the start.' },
       { q: 'Which privacy law applies to my Toronto app?', a: 'Most private-sector businesses in Ontario follow the federal PIPEDA when they collect personal information in commercial activity. If your app handles personal health information for health information custodians, Ontario’s PHIPA also applies. Confirm the details with a privacy professional before the build.' },
     ],
-    cta: { href: '/services/web-development', label: 'Explore our web development services' },
+    cta: { href: '/locations/software-development-company-in-toronto', label: 'See our Toronto software development services' },
   },
   {
     slug: 'software-development-contract-canada',
@@ -2395,12 +2395,12 @@ export const articles: Article[] = [
       { q: 'Who owns the code when the project finishes?', a: 'You should. The contract should assign custom work, designs and deliverables to your business on payment, with repositories and cloud accounts in your name. Avoid setups where the vendor keeps the keys.' },
       { q: 'How long does a custom software project take?', a: 'Timelines depend on scope. A marketing site may take four to eight weeks; a dual-platform mobile app often takes twelve to twenty-four weeks; a SaaS MVP or enterprise system can run many months. A credible partner explains the timeline after discovery, not before.' },
     ],
-    cta: { href: '/services/web-development', label: 'Explore our web development services' },
+    cta: { href: '/locations/software-development-company-in-edmonton', label: 'See our Edmonton software development services' },
   },
   {
     slug: 'seo-companies-edmonton',
     relatedTopic: 'seo',
-    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
+    relatedService: { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
     category: 'Business',
     title: 'SEO Companies in Edmonton: How to Choose One (2026)',
     dek: 'A buyer’s guide for Edmonton businesses hiring an SEO company: what local SEO should cover, what a good agency does in the first 90 days, typical Canadian pricing, the red flags to avoid and the questions to ask before you sign.',
@@ -2498,7 +2498,7 @@ export const articles: Article[] = [
       { q: 'Should I choose local SEO or Google Ads?', a: 'Google Ads brings traffic as soon as campaigns go live but stops when you stop paying. Local SEO takes longer to build but keeps bringing map-pack and organic traffic without a cost per click. Many Edmonton businesses run ads while SEO builds, then shift budget as organic leads grow.' },
       { q: 'Do I need separate pages for St. Albert, Sherwood Park and Spruce Grove?', a: 'If you genuinely serve those areas and customers search for them, a useful page for each area can help you rank there. Each page should say something specific about the work you do in that area, not repeat the same text with the town name swapped.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: serviceCityPath('digital-marketing', 'edmonton'), label: 'See our Edmonton SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'edmonton' },
   },
   {
@@ -2617,7 +2617,7 @@ export const articles: Article[] = [
       { q: 'Should I start with Google Ads or SEO?', a: 'If you need leads quickly, are launching something new or face seasonal demand, start with Google Ads. If you plan to serve the same market for years and buyers research before calling, invest in SEO. Many Edmonton businesses run ads while SEO builds.' },
       { q: 'Do I need marketing for St. Albert, Sherwood Park and Spruce Grove separately?', a: 'If you genuinely serve those communities, yes. Each is its own search and ad audience. Useful area pages and location targeting help you appear there, as long as each page says something specific rather than repeating the same text with the town name swapped.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: '/locations/digital-marketing-agency-in-edmonton', label: 'See our Edmonton digital marketing agency' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'edmonton' },
   },
   {
@@ -2735,7 +2735,7 @@ export const articles: Article[] = [
       { q: 'Should I build native, cross-platform or a PWA?', a: 'Cross-platform (Flutter or React Native) suits most business, SaaS and government-facing apps because one codebase serves both stores. Native suits heavy hardware or performance needs. A PWA suits internal tools and simple citizen flows that do not need an app store.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+    cta: { href: serviceCityPath('mobile-app-development', 'ottawa'), label: 'See our Ottawa app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'ottawa' },
   },
   {
@@ -2871,7 +2871,7 @@ export const articles: Article[] = [
       { q: 'Who should own our ad accounts, analytics and Google Business Profile?', a: 'Your business should own them, with the agency added as a user. That keeps your campaign history, analytics and reviews with you if you change agencies or bring the work in-house.' },
       { q: 'Can an agency guarantee first-page rankings or a set number of leads?', a: 'No. Nobody controls Google, Bing or Meta results. Treat a guarantee as a warning sign and ask instead what work will be completed each month, how leads will be tracked and what the agency will change if results are flat.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: '/locations/digital-marketing-agency-in-ottawa', label: 'See our Ottawa digital marketing agency' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'ottawa' },
   },
   {
@@ -2968,7 +2968,7 @@ export const articles: Article[] = [
       { q: 'Should energy or industrial firms use social media?', a: 'LinkedIn can help keep an industrial or engineering firm visible to buyers and recruits, but it rarely replaces strong service pages, technical proof and search visibility for the services procurement teams look up.' },
       { q: 'What should a digital marketing proposal include?', a: 'A diagnosis of your current position, a channel plan with reasons, named monthly deliverables, agency fees shown separately from ad spend, a tracking plan, confirmation that accounts are in your name, and clear contract and notice terms.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: '/locations/digital-marketing-agency-in-calgary', label: 'See our Calgary digital marketing agency' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'calgary' },
   },
   {
@@ -3064,7 +3064,7 @@ export const articles: Article[] = [
       { q: 'Can an agency guarantee Google rankings?', a: 'No. Nobody controls Google or Bing results. A ranking guarantee is a red flag. Ask what work will be done each month and how leads and traffic will be reported instead.' },
       { q: 'How long should a Toronto marketing contract be?', a: 'Many businesses prefer month-to-month terms or a short initial term with a reasonable notice period. Long lock-ins with heavy cancellation penalties remove the agency’s reason to keep earning your business.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: '/locations/digital-marketing-agency-in-toronto', label: 'See our Toronto digital marketing agency' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'toronto' },
   },
   {
@@ -3161,7 +3161,7 @@ export const articles: Article[] = [
       { q: 'Who should own the photos and videos an agency creates?', a: 'Your business should, unless the contract clearly says otherwise. Confirm creative ownership and licensing in writing before work starts, along with ownership of ad, analytics and profile accounts.' },
       { q: 'Can an agency guarantee results?', a: 'No agency can guarantee rankings or lead numbers, because nobody controls Google, Bing or Meta. Look instead for a clear plan, honest expectations and reporting that ties work to enquiries and sales.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: '/locations/digital-marketing-agency-in-vancouver', label: 'See our Vancouver digital marketing agency' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'vancouver' },
   },
   {
@@ -3283,7 +3283,7 @@ export const articles: Article[] = [
       { q: 'Which privacy laws apply to an app built in Edmonton?', a: 'Alberta\'s Personal Information Protection Act (PIPA) covers personal information handled by private organisations in Alberta, and PIPEDA applies to commercial activity across provinces and borders. Your app should collect only what it needs, get clear consent and secure the data.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+    cta: { href: serviceCityPath('mobile-app-development', 'edmonton'), label: 'See our Edmonton app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'edmonton' },
   },
   {
@@ -3389,7 +3389,7 @@ export const articles: Article[] = [
       { q: 'Which privacy laws apply to an app built in Calgary?', a: 'Alberta’s Personal Information Protection Act (PIPA) covers personal information handled by private organisations in Alberta, and PIPEDA applies to commercial activity across provinces and borders. Your app should collect only what it needs, get clear consent and secure the data.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+    cta: { href: serviceCityPath('mobile-app-development', 'calgary'), label: 'See our Calgary app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'calgary' },
   },
   {
@@ -3748,13 +3748,13 @@ export const articles: Article[] = [
       { q: 'Should I build native, cross-platform or a PWA?', a: 'Cross-platform (Flutter or React Native) suits most business and customer apps because one codebase serves both stores. Native suits heavy hardware or performance needs. A PWA suits internal tools and simple flows that do not need an app store.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+    cta: { href: serviceCityPath('mobile-app-development', 'toronto'), label: 'See our Toronto app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'toronto' },
   },
   {
     slug: 'seo-companies-calgary',
     relatedTopic: 'seo',
-    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
+    relatedService: { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
     category: 'Business',
     title: 'SEO Companies in Calgary: A Buyer’s Guide (2026)',
     dek: 'A buyer’s guide for Calgary businesses hiring an SEO company: map-pack work for trades and clinics, separate searches in Airdrie, Cochrane, Okotoks and Chestermere, technical B2B searches, the first 90 days, Canadian pricing, AI-answer visibility, red flags and ten questions to ask.',
@@ -3857,7 +3857,7 @@ export const articles: Article[] = [
       { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and where, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
       { q: 'Should I choose SEO or Google Ads?', a: 'Google Ads brings traffic as soon as campaigns go live but stops when you stop paying. SEO takes longer but keeps bringing traffic without a cost per click. Many Calgary businesses run ads while SEO builds, then shift budget as organic leads grow.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: serviceCityPath('digital-marketing', 'calgary'), label: 'See our Calgary SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'calgary' },
   },
   {
@@ -3958,7 +3958,7 @@ export const articles: Article[] = [
       { q: 'Can our AI data stay in Canada?', a: 'Yes, with the right architecture. A credible vendor should offer Canadian cloud regions for your application and document store, and configure model providers so your content is not used for training. Your compliance team should sign off on the final design.' },
       { q: 'Who owns the AI system when the project finishes?', a: 'You should. The contract should assign source code, prompts, configuration and cloud accounts to your business on payment, with no lock-in. You can keep working with the same partner after launch or hand everything to your own team.' },
     ],
-    cta: { href: '/services/ai-ml', label: 'Explore our AI & ML development services' },
+    cta: { href: serviceCityPath('ai-ml', 'toronto'), label: 'See our Toronto AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'toronto' },
   },
   {
@@ -4066,7 +4066,7 @@ export const articles: Article[] = [
       { q: 'Can our AI data stay in Canada?', a: 'Yes, with the right architecture. A credible vendor can host your AI system, document store and logs in Canadian cloud regions and configure model providers so your data is not used for training. Your compliance team should sign off on the final design.' },
       { q: 'Can SR&ED or IRAP help pay for an AI project?', a: 'Sometimes. Work that resolves genuine technical uncertainty may qualify for SR&ED tax credits, and NRC IRAP can fund part of some innovation projects. Routine chatbot configuration usually does not qualify. Keep technical records from the start and check eligibility with the programs and your accountant.' },
     ],
-    cta: { href: '/services/ai-ml', label: 'Explore our AI & ML development services' },
+    cta: { href: serviceCityPath('ai-ml', 'edmonton'), label: 'See our Edmonton AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'edmonton' },
   },
   {
@@ -4358,7 +4358,7 @@ export const articles: Article[] = [
       { q: 'Who owns the design files when the project ends?', a: 'You should. The contract should hand over editable Figma files, clickable prototypes, the component library, design tokens, research findings and usability notes with no lock-in. If you have an in-house team, a working session at handoff helps them extend the system after launch.' },
       { q: 'Should the same company design and build my Toronto product?', a: 'It often helps. Mapletech Labs designs and builds on one team, so the design system maps to real components and edge cases are settled with the engineers who will code them. If you use separate vendors, insist on annotated specs and a designer who stays available during the build.' },
     ],
-    cta: { href: '/services/product-design', label: 'Explore our UI/UX design services' },
+    cta: { href: serviceCityPath('product-design', 'toronto'), label: 'See our Toronto UI/UX design services' },
     enquiryContext: { serviceSlug: 'product-design', citySlug: 'toronto' },
   },
   {
@@ -4469,7 +4469,7 @@ export const articles: Article[] = [
       { q: 'Who owns the design files after the project?', a: 'You should. Your contract should hand over editable design files, prototypes, the component library, design tokens and research findings when the project ends, with no lock-in.' },
       { q: 'Should I hire a design-only studio or a team that also builds?', a: 'If you have strong in-house engineers, a design-only studio can work well with a detailed handover. If you need the product built too, a design-and-build team keeps designers and engineers on the same project, which reduces gaps between the design and the final software.' },
     ],
-    cta: { href: '/services/product-design', label: 'Explore our UI/UX design services' },
+    cta: { href: serviceCityPath('product-design', 'vancouver'), label: 'See our Vancouver UI/UX design services' },
     enquiryContext: { serviceSlug: 'product-design', citySlug: 'vancouver' },
   },
   {
@@ -4925,13 +4925,13 @@ export const articles: Article[] = [
       { q: 'Will a new site hurt my Google rankings?', a: 'Not if migration is planned. Audit URLs that earn traffic today, map them to the new structure, use 301 redirects where URLs change, keep titles and headings where they still match search intent, and launch from staging after technical and content review.' },
       { q: 'Who owns the website when the project finishes?', a: 'You should. The contract should assign source code, design files, the domain and CMS access to your business on payment, with no lock-in. Analytics and Search Console should stay in your name throughout the project.' },
     ],
-    cta: { href: '/services/web-development', label: 'Explore our web development services' },
+    cta: { href: serviceCityPath('web-development', 'edmonton'), label: 'See our Edmonton web development services' },
     enquiryContext: { serviceSlug: 'web-development', citySlug: 'edmonton' },
   },
   {
     slug: 'seo-companies-toronto',
     relatedTopic: 'seo',
-    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
+    relatedService: { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
     category: 'Business',
     title: 'SEO Companies in Toronto: How to Choose One (2026)',
     dek: 'A buyer’s guide for Toronto and GTA businesses hiring an SEO company: downtown vs suburb searches, Google Business Profile and the map pack, technical SEO, content and links, the first 90 days, Canadian pricing in CAD, AI-answer visibility, red flags and ten questions to ask.',
@@ -5041,13 +5041,13 @@ export const articles: Article[] = [
       { q: 'Can we rank in the Toronto map pack without a downtown address?', a: 'Yes, if the address and service area are real. You need either a staffed address in the area or a genuine service-area setup. Google removes or down-ranks profiles built on virtual offices and fake addresses.' },
       { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and where you serve in the GTA, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: serviceCityPath('digital-marketing', 'toronto'), label: 'See our Toronto SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'toronto' },
   },
   {
     slug: 'seo-companies-vancouver',
     relatedTopic: 'seo',
-    relatedService: { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
+    relatedService: { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
     category: 'Business',
     title: 'SEO Companies in Vancouver: How to Choose One (2026)',
     dek: 'A buyer’s guide for Vancouver and Lower Mainland businesses hiring an SEO company: the Metro Vancouver map pack, Burnaby, Surrey, Richmond and North Vancouver searches, multilingual SEO, the first 90 days, Canadian pricing in CAD, AI-answer visibility, red flags and ten questions to ask.',
@@ -5158,7 +5158,7 @@ export const articles: Article[] = [
       { q: 'How long until Vancouver SEO shows results?', a: 'Profile and technical fixes usually show movement within 8 to 16 weeks for a site without serious blockers. Competitive category terms such as SaaS comparisons, real estate or tourism more often need 4 to 9 months before the trend is worth judging.' },
       { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and which Lower Mainland cities you serve, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
     ],
-    cta: { href: '/services/digital-marketing', label: 'Explore our digital marketing services' },
+    cta: { href: serviceCityPath('digital-marketing', 'vancouver'), label: 'See our Vancouver SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'vancouver' },
   },
   {
