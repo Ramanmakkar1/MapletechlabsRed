@@ -1,5 +1,6 @@
 import { BLOG_AUTHOR } from '@/lib/seo/business';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
 import { getArticle, getRelatedArticles } from '@/data/articles';
@@ -46,7 +47,13 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'app-development-companies-calgary')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="calgary" cityName="Calgary" />} />
+      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="calgary" cityName="Calgary" />} extraBlock={
+        <p style={{ marginTop: 24, lineHeight: 1.7 }}>
+          Need a team to build it? See our{' '}
+          <Link href="/services/mobile-app-development/calgary">mobile app development in Calgary</Link>{' '}
+          page for iOS, Android and Flutter builds, our process, CAD pricing and case studies.
+        </p>
+      } />
     </>
   );
 }

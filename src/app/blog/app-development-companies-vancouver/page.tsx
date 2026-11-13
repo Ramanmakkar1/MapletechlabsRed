@@ -50,8 +50,8 @@ export default function Page() {
       <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="vancouver" cityName="Vancouver" />} extraBlock={
         <p style={{ marginTop: 24, lineHeight: 1.7 }}>
           Need a team to build it? See our{' '}
-          <Link href="/services/mobile-app-development/vancouver">mobile app development company in Vancouver</Link>{' '}
-          page for platforms, process, CAD pricing and case studies.
+          <Link href="/services/mobile-app-development/vancouver">mobile app development in Vancouver</Link>{' '}
+          page for iOS, Android and Flutter builds, our process, CAD pricing and case studies.
         </p>
       } />
     </>
