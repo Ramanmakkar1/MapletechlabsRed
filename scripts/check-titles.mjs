@@ -15,7 +15,7 @@ import { join, relative, sep } from "node:path";
 import { register } from "node:module";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import assert from "node:assert/strict";
-import { seoTitle } from "../src/lib/seo/title.ts";
+import { ogTitle, seoTitle } from "../src/lib/seo/title.ts";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const BRAND = " | Mapletech Labs";
@@ -96,14 +96,18 @@ const EXPECTED_AUDIT_TITLES = new Map([
   ["src/app/services/digital-marketing/seo-services/page.tsx", "SEO Services in Canada: Technical and Local | Mapletech Labs"],
 ]);
 const auditArticlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
+function articleMetaTitle(slug) {
+  const block = auditArticlesSrc.match(new RegExp(`slug: '${slug}'[\\s\\S]*?metaTitle: ('(?:[^'\\\\]|\\\\.)*')`));
+  return block?.[1] && block[1].slice(1, -1).replace(/\\'/g, "'");
+}
 for (const file of AUDIT_PAGES) {
   const src = readFileSync(join(ROOT, file), "utf8");
+  const slug = file.split(/[\\/]/).at(-2);
   const m = src.match(/^  title: (.+),$/m);
   let title = m && parseTitle(m[1], src);
   if (!title && m?.[1] === "seoTitle(a.metaTitle)") {
-    const slug = file.split(/[\\/]/).at(-2);
-    const block = auditArticlesSrc.match(new RegExp(`slug: '${slug}'[\\s\\S]*?metaTitle: ('(?:[^'\\\\]|\\\\.)*')`));
-    if (block) title = parseTitle(`seoTitle(${block[1]})`, "");
+    const metaTitle = articleMetaTitle(slug);
+    if (metaTitle) title = parseTitle(`seoTitle('${metaTitle}')`, "");
   }
   if (!title) {
     problems.push(`${file}: audit page title could not be resolved`);
@@ -119,6 +123,32 @@ for (const file of AUDIT_PAGES) {
   }
   if ((rendered.match(/Mapletech Labs/gi) || []).length !== 1) {
     problems.push(`${file}: audit title must name the brand once`);
+  }
+
+  // Open Graph titles are emitted independently of metadata.title; they must
+  // stay within the same 60-character limit and carry the brand once.
+  const ogExpr = src.match(/openGraph:\s*\{[\s\S]*?title: ogTitle\((.+?)\),/)?.[1];
+  let ogBase;
+  if (ogExpr === "TITLE") {
+    ogBase = src.match(/^const TITLE = '((?:[^'\\]|\\.)*)';$/m)?.[1];
+  } else if (ogExpr === "a.metaTitle") {
+    ogBase = articleMetaTitle(slug);
+  } else if (ogExpr?.match(/^'((?:[^'\\]|\\.)*)'$/)) {
+    ogBase = ogExpr.slice(1, -1);
+  }
+  if (ogBase === undefined) {
+    problems.push(`${file}: audit page openGraph.title could not be resolved`);
+  } else {
+    const ogRendered = ogTitle(ogBase.replace(/\\'/g, "'"));
+    if (expected && ogRendered !== expected) {
+      problems.push(`${file}: audit openGraph.title "${ogRendered}" must remain "${expected}"`);
+    }
+    if (ogRendered.length > MAX) {
+      problems.push(`${file}: audit openGraph.title "${ogRendered}" is ${ogRendered.length} chars (max ${MAX})`);
+    }
+    if ((ogRendered.match(/Mapletech Labs/gi) || []).length !== 1) {
+      problems.push(`${file}: audit openGraph.title must name the brand once`);
+    }
   }
 }
 

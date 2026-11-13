@@ -6,7 +6,7 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const DESCRIPTION = 'Custom e-commerce stores built to convert and scale. Shopify, headless commerce, and Next.js storefronts by Edmonton-based Mapletech Labs. 80+ stores launched for Toronto and Canada-wide teams.';
+const DESCRIPTION = 'Custom Shopify, headless commerce and Next.js stores by Edmonton-based Mapletech Labs. 80+ e-commerce builds launched for Toronto and Canada-wide teams.';
 
 export const metadata: Metadata = {
   title: 'E-Commerce Development Services | Canada',
