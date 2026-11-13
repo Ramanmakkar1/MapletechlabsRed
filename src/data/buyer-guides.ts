@@ -6,10 +6,13 @@ const BLOG_SLUGS = new Set([
   'ai-development-companies-calgary',
   'ai-development-companies-vancouver',
   'app-development-companies-calgary',
+  'app-development-companies-ottawa',
   'app-development-companies-edmonton',
   'app-development-companies-toronto',
   'app-development-companies-vancouver',
   'choose-software-development-company-canada',
+  'mobile-app-development-company-canada',
+  'blockchain-development-companies-canada',
   'digital-marketing-agencies-edmonton',
   'digital-marketing-agencies-ottawa',
   'flutter-vs-react-native-canada',
@@ -50,6 +53,7 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
     calgary: 'app-development-companies-calgary',
     edmonton: 'app-development-companies-edmonton',
     vancouver: 'app-development-companies-vancouver',
+    ottawa: 'app-development-companies-ottawa',
   },
   'ai-ml': { toronto: 'ai-development-companies-toronto', edmonton: 'ai-development-companies-edmonton', calgary: 'ai-development-companies-calgary', vancouver: 'ai-development-companies-vancouver' },
   'digital-marketing': {
@@ -108,7 +112,8 @@ const NATIONAL_GUIDE_SLUG: Partial<Record<string, string>> = {
   'saas-development': 'saas-development-company-canada',
   'web-development': 'website-development-company-canada',
   'wordpress-cms': 'wordpress-vs-headless-cms-canada',
-  'mobile-app-development': 'choose-software-development-company-canada',
+  'mobile-app-development': 'mobile-app-development-company-canada',
+  'blockchain-web3': 'blockchain-development-companies-canada',
 };
 
 /** Short phrase for “Comparing {label} companies in {city}?” */
@@ -120,6 +125,7 @@ const COMPARE_LABEL: Partial<Record<string, string>> = {
   'product-design': 'UI/UX design',
   'saas-development': 'SaaS development',
   'wordpress-cms': 'WordPress & CMS',
+  'blockchain-web3': 'blockchain development',
 };
 
 export type BuyerGuide = { href: string; label: string; isCity: boolean; linkText?: string };
@@ -163,6 +169,8 @@ export function buyerGuideLinkText(serviceSlug: string, cityName: string, isCity
       return `Read our guide to choosing a SaaS development company in ${place}`;
     case 'wordpress-cms':
       return `Read our WordPress vs headless CMS comparison for ${place}`;
+    case 'blockchain-web3':
+      return `Read our guide to choosing a blockchain development company in ${place}`;
     default:
       return `Read our guide to choosing an app development company in ${place}`;
   }
