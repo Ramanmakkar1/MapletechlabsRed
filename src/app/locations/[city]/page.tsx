@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: seoTitle(finalTitle),
     description: seoDescription(description),
-    openGraph: { title: ogTitle(finalTitle), description, url, type: 'website' },
+    openGraph: { title: ogTitle(finalTitle), description: seoDescription(description), url, type: 'website' },
     alternates: { canonical: url },
   };
 }

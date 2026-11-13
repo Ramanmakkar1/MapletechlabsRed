@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: seoDescription(desc),
     openGraph: {
       title: ogTitle(finalTitle),
-      description: desc,
+      description: seoDescription(desc),
       url: data.canonicalUrl,
       type: 'website',
     },
