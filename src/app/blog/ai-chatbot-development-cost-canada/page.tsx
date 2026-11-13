@@ -53,7 +53,7 @@ export default function Page() {
           <div className="reveal" style={{ marginBottom: 56 }}>
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 16 }}>Related services</p>
             <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-              Planning a customer-facing assistant? See our <Link href="/services/ai-ml/ai-chatbots" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>AI chatbot development services</Link>. If the work is mainly connecting a model to your product or data, see <Link href="/services/ai-ml/llm-integration" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>LLM integration services</Link>.
+              Planning a customer-facing assistant? See our <Link href="/services/ai-ml/ai-chatbots" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>AI chatbot development services</Link>. If the work is mainly connecting a model to your product or data, see <Link href="/services/ai-ml/llm-integration" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>LLM integration services</Link>. If you are still scoping the project, start with <Link href="/services/ai-consulting" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>AI consulting</Link> to confirm the use case and budget first.
             </p>
           </div>
         </>

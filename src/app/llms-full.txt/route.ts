@@ -71,6 +71,7 @@ function buildText(): string {
   )));
   out.push(...lines([
     link('Healthcare Software Development', '/services/software-development/healthcare-software', 'telehealth, patient portals, clinical workflow tools and EHR integration for Canadian healthcare providers'),
+    link('AI Consulting', '/services/ai-consulting', 'AI use-case assessment, data readiness, build versus buy and feasibility planning for Canadian businesses'),
   ]));
   out.push('');
 

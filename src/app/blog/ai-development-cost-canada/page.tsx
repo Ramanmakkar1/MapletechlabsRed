@@ -53,7 +53,7 @@ export default function Page() {
           <div className="reveal" style={{ marginBottom: 56 }}>
             <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 16 }}>Related services</p>
             <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-              Planning an AI feature? See our <Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>AI and machine learning development services in Canada</Link>.
+              Planning an AI feature? See our <Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>AI and machine learning development services in Canada</Link>. If you are still scoping the project, start with <Link href="/services/ai-consulting" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>AI consulting</Link> to confirm the use case and budget first.
             </p>
           </div>
         </>

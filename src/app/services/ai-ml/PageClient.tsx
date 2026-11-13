@@ -146,6 +146,7 @@ export default function PageClient() {
               <li>Hosting constraints: residency, security and deployment environment.</li>
               <li>A measurable business outcome, such as reduced handling time, with a baseline.</li>
             </ul>
+            <p className="lede">Not sure where AI fits yet? Our <Link href="/services/ai-consulting">AI consulting services</Link> help you pick the right use cases, check your data readiness and decide whether to build or buy before any development starts.</p>
             <p className="lede">Toronto businesses can see local use cases, privacy considerations and FAQs on our <Link href="/locations/ai-development-company-in-toronto">AI development company in Toronto</Link> page.</p>
             <p className="lede"><Link href="/contact">Discuss your AI project approach and acceptance criteria</Link>.</p>
           </div>

@@ -3,16 +3,17 @@ import PageClient, { FAQS } from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema, ServiceSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
 
-const TITLE = 'AI Consulting Services for Canada';
+const TITLE = 'AI Consulting Services in Canada | Edmonton AI Consultants';
 const DESCRIPTION = 'AI consulting for Canadian businesses: assess use cases and data readiness, compare build versus buy, and plan feasibility, integrations and next steps.';
 const URL = canonicalUrl('/services/ai-consulting');
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
-    title: `${TITLE} | Mapletech Labs`,
+    title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: URL,
     type: 'website',
