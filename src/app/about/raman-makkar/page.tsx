@@ -266,13 +266,13 @@ export default function RamanPage() {
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
               <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>How Raman works with clients</h2>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 Tell us about your project idea during a free project consultation. A senior engineer reads your brief and gets back with honest first thoughts and questions that matter, responding within one working day. This initial conversation helps determine whether custom software, an off-the-shelf solution, or a smaller first release best fits your goals.
               </p>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 When the project looks like a good fit, the next step is a 30-minute discovery call focused on users, technical constraints, timeline, and budget. This creates a clearer picture of the scope and whether the teams should work together.
               </p>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 Once you accept, the team is assigned, environments are set up, and the first sprint is planned so you see working software early and often. Most projects run remotely with weekly demos, with in-person meetings when they help.
               </p>
               <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginTop: '24px', marginBottom: '12px' }}>
