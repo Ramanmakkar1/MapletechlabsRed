@@ -199,7 +199,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             <div className="cb-container">
               <Head title={`WordPress websites for ${cityName} businesses`} />
               <div className="prose-split">
-                <div><h2 style={{ maxWidth: '18ch' }}>WordPress, when it is the right fit</h2></div>
+                <div><h3 style={{ maxWidth: '18ch', fontSize: 'var(--fs-h3)', margin: 0 }}>WordPress, when it is the right fit</h3></div>
                 <div className="prose-body">
                   <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>
                     We build WordPress sites for {cityName} businesses that need to publish and update content without a developer: brochure sites, service pages, blogs and small online stores. You get a custom theme, a clean editor, fast pages and the same fixed CAD price agreed before work starts.
