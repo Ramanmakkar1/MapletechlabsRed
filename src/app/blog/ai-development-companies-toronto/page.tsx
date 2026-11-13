@@ -54,7 +54,8 @@ export default function Page() {
         relatedServices={
           <RelatedServices
             links={[
-              { href: '/services/ai-ml', label: 'AI development services in Toronto' },
+              { href: '/locations/ai-development-company-in-toronto', label: 'AI development company in Toronto' },
+              { href: '/services/ai-ml', label: 'AI and machine learning services across Canada' },
               { href: '/services/ai-ml/ai-chatbots', label: 'AI chatbot development services' },
               { href: '/locations/software-development-company-in-toronto', label: 'Software development company in Toronto' },
             ]}

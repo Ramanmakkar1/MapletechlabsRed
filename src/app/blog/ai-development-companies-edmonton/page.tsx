@@ -54,7 +54,8 @@ export default function Page() {
         relatedServices={
           <RelatedServices
             links={[
-              { href: '/services/ai-ml', label: 'AI development services in Edmonton' },
+              { href: '/locations/ai-development-company-in-edmonton', label: 'AI development company in Edmonton' },
+              { href: '/services/ai-ml', label: 'AI and machine learning services across Canada' },
               { href: '/services/ai-ml/llm-integration', label: 'LLM integration services' },
               { href: '/locations/software-development-company-in-edmonton', label: 'Software development company in Edmonton' },
             ]}
