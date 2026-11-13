@@ -319,7 +319,7 @@ export default function RamanPage() {
               <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>
                 AI integration and product strategy
               </h3>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 Raman specializes in scaling systems, team architecture, and AI integration. His product work includes
                 SaaS product strategy, product design, and cloud architecture on AWS and GCP, with AI and machine
                 learning applied to practical features rather than isolated experiments.
@@ -327,7 +327,7 @@ export default function RamanPage() {
               <h3 style={{ fontSize: '20px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>
                 Leadership and team building
               </h3>
-              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: 0, maxWidth: '800px' }}>
                 Raman has scaled engineering teams and mentored builders across fintech, healthcare, and enterprise, and
                 today leads a 25+ member team of engineers, designers, and strategists. He works directly with clients
                 from discovery through delivery, runs projects in short agile cycles with weekly demos, and mentors
