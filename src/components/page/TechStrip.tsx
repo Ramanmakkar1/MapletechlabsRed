@@ -59,7 +59,7 @@ export default function TechStrip({
                 style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '18px 34px', flexShrink: 0 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`/logos/${t.file}.svg`} alt={i < items.length ? t.name : ''} width={26} height={26} style={{ display: 'block', filter: 'invert(1)', opacity: 0.9 }} />
+                <img src={`/logos/${t.file}.svg`} alt={i < items.length ? t.name : ''} width={26} height={26} loading="lazy" decoding="async" style={{ display: 'block', filter: 'invert(1)', opacity: 0.9 }} />
                 <span style={{ fontSize: 16, fontWeight: 600, color: '#fff', letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>{t.name}</span>
               </li>
             ))}
