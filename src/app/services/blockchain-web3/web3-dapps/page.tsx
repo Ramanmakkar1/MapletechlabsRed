@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Web3 dApp Development Company in Canada';
+const DESCRIPTION = 'Web3 dApp development in Canada: full-stack dApps with wallet integration, on-chain indexing and cross-chain UX, shipped by our Edmonton team.';
+
 export const metadata: Metadata = {
-  title: 'Web3 dApp Development Company in Canada',
-  description: 'Web3 dApp development with wallet integration, on-chain indexing and cross-chain UX. Mapletech Labs ships production dApps from Edmonton, Canada.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Web3 dApp Development Services | Mapletech Labs',
-    description: 'Web3 dApp development with wallet integration, on-chain indexing and cross-chain UX. Mapletech Labs ships production dApps from Edmonton, Canada.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/blockchain-web3/web3-dapps',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Web3 dApp Development Services'}
-        description={'Web3 dApp development with wallet integration, on-chain indexing, and cross-chain UX. Mapletech Labs ships production dApps from Edmonton, Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/blockchain-web3/web3-dapps'}
       />
       <PageClient />

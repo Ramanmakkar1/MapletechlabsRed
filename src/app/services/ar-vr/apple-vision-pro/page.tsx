@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Apple Vision Pro App Development | Canada';
+const DESCRIPTION = 'Apple Vision Pro app development in Canada: visionOS apps built with SwiftUI and RealityKit for immersive spatial computing, from our Edmonton team.';
+
 export const metadata: Metadata = {
-  title: 'Apple Vision Pro App Development | Canada',
-  description: 'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds spatial computing apps for Apple Vision Pro from Edmonton, Canada.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Apple Vision Pro App Development | Mapletech Labs',
-    description: 'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds immersive spatial computing apps for Apple Vision Pro from Edmonton, Canada.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/ar-vr/apple-vision-pro',
     type: 'website',
   },
@@ -27,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Apple Vision Pro App Development'}
-        description={'visionOS app development with SwiftUI and RealityKit. Mapletech Labs builds spatial computing apps for Apple Vision Pro from Edmonton, Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/ar-vr/apple-vision-pro'}
       />
       <PageClient />
