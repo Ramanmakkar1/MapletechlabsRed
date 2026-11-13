@@ -5,7 +5,8 @@ import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline } from '
 import { getCityServiceData, serviceCityExtraFaqs } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
-import { localServiceTitle, ogTitle } from '@/lib/seo/title';
+import { localServiceTitle, ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import type { ServiceCityLocal } from '@/data/service-city-local';
@@ -53,8 +54,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = override?.description ?? data.description;
   const url = canonicalUrl(`/locations/${slug}`);
   return {
-    title: finalTitle,
-    description,
+    title: seoTitle(finalTitle),
+    description: seoDescription(description),
     openGraph: { title: ogTitle(finalTitle), description, url, type: 'website' },
     alternates: { canonical: url },
   };
