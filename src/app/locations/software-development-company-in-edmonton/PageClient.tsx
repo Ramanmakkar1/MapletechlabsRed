@@ -6,7 +6,7 @@ const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, la
 // Honest hero figures: the company's own verifiable facts, not invented client metrics.
 const heroStats = pair([['2018', 'Founded in Edmonton'], ['12', 'Canadian cities served'], ['1 day', 'To a senior-engineer reply']]);
 const services = [
-  { title: 'Mobile App Development', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: '/services/mobile-app-development' },
+  { title: 'Mobile App Development in Edmonton', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: '/services/mobile-app-development/edmonton' },
   { title: 'Web Development', desc: 'Fast, secure web platforms and enterprise portals engineered to scale — from marketing sites to the complex internal systems that replace spreadsheets and legacy tools.', href: '/services/web-development' },
   { title: 'AI & Machine Learning', desc: 'LLM integration, intelligent automation and predictive analytics built for production — wired into the systems your team already uses, where a model removes real work.', href: '/services/ai-ml' },
   { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols and decentralized apps engineered for security and audit — practical Web3 that solves a real problem rather than chasing a trend.', href: '/services/blockchain-web3' },
@@ -95,6 +95,7 @@ const localContent = (
           <p>If your project is mainly a website or web application, see our page on <Link href="/locations/web-development-company-in-edmonton">web development in Edmonton</Link>. For brand strategy, visual identity and rebrands, see <Link href="/locations/edmonton/branding">branding in Edmonton</Link>. To talk through an idea, <Link href="/contact">contact our Edmonton team</Link> and tell us what you want to build.</p>
           <h3>Guides for Edmonton buyers</h3>
           <p>Comparing software development companies in Edmonton? Read our <Link href="/blog/software-development-companies-edmonton">guide to choosing a software development company in Edmonton</Link>.</p>
+          <p>Planning an iOS or Android app? See <Link href="/services/mobile-app-development/edmonton">mobile app development in Edmonton</Link> for platforms, process and CAD pricing.</p>
           <p>Comparing other options? Read our guides on <Link href="/blog/app-development-companies-edmonton">choosing an app development company in Edmonton</Link> and <Link href="/blog/seo-companies-edmonton">choosing an SEO company in Edmonton</Link>.</p>
         </div>
       </div>

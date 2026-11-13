@@ -10,7 +10,7 @@ const numbers = pair([
                   ['3+', 'Years Serving Toronto'],
                 ]);
 const services = [
-  { title: 'Mobile App Development', desc: 'Native and cross-platform apps for iOS and Android, built to serve Toronto\'s diverse, mobile-first consumer base.', href: '/services/mobile-app-development' },
+  { title: 'Mobile App Development in Toronto', desc: 'Native and cross-platform apps for iOS and Android, built to serve Toronto\'s diverse, mobile-first consumer base.', href: '/services/mobile-app-development/toronto' },
   { title: 'Web Development', desc: 'Scalable web applications and enterprise portals for Bay Street financial institutions and fast-growing startups.', href: '/services/web-development' },
   { title: 'AI & Machine Learning', desc: 'Predictive analytics, NLP, and intelligent automation for FinTech platforms and data-driven enterprises.', href: '/services/ai-ml' },
   { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols, and tokenization platforms for Canada\'s financial capital.', href: '/services/blockchain-web3' },
@@ -84,6 +84,7 @@ export default function PageClient() {
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container prose-body">
             <p>Need cloud migration, CI/CD or Kubernetes in the GTA? See our page on <Link href="/locations/toronto/cloud-devops">cloud and DevOps in Toronto</Link>, or read our <Link href="/blog/software-development-companies-toronto">guide to Toronto software companies</Link> for costs and vetting questions.</p>
+            <p>Planning a mobile app? Compare <Link href="/services/mobile-app-development/toronto">mobile app development in Toronto</Link>, or read our guide on <Link href="/blog/app-development-companies-toronto">choosing an app development company in Toronto</Link>.</p>
           </div>
         </section>
       }

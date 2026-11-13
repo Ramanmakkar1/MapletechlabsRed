@@ -10,7 +10,7 @@ const numbers = pair([
                   ['15+', 'Clean Tech Platforms'],
                 ]);
 const services = [
-  { title: 'Mobile App Development', desc: 'High-performance mobile apps for gaming studios, PropTech platforms, and Pacific Rim commerce.', href: '/services/mobile-app-development' },
+  { title: 'Mobile App Development in Vancouver', desc: 'High-performance mobile apps for gaming studios, PropTech platforms, and Pacific Rim commerce.', href: '/services/mobile-app-development/vancouver' },
   { title: 'Web Development', desc: 'Scalable web platforms for film production pipelines, clean tech dashboards, and real estate marketplaces.', href: '/services/web-development' },
   { title: 'AI & Machine Learning', desc: 'Computer vision for VFX workflows, predictive models for clean energy, and NLP for multilingual markets.', href: '/services/ai-ml' },
   { title: 'Blockchain & Web3', desc: 'Decentralized applications, NFT platforms, and tokenized asset systems for Vancouver\'s forward-thinking tech scene.', href: '/services/blockchain-web3' },

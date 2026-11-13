@@ -10,7 +10,7 @@ const numbers = pair([
                   ['$2B+', 'Client Revenue Impacted'],
                 ]);
 const services = [
-  { title: 'Mobile App Development', desc: 'Field-ready mobile apps for energy crews, logistics teams, and fleet operators across Alberta.', href: '/services/mobile-app-development' },
+  { title: 'Mobile App Development in Calgary', desc: 'Field-ready mobile apps for energy crews, logistics teams, and fleet operators across Alberta.', href: '/services/mobile-app-development/calgary' },
   { title: 'Web Development', desc: 'Enterprise web platforms for oil and gas operators, pipeline companies, and energy trading desks.', href: '/services/web-development' },
   { title: 'AI & Machine Learning', desc: 'Predictive maintenance for drilling rigs, pipeline anomaly detection, and production optimization models.', href: '/services/ai-ml' },
   { title: 'Blockchain & Web3', desc: 'Supply chain transparency, carbon credit tokenization, and decentralized energy trading platforms.', href: '/services/blockchain-web3' },
