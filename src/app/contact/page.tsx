@@ -80,13 +80,13 @@ export default function ContactRoute() {
         <section style={{ padding: '0 0 var(--section-y)' }}>
           <div className="cb-container">
             <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
-        <section aria-labelledby="contact-answer">
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-answer">
           <h2 id="contact-answer" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How to get a free project consultation from Mapletech Labs</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             To get a free project consultation from Mapletech Labs, send a short project brief using the form on this page, call <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a>, or email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a>. A senior engineer replies within one working day, and the first call is a free 30-minute discovery call. Our team is based in Edmonton, Alberta and works with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal, and across Canada.
           </p>
         </section>
-        <section aria-labelledby="contact-brief-consultation">
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-brief-consultation">
           <h2 id="contact-brief-consultation" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What to include in a project brief and what to expect in the free consultation</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             A good project brief tells us the problem, who it is for, your rough budget and your target date, and in return the free consultation gives you honest first thoughts, a clearer scope and a recommendation on the best next step. You do not need a finished specification to get started.
@@ -105,7 +105,7 @@ export default function ContactRoute() {
             In the free 30-minute consultation, a senior engineer talks through your goals, users, technical constraints, timeline and budget. You leave with a clearer picture of the scope, an honest view of whether custom software, an off-the-shelf tool or a smaller first release fits best, and whether we should work together. If the project is a fit, we follow up with a written scope and estimate, usually within a week, and your idea stays under NDA from the first conversation.
           </p>
         </section>
-        <section aria-labelledby="contact-discovery-call">
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-discovery-call">
           <h2 id="contact-discovery-call" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens during the free 30-minute discovery call</h2>
           <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             <li><strong>Goals and users.</strong> We confirm the problem you want solved, who will use the product and what a successful outcome looks like.</li>
@@ -121,7 +121,7 @@ export default function ContactRoute() {
         <section style={{ padding: '0 0 var(--section-y)' }}>
           <div className="cb-container">
             <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
-        <section aria-labelledby="contact-quick-facts">
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-quick-facts">
           <h2 id="contact-quick-facts" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Contact Mapletech Labs at a glance</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Contact Mapletech Labs for a free project consultation about custom software, mobile apps, AI & automation. Our Edmonton team responds within one working day and works with clients across Canada.
@@ -134,7 +134,7 @@ export default function ContactRoute() {
             <li>Service areas: Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal, with remote work across Canada</li>
           </ul>
         </section>
-        <section aria-labelledby="contact-options">
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-options">
           <h2 id="contact-options" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Which way should you contact Mapletech Labs?</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Use the contact form for a detailed project brief, call for an urgent question or a quick scoping chat, or email if you need to send files and existing documents. The form and email get a reply within one working day, and a senior engineer reads every message.
@@ -169,20 +169,17 @@ export default function ContactRoute() {
           </table>
           </div>
         </section>
-        <section aria-labelledby="contact-next-steps">
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-next-steps">
           <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you get in touch</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            Tell us about your project idea during our <Link href="#contact-form" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>free project consultation</Link>. Our senior engineer will read your brief and get back with honest first thoughts and questions that matter, responding within one working day. This initial conversation helps us understand whether custom software, an off-the-shelf solution, or a smaller first release best fits your goals.
-          </p>
-          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            If the project looks like a good fit, we schedule a 30-minute discovery call to discuss users, technical constraints, timeline, and budget. You leave with a clearer picture of the scope and whether we should work together. If the project is a fit, we follow up with a written scope and estimate, usually within a week, and your idea stays under NDA from the first conversation. When you accept, we assign your team, set up environments, and plan the first sprint so you see working software early and often.
+            After your free project consultation, if the project is a fit, we follow up with a written scope and estimate, usually within a week, and your idea stays under NDA from the first conversation. When you accept, we assign your team, set up environments and plan the first sprint so you see working software early and often.
           </p>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Our headquarters is in Edmonton, Alberta, and our team has dedicated engineers in Edmonton, Calgary, Toronto, and Vancouver, so there&#8217;s always someone in your time zone. Most projects run remotely with weekly demos, and we meet in person when it helps. We work with clients across Canada, including Calgary, Toronto, Vancouver, Ottawa, and Montreal. <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Explore our complete service catalog</Link> to learn about the custom software development, mobile apps, AI & automation, and other solutions we offer.
           </p>
         </section>
 
-        <section aria-labelledby="contact-project-types">
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-project-types">
           <h2 id="contact-project-types" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Which Mapletech Labs service fits your project?</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             The contact form can take a service and a city from the URL, so the quickest way to reach the right team is to pick the closest service from the list below. Choose the option that sounds most like your project, even if it is not an exact match. Each service page explains the work involved, the technology we use and the kind of problems we solve, so it is a useful place to start before you write your brief. If two services seem relevant, mention both in your message. A senior engineer reads every message, and the team confirms the real scope, timeline and budget on the free 30-minute discovery call.
@@ -195,7 +192,7 @@ export default function ContactRoute() {
           </p>
         </section>
 
-        <section aria-labelledby="contact-service-areas">
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-service-areas">
           <h2 id="contact-service-areas" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Where Mapletech Labs works with clients</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Mapletech Labs is a software development company with its head office in Edmonton, Alberta. Our team has dedicated engineers in Edmonton, Calgary, Toronto and Vancouver, and we work with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal and across Canada. Most projects run remotely with weekly demos, so you can see working software and give feedback as the work moves forward. When a project benefits from meeting in person, we arrange it. Wherever you are in Canada, the first step is the same: send a short project brief and a senior engineer replies within one working day. Choose your city below to see how we work with local businesses.
