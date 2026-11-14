@@ -7,7 +7,7 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const TITLE = 'SEO Services in Canada: Local SEO Experts';
+const TITLE = 'SEO Services in Canada: Local SEO Experts for 2026';
 const DESCRIPTION = 'SEO services in Canada from an Edmonton-based team: technical SEO, local SEO, link building and content strategy. 200% avg organic traffic growth.';
 
 export const metadata: Metadata = {

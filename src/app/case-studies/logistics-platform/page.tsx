@@ -7,7 +7,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const NAME = 'Logistics & Fleet Platform';
-const TITLE = 'Logistics Platform: 15K+ Deliveries a Day';
+const TITLE = 'Logistics Platform Case Study: 15K+ Deliveries a Day';
 const DESCRIPTION = 'Mapletech Labs built a real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time rate. Read the case study.';
 const SLUG = 'logistics-platform';
 const DATE = '2026-03-14';

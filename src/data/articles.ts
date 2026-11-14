@@ -3495,7 +3495,7 @@ export const articles: Article[] = [
     category: 'Business',
     title: 'App Development Companies in Edmonton: How to Choose One (2026)',
     dek: 'A buyer\'s guide for Edmonton businesses hiring an app development company: discovery, platform choice, portfolio evidence, code ownership, support, Alberta privacy and the questions to ask before you sign.',
-    metaTitle: 'App Development Companies in Edmonton 2026',
+    metaTitle: 'App Development Companies in Edmonton: 2026 Buyer Guide',
     metaDescription: 'How to compare app development companies in Edmonton: discovery, platform choice, portfolio evidence, code ownership, support and questions to ask.',
     answer: 'To choose an app development company in Edmonton, compare how each firm runs discovery, which platforms it recommends and why, the evidence behind its portfolio, who owns the code and store accounts, and what support it offers after launch.',
     date: '2026-11-10',
