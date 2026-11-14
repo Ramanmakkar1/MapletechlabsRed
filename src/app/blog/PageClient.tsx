@@ -110,6 +110,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'web-development-companies-montreal', category: 'Business',
+    title: 'Web Development Companies in Montreal: How to Choose (2026)',
+    excerpt: 'How to choose a web development company in Montreal: website vs web app, French-first Bill 96 sites, Law 25 privacy, CAD costs and 10 questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'seo-companies-calgary', category: 'Business',
     title: 'SEO Companies in Calgary: A Buyer’s Guide (2026)',
     excerpt: 'How Calgary businesses should choose an SEO company: map pack, Airdrie and Okotoks searches, technical B2B SEO, CAD pricing, AI answers and 10 questions to ask.',

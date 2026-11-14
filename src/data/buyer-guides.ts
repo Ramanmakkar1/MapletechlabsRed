@@ -49,6 +49,7 @@ const BLOG_SLUGS = new Set([
   'web-development-companies-vancouver',
   'web-development-companies-calgary',
   'web-development-companies-ottawa',
+  'web-development-companies-montreal',
   'website-development-company-canada',
 ]);
 
@@ -90,6 +91,7 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
     vancouver: 'web-development-companies-vancouver',
     calgary: 'web-development-companies-calgary',
     ottawa: 'web-development-companies-ottawa',
+    montreal: 'web-development-companies-montreal',
   },
 };
 
