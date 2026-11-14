@@ -105,7 +105,7 @@ export default function ContactPage({ serviceOptions = [], cityOptions = [] }: {
                 Contact Mapletech Labs about your project
               </h1>
               <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, margin: '0 0 44px', maxWidth: 400 }}>
-                Mapletech Labs is a software, app, AI and UI/UX development company serving Edmonton, Calgary, Toronto and Vancouver. Tell us about your project and a senior engineer at our Edmonton software development company replies within one working day with next steps, not a sales script.
+                Mapletech Labs offers a free project consultation for software, app, AI and UI/UX development. We are based in Edmonton, Alberta and work with clients Canada-wide, including Calgary, Toronto and Vancouver, Ottawa and Montreal. Call <a href="tel:+14036048692" style={{ color: 'var(--brand)' }}>+1 (403) 604-8692</a>, email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)' }}>hello@mapletechlabs.ca</a>, or send the form, and a senior engineer at our Edmonton software development company replies within one working day with next steps, not a sales script.
               </p>
 
               <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
