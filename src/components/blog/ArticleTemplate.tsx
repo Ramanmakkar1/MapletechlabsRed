@@ -241,9 +241,15 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                   </details>
                 )}
                 <div className="reveal" style={{ marginBottom: 44 }}>
-                  {a.intro.map((p, i) => (
-                    <p key={i} style={{ fontSize: 18.5, color: i === 0 ? 'var(--ink)' : 'var(--body)', lineHeight: 1.75, marginBottom: 18, fontWeight: i === 0 ? 500 : 400 }} dangerouslySetInnerHTML={{ __html: p }} />
-                  ))}
+                  {a.answer && (
+                    <p style={{ fontSize: 18.5, color: 'var(--ink)', lineHeight: 1.75, marginBottom: 18, fontWeight: 500 }} dangerouslySetInnerHTML={{ __html: a.answer }} />
+                  )}
+                  {a.intro.map((p, i) => {
+                    if (a.answer && i === 0 && p === a.answer) return null;
+                    return (
+                      <p key={i} style={{ fontSize: 18.5, color: i === 0 ? 'var(--ink)' : 'var(--body)', lineHeight: 1.75, marginBottom: 18, fontWeight: i === 0 ? 500 : 400 }} dangerouslySetInnerHTML={{ __html: p }} />
+                    );
+                  })}
                 </div>
 
                 {a.body.map((b, i) => (
