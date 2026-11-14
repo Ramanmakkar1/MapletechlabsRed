@@ -3,7 +3,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 import cityDescription from '@/lib/seo/city-meta';
-import { ogTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 export const dynamic = 'force-static';
 
