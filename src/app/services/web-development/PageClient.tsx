@@ -133,13 +133,15 @@ export default function PageClient() {
         </section>
         <ServiceCityLinks
           id="web-dev-cities"
-          heading="Web development in Edmonton, Calgary, Toronto and Vancouver"
+          heading="Web development in Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal"
           intro="Mapletech Labs is based in Edmonton and builds websites, web apps and portals for businesses across Canada. See local pricing, process and FAQs for your city:"
           links={[
             { href: '/locations/web-development-company-in-edmonton', label: 'Web development company in Edmonton', note: 'our home city, with in-person discovery workshops available' },
             { href: '/locations/web-development-company-in-calgary', label: 'Web development company in Calgary', note: 'local web projects supported remotely or on site' },
             { href: '/locations/web-development-company-in-toronto', label: 'Web development company in Toronto', note: 'web development for Toronto businesses, delivered remotely or on site' },
             { href: '/locations/web-development-company-in-vancouver', label: 'Web development company in Vancouver', note: 'web development for Vancouver businesses, delivered remotely or on site' },
+            { href: '/locations/web-development-company-in-ottawa', label: 'Web development company in Ottawa', note: 'web development for Ottawa businesses, delivered remotely' },
+            { href: '/locations/web-development-company-in-montreal', label: 'Web development company in Montreal', note: 'web development for Montreal businesses, delivered remotely' },
           ]}
         />
         </>

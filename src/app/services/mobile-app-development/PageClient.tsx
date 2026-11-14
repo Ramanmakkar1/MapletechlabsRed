@@ -171,13 +171,15 @@ export default function PageClient() {
         </section>
         <ServiceCityLinks
           id="mobile-app-cities"
-          heading="App development in Edmonton, Calgary, Toronto and Vancouver"
+          heading="App development in Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal"
           intro="Mapletech Labs is based in Edmonton and builds iOS, Android and cross-platform apps for businesses across Canada. See local pricing, process and FAQs for your city:"
           links={[
             { href: '/locations/app-development-company-in-edmonton', label: 'App development company in Edmonton', note: 'our home city, with in-person discovery workshops available' },
             { href: '/locations/app-development-company-in-calgary', label: 'App development company in Calgary', note: 'local app projects supported remotely or on site' },
             { href: '/locations/app-development-company-in-toronto', label: 'App development company in Toronto', note: 'app development for Toronto businesses, delivered remotely or on site' },
             { href: '/locations/app-development-company-in-vancouver', label: 'App development company in Vancouver', note: 'app development for Vancouver businesses, delivered remotely or on site' },
+            { href: '/locations/app-development-company-in-ottawa', label: 'App development company in Ottawa', note: 'app development for Ottawa businesses, delivered remotely' },
+            { href: '/locations/app-development-company-in-montreal', label: 'App development company in Montreal', note: 'app development for Montreal businesses, delivered remotely' },
           ]}
         />
         </>

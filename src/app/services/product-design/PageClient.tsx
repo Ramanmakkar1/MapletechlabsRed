@@ -116,13 +116,15 @@ function BuyerContent() {
     </section>
     <ServiceCityLinks
       id="ui-ux-cities"
-      heading="UI/UX design in Edmonton, Calgary, Toronto and Vancouver"
+      heading="UI/UX design in Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal"
       intro="See local pricing guidance, process and FAQs for our UI/UX design work in your city:"
       links={[
         { href: '/locations/ui-ux-design-company-in-edmonton', label: 'UI/UX design company in Edmonton', note: 'Headquartered in Edmonton, with in-person discovery workshops and usability testing available.' },
         { href: '/locations/ui-ux-design-company-in-calgary', label: 'UI/UX design company in Calgary', note: 'Alberta team that travels to Calgary for research and design workshops.' },
         { href: '/locations/ui-ux-design-company-in-toronto', label: 'UI/UX design company in Toronto', note: 'Remote design work for GTA teams, with in-person workshops when needed.' },
         { href: '/locations/ui-ux-design-company-in-vancouver', label: 'UI/UX design company in Vancouver', note: 'Remote UI/UX design for Lower Mainland teams, with workshops on request.' },
+        { href: '/locations/ui-ux-design-company-in-ottawa', label: 'UI/UX design company in Ottawa', note: 'Remote UI/UX design for Ottawa teams, including bilingual and WCAG-focused work.' },
+        { href: '/locations/ui-ux-design-company-in-montreal', label: 'UI/UX design company in Montreal', note: 'Remote UI/UX design for Montreal teams, with workshops on request.' },
       ]}
     />
     </>
