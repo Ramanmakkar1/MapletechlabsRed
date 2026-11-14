@@ -85,21 +85,23 @@ export default function PageClient() {
             </div>
           </div>
         </section>
-        <section aria-labelledby="software-development-cities" style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+        <section aria-labelledby="saas-development-cities" style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
             <div className="head">
               <div>
-                <h2 id="software-development-cities">Software development in major Canadian cities</h2>
-                <p className="lede">Mapletech Labs builds custom software for clients across Canada. Pick your city to see local details.</p>
+                <h2 id="saas-development-cities">SaaS development companies in major Canadian cities</h2>
+                <p className="lede">Mapletech Labs is based in Edmonton and builds SaaS products for founders and businesses across Canada. See local pricing, process and FAQs for your city:</p>
               </div>
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
-              <li><Link href="/locations/software-development-company-in-toronto">Software development company in Toronto</Link></li>
-              <li><Link href="/locations/software-development-company-in-vancouver">Software development company in Vancouver</Link></li>
-              <li><Link href="/locations/software-development-company-in-calgary">Software development company in Calgary</Link></li>
-              <li><Link href="/locations/software-development-company-in-edmonton">Software development company in Edmonton</Link></li>
-              <li><Link href="/locations/software-development-company-in-montreal">Software development company in Montreal</Link></li>
+              <li><Link href="/locations/saas-development-company-in-edmonton">SaaS development company in Edmonton</Link></li>
+              <li><Link href="/locations/saas-development-company-in-calgary">SaaS development company in Calgary</Link></li>
+              <li><Link href="/locations/saas-development-company-in-toronto">SaaS development company in Toronto</Link></li>
+              <li><Link href="/locations/saas-development-company-in-vancouver">SaaS development company in Vancouver</Link></li>
+              <li><Link href="/locations/saas-development-company-in-ottawa">SaaS development company in Ottawa</Link></li>
+              <li><Link href="/locations/saas-development-company-in-montreal">SaaS development company in Montreal</Link></li>
             </ul>
+            <p className="lede" style={{ marginTop: 16 }}>Need a broader custom build? See our <Link href="/locations/software-development-company-in-toronto">software development company pages</Link>, starting with Toronto.</p>
           </div>
         </section>
         </>
