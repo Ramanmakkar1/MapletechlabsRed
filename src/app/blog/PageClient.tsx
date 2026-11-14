@@ -74,6 +74,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'ai-development-companies-ottawa', category: 'Business',
+    title: 'AI Development Companies in Ottawa: How to Choose (2026)',
+    excerpt: 'How to choose an AI development company in Ottawa: chatbots, LLM and RAG builds, bilingual English and French AI, PIPEDA, data residency and CAD costs.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'ai-development-companies-edmonton', category: 'Technology',
     title: 'AI Development Companies in Edmonton: How to Choose One (2026)',
     excerpt: 'How to choose an AI development company in Edmonton: LLM and RAG builds, Alberta PIPA and PIPEDA, data residency, CAD costs and 10 questions to ask.',
