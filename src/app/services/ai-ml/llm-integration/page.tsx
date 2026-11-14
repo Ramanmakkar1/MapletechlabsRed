@@ -9,14 +9,14 @@ import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'LLM Integration Services in Canada';
 const DESCRIPTION =
-  'LLM integration services in Canada: Mapletech Labs connects GPT, Claude and open-source models to apps and documents with RAG and production deployment.';
+  'LLM integration services in Canada: Mapletech Labs integrates GPT, Claude and custom large language models into your apps and workflows. Free consultation.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
     title: ogTitle(TITLE),
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/ai-ml/llm-integration',
     type: 'website',
   },

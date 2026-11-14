@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: seoDescription(DESCRIPTION),
   openGraph: {
     title: ogTitle(TITLE),
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/ai-ml/predictive-analytics',
     type: 'website',
   },

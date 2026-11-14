@@ -8,14 +8,14 @@ import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'AI Chatbot Development Company in Canada';
-const DESCRIPTION = 'AI chatbot development in Canada: custom support, sales and internal chatbots grounded in your documents, with human handoff and CRM integrations.';
+const DESCRIPTION = 'AI chatbot development company in Canada: Mapletech Labs builds AI agents for customer support, sales and internal operations. Free consultation.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
     title: ogTitle(TITLE),
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/ai-ml/ai-chatbots',
     type: 'website',
   },
