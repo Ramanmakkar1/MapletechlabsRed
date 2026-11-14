@@ -4273,18 +4273,18 @@ export const articles: Article[] = [
     category: 'Business',
     title: 'Web Development Companies in Calgary: How to Choose One (2026)',
     dek: 'A buyer’s guide for Calgary and southern Alberta businesses hiring a web development company: marketing sites vs web apps vs e-commerce and portals, Next.js and CMS questions, Canadian hosting, Core Web Vitals and SEO-readiness, WCAG 2.1 AA accessibility, Alberta PIPA and PIPEDA, CAD cost ranges, code and hosting ownership, red flags and ten questions to ask.',
-    metaTitle: 'Web Development Companies in Calgary: How to Choose',
-    metaDescription: 'How to choose a web development company in Calgary: website vs web app vs e-commerce, Alberta PIPA, Canadian hosting, CAD costs and 10 questions.',
-    date: '2026-11-13',
-    dateModified: '2026-11-13',
+    metaTitle: 'Web Development Companies in Calgary',
+    metaDescription: 'Choose a web development company in Calgary: compare energy and B2B portals, e-commerce, CAD pricing, 30/60/90-day plans, red flags and key questions.',
+    date: '2026-11-14',
+    dateModified: '2026-11-14',
     readTime: '10 min read',
-    heroKey: 'studio',
+    heroKey: 'planning',
     intro: [
       'The right web development company in Calgary scopes your site around what you sell, fixes the price in CAD before coding, builds speed, SEO and accessibility in from the first template, and leaves the code, domain and hosting in your name. That matters whether you need a public lead-generation site, a customer-facing store or a secure portal for crews, suppliers and clients.',
       'This is a buyer’s guide, not a ranked list. It explains the project types, Calgary-specific requirements, privacy and accessibility questions, costs, ownership terms and warning signs to check before you sign. For detailed budgets, see our <a href="/blog/website-cost-canada">website cost guide for Canada</a>; for national vendor-selection context, read our <a href="/blog/website-development-company-canada">guide to choosing a website development company in Canada</a>. To see how we scope local projects, visit our <a href="/locations/web-development-company-in-calgary">web development company in Calgary</a> page.',
     ],
     body: [
-      { type: 'h2', id: 'what-calgary-needs', text: 'What Calgary businesses need from web development' },
+      { type: 'h2', id: 'what-calgary-needs', text: 'What web projects do Calgary businesses need?' },
       { type: 'p', html: 'Calgary buyers often need a website to support long B2B sales cycles, distributed field teams or local service searches — sometimes all three. A useful discovery session starts with customers, operating workflows and the regions you serve, not a favourite template:' },
       { type: 'checks', items: [
         { term: 'Energy and oil & gas service firms', text: 'Capability pages, technical resources and qualification content that help procurement teams understand your equipment, safety processes and service area. Downloads, spec libraries and enquiry routing may matter more than decorative effects.' },
@@ -4296,7 +4296,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'The right partner asks how an enquiry, booking or order reaches your team, who updates content and which systems hold operational data. Those answers should shape the scope before anyone recommends a stack.' },
 
-      { type: 'h2', id: 'site-app-ecommerce-portal', text: 'Marketing site vs web app vs e-commerce vs portal' },
+      { type: 'h2', id: 'site-app-ecommerce-portal', text: 'Do you need a website, web app, e-commerce store or portal?' },
       { type: 'p', html: 'These labels describe different products. Sorting your requirements into the right category prevents an apparent website bargain from becoming an under-scoped software project:' },
       { type: 'checks', items: [
         { term: 'Marketing website', text: 'Mostly public pages — services, about, work, blog, contact. Built so Google and Bing can crawl them, your team can edit copy in a CMS, and visitors can call, book or request a quote. This is the usual starting point for a Calgary professional or field-service firm.' },
@@ -4306,7 +4306,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'In Calgary, field-crew and contractor portals are a typical example: staff or subcontractors sign in to receive job documents, upload photos, log progress or review safety forms. That requires roles, permissions and workflow logic; a public website package does not cover it. Ask the vendor to separate public content, application functions and integrations in the quote.' },
 
-      { type: 'h2', id: 'tech-stack', text: 'Tech stack, CMS and Canadian hosting questions' },
+      { type: 'h2', id: 'tech-stack', text: 'What tech stack, CMS and Canadian hosting should you ask for?' },
       { type: 'p', html: 'You do not have to choose a framework yourself, but you should understand what is being proposed and how your team will operate it. Ask these questions during the shortlist stage:' },
       { type: 'ul', items: [
         '<strong>Why this stack for this project?</strong> A credible team explains the trade-offs in terms of your content, workflows and maintenance budget. We develop on Next.js and React, rendering key pages on the server for fast first loads; our <a href="/services/web-development/nextjs-development">Next.js development</a> service explains where that approach fits.',
@@ -4316,7 +4316,7 @@ export const articles: Article[] = [
         '<strong>How are updates and recovery handled?</strong> Ask about framework and CMS upgrades, security patches, monitoring, backups, restore testing and the cost of ongoing support.',
       ] },
 
-      { type: 'h2', id: 'vitals-seo', text: 'Core Web Vitals and SEO-readiness' },
+      { type: 'h2', id: 'vitals-seo', text: 'How should the build handle Core Web Vitals and SEO?' },
       { type: 'p', html: 'Search performance depends on the build as well as the later content campaign. Put these requirements in the statement of work and test them on a phone before launch:' },
       { type: 'ul', items: [
         '<strong>Performance budgets for real templates.</strong> Size images and fonts, lazy-load below-the-fold media, limit third-party scripts and test Core Web Vitals on mobile connections rather than only office Wi-Fi.',
@@ -4327,15 +4327,15 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'A sound technical foundation still needs an ongoing search strategy. Our <a href="/blog/seo-companies-calgary">guide to choosing an SEO company in Calgary</a> explains how to evaluate that separate scope.' },
 
-      { type: 'h2', id: 'accessibility', text: 'Accessibility: WCAG 2.1 AA' },
+      { type: 'h2', id: 'accessibility', text: 'How do you make a Calgary website accessible (WCAG 2.1 AA)?' },
       { type: 'p', html: 'Alberta has no AODA-style statute that imposes the same website-accessibility framework as Ontario, so do not accept a vague claim that a site is “Alberta compliant”. Instead, request WCAG 2.1 level AA as the design, development and acceptance standard. This makes the expected result concrete for public-facing businesses, suppliers to public bodies and organizations with accessibility policies of their own.' },
       { type: 'p', html: 'Test keyboard navigation and visible focus, screen-reader labels, contrast, text resizing, understandable form errors, video captions and alternatives to colour-only signals. Include those checks in template acceptance and pre-launch QA; fixing them after every page has been assembled usually costs more.' },
 
-      { type: 'h2', id: 'privacy', text: 'Alberta privacy: PIPA and PIPEDA for website forms' },
+      { type: 'h2', id: 'privacy', text: 'Which Alberta privacy rules apply to website forms (PIPA and PIPEDA)?' },
       { type: 'p', html: 'Alberta’s Personal Information Protection Act (PIPA) covers private-sector organizations in Alberta. The federal Personal Information Protection and Electronic Documents Act (PIPEDA) applies to commercial activity that crosses provincial or national borders. Public bodies fall under Alberta’s Freedom of Information and Protection of Privacy (FOIP) framework and the newer Access to Information and Protection of Privacy Acts. The rules that apply depend on the organization, activity and data involved.' },
       { type: 'p', html: 'For a website form, collect only what you need, explain the purpose, obtain appropriate consent, protect submissions and document retention and access. Ask the developer to map every processor that receives the data — hosting, forms, email, CRM, analytics, chat and payments — including storage regions. Have your lawyer or privacy officer confirm your obligations; this guide is practical context, not legal advice.' },
 
-      { type: 'h2', id: 'pricing', text: 'What a website costs in Calgary (CAD)' },
+      { type: 'h2', id: 'pricing', text: 'What does web development cost in Calgary (CAD)?' },
       { type: 'p', html: 'Calgary projects follow the same Canadian planning ranges published in our <a href="/blog/website-cost-canada">website cost guide for Canada</a>, rather than a separate city price list. Scope, content readiness and integrations explain most of the variation:' },
       { type: 'ul', items: [
         '<strong>Template or WordPress site:</strong> about CAD $2,000&ndash;$10,000, roughly 2&ndash;4 weeks. Fine for a small brochure site, limited on performance and growth.',
@@ -4346,7 +4346,16 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'Do not compare a template quote with a custom portal quote as though they are substitutes. Ask for the scope and assumptions behind each number, plus ongoing hosting, licences and support. A reasonable planning rule is to set aside 15&ndash;20% of the initial build cost each year for maintenance and improvement.' },
 
-      { type: 'h2', id: 'ownership', text: 'Who owns the code, domain and hosting' },
+      { type: 'h2', id: 'first-90-days', text: 'What should the first 30/60/90 days look like?' },
+      { type: 'p', html: 'A Calgary web project should have visible checkpoints, not one long silence followed by a launch date. Ask the vendor to commit to a phased plan like this in the proposal, with named people and review dates:' },
+      { type: 'ul', items: [
+        '<strong>Days 1&ndash;30 &mdash; discovery, content and structure.</strong> Interview the teams who handle enquiries, bookings or field jobs; agree the site map; collect existing URLs, analytics and Search Console access; and draft the key service, sector and location pages. For a portal or web app, define user roles, permissions, integrations and the acceptance criteria before design starts.',
+        '<strong>Days 31&ndash;60 &mdash; design, build and CMS.</strong> Sign off templates and components on real content rather than placeholder text, set up the CMS and editor permissions, and build the core pages, forms and integrations. Expect a staging URL you can test on your own phone, plus a first pass at Core Web Vitals, accessibility and technical SEO.',
+        '<strong>Days 61&ndash;90 &mdash; QA, migration and launch.</strong> Complete content, redirect mapping and cross-browser testing; run accessibility and speed checks; train your editors; then launch with analytics, Search Console and Bing Webmaster Tools in your accounts. Review the first weeks of queries and fix anything that slips after go-live.',
+      ] },
+      { type: 'p', html: 'Complex portals, e-commerce migrations and multi-language builds can run longer, but the same rhythm applies: show working software and measurable checks every few weeks so problems surface while they are still cheap to fix.' },
+
+      { type: 'h2', id: 'ownership', text: 'Who owns the code, domain and hosting?' },
       { type: 'p', html: 'Ownership should be settled before a deposit changes hands. Confirm in the contract and account setup that:' },
       { type: 'ul', items: [
         '<strong>Your business owns the custom code, designs and content.</strong> The agreement should assign the work to you on payment and include the source repository and editable design files.',
@@ -4357,7 +4366,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'A proprietary site builder or an agency-owned account can make a future move expensive even when the visual design is yours. Ask exactly what can be exported and transferred before signing.' },
 
-      { type: 'h2', id: 'red-flags', text: 'Red flags when hiring a web development company' },
+      { type: 'h2', id: 'red-flags', text: 'What are the red flags when hiring a web development company?' },
       { type: 'ul', items: [
         '<strong>A fixed quote before meaningful discovery.</strong> If nobody has asked about content, roles, integrations or internal editing, the number rests on assumptions you have not seen.',
         '<strong>A generic proposal with Calgary pasted in.</strong> The scope should reflect your buyers, field or sales workflows, surrounding service areas and actual systems.',
@@ -4368,7 +4377,7 @@ export const articles: Article[] = [
         '<strong>No testable support terms.</strong> Ask what response times, security updates, backups, training and improvement work the ongoing fee actually covers.',
       ] },
 
-      { type: 'h2', id: 'questions', text: '10 questions to ask a Calgary web development company' },
+      { type: 'h2', id: 'questions', text: 'What 10 questions should you ask before you sign?' },
       { type: 'ol', items: [
         'Who will design and build our site, and can we meet the people responsible before signing?',
         'Is our brief a marketing website, web application, e-commerce store or portal, and what assumptions sit behind that classification?',
@@ -4386,7 +4395,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'why-mapletech', text: 'Why Calgary businesses work with Mapletech Labs' },
       { type: 'p', html: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, about three hours’ drive from Calgary and in the same time zone. We do not have a Calgary office, and we can hold in-person workshops in Calgary by arrangement. You work directly with the senior engineers who build your site, your contract is with a Canadian company priced in CAD, and scope and price are fixed before any work starts. Discovery is free. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your project.' },
       { type: 'p', html: 'We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get fast first loads, with Core Web Vitals shaped during the build and a CMS so your team can publish without a developer. Our work includes a high-performance e-commerce platform for a leading Canadian retailer that drove 3x revenue growth and handles 2M+ monthly visitors, and a real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings. All source code, design files, domain and hosting accounts we create belong to you, with no lock-in.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Calgary project', text: `See how we scope and price Calgary builds on our <a href="${serviceCityPath('web-development', 'calgary')}">web development company in Calgary</a> page, explore our <a href="/services/web-development">web development services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Calgary project', text: `See how we scope and price Calgary builds on our <a href="${serviceCityPath('web-development', 'calgary')}">web development company in Calgary</a> page, explore our <a href="/services/web-development">web development services</a>, call <a href="tel:+14036048692">+1-403-604-8692</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
     ],
     keyTakeaways: [
       'Calgary web projects range from local trade-service sites to energy procurement resources, agtech products and field-crew portals; define the real workflow before comparing prices.',
