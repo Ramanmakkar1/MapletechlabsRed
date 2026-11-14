@@ -3339,8 +3339,8 @@ export const articles: Article[] = [
     dek: 'A practical buyer guide for Montreal businesses comparing digital marketing agencies: French and English ads, social and content, Law 25 consent, CAD retainers, reporting, red flags and the questions to ask.',
     metaTitle: 'Digital Marketing Agencies in Montreal: How to Choose',
     metaDescription: 'How to choose a digital marketing agency in Montreal: French and English ads, Law 25 consent, CAD retainers, reporting, red flags and the questions to ask.',
-    date: '2026-11-13',
-    dateModified: '2026-11-13',
+    date: '2026-11-14',
+    dateModified: '2026-11-14',
     readTime: '11 min read',
     heroKey: 'planning',
     intro: [
@@ -3349,6 +3349,14 @@ export const articles: Article[] = [
     ],
     body: [
       { type: 'p', html: '<strong>Quick answer:</strong> A digital marketing agency in Montreal costs about CAD $5,000 to $25,000 per month for a full-service package covering SEO, Google Ads, Meta ads and social media; single channels cost less. Choose one that plans French and English campaigns separately, handles Law 25 consent for tracking, keeps accounts in your name and answers the 10 questions in this guide.' },
+      { type: 'h2', id: 'what-to-cover', text: 'What should a Montreal digital marketing agency cover?' },
+      { type: 'p', html: 'A complete agency should be able to run four core areas for a Montreal business, and explain how each one produces enquiries rather than just activity.' },
+      { type: 'checks', items: [
+        { term: 'Local SEO and Google Business Profile', text: 'Accurate categories, services, hours, photos, reviews and consistent name, address and phone details, plus French and English service pages for the areas you serve. Ask how the agency will improve the profile and track calls and direction requests.' },
+        { term: 'Google Ads and Microsoft Advertising', text: 'Search campaigns in French and English that exclude job and research searches, with conversion tracking and cost per lead reported separately from the management fee.' },
+        { term: 'Content', text: 'Service pages, comparisons and answers to the questions buyers ask before they contact you, written natively for each language and linked to the pages that earn enquiries.' },
+        { term: 'Analytics and reporting', text: 'Calls, forms and bookings attributed to each channel and language, with a baseline before work starts and a monthly report you can read in ten minutes.' },
+      ] },
       { type: 'h2', id: 'channel-mix', text: 'Judge the full channel mix, not one channel' },
       { type: 'p', html: 'Montreal buyers do not all arrive the same way. Some search Google in French, some in English, some scroll Meta feeds, and some read a blog post for weeks before they contact anyone. A useful agency explains how the channels work together and which one it would start with for your business.' },
       { type: 'checks', items: [
@@ -3394,6 +3402,15 @@ export const articles: Article[] = [
       { type: 'p', html: 'A monthly report should be readable in about ten minutes and answer three questions: what work was done, what it produced, and what happens next. Look for leads by channel, cost per lead on paid campaigns, organic traffic to pages that earn money, the work completed, what was learned and the plan for the next month.' },
       { type: 'p', html: 'Impressions, reach and follower counts can appear, but they should support the lead numbers rather than replace them. If the report cannot show where enquiries came from, the tracking and consent setup is the first thing to fix.' },
 
+      { type: 'h2', id: 'first-90-days', text: 'What a Montreal agency should do in the first 90 days' },
+      { type: 'p', html: 'The first 90 days should produce a working foundation, not just a strategy deck. Ask any agency to describe what it will change, in what order, and how you will see progress by day 30, 60 and 90.' },
+      { type: 'ul', items: [
+        '<strong>Days 1&ndash;30:</strong> audit the website, Google Business Profile, ad accounts and analytics; fix tracking and consent; agree the baseline, the target leads and the French and English keyword sets.',
+        '<strong>Days 31&ndash;60:</strong> fix technical SEO and conversion problems on key pages, launch or restructure French and English campaigns, and begin the first content or landing-page work.',
+        '<strong>Days 61&ndash;90:</strong> review cost per lead by channel and language, cut what is wasting budget, scale what is working and agree the next quarter&rsquo;s plan against the baseline.',
+      ] },
+      { type: 'p', html: 'Agencies that cannot describe this sequence in specific terms are guessing. Progress in SEO and content can take longer than 90 days, but the setup, measurement and first fixes should all be visible inside the first quarter.' },
+
       { type: 'h2', id: 'red-flags', text: 'Red flags when hiring a digital marketing agency in Montreal' },
       { type: 'ul', items: [
         '<strong>Guaranteed rankings or lead counts.</strong> No agency controls Google, Bing or Meta. Guarantees often rely on obscure keywords or low-quality leads.',
@@ -3403,6 +3420,10 @@ export const articles: Article[] = [
         '<strong>Tracking with no consent plan.</strong> Pixels and analytics installed without regard for Law 25 create risk and unreliable data.',
         '<strong>A report with no leads.</strong> Traffic and impressions are not the same as enquiries and sales.',
       ] },
+
+      { type: 'h2', id: 'agency-types', text: 'Agency vs freelancer vs in-house: which model fits Montreal?' },
+      { type: 'p', html: 'There is no single best model. The right choice depends on how many channels you need, how fast you need results, how much control you want and whether anyone on your team can manage the work.' },
+      { type: 'table', html: '<table><thead><tr><th scope="col">Model</th><th scope="col">Best for</th><th scope="col">Watch for</th></tr></thead><tbody><tr><th scope="row">Montreal agency</th><td>Businesses that want SEO, paid search, social, content and analytics planned together, with French and English handled by one team</td><td>Spreading a small budget across too many channels; ask which channels it would leave out</td></tr><tr><th scope="row">Freelancer</th><td>A single channel, a tight budget or a clearly defined project</td><td>Limited capacity and backup; confirm who covers holidays, reporting and tracking</td></tr><tr><th scope="row">In-house team</th><td>Businesses with enough ongoing work to justify a salary and who want full control</td><td>Hiring time, tool costs and senior expertise; a hybrid with an agency can fill gaps</td></tr><tr><th scope="row">Remote Canadian agency</th><td>Teams that want agency breadth and French review without paying for a local office</td><td>Overlapping working hours and clear written communication; confirm who does the work and where data is stored</td></tr></tbody></table>' },
 
       { type: 'h2', id: 'questions', text: '10 questions to ask before you sign' },
       { type: 'ol', items: [
@@ -3420,7 +3441,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Montreal companies' },
       { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. We have no Montreal office; we work with Montreal companies remotely, with overlapping working hours, video calls and shared boards. Our team handles SEO, Google Ads, Meta ads, social media, content and tracking together, and because we also build websites, we can fix the landing pages and technical problems that hold campaigns back. We work on monthly retainers with a written scope and clear reporting, and we do not use multi-year lock-ins. For a national view of agency types, pricing and Canadian consent rules, read our <a href="/blog/digital-marketing-agencies-canada">guide to choosing a digital marketing agency in Canada</a>.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team about Montreal', text: 'See how we work with local businesses on our <a href="/locations/digital-marketing-agency-in-montreal">digital marketing agency in Montreal</a> page, or explore our <a href="/services/digital-marketing">digital marketing services</a>. For organic search specifically, read our <a href="/blog/seo-companies-montreal">guide to choosing an SEO company in Montreal</a>. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
+      { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team about Montreal', text: 'See how we work with local businesses on our <a href="/locations/digital-marketing-agency-in-montreal">digital marketing agency in Montreal</a> page, or explore our <a href="/services/digital-marketing">digital marketing services</a>. For organic search specifically, see our <a href="/locations/seo-company-in-montreal">SEO company in Montreal</a> page. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
     ],
     keyTakeaways: [
       'Compare agencies on the full channel mix: Google Ads, Meta ads, social, content, tracking and reporting.',
