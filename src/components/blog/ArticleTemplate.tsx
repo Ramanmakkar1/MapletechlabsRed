@@ -58,6 +58,7 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'digital-marketing-agencies-toronto': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
   'digital-marketing-agencies-vancouver': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
   'digital-marketing-agencies-ottawa': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
+  'digital-marketing-agencies-montreal': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
   'seo-companies-calgary': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
   'seo-companies-ottawa': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
   'seo-companies-montreal': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },

@@ -206,6 +206,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
   },
   {
+    slug: 'digital-marketing-agencies-montreal', category: 'Business',
+    title: 'Digital Marketing Agencies in Montreal: How to Choose (2026)',
+    excerpt: 'A buyer’s guide for Montreal businesses: French and English ads, Bill 96, Law 25 consent, social and content, CAD retainers, reporting and red flags.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '11 min read',
+  },
+  {
     slug: 'ui-ux-design-companies-canada', category: 'Business',
     title: 'Best UI/UX Design Companies in Canada (2026): How to Choose, Costs and What to Ask',
     excerpt: 'What a UI/UX company should deliver, CAD costs from MVP design to a design system, a neutral shortlist of Canadian studios, an evaluation checklist and red flags.',

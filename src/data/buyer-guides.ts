@@ -16,6 +16,7 @@ const BLOG_SLUGS = new Set([
   'blockchain-development-companies-canada',
   'digital-marketing-agencies-edmonton',
   'digital-marketing-agencies-ottawa',
+  'digital-marketing-agencies-montreal',
   'flutter-vs-react-native-canada',
   'wordpress-vs-headless-cms-canada',
   'digital-marketing-agencies-calgary',
@@ -97,6 +98,11 @@ const PAGE_GUIDE: Partial<Record<string, { slug: string; label: string; linkText
     slug: 'digital-marketing-agencies-ottawa',
     label: 'digital marketing',
     linkText: 'Read our guide to choosing a digital marketing agency in Ottawa',
+  },
+  'digital-marketing-agency-in-montreal': {
+    slug: 'digital-marketing-agencies-montreal',
+    label: 'digital marketing',
+    linkText: 'Read our guide to choosing a digital marketing agency in Montreal',
   },
   'digital-marketing-agency-in-calgary': {
     slug: 'digital-marketing-agencies-calgary',
