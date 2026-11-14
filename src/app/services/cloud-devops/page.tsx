@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Cloud & DevOps Services Company in Canada';
+const DESCRIPTION = 'Cloud and DevOps services in Canada: AWS architecture, Kubernetes, CI/CD pipelines and infrastructure as code. Get a free infrastructure audit.';
+
 export const metadata: Metadata = {
-  title: 'Cloud & DevOps Services Company in Canada',
-  description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada. Get a free infrastructure audit.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Cloud & DevOps Services Company in Canada | Mapletech Labs',
-    description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada. Get a free infrastructure audit.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/cloud-devops',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Cloud & DevOps Services',
   serviceType: 'Cloud & DevOps',
-  description: 'AWS, Kubernetes & CI/CD pipeline services by Mapletech Labs. Cloud architecture and DevOps for scalable apps in Canada.',
+  description: DESCRIPTION,
   provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',

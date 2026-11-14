@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'WordPress & CMS Development in Canada';
+const DESCRIPTION = 'WordPress development in Canada: custom themes, WooCommerce stores, headless WordPress and Strapi CMS builds for Canadian businesses. Get a free quote.';
+
 export const metadata: Metadata = {
-  title: 'WordPress & CMS Development in Canada',
-  description: 'WordPress & headless CMS development by Mapletech Labs. Custom themes, WooCommerce & Strapi for Canadian businesses. Get a free quote for your project.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'WordPress & CMS Development in Canada | Mapletech Labs',
-    description: 'WordPress & headless CMS development by Mapletech Labs. Custom themes, WooCommerce & Strapi for Canadian businesses. Get a free quote for your project.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/wordpress-cms',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'WordPress & CMS Development',
   serviceType: 'WordPress & CMS Development',
-  description: 'WordPress & headless CMS development by Mapletech Labs. Custom themes, WooCommerce & Strapi for Canadian businesses.',
+  description: DESCRIPTION,
   provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',

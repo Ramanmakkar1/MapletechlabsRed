@@ -4,12 +4,15 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
+const TITLE = 'Game Development Services in Canada';
+const DESCRIPTION = 'Game development studio in Canada: Unity and Unreal Engine games, mobile and hyper-casual titles and multiplayer LiveOps. Request a free project estimate.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Game Development Services in Canada'),
-  description: seoDescription('Unity & Unreal Engine game development by Mapletech Labs. Mobile, hyper-casual & multiplayer games built in Canada. Request a free project estimate today.'),
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: ogTitle('Game Development Services in Canada'),
-    description: seoDescription('Unity & Unreal Engine game development by Mapletech Labs. Mobile, hyper-casual & multiplayer games built in Canada. Request a free project estimate today.'),
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/game-development',
     type: 'website',
   },
@@ -23,7 +26,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Game Development Services',
   serviceType: 'Game Development',
-  description: 'Professional game development by Mapletech Labs. Mobile games, Unity, Unreal Engine, hyper-casual games, and multiplayer LiveOps solutions.',
+  description: DESCRIPTION,
   provider: { '@id': 'https://mapletechlabs.ca/#organization' },
   areaServed: {
     '@type': 'Country',

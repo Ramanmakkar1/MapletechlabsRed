@@ -1,14 +1,19 @@
 import type { Metadata } from 'next';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 
+const TITLE = 'Branding & Identity Services in Canada';
+const DESCRIPTION = 'Branding agency in Canada: brand strategy, logo design, visual identity and brand guidelines for growing businesses. Request a free brand consultation.';
+
 export const metadata: Metadata = {
-  title: 'Branding & Identity Services in Canada',
-  description: 'Strategic branding by Mapletech Labs. Logo design, visual identity & brand guidelines for businesses in Canada. Request a free brand consultation today.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Branding & Identity Services in Canada | Mapletech Labs',
-    description: 'Strategic branding by Mapletech Labs. Logo design, visual identity & brand guidelines for businesses in Canada. Request a free brand consultation today.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/branding',
     type: 'website',
   },
@@ -21,7 +26,7 @@ const serviceSchema = serviceHubSchema({
   slug: 'branding',
   name: 'Branding & Identity Services',
   serviceType: 'Branding & Identity',
-  description: 'Strategic branding by Mapletech Labs. Logo design, visual identity & brand guidelines for businesses in Canada.',
+  description: DESCRIPTION,
 });
 
 const breadcrumbSchema = {

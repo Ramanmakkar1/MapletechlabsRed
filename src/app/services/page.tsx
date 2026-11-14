@@ -1,14 +1,19 @@
 import type { Metadata } from 'next';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Software Development Services in Canada';
+const DESCRIPTION = 'Software development services in Canada: 12 service lines, from custom software, mobile apps and AI to UI/UX, cloud and SaaS, by one Edmonton-based team.';
+
 export const metadata: Metadata = {
-  title: 'Software Development Services in Canada',
-  description: 'Custom software, mobile apps, AI, cloud and SaaS development from Mapletech Labs. Twelve service lines, one accountable Canadian engineering team.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Software Development Services in Canada | Mapletech Labs',
-    description: 'Explore 12 service categories from Mapletech Labs — mobile app development, web development, AI & machine learning, blockchain, product design, cloud & DevOps, AR/VR, game development, digital marketing, branding, WordPress & CMS, and SaaS development.',
+    title: ogTitle(TITLE),
+    description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services',
     type: 'website',
   },
