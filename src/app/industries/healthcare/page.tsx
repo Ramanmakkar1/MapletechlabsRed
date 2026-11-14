@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: ogTitle(TITLE),
+    title: ogTitle('Healthcare Software Development in Canada'),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/industries/healthcare',
     type: 'website',
@@ -34,7 +34,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={TITLE}
-        description={'Healthcare software development in Canada by Mapletech Labs: HIPAA-compliant telehealth, EHR and patient portals for providers.'}
+        description={seoDescription(DESCRIPTION)}
         url={'https://mapletechlabs.ca/industries/healthcare'}
       />
       <PageClient />

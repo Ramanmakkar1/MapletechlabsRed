@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: ogTitle(TITLE),
+    title: ogTitle('Enterprise Software Development in Canada'),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/industries/enterprise',
     type: 'website',
@@ -34,7 +34,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={TITLE}
-        description={'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at enterprise scale.'}
+        description={seoDescription(DESCRIPTION)}
         url={'https://mapletechlabs.ca/industries/enterprise'}
       />
       <PageClient />
