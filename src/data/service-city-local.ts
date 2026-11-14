@@ -1329,6 +1329,73 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-design-company-in-calgary': {
+    title: 'Web Design Company in Calgary',
+    description: 'Calgary web design from Mapletech Labs: fast, mobile-first websites built to turn visitors into leads, with a fixed CAD quote. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs designs custom websites for Calgary businesses from our Alberta team, with mobile-first layouts, fast pages and SEO-ready structure. Every project gets a fixed CAD quote, clear design milestones and a site built to turn visitors into enquiries.',
+    intro: 'Mapletech Labs is an Alberta web design team headquartered in Edmonton, and we design and build custom websites for Calgary businesses. We do not have a Calgary office, but we share your time zone and travel to Calgary for discovery sessions and design reviews when a project needs it. From the first wireframe to launch, we focus on credibility, page speed and clear conversion paths, and we agree a written scope and fixed CAD price before design starts. Call +1-403-604-8692 to talk about your Calgary website.',
+    sections: [
+      {
+        heading: 'Web design shaped by Calgary industries',
+        body: [
+          'Calgary buyers in energy, oilfield services, fintech, logistics, agriculture and professional services research a supplier long before they call. That changes how a site is designed: technical service pages that answer real questions, proof and case studies near the top of the funnel, and enquiry forms that capture the details your sales team needs. For energy and field-services firms we design clear service and capability pages, while fintech and professional services sites lead with trust signals, security information and straightforward process explanations.',
+        ],
+      },
+      {
+        heading: 'Designing for leads, not just looks',
+        body: [
+          'A redesign should fix the reasons your current site loses enquiries. We review where Calgary visitors drop off, simplify forms and calls to action, and set a clear conversion path on every key page. Page speed and Core Web Vitals are part of the design brief from the start, so heavy images, fonts and scripts do not slow the site after launch. If you are comparing studios, see our ',
+          { href: '/services/web-development/web-design', label: 'web design services across Canada' },
+          ' for the full scope.',
+        ],
+      },
+      {
+        heading: 'What web design costs in Calgary',
+        body: [
+          'Our project pricing puts a custom website at $10,000-$50,000 CAD, with a typical delivery window of 4-10 weeks. The final figure depends on page count, design depth, content requirements and integrations, and we agree a written scope and fixed price before design starts. For the full breakdown of what drives the number, read our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Design and development under one roof',
+        body: [
+          'Web design covers how the site looks, reads and converts, while development covers the code, integrations and systems behind it. Most Calgary businesses need both, and we deliver them as one project so nothing is lost between a design file and the live site. For a complex build, portal, e-commerce system or custom application, start with our ',
+          { href: '/locations/web-development-company-in-calgary', label: 'Web Development Company in Calgary' },
+          ' page. If you need ongoing search visibility after launch, our ',
+          { href: '/locations/seo-company-in-calgary', label: 'SEO Company in Calgary' },
+          ' team handles that work.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does web design cost in Calgary?',
+        a: 'Our project pricing puts a custom website at $10,000-$50,000 CAD, delivered in about 4-10 weeks. The final price depends on page count, design depth, content and integrations, and we agree a fixed CAD quote after a free discovery call.',
+      },
+      {
+        q: 'Do you have a Calgary office?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and does not have a Calgary office. We work in the same time zone and travel to Calgary for discovery sessions, design reviews and workshops, with travel agreed up front.',
+      },
+      {
+        q: 'How long does a Calgary website take to design and build?',
+        a: 'A custom website usually takes 4-10 weeks from kickoff to launch, based on the ranges in our project pricing. Smaller brochure sites can move faster, while larger sites with many pages or integrations take longer. Your written scope includes milestones for design approval, content lock and launch.',
+      },
+      {
+        q: 'Can you redesign an existing Calgary website?',
+        a: 'Yes. We can redesign an existing site or move it to a faster custom build, keeping the URLs and content that already earn traffic. We audit your current pages, plan redirects where needed and review the new design on staging before launch so your rankings and enquiries are protected.',
+      },
+      {
+        q: 'Will my Calgary website be SEO-ready and mobile-friendly?',
+        a: 'Yes. Every site we design is built mobile-first, with fast-loading pages, clean URLs, descriptive headings and structured data so Google and Bing can read it. We test on real phones and check Core Web Vitals before launch, and we can add ongoing SEO work if you want to keep improving after the site goes live.',
+      },
+    ],
+  },
   'web-development-company-in-vancouver': {
     title: 'Web Development Company in Vancouver',
     description: 'Mapletech Labs builds custom websites and web apps for Vancouver businesses, with a fixed CAD price agreed up front from Edmonton. Get a free quote.',
