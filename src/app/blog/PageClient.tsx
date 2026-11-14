@@ -152,6 +152,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
   },
   {
+    slug: 'app-development-companies-montreal', category: 'Business',
+    title: 'App Development Companies in Montreal: How to Choose One (2026)',
+    excerpt: 'How to choose an app development company in Montreal: bilingual apps under Bill 96, Quebec Law 25 privacy, CAD cost ranges, red flags and 10 questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '9 min read',
+  },
+  {
     slug: 'software-development-companies-edmonton', category: 'Business',
     title: 'Software Development Companies in Edmonton: How to Choose (2026)',
     excerpt: 'A buyer’s guide for Edmonton businesses hiring custom software: fixed CAD pricing, typical costs, red flags, and 10 questions to ask before you sign.',

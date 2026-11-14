@@ -43,6 +43,7 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'app-development-companies-vancouver': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'app-development-companies-edmonton': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'app-development-companies-ottawa': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'app-development-companies-montreal': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'software-development-companies-edmonton': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
   'software-development-companies-calgary': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
   'software-development-companies-toronto': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
