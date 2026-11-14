@@ -12,7 +12,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Pricing & Engagement Models (CAD)';
+const TITLE = 'Software Development Pricing in Canada';
 const DESCRIPTION = 'Explore typical Canadian website, web app, SaaS, mobile and AI project ranges in CAD, engagement models, and ways to manage software development costs.';
 const URL = canonicalUrl('/pricing');
 const FAQS = [
