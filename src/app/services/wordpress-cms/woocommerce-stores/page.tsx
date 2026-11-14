@@ -11,6 +11,9 @@ import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 const TITLE = 'WooCommerce Store Development in Canada';
 const DESCRIPTION = 'WooCommerce store development in Canada: online stores with custom plugins, Canadian payment gateways and shipping integrations. Get a free quote.';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
