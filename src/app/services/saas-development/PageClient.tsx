@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import HubBuyerGuides from '@/components/page/HubBuyerGuides';
 import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
@@ -104,6 +105,7 @@ export default function PageClient() {
             <p className="lede" style={{ marginTop: 16 }}>Need a broader custom build? See our <Link href="/locations/software-development-company-in-toronto">software development company pages</Link>, starting with Toronto.</p>
           </div>
         </section>
+        <HubBuyerGuides serviceSlug="saas-development" heading="How to choose a SaaS development company: city guides" />
         </>
       )}
     />

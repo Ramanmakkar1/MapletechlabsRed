@@ -182,6 +182,27 @@ export function buyerGuideFor(serviceSlug: string, citySlug: string, pageKey?: s
   return { href, label: compareLabel, isCity: Boolean(cityHref) };
 }
 
+const HUB_CITY_ORDER = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa', 'montreal'];
+
+/** National and city buyer guides for a service hub page. */
+export function hubBuyerGuides(serviceSlug: string): { national?: { href: string; text: string }; cities: { href: string; text: string }[] } {
+  const nationalHref = slugToHref(NATIONAL_GUIDE_SLUG[serviceSlug]);
+  const national = nationalHref
+    ? { href: nationalHref, text: buyerGuideLinkText(serviceSlug, 'Canada', false) }
+    : undefined;
+
+  const citySlugs = CITY_GUIDE_SLUG[serviceSlug] ?? {};
+  const cities: { href: string; text: string }[] = [];
+  for (const citySlug of HUB_CITY_ORDER) {
+    const href = slugToHref(citySlugs[citySlug]);
+    if (!href) continue;
+    const cityName = citySlug.charAt(0).toUpperCase() + citySlug.slice(1);
+    cities.push({ href, text: buyerGuideLinkText(serviceSlug, cityName, true) });
+  }
+
+  return { national, cities };
+}
+
 /** Descriptive anchor text for the buyer-guide card link. National guides say "in Canada", not the city. */
 export function buyerGuideLinkText(serviceSlug: string, cityName: string, isCity: boolean): string {
   const place = isCity ? cityName : 'Canada';

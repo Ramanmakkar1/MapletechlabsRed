@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import HubBuyerGuides from '@/components/page/HubBuyerGuides';
 import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
@@ -105,6 +106,7 @@ export default function PageClient() {
       industries={industries}
       faqs={faqs}
       buyerContent={(
+        <>
         <section style={{ padding: 'var(--section-y-sm) 0' }}>
           <div className="cb-container" style={{ display: 'grid', gap: 20 }}>
             <h2>Choose an AI development approach</h2>
@@ -159,6 +161,8 @@ export default function PageClient() {
             <p className="lede"><Link href="/contact">Discuss your AI project approach and acceptance criteria</Link>.</p>
           </div>
         </section>
+        <HubBuyerGuides serviceSlug="ai-ml" heading="How to choose an AI development company: city guides" />
+        </>
       )}
     />
   );
