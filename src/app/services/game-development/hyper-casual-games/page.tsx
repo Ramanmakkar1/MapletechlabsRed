@@ -8,7 +8,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Hyper-Casual Game Development Services';
-const DESCRIPTION = 'Hyper-casual game development from 3-day prototypes to CPI-validated launches: 40+ games shipped and 50M+ downloads by our Edmonton-based studio.';
+const DESCRIPTION = 'Hyper-casual game development from 3-day prototypes to CPI-validated launches: 40+ games shipped and 50M+ downloads by our Toronto-based game studio.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
@@ -32,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={TITLE}
-        description={DESCRIPTION}
+        description={seoDescription(DESCRIPTION)}
         url={'https://mapletechlabs.ca/services/game-development/hyper-casual-games'}
       />
       <PageClient />
