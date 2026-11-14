@@ -2699,7 +2699,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Most Edmonton businesses end up using both: ads to bring leads while SEO builds, then shifting budget as organic leads grow. The data from ads also tells you which pages are worth growing for search.' },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works' },
-      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. Our marketing team handles SEO, Google Ads, local search, content and tracking together, and because we also build websites, we can fix the landing pages and technical problems that hold campaigns back instead of sending a list to someone else. We work on monthly retainers with clear scope and reporting, and we do not use multi-year lock-ins.' },
+      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. Our marketing team handles SEO, Google Ads, local search, content and tracking together, and because we also build websites, we can fix the landing pages and technical problems that hold campaigns back instead of sending a list to someone else. We work on monthly retainers with clear scope and reporting, and we do not use multi-year lock-ins. For a national view of agency types, pricing and Canadian consent rules, read our <a href="/blog/digital-marketing-agencies-canada">guide to choosing a digital marketing agency in Canada</a>.' },
       { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team in Edmonton', text: 'See how we work with local businesses on our <a href="/locations/digital-marketing-agency-in-edmonton">digital marketing agency in Edmonton</a> page, or, if search is your focus, our <a href="/locations/seo-company-in-edmonton">SEO company in Edmonton</a> page. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
     ],
     keyTakeaways: [
@@ -3068,7 +3068,7 @@ export const articles: Article[] = [
       ] },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Ottawa businesses' },
-      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. Our team handles SEO, Google Ads, local search, content and tracking together, and because we also build websites, we can fix the landing pages and technical problems that hold campaigns back. We work on monthly retainers with a written scope and clear reporting, and we do not use multi-year lock-ins.' },
+      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. Our team handles SEO, Google Ads, local search, content and tracking together, and because we also build websites, we can fix the landing pages and technical problems that hold campaigns back. We work on monthly retainers with a written scope and clear reporting, and we do not use multi-year lock-ins. For a national view of agency types, pricing and Canadian consent rules, read our <a href="/blog/digital-marketing-agencies-canada">guide to choosing a digital marketing agency in Canada</a>.' },
       { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team about Ottawa', text: 'See how we work with local businesses on our <a href="/locations/digital-marketing-agency-in-ottawa">digital marketing agency in Ottawa</a> page, or explore our <a href="/services/digital-marketing">digital marketing services</a>. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
     ],
     keyTakeaways: [
@@ -3178,7 +3178,7 @@ export const articles: Article[] = [
       ] },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Montreal companies' },
-      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. We have no Montreal office; we work with Montreal companies remotely, with overlapping working hours, video calls and shared boards. Our team handles SEO, Google Ads, Meta ads, social media, content and tracking together, and because we also build websites, we can fix the landing pages and technical problems that hold campaigns back. We work on monthly retainers with a written scope and clear reporting, and we do not use multi-year lock-ins.' },
+      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. We have no Montreal office; we work with Montreal companies remotely, with overlapping working hours, video calls and shared boards. Our team handles SEO, Google Ads, Meta ads, social media, content and tracking together, and because we also build websites, we can fix the landing pages and technical problems that hold campaigns back. We work on monthly retainers with a written scope and clear reporting, and we do not use multi-year lock-ins. For a national view of agency types, pricing and Canadian consent rules, read our <a href="/blog/digital-marketing-agencies-canada">guide to choosing a digital marketing agency in Canada</a>.' },
       { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team about Montreal', text: 'See how we work with local businesses on our <a href="/locations/digital-marketing-agency-in-montreal">digital marketing agency in Montreal</a> page, or explore our <a href="/services/digital-marketing">digital marketing services</a>. For organic search specifically, read our <a href="/blog/seo-companies-montreal">guide to choosing an SEO company in Montreal</a>. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
     ],
     keyTakeaways: [
@@ -3197,6 +3197,109 @@ export const articles: Article[] = [
     ],
     cta: { href: '/locations/digital-marketing-agency-in-montreal', label: 'See our Montreal digital marketing agency' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'montreal' },
+  },
+  {
+    slug: 'digital-marketing-agencies-canada',
+    relatedTopic: 'seo',
+    relatedService: { href: '/services/digital-marketing', label: 'digital marketing services' },
+    category: 'Business',
+    title: 'Digital Marketing Agencies in Canada: How to Choose (2026)',
+    dek: 'A practical buyer guide for Canadian businesses comparing digital marketing agencies: full-service scope, CAD retainers, CASL and PIPEDA consent, bilingual campaigns, agency types, a vetting checklist and red flags.',
+    metaTitle: 'Digital Marketing Agencies in Canada 2026',
+    metaDescription: 'How to choose a digital marketing agency in Canada: full-service scope, CAD retainers, CASL and PIPEDA consent, bilingual campaigns and red flags.',
+    date: '2026-11-13',
+    dateModified: '2026-11-13',
+    readTime: '12 min read',
+    heroKey: 'planning',
+    intro: [
+      'Choose a digital marketing agency in Canada by matching the channels you need to a team that can prove the work, quote in CAD and handle Canadian rules such as CASL, PIPEDA and Quebec&rsquo;s Law 25. A full-service agency should cover SEO, Google Ads, social media, content and analytics as one plan, not five disconnected retainers.',
+      'This is a buyer guide, not a ranked list. It explains what a full-service agency covers, the CAD retainer ranges to expect, the Canadian rules that change how campaigns are built, how agency types compare, a vetting checklist and the red flags to avoid. If organic search is your main channel, our <a href="/blog/top-seo-companies-canada">guide to choosing an SEO company in Canada</a> goes deeper on that one service.',
+    ],
+    body: [
+      { type: 'p', html: '<strong>Quick answer:</strong> A full-service digital marketing agency in Canada typically costs about CAD $5,000 to $25,000 per month for SEO, Google Ads, social media, content and analytics together; single channels cost less. Choose one that separates agency fees from ad spend, keeps accounts in your name, plans consent for tracking and email, and puts the scope in writing before you sign.' },
+      { type: 'h2', id: 'full-service', text: 'What a full-service digital marketing agency covers' },
+      { type: 'p', html: 'A full-service agency plans the channels together so each one has a clear job. That does not mean every channel at once. It means the agency can explain which channel to start with, how the others support it and what it would leave out for your budget.' },
+      { type: 'checks', items: [
+        { term: 'SEO', text: 'Earns visibility for the questions people search before they buy. Ask what technical fixes, content and internal links will be done, and how organic enquiries will be tracked. See our <a href="/services/digital-marketing/seo-services">SEO services</a>.' },
+        { term: 'Google Ads', text: 'Captures people already searching for your service. Ask how campaigns will exclude job and research searches and report cost per lead rather than clicks. See our <a href="/services/digital-marketing/google-ads-ppc">Google Ads and PPC management</a>.' },
+        { term: 'Social media', text: 'Keeps a local brand visible and gives paid campaigns credible creative. Ask which platforms fit your customers and who produces the posts. See our <a href="/services/digital-marketing/social-media-marketing">social media marketing</a>.' },
+        { term: 'Content', text: 'Builds lasting visibility for the questions people ask before they contact you, and gives ads somewhere useful to send people. See our <a href="/services/digital-marketing/content-marketing">content marketing</a>.' },
+        { term: 'Analytics', text: 'Connects every channel to real enquiries. Ask how calls, forms and bookings are attributed, and how consent affects what can be measured. See our <a href="/services/digital-marketing/performance-analytics">performance analytics and conversion tracking</a>.' },
+      ] },
+      { type: 'p', html: 'A team that can explain the trade-offs between these channels has thought about your business. A team that promises every channel at once usually spreads a small budget too thinly. You can see how we structure the work on our <a href="/services/digital-marketing">digital marketing services</a> page.' },
+
+      { type: 'h2', id: 'budget', text: 'CAD monthly retainers and ad spend in Canada' },
+      { type: 'p', html: 'Two Canadian businesses can receive very different quotes for what sounds like the same service. The difference usually comes from the number of channels, competition, content volume, landing pages, tracking and the size of the ad budget. Use these Canadian ranges as a starting point, then compare quotes by deliverables and what is excluded.' },
+      { type: 'table', html: '<table><thead><tr><th scope="col">Service</th><th scope="col">Typical monthly retainer (CAD)</th><th scope="col">Ad spend (CAD)</th></tr></thead><tbody><tr><th scope="row">SEO</th><td>About $1,500&ndash;$10,000</td><td>None; SEO is earned visibility</td></tr><tr><th scope="row">Google Ads management</th><td>About $2,000&ndash;$15,000</td><td>Paid to Google, budgeted separately; often 15&ndash;25% of ad spend in fees with a monthly minimum</td></tr><tr><th scope="row">Social media</th><td>About $1,000&ndash;$8,000</td><td>Paid social budget billed separately from management</td></tr><tr><th scope="row">Full-service package</th><td>About $5,000&ndash;$25,000</td><td>Media budget for Google and Meta shown on its own line</td></tr></tbody></table>' },
+      { type: 'p', html: 'Our <a href="/blog/digital-marketing-cost-canada">digital marketing cost guide for Canada</a> sets out the same ranges in more detail. Ad spend is paid to Google or Meta, not to the agency, and should be budgeted separately. Agree a test budget before scaling, and ask what a lead is worth to your business so the spend can be judged against a real target.' },
+
+      { type: 'h2', id: 'canadian-factors', text: 'Canadian rules that change how campaigns are built' },
+      { type: 'p', html: 'Canada is not one uniform market. Privacy law, anti-spam law and language rules vary by province and by channel, so a plan that works in one city may need changes in another. These are the factors to raise in a first meeting.' },
+      { type: 'checks', items: [
+        { term: 'CASL for email', text: 'Canada&rsquo;s Anti-Spam Legislation requires consent before commercial email, clear sender identification and an easy unsubscribe. Ask how the agency will collect, record and honour consent, and how it will keep purchased lists out of your campaigns.' },
+        { term: 'PIPEDA for personal information', text: 'The federal Personal Information Protection and Electronic Documents Act sets rules for how private-sector organizations collect, use and disclose personal information. Ask what data the agency and its tools collect, where it is stored and who can access it.' },
+        { term: 'Quebec Law 25 consent', text: 'Quebec&rsquo;s Law 25 adds privacy duties for organizations handling information in Quebec, including consent for tracking and an identified privacy officer. Pixels and analytics should wait for a clear choice where consent is required.' },
+        { term: 'Bilingual campaigns', text: 'For Quebec and national campaigns, plan French and English ad copy, landing pages and email separately. Machine translation usually shows; a native reviewer should check headlines, offers and calls to action before launch.' },
+      ] },
+      { type: 'callout', tone: 'muted', title: 'Practical guidance, not legal advice', text: 'The exact duties depend on your organization, your customers and the tools you use. Your privacy officer or lawyer should confirm them. An agency can set up consent-aware tracking and document the data flow, but it cannot decide your legal position for you.' },
+
+      { type: 'h2', id: 'agency-types', text: 'Full-service agency vs SEO specialist vs freelancer vs in-house' },
+      { type: 'p', html: 'There is no single best model. The right choice depends on how many channels you need, how fast you need results, how much control you want and whether you have someone in-house to manage the work.' },
+      { type: 'table', html: '<table><thead><tr><th scope="col">Agency type</th><th scope="col">Best for</th><th scope="col">Watch for</th></tr></thead><tbody><tr><th scope="row">Full-service agency</th><td>Businesses that want SEO, paid search, social, content and analytics planned together</td><td>Spreading a small budget across too many channels; ask which channels it would leave out</td></tr><tr><th scope="row">SEO specialist</th><td>Companies whose customers mainly search Google or Bing and can wait for organic results</td><td>No paid or social support; check that technical SEO, content and link work are all included</td></tr><tr><th scope="row">Freelancer</th><td>A single channel, a tight budget or a clearly defined project</td><td>Limited capacity and backup; confirm who covers holidays, reporting and tracking</td></tr><tr><th scope="row">In-house team</th><td>Businesses with enough ongoing work to justify a salary and want full control</td><td>Hiring time, tool costs and senior expertise; a hybrid with an agency can fill gaps</td></tr></tbody></table>' },
+
+      { type: 'h2', id: 'vetting', text: 'A vetting checklist before you sign' },
+      { type: 'checks', items: [
+        { term: 'A written scope', text: 'The proposal should name the channels, deliverables, reporting cadence, contract length and notice period. Vague promises such as &ldquo;full digital marketing&rdquo; are not a scope.' },
+        { term: 'Fees separated from ad spend', text: 'You should see what goes to the agency and what goes to Google or Meta. Ask for the management fee, minimum spend and any setup or content charges in writing.' },
+        { term: 'Account ownership', text: 'Your business should own Google Ads, Google Analytics, Search Console, Meta Business Manager and your Google Business Profile, with the agency added as a user.' },
+        { term: 'Proof of the work', text: 'Ask for a sample monthly report with client details removed, and for examples of the work the team actually did, not just logos on a homepage.' },
+        { term: 'The people doing the work', text: 'Ask who will manage your account each week and whether you can meet them. A senior salesperson who disappears after signing is a common complaint.' },
+        { term: 'Tracking and consent', text: 'Agree how calls, forms and bookings will be tracked, and how CASL, PIPEDA and Law 25 consent will be handled before campaigns launch.' },
+        { term: 'A first-90-days plan', text: 'The agency should say what it will change on your website, ads and listings in the first three months, and how it will judge whether the work is on track.' },
+      ] },
+
+      { type: 'h2', id: 'red-flags', text: 'Red flags when hiring a digital marketing agency in Canada' },
+      { type: 'ul', items: [
+        '<strong>Guaranteed rankings or lead counts.</strong> No agency controls Google, Bing or Meta. Guarantees often rely on obscure keywords or low-quality leads.',
+        '<strong>The agency owns your accounts.</strong> You should keep your ad history, analytics, Search Console and Google Business Profile if you change providers.',
+        '<strong>Fees and ad spend blended together.</strong> If you cannot see what went to the platform and what went to the agency, you cannot judge either.',
+        '<strong>No consent plan for email or tracking.</strong> Campaigns that ignore CASL, PIPEDA or Law 25 create legal and reporting risk at the same time.',
+        '<strong>French as an afterthought.</strong> Machine-translated ads and English landing pages for French campaigns waste budget and can miss the market.',
+        '<strong>A report with no leads.</strong> Traffic and impressions are not the same as enquiries and sales.',
+      ] },
+
+      { type: 'h2', id: 'choose-by-city', text: 'Choose by city' },
+      { type: 'p', html: 'Local competition, talent and language change the plan. These city guides go deeper on the market you are hiring in:' },
+      { type: 'ul', items: [
+        '<a href="/blog/digital-marketing-agencies-edmonton">digital marketing agencies in Edmonton</a>',
+        '<a href="/blog/digital-marketing-agencies-calgary">digital marketing agencies in Calgary</a>',
+        '<a href="/blog/digital-marketing-agencies-toronto">digital marketing agencies in Toronto</a>',
+        '<a href="/blog/digital-marketing-agencies-vancouver">digital marketing agencies in Vancouver</a>',
+        '<a href="/blog/digital-marketing-agencies-ottawa">digital marketing agencies in Ottawa</a>',
+        '<a href="/blog/digital-marketing-agencies-montreal">digital marketing agencies in Montreal</a>',
+      ] },
+
+      { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Canadian companies' },
+      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. Our team handles SEO, Google Ads, Meta ads, social media, content and tracking together, and because we also build websites, we can fix the landing pages and technical problems that hold campaigns back. We work on monthly retainers with a written scope and clear reporting, and we do not use multi-year lock-ins.' },
+      { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team about your market', text: 'See how we structure the work on our <a href="/services/digital-marketing">digital marketing services</a> page, or explore our city pages for <a href="/locations/digital-marketing-agency-in-edmonton">Edmonton</a>, <a href="/locations/digital-marketing-agency-in-calgary">Calgary</a>, <a href="/locations/digital-marketing-agency-in-toronto">Toronto</a> and <a href="/locations/digital-marketing-agency-in-vancouver">Vancouver</a>. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
+    ],
+    keyTakeaways: [
+      'Compare agencies on the full channel mix: SEO, Google Ads, social, content, analytics and reporting.',
+      'Typical Canadian ranges: SEO about CAD $1,500-$10,000 per month, paid search management $2,000-$15,000 plus ad spend, social $1,000-$8,000, full-service $5,000-$25,000.',
+      'Plan CASL consent for email, PIPEDA and Quebec Law 25 consent for tracking, and separate French and English campaigns.',
+      'Choose the agency type that fits your channels and control: full-service, SEO specialist, freelancer or in-house.',
+      'Keep ownership of your ad accounts, analytics and Google Business Profile, and separate agency fees from ad spend.',
+    ],
+    faqs: [
+      { q: 'How much does a digital marketing agency in Canada cost?', a: 'Canadian ranges in our digital marketing cost guide put SEO at about CAD $1,500 to $10,000 per month, paid search management at about $2,000 to $15,000 per month plus ad spend, social media at about $1,000 to $8,000 per month, and full-service packages at about $5,000 to $25,000 per month. Your quote depends on channels, competition, content, tracking and ad budget.' },
+      { q: 'What does a full-service digital marketing agency include?', a: 'A full-service agency plans SEO, Google Ads, social media, content and analytics together. That can include technical SEO, content and landing pages, paid search and paid social management, organic social posts, email, conversion tracking and monthly reporting. Ask which channels it would start with and which it would leave out for your budget.' },
+      { q: 'What is CASL and how does it affect email marketing?', a: 'CASL is Canada&rsquo;s Anti-Spam Legislation. It requires consent before commercial email, clear sender identification and an easy unsubscribe, and it applies to messages sent from Canada or to Canadian recipients. Ask how the agency will collect, record and honour consent, and keep purchased lists out of your campaigns.' },
+      { q: 'How do PIPEDA and Quebec Law 25 affect tracking pixels?', a: 'PIPEDA sets federal private-sector rules for personal information, and Quebec&rsquo;s Law 25 adds privacy duties for organizations handling information in Quebec, including consent for tracking and an identified privacy officer. Before installing a Meta Pixel, Google Analytics or ad-platform tags, agree what data is collected, what consent is shown and how it is recorded. Confirm the details with your privacy officer or lawyer.' },
+      { q: 'Should I hire a local agency or a remote Canadian one?', a: 'A local team can make in-person meetings easy, but a Canadian team elsewhere with overlapping working hours can deliver the same quality remotely. Mapletech Labs is headquartered in Edmonton and works with companies across Canada through video calls, shared boards and regular reporting. Focus on the plan, the people doing the work, fixed CAD pricing and who owns the accounts.' },
+      { q: 'How long before I see results from a digital marketing agency?', a: 'Paid channels such as Google Ads and Meta ads can produce leads within the first few weeks once tracking and landing pages are ready. SEO usually takes about three to six months to show meaningful movement, because technical fixes, content and links need time to be indexed and to earn rankings. Ask the agency what it will measure in the first 30, 60 and 90 days.' },
+    ],
+    cta: { href: '/services/digital-marketing', label: 'See our digital marketing services' },
+    enquiryContext: { serviceSlug: 'digital-marketing' },
   },
   {
     slug: 'digital-marketing-agencies-calgary',
@@ -3275,7 +3378,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Agencies that answer clearly and in writing are usually the ones that will report clearly later.' },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Calgary businesses' },
-      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. One team covers SEO, Google Ads, social media, content and tracking, and because we also build websites, we can fix the landing pages that hold campaigns back. We travel to Calgary for discovery meetings and reviews when a project needs it, price retainers in CAD with a written monthly scope, and keep every account in your name.' },
+      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. One team covers SEO, Google Ads, social media, content and tracking, and because we also build websites, we can fix the landing pages that hold campaigns back. We travel to Calgary for discovery meetings and reviews when a project needs it, price retainers in CAD with a written monthly scope, and keep every account in your name. For a national view of agency types, pricing and Canadian consent rules, read our <a href="/blog/digital-marketing-agencies-canada">guide to choosing a digital marketing agency in Canada</a>.' },
       { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team about Calgary', text: 'See how we plan channels for local businesses on our <a href="/locations/digital-marketing-agency-in-calgary">digital marketing agency in Calgary</a> page, or, if search is your focus, our <a href="/locations/seo-company-in-calgary">SEO company in Calgary</a> page. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
     ],
     keyTakeaways: [
@@ -3371,7 +3474,7 @@ export const articles: Article[] = [
       ] },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Toronto businesses' },
-      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. We do not have a Toronto office: Edmonton is two hours behind Toronto, so most of the working day overlaps, and we travel to Toronto for workshops and milestone reviews when a project needs it. One team handles SEO, Google Ads, social, content and tracking, and because we also build websites we can fix the landing pages that decide whether expensive GTA clicks turn into leads.' },
+      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. We do not have a Toronto office: Edmonton is two hours behind Toronto, so most of the working day overlaps, and we travel to Toronto for workshops and milestone reviews when a project needs it. One team handles SEO, Google Ads, social, content and tracking, and because we also build websites we can fix the landing pages that decide whether expensive GTA clicks turn into leads. For a national view of agency types, pricing and Canadian consent rules, read our <a href="/blog/digital-marketing-agencies-canada">guide to choosing a digital marketing agency in Canada</a>.' },
       { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team about Toronto', text: 'See how we plan GTA campaigns on our <a href="/locations/digital-marketing-agency-in-toronto">digital marketing agency in Toronto</a> page, or, for search on its own, our <a href="/locations/seo-company-in-toronto">SEO company in Toronto</a> page. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
     ],
     keyTakeaways: [
@@ -3468,7 +3571,7 @@ export const articles: Article[] = [
       ] },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Vancouver businesses' },
-      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. We do not have a Vancouver office; Vancouver is one hour behind Edmonton, so our working days almost fully overlap, and we come to Vancouver for workshops and reviews when a project needs it. One team covers SEO, Google Ads, social, content and tracking, and because we also design and build websites, we can improve the pages your campaigns send people to.' },
+      { type: 'p', html: 'Mapletech Labs was founded in 2018 and is headquartered in Edmonton, Alberta. We do not have a Vancouver office; Vancouver is one hour behind Edmonton, so our working days almost fully overlap, and we come to Vancouver for workshops and reviews when a project needs it. One team covers SEO, Google Ads, social, content and tracking, and because we also design and build websites, we can improve the pages your campaigns send people to. For a national view of agency types, pricing and Canadian consent rules, read our <a href="/blog/digital-marketing-agencies-canada">guide to choosing a digital marketing agency in Canada</a>.' },
       { type: 'callout', tone: 'brand', title: 'Talk to a digital marketing team about Vancouver', text: 'See how we work with Lower Mainland businesses on our <a href="/locations/digital-marketing-agency-in-vancouver">digital marketing agency in Vancouver</a> page, or, if search is your focus, our <a href="/locations/seo-company-in-vancouver">SEO company in Vancouver</a> page. You can also call us on <a href="tel:+14036048692">+1-403-604-8692</a>.' },
     ],
     keyTakeaways: [

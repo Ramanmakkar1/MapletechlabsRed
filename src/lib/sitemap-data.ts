@@ -97,6 +97,7 @@ export const blogSlugs = [
   'mobile-app-development-company-canada',
   'digital-marketing-agencies-ottawa',
   'digital-marketing-agencies-montreal',
+  'digital-marketing-agencies-canada',
   'custom-software-development-cost-canada',
 ];
 

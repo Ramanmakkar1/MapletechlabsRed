@@ -17,6 +17,7 @@ const BLOG_SLUGS = new Set([
   'digital-marketing-agencies-edmonton',
   'digital-marketing-agencies-ottawa',
   'digital-marketing-agencies-montreal',
+  'digital-marketing-agencies-canada',
   'flutter-vs-react-native-canada',
   'wordpress-vs-headless-cms-canada',
   'digital-marketing-agencies-calgary',
