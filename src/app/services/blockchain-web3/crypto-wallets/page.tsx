@@ -8,7 +8,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 const TITLE = 'Crypto Wallet Development Company in Canada';
-const DESCRIPTION = 'Custom crypto wallet development with multi-chain support, HD key management and hardware wallet integration. Mapletech Labs builds secure wallets in Canada.';
+const DESCRIPTION = 'Crypto wallet development in Canada: secure multi-chain wallets with HD key management and hardware wallet integration from Mapletech Labs in Edmonton.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
@@ -32,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={TITLE}
-        description={seoDescription(DESCRIPTION)}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/blockchain-web3/crypto-wallets'}
       />
       <PageClient />

@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Smart Contract Development in Canada';
+const DESCRIPTION = 'Smart contract development in Canada: audited Ethereum, Solana and Polygon contracts for DeFi, NFT and DAO projects, 100+ audits and $500M+ TVL secured.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Smart Contract Development in Canada'),
-  description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds secure DeFi, NFT, and DAO smart contracts. 100+ audits. Book now',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Smart Contract Development in Canada | Mapletech Labs',
-    description: 'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds DeFi, NFT, and DAO contracts, 100+ audits, $500M+ TVL secured',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/blockchain-web3/smart-contracts',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Smart Contract Development'}
-        description={'Audited smart contract development on Ethereum, Solana, and Polygon. Mapletech Labs builds secure DeFi, NFT, and DAO smart contracts.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/blockchain-web3/smart-contracts'}
       />
       <PageClient />
