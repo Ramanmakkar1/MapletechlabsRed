@@ -19,7 +19,7 @@ export const serviceSlugs = [
 
 export const subServices: Record<string, string[]> = {
   'mobile-app-development': ['ios-app-development', 'android-app-development', 'flutter-development', 'react-native-apps', 'cross-platform-apps'],
-  'ai-ml': ['llm-integration', 'ai-automation', 'computer-vision', 'predictive-analytics', 'ai-chatbots'],
+  'ai-ml': ['llm-integration', 'ai-automation', 'computer-vision', 'predictive-analytics', 'ai-chatbots', 'ai-agent-development'],
   'web-development': ['nextjs-development', 'saas-platforms', 'ecommerce-systems', 'api-backend', 'enterprise-portals'],
   'product-design': ['ui-ux-strategy', 'ux-audit', 'wireframing', 'prototyping', 'design-systems', 'brand-identity'],
   'blockchain-web3': ['smart-contracts', 'defi-protocols', 'nft-platforms', 'crypto-wallets', 'web3-dapps'],

@@ -24,6 +24,7 @@ function slugToTitle(slug: string): string {
     'llm-integration': 'LLM Integration',
     'ai-ml': 'AI & Machine Learning',
     'ai-chatbots': 'AI Chatbots',
+    'ai-agent-development': 'AI Agent Development',
     'ai-automation': 'AI Automation',
     'ai-development-companies-canada': 'AI Development Companies in Canada',
     'ar-vr': 'AR/VR',
