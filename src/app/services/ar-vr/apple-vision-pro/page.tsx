@@ -7,8 +7,8 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const TITLE = 'Apple Vision Pro App Development | Canada';
-const DESCRIPTION = 'Apple Vision Pro app development in Canada: visionOS apps built with SwiftUI and RealityKit for immersive spatial computing, from our Edmonton team.';
+const TITLE = 'Apple Vision Pro App Development in Canada';
+const DESCRIPTION = 'Apple Vision Pro app development in Canada: Mapletech Labs builds visionOS spatial computing apps with SwiftUI and RealityKit. Book a free consultation.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
