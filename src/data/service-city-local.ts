@@ -1536,6 +1536,79 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-design-company-in-winnipeg': {
+    title: 'Web Design Company in Winnipeg',
+    description: 'Winnipeg web design from Mapletech Labs: fast, mobile-first websites built to turn visitors into leads, with a fixed CAD quote. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs designs custom websites for Winnipeg businesses from our Canadian team, with mobile-first layouts, quick pages and SEO-ready structure. We agree a fixed CAD price and design milestones up front, then build the site around the enquiries you want to receive.',
+    intro: 'Mapletech Labs is a Canadian web design team headquartered in Edmonton, creating custom websites for Winnipeg businesses. We do not have a Winnipeg office, but Winnipeg is in Central time, one hour ahead of Edmonton, so our working days almost fully overlap and questions get answered the same day. When a project needs it, we travel to Winnipeg for discovery sessions and design reviews, with travel agreed up front. You work directly with the senior designers and engineers on your project, under a fixed scope and fixed CAD price agreed before design starts. Call +1-403-604-8692 to discuss your Winnipeg website.',
+    sections: [
+      {
+        heading: 'Web design for Winnipeg\'s manufacturers, agri-food and logistics firms',
+        body: [
+          'Winnipeg\'s economy is broader than most city markets: manufacturers, agricultural and agri-food suppliers, insurance and financial services firms, and logistics and distribution companies all sell to buyers who research before they call. Those buyers want capability pages, product and service detail, certifications, coverage maps and proof of past work, not a generic brochure site. We design websites that make what you make, where you deliver and who you serve obvious, with enquiry forms that collect the specifications your sales team needs to quote accurately.',
+        ],
+      },
+      {
+        heading: 'Lead-generating sites for Manitoba trade and service companies',
+        body: [
+          'For trades, clinics, professional services and other Manitoba service businesses, the website has one main job: turn a local search into a call, a booking or a quote request. That means clear service pages written around how customers describe the work, prominent phone and contact routes on mobile, and real proof such as project photos, service areas and the process a customer goes through. We build the site around those actions rather than around a company history nobody reads, so visitors from Winnipeg, Steinbach, Selkirk and rural Manitoba know within seconds whether you cover their job.',
+        ],
+      },
+      {
+        heading: 'Google Business Profile and local SEO set up at launch',
+        body: [
+          'A new website only earns local traffic when search engines and map listings can read it. At launch we set up the technical basics: clear headings, readable URLs, metadata, structured data, a sitemap and a self-referencing canonical. We can also set up or clean up your Google Business Profile and Bing Places listing with honest categories, service areas and the same name, address and phone used across your site and citations. We do not create virtual offices or claim addresses you do not use, because suspended profiles cost months of visibility. For ongoing search work after launch, our ',
+          { href: '/locations/digital-marketing-agency-in-winnipeg', label: 'Digital Marketing Agency in Winnipeg' },
+          ' team can keep improving local visibility.',
+        ],
+      },
+      {
+        heading: 'Mobile-first speed for Winnipeg visitors',
+        body: [
+          'Most local service searches start on a phone, often on a mobile connection, so we design the smallest screen first and test on real devices. Images are compressed and sized, fonts and scripts are controlled, and templates are checked against Core Web Vitals before launch so a slow page does not lose the enquiry. Design and engineering sit in one scope, which keeps the live site close to the approved design; our ',
+          { href: '/services/web-development/web-design', label: 'web design services across Canada' },
+          ' set out the full process. For a larger portal, e-commerce system or custom application, see our ',
+          { href: '/locations/web-development-company-in-winnipeg', label: 'Web Development Company in Winnipeg' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'What web design costs in Winnipeg',
+        body: [
+          'Our project pricing puts a custom website at $10,000-$50,000 CAD, with a typical delivery window of 4-10 weeks. Where your project lands inside that range depends on how many pages you need, how much custom design work each one takes, what content has to be written or moved over, and which integrations the build requires. You get a written scope and a fixed price in CAD before design starts, so the number stays put for the life of the project. For the detail behind those ranges, read our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does web design cost in Winnipeg?',
+        a: 'A custom Winnipeg website is priced at $10,000-$50,000 CAD in our project pricing, and most take 4-10 weeks to design and build. Page count, design depth, content and integrations move the number within that range, and you receive a fixed CAD quote after a free discovery call.',
+      },
+      {
+        q: 'How long does a Winnipeg website take to design and build?',
+        a: 'A custom website usually takes 4-10 weeks from kickoff to launch, based on the ranges in our project pricing. Smaller brochure sites can move faster, while larger sites with many pages or integrations take longer. Your written scope includes milestones for design approval, content lock and launch.',
+      },
+      {
+        q: 'Should we redesign our existing Winnipeg site or start a new build?',
+        a: 'It depends on what is holding the current site back. If the design is dated or the platform is slow, we can rework it or rebuild it on a faster stack. We first review which pages bring traffic, keep the URLs that matter, add 301 redirects where addresses change, and approve the new design on staging before it goes live.',
+      },
+      {
+        q: 'Will our Winnipeg website be SEO-ready at launch?',
+        a: 'Yes. We launch with clear headings, readable URLs, metadata, structured data, a sitemap and a self-referencing canonical, and we can set up your Google Business Profile and Bing Places listing with honest categories and service areas. Pages are designed mobile-first and tested on real devices so Core Web Vitals stay in a healthy range.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your Winnipeg website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
   'web-development-company-in-vancouver': {
     title: 'Web Development Company in Vancouver',
     description: 'Mapletech Labs builds custom websites and web apps for Vancouver businesses, with a fixed CAD price agreed up front from Edmonton. Get a free quote.',
