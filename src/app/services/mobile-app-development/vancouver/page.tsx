@@ -8,8 +8,9 @@ import { contactHrefFor } from '@/lib/enquiryContext';
 import { services } from '@/data/services';
 import { cities } from '@/data/cities';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 
-const TITLE = 'Mobile App Development in Vancouver: iOS, Android & Flutter';
+const TITLE = 'Mobile App Development in Vancouver';
 const DESCRIPTION = 'Mapletech Labs builds iOS, Android and cross-platform apps for Vancouver businesses from our Edmonton HQ, with fixed-scope quotes from discovery to launch.';
 const URL = 'https://mapletechlabs.ca/services/mobile-app-development/vancouver';
 
@@ -43,11 +44,11 @@ const FAQS = [
 const contactHref = contactHrefFor('mobile-app-development', 'vancouver', services, cities);
 
 export const metadata: Metadata = {
-  title: { absolute: TITLE },
+  title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
     images: DEFAULT_OG_IMAGES,
-    title: TITLE,
+    title: ogTitle(TITLE),
     description: seoDescription(DESCRIPTION),
     url: URL,
     type: 'website',
