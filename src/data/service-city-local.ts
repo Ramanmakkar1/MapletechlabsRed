@@ -1609,6 +1609,85 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-design-company-in-montreal': {
+    title: 'Web Design Company in Montreal',
+    description: 'Montreal web design from Mapletech Labs: fast, mobile-first, French-ready sites built to win leads, with a fixed CAD quote. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs designs custom websites for Montreal businesses from our Canadian team, with mobile-first layouts, quick pages and SEO-ready structure. We agree a fixed CAD price and design milestones up front, then build the site around the enquiries you want to receive.',
+    intro: 'Mapletech Labs is a Canadian web design team headquartered in Edmonton, creating custom websites for Montreal businesses. We do not have a Montreal office, but Montreal is in Eastern time, two hours ahead of Edmonton, so we schedule calls and reviews inside your working day and answer questions the same day. When a project needs it, we travel to Montreal for discovery sessions and design reviews, with travel agreed up front. You work directly with the senior designers and engineers on your project, under a fixed scope and fixed CAD price agreed before design starts. Call +1-403-604-8692 to discuss your Montreal website.',
+    sections: [
+      {
+        heading: 'Web design for Montreal\'s AI, gaming, retail and tourism economy',
+        body: [
+          'Montreal buyers come from several distinct markets: AI and technology startups, gaming and creative studios, retailers and e-commerce brands, and tourism and hospitality operators. Each needs a different website. AI and SaaS teams need product and service pages that explain a technical offer to buyers comparing several vendors. Gaming and creative studios need portfolio and showcase pages that stay fast with rich media. Retailers need product catalogues, secure checkout and seasonal campaigns, while hotels, venues and tour operators need booking flows your team can update without a developer. We design around those differences so a visitor knows what you do, who you serve and how to reach you within seconds.',
+        ],
+      },
+      {
+        heading: 'French-first websites under Quebec\'s Charter of the French Language',
+        body: [
+          'Quebec\'s Charter of the French Language, strengthened by Bill 96, sets French-first rules for commercial websites serving Quebec customers. French cannot be an afterthought or a machine-translated menu bolted onto an English site: it needs to be a complete, credible version with its own copy, navigation, forms and calls to action. We plan the French version first and have the copy written or reviewed by a fluent writer, so the tone holds up with Francophone visitors. Your legal advisors confirm how the Charter applies to your organisation and review the final wording.',
+        ],
+      },
+      {
+        heading: 'Quebec Law 25 privacy: cookie consent and clear policies',
+        body: [
+          'Quebec Law 25 governs how private-sector organisations collect, use and store personal information, and it affects the cookie banners, consent controls and privacy policy on your website. We build consent prompts that let visitors accept or refuse non-essential cookies, structure forms so you collect only the data you need, and give you a clear privacy policy page that explains what is collected and why. We implement the technical side; your legal counsel confirms how Law 25 applies to your business and signs off on the final policy wording.',
+        ],
+      },
+      {
+        heading: 'Bilingual site structure with proper hreflang',
+        body: [
+          'A bilingual Montreal website works best when both language versions are planned together rather than translated after launch. We build matching French and English pages with separate URLs, mirrored navigation, forms and calls to action, a clear language switcher and hreflang tags that tell Google and Bing which page belongs to which audience. That structure keeps the two versions from competing in search results and helps Francophone and Anglophone visitors land on the right page. It also makes future content updates easier, because both versions follow the same model.',
+        ],
+      },
+      {
+        heading: 'Conversion-focused design for Montreal buyers',
+        body: [
+          'A polished Montreal site still has to turn visitors into enquiries. We design clear paths to a quote, a booking or a call, with prominent phone and contact routes on mobile, proof and case studies placed where a researcher will find them, and forms that collect the details your sales team actually needs. Pages are built mobile-first with compressed images and controlled scripts, then checked against Core Web Vitals before launch so a slow template does not cost you leads. Design and engineering sit in one scope, which keeps the live site close to the approved design; our ',
+          { href: '/services/web-development/web-design', label: 'web design services across Canada' },
+          ' set out the full process. For a larger portal, e-commerce system or custom application, see our ',
+          { href: '/locations/web-development-company-in-montreal', label: 'Web Development Company in Montreal' },
+          ' page, and for ongoing search work our ',
+          { href: '/locations/seo-company-in-montreal', label: 'SEO Company in Montreal' },
+          ' team can keep improving visibility after launch.',
+        ],
+      },
+      {
+        heading: 'What web design costs in Montreal',
+        body: [
+          'Our project pricing puts a custom website at $10,000-$50,000 CAD, with a typical delivery window of 4-10 weeks. Where your project lands inside that range depends on how many pages you need, how much custom design work each one takes, what content has to be written or moved over, and which integrations the build requires. You get a written scope and a fixed price in CAD before design starts, so the number stays put for the life of the project. For the detail behind those ranges, read our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does web design cost in Montreal?',
+        a: 'A custom Montreal website is priced at $10,000-$50,000 CAD in our project pricing, and most take 4-10 weeks to design and build. Page count, design depth, content and integrations move the number within that range, and you receive a fixed CAD quote after a free discovery call.',
+      },
+      {
+        q: 'Does my Montreal website need to be in French?',
+        a: 'Quebec\'s Charter of the French Language, strengthened by Bill 96, sets French-first rules for commercial websites serving Quebec customers. We plan a complete French version with its own copy, navigation and forms, written or reviewed by a fluent writer, and your legal advisors confirm how the Charter applies to your organisation.',
+      },
+      {
+        q: 'How long does a Montreal website take to design and build?',
+        a: 'A custom website usually takes 4-10 weeks from kickoff to launch, based on the ranges in our project pricing. Smaller brochure sites can move faster, while larger sites with many pages, two languages or integrations take longer. Your written scope includes milestones for design approval, content lock and launch.',
+      },
+      {
+        q: 'How do you handle Quebec Law 25 cookie consent?',
+        a: 'We build consent prompts that let visitors accept or refuse non-essential cookies, structure forms so you collect only the data you need, and provide a clear privacy policy page explaining what is collected and why. Your legal counsel confirms how Law 25 applies to your business and signs off on the final policy wording.',
+      },
+      {
+        q: 'Do you offer website maintenance after launch?',
+        a: 'Yes. After launch we can handle updates, security patches, backups, performance checks and new pages, either as a one-off job or an ongoing arrangement. You own the source code, design files and domain, so you can also hand the website to your own team at any point.',
+      },
+    ],
+  },
   'web-development-company-in-vancouver': {
     title: 'Web Development Company in Vancouver',
     description: 'Mapletech Labs builds custom websites and web apps for Vancouver businesses, with a fixed CAD price agreed up front from Edmonton. Get a free quote.',
