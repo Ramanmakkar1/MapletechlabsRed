@@ -6985,6 +6985,85 @@ export const articles: Article[] = [
     cta: { href: '/services/software-discovery', label: 'Start with software discovery' },
     enquiryContext: { serviceSlug: 'saas-development' },
   },
+  {
+    slug: 'web-app-vs-mobile-app-canada',
+    relatedTopic: 'apps',
+    relatedService: { href: '/services/mobile-app-development', label: 'mobile app development' },
+    category: 'Engineering',
+    title: 'Web App vs Mobile App: A Buyer\'s Guide for Canada',
+    dek: 'A practical guide for Canadian buyers: when a responsive web app is enough, when you need a native or cross-platform mobile app, what moves cost and timeline, and how to decide before you request quotes.',
+    metaTitle: 'Web App vs Mobile App: Canada Buyer Guide',
+    metaDescription: 'Compare web apps and mobile apps for Canadian buyers: use cases, responsive web vs native, cost and timeline factors, plus a decision checklist.',
+    answer: 'A web app runs in a browser and works across devices without an app-store install, while a mobile app is installed from the App Store or Google Play and can use more of the phone\'s hardware. Choose a web app for reach, fast updates and lower cost, and a mobile app when the product depends on device features, offline use or an app-store presence.',
+    date: '2026-11-14',
+    dateModified: '2026-11-14',
+    readTime: '9 min read',
+    heroKey: 'app',
+    intro: [
+      'A web app runs in a browser and works across devices without an app-store install, while a mobile app is installed from the App Store or Google Play and can use more of the phone\'s hardware. For most Canadian businesses the useful question is not which one is better in general, but which one your customers will actually use for the job you need done.',
+      'This guide compares responsive web apps with native and cross-platform mobile apps, shows where each fits, explains what moves cost and timeline, and gives you a checklist to work through before you request quotes. For our own capabilities, see <a href="/services/web-development">web development services</a> and <a href="/services/mobile-app-development">mobile app development services</a>.',
+    ],
+    body: [
+      { type: 'h2', id: 'quick-answer', text: 'Web app or mobile app: which should you build?' },
+      { type: 'p', html: 'Start with how customers reach you and what the product must do. If people find you through search, email or a link and the task is booking, ordering, paying, reading or managing an account, a responsive web app usually delivers the widest reach for the least cost. If the product depends on push notifications, the camera, GPS, offline use, Bluetooth or an app-store listing, a mobile app is the better fit. Many businesses need both eventually, but a focused first release should pick one.' },
+      { type: 'p', html: 'A common mistake is treating the app store as a marketing channel on its own. Discovery still comes from search, referrals and your existing audience, so a mobile app should earn its extra cost through a genuine device or usage advantage, not just because competitors have one.' },
+
+      { type: 'h2', id: 'use-cases', text: 'What each option is best at' },
+      { type: 'table', html: '<table><thead><tr><th scope="col">Need</th><th scope="col">Responsive web app</th><th scope="col">Mobile app</th></tr></thead><tbody><tr><td>Customers arrive from Google, ads or a shared link</td><td>Strong: one URL works on every device and is indexable</td><td>Weaker: requires an install before first use</td></tr><tr><td>Booking, ordering, payments and accounts</td><td>Strong: familiar browser checkout and sign-in</td><td>Strong, with added push and saved-login convenience</td></tr><tr><td>Push notifications and repeat engagement</td><td>Limited: depends on browser support and opt-in</td><td>Strong: native push and home-screen presence</td></tr><tr><td>Camera, GPS, Bluetooth or sensors</td><td>Partial: browser APIs cover some cases</td><td>Strong: full access to device hardware</td></tr><tr><td>Offline or unreliable connectivity</td><td>Limited: service workers help but are constrained</td><td>Strong: local storage and background sync</td></tr><tr><td>Internal tools used by staff on phones</td><td>Often enough, and easier to deploy and update</td><td>Worth it when scanning, photos or offline work matter</td></tr><tr><td>Fast updates and lower upfront cost</td><td>Strong: deploy once, users get the latest version</td><td>Weaker: store review, releases and version support</td></tr></tbody></table>' },
+
+      { type: 'h2', id: 'responsive-vs-native', text: 'Responsive web apps vs native and cross-platform apps' },
+      { type: 'p', html: 'A <strong>responsive web app</strong> is one codebase that adapts its layout to phones, tablets and desktops. It is the default for most customer-facing business software because it is discoverable in search, needs no install and updates instantly. A <strong>progressive web app (PWA)</strong> adds installability and some offline behaviour on top, but it is still a web app and does not match native access to every device feature.' },
+      { type: 'p', html: 'A <strong>native app</strong> is built separately for iOS and Android, which gives the best performance and the deepest device integration at the cost of two codebases. A <strong>cross-platform app</strong> uses one codebase such as React Native or Flutter to ship to both stores, with native code added only where a feature needs it. For most business apps cross-platform is the pragmatic middle ground; native earns its cost when performance or hardware access is central to the product. Our <a href="/blog/native-vs-cross-platform-vs-pwa">native vs cross-platform vs PWA comparison</a> goes deeper on that choice.' },
+      { type: 'callout', tone: 'muted', title: 'A useful rule of thumb', text: 'If the product can be described as a workflow with a login, start with a responsive web app. If it can be described as a tool that lives on the phone, start with a mobile app.' },
+
+      { type: 'h2', id: 'cost-timeline', text: 'What drives cost and timeline' },
+      { type: 'p', html: 'The technology choice matters, but it is rarely the biggest cost driver. Scope, integrations, data migration, design depth, compliance and the number of platforms you support usually decide where a project lands. A simple responsive web app can be a few weeks of work; a cross-platform app with accounts, payments, notifications and an admin dashboard is a multi-month project; two native apps with complex device features cost more again.' },
+      { type: 'ul', items: [
+        'Number of platforms: one responsive web app is cheaper than iOS plus Android, and cross-platform sits between the two.',
+        'Accounts, payments and integrations: each external system adds design, testing and failure handling.',
+        'Design depth: a template-level interface costs far less than custom interaction design and accessibility work.',
+        'Data and migration: moving existing records, cleaning them and keeping systems in sync is often underestimated.',
+        'Compliance and security: privacy, consent, health or financial requirements add review and documentation.',
+        'App-store overhead: store accounts, review cycles, screenshots, privacy declarations and ongoing OS updates.',
+        'Support after launch: monitoring, bug fixes, OS changes and new features are a continuing cost, not a one-off.',
+      ] },
+      { type: 'p', html: 'For published ranges and what is included, see our <a href="/pricing">pricing guidance</a>. Treat any quote that lists only a total, without a written scope and assumptions, as not comparable to another quote.' },
+
+      { type: 'h2', id: 'comparison', text: 'Web app vs mobile app comparison' },
+      { type: 'table', html: '<table><thead><tr><th scope="col">Factor</th><th scope="col">Responsive web app</th><th scope="col">Native app</th><th scope="col">Cross-platform app</th></tr></thead><tbody><tr><td>Reach</td><td>Any modern browser, including desktop</td><td>One store per platform</td><td>Both stores from one codebase</td></tr><tr><td>Install required</td><td>No</td><td>Yes</td><td>Yes</td></tr><tr><td>Search visibility</td><td>Strong: pages can rank</td><td>Store listing only</td><td>Store listing only</td></tr><tr><td>Device access</td><td>Partial</td><td>Full</td><td>Near-full, with native modules</td></tr><tr><td>Performance ceiling</td><td>Good for most workflows</td><td>Highest</td><td>High for most apps</td></tr><tr><td>Updates</td><td>Instant on deploy</td><td>Store review per release</td><td>Store review per release</td></tr><tr><td>Upfront cost</td><td>Lowest</td><td>Highest</td><td>Middle</td></tr><tr><td>Maintenance</td><td>One codebase</td><td>Two codebases</td><td>One codebase plus native fixes</td></tr></tbody></table>' },
+
+      { type: 'h2', id: 'checklist', text: 'Decision checklist' },
+      { type: 'checks', items: [
+        { term: 'How will customers first find the product?', text: 'If search, ads or shared links matter, a web app gives every visitor a working entry point without an install.' },
+        { term: 'Does the core task need device hardware?', text: 'Camera, GPS, Bluetooth, sensors or heavy graphics point to a mobile app; forms and workflows usually do not.' },
+        { term: 'Is offline use essential?', text: 'If the product must work without a connection, plan for a mobile app rather than assuming a browser will cope.' },
+        { term: 'Do you need push notifications?', text: 'Native push is more reliable and more familiar to users than browser notifications.' },
+        { term: 'How often will the product change?', text: 'Frequent iteration is cheaper on the web, where you deploy once instead of shipping through app stores.' },
+        { term: 'What is the smallest useful first release?', text: 'Pick one platform and one core workflow, prove it with real users, then expand rather than building everything at once.' },
+        { term: 'Who maintains it after launch?', text: 'Confirm ownership of code, accounts and store listings, and budget for ongoing support and OS updates.' },
+      ] },
+
+      { type: 'h2', id: 'next-step', text: 'How to get an accurate quote' },
+      { type: 'p', html: 'Bring the workflow you want to improve, the people who will use it, the systems it must connect to and your budget range. A short discovery turns that into a scope, a platform recommendation and a price you can compare. If you already know you need a mobile app, see our <a href="/services/mobile-app-development">mobile app development services</a>; if the product is primarily a browser-based platform, start with <a href="/services/web-development">web development</a>.' },
+      { type: 'callout', tone: 'brand', title: 'Talk through your project', text: 'Review our <a href="/pricing">pricing guidance</a>, then <a href="/contact">contact Mapletech Labs</a> with your use case and we will recommend a web, cross-platform or native approach and scope the first release.' },
+    ],
+    keyTakeaways: [
+      'A web app runs in the browser and needs no install; a mobile app is installed from an app store and can use more device hardware.',
+      'Choose a responsive web app for reach, search visibility, fast updates and lower upfront cost.',
+      'Choose a mobile app when push notifications, camera, GPS, offline use or an app-store presence are central to the product.',
+      'Cross-platform is the pragmatic default for most business apps; native earns its cost when performance or hardware access is the product.',
+      'Scope, integrations, data, compliance and the number of platforms move cost more than the framework you pick.',
+    ],
+    faqs: [
+      { q: 'Is a web app cheaper than a mobile app?', a: 'Usually yes. A responsive web app is one codebase that updates instantly and needs no app-store process, so it costs less to build and maintain than native iOS and Android apps. A cross-platform mobile app sits in the middle. The gap narrows when the web app needs complex integrations, custom design or strict compliance work.' },
+      { q: 'Can a web app work offline like a mobile app?', a: 'Partly. A progressive web app can cache pages and some data so it keeps working with a poor connection, but browser storage and background behaviour are more limited than a native app. If offline use is essential to the core task, plan for a mobile app.' },
+      { q: 'Do I need an app store listing to reach mobile customers?', a: 'No. A responsive web app reaches phone users through the browser, search and shared links without an install. An app-store listing helps when repeat engagement, push notifications or device features justify the extra build, review and maintenance work.' },
+      { q: 'Should I build native or cross-platform?', a: 'Most business apps are well served by cross-platform frameworks such as React Native or Flutter, which ship to both stores from one codebase. Native is worth the two codebases when graphics, AR, on-device machine learning or flawless performance are central to the product.' },
+      { q: 'How long does it take to build a web or mobile app?', a: 'A focused responsive web app can take a few weeks, while a cross-platform app with accounts, payments and notifications typically takes a few months. Two native apps with complex device features take longer. Integrations, approvals, data quality and app-store review are the usual causes of delay.' },
+    ],
+    cta: { href: '/services/mobile-app-development', label: 'See our app development services' },
+    enquiryContext: { serviceSlug: 'mobile-app-development' },
+  },
 ];
 
 export const articleSlugs = articles.map(a => a.slug);
