@@ -9,7 +9,8 @@ import CTASection from '@/components/CTASection';
 import { PROJECT_PRICING } from '@/data/pricing';
 import { serviceCityPath, isIndexableCityService } from '@/data/serviceCity';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Pricing & Engagement Models (CAD)';
 const DESCRIPTION = 'Explore typical Canadian website, web app, SaaS, mobile and AI project ranges in CAD, engagement models, and ways to manage software development costs.';
@@ -38,8 +39,8 @@ const CITY_SERVICES = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: seoTitle(TITLE), description: DESCRIPTION,
-  openGraph: { title: TITLE, description: DESCRIPTION, url: URL, type: 'website' },
+  title: seoTitle(TITLE), description: seoDescription(DESCRIPTION),
+  openGraph: { title: ogTitle(TITLE), description: seoDescription(DESCRIPTION), url: URL, type: 'website' },
   alternates: { canonical: URL },
 };
 

@@ -11,7 +11,8 @@ const ContactPage = dynamic(() => import('@/components/ContactPage'), {
   loading: () => <div aria-hidden="true" style={{ minHeight: 720 }} />,
 });
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
 import { services } from '@/data/services';
 import { cities } from '@/data/cities';
@@ -26,10 +27,10 @@ const DESCRIPTION = 'Contact Mapletech Labs for a free project consultation. Cus
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/contact',
     type: 'website',
   },

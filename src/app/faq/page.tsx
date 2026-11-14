@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import FAQPageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { FAQ_JSON_LD } from '@/data/faq-categories';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -15,10 +16,10 @@ export const revalidate = false;
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: `${TITLE} | Mapletech Labs`,
-    description: DESCRIPTION,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/faq',
   },
   alternates: {
