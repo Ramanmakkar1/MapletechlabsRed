@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Prototyping & Usability Testing in Canada';
+const DESCRIPTION = 'Prototyping and usability testing in Canada: interactive Figma prototypes, design sprints and real-user testing, with 300+ prototypes built by our team.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Prototyping & Usability Testing in Canada'),
-  description: 'Interactive prototyping and usability testing by Mapletech Labs. Figma prototypes, design sprints and real-user testing. 300+ prototypes built in Canada.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Prototyping & Usability Testing in Canada | Mapletech Labs',
-    description: 'Interactive prototyping and usability testing by Mapletech Labs. Figma prototypes, design sprints and real-user testing. 300+ prototypes built in Canada.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/product-design/prototyping',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Prototyping & Usability Testing'}
-        description={'Interactive prototyping and usability testing by Mapletech Labs. Figma prototypes, design sprints, and real-user testing. 300+ prototypes built across Canada.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/product-design/prototyping'}
       />
       <PageClient />

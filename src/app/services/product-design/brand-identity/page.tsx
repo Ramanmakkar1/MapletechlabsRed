@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'Brand Identity Design Agency in Canada';
+const DESCRIPTION = 'Brand identity design agency in Canada: naming, logo systems, typography and guidelines that work across product, web and print, for 100+ brands so far.';
+
 export const metadata: Metadata = {
-  title: seoTitle('Brand Identity Design Agency in Canada'),
-  description: 'Brand identity design from Mapletech Labs: naming, logo systems, typography and guidelines for product, web and print. 100+ brands created. Book a call.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Brand Identity Design Agency in Canada | Mapletech Labs',
-    description: 'Brand identity design from Mapletech Labs: naming, logo systems, typography and guidelines for product, web and print. 100+ brands created. Book a call.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/product-design/brand-identity',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Brand Identity Design'}
-        description={'Brand identity design from Mapletech Labs: naming, logo systems, typography and guidelines for product, web and print. 100+ brands created. Book a call.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/product-design/brand-identity'}
       />
       <PageClient />

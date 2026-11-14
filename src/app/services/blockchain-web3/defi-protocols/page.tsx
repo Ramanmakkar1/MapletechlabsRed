@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { seoTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
+const TITLE = 'DeFi Protocol Development in Canada';
+const DESCRIPTION = 'DeFi protocol development in Canada: custom decentralized exchanges, lending platforms, yield aggregators and liquidity pools built and audited for launch.';
+
 export const metadata: Metadata = {
-  title: seoTitle('DeFi Protocol Development in Canada'),
-  description: 'Custom DeFi protocol development by Mapletech Labs. Build decentralized exchanges, lending platforms, yield aggregators, and liquidity pools.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'DeFi Protocol Development in Canada | Mapletech Labs',
-    description: 'Custom DeFi protocol development by Mapletech Labs. Build decentralized exchanges, lending platforms, yield aggregators, and liquidity pools.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/blockchain-web3/defi-protocols',
     type: 'website',
   },
@@ -28,7 +32,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'DeFi Protocol Development'}
-        description={'Custom DeFi protocol development by Mapletech Labs. Build decentralized exchanges, lending platforms, yield aggregators, and liquidity pools.'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/blockchain-web3/defi-protocols'}
       />
       <PageClient />
