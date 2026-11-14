@@ -7,8 +7,8 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const TITLE = 'E-Commerce Development Services | Canada';
-const DESCRIPTION = 'Custom Shopify, headless commerce and Next.js stores by Edmonton-based Mapletech Labs. 80+ builds launched across Canada, with $50M+ GMV processed.';
+const TITLE = 'E-Commerce Development Services in Canada';
+const DESCRIPTION = 'E-commerce development in Canada: custom Shopify, headless commerce and Next.js stores by Edmonton-based Mapletech Labs. 80+ builds launched, $50M+ GMV.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
