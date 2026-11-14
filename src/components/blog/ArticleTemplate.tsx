@@ -83,6 +83,7 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'ai-development-companies-calgary': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
   'ai-development-companies-toronto': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
   'ai-development-companies-vancouver': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
+  'ai-development-companies-montreal': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
   'ai-development-companies-ottawa': { label: 'AI Development', path: c => serviceCityPath('ai-ml', c) },
 };
 
