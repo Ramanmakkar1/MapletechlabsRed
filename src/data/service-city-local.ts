@@ -3091,6 +3091,75 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-mississauga': {
+    title: 'Digital Marketing Agency in Mississauga',
+    description: 'Digital marketing agency in Mississauga for local SEO, Google and Microsoft Ads and content from a Canadian team, priced in CAD. Get a free strategy call.',
+    answer: 'Mapletech Labs is a Canadian digital marketing agency headquartered in Edmonton, providing SEO, Google and Microsoft Ads, content and analytics for Mississauga businesses. You get a fixed monthly scope priced in CAD and a monthly report covering rankings, traffic, ad spend and conversions.',
+    intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton. We work with Mississauga businesses that want one partner for SEO, paid ads and content, and we do not have a Mississauga office. Mississauga runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for most of yours and calls, reviews and campaign changes happen the same day. You work directly with the specialists doing the work, not a salesperson. Retainers are priced in CAD with a fixed monthly scope agreed before work starts. Call +1-403-604-8692 to talk through your Mississauga marketing goals.',
+    sections: [
+      {
+        heading: 'What is included in our Mississauga digital marketing',
+        body: [
+          'We scope the work around the channels that fit your goals: local SEO and Google Business Profile optimisation for neighbourhood and service-area searches across Port Credit, Streetsville, Meadowvale, Erin Mills, Malton and Square One/City Centre; content that answers the questions Mississauga buyers ask before they call; Google and Microsoft Ads for leads while organic search builds; and analytics that tie spend to conversions. Search only? See our ',
+          { href: '/locations/seo-company-in-mississauga', label: 'SEO Company in Mississauga' },
+          ' page for an SEO-only scope, or our ',
+          { href: '/services/digital-marketing', label: 'digital marketing services' },
+          ' for the full range of channels we run.',
+        ],
+      },
+      {
+        heading: 'Competing with Toronto for GTA search traffic',
+        body: [
+          'Mississauga businesses share Google results and ad auctions with Toronto, Brampton and Oakville, so a campaign that only targets the city name leaves searches on the table. We set city and service-area targeting around where your customers actually are, build landing pages for each area you serve, and keep the copy specific to Mississauga rather than a generic GTA headline. That structure helps Google and Bing show the right page for each neighbourhood query and keeps your ads from paying for clicks outside your service area. For the core city, see our ',
+          { href: '/locations/digital-marketing-agency-in-toronto', label: 'Digital Marketing Agency in Toronto' },
+          ' page.',
+        ],
+      },
+      {
+        heading: 'B2B marketing for Mississauga\'s head offices, logistics and life-sciences firms',
+        body: [
+          'Mississauga is a head-office and logistics hub, with life-sciences and manufacturing employers clustered around the airport corridor and Meadowvale. Those sales cycles are long and the buyers are different: procurement, operations and technical teams compare vendors before they ever fill in a form. We plan the funnel around that with LinkedIn campaigns, Microsoft Ads for the desktop and B2B searches other agencies skip, and bottom-of-funnel content that makes credentials, integrations and past work easy to check. If the site itself needs rebuilding, our ',
+          { href: '/locations/web-development-company-in-mississauga', label: 'Web Development Company in Mississauga' },
+          ' team builds the pages the campaigns point to.',
+        ],
+      },
+      {
+        heading: 'Pricing and how we work',
+        body: [
+          'Digital marketing is quoted as a monthly retainer in CAD, not hourly. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' publishes the typical Canadian ranges: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. GTA click costs are among the highest in Canada, so your quote depends on the channels you choose. After a free review of your site and your Mississauga competitors, we agree a fixed monthly scope in writing before the first invoice, and you get a monthly report with rankings, traffic, ad spend and conversions.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does digital marketing cost in Mississauga?',
+        a: 'In our Canadian digital marketing cost guide, SEO typically runs about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month in CAD. GTA click costs are among the highest in Canada. We confirm a fixed monthly scope in CAD after a free review.',
+      },
+      {
+        q: 'How long does SEO take in Mississauga?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Mississauga and GTA terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress building before the position charts catch up.',
+      },
+      {
+        q: 'Can you target Mississauga and the rest of the GTA in one campaign?',
+        a: 'Yes. We can run one account with city and service-area targeting for Mississauga, Toronto, Brampton and Oakville, then send each area to its own landing page so the message matches the search. That keeps budgets focused on the places you actually serve and avoids paying for clicks outside your service area.',
+      },
+      {
+        q: 'For a Mississauga service business, Google Ads or SEO first?',
+        a: 'If your site is slow, thin or missing from local search, we usually fix that first so paid traffic lands on pages that convert. For map-pack categories like trades, clinics and professional services, Google Business Profile and local SEO often bring the first calls. Many Mississauga clients run both: a focused search campaign for near-term leads and SEO for a lower cost per lead over time.',
+      },
+      {
+        q: 'Do you meet in Mississauga?',
+        a: 'We work remotely, with weekly calls and shared documents instead of a Mississauga office. Mapletech Labs is headquartered in Edmonton, two hours behind Mississauga, so most of the working day overlaps. When a project needs it, we can travel to Mississauga for workshops and milestone reviews, with travel agreed up front.',
+      },
+    ],
+  },
   'app-development-company-in-winnipeg': {
     title: 'App Development Company in Winnipeg',
     description: 'iOS and Android app development for Winnipeg businesses by a Canadian team headquartered in Edmonton, with a fixed CAD price. Get a free quote.',
@@ -3289,7 +3358,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'How Mississauga search actually works',
         body: [
-          'Mississauga is several local markets in one city. Retail and hospitality around Square One and City Centre compete on “near me” and parking-area searches, while Meadowvale and the Airport Corporate Centre run on office-park and B2B terms. Logistics and freight firms near Pearson fight for corridor and cross-border queries, and clinics, trades and professional services win on neighbourhood intent — often against pages that say Brampton or Oakville instead of Mississauga. We map the keywords your buyers use in each pocket, including when they compare Mississauga to neighbouring cities, then build pages and profile signals that match those searches instead of one generic GTA headline.',
+          'Mississauga is several local markets in one city. Retail and hospitality around Square One and City Centre compete on “near me” and parking-area searches, while Meadowvale and the Airport Corporate Centre run on office-park and B2B terms. Logistics and freight firms near Pearson fight for corridor and cross-border queries, and clinics, trades and professional services win on neighbourhood intent — often against pages that say Brampton or Oakville instead of Mississauga. We map the keywords your buyers use in each pocket, including when they compare Mississauga to neighbouring cities, then build pages and profile signals that match those searches instead of one generic GTA headline. Want SEO, ads and content run together? See our ',
+          { href: '/locations/digital-marketing-agency-in-mississauga', label: 'Digital Marketing Agency in Mississauga' },
+          ' page.',
         ],
       },
       {

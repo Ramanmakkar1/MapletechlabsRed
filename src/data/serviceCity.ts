@@ -31,7 +31,7 @@ export const serviceCityCombos: ServiceCityCombo[] = PRIORITY_SERVICES.flatMap(p
 );
 
 /** “Digital marketing agency in [city]” keyword pages — separate from seo-company URLs. */
-export const AGENCY_CITIES = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa', 'montreal', 'winnipeg'] as const;
+export const AGENCY_CITIES = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa', 'montreal', 'winnipeg', 'mississauga'] as const;
 
 export const agencyCombos: ServiceCityCombo[] = AGENCY_CITIES.map(c => ({
   slug: `digital-marketing-agency-in-${c}`,

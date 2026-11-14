@@ -20,6 +20,7 @@ const AGENCY_CITY_NAMES: Record<(typeof AGENCY_CITIES)[number], string> = {
   ottawa: 'Ottawa',
   montreal: 'Montreal',
   winnipeg: 'Winnipeg',
+  mississauga: 'Mississauga',
 };
 
 function useReveal() {
