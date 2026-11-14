@@ -25,6 +25,7 @@ const SLUG_PROJECT_SERVICE: Record<string, { href: string; label: string }> = {
   'sred-software-development-canada': { href: '/services/saas-development', label: 'Custom software and SaaS development' },
   'software-maintenance-cost-canada': { href: '/services/saas-development', label: 'Software and SaaS development services' },
   'software-development-contract-canada': { href: '/services/saas-development', label: 'Custom software development services' },
+  'healthcare-software-development-canada': { href: '/services/software-development', label: 'Custom software development services' },
 };
 
 const SLUG_SERVICE: Record<string, CityService> = {
@@ -45,6 +46,7 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'app-development-companies-edmonton': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'app-development-companies-ottawa': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'app-development-companies-montreal': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
+  'healthcare-software-development-canada': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
   'software-development-companies-edmonton': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
   'software-development-companies-calgary': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
   'software-development-companies-toronto': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
