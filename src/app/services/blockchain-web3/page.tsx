@@ -6,7 +6,7 @@ import { seoDescription } from '@/lib/seo/description';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Blockchain & Web3 Development in Canada';
-const DESCRIPTION = 'Blockchain and Web3 development in Canada from an Edmonton-based team: smart contracts, DeFi protocols and dApps for Canadian businesses. Book a free consultation.';
+const DESCRIPTION = 'Blockchain and Web3 development in Canada from an Edmonton-based team: smart contracts, DeFi protocols and dApps for businesses. Book a free consultation.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
