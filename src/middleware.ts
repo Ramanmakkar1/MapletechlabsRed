@@ -1,9 +1,15 @@
 import { NextResponse, type NextRequest } from 'next/server';
 
-// Prerendered HTML (layout `revalidate = false`) is cached from next.config
-// `headers()`. This function must not run a network call, a redirect-table
-// scan, or a per-request regex on those paths. Only /api and the legacy /fr
-// routes enter it.
+// HTML documents sit in the CDN for 1 day, matching the key-page headers in
+// next.config.ts headers() (1 day fresh, 1 week stale-while-revalidate).
+// Content only changes on deploy, so this must not run a network call, a
+// redirect-table scan, or a per-request regex on those paths.
+const HTML_CACHE = 'public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400';
+
+function isDocument(pathname: string): boolean {
+  return !pathname.startsWith('/_next/') && !pathname.startsWith('/api');
+}
+
 function isApi(pathname: string): boolean {
   return pathname === '/api' || pathname.startsWith('/api/');
 }
@@ -47,7 +53,17 @@ export function middleware(req: NextRequest) {
   }
 
   if (!isApi(pathname)) {
-    return NextResponse.next();
+    // Leave RSC navigation payloads to the framework; only cache full HTML.
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      return NextResponse.next();
+    }
+    if (req.headers.get('rsc') || req.headers.get('next-router-prefetch')) {
+      return NextResponse.next();
+    }
+    if (!isDocument(pathname)) return NextResponse.next();
+    const res = NextResponse.next();
+    res.headers.set('Cache-Control', HTML_CACHE);
+    return res;
   }
 
   if (req.method !== 'GET' && req.method !== 'HEAD') {
@@ -65,6 +81,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // Static pages are not listed, so they never enter middleware.
-  matcher: ['/api/:path*', '/fr', '/fr/:path*'],
+  // Document routes plus /api and the legacy /fr redirects. Framework assets
+  // and files with extensions stay out of middleware.
+  matcher: ['/((?!_next/|.*\\..*).*)'],
 };
