@@ -2957,6 +2957,73 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-winnipeg': {
+    title: 'Digital Marketing Agency in Winnipeg',
+    description: 'Winnipeg digital marketing agency: local SEO, Google and Microsoft Ads and content from a Canadian team, priced in CAD retainers. Get a free strategy call.',
+    answer: 'Mapletech Labs is a Canadian digital marketing agency headquartered in Edmonton, providing SEO, Google and Microsoft Ads, social and content for Winnipeg businesses. You get a fixed monthly scope priced in CAD and a monthly report covering rankings, traffic, ad spend and conversions.',
+    intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton. We work with Winnipeg businesses that want one partner for SEO, paid ads and content, and we do not have a Winnipeg office. Winnipeg runs on Central time, one hour ahead of Edmonton, so our working days overlap and calls, reviews and campaign changes happen the same day. You work directly with the specialists doing the work, not a salesperson. Retainers are priced in CAD with a fixed monthly scope agreed before work starts. Call +1-403-604-8692 to talk through your Winnipeg marketing goals.',
+    sections: [
+      {
+        heading: 'What is included in our Winnipeg digital marketing',
+        body: [
+          'We scope the work around the channels that fit your goals: local SEO and Google Business Profile optimisation for neighbourhood and service-area searches across St. Boniface, Osborne Village, St. Vital, Transcona and The Exchange District; content that answers the questions Winnipeg buyers ask before they call; Google and Microsoft Ads for leads while organic search builds; and analytics that tie spend to conversions. Search only? See our ',
+          { href: '/locations/seo-company-in-winnipeg', label: 'SEO Company in Winnipeg' },
+          ' page for an SEO-only scope, or our ',
+          { href: '/services/digital-marketing', label: 'digital marketing services' },
+          ' for the full range of channels we run.',
+        ],
+      },
+      {
+        heading: 'Marketing to Winnipeg\'s trades, manufacturing and agri-business buyers',
+        body: [
+          'Winnipeg is a province-wide buying centre, not just a city market. Trades, clinics and home-services businesses compete for map-pack visibility in each neighbourhood, while manufacturers, agri-food companies and B2B suppliers sell across Winnipeg, Steinbach, Selkirk and rural Manitoba. We plan service-area targeting around where your customers actually are, build B2B lead generation for manufacturers and agri-food companies that shortens the path from first search to a quote, and fix the map-pack competition for trades and clinics with honest Google Business Profile signals. If the site itself needs rebuilding, our ',
+          { href: '/locations/web-development-company-in-winnipeg', label: 'Web Development Company in Winnipeg' },
+          ' team builds the pages the campaigns point to.',
+        ],
+      },
+      {
+        heading: 'Paid search costs in Winnipeg',
+        body: [
+          'Winnipeg is a smaller click market than Toronto or Vancouver, so a well-managed budget tends to go further here. We run Google Ads for the high-intent searches and Microsoft Ads to reach Bing and desktop buyers that other agencies often skip, then review search terms, negative keywords and landing pages every month so spend stays on the terms that produce leads. We do not promise a fixed cost per click; your actual costs depend on your industry, competition and season, and we report what the account really spent.',
+        ],
+      },
+      {
+        heading: 'Pricing and how we work',
+        body: [
+          'Digital marketing is quoted as a monthly retainer in CAD, not hourly. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' publishes the typical Canadian ranges: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Winnipeg sits below the largest Canadian click markets, so your quote depends on the channels you choose. After a free review of your site and your Winnipeg competitors, we agree a fixed monthly scope in writing before the first invoice, and you get a monthly report with rankings, traffic, ad spend and conversions.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does digital marketing cost in Winnipeg?',
+        a: 'In our Canadian digital marketing cost guide, SEO typically runs about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month in CAD. Winnipeg click costs sit below Toronto and Vancouver. We confirm a fixed monthly scope in CAD after a free review.',
+      },
+      {
+        q: 'How long does SEO take in Winnipeg?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Winnipeg terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress building before the position charts catch up.',
+      },
+      {
+        q: 'Do you serve businesses outside Winnipeg in Manitoba?',
+        a: 'Yes. We work with businesses across Manitoba, including Steinbach, Selkirk and rural communities, as well as Winnipeg itself. Campaigns can target service areas, province-wide searches or specific towns, and we set up location pages and Google Business Profile coverage that match where you actually operate.',
+      },
+      {
+        q: 'For a Winnipeg service business, Google Ads or SEO first?',
+        a: 'If your site is slow, thin or missing from local search, we usually fix that first so paid traffic lands on pages that convert. For map-pack categories like trades, clinics and professional services, Google Business Profile and local SEO often bring the first calls. Many Winnipeg clients run both: a focused search campaign for near-term leads and SEO for a lower cost per lead over time.',
+      },
+      {
+        q: 'Do you meet in Winnipeg?',
+        a: 'We work remotely, with weekly calls and shared documents instead of a Winnipeg office. Mapletech Labs is headquartered in Edmonton, one hour behind Winnipeg, so most of the working day overlaps. When a project needs it, we can travel to Winnipeg for workshops and milestone reviews, with travel agreed up front.',
+      },
+    ],
+  },
   'app-development-company-in-winnipeg': {
     title: 'App Development Company in Winnipeg',
     description: 'iOS and Android app development for Winnipeg businesses by a Canadian team headquartered in Edmonton, with a fixed CAD price. Get a free quote.',
@@ -3275,7 +3342,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'How Winnipeg search actually works',
         body: [
-          'Winnipeg buyers search in several distinct ways. Professional firms in the Exchange District and downtown office towers compete on service and B2B terms, while St. Boniface brings bilingual demand, with some customers searching in French and expecting a French page to answer them. Manufacturing, agribusiness and transportation and logistics firms tied to the city\'s rail, trucking and air-cargo routes fight for industrial, supplier and province-wide queries rather than neighbourhood ones. Trades, clinics and home services win or lose on “near me” searches by neighbourhood, from St. Vital to Transcona. We map the keywords your buyers use in each of these markets, then build pages and profile signals that match those searches instead of one generic Manitoba headline.',
+          'Winnipeg buyers search in several distinct ways. Professional firms in the Exchange District and downtown office towers compete on service and B2B terms, while St. Boniface brings bilingual demand, with some customers searching in French and expecting a French page to answer them. Manufacturing, agribusiness and transportation and logistics firms tied to the city\'s rail, trucking and air-cargo routes fight for industrial, supplier and province-wide queries rather than neighbourhood ones. Trades, clinics and home services win or lose on “near me” searches by neighbourhood, from St. Vital to Transcona. We map the keywords your buyers use in each of these markets, then build pages and profile signals that match those searches instead of one generic Manitoba headline. Want SEO, ads and content run together? See our ',
+          { href: '/locations/digital-marketing-agency-in-winnipeg', label: 'Digital Marketing Agency in Winnipeg' },
+          ' page.',
         ],
       },
       {
