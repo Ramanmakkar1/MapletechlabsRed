@@ -181,7 +181,9 @@ for (const { city, service } of getAllCityServiceParams()) {
 // 3. The helper itself.
 if (typeof seoTitle("Contact Mapletech Labs") !== "object") problems.push("seoTitle() must opt out of the template when the brand is present");
 if (typeof seoTitle("x".repeat(60)) !== "object") problems.push("seoTitle() must opt out of the template when branding would exceed 60");
-if (seoTitle("Short title") !== "Short title") problems.push("seoTitle() must keep short titles on the template");
+if (seoTitle("Short title").absolute !== "Short title" + BRAND) problems.push("seoTitle() must return the branded rendered value for short titles");
+if (seoTitle("Software Development Company in Laval").absolute.length < MIN) problems.push("seoTitle() must lengthen short titles with the brand toward 50 chars");
+if (seoTitle("x".repeat(60)).absolute.length > MAX) problems.push("seoTitle() must never return more than 60 rendered chars");
 
 // Exercise parsing, final rendering and rejection without evaluating source code.
 const fixture = "const TITLE = '" + "x".repeat(50) + "';";

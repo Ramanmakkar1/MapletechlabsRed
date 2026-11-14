@@ -50,6 +50,10 @@ function clampTitle(title: string): string {
  * and already-branded ("Contact Mapletech Labs") inputs. The brand is added at
  * most once, and an over-long title is clamped instead of overflowing 60
  * characters, keeping the leading keyword intact.
+ *
+ * The brand is only appended when the rendered result still fits within
+ * MAX_TITLE_LENGTH, so short titles are lengthened toward the 50-60 range
+ * without ever pushing a keyword-first title past 60.
  */
 export function resolveBrandedTitle(title: string): string {
   const cleaned = cleanTitle(title);
@@ -62,13 +66,15 @@ export function ogTitle(title: string): string {
   return resolveBrandedTitle(title);
 }
 
-export function seoTitle(title: string): string | { absolute: string } {
-  const cleaned = cleanTitle(title);
-  if (hasBrand(cleaned)) return { absolute: resolveBrandedTitle(cleaned) };
-  if (cleaned.length + BRAND_SUFFIX.length > MAX_TITLE_LENGTH) {
-    return { absolute: resolveBrandedTitle(cleaned) };
-  }
-  return cleaned;
+/**
+ * Return the exact string Next.js should render. The root layout's
+ * `title.template` is bypassed with `{ absolute }` because the brand has
+ * already been resolved here: this keeps the keyword prefix first, adds the
+ * brand only when the result stays within 60 characters, and never emits the
+ * brand twice.
+ */
+export function seoTitle(title: string): { absolute: string } {
+  return { absolute: resolveBrandedTitle(title) };
 }
 
 /**
