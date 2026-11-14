@@ -5021,8 +5021,8 @@ export const articles: Article[] = [
     dek: 'A buyer’s guide for Montreal businesses hiring an SEO company: French and English search, map-pack work across the Plateau, Laval, Longueuil and the West Island, technical SEO, CAD pricing, AI-answer visibility, red flags and ten questions to ask.',
     metaTitle: 'SEO Companies in Montreal: How to Choose the Right One',
     metaDescription: 'How to choose an SEO company in Montreal: French and English search, map pack and suburb searches, CAD pricing, AI answers, red flags and 10 questions.',
-    date: '2026-11-13',
-    dateModified: '2026-11-13',
+    date: '2026-11-14',
+    dateModified: '2026-11-14',
     readTime: '10 min read',
     heroKey: 'planning',
     intro: [
@@ -5044,6 +5044,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'french-english', text: 'French and English SEO in Montreal' },
       { type: 'p', html: 'Montreal is a French-first city with a large English-speaking population and many bilingual buyers, so keyword research has to run in both languages. The two do not simply mirror each other: the terms that win in French are often different from a literal translation of the English phrase, and the intent behind them can differ too.' },
       { type: 'p', html: 'A good plan is clear about which terms each language actually wins, then builds French pages that stand on their own rather than machine-translated duplicates. Keep the site structure and hreflang tags tidy so search engines show the right page to the right visitor, and make sure the French pages are linked and indexed rather than left as orphans. If your customers search in both languages, treat bilingual search as part of the main plan, not an optional extra.' },
+      { type: 'p', html: 'Quebec&rsquo;s Charter of the French Language, strengthened by Bill 96, also shapes commercial websites: French must be at least as available as English for Quebec customers, and where another language appears, French must be markedly predominant. In practice, plan French navigation, page copy, forms, error messages, metadata and a clearly visible language switch from the start rather than translating a finished English site later. This is general guidance, not legal advice; confirm how the rules apply to your business with your own adviser.' },
 
       { type: 'h2', id: 'local-searches', text: 'Neighbourhood and suburb searches: Plateau, Laval, Longueuil and the West Island' },
       { type: 'p', html: 'Montreal does not search like one big market. The island is split into distinct boroughs and neighbourhoods, and the map pack can change from the Plateau to the West Island. Many customers also live off-island in Laval, Longueuil and the South Shore, and they search with their own town name.' },
