@@ -4897,13 +4897,13 @@ export const articles: Article[] = [
     dek: 'A buyer’s guide for Ottawa businesses hiring an SEO company: map-pack work across Kanata, Orléans, Barrhaven and Nepean, English and French search in the National Capital Region, B2B and government-supplier SEO, the first 90 days, CAD pricing, AI-answer visibility, red flags and ten questions to ask.',
     metaTitle: 'SEO Companies in Ottawa: How to Choose (2026 Guide)',
     metaDescription: 'How to choose an SEO company in Ottawa: local map pack and bilingual (English/French) search, the first 90 days, CAD pricing, red flags and questions.',
-    date: '2026-11-13',
-    dateModified: '2026-11-13',
+    date: '2026-11-14',
+    dateModified: '2026-11-14',
     readTime: '10 min read',
     heroKey: 'planning',
     intro: [
       'The right SEO company in Ottawa is one that can show how it will win you calls and enquiries from the searches your customers actually type — whether that is a homeowner in Barrhaven looking for a plumber, a Kanata North tech buyer comparing platforms, or a procurement officer checking a government supplier. It should explain the plan in plain words, price it in CAD, and leave your Google Business Profile, Search Console and website accounts in your name.',
-      'This is a buyer’s guide, not a ranked list. It covers what an Ottawa SEO company should do, how local search works across the capital region and the Gatineau side, why English and French search need separate work, what B2B and government suppliers need, typical Canadian pricing, the first 90 days, red flags, ten questions to ask and how to get found in AI answers. For how we run SEO for Ottawa clients, see our <a href="/locations/seo-company-in-ottawa">SEO company in Ottawa</a> page.',
+      'This is a buyer’s guide, not a ranked list. It covers what an Ottawa SEO company should do, how local search works across the capital region and the Gatineau side, why English and French search need separate work, what B2B and government suppliers need, typical Canadian pricing, the first 90 days, red flags, ten questions to ask and how to get found in AI answers. For national context, see our <a href="/blog/top-seo-companies-canada">guide to top SEO companies in Canada</a>. For how we run SEO for Ottawa clients, see our <a href="/locations/seo-company-in-ottawa">SEO company in Ottawa</a> page.',
     ],
     body: [
       { type: 'h2', id: 'what-ottawa-needs', text: 'What should an Ottawa SEO company do for you?' },
@@ -4917,8 +4917,12 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'Ask any shortlisted company to show this plan in writing, with the order of work and who does each part. Our <a href="/services/digital-marketing/seo-services">SEO services</a> page explains how we cover the technical and content side together.' },
 
+      { type: 'h2', id: 'technical-content-links', text: 'Technical SEO vs content vs links: where should the budget go?' },
+      { type: 'p', html: 'Ottawa businesses often ask which part of SEO to pay for first. The three do different jobs: <strong>technical SEO</strong> makes your site fast, crawlable and easy for Google and Bing to index; <strong>content</strong> makes each page the best answer for a specific search, including neighbourhood and bilingual queries; and <strong>links</strong> from relevant Canadian, Ontario and Ottawa sources build authority for competitive terms.' },
+      { type: 'p', html: 'A good agency fixes technical problems first, because content and links cannot compensate for a site search engines struggle to crawl. It then maps content to the searches that bring enquiries and earns links from directories, associations, suppliers and media that genuinely relate to your business. Be wary of budgets weighted almost entirely to cheap monthly links with little technical or content work.' },
+
       { type: 'h2', id: 'local-seo-ottawa', text: 'Local SEO in Ottawa: map pack, Kanata/Orleans/Barrhaven and Gatineau searches' },
-      { type: 'p', html: 'Ottawa does not search like one big market. The city is spread across distinct communities, and the map pack can change from one part of the city to another. A business that ranks well downtown may be invisible to a searcher in Kanata, Orléans or Barrhaven, and the reverse is just as common.' },
+      { type: 'p', html: 'Ottawa does not search like one big market. The city is spread across distinct communities, and the map pack can change from one part of the city to another. A business that ranks well downtown may be invisible to a searcher in Kanata, Orléans, Barrhaven or Nepean, and the reverse is just as common.' },
       { type: 'p', html: 'If you genuinely serve those communities, each one needs a useful page that says something specific: what you do there, how quickly you can get there, which jobs or clients you have nearby and any local details that matter. Copying the Ottawa page and swapping the neighbourhood name is a doorway page, not local SEO, and it can hurt you. The same rule applies across the river: Gatineau-side and francophone queries often use different wording, and searches do not stop at the provincial border.' },
       { type: 'p', html: 'For service businesses, the profile is usually where the call starts. We set up and optimise your Google Business Profile and Bing Places as a real service-area business, choose categories and service areas that match what you actually cover, and keep the same name, address and phone — NAP — across your site, directories and citations. Our <a href="/services/digital-marketing/local-seo">local SEO service</a> page explains how we approach map-pack and service-area work.' },
 
@@ -4937,7 +4941,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'A single-location local campaign sits at the lower end of these ranges. Government suppliers, Kanata North tech companies or national-competition keywords sit higher. A quote under about $1,000 per month for full-service marketing is a warning sign in itself, and a fixed monthly number in CAD after a free review is easier to compare than hourly billing.' },
 
       { type: 'h2', id: 'first-90-days', text: 'What the first 90 days should look like' },
-      { type: 'p', html: 'The first three months should fix foundations and set a plan you can check. Expect work in roughly this order:' },
+      { type: 'p', html: 'The first three months should fix foundations and set a plan you can check. A sensible shape is 30 days to audit the site, confirm indexing and set up tracking, 60 days to ship titles, Google Business Profile fixes and the first content, and 90 days to build authority and judge early trends. Expect work in roughly this order:' },
       { type: 'ol', items: [
         '<strong>Technical audit.</strong> Crawl the site for speed, mobile layout, broken links, redirect chains, duplicate pages, canonical tags and structured data, then agree a short prioritised fix list.',
         '<strong>Indexing in Google and Bing.</strong> Set up Search Console and Bing Webmaster Tools in your name, submit a clean sitemap and confirm your money pages are indexed in both.',
