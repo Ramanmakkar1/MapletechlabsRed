@@ -22,8 +22,8 @@ import { SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 const SERVICE_OPTIONS = services.filter(s => s.slug in SERVICE_PROJECT_TYPE).map(s => ({ slug: s.slug, name: s.name }));
 const CITY_OPTIONS = cities.map(c => ({ slug: c.slug, name: c.name }));
 
-const TITLE = 'Contact Mapletech Labs | Free Project Consultation';
-const DESCRIPTION = 'Contact Mapletech Labs for a free project consultation. Custom software development company in Edmonton, Canada. Response within one working day.';
+const TITLE = 'Contact a Software Development Company in Edmonton';
+const DESCRIPTION = 'Book a free project consultation with Mapletech Labs, an Edmonton, Canada software development company. A senior engineer replies within one working day.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
