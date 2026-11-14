@@ -9,7 +9,7 @@ import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Unicorn Apps 2026: Top 10 Growth Stories for Founders';
 const DESCRIPTION =
-  'Top 10 unicorn apps 2026: how NovaPay, LoomAI and others hit $1B+, the product choices fueling growth, and lessons Canadian founders can apply right now.';
+  'Top 10 unicorn apps 2026: how NovaPay, LoomAI and others reached $1B+, the product decisions behind their growth, and lessons for Canadian founders.';
 const SLUG = 'top-10-unicorn-apps-2026';
 const DATE = '2026-01-15';
 
