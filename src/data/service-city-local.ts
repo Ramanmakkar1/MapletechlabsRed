@@ -1463,6 +1463,79 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-design-company-in-ottawa': {
+    title: 'Web Design Company in Ottawa, Ontario',
+    description: 'Ottawa web design from Mapletech Labs: fast, mobile-first, bilingual-ready sites built to win leads, with a fixed CAD quote. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs designs custom websites for Ottawa businesses from our Canadian team, with mobile-first layouts, quick pages and SEO-ready structure. We agree a fixed CAD price and clear milestones up front, then build the site around the enquiries you want to receive.',
+    intro: 'Mapletech Labs is a Canadian web design team headquartered in Edmonton, creating custom websites for Ottawa businesses. We do not have an Ottawa office, but Ottawa is two hours ahead of Edmonton, so we schedule calls and reviews inside your working day and answer questions the same day. When a project needs it, we travel to Ottawa for discovery sessions and design reviews, with travel agreed up front. You work directly with the senior designers and engineers on your project, under a fixed scope and fixed CAD price agreed before design starts. Call +1-403-604-8692 to discuss your Ottawa website.',
+    sections: [
+      {
+        heading: 'Web design for Ottawa\'s public-sector and tech economy',
+        body: [
+          'Ottawa buyers are not a single audience. Federal departments, agencies and the suppliers who bid on public contracts need websites that state capabilities, certifications and past work clearly enough to survive a procurement review. Kanata North technology firms need product and service pages that explain a technical offer to buyers who compare several vendors, and professional services firms across the city need proof and clear contact routes. A credible Ottawa website makes those distinctions obvious: who you serve, what you deliver, which standards you meet and how a buyer can reach the right person without hunting through the site.',
+        ],
+      },
+      {
+        heading: 'Bilingual English and French websites',
+        body: [
+          'Ottawa businesses and public-facing organisations often need the same site in English and French, not a translated menu bolted onto one language. We plan both language versions together so navigation, forms, calls to action and service pages mirror each other, with separate URLs, a clear language switcher and hreflang tags that tell Google and Bing which page belongs to which audience. French copy is written or reviewed by a fluent writer rather than passed through an automatic translator, so the tone holds up with Francophone visitors and public-sector reviewers.',
+        ],
+      },
+      {
+        heading: 'Accessibility for the public sector: WCAG 2.1 AA and the Accessible Canada Act',
+        body: [
+          'Federally regulated organisations in Ottawa work under the Accessible Canada Act, and public-sector websites are commonly expected to meet WCAG 2.1 level AA. We design and test to that standard from the first wireframe, covering keyboard navigation, screen-reader structure, colour contrast, focus states, form labels and text resizing, so accessibility is built in rather than patched on later. We can share accessibility test results with your team, and your legal advisors confirm how the Act and the standard apply to your organisation and website.',
+        ],
+      },
+      {
+        heading: 'What web design costs in Ottawa',
+        body: [
+          'Our project pricing puts a custom website at $10,000-$50,000 CAD, with a typical delivery window of 4-10 weeks. Where your project lands inside that range depends on how many pages you need, how much custom design work each one takes, what content has to be written or moved over, and which integrations the build requires. You get a written scope and a fixed price in CAD before design starts, so the number stays put for the life of the project. For the detail behind those ranges, read our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Fast, SEO-ready pages that bring in leads',
+        body: [
+          'A polished Ottawa site still has to load quickly and be easy for search engines to read. We build mobile-first pages with compressed images, controlled fonts and scripts, then check Core Web Vitals before launch so slow templates do not cost you enquiries. Clear headings, readable URLs, structured data and internal links help Google and Bing understand your services and your city. Design and engineering sit in one scope, which keeps the live site close to the approved design; our ',
+          { href: '/services/web-development/web-design', label: 'web design services across Canada' },
+          ' set out the full process. For a larger portal, e-commerce system or custom application, see our ',
+          { href: '/locations/web-development-company-in-ottawa', label: 'Web Development Company in Ottawa' },
+          ' page, and for ongoing search work our ',
+          { href: '/locations/seo-company-in-ottawa', label: 'SEO Company in Ottawa' },
+          ' team can keep improving visibility after launch.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does web design cost in Ottawa?',
+        a: 'A custom Ottawa website is priced at $10,000-$50,000 CAD in our project pricing, and most take 4-10 weeks to design and build. Page count, design depth, content and integrations move the number within that range, and you receive a fixed CAD quote after a free discovery call.',
+      },
+      {
+        q: 'How long does an Ottawa website take to design and build?',
+        a: 'A custom website usually takes 4-10 weeks from kickoff to launch, based on the ranges in our project pricing. Smaller brochure sites can move faster, while larger sites with many pages, two languages or integrations take longer. Your written scope includes milestones for design approval, content lock and launch.',
+      },
+      {
+        q: 'Can you build a bilingual English and French website?',
+        a: 'Yes. We build paired English and French versions of a site with matching structure, separate URLs, a language switcher and hreflang tags, and we have the French copy written or reviewed by a fluent writer. Both versions are checked before launch so navigation, forms and calls to action work the same way.',
+      },
+      {
+        q: 'Will our Ottawa website meet accessibility requirements?',
+        a: 'We design and test to WCAG 2.1 level AA, the standard public-sector websites are commonly expected to meet, covering keyboard access, screen-reader structure, colour contrast, focus states and text resizing. We can share our accessibility test results with you, and your own legal team should confirm how the Accessible Canada Act applies to your organisation.',
+      },
+      {
+        q: 'Who owns the website code and domain?',
+        a: 'You do. All source code, design files and the domain for your Ottawa website belong to you, with no lock-in. You can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
   'web-development-company-in-vancouver': {
     title: 'Web Development Company in Vancouver',
     description: 'Mapletech Labs builds custom websites and web apps for Vancouver businesses, with a fixed CAD price agreed up front from Edmonton. Get a free quote.',
