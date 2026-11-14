@@ -3570,7 +3570,7 @@ export const articles: Article[] = [
         '<strong>Enterprise web application or portal:</strong> about CAD $100,000&ndash;$500,000+, roughly 4&ndash;12 months, with authentication, role-based access and integrations.',
         '<strong>SaaS platform:</strong> about CAD $50,000&ndash;$300,000+, typically 3&ndash;12 months for an MVP.',
       ] },
-      { type: 'p', html: 'Our cost guide lists Vancouver onshore development rates at roughly CAD $110&ndash;$170 per hour, the highest of the Canadian cities we track, so a Below-average quote from a local team deserves a second look. Budget for running costs too: hosting, monitoring, security patches and content updates. A reasonable planning rule is to set aside 15&ndash;20% of the initial build cost each year for maintenance and improvement.' },
+      { type: 'p', html: 'Our cost guide lists Vancouver onshore development rates at roughly CAD $110&ndash;$170 per hour, second only to Toronto among the Canadian cities we track, so a below-average quote from a local team deserves a second look. Budget for running costs too: hosting, monitoring, security patches and content updates. A reasonable planning rule is to set aside 15&ndash;20% of the initial build cost each year for maintenance and improvement.' },
 
       { type: 'h2', id: 'ownership', text: 'Who owns the code, domain and hosting' },
       { type: 'p', html: 'Ownership is the single clause buyers regret skipping. Before you sign, confirm in writing that:' },
