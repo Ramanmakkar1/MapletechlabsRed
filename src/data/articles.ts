@@ -6302,7 +6302,7 @@ export const articles: Article[] = [
     category: 'Business',
     title: 'UI/UX Design Companies in Montreal: How to Choose One (2026)',
     dek: "A buyer's guide for Montreal teams hiring a UI/UX design company: French-first interfaces under Bill 96, Quebec Law 25 consent design, WCAG accessibility, CAD pricing bands, red flags and 10 questions to ask.",
-    metaTitle: 'UI/UX Design Companies in Montreal: How to Choose (2026)',
+    metaTitle: 'UI/UX Design Companies in Montreal | Mapletech Labs',
     metaDescription: 'How to choose a UI/UX design company in Montreal: research, French-first interfaces under Bill 96, Law 25 consent design, CAD pricing and 10 questions.',
     answer: 'A good UI/UX design company in Montreal runs real user research, designs French-first bilingual interfaces that meet WCAG 2.1 AA, builds consent flows that satisfy Quebec Law 25, and hands you a reusable design system and Figma files you own.',
     date: '2026-11-14',
