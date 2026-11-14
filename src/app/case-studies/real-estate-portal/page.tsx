@@ -5,6 +5,7 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { BLOG_IMAGE } from '@/lib/seo/business';
 
 const NAME = 'ML-Powered Real Estate Portal';
 const TITLE = 'Real Estate Portal Case Study: ML Search, 850K+ Listings';
@@ -34,6 +35,7 @@ const jsonLd = {
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
+  image: BLOG_IMAGE,
   author: {
     '@type': 'Organization',
     '@id': 'https://mapletechlabs.ca/#organization',

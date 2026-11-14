@@ -5,6 +5,7 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { BLOG_IMAGE } from '@/lib/seo/business';
 
 const NAME = 'PCI DSS Payments API';
 const TITLE = 'PCI DSS Payments API Case Study: 12M Transactions a Month';
@@ -34,6 +35,7 @@ const jsonLd = {
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
+  image: BLOG_IMAGE,
   author: {
     '@type': 'Organization',
     '@id': 'https://mapletechlabs.ca/#organization',
