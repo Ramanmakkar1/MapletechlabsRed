@@ -53,7 +53,6 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'software-development-companies-vancouver': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
   'software-development-companies-ottawa': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
   'software-development-companies-montreal': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
-  'healthcare-software-development-canada': { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
   'shopify-vs-custom-ecommerce-canada': { label: 'Web Development', path: c => serviceCityPath('web-development', c) },
   'seo-companies-edmonton': { label: 'SEO & Digital Marketing', path: c => serviceCityPath('digital-marketing', c) },
   'digital-marketing-agencies-edmonton': { label: 'Digital Marketing', noun: 'agency', path: c => `/locations/digital-marketing-agency-in-${c}` },
