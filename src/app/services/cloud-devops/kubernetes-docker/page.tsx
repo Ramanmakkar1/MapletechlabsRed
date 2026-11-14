@@ -7,8 +7,8 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const TITLE = 'Kubernetes & Docker Consulting Services in Canada';
-const DESCRIPTION = 'Production-grade Kubernetes and Docker by Mapletech Labs: EKS, GKE and AKS cluster setup, Helm charts and container security. 60+ K8s clusters deployed in Canada.';
+const TITLE = 'Kubernetes & Docker Consulting in Canada';
+const DESCRIPTION = 'Kubernetes and Docker consulting in Canada: production-grade EKS, GKE and AKS setup, Helm charts and container security, with 60+ K8s clusters deployed.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
@@ -31,8 +31,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={TITLE}
-        description={seoDescription(DESCRIPTION)}
+        name={'Kubernetes & Docker Consulting'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/cloud-devops/kubernetes-docker'}
       />
       <PageClient />

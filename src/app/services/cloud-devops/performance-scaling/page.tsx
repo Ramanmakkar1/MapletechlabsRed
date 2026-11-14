@@ -4,13 +4,18 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoDescription } from '@/lib/seo/description';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
+
+const TITLE = 'Performance Scaling & Optimization Services';
+const DESCRIPTION = 'Performance scaling and optimization in Canada: load testing, database tuning, CDN strategy and autoscaling that keep apps at 99.99% uptime. Free audit.';
 
 export const metadata: Metadata = {
-  title: 'Performance Scaling & Optimization Services',
-  description: 'Expert performance engineering & scaling. Load testing, database optimization, CDN strategy and autoscaling for Canadian businesses. 99.99% uptime.',
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Performance Scaling & Optimization | Mapletech Labs',
-    description: 'Expert performance engineering & scaling. Load testing, database optimization, CDN strategy and autoscaling for Canadian businesses.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/cloud-devops/performance-scaling',
     type: 'website',
   },
@@ -26,8 +31,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
-        name={'Performance Scaling & Optimization Services'}
-        description={'Expert performance engineering and scaling solutions. Load testing, database optimization, CDN strategy, and autoscaling for Canadian businesses. 99.99% uptime.'}
+        name={'Performance Scaling & Optimization'}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/cloud-devops/performance-scaling'}
       />
       <PageClient />
