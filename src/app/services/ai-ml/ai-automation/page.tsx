@@ -5,6 +5,7 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { seoTitle } from '@/lib/seo/title';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const title = 'AI Automation Services Canada: Workflows | Mapletech Labs';
 const description = 'Compare AI automation approaches for invoices, email and CRM workflows. Explore cost drivers and plan your Canadian business automation with an engineer.';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(title),
   description,
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title,
     description,
     url,

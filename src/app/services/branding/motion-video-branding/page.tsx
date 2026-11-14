@@ -6,6 +6,7 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Motion & Video Branding Services in Canada';
 const DESCRIPTION = 'Motion and video branding in Canada: animated logos, brand videos, social media content and product demos that hold your audience. Get a free quote.';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/branding/motion-video-branding',

@@ -6,6 +6,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'SaaS Platform Development in Canada';
 const DESCRIPTION = 'SaaS platform development in Canada: scalable multi-tenant software-as-a-service apps with billing, auth and dashboards. Get a free quote today.';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/web-development/saas-platforms',

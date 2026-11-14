@@ -9,6 +9,7 @@ import { ServiceSchema, FaqSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import { serviceMedia } from '@/data/media';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const url = canonicalUrl('/services/product-design/ux-audit');
 const title = 'UX Audit Services Canada for Products | Mapletech Labs';
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   title: { absolute: title },
   description,
   alternates: { canonical: url },
-  openGraph: { title, description, url, type: 'website' },
+  openGraph: { images: DEFAULT_OG_IMAGES, title, description, url, type: 'website' },
 };
 
 const faqs = [

@@ -5,6 +5,7 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Flutter App Development Company in Canada: Get Quote';
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description,
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: TITLE,
     description,
     url: 'https://mapletechlabs.ca/services/mobile-app-development/flutter-development',

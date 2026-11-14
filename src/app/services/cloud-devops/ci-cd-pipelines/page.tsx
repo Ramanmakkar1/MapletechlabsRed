@@ -6,6 +6,7 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const DESCRIPTION = 'Automated CI/CD pipelines by Edmonton-based Mapletech Labs: GitHub Actions, blue-green deploys, zero-downtime releases. 100+ pipelines for Canadian teams.';
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   title: seoTitle('CI/CD Pipeline Services in Canada'),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: 'CI/CD Pipeline Services in Canada | Mapletech Labs',
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/cloud-devops/ci-cd-pipelines',

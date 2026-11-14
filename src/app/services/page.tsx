@@ -4,6 +4,7 @@ import { seoDescription } from '@/lib/seo/description';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Software Development Services in Canada';
 const DESCRIPTION = 'Software development services in Canada: 12 service lines, from custom software, mobile apps and AI to UI/UX, cloud and SaaS, by one Edmonton-based team.';
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services',

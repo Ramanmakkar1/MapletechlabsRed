@@ -7,6 +7,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema, ServiceSchema } from '@/components/ServiceSchema';
 import CTASection from '@/components/CTASection';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Software Discovery Sprint for Product Teams';
 const OG_TITLE = `${TITLE} | Mapletech Labs`;
@@ -50,6 +51,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: OG_TITLE,
     description: DESCRIPTION,
     url: URL,

@@ -4,6 +4,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Mobile App Development Company in Canada';
 const DESCRIPTION = 'Mobile app development company in Canada: iOS, Android, Flutter and React Native apps from an Edmonton team, with 300+ apps shipped. Free consultation.';
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/mobile-app-development',

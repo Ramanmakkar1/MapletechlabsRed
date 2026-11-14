@@ -6,6 +6,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoDescription } from '@/lib/seo/description';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Performance Scaling & Optimization Services';
 const DESCRIPTION = 'Performance scaling and optimization in Canada: load testing, database tuning, CDN strategy and autoscaling that keep apps at 99.99% uptime. Free audit.';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/cloud-devops/performance-scaling',

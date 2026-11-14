@@ -6,6 +6,7 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Brand Strategy Services for Canadian Firms';
 const DESCRIPTION = 'Brand strategy services for Canadian firms: market positioning, competitive analysis and brand architecture that build lasting market impact. Book a call.';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/branding/brand-strategy',

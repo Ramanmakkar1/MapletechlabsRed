@@ -6,6 +6,7 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Logo & Visual Identity Design in Canada';
 const DESCRIPTION = 'Logo and visual identity design in Canada: memorable logos, colour systems and typography that define your brand, with 200+ logos designed by our team.';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/branding/logo-visual-identity',

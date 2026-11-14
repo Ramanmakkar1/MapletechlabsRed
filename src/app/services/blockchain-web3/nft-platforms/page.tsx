@@ -5,6 +5,7 @@ import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoDescription } from '@/lib/seo/description';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const DESCRIPTION = 'Gas-optimized NFT minting contracts, custom marketplaces, and royalty systems. 500K+ NFTs minted across 30+ platforms by Edmonton-based Mapletech Labs.';
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   title: 'NFT Platform & Marketplace Development',
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: 'NFT Platform Development | Mapletech Labs',
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/blockchain-web3/nft-platforms',

@@ -6,6 +6,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoDescription } from '@/lib/seo/description';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'AWS Architecture & Cloud Solutions in Canada';
 const DESCRIPTION = 'Certified AWS architects at Edmonton-based Mapletech Labs: cloud migration, cost control, multi-region HA. $2M+ saved for Canadian businesses. Free audit.';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/cloud-devops/aws-architecture',

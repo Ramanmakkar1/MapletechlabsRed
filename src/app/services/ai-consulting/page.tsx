@@ -4,6 +4,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema, ServiceSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'AI Consulting Services in Canada | Edmonton AI Consultants';
 const DESCRIPTION = 'AI consulting for Canadian businesses: assess use cases and data readiness, compare build versus buy, and plan feasibility, integrations and next steps.';
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: URL,

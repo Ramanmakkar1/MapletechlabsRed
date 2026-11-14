@@ -3,6 +3,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 import { ogTitle } from '@/lib/seo/title';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'UI/UX Design Company in Canada: Apps & SaaS';
 
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps & SaaS, with fixed CAD pricing. Get a free design audit.',
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps & SaaS, with fixed CAD pricing. Get a free design audit.',
     url: 'https://mapletechlabs.ca/services/product-design',

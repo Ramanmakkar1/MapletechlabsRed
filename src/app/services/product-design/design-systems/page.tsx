@@ -6,6 +6,7 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Design System Services in Canada: Figma and Storybook';
 const DESCRIPTION = 'Design system services in Canada from an Edmonton-based team: Figma component libraries, Storybook docs and WCAG 2.1 accessibility. 50+ systems delivered.';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/product-design/design-systems',

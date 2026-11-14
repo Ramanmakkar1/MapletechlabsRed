@@ -4,6 +4,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'SaaS Development Company in Canada';
 const DESCRIPTION = 'SaaS development company in Canada: MVP launch, multi-tenant architecture, subscription billing and SSO for startups. Book a free strategy call.';
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/saas-development',

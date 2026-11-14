@@ -5,11 +5,13 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 export const metadata: Metadata = {
   title: seoTitle('Wireframing & UX Design Services in Canada'),
   description: 'Wireframing and UX design from Mapletech Labs. Low- and high-fidelity wireframes and clickable prototypes that settle the hard questions before build.',
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: 'Wireframing & UX Design Services in Canada | Mapletech Labs',
     description: 'Wireframing and UX design from Mapletech Labs. Low- and high-fidelity wireframes and clickable prototypes that settle the hard questions before build.',
     url: 'https://mapletechlabs.ca/services/product-design/wireframing',

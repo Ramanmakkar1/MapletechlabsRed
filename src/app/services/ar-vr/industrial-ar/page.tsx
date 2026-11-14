@@ -6,6 +6,7 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const DESCRIPTION = 'Enterprise industrial AR for manufacturing and maintenance. HoloLens 2, digital twins, and IoT overlays by Edmonton-based Mapletech Labs in Canada.';
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   title: seoTitle('Industrial AR Solutions | HoloLens Development'),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: 'Industrial AR Solutions | Mapletech Labs',
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/ar-vr/industrial-ar',

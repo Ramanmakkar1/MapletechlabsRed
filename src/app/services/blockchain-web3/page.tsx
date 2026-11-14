@@ -3,6 +3,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Blockchain & Web3 Development in Canada';
 const DESCRIPTION = 'Blockchain and Web3 development in Canada from an Edmonton-based team: smart contracts, DeFi protocols and dApps for Canadian businesses. Book a free consultation.';
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/blockchain-web3',

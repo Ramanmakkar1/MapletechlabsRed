@@ -4,6 +4,7 @@ import { ServiceSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
 import PageClient from './PageClient';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const PATH = '/services/software-development/legacy-software-modernization';
 const TITLE = 'Legacy Software Modernization Services';
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: DESCRIPTION,
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: `${TITLE} | Mapletech Labs`,
     description: DESCRIPTION,
     url: URL,

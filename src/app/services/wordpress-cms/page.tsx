@@ -3,6 +3,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'WordPress & CMS Development in Canada';
 const DESCRIPTION = 'WordPress development in Canada: custom themes, WooCommerce stores, headless WordPress and Strapi CMS builds for Canadian businesses. Get a free quote.';
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/wordpress-cms',

@@ -7,6 +7,7 @@ import { seoDescription } from '@/lib/seo/description';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import { services } from '@/data/services';
 import { cities } from '@/data/cities';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Mobile App Development in Vancouver: iOS, Android & Flutter';
 const DESCRIPTION = 'Mapletech Labs builds iOS, Android and cross-platform apps for Vancouver businesses from our Edmonton HQ, with fixed-scope quotes from discovery to launch.';
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: TITLE,
     description: seoDescription(DESCRIPTION),
     url: URL,

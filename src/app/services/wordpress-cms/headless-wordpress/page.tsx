@@ -6,6 +6,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoDescription } from '@/lib/seo/description';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const DESCRIPTION = 'Headless WordPress with Next.js frontends for blazing-fast performance. WPGraphQL, ISR, CDN delivery by Edmonton-based Mapletech Labs. 40+ projects shipped';
 const TITLE = 'Headless WordPress Development in Canada';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/services/wordpress-cms/headless-wordpress',
