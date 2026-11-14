@@ -6,6 +6,7 @@ import cityDescription from '@/lib/seo/city-meta';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 export const dynamic = 'force-static';
+export const revalidate = false;
 
 const TITLE = 'Software Development Company in Mississauga';
 

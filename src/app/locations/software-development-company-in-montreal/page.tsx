@@ -5,6 +5,7 @@ import { localServiceSchema } from '@/lib/seo/business';
 import cityDescription from '@/lib/seo/city-meta';
 
 export const dynamic = 'force-static';
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Montreal',

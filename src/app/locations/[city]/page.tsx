@@ -9,6 +9,7 @@ import { localServiceTitle, ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
+import { SERVICE_CITY_LOCAL } from '@/data/service-city-local';
 import type { ServiceCityLocal } from '@/data/service-city-local';
 
 interface PageProps {
@@ -19,15 +20,12 @@ interface PageProps {
 // keyword pages. Static city-landing and province folders take precedence for their
 // own paths; old bare /locations/<city> paths are 301-redirected in next.config.
 // Hand-written local copy (title, intro, sections, proof, FAQs) for selected combos.
-// Keep the large hand-written copy catalog out of the route's initial server
-// chunk. The module is loaded only for keyword pages that need local copy, and
-// remains cached by the server module loader for subsequent requests.
-const localFor = cache(async (slug: string): Promise<ServiceCityLocal | undefined> => {
-  const { SERVICE_CITY_LOCAL } = await import('@/data/service-city-local');
-  return Object.prototype.hasOwnProperty.call(SERVICE_CITY_LOCAL, slug)
+// Imported at build time so every keyword page renders from static data with no
+// request-time module loading.
+const localFor = (slug: string): ServiceCityLocal | undefined =>
+  Object.prototype.hasOwnProperty.call(SERVICE_CITY_LOCAL, slug)
     ? SERVICE_CITY_LOCAL[slug]
     : undefined;
-});
 
 const getCombo = cache((slug: string) => getServiceCityCombo(slug));
 const getData = cache((citySlug: string, serviceSlug: string) => getCityServiceData(citySlug, serviceSlug));
@@ -54,7 +52,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isAgencyPage = combo.slug.startsWith('digital-marketing-agency-in-');
   const headline = isAgencyPage ? 'Digital Marketing Agency' : priorityCompanyHeadline(combo.serviceSlug, combo.label);
   const base = isAgencyPage ? `${headline} in ${data.cityName}` : `${headline} Company in ${data.cityName}`;
-  const override = await localFor(slug);
+  const override = localFor(slug);
   const title = override?.title ?? (base.length <= 43 ? base : `${combo.label} in ${data.cityName}`);
   const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
   const description = override?.description ?? data.description;
@@ -77,7 +75,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
 
   // Display the keyword label (e.g. "AI Development") rather than the formal
   // service name, so the H1 and headings match the target query.
-  const local = await localFor(slug);
+  const local = localFor(slug);
   const isAgencyPage = combo.slug.startsWith('digital-marketing-agency-in-');
   const serviceName = isAgencyPage ? 'Digital Marketing Agency' : priorityCompanyHeadline(combo.serviceSlug, combo.label);
   const extraFaqs = serviceCityExtraFaqs(combo.serviceSlug, raw.cityName);
