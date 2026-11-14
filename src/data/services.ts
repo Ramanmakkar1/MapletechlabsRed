@@ -658,6 +658,7 @@ export const services: ServiceData[] = [
       { name: "Computer Vision", slug: "computer-vision" },
       { name: "Predictive Analytics", slug: "predictive-analytics" },
       { name: "AI Chatbots", slug: "ai-chatbots" },
+      { name: "AI Agent Development", slug: "ai-agent-development" },
     ],
   },
 

@@ -23,6 +23,7 @@ const SUB_SERVICE_FOLDERS: Record<string, string[]> = {
     'computer-vision',
     'predictive-analytics',
     'ai-chatbots',
+    'ai-agent-development',
   ],
   'product-design': [
     'ui-ux-strategy',

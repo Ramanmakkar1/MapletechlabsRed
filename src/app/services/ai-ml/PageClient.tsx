@@ -122,6 +122,7 @@ export default function PageClient() {
                 <tbody>
                   {[
                     ['Customers need instant answers to common questions, 24/7', 'AI chatbot or virtual assistant', <Link key="chatbots" href="/services/ai-ml/ai-chatbots">AI chatbot development</Link>],
+                    ['A task needs several steps across your systems (look up, decide, update a record)', 'AI agent with scoped tool access', <Link key="agents" href="/services/ai-ml/ai-agent-development">AI agent development</Link>],
                     ['Staff need reliable answers from policies, manuals or product documentation', 'Document retrieval and LLM integration (RAG)', <Link key="llm" href="/services/ai-ml/llm-integration">LLM integration</Link>],
                     ['Repeatable tasks such as triage, routing or data entry consume staff time', 'AI workflow automation', <Link key="automation" href="/services/ai-ml/ai-automation">AI automation</Link>],
                     ['You need forecasts, churn scores or demand predictions from business data', 'Custom predictive analytics model', <Link key="predictive" href="/services/ai-ml/predictive-analytics">Predictive analytics</Link>],

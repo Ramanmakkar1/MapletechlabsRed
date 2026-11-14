@@ -105,6 +105,7 @@ const services: ServiceCategory[] = [
       { name: 'Computer Vision', href: '/services/ai-ml/computer-vision' },
       { name: 'Predictive Analytics', href: '/services/ai-ml/predictive-analytics' },
       { name: 'AI Chatbots', href: '/services/ai-ml/ai-chatbots' },
+      { name: 'AI Agent Development', href: '/services/ai-ml/ai-agent-development' },
     ],
   },
   {
