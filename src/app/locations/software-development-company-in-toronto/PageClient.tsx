@@ -51,6 +51,18 @@ const trends = [
                 { t: 'Enterprise Digital Transformation', d: 'Canada\'s largest enterprises are headquartered here — driving massive demand for cloud migration, SaaS, and automation.' },
                 { t: 'Web3 & Crypto', d: 'Toronto leads Canada\'s crypto ecosystem with exchanges, DeFi protocols, and blockchain infrastructure companies.' },
               ];
+const torontoOverview = {
+  title: 'What does a software development company in Toronto do?',
+  lead: 'A software development company in Toronto designs, builds and maintains custom software for local businesses &mdash; the web platforms, mobile apps and AI systems that replace spreadsheets and legacy tools. Mapletech Labs does exactly that for Toronto startups, scale-ups and enterprises, with senior engineers, a fixed scope and a fixed price agreed before any code is written.',
+  points: [
+    { t: 'Plan and scope the product', d: 'We turn a business problem into a clear technical plan, user flows and a fixed-price proposal — including the Toronto-specific compliance, security and accessibility requirements your sector demands.' },
+    { t: 'Design and build it', d: 'Senior engineers and designers build the web app, mobile app, AI feature or SaaS platform end to end, shipping working software in short iterations you can review.' },
+    { t: 'Launch and support it', d: 'We handle cloud deployment, QA and handover, then stay on for support and improvements. You own all the code, infrastructure and IP from day one.' },
+    { t: 'Work with Toronto teams', d: 'We work in your time zone and can meet in person across the GTA, from the Financial District and King West to North York, Markham and Mississauga.' },
+  ],
+  covers: ['Product strategy & UX', 'Web & mobile engineering', 'AI & automation', 'Cloud, DevOps & support'],
+};
+
 const serviceLinks = [
                 { name: 'Web Development', slug: 'web-development' },
                 { name: 'Mobile App Development', slug: 'mobile-app-development' },
@@ -66,11 +78,31 @@ const serviceLinks = [
                 { name: 'AR & VR', slug: 'ar-vr' },
               ];
 
+const localFaqs = [
+  {
+    q: 'What does a software development company in Toronto do?',
+    a: 'A software development company in Toronto designs, builds and maintains custom software — web applications, mobile apps, AI features and SaaS platforms. Mapletech Labs scopes the work, agrees a fixed price, then designs, engineers, tests and launches the product, and supports it afterwards. You own all the code, infrastructure and IP.',
+  },
+  {
+    q: 'How much does software development cost in Toronto?',
+    a: 'In Canadian dollars, a typical Toronto website runs $10,000–$50,000, a web app $25,000–$100,000, a mobile app $30,000–$200,000, a SaaS MVP $30,000–$75,000 and an AI feature $10,000–$35,000. These are scope-dependent ballparks, not quotes; after discovery we agree a fixed price before any code is written. See our full CAD pricing and engagement models for details.',
+  },
+  {
+    q: 'How long does a software project take in Toronto?',
+    a: 'A website usually takes 4–10 weeks, a web app 8–16 weeks, a mobile app 10–24 weeks, a SaaS MVP 8–13 weeks and a first AI feature about 3 weeks. Timelines depend on scope and integrations, and you get a dated plan with the fixed-price proposal.',
+  },
+  {
+    q: 'Why choose Mapletech Labs for software development in Toronto?',
+    a: 'You work directly with senior engineers, not a sales layer in front of a junior team. Every project is fixed in scope and price up front, your data stays in Canada, and you keep all the code and IP. We have delivered 120+ projects in Ontario — including fintech and real-estate work — with a 97% client retention rate.',
+  },
+];
+
 export default function PageClient() {
   return (
     <LocationPageTemplate
       slug="toronto"
-      copy={{ badge: 'Software development in Toronto', title: <>Software Development in <span style={{ color: 'var(--brand)' }}>Toronto</span></>, desc: <>Toronto is Canada&apos;s FinTech capital and largest tech hub. From the MaRS Discovery District to Bay Street, we build custom software for startups, scale-ups, and enterprises powering North America&apos;s most multicultural market.</> }}
+      overview={torontoOverview}
+      copy={{ badge: 'Software development in Toronto', title: <>Software Development in <span style={{ color: 'var(--brand)' }}>Toronto</span></>, desc: <>A software development company in Toronto builds and maintains custom software — we build web platforms, mobile apps and AI systems for Toronto startups, scale-ups, and enterprises. Toronto is Canada&apos;s FinTech capital and largest tech hub; from the MaRS Discovery District to Bay Street, we serve North America&apos;s most multicultural market.</> }}
       heroStats={heroStats}
       services={services}
       numbers={{ title: "Toronto & Ontario by the Numbers", sub: "Driving digital transformation across Canada's largest tech market.", stats: numbers }}
@@ -83,11 +115,22 @@ export default function PageClient() {
       localContent={
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container prose-body">
-            <p>Need cloud migration, CI/CD or Kubernetes in the GTA? See our page on <Link href="/locations/toronto/cloud-devops">cloud and DevOps in Toronto</Link>, or read our <Link href="/blog/software-development-companies-toronto">guide to Toronto software companies</Link> for costs and vetting questions.</p>
-            <p>Planning a mobile app? Compare <Link href="/services/mobile-app-development/toronto">mobile app development in Toronto</Link>, or read our guide on <Link href="/blog/app-development-companies-toronto">choosing an app development company in Toronto</Link>.</p>
+            <h2>How does our software development process work in Toronto?</h2>
+            <p>Every engagement follows the same four stages: discovery and fixed-price scoping, design and build in short reviewable iterations, QA and launch, then ongoing support. You see working software early and often, rather than a single handover at the end. We can run the whole process remotely or meet your team in person anywhere in the GTA.</p>
+
+            <h2>How much does software development cost in Toronto (CAD)?</h2>
+            <p>We price in Canadian dollars and agree a fixed scope and fixed price before coding starts. As a guide, a website typically runs $10,000–$50,000, a web app $25,000–$100,000, a mobile app $30,000–$200,000, a SaaS MVP $30,000–$75,000 and an AI feature $10,000–$35,000. The exact number depends on complexity, integrations and compliance needs. See the <Link href="/pricing">full pricing and engagement models</Link>, or <Link href="/contact">contact us for a free fixed-price quote</Link>.</p>
+
+            <h2>Which Toronto industries do we build software for?</h2>
+            <p>Toronto&apos;s economy is concentrated in financial services, real estate, healthcare, e-commerce and SaaS, and that is where most of our Toronto work sits. Our <Link href="/case-studies/fintech-trading-platform">Toronto fintech trading platform case study</Link> covers a compliance-heavy financial build, and our <Link href="/case-studies/real-estate-portal">real-estate listing platform case study</Link> shows a property-tech project. For AI work, see <Link href="/services/ai-ml">AI and machine learning development</Link>; for consumer or field apps, <Link href="/services/mobile-app-development/toronto">mobile app development in Toronto</Link>; and for web platforms, <Link href="/services/web-development">web development services</Link>.</p>
+            <p>Need cloud migration, CI/CD or Kubernetes in the GTA? See our page on <Link href="/locations/toronto/cloud-devops">cloud and DevOps in Toronto</Link>, or read our <Link href="/blog/software-development-companies-toronto">guide to Toronto software companies</Link> for costs and vetting questions. Planning a mobile app? Compare <Link href="/services/mobile-app-development/toronto">mobile app development in Toronto</Link>, or read our guide on <Link href="/blog/app-development-companies-toronto">choosing an app development company in Toronto</Link>.</p>
+
+            <h2>Why choose Mapletech Labs in Toronto?</h2>
+            <p>Toronto companies choose us for senior engineers, fixed pricing and full ownership of the code. We have delivered 120+ projects in Ontario with a 97% client retention rate, including 50+ fintech solutions, and we understand the compliance, security and performance standards of Bay Street. Every repository, cloud account and asset we create is yours, and your data stays in Canada. <Link href="/contact">Tell us about your project</Link> and a senior engineer will reply within one working day with a fixed-price plan.</p>
           </div>
         </section>
       }
+      localFaqs={localFaqs}
     />
   );
 }
