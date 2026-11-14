@@ -156,6 +156,12 @@ export default function RamanPage() {
               >
                 Raman Makkar at a glance
               </h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '16px', maxWidth: '800px' }}>
+                Raman Makkar is the founder and CEO of Mapletech Labs, which he founded in Edmonton, Alberta in 2018 as
+                TML Branding Agency. From its Edmonton headquarters, his team serves clients across Canada and
+                internationally. Raman leads services spanning custom web applications, mobile apps, AI/ML solutions,
+                cloud infrastructure and SaaS platforms.
+              </p>
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
                 <li style={{ marginBottom: '8px' }}>Role: Founder &amp; CEO of Mapletech Labs</li>
                 <li style={{ marginBottom: '8px' }}>Company: Mapletech Labs, founded in 2018 as TML Branding Agency</li>
@@ -176,6 +182,13 @@ export default function RamanPage() {
                   Edmonton, Calgary, Toronto, Vancouver and internationally
                 </li>
               </ul>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginTop: '20px', maxWidth: '800px' }}>
+                Explore <Link href="/services" style={{ color: 'var(--brand)' }}>Mapletech Labs&apos; software development services</Link>,
+                browse <Link href="/case-studies" style={{ color: 'var(--brand)' }}>client case studies and project results</Link>,
+                find <Link href="/locations" style={{ color: 'var(--brand)' }}>software development locations across Canada</Link>,
+                review <Link href="/pricing" style={{ color: 'var(--brand)' }}>software development pricing guidance</Link>,
+                or <Link href="/contact" style={{ color: 'var(--brand)' }}>book a free consultation with Raman</Link>.
+              </p>
             </section>
 
             <section aria-labelledby="raman-background" style={{ marginTop: '48px' }}>
