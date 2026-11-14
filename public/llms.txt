@@ -156,6 +156,7 @@
 - [Software Development Contracts in Canada (2026)](https://mapletechlabs.ca/blog/software-development-contract-canada): fixed price vs time and materials, IP ownership and a pre-signing checklist.
 - [SR&ED Tax Credits for Software Development in Canada (2026 Guide)](https://mapletechlabs.ca/blog/sred-software-development-canada): how Canadian R&D tax credits work for software projects.
 - [How to Choose a SaaS Development Company in Canada (2026)](https://mapletechlabs.ca/blog/saas-development-company-canada): engagement models, red flags and questions to ask before hiring.
+- [SaaS Development Companies in Vancouver: How to Choose (2026)](https://mapletechlabs.ca/blog/saas-development-companies-vancouver): BC PIPA and PIPEDA, B2B and climate-tech product work, senior talent costs and CAD ranges.
 - [Best UI/UX Design Companies in Canada (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-canada): how to choose a studio, typical CAD costs and what to ask.
 - [Digital Marketing Agencies in Calgary: How to Choose](https://mapletechlabs.ca/blog/digital-marketing-agencies-calgary): buyer's guide for Calgary businesses hiring an agency.
 - [Digital Marketing Agencies in Toronto: How to Choose](https://mapletechlabs.ca/blog/digital-marketing-agencies-toronto): buyer's guide for Toronto and GTA businesses hiring an agency.

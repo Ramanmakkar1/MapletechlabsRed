@@ -338,6 +338,12 @@ const posts = [
     readTime: '9 min read',
   },
   {
+    slug: 'saas-development-companies-vancouver', category: 'Business',
+    title: 'SaaS Development Companies in Vancouver: How to Choose (2026)',
+    excerpt: 'How to choose a SaaS development company in Vancouver: BC PIPA and PIPEDA, B2B and climate-tech product work, senior talent costs, CAD ranges and the questions to ask.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'website-development-company-canada',
     category: 'Engineering',
     title: 'How to Choose a Website Development Company in Canada (2026)',
