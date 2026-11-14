@@ -196,9 +196,14 @@ assert.equal(resolveTitle(parseTitle("{ absolute: 'Short title' }", "")), "Short
 assert.match(titleProblems(parseTitle("{ absolute: '" + "x".repeat(61) + "' }", ""))[0], /61 chars/);
 assert.deepEqual(titleProblems(seoTitle("x".repeat(61))), []);
 assert.equal(resolveTitle(seoTitle("x".repeat(61))).length, MAX);
+assert.equal(ogTitle("Contact Mapletech Labs"), "Contact Mapletech Labs");
+assert.equal(ogTitle("Mapletech Labs | Mapletech Labs"), "Mapletech Labs");
+assert.equal(ogTitle("x".repeat(61)).length, MAX);
+assert.ok(!ogTitle("x".repeat(61)).includes("Mapletech"));
 assert.match(titleProblems(parseTitle("TITLE", fixture))[0], /67 chars/);
 assert.match(titleProblems(parseTitle("'Contact Mapletech Labs'", ""))[0], /brand twice/);
-assert.match(titleProblems(seoTitle("Mapletech Labs | Mapletech Labs"))[0], /brand twice/);
+assert.equal(resolveTitle(seoTitle("Mapletech Labs | Mapletech Labs")), "Mapletech Labs");
+assert.deepEqual(titleProblems(seoTitle("Mapletech Labs | Mapletech Labs")), []);
 assert.equal(parseTitle("seoTitle(getTitle())", ""), undefined);
 
 // Article limits apply after branding; unrelated page fixtures keep their rules.

@@ -15,6 +15,29 @@
 export const BRAND_SUFFIX = ' | Mapletech Labs';
 export const MAX_TITLE_LENGTH = 60;
 
+function cleanTitle(title: string): string {
+  return title.replace(/\s+/g, ' ').trim();
+}
+
+function hasBrand(title: string): boolean {
+  return /Mapletech Labs/i.test(title);
+}
+
+/** Keep the first brand mention and remove any extra ones, then tidy separators. */
+function dedupeBrand(title: string): string {
+  let kept = false;
+  return cleanTitle(
+    title
+      .replace(/Mapletech Labs/gi, (match) => {
+        if (kept) return '';
+        kept = true;
+        return match;
+      })
+      .replace(/(\s*[|:\-–—]\s*){2,}/g, ' | ')
+      .replace(/\s*[|:\-–—]\s*$/, ''),
+  );
+}
+
 function clampTitle(title: string): string {
   if (title.length <= MAX_TITLE_LENGTH) return title;
   const spaceIndex = title.lastIndexOf(' ', MAX_TITLE_LENGTH);
@@ -22,17 +45,30 @@ function clampTitle(title: string): string {
   return cut.replace(/[ :|\-,&(]+$/, '').trim();
 }
 
+/**
+ * Resolve the final branded string for both plain ("SEO Services in Canada")
+ * and already-branded ("Contact Mapletech Labs") inputs. The brand is added at
+ * most once, and an over-long title is clamped instead of overflowing 60
+ * characters, keeping the leading keyword intact.
+ */
+export function resolveBrandedTitle(title: string): string {
+  const cleaned = cleanTitle(title);
+  if (hasBrand(cleaned)) return clampTitle(dedupeBrand(cleaned));
+  const branded = `${cleaned}${BRAND_SUFFIX}`;
+  return branded.length > MAX_TITLE_LENGTH ? clampTitle(cleaned) : branded;
+}
+
 export function ogTitle(title: string): string {
-  const trimmed = title.trim();
-  const branded = `${trimmed}${BRAND_SUFFIX}`;
-  return branded.length > MAX_TITLE_LENGTH ? clampTitle(branded) : branded;
+  return resolveBrandedTitle(title);
 }
 
 export function seoTitle(title: string): string | { absolute: string } {
-  const clamped = clampTitle(title.trim());
-  if (/Mapletech Labs/i.test(clamped)) return { absolute: clamped };
-  if (clamped.length + BRAND_SUFFIX.length > MAX_TITLE_LENGTH) return { absolute: clamped };
-  return clamped;
+  const cleaned = cleanTitle(title);
+  if (hasBrand(cleaned)) return { absolute: resolveBrandedTitle(cleaned) };
+  if (cleaned.length + BRAND_SUFFIX.length > MAX_TITLE_LENGTH) {
+    return { absolute: resolveBrandedTitle(cleaned) };
+  }
+  return cleaned;
 }
 
 /**
