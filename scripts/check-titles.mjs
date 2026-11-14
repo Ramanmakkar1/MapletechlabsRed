@@ -100,6 +100,7 @@ function articleMetaTitle(slug) {
   const block = auditArticlesSrc.match(new RegExp(`slug: '${slug}'[\\s\\S]*?metaTitle: ('(?:[^'\\\\]|\\\\.)*')`));
   return block?.[1] && block[1].slice(1, -1).replace(/\\'/g, "'");
 }
+const auditTitleOwners = new Map();
 for (const file of AUDIT_PAGES) {
   const src = readFileSync(join(ROOT, file), "utf8");
   const slug = file.split(/[\\/]/).at(-2);
@@ -124,6 +125,9 @@ for (const file of AUDIT_PAGES) {
   if ((rendered.match(/Mapletech Labs/gi) || []).length !== 1) {
     problems.push(`${file}: audit title must name the brand once`);
   }
+  const owner = auditTitleOwners.get(rendered);
+  if (owner) problems.push(`${file}: audit title "${rendered}" duplicates ${owner}`);
+  else auditTitleOwners.set(rendered, file);
 
   // Open Graph titles are emitted independently of metadata.title; they must
   // stay within the same 60-character limit and carry the brand once.
