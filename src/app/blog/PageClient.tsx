@@ -260,6 +260,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '8 min read',
   },
   {
+    slug: 'ai-chatbot-vs-ai-agent-for-business', category: 'AI/ML',
+    title: 'AI Chatbot vs AI Agent for Business: What to Build in 2026',
+    excerpt: 'What chatbots and AI agents each do, a side-by-side comparison, when a chatbot is enough, when an agent is justified, and how to control permissions, evaluation and cost.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '11 min read',
+  },
+  {
     slug: 'ai-development-cost-canada', category: 'AI/ML',
     title: 'AI Development Cost in Canada (2026): Chatbots, LLM Integration and Custom Models',
     excerpt: 'Ballpark CAD ranges for AI chatbot RAG, LLM integration, workflow automation, computer vision, predictive analytics and custom model training in Canada.',

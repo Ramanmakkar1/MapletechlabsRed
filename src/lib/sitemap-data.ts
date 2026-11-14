@@ -96,6 +96,7 @@ export const blogSlugs = [
   'healthcare-software-development-canada',
   'shopify-vs-custom-ecommerce-canada',
   'ai-chatbot-development-cost-canada',
+  'ai-chatbot-vs-ai-agent-for-business',
   'mobile-app-development-company-canada',
   'digital-marketing-agencies-ottawa',
   'digital-marketing-agencies-montreal',
