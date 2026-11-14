@@ -70,6 +70,7 @@ export const blogSlugs = [
   'app-development-companies-ottawa',
   'app-development-companies-toronto',
   'seo-companies-calgary',
+  'seo-companies-ottawa',
   'ai-development-companies-toronto',
   'web-development-companies-edmonton',
   'ui-ux-design-companies-toronto',

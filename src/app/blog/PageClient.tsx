@@ -104,6 +104,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'seo-companies-ottawa', category: 'Business',
+    title: 'SEO Companies in Ottawa: How to Choose the Right One (2026)',
+    excerpt: 'How to choose an SEO company in Ottawa: local map pack, Kanata and Orléans searches, bilingual English/French SEO, CAD pricing, AI answers, 10 questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'ai-development-companies-toronto', category: 'Technology',
     title: 'AI Development Companies in Toronto: How to Choose One (2026)',
     excerpt: 'How to choose an AI development company in Toronto: LLM and RAG builds, PIPEDA and OSFI rules, CAD cost ranges, red flags and 10 questions to ask.',
