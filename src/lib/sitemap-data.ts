@@ -89,6 +89,7 @@ export const blogSlugs = [
   'ui-ux-design-companies-montreal',
   'ai-development-companies-vancouver',
   'web-development-companies-calgary',
+  'web-development-companies-ottawa',
   'healthcare-software-development-canada',
   'shopify-vs-custom-ecommerce-canada',
   'ai-chatbot-development-cost-canada',
