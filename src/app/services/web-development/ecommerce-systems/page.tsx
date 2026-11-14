@@ -1,19 +1,21 @@
 import type { Metadata } from 'next';
 import { seoDescription } from '@/lib/seo/description';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
-const DESCRIPTION = 'Custom Shopify, headless commerce and Next.js stores by Edmonton-based Mapletech Labs. 80+ e-commerce builds launched for Toronto and Canada-wide teams.';
+const TITLE = 'E-Commerce Development Services | Canada';
+const DESCRIPTION = 'Custom Shopify, headless commerce and Next.js stores by Edmonton-based Mapletech Labs. 80+ builds launched across Canada, with $50M+ GMV processed.';
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Development Services | Canada',
+  title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'E-Commerce Development Services | Mapletech Labs',
-    description: 'High-converting online stores with Shopify, headless commerce, and custom Next.js storefronts. $50M+ GMV processed.',
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca/services/web-development/ecommerce-systems',
     type: 'website',
   },

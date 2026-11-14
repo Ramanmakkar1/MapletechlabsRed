@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { seoDescription } from '@/lib/seo/description';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
@@ -6,15 +8,15 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
 const url = canonicalUrl('/services/web-development/api-backend');
-const title = 'API Development Services in Canada | Mapletech Labs';
-const description = 'Scalable REST and GraphQL APIs with sub-100ms latency and 99.9% uptime. Secure backend engineering by Edmonton-based Mapletech Labs. 200+ APIs delivered.';
+const TITLE = 'API Development Services in Canada';
+const DESCRIPTION = 'Scalable REST and GraphQL APIs with sub-100ms latency and 99.9% uptime. Secure backend engineering by Edmonton-based Mapletech Labs. 200+ APIs delivered.';
 
 export const metadata: Metadata = {
-  title: { absolute: title },
-  description,
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title,
-    description,
+    title: ogTitle(TITLE),
+    description: seoDescription(DESCRIPTION),
     url,
     type: 'website',
   },
@@ -31,7 +33,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'API & Backend Development Services'}
-        description={description}
+        description={DESCRIPTION}
         url={'https://mapletechlabs.ca/services/web-development/api-backend'}
       />
       <PageClient />
