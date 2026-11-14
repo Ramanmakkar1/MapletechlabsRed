@@ -10,6 +10,7 @@ import { cities } from '@/data/cities';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 
+// Keyword-first title; seoTitle appends the brand within the 50-60 char limit.
 const TITLE = 'Mobile App Development in Calgary';
 const DESCRIPTION = 'Mapletech Labs builds iOS, Android and cross-platform apps for Calgary businesses from our Edmonton HQ, with fixed-scope quotes from discovery to launch.';
 const URL = 'https://mapletechlabs.ca/services/mobile-app-development/calgary';
