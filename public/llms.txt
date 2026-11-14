@@ -235,6 +235,7 @@
 - [UI/UX Design Company Toronto: How to Choose (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-toronto): research, prototypes, AODA accessibility, CAD pricing, red flags and 10 questions to ask before you sign.
 - [UI/UX Design Companies in Vancouver: How to Choose](https://mapletechlabs.ca/blog/ui-ux-design-companies-vancouver): what to expect from research to handoff, WCAG and BC accessibility, pricing, red flags and questions to ask.
 - [UI/UX Design Companies in Ottawa: How to Choose (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-ottawa): choose a bilingual team with WCAG 2.1 AA, GC Cloud, CAD pricing bands, red flags and 10 questions to ask.
+- [UI/UX Design Companies in Montreal: How to Choose (2026)](https://mapletechlabs.ca/blog/ui-ux-design-companies-montreal): research, French-first interfaces under Bill 96, Law 25 consent design, CAD pricing bands, red flags and 10 questions to ask.
 - [Web Development Companies in Edmonton](https://mapletechlabs.ca/blog/web-development-companies-edmonton): compare capital-region SEO, B2B portals, CAD pricing, 30/60/90-day plans, red flags and key questions.
 - [Web Development Companies in Vancouver: How to Choose](https://mapletechlabs.ca/blog/web-development-companies-vancouver): marketing site vs web app vs e-commerce, tech stack and hosting questions, CAD costs and red flags.
 
