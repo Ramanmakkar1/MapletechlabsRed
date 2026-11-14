@@ -10,7 +10,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'SaaS Development Cost in Canada: 2026 CAD';
-const DESCRIPTION = 'SaaS development cost in Canada: compare real CAD ranges from MVP to enterprise, plus the budget drivers, timelines and planning steps before you hire.';
+const DESCRIPTION = 'SaaS development cost in Canada: see real CAD ranges from MVP to enterprise, what drives the budget, timelines and planning steps before you hire.';
 const SLUG = 'saas-development-cost-canada';
 const DATE = '2026-03-06';
 
@@ -33,7 +33,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: TITLE,
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   datePublished: DATE,
   dateModified: '2026-03-12',
   author: BLOG_AUTHOR,
