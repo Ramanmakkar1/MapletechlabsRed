@@ -12,7 +12,7 @@ const REDIRECTED_LOCATION_SLUGS = new Set([
 ]);
 
 export const serviceSlugs = [
-  'mobile-app-development', 'ai-ml', 'web-development', 'product-design',
+  'mobile-app-development', 'ai-ml', 'web-development', 'software-development', 'product-design',
   'blockchain-web3', 'cloud-devops', 'ar-vr', 'digital-marketing',
   'wordpress-cms', 'game-development', 'branding', 'saas-development',
 ];
