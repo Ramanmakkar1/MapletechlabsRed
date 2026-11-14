@@ -40,7 +40,16 @@ export const agencyCombos: ServiceCityCombo[] = AGENCY_CITIES.map(c => ({
   label: 'Digital Marketing Agency',
 }));
 
-const allServiceCityCombos = [...serviceCityCombos, ...agencyCombos];
+export const WEB_DESIGN_CITIES = ['edmonton'] as const;
+
+export const webDesignCombos: ServiceCityCombo[] = WEB_DESIGN_CITIES.map(c => ({
+  slug: `web-design-company-in-${c}`,
+  citySlug: c,
+  serviceSlug: 'web-development',
+  label: 'Web Design',
+}));
+
+const allServiceCityCombos = [...serviceCityCombos, ...agencyCombos, ...webDesignCombos];
 
 const bySlug = new Map(allServiceCityCombos.map(c => [c.slug, c]));
 export const getServiceCityCombo = (slug: string): ServiceCityCombo | undefined => bySlug.get(slug);

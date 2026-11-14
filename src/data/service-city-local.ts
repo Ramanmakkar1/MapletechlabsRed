@@ -1200,6 +1200,74 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-design-company-in-edmonton': {
+    title: 'Web Design Company in Edmonton',
+    description: 'Mapletech Labs is an Edmonton web design company building fast, mobile-first websites that turn visitors into leads, with fixed CAD quotes. Free quote.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and designs custom websites for Edmonton businesses, with mobile-first layouts, fast pages and SEO-ready structure. Every project comes with a fixed CAD quote, clear design milestones and a site built to turn visitors into enquiries.',
+    intro: 'Mapletech Labs is headquartered in Edmonton, so your web design project is handled by a local team you can meet in person. We design and build custom websites for Edmonton businesses that need to look credible, load quickly and turn visitors into enquiries, from the first wireframe to launch. Every scope is written down and priced in CAD before design starts, and you can reach us on +1-403-604-8692.',
+    sections: [
+      {
+        heading: 'What our Edmonton web design covers',
+        body: [
+          'A website is more than a visual layer, so our design work covers the whole visitor journey. We map the pages your customers need, plan the user experience (UX), create the visual design and write the structure for your copy so each page has a clear job. The build is mobile-first, tested on real phones, and designed to WCAG accessibility standards so keyboard users, screen-reader users and visitors who need strong contrast can use it. If you are comparing us with other studios, see our ',
+          { href: '/services/web-development/web-design', label: 'web design services across Canada' },
+          ' for the full scope.',
+        ],
+      },
+      {
+        heading: 'Redesign or new site: designing for leads',
+        body: [
+          'A redesign should fix the reasons your current site loses enquiries, not just change its colours. We review where visitors drop off, simplify forms and calls to action, and set clear conversion paths on every key page. Page speed and Core Web Vitals are part of the design brief from the start, so heavy images, fonts and scripts do not slow the site after launch. When a project needs deeper interface and product thinking, our ',
+          { href: '/services/product-design', label: 'UI/UX design' },
+          ' team can run the research, wireframes and testing.',
+        ],
+      },
+      {
+        heading: 'What web design costs in Edmonton',
+        body: [
+          'Our project pricing puts a custom website at $10,000-$50,000 CAD, with a typical delivery window of 4-10 weeks. The final figure depends on the number of pages, the design depth, content requirements and any integrations you need. We agree a written scope and a fixed price before design starts, so there are no surprise invoices. For the full breakdown of what drives the number, read our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Design vs development: which do you need?',
+        body: [
+          'Web design focuses on how the site looks, reads and converts, while development covers the code, integrations and systems behind it. Most Edmonton businesses need both, and we deliver them as one project so nothing is lost between a design file and the live site. If your project is a complex build, portal, e-commerce system or custom application, start with our ',
+          { href: '/locations/web-development-company-in-edmonton', label: 'Web Development Company in Edmonton' },
+          ' page. If you need ongoing search visibility after launch, our ',
+          { href: '/locations/seo-company-in-edmonton', label: 'SEO Company in Edmonton' },
+          ' team handles that work.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does web design cost in Edmonton?',
+        a: 'Our project pricing puts a custom website at $10,000-$50,000 CAD, delivered in about 4-10 weeks. The final price depends on page count, design depth, content and integrations, and we agree a fixed CAD quote after a free discovery call.',
+      },
+      {
+        q: 'How long does a website take to design and build?',
+        a: 'A custom website usually takes 4-10 weeks from kickoff to launch, based on the ranges in our project pricing. Smaller brochure sites can move faster, while larger sites with many pages or integrations take longer. Your written scope includes milestones for design approval, content lock and launch.',
+      },
+      {
+        q: 'Do you redesign existing WordPress sites?',
+        a: 'Yes. We can redesign an existing WordPress site or move it to a faster custom build, keeping the URLs and content that already earn traffic. We audit your current pages, plan redirects where needed and review the new design on staging before launch so your rankings and enquiries are protected.',
+      },
+      {
+        q: 'Will my website be SEO-ready and mobile-friendly?',
+        a: 'Yes. Every site we design is built mobile-first, with fast-loading pages, clean URLs, descriptive headings and structured data so Google and Bing can read it. We test on real phones and check Core Web Vitals before launch, and we can add ongoing SEO work if you want to keep improving after the site goes live.',
+      },
+      {
+        q: 'Can we meet in person in Edmonton?',
+        a: 'Yes. Mapletech Labs is headquartered in Edmonton, so we can hold discovery sessions, design reviews and workshops at your office or site. Day-to-day work runs on calls and shared boards, and you can meet in person again whenever a milestone needs it.',
+      },
+    ],
+  },
   'web-development-company-in-calgary': {
     title: 'Web Development Company in Calgary',
     description: 'Web Development Company in Calgary: custom websites and web apps by Mapletech Labs, with a fixed CAD price agreed up front. Get a free quote.',

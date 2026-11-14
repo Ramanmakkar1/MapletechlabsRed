@@ -4,6 +4,7 @@ import { cities } from '@/data/cities';
 import { services } from '@/data/services';
 import {
   agencyCombos,
+  webDesignCombos,
   isIndexableCityService,
   isPriorityService,
   priorityCompanyHeadline,
@@ -91,6 +92,9 @@ function buildText(): string {
       ...agencyCombos
         .filter(ac => ac.citySlug === c.slug)
         .map(ac => link(`${ac.label} in ${c.name}`, `/locations/${ac.slug}`)),
+      ...webDesignCombos
+        .filter(wd => wd.citySlug === c.slug)
+        .map(wd => link(`${wd.label} Company in ${c.name}`, `/locations/${wd.slug}`)),
       ...services
         .filter(s => !isPriorityService(s.slug) && isIndexableCityService(c.slug, s.slug))
         .map(s => link(`${serviceName.get(s.slug)} in ${cityName.get(c.slug)}`, `/locations/${c.slug}/${s.slug}`)),
