@@ -5,7 +5,7 @@ import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
-import { BLOG_IMAGE } from '@/lib/seo/business';
+import { caseStudyMedia } from '@/data/media';
 
 const NAME = 'HIPAA-Compliant Telehealth Platform';
 const TITLE = 'Telehealth Platform Case Study: 200K+ Patient Sessions';
@@ -36,7 +36,7 @@ const jsonLd = {
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
-  image: BLOG_IMAGE,
+  image: `https://mapletechlabs.ca${caseStudyMedia[SLUG].src}`,
   author: {
     '@type': 'Organization',
     '@id': 'https://mapletechlabs.ca/#organization',
