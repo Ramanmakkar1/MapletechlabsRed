@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getCityServiceData, getAllCityServiceParams } from '@/data/city-service';
+import { getCityServiceData, getServedCityServiceParams } from '@/data/city-service';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { isIndexableCityService } from '@/data/serviceCity';
@@ -21,7 +21,7 @@ const EDM_WEB_DESCRIPTION = 'Web development in Edmonton by Mapletech Labs, head
 const isEdmWebPair = (city: string, service: string) => city === 'edmonton' && service === 'web-development';
 
 export async function generateStaticParams() {
-  return getAllCityServiceParams();
+  return getServedCityServiceParams();
 }
 
 export const dynamic = 'force-static';

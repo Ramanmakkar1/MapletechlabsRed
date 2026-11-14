@@ -2,6 +2,7 @@ import { type CityData, getCityBySlug, cities } from './cities';
 import { getServiceBySlug, services } from './services';
 import { canonicalUrl as buildCanonicalUrl } from '@/lib/seo/canonical';
 import { getCityServiceIntersection, type IndustryApplication } from './city-service-content';
+import { isPriorityService, isIndexableCityService } from './serviceCity';
 
 export interface CityServicePageData {
   // City data
@@ -208,4 +209,11 @@ export function getAllCityServiceParams(): { city: string; service: string }[] {
     }
   }
   return params;
+}
+
+/** Pairs that are actually served. Priority-service pairs and non-major-city niche pairs are 301'd by next.config.ts redirects(), so they are not prerendered. */
+export function getServedCityServiceParams(): { city: string; service: string }[] {
+  return getAllCityServiceParams().filter(
+    ({ city, service }) => !isPriorityService(service) && isIndexableCityService(city, service),
+  );
 }
