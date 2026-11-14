@@ -19,6 +19,7 @@ const ANSWER_FIRST_SLUGS = [
   'ui-ux-design-company-in-calgary',
   'ui-ux-design-company-in-toronto',
   'ui-ux-design-company-in-vancouver',
+  'web-design-company-in-calgary',
 ] as const;
 
 test('priority app, AI and UI/UX city pages have a two-sentence answer-first lead', () => {
