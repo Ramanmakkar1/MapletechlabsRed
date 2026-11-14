@@ -21,6 +21,8 @@ export const BUSINESS = {
   ],
 } as const;
 
+export const BLOG_IMAGE = { '@type': 'ImageObject', url: BUSINESS.image, width: 1200, height: 630 };
+
 export const HQ_ADDRESS = {
   '@type': 'PostalAddress',
   addressLocality: 'Edmonton',

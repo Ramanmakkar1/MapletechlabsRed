@@ -1,4 +1,4 @@
-import { BLOG_AUTHOR } from '@/lib/seo/business';
+import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
@@ -38,6 +38,7 @@ const jsonLd = {
   datePublished: DATE,
   dateModified: '2026-11-10',
   author: BLOG_AUTHOR,
+  image: BLOG_IMAGE,
   publisher: {
     '@type': 'Organization',
     '@id': 'https://mapletechlabs.ca/#organization',

@@ -1,4 +1,4 @@
-import { BLOG_AUTHOR } from '@/lib/seo/business';
+import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
@@ -35,6 +35,7 @@ const jsonLd = {
   datePublished: DATE,
   dateModified: '2026-01-15',
   author: BLOG_AUTHOR,
+  image: BLOG_IMAGE,
   publisher: {
     '@type': 'Organization',
     '@id': 'https://mapletechlabs.ca/#organization',

@@ -8,6 +8,7 @@ import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { BLOG_IMAGE } from '@/lib/seo/business';
 
 const a = getArticle('digital-marketing-agencies-calgary')!;
 const URL = `https://mapletechlabs.ca/blog/digital-marketing-agencies-calgary`;
@@ -33,6 +34,7 @@ const jsonLd = {
   description: a.metaDescription,
   datePublished: a.date,
   dateModified: a.dateModified,
+  image: BLOG_IMAGE,
   author: { '@type': 'Person', name: 'Raman Makkar', jobTitle: 'CEO', url: 'https://mapletechlabs.ca/about' },
   publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
   url: URL,
