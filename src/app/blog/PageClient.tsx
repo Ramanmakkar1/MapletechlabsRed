@@ -92,6 +92,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'web-development-companies-calgary', category: 'Business',
+    title: 'Web Development Companies in Calgary: How to Choose One (2026)',
+    excerpt: 'How to choose a web development company in Calgary: website vs web app vs e-commerce, Alberta PIPA, Canadian hosting, CAD costs and 10 questions.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'seo-companies-calgary', category: 'Business',
     title: 'SEO Companies in Calgary: A Buyer’s Guide (2026)',
     excerpt: 'How Calgary businesses should choose an SEO company: map pack, Airdrie and Okotoks searches, technical B2B SEO, CAD pricing, AI answers and 10 questions to ask.',
