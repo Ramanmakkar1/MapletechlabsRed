@@ -59,7 +59,7 @@ export function middleware(req: NextRequest) {
   const res = NextResponse.next();
   res.headers.set(
     'Cache-Control',
-    'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400',
+    'public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=86400',
   );
   return res;
 }
