@@ -26,6 +26,7 @@ const BLOG_SLUGS = new Set([
   'digital-marketing-agencies-vancouver',
   'saas-development-company-canada',
   'saas-development-companies-vancouver',
+  'saas-development-companies-toronto',
   'seo-companies-calgary',
   'seo-companies-ottawa',
   'seo-companies-montreal',
@@ -86,6 +87,7 @@ const CITY_GUIDE_SLUG: Record<string, Partial<Record<string, string>>> = {
   },
   'saas-development': {
     vancouver: 'saas-development-companies-vancouver',
+    toronto: 'saas-development-companies-toronto',
   },
   'web-development': {
     toronto: 'web-development-companies-toronto',
