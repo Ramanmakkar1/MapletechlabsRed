@@ -30,6 +30,13 @@ const RELATED_TOPIC_SERVICE: Record<import('@/data/articles').RelatedTopic, { hr
   seo: { href: '/services/digital-marketing', label: 'SEO and digital marketing services' },
 };
 
+/** Fallback related service per article category, used when an article has no explicit relatedService. */
+const CATEGORY_RELATED_SERVICE: Record<string, { href: string; label: string }> = {
+  'AI/ML': { href: '/services/ai-ml', label: 'AI development services' },
+  Engineering: { href: '/services/web-development', label: 'web development services' },
+  Business: { href: '/services/saas-development', label: 'SaaS development services' },
+};
+
 /** Direct service link in the project CTA when the secondary button points at a tool. */
 const SLUG_PROJECT_SERVICE: Record<string, { href: string; label: string }> = {
   'nrc-irap-funding-software-canada': { href: '/services/saas-development', label: 'Custom software and SaaS development' },
@@ -189,6 +196,7 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
 
 export default function ArticleTemplate({ a, related = [], cityLinks, relatedServices, extraBlock }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode; relatedServices?: ReactNode; extraBlock?: ReactNode }) {
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
+  const relatedService = a.relatedService ?? CATEGORY_RELATED_SERVICE[a.category];
   const postCity = CITIES.find(c => a.slug.endsWith(`-${c.slug}`));
   const primaryLocal = cityLinks && categoryService && postCity ? { href: categoryService.path(postCity.slug), text: `${categoryService.label} ${categoryService.noun ?? 'company'} in ${postCity.name}`, city: postCity.name } : null;
   const projectService = SLUG_PROJECT_SERVICE[a.slug];
@@ -297,11 +305,11 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                 </div>
 
                 {/* Related service */}
-                {a.relatedService && (
+                {relatedService && (
                   <div className="reveal" style={{ marginTop: 'clamp(32px, 4vw, 48px)', padding: 'clamp(22px, 2.6vw, 30px)', border: '1px solid var(--brand)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)' }}>
                     <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Related service</h2>
                     <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                      Get a quote for <Link href={a.relatedService.href} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>{a.relatedService.label}</Link> from Mapletech Labs.
+                      Get a quote for <Link href={relatedService.href} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>{relatedService.label}</Link> from Mapletech Labs.
                     </p>
                   </div>
                 )}
