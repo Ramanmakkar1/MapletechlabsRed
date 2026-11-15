@@ -1,7 +1,7 @@
 // Build-output check: every rendered page's <title> and meta description must
-// stay within the autopilot audit limits (title 20-60 chars, description
-// 120-155 chars). Source metadata can look in range while the rendered HTML is
-// not (seoTitle() absolute titles, 120-155 char article descriptions), so this
+// stay within the autopilot audit limits (title 50-60 chars, description
+// 140-155 chars). Source metadata can look in range while the rendered HTML is
+// not (seoTitle() absolute titles, article descriptions), so this
 // reads the real build output in .next/server/app, not the source.
 //
 // Run: npm run check:meta   (after `npm run build`; never part of the build)
@@ -10,7 +10,7 @@ import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
-const APP_DIR = join(ROOT, ".next", "server", "app");
+const APP_DIR = process.env.META_APP_DIR || join(ROOT, ".next", "server", "app");
 const SKIP_FILES = new Set(["_not-found.html", "404.html", "500.html", "_global-error.html"]);
 const ENTITIES = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#39;": "'", "&#x27;": "'" };
 
@@ -57,12 +57,12 @@ for (const file of htmlFiles(APP_DIR).sort()) {
   const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
   const titleText = title ? measure(title[1]) : "";
   if (!titleText) problems.push({ route, field: "title", length: 0, text: "(missing)" });
-  else if (titleText.length > 60 || titleText.length < 20) problems.push({ route, field: "title", length: titleText.length, text: titleText });
+  else if (titleText.length > 60 || titleText.length < 50) problems.push({ route, field: "title", length: titleText.length, text: titleText });
 
   const description = html.match(/<meta[^>]+name=["']description["'][^>]*content=(["'])([\s\S]*?)\1/i);
   const descriptionText = description ? measure(description[2]) : "";
   if (!descriptionText) problems.push({ route, field: "description", length: 0, text: "(missing)" });
-  else if (descriptionText.length > 155 || descriptionText.length < 120) problems.push({ route, field: "description", length: descriptionText.length, text: descriptionText });
+  else if (descriptionText.length > 155 || descriptionText.length < 140) problems.push({ route, field: "description", length: descriptionText.length, text: descriptionText });
 }
 
 if (process.argv.includes("--json")) {
