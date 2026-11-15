@@ -1,67 +1,68 @@
 import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
-import { Metadata } from 'next';
-import PageClient from './PageClient';
+import type { Metadata } from 'next';
+import ArticleTemplate from '@/components/blog/ArticleTemplate';
+import RelatedServices from '@/components/RelatedServices';
+import { notFound } from 'next/navigation';
+import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle, ogTitle } from '@/lib/seo/title';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Top 10 AI Development Companies in Canada (2026 Guide)';
-const DESCRIPTION = 'A researched ranking of the best AI and machine-learning development companies in Canada for 2026, with how to choose the right partner for your project.';
-const SLUG = 'ai-development-companies-canada';
-const DATE = '2026-02-14';
+const a = getArticle('ai-development-companies-canada');
+if (!a) notFound();
+const URL = `https://mapletechlabs.ca/blog/ai-development-companies-canada`;
 
 export const metadata: Metadata = {
-  title: seoTitle(TITLE),
-  description: seoDescription(DESCRIPTION),
+  title: seoTitle(a.metaTitle),
+  description: seoDescription(a.metaDescription),
   openGraph: {
-    title: ogTitle(TITLE),
-    description: seoDescription(DESCRIPTION),
+    title: ogTitle(a.metaTitle),
+    description: seoDescription(a.metaDescription),
     type: 'article',
-    publishedTime: DATE,
-    url: `https://mapletechlabs.ca/blog/${SLUG}`,
+    publishedTime: a.date,
+    modifiedTime: a.dateModified,
+    url: URL,
   },
-  alternates: {
-    canonical: canonicalUrl(`/blog/${SLUG}`),
-  },
+  alternates: { canonical: canonicalUrl('/blog/ai-development-companies-canada') },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
-  description: DESCRIPTION,
-  datePublished: DATE,
-  dateModified: '2026-11-10',
+  headline: a.title,
+  description: a.metaDescription,
+  datePublished: a.date,
+  dateModified: a.dateModified,
   author: BLOG_AUTHOR,
   image: BLOG_IMAGE,
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://mapletechlabs.ca/#organization',
-    name: 'Mapletech Labs',
-    url: 'https://mapletechlabs.ca',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://mapletechlabs.ca/logo.png',
-    },
-  },
-  url: `https://mapletechlabs.ca/blog/${SLUG}`,
-  mainEntityOfPage: `https://mapletechlabs.ca/blog/${SLUG}`,
+  publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
+  url: URL,
+  mainEntityOfPage: URL,
 };
 
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema items={getBlogBreadcrumbs(TITLE, SLUG)} />
-      <FaqSchema faqs={GUIDE_FAQS['ai-development-companies-canada']} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'ai-development-companies-canada')} />
+      <FaqSchema faqs={a.faqs} />
+      <ArticleTemplate
+        a={a}
+        related={getRelatedArticles(a.slug)}
+        relatedServices={
+          <RelatedServices
+            links={[
+              { href: '/services/ai-ml', label: 'AI and machine learning services across Canada' },
+              { href: '/services/ai-ml/ai-chatbots', label: 'AI chatbot development services' },
+              { href: '/services/ai-ml/llm-integration', label: 'LLM integration services' },
+              { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
+            ]}
+          />
+        }
       />
-      <PageClient />
     </>
   );
 }
