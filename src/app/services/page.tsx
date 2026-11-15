@@ -31,6 +31,20 @@ export default function Page() {
         { position: 1, name: 'Home', item: canonicalUrl('/') },
         { position: 2, name: 'Services', item: canonicalUrl('/services') },
       ]} />
+      <nav aria-label="Core services" className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+          Explore our core service hubs
+        </h2>
+        <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <li><a href="/services/software-development" className="underline hover:no-underline">Custom software development services</a></li>
+          <li><a href="/services/web-development" className="underline hover:no-underline">Web development company</a></li>
+          <li><a href="/services/mobile-app-development" className="underline hover:no-underline">Mobile app development services</a></li>
+          <li><a href="/services/ai-ml" className="underline hover:no-underline">AI and machine learning development</a></li>
+          <li><a href="/services/product-design" className="underline hover:no-underline">UI/UX and product design services</a></li>
+          <li><a href="/services/saas-development" className="underline hover:no-underline">SaaS platform development</a></li>
+          <li><a href="/services/digital-marketing" className="underline hover:no-underline">Digital marketing services</a></li>
+        </ul>
+      </nav>
       <PageClient />
     </>
   );
