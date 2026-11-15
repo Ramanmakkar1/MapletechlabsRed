@@ -531,6 +531,7 @@ const posts = [
     slug: 'saas-development-cost-canada',
     category: 'Business',
     title: 'SaaS Development Cost in Canada (2026)',
+    metaTitle: 'SaaS Development Cost in Canada: 2026 CAD',
     excerpt: 'Complete cost breakdown for building a SaaS product in Canada — MVP pricing, scaling costs, and what drives development budgets in 2026.',
     author: 'RM',
     authorName: 'Raman Makkar',
