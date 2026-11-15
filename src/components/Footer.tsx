@@ -30,6 +30,7 @@ const columns: { title: string; links: { label: string; href: string; lang?: str
       { label: 'Logistics', href: '/industries/logistics' },
       { label: 'EdTech', href: '/industries/edtech' },
       { label: 'Enterprise', href: '/industries/enterprise' },
+      { label: 'All Industries', href: '/industries' },
     ],
   },
   {
