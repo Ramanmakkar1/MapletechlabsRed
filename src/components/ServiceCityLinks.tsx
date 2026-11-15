@@ -56,7 +56,7 @@ export default function ServiceCityLinks(props: ServiceCityLinksProps) {
         {serviceSlug === 'digital-marketing' ? (
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 10 }}>
             {AGENCY_CITIES.map(slug => {
-              const city = CITIES.find(c => c.slug === slug);
+              const city = cities.find(c => c.slug === slug);
               if (!city) return null;
               return (
                 <Link key={slug} href={`/locations/digital-marketing-agency-in-${slug}`} className="pill" style={{ height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box', padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>
