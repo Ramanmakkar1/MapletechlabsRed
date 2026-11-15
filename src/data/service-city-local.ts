@@ -531,16 +531,35 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         ],
       },
       {
+        heading: 'How a Vancouver AI project runs',
+        body: [
+          'Every engagement follows the same four stages. Discovery maps the task, the data you can use and who approves the output, and we test a small sample by hand before writing code. Prototype puts a working version in front of your staff in two to four weeks so they can score real answers. Build hardens the data pipeline, permissions, guardrails and integrations, with an evaluation set that must pass before release. Launch covers deployment in your chosen Canadian region, monitoring, a feedback loop and a handover runbook, so your team can operate the system without us.',
+        ],
+      },
+      {
         heading: 'What AI development costs',
         body: [
           'Our ',
           { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
           ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. If you are comparing local vendors, our ',
           { href: '/blog/software-development-companies-vancouver', label: 'guide to Vancouver software companies' },
-          ' lists the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+          ' lists the questions to ask, and our ',
+          { href: '/services/ai-ml', label: 'AI and machine learning development services' },
+          ' page shows the capabilities we build. Discovery is free, and your price is fixed before coding starts.',
         ],
       },
     ],
+    comparison: {
+      heading: 'AI project types compared by cost and timeline',
+      intro: 'Planning ranges in CAD from our AI development cost guide. They are not quotes: after a free discovery call you get a fixed price for your scope.',
+      caption: 'Typical AI project types for Vancouver businesses, with Canadian planning ranges and timelines',
+      headers: ['Project type', 'What you get', 'Planning range (CAD)', 'Typical timeline'],
+      rows: [
+        ['LLM feature in an existing app', 'Chat, summarisation or classification added to software you already run, with prompts and guardrails.', '$10,000-$35,000', '4-8 weeks'],
+        ['Document chatbot (RAG)', 'Answers from your manuals and policies with sources, access control and hand-off to staff.', '$15,000-$50,000', '6-12 weeks'],
+        ['Custom model training', 'A model trained on your own labelled data, with evaluation, deployment and monitoring.', '$75,000+', '12 weeks or more'],
+      ],
+    },
     proof: [
       { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
       { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
