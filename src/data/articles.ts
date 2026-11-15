@@ -3488,8 +3488,8 @@ export const articles: Article[] = [
     dek: 'A practical buyer guide for Canadian businesses comparing digital marketing agencies: full-service scope, CAD retainers, CASL and PIPEDA consent, bilingual campaigns, agency types, a vetting checklist and red flags.',
     metaTitle: 'Digital Marketing Agencies in Canada 2026',
     metaDescription: 'How to choose a digital marketing agency in Canada: full-service scope, CAD retainers, CASL and PIPEDA consent, bilingual campaigns and red flags.',
-    date: '2026-11-13',
-    dateModified: '2026-11-13',
+    date: '2026-11-14',
+    dateModified: '2026-11-14',
     readTime: '12 min read',
     heroKey: 'planning',
     intro: [
