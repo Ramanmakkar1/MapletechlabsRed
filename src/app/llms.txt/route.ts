@@ -1,0 +1,95 @@
+import { cities } from '@/data/cities';
+import { PROJECT_PRICING } from '@/data/pricing';
+import { services } from '@/data/services';
+import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
+import { canonicalUrl } from '@/lib/seo/canonical';
+import { SITEMAP_CHILDREN } from '@/lib/sitemap-data';
+
+export const revalidate = 86400;
+
+/** Case-study pages that are live and listed in the page sitemap. */
+const CASE_STUDIES = [
+  { slug: 'fintech-trading-platform', label: 'Fintech trading platform' },
+  { slug: 'healthcare-telehealth', label: 'Healthcare telehealth platform' },
+  { slug: 'ecommerce-platform', label: 'Ecommerce platform' },
+  { slug: 'logistics-platform', label: 'Logistics platform' },
+  { slug: 'real-estate-portal', label: 'Real estate portal' },
+  { slug: 'payments-api-platform', label: 'Payments API platform' },
+];
+
+function buildText(): string {
+  // Reuse the sitemap as the source of truth: only live, indexable URLs are emitted.
+  const inSitemap = new Set(SITEMAP_CHILDREN.flatMap(child => child.entries().map(e => e.loc)));
+  const link = (label: string, path: string, note?: string): string | null => {
+    const url = canonicalUrl(path);
+    if (!inSitemap.has(url)) return null;
+    return `- [${label}](${url})${note ? `: ${note}` : ''}`;
+  };
+  const lines = (items: (string | null)[]) => items.filter((l): l is string => Boolean(l));
+
+  const pricingNote = [
+    `websites $${(PROJECT_PRICING.website.low / 1000).toFixed(0)}k–$${(PROJECT_PRICING.website.high / 1000).toFixed(0)}k`,
+    `SaaS MVPs $${(PROJECT_PRICING.saas.low / 1000).toFixed(0)}k–$${(PROJECT_PRICING.saas.high / 1000).toFixed(0)}k`,
+    `mobile apps $${(PROJECT_PRICING.mobile.low / 1000).toFixed(0)}k–$${(PROJECT_PRICING.mobile.high / 1000).toFixed(0)}k`,
+  ].join(', ');
+
+  const out: string[] = [];
+  out.push(`# ${BUSINESS.name}`);
+  out.push('');
+  out.push('> Concise entity index for AI assistants and crawlers. Full index: ' + canonicalUrl('/llms-full.txt'));
+  out.push('');
+  out.push(`${BUSINESS.name} is a software, app and AI development agency headquartered in Edmonton, Alberta, Canada.`);
+  out.push('');
+  out.push('## Entity facts');
+  out.push('');
+  out.push(`- Name: ${BUSINESS.name}`);
+  out.push(`- Headquarters: ${HQ_ADDRESS.addressLocality}, ${HQ_ADDRESS.addressRegion} ${HQ_ADDRESS.postalCode}, Canada`);
+  out.push(`- Phone: ${BUSINESS.telephone}`);
+  out.push(`- Email: ${BUSINESS.email}`);
+  out.push(`- Website: ${canonicalUrl('/')}`);
+  out.push(`- Cities served: ${LOCAL_BUSINESS_AREA_SERVED.map(a => a.name).join(', ')}`);
+  out.push(`- Founder: Raman Makkar, Founder & CEO — ${canonicalUrl('/about/raman-makkar')}`);
+  out.push('');
+  out.push('## Core services');
+  out.push('');
+  out.push(...lines(services.map(s => link(s.name, `/services/${s.slug}`, s.relatedSubServices.map(r => r.name).join(', ')))));
+  out.push('');
+  out.push('## Primary service pages');
+  out.push('');
+  out.push(...lines([
+    link('All services', '/services'),
+    link('AI Consulting', '/services/ai-consulting'),
+    link('Pricing', '/pricing', pricingNote),
+  ]));
+  out.push('');
+  out.push('## Cities served');
+  out.push('');
+  out.push(...lines(cities.map(c => link(`Software Development Company in ${c.name}`, `/locations/software-development-company-in-${c.slug}`))));
+  out.push(...lines([link('All locations', '/locations')]));
+  out.push('');
+  out.push('## Case studies');
+  out.push('');
+  out.push(...lines(CASE_STUDIES.map(cs => link(cs.label, `/case-studies/${cs.slug}`))));
+  out.push(...lines([link('All case studies', '/case-studies')]));
+  out.push('');
+  out.push('## Contact');
+  out.push('');
+  out.push(...lines([
+    link('Contact', '/contact', `${BUSINESS.telephone} · ${BUSINESS.email}`),
+    link('About', '/about'),
+  ]));
+  // Not in the sitemap (it is an AI-assistant index), so emit it directly.
+  out.push(`- [Full entity and buyer-guide index](${canonicalUrl('/llms-full.txt')})`);
+  out.push('');
+
+  return out.join('\n');
+}
+
+export function GET() {
+  return new Response(buildText(), {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=86400',
+    },
+  });
+}
