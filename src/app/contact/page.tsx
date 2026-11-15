@@ -184,15 +184,21 @@ export default function ContactRoute() {
         </section>
 
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-project-types">
-          <h2 id="contact-project-types" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Which Mapletech Labs service fits your project?</h2>
+          <h2 id="contact-project-types" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How to choose the right service for your project</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            The contact form can take a service and a city from the URL, so the quickest way to reach the right team is to pick the closest service from the list below. Choose the option that sounds most like your project, even if it is not an exact match. Each service page explains the work involved, the technology we use and the kind of problems we solve, so it is a useful place to start before you write your brief. If two services seem relevant, mention both in your message. A senior engineer reads every message, and the team confirms the real scope, timeline and budget on the free 30-minute discovery call.
+            Choose a service by the outcome you need, not by the technology name. Pick the closest fit below, open that service page to see the process, tech and typical scope, then send your brief with that service selected. If two services overlap, mention both and a senior engineer will confirm the right scope on the free 30-minute discovery call.
           </p>
-          <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            {services.slice(0, 8).map(s => <li key={s.slug}><Link href={`/services/${s.slug}`} style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>{s.name}</Link></li>)}
+          <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760, display: 'grid', gap: 10 }}>
+            <li><strong>New software platform, SaaS product or internal tool:</strong> start with <Link href="/services/software-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>custom software development services</Link>, or <Link href="/services/saas-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>SaaS product development</Link> if you are building a subscription platform.</li>
+            <li><strong>iOS or Android app, or one app for both platforms:</strong> see <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>mobile app development for iOS, Android and cross-platform apps</Link>.</li>
+            <li><strong>AI automation, chatbots, LLM integration or predictive analytics:</strong> explore <Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>AI and machine learning development</Link>, or <Link href="/services/ai-consulting" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>AI consulting</Link> if you need a strategy and roadmap first.</li>
+            <li><strong>Website, online store or a redesign:</strong> choose <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>web development and e-commerce builds</Link>.</li>
+            <li><strong>Interfaces that are hard to use, or a brand that needs a refresh:</strong> look at <Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>UI/UX and product design services</Link>.</li>
+            <li><strong>More qualified leads from search, ads or social:</strong> see <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>digital marketing services</Link>, including <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>SEO services</Link> and <Link href="/services/digital-marketing/google-ads-ppc" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Google Ads management</Link>.</li>
+            <li><strong>Cloud infrastructure, deployment or scaling problems:</strong> start with <Link href="/services/cloud-devops" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>cloud and DevOps services</Link>.</li>
           </ul>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-            Not sure which one fits? Describe the problem in the form above and we will point you to the <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>right service</Link> on the call.
+            Still unsure? Describe the problem in the form above and we will point you to the <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>right service across all Mapletech Labs services</Link> on the call.
           </p>
         </section>
 
