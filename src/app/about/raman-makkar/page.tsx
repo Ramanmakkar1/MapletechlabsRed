@@ -186,11 +186,21 @@ export default function RamanPage() {
               That work spans fintech, healthcare, e-commerce, logistics, edtech and enterprise, with real results such as
               a fintech trading platform running 75K+ transactions a day, an e-commerce redesign that lifted conversion
               from 2.1% to 3.8%, and a telehealth platform serving 450K+ patient records. Explore the{' '}
-              <Link href="/services" style={{ color: 'var(--brand)' }}>software development services</Link> he
+              <Link href="/services/software-development" style={{ color: 'var(--brand)' }}>custom software development services</Link> he
               leads, see the results in the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link> such as the{' '}
               <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>AI-powered trading platform</Link> and{' '}
               <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)' }}>enterprise e-commerce platform</Link>,
               or <Link href="/contact" style={{ color: 'var(--brand)' }}>contact Raman for a free consultation</Link>.
+            </p>
+            <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '20px', color: 'var(--body)', maxWidth: '800px' }}>
+              Raman is based in Edmonton, Alberta, where he founded the company in 2018, and he works directly with
+              clients from discovery through delivery. His team of 25+ engineers, designers and strategists has delivered
+              500+ projects for businesses in Edmonton, Calgary, Toronto, Vancouver and internationally. Read the{' '}
+              <Link href="/about" style={{ color: 'var(--brand)' }}>Mapletech Labs company story and values</Link> for
+              more on how the team works, or explore{' '}
+              <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI and machine learning development</Link>{' '}
+              and <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>{' '}
+              to see the services he leads.
             </p>
             <p style={{ fontSize: '24px', color: 'var(--brand)', marginBottom: '32px' }}>Founder &amp; CEO</p>
             <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '32px', color: 'var(--body)', maxWidth: '800px' }}>
