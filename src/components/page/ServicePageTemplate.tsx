@@ -24,6 +24,11 @@ import type { Faq, HeroCopy, IndustryCard, ServiceCard, Stat, Step, TechCategory
 
 const heroShots = [officeMedia.open, officeMedia.desk, officeMedia.meeting];
 
+// Repository data is immutable, so resolve lookups once at module load rather
+// than rescanning the arrays on every render.
+const workBySlug = new Map(work.map(w => [w.slug, w]));
+const serviceCategoryByHref = new Map(serviceCategories.map(c => [c.href, c]));
+
 /* Service-specific fit and preparation notes for the first conversation. */
 const PROJECT_FIT: Record<string, { fit: string; prepare: string[] }> = {
   'mobile-app-development': {
@@ -194,7 +199,7 @@ function ProjectFit({ slug, name, contactHref }: { slug: string; name: string; c
    Copy comes straight from src/data/work.ts; nothing is reworded here. */
 function ClientWork({ slugs }: { slugs: string[] }) {
   const items = slugs
-    .map(s => work.find(w => w.slug === s))
+    .map(s => workBySlug.get(s))
     .filter((w): w is WorkItem => Boolean(w));
   if (!items.length) return null;
   return (
@@ -220,7 +225,7 @@ function ClientWork({ slugs }: { slugs: string[] }) {
 /* Each category page links its own sub-service pages. They used to hang off
    the mega menu alone, which left them one removed nav away from orphaned. */
 function SubServiceLinks({ slug, name }: { slug: string; name: string }) {
-  const cat = serviceCategories.find(c => c.href === `/services/${slug}`);
+  const cat = serviceCategoryByHref.get(`/services/${slug}`);
   if (!cat?.links.length) return null;
   return (
     <section style={{ padding: 'var(--section-y-sm) 0' }}>

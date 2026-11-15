@@ -98,6 +98,14 @@ const SERVICE_BLURB: Record<string, string> = {
   'digital-marketing': 'SEO, Google Ads, social and paid media — data-driven campaigns that fill your pipeline and are measured against revenue, not vanity metrics.',
 };
 
+// Repository data is immutable, so resolve it once rather than rescanning the
+// city and service lists on every render of the shared city template.
+const CITY_BY_SLUG = new Map(cities.map(c => [c.slug, c]));
+const DEFAULT_SERVICE_ITEMS = DEFAULT_SERVICES.map(s => {
+  const slug = s.href.split('/').filter(Boolean).pop() ?? '';
+  return { ...s, desc: SERVICE_BLURB[slug] ?? s.desc };
+});
+
 function defaultOverview(cityName: string, industries: string[]) {
   const inds = industries.length ? industries.slice(0, 3).join(', ').toLowerCase() : 'local business';
   return {
@@ -111,7 +119,7 @@ function defaultOverview(cityName: string, industries: string[]) {
 /* City page — one honest block sequence shared by every city. */
 export default function LocationPageTemplate(p: LocationProps) {
   const quote = quoteForCity(p.slug);
-  const city = cities.find(c => c.slug === p.slug);
+  const city = CITY_BY_SLUG.get(p.slug);
   const name = city?.name ?? p.slug;
   const provinceSlug = city ? provinceSlugForName(city.province) : undefined;
 
@@ -124,10 +132,12 @@ export default function LocationPageTemplate(p: LocationProps) {
     COMMITMENTS.some(c => c.title === w.title && c.metric === w.metric &&
       w.desc.replace('your Edmonton project', 'your project') === c.desc)
   );
-  const serviceItems = (p.services ?? DEFAULT_SERVICES).map(s => {
-    const slug = s.href.split('/').filter(Boolean).pop() ?? '';
-    return { ...s, desc: SERVICE_BLURB[slug] ?? s.desc };
-  });
+  const serviceItems = p.services
+    ? p.services.map(s => {
+        const slug = s.href.split('/').filter(Boolean).pop() ?? '';
+        return { ...s, desc: SERVICE_BLURB[slug] ?? s.desc };
+      })
+    : DEFAULT_SERVICE_ITEMS;
 
   return (
     <>

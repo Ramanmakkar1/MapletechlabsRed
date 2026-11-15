@@ -1,6 +1,10 @@
 ﻿import Link from 'next/link';
 import { work } from '@/data/work';
 
+// Repository case studies are immutable; index them once instead of scanning
+// the full list for every project card on every render.
+const workBySlug = new Map(work.map(item => [item.slug, item]));
+
 const serviceProjects: Record<string, { slug: string; metric: number }[]> = {
   'ai-ml': [
     { slug: 'fintech-trading-platform', metric: 0 },
@@ -30,7 +34,7 @@ export default function ServiceProof({ slug, name, contactHref = '/contact', cas
         <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>{heading}</h2>
         <div className="grid grid--2" style={{ gap: 20 }}>
           {projects.map(({ slug: projectSlug, metric }) => {
-            const project = work.find(item => item.slug === projectSlug);
+            const project = workBySlug.get(projectSlug);
             if (!project) return null;
             return (
               <article key={project.slug} className="tile" style={{ minWidth: 0 }}>
