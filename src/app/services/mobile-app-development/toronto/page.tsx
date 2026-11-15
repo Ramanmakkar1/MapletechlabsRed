@@ -11,7 +11,7 @@ import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 // Keyword-first title; seoTitle appends the brand within the 50-60 char limit.
 const TITLE = 'Mobile App Development in Toronto';
-const HERO_TITLE = 'Mobile App Development in Toronto: iOS, Android & Flutter';
+const HERO_TITLE = 'Mobile App Development in Toronto';
 const DESCRIPTION = 'Mapletech Labs builds iOS, Android and cross-platform apps for Toronto fintech, retail and health teams, with fixed-scope quotes from discovery to launch.';
 const URL = 'https://mapletechlabs.ca/services/mobile-app-development/toronto';
 
