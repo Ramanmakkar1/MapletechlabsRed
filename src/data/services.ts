@@ -447,6 +447,7 @@ export const services: ServiceData[] = [
     ],
     relatedSubServices: [
       { name: "Next.js Development", slug: "nextjs-development" },
+      { name: "Web Design", slug: "web-design" },
       { name: "SaaS Platforms", slug: "saas-platforms" },
       { name: "E-Commerce Systems", slug: "ecommerce-systems" },
       { name: "API & Backend", slug: "api-backend" },

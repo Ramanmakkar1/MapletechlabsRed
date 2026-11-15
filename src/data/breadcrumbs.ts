@@ -48,6 +48,7 @@ function slugToTitle(slug: string): string {
     'flutter-development': 'Flutter Development',
     'mobile-app-development': 'Mobile App Development',
     'web-development': 'Web Development',
+    'web-design': 'Web Design',
     'ecommerce-systems': 'E-Commerce Systems',
     'ecommerce-development': 'E-Commerce Development',
     'api-backend': 'API & Backend',
