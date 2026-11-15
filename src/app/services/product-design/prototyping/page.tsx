@@ -8,6 +8,9 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 const TITLE = 'Prototyping & Usability Testing in Canada';
 const DESCRIPTION = 'Prototyping and usability testing in Canada: interactive Figma prototypes, design sprints and real-user testing, with 300+ prototypes built by our team.';
 
