@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { cache } from 'react';
 import { notFound } from 'next/navigation';
-import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline } from '@/data/serviceCity';
+import { getServiceCityCombo, serviceCitySlugs, priorityCompanyHeadline, WEB_DESIGN_CITIES } from '@/data/serviceCity';
 import { getCityServiceData, serviceCityExtraFaqs } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
@@ -131,11 +131,15 @@ export default async function ServiceCityPage({ params }: PageProps) {
   const crossLink =
     slug === 'web-development-company-in-edmonton'
       ? { before: 'Need custom software beyond a website? See our ', href: '/locations/software-development-company-in-edmonton', linkLabel: 'Custom Software Development in Edmonton' }
-      : isAgencyPage && !local
-        ? { before: 'Focused on SEO only? See our ', href: `/locations/seo-company-in-${combo.citySlug}`, linkLabel: `SEO Company in ${data.cityName}` }
-        : slug === `app-development-company-in-${combo.citySlug}` && MOBILE_CITY_PAGES.includes(combo.citySlug)
-          ? { before: 'Planning a native or cross-platform app? See our ', href: `/services/mobile-app-development/${combo.citySlug}`, linkLabel: `iOS, Android and Flutter app development in ${data.cityName}` }
-          : undefined;
+      : slug === `web-design-company-in-${combo.citySlug}`
+        ? { before: 'Need a web app, portal or custom integrations as well? See our ', href: `/locations/web-development-company-in-${combo.citySlug}`, linkLabel: `Web Development Company in ${data.cityName}` }
+        : slug === `web-development-company-in-${combo.citySlug}` && (WEB_DESIGN_CITIES as readonly string[]).includes(combo.citySlug)
+          ? { before: 'Mainly need a new website designed? See our ', href: `/locations/web-design-company-in-${combo.citySlug}`, linkLabel: `Web Design Company in ${data.cityName}` }
+          : isAgencyPage && !local
+            ? { before: 'Focused on SEO only? See our ', href: `/locations/seo-company-in-${combo.citySlug}`, linkLabel: `SEO Company in ${data.cityName}` }
+            : slug === `app-development-company-in-${combo.citySlug}` && MOBILE_CITY_PAGES.includes(combo.citySlug)
+              ? { before: 'Planning a native or cross-platform app? See our ', href: `/services/mobile-app-development/${combo.citySlug}`, linkLabel: `iOS, Android and Flutter app development in ${data.cityName}` }
+              : undefined;
 
   return (
     <>
