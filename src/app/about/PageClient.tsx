@@ -121,6 +121,23 @@ export default function AboutPage() {
         {/* ── HERO ── */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "Software Development Company · Edmonton", title: <>About Mapletech Labs<br /><span style={{ color: 'var(--brand)' }}>We Build Software That Matters.</span></>, desc: <>Mapletech Labs is a custom software, app, AI and UI/UX development company headquartered in Edmonton, Canada, founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={humanMedia.workshop} form={false} />
 
+        {/* ── FOUNDER ── */}
+        <section style={{ padding: '0 0 8px' }}>
+          <div className="cb-container" style={{ maxWidth: 860 }}>
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)' }}>
+              Raman Makkar is the founder and CEO of Mapletech Labs, the Edmonton, Alberta software development company
+              he started in 2018. He brings 15+ years of engineering experience and leads a 25+ member team that has
+              delivered 500+ projects for clients across Canada and internationally. Read the full{' '}
+              <Link href="/about/raman-makkar" style={{ color: 'var(--brand)' }}>Raman Makkar founder profile</Link>,
+              explore the <Link href="/services" style={{ color: 'var(--brand)' }}>software development services he leads</Link>{' '}
+              and the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>client case studies and results</Link>,
+              find a local team through <Link href="/locations" style={{ color: 'var(--brand)' }}>Mapletech Labs locations across Canada</Link>,
+              review <Link href="/pricing" style={{ color: 'var(--brand)' }}>software development pricing guidance</Link>,
+              or <Link href="/contact" style={{ color: 'var(--brand)' }}>contact Raman for a free consultation</Link>.
+            </p>
+          </div>
+        </section>
+
         {/* ── AT A GLANCE ── */}
         <section style={{ padding: 'var(--section-y) 0 0' }}>
           <div className="cb-container" style={{ maxWidth: 860 }}>
