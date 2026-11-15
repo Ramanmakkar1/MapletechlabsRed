@@ -46,6 +46,14 @@ const SLUG_PROJECT_SERVICE: Record<string, { href: string; label: string }> = {
   'healthcare-software-development-canada': { href: '/services/software-development', label: 'Custom software development services' },
 };
 
+/** AI explainer posts that get a short business-context paragraph after the intro. */
+const AI_EXPLAINER_SLUGS = new Set([
+  'agentic-ai-in-production',
+  'what-is-agentic-ai',
+  'use-claude-for-free',
+  'run-ai-models-locally-free',
+]);
+
 const SLUG_SERVICE: Record<string, CityService> = {
   'native-vs-cross-platform-vs-pwa': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'app-privacy-compliance-canada': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
@@ -272,6 +280,12 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                     );
                   })}
                 </div>
+
+                {AI_EXPLAINER_SLUGS.has(a.slug) && (
+                  <p className="reveal" style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px', padding: 'clamp(16px, 2vw, 20px)', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)' }}>
+                    Building this for a business? Mapletech Labs helps Canadian companies put AI into production with <Link href="/services/ai-ml/llm-integration" style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>LLM integration</Link> and <Link href="/services/ai-ml/ai-chatbots" style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>AI chatbot development</Link>.
+                  </p>
+                )}
 
                 {/* Top service callout */}
                 {(() => {
