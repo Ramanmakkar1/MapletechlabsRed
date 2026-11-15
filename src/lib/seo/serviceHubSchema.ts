@@ -49,6 +49,20 @@ const SUB_SERVICE_FOLDERS: Record<string, string[]> = {
   ],
 };
 
+/** BreadcrumbList for a service hub page, using its own canonical URL. */
+export function serviceBreadcrumbSchema(opts: { slug: string; label: string }) {
+  const url = canonicalUrl(`/services/${opts.slug}`);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: canonicalUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: canonicalUrl('/services') },
+      { '@type': 'ListItem', position: 3, name: opts.label, item: url },
+    ],
+  };
+}
+
 export function serviceHubSchema(opts: {
   slug: string;
   name: string;
@@ -65,7 +79,7 @@ export function serviceHubSchema(opts: {
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': `https://mapletechlabs.ca/services/${slug}#service`,
+    '@id': `${canonicalUrl(`/services/${slug}`)}#service`,
     name,
     serviceType,
     description,

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
+import { serviceBreadcrumbSchema, serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 import { ogTitle } from '@/lib/seo/title';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
@@ -29,15 +29,7 @@ const serviceSchema = serviceHubSchema({
   description: 'UI/UX design company in Canada: user research, wireframes, prototypes and design systems for apps & SaaS, with fixed CAD pricing. Get a free design audit.',
 });
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://mapletechlabs.ca/services' },
-    { '@type': 'ListItem', position: 3, name: 'UI/UX Design', item: 'https://mapletechlabs.ca/services/product-design' },
-  ],
-};
+const breadcrumbSchema = serviceBreadcrumbSchema({ slug: 'product-design', label: 'UI/UX Design' });
 
 export default function Page() {
   return (

@@ -3,7 +3,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
+import { serviceBreadcrumbSchema, serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Branding & Identity Services in Canada';
@@ -31,15 +31,7 @@ const serviceSchema = serviceHubSchema({
   description: DESCRIPTION,
 });
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://mapletechlabs.ca/services' },
-    { '@type': 'ListItem', position: 3, name: 'Branding & Identity', item: 'https://mapletechlabs.ca/services/branding' },
-  ],
-};
+const breadcrumbSchema = serviceBreadcrumbSchema({ slug: 'branding', label: 'Branding & Identity' });
 
 export default function Page() {
   return (

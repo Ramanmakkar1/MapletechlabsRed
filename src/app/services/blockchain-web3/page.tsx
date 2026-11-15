@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { serviceBreadcrumbSchema, serviceHubSchema } from '@/lib/seo/serviceHubSchema';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
@@ -23,29 +24,14 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
+const serviceSchema = serviceHubSchema({
+  slug: 'blockchain-web3',
   name: 'Blockchain & Web3 Development Services',
   serviceType: 'Blockchain & Web3 Development',
   description: seoDescription(DESCRIPTION),
-  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Canada',
-  },
-  url: 'https://mapletechlabs.ca/services/blockchain-web3',
-};
+});
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://mapletechlabs.ca/services' },
-    { '@type': 'ListItem', position: 3, name: 'Blockchain & Web3', item: 'https://mapletechlabs.ca/services/blockchain-web3' },
-  ],
-};
+const breadcrumbSchema = serviceBreadcrumbSchema({ slug: 'blockchain-web3', label: 'Blockchain & Web3' });
 
 export default function Page() {
   return (
