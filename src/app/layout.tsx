@@ -10,6 +10,8 @@ import "./globals.css";
 
 // Bounded regeneration interval for repository-managed content.
 export const revalidate = false; // repository content refreshes through deployment
+// Explicit static-rendering contract for every repository-managed page.
+export const dynamic = 'force-static';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
