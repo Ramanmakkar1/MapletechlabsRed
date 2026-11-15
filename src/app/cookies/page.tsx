@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy',
-  description: 'How Mapletech Labs uses cookies and similar technologies, what each category does, and how to change your preferences at any time.',
+  description: 'How Mapletech Labs uses cookies and similar technologies, what each category does, and how to change your preferences at any time in your browser.',
   alternates: { canonical: canonicalUrl('/cookies') },
 };
 

@@ -20,7 +20,13 @@ import { ogTitle, seoTitle } from "../src/lib/seo/title.ts";
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const BRAND = " | Mapletech Labs";
 const MAX = 60;
+const MIN = 50;
 const problems = [];
+
+// 1-based line number of a regex match index, for file:line reporting.
+function lineAt(src, index) {
+  return src.slice(0, index).split("\n").length;
+}
 
 function resolveTitle(title) {
   return typeof title === "string" ? title + BRAND : title.absolute;
@@ -74,7 +80,8 @@ for (const file of files) {
   const isArticle = file.startsWith(join("src", "app", "blog") + sep)
     && file !== join("src", "app", "blog", "page.tsx");
   const checkTitle = isArticle ? articleTitleProblems : titleProblems;
-  problems.push(...checkTitle(title).map((problem) => `${file}: ${problem}`));
+  const where = `${file}:${lineAt(src, m.index)}`;
+  problems.push(...checkTitle(title).map((problem) => `${where}: ${problem}`));
 }
 
 // 1b. Regression guard for the six pages in the 2026-11-11 "titles over 60
@@ -225,21 +232,22 @@ assert.equal(resolveTitle(overlong).length, 61);
 assert.match(articleTitleProblems(overlong)[0], /61 chars \(max 60\)/);
 
 function descriptionProblems(text) {
-  return text.length < 120 || text.length > 155
-    ? [`description is ${text.length} chars (want 120-155)`]
+  return text.length < 140 || text.length > 155
+    ? [`description is ${text.length} chars (want 140-155)`]
     : [];
 }
 
+// Return { text, line } so violations can be reported as file:line.
 function articleDescriptions(src) {
   return Array.from(src.matchAll(/metaDescription:\s*(['"])((?:(?!\1)[^\\]|\\.)*)\1/g),
-    (m) => m[2].replace(/\\(['"])/g, "$1"));
+    (m) => ({ text: m[2].replace(/\\(['"])/g, "$1"), line: lineAt(src, m.index) }));
 }
 
-assert.deepEqual(articleDescriptions("metaDescription: \n  'Multiline field'"), ["Multiline field"]);
-assert.deepEqual(articleDescriptions("metaDescription:\t'Inline field'"), ["Inline field"]);
-for (const length of [119, 120, 155, 156]) {
-  const [text] = articleDescriptions(`metaDescription:\n  '${"x".repeat(length)}'`);
-  assert.equal(descriptionProblems(text).length, length < 120 || length > 155 ? 1 : 0);
+assert.deepEqual(articleDescriptions("metaDescription: \n  'Multiline field'"), [{ text: "Multiline field", line: 1 }]);
+assert.deepEqual(articleDescriptions("metaDescription:\t'Inline field'"), [{ text: "Inline field", line: 1 }]);
+for (const length of [139, 140, 155, 156]) {
+  const [{ text }] = articleDescriptions(`metaDescription:\n  '${"x".repeat(length)}'`);
+  assert.equal(descriptionProblems(text).length, length < 140 || length > 155 ? 1 : 0);
 }
 
 // 4. Meta descriptions (src/app/**/page.tsx literals + src/data/articles.ts).
@@ -257,24 +265,24 @@ for (const file of descFiles) {
   if (!m) continue; // dynamic data: no literal to check
   const text = m[1].replace(/\\'/g, "'");
   descriptions++;
-  problems.push(...descriptionProblems(text).map((problem) => `${file}: ${problem}`));
+  problems.push(...descriptionProblems(text).map((problem) => `${file}:${lineAt(src, m.index)}: ${problem}`));
 }
 const articlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
 let articleTitles = 0;
 for (const m of articlesSrc.matchAll(/metaTitle: ('(?:[^'\\]|\\.)*')/g)) {
   const title = parseTitle(`seoTitle(${m[1]})`, "");
   articleTitles++;
-  problems.push(...articleTitleProblems(title).map((problem) => `articles.ts: ${problem}`));
+  problems.push(...articleTitleProblems(title).map((problem) => `src/data/articles.ts:${lineAt(articlesSrc, m.index)}: ${problem}`));
 }
 const articleDescriptionsFound = articleDescriptions(articlesSrc);
 assert.equal(articleDescriptionsFound.length, articleTitles, "Every article must have a checked description");
-for (const text of articleDescriptionsFound) {
+for (const { text, line } of articleDescriptionsFound) {
   descriptions++;
-  problems.push(...descriptionProblems(text).map((problem) => `articles.ts: ${text.slice(0, 40)}... ${problem}`));
+  problems.push(...descriptionProblems(text).map((problem) => `src/data/articles.ts:${line}: ${text.slice(0, 40)}... ${problem}`));
 }
 
 if (problems.length) {
   console.error(`check-titles: ${problems.length} problem(s)\n` + problems.join("\n"));
   process.exit(1);
 }
-console.log(`check-titles: ${files.length} page files + ${articleTitles} article titles + ${generated} generated city x service titles + ${descriptions} descriptions (${articleDescriptionsFound.length} articles) OK (<= ${MAX} chars, articles 50-${MAX} chars, 120-155 chars, single brand); resolver and description assertions passed`);
+console.log(`check-titles: ${files.length} page files + ${articleTitles} article titles + ${generated} generated city x service titles + ${descriptions} descriptions (${articleDescriptionsFound.length} articles) OK (<= ${MAX} chars, articles ${MIN}-${MAX} chars, 140-155 chars, single brand); resolver and description assertions passed`);

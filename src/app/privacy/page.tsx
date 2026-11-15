@@ -6,7 +6,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'How Mapletech Labs collects, uses and protects personal information, our PIPEDA commitments, and how to exercise your privacy rights.',
+  description: 'How Mapletech Labs collects, uses and protects personal information, our PIPEDA commitments, and how to exercise your privacy rights in Canada.',
   alternates: { canonical: canonicalUrl('/privacy') },
 };
 
