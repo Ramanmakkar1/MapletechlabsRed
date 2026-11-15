@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { cache } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getCityServiceData, getServedCityServiceParams } from '@/data/city-service';
@@ -20,6 +21,9 @@ const EDM_WEB_TITLE = 'Website & Web Development Edmonton';
 const EDM_WEB_DESCRIPTION = 'Web development in Edmonton by Mapletech Labs, headquartered here. Website development, web apps and portals at a fixed CAD price. Get a free quote.';
 const isEdmWebPair = (city: string, service: string) => city === 'edmonton' && service === 'web-development';
 
+// Dedupe the data lookup between generateMetadata and the page render.
+const getData = cache((city: string, service: string) => getCityServiceData(city, service));
+
 export async function generateStaticParams() {
   return getServedCityServiceParams();
 }
@@ -34,7 +38,7 @@ export const revalidate = 31536000;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { city, service } = await params;
-  const data = getCityServiceData(city, service);
+  const data = getData(city, service);
   if (!data) return {};
   const isEdmWeb = isEdmWebPair(city, service);
   const title = isEdmWeb ? EDM_WEB_TITLE : data.title;
@@ -60,7 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function CityServicePage({ params }: PageProps) {
   const { city, service } = await params;
-  const data = getCityServiceData(city, service);
+  const data = getData(city, service);
 
   if (!data) {
     notFound();
