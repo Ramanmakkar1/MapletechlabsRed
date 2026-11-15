@@ -40,8 +40,15 @@ export default function Page() {
           <li><a href="/services/web-development" className="underline hover:no-underline">Web development company</a></li>
           <li><a href="/services/mobile-app-development" className="underline hover:no-underline">Mobile app development services</a></li>
           <li><a href="/services/ai-ml" className="underline hover:no-underline">AI and machine learning development</a></li>
+          <li><a href="/services/blockchain-web3" className="underline hover:no-underline">Blockchain and Web3 development</a></li>
+          <li><a href="/services/cloud-devops" className="underline hover:no-underline">Cloud and DevOps consulting</a></li>
+          <li><a href="/services/ar-vr" className="underline hover:no-underline">AR/VR development services</a></li>
+          <li><a href="/services/game-development" className="underline hover:no-underline">Game development services</a></li>
           <li><a href="/services/product-design" className="underline hover:no-underline">UI/UX and product design services</a></li>
+          <li><a href="/services/branding" className="underline hover:no-underline">Branding and brand identity design</a></li>
           <li><a href="/services/saas-development" className="underline hover:no-underline">SaaS platform development</a></li>
+          <li><a href="/services/wordpress-cms" className="underline hover:no-underline">WordPress and CMS development</a></li>
+          <li><a href="/services/software-maintenance" className="underline hover:no-underline">Software maintenance and support</a></li>
           <li><a href="/services/digital-marketing" className="underline hover:no-underline">Digital marketing services</a></li>
         </ul>
       </nav>
