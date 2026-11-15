@@ -71,6 +71,8 @@ export default function RamanPage() {
         name: 'Raman Makkar',
         jobTitle: 'Founder & CEO',
         url: profileUrl,
+        email: 'hello@mapletechlabs.ca',
+        telephone: '+1-403-604-8692',
         worksFor: { '@id': `${canonicalUrl('/')}#organization` },
         description:
           'Founded Mapletech Labs in 2018 with a mission to build world-class software without compromise. With 15+ years in software engineering, Raman Makkar has architected systems processing billions of transactions, scaled engineering teams, and mentored builders across fintech, healthcare, and enterprise.',
@@ -153,7 +155,11 @@ export default function RamanPage() {
                 <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link> and{' '}
                 <Link href="/services/product-design" style={{ color: 'var(--brand)' }}>UI/UX design</Link> services for
                 clients in fintech, healthcare, e-commerce, logistics, edtech and enterprise across Edmonton, Calgary,
-                Toronto, Vancouver and internationally.
+                Toronto, Vancouver and internationally. He is based in Edmonton, Alberta and works directly with clients
+                from discovery through delivery. To reach him, call{' '}
+                <a href="tel:+14036048692" style={{ color: 'var(--brand)' }}>+1 (403) 604-8692</a>, email{' '}
+                <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)' }}>hello@mapletechlabs.ca</a>, or{' '}
+                <Link href="/contact" style={{ color: 'var(--brand)' }}>book a free consultation</Link>.
               </p>
             </section>
             <p style={{ fontSize: '20px', lineHeight: 1.7, marginBottom: '20px', color: 'var(--ink)', fontWeight: 500, maxWidth: '800px' }}>
@@ -533,6 +539,24 @@ export default function RamanPage() {
                   </div>
                 ))}
               </div>
+            </section>
+
+            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 id="contact-raman" style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>
+                Contact Raman Makkar
+              </h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '16px', maxWidth: '800px' }}>
+                Raman Makkar works from Mapletech Labs&apos; Edmonton, Alberta headquarters and meets clients across
+                Canada remotely or in person. For a new project, call{' '}
+                <a href="tel:+14036048692" style={{ color: 'var(--brand)' }}>+1 (403) 604-8692</a> or email{' '}
+                <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)' }}>hello@mapletechlabs.ca</a>{' '}
+                with a short brief covering your goals, users, timeline and budget. A senior engineer replies within one
+                working day, and the first 30-minute discovery call is free.
+              </p>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', maxWidth: '800px' }}>
+                Prefer a form? <Link href="/contact" style={{ color: 'var(--brand)' }}>Send your project brief</Link> and
+                Raman or a senior engineer will follow up with honest first thoughts, questions and next steps.
+              </p>
             </section>
 
             <div style={{ marginTop: '48px', textAlign: 'center' }}>
