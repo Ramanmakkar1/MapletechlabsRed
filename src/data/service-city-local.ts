@@ -3278,7 +3278,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'digital-marketing-agency-in-montreal': {
     title: 'Digital Marketing Agency in Montreal',
     description: 'Grow your Montreal business with SEO and ads in English and French from a Canadian digital marketing team based in Edmonton. Get a free strategy call.',
-    intro: 'Montreal is a French-first market where local businesses compete for attention in Google Maps and search. Its AI and gaming scene also brings technology companies into a crowded market for talent, customers and partners. Quebec\'s Charter of the French Language, including changes made by Bill 96, makes language planning important for commercial content.',
+    intro: 'Mapletech Labs is a Canadian digital marketing team headquartered in Edmonton, working with Montreal businesses that want one partner for French-first SEO, Google and Microsoft Ads and content. We do not have a Montreal office; Edmonton is two hours behind Montreal, so most of the working day overlaps for calls and reviews. Retainers are priced in CAD. Call +1-403-604-8692 to talk about your channel mix. Montreal is a French-first market where local businesses compete for attention in Google Maps and search. Its AI and gaming scene also brings technology companies into a crowded market for talent, customers and partners. Quebec\'s Charter of the French Language, including changes made by Bill 96, makes language planning important for commercial content.',
     sections: [
       {
         heading: 'What is included in Montreal digital marketing',
