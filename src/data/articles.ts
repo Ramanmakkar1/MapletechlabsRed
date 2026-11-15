@@ -5943,7 +5943,7 @@ export const articles: Article[] = [
     category: 'Business',
     title: 'AI Development Companies in Ottawa: How to Choose (2026)',
     dek: 'A buyer’s guide for Ottawa businesses hiring an AI development company: chatbots, LLM features, RAG over documents and workflow automation, bilingual English and French AI, PIPEDA and Canadian data residency, government security expectations, CAD costs, SR&ED and IRAP, red flags and ten questions to ask.',
-    metaTitle: 'AI Development Companies in Ottawa: 2026 Buyer\'s Guide',
+    metaTitle: 'AI Development Companies Ottawa 2026 Guide',
     metaDescription: 'How to choose an AI development company in Ottawa: chatbots, LLM and RAG builds, bilingual English/French AI, PIPEDA and data residency, CAD costs.',
     date: '2026-11-14',
     dateModified: '2026-11-14',
