@@ -28,7 +28,8 @@ export default function Hero() {
             the digital products ambitious teams run on &mdash; web platforms, mobile apps and AI systems, engineered to last.
           </p>
           <p style={{ marginTop: 0, marginBottom: 36, fontSize: 15, color: 'var(--muted)' }}>
-            Headquartered in Alberta: <Link href="/locations/software-development-company-in-edmonton">Custom Software Development in Edmonton</Link>
+            Headquartered in Edmonton, we deliver custom software development in Edmonton: web platforms, mobile apps and AI systems for local teams, from our head office in Alberta.
+            Explore our <Link href="/locations/edmonton/web-development">web development in Edmonton</Link> and <Link href="/services/software-development">custom software development services</Link> in detail.
           </p>
 
           <div className="btn-group" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 40 }}>
