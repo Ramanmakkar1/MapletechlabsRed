@@ -1760,6 +1760,73 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'web-design-company-in-vancouver': {
+    title: 'Web Design Company in Vancouver',
+    description: 'Vancouver web design from Mapletech Labs: custom mobile-first sites for tech, tourism and e-commerce brands, with a fixed CAD price. Call +1-403-604-8692.',
+    answer: 'Mapletech Labs designs custom websites for Vancouver businesses, building mobile-first layouts for tech, tourism and e-commerce brands that convert visitors into enquiries. You get a fixed CAD price and design milestones agreed up front, with senior designers and engineers building the site around your goals.',
+    intro: 'Mapletech Labs is a Canadian web design team headquartered in Edmonton, creating custom websites for Vancouver businesses. We do not have a Vancouver office, but Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. When a project needs it, we travel to Vancouver for discovery sessions and design reviews, with travel agreed up front. You work directly with the senior designers and engineers on your project, under a fixed scope and fixed CAD price agreed before design starts. Call +1-403-604-8692 to discuss your Vancouver website.',
+    sections: [
+      {
+        heading: 'Web design for Vancouver\'s tech, tourism and e-commerce brands',
+        body: [
+          'Vancouver\'s web design briefs come from very different buyers. Tech and SaaS companies need marketing sites and product pages that explain a technical offer and turn trials into paid accounts. Tourism and hospitality operators need booking pages, seasonal campaigns and experience pages that stay easy to update as offerings change. E-commerce and DTC brands need storefronts that load fast on the phones most shoppers use and tie cleanly into inventory and fulfilment. A credible Vancouver website makes those distinctions obvious: who you serve, what you deliver and how a visitor reaches the right person without hunting through the site.',
+        ],
+      },
+      {
+        heading: 'Designing for mobile visitors',
+        body: [
+          'Most Vancouver visitors arrive on a phone, so we design mobile-first and test on real devices before a desktop pass. Tap targets, form fields and navigation are sized for a thumb, images and fonts load fast enough to keep Core Web Vitals in a healthy range, and pages keep clear headings, readable URLs and structured data that help Google and Bing understand your content. The result is a site that converts on a phone first and scales up to a laptop, not a desktop layout shrunk down.',
+        ],
+      },
+      {
+        heading: 'What web design costs in Vancouver',
+        body: [
+          'Our project pricing puts a custom website at $10,000-$50,000 CAD, with a typical delivery window of 4-10 weeks. Where your project lands inside that range comes down to how many pages you need, how much design work each one takes, what content has to be written or migrated, and which integrations the build requires. You get a written scope and a fixed price in CAD before design starts, so the number stays put for the life of the project. For the detail behind those ranges, read our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Design and build handled by one team',
+        body: [
+          'Design and development are separate skills, and splitting them across two vendors often means the finished build drifts from the approved design. We handle both in one scope: the visual and UX work that shapes how your Vancouver site looks and converts, plus the engineering that ships it. Our ',
+          { href: '/services/web-development/web-design', label: 'web design services across Canada' },
+          ' set out the full scope. For a complex build, portal, e-commerce system or custom application, see our ',
+          { href: '/locations/web-development-company-in-vancouver', label: 'Web Development Company in Vancouver' },
+          ' page. If you need ongoing search visibility after launch, our ',
+          { href: '/locations/seo-company-in-vancouver', label: 'SEO Company in Vancouver' },
+          ' team handles that work.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does web design cost in Vancouver?',
+        a: 'A custom Vancouver website is priced at $10,000-$50,000 CAD in our project pricing, and most take 4-10 weeks to design and build. Page count, design depth, content and integrations move the number within that range, and you receive a fixed CAD quote after a free discovery call.',
+      },
+      {
+        q: 'Do you have an office in Vancouver?',
+        a: 'No. Mapletech Labs is headquartered in Edmonton and does not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap, and we travel to Vancouver for discovery sessions, design reviews and workshops, with travel agreed up front.',
+      },
+      {
+        q: 'Will my Vancouver website be mobile-friendly?',
+        a: 'Yes. We design mobile-first and test on real devices, sizing tap targets, forms and navigation for a thumb, and keeping image and font loading fast so Core Web Vitals stay in a healthy range. The desktop experience is built up from that mobile base, not the other way around.',
+      },
+      {
+        q: 'Can you redesign an existing Vancouver website?',
+        a: 'Yes. If your current site is slow, dated or hard to update, we can rework it or rebuild it on a faster stack. We first review which pages bring traffic, keep the URLs that matter, add 301 redirects where addresses change, and approve the new design on staging before it goes live.',
+      },
+      {
+        q: 'Will my Vancouver website be SEO-ready?',
+        a: 'Yes. Pages get clear headings, readable URLs and structured data that help Google and Bing understand your content, and we can keep improving search visibility after launch through our SEO Company in Vancouver work.',
+      },
+    ],
+  },
   'seo-company-in-vancouver': {
     title: 'SEO Company in Vancouver',
     description: 'Vancouver SEO from Mapletech Labs: local map-pack search, technical fixes and CAD retainers with monthly reporting from Edmonton. Call +1-403-604-8692.',
