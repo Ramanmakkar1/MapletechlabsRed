@@ -2663,7 +2663,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Ottawa spans government suppliers, professional services and competitive tech keywords, so we agree the scope in writing before the first invoice. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
-          ' before you commit.',
+          ' before you commit. If you are still comparing firms, read our ',
+          { href: '/blog/seo-companies-ottawa', label: 'guide to choosing an SEO company in Ottawa' },
+          '.',
         ],
       },
       {
