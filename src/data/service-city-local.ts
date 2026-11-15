@@ -310,6 +310,17 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         ],
       },
     ],
+    comparison: {
+      heading: 'What AI development costs in Calgary, by project type',
+      intro: 'Planning ranges from our AI development cost guide; a fixed CAD price is agreed after a free discovery call.',
+      caption: 'Typical 2026 CAD planning ranges for Calgary AI projects',
+      headers: ['Project type', 'Best for', 'Typical cost (CAD)'],
+      rows: [
+        ['LLM feature in an existing app', 'Adding chat, summaries or classification to software you already run', '$10,000-$35,000'],
+        ['Document chatbot (RAG)', 'Answers from your manuals and policies, with sources, access control and hand-off to staff', '$15,000-$50,000'],
+        ['Custom model training', 'Your own data is the advantage and no general model fits', 'From $75,000'],
+      ],
+    },
     proof: [
       { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
       { href: '/case-studies/logistics-platform', label: 'Logistics & fleet platform', note: 'A real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate.' },
