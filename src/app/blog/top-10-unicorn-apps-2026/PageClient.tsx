@@ -40,7 +40,13 @@ const relatedPosts = [
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
-export default function BlogPostPageClient() {
+export default function BlogPostPageClient({
+  answer,
+  faqs,
+}: {
+  answer?: string;
+  faqs: { q: string; a: string }[];
+}) {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -186,6 +192,22 @@ export default function BlogPostPageClient() {
                     This year, ten apps joined the unicorn club through mobile-first products. We studied each one — their architecture, their growth mechanics, their design decisions — to understand exactly what separated them from the thousands of apps that launched alongside them and quietly disappeared. What we found was a set of shared principles, applied relentlessly.
                   </p>
                 </div>
+
+                {/* Answer-first summary */}
+                {answer && (
+                  <div className="reveal" style={{
+                    background: 'var(--surface-alt)', border: '1px solid var(--brand)',
+                    borderRadius: 20, padding: '24px 28px', marginBottom: 56,
+                  }}>
+                    <p style={{
+                      fontSize: 13, fontWeight: 700, color: 'var(--brand)',
+                      letterSpacing: '0.04em', textTransform: 'uppercase', margin: '0 0 10px',
+                    }}>Quick Answer</p>
+                    <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, margin: 0 }}>
+                      {answer}
+                    </p>
+                  </div>
+                )}
 
                 {/* App 1: NovaPay */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="novapay">
@@ -624,6 +646,22 @@ export default function BlogPostPageClient() {
                     {' '}and an{' '}
                     <Link href="/locations/app-development-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>app development company in Vancouver</Link>.
                   </p>
+                </div>
+
+                {/* ── FAQS ── */}
+                <div className="reveal" style={{ marginBottom: 48 }} id="faqs">
+                  <h2 style={{
+                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
+                    letterSpacing: '-0.03em', marginBottom: 20,
+                  }}>Frequently Asked Questions</h2>
+                  <ul style={{ listStyle: 'none', margin: 0, padding: 0, borderTop: '1px solid var(--line)' }}>
+                    {faqs.map((f, i) => (
+                      <li key={i} style={{ borderBottom: '1px solid var(--line)', padding: '22px 0' }}>
+                        <h3 style={{ fontSize: 17, fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>{f.q}</h3>
+                        <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.75, margin: 0, maxWidth: '68ch' }}>{f.a}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
               </article>
