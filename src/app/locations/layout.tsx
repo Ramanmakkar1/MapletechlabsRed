@@ -5,7 +5,9 @@ import type { ReactNode } from 'react';
 // explicit revalidate the route can fall back to a short ISR window and the
 // audit measures a cold server render (7-10 s) as the response time.
 export const dynamic = 'force-static';
-export const revalidate = false;
+// A numeric window (not `false`) so the host's Next adapter emits a long
+// s-maxage/stale-time instead of falling back to its 300 s default.
+export const revalidate = 31536000;
 // Cache-only: city and city+service routes must not fetch uncached at request time.
 export const fetchCache = 'force-cache';
 

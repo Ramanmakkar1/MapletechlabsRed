@@ -13,7 +13,8 @@ const DESCRIPTION = 'WooCommerce store development in Canada: online stores with
 
 // Fully content-driven: prerender at build time and serve statically until the next deployment.
 export const dynamic = 'force-static';
-export const revalidate = false;
+// Numeric window so the host emits a long s-maxage instead of its 300 s default.
+export const revalidate = 31536000;
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),

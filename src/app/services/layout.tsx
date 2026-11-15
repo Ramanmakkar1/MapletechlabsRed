@@ -6,7 +6,9 @@ import type { ReactNode } from 'react';
 // runtime; without this the audit can hit a cold ISR render (4-40 s) and
 // measure it as the server response time.
 export const dynamic = 'force-static';
-export const revalidate = false;
+// A numeric window (not `false`) so the host's Next adapter emits a long
+// s-maxage/stale-time instead of falling back to its 300 s default.
+export const revalidate = 31536000;
 // Cache-only: never fall back to an uncached fetch on a service route.
 export const fetchCache = 'force-cache';
 
