@@ -85,7 +85,7 @@ const nextConfig: NextConfig = {
       {
         source: '/services/:path*',
         headers: [
-          { key: 'Cache-Control', value: STATIC_TEMPLATE_CACHE },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400' },
           { key: 'CDN-Cache-Control', value: STATIC_TEMPLATE_CDN_CACHE },
         ],
       },
@@ -115,7 +115,7 @@ const nextConfig: NextConfig = {
       {
         source: '/locations/:path*',
         headers: [
-          { key: 'Cache-Control', value: STATIC_TEMPLATE_CACHE },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400' },
           { key: 'CDN-Cache-Control', value: STATIC_TEMPLATE_CDN_CACHE },
         ],
       },
