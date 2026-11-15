@@ -10,7 +10,7 @@ import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Top 10 Software Development Companies in Canada (2026)';
-const DESCRIPTION = 'See how the top software development companies in Canada for 2026 compare by specialization, delivery, code ownership, support and budget fit.';
+const DESCRIPTION = 'Top software development companies in Canada for 2026: compare specialization, delivery model, code ownership, support and budget fit before you hire.';
 const SLUG = 'top-software-development-companies-canada';
 const DATE = '2026-02-10';
 
