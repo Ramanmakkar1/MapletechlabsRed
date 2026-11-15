@@ -23,12 +23,12 @@ export const metadata: Metadata = {
 };
 
 const caseStudies = [
-  { slug: 'fintech-trading-platform', name: 'AI-Powered Trading Platform' },
-  { slug: 'healthcare-telehealth', name: 'HIPAA-Compliant Telehealth Platform' },
-  { slug: 'ecommerce-platform', name: 'Enterprise E-Commerce Redesign' },
-  { slug: 'logistics-platform', name: 'Real-Time Fleet Management System' },
-  { slug: 'payments-api-platform', name: 'PCI DSS Payments API' },
-  { slug: 'real-estate-portal', name: 'Multi-Listing Real Estate Platform' },
+  { slug: 'fintech-trading-platform', name: 'AI-Powered Trading Platform', label: 'Fintech Trading Platform' },
+  { slug: 'healthcare-telehealth', name: 'HIPAA-Compliant Telehealth Platform', label: 'Healthcare Telehealth Platform' },
+  { slug: 'ecommerce-platform', name: 'Enterprise E-Commerce Redesign', label: 'Ecommerce Platform' },
+  { slug: 'logistics-platform', name: 'Real-Time Fleet Management System', label: 'Logistics Platform' },
+  { slug: 'payments-api-platform', name: 'PCI DSS Payments API', label: 'Payments API Platform' },
+  { slug: 'real-estate-portal', name: 'Multi-Listing Real Estate Platform', label: 'Real Estate Portal' },
 ];
 
 const jsonLd = {
@@ -77,9 +77,10 @@ export default function Page() {
             <li key={c.slug}>
               <Link
                 href={`/case-studies/${c.slug}`}
+                title={c.name}
                 className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
               >
-                {c.name}
+                {c.label}
               </Link>
             </li>
           ))}
