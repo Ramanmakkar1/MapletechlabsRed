@@ -5319,7 +5319,7 @@ export const articles: Article[] = [
     category: 'Business',
     title: 'SEO Companies in Montreal: How to Choose (2026)',
     dek: 'A buyer’s guide for Montreal businesses hiring an SEO company: French and English search, map-pack work across the Plateau, Laval, Longueuil and the West Island, technical SEO, CAD pricing, AI-answer visibility, red flags and ten questions to ask.',
-    metaTitle: 'SEO Companies in Montreal: How to Choose the Right One',
+    metaTitle: 'SEO Companies in Montreal: How to Choose One (2026)',
     metaDescription: 'How to choose an SEO company in Montreal: French and English search, map pack and suburb searches, CAD pricing, AI answers, red flags and 10 questions.',
     date: '2026-11-14',
     dateModified: '2026-11-14',
