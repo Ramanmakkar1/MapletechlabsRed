@@ -61,6 +61,16 @@ export default function WhatWeBuild() {
           and{' '}
           <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development in Edmonton</Link>
         </p>
+        <p style={{ marginTop: 8, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
+          Explore:{' '}
+          <Link href="/services" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>software development services</Link>{' '}
+          &middot;{' '}
+          <Link href="/case-studies" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>client case studies</Link>{' '}
+          &middot;{' '}
+          <Link href="/industries" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>industries we serve</Link>{' '}
+          &middot;{' '}
+          <Link href="/locations" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>locations across Canada</Link>
+        </p>
       </div>
     </section>
   );
