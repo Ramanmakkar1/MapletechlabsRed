@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '50+', label: 'SaaS Platforms Built' },
@@ -31,6 +33,38 @@ const faqs = [
   { q: 'Do you provide post-launch support?', a: 'Yes. Most of our SaaS clients engage us on a monthly retainer covering infrastructure monitoring, incident response, performance optimisation, security updates, and ongoing feature development. We treat post-launch as the beginning of the product journey, not the end of the engagement.' },
 ];
 
+const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
+
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to hire a SaaS platform development team</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Hire a SaaS platform development team when you need a production-ready product with multi-tenant architecture, billing and enterprise auth — not just a prototype. A focused team gets your MVP live in about 8 weeks and builds the foundation to scale without a costly re-architecture.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>Multi-tenant architecture with the right data isolation model for your compliance and scale needs.</li>
+          <li>Subscription billing with Stripe — trials, proration, dunning, invoices and tax handling.</li>
+          <li>SSO and authentication with SAML/OIDC, MFA, role-based access control and audit logging.</li>
+          <li>Admin and tenant dashboards for user management, subscription oversight and feature flags.</li>
+          <li>Usage analytics and a documented API platform with webhooks, keys and rate limiting.</li>
+        </ul>
+        <p>
+          Start with <Link href="/services/saas-development/saas-mvp-development">SaaS MVP development</Link> and get the tenancy model right with <Link href="/services/saas-development/multi-tenant-architecture">multi-tenant architecture</Link>. For budget planning, read our <Link href="/blog/saas-development-cost-canada">SaaS development cost guide for Canada</Link>.
+        </p>
+        <p>
+          Explore SaaS platform development in{' '}
+          {cityLinks.map(([name, slug], i) => (
+            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('saas-development', slug)}>{name}</Link></span>
+          ))}. Ready to scope your platform? <Link href="/contact">Book a SaaS development consultation</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +76,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Everything Your SaaS Needs to Succeed"
+      buyerContent={<BuyerContent />}
     />
   );
 }
