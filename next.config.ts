@@ -80,7 +80,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/services/:path*',
-        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=604800, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
         source: '/faq',
@@ -92,11 +92,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/industries/:slug',
-        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=604800, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
         source: '/industries/:path*',
-        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=604800, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
         source: '/locations',
@@ -104,18 +104,18 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/locations/:path*',
-        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=604800, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       // The keyword city pages and the city+service mesh are the slowest
       // templates in the audit. They are fully static, so let the CDN keep
       // them for a day and serve stale for a week while the edge revalidates.
       {
         source: '/locations/:slug',
-        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=604800, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
         source: '/locations/:city/:service',
-        headers: [{ key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=604800, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
         source: '/locations/ai-development-company-in-vancouver',
