@@ -47,7 +47,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'web-development-companies-montreal')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="montreal" cityName="Montreal" />} />
+      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="montreal" cityName="Montreal" showWebDesignAndMarketing />} />
     </>
   );
 }

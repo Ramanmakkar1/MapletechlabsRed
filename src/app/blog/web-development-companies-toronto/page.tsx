@@ -62,7 +62,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <PageClient localLinks={<LocalServiceLinks citySlug="toronto" cityName="Toronto" />} />
+      <PageClient localLinks={<LocalServiceLinks citySlug="toronto" cityName="Toronto" showWebDesignAndMarketing />} />
     </>
   );
 }

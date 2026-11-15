@@ -11,7 +11,7 @@ const navigationLinkStyle = {
  * Sidebar box for city-focused blog posts: links straight to our service pages
  * in that city, so the posts pass crawl paths to the local service pages.
  */
-export default function LocalServiceLinks({ citySlug, cityName }: { citySlug: string; cityName: string }) {
+export default function LocalServiceLinks({ citySlug, cityName, showWebDesignAndMarketing = false }: { citySlug: string; cityName: string; showWebDesignAndMarketing?: boolean }) {
   const links = services.filter(s => isIndexableCityService(citySlug, s.slug));
   return (
     <div style={{
@@ -31,6 +31,16 @@ export default function LocalServiceLinks({ citySlug, cityName }: { citySlug: st
         <Link href={`/locations/software-development-company-in-${citySlug}`} className="pill" style={navigationLinkStyle}>
           Software development in {cityName}
         </Link>
+        {showWebDesignAndMarketing && (
+          <>
+            <Link href={`/locations/web-design-company-in-${citySlug}`} className="pill" style={navigationLinkStyle}>
+              Web design company in {cityName}
+            </Link>
+            <Link href={`/locations/digital-marketing-agency-in-${citySlug}`} className="pill" style={navigationLinkStyle}>
+              Digital marketing agency in {cityName}
+            </Link>
+          </>
+        )}
         {links.map(s => (
           <Link key={s.slug} href={serviceCityPath(s.slug, citySlug)} className="pill" style={navigationLinkStyle}>
             {s.name} in {cityName}
