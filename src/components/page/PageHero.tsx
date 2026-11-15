@@ -21,8 +21,8 @@ const Tick = () => (
 /* Inner-page hero. With a quote form: clean white, copy left, form right —
    the media band below carries the imagery. Without one: copy left, the
    photograph itself on the right, unscrimmed. */
-export default function PageHero({ crumbs, copy, stats, photo, form = true, serviceName, city, contactHref = '/contact', costHref }: {
-  crumbs: Crumb[]; copy: HeroCopy; stats?: Stat[]; photo: Media; form?: boolean; serviceName?: string; city?: string; contactHref?: string; costHref?: string;
+export default function PageHero({ crumbs, copy, stats, photo, form = true, serviceName, city, contactHref = '/contact', costHref, h1 }: {
+  crumbs: Crumb[]; copy: HeroCopy; stats?: Stat[]; photo: Media; form?: boolean; serviceName?: string; city?: string; contactHref?: string; costHref?: string; h1?: string;
 }) {
   return (
     <section style={{ background: 'var(--surface)', padding: 'var(--hero-top) 0 var(--section-y)' }}>
@@ -30,8 +30,17 @@ export default function PageHero({ crumbs, copy, stats, photo, form = true, serv
         <Breadcrumb items={crumbs} />
         <div className="hero-split" style={{ marginTop: 'clamp(20px, 3vw, 36px)', alignItems: form ? 'start' : 'center' }}>
           <div>
-            <span className="section-tag">{copy.badge}</span>
-            <h1 style={{ fontSize: 'var(--fs-display)', fontWeight: 600, letterSpacing: '-0.035em', lineHeight: 1.05, margin: '0 0 20px' }}>{copy.title}</h1>
+            {h1 ? (
+              <>
+                <h1 className="section-tag">{h1}</h1>
+                <p style={{ fontSize: 'var(--fs-display)', fontWeight: 600, letterSpacing: '-0.035em', lineHeight: 1.05, margin: '0 0 20px', color: 'var(--ink)' }}>{copy.title}</p>
+              </>
+            ) : (
+              <>
+                <span className="section-tag">{copy.badge}</span>
+                <h1 style={{ fontSize: 'var(--fs-display)', fontWeight: 600, letterSpacing: '-0.035em', lineHeight: 1.05, margin: '0 0 20px' }}>{copy.title}</h1>
+              </>
+            )}
             <p style={{ fontSize: 'clamp(16px, 1.4vw, 18px)', color: 'var(--body)', lineHeight: 1.7, maxWidth: '58ch', margin: '0 0 30px' }}>{copy.desc}</p>
             <div className="btn-group" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: stats?.length ? 36 : 0 }}>
               <Link href={contactHref} className="btn btn--primary btn--lg">Start Your Project

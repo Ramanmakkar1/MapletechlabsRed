@@ -43,7 +43,7 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
     <>
       <Navbar />
       <main id="main-content">
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: parent.label, href: parent.href }, { label: name }]} copy={copy} stats={stats} photo={hero} serviceName={name} contactHref={contactHref} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: parent.label, href: parent.href }, { label: name }]} copy={copy} stats={stats} photo={hero} serviceName={name} contactHref={contactHref} h1={/canada/i.test(name) ? name : `${name} in Canada`} />
         <StatRow stats={stats} />
         <ServicesGrid title={capabilitiesTitle ?? `Our ${name} capabilities`} items={services} />
         <ServiceProof slug={parentSlug} name={name} contactHref={contactHref} caseStudySlugs={caseStudySlugs} />
