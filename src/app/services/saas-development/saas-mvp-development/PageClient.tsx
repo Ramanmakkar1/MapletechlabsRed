@@ -1,4 +1,7 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import { PROJECT_PRICING } from '@/data/pricing';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '50+', label: 'SaaS MVPs Shipped' },
@@ -31,6 +34,40 @@ const faqs = [
   { q: 'What happens after the MVP launches?', a: 'We offer a post-launch retainer for rapid iteration based on user feedback — typically 4-8 weeks of bi-weekly sprints while you validate product-market fit. Once you\'ve hired your first engineers, we provide a thorough technical handover including architecture documentation, a codebase walkthrough, and a Q&A session with your new team.' },
 ];
 
+const cad = (n: number) => `$${n.toLocaleString('en-CA')}`;
+const saas = PROJECT_PRICING.saas;
+const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
+
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>What a SaaS MVP costs in Canada and what you get</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          A SaaS MVP in Canada typically costs {cad(saas.low)}–{cad(saas.high)} CAD and takes {saas.weeksLow}–{saas.weeksHigh} weeks with Mapletech Labs. That range covers a scoped, production-ready first release — not a throwaway prototype — and your fixed price follows discovery. For the full breakdown of what moves the number, read our <Link href="/blog/saas-development-cost-canada">SaaS development cost guide for Canada</Link> and <Link href="/blog/build-saas-mvp-8-weeks">how to build a SaaS MVP in 8 weeks</Link>.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What is included in the MVP</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li><strong>Scope and roadmap:</strong> discovery workshops, user story mapping and a fixed-scope spec that keeps the build focused on validating your core hypothesis.</li>
+          <li><strong>Authentication and billing:</strong> secure sign-up, login and onboarding, plus Stripe subscriptions for your first paid tier. See our <Link href="/services/saas-development/auth-sso">auth and SSO development</Link> and <Link href="/services/saas-development/billing-subscriptions">subscription billing services</Link>.</li>
+          <li><strong>Admin dashboard:</strong> an internal panel to manage users, view key metrics and operate the product without engineering support.</li>
+          <li><strong>Analytics:</strong> product and usage tracking configured so you can see activation, retention and the path to your first paying customers.</li>
+          <li><strong>Launch and monitoring:</strong> production deployment, CI/CD, error tracking and uptime alerting, with a post-launch iteration option.</li>
+        </ul>
+        <p style={{ margin: '0 0 12px' }}>
+          Working with a local team? Explore SaaS development in{' '}
+          {cityLinks.map(([name, slug], i) => (
+            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('saas-development', slug)}>{name}</Link></span>
+          ))}.
+        </p>
+        <p>
+          Ready to scope your MVP? <Link href="/contact">Contact us</Link> with your idea and timeline and we will reply within one working day.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +79,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
