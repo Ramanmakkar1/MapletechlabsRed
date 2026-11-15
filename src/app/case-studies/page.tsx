@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
@@ -69,6 +70,21 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <nav aria-label="Case studies" className="mx-auto max-w-6xl px-4 pt-8">
+        <h2 className="text-lg font-semibold text-slate-900">Our case studies</h2>
+        <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+          {caseStudies.map(c => (
+            <li key={c.slug}>
+              <Link
+                href={`/case-studies/${c.slug}`}
+                className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
+              >
+                {c.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
       <PageClient />
     </>
   );
