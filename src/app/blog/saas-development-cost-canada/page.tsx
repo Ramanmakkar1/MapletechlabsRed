@@ -9,7 +9,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'SaaS Development Cost Canada: 2026 Guide';
+const TITLE = 'SaaS Development Cost in Canada: 2026 CAD';
 const DESCRIPTION = 'SaaS development cost in Canada: see real CAD ranges from MVP to enterprise, what drives the budget, timelines and planning steps before you hire.';
 const SLUG = 'saas-development-cost-canada';
 const DATE = '2026-03-06';
