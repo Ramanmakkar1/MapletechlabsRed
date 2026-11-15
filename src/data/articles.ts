@@ -1583,7 +1583,7 @@ export const articles: Article[] = [
     title: 'Custom Software vs Off-the-Shelf: How to Decide (2026)',
     dek: 'Building custom software when you could have bought a tool is an expensive mistake — and so is forcing your business into software that does not fit. Here is an honest framework for deciding which is right.',
     metaTitle: 'Custom Software vs Off-the-Shelf (2026)',
-    metaDescription: 'Custom software vs off-the-shelf in 2026: buy a proven tool when it fits, build custom when your workflow is the product, and compare five-year costs.',
+    metaDescription: 'Custom software vs off-the-shelf: buy when a proven tool fits, build when your workflow is the product. A Canadian buyer\'s guide to five-year costs.',
     date: '2026-09-08',
     dateModified: '2026-09-08',
     readTime: '9 min read',
