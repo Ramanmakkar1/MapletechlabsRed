@@ -1405,73 +1405,6 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
-  'web-design-company-in-toronto': {
-    title: 'Web Design Company in Toronto',
-    description: 'Toronto web design from Mapletech Labs: fast, mobile-first websites built to turn visitors into leads, with a fixed CAD quote. Call +1-403-604-8692.',
-    answer: 'Mapletech Labs designs custom websites for Toronto businesses from our Canadian team, with mobile-first layouts, quick pages and SEO-ready structure. We agree a fixed CAD price and design milestones up front, then build the site around the actions you want visitors to take.',
-    intro: 'Mapletech Labs is a Canadian web design team headquartered in Edmonton, creating custom websites for Toronto businesses. We do not have a Toronto office, but Edmonton is two hours behind Toronto, so our working days overlap for most of yours and questions get answered the same day. When a project needs it, we travel to Toronto for discovery sessions and design reviews, with travel agreed up front. You work directly with the senior designers and engineers on your project, under a fixed scope and fixed CAD price agreed before design starts. Call +1-403-604-8692 to discuss your Toronto website.',
-    sections: [
-      {
-        heading: 'Web design for Toronto\'s competitive markets',
-        body: [
-          'Toronto buyers in finance, SaaS and professional services compare suppliers long before they make contact, often across several shortlisted websites. That changes how a site should be designed: service pages that answer specific questions, proof and case studies placed where a researcher will find them, and enquiry forms that collect the details your sales team actually needs. A credible Toronto website has to explain what you do, who you do it for and why your team can be trusted, without making a visitor dig through the whole site to find out.',
-        ],
-      },
-      {
-        heading: 'Ontario accessibility: designing to WCAG 2.0 AA',
-        body: [
-          'Ontario organisations often ask us about the Accessibility for Ontarians with Disabilities Act (AODA), which references WCAG 2.0 level AA for public websites. We design and test to that standard, covering keyboard navigation, screen-reader structure, colour contrast, focus states and text resizing, so accessibility is part of the build rather than a patch added afterwards. We can share accessibility test results with your team, and your legal advisors confirm how the AODA applies to your organisation and website.',
-        ],
-      },
-      {
-        heading: 'What web design costs in Toronto',
-        body: [
-          'Our project pricing puts a custom website at $10,000-$50,000 CAD, with a typical delivery window of 4-10 weeks. Where your project lands inside that range comes down to how many pages you need, how much design work each one takes, what content has to be written or migrated, and which integrations the build requires. You get a written scope and a fixed price in CAD before design starts, so the number stays put for the life of the project. For the detail behind those ranges, read our ',
-          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
-          '.',
-        ],
-      },
-      {
-        heading: 'Design and build handled by one Toronto-facing team',
-        body: [
-          'Design and development are separate skills, and splitting them across two vendors often means the finished build drifts from the approved design. We handle both in one scope: the visual and UX work that shapes how your Toronto site looks and converts, plus the engineering that ships it. Our ',
-          { href: '/services/web-development/web-design', label: 'web design services across Canada' },
-          ' set out the full scope. For a complex build, portal, e-commerce system or custom application, see our ',
-          { href: '/locations/web-development-company-in-toronto', label: 'Web Development Company in Toronto' },
-          ' page. If you need ongoing search visibility after launch, our ',
-          { href: '/locations/seo-company-in-toronto', label: 'SEO Company in Toronto' },
-          ' team handles that work.',
-        ],
-      },
-    ],
-    proof: [
-      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
-      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
-      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
-    ],
-    faqs: [
-      {
-        q: 'How much does web design cost in Toronto?',
-        a: 'A custom Toronto website is priced at $10,000-$50,000 CAD in our project pricing, and most take 4-10 weeks to design and build. Page count, design depth, content and integrations move the number within that range, and you receive a fixed CAD quote after a free discovery call.',
-      },
-      {
-        q: 'Do you have an office in Toronto?',
-        a: 'No. Mapletech Labs is headquartered in Edmonton and does not have a Toronto office. Edmonton is two hours behind Toronto, so our working days overlap for most of yours, and we travel to Toronto for discovery sessions, design reviews and workshops, with travel agreed up front.',
-      },
-      {
-        q: 'Will our Toronto website meet AODA requirements?',
-        a: 'We design and test to WCAG 2.0 level AA, the standard the AODA references for public websites, covering keyboard access, screen-reader structure, colour contrast and text resizing. We can share our accessibility test results with you, and your own legal team should confirm whether and how the AODA applies to your organisation.',
-      },
-      {
-        q: 'Can you redesign an existing Toronto website?',
-        a: 'Yes. If your current site is slow, dated or hard to update, we can rework it or rebuild it on a faster stack. We first review which pages bring traffic, keep the URLs that matter, add 301 redirects where addresses change, and approve the new design on staging before it goes live.',
-      },
-      {
-        q: 'Will my Toronto website be SEO-ready and mobile-friendly?',
-        a: 'Yes. We design mobile-first and test on real devices, with fast image and font loading so Core Web Vitals stay in a healthy range. Pages get clear headings, readable URLs and structured data that help Google and Bing understand your content, and we can keep improving search visibility after launch.',
-      },
-    ],
-  },
   'web-design-company-in-ottawa': {
     title: 'Web Design Company in Ottawa, Ontario',
     description: 'Ottawa web design from Mapletech Labs: fast, mobile-first, bilingual-ready sites built to win leads, with a fixed CAD quote. Call +1-403-604-8692.',
@@ -1832,6 +1765,81 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         q: 'Who owns the website files, code and domain?',
         a: 'You do. All source code, design files and the domain for your Vancouver website belong to you, with no lock-in. At handover we train your team to use the CMS so you can update pages yourself, and you can keep working with us after launch or hand the website to your own team.',
+      },
+    ],
+  },
+  'web-design-company-in-toronto': {
+    title: 'Web Design Company in Toronto',
+    description: 'Toronto web design from Mapletech Labs: custom, mobile-first websites for Ontario businesses, built to win leads, with a fixed CAD price agreed up front.',
+    answer: 'Mapletech Labs provides web design in Toronto for Ontario businesses that need a custom, mobile-first site built to win leads. You get an AODA-accessible, SEO-ready build with a fixed CAD price agreed up front and senior designers and engineers on the project.',
+    intro: 'Mapletech Labs is a Canadian web design team headquartered in Edmonton, creating custom websites for Toronto businesses. We do not have a Toronto office. Edmonton is two hours behind Toronto, so our working days overlap for most of yours and questions get answered the same day. You work directly with the senior designers and engineers on your project, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before design starts. Call us on +1-403-604-8692 to talk through your Toronto website.',
+    sections: [
+      {
+        heading: 'Web design for Toronto\'s finance, professional-services and retail businesses',
+        body: [
+          'Toronto web design briefs come from several distinct markets. Financial and professional-services firms need clear service pages, proof and trust signals that let a cautious buyer shortlist them without a call. B2B and tech startups need product pages and demo or trial paths that turn a technical offer into a booked conversation. Retail and e-commerce brands need a fast mobile storefront and a checkout or enquiry path that works in a few taps. A credible Toronto website makes those differences obvious: who you serve, what you deliver and how a visitor reaches the right person without hunting through the site.',
+        ],
+      },
+      {
+        heading: 'AODA accessibility and Canadian privacy for Ontario websites',
+        body: [
+          'The Accessibility for Ontarians with Disabilities Act (AODA) requires many Ontario organisations to meet WCAG 2.0 level AA on their public websites. We design and test to WCAG 2.1 level AA, covering keyboard navigation, screen-reader structure, colour contrast, focus states and text resizing, so accessibility is built into the project rather than patched on later. Private-sector personal data in Ontario generally falls under the federal Personal Information Protection and Electronic Documents Act (PIPEDA). We plan Canadian hosting when residency matters, and your legal team confirms which obligations apply to your organisation.',
+        ],
+      },
+      {
+        heading: 'Our web design process',
+        body: [
+          'Our process starts with a workshop, where we learn your customers, competitors and the enquiries you want the site to produce. We then map the sitemap and wireframes so every page, navigation path and call to action has a purpose. Next comes Figma design built with real content and reviewed before a line of code, with our ',
+          { href: '/services/product-design', label: 'UI/UX design services' },
+          ' shaping the layout and interactions. Engineering then builds the approved design, we test on real devices and launch after accessibility and performance checks, with training so your team can update pages.',
+        ],
+      },
+      {
+        heading: 'What web design costs in Toronto',
+        body: [
+          'Our project pricing puts a custom website at $10,000-$50,000 CAD, with a typical delivery window of 4-10 weeks. Where your project lands inside that range depends on how many pages you need, how much custom design work each one takes, what content has to be written or moved over, and which integrations the build requires. You get a written scope and a fixed price in CAD before design starts, so the number stays put for the life of the project. For the detail behind those ranges, read our ',
+          { href: '/blog/website-cost-canada', label: 'website cost guide for Canada' },
+          '.',
+        ],
+      },
+      {
+        heading: 'Design, development and SEO under one scope',
+        body: [
+          'Design and development are separate skills, and splitting them across vendors often means the finished build drifts from the approved design. We handle design, engineering and the search fundamentals in one scope, so pages launch fast, structured and ready to rank. If you need a complex build, portal, e-commerce system or custom application, see our ',
+          { href: '/locations/web-development-company-in-toronto', label: 'Web Development Company in Toronto' },
+          ' page. For ongoing search visibility after launch, our ',
+          { href: '/locations/seo-company-in-toronto', label: 'SEO Company in Toronto' },
+          ' team handles that work, and for vendor comparisons read our ',
+          { href: '/blog/web-development-companies-toronto', label: 'guide to choosing a web development company in Toronto' },
+          '.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'A real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does web design cost in Toronto?',
+        a: 'A custom Toronto website is priced at $10,000-$50,000 CAD in our project pricing, and most take 4-10 weeks to design and build. Page count, design depth, content and integrations move the number within that range, and you receive a fixed CAD quote after a free discovery call.',
+      },
+      {
+        q: 'How long does a Toronto website take to design and build?',
+        a: 'A custom website usually takes 4-10 weeks from kickoff to launch, based on the ranges in our project pricing. Smaller brochure sites can move faster, while larger sites with many pages or integrations take longer. Your written scope includes milestones for design approval, content lock and launch.',
+      },
+      {
+        q: 'Will our Toronto website meet AODA accessibility requirements?',
+        a: 'We design and test to WCAG 2.1 level AA, which meets the WCAG 2.0 level AA standard the AODA references for public websites, covering keyboard access, screen-reader structure, colour contrast, focus states and text resizing. We can share our accessibility test results with you, and your own legal team should confirm how the AODA applies to your organisation.',
+      },
+      {
+        q: 'Will my Toronto website be fast and mobile-friendly?',
+        a: 'Yes. We design mobile-first and test on real devices, sizing tap targets, forms and navigation for a thumb, and keeping image and font loading fast so Core Web Vitals stay in a healthy range. The desktop experience is built up from that mobile base, not the other way around.',
+      },
+      {
+        q: 'Who owns the website files, code and domain?',
+        a: 'You do. All source code, design files and the domain for your Toronto website belong to you, with no lock-in. At handover we train your team to use the CMS so you can update pages yourself, and you can keep working with us after launch or hand the website to your own team.',
       },
     ],
   },
