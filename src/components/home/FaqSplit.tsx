@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { defaultFaqs } from '@/data/faqs';
 
 /* Questions on divider rows, answers expanding in place. Native
    details/summary keep every answer reachable before JavaScript loads. */
-export default function FaqSplit({ faqs = defaultFaqs, title = 'Frequently asked questions' }: { faqs?: { q: string; a: string }[]; title?: string } = {}) {
+export default function FaqSplit({ faqs = defaultFaqs, title = 'Frequently asked questions' }: { faqs?: { q: string; a: string; aNode?: ReactNode }[]; title?: string } = {}) {
   return (
     <section id="faq" style={{ padding: 'var(--section-y) 0' }}>
       <div className="cb-container faq-split">
@@ -24,7 +25,7 @@ export default function FaqSplit({ faqs = defaultFaqs, title = 'Frequently asked
                   <span aria-hidden className="faq-plus">+</span>
                 </summary>
                 <div className="faq-answer">
-                  <p>{f.a}</p>
+                  <p>{f.aNode ?? f.a}</p>
                 </div>
               </details>
             </li>

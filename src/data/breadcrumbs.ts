@@ -50,6 +50,7 @@ function slugToTitle(slug: string): string {
     'web-development': 'Web Development',
     'web-design': 'Web Design',
     'ecommerce-systems': 'E-Commerce Systems',
+    'shopify-development': 'Shopify Development',
     'ecommerce-development': 'E-Commerce Development',
     'api-backend': 'API & Backend',
     'api-development': 'API Development',
