@@ -100,6 +100,41 @@ export default function RamanPage() {
           name: 'Edmonton, Alberta, Canada',
         },
       },
+      {
+        '@type': 'Organization',
+        '@id': `${canonicalUrl('/')}#organization`,
+        name: 'Mapletech Labs',
+        alternateName: 'TML Branding Agency',
+        url: canonicalUrl('/'),
+        email: 'hello@mapletechlabs.ca',
+        telephone: '+1-403-604-8692',
+        foundingDate: '2018',
+        founder: { '@id': personId },
+        description:
+          'Mapletech Labs is an Edmonton, Alberta software development company founded by Raman Makkar in 2018. Its 25+ member team has delivered 500+ projects, building custom web applications, mobile apps, AI/ML solutions, cloud infrastructure and SaaS platforms.',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Edmonton',
+          addressRegion: 'AB',
+          addressCountry: 'CA',
+        },
+        areaServed: [
+          { '@type': 'City', name: 'Edmonton' },
+          { '@type': 'City', name: 'Calgary' },
+          { '@type': 'City', name: 'Toronto' },
+          { '@type': 'City', name: 'Vancouver' },
+        ],
+        knowsAbout: [
+          'Software Development',
+          'Web Development',
+          'Mobile App Development',
+          'AI Development',
+          'UI/UX Design',
+          'SaaS Development',
+          'Cloud Infrastructure',
+        ],
+        numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 25 },
+      },
     ],
   };
 
