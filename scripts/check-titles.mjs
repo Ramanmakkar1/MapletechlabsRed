@@ -8,6 +8,8 @@
 // must therefore be brand-free literals, or go through seoTitle() which opts
 // out of the template when the brand is already present or would overflow.
 //
+// Meta descriptions are checked at 140-155 chars (see descriptionProblems).
+//
 // Run: npm run seo:titles   (also imports the city x service generator via
 // Node's type stripping, so generated titles are checked for real).
 import { readdirSync, readFileSync } from "node:fs";
@@ -231,6 +233,7 @@ const overlong = { absolute: "x".repeat(61) };
 assert.equal(resolveTitle(overlong).length, 61);
 assert.match(articleTitleProblems(overlong)[0], /61 chars \(max 60\)/);
 
+// Audit standard: meta descriptions must be 140-155 chars.
 function descriptionProblems(text) {
   return text.length < 140 || text.length > 155
     ? [`description is ${text.length} chars (want 140-155)`]
@@ -245,7 +248,7 @@ function articleDescriptions(src) {
 
 assert.deepEqual(articleDescriptions("metaDescription: \n  'Multiline field'"), [{ text: "Multiline field", line: 1 }]);
 assert.deepEqual(articleDescriptions("metaDescription:\t'Inline field'"), [{ text: "Inline field", line: 1 }]);
-for (const length of [139, 140, 155, 156]) {
+for (const length of [120, 139, 140, 155, 156]) {
   const [{ text }] = articleDescriptions(`metaDescription:\n  '${"x".repeat(length)}'`);
   assert.equal(descriptionProblems(text).length, length < 140 || length > 155 ? 1 : 0);
 }

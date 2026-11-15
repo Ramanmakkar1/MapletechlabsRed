@@ -59,6 +59,7 @@ for (const file of htmlFiles(APP_DIR).sort()) {
   if (!titleText) problems.push({ route, field: "title", length: 0, text: "(missing)" });
   else if (titleText.length > 60 || titleText.length < 50) problems.push({ route, field: "title", length: titleText.length, text: titleText });
 
+  // Description standard: 140-155 chars.
   const description = html.match(/<meta[^>]+name=["']description["'][^>]*content=(["'])([\s\S]*?)\1/i);
   const descriptionText = description ? measure(description[2]) : "";
   if (!descriptionText) problems.push({ route, field: "description", length: 0, text: "(missing)" });
