@@ -9,7 +9,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Kubernetes & Docker Consulting in Canada';
-const DESCRIPTION = 'Kubernetes and Docker consulting in Canada: production-grade EKS, GKE and AKS setup, Helm charts and container security, with 60+ K8s clusters deployed.';
+const DESCRIPTION = 'Kubernetes and Docker consulting in Canada: we deploy production-grade EKS, GKE and AKS clusters with Helm charts and container security, 60+ deployments.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
