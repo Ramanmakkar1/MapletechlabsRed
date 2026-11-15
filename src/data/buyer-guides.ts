@@ -116,6 +116,11 @@ const PAGE_GUIDE: Partial<Record<string, { slug: string; label: string; linkText
     label: 'digital marketing',
     linkText: 'Read our guide to choosing a digital marketing agency in Ottawa',
   },
+  'seo-company-in-ottawa': {
+    slug: 'digital-marketing-agencies-ottawa',
+    label: 'SEO',
+    linkText: 'Read our guide to choosing an SEO and digital marketing agency in Ottawa',
+  },
   'digital-marketing-agency-in-montreal': {
     slug: 'digital-marketing-agencies-montreal',
     label: 'digital marketing',
