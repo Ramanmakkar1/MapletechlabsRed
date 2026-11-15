@@ -66,6 +66,7 @@ export const blogSlugs = [
   'digital-marketing-agencies-toronto',
   'digital-marketing-agencies-vancouver',
   'software-development-companies-edmonton',
+  'app-development-companies-canada',
   'app-development-companies-calgary',
   'app-development-companies-ottawa',
   'app-development-companies-montreal',

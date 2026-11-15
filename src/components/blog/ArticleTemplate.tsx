@@ -66,6 +66,7 @@ const SLUG_SERVICE: Record<string, CityService> = {
   'saas-development-companies-calgary': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
   'saas-development-companies-montreal': { label: 'SaaS Development', path: c => serviceCityPath('saas-development', c) },
   'ui-ux-design-companies-canada': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },
+  'app-development-companies-canada': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'mobile-app-development-company-canada': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'flutter-vs-react-native-canada': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
   'ui-ux-design-cost-canada': { label: 'UI/UX Design', path: c => serviceCityPath('product-design', c) },

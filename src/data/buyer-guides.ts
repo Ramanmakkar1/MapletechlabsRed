@@ -7,6 +7,7 @@ const BLOG_SLUGS = new Set([
   'ai-development-companies-vancouver',
   'ai-development-companies-montreal',
   'ai-development-companies-ottawa',
+  'app-development-companies-canada',
   'app-development-companies-calgary',
   'app-development-companies-ottawa',
   'app-development-companies-montreal',
@@ -150,7 +151,7 @@ const NATIONAL_GUIDE_SLUG: Partial<Record<string, string>> = {
   'saas-development': 'saas-development-company-canada',
   'web-development': 'website-development-company-canada',
   'wordpress-cms': 'wordpress-vs-headless-cms-canada',
-  'mobile-app-development': 'mobile-app-development-company-canada',
+  'mobile-app-development': 'app-development-companies-canada',
   'blockchain-web3': 'blockchain-development-companies-canada',
 };
 
