@@ -16,6 +16,7 @@ import { seoDescription } from '@/lib/seo/description';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
 import { services } from '@/data/services';
 import { cities } from '@/data/cities';
+import { PROJECT_PRICING } from '@/data/pricing';
 import { SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 
 // Allowlists for ?service=&city= enquiry context (validated client-side in ContactPage).
@@ -83,6 +84,9 @@ export default function ContactRoute() {
             <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-answer">
           <h2 id="contact-answer" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How to get a free project consultation from Mapletech Labs</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Mapletech Labs is a software development company based in Edmonton, Alberta that builds custom software, mobile apps, AI and automation, UI/UX design, websites and SEO for clients across Canada. A senior engineer replies to every enquiry within one working day.
+          </p>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             To get a free project consultation from Mapletech Labs, send a short project brief using the form on this page, call <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a>, or email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a>. A senior engineer replies within one working day with next steps. Our Edmonton, Alberta team builds custom software, mobile apps, AI and automation, UI/UX design, websites and SEO for clients in Calgary, Toronto, Vancouver, Ottawa, Montreal and across Canada. The first call is a free 30-minute discovery call, and if the project is a fit we follow up with a written scope and estimate.
           </p>
@@ -199,6 +203,61 @@ export default function ContactRoute() {
           </ul>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Still unsure? Describe the problem in the form above and we will point you to the <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>right service across all Mapletech Labs services</Link> on the call.
+          </p>
+        </section>
+
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-project-types-table">
+          <h2 id="contact-project-types-table" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What kinds of projects does Mapletech Labs take on?</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Mapletech Labs takes on websites, web apps, SaaS products, mobile apps and AI features, from a first MVP to a rebuild of an existing system. The table below shows the typical scope, timeline and CAD range for each project type, so you can see where your idea sits before you send a brief.
+          </p>
+          <div className="contact-channels">
+            <table>
+              <caption style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, textAlign: 'left', paddingBottom: '12px' }}>Typical Mapletech Labs project types, timelines and CAD ranges</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Project type</th>
+                  <th scope="col">Typical scope</th>
+                  <th scope="col">Typical timeline</th>
+                  <th scope="col">Typical range (CAD)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Project type">Website or online store</td>
+                  <td data-label="Typical scope">Marketing site, e-commerce, CMS and SEO foundations</td>
+                  <td data-label="Typical timeline">{PROJECT_PRICING.website.weeksLow}-{PROJECT_PRICING.website.weeksHigh} weeks</td>
+                  <td data-label="Typical range (CAD)">${PROJECT_PRICING.website.low.toLocaleString('en-CA')}-${PROJECT_PRICING.website.high.toLocaleString('en-CA')}</td>
+                </tr>
+                <tr>
+                  <td data-label="Project type">Web app or internal tool</td>
+                  <td data-label="Typical scope">Accounts, dashboards, workflows and integrations</td>
+                  <td data-label="Typical timeline">{PROJECT_PRICING.webapp.weeksLow}-{PROJECT_PRICING.webapp.weeksHigh} weeks</td>
+                  <td data-label="Typical range (CAD)">${PROJECT_PRICING.webapp.low.toLocaleString('en-CA')}-${PROJECT_PRICING.webapp.high.toLocaleString('en-CA')}</td>
+                </tr>
+                <tr>
+                  <td data-label="Project type">SaaS MVP</td>
+                  <td data-label="Typical scope">Subscription billing, onboarding, core product and admin</td>
+                  <td data-label="Typical timeline">{PROJECT_PRICING.saas.weeksLow}-{PROJECT_PRICING.saas.weeksHigh} weeks</td>
+                  <td data-label="Typical range (CAD)">${PROJECT_PRICING.saas.low.toLocaleString('en-CA')}-${PROJECT_PRICING.saas.high.toLocaleString('en-CA')}</td>
+                </tr>
+                <tr>
+                  <td data-label="Project type">Mobile app (iOS, Android or cross-platform)</td>
+                  <td data-label="Typical scope">Native or cross-platform app, API, store release and updates</td>
+                  <td data-label="Typical timeline">{PROJECT_PRICING.mobile.weeksLow}-{PROJECT_PRICING.mobile.weeksHigh} weeks</td>
+                  <td data-label="Typical range (CAD)">${PROJECT_PRICING.mobile.low.toLocaleString('en-CA')}-${PROJECT_PRICING.mobile.high.toLocaleString('en-CA')}</td>
+                </tr>
+                <tr>
+                  <td data-label="Project type">AI feature or automation</td>
+                  <td data-label="Typical scope">LLM integration, chatbot, document processing or predictive model</td>
+                  <td data-label="Typical timeline">About {PROJECT_PRICING.ai.weeksLow} weeks</td>
+                  <td data-label="Typical range (CAD)">${PROJECT_PRICING.ai.low.toLocaleString('en-CA')}-${PROJECT_PRICING.ai.high.toLocaleString('en-CA')}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            These are typical ballpark ranges, not quotes. Scope, platform and integrations decide the final price, and we confirm it in a written estimate after the free consultation. See the full <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development pricing in Canada</Link> for engagement models and cost guides.
           </p>
         </section>
 
