@@ -1,5 +1,5 @@
-'use client';
-
+// Static markup (links, logo, contact details) with no hooks or browser APIs,
+// so it renders on the server and ships no JavaScript to the 9 slow templates.
 import Link from 'next/link';
 import Image from 'next/image';
 
