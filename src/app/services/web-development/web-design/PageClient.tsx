@@ -1,6 +1,8 @@
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 import Link from 'next/link';
 import { PROJECT_PRICING } from '@/data/pricing';
+import { WEB_DESIGN_CITIES } from '@/data/serviceCity';
+import { cities } from '@/data/cities';
 
 function BuyerContent() {
   const cad = (amount: number) => new Intl.NumberFormat('en-CA', {
@@ -54,6 +56,32 @@ function BuyerContent() {
         <p className="lede" style={{ marginTop: 24 }}>
           A marketing website design and build generally falls in the {planningRange(PROJECT_PRICING.website)} range. For the build itself, see our <Link href="/services/web-development">custom web development</Link> services, or explore <Link href="/services/product-design">UI/UX design services</Link> and <Link href="/services/wordpress-cms">WordPress development</Link> for editable content. We work with businesses across Canada, including <Link href="/locations/web-development-company-in-edmonton">web design and development in Edmonton</Link>, <Link href="/locations/web-development-company-in-calgary">web design and development in Calgary</Link>, <Link href="/locations/web-development-company-in-toronto">web design and development in Toronto</Link> and <Link href="/locations/web-development-company-in-vancouver">web design and development in Vancouver</Link>. Compare budgets in our <Link href="/blog/website-cost-canada">Canadian website cost guide</Link>, then <Link href="/contact?service=web-development">request a free web design quote</Link>.
         </p>
+      </div>
+    </section>
+  );
+}
+
+function CityLinks() {
+  return (
+    <section className="section-padding-sm" aria-labelledby="web-design-cities">
+      <div className="cb-container">
+        <div className="head">
+          <div>
+            <h2 id="web-design-cities">Web design in your city</h2>
+            <p className="lede">We design and build websites for businesses across Canada — find local web design services, examples and pricing guidance for your city.</p>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          {WEB_DESIGN_CITIES.map(slug => {
+            const city = cities.find(c => c.slug === slug);
+            if (!city) return null;
+            return (
+              <Link key={slug} href={`/locations/web-design-company-in-${slug}`} className="pill" style={{ height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box', padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>
+                Web Design Company in {city.name}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
@@ -116,7 +144,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Web Design Services"
-      buyerContent={<BuyerContent />}
+      buyerContent={<><BuyerContent /><CityLinks /></>}
     />
   );
 }
