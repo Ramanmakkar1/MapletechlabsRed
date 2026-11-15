@@ -132,14 +132,25 @@ export default function RamanPage() {
               ]}
             />
             <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
+            <p style={{ fontSize: '20px', lineHeight: 1.7, marginBottom: '20px', color: 'var(--ink)', fontWeight: 500, maxWidth: '800px' }}>
+              Raman Makkar is the Founder &amp; CEO of Mapletech Labs, the Edmonton software development company he
+              founded in 2018. He brings 15+ years of software engineering experience and leads a 25+ member team that
+              has delivered 500+ projects for clients across Canada. He leads the company&apos;s{' '}
+              <Link href="/services" style={{ color: 'var(--brand)' }}>software development services</Link>, including{' '}
+              <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>custom web development</Link>,{' '}
+              <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>,{' '}
+              <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link> and{' '}
+              <Link href="/services/product-design" style={{ color: 'var(--brand)' }}>UI/UX design</Link>. Explore the{' '}
+              <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link> for results, or{' '}
+              <Link href="/contact" style={{ color: 'var(--brand)' }}>contact Raman</Link> to discuss your project.
+            </p>
             <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginBottom: '12px' }}>
               Who is Raman Makkar?
             </h2>
             <p style={{ fontSize: '20px', lineHeight: 1.7, marginBottom: '20px', color: 'var(--ink)', fontWeight: 500, maxWidth: '800px' }}>
-              Raman Makkar is the founder and CEO of Mapletech Labs, an Edmonton-based software development company he
-              founded in 2018. He brings 15+ years of engineering experience, including engineering leadership at three
-              startup exits and architecting a fintech platform that processes $1B+ annually, and today leads a 25+ member
-              team that has delivered 500+ projects.
+              His 15+ years of engineering experience include engineering leadership at three startup exits and
+              architecting a fintech platform that processes $1B+ annually, and today he leads a 25+ member team that has
+              delivered 500+ projects.
             </p>
             <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '20px', color: 'var(--body)', maxWidth: '800px' }}>
               That work spans fintech, healthcare, e-commerce, logistics, edtech and enterprise, with real results such as
