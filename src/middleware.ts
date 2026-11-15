@@ -5,6 +5,16 @@ import { NextResponse, type NextRequest } from 'next/server';
 // Content only changes on deploy, so this must not run a network call, a
 // redirect-table scan, or a per-request regex on those paths.
 const HTML_CACHE = 'public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400';
+// Repository-managed SEO templates are force-static and use Next's one-year
+// expireTime, so keep them at the CDN for the same window instead of letting
+// them fall back to the one-day document cache and be re-rendered on audit.
+const STATIC_TEMPLATE_CACHE = 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400';
+
+function isStaticTemplate(pathname: string): boolean {
+  return pathname === '/services' || pathname.startsWith('/services/')
+    || pathname === '/locations' || pathname.startsWith('/locations/')
+    || pathname === '/blog' || pathname.startsWith('/blog/');
+}
 
 function isDocument(pathname: string): boolean {
   return !pathname.startsWith('/_next/') && !pathname.startsWith('/api');
@@ -62,7 +72,7 @@ export function middleware(req: NextRequest) {
     }
     if (!isDocument(pathname)) return NextResponse.next();
     const res = NextResponse.next();
-    res.headers.set('Cache-Control', HTML_CACHE);
+    res.headers.set('Cache-Control', isStaticTemplate(pathname) ? STATIC_TEMPLATE_CACHE : HTML_CACHE);
     return res;
   }
 
