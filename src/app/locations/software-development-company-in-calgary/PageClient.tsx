@@ -83,6 +83,7 @@ export default function PageClient() {
       localContent={
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container prose-body">
+            <p>A Calgary example: for RouteLogic Inc. we built a <Link href="/case-studies/logistics-platform">real-time fleet management system</Link> that tracks 500 trucks and 15K+ daily deliveries and cut fuel cost by 25%. See all our <Link href="/case-studies">software development case studies</Link>.</p>
             <p>Energy and logistics teams modernizing infrastructure often start with cloud architecture and pipelines. See our page on <Link href="/locations/calgary/cloud-devops">cloud and DevOps in Calgary</Link>, or our <Link href="/blog/software-development-companies-calgary">Calgary software development guide</Link> for local costs and how to choose a partner.</p>
             <p>Planning a mobile app? Compare <Link href="/services/mobile-app-development/calgary">mobile app development in Calgary</Link>, or read our guide on <Link href="/blog/app-development-companies-calgary">choosing an app development company in Calgary</Link>.</p>
           </div>
