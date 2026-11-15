@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
+import HubBuyerGuides from '@/components/page/HubBuyerGuides';
 import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
@@ -127,6 +128,7 @@ function BuyerContent() {
         { href: '/locations/ui-ux-design-company-in-montreal', label: 'UI/UX design company in Montreal', note: 'Remote UI/UX design for Montreal teams, with workshops on request.' },
       ]}
     />
+    <HubBuyerGuides serviceSlug="product-design" heading="How to choose a UI/UX design company: city guides" />
     </>
   );
 }

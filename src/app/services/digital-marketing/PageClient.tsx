@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
+import HubBuyerGuides from '@/components/page/HubBuyerGuides';
 import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
@@ -72,6 +73,7 @@ export default function PageClient() {
               <p className="lede">Hiring locally? See our digital marketing agency pages for <Link href="/locations/digital-marketing-agency-in-edmonton">digital marketing agency in Edmonton</Link>, <Link href="/locations/digital-marketing-agency-in-calgary">Calgary</Link>, <Link href="/locations/digital-marketing-agency-in-toronto">Toronto</Link>, <Link href="/locations/digital-marketing-agency-in-vancouver">Vancouver</Link>, <Link href="/locations/digital-marketing-agency-in-ottawa">Ottawa</Link> and <Link href="/locations/digital-marketing-agency-in-montreal">Montreal</Link>.</p>
             </div>
           </section>
+          <HubBuyerGuides serviceSlug="digital-marketing" heading="How to choose an SEO company: city guides" />
         </>
       )}
     />

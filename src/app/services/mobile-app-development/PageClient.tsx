@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 import ServiceCityLinks from '@/components/page/ServiceCityLinks';
+import HubBuyerGuides from '@/components/page/HubBuyerGuides';
 import { serviceCaseMap } from '@/data/service-case-map';
 import { work } from '@/data/work';
 
@@ -182,6 +183,7 @@ export default function PageClient() {
             { href: '/locations/app-development-company-in-montreal', label: 'App development company in Montreal', note: 'app development for Montreal businesses, delivered remotely' },
           ]}
         />
+        <HubBuyerGuides serviceSlug="mobile-app-development" heading="How to choose an app development company: city guides" />
         </>
       }
     />

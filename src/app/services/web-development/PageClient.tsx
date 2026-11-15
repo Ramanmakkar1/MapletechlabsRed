@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 import ServiceCityLinks from '@/components/page/ServiceCityLinks';
+import HubBuyerGuides from '@/components/page/HubBuyerGuides';
 import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
@@ -144,6 +145,7 @@ export default function PageClient() {
             { href: '/locations/web-development-company-in-montreal', label: 'Web development company in Montreal', note: 'web development for Montreal businesses, delivered remotely' },
           ]}
         />
+        <HubBuyerGuides serviceSlug="web-development" heading="How to choose a web development company: city guides" />
         </>
       )}
     />
