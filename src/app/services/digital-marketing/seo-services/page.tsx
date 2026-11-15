@@ -14,6 +14,7 @@ const TITLE = 'SEO Services in Canada: Technical and Local';
 const DESCRIPTION = 'SEO services in Canada from an Edmonton-based team: technical SEO, local SEO, link building and content strategy. 200% avg organic traffic growth.';
 
 export const metadata: Metadata = {
+  // Rendered title: "SEO Services in Canada: Technical and Local | Mapletech Labs" (60 chars).
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
