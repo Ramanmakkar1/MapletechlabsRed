@@ -2263,7 +2263,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         body: [
           'For SaaS handling health data, PHIPA requirements can affect access, consent, retention and how information moves between providers. Public-facing parts may need to meet AODA/WCAG 2.0 AA accessibility requirements, including keyboard navigation, readable forms and screen reader support. PIPEDA may also apply to personal information handled through commercial activities. We map data flows and technical controls during discovery, using our ',
           { href: '/blog/app-privacy-compliance-canada', label: 'Canadian app privacy checklist' },
-          ' to support planning and review; your legal team confirms what applies',
+          ' to support planning and review; your legal team confirms what applies.',
         ],
       },
       {
@@ -2272,7 +2272,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           'Our ',
           { href: '/blog/saas-development-cost-canada', label: 'Canadian SaaS development cost guide' },
           ' puts an MVP at $30,000-$75,000 CAD over 3 - 4 months, a growth-stage product at $75,000-$200,000 over 4 - 8 months, and an enterprise platform at $200,000-$500,000+ over 8 - 18 months. Integrations, security requirements and the scope of the first release shape your fixed CAD price. Before choosing a partner, use our ',
-          { href: '/blog/software-development-companies-toronto', label: 'guide to choosing a Toronto software company' },
+          { href: '/blog/saas-development-companies-toronto', label: 'guide to choosing a SaaS development company in Toronto' },
           ' to compare scope, delivery responsibilities and ownership terms.',
         ],
       },
