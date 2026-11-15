@@ -2037,6 +2037,14 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         ],
       },
       {
+        heading: 'Design systems and accessibility built in',
+        body: [
+          'Edmonton products rarely stay small, so we leave behind a component library and design tokens rather than a folder of one-off screens. Buttons, forms, tables, empty states and error states are documented once and reused, which keeps later features consistent and cuts design and build time. Accessibility is decided in those components, not patched in at the end: we design to WCAG 2.2 AA for contrast, focus states, keyboard paths, text sizing and screen-reader labels, which supports public-sector, healthcare and campus clients in Edmonton. See how we structure this work on our ',
+          { href: '/services/product-design/design-systems', label: 'design systems' },
+          ' page.',
+        ],
+      },
+      {
         heading: 'In-person workshops and user testing in Edmonton',
         body: [
           'Because our head office is in Edmonton, research does not have to happen only on a video call. We can facilitate discovery workshops at your site, watch how staff use today’s tools and sketch flows with the people who will live in the product. Usability tests can be run in person with local participants when that gives clearer feedback than a remote session. Between visits, you share Figma links, comment on prototypes and join short review calls so decisions do not stall.',
