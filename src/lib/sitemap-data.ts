@@ -95,6 +95,7 @@ export const blogSlugs = [
   'web-development-companies-ottawa',
   'web-development-companies-montreal',
   'healthcare-software-development-canada',
+  'healthcare-ai-development-canada',
   'shopify-vs-custom-ecommerce-canada',
   'ai-chatbot-development-cost-canada',
   'ai-chatbot-vs-ai-agent-for-business',

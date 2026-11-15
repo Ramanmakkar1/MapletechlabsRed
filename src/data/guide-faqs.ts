@@ -1,4 +1,26 @@
 export const GUIDE_FAQS: Record<string, { q: string; a: string }[]> = {
+  'healthcare-ai-development-canada': [
+    {
+      q: 'What is healthcare AI development in Canada?',
+      a: 'It is the design and building of AI features for Canadian health organizations, such as clinical documentation, intake support, knowledge search and patient messaging. Good projects combine a bounded use case with approved data sources, human review, privacy assessment and evaluation before launch.',
+    },
+    {
+      q: 'Is healthcare AI regulated in Canada?',
+      a: 'It can be. Some AI uses may fall under Health Canada medical-device rules or professional-college obligations, while privacy laws such as PHIPA, PIPEDA and HIA govern the information. Your counsel and privacy officer should confirm which rules apply to your specific use case before development starts.',
+    },
+    {
+      q: 'Does healthcare AI data have to stay in Canada?',
+      a: 'Not always, but many health organizations and contracts require Canadian storage and processing for identifiable data. Confirm where the application, database, backups, logs and model provider run, and get the residency and subprocessor terms in writing rather than assuming a Canadian region covers everything.',
+    },
+    {
+      q: 'How much does healthcare AI development cost in Canada?',
+      a: 'A focused RAG assistant over a clean document set can cost less than a clinical tool integrated with an EHR and a sign-off workflow. Cost is driven by data readiness, integrations, evaluation, privacy review and ongoing operations. See our AI development cost guide for CAD planning ranges by feature type.',
+    },
+    {
+      q: 'When should we not use AI in healthcare?',
+      a: 'Avoid AI when a deterministic rule or form is more reliable, when there is no approved source of truth, when no one can review the output before it affects care or payment, or when the privacy basis and residency requirements are unresolved. Fixing the workflow or data is often the better first step.',
+    },
+  ],
   'app-development-cost-canada': [
     {
       q: 'How much does a simple app cost in Canada?',
