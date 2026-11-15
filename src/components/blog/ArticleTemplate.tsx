@@ -19,6 +19,17 @@ const CATEGORY_SERVICE: Record<string, CityService> = {
   Business: { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
 };
 
+/** Canonical service page per Article.relatedTopic, for the top service callout. */
+const RELATED_TOPIC_SERVICE: Record<import('@/data/articles').RelatedTopic, { href: string; label: string }> = {
+  software: { href: '/services/software-development', label: 'software development services' },
+  saas: { href: '/services/saas-development', label: 'SaaS development services' },
+  web: { href: '/services/web-development', label: 'web development services' },
+  apps: { href: '/services/mobile-app-development', label: 'mobile app development services' },
+  ai: { href: '/services/ai-ml', label: 'AI development services' },
+  design: { href: '/services/product-design', label: 'UI/UX design services' },
+  seo: { href: '/services/digital-marketing', label: 'SEO and digital marketing services' },
+};
+
 /** Direct service link in the project CTA when the secondary button points at a tool. */
 const SLUG_PROJECT_SERVICE: Record<string, { href: string; label: string }> = {
   'nrc-irap-funding-software-canada': { href: '/services/saas-development', label: 'Custom software and SaaS development' },
@@ -251,6 +262,19 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                     );
                   })}
                 </div>
+
+                {/* Top service callout */}
+                {(() => {
+                  const svc = a.relatedService ?? RELATED_TOPIC_SERVICE[a.relatedTopic];
+                  if (!svc) return null;
+                  return (
+                    <div className="reveal" style={{ marginBottom: 28, padding: 'clamp(18px, 2.2vw, 24px)', border: '1px solid var(--brand)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)' }}>
+                      <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
+                        {a.relatedService ? 'Get a quote for ' : 'Need this built? '}<Link href={svc.href} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>See our {svc.label}</Link> from Mapletech Labs.
+                      </p>
+                    </div>
+                  );
+                })()}
 
                 {a.body.map((b, i) => (
                   <div key={i} className="reveal" style={{ marginBottom: b.type === 'h2' ? 4 : 0 }}>
