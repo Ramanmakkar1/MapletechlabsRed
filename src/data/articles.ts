@@ -414,6 +414,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'developers', text: 'For developers: Claude Code and the API' },
       { type: 'p', html: 'If you write software, the two developer-facing ways to use Claude are <strong>Claude Code</strong> (a command-line coding agent that works inside your repository) and the <strong>Anthropic API</strong> (for building Claude into your own apps). Both are metered by usage rather than offered on the same free chat plan, so they are not "free" in the claude.ai sense — but you can start small and pay only for what you use, and a few dollars of API credit goes a long way while you are learning.' },
       { type: 'p', html: 'For everyday coding help, though, you do not need either: paste your code into the free claude.ai chat and you get most of the value with none of the setup.' },
+      { type: 'p', html: 'If your business wants Claude or another model built into its own product or workflows, rather than used in a chat window, that is an <a href="/services/ai-ml/llm-integration">LLM integration</a>. Our <a href="/blog/ai-development-cost-canada">AI development cost guide</a> covers typical Canadian budgets.' },
       { type: 'h2', id: 'get-more', text: 'Getting noticeably better answers on the free plan' },
       { type: 'p', html: 'The single biggest lever is not the plan, it is how you ask. The same free account produces dramatically better output when you:' },
       { type: 'checks', items: [
@@ -506,6 +507,8 @@ export const articles: Article[] = [
         '<strong>Convenience:</strong> the cloud wins. No downloads, no hardware limits, always the latest model.',
       ] },
       { type: 'callout', tone: 'brand', title: 'The practical answer for most people', text: 'Use both. Run a local open model for private, offline or high-volume work, and reach for a hosted model like Claude when you want the strongest possible answer. They are complementary, not competitors.' },
+      { type: 'h2', id: 'for-businesses', text: 'Running private AI models for a business' },
+      { type: 'p', html: 'Teams that like the privacy of local models often want the same thing at company scale: an open-weight or hosted model connected to their own documents and systems, with data kept in Canada. That is an <a href="/services/ai-ml/llm-integration">LLM integration project</a>, and the most common first use is a <a href="/services/ai-ml/ai-chatbots">custom AI chatbot</a> for support or internal knowledge. For budgets, see our <a href="/blog/ai-chatbot-development-cost-canada">AI chatbot development cost guide</a>.' },
       { type: 'h2', id: 'claude-note', text: 'A note on Claude and other hosted models' },
       { type: 'p', html: 'If you were hoping to run Claude itself locally, you cannot — it is a hosted model and is not distributed as downloadable weights. The good news is that Claude has a capable free plan you can use in a browser with no setup. We covered exactly how in <a href="/blog/use-claude-for-free">How to Use Claude for Free in 2026</a>. Pair that with a local open model from this guide and you have both ends of the spectrum covered, for free.' },
     ],
