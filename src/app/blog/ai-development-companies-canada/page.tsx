@@ -11,19 +11,19 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const a = getArticle('ai-development-companies-canada');
-if (!a) notFound();
+const article = getArticle('ai-development-companies-canada');
+if (!article) notFound();
 const URL = `https://mapletechlabs.ca/blog/ai-development-companies-canada`;
 
 export const metadata: Metadata = {
-  title: seoTitle(a.metaTitle),
-  description: seoDescription(a.metaDescription),
+  title: seoTitle(article.metaTitle),
+  description: seoDescription(article.metaDescription),
   openGraph: {
-    title: ogTitle(a.metaTitle),
-    description: seoDescription(a.metaDescription),
+    title: ogTitle(article.metaTitle),
+    description: seoDescription(article.metaDescription),
     type: 'article',
-    publishedTime: a.date,
-    modifiedTime: a.dateModified,
+    publishedTime: article.date,
+    modifiedTime: article.dateModified,
     url: URL,
   },
   alternates: { canonical: canonicalUrl('/blog/ai-development-companies-canada') },
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: a.title,
-  description: a.metaDescription,
-  datePublished: a.date,
-  dateModified: a.dateModified,
+  headline: article.title,
+  description: article.metaDescription,
+  datePublished: article.date,
+  dateModified: article.dateModified,
   author: BLOG_AUTHOR,
   image: BLOG_IMAGE,
   publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
@@ -44,14 +44,16 @@ const jsonLd = {
 };
 
 export default function Page() {
+  if (!article) notFound();
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'ai-development-companies-canada')} />
-      <FaqSchema faqs={a.faqs} />
+      <BreadcrumbSchema items={getBlogBreadcrumbs(article.title, 'ai-development-companies-canada')} />
+      <FaqSchema faqs={article.faqs} />
       <ArticleTemplate
-        a={a}
-        related={getRelatedArticles(a.slug)}
+        a={article}
+        related={getRelatedArticles(article.slug)}
         relatedServices={
           <RelatedServices
             links={[
