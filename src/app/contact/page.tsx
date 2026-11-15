@@ -82,6 +82,15 @@ export default function ContactRoute() {
         <section style={{ padding: '0 0 var(--section-y)' }}>
           <div className="cb-container">
             <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
+        <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-what-we-build">
+          <h2 id="contact-what-we-build" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What Mapletech Labs builds, where we work and what it costs</h2>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Mapletech Labs is an Edmonton, Alberta software development company that builds custom software, SaaS platforms, mobile apps, AI and automation, UI/UX design, websites and SEO for clients across Canada. We work from Edmonton with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal, mostly remotely with weekly demos. Most projects are fixed-scope: after a free 30-minute discovery call we send a written scope and a fixed price, with typical CAD ranges of ${PROJECT_PRICING.website.low.toLocaleString('en-CA')}-${PROJECT_PRICING.website.high.toLocaleString('en-CA')} for a website, ${PROJECT_PRICING.webapp.low.toLocaleString('en-CA')}-${PROJECT_PRICING.webapp.high.toLocaleString('en-CA')} for a web app, ${PROJECT_PRICING.saas.low.toLocaleString('en-CA')}-${PROJECT_PRICING.saas.high.toLocaleString('en-CA')} for a SaaS MVP and ${PROJECT_PRICING.mobile.low.toLocaleString('en-CA')}-${PROJECT_PRICING.mobile.high.toLocaleString('en-CA')} for a mobile app. See our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development pricing in Canada</Link> for current ranges and our <Link href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development case studies</Link> for shipped work. Send a short brief and a senior engineer replies within one working day.
+          </p>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Start with the <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development services we offer</Link>, or see how we work with local businesses as a <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development company in Edmonton</Link>.
+          </p>
+        </section>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-answer">
           <h2 id="contact-answer" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How to get a free project consultation from Mapletech Labs</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
