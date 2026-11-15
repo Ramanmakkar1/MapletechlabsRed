@@ -1,21 +1,12 @@
 import { cities } from '@/data/cities';
 import { PROJECT_PRICING } from '@/data/pricing';
 import { services } from '@/data/services';
+import { work } from '@/data/work';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { SITEMAP_CHILDREN } from '@/lib/sitemap-data';
 
 export const revalidate = 86400;
-
-/** Case-study pages that are live and listed in the page sitemap. */
-const CASE_STUDIES = [
-  { slug: 'fintech-trading-platform', label: 'Fintech trading platform' },
-  { slug: 'healthcare-telehealth', label: 'Healthcare telehealth platform' },
-  { slug: 'ecommerce-platform', label: 'Ecommerce platform' },
-  { slug: 'logistics-platform', label: 'Logistics platform' },
-  { slug: 'real-estate-portal', label: 'Real estate portal' },
-  { slug: 'payments-api-platform', label: 'Payments API platform' },
-];
 
 function buildText(): string {
   // Reuse the sitemap as the source of truth: only live, indexable URLs are emitted.
@@ -69,7 +60,11 @@ function buildText(): string {
   out.push('');
   out.push('## Case studies');
   out.push('');
-  out.push(...lines(CASE_STUDIES.map(cs => link(cs.label, `/case-studies/${cs.slug}`))));
+  out.push(...lines(work.map(project => link(
+    `${project.title} for ${project.client}`,
+    project.href,
+    project.desc,
+  ))));
   out.push(...lines([link('All case studies', '/case-studies')]));
   out.push('');
   out.push('## Contact');
