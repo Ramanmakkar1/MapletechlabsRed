@@ -1,7 +1,8 @@
 import { getArticle } from '@/data/articles';
 import { provinceSlugs } from '@/data/provinces';
 import { serviceCityCombos, agencyCombos, webDesignCombos, isPriorityService, isIndexableCityService } from '@/data/serviceCity';
-import { siteOrigin } from '@/lib/seo/canonical';
+import { canonicalPath, siteOrigin } from '@/lib/seo/canonical';
+import { isIndexableSitemapPath } from '@/lib/seo/indexability';
 
 export const BASE_URL = siteOrigin();
 
@@ -131,6 +132,15 @@ export function xmlEscape(value: string): string {
     .replace(/'/g, '&apos;');
 }
 
+/**
+ * Keep redirected, removed and noindex URLs out of every child sitemap. This
+ * is applied at the builder level so route handlers, the sitemap index and
+ * llms.txt all consume the same indexability-safe list.
+ */
+export function filterIndexableEntries(entries: SitemapEntry[]): SitemapEntry[] {
+  return entries.filter(entry => isIndexableSitemapPath(canonicalPath(entry.loc)));
+}
+
 /** Newest lastmod among a set of entries, or undefined when none carries one. */
 export function newestLastmod(entries: SitemapEntry[]): string | undefined {
   let newest: string | undefined;
@@ -149,7 +159,7 @@ export function newestLastmod(entries: SitemapEntry[]): string | undefined {
  */
 
 export function pageSitemapEntries(): SitemapEntry[] {
-  return [
+  return filterIndexableEntries([
     { loc: BASE_URL, lastmod: '2026-03-15', changefreq: 'weekly', priority: '1.0' },
     { loc: `${BASE_URL}/about`, lastmod: '2026-11-13', changefreq: 'monthly', priority: '0.8' },
     { loc: `${BASE_URL}/contact`, lastmod: '2026-11-14', changefreq: 'monthly', priority: '0.9' },
@@ -172,7 +182,7 @@ export function pageSitemapEntries(): SitemapEntry[] {
     { loc: `${BASE_URL}/tools/sred-estimator`, lastmod: '2026-11-03', changefreq: 'monthly', priority: '0.7' },
     { loc: `${BASE_URL}/tools/in-house-vs-agency`, lastmod: '2026-11-03', changefreq: 'monthly', priority: '0.7' },
     { loc: `${BASE_URL}/tools/project-brief`, lastmod: '2026-11-03', changefreq: 'monthly', priority: '0.7' },
-  ];
+  ]);
 }
 
 /*
@@ -198,12 +208,12 @@ const blogLastmod: Record<string, string> = {
 };
 
 export function blogSitemapEntries(): SitemapEntry[] {
-  return blogSlugs.map(slug => ({
+  return filterIndexableEntries(blogSlugs.map(slug => ({
     loc: `${BASE_URL}/blog/${slug}`,
     lastmod: getArticle(slug)?.dateModified ?? blogLastmod[slug],
     changefreq: 'monthly',
     priority: '0.6',
-  }));
+  })));
 }
 
 export function serviceSitemapEntries(): SitemapEntry[] {
@@ -222,25 +232,25 @@ export function serviceSitemapEntries(): SitemapEntry[] {
     changefreq: 'monthly',
     priority: '0.9',
   }));
-  return [...services, ...standaloneServices, ...cityServices];
+  return filterIndexableEntries([...services, ...standaloneServices, ...cityServices]);
 }
 
 export function subserviceSitemapEntries(): SitemapEntry[] {
-  return Object.entries(subServices).flatMap(([category, slugs]) =>
+  return filterIndexableEntries(Object.entries(subServices).flatMap(([category, slugs]) =>
     slugs.map(slug => ({
       loc: `${BASE_URL}/services/${category}/${slug}`,
       changefreq: 'monthly',
       priority: '0.8',
     }))
-  );
+  ));
 }
 
 export function industrySitemapEntries(): SitemapEntry[] {
-  return industrySlugs.map(slug => ({
+  return filterIndexableEntries(industrySlugs.map(slug => ({
     loc: `${BASE_URL}/industries/${slug}`,
     changefreq: 'monthly',
     priority: '0.7',
-  }));
+  })));
 }
 
 export function locationSitemapEntries(): SitemapEntry[] {
@@ -271,14 +281,14 @@ export function locationSitemapEntries(): SitemapEntry[] {
     changefreq: 'monthly' as const,
     priority: '0.85',
   };
-  return [...provinces, ...cities, ...serviceCities, aiConsultingEdmonton, aiConsultingToronto];
+  return filterIndexableEntries([...provinces, ...cities, ...serviceCities, aiConsultingEdmonton, aiConsultingToronto]);
 }
 
 export function localSeoSitemapEntries(): SitemapEntry[] {
   // Priority services now live at keyword URLs (in locationSitemapEntries), so
   // their old mesh URLs are excluded here to avoid duplicate listings. Niche
   // pairs that the page itself marks noindex are excluded as well.
-  return citySlugs.flatMap(city =>
+  return filterIndexableEntries(citySlugs.flatMap(city =>
     serviceSlugs
       .filter(s => !isPriorityService(s) && isIndexableCityService(city, s))
       .filter(s => !REDIRECTED_LOCATION_SLUGS.has(`/locations/${city}/${s}`))
@@ -290,15 +300,15 @@ export function localSeoSitemapEntries(): SitemapEntry[] {
         // that can rank and convert.
         priority: '0.3',
       }))
-  );
+  ));
 }
 
 export function legalSitemapEntries(): SitemapEntry[] {
-  return ['privacy', 'terms', 'cookies'].map(slug => ({
+  return filterIndexableEntries(['privacy', 'terms', 'cookies'].map(slug => ({
     loc: `${BASE_URL}/${slug}`,
     changefreq: 'yearly',
     priority: '0.3',
-  }));
+  })));
 }
 
 /** Child sitemaps in index order, each paired with its entry builder. */
