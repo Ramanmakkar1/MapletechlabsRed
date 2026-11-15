@@ -1,7 +1,12 @@
 import path from 'node:path';
 import { execSync } from 'node:child_process';
 import type { NextConfig } from "next";
-import { STATIC_TEMPLATE_CACHE, STATIC_TEMPLATE_CDN_CACHE } from './src/lib/cache-headers';
+import {
+  STATIC_TEMPLATE_CACHE,
+  STATIC_TEMPLATE_CDN_CACHE,
+  STATIC_SERVICE_LOCATION_CACHE,
+  STATIC_SERVICE_LOCATION_CDN_CACHE,
+} from './src/lib/cache-headers';
 
 function buildSha(): string {
   const fromEnv = process.env.BUILD_SHA || process.env.VERCEL_GIT_COMMIT_SHA || process.env.GIT_COMMIT || process.env.SOURCE_COMMIT;
@@ -85,8 +90,8 @@ const nextConfig: NextConfig = {
       {
         source: '/services/:path*',
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400' },
-          { key: 'CDN-Cache-Control', value: STATIC_TEMPLATE_CDN_CACHE },
+          { key: 'Cache-Control', value: STATIC_SERVICE_LOCATION_CACHE },
+          { key: 'CDN-Cache-Control', value: STATIC_SERVICE_LOCATION_CDN_CACHE },
         ],
       },
       {
@@ -108,15 +113,15 @@ const nextConfig: NextConfig = {
       {
         source: '/locations',
         headers: [
-          { key: 'Cache-Control', value: STATIC_TEMPLATE_CACHE },
-          { key: 'CDN-Cache-Control', value: STATIC_TEMPLATE_CDN_CACHE },
+          { key: 'Cache-Control', value: STATIC_SERVICE_LOCATION_CACHE },
+          { key: 'CDN-Cache-Control', value: STATIC_SERVICE_LOCATION_CDN_CACHE },
         ],
       },
       {
         source: '/locations/:path*',
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400' },
-          { key: 'CDN-Cache-Control', value: STATIC_TEMPLATE_CDN_CACHE },
+          { key: 'Cache-Control', value: STATIC_SERVICE_LOCATION_CACHE },
+          { key: 'CDN-Cache-Control', value: STATIC_SERVICE_LOCATION_CDN_CACHE },
         ],
       },
       // The keyword city pages and the city+service mesh are the slowest
@@ -125,22 +130,22 @@ const nextConfig: NextConfig = {
       {
         source: '/locations/:slug',
         headers: [
-          { key: 'Cache-Control', value: STATIC_TEMPLATE_CACHE },
-          { key: 'CDN-Cache-Control', value: STATIC_TEMPLATE_CDN_CACHE },
+          { key: 'Cache-Control', value: STATIC_SERVICE_LOCATION_CACHE },
+          { key: 'CDN-Cache-Control', value: STATIC_SERVICE_LOCATION_CDN_CACHE },
         ],
       },
       {
         source: '/locations/:city/:service',
         headers: [
-          { key: 'Cache-Control', value: STATIC_TEMPLATE_CACHE },
-          { key: 'CDN-Cache-Control', value: STATIC_TEMPLATE_CDN_CACHE },
+          { key: 'Cache-Control', value: STATIC_SERVICE_LOCATION_CACHE },
+          { key: 'CDN-Cache-Control', value: STATIC_SERVICE_LOCATION_CDN_CACHE },
         ],
       },
       {
         source: '/locations/ai-development-company-in-vancouver',
         headers: [
-          { key: 'Cache-Control', value: STATIC_TEMPLATE_CACHE },
-          { key: 'CDN-Cache-Control', value: STATIC_TEMPLATE_CDN_CACHE },
+          { key: 'Cache-Control', value: STATIC_SERVICE_LOCATION_CACHE },
+          { key: 'CDN-Cache-Control', value: STATIC_SERVICE_LOCATION_CDN_CACHE },
         ],
       },
     ];
