@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -31,6 +32,38 @@ const faqs = [
   { q: 'Do you create the content or do we?', a: 'We handle all content creation unless you prefer to provide assets — our team produces graphics, video edits, captions, and creative concepts. For some clients we work in a hybrid model, using your team\'s raw footage or photography with our creative direction and editing.' },
 ];
 
+const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
+
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to hire a social media marketing agency</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Hire a social media marketing agency when you need consistent posting, active community management and paid social results but cannot staff all three in-house. An agency gives you a strategy, a content calendar and a team to publish and optimise every month.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>A channel strategy built around your audience, competitors and business goals.</li>
+          <li>A monthly content calendar covering pillars, formats and captions.</li>
+          <li>Graphics, short-form video and reels produced by our creative team.</li>
+          <li>Daily community management across comments, DMs and mentions.</li>
+          <li>Monthly reporting that ties reach and engagement to leads and revenue.</li>
+        </ul>
+        <p>
+          Pair social with <Link href="/services/digital-marketing/content-marketing">content marketing</Link> and <Link href="/services/digital-marketing/google-ads-ppc">Google Ads PPC</Link> for a full-funnel plan, and read our guide to <Link href="/blog/digital-marketing-agencies-canada">digital marketing agencies in Canada</Link> before you choose a partner.
+        </p>
+        <p>
+          Explore social media marketing in{' '}
+          {cityLinks.map(([name, slug], i) => (
+            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={`/locations/digital-marketing-agency-in-${slug}`}>{name}</Link></span>
+          ))}. Ready to grow your audience? <Link href="/contact">Book a social media strategy call</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +75,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
