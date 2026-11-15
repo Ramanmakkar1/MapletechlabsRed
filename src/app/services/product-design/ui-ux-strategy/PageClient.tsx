@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '150+', label: 'Products Designed' },
@@ -31,6 +33,38 @@ const faqs = [
   { q: 'Can strategy work be done remotely?', a: 'Absolutely. We have delivered strategy engagements for clients across North America, Europe, and the Asia-Pacific region entirely remotely using Figma, Miro, Notion, and video facilitation. Timezone alignment is planned at the kickoff.' },
 ];
 
+const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
+
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to hire a UI/UX strategy team</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          A 3wk UI/UX strategy sprint maps users, journeys and priorities before design or build. It gives your team evidence for deciding what to improve first and what to leave out.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>Research findings that explain user needs, pain points and opportunities.</li>
+          <li>A journey map of key tasks, friction points and moments that matter.</li>
+          <li>A prioritised roadmap that sequences improvements against business goals.</li>
+          <li>Wireframe direction for the highest-priority screens and flows.</li>
+          <li>Success metrics to evaluate the experience after launch.</li>
+        </ul>
+        <p>
+          Turn the strategy into <Link href="/services/product-design/wireframing">wireframes</Link>, validate critical flows with <Link href="/services/product-design/prototyping">interactive prototypes</Link>, and keep delivery consistent with a <Link href="/services/product-design/design-systems">shared design system</Link>. For budget planning, read our <Link href="/blog/ui-ux-design-cost-canada">UI/UX design cost guide for Canada</Link>.
+        </p>
+        <p>
+          Explore UI/UX strategy in{' '}
+          {cityLinks.map(([name, slug], i) => (
+            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('product-design', slug)}>{name}</Link></span>
+          ))}. Ready to define your product priorities? <Link href="/contact">Book a UI/UX strategy consultation</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +76,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
