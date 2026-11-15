@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '200+', label: 'Products Wireframed' },
@@ -31,6 +33,38 @@ const faqs = [
   { q: 'What files do I receive at the end?', a: 'You receive a fully organised Figma file containing all wireframes, annotated specs, user flow diagrams, and a component inventory. Exports as PDF and PNG are also provided for stakeholder presentations. You own all delivered files outright.' },
 ];
 
+const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
+
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to hire a wireframing team</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Hire a wireframing team when you need to agree on structure before visual design or development. Our first wireframes arrive in 1wk, so your team can review real layouts early and avoid expensive rework later.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>Low-fidelity wireframes for every key screen and layout.</li>
+          <li>User flow maps showing each path through the product.</li>
+          <li>Responsive layout plans for desktop, tablet and mobile.</li>
+          <li>A documented interaction pattern library for consistency.</li>
+          <li>Handoff-ready annotated specs with spacing and component notes.</li>
+        </ul>
+        <p>
+          Validate the flows with <Link href="/services/product-design/prototyping">interactive prototypes</Link>, set direction with <Link href="/services/product-design/ui-ux-strategy">UI/UX strategy</Link>, and plan budget with our <Link href="/blog/ui-ux-design-cost-canada">UI/UX design cost guide for Canada</Link>.
+        </p>
+        <p>
+          Explore wireframing in{' '}
+          {cityLinks.map(([name, slug], i) => (
+            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('product-design', slug)}>{name}</Link></span>
+          ))}. Ready to align your team? <Link href="/contact">Book a wireframing consultation</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +76,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
