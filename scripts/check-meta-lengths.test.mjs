@@ -45,3 +45,22 @@ test("rendered metadata gate rejects short text and accepts corrected audited UR
     rmSync(appDir, { recursive: true, force: true });
   }
 });
+
+test("description lower bound is 140, not 120", () => {
+  const appDir = mkdtempSync(join(tmpdir(), "mapletech-meta-boundary-"));
+  const title = "A".repeat(50);
+  try {
+    mkdirSync(join(appDir, "at-120"));
+    writeFileSync(join(appDir, "at-120", "index.html"), page(title, "D".repeat(120)));
+    mkdirSync(join(appDir, "at-140"));
+    writeFileSync(join(appDir, "at-140", "index.html"), page(title, "D".repeat(140)));
+
+    const result = run(appDir);
+    assert.equal(result.status, 1);
+    assert.deepEqual(JSON.parse(result.stdout), [
+      { route: "/at-120", field: "description", length: 120, text: "D".repeat(120) },
+    ]);
+  } finally {
+    rmSync(appDir, { recursive: true, force: true });
+  }
+});
