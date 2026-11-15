@@ -6,6 +6,8 @@ import type { ReactNode } from 'react';
 // audit measures a cold server render (7-10 s) as the response time.
 export const dynamic = 'force-static';
 export const revalidate = false;
+// Cache-only: city and city+service routes must not fetch uncached at request time.
+export const fetchCache = 'force-cache';
 
 export default function LocationsLayout({ children }: { children: ReactNode }) {
   return <>{children}</>;

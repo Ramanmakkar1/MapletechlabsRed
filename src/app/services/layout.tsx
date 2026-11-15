@@ -7,6 +7,8 @@ import type { ReactNode } from 'react';
 // measure it as the server response time.
 export const dynamic = 'force-static';
 export const revalidate = false;
+// Cache-only: never fall back to an uncached fetch on a service route.
+export const fetchCache = 'force-cache';
 
 export default function ServicesLayout({ children }: { children: ReactNode }) {
   return <>{children}</>;
