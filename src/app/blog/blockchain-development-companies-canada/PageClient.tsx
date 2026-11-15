@@ -36,7 +36,7 @@ const companies = [
 ];
 
 const relatedPosts = [
-  { slug: 'ai-development-companies-canada', title: 'Top 10 AI Development Companies in Canada', category: 'Technology', readTime: '9 min' },
+  { slug: 'ai-development-companies-edmonton', title: 'AI Development Companies in Edmonton', category: 'Technology', readTime: '9 min' },
   { slug: 'top-software-development-companies-canada', title: 'Top 10 Software Development Companies in Canada', category: 'Business', readTime: '10 min' },
   { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
 ];

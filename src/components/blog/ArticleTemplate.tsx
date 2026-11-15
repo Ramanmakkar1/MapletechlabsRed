@@ -295,7 +295,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                   return (
                     <div className="reveal" style={{ marginBottom: 28, padding: 'clamp(18px, 2.2vw, 24px)', border: '1px solid var(--brand)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)' }}>
                       <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                        {a.relatedService ? 'Get a quote for ' : 'Need this built? '}<Link href={svc.href} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>See our {svc.label}</Link> from Mapletech Labs.
+                        {a.relatedService ? 'Get a quote for our ' : 'Need this built? See our '}<Link href={svc.href} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>{svc.label}</Link> from Mapletech Labs.
                       </p>
                     </div>
                   );

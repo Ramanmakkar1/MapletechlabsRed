@@ -36,7 +36,7 @@ const apps = [
 
 const relatedPosts = [
   { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
-  { slug: 'ai-development-companies-canada', title: 'Top 10 AI Development Companies in Canada (2026)', category: 'AI/ML', readTime: '9 min' },
+  { slug: 'ai-development-companies-edmonton', title: 'AI Development Companies in Edmonton', category: 'AI/ML', readTime: '9 min' },
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 

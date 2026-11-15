@@ -478,16 +478,6 @@ const posts = [
     readTime: '8 min read',
   },
   {
-    slug: 'ai-development-companies-canada',
-    category: 'AI/ML',
-    title: 'Top 10 AI Development Companies in Canada (2026)',
-    excerpt: 'Ranking the best AI and machine learning development companies in Canada, from LLM integration specialists to computer vision experts.',
-    author: 'RM',
-    authorName: 'Raman Makkar',
-    date: 'Feb 2026',
-    readTime: '9 min read',
-  },
-  {
     slug: 'app-development-companies-edmonton',
     category: 'Mobile',
     title: 'Top 10 App Development Companies in Edmonton (2026)',
@@ -548,16 +538,6 @@ const posts = [
     authorName: 'Raman Makkar',
     date: 'Mar 2026',
     readTime: '9 min read',
-  },
-  {
-    slug: 'digital-marketing-cost-canada',
-    category: 'Digital Marketing',
-    title: 'How Much Does Digital Marketing Cost in Canada? (2026)',
-    excerpt: 'Complete guide to digital marketing costs in Canada — SEO, PPC, social media, and content marketing pricing from top Canadian agencies.',
-    author: 'RM',
-    authorName: 'Raman Makkar',
-    date: 'Mar 2026',
-    readTime: '7 min read',
   },
   {
     slug: 'software-development-companies-calgary',

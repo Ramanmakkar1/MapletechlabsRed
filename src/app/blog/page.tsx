@@ -97,16 +97,16 @@ export default function Page() {
             </Link>
           </li>
           <li>
-            <Link href="/blog/ai-development-companies-canada">
-              AI development companies in Canada
+            <Link href="/blog/ai-development-companies-edmonton">
+              AI development companies in Edmonton
             </Link>
           </li>
           <li>
             <Link href="/blog/website-cost-canada">Website cost in Canada</Link>
           </li>
           <li>
-            <Link href="/blog/digital-marketing-cost-canada">
-              Digital marketing cost in Canada
+            <Link href="/blog/top-seo-companies-canada">
+              Top SEO companies in Canada
             </Link>
           </li>
           <li>
