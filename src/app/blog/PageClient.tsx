@@ -380,6 +380,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'saas-development-companies-montreal', category: 'Business',
+    title: 'SaaS Development Companies in Montreal: How to Choose (2026)',
+    excerpt: 'How to choose a SaaS development company in Montreal: French-first products under Bill 96, Quebec Law 25, AI talent, multi-tenant builds, CAD ranges and the questions to ask.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'saas-development-companies-toronto', category: 'Business',
     title: 'SaaS Development Companies in Toronto: How to Choose (2026)',
     excerpt: 'How to choose a SaaS development company in Toronto: multi-tenant architecture, billing, SSO, PIPEDA and OSFI-aware fintech work, CAD ranges and the questions to ask.',
