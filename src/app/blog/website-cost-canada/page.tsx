@@ -10,7 +10,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Website Cost in Canada: 2026 CAD Prices';
-const DESCRIPTION = 'Website cost in Canada in 2026: CAD $500 to $500,000+ by build type. Compare template, custom and e-commerce price tiers, cost drivers and budgeting tips.';
+const DESCRIPTION = 'Website cost in Canada in 2026: CAD $500 to $500,000+ by build type. Compare template, custom and e-commerce tiers, cost drivers and budgeting tips.';
 const SLUG = 'website-cost-canada';
 const DATE = '2026-01-22';
 
