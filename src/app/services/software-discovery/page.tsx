@@ -7,6 +7,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema, ServiceSchema } from '@/components/ServiceSchema';
 import CTASection from '@/components/CTASection';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoDescription } from '@/lib/seo/description';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Software Discovery Sprint for Product Teams';
@@ -49,11 +50,11 @@ const cardTitle = { color: 'var(--ink)', marginTop: 0, fontSize: 18 };
 
 export const metadata: Metadata = {
   title: TITLE,
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     images: DEFAULT_OG_IMAGES,
     title: OG_TITLE,
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     url: URL,
     type: 'website',
   },
@@ -67,7 +68,7 @@ export default function SoftwareDiscoveryPage() {
     <>
       <ServiceSchema
         name="Software Discovery Sprint"
-        description="A focused software discovery sprint that turns an early product idea into clear requirements, user flows, technical risks and a phased scope."
+        description={seoDescription(DESCRIPTION)}
         url={URL}
         serviceType="Software Discovery"
       />

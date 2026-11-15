@@ -41,7 +41,7 @@ export default function Page() {
       />
       <ServiceSchema
         name={TITLE}
-        description={DESCRIPTION}
+        description={seoDescription(DESCRIPTION)}
         url={URL}
         serviceType="Custom software development"
       />

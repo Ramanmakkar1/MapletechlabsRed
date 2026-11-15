@@ -3,6 +3,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import PageClient from './PageClient';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
@@ -14,11 +15,11 @@ const URL = canonicalUrl(PATH);
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     images: DEFAULT_OG_IMAGES,
     title: `${TITLE} | Mapletech Labs`,
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     url: URL,
     type: 'website',
   },
@@ -40,7 +41,7 @@ export default function Page() {
       />
       <ServiceSchema
         name={TITLE}
-        description={DESCRIPTION}
+        description={seoDescription(DESCRIPTION)}
         url={URL}
         serviceType="Legacy software modernization"
       />

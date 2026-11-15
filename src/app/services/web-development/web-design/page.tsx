@@ -34,7 +34,7 @@ export default function Page() {
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={'Web Design Services'}
-        description={DESCRIPTION}
+        description={seoDescription(DESCRIPTION)}
         url={'https://mapletechlabs.ca/services/web-development/web-design'}
       />
       <PageClient />
