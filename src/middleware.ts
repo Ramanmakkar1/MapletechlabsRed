@@ -1,11 +1,11 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { STATIC_TEMPLATE_CACHE, STATIC_TEMPLATE_CDN_CACHE } from '@/lib/cache-headers';
 
-// HTML documents sit in the CDN for 1 day, matching the key-page headers in
-// next.config.ts headers() (1 day fresh, 1 week stale-while-revalidate).
+// HTML documents sit in the CDN for a year, matching the broad HTML rule in
+// next.config.ts headers() (1 year fresh, 1 week stale-while-revalidate).
 // Content only changes on deploy, so this must not run a network call, a
 // redirect-table scan, or a per-request regex on those paths.
-const HTML_CACHE = 'public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400';
+const HTML_CACHE = 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400';
 // Repository-managed SEO templates are force-static and use Next's one-year
 // expireTime, so keep them at the CDN for the same window instead of letting
 // them fall back to the one-day document cache and be re-rendered on audit.

@@ -46,10 +46,10 @@ const nextConfig: NextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         ],
       },
-      // Other HTML pages. src/middleware.ts also sets the same 1-day CDN window on documents, because on this host the framework default can override these headers.
+      // Other HTML pages. src/middleware.ts also sets the same 1-year CDN window on documents, because on this host the framework default can override these headers.
       {
         source: '/((?!api|_next|.*\\..*).*)',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800, stale-if-error=86400' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
         source: '/',
