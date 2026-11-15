@@ -64,6 +64,49 @@ export default function PageClient() {
         </section>
         <section style={{ padding: 'var(--section-y-sm) 0' }}>
           <div className="cb-container">
+            <h2>Which SEO engagement fits: local, national or technical SEO?</h2>
+            <p className="lede">Choose local SEO to win enquiries in specific service areas, national SEO to compete across Canada, or technical SEO when crawl, indexation and site-performance problems are holding back your existing pages. If you need several outcomes, use the table to agree the first priority and scope with our team.</p>
+            <div role="region" aria-label="SEO engagement comparison" tabIndex={0} style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', minWidth: 960, borderCollapse: 'collapse', textAlign: 'left' }}>
+                <caption style={{ textAlign: 'left', marginBottom: 12 }}>Compare the best fit, deliverables, measurement and next step for each SEO engagement.</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Engagement</th>
+                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Best fit</th>
+                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Deliverables</th>
+                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Measurement</th>
+                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Next step</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Local SEO</th>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Businesses that want nearby customers to find and contact them in defined cities or service areas.</td>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Google Business Profile and Bing Places optimisation, citation cleanup, local landing pages and locally relevant content.</td>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Local-pack and organic visibility, calls, direction requests, form enquiries and booked work by target location.</td>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>; compare our city pages for <Link href="/locations/seo-company-in-edmonton">Edmonton</Link>, <Link href="/locations/seo-company-in-calgary">Calgary</Link>, <Link href="/locations/seo-company-in-toronto">Toronto</Link> and <Link href="/locations/seo-company-in-vancouver">Vancouver</Link>, then <Link href="/contact">contact us about local SEO</Link>.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>National SEO</th>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Companies selling across Canada that need non-local rankings and organic leads in multiple provinces or markets.</td>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>National keyword mapping, service and content optimisation, internal linking, digital PR and priority city-page support.</td>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Non-brand organic visibility, national and city rankings, qualified sessions, enquiries and revenue attributable to organic search.</td>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>; compare our city pages for <Link href="/locations/seo-company-in-edmonton">Edmonton</Link>, <Link href="/locations/seo-company-in-calgary">Calgary</Link>, <Link href="/locations/seo-company-in-toronto">Toronto</Link> and <Link href="/locations/seo-company-in-vancouver">Vancouver</Link>, then <Link href="/contact">contact us about national SEO</Link>.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style={{ padding: 12, verticalAlign: 'top' }}>Technical SEO</th>
+                    <td style={{ padding: 12, verticalAlign: 'top' }}>Websites with strong services or content that are constrained by crawling, indexing, duplication, schema or Core Web Vitals issues.</td>
+                    <td style={{ padding: 12, verticalAlign: 'top' }}>Technical audit, prioritised fix roadmap, implementation support and validation across key templates and devices.</td>
+                    <td style={{ padding: 12, verticalAlign: 'top' }}>Valid indexed pages, crawl and canonical health, Core Web Vitals, resolved audit issues and resulting organic traffic and enquiries.</td>
+                    <td style={{ padding: 12, verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>; compare our city pages for <Link href="/locations/seo-company-in-edmonton">Edmonton</Link>, <Link href="/locations/seo-company-in-calgary">Calgary</Link>, <Link href="/locations/seo-company-in-toronto">Toronto</Link> and <Link href="/locations/seo-company-in-vancouver">Vancouver</Link>, then <Link href="/contact">contact us about technical SEO</Link>.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
             <h2>Prepare for your SEO consultation</h2>
             <p className="lede">Bring the following so we can discuss a relevant audit and scope:</p>
             <ul className="lede">
