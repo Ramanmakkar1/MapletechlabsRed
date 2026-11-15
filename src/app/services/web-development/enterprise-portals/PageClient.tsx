@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '40+', label: 'Enterprise Portals' },
@@ -31,6 +33,38 @@ const faqs = [
   { q: 'How do you handle change management for a new enterprise portal?', a: 'Change management is built into our delivery process. We involve business stakeholders throughout via regular demos and feedback sessions, run a controlled pilot with power users before broad rollout, provide role-specific training materials and video walkthroughs, and establish a feedback channel for the first 60 days. Adoption metrics are tracked and reported to leadership throughout.' },
 ];
 
+const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
+
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to build a custom enterprise portal</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Build a custom enterprise portal when off-the-shelf tools can no longer match your access rules, workflows or compliance requirements. A custom portal connects your identity systems, automates approvals and keeps an audit trail across every user action.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>Role-based access control with hierarchical roles and permission inheritance.</li>
+          <li>SSO and LDAP integration with Active Directory, Azure AD, Okta or any SAML 2.0 / OIDC provider.</li>
+          <li>Configurable workflow automation for approvals, notifications and task routing.</li>
+          <li>Executive and operational dashboards with real-time reporting and drill-down analytics.</li>
+          <li>Immutable audit logging and compliance reporting for SOC2, ISO 27001, HIPAA and GDPR.</li>
+        </ul>
+        <p>
+          Connect the portal to your systems with <Link href="/services/web-development/api-backend">API and backend development</Link>, secure sign-in through <Link href="/services/saas-development/auth-sso">authentication and SSO</Link>, and plan the investment with our <Link href="/blog/custom-software-development-cost-canada">custom software development cost guide for Canada</Link>.
+        </p>
+        <p>
+          Explore enterprise portal development in{' '}
+          {cityLinks.map(([name, slug], i) => (
+            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('web-development', slug)}>{name}</Link></span>
+          ))}. Ready to scope your portal? <Link href="/contact">Book an enterprise portal consultation</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +76,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Enterprise-Grade Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
