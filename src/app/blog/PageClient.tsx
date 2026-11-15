@@ -392,6 +392,12 @@ const posts = [
     author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
   },
   {
+    slug: 'saas-development-companies-calgary', category: 'Business',
+    title: 'SaaS Development Companies in Calgary: How to Choose (2026)',
+    excerpt: 'How to choose a SaaS development company in Calgary: energy tech, fintech, agtech and logistics products, multi-tenant architecture, billing, SSO, Alberta PIPA, CAD ranges and the questions to ask.',
+    author: 'RM', authorName: 'Raman Makkar', date: 'Nov 2026', readTime: '10 min read',
+  },
+  {
     slug: 'website-development-company-canada',
     category: 'Engineering',
     title: 'How to Choose a Website Development Company in Canada (2026)',
