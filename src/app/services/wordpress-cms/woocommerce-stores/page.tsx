@@ -11,6 +11,7 @@ import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 const TITLE = 'WooCommerce Store Development in Canada';
 const DESCRIPTION = 'WooCommerce store development in Canada: online stores with custom plugins, Canadian payment gateways and shipping integrations. Get a free quote.';
 
+// Fully content-driven: prerender once at build time and serve statically.
 export const dynamic = 'force-static';
 export const revalidate = false;
 
