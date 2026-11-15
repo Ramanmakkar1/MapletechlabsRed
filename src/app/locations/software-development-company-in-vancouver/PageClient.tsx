@@ -84,6 +84,7 @@ export default function PageClient() {
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container prose-body">
             <p>Comparing development partners in Vancouver? Read our guide to <Link href="/blog/software-development-companies-vancouver">software development companies in Vancouver</Link> for what to look for, typical costs and the questions to ask on the first call. If you are planning a mobile product, see our <Link href="/services/mobile-app-development/vancouver">mobile app development company in Vancouver</Link> page for platforms, process and pricing guidance.</p>
+            <p>A Vancouver example: for ClinicFlow Health we built a <Link href="/case-studies/healthcare-telehealth">HIPAA- and PIPEDA-compliant telehealth platform</Link> that serves 450K+ patient records and cut admin overhead by 40%. See all our <Link href="/case-studies">software development case studies</Link>.</p>
           </div>
         </section>
       }
