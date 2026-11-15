@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -31,6 +32,33 @@ const faqs = [
   { q: 'How do you handle image optimisation?', a: 'We convert all images to WebP (with AVIF for supporting browsers), compress them with quality settings tuned to be imperceptible to the human eye, implement responsive srcsets so mobile devices download smaller files, add proper lazy loading, and set explicit width/height attributes to prevent layout shift. For large sites, we automate this via Cloudflare Images or a custom pipeline.' },
 ];
 
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to pay for WordPress speed optimisation</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Pay for WordPress speed optimisation when your site fails Core Web Vitals or takes more than a few seconds to load on mobile. The target is a Largest Contentful Paint (LCP) under 2.5 seconds, because that is the threshold Google uses to judge a fast, rankable page.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>A Core Web Vitals audit covering LCP, INP and CLS on mobile and desktop.</li>
+          <li>Plugin cleanup that removes bloat, conflicts and unnecessary scripts.</li>
+          <li>Image and caching fixes, including WebP/AVIF conversion and full-page caching.</li>
+          <li>Hosting advice so your server and CDN support the speed gains.</li>
+          <li>A before/after report with measured scores and load times.</li>
+        </ul>
+        <p>
+          Pair speed work with <Link href="/services/wordpress-cms/custom-wordpress-themes">custom WordPress themes</Link> and <Link href="/services/digital-marketing/seo-services">SEO services</Link> so performance gains turn into rankings. For budget planning, read our <Link href="/blog/website-cost-canada">website cost guide for Canada</Link>.
+        </p>
+        <p>
+          We also help businesses through our <Link href="/locations/web-development-company-in-toronto">web development company in Toronto</Link>. Ready to make your site faster? <Link href="/contact">Book a speed optimisation consultation</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +70,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
