@@ -65,6 +65,9 @@ const buyerContent = (
         <p style={p}>
           We also build for specific industries, including <A href="/industries/healthcare">healthcare</A>, <A href="/industries/fintech">fintech</A> and <A href="/industries/logistics">logistics</A>, where integration, privacy and uptime requirements shape the architecture from day one.
         </p>
+        <p style={p}>
+          Working with a local team? See <A href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</A> (our head office), <A href="/locations/software-development-company-in-calgary">Calgary</A>, <A href="/locations/software-development-company-in-toronto">Toronto</A> and <A href="/locations/software-development-company-in-vancouver">Vancouver</A>.
+        </p>
       </div>
     </section>
 
