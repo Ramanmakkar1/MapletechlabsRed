@@ -521,6 +521,7 @@ const posts = [
     slug: 'web-development-companies-toronto',
     category: 'Engineering',
     title: 'Top Web Development Companies in Toronto (2026)',
+    metaTitle: 'Web Development Companies in Toronto 2026',
     excerpt: 'Ranking the best web development companies in Toronto — from Next.js specialists to full-stack agencies building enterprise-grade digital products.',
     author: 'RM',
     authorName: 'Raman Makkar',
