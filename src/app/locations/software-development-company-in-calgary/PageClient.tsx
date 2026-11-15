@@ -11,11 +11,11 @@ const numbers = pair([
                 ]);
 const services = [
   { title: 'Mobile App Development in Calgary', desc: 'Field-ready mobile apps for energy crews, logistics teams, and fleet operators across Alberta.', href: '/services/mobile-app-development/calgary' },
-  { title: 'Web Development', desc: 'Enterprise web platforms for oil and gas operators, pipeline companies, and energy trading desks.', href: '/services/web-development' },
-  { title: 'AI & Machine Learning', desc: 'Predictive maintenance for drilling rigs, pipeline anomaly detection, and production optimization models.', href: '/services/ai-ml' },
+  { title: 'Web Development in Calgary', desc: 'Enterprise web platforms for oil and gas operators, pipeline companies, and energy trading desks.', href: '/locations/web-development-company-in-calgary' },
+  { title: 'AI Development in Calgary', desc: 'Predictive maintenance for drilling rigs, pipeline anomaly detection, and production optimization models.', href: '/locations/ai-development-company-in-calgary' },
   { title: 'Blockchain & Web3', desc: 'Supply chain transparency, carbon credit tokenization, and decentralized energy trading platforms.', href: '/services/blockchain-web3' },
-  { title: 'Cloud & DevOps', desc: 'Secure cloud infrastructure for SCADA systems, real-time telemetry, and enterprise resource planning.', href: '/services/cloud-devops' },
-  { title: 'Product Design', desc: 'UI/UX for complex operational dashboards, GIS mapping interfaces, and field service applications.', href: '/services/product-design' },
+  { title: 'Cloud & DevOps in Calgary', desc: 'Secure cloud infrastructure for SCADA systems, real-time telemetry, and enterprise resource planning.', href: '/locations/calgary/cloud-devops' },
+  { title: 'UI/UX Design in Calgary', desc: 'UI/UX for complex operational dashboards, GIS mapping interfaces, and field service applications.', href: '/locations/ui-ux-design-company-in-calgary' },
 ];
 
 const whyChoose = [
