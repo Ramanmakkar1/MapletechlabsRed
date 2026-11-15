@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '80+', label: 'WooCommerce Stores Built' },
@@ -31,6 +33,38 @@ const faqs = [
   { q: 'Do you provide training after launch?', a: 'Yes. Every project includes a handover session covering order management, adding/editing products, running promotions, and managing customers. We also provide written documentation and video walkthroughs tailored to your team\'s technical level.' },
 ];
 
+const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
+
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to choose a custom WooCommerce store</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Choose a custom WooCommerce store when you need full control over checkout, product structure and running costs that a hosted platform cannot give you. It suits growing catalogues, complex variations and deep WordPress integrations.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>A custom WooCommerce theme built around your brand and buying journey.</li>
+          <li>Payment, shipping, tax and inventory configuration tested before launch.</li>
+          <li>Checkout optimisation that reduces abandonment and lifts conversion.</li>
+          <li>Performance and caching work so large catalogues stay fast.</li>
+          <li>Handover training, documentation and post-launch support.</li>
+        </ul>
+        <p>
+          See how we build stores in our <Link href="/services/web-development/ecommerce-systems">eCommerce systems service</Link>, and keep them fast with <Link href="/services/wordpress-cms/site-speed-optimisation">WordPress site speed optimisation</Link>. Compare platforms in <Link href="/blog/shopify-vs-custom-ecommerce-canada">Shopify vs custom eCommerce in Canada</Link> and plan budget with our <Link href="/blog/website-cost-canada">website cost guide for Canada</Link>.
+        </p>
+        <p>
+          Explore WooCommerce development in{' '}
+          {cityLinks.map(([name, slug], i) => (
+            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('web-development', slug)}>{name}</Link></span>
+          ))}. Ready to scope your store? <Link href="/contact">Book a WooCommerce consultation</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +76,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
