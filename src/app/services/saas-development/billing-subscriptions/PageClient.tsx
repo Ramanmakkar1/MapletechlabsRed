@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
+import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '$50M+', label: 'MRR Managed via Stripe' },
@@ -31,6 +33,38 @@ const faqs = [
   { q: 'How do you handle proration when users upgrade or downgrade?', a: 'Stripe handles proration natively — when a customer upgrades mid-cycle, they are charged the pro-rated difference immediately. For downgrades, we typically credit the difference to the next invoice. We implement a preview-before-confirm UI so customers see exactly what they will be charged before they confirm a plan change, reducing support tickets and disputes.' },
 ];
 
+const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
+
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to hire a team for SaaS billing</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Hire a billing team when your SaaS needs reliable subscriptions, correct proration and automated failed-payment recovery — before revenue leaks or manual invoicing slows growth. A dedicated build gets Stripe, tax and dunning right the first time.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>A Stripe subscription setup with products, prices, coupons, webhooks and customer portal configured correctly.</li>
+          <li>Flat-rate, per-seat, usage-based and hybrid billing models with working upgrade and downgrade flows.</li>
+          <li>Free trial and freemium flows with upgrade prompts timed to activation milestones.</li>
+          <li>Automated dunning and failed-payment recovery that reduces involuntary churn.</li>
+          <li>Branded invoices, receipts and a self-serve billing portal so customers manage their own plans.</li>
+        </ul>
+        <p>
+          Build the billing layer on a solid <Link href="/services/saas-development/multi-tenant-architecture">multi-tenant architecture</Link>, then track revenue with <Link href="/services/saas-development/analytics-dashboards">analytics dashboards</Link>. For budget planning, read our <Link href="/blog/saas-development-cost-canada">SaaS development cost guide for Canada</Link>.
+        </p>
+        <p>
+          Explore SaaS billing in{' '}
+          {cityLinks.map(([name, slug], i) => (
+            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('saas-development', slug)}>{name}</Link></span>
+          ))}. Ready to fix your billing? <Link href="/contact">Book a SaaS billing consultation</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +76,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
