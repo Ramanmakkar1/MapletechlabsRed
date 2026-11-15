@@ -2222,7 +2222,30 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           ' may help with eligible work, subject to their requirements and your circumstances.',
         ],
       },
+      {
+        heading: 'Build vs buy: choosing the right path for your Edmonton SaaS',
+        body: [
+          'Buying an off-the-shelf product is faster and cheaper when your workflow already matches what the tool does. Building custom makes sense when your process is the advantage, when existing tools force workarounds, or when you need your own data model, integrations and pricing. We help Edmonton teams weigh both before committing: if a proven product fits, we say so; if a custom build is justified, we scope the smallest release that proves the model. See our ',
+          { href: '/services/saas-development', label: 'SaaS development services' },
+          ' or ',
+          { href: '/contact', label: 'contact us' },
+          ' to talk through your options.',
+        ],
+      },
     ],
+    comparison: {
+      heading: 'Build vs buy for an Edmonton SaaS product',
+      intro: 'A quick comparison to help you decide before you commit budget.',
+      caption: 'Build vs buy comparison for Edmonton SaaS teams',
+      headers: ['Decision', 'Buy (off-the-shelf)', 'Build (custom SaaS)'],
+      rows: [
+        ['Best when', 'Your workflow matches the product and speed matters most', 'Your process is the advantage or no tool fits without workarounds'],
+        ['Up-front cost', 'Subscription and setup fees, lower initial spend', 'MVP from $30,000-$75,000 CAD, agreed as a fixed price'],
+        ['Time to first release', 'Days to weeks', '3-4 months for a focused MVP'],
+        ['Ownership and control', 'Vendor roadmap and pricing decide', 'You own the code, data model and roadmap'],
+        ['Long-term fit', 'You adapt to the tool', 'The product adapts to your business'],
+      ],
+    },
     proof: [
       { href: '/case-studies/payments-api-platform', label: 'Payments API platform', note: 'PayBridge Solutions’ PCI DSS certified payments API, processing 12 million transactions a month securely and at scale.' },
       { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
