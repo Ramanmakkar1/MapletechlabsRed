@@ -9,9 +9,9 @@ import { seoDescription } from '@/lib/seo/description';
 import { caseStudyMedia } from '@/data/media';
 
 const NAME = 'Logistics & Fleet Platform';
-// Rendered with brand: "Logistics Case Study: 15K+ Daily Deliveries | Mapletech Labs" (60 chars).
-// Keyword-first ("Logistics Case Study") and keeps the 15K+ deliveries result within 60 chars.
-const TITLE = 'Logistics Case Study: 15K+ Daily Deliveries';
+// Rendered with brand: "Logistics Case Study: 15K+ Deliveries/Day | Mapletech Labs" (58 chars).
+// Keyword-first ("Logistics Case Study") and keeps the 15K+ daily deliveries result within 60 chars.
+const TITLE = 'Logistics Case Study: 15K+ Deliveries/Day';
 const DESCRIPTION = 'Mapletech Labs built a real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time rate. Read the case study.';
 const SLUG = 'logistics-platform';
 const DATE = '2026-03-14';
