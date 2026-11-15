@@ -101,9 +101,9 @@ export default function ContactPage({ serviceOptions = [], cityOptions = [] }: {
             {/* Left — everything you need to reach us */}
             <div>
               <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--faint)', marginBottom: 20 }}>Contact</div>
-              <h1 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: '0 0 20px' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.1, margin: '0 0 20px' }}>
                 Contact Mapletech Labs about your project
-              </h1>
+              </h2>
               <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, margin: '0 0 20px', maxWidth: 400 }}>
                 Mapletech Labs is an Edmonton-based software development company serving startups, scale-ups and established businesses across Canada, including Calgary, Toronto, Vancouver, Ottawa and Montreal. We offer a free 30-minute consultation, and a senior engineer replies within one working day. Our services include <a href="/services/saas-development" style={{ color: 'var(--brand)' }}>custom software development</a>, <a href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</a>, <a href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</a>, <a href="/services/product-design" style={{ color: 'var(--brand)' }}>UI/UX design</a>, <a href="/services/digital-marketing" style={{ color: 'var(--brand)' }}>digital marketing</a> and <a href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)' }}>SEO services</a>. Call <a href="tel:+14036048692" style={{ color: 'var(--brand)' }}>+1 (403) 604-8692</a>, email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)' }}>hello@mapletechlabs.ca</a>, or send the form below.
               </p>

@@ -92,7 +92,10 @@ export default function ContactRoute() {
           </p>
         </section>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-answer">
-          <h2 id="contact-answer" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How to get a free project consultation from Mapletech Labs</h2>
+          <h1 id="contact-answer" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How to get a free project consultation from Mapletech Labs</h1>
+          <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+            Mapletech Labs is based in Edmonton, Alberta (T5J 1B9). Call <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a> or email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a> and a senior engineer replies within one working day. The first 30-minute consultation is free, and project pricing is fixed-scope in CAD, with typical ranges of ${PROJECT_PRICING.website.low.toLocaleString('en-CA')}-${PROJECT_PRICING.website.high.toLocaleString('en-CA')} for a website, ${PROJECT_PRICING.webapp.low.toLocaleString('en-CA')}-${PROJECT_PRICING.webapp.high.toLocaleString('en-CA')} for a web app, ${PROJECT_PRICING.saas.low.toLocaleString('en-CA')}-${PROJECT_PRICING.saas.high.toLocaleString('en-CA')} for a SaaS MVP and ${PROJECT_PRICING.mobile.low.toLocaleString('en-CA')}-${PROJECT_PRICING.mobile.high.toLocaleString('en-CA')} for a mobile app.
+          </p>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Mapletech Labs is a software development company based in Edmonton, Alberta that builds custom software, mobile apps, AI and automation, UI/UX design, websites and SEO for clients across Canada. A senior engineer replies to every enquiry within one working day.
           </p>
