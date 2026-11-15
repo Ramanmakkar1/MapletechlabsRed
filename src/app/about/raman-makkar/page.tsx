@@ -132,6 +132,9 @@ export default function RamanPage() {
               ]}
             />
             <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
+            <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginBottom: '12px' }}>
+              Who is Raman Makkar?
+            </h2>
             <p style={{ fontSize: '20px', lineHeight: 1.7, marginBottom: '20px', color: 'var(--ink)', fontWeight: 500, maxWidth: '800px' }}>
               Raman Makkar is the founder and CEO of Mapletech Labs, an Edmonton-based software development company he
               founded in 2018. He brings 15+ years of engineering experience, including engineering leadership at three
@@ -174,7 +177,8 @@ export default function RamanPage() {
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
                 <li style={{ marginBottom: '8px' }}>Role: Founder &amp; CEO of Mapletech Labs</li>
                 <li style={{ marginBottom: '8px' }}>Company: Mapletech Labs, founded in 2018 as TML Branding Agency</li>
-                <li style={{ marginBottom: '8px' }}>Based in: Edmonton, Alberta</li>
+                <li style={{ marginBottom: '8px' }}>Founded: 2018, in Edmonton, Alberta, Canada</li>
+                <li style={{ marginBottom: '8px' }}>Headquarters: Edmonton, Alberta, Canada</li>
                 <li style={{ marginBottom: '8px' }}>
                   Experience: 15+ years in software engineering, product development and digital transformation
                 </li>
@@ -186,11 +190,11 @@ export default function RamanPage() {
                 </li>
                 <li style={{ marginBottom: '8px' }}>Projects delivered: 500+ for clients across Canada and internationally</li>
                 <li style={{ marginBottom: '8px' }}>
-                  Main services: custom web applications, mobile apps, AI/ML solutions, cloud infrastructure and SaaS
+                  Core services: custom web applications, mobile apps, AI/ML solutions, cloud infrastructure and SaaS
                   platforms
                 </li>
                 <li>
-                  Sectors and clients: fintech, healthcare, e-commerce, logistics, edtech and enterprise, with clients in
+                  Industries served: fintech, healthcare, e-commerce, logistics, edtech and enterprise, with clients in
                   Edmonton, Calgary, Toronto, Vancouver and internationally
                 </li>
               </ul>
