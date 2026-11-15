@@ -265,7 +265,12 @@ export function locationSitemapEntries(): SitemapEntry[] {
     changefreq: 'monthly' as const,
     priority: '0.85',
   };
-  return [...provinces, ...cities, ...serviceCities, aiConsultingEdmonton];
+  const aiConsultingToronto = {
+    loc: `${BASE_URL}/locations/ai-consulting-company-in-toronto`,
+    changefreq: 'monthly' as const,
+    priority: '0.85',
+  };
+  return [...provinces, ...cities, ...serviceCities, aiConsultingEdmonton, aiConsultingToronto];
 }
 
 export function localSeoSitemapEntries(): SitemapEntry[] {
