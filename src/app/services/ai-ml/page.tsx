@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceHubSchema } from '@/lib/seo/serviceHubSchema';
@@ -46,6 +47,15 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <section style={{ maxWidth: 1120, margin: '0 auto', padding: '32px 24px 0' }}>
+        <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--text-muted, #4b5563)', margin: 0 }}>
+          Mapletech Labs provides AI development in Canada, building custom LLM apps, AI chatbots, automation and predictive models for businesses nationwide. Find a local team on our{' '}
+          <Link href="/locations/ai-development-company-in-edmonton">AI development company in Edmonton</Link>,{' '}
+          <Link href="/locations/ai-development-company-in-calgary">AI development company in Calgary</Link>,{' '}
+          <Link href="/locations/ai-development-company-in-toronto">AI development company in Toronto</Link> and{' '}
+          <Link href="/locations/ai-development-company-in-vancouver">AI development company in Vancouver</Link> pages.
+        </p>
+      </section>
       <PageClient />
     </>
   );
