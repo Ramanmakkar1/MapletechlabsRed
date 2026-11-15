@@ -166,7 +166,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
         heroDesc={
           slug === 'web-development-company-in-edmonton' ? (
             <>
-              Mapletech Labs is an Edmonton web development company headquartered in the city. We build custom websites, web apps and portals for Edmonton businesses — fast, SEO-ready, with a fixed CAD price and a senior engineer who replies in one day.
+              Mapletech Labs is an Edmonton web development company headquartered in Edmonton. We build custom websites, web apps and portals for Edmonton businesses — fast, SEO-ready, with a fixed CAD price and a senior engineer who replies in one day.
             </>
           ) : undefined
         }
