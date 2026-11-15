@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
@@ -67,6 +68,54 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <nav
+        aria-label="Related blog topics"
+        className="cb-container"
+        style={{ paddingTop: 'var(--section-y)' }}
+      >
+        <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.75rem' }}>
+          Related topics
+        </h2>
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '0.5rem 1.5rem',
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+          }}
+        >
+          <li>
+            <Link href="/blog/software-development-companies-edmonton">
+              Software development companies in Edmonton
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/app-development-cost-canada">
+              App development cost in Canada
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/ai-development-companies-canada">
+              AI development companies in Canada
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/website-cost-canada">Website cost in Canada</Link>
+          </li>
+          <li>
+            <Link href="/blog/digital-marketing-cost-canada">
+              Digital marketing cost in Canada
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/custom-software-vs-off-the-shelf">
+              Custom software vs off-the-shelf
+            </Link>
+          </li>
+        </ul>
+      </nav>
       <PageClient />
     </>
   );
