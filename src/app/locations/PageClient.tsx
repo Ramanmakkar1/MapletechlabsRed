@@ -35,6 +35,18 @@ const buyerIntentPath = (serviceSlug: string, citySlug: string) =>
     ? `/locations/software-development-company-in-${citySlug}`
     : serviceCityPath(serviceSlug, citySlug);
 
+// The four markets buyers search for most. Rendered server-side so crawlers and
+// visitors without JS can reach the priority service + city pages from /locations.
+const PRIORITY_CITY_SLUGS = ['edmonton', 'calgary', 'toronto', 'vancouver'];
+const PRIORITY_CITY_SERVICES = [
+  { serviceSlug: 'software-development', label: 'Software development' },
+  { serviceSlug: 'mobile-app-development', label: 'App development' },
+  { serviceSlug: 'ai-ml', label: 'AI development' },
+  { serviceSlug: 'product-design', label: 'UI/UX design' },
+  { serviceSlug: 'web-development', label: 'Web development' },
+  { serviceSlug: 'digital-marketing', label: 'SEO' },
+] as const;
+
 const cardBase: React.CSSProperties = {
   border: '1px solid var(--line)',
   borderRadius: 24,
@@ -96,6 +108,36 @@ export default function LocationsIndexPage() {
 
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations' }]} copy={{ badge: "Across Canada", title: <>Software Development Company<br /><span style={{ color: 'var(--brand)' }}>Across Canada.</span></>, desc: <>From coast to coast, Mapletech Labs brings world-class software development to businesses across Canada. Our distributed team model means you get local expertise backed by national resources.</> }} photo={officeMedia.open} form={false} />
+
+        {/* PRIORITY CITY + SERVICE PAGES — server-rendered links to the highest-intent pages */}
+        <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container">
+            <div className="head">
+              <div>
+                <h2>Priority city and service pages</h2>
+                <p className="lede">Jump straight to the service and city you need. Each page below targets a specific search, with local proof, process and pricing guidance.</p>
+              </div>
+            </div>
+            <div className="grid grid--2">
+              {PRIORITY_CITY_SLUGS.map(slug => {
+                const city = allCities.find(c => c.slug === slug);
+                if (!city) return null;
+                return (
+                  <div key={slug} className="tile">
+                    <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', marginBottom: 14 }}>{city.name}{city.isHQ ? ' · HQ' : ''}</h3>
+                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                      {PRIORITY_CITY_SERVICES.map(service => (
+                        <Link key={service.serviceSlug} href={buyerIntentPath(service.serviceSlug, slug)} className="pill">
+                          {service.label} in {city.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
         {/* INTRO — national coverage, real content */}
         <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
