@@ -132,12 +132,17 @@ export default function RamanPage() {
               ]}
             />
             <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
-            <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '20px', color: 'var(--body)', maxWidth: '800px' }}>
+            <p style={{ fontSize: '20px', lineHeight: 1.7, marginBottom: '20px', color: 'var(--ink)', fontWeight: 500, maxWidth: '800px' }}>
               Raman Makkar is the founder and CEO of Mapletech Labs, an Edmonton-based software development company he
-              founded in 2018. With 15+ years in software engineering and a 25+ member team, he has led the delivery of
-              500+ projects. Real results include a fintech trading platform running 75K+ transactions a day, an e-commerce
-              redesign that lifted conversion from 2.1% to 3.8%, and a telehealth platform serving 450K+ patient records.
-              Explore the <Link href="/services" style={{ color: 'var(--brand)' }}>software development services</Link> he
+              founded in 2018. He brings 15+ years of engineering experience, including engineering leadership at three
+              startup exits and architecting a fintech platform that processes $1B+ annually, and today leads a 25+ member
+              team that has delivered 500+ projects.
+            </p>
+            <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '20px', color: 'var(--body)', maxWidth: '800px' }}>
+              That work spans fintech, healthcare, e-commerce, logistics, edtech and enterprise, with real results such as
+              a fintech trading platform running 75K+ transactions a day, an e-commerce redesign that lifted conversion
+              from 2.1% to 3.8%, and a telehealth platform serving 450K+ patient records. Explore the{' '}
+              <Link href="/services" style={{ color: 'var(--brand)' }}>software development services</Link> he
               leads, see the results in the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link> such as the{' '}
               <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>AI-powered trading platform</Link> and{' '}
               <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)' }}>enterprise e-commerce platform</Link>,
@@ -172,6 +177,9 @@ export default function RamanPage() {
                 <li style={{ marginBottom: '8px' }}>Based in: Edmonton, Alberta</li>
                 <li style={{ marginBottom: '8px' }}>
                   Experience: 15+ years in software engineering, product development and digital transformation
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  Track record: engineering leadership at 3 startup exits and a fintech platform processing $1B+ annually
                 </li>
                 <li style={{ marginBottom: '8px' }}>
                   Team: 25+ engineers, designers and strategists serving clients across Canada and internationally
@@ -303,6 +311,17 @@ export default function RamanPage() {
                   collaborate with Vancouver companies on web, mobile, and AI-driven software initiatives.
                 </li>
               </ul>
+            </section>
+
+            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Sectors Raman serves</h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Through Mapletech Labs, Raman works with clients in fintech, healthcare, e-commerce, logistics, edtech and
+                enterprise, from startups to established Canadian companies. The team is headquartered in Edmonton and
+                serves clients in Calgary, Toronto, Vancouver and internationally. See the{' '}
+                <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Edmonton software development location</Link>{' '}
+                for local details, or browse the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>case studies by sector and result</Link>.
+              </p>
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
