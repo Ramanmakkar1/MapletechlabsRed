@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
+import { STATIC_TEMPLATE_CACHE, STATIC_TEMPLATE_CDN_CACHE } from '@/lib/cache-headers';
 
 // HTML documents sit in the CDN for 1 day, matching the key-page headers in
 // next.config.ts headers() (1 day fresh, 1 week stale-while-revalidate).
@@ -8,7 +9,7 @@ const HTML_CACHE = 'public, max-age=0, must-revalidate, s-maxage=86400, stale-wh
 // Repository-managed SEO templates are force-static and use Next's one-year
 // expireTime, so keep them at the CDN for the same window instead of letting
 // them fall back to the one-day document cache and be re-rendered on audit.
-const STATIC_TEMPLATE_CACHE = 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400';
+// The shared constants keep this in sync with next.config.ts headers().
 
 function isStaticTemplate(pathname: string): boolean {
   return pathname === '/services' || pathname.startsWith('/services/')
@@ -72,7 +73,12 @@ export function middleware(req: NextRequest) {
     }
     if (!isDocument(pathname)) return NextResponse.next();
     const res = NextResponse.next();
-    res.headers.set('Cache-Control', isStaticTemplate(pathname) ? STATIC_TEMPLATE_CACHE : HTML_CACHE);
+    if (isStaticTemplate(pathname)) {
+      res.headers.set('Cache-Control', STATIC_TEMPLATE_CACHE);
+      res.headers.set('CDN-Cache-Control', STATIC_TEMPLATE_CDN_CACHE);
+    } else {
+      res.headers.set('Cache-Control', HTML_CACHE);
+    }
     return res;
   }
 
