@@ -11,11 +11,11 @@ const numbers = pair([
                 ]);
 const services = [
   { title: 'Mobile App Development in Toronto', desc: 'Native and cross-platform apps for iOS and Android, built to serve Toronto\'s diverse, mobile-first consumer base.', href: '/services/mobile-app-development/toronto' },
-  { title: 'Web Development', desc: 'Scalable web applications and enterprise portals for Bay Street financial institutions and fast-growing startups.', href: '/services/web-development' },
-  { title: 'AI & Machine Learning', desc: 'Predictive analytics, NLP, and intelligent automation for FinTech platforms and data-driven enterprises.', href: '/services/ai-ml' },
+  { title: 'Web Development in Toronto', desc: 'Scalable web applications and enterprise portals for Bay Street financial institutions and fast-growing startups.', href: '/locations/web-development-company-in-toronto' },
+  { title: 'AI Development in Toronto', desc: 'Predictive analytics, NLP, and intelligent automation for FinTech platforms and data-driven enterprises.', href: '/locations/ai-development-company-in-toronto' },
   { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols, and tokenization platforms for Canada\'s financial capital.', href: '/services/blockchain-web3' },
-  { title: 'Cloud & DevOps', desc: 'AWS, Azure, and GCP architecture with CI/CD pipelines for high-availability financial systems.', href: '/services/cloud-devops' },
-  { title: 'Product Design', desc: 'UI/UX strategy and design systems for multicultural audiences across Canada\'s largest market.', href: '/services/product-design' },
+  { title: 'Cloud & DevOps in Toronto', desc: 'AWS, Azure, and GCP architecture with CI/CD pipelines for high-availability financial systems.', href: '/locations/toronto/cloud-devops' },
+  { title: 'UI/UX Design in Toronto', desc: 'UI/UX strategy and design systems for multicultural audiences across Canada\'s largest market.', href: '/locations/ui-ux-design-company-in-toronto' },
 ];
 
 const whyChoose = [
