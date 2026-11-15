@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -31,6 +32,33 @@ const faqs = [
   { q: 'What dashboards do you build?', a: 'Our standard dashboard suite includes an executive overview (traffic, conversions, revenue), a channel performance breakdown, a paid media dashboard (Google Ads, Meta), an SEO dashboard (Search Console + GA4), and an e-commerce funnel analysis. All dashboards are customised to your specific KPIs.' },
 ];
 
+function BuyerContent() {
+  return (
+    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to invest in marketing performance analytics</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Invest in performance analytics when you cannot confidently say which channels, campaigns or keywords produce revenue. Clean GA4 tracking and a single dashboard turn scattered reports into decisions, so budget moves to what works instead of what merely looks busy.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
+        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li>A full GA4 and Google Tag Manager audit, with every broken or missing tag documented.</li>
+          <li>Conversion tracking configured for purchases, lead forms and key on-site actions.</li>
+          <li>Call and form attribution so every enquiry is traced back to its source.</li>
+          <li>A live Looker Studio dashboard combining GA4, Google Ads, Search Console and your CRM.</li>
+          <li>Monthly insights and recommendations tying the numbers to real business outcomes.</li>
+        </ul>
+        <p>
+          Use the data to sharpen <Link href="/services/digital-marketing/google-ads-ppc">Google Ads and PPC</Link> and <Link href="/services/digital-marketing/seo-services">SEO services</Link>, so both channels are measured on leads and revenue rather than clicks. For budget planning, read our <Link href="/blog/digital-marketing-cost-canada">digital marketing cost guide for Canada</Link>.
+        </p>
+        <p>
+          We deliver analytics and reporting for businesses in <Link href="/locations/digital-marketing-agency-in-edmonton">Edmonton</Link> and <Link href="/locations/digital-marketing-agency-in-calgary">Calgary</Link>. Want to know exactly where your marketing spend goes? <Link href="/contact">Book a free analytics audit</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -42,6 +70,7 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
+      buyerContent={<BuyerContent />}
     />
   );
 }
