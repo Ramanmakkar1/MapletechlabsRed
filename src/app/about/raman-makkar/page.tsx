@@ -132,6 +132,30 @@ export default function RamanPage() {
               ]}
             />
             <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
+            <section
+              aria-label="Founder summary"
+              style={{
+                background: 'var(--surface-alt)',
+                border: '1px solid var(--line)',
+                borderRadius: '12px',
+                padding: '20px 24px',
+                marginBottom: '24px',
+                maxWidth: '800px',
+              }}
+            >
+              <p style={{ fontSize: '18px', lineHeight: 1.7, margin: 0, color: 'var(--ink)', fontWeight: 500 }}>
+                <strong>In short:</strong> Raman Makkar is the Founder &amp; CEO of Mapletech Labs, the Edmonton software
+                development company he founded in 2018. A Computer Science graduate with 15+ years in software
+                engineering, he led engineering at 3 startup exits and architected a fintech platform processing $1B+
+                annually. He leads the company&apos;s{' '}
+                <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development</Link>,{' '}
+                <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>,{' '}
+                <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link> and{' '}
+                <Link href="/services/product-design" style={{ color: 'var(--brand)' }}>UI/UX design</Link> services for
+                clients in fintech, healthcare, e-commerce, logistics, edtech and enterprise across Edmonton, Calgary,
+                Toronto, Vancouver and internationally.
+              </p>
+            </section>
             <p style={{ fontSize: '20px', lineHeight: 1.7, marginBottom: '20px', color: 'var(--ink)', fontWeight: 500, maxWidth: '800px' }}>
               Raman Makkar is the Founder &amp; CEO of Mapletech Labs, the Edmonton software development company he
               founded in 2018. He brings 15+ years of software engineering experience and leads a 25+ member team that
