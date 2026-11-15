@@ -1152,6 +1152,16 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         ],
       },
       {
+        heading: 'Website or web app: which do you need?',
+        body: [
+          'A website is mostly read: service pages, a blog, a contact form and maybe a store, and it is the right choice when your goal is to be found and trusted. A web app is used: customers log in, staff manage records, bookings or orders, and data moves between your systems. Many Edmonton projects start as a marketing website and grow a portal or dashboard later, so we scope the two separately and tell you which one your budget actually needs. See our ',
+          { href: '/services/web-development', label: 'web development services' },
+          ' for the full build scope, or ',
+          { href: '/contact', label: 'contact us' },
+          ' and we will tell you which route fits.',
+        ],
+      },
+      {
         heading: 'Workshops in person, here in Edmonton',
         body: [
           'Because our head office is in Edmonton, discovery does not have to happen only over a video call. We can run scoping and design workshops at your office, plant or campus, watch how your staff and customers use your current site today, and sketch page flows with the people who will maintain them. After the workshop you get a written scope with every page, integration and content milestone listed. Demos and content reviews can also be held in person, while day-to-day build progress runs on shared boards and weekly calls with the same engineers who attended the workshop.',
@@ -1170,10 +1180,24 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           { href: '/blog/website-cost-canada', label: 'Canadian website cost guide' },
           ' puts a template or WordPress site at about $2,000-$10,000 CAD (2-4 weeks), a custom business website at $10,000-$50,000 (4-10 weeks), an e-commerce platform at $25,000-$100,000 (8-16 weeks) and an enterprise web application at $100,000-$500,000+ (4-12 months). If you are comparing vendors, our ',
           { href: '/blog/web-development-companies-edmonton', label: 'guide to choosing a web development company in Edmonton' },
-          ' lists the questions to ask. Discovery is free, and your price is fixed before coding starts.',
+          ' lists the questions to ask. If you want your team to edit content without a developer, see our ',
+          { href: '/services/wordpress-cms', label: 'WordPress CMS services' },
+          '; if you need logins, dashboards or integrations, that is a custom web app. Discovery is free, and your price is fixed before coding starts.',
         ],
       },
     ],
+    comparison: {
+      heading: 'WordPress or custom development?',
+      intro: 'Both are built by the same Edmonton team; the right choice depends on how much content you publish and how much custom logic the site needs.',
+      caption: 'Typical 2026 CAD ranges for an Edmonton website, from our Canadian website cost guide.',
+      headers: ['Option', 'Best for', 'Typical timeline', 'Typical cost (CAD)'],
+      rows: [
+        ['WordPress site', 'Content-led brochure sites, blogs and small stores your team updates itself', '2-4 weeks', '$2,000-$10,000'],
+        ['Custom business website', 'Brand-led sites that need speed, SEO depth and room to grow', '4-10 weeks', '$10,000-$50,000'],
+        ['E-commerce platform', 'Online stores that sell products directly', '8-16 weeks', '$25,000-$100,000'],
+        ['Custom web app or portal', 'Logins, dashboards, bookings and workflows that run your business', '4-12 months', '$100,000-$500,000+'],
+      ],
+    },
     proof: [
       { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
       { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
