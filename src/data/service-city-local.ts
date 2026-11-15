@@ -737,23 +737,37 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton, working with Toronto and GTA businesses that want one partner for SEO, Google Ads, social media and content. We do not have a Toronto office. Edmonton is two hours behind Toronto, so most of the working day overlaps, and we come to Toronto for workshops and milestone reviews when a project needs it, with travel agreed up front. One team covers SEO, Google Ads, social and content — not separate vendors for each channel. Retainers are priced in CAD. Call +1-403-604-8692 to talk about your channel mix.',
     sections: [
       {
-        heading: 'Why the Toronto and GTA paid-search market is tough',
+        heading: 'SEO for Toronto buyers who compare before they call',
         body: [
-          'The GTA is one of Canada\'s most crowded advertising markets: cost per click runs high in finance, legal, real estate and SaaS, and buyers compare vendors before they ever fill a form. Search intent also splits by suburb — what works for downtown Toronto often differs from Mississauga, Brampton, Markham or Vaughan. We plan budgets around those splits instead of one generic metro campaign. Need search only? See our ',
-          { href: '/locations/seo-company-in-toronto', label: 'SEO Company in Toronto' },
-          ' page for an SEO-only scope.',
+          'Toronto buyers search with suburb and industry qualifiers — “SEO company in Toronto”, “ecommerce SEO Toronto”, “law firm marketing GTA” — and compare three or four firms before they enquire. We build pages around those real queries, fix the technical issues that keep them out of the index, and keep your citations consistent so you show in the map pack for the areas you actually serve. For a search-only scope, see our ',
+          { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
+          ' or the full ',
+          { href: '/services/digital-marketing', label: 'digital marketing' },
+          ' offer.',
         ],
       },
       {
-        heading: 'One plan across search, paid and social',
+        heading: 'PPC when Toronto clicks are expensive',
         body: [
-          'We align organic search, paid campaigns and social posts to the same lead goals, so messaging and landing pages stay consistent when someone moves from an ad to your site or from a post to a service page. Each channel is scoped separately with clear KPIs: ',
+          'GTA cost per click is among the highest in Canada in finance, legal, real estate and SaaS, so paid search only works when the landing page and offer are tight. We start with the searches that already convert, cut wasted spend on broad match, and split campaigns by city and service so Mississauga, Brampton, Markham and Vaughan budgets report separately. ',
           { href: '/services/digital-marketing/google-ads-ppc', label: 'Google Ads and PPC' },
-          ', ',
-          { href: '/services/digital-marketing/social-media-marketing', label: 'social media marketing' },
-          ', and ',
-          { href: '/services/digital-marketing/content-marketing', label: 'content marketing' },
-          '. You can ramp one channel without guessing what the retainer covers.',
+          ' is scoped as its own line item with a target cost per lead.',
+        ],
+      },
+      {
+        heading: 'Content that answers Toronto buying questions',
+        body: [
+          'Content earns the comparison searches that ads cannot buy: “how much does SEO cost in Toronto”, “best digital marketing agency for SaaS”, “local SEO vs national SEO”. We write service and location pages, case-study summaries and buying guides that answer those questions in plain language, then link them to the pages that convert. ',
+          { href: '/services/digital-marketing/content-marketing', label: 'Content marketing' },
+          ' is planned around the questions your sales team already hears.',
+        ],
+      },
+      {
+        heading: 'Analytics that show which channel produced the lead',
+        body: [
+          'Toronto buyers often touch several channels before they enquire, so last-click reports undercount SEO and content. We connect Google Analytics 4, Google Ads, Search Console and your CRM so you can see which pages and campaigns produced calls, forms and pipeline, not just sessions. ',
+          { href: '/services/digital-marketing/performance-analytics', label: 'Performance analytics' },
+          ' gives leadership one view across channels.',
         ],
       },
       {
@@ -765,11 +779,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         ],
       },
       {
-        heading: 'Reporting you can act on',
+        heading: 'Who we are a good fit for — and who we are not',
         body: [
-          'Each cycle you get rankings, traffic, ad spend, conversions and the work completed, with plain-language notes on what we changed and what we are testing next. When leadership needs attribution across channels, our ',
-          { href: '/services/digital-marketing/performance-analytics', label: 'performance analytics' },
-          ' service connects ads, analytics and CRM data in one view instead of export screenshots alone.',
+          'We are a good fit if you are a Toronto or GTA business with a real service or product, a site that can be fixed or rebuilt, and someone who can approve content and budget decisions. We are not the right fit if you need a Toronto street address for local pack eligibility, a guaranteed #1 ranking, or the cheapest per-hour freelancer. We do not have a Toronto office and we will not pretend to; we work from Edmonton with overlapping hours and travel for workshops when a project needs it. If that honesty is a problem, we are not your agency.',
         ],
       },
     ],
@@ -784,20 +796,16 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         a: 'In our Canadian digital marketing cost guide, SEO typically runs about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month in CAD. GTA ad spend often sits above smaller cities because clicks cost more. We confirm a fixed monthly scope in CAD after a free review.',
       },
       {
-        q: 'Do you have an office in Toronto?',
-        a: 'No. Mapletech Labs is headquartered in Edmonton. We do not maintain a Toronto office. Edmonton is two hours behind Toronto, so most of our working day overlaps with yours for calls and reviews. When a project needs it, we travel to Toronto for workshops and milestone reviews with travel agreed up front.',
-      },
-      {
-        q: 'Should we start with SEO or Google Ads in the GTA?',
-        a: 'In a competitive GTA market, Google Ads can produce leads while SEO and content build. If your site is slow, thin or missing from local search, we usually fix that first so paid traffic lands on pages that convert. Many Toronto clients run both: a focused search campaign for near-term leads and SEO for lower cost per lead over time.',
-      },
-      {
-        q: 'How soon will we see results?',
+        q: 'How soon will we see results from Toronto campaigns?',
         a: 'Paid search can produce leads within weeks once campaigns and landing pages are live. SEO and content usually need several months before trend lines are fair to judge; local gains often show in 8-16 weeks when the site has no major technical blockers. We set expectations in the first report and track leading indicators such as impressions and conversions, not only position charts.',
       },
       {
-        q: 'Can you run campaigns for several GTA cities?',
-        a: 'Yes. We build separate landing pages and location targeting per city or suburb — for example Mississauga, Brampton, Markham or Vaughan — so ads and organic pages match local search intent instead of one generic Toronto page. Reporting rolls up to your account level while still showing performance by location.',
+        q: 'What reporting do we get each month?',
+        a: 'Each cycle you get rankings, traffic, ad spend, conversions and the work completed, with plain-language notes on what we changed and what we are testing next. When leadership needs attribution across channels, our performance analytics service connects ads, analytics and CRM data in one view instead of export screenshots alone. We review the numbers with you on a monthly call and agree the next priorities.',
+      },
+      {
+        q: 'Can you improve our local SEO in Toronto and the GTA?',
+        a: 'Yes. We clean up your Google Business Profile with honest service-area settings, accurate categories and the same name, address and phone across directories, then build location pages for the suburbs you serve — for example Mississauga, Brampton, Markham or Vaughan — so each one matches local search intent. We never create fake Toronto addresses or virtual offices, because those get profiles suspended. Reporting rolls up to your account level while still showing performance by location.',
       },
     ],
   },
