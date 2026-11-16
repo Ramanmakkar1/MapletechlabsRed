@@ -194,24 +194,28 @@ function buildLocationPage(slug: string): LocationPageData | null {
   };
 }
 
-// Build every keyword location page once at module load. The route then only
-// reads this map, so rendering never rebuilds FAQs, schema or internal links.
+// Build keyword location pages lazily and memoize them. Building every page at
+// module load made a cold render of any single keyword page (>150 of them) pay
+// to construct all of their FAQs, schema and link meshes first, which the slow
+// page audit measured as a multi-second server response. The slug list is cheap
+// and already available, so generateStaticParams still covers every route.
 const LOCATION_PAGES = new Map<string, LocationPageData>();
-for (const slug of serviceCitySlugs) {
-  const page = buildLocationPage(slug);
-  if (page) LOCATION_PAGES.set(slug, page);
-}
 
-export const locationPageSlugs = [...LOCATION_PAGES.keys()];
+export const locationPageSlugs = serviceCitySlugs;
 
 export function getLocationPage(slug: string): LocationPageData | undefined {
-  return LOCATION_PAGES.get(slug);
+  const cached = LOCATION_PAGES.get(slug);
+  if (cached) return cached;
+  const page = buildLocationPage(slug);
+  if (page) LOCATION_PAGES.set(slug, page);
+  return page ?? undefined;
 }
 
 // --- /locations/<city>/<service> mesh pages -------------------------------
-// Same idea as the keyword pages above: build the full payload once at module
-// load so the route render and generateMetadata only read a map. Nothing in
-// the request path builds schema, FAQs, metadata or internal links.
+// Same idea as the keyword pages above: build a pair's full payload on first
+// request and memoize it, so the route render and generateMetadata only read a
+// map. Nothing in the request path rebuilds schema, FAQs, metadata or links,
+// and a cold render no longer has to build every other mesh page first.
 export interface LocationMeshPageData {
   city: string;
   service: string;
@@ -302,13 +306,14 @@ function buildLocationMeshPage(city: string, service: string): LocationMeshPageD
 
 const LOCATION_MESH_PARAMS = getServedCityServiceParams();
 const LOCATION_MESH_PAGES = new Map<string, LocationMeshPageData>();
-for (const { city, service } of LOCATION_MESH_PARAMS) {
-  const page = buildLocationMeshPage(city, service);
-  if (page) LOCATION_MESH_PAGES.set(`${city}/${service}`, page);
-}
 
 export const locationMeshParams = LOCATION_MESH_PARAMS;
 
 export function getLocationMeshPage(city: string, service: string): LocationMeshPageData | undefined {
-  return LOCATION_MESH_PAGES.get(`${city}/${service}`);
+  const key = `${city}/${service}`;
+  const cached = LOCATION_MESH_PAGES.get(key);
+  if (cached) return cached;
+  const page = buildLocationMeshPage(city, service);
+  if (page) LOCATION_MESH_PAGES.set(key, page);
+  return page ?? undefined;
 }
