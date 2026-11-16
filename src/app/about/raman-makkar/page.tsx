@@ -212,12 +212,14 @@ export default function RamanPage() {
               <Link href="/contact" style={{ color: 'var(--brand)' }}>contact Raman</Link> to discuss your project.
             </p>
             <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginBottom: '12px' }}>
-              Who is Raman Makkar?
+              Who is Raman Makkar and what does Mapletech Labs deliver?
             </h2>
             <p style={{ fontSize: '20px', lineHeight: 1.7, marginBottom: '20px', color: 'var(--ink)', fontWeight: 500, maxWidth: '800px' }}>
-              His 15+ years of engineering experience include engineering leadership at three startup exits and
-              architecting a fintech platform that processes $1B+ annually, and today he leads a 25+ member team that has
-              delivered 500+ projects.
+              Raman Makkar is the Founder &amp; CEO of Mapletech Labs, an Edmonton software development company he founded
+              in 2018. Mapletech Labs delivers custom web applications, mobile apps, AI/ML solutions, cloud infrastructure
+              and SaaS platforms for clients across Canada and internationally. His 15+ years of engineering experience
+              include engineering leadership at three startup exits and architecting a fintech platform that processes
+              $1B+ annually, and today he leads a 25+ member team that has delivered 500+ projects.
             </p>
             <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '20px', color: 'var(--body)', maxWidth: '800px' }}>
               That work spans fintech, healthcare, e-commerce, logistics, edtech and enterprise, with real results such as
@@ -295,9 +297,35 @@ export default function RamanPage() {
               </p>
             </section>
 
+            <section aria-labelledby="raman-companies" style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 id="raman-companies" style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>
+                Companies Raman Makkar founded and leads
+              </h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Raman Makkar founded Mapletech Labs in Edmonton, Alberta in 2018 as TML Branding Agency and still leads it
+                as Founder &amp; CEO. The company has grown from that branding agency into a full-service software
+                development company with 12 locations across Canada and a 25+ member team that has delivered 500+
+                projects. Read the <Link href="/about" style={{ color: 'var(--brand)' }}>Mapletech Labs company history</Link>{' '}
+                for the full story and values.
+              </p>
+              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '12px' }}>
+                  <strong>Mapletech Labs</strong> — founded 2018 in Edmonton, Alberta. A software development company
+                  delivering custom web applications, mobile apps, AI/ML solutions, cloud infrastructure and SaaS
+                  platforms. 25+ team members, 500+ projects, 12 locations across Canada. See{' '}
+                  <Link href="/services" style={{ color: 'var(--brand)' }}>Mapletech Labs services</Link>.
+                </li>
+                <li>
+                  <strong>TML Branding Agency</strong> — the original brand Raman founded in 2018, now the alternate name
+                  under which Mapletech Labs began. It grew into the full-service technology company clients work with
+                  today.
+                </li>
+              </ul>
+            </section>
+
             <section aria-labelledby="raman-background" style={{ marginTop: '48px' }}>
               <h2 id="raman-background" style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>
-                Background, expertise and approach
+                Raman Makkar&apos;s expertise, background and approach
               </h2>
               <div
                 style={{
@@ -353,7 +381,7 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Services Raman leads</h2>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Services Raman Makkar leads at Mapletech Labs</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
                 Raman and the Mapletech Labs team deliver custom digital products and long-term engineering support for
                 businesses across Canada.
@@ -402,6 +430,40 @@ export default function RamanPage() {
                   <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)' }}>Software development in Vancouver</Link>:
                   collaborate with Vancouver companies on web, mobile, and AI-driven software initiatives.
                 </li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="raman-locations" style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 id="raman-locations" style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>
+                Locations where Raman Makkar works
+              </h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Raman Makkar is based at the Mapletech Labs headquarters in Edmonton, Alberta, and the team serves 12
+                locations across Canada plus clients in the US and Europe. He works with Edmonton, Calgary, Toronto and
+                Vancouver businesses remotely or in person, and meets clients in Ottawa and Montreal. Browse all{' '}
+                <Link href="/locations" style={{ color: 'var(--brand)' }}>Mapletech Labs locations across Canada</Link>{' '}
+                or pick a city below.
+              </p>
+              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Edmonton, Alberta</Link>{' '}
+                  — company headquarters and home base for Raman.
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)' }}>Calgary, Alberta</Link>{' '}
+                  — custom software and app development for Calgary businesses.
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)' }}>Toronto, Ontario</Link>{' '}
+                  — product engineering and application builds for Toronto teams.
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)' }}>Vancouver, British Columbia</Link>{' '}
+                  — web, mobile and AI-driven software for Vancouver companies.
+                </li>
+                <li style={{ marginBottom: '8px' }}>Ottawa, Ontario — project delivery for public-sector and enterprise clients.</li>
+                <li style={{ marginBottom: '8px' }}>Montreal, Quebec — product and platform work for Quebec businesses.</li>
+                <li>United States and Europe — remote delivery for international clients.</li>
               </ul>
             </section>
 
