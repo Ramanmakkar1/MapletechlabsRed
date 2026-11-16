@@ -116,6 +116,8 @@ function BuyerContent() {
           <li>Define human approvals, escalation owners, and measurable acceptance criteria.</li>
           <li>Set a budget range, target timeline, and owner for ongoing monitoring and usage costs.</li>
         </ul>
+        <h2 id="automation-related-services">AI automation, AI development and software development</h2>
+        <p>AI automation is one part of our <Link href="/services/ai-ml">AI development services</Link>, which cover machine learning, LLM integration and AI agents alongside workflow automation. When a workflow needs a new application, integrations or admin dashboards around it, our <Link href="/services/software-development">custom software development team</Link> builds that layer. You can see the technical work in our case studies: the <Link href="/case-studies/fintech-trading-platform">AI-powered trading platform for Axion Capital</Link>, the <Link href="/case-studies/logistics-platform">real-time fleet management system for RouteLogic</Link> and the <Link href="/case-studies/healthcare-telehealth">HIPAA-compliant telehealth platform for ClinicFlow Health</Link>.</p>
         <Link href="/contact#contact-form" className="btn btn--primary">Discuss your AI automation workflow with an engineer</Link>
       </div>
     </section>
@@ -127,7 +129,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/ai-ml", label: "AI & Machine Learning" }}
       name="AI Automation"
-      copy={{ badge: "AI & MACHINE LEARNING", title: <>AI Automation Services in <span style={{ color: 'var(--brand)' }}>Canada</span></>, desc: <>We design and deploy intelligent automation workflows that eliminate repetitive work, reduce errors, and free your team to focus on what matters — saving an average of 70% in manual processing time.</> }}
+      copy={{ badge: "AI & MACHINE LEARNING", title: <>AI Automation Services in <span style={{ color: 'var(--brand)' }}>Canada</span></>, desc: <>AI automation services build software that handles repetitive business work — invoice processing, email triage, lead routing and data entry — by combining rules with AI models, while your people approve the exceptions. Mapletech Labs designs and deploys these workflows for Canadian companies in Edmonton, Calgary, Toronto and Vancouver, typically cutting manual processing time by around 70%.</> }}
       stats={stats}
       services={services}
       steps={steps}
