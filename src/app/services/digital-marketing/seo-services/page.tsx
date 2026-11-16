@@ -8,14 +8,14 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
-// Approved SEO title: "SEO Services in Canada: Technical and Local". The title
-// helper appends the Mapletech Labs brand once, rendering at 60 chars.
+// Approved SEO title: "SEO Services Canada: Technical and Local". The title
+// helper appends the Mapletech Labs brand once, rendering at 57 chars.
 // "and" avoids the HTML entity (&amp;) that would push the raw <title> over 60.
-const TITLE = 'SEO Services in Canada: Technical and Local';
+const TITLE = 'SEO Services Canada: Technical and Local';
 const DESCRIPTION = 'SEO services in Canada from an Edmonton-based team: technical SEO, local SEO, link building and content strategy. 200% avg organic traffic growth.';
 
 export const metadata: Metadata = {
-  // Rendered title: "SEO Services in Canada: Technical and Local | Mapletech Labs" (60 chars).
+  // Rendered title: "SEO Services Canada: Technical and Local | Mapletech Labs" (57 chars).
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {

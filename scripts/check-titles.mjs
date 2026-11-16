@@ -97,12 +97,12 @@ const AUDIT_PAGES = [
   "src/app/services/digital-marketing/seo-services/page.tsx",
 ];
 const EXPECTED_AUDIT_TITLES = new Map([
-  ["src/app/blog/app-development-companies-edmonton/page.tsx", "App Development Companies in Edmonton 2026 | Mapletech Labs"],
-  ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost in Canada: 2026 CAD | Mapletech Labs"],
-  ["src/app/blog/web-development-companies-toronto/page.tsx", "Web Development Companies in Toronto 2026 | Mapletech Labs"],
-  ["src/app/blog/website-cost-canada/page.tsx", "Website Cost in Canada 2026: Prices by Type | Mapletech Labs"],
-  ["src/app/case-studies/logistics-platform/page.tsx", "Logistics Platform: 15K+ Deliveries a Day | Mapletech Labs"],
-  ["src/app/services/digital-marketing/seo-services/page.tsx", "SEO Services in Canada: Technical and Local | Mapletech Labs"],
+  ["src/app/blog/app-development-companies-edmonton/page.tsx", "App Development Companies Edmonton 2026 | Mapletech Labs"],
+  ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost Canada: 2026 CAD | Mapletech Labs"],
+  ["src/app/blog/web-development-companies-toronto/page.tsx", "Web Development Companies Toronto 2026 | Mapletech Labs"],
+  ["src/app/blog/website-cost-canada/page.tsx", "Website Cost Canada 2026: Prices by Type | Mapletech Labs"],
+  ["src/app/case-studies/logistics-platform/page.tsx", "Logistics Platform: 15K+ Deliveries Daily | Mapletech Labs"],
+  ["src/app/services/digital-marketing/seo-services/page.tsx", "SEO Services Canada: Technical and Local | Mapletech Labs"],
 ]);
 const auditArticlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
 function articleMetaTitle(slug) {
