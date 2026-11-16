@@ -40,23 +40,32 @@ function BuyerContent() {
   return (
     <section aria-labelledby="ecommerce-buyer-guide" style={{ padding: 'var(--section-y-sm) 0', background: 'var(--surface-alt)' }}>
       <div className="cb-container" style={{ maxWidth: 960, color: 'var(--body)', lineHeight: 1.7 }}>
-        <h2 id="ecommerce-buyer-guide">Planning a custom e-commerce build or replatform</h2>
-        <p className="lede">A custom e-commerce build gives you a storefront designed around your catalogue, checkout and back-office systems instead of a fixed theme. It fits when standard retail tooling cannot support your pricing, order flow or integrations; a simpler catalogue often launches faster on Shopify.</p>
+        <h2 id="ecommerce-buyer-guide">What is a custom e-commerce system?</h2>
+        <p className="lede">A custom e-commerce system is an online store built around your catalogue, checkout and back-office processes instead of a fixed theme. It gives you control over product structure, pricing rules, integrations and page speed, and it fits when standard retail tooling cannot support how you actually sell. A simpler catalogue often launches faster on Shopify, so we recommend the platform only after reviewing your requirements.</p>
 
-        <h3>Custom storefronts</h3>
-        <p className="lede">We build custom storefronts with Next.js Commerce or bespoke architecture, tailored to your brand with mobile-first product pages and a checkout built to convert. Our <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)' }}>enterprise e-commerce platform case study</Link> shows a headless rebuild that tripled revenue, serves 2M+ monthly visitors at 99.9% uptime, and held zero downtime through Black Friday peak traffic.</p>
+        <h2>Product catalog and merchandising</h2>
+        <p className="lede">The catalogue is the foundation of the store. We model products, variants, collections and attributes so customers can find the right item quickly, whether you sell 50 SKUs or 50,000. That includes faceted filtering, product search through Algolia or Elasticsearch, related-product logic, and merchandising rules for promotions and seasonal ranges. We also plan category and product URL structure up front so the catalogue stays crawlable and easy to manage as it grows.</p>
 
-        <h3>Commerce integrations</h3>
-        <p className="lede">Your storefront is only as good as the systems behind it. We connect payment gateways such as Stripe, PayPal, Klarna and Afterpay, plus inventory and order management, shipping, email marketing, analytics, ERP, PIM and 3PL providers. Product search can run on Algolia or Elasticsearch, and commerce backends can include Shopify or Commercetools.</p>
+        <h2>Checkout and payments</h2>
+        <p className="lede">Checkout is where revenue is won or lost. We remove friction with guest checkout, address autocomplete, saved payment methods, one-click upsells and abandoned-cart recovery, then test the full flow on mobile and desktop. Payments run through Stripe, PayPal, Klarna, Afterpay and regional providers with secure tokenisation, 3D Secure, multi-currency support and automatic tax calculation. Our clients typically see 15–40% conversion rate improvements within 90 days of launch.</p>
 
-        <h3>Migration considerations</h3>
+        <h2>Integrations with your business systems</h2>
+        <p className="lede">Your storefront is only as good as the systems behind it. We connect payment gateways, inventory and order management, shipping, email marketing, analytics, ERP, PIM and 3PL providers so stock, orders and customer data stay in sync. Product search can run on Algolia or Elasticsearch, and commerce backends can include <Link href="/services/web-development/shopify-development" style={{ color: 'var(--brand)' }}>Shopify development</Link> or Commercetools. If you run WordPress, our <Link href="/services/wordpress-cms/woocommerce-stores" style={{ color: 'var(--brand)' }}>WooCommerce store development</Link> service covers the same integrations on that stack.</p>
+
+        <h2>Performance and scale</h2>
+        <p className="lede">Fast stores sell more and rank better. We build with Next.js Commerce or bespoke architecture, edge caching via CDN, optimised images and database read replicas, then load test up to 5x expected peak traffic before major events. Our <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)' }}>enterprise e-commerce platform case study</Link> shows a headless rebuild that tripled revenue, serves 2M+ monthly visitors at 99.9% uptime, and held zero downtime through Black Friday peak traffic. Our storefront delivery benchmark is 4 weeks, with larger replatforms scoped separately.</p>
+
+        <h2>Security and compliance</h2>
+        <p className="lede">Security is built into the architecture, not added at the end. We use PCI-compliant hosted payment fields so card data never touches your servers, enforce HTTPS and secure headers, apply role-based access to admin tools, and keep dependencies patched. For Canadian stores we configure tax and shipping rules correctly, and we support privacy and consent requirements for customer data. We also monitor error rates and uptime closely in the first 48 hours after launch.</p>
+
+        <h2>When custom e-commerce development fits</h2>
+        <p className="lede">A custom build fits when your storefront needs unique UX, complex B2B or multi-vendor workflows, unusual pricing, or deep ERP, PIM or 3PL integration. A standard retail catalogue with straightforward requirements is often better served by Shopify. We assess your catalogue, order flow and integrations before recommending either path, and you can see the wider team&apos;s work on our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services page</Link>.</p>
+
+        <h2>Migration considerations</h2>
         <p className="lede">A migration has to protect revenue, rankings and customer history. We have a structured migration process covering product catalogue and media, customer accounts, order history, SEO URL preservation with redirects, and payment method migration. We run parallel systems during the transition to ensure zero downtime and validate every product, price, and image before cutover.</p>
 
-        <h3>Project scope and delivery</h3>
-        <p className="lede">Scope is driven by catalogue size, number of unique templates, checkout complexity, integrations and data migration. We define the catalogue structure, payment and fulfilment strategy and technology stack first, then build and test every integration end to end. Our storefront delivery benchmark is 4 weeks, with larger replatforms scoped separately. We share a scoped, fixed-price proposal before any build starts.</p>
-
-        <h3>Shopify versus custom: how to evaluate</h3>
-        <p className="lede">Choose Shopify for standard retail with straightforward requirements, fast time to market and a rich app ecosystem. Choose a custom or headless build when you need unique UX, complex B2B workflows, unusual pricing models or deep ERP integration. We evaluate both options objectively against your requirements and budget, and you can see the wider team&apos;s work on our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services page</Link>.</p>
+        <h2>Shopify versus custom: how to evaluate</h2>
+        <p className="lede">Choose Shopify for standard retail with straightforward requirements, fast time to market and a rich app ecosystem. Choose a custom or headless build when you need unique UX, complex B2B workflows, unusual pricing models or deep ERP integration. We evaluate both options objectively against your requirements and budget, and we share a scoped, fixed-price proposal before any build starts.</p>
         <p className="lede"><Link href="/contact?service=web-development">Book an e-commerce consultation</Link> with your catalogue size, current platform and integration list so we can recommend Shopify, headless or bespoke and provide a fixed quote.</p>
       </div>
     </section>
