@@ -80,8 +80,9 @@ export default function Page() {
           Software, AI, marketing and cost guides: where to start
         </h2>
         <p style={{ maxWidth: 760, marginBottom: '0.75rem', lineHeight: 1.7 }}>
-          Mapletech Labs writes practical guides for Canadian businesses buying software, AI and
-          marketing. If you are budgeting, start with our{' '}
+          Mapletech Labs&apos; blog covers software development, app development, AI, UI/UX design
+          and digital marketing for Canadian businesses, with cost guides, city-by-city agency
+          rankings and practical how-tos. If you are budgeting, start with our{' '}
           <Link href="/blog/website-cost-canada">website cost in Canada guide</Link> and{' '}
           <Link href="/blog/custom-software-development-cost-canada">
             custom software development cost in Canada guide
@@ -96,6 +97,29 @@ export default function Page() {
           </Link>
           .
         </p>
+
+        <nav aria-label="Our services" style={{ margin: '1.25rem 0 0.5rem' }}>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '0 0 0.5rem' }}>
+            Our services
+          </h3>
+          <ul style={{ lineHeight: 1.9, margin: 0, paddingLeft: '1.25rem' }}>
+            <li>
+              <Link href="/services/software-development">Custom software development services</Link>
+            </li>
+            <li>
+              <Link href="/services/mobile-app-development">Mobile app development services</Link>
+            </li>
+            <li>
+              <Link href="/services/ai-ml">AI and machine learning development</Link>
+            </li>
+            <li>
+              <Link href="/services/product-design">UI/UX and product design services</Link>
+            </li>
+            <li>
+              <Link href="/services/digital-marketing/seo-services">SEO services in Canada</Link>
+            </li>
+          </ul>
+        </nav>
 
         <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '1.25rem 0 0.5rem' }}>Costs and budgets</h3>
         <ul style={{ lineHeight: 1.9, margin: 0, paddingLeft: '1.25rem' }}>
