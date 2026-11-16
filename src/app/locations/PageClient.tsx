@@ -117,7 +117,7 @@ export default function LocationsIndexPage() {
                 <strong>Mapletech Labs is a Canadian software company that builds custom software, mobile apps, AI systems and UI/UX design for businesses across Canada.</strong> We are headquartered in Edmonton and deliver from there to clients in Calgary, Toronto, Vancouver and twenty-four cities in seven provinces, combining local market knowledge with a national engineering bench.
               </p>
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
-                Start with the city closest to you for local delivery details, industries and the services we ship there:
+                Start with the city closest to you for local delivery details, industries and the services we ship there. Software development, app development, AI development and UI/UX design are available in every market we serve, including Edmonton, Calgary, Toronto, Vancouver, Quebec City, Victoria, Gatineau and Regina:
               </p>
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0 0', display: 'grid', gap: 12 }}>
@@ -139,6 +139,26 @@ export default function LocationsIndexPage() {
               <li>
                 <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)', fontWeight: 600 }}>
                   Software, app, AI and UI/UX development in Vancouver
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/software-development-company-in-quebec-city" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Software, app, AI and UI/UX development in Quebec City
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/software-development-company-in-victoria" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Software, app, AI and UI/UX development in Victoria
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/software-development-company-in-gatineau" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Software, app, AI and UI/UX development in Gatineau
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/software-development-company-in-regina" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Software, app, AI and UI/UX development in Regina
                 </Link>
               </li>
             </ul>
