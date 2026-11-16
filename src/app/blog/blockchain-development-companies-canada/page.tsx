@@ -7,7 +7,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Top 10 Blockchain Development Companies in Canada (2026)';
+const TITLE = 'Blockchain Development Companies in Canada: Top 10';
 const DESCRIPTION = 'The best blockchain and Web3 development companies in Canada for 2026, compared on services and track record, plus how to choose the right partner.';
 const SLUG = 'blockchain-development-companies-canada';
 const DATE = '2026-03-03';

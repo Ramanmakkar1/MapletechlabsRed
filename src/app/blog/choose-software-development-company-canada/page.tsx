@@ -9,7 +9,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'How to Choose a Software Development Company in Canada';
+const TITLE = 'Software Development Company Canada: How to Choose 2026';
 const DESCRIPTION = 'How to choose a software development company in Canada: what to look for, questions to ask, pricing models, red flags, and how to compare your shortlist.';
 const SLUG = 'choose-software-development-company-canada';
 const DATE = '2026-02-05';

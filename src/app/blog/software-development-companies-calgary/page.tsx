@@ -10,7 +10,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const TITLE = 'Top 10 Software Development Companies in Calgary (2026)';
+const TITLE = 'Software Development Companies in Calgary: Top 10 2026';
 const DESCRIPTION = 'The best software development companies in Calgary, Alberta for 2026, compared on services, industries and track record, plus how to choose a team.';
 const SLUG = 'software-development-companies-calgary';
 const DATE = '2026-02-28';
