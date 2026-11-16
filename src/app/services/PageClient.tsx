@@ -90,6 +90,7 @@ const services: ServiceCategory[] = [
       { name: 'API & Backend', href: '/services/web-development/api-backend' },
       { name: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
       { name: 'Custom Software Development', href: '/services/software-development' },
+      { name: 'Dedicated Development Team', href: '/services/software-development/dedicated-development-team' },
       { name: 'Legacy Software Modernization', href: '/services/software-development/legacy-software-modernization' },
       { name: 'Software Maintenance', href: '/services/software-maintenance' },
     ],
