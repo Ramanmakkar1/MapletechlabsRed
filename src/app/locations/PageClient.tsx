@@ -109,6 +109,42 @@ export default function LocationsIndexPage() {
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations' }]} copy={{ badge: "Across Canada", title: <>Software Development Company<br /><span style={{ color: 'var(--brand)' }}>Across Canada.</span></>, desc: <>From coast to coast, Mapletech Labs brings world-class software development to businesses across Canada. Our distributed team model means you get local expertise backed by national resources.</> }} photo={officeMedia.open} form={false} />
 
+        {/* ANSWER-FIRST SUMMARY + PRIORITY CITY LINKS */}
+        <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container">
+            <div className="prose-body" style={{ maxWidth: 820 }}>
+              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
+                <strong>Mapletech Labs is a Canadian software company that builds custom software, mobile apps, AI systems and UI/UX design for businesses across Canada.</strong> We are headquartered in Edmonton and deliver from there to clients in Calgary, Toronto, Vancouver and twenty-four cities in seven provinces, combining local market knowledge with a national engineering bench.
+              </p>
+              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
+                Start with the city closest to you for local delivery details, industries and the services we ship there:
+              </p>
+            </div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0 0', display: 'grid', gap: 12 }}>
+              <li>
+                <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Software, app, AI and UI/UX development in Edmonton (our headquarters)
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Software, app, AI and UI/UX development in Calgary
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Software, app, AI and UI/UX development in Toronto
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Software, app, AI and UI/UX development in Vancouver
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* PRIORITY CITY + SERVICE PAGES — server-rendered links to the highest-intent pages */}
         <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
