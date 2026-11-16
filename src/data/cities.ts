@@ -794,6 +794,12 @@ export const cities: CityData[] = [
     isHQ: false,
     localIndustries: ['Film & Visual Effects', 'Video Games', 'Telecommunications', 'Clean Technology', 'Education'],
     heroContext: 'Burnaby is a technology and media centre — home to Simon Fraser University, one of Canada’s largest video-game and visual-effects clusters, major telecommunications operations, and a growing clean-tech sector.',
+    answer:
+      'Mapletech Labs is a software development company serving Burnaby and Metro Vancouver, building custom web platforms, mobile apps and AI systems for games, VFX, telecom and clean-tech teams. You get a fixed scope and price in CAD, senior engineers on the project, and a reply from a senior engineer within one working day.',
+    localNeeds:
+      'Burnaby teams usually need software that keeps up with real-time production: tools and pipelines for games and VFX studios, data platforms and dashboards for telecom and clean-tech operations, and web or mobile products that hold up under heavy media traffic. SFU spin-offs and product teams around Metrotown and Brentwood often need a production-grade MVP built quickly without cutting engineering quality.',
+    process:
+      'Our Burnaby process starts with a discovery call, then a written scope and fixed price before any code is written. We design, build and release in short cycles with working software at every sprint, keep your data in Canada where residency matters, and stay on for support and new features after launch.',
     whyCity: [
       { icon: '', title: 'Games and VFX', desc: 'One of Canada’s densest games and visual-effects clusters means real demand for real-time, high-performance and pipeline tooling.' },
       { icon: '', title: 'Telecom and clean tech', desc: 'Major telecommunications and clean-technology operations need robust data platforms, dashboards and integrations.' },
@@ -810,6 +816,12 @@ export const cities: CityData[] = [
     isHQ: false,
     localIndustries: ['Government & Crown Corporations', 'Agriculture & Agri-Tech', 'Energy & Potash', 'Insurance', 'Manufacturing'],
     heroContext: 'Regina is Saskatchewan’s capital, with an economy built on government and Crown corporations, a large agriculture and agri-tech sector, energy and potash, and insurance.',
+    answer:
+      'Mapletech Labs is a software development company serving Regina and Saskatchewan, building custom web platforms, mobile apps and AI systems for government, agri-tech, insurance and energy teams. You get a fixed scope and price in CAD, senior engineers on the project, and a reply from a senior engineer within one working day.',
+    localNeeds:
+      'Regina organisations usually need software that fits public-sector and resource workflows: secure citizen portals, internal case and workflow systems, precision-agriculture and traceability platforms, and claims or policy tools for insurers. Crown corporations and government suppliers also need accessible, well-documented systems that pass procurement and privacy review.',
+    process:
+      'Our Regina process starts with a discovery call, then a written scope and fixed price before any code is written. We design, build and release in short cycles with working software at every sprint, keep your data in Canada, and stay on for support and new features after launch.',
     whyCity: [
       { icon: '', title: 'Government and Crown corps', desc: 'As the provincial capital, Regina needs accessible, secure citizen-facing services and internal systems built to public-sector standards.' },
       { icon: '', title: 'Agriculture and agri-tech', desc: 'Saskatchewan’s agricultural core drives demand for precision-farming, traceability and supply-chain platforms.' },
@@ -906,6 +918,12 @@ export const cities: CityData[] = [
     isHQ: false,
     localIndustries: ['Biotech & Pharmaceuticals', 'Life Sciences', 'Manufacturing', 'Agri-Food', 'Retail'],
     heroContext: 'Laval is the second-largest city in Quebec, with a nationally significant biotechnology and pharmaceutical cluster around the Cité de la Biotech, plus manufacturing and agri-food.',
+    answer:
+      'Mapletech Labs is a software development company serving Laval and Greater Montreal, building custom web platforms, mobile apps and AI systems for life-sciences, manufacturing, retail and agri-food teams. You get a fixed scope and price in CAD, senior engineers on the project, and a reply from a senior engineer within one working day.',
+    localNeeds:
+      'Laval businesses usually need software that works in French first: compliant research and lab data tools for the Cité de la Biotech, warehouse and delivery apps for manufacturers along Highways 15 and 440, and booking, ordering or loyalty apps for retailers around Carrefour Laval and Centropolis. Quebec’s Law 25 and the Charter of the French Language shape how that software collects data and speaks to users.',
+    process:
+      'Our Laval process starts with a discovery call, then a written scope and fixed price before any code is written. We design, build and release in short cycles with working software at every sprint, build French-first or fully bilingual from the first wireframe, and stay on for support and new features after launch.',
     whyCity: [
       { icon: '', title: 'Biotech and pharma', desc: 'The Cité de la Biotech anchors a serious life-sciences cluster needing compliant, well-engineered data and research software.' },
       { icon: '', title: 'Manufacturing and agri-food', desc: 'A strong manufacturing and agri-food base drives demand for operations, traceability and supply-chain platforms.' },
