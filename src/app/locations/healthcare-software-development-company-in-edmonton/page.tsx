@@ -6,7 +6,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 export const dynamic = 'force-static';
-export const revalidate = false;
+export const revalidate = 31536000;
 
 const TITLE = 'Healthcare Software Development in Edmonton';
 const DESCRIPTION =

@@ -6,7 +6,7 @@ import cityDescription from '@/lib/seo/city-meta';
 import { ogTitle } from '@/lib/seo/title';
 
 export const dynamic = 'force-static';
-export const revalidate = false;
+export const revalidate = 31536000;
 
 const TITLE = 'Software Development Company in Quebec City';
 

@@ -4,7 +4,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 
 export const dynamic = 'force-static';
-export const revalidate = false;
+export const revalidate = 31536000;
 
 const TITLE = 'Software Development Company Toronto | Fixed Price';
 const DESCRIPTION = 'Software development company for Toronto businesses: custom software, web and mobile apps by Mapletech Labs. Fixed-scope, fixed-price builds. Free quote.';

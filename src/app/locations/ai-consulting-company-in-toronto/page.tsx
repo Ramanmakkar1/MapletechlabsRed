@@ -5,7 +5,7 @@ import { BUSINESS, localServiceSchema } from '@/lib/seo/business';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 export const dynamic = 'force-static';
-export const revalidate = false;
+export const revalidate = 31536000;
 
 const TITLE = 'AI Consulting Company in Toronto, ON | Mapletech Labs';
 const DESCRIPTION =
