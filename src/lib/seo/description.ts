@@ -4,10 +4,10 @@
  * Search engines truncate descriptions past ~155 characters, so long copy is
  * cut at a word boundary and stripped of trailing punctuation. The cut never
  * falls below the 140-character target: if the last word boundary is too early,
- * the copy is cut at the maximum instead. Short copy is returned unchanged by
- * `seoDescription()`; `articleDescription()` extends it with the article
- * fallback (and, when that is still too short, real company facts) so blog
- * metadata always lands in the 140-155 character window.
+ * the copy is cut at the maximum instead. Short copy is extended with real
+ * company/service context by `seoDescription()`; `articleDescription()` keeps
+ * its article fallback (and, when that is still too short, real company facts)
+ * so blog metadata always lands in the 140-155 character window.
  */
 const MIN_DESCRIPTION_LENGTH = 140;
 const MAX_DESCRIPTION_LENGTH = 155;
@@ -15,6 +15,11 @@ const MAX_DESCRIPTION_LENGTH = 155;
 /** Real entity facts used only when every article source is missing or short. */
 const COMPANY_FACT_FALLBACK =
   'Mapletech Labs is a Canadian software development company building web, mobile and AI products for businesses in Edmonton, Calgary, Toronto and Vancouver.';
+
+/** Real company/service context appended to short hand-written descriptions. */
+const COMPANY_CONTEXT = COMPANY_FACT_FALLBACK;
+const COMPANY_CONTEXT_NO_BRAND =
+  'We are a Canadian software development company building web, mobile and AI products for businesses in Edmonton, Calgary, Toronto and Vancouver.';
 
 function truncateAtWordBoundary(text: string): string {
   const spaceIndex = text.lastIndexOf(' ', MAX_DESCRIPTION_LENGTH);
@@ -26,10 +31,28 @@ function truncateAtWordBoundary(text: string): string {
 
 export function seoDescription(text: string): string {
   const trimmed = text.trim();
-  if (trimmed.length <= MAX_DESCRIPTION_LENGTH) return trimmed;
-  const cleaned = truncateAtWordBoundary(trimmed);
+
+  // Long copy keeps the existing word-boundary trim.
+  if (trimmed.length > MAX_DESCRIPTION_LENGTH) {
+    const cleaned = truncateAtWordBoundary(trimmed);
+    if (cleaned.length >= MIN_DESCRIPTION_LENGTH) return cleaned;
+    return trimmed
+      .slice(0, MAX_DESCRIPTION_LENGTH)
+      .replace(/[.,;:!?\-–—]+$/, '')
+      .trim();
+  }
+
+  if (trimmed.length >= MIN_DESCRIPTION_LENGTH) return trimmed;
+
+  // Short copy is extended with real company/service context, then trimmed at
+  // a word boundary so the result still lands in the 140-155 window.
+  const context = /mapletech/i.test(trimmed) ? COMPANY_CONTEXT_NO_BRAND : COMPANY_CONTEXT;
+  const extended = `${trimmed} ${context}`.trim();
+  if (extended.length <= MAX_DESCRIPTION_LENGTH) return extended;
+
+  const cleaned = truncateAtWordBoundary(extended);
   if (cleaned.length >= MIN_DESCRIPTION_LENGTH) return cleaned;
-  return trimmed
+  return extended
     .slice(0, MAX_DESCRIPTION_LENGTH)
     .replace(/[.,;:!?\-–—]+$/, '')
     .trim();
