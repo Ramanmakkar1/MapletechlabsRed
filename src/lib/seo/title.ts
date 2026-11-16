@@ -15,8 +15,18 @@
 export const BRAND_SUFFIX = ' | Mapletech Labs';
 export const MAX_TITLE_LENGTH = 60;
 
+function decodeEntities(title: string): string {
+  return title
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ');
+}
+
 function cleanTitle(title: string): string {
-  return title.replace(/\s+/g, ' ').trim();
+  return decodeEntities(title).replace(/\s+/g, ' ').trim();
 }
 
 function hasBrand(title: string): boolean {
@@ -83,7 +93,7 @@ export function seoTitle(title: string): { absolute: string } {
  * branded title still fits MAX_TITLE_LENGTH.
  */
 export function localServiceTitle(title: string, cityName: string, provinceAbbr: string): string {
-  const t = title.trim();
+  const t = decodeEntities(title).trim();
   const fits = (s: string) => s.length + BRAND_SUFFIX.length <= MAX_TITLE_LENGTH;
   let out = t;
   if (provinceAbbr && t.endsWith(` in ${cityName}`) && fits(`${t}, ${provinceAbbr}`)) out = `${t}, ${provinceAbbr}`;
