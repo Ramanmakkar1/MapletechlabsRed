@@ -284,6 +284,14 @@ for (const { text, line } of articleDescriptionsFound) {
   problems.push(...descriptionProblems(text).map((problem) => `src/data/articles.ts:${line}: ${text.slice(0, 40)}... ${problem}`));
 }
 
+if (auditTitleOwners.size !== AUDIT_PAGES.length) {
+  problems.push(`audit regression must cover ${AUDIT_PAGES.length} routes, resolved ${auditTitleOwners.size}`);
+}
+// Proof for the six audited routes: rendered title + length per route.
+for (const [title, file] of auditTitleOwners) {
+  console.log(`audit ${file.split(/[\\/]/).at(-2)}: "${title}" (${title.length})`);
+}
+
 if (problems.length) {
   console.error(`check-titles: ${problems.length} problem(s)\n` + problems.join("\n"));
   process.exit(1);
