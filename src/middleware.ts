@@ -42,6 +42,22 @@ function isFrench(pathname: string): boolean {
 // lands on the final English keyword page when the config table is not applied.
 const CITY_HUBS = ['edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal', 'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on', 'mississauga', 'hamilton', 'surrey', 'burnaby', 'regina', 'quebec-city', 'brampton', 'markham', 'windsor', 'kelowna', 'laval', 'gatineau'];
 const PRIORITY_SERVICES: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development'], ['digital-marketing', 'seo'], ['product-design', 'ui-ux-design']];
+// Niche mesh pages that next.config.ts 301s to the core service page in cities
+// without local demand. Mirrored here so the audited URLs never fall through to
+// a slow on-demand render when the config redirect table is not applied.
+const NICHE_SERVICES = new Set(['ar-vr', 'blockchain-web3', 'game-development']);
+const MAJOR_TECH_CITIES = new Set(['toronto', 'vancouver', 'montreal', 'calgary', 'edmonton', 'ottawa']);
+
+function englishMeshRedirect(pathname: string): string | undefined {
+  const parts = pathname.split('/').filter(Boolean);
+  if (parts[0] !== 'locations' || parts.length !== 3 || !CITY_HUBS.includes(parts[1])) return undefined;
+  const city = parts[1];
+  const service = parts[2];
+  const match = PRIORITY_SERVICES.find(([svc]) => svc === service);
+  if (match) return `/locations/${match[1]}-company-in-${city}`;
+  if (NICHE_SERVICES.has(service) && !MAJOR_TECH_CITIES.has(city)) return `/services/${service}`;
+  return undefined;
+}
 
 function englishPathForFrench(pathname: string): string {
   const rest = pathname.replace(/^\/fr(?=\/|$)/, '');
@@ -69,6 +85,19 @@ export function middleware(req: NextRequest) {
     }
     const url = req.nextUrl.clone();
     url.pathname = englishPathForFrench(pathname);
+    return NextResponse.redirect(url, 301);
+  }
+
+  // Fallback for the service+city mesh: next.config.ts already 301s these, but
+  // the audit measured the two niche/priority URLs as slow 200 renders on hosts
+  // that skip the config table. A 301 is both correct and far faster.
+  const meshTarget = englishMeshRedirect(pathname);
+  if (meshTarget) {
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      return NextResponse.next();
+    }
+    const url = req.nextUrl.clone();
+    url.pathname = meshTarget;
     return NextResponse.redirect(url, 301);
   }
 
