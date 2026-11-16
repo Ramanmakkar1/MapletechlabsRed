@@ -81,6 +81,10 @@ function BuyerContent() {
   return (
     <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
       <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>What is Flutter app development?</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Flutter app development is the process of building iOS, Android, web and desktop apps from a single Dart codebase using Google&apos;s open-source Flutter framework. It compiles to native ARM code and draws its own UI, so you get one team, one codebase and near-native speed instead of separate native builds for each platform.
+        </p>
         <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Hire Flutter developers for your next release</h2>
         <p style={{ margin: '0 0 24px' }}>
           Mapletech Labs has shipped 100+ Flutter apps for Canadian teams. Choose the engagement that matches where your product is today. Still comparing stacks? Read our{' '}
@@ -99,6 +103,58 @@ function BuyerContent() {
             </div>
           ))}
         </div>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Flutter vs native vs React Native</h2>
+        <p style={{ margin: '0 0 16px' }}>
+          Flutter is the best fit when you want one custom, pixel-consistent UI across iOS and Android on a single Dart codebase. Native is the right call for apps that lean heavily on platform-specific hardware or need the absolute latest OS APIs on day one. React Native suits JavaScript-first teams that want to reuse React skills and native components. The table below summarises the trade-offs buyers ask about most.
+        </p>
+        <div style={{ overflowX: 'auto', marginBottom: 32 }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+            <thead>
+              <tr>
+                <th style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Factor</th>
+                <th style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Flutter</th>
+                <th style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Native (Swift/Kotlin)</th>
+                <th style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>React Native</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Codebases</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>One Dart codebase</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Two (iOS + Android)</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>One JavaScript/TypeScript codebase</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>UI consistency</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Identical on every platform</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Platform-native look per OS</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Native components, some per-platform tuning</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Performance</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Native ARM, 60/120fps</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Best possible, full hardware access</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Near-native via native modules</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Typical cost</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Up to 60% less than two native builds</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Highest — two teams, two timelines</td>
+                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Lower than native, similar to Flutter</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px 12px' }}>Best for</td>
+                <td style={{ padding: '10px 12px' }}>Custom branded UIs, fast multi-platform launches</td>
+                <td style={{ padding: '10px 12px' }}>Hardware-heavy or OS-first apps</td>
+                <td style={{ padding: '10px 12px' }}>JavaScript/React teams reusing existing skills</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Delivery scope, timeline and cost drivers</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Scope is set by the number of user journeys, integrations and platforms you need, not by the framework alone. A focused Flutter MVP can ship in 6–10 weeks, while a multi-platform product with custom Platform Channels, offline sync and store compliance typically runs 12–20 weeks. The biggest cost drivers are custom native bridges, third-party SDK integrations, migration from existing native apps, and App Store or Play Store review requirements. See our <Link href="/services/mobile-app-development/cross-platform-apps">cross-platform app development services</Link> for the wider delivery model.
+        </p>
         <div className="grid grid--2">
           <div>
             <h2 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>Launch deliverables and handover</h2>
