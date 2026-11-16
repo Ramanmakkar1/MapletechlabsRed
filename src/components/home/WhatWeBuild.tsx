@@ -63,7 +63,7 @@ export default function WhatWeBuild() {
         </p>
         <p style={{ marginTop: 8, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
           Looking for a local team? Mapletech Labs is a{' '}
-          <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development company in Edmonton</Link>{' '}
+          <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software team in Edmonton</Link>{' '}
           working with clients across Canada.
         </p>
         <p style={{ marginTop: 8, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
