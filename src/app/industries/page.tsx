@@ -67,6 +67,39 @@ export default function Page() {
             management systems and subscription platforms.
           </li>
         </ul>
+        <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, margin: '2.5rem 0 1rem' }}>
+          The software services behind each industry
+        </h2>
+        <p style={{ maxWidth: '70ch', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+          Every vertical above is delivered with the same core engineering practice. These are the
+          service pages behind the industry work, so you can see exactly what we build and how.
+        </p>
+        <ul style={{ maxWidth: '70ch', lineHeight: 1.9 }}>
+          <li>
+            <Link href="/services/software-development">Custom software development</Link> &mdash;
+            the systems, portals and platforms we build for regulated industries.
+          </li>
+          <li>
+            <Link href="/services/saas-development">SaaS development</Link> &mdash; multi-tenant
+            subscription platforms for EdTech, fintech and B2B clients.
+          </li>
+          <li>
+            <Link href="/services/web-development">Custom web development</Link> &mdash; storefronts,
+            portals and web apps built for conversion and scale.
+          </li>
+          <li>
+            <Link href="/services/mobile-app-development">Mobile app development</Link> &mdash;
+            iOS and Android apps for patient, driver and customer-facing teams.
+          </li>
+          <li>
+            <Link href="/services/ai-ml">AI and ML development</Link> &mdash; predictive analytics,
+            automation and LLM integration across verticals.
+          </li>
+          <li>
+            <Link href="/services/product-design">UI/UX design</Link> &mdash; interface and
+            experience design that makes complex systems usable.
+          </li>
+        </ul>
       </section>
       <PageClient />
     </>
