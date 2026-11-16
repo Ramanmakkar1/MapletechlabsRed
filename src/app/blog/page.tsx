@@ -68,6 +68,130 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <section
+        aria-labelledby="blog-summary-heading"
+        className="cb-container"
+        style={{ paddingTop: 'var(--section-y)' }}
+      >
+        <h2
+          id="blog-summary-heading"
+          style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.75rem' }}
+        >
+          Software, AI, marketing and cost guides: where to start
+        </h2>
+        <p style={{ maxWidth: 760, marginBottom: '0.75rem', lineHeight: 1.7 }}>
+          Mapletech Labs writes practical guides for Canadian businesses buying software, AI and
+          marketing. If you are budgeting, start with our{' '}
+          <Link href="/blog/website-cost-canada">website cost in Canada guide</Link> and{' '}
+          <Link href="/blog/custom-software-development-cost-canada">
+            custom software development cost in Canada guide
+          </Link>
+          ; if you are hiring, start with the{' '}
+          <Link href="/blog/ai-development-companies-canada">
+            AI development companies in Canada guide
+          </Link>{' '}
+          and the{' '}
+          <Link href="/blog/digital-marketing-cost-canada">
+            digital marketing cost in Canada guide
+          </Link>
+          .
+        </p>
+
+        <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '1.25rem 0 0.5rem' }}>Costs and budgets</h3>
+        <ul style={{ lineHeight: 1.9, margin: 0, paddingLeft: '1.25rem' }}>
+          <li>
+            <Link href="/blog/website-cost-canada">Website cost in Canada (2026)</Link>
+          </li>
+          <li>
+            <Link href="/blog/custom-software-development-cost-canada">
+              Custom software development cost in Canada
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/app-development-cost-canada">App development cost in Canada</Link>
+          </li>
+          <li>
+            <Link href="/blog/saas-development-cost-canada">SaaS development cost in Canada</Link>
+          </li>
+          <li>
+            <Link href="/blog/ai-development-cost-canada">AI development cost in Canada</Link>
+          </li>
+          <li>
+            <Link href="/blog/software-maintenance-cost-canada">
+              Software and app maintenance cost in Canada
+            </Link>
+          </li>
+        </ul>
+
+        <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '1.25rem 0 0.5rem' }}>Software and app development</h3>
+        <ul style={{ lineHeight: 1.9, margin: 0, paddingLeft: '1.25rem' }}>
+          <li>
+            <Link href="/blog/top-software-development-companies-canada">
+              Top software development companies in Canada
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/software-development-companies-edmonton">
+              Software development companies in Edmonton
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/software-development-companies-calgary">
+              Software development companies in Calgary
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/custom-software-vs-off-the-shelf">
+              Custom software vs off-the-shelf
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/native-vs-cross-platform-vs-pwa">
+              Native vs cross-platform vs PWA
+            </Link>
+          </li>
+        </ul>
+
+        <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '1.25rem 0 0.5rem' }}>AI development</h3>
+        <ul style={{ lineHeight: 1.9, margin: 0, paddingLeft: '1.25rem' }}>
+          <li>
+            <Link href="/blog/ai-development-companies-canada">
+              AI development companies in Canada
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/ai-chatbot-vs-ai-agent-for-business">
+              AI chatbot vs AI agent for business
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/what-is-agentic-ai">What is agentic AI?</Link>
+          </li>
+          <li>
+            <Link href="/blog/agentic-ai-in-production">Agentic AI in production</Link>
+          </li>
+        </ul>
+
+        <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '1.25rem 0 0.5rem' }}>Digital marketing</h3>
+        <ul style={{ lineHeight: 1.9, margin: 0, paddingLeft: '1.25rem' }}>
+          <li>
+            <Link href="/blog/digital-marketing-cost-canada">
+              Digital marketing cost in Canada
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/digital-marketing-agencies-canada">
+              Digital marketing agencies in Canada
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/top-seo-companies-canada">Top SEO companies in Canada</Link>
+          </li>
+          <li>
+            <Link href="/blog/seo-companies-edmonton">SEO companies in Edmonton</Link>
+          </li>
+        </ul>
+      </section>
       <nav
         aria-label="Related blog topics"
         className="cb-container"
