@@ -86,6 +86,25 @@ export default function ContactRoute() {
           </div>
         </section>
         <ContactPage serviceOptions={SERVICE_OPTIONS} cityOptions={CITY_OPTIONS} />
+        <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-direct">
+          <div className="cb-container">
+            <div style={{ maxWidth: 860 }}>
+              <h2 id="contact-direct" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Contact Mapletech Labs: services, locations and response time</h2>
+              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+                To contact Mapletech Labs, call <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a>, email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a>, or send the form above. A senior engineer replies within one working day, and the first 30-minute consultation is free. We are based in Edmonton, Alberta (T5J 1B9) and work with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal, mostly remotely with weekly demos.
+              </p>
+              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+                Tell us the problem, who it is for, your rough budget and your target date. We reply with honest first thoughts, then a written scope and fixed-price estimate if the project is a fit. The services people contact us about most are:
+              </p>
+              <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760, display: 'grid', gap: 10 }}>
+                <li><Link href="/services/software-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Custom software development</Link> — new platforms, SaaS products and internal tools built around how your business actually works.</li>
+                <li><Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Mobile app development</Link> — iOS, Android and cross-platform apps, from a first MVP to store release and updates.</li>
+                <li><Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>AI and machine learning development</Link> — automation, chatbots, LLM integrations and predictive analytics.</li>
+                <li><Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>UI/UX and product design</Link> — audits, user journeys, prototypes and design handoff for products that feel hard to use.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section style={{ padding: '0 0 var(--section-y)' }}>
           <div className="cb-container">
             <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
