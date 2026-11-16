@@ -17,6 +17,9 @@ export function generateStaticParams() {
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
+// Match the locations layout cache convention: never let a render opt into
+// uncached fetch work.
+export const fetchCache = 'force-cache';
 // Keep the prerendered keyword pages in the cache until the next deploy.
 export const revalidate = 31536000;
 
