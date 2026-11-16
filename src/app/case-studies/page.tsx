@@ -23,12 +23,12 @@ export const metadata: Metadata = {
 };
 
 const caseStudies = [
-  { slug: 'fintech-trading-platform', name: 'AI-Powered Trading Platform', label: 'Fintech Trading Platform' },
-  { slug: 'healthcare-telehealth', name: 'HIPAA-Compliant Telehealth Platform', label: 'Healthcare Telehealth Platform' },
-  { slug: 'ecommerce-platform', name: 'Enterprise E-Commerce Redesign', label: 'Ecommerce Platform' },
-  { slug: 'logistics-platform', name: 'Real-Time Fleet Management System', label: 'Logistics Platform' },
-  { slug: 'payments-api-platform', name: 'PCI DSS Payments API', label: 'Payments API Platform' },
-  { slug: 'real-estate-portal', name: 'Multi-Listing Real Estate Platform', label: 'Real Estate Portal' },
+  { slug: 'fintech-trading-platform', name: 'AI-Powered Trading Platform', label: 'Fintech Trading Platform', outcome: '75K+ daily transactions at 99.99% uptime' },
+  { slug: 'healthcare-telehealth', name: 'HIPAA-Compliant Telehealth Platform', label: 'Healthcare Telehealth Platform', outcome: '450K+ patient records with 40% less admin' },
+  { slug: 'ecommerce-platform', name: 'Enterprise E-Commerce Redesign', label: 'Ecommerce Platform', outcome: 'checkout conversion up from 2.1% to 3.8%' },
+  { slug: 'logistics-platform', name: 'Real-Time Fleet Management System', label: 'Logistics Platform', outcome: '25% lower fuel costs, $180K saved a year' },
+  { slug: 'payments-api-platform', name: 'PCI DSS Payments API', label: 'Payments API Platform', outcome: '12M+ monthly transactions, PCI DSS compliant' },
+  { slug: 'real-estate-portal', name: 'Multi-Listing Real Estate Platform', label: 'Real Estate Portal', outcome: '850K+ active listings with ML recommendations' },
 ];
 
 const jsonLd = {
@@ -72,6 +72,12 @@ export default function Page() {
       />
       <section className="mx-auto max-w-6xl px-4 pt-8">
         <p className="max-w-3xl text-base leading-7 text-slate-700">
+          Maple Tech Labs has delivered software that runs in production for Canadian businesses since
+          2018 &mdash; 500+ projects for 150+ clients across 12 cities. The results include a trading
+          platform handling 75K+ transactions a day at 99.99% uptime, checkout conversion lifted from
+          2.1% to 3.8%, and fleet fuel costs cut by 25% ($180K a year).
+        </p>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-slate-700">
           Maple Tech Labs case studies are real Canadian software projects &mdash; each one reports the
           outcome the client actually measured, from sub-50ms trade execution to a 3.8% checkout
           conversion rate. Together they show our custom software development, web development, and AI
@@ -88,7 +94,7 @@ export default function Page() {
                   title={c.name}
                   className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
                 >
-                  {c.label} case study
+                  {c.label} case study: {c.outcome}
                 </Link>
               </li>
             ))}
