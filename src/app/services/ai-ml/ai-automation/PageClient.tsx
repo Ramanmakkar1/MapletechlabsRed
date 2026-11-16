@@ -38,8 +38,11 @@ function BuyerContent() {
   return (
     <section aria-labelledby="automation-buyer-guide" style={{ padding: 'var(--section-y) 0', background: 'var(--surface-alt)' }}>
       <div className="cb-container" style={{ color: 'var(--body)', lineHeight: 1.7 }}>
-        <h2 id="automation-buyer-guide">Choose the right automation for your workflow</h2>
-        <p className="lede">Start with a repetitive bottleneck, its exceptions, and a measurable outcome. These are illustrative workflow examples, not additional client projects or results.</p>
+        <h2 id="automation-buyer-guide">What is AI automation for Canadian businesses?</h2>
+        <p className="lede">AI automation is software that completes repetitive business tasks — reading invoices, sorting email, routing leads, moving data between systems — by combining rules with AI models that handle messy, unstructured inputs. For a Canadian business it means fewer manual hours, fewer keying errors, and a documented process that keeps working as volume grows, with people approving the cases that matter.</p>
+        <p>Mapletech Labs designs and builds these workflows for companies in Edmonton, Calgary, Toronto and Vancouver, connecting AI decision points to the tools your team already uses. Start with one repetitive bottleneck, its exceptions, and a measurable outcome. The workflow examples below are illustrative, not additional client projects or results.</p>
+
+        <h2 id="automation-use-cases">AI automation use cases for Canadian businesses</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 24, margin: '28px 0' }}>
           <article>
             <h3>Example: invoice extraction</h3>
@@ -80,7 +83,28 @@ function BuyerContent() {
             </tbody>
           </table>
         </div>
-        <h3>What drives AI automation costs?</h3>
+        <h2 id="automation-integrations">Which systems can AI automation integrate with?</h2>
+        <p>AI automation is only as useful as the systems it can reach. We connect workflows to the tools your team already runs, using official APIs where they exist and secure, permission-limited access where they do not. Typical integrations include:</p>
+        <ul style={{ paddingLeft: 24, marginBottom: 28 }}>
+          <li><strong>CRM and sales tools</strong> such as HubSpot, Salesforce and Pipedrive for lead capture, routing and record updates.</li>
+          <li><strong>Accounting and ERP systems</strong> such as QuickBooks, Xero and Sage for invoice, expense and purchase-order processing.</li>
+          <li><strong>Email and collaboration</strong> such as Microsoft 365, Google Workspace and Slack for triage, drafting and notifications.</li>
+          <li><strong>Help desks and support platforms</strong> such as Zendesk and Freshdesk for ticket classification and response drafting.</li>
+          <li><strong>Data stores and internal tools</strong> including databases, cloud storage, spreadsheets and custom admin systems.</li>
+        </ul>
+        <p>Where a workflow needs language understanding or an autonomous multi-step agent, we build it with our <Link href="/services/ai-ml/llm-integration">LLM integration services</Link> or <Link href="/services/ai-ml/ai-agent-development">AI agent development</Link> team. See the full <Link href="/services/ai-ml">AI and machine learning practice</Link> for related capabilities.</p>
+
+        <h2 id="automation-delivery-process">How we deliver an AI automation project</h2>
+        <p>Every engagement follows the same four stages, so you know what happens, who is involved and what you receive at each step:</p>
+        <ol style={{ paddingLeft: 24, marginBottom: 28 }}>
+          <li><strong>Process audit (1–2 weeks).</strong> We map the current workflow, quantify manual hours and error costs, and rank opportunities by ROI and feasibility. You get a written scope and success measures.</li>
+          <li><strong>Automation design.</strong> We define triggers, AI decision points, data flows, exception handling and human-in-the-loop checkpoints, then agree on acceptance criteria before building.</li>
+          <li><strong>Build and integration (2–3 weeks for a first workflow).</strong> We implement the workflow, connect your systems, test against representative samples and configure monitoring dashboards.</li>
+          <li><strong>Launch, monitor and optimise.</strong> After go-live we track accuracy and throughput, retrain or adjust as data drifts, and add new use cases once the first is stable.</li>
+        </ol>
+        <p>A focused first automation is typically live in 4–6 weeks; multi-system programmes usually take 8–12 weeks. We prioritise getting one measurable win into production before expanding.</p>
+
+        <h2 id="automation-pricing">What drives AI automation pricing in Canada?</h2>
         <p><strong>Workflow volume</strong> determines throughput and exception workload. <strong>Integrations</strong> depend on API access, permissions, and legacy systems. <strong>Data preparation</strong> includes cleaning, labelling, and handling inconsistent formats. <strong>Evaluation</strong> covers representative test cases, acceptance thresholds, and failure handling. <strong>Ongoing model usage</strong> varies with document length, request volume, and retries, alongside hosting and monitoring.</p>
         <p>Compare implementation and operating budgets in our <Link href="/blog/ai-development-cost-canada">AI development cost guide for Canada</Link> and review <Link href="/pricing">software development pricing and engagement options</Link>. A workflow scope is needed for a project estimate.</p>
         <h3>Scoping checklist for your consultation</h3>
