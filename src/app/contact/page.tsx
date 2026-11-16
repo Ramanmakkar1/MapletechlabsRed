@@ -78,6 +78,13 @@ export default function ContactRoute() {
     <>
       <Navbar />
       <main id="main-content" tabIndex={-1}>
+        <section style={{ padding: 'calc(var(--section-y) + 40px) 0 0' }} aria-label="Contact Mapletech Labs">
+          <div className="cb-container">
+            <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.7, maxWidth: 860, margin: 0 }}>
+              Mapletech Labs is an Edmonton, Alberta software development company that builds custom software, mobile apps, AI and automation, UI/UX design, websites and SEO for clients across Canada. A senior engineer replies to every enquiry within one working day, and the first 30-minute project consultation is free. Send a short brief using the form below, or start with our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development services</Link>, see <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>typical project pricing in CAD</Link>, browse <Link href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development case studies</Link>, or learn how we work as a <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development company in Edmonton</Link>.
+            </p>
+          </div>
+        </section>
         <ContactPage serviceOptions={SERVICE_OPTIONS} cityOptions={CITY_OPTIONS} />
         <section style={{ padding: '0 0 var(--section-y)' }}>
           <div className="cb-container">
