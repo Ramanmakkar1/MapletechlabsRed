@@ -13,10 +13,9 @@
  * `seoTitle()` resolver still owns branding and the 60-character clamp.
  */
 import { BRAND_SUFFIX, MAX_TITLE_LENGTH } from './title';
-import { seoDescription } from './description';
+import { articleDescription } from './description';
 
 const MIN_TITLE_LENGTH = 50;
-const MIN_DESCRIPTION_LENGTH = 140;
 
 /** Leading words that are not part of the search keyword. */
 const LEADING_FILLER =
@@ -140,14 +139,10 @@ export function blogTitle(title: string, keyword?: string, fallbackTitle?: strin
 }
 
 /**
- * Return a 140-155 character description. Long copy is trimmed by
- * `seoDescription()`; short copy is extended with the article dek (real page
- * facts) rather than filler.
+ * Return a 140-155 character description. Long copy is trimmed at a word
+ * boundary; short copy is extended with the article dek (real page facts) and,
+ * as a last resort, real company facts rather than filler.
  */
 export function blogDescription(description: string, fallback?: string): string {
-  const text = seoDescription(description);
-  if (text.length >= MIN_DESCRIPTION_LENGTH || !fallback) return text;
-
-  const combined = clean(`${text} ${fallback}`);
-  return seoDescription(combined);
+  return articleDescription(description, fallback);
 }
