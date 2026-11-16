@@ -53,7 +53,7 @@ const nextConfig: NextConfig = {
       },
       // Other HTML pages. src/middleware.ts also sets the same 1-year CDN window on documents, because on this host the framework default can override these headers.
       {
-        source: '/((?!api|_next|.*\\..*).*)',
+        source: '/((?!api|_next|services|locations|.*\\..*).*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, s-maxage=31536000, stale-while-revalidate=604800, stale-if-error=86400' }],
       },
       {
