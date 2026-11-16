@@ -5542,7 +5542,7 @@ export const articles: Article[] = [
     category: 'AI/ML',
     title: 'Top 10 AI Development Companies in Canada (2026)',
     dek: 'A researched 2026 ranking of the ten best AI and machine-learning development companies in Canada, from LLM integration and RAG chatbots to computer vision and predictive analytics, with how to choose the right partner for your project.',
-    metaTitle: 'Top 10 AI Development Companies in Canada (2026)',
+    metaTitle: 'Top 10 AI Development Companies in Canada for 2026',
     metaDescription: 'A researched ranking of the best AI and machine-learning development companies in Canada for 2026, with how to choose the right partner for your project.',
     date: '2026-02-14',
     dateModified: '2026-11-10',
