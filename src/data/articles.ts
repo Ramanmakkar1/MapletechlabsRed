@@ -10,7 +10,7 @@
  */
 
 import { serviceCityPath } from './serviceCity';
-import { seoDescription } from '@/lib/seo/description';
+import { blogDescription } from '@/lib/seo/blog';
 
 export type Block =
   | { type: 'h2'; id: string; text: string }
@@ -7674,7 +7674,7 @@ export const articles: Article[] = [
 export const articleSlugs = articles.map(a => a.slug);
 export function getArticle(slug: string): Article | undefined {
   const found = articles.find(a => a.slug === slug);
-  return found && { ...found, metaDescription: seoDescription(found.metaDescription) };
+  return found && { ...found, metaDescription: blogDescription(found.metaDescription, found.dek) };
 }
 
 export interface RelatedArticle {
