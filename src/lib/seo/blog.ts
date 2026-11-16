@@ -107,15 +107,27 @@ export function blogTitle(title: string, keyword?: string, fallbackTitle?: strin
     if (fallback.length > normalized.length) normalized = fallback;
   }
 
-  if (/Mapletech Labs/i.test(normalized)) return normalized;
+  // Branding is owned by seoTitle(); strip any brand mention from the base so
+  // it can never bypass the length rules below.
+  let base = clean(
+    normalized
+      .replace(/\s*[|—–-]\s*Mapletech Labs.*$/i, '')
+      .replace(/Mapletech Labs/gi, '')
+      .replace(/\s*[|—–-]\s*$/, ''),
+  );
+  if (!base) base = normalized;
+
+  // Hard cap: always trim an over-long title at a word boundary, keeping the
+  // keyword-first prefix. The brand is dropped when it cannot fit.
+  if (base.length > MAX_TITLE_LENGTH) base = trimToFit(base, MAX_TITLE_LENGTH);
 
   // Titles that already render at 50-60 characters keep every word; seoTitle()
   // drops the brand when adding it would overflow.
-  if (normalized.length >= MIN_TITLE_LENGTH) return normalized;
+  if (base.length >= MIN_TITLE_LENGTH) return base;
 
   // A short title needs the brand to reach 50. Trim to leave room for it.
   const maxBase = MAX_TITLE_LENGTH - BRAND_SUFFIX.length;
-  let base = trimToFit(normalized, maxBase);
+  base = trimToFit(base, maxBase);
 
   // A very short title still needs to reach 50 rendered characters. "Guide" is
   // accurate for every article and keeps the keyword at the front.
