@@ -70,22 +70,31 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <nav aria-label="Case studies" className="mx-auto max-w-6xl px-4 pt-8">
-        <h2 className="text-lg font-semibold text-slate-900">Our case studies</h2>
-        <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
-          {caseStudies.map(c => (
-            <li key={c.slug}>
-              <Link
-                href={`/case-studies/${c.slug}`}
-                title={c.name}
-                className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
-              >
-                {c.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <section className="mx-auto max-w-6xl px-4 pt-8">
+        <p className="max-w-3xl text-base leading-7 text-slate-700">
+          Maple Tech Labs case studies are real Canadian software projects &mdash; each one reports the
+          outcome the client actually measured, from sub-50ms trade execution to a 3.8% checkout
+          conversion rate. Together they show our custom software development, web development, and AI
+          development services delivering in production across fintech, healthcare, e-commerce,
+          logistics, payments, and real estate.
+        </p>
+        <nav aria-label="Case studies" className="mt-6">
+          <h2 className="text-lg font-semibold text-slate-900">Our case studies</h2>
+          <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+            {caseStudies.map(c => (
+              <li key={c.slug}>
+                <Link
+                  href={`/case-studies/${c.slug}`}
+                  title={c.name}
+                  className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
+                >
+                  {c.label} case study
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </section>
       <PageClient />
     </>
   );
