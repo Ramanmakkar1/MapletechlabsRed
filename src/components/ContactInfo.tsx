@@ -240,7 +240,7 @@ export default function ContactInfo() {
           </p>
 
           <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>
-            Common questions
+            What do buyers ask before contacting Mapletech Labs?
           </h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 32px' }}>
             The things people ask us before they hit send. If yours is not here, just put it in the message above.

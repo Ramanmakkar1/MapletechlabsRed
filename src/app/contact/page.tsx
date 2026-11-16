@@ -90,7 +90,7 @@ export default function ContactRoute() {
         <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-direct">
           <div className="cb-container">
             <div style={{ maxWidth: 860 }}>
-              <h2 id="contact-direct" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Contact Mapletech Labs: services, locations and response time</h2>
+              <h2 id="contact-direct" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How do you contact Mapletech Labs, and how quickly do you reply?</h2>
               <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
                 To contact Mapletech Labs, call <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a>, email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a>, or send the form above. A senior engineer replies within one working day, and the first 30-minute consultation is free. We are based in Edmonton, Alberta (T5J 1B9) and work with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal, mostly remotely with weekly demos.
               </p>
@@ -110,7 +110,7 @@ export default function ContactRoute() {
           <div className="cb-container">
             <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-what-we-build">
-          <h2 id="contact-what-we-build" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What Mapletech Labs builds, where we work and what it costs</h2>
+          <h2 id="contact-what-we-build" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What does Mapletech Labs build, where does it work, and what does it cost?</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Mapletech Labs is an Edmonton, Alberta software development company that builds custom software, SaaS platforms, mobile apps, AI and automation, UI/UX design, websites and SEO for clients across Canada. We work from Edmonton with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal, mostly remotely with weekly demos. Most projects are fixed-scope: after a free 30-minute discovery call we send a written scope and a fixed price, with typical CAD ranges of ${PROJECT_PRICING.website.low.toLocaleString('en-CA')}-${PROJECT_PRICING.website.high.toLocaleString('en-CA')} for a website, ${PROJECT_PRICING.webapp.low.toLocaleString('en-CA')}-${PROJECT_PRICING.webapp.high.toLocaleString('en-CA')} for a web app, ${PROJECT_PRICING.saas.low.toLocaleString('en-CA')}-${PROJECT_PRICING.saas.high.toLocaleString('en-CA')} for a SaaS MVP and ${PROJECT_PRICING.mobile.low.toLocaleString('en-CA')}-${PROJECT_PRICING.mobile.high.toLocaleString('en-CA')} for a mobile app. See our <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development pricing in Canada</Link> for current ranges and our <Link href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development case studies</Link> for shipped work. Send a short brief and a senior engineer replies within one working day.
           </p>
@@ -140,7 +140,7 @@ export default function ContactRoute() {
           </p>
         </section>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-brief-consultation">
-          <h2 id="contact-brief-consultation" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What to include in a project brief and what to expect in the free consultation</h2>
+          <h2 id="contact-brief-consultation" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What should you include in a project brief, and what happens in the free consultation?</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             A good project brief tells us the problem, who it is for, your rough budget and your target date, and in return the free consultation gives you honest first thoughts, a clearer scope and a recommendation on the best next step. You do not need a finished specification to get started.
           </p>
@@ -159,7 +159,7 @@ export default function ContactRoute() {
           </p>
         </section>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-discovery-call">
-          <h2 id="contact-discovery-call" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens during the free 30-minute discovery call</h2>
+          <h2 id="contact-discovery-call" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens during the free 30-minute discovery call?</h2>
           <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             <li><strong>Goals and users.</strong> We confirm the problem you want solved, who will use the product and what a successful outcome looks like.</li>
             <li><strong>Technical constraints.</strong> We review existing systems, integrations, platforms and any security or data needs.</li>
@@ -175,7 +175,7 @@ export default function ContactRoute() {
           <div className="cb-container">
             <div style={{ maxWidth: 860, display: 'grid', gap: 40 }}>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-quick-facts">
-          <h2 id="contact-quick-facts" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Contact Mapletech Labs at a glance</h2>
+          <h2 id="contact-quick-facts" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What are the Mapletech Labs contact details at a glance?</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Contact Mapletech Labs for a free project consultation about custom software, mobile apps, AI & automation. Our Edmonton team responds within one working day and works with clients across Canada.
           </p>
@@ -223,7 +223,7 @@ export default function ContactRoute() {
           </div>
         </section>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-next-steps">
-          <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you get in touch</h2>
+          <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you contact Mapletech Labs?</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             After you get in touch, a senior engineer replies within one working day, and the project moves through four clear steps.
           </p>
@@ -236,7 +236,7 @@ export default function ContactRoute() {
         </section>
 
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-project-types">
-          <h2 id="contact-project-types" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How to choose the right service for your project</h2>
+          <h2 id="contact-project-types" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>How do you choose the right service for your project?</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Choose a service by the outcome you need, not by the technology name. Pick the closest fit below, open that service page to see the process, tech and typical scope, then send your brief with that service selected. If two services overlap, mention both and a senior engineer will confirm the right scope on the free 30-minute discovery call.
           </p>
@@ -320,7 +320,7 @@ export default function ContactRoute() {
         </section>
 
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-service-areas">
-          <h2 id="contact-service-areas" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Where Mapletech Labs works with clients</h2>
+          <h2 id="contact-service-areas" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Where does Mapletech Labs work with clients?</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             Mapletech Labs is a software development company with its head office in Edmonton, Alberta. Our team has dedicated engineers in Edmonton, Calgary, Toronto and Vancouver, so there is always someone in your time zone, and we work with clients in Calgary, Toronto, Vancouver, Ottawa and Montreal and across Canada. Most projects run remotely with weekly demos, so you can see working software and give feedback as the work moves forward. When a project benefits from meeting in person, we arrange it. Wherever you are in Canada, the first step is the same: send a short project brief and a senior engineer replies within one working day. Choose your city below to see how we work with local businesses.
           </p>
