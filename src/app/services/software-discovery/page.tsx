@@ -8,10 +8,11 @@ import { FaqSchema, ServiceSchema } from '@/components/ServiceSchema';
 import CTASection from '@/components/CTASection';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoDescription } from '@/lib/seo/description';
+import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
-const TITLE = 'Software Discovery Sprint for Product Teams';
-const OG_TITLE = `${TITLE} | Mapletech Labs`;
+const TITLE = 'Software Discovery Sprint for Product Teams in Canada';
+const OG_TITLE = ogTitle(TITLE);
 const DESCRIPTION =
   'A software discovery sprint turns an early product idea into clear requirements, user flows, technical risks and a phased scope you can price and build.';
 const URL = canonicalUrl('/services/software-discovery');
@@ -49,7 +50,7 @@ const card = { padding: 22, border: '1px solid var(--line)', borderRadius: 16 };
 const cardTitle = { color: 'var(--ink)', marginTop: 0, fontSize: 18 };
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
     images: DEFAULT_OG_IMAGES,
