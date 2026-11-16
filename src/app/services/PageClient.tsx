@@ -383,6 +383,21 @@ export default function ServicesIndexPage() {
               <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, margin: 0 }}>
                 Every engagement is fixed-scope and fixed-price, with senior engineers and a reply within one working day.
               </p>
+              <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', marginTop: '1.5rem', marginBottom: '0.75rem' }}>
+                Our four priority service families
+              </h3>
+              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, marginBottom: '0.75rem' }}>
+                Most of our client work falls into four families. We lead with these because they cover what Canadian startups and enterprises search for most:
+              </p>
+              <ul style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, margin: 0, paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <li><Link href="/services/software-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>Software development</Link> — custom software platforms, SaaS products and enterprise systems built to scale from MVP to millions of users.</li>
+                <li><Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>App development</Link> — native iOS, Android and cross-platform mobile apps in Swift, Kotlin, Flutter and React Native, with 300+ apps shipped.</li>
+                <li><Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>AI development</Link> — LLM integration, AI automation, computer vision and predictive analytics that cut operational costs and unlock new capabilities.</li>
+                <li><Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>UI/UX design</Link> — user research, wireframes, interactive prototypes and design systems that measurably lift adoption and conversion.</li>
+              </ul>
+              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, marginTop: '0.75rem', marginBottom: 0 }}>
+                We also run a dedicated <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>digital marketing</Link> practice — SEO, Google Ads, content and social media — so the products we build keep getting found after launch.
+              </p>
             </div>
           </div>
         </section>
