@@ -10,6 +10,7 @@
     "submit-urls": "npx tsx scripts/submit-to-search-engines.ts",
     "submit:search-engines": "npx tsx scripts/submit-to-search-engines.ts",
     "seo:titles": "node --experimental-strip-types --no-warnings scripts/check-titles.mjs",
+    "seo:warm": "npx tsx scripts/warm-seo-routes.ts",
     "check:meta": "node scripts/check-meta-lengths.mjs",
     "check:meta:test": "node --test scripts/check-meta-lengths.test.mjs"
   },
