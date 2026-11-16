@@ -6,12 +6,13 @@ const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, la
 // Honest hero figures: the company's own verifiable facts, not invented client metrics.
 const heroStats = pair([['2018', 'Founded in Edmonton'], ['12', 'Canadian cities served'], ['1 day', 'To a senior-engineer reply']]);
 const services = [
-  { title: 'Mobile App Development in Edmonton', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: '/services/mobile-app-development/edmonton' },
+  { title: 'Custom Software Development in Edmonton', desc: 'Purpose-built web platforms, portals and internal tools designed around your workflows, with a fixed scope and price agreed before development begins.', href: '/services/software-development' },
+  { title: 'Mobile App Development in Edmonton', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: '/services/mobile-app-development' },
   { title: 'Web Development in Edmonton', desc: 'Fast, secure web platforms and enterprise portals engineered to scale — from marketing sites to the complex internal systems that replace spreadsheets and legacy tools.', href: '/locations/web-development-company-in-edmonton' },
-  { title: 'AI Development in Edmonton', desc: 'LLM integration, intelligent automation and predictive analytics built for production — wired into the systems your team already uses, where a model removes real work.', href: '/locations/ai-development-company-in-edmonton' },
+  { title: 'AI Development in Edmonton', desc: 'LLM integration, intelligent automation and predictive analytics built for production — wired into the systems your team already uses, where a model removes real work.', href: '/services/ai-ml' },
   { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols and decentralized apps engineered for security and audit — practical Web3 that solves a real problem rather than chasing a trend.', href: '/services/blockchain-web3' },
   { title: 'Cloud & DevOps', desc: 'AWS and Azure architecture, Kubernetes and CI/CD pipelines for zero-downtime releases — infrastructure that scales with demand and costs less to run.', href: '/services/cloud-devops' },
-  { title: 'Product Design', desc: 'UX research, product strategy, prototyping and design systems that convert — interfaces your customers find obvious and your engineers can build on.', href: '/services/product-design' },
+  { title: 'UI/UX & Product Design in Edmonton', desc: 'UX research, product strategy, UI design, prototyping and design systems that convert — interfaces your customers find obvious and your engineers can build on.', href: '/services/product-design' },
 ];
 
 const whyChoose = [
