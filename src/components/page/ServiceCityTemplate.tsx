@@ -179,7 +179,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
                   </div>
                 </div>
               ) : null}
-              <h3 style={{ fontSize: 'var(--fs-h3)', margin: 'clamp(36px, 4vw, 52px) 0 16px' }}>Proof from our case studies</h3>
+              <h2 style={{ fontSize: 'var(--fs-h3)', margin: 'clamp(36px, 4vw, 52px) 0 16px' }}>Proof from our case studies</h2>
               <div className="grid grid--3">
                 {local.proof.map(pr => (
                   <Link key={pr.href} href={pr.href} className="tile rise" style={{ display: 'block', textDecoration: 'none' }}>

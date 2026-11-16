@@ -1166,11 +1166,11 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     ],
   },
   'web-development-company-in-edmonton': {
-    title: 'Website Development Edmonton | Free Quote',
+    title: 'Custom Software & Web Development Edmonton | Mapletech',
     description:
-      'Web development in Edmonton by Mapletech Labs, headquartered here. Business websites from $850 CAD, plus web apps, e-commerce and portals. Free quote.',
-    answer: 'Mapletech Labs is headquartered in Edmonton and provides web development there, building fast SEO-ready websites, e-commerce stores and web apps for Edmonton companies. You get a fixed scope and price before work starts, senior engineers writing your code, and in-person workshops at your office.',
-    intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for web development you are working with a local team at our head office, not a sales desk for developers somewhere else. We build fast, SEO-ready business websites, e-commerce stores and web apps for Edmonton companies, public bodies and growing teams across the city. You talk directly to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
+      'Custom software and web development in Edmonton by Mapletech Labs, headquartered here. Websites from $850 CAD, web apps, e-commerce and portals. Free quote.',
+    answer: 'Mapletech Labs is headquartered in Edmonton and provides custom software and web development there, building fast SEO-ready websites, e-commerce stores, web apps and the custom systems behind them for Edmonton companies. You get a fixed scope and price before work starts, senior engineers writing your code, and in-person workshops at your office.',
+    intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for custom software or web development you are working with a local team at our head office, not a sales desk for developers somewhere else. We build fast, SEO-ready business websites, e-commerce stores, web apps and custom software for Edmonton companies, public bodies and growing teams across the city. You talk directly to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
     sections: [
       {
         heading: 'The websites Edmonton organisations need',
@@ -1185,7 +1185,15 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           { href: '/services/web-development', label: 'web development services' },
           ' for the full build scope, or ',
           { href: '/contact', label: 'contact us' },
-          ' and we will tell you which route fits.',
+          ' and we will tell you which route fits. If your project needs custom software beyond a website, see our ',
+          { href: '/services/software-development', label: 'custom software development services' },
+          '; for iOS and Android, ',
+          { href: '/services/mobile-app-development', label: 'mobile app development' },
+          '; for AI features, ',
+          { href: '/services/ai-ml', label: 'AI and machine learning development' },
+          '; and for research, wireframes and design systems, ',
+          { href: '/services/product-design', label: 'UI/UX design services' },
+          '.',
         ],
       },
       {
