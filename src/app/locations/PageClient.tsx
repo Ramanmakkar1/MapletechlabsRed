@@ -192,6 +192,25 @@ export default function LocationsIndexPage() {
                 );
               })}
             </div>
+            <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: 'clamp(32px, 4vw, 48px) 0 12px' }}>Specialist location pages</h3>
+            <p className="lede" style={{ marginBottom: 16 }}>Focused consulting and industry practices in our two largest tech markets:</p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
+              <li>
+                <Link href="/locations/ai-consulting-company-in-edmonton" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  AI consulting company in Edmonton — strategy, LLM integration and AI roadmaps
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/ai-consulting-company-in-toronto" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  AI consulting company in Toronto — enterprise AI strategy and delivery
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/healthcare-software-development-company-in-edmonton" style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                  Healthcare software development company in Edmonton — PHIPA-ready clinical platforms
+                </Link>
+              </li>
+            </ul>
           </div>
         </section>
 
