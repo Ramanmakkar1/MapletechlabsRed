@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
           <p style={{ marginTop: 0, marginBottom: 36, fontSize: 15, color: 'var(--muted)' }}>
             Headquartered in Edmonton, we deliver custom software development in Edmonton: web platforms, mobile apps and AI systems for local teams, from our head office in Alberta.
-            Explore our <Link href="/locations/edmonton/web-development">web development in Edmonton</Link> and <Link href="/services/software-development">custom software development services</Link> in detail.
+            Explore our <Link href="/locations/edmonton/web-development">web development in Edmonton</Link>, <Link href="/services/software-development">custom software development services</Link> and our <Link href="/locations/software-development-company-in-edmonton">custom software development company in Edmonton</Link> in detail.
           </p>
 
           <div className="btn-group" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 40 }}>
