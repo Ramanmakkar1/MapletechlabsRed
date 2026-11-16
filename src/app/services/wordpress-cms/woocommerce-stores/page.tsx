@@ -15,6 +15,9 @@ const DESCRIPTION = 'WooCommerce store development in Canada: online stores with
 export const dynamic = 'force-static';
 // Numeric window so the host emits a long s-maxage instead of its 300 s default.
 export const revalidate = 31536000;
+// Cache-only: every content input is local build-time data, so never fall back
+// to an uncached render-time fetch on this route.
+export const fetchCache = 'force-cache';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),

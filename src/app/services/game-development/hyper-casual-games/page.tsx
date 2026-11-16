@@ -16,6 +16,9 @@ const DESCRIPTION = 'Hyper-casual game development from 3-day prototypes to CPI-
 // s-maxage instead of falling back to its 300 s default.
 export const dynamic = 'force-static';
 export const revalidate = 31536000;
+// Cache-only: every content input is local build-time data, so never fall back
+// to an uncached render-time fetch on this route.
+export const fetchCache = 'force-cache';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
