@@ -11,8 +11,11 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
-const article = getArticle('ai-development-companies-canada');
-if (!article) notFound();
+export const dynamic = 'force-static';
+export const revalidate = false;
+export const fetchCache = 'force-cache';
+
+const article = getArticle('ai-development-companies-canada')!;
 const URL = `https://mapletechlabs.ca/blog/ai-development-companies-canada`;
 
 export const metadata: Metadata = {

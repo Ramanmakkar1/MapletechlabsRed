@@ -13,6 +13,7 @@ import { seoDescription } from '@/lib/seo/description';
 // cannot fall back to a per-request render.
 export const dynamic = 'force-static';
 export const revalidate = false;
+export const fetchCache = 'force-cache';
 
 const TITLE = 'How Much Does Digital Marketing Cost in Canada? (2026)';
 const DESCRIPTION = 'Digital marketing cost in Canada for 2026: real CAD ranges for SEO, Google Ads, social media and content, plus the factors that move your quote.';
