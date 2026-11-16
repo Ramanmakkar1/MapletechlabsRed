@@ -187,6 +187,23 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
+        {city?.answer ? (
+          <section style={{ padding: '0 0 var(--section-y)', borderTop: '1px solid var(--line)' }}>
+            <div className="cb-container">
+              <div className="prose-split">
+                <div><h2 style={{ maxWidth: '18ch' }}>Software development in {name}: what local businesses need</h2></div>
+                <div className="prose-body">
+                  <p style={{ fontSize: 'clamp(18px, 1.5vw, 20px)', color: 'var(--ink)', lineHeight: 1.65, fontWeight: 450, margin: '0 0 16px' }}>{city.answer}</p>
+                  {city.localNeeds ? <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>{city.localNeeds}</p> : null}
+                  {city.process ? <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>{city.process}</p> : null}
+                  <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
+                    Related services in {name}: <Link href={serviceCityPath('web-development', p.slug)}>web development in {name}</Link>, <Link href={serviceCityPath('mobile-app-development', p.slug)}>mobile app development in {name}</Link>, <Link href={serviceCityPath('ai-ml', p.slug)}>AI development in {name}</Link> and <Link href={serviceCityPath('product-design', p.slug)}>UI/UX design in {name}</Link>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
         <MediaBand media={humanPick(p.slug, 4)} />
         <ServiceCards title={`Our services in ${name}`} items={serviceItems} />
         {p.numbers && p.numbers.stats.length > 0 && (

@@ -6,6 +6,12 @@ export interface CityData {
   isHQ: boolean;
   localIndustries: string[];
   heroContext: string;
+  /** Answer-first lead for the city page: two plain sentences naming the service, city and what the client gets. */
+  answer?: string;
+  /** What local businesses in this city typically need software to do. */
+  localNeeds?: string;
+  /** How a project in this city actually runs, from discovery to launch. */
+  process?: string;
   whyCity: { icon: string; title: string; desc: string }[];
   stats: { value: string; label: string }[];
   testimonials: { name: string; company: string; role: string; quote: string }[];
@@ -21,6 +27,12 @@ export const cities: CityData[] = [
     localIndustries: ['Oil & Gas', 'Agriculture Tech', 'Government', 'Healthcare', 'Clean Energy'],
     heroContext:
       'Edmonton is rapidly transforming into a technology hub, with the city\'s tech sector growing 30% year-over-year. From energy companies modernizing their operations to agri-tech startups disrupting traditional farming, Edmonton businesses are investing heavily in custom software to stay competitive. As a company headquartered right here in Edmonton, we understand the local market better than anyone.',
+    answer:
+      'Mapletech Labs is a software development company in Edmonton, building custom web platforms, mobile apps and AI systems for local businesses from our head office here. You get a fixed scope and price in CAD, senior engineers on the project, and a reply from a senior engineer within one working day.',
+    localNeeds:
+      'Edmonton businesses usually need software that fits energy, construction, healthcare and public-sector workflows: field apps that keep working offline, portals that replace spreadsheets and email chains, and dashboards that pull readings from equipment in the field. Startups around the University of Alberta and Amii also need a production-grade product built around a model that already works in the lab.',
+    process:
+      'Our Edmonton process starts with a discovery conversation at your office or ours, then a written scope and fixed price before any code is written. We design, build and release in short cycles with working software at every sprint, and the same team stays on for support, hosting and new features after launch.',
     whyCity: [
       {
         icon: '🏢',
@@ -79,6 +91,12 @@ export const cities: CityData[] = [
     localIndustries: ['FinTech', 'Banking', 'Media & Entertainment', 'Real Estate', 'Retail'],
     heroContext:
       'Toronto is Canada\'s largest tech hub, home to over 15,000 tech companies and a thriving startup ecosystem. From Bay Street fintech disruption to Shopify-scale e-commerce, Toronto businesses demand world-class software engineering. Our Toronto team delivers enterprise-grade solutions to companies across the GTA and beyond.',
+    answer:
+      'Mapletech Labs is a software development company serving Toronto and the GTA, building custom web platforms, mobile apps and AI systems for fintech, retail, media and SaaS businesses. You get a fixed scope and price in CAD, senior engineers on the project, and a reply within one working day.',
+    localNeeds:
+      'Toronto teams often need software that handles scale and regulation: secure client portals, payment and onboarding flows, multi-tenant SaaS products and AI features wired into existing systems. Retail, media and real-estate businesses also need fast, accessible customer experiences that hold up under heavy traffic.',
+    process:
+      'Our Toronto process begins with discovery, then a written scope and fixed price before any code is written. We design, build and release in short cycles with working software at every sprint, keep your data in Canada where residency matters, and stay on for support and new features after launch.',
     whyCity: [
       {
         icon: '🏦',
@@ -137,6 +155,12 @@ export const cities: CityData[] = [
     localIndustries: ['Film & VFX', 'Gaming', 'Clean Tech', 'Real Estate', 'Tourism'],
     heroContext:
       'Vancouver is a global leader in gaming, film VFX, and clean technology. The city\'s tech sector employs over 120,000 professionals and continues to attract top talent from around the world. Whether you\'re building the next indie game hit or a sustainability platform, our Vancouver team delivers cutting-edge solutions.',
+    answer:
+      'Mapletech Labs is a software development company serving Vancouver and BC, building custom web platforms, mobile apps and AI systems for tech, tourism, retail and health businesses. You get a fixed scope and price in CAD, senior engineers writing your code, and a reply within one working day.',
+    localNeeds:
+      'Vancouver businesses often need software for booking and seasonal demand in tourism, customer portals and e-commerce for retail, and secure tools for health and life-sciences teams. Startups and scale-ups also need multi-tenant SaaS products and AI features that can grow without a rebuild.',
+    process:
+      'A Vancouver project starts with discovery, then a written scope and fixed price before development begins. We build in short cycles, demo working software every sprint, keep data in Canadian regions where residency matters, and hand over the code, cloud accounts and IP to your team.',
     whyCity: [
       {
         icon: '🎮',
@@ -195,6 +219,12 @@ export const cities: CityData[] = [
     localIndustries: ['Energy', 'Finance', 'Transportation', 'Logistics', 'Agriculture'],
     heroContext:
       'Calgary is Canada\'s energy capital and a fast-growing technology center. With major companies like Enbridge, TC Energy, and Suncor driving digital transformation, Calgary businesses need robust, scalable software solutions. Our team serves Calgary from our Edmonton headquarters — just 3 hours away — with the same quality and speed.',
+    answer:
+      'Mapletech Labs is a software development company serving Calgary, building custom web platforms, mobile apps and AI systems for energy, fintech, logistics and health businesses. You get a fixed scope and price in CAD, senior engineers writing your code, and a reply within one working day.',
+    localNeeds:
+      'Calgary companies tend to need software for field operations, asset tracking and reporting across energy and clean tech, plus secure portals and automation for fintech, insurance and logistics teams. Many also need mobile tools that work at remote sites and reconcile data once crews are back online.',
+    process:
+      'A Calgary project starts with a discovery call or an on-site workshop, followed by a written scope and fixed price before development begins. We build in short cycles, demo working software every sprint, and hand over the code, cloud accounts and IP to your team, with ongoing support available after launch.',
     whyCity: [
       {
         icon: '🛢️',
