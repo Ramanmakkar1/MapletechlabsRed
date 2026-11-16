@@ -11,6 +11,7 @@ import MediaBand from '@/components/MediaBand';
 import { humanMedia } from '@/data/media';
 import { PRIORITY_SERVICES, serviceCityPath, priorityCompanyHeadline, AGENCY_CITIES, WEB_DESIGN_CITIES } from '@/data/serviceCity';
 import { cities as allCities } from '@/data/cities';
+import LocationDirectory from '@/components/LocationDirectory';
 
 // Edmonton (HQ) first, then the other major markets.
 const MAJOR_CITY_SLUGS = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa', 'montreal'];
@@ -211,6 +212,9 @@ export default function LocationsIndexPage() {
                 </Link>
               </li>
             </ul>
+            <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: 'clamp(32px, 4vw, 48px) 0 12px' }}>More location pages</h3>
+            <p className="lede" style={{ marginBottom: 16 }}>Province overviews and service pages in the Prairie, Atlantic and Quebec markets:</p>
+            <LocationDirectory />
           </div>
         </section>
 
