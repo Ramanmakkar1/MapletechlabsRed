@@ -121,9 +121,18 @@ export default function AboutPage() {
         {/* ── HERO ── */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "Software Development Company · Edmonton", title: <>About Mapletech Labs<br /><span style={{ color: 'var(--brand)' }}>We Build Software That Matters.</span></>, desc: <>Mapletech Labs is a custom software, app, AI and UI/UX development company headquartered in Edmonton, Canada, founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={humanMedia.workshop} form={false} />
 
-        {/* ── FOUNDER ── */}
+        {/* ── WHO WE ARE (ANSWER-FIRST) ── */}
         <section style={{ padding: '0 0 8px' }}>
           <div className="cb-container" style={{ maxWidth: 860 }}>
+            <h2 id="who-we-are" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
+              Who is Raman Makkar and what does Mapletech Labs do?
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)', marginBottom: 16 }}>
+              Raman Makkar is the founder and CEO of Mapletech Labs, a Canadian software development company headquartered
+              in Edmonton, Alberta, that he founded in 2018. Mapletech Labs builds custom web platforms, mobile apps, AI
+              products and UI/UX experiences for businesses across Canada, with 12 locations in Edmonton, Calgary, Toronto
+              and Vancouver and a virtual team of the best agents from around the world.
+            </p>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)' }}>
               Raman Makkar is the founder and CEO of Mapletech Labs, the Edmonton, Alberta software development company
               he started in 2018. He brings 15+ years of engineering experience and leads a 25+ member team that has
@@ -163,7 +172,8 @@ export default function AboutPage() {
                 <Link href="/services/ai-ml" style={{ color: 'var(--brand)', fontWeight: 500 }}>AI development</Link>,{' '}
                 <Link href="/services/product-design" style={{ color: 'var(--brand)', fontWeight: 500 }}>UI/UX design</Link>,{' '}
                 <Link href="/services/saas-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>SaaS development</Link> and{' '}
-                <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', fontWeight: 500 }}>SEO and digital marketing</Link>
+                <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', fontWeight: 500 }}>SEO and digital marketing</Link>,{' '}
+                <Link href="/services" style={{ color: 'var(--brand)', fontWeight: 500 }}>all services</Link>
               </dd>
               <dt style={{ fontWeight: 600, color: 'var(--ink)' }}>Contact</dt>
               <dd style={{ margin: 0 }}>
@@ -171,6 +181,43 @@ export default function AboutPage() {
                 <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', fontWeight: 500 }}>hello@mapletechlabs.ca</a> · replies within one working day
               </dd>
             </dl>
+          </div>
+        </section>
+
+        {/* ── CORE SERVICES ── */}
+        <section style={{ padding: 'var(--section-y) 0' }}>
+          <div className="cb-container" style={{ maxWidth: 860 }}>
+            <h2 id="core-services" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
+              What Mapletech Labs builds for Canadian businesses
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)', marginBottom: 20 }}>
+              Mapletech Labs delivers end-to-end product engineering: strategy, design, build and launch. Our core
+              services cover everything a Canadian startup, scale-up or enterprise needs to ship software that matters.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 16 }}>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/services/web-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>Web development</Link> — Next.js, API and backend systems, ecommerce platforms and enterprise portals.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>App development</Link> — iOS, Android and cross-platform mobile apps built for scale.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/services/ai-ml" style={{ color: 'var(--brand)', fontWeight: 500 }}>AI development</Link> — LLM integration, AI agents, computer vision and predictive analytics.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/services/product-design" style={{ color: 'var(--brand)', fontWeight: 500 }}>UI/UX design</Link> — product strategy, design systems, wireframing and UX audits.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/services/saas-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>SaaS development</Link> — multi-tenant platforms, billing, auth and analytics dashboards.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', fontWeight: 500 }}>SEO and digital marketing</Link> — local SEO, content, Google Ads and performance analytics.
+              </li>
+            </ul>
+            <p style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)', marginTop: 20 }}>
+              See the <Link href="/services" style={{ color: 'var(--brand)', fontWeight: 500 }}>full list of Mapletech Labs services</Link> and{' '}
+              <Link href="/pricing" style={{ color: 'var(--brand)', fontWeight: 500 }}>software development pricing guidance</Link> for what projects typically cost.
+            </p>
           </div>
         </section>
 
@@ -431,6 +478,14 @@ export default function AboutPage() {
             }}>
               12 locations across Canada, one engineering culture. Best agents from around the world.
             </p>
+            <p className="reveal reveal-d3" style={{
+              fontSize: 15.5, color: 'var(--muted)', lineHeight: 1.7,
+              maxWidth: 640, marginBottom: 40,
+            }}>
+              Our head office is in Edmonton, Alberta, with offices in Calgary, Toronto and Vancouver. We serve clients in
+              all 12 Canadian locations coast-to-coast — explore{' '}
+              <Link href="/locations" style={{ color: 'var(--brand)', fontWeight: 500 }}>Mapletech Labs locations across Canada</Link> to find your local team.
+            </p>
             <div style={{
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 20,
             }}>
@@ -467,6 +522,42 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── CASE STUDIES ── */}
+        <section style={{ padding: 'var(--section-y) 0' }}>
+          <div className="cb-container" style={{ maxWidth: 860 }}>
+            <h2 id="case-studies" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
+              Client work: case studies and results
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)', marginBottom: 20 }}>
+              Our 500+ delivered projects include products that have collectively generated over $500 million in client
+              revenue. These case studies show what we build and the measurable results our clients get.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 16 }}>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)', fontWeight: 500 }}>Ecommerce platform</Link> — high-converting storefront and checkout for a Canadian retailer.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)', fontWeight: 500 }}>Fintech trading platform</Link> — real-time trading interface with low-latency data feeds.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/case-studies/healthcare-telehealth" style={{ color: 'var(--brand)', fontWeight: 500 }}>Healthcare telehealth</Link> — secure video consultation platform for Canadian clinics.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/case-studies/logistics-platform" style={{ color: 'var(--brand)', fontWeight: 500 }}>Logistics platform</Link> — fleet tracking and route optimisation for a national carrier.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/case-studies/payments-api-platform" style={{ color: 'var(--brand)', fontWeight: 500 }}>Payments API platform</Link> — developer-facing API for processing payments at scale.
+              </li>
+              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
+                <Link href="/case-studies/real-estate-portal" style={{ color: 'var(--brand)', fontWeight: 500 }}>Real estate portal</Link> — property search and listing platform for a Canadian brokerage.
+              </li>
+            </ul>
+            <p style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)', marginTop: 20 }}>
+              Browse all <Link href="/case-studies" style={{ color: 'var(--brand)', fontWeight: 500 }}>Mapletech Labs case studies</Link> to see the full range of client work.
+            </p>
           </div>
         </section>
 
