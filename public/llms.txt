@@ -156,7 +156,7 @@
 - [AI Chatbot vs AI Agent for Business (2026)](https://mapletechlabs.ca/blog/ai-chatbot-vs-ai-agent-for-business): the difference between an AI chatbot and an AI agent, a comparison table, and when each one is the right build.
 - [SaaS Development Cost in Canada (2026)](https://mapletechlabs.ca/blog/saas-development-cost-canada): SaaS development cost guide for Canadian businesses comparing MVP and enterprise CAD ranges, timelines, budget drivers and build planning.
 - [Software & App Maintenance Cost in Canada (2026)](https://mapletechlabs.ca/blog/software-maintenance-cost-canada): Software and app maintenance guide for Canadian businesses covering monthly CAD ranges, retainers, in-house teams and hidden costs.
-- [Digital Marketing Cost in Canada](https://mapletechlabs.ca/blog/digital-marketing-cost-canada): Digital marketing cost guide for Canadian businesses comparing monthly SEO, Google Ads, social media and content budgets in CAD.
+- [Digital Marketing Services in Canada](https://mapletechlabs.ca/services/digital-marketing): SEO, Google Ads, social media and content marketing services for Canadian businesses, with transparent SEO and marketing budget guidance in CAD.
 - [Top SEO Companies in Canada](https://mapletechlabs.ca/blog/top-seo-companies-canada): Data-driven comparison of ten Canadian SEO companies for businesses evaluating agency strengths and choosing an SEO partner.
 - [UI/UX Design Cost in Canada (2026 Guide)](https://mapletechlabs.ca/blog/ui-ux-design-cost-canada): what UI/UX design projects cost in CAD, by project type and scope.
 - [Freelancer vs Agency vs In-House Team in Canada (2026)](https://mapletechlabs.ca/blog/freelancer-vs-agency-vs-in-house-canada): how to choose the right build model for your budget, timeline and post-launch support.
@@ -173,7 +173,7 @@
 - [Digital Marketing Agencies in Ottawa: How to Choose](https://mapletechlabs.ca/blog/digital-marketing-agencies-ottawa): buyer's guide for Ottawa businesses
 - [Digital Marketing Agencies in Montreal: How to Choose](https://mapletechlabs.ca/blog/digital-marketing-agencies-montreal): buyer's guide for Montreal businesses
 - [Digital Marketing Agencies in Canada: How to Choose](https://mapletechlabs.ca/blog/digital-marketing-agencies-canada): national buyer's guide to full-service scope, CAD retainers, CASL and PIPEDA consent, agency types and red flags.
-- [AI Development Companies in Canada](https://mapletechlabs.ca/blog/ai-development-companies-canada): how to choose an AI development partner in Canada
+- [AI & ML Development Services in Canada](https://mapletechlabs.ca/services/ai-ml): custom LLM apps, AI chatbots, automation and predictive models, and how to choose an AI development partner in Canada.
 - [Top Software Development Companies in Canada](https://mapletechlabs.ca/blog/top-software-development-companies-canada): how to choose a software partner, with what to expect and typical costs
 - [Web Development Companies in Toronto](https://mapletechlabs.ca/blog/web-development-companies-toronto): buyer's guide for Toronto businesses
 - [Web Development Companies in Edmonton: How to Choose (2026)](https://mapletechlabs.ca/blog/web-development-companies-edmonton): how to choose a web development company in Edmonton, covering capital-region SEO, B2B portals, CAD pricing, 30/60/90-day plans, red flags and questions to ask.
