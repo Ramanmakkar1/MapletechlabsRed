@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadges from '@/components/TrustBadges';
 import { industryMedia, officeMedia, humanMedia } from '@/data/media';
 import PageHero from '@/components/page/PageHero';
@@ -115,13 +114,6 @@ export default function IndustriesPage() {
     <>
       <Navbar />
       <main style={{ background: 'var(--surface)', color: 'var(--ink)', paddingTop: 'var(--section-y)' }}>
-        <div className="cb-container">
-          <Breadcrumb items={[
-            { label: 'Home', href: '/' },
-            { label: 'Industries' },
-          ]} />
-        </div>
-
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} copy={{ badge: "Sectors we serve", title: <>Software Development<br />by <span style={{ color: 'var(--brand)' }}>Industry.</span></>, desc: <>Deep expertise across six verticals — FinTech, healthcare, e-commerce, enterprise, EdTech and logistics — with custom software built for your industry&apos;s regulations and realities.</> }} photo={humanMedia.pairing} form={false} />
 
@@ -215,31 +207,6 @@ export default function IndustriesPage() {
 
         {/* CTA */}
         <FinalCta title="Building for a regulated industry?" sub="We’ve shipped in fintech, healthcare and logistics. Tell us your constraints and we’ll show you how we’d design around them." />
-
-        {/* JSON-LD Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                {
-                  '@type': 'ListItem',
-                  position: 1,
-                  name: 'Home',
-                  item: 'https://mapletechlabs.ca',
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'Industries',
-                  item: 'https://mapletechlabs.ca/industries',
-                },
-              ],
-            }),
-          }}
-        />
 
       </main>
       <Footer />

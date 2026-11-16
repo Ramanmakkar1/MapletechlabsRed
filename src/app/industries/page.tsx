@@ -30,8 +30,8 @@ export default function Page() {
     <>
       <BreadcrumbSchema
         items={[
-          { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-          { position: 2, name: 'Industries', item: 'https://mapletechlabs.ca/industries' },
+          { position: 1, name: 'Home', item: canonicalUrl('/') },
+          { position: 2, name: 'Industries', item: canonicalUrl('/industries') },
         ]}
       />
       <section className="cb-container" style={{ paddingTop: 'clamp(2rem, 4vw, 3rem)' }}>
