@@ -9,6 +9,9 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
+// Render this location page from build-time data and keep it in the static cache.
+export const dynamic = 'force-static';
+
 // Keyword-first title; seoTitle appends the brand within the 50-60 char limit.
 const TITLE = 'Mobile App Development in Toronto';
 const HERO_TITLE = 'Mobile App Development in Toronto';
@@ -148,8 +151,10 @@ const breadcrumbSchema = [
   { position: 4, name: 'Toronto', item: URL },
 ];
 
+// Resolve the city data once at build time instead of on every request.
+const base = getCityServiceData('toronto', 'mobile-app-development');
+
 export default function Page() {
-  const base = getCityServiceData('toronto', 'mobile-app-development');
   if (!base) notFound();
 
   const data = {
