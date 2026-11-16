@@ -1412,7 +1412,7 @@ export const articles: Article[] = [
     title: 'Native vs Cross-Platform vs PWA: Choosing Your App Approach (2026)',
     dek: 'Native, cross-platform or a progressive web app? The wrong choice costs you months and money. Here is a clear, honest way to decide — what each approach is best at, where each falls down, and a simple decision framework.',
     metaTitle: 'Native vs Cross-Platform vs PWA (2026)',
-    metaDescription: 'Native vs cross-platform vs PWA in 2026: compare costs, performance and maintenance, then use this framework to pick the right approach before you hire.',
+    metaDescription: 'Native vs cross-platform vs PWA in 2026: compare costs, performance and maintenance, then use our framework to pick the right app approach before you hire.',
     date: '2026-09-08',
     dateModified: '2026-09-08',
     readTime: '9 min read',
