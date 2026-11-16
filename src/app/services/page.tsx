@@ -38,13 +38,17 @@ export default function Page() {
         <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
           <li><a href="/services/software-development" className="underline hover:no-underline">Custom software development services</a></li>
           <li><a href="/services/web-development" className="underline hover:no-underline">Web development company</a></li>
+          <li><a href="/services/web-development/ecommerce-systems" className="underline hover:no-underline">Ecommerce systems development</a></li>
           <li><a href="/services/mobile-app-development" className="underline hover:no-underline">Mobile app development services</a></li>
+          <li><a href="/services/mobile-app-development/flutter-development" className="underline hover:no-underline">Flutter app development</a></li>
           <li><a href="/services/ai-ml" className="underline hover:no-underline">AI and machine learning development</a></li>
+          <li><a href="/services/ai-ml/ai-automation" className="underline hover:no-underline">AI automation services</a></li>
           <li><a href="/services/blockchain-web3" className="underline hover:no-underline">Blockchain and Web3 development</a></li>
           <li><a href="/services/cloud-devops" className="underline hover:no-underline">Cloud and DevOps consulting</a></li>
           <li><a href="/services/ar-vr" className="underline hover:no-underline">AR/VR development services</a></li>
           <li><a href="/services/game-development" className="underline hover:no-underline">Game development services</a></li>
           <li><a href="/services/product-design" className="underline hover:no-underline">UI/UX and product design services</a></li>
+          <li><a href="/services/product-design/design-systems" className="underline hover:no-underline">Design systems and component libraries</a></li>
           <li><a href="/services/branding" className="underline hover:no-underline">Branding and brand identity design</a></li>
           <li><a href="/services/saas-development" className="underline hover:no-underline">SaaS platform development</a></li>
           <li><a href="/services/wordpress-cms" className="underline hover:no-underline">WordPress and CMS development</a></li>
