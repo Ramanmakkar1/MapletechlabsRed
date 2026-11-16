@@ -158,16 +158,16 @@ export default async function ServiceCityPage({ params }: PageProps) {
             </>
           ) : slug === 'web-development-company-in-edmonton' ? (
             <>
-              Custom Software &amp;
+              Custom Software Development
               <br />
-              Web Development in <span style={{ color: 'var(--brand)' }}>{data.cityName}</span>
+              Company in <span style={{ color: 'var(--brand)' }}>{data.cityName}</span>
             </>
           ) : undefined
         }
         heroDesc={
           slug === 'web-development-company-in-edmonton' ? (
             <>
-              Mapletech Labs provides custom software and web development in Edmonton from our head office here. We build custom websites, web apps, portals and the software behind them for Edmonton businesses — fast, SEO-ready, with a fixed CAD price and a senior engineer who replies in one day.
+              Mapletech Labs is a custom software development company in Edmonton, working from our head office here. We build custom web apps, portals, e-commerce sites and the software behind them for Edmonton businesses — fast, SEO-ready, with a fixed CAD price and a senior engineer who replies in one day.
             </>
           ) : undefined
         }
