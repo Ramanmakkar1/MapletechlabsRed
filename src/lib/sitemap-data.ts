@@ -282,7 +282,12 @@ export function locationSitemapEntries(): SitemapEntry[] {
     changefreq: 'monthly' as const,
     priority: '0.85',
   };
-  return filterIndexableEntries([...provinces, ...cities, ...serviceCities, aiConsultingEdmonton, aiConsultingToronto]);
+  const healthcareEdmonton = {
+    loc: `${BASE_URL}/locations/healthcare-software-development-company-in-edmonton`,
+    changefreq: 'monthly' as const,
+    priority: '0.85',
+  };
+  return filterIndexableEntries([...provinces, ...cities, ...serviceCities, aiConsultingEdmonton, aiConsultingToronto, healthcareEdmonton]);
 }
 
 export function localSeoSitemapEntries(): SitemapEntry[] {
