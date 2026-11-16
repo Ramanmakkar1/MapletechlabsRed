@@ -168,7 +168,6 @@ export default function RamanPage() {
                 { label: 'Raman Makkar' },
               ]}
             />
-            <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
             <section
               aria-label="Founder summary"
               style={{
@@ -181,10 +180,10 @@ export default function RamanPage() {
               }}
             >
               <p style={{ fontSize: '18px', lineHeight: 1.7, margin: 0, color: 'var(--ink)', fontWeight: 500 }}>
-                <strong>In short:</strong> Raman Makkar is the Founder &amp; CEO of Mapletech Labs, the Edmonton software
+                <strong>In short:</strong> Raman Makkar is the Founder &amp; CEO of Mapletech Labs, an Edmonton software
                 development company he founded in 2018. A Computer Science graduate with 15+ years in software
                 engineering, he led engineering at 3 startup exits and architected a fintech platform processing $1B+
-                annually. He leads the company&apos;s{' '}
+                annually, and he now leads a 25+ member team that has delivered 500+ projects. He leads the company&apos;s{' '}
                 <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development</Link>,{' '}
                 <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>,{' '}
                 <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link> and{' '}
@@ -194,9 +193,12 @@ export default function RamanPage() {
                 from discovery through delivery. To reach him, call{' '}
                 <a href="tel:+14036048692" style={{ color: 'var(--brand)' }}>+1 (403) 604-8692</a>, email{' '}
                 <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)' }}>hello@mapletechlabs.ca</a>, or{' '}
-                <Link href="/contact" style={{ color: 'var(--brand)' }}>book a free consultation</Link>.
+                <Link href="/contact" style={{ color: 'var(--brand)' }}>book a free consultation</Link>. Read the{' '}
+                <Link href="/about" style={{ color: 'var(--brand)' }}>Mapletech Labs about page</Link> or explore{' '}
+                <Link href="/case-studies" style={{ color: 'var(--brand)' }}>client case studies</Link> for proof.
               </p>
             </section>
+            <h1 style={{ fontSize: '48px', fontWeight: 600, marginBottom: '24px' }}>Raman Makkar</h1>
             <p style={{ fontSize: '20px', lineHeight: 1.7, marginBottom: '20px', color: 'var(--ink)', fontWeight: 500, maxWidth: '800px' }}>
               Raman Makkar is the Founder &amp; CEO of Mapletech Labs, the Edmonton software development company he
               founded in 2018. He brings 15+ years of software engineering experience and leads a 25+ member team that
