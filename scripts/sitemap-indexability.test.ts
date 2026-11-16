@@ -3,7 +3,8 @@ import test from 'node:test';
 import nextConfig from '../next.config';
 import { canonicalPath } from '../src/lib/seo/canonical';
 import { isIndexableSitemapPath } from '../src/lib/seo/indexability';
-import { BASE_URL, SITEMAP_CHILDREN, blogSitemapEntries } from '../src/lib/sitemap-data';
+import { BASE_URL, SITEMAP_CHILDREN, blogSitemapEntries, localSeoSitemapEntries } from '../src/lib/sitemap-data';
+import { getServedCityServiceParams } from '../src/data/city-service';
 
 /** Audit URLs that were previously blocked because they 301 to a service page. */
 const BLOCKED_BLOG_PATHS = [
@@ -35,6 +36,17 @@ test('every sitemap entry is indexable and is not a redirect source', async () =
       assert.equal(isIndexableSitemapPath(path), true, `${entry.loc} must be indexable`);
       assert.equal(exactRedirectSources.has(path), false, `${entry.loc} must not redirect`);
     }
+  }
+});
+
+test('local-seo sitemap only lists city/service pages the route actually prerenders', () => {
+  const served = new Set(
+    getServedCityServiceParams().map(({ city, service }) => `/locations/${city}/${service}`),
+  );
+
+  for (const entry of localSeoSitemapEntries()) {
+    const path = canonicalPath(entry.loc);
+    assert.equal(served.has(path), true, `${entry.loc} is not a served city/service page (would 404)`);
   }
 });
 

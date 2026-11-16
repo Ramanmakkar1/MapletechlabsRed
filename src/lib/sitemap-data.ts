@@ -1,6 +1,7 @@
 import { getArticle } from '@/data/articles';
 import { provinceSlugs } from '@/data/provinces';
-import { serviceCityCombos, agencyCombos, webDesignCombos, isPriorityService, isIndexableCityService } from '@/data/serviceCity';
+import { serviceCityCombos, agencyCombos, webDesignCombos, isPriorityService } from '@/data/serviceCity';
+import { getServedCityServiceParams } from '@/data/city-service';
 import { canonicalPath, siteOrigin } from '@/lib/seo/canonical';
 import { isIndexableSitemapPath } from '@/lib/seo/indexability';
 
@@ -287,20 +288,21 @@ export function locationSitemapEntries(): SitemapEntry[] {
 export function localSeoSitemapEntries(): SitemapEntry[] {
   // Priority services now live at keyword URLs (in locationSitemapEntries), so
   // their old mesh URLs are excluded here to avoid duplicate listings. Niche
-  // pairs that the page itself marks noindex are excluded as well.
-  return filterIndexableEntries(citySlugs.flatMap(city =>
-    serviceSlugs
-      .filter(s => !isPriorityService(s) && isIndexableCityService(city, s))
-      .filter(s => !REDIRECTED_LOCATION_SLUGS.has(`/locations/${city}/${s}`))
-      .map(service => ({
-        loc: `${BASE_URL}/locations/${city}/${service}`,
-        changefreq: 'monthly',
-        // Thin city/niche pairs: keep them discoverable but below the service
-        // and priority city-service pages so crawlers spend budget on pages
-        // that can rank and convert.
-        priority: '0.3',
-      }))
-  ));
+  // pairs that the page itself marks noindex are excluded as well. Use the same
+  // served-params list as the route's generateStaticParams so the sitemap can
+  // never advertise a mesh URL that is not prerendered (and would 404).
+  return filterIndexableEntries(getServedCityServiceParams()
+    .filter(({ service }) => !isPriorityService(service))
+    .filter(({ city, service }) => !REDIRECTED_LOCATION_SLUGS.has(`/locations/${city}/${service}`))
+    .map(({ city, service }) => ({
+      loc: `${BASE_URL}/locations/${city}/${service}`,
+      changefreq: 'monthly',
+      // Thin city/niche pairs: keep them discoverable but below the service
+      // and priority city-service pages so crawlers spend budget on pages
+      // that can rank and convert.
+      priority: '0.3',
+    }))
+  );
 }
 
 export function legalSitemapEntries(): SitemapEntry[] {
