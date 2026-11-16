@@ -36,6 +36,14 @@ test("over-long encoded title is clamped after decoding", () => {
   assert.ok(!result.includes("&amp;"));
 });
 
+test("over-long branded title drops the brand instead of cutting the keyword", () => {
+  const base = "Custom Software Development Company in Vancouver, British Columbia | Mapletech Labs";
+  const result = resolveBrandedTitle(base);
+  assert.ok(result.length <= MAX_TITLE_LENGTH, `title "${result}" is ${result.length} chars (max ${MAX_TITLE_LENGTH})`);
+  assert.ok(!/Mapletech Labs/i.test(result), `expected brand dropped, got "${result}"`);
+  assert.ok(result.startsWith("Custom Software Development"), `expected keyword first, got "${result}"`);
+});
+
 test("six audited long-title patterns stay within 50-60 chars", () => {
   const audited = [
     "App Development Companies in Edmonton 2026",

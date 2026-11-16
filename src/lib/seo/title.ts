@@ -67,7 +67,20 @@ function clampTitle(title: string): string {
  */
 export function resolveBrandedTitle(title: string): string {
   const cleaned = cleanTitle(title);
-  if (hasBrand(cleaned)) return clampTitle(dedupeBrand(cleaned));
+  if (hasBrand(cleaned)) {
+    const deduped = dedupeBrand(cleaned);
+    if (deduped.length <= MAX_TITLE_LENGTH) return deduped;
+    // Over-long branded title: drop the brand so the leading keyword survives
+    // instead of clamping the brand into the visible part of the title.
+    const keywordOnly = cleanTitle(
+      deduped
+        .replace(/\s*[|:\-–—]\s*Mapletech Labs\s*$/i, '')
+        .replace(/Mapletech Labs/gi, ''),
+    )
+      .replace(/\s*[|:\-–—]\s*$/, '')
+      .trim();
+    return clampTitle(keywordOnly || deduped);
+  }
   const branded = `${cleaned}${BRAND_SUFFIX}`;
   return branded.length > MAX_TITLE_LENGTH ? clampTitle(cleaned) : branded;
 }
