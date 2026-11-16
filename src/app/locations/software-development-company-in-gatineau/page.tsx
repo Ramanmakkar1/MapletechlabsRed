@@ -6,6 +6,9 @@ import cityDescription from '@/lib/seo/city-meta';
 
 export const dynamic = 'force-static';
 export const revalidate = 31536000;
+// Cache-only: this page is built from local data, so never fall back to an
+// uncached render-time fetch on this route.
+export const fetchCache = 'force-cache';
 
 export const metadata: Metadata = {
   title: 'Software Development Company in Gatineau',
