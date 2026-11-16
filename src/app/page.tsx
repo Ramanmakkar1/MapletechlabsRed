@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import { canonicalPath } from '@/lib/seo/canonical';
+import { seoTitle } from '@/lib/seo/title';
+import { seoDescription } from '@/lib/seo/description';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/home/Hero';
 import TrustStrip from '@/components/home/TrustStrip';
@@ -26,15 +28,18 @@ const StickyCTA = nextDynamic(() => import('@/components/StickyCTA'));
 
 export const dynamic = 'force-static';
 
+const TITLE = 'Software Development Company Edmonton';
+const DESCRIPTION =
+  'Mapletech Labs is an Edmonton custom software company building web and mobile apps, AI systems and digital projects for Canadian teams. Book a free call.';
+
 export const metadata: Metadata = {
-  // `absolute`: the layout's "%s | Mapletech Labs" template would double the brand.
-  title: { absolute: 'Custom Software Development Edmonton | Mapletech Labs' },
-  description:
-    'Mapletech Labs is an Edmonton custom software company building web and mobile apps, AI systems and digital projects for Canadian teams. Book a free call.',
+  // The Edmonton location page owns the exact "custom software development
+  // Edmonton" title, so the homepage targets the company query instead.
+  title: seoTitle(TITLE),
+  description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: 'Custom Software Development Edmonton | Mapletech Labs',
-    description:
-      'Mapletech Labs is an Edmonton custom software company building web and mobile apps, AI systems and digital projects for Canadian teams. Book a free call.',
+    title: seoTitle(TITLE).absolute,
+    description: seoDescription(DESCRIPTION),
     url: 'https://mapletechlabs.ca',
     type: 'website',
     siteName: 'Mapletech Labs',
@@ -56,7 +61,7 @@ const homepageSchema = {
   '@type': 'WebPage',
   '@id': 'https://mapletechlabs.ca/#webpage',
   url: 'https://mapletechlabs.ca/',
-  name: 'Custom Software Development Edmonton | Mapletech Labs',
+  name: seoTitle(TITLE).absolute,
   description: metadata.description,
   isPartOf: {
     '@type': 'WebSite',

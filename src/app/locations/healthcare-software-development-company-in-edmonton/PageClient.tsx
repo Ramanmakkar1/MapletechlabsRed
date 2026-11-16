@@ -55,7 +55,7 @@ export default function PageClient() {
               A healthcare software development company in Edmonton builds the secure clinical systems care teams rely on: patient portals, telehealth apps, appointment and intake workflows, and integrations with existing health records. Mapletech Labs builds these systems from our Edmonton headquarters, with HIPAA and PIPEDA compliance designed in from day one rather than added after launch.
             </p>
             <p style={p}>
-              We have built a HIPAA-compliant telehealth platform that has handled 200K+ patient sessions at 99.97% uptime, with a 4.8-star app rating and 60% faster consultations. The same approach applies to Edmonton clinics, primary care networks and healthtech companies that need software built around how care is actually delivered.
+              We have built a HIPAA-compliant telehealth platform that has handled 200K+ patient sessions at 99.97% uptime, with a 4.8-star app rating and 60% faster consultations. The same approach applies to Edmonton clinics, primary care networks and healthtech companies that need software built around how care is actually delivered. Read more about <A href="/">Mapletech Labs on our homepage</A>.
             </p>
             <p style={p}><A href="/contact">Talk to our Edmonton healthcare software team</A>.</p>
           </div>
@@ -122,7 +122,7 @@ export default function PageClient() {
               <li><strong>Security and quality review:</strong> test encryption, access controls, audit logging, load behaviour and failure handling before launch.</li>
               <li><strong>Launch and support:</strong> monitor uptime, fix issues quickly and continue with new workflows once the first release is live.</li>
             </ol>
-            <p style={p}>If your project is broader than healthcare, see our <A href="/services/software-development">custom software development services</A>. If you are adding automation or model-powered features, see <A href="/services/ai-ml">AI and machine learning development</A>.</p>
+            <p style={p}>If your project is broader than healthcare, see our <A href="/locations/software-development-company-in-edmonton">custom software development company in Edmonton</A> or our <A href="/services/software-development">custom software development services</A>. If you are adding automation or model-powered features, see <A href="/services/ai-ml">AI and machine learning development</A>.</p>
           </div>
         </section>
 
