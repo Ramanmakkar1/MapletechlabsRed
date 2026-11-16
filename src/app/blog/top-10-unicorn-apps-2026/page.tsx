@@ -10,7 +10,7 @@ import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Unicorn Apps 2026: Top 10 Growth Stories for Founders';
 const DESCRIPTION =
-  'Top 10 unicorn apps of 2026: what each mobile product does, how it hit a $1B valuation, and the founder lessons you can copy. See the growth patterns.';
+  'Top 10 unicorn apps of 2026: what each mobile product does, how it reached a $1B valuation, and the founder lessons you can copy. See the growth patterns.';
 const SLUG = 'top-10-unicorn-apps-2026';
 const DATE = '2026-01-15';
 
