@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -101,7 +102,7 @@ const locationFaqs = [
   { q: 'Do you understand local privacy and compliance rules?', a: 'Yes, and it is province-specific. Alberta and BC have their own PIPA statutes, Quebec has Law 25, and elsewhere federal PIPEDA applies, with PHIPA for Ontario health data. Each province page explains how we design for its rules.' },
 ];
 
-export default function LocationsIndexPage() {
+export default function LocationsIndexPage({ priorityLocationLinks }: { priorityLocationLinks?: ReactNode }) {
   return (
     <>
       <Navbar />
@@ -214,6 +215,7 @@ export default function LocationsIndexPage() {
             </ul>
             <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: 'clamp(32px, 4vw, 48px) 0 12px' }}>More location pages</h3>
             <p className="lede" style={{ marginBottom: 16 }}>Province overviews and service pages in the Prairie, Atlantic and Quebec markets:</p>
+            {priorityLocationLinks}
             <LocationDirectory />
           </div>
         </section>
