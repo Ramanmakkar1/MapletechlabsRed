@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import nextDynamic from 'next/dynamic';
 import { canonicalPath } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
@@ -88,6 +89,10 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <WhatWeBuild />
+        <p className="cb-container" style={{ fontSize: 14, color: 'var(--muted)' }}>
+          Planning a project in Alberta? Talk to our{' '}
+          <Link href="/locations/edmonton/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development company in Edmonton</Link>.
+        </p>
         <EditorialBand />
         <EssentialGuides />
         <FeaturedWork />
