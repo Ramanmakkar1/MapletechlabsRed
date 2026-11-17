@@ -1,31 +1,16 @@
 import type { Metadata } from 'next';
-import { cache } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getCityServiceData, getServedCityServiceParams } from '@/data/city-service';
+import { getLocationMeshPage, locationMeshParams } from '@/lib/locationPages';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import { isIndexableCityService } from '@/data/serviceCity';
-import { localServiceSchema } from '@/lib/seo/business';
-import { localServiceTitle, ogTitle, seoTitle } from '@/lib/seo/title';
-import { seoDescription } from '@/lib/seo/description';
-import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
 }
 
-// Edmonton web development targets its own queries ('web development edmonton',
-// 'website development edmonton'); every other pair keeps the shared title/description.
-const EDM_WEB_TITLE = 'Website & Web Development Edmonton';
-const EDM_WEB_DESCRIPTION = 'Web development in Edmonton by Mapletech Labs, headquartered here. Website development, web apps and portals at a fixed CAD price. Get a free quote.';
-const isEdmWebPair = (city: string, service: string) => city === 'edmonton' && service === 'web-development';
-
-// Dedupe the data lookup between generateMetadata and the page render.
-const getData = cache((city: string, service: string) => getCityServiceData(city, service));
-
-export async function generateStaticParams() {
-  return getServedCityServiceParams();
+export function generateStaticParams() {
+  return locationMeshParams;
 }
 
 export const dynamic = 'force-static';
@@ -38,76 +23,15 @@ export const revalidate = 31536000;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { city, service } = await params;
-  const data = getData(city, service);
-  if (!data) return {};
-  const isEdmWeb = isEdmWebPair(city, service);
-  const title = isEdmWeb ? EDM_WEB_TITLE : data.title;
-  const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
-  const desc = isEdmWeb ? EDM_WEB_DESCRIPTION : data.description;
-
-  return {
-    title: seoTitle(finalTitle),
-    description: seoDescription(desc),
-    openGraph: {
-      title: ogTitle(finalTitle),
-      description: seoDescription(desc),
-      url: data.canonicalUrl,
-      type: 'website',
-    },
-    alternates: {
-      canonical: data.canonicalUrl,
-    },
-    // Niche pairs in smaller cities stay crawlable but out of the index.
-    ...(isIndexableCityService(city, service) ? {} : { robots: { index: false, follow: true } }),
-  };
+  return getLocationMeshPage(city, service)?.metadata ?? {};
 }
 
 export default async function CityServicePage({ params }: PageProps) {
   const { city, service } = await params;
-  const data = getData(city, service);
+  const page = getLocationMeshPage(city, service);
+  if (!page) notFound();
 
-  if (!data) {
-    notFound();
-  }
-  const isEdmWeb = isEdmWebPair(city, service);
-  const desc = isEdmWeb ? EDM_WEB_DESCRIPTION : data.description;
-  const quote = quoteForCity(city);
-  const breadcrumbItems = [
-    { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-    { position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
-    { position: 3, name: data.cityName, item: `https://mapletechlabs.ca/locations/software-development-company-in-${data.citySlug}` },
-    { position: 4, name: `${data.serviceName} in ${data.cityName}`, item: data.canonicalUrl },
-  ];
-
-  // Combined JSON-LD schema (single @graph to avoid duplicate field errors)
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      ...(quote ? [reviewForQuote(quote)] : []),
-      {
-        '@type': 'Service',
-        name: `${data.serviceName} in ${data.cityName}`,
-        provider: { '@id': 'https://mapletechlabs.ca/#localbusiness' },
-        areaServed: {
-          '@type': 'City',
-          name: data.cityName,
-          containedInPlace: {
-            '@type': 'AdministrativeArea',
-            name: data.province,
-          },
-        },
-        serviceType: data.serviceName,
-        description: desc,
-        url: data.canonicalUrl,
-      },
-      localServiceSchema({
-        cityName: data.cityName,
-        provinceName: data.province,
-        url: data.canonicalUrl,
-        serviceType: [data.serviceName],
-      }),
-    ],
-  };
+  const { data, isEdmWeb, heroDescription, jsonLd, breadcrumbItems } = page;
 
   return (
     <>
@@ -120,7 +44,7 @@ export default async function CityServicePage({ params }: PageProps) {
         <ServiceCityTemplate
           data={data}
           heroTitle={<>Web Development <span style={{ color: 'var(--brand)' }}>Edmonton</span><br />&amp; Website Development</>}
-          heroDesc={<>{data.heroDescription} Part of our <Link href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</Link>, from our head office here.</>}
+          heroDesc={<>{heroDescription} Part of our <Link href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</Link>, from our head office here.</>}
         />
       ) : (
         <ServiceCityTemplate data={data} />
