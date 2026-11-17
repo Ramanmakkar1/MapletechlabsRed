@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { locationPageSlugs, getLocationPage } from '@/lib/locationPages';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 interface PageProps {
   params: Promise<{ slug: string[] }>;
@@ -25,8 +26,17 @@ export const revalidate = 31536000;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug: segments } = await params;
-  const page = getLocationPage(segments.join('/'));
-  return page?.metadata ?? {};
+  const slug = segments.join('/');
+  const page = getLocationPage(slug);
+  const baseMetadata = page?.metadata ?? {};
+  const canonical = canonicalUrl(`/locations/${slug}`);
+  return {
+    ...baseMetadata,
+    alternates: {
+      ...baseMetadata.alternates,
+      canonical,
+    },
+  };
 }
 
 export default async function LocationCatchAllPage({ params }: PageProps) {
