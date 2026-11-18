@@ -177,8 +177,8 @@ export default function AboutPage() {
               </dd>
               <dt style={{ fontWeight: 600, color: 'var(--ink)' }}>Contact</dt>
               <dd style={{ margin: 0 }}>
-                <a href="tel:+14036048692" style={{ color: 'var(--brand)', fontWeight: 500 }}>+1 (403) 604-8692</a> ·{' '}
-                <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', fontWeight: 500 }}>hello@mapletechlabs.ca</a> · replies within one working day
+                <a href="tel:+14036048692" style={{ color: 'var(--brand)', fontWeight: 500 }}>+1 (403) 604-8692</a>{' '}
+                <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', fontWeight: 500 }}>hello@mapletechlabs.ca</a> — replies within one working day
               </dd>
             </dl>
           </div>
