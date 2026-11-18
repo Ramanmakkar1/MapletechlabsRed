@@ -173,12 +173,18 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Where AI actually helps Edmonton organisations',
         body: [
           'Energy and field operations teams have thousands of pages of manuals and safety procedures, and AI search can find the right answer in seconds. It can also draft summaries of long inspection reports for a supervisor to check. Government and post-secondary teams can offer citizen or student help bots that show the source for every answer. Clinics can use AI to draft intake and triage notes, built to respect Alberta’s Health Information Act. Logistics firms can sort dispatch requests and triage busy email inboxes so staff spend less time on routine messages.',
+          ' See our ',
+          { href: '/services/ai-ml/ai-automation', label: 'AI workflow automation services' },
+          ' for how we scope these projects.',
         ],
       },
       {
         heading: 'Chatbots on your own documents, with sources',
         body: [
           'Most business chatbots should answer from your own content, not the open internet. We use retrieval-augmented generation (RAG): the bot first finds the relevant passages in your policies, manuals or knowledge base, then writes an answer and cites the source so staff can check it. Access control means each user only sees answers drawn from documents they are allowed to read. When a question is out of scope or the bot is not sure, it hands off to a person instead of guessing.',
+          ' Our ',
+          { href: '/services/ai-ml/ai-chatbots', label: 'AI chatbot development' },
+          ' page covers features and timelines.',
         ],
       },
       {
