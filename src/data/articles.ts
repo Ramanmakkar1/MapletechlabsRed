@@ -161,7 +161,7 @@ export const articles: Article[] = [
     title: 'Healthcare AI Development in Canada: Buyer Guide (2026)',
     dek: 'A practical Canadian buyer guide to healthcare AI: where it helps, how RAG and human review work, PHIPA, PIPEDA and HIA duties, hosting, build vs buy, costs, timelines and vendor questions.',
     metaTitle: 'Healthcare AI Development Canada: Buyer Guide 2026',
-    metaDescription: 'Plan healthcare AI development in Canada: use cases, RAG and human review, PHIPA, PIPEDA and HIA duties, hosting, build vs buy, costs and vendor questions.',
+    metaDescription: 'Plan healthcare AI development in Canada: use cases, RAG with human review, PHIPA, PIPEDA and HIA duties, hosting, build vs buy, costs and vendor checks.',
     answer: 'Healthcare AI development in Canada means building AI features for clinical and administrative workflows with privacy, human review and Canadian data handling designed in from the start, rather than adding a general-purpose chatbot to a health product.',
     date: '2026-11-15',
     dateModified: '2026-11-15',
