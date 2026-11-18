@@ -220,6 +220,9 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   }
   const hero = humanMedia[a.heroKey as keyof typeof humanMedia] ?? humanMedia.team;
   const published = new Date(a.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+  const updated = a.dateModified && a.dateModified !== a.date
+    ? new Date(a.dateModified).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })
+    : null;
 
   return (
     <>
@@ -237,6 +240,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
               <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', fontSize: 14, color: 'var(--muted)' }}>
                 <Link href="/about/raman-makkar" rel="author" style={{ fontWeight: 600, color: 'var(--ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Raman Makkar</Link>
                 <span aria-hidden>&middot;</span><span>{published}</span>
+                {updated && <><span aria-hidden>&middot;</span><span>Updated {updated}</span></>}
                 <span aria-hidden>&middot;</span><span>{a.readTime}</span>
               </div>
             </div>
