@@ -567,7 +567,7 @@ export const articles: Article[] = [
     title: 'How to Run AI Models Locally for Free in 2026',
     dek: 'You can run genuinely capable AI models on your own computer — no subscription, nothing leaving your machine. Here is the honest, practical guide: the tools, the open models worth downloading, the hardware you actually need, and where local hits its limits.',
     metaTitle: 'Run AI Models Locally for Free (2026)',
-    metaDescription: 'Run AI models locally for free in 2026: set up Ollama or LM Studio, choose a model for your RAM and GPU, and keep your data private with this setup guide.',
+    metaDescription: 'You can run AI models locally for free: install Ollama or LM Studio, match a model to your RAM and GPU, and keep data private at no per-message cost.',
     date: '2026-09-08',
     dateModified: '2026-11-14',
     readTime: '10 min read',
