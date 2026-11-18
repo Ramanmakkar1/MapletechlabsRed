@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
@@ -74,38 +73,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section
-        aria-labelledby="logistics-summary-heading"
-        style={{ maxWidth: 840, margin: '0 auto', padding: '48px 24px 0' }}
-      >
-        <h2
-          id="logistics-summary-heading"
-          style={{ fontSize: 28, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 16 }}
-        >
-          What Mapletech Labs built for the logistics client
-        </h2>
-        <p style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 16 }}>
-          Mapletech Labs built a real-time logistics and fleet management platform for a Vancouver
-          logistics client, combining IoT fleet tracking, ML-powered route optimization and a live
-          operations dashboard. The platform now handles <strong>15K+ daily deliveries</strong> with a{' '}
-          <strong>98% on-time rate</strong> and delivers <strong>25% fuel savings</strong>.
-        </p>
-        <p style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7 }}>
-          Read more about our{' '}
-          <Link href="/industries/logistics" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-            logistics software development
-          </Link>{' '}
-          work, our{' '}
-          <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-            web development services
-          </Link>
-          , or{' '}
-          <Link href="/contact" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-            contact Mapletech Labs
-          </Link>{' '}
-          to discuss a similar platform.
-        </p>
-      </section>
       <PageClient />
     </>
   );
