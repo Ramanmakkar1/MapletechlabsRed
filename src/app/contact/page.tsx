@@ -40,6 +40,21 @@ export const metadata: Metadata = {
   },
 };
 
+const CONTACT_PAGE_FAQS = [
+  {
+    question: 'Which services can I request through this contact page?',
+    answer: 'You can request custom software, SaaS and web development, iOS, Android and cross-platform apps, AI and machine learning, UI/UX and product design, SEO and digital marketing. Choose the closest service in the form, or describe your goal if you are unsure.',
+  },
+  {
+    question: 'What should I include in my first message?',
+    answer: 'Share the problem you want solved, who will use the product, your rough budget and target date, plus any helpful links or documents. You do not need a finished specification to get in touch.',
+  },
+  {
+    question: 'Is the first consultation free, and when will you reply?',
+    answer: 'Yes. The first 30-minute project consultation is free, and a senior engineer replies within one working day with next steps.',
+  },
+];
+
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
@@ -90,6 +105,37 @@ export default function ContactRoute() {
           </div>
         </section>
         <ContactPage serviceOptions={SERVICE_OPTIONS} cityOptions={CITY_OPTIONS} />
+        <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-faq">
+          <div className="cb-container">
+            <div style={{ maxWidth: 860 }}>
+              <h2 id="contact-faq" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Contact FAQ</h2>
+              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760, margin: '0 0 28px' }}>
+                Quick answers about contacting Mapletech Labs and starting a software, app, AI, design or SEO enquiry.
+              </p>
+              <div style={{ display: 'grid', gap: 24 }}>
+                {CONTACT_PAGE_FAQS.map(faq => (
+                  <div key={faq.question} style={{ borderTop: '1px solid var(--line)', paddingTop: 22 }}>
+                    <h3 style={{ fontSize: 19, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', lineHeight: 1.35, margin: '0 0 10px' }}>{faq.question}</h3>
+                    <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760, margin: 0 }}>{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-company">
+          <div className="cb-container">
+            <div style={{ maxWidth: 860 }}>
+              <h2 id="contact-company" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Which company will you be contacting?</h2>
+              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+                You will be contacting Mapletech Labs, a Canadian software, app, AI and UI/UX development company founded by Raman Makkar in Edmonton, Alberta in 2018. The team works with startups and established businesses in fintech, healthcare, e-commerce, logistics, edtech and enterprise. Its head office is in Edmonton, with dedicated engineers in Calgary, Toronto and Vancouver and remote collaboration with clients across Canada.
+              </p>
+              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760, margin: 0 }}>
+                Read more <Link href="/about" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>about Mapletech Labs and its company history</Link>, meet <Link href="/about/raman-makkar" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>founder and CEO Raman Makkar</Link>, or browse <Link href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software, app and AI case studies</Link> before sending your project brief.
+              </p>
+            </div>
+          </div>
+        </section>
         <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-services">
           <div className="cb-container">
             <div style={{ maxWidth: 860 }}>
@@ -370,7 +416,10 @@ export default function ContactRoute() {
         { position: 2, name: 'Contact', item: canonicalUrl('/contact') },
       ]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
-      <FaqSchema faqs={CONTACT_FAQS.map(({ question, answer }) => ({ q: question, a: answer }))} />
+      <FaqSchema faqs={[
+        ...CONTACT_PAGE_FAQS.map(({ question, answer }) => ({ q: question, a: answer })),
+        ...CONTACT_FAQS.map(({ question, answer }) => ({ q: question, a: answer })),
+      ]} />
       <Footer />
     </>
   );
