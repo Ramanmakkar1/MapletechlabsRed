@@ -378,7 +378,13 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'Native or cross-platform: how we choose',
         body: [
-          'For most Vancouver clients we recommend Flutter or React Native, because one shared codebase reaches both the App Store and Google Play. That usually costs 30-40% less than building and maintaining two separate native apps. We switch to native Swift for iOS and Kotlin for Android when your app leans hard on device hardware or Bluetooth, has to store large amounts of data offline, or needs the best possible performance. We walk you through the reasons for our recommendation before you choose.',
+          'For most Vancouver clients we recommend ',
+          { href: '/services/mobile-app-development/flutter-development', label: 'Flutter' },
+          ' or ',
+          { href: '/services/mobile-app-development/react-native-apps', label: 'React Native' },
+          ', because ',
+          { href: '/services/mobile-app-development/cross-platform-apps', label: 'one shared codebase' },
+          ' reaches both the App Store and Google Play. That usually costs 30-40% less than building and maintaining two separate native apps. We switch to native Swift for iOS and Kotlin for Android when your app leans hard on device hardware or Bluetooth, has to store large amounts of data offline, or needs the best possible performance. We walk you through the reasons for our recommendation before you choose.',
         ],
       },
       {
