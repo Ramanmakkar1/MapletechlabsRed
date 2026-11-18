@@ -494,7 +494,7 @@ export const articles: Article[] = [
     title: 'How to Use Claude for Free in 2026: A Practical Guide',
     dek: 'Claude is one of the most capable AI assistants available, and you can use a lot of it without paying anything. Here is exactly how the free access works in 2026, what you get, where the limits sit, and how to get more out of every message.',
     metaTitle: 'How to Use Claude for Free (2026)',
-    metaDescription: 'Use Claude for free in 2026: start on web or mobile without a card, understand message limits, and use four habits to get more from the free plan.',
+    metaDescription: 'Use Claude for free in 2026: sign up on web or mobile with no card, understand the message limits, and apply four habits to get more from the free plan.',
     date: '2026-09-08',
     dateModified: '2026-11-14',
     readTime: '8 min read',
