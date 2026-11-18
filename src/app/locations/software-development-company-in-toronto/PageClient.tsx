@@ -53,7 +53,7 @@ const trends = [
               ];
 const torontoOverview = {
   title: 'What does a software development company in Toronto do?',
-  lead: 'A software development company in Toronto designs, builds and maintains custom software for local businesses &mdash; the web platforms, mobile apps and AI systems that replace spreadsheets and legacy tools. Mapletech Labs does exactly that for Toronto startups, scale-ups and enterprises, with senior engineers, a fixed scope and a fixed price agreed before any code is written.',
+  lead: 'A software development company in Toronto designs, builds and maintains custom software for local businesses — the web platforms, mobile apps and AI systems that replace spreadsheets and legacy tools. Mapletech Labs does exactly that for Toronto startups, scale-ups and enterprises, with senior engineers, a fixed scope and a fixed price agreed before any code is written.',
   points: [
     { t: 'Plan and scope the product', d: 'We turn a business problem into a clear technical plan, user flows and a fixed-price proposal — including the Toronto-specific compliance, security and accessibility requirements your sector demands.' },
     { t: 'Design and build it', d: 'Senior engineers and designers build the web app, mobile app, AI feature or SaaS platform end to end, shipping working software in short iterations you can review.' },

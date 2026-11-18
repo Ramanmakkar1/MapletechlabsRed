@@ -110,7 +110,7 @@ function defaultOverview(cityName: string, industries: string[]) {
   const inds = industries.length ? industries.slice(0, 3).join(', ').toLowerCase() : 'local business';
   return {
     title: `Your software and app development partner in ${cityName}`,
-    lead: `Mapletech Labs is a custom software development company working with ${cityName} businesses &mdash; building web platforms, mobile apps and AI systems for sectors like ${inds}. You get senior engineers, a fixed scope and price, and software built properly the first time.`,
+    lead: `Mapletech Labs is a custom software development company working with ${cityName} businesses — building web platforms, mobile apps and AI systems for sectors like ${inds}. You get senior engineers, a fixed scope and price, and software built properly the first time.`,
     points: POINTS,
     covers: COVERS,
   };
