@@ -80,9 +80,20 @@ export default function Page() {
         <p className="mt-4 max-w-3xl text-base leading-7 text-slate-700">
           Mapletech Labs case studies are real Canadian software projects &mdash; each one reports the
           outcome the client actually measured, from sub-50ms trade execution to a 3.8% checkout
-          conversion rate. Together they show our custom software development, web development, and AI
-          development services delivering in production across fintech, healthcare, e-commerce,
-          logistics, payments, and real estate.
+          conversion rate. Together they show our{' '}
+          <Link href="/services/software-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+            custom software development
+          </Link>
+          ,{' '}
+          <Link href="/services/web-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+            web development
+          </Link>
+          , and{' '}
+          <Link href="/services/ai-ml" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+            AI development
+          </Link>{' '}
+          services delivering in production across fintech, healthcare, e-commerce, logistics, payments,
+          and real estate.
         </p>
         <nav aria-label="Case studies" className="mt-6">
           <h2 className="text-lg font-semibold text-slate-900">Our case studies</h2>
@@ -98,6 +109,41 @@ export default function Page() {
                 </Link>
               </li>
             ))}
+          </ul>
+        </nav>
+        <nav aria-label="Related services" className="mt-6">
+          <h2 className="text-lg font-semibold text-slate-900">Related services</h2>
+          <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+            <li>
+              <Link href="/services/software-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                Custom software development services
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/web-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                Web development services
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/mobile-app-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                Mobile app development services
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/ai-ml" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                AI development services
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/saas-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                SaaS development services
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/product-design" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                Product design services
+              </Link>
+            </li>
           </ul>
         </nav>
       </section>
