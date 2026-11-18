@@ -195,6 +195,16 @@ const organizationSchema = {
   },
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteOrigin()}/#website`,
+  name: "Mapletech Labs",
+  url: siteOrigin(),
+  inLanguage: "en-CA",
+  publisher: { "@id": `${siteOrigin()}/#organization` },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -216,6 +226,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        {/* WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
         {children}
