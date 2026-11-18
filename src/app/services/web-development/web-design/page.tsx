@@ -9,7 +9,7 @@ import { seoDescription } from '@/lib/seo/description';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 const TITLE = 'Web Design Company in Canada: Custom Websites';
-const DESCRIPTION = 'Web design company in Canada: Mapletech Labs designs fast, mobile-first custom websites that turn visitors into leads, with fixed CAD quotes. Get a free quote.';
+const DESCRIPTION = 'Web design company in Canada: we design and build fast, mobile-first custom websites with fixed CAD quotes. Request your free quote today, no obligation.';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
