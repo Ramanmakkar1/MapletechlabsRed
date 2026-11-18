@@ -142,7 +142,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
       ? createElement(
           Fragment,
           null,
-          'Custom Software Development',
+          'Web Development',
           createElement('br'),
           'Company in ',
           cityBrand(data.cityName),
@@ -151,7 +151,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
 
   const heroDesc =
     slug === 'web-development-company-in-edmonton'
-      ? 'Mapletech Labs is a custom software development company in Edmonton, working from our head office here. We build custom web apps, portals, e-commerce sites and the software behind them for Edmonton businesses — fast, SEO-ready, with a fixed CAD price and a senior engineer who replies in one day.'
+      ? 'Mapletech Labs is a web development company in Edmonton, working from our head office here. We build custom web apps, portals, e-commerce sites and the software behind them for Edmonton businesses — fast, SEO-ready, with a fixed CAD price and a senior engineer who replies in one day.'
       : undefined;
 
   const headline = isAgencyPage

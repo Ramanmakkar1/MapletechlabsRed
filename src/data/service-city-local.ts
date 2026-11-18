@@ -1166,10 +1166,10 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     ],
   },
   'web-development-company-in-edmonton': {
-    title: 'Custom Software Development Company Edmonton | Free Quote',
+    title: 'Web Development Company in Edmonton | Web Apps & Portals',
     description:
-      'Mapletech Labs is a custom software development company in Edmonton, building web apps, e-commerce and AI. Fixed price, senior engineers, fast replies.',
-    answer: 'Mapletech Labs is a custom software development company in Edmonton, building web apps, portals, e-commerce stores, AI systems and the custom software behind them for Edmonton companies. You get a fixed scope and price before work starts, senior engineers writing your code, and in-person workshops at your office.',
+      'Web development company in Edmonton: Mapletech Labs builds web apps, portals and e-commerce sites from our Edmonton head office. Fixed CAD price, free quote.',
+    answer: 'Mapletech Labs is a web development company in Edmonton, building web apps, portals, e-commerce stores, AI systems and the custom software behind them for Edmonton companies. You get a fixed scope and price before work starts, senior engineers writing your code, and in-person workshops at your office.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for custom software or web development you are working with a local team at our head office, not a sales desk for developers somewhere else. We build fast, SEO-ready business websites, e-commerce stores, web apps and custom software for Edmonton companies, public bodies and growing teams across the city. You talk directly to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
     sections: [
       {
