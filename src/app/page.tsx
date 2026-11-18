@@ -29,13 +29,11 @@ const StickyCTA = nextDynamic(() => import('@/components/StickyCTA'));
 
 export const dynamic = 'force-static';
 
-const TITLE = 'Software Development Company Edmonton';
+const TITLE = 'Custom Software Development Edmonton';
 const DESCRIPTION =
-  'Mapletech Labs is an Edmonton custom software company building web and mobile apps, AI systems and digital projects for Canadian teams. Book a free call.';
+  'Mapletech Labs delivers custom software development in Edmonton, including web and mobile apps and AI systems for Canadian teams. Book a free call today.';
 
 export const metadata: Metadata = {
-  // The Edmonton location page owns the exact "custom software development
-  // Edmonton" title, so the homepage targets the company query instead.
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
