@@ -21,6 +21,13 @@ import type { Faq, HeroCopy, ServiceCard, Stat, Step } from './types';
 
 const heroShots = [officeMedia.desk, officeMedia.meeting, officeMedia.open];
 
+const navigationLinkStyle = {
+  height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box',
+  padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere', lineHeight: 1.4,
+} as const;
+
+const tokens = (s: string) => s.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+
 const COST_GUIDES: Record<string, { href: string; label: string }> = {
   'ai-ml': { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
   'mobile-app-development': { href: '/blog/app-development-cost-canada', label: 'app development cost guide for Canada' },
@@ -37,6 +44,21 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
   parent: { href: string; label: string }; name: string; copy: HeroCopy; stats: Stat[]; services: ServiceCard[]; steps: Step[]; faqs: Faq[]; capabilitiesTitle?: string; buyerContent?: ReactNode; caseStudySlugs?: string[];
 }) {
   const parentSlug = parent.href.split('/').pop() ?? '';
+  const parentData = servicesAllowlist.find(s => s.slug === parentSlug);
+  const nameTokens = tokens(name);
+  const related = parentData?.relatedSubServices ?? [];
+  let currentIdx = -1;
+  let currentScore = -1;
+  related.forEach((r, i) => {
+    const overlap = tokens(r.name).filter(t => nameTokens.includes(t)).length;
+    const a = r.name.toLowerCase();
+    const b = name.toLowerCase();
+    let prefix = 0;
+    while (prefix < a.length && prefix < b.length && a[prefix] === b[prefix]) prefix += 1;
+    const score = overlap * 1000 + prefix;
+    if (score > currentScore) { currentScore = score; currentIdx = i; }
+  });
+  const siblings = related.filter((_, i) => i !== currentIdx);
   const contactHref = contactHrefFor(parentSlug, undefined, servicesAllowlist, citiesAllowlist);
   const costGuide = COST_GUIDES[parentSlug];
   const hero = heroShots[name.length % heroShots.length];
@@ -48,6 +70,16 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
         <StatRow stats={stats} />
         <ServicesGrid title={capabilitiesTitle ?? `Our ${name} capabilities`} items={services} />
         <ServiceProof slug={parentSlug} name={name} contactHref={contactHref} caseStudySlugs={caseStudySlugs ?? serviceCaseMap[parentSlug]?.slice(0, 2)} />
+        {siblings.length > 0 ? (
+          <section aria-labelledby="sub-service-siblings" style={{ padding: 'var(--section-y-sm) 0' }}>
+            <div className="cb-container">
+              <h2 id="sub-service-siblings" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 12px' }}>Related {parent.label} services</h2>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                {siblings.map(r => <Link key={r.slug} href={`/services/${parentSlug}/${r.slug}`} className="pill" style={navigationLinkStyle}>{r.name}</Link>)}
+              </div>
+            </div>
+          </section>
+        ) : null}
         {buyerContent}
         {costGuide ? (
           <section aria-labelledby="sub-service-cost" style={{ padding: 'var(--section-y-sm) 0' }}>
