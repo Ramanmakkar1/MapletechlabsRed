@@ -95,6 +95,13 @@ export default function Home() {
           and{' '}
           <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Web development company in Edmonton</Link>.
         </p>
+        <p className="cb-container" style={{ fontSize: 15, color: 'var(--body)', maxWidth: '70ch', margin: '0 auto 48px' }}>
+          Custom software development in Edmonton means a local team that designs and builds web platforms, mobile apps and AI systems around your business, from requirements to launch and beyond. Explore our{' '}
+          <Link href="/locations/edmonton/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton web development services</Link>{' '}
+          and{' '}
+          <Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development services</Link>{' '}
+          to see how we work with Canadian teams.
+        </p>
         <EditorialBand />
         <EssentialGuides />
         <FeaturedWork />
