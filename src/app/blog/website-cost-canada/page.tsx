@@ -10,7 +10,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Website Cost in Canada: 2026 Pricing Guide';
-const DESCRIPTION = 'What a website really costs in Canada in 2026: real price ranges for design, development, hosting and SEO, plus what drives the quote up or down.';
+const DESCRIPTION = 'See what website development costs in Canada, what changes the price, and how to budget for design, features, maintenance, and growth for every budget.';
 const SLUG = 'website-cost-canada';
 const DATE = '2026-01-22';
 
