@@ -8,6 +8,7 @@ import Link from 'next/link';
 import type { CSSProperties } from 'react';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
@@ -653,6 +654,8 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="saas-development-cost-canada" />
 
       </main>
       <Footer />

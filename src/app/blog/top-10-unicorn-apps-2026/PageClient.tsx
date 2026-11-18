@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -803,6 +804,8 @@ export default function BlogPostPageClient({
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="top-10-unicorn-apps-2026" />
 
       </main>
       <Footer />

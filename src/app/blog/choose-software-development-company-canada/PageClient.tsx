@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import SoftwareCompanyLinks from '@/components/SoftwareCompanyLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
@@ -627,6 +628,8 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="choose-software-development-company-canada" />
 
       </main>
       <Footer />

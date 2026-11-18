@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import { AGENCY_CITIES } from '@/data/serviceCity';
 import GuideFaq from '@/components/blog/GuideFaq';
@@ -688,6 +689,8 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="digital-marketing-cost-canada" />
 
       </main>
       <Footer />

@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
@@ -679,6 +680,8 @@ At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="website-cost-canada" />
 
       </main>
       <Footer />

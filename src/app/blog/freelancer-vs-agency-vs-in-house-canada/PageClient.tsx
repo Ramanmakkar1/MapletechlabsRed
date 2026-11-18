@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 
 function useReveal() {
@@ -612,6 +613,8 @@ export default function FreelancerVsAgencyVsInHouseClient({
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="freelancer-vs-agency-vs-in-house-canada" />
 
       </main>
       <Footer />

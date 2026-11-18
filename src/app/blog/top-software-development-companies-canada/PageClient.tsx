@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import SoftwareCompanyLinks from '@/components/SoftwareCompanyLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
@@ -718,6 +719,8 @@ export default function BlogPostPageClient() {
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="top-software-development-companies-canada" />
 
       </main>
       <Footer />

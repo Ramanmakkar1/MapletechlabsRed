@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
@@ -747,6 +748,8 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="app-development-cost-canada" />
 
       </main>
       <Footer />

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import GuideFaq from '@/components/blog/GuideFaq';
 import { GUIDE_FAQS } from '@/data/guide-faqs';
 
@@ -511,6 +512,8 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="software-development-companies-calgary" />
 
       </main>
       <Footer />

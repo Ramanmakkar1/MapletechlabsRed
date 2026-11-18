@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import BlogServiceCta from '@/components/blog/BlogServiceCta';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
 import { GUIDE_FAQS } from '@/data/guide-faqs';
@@ -615,6 +616,8 @@ export default function AiDevelopmentCompaniesCanadaClient() {
             </div>
           </div>
         </section>
+
+        <BlogServiceCta slug="ai-development-companies-canada" />
 
       </main>
       <Footer />
