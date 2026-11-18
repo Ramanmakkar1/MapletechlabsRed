@@ -117,7 +117,13 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'Native or cross-platform: picking the right build',
         body: [
-          'Most Calgary projects need to reach both iPhone and Android users, so we usually suggest a cross-platform build in Flutter or React Native. One codebase ships to both app stores and typically costs 30-40% less than building two separate native apps. When an app depends on heavy device hardware, Bluetooth sensors, large offline data sets or top-end performance, we build natively in Swift and Kotlin instead. We walk you through that choice for your app in plain language before you sign anything.',
+          'Most Calgary projects need to reach both iPhone and Android users, so we usually suggest a ',
+          { href: '/services/mobile-app-development/cross-platform-apps', label: 'cross-platform build' },
+          ' in ',
+          { href: '/services/mobile-app-development/flutter-development', label: 'Flutter' },
+          ' or ',
+          { href: '/services/mobile-app-development/react-native-apps', label: 'React Native' },
+          '. One codebase ships to both app stores and typically costs 30-40% less than building two separate native apps. When an app depends on heavy device hardware, Bluetooth sensors, large offline data sets or top-end performance, we build natively in Swift and Kotlin instead. We walk you through that choice for your app in plain language before you sign anything.',
         ],
       },
       {
