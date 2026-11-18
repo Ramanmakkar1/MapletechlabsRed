@@ -18,6 +18,7 @@ const h2 = {
 
 export default function CaseStudyRelated({ intro, services, city }: Props) {
   const links = city ? [...services, city] : services;
+  const primaryService = services[0];
 
   return (
     <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
@@ -26,6 +27,14 @@ export default function CaseStudyRelated({ intro, services, city }: Props) {
         <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, margin: '0 0 24px', maxWidth: 720 }}>
           {intro}
         </p>
+        {primaryService && (
+          <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, margin: '0 0 24px' }}>
+            <Link href={primaryService.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>
+              Explore our {primaryService.label} services
+            </Link>
+            .
+          </p>
+        )}
         <ul
           style={{
             listStyle: 'none',
