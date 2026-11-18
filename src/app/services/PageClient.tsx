@@ -288,6 +288,14 @@ const SERVICE_GROUPS: {
   },
 ];
 
+const DECISION_LINKS = [
+  { label: 'Custom software development', href: '/services/software-development', desc: 'Custom platforms, SaaS and enterprise systems built to scale from MVP to millions of users.' },
+  { label: 'Mobile app development', href: '/services/mobile-app-development', desc: 'Native iOS, Android and cross-platform apps in Swift, Kotlin, Flutter and React Native.' },
+  { label: 'AI & machine learning', href: '/services/ai-ml', desc: 'LLM integration, AI automation, computer vision and predictive analytics.' },
+  { label: 'UI/UX product design', href: '/services/product-design', desc: 'User research, wireframes, prototypes and design systems that lift adoption and conversion.' },
+  { label: 'SEO & digital marketing', href: '/services/digital-marketing', desc: 'SEO, Google Ads, content and social media campaigns measured against leads and revenue.' },
+];
+
 const CHOOSE_GUIDE = [
   {
     need: 'A new product or platform',
@@ -443,6 +451,35 @@ export default function ServicesIndexPage() {
                   </Link>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* WHICH SERVICE DO YOU NEED? */}
+        <section className="section-padding" style={{ paddingTop: 0 }}>
+          <div className="cb-container">
+            <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '0.75rem' }}>Which service do you need?</h2>
+              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', maxWidth: 720, margin: '0 auto' }}>
+                One clear starting point for each major service — open the page for scope, process, pricing guidance and real client results.
+              </p>
+            </div>
+            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
+              {DECISION_LINKS.map(item => (
+                <div key={item.href} style={{ border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', padding: 'clamp(1.25rem, 3vw, 1.75rem)', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <Link href={item.href} style={{ color: 'var(--ink)', fontWeight: 600, fontSize: 'var(--fs-h4)', textDecoration: 'none', lineHeight: 1.3 }}>{item.label}</Link>
+                  <p style={{ color: 'var(--body)', fontSize: 14.5, lineHeight: 1.7, margin: 0, flexGrow: 1 }}>{item.desc}</p>
+                  <Link href={item.href} style={{ color: 'var(--brand)', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none', minHeight: 44, display: 'flex', alignItems: 'center' }}>
+                    Explore {item.label} &rarr;
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div className="reveal" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '1rem 2rem', marginTop: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
+              <Link href="/case-studies" style={{ color: 'var(--brand)', fontWeight: 600, fontSize: '0.95rem', textDecoration: 'none', minHeight: 44, display: 'flex', alignItems: 'center' }}>
+                See real client results in our case studies &rarr;
+              </Link>
+              <Link href="/contact" className="btn btn--primary">Book a free consultation</Link>
             </div>
           </div>
         </section>
