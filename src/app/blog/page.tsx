@@ -6,8 +6,8 @@ import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { articles } from '@/data/articles';
 
-const TITLE = 'Software Development Blog: Costs, Guides & Rankings';
-const DESCRIPTION = 'Software development guides from Mapletech Labs: app and website cost in Canada, top agency rankings by city, AI how-tos and advice on hiring a dev team.';
+const TITLE = 'Software, AI & App Development Insights | MapleTech';
+const DESCRIPTION = 'Guides on software, app and AI development costs, process and results in Canada. Learn what projects cost, how we build them, and what to expect.';
 const LAST_MODIFIED = articles.reduce(
   (latest, a) => (a.dateModified > latest ? a.dateModified : latest),
   '',
