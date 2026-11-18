@@ -72,13 +72,13 @@ export default function Page() {
       />
       <section className="mx-auto max-w-6xl px-4 pt-8">
         <p className="max-w-3xl text-base leading-7 text-slate-700">
-          Maple Tech Labs has delivered software that runs in production for Canadian businesses since
+          Mapletech Labs has delivered software that runs in production for Canadian businesses since
           2018 &mdash; 500+ projects for 150+ clients across 12 cities. The results include a trading
           platform handling 75K+ transactions a day at 99.99% uptime, checkout conversion lifted from
           2.1% to 3.8%, and fleet fuel costs cut by 25% ($180K a year).
         </p>
         <p className="mt-4 max-w-3xl text-base leading-7 text-slate-700">
-          Maple Tech Labs case studies are real Canadian software projects &mdash; each one reports the
+          Mapletech Labs case studies are real Canadian software projects &mdash; each one reports the
           outcome the client actually measured, from sub-50ms trade execution to a 3.8% checkout
           conversion rate. Together they show our custom software development, web development, and AI
           development services delivering in production across fintech, healthcare, e-commerce,
