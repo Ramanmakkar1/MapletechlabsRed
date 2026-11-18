@@ -3581,6 +3581,73 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       },
     ],
   },
+  'digital-marketing-agency-in-regina': {
+    title: 'Digital Marketing Agency in Regina',
+    description: 'Digital marketing agency in Regina: local SEO, Google and Microsoft Ads and content for public-sector, agri-tech and insurance teams. CAD retainers.',
+    answer: 'Mapletech Labs is a Canadian digital marketing agency headquartered in Edmonton, providing SEO, Google and Microsoft Ads, social and content for Regina businesses. You get a fixed monthly scope priced in CAD and a monthly report covering rankings, traffic, ad spend and conversions.',
+    intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton. We run digital marketing for Regina businesses that want one partner for SEO, paid ads and content, and we do not have a Regina office. Regina stays on Central Standard Time all year, the same clock as Edmonton in summer and one hour ahead in winter, so our working days overlap and calls, reviews and campaign changes happen the same day. You work directly with the specialists doing the work, not a salesperson. Retainers are priced in CAD with a fixed monthly scope agreed before work starts. Call +1-403-604-8692 to talk through your Regina marketing goals.',
+    sections: [
+      {
+        heading: 'What is included in our Regina digital marketing',
+        body: [
+          'We scope the work around the channels that fit your goals: local SEO and Google Business Profile optimisation for service-area searches across Regina and nearby towns; content that answers the questions Regina buyers ask before they call; Google and Microsoft Ads for leads while organic search builds; and analytics that tie spend to conversions. Search only? See our ',
+          { href: '/locations/seo-company-in-regina', label: 'SEO Company in Regina' },
+          ' page for an SEO-only scope, or our ',
+          { href: '/services/digital-marketing', label: 'digital marketing services' },
+          ' for the full range of channels we run.',
+        ],
+      },
+      {
+        heading: 'Marketing to Regina\'s public-sector, agriculture, potash and insurance buyers',
+        body: [
+          'Regina is Saskatchewan\'s capital, so a large share of local search demand comes from government and Crown corporation projects, agri-tech and grain-marketing companies, potash and energy operators, and insurance firms serving producers and businesses across the province. Public-sector suppliers search for bid and procurement terms as well as service terms, so we plan content and campaigns around both. Agriculture and potash buyers often search from the field or a plant floor, so landing pages must load fast on phones and answer the question in the first screen. We build B2B lead generation that shortens the path from first search to a quote request, and we keep your Google Business Profile honest, with a real address or a genuine service area. If the site itself needs rebuilding, our ',
+          { href: '/locations/web-development-company-in-regina', label: 'Web Development Company in Regina' },
+          ' team builds the pages the campaigns point to.',
+        ],
+      },
+      {
+        heading: 'Bilingual content for Saskatchewan\'s francophone buyers',
+        body: [
+          'Saskatchewan is one of Canada\'s officially bilingual provinces, and some Regina buyers, especially in government, education and health, search in French. Where your market justifies it, we plan French-language pages and ad copy alongside the English site, with the same facts, pricing and contact details in both languages. We size the French scope from your actual search data and customer base rather than adding pages by default, and we keep the two versions consistent so your name, address and phone match everywhere.',
+        ],
+      },
+      {
+        heading: 'Lead tracking and CAD pricing',
+        body: [
+          'Every campaign reports leads, not just clicks. We set up conversion tracking for form submissions, calls and quote requests, so each month you can see which channels produced real enquiries and what they cost. Digital marketing is quoted as a monthly retainer in CAD, not hourly. Our ',
+          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          ' publishes the typical Canadian ranges: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Regina sits below the largest Canadian click markets, so your quote depends on the channels you choose. After a free review of your site and your Regina competitors, we agree a fixed monthly scope in writing before the first invoice, and you get a monthly report with rankings, traffic, ad spend and conversions.',
+        ],
+      },
+    ],
+    proof: [
+      { href: '/case-studies/ecommerce-platform', label: 'E-commerce platform', note: 'A high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer.' },
+      { href: '/case-studies/real-estate-portal', label: 'Real estate portal', note: 'PropConnect Canada\'s real estate platform, with machine-learning recommendations across 850,000+ active listings.' },
+      { href: '/case-studies/fintech-trading-platform', label: 'Fintech trading platform', note: 'An AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech.' },
+    ],
+    faqs: [
+      {
+        q: 'How much does digital marketing cost in Regina?',
+        a: 'In our Canadian digital marketing cost guide, SEO typically runs about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month in CAD. Regina click costs sit below Toronto and Vancouver. We confirm a fixed monthly scope in CAD after a free review.',
+      },
+      {
+        q: 'How long does SEO take in Regina?',
+        a: 'Technical fixes and Google Business Profile cleanup often show movement in 8-16 weeks when the site has no major blockers. New content for competitive Regina terms usually needs 4-9 months before trend lines are fair to judge. From the first report we track impressions, indexed pages and leads, so you can see progress building before the position charts catch up.',
+      },
+      {
+        q: 'Do you serve businesses outside Regina in Saskatchewan?',
+        a: 'Yes. We work with businesses across Saskatchewan, including Saskatoon and rural communities, as well as Regina itself. Campaigns can target service areas, province-wide searches or specific towns, and we set up location pages and Google Business Profile coverage that match where you actually operate.',
+      },
+      {
+        q: 'For a Regina service business, Google Ads or SEO first?',
+        a: 'If your site is slow, thin or missing from local search, we usually fix that first so paid traffic lands on pages that convert. For map-pack categories like trades, clinics and professional services, Google Business Profile and local SEO often bring the first calls. Many Regina clients run both: a focused search campaign for near-term leads and SEO for a lower cost per lead over time.',
+      },
+      {
+        q: 'Do you meet in Regina?',
+        a: 'We work remotely, with weekly calls and shared documents instead of a Regina office. Mapletech Labs is headquartered in Edmonton, one province over, so our working days overlap almost completely. When a project needs it, we can travel to Regina for workshops and milestone reviews, with travel agreed up front.',
+      },
+    ],
+  },
   'app-development-company-in-winnipeg': {
     title: 'App Development Company in Winnipeg',
     description: 'iOS and Android app development for Winnipeg businesses by a Canadian team headquartered in Edmonton, with a fixed CAD price. Get a free quote.',
