@@ -308,6 +308,9 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             </div>
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Explore our {serviceName} services</h3>
+              <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 12px' }}>
+                Read more about our <Link href={`/services/${serviceSlug}`} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{serviceName} services in Canada</Link>.
+              </p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {p.relatedSubServices.map(r => <Link key={r.slug} href={`/services/${serviceSlug}/${r.slug}`} className="pill" style={navigationLinkStyle}>{r.name}</Link>)}
               </div>
