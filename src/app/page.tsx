@@ -90,6 +90,10 @@ export default function Home() {
         <p className="cb-container" style={{ fontSize: 14, color: 'var(--muted)' }}>
           Planning a project in Alberta? Talk to our{' '}
           <Link href="/locations/edmonton/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development company in Edmonton</Link>.
+          <br />
+          <Link href="/locations/edmonton/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Custom software development in Edmonton</Link>{' '}
+          and{' '}
+          <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Web development company in Edmonton</Link>.
         </p>
         <EditorialBand />
         <EssentialGuides />
