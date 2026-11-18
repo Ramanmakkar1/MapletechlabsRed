@@ -85,6 +85,19 @@ function BuyerContent() {
         <p style={{ margin: '0 0 24px' }}>
           Flutter app development is the process of building iOS, Android, web and desktop apps from a single Dart codebase using Google&apos;s open-source Flutter framework. It compiles to native ARM code and draws its own UI, so you get one team, one codebase and near-native speed instead of separate native builds for each platform.
         </p>
+        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When Flutter is the right choice</h2>
+        <p style={{ margin: '0 0 12px' }}>
+          Flutter fits teams that want one app on both stores without maintaining two codebases. It is usually the right call when:
+        </p>
+        <ul style={list}>
+          <li><strong>You need a single codebase.</strong> One Dart codebase ships to iOS and Android, so features and fixes land once instead of twice.</li>
+          <li><strong>You want a faster release cycle.</strong> Shared code and one QA pass shorten the path from design to both app stores.</li>
+          <li><strong>You need native-level performance.</strong> Flutter compiles to native ARM code and renders at 60/120fps without a JavaScript bridge.</li>
+          <li><strong>Your team already works in Dart or Flutter.</strong> Existing Flutter skills mean lower onboarding and easier long-term maintenance.</li>
+        </ul>
+        <p style={{ margin: '0 0 24px' }}>
+          If that sounds like your project, see our <Link href="/services/mobile-app-development">mobile app development services</Link> or <Link href="/contact">contact us for a Flutter quote</Link>.
+        </p>
         <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Hire Flutter developers for your next release</h2>
         <p style={{ margin: '0 0 24px' }}>
           Mapletech Labs has shipped 100+ Flutter apps for Canadian teams. Choose the engagement that matches where your product is today. Still comparing stacks? Read our{' '}
@@ -188,7 +201,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/mobile-app-development", label: "Mobile App Development" }}
       name="Flutter Development"
-      copy={{ badge: "CROSS-PLATFORM NATIVE", title: <>Flutter App Development —{' '}<span style={{ color: 'var(--brand)' }}>One Codebase. Every Platform. Native Speed.</span></>, desc: <>Flutter lets us ship beautiful, high-performance apps for iOS, Android, web, and desktop from a single Dart codebase — cutting your development cost by up to 60% without sacrificing quality or native feel.</> }}
+      copy={{ badge: "CROSS-PLATFORM NATIVE", title: <>Flutter App Development —{' '}<span style={{ color: 'var(--brand)' }}>One Codebase. Every Platform. Native Speed.</span></>, desc: <>Flutter development is building iOS, Android, web and desktop apps from one Dart codebase, so you ship every platform with a single team and a single release cycle. Mapletech Labs builds Flutter apps for startups and established Canadian teams that want native-speed performance and up to 60% lower cost than separate native builds, without sacrificing quality or native feel.</> }}
       stats={stats}
       services={services}
       steps={steps}
