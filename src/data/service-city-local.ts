@@ -2545,6 +2545,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'app-development-company-in-ottawa': {
     title: 'App Development Company in Ottawa',
     description: 'iOS and Android app development for Ottawa businesses by a Canadian team headquartered in Edmonton, with a fixed CAD price. Get a free quote.',
+    answer: 'Mapletech Labs provides iOS, Android and cross-platform app development for Ottawa businesses from our Edmonton headquarters. You get a fixed scope and price in CAD, with senior engineers writing your code.',
     intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton that builds iOS and Android apps for Ottawa businesses and organisations. Edmonton is two hours behind Ottawa, so most of the working day overlaps and questions get answered the same day. We work with teams in government, tech, health and fintech across the city. You deal directly with the senior engineers who write your code, not account managers passing notes along. Your contract is with a Canadian company, priced in CAD, and you get a fixed scope and price before any work starts. Call us on +1-403-604-8692 to talk through your app idea.',
     sections: [
       {
