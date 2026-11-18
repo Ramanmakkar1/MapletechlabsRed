@@ -8,7 +8,7 @@ import { seoDescription } from '@/lib/seo/description';
 export const dynamic = 'force-static';
 export const revalidate = 31536000;
 
-const TITLE = 'Custom Software Development Edmonton | Mapletech Labs';
+const TITLE = 'Custom Software Development Edmonton: Fixed-Price Builds';
 const DESCRIPTION = 'Custom software development in Edmonton by Mapletech Labs, headquartered here. Fixed price, and a senior engineer replies in 1 day. Get a free quote.';
 
 export const metadata: Metadata = {
