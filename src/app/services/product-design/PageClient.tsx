@@ -112,6 +112,7 @@ function BuyerContent() {
         <p className="lede">Share business goals, primary personas, analytics or support themes, and links to the current product or brief. Note platforms (web, iOS, Android), accessibility expectations, brand assets, engineering stack and target launch dates. If you only have hypotheses, say so — we will recommend research or audit work first.</p>
         <h3>Deliverables aligned to our process</h3>
         <p className="lede">Engagements typically include prioritised user journeys and information architecture from strategy, lo-fi and tested flows from wireframing, interactive <Link href="/services/product-design/prototyping">prototypes validated with users</Link>, hi-fi UI with responsive variants, and developer handoff: Figma with auto-layout, annotated specs, assets and component documentation. Exact artefacts are fixed in your statement of work based on the scope above.</p>
+        <p className="lede">For a real example, read our <Link href="/case-studies/ecommerce-platform">e-commerce checkout redesign case study</Link>: NorthStar E-Commerce went from a 2.1% to a 3.8% conversion rate in 90 days.</p>
         <p className="lede"><Link href="/contact?service=product-design">Book a product design consultation</Link> with your goals, screen list and constraints so we can recommend audit, phased redesign or full product design and provide a fixed quote.</p>
       </div>
     </section>
