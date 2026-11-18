@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
@@ -69,6 +70,39 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <section className="mx-auto max-w-3xl px-4 py-8">
+        <h2 className="text-2xl font-bold">
+          Mapletech Labs Built PayBridge Solutions&rsquo; PCI DSS Payments API
+        </h2>
+        <p className="mt-4">
+          Mapletech Labs built PayBridge Solutions&rsquo; PCI DSS payments API for Ottawa,
+          processing 12M+ monthly transactions. The tokenization-first architecture passed a
+          PCI DSS Level 1 audit with zero findings, delivering 100ms average latency, 99.97%
+          uptime and zero data breaches.
+        </p>
+        <p className="mt-4">
+          Explore our related work:{' '}
+          <Link className="underline" href="/services/web-development/api-backend">
+            API &amp; backend development
+          </Link>
+          ,{' '}
+          <Link className="underline" href="/services/saas-development">
+            SaaS development
+          </Link>
+          ,{' '}
+          <Link
+            className="underline"
+            href="/locations/software-development-company-in-ottawa"
+          >
+            Ottawa software development
+          </Link>{' '}
+          and{' '}
+          <Link className="underline" href="/contact">
+            contact us
+          </Link>{' '}
+          to start your own payments project.
+        </p>
+      </section>
       <PageClient />
     </>
   );
