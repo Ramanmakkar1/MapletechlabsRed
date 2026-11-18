@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { seoTitle } from '@/lib/seo/title';
+import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { articles } from '@/data/articles';
 
-const TITLE = 'Software, AI & App Development Insights | MapleTech';
+const TITLE = 'Software, AI & App Development Blog | Mapletech Labs';
 const DESCRIPTION = 'Guides on software, app and AI development costs, process and results in Canada. Learn what projects cost, how we build them, and what to expect.';
 const LAST_MODIFIED = articles.reduce(
   (latest, a) => (a.dateModified > latest ? a.dateModified : latest),
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
   openGraph: {
-    title: TITLE,
+    title: ogTitle(TITLE),
     description: DESCRIPTION,
     url: 'https://mapletechlabs.ca/blog',
     type: 'website',
