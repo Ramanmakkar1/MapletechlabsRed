@@ -29,7 +29,7 @@ export default function LocalServiceLinks({ citySlug, cityName, showWebDesignAnd
           All software services
         </Link>
         <Link href={`/locations/software-development-company-in-${citySlug}`} className="pill" style={navigationLinkStyle}>
-          Software development in {cityName}
+          Custom software development in {cityName}
         </Link>
         {showWebDesignAndMarketing && (
           <>
