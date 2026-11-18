@@ -43,6 +43,21 @@ export default function FeaturedWork() {
             </article>
           ))}
         </div>
+
+        {/* Deep links to the case studies not shown above, so every
+            case-study URL is reachable from the homepage. */}
+        <nav aria-label="More case studies" style={{ marginTop: 'clamp(40px, 5vw, 64px)' }}>
+          <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 14 }}>More case studies</h3>
+          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 10 }}>
+            {work.slice(3).map(w => (
+              <li key={w.slug}>
+                <Link href={w.href} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                  {w.title} case study: {w.metrics.map(m => m.value).join(', ')}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </section>
   );
