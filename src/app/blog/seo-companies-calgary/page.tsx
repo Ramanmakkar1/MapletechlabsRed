@@ -2,6 +2,7 @@ import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
+import RelatedServices from '@/components/RelatedServices';
 import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
@@ -47,7 +48,21 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'seo-companies-calgary')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="calgary" cityName="Calgary" />} />
+      <ArticleTemplate
+        a={a}
+        related={getRelatedArticles(a.slug)}
+        cityLinks={<LocalServiceLinks citySlug="calgary" cityName="Calgary" />}
+        relatedServices={
+          <RelatedServices
+            links={[
+              { href: '/locations/seo-company-in-calgary', label: 'SEO company in Calgary' },
+              { href: '/locations/digital-marketing-agency-in-calgary', label: 'Digital marketing agency in Calgary' },
+              { href: '/services/digital-marketing/seo-services', label: 'SEO services across Canada' },
+              { href: '/services/digital-marketing/local-seo', label: 'Local SEO services' },
+            ]}
+          />
+        }
+      />
     </>
   );
 }
