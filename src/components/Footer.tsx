@@ -13,12 +13,13 @@ const columns: { title: string; links: { label: string; href: string; lang?: str
   {
     title: 'Services',
     links: [
+      { label: 'Custom Software Development', href: '/services/software-development' },
       { label: 'Web Development', href: '/services/web-development' },
       { label: 'Mobile Apps', href: '/services/mobile-app-development' },
       { label: 'AI & Machine Learning', href: '/services/ai-ml' },
       { label: 'SaaS Development', href: '/services/saas-development' },
       { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
-      { label: 'Product Design', href: '/services/product-design' },
+      { label: 'UI/UX Design', href: '/services/product-design' },
     ],
   },
   {
