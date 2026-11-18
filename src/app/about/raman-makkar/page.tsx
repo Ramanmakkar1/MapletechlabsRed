@@ -412,6 +412,14 @@ export default function RamanPage() {
                   shape product strategy, interfaces, and design systems that make complex software easy to use.
                 </li>
                 <li style={{ marginBottom: '12px' }}>
+                  <Link href="/services/cloud-devops" style={{ color: 'var(--brand)' }}>Cloud and DevOps</Link>:
+                  design, migrate and operate cloud infrastructure on AWS and GCP so products scale with demand.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/services/software-maintenance" style={{ color: 'var(--brand)' }}>Software maintenance and support</Link>:
+                  keep production software running with ongoing updates, monitoring and long-term engineering support.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
                   <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Software development in Edmonton</Link>:
                   work with a local Edmonton team for discovery, delivery, and ongoing product support.
                 </li>
@@ -473,6 +481,47 @@ export default function RamanPage() {
                 <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Edmonton software development location</Link>{' '}
                 for local details, or browse the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>case studies by sector and result</Link>.
               </p>
+            </section>
+
+            <section aria-labelledby="raman-projects" style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 id="raman-projects" style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>
+                Projects Raman Makkar has led
+              </h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Raman Makkar has led 500+ projects for Mapletech Labs clients across Canada and internationally. The
+                selected examples below come from the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>{' '}
+                and cover the fintech, healthcare, e-commerce, logistics and enterprise work his team ships.
+              </p>
+              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>AI-powered trading platform</Link>:
+                  a real-time algorithmic trading system processing 75K+ transactions a day with sub-50ms latency and zero
+                  data loss, built for institutional-grade reliability.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)' }}>Enterprise e-commerce platform</Link>:
+                  a headless e-commerce rebuild that lifted conversion from 2.1% to 3.8% in 90 days for 2M+ monthly visitors.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/healthcare-telehealth" style={{ color: 'var(--brand)' }}>HIPAA-compliant telehealth platform</Link>:
+                  a telehealth platform serving 450K+ patient records with encrypted video, EHR workflows and a mobile
+                  experience, compliant with HIPAA and PIPEDA.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/logistics-platform" style={{ color: 'var(--brand)' }}>Real-time logistics and fleet management</Link>:
+                  a fleet system tracking 500 trucks and 15K+ daily deliveries that cut fuel cost by 25% through ML route
+                  optimization.
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <Link href="/case-studies/payments-api-platform" style={{ color: 'var(--brand)' }}>PCI DSS payments API</Link>:
+                  a payments processing API certified for PCI DSS compliance and handling 12M+ monthly transactions.
+                </li>
+                <li>
+                  <Link href="/case-studies/real-estate-portal" style={{ color: 'var(--brand)' }}>ML-powered real estate portal</Link>:
+                  a multi-listing real estate platform with machine-learning property recommendations across 850K+ active
+                  listings in Canada.
+                </li>
+              </ul>
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
