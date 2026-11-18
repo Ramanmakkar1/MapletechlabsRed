@@ -41,6 +41,7 @@ export default function Page() {
           <li><a href="/services/web-development/ecommerce-systems" className="underline hover:no-underline">Ecommerce systems development</a></li>
           <li><a href="/services/mobile-app-development" className="underline hover:no-underline">Mobile app development services</a></li>
           <li><a href="/services/mobile-app-development/flutter-development" className="underline hover:no-underline">Flutter app development</a></li>
+          <li><a href="/services/mobile-app-development/cross-platform-apps" className="underline hover:no-underline">Cross-platform app development</a></li>
           <li><a href="/services/ai-ml" className="underline hover:no-underline">AI and machine learning development</a></li>
           <li><a href="/services/ai-ml/ai-automation" className="underline hover:no-underline">AI automation services</a></li>
           <li><a href="/services/blockchain-web3" className="underline hover:no-underline">Blockchain and Web3 development</a></li>
