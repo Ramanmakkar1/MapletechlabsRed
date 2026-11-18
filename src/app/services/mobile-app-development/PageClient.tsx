@@ -7,7 +7,7 @@ import { work } from '@/data/work';
 
 const stats = [
   { value: '300+', label: 'Apps Shipped' },
-  { value: '4.9★', label: 'App Store Avg' },
+  { value: '4.9/5', label: 'App Store Avg' },
   { value: '8 Wks', label: 'MVP Timeline' },
   { value: '98%', label: 'Client Retention' },
 ];
