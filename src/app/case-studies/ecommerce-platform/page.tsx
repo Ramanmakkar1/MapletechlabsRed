@@ -89,8 +89,8 @@ export default function Page() {
         </p>
         <p style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7 }}>
           Read more about our{' '}
-          <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-            web development
+          <Link href="/services/software-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
+            software development services
           </Link>{' '}
           services, our{' '}
           <Link href="/services/web-development/ecommerce-systems" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
