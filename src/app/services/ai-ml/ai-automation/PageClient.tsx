@@ -83,6 +83,15 @@ function BuyerContent() {
             </tbody>
           </table>
         </div>
+        <h2 id="automation-project-planning">What to consider before planning an AI automation project</h2>
+        <p>Before scoping an automation project, decide on these factors so the estimate, timeline and success measures are realistic:</p>
+        <ul style={{ paddingLeft: 24, marginBottom: 28 }}>
+          <li><strong>Workflow scope:</strong> pick one workflow with a clear owner, trigger and output; multi-system programmes take 8–12 weeks versus 4–6 weeks for a single focused automation.</li>
+          <li><strong>Volume and cost:</strong> monthly task volume, peak loads, current manual hours and the cost of errors determine the ROI case and the operating budget for model usage, OCR and hosting.</li>
+          <li><strong>System access:</strong> API availability, sandbox accounts and minimum permissions for each connected system; agree on data retention and who approves production access.</li>
+          <li><strong>Data readiness:</strong> redacted sample inputs including exceptions and difficult cases, plus time for cleaning, labelling and handling inconsistent formats.</li>
+          <li><strong>Human review design:</strong> which actions need approval, who owns escalations, and measurable acceptance criteria for accuracy and throughput before go-live.</li>
+        </ul>
         <h2 id="automation-integrations">Which systems can AI automation integrate with?</h2>
         <p>AI automation is only as useful as the systems it can reach. We connect workflows to the tools your team already runs, using official APIs where they exist and secure, permission-limited access where they do not. Typical integrations include:</p>
         <ul style={{ paddingLeft: 24, marginBottom: 28 }}>
@@ -92,7 +101,7 @@ function BuyerContent() {
           <li><strong>Help desks and support platforms</strong> such as Zendesk and Freshdesk for ticket classification and response drafting.</li>
           <li><strong>Data stores and internal tools</strong> including databases, cloud storage, spreadsheets and custom admin systems.</li>
         </ul>
-        <p>Where a workflow needs language understanding or an autonomous multi-step agent, we build it with our <Link href="/services/ai-ml/llm-integration">LLM integration services</Link> or <Link href="/services/ai-ml/ai-agent-development">AI agent development</Link> team. See the full <Link href="/services/ai-ml">AI and machine learning practice</Link> for related capabilities.</p>
+        <p>Where a workflow needs language understanding or an autonomous multi-step agent, we build it with our <Link href="/services/ai-ml/llm-integration">LLM integration services</Link> or <Link href="/services/ai-ml/ai-agent-development">AI agent development</Link> team. See the full <Link href="/services/ai-ml">AI development services</Link> for related capabilities.</p>
 
         <h2 id="automation-delivery-process">How we deliver an AI automation project</h2>
         <p>Every engagement follows the same four stages, so you know what happens, who is involved and what you receive at each step:</p>
@@ -118,6 +127,7 @@ function BuyerContent() {
         </ul>
         <h2 id="automation-related-services">AI automation, AI development and software development</h2>
         <p>AI automation is one part of our <Link href="/services/ai-ml">AI development services</Link>, which cover machine learning, LLM integration and AI agents alongside workflow automation. When a workflow needs a new application, integrations or admin dashboards around it, our <Link href="/services/software-development">custom software development team</Link> builds that layer. You can see the technical work in our case studies: the <Link href="/case-studies/fintech-trading-platform">AI-powered trading platform for Axion Capital</Link>, the <Link href="/case-studies/logistics-platform">real-time fleet management system for RouteLogic</Link> and the <Link href="/case-studies/healthcare-telehealth">HIPAA-compliant telehealth platform for ClinicFlow Health</Link>.</p>
+        <p>Ready to scope your first automation? <Link href="/contact">Contact our team</Link> — an engineer replies within one working day with next steps and a workflow walkthrough plan.</p>
         <Link href="/contact#contact-form" className="btn btn--primary">Discuss your AI automation workflow with an engineer</Link>
       </div>
     </section>
@@ -129,7 +139,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/ai-ml", label: "AI & Machine Learning" }}
       name="AI Automation"
-      copy={{ badge: "AI & MACHINE LEARNING", title: <>AI Automation Services in <span style={{ color: 'var(--brand)' }}>Canada</span></>, desc: <>AI automation services build software that handles repetitive business work — invoice processing, email triage, lead routing and data entry — by combining rules with AI models, while your people approve the exceptions. Mapletech Labs designs and deploys these workflows for Canadian companies in Edmonton, Calgary, Toronto and Vancouver, typically cutting manual processing time by around 70%.</> }}
+      copy={{ badge: "AI & MACHINE LEARNING", title: <>AI Automation Services in <span style={{ color: 'var(--brand)' }}>Canada</span></>, desc: <>Mapletech Labs provides AI automation services that build software to run repetitive business work — invoice processing, email triage, lead routing and data entry — by combining rules with AI models, while your people approve the exceptions. We design, build and deploy these workflows for Canadian companies in Edmonton, Calgary, Toronto and Vancouver, typically cutting manual processing time by around 70%.</> }}
       stats={stats}
       services={services}
       steps={steps}
