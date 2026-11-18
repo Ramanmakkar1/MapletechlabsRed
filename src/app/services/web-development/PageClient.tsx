@@ -129,7 +129,7 @@ export default function PageClient() {
                 <p>Before requesting a quote, map the main tasks and user roles, including permissions and approvals. Share examples of existing data, migration needs, integrations, security constraints and accessibility requirements. The number of workflows, business rules and external systems can significantly change the scope.</p>
               </div>
             </div>
-            <p className="lede" style={{ marginTop: 24 }}>Compare the factors behind budgets in our <Link href="/blog/website-cost-canada">Canadian website cost guide</Link>, then <Link href="/contact">contact us to discuss your web development scope</Link>. Planning a project in the Alberta capital? See our <Link href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</Link> page.</p>
+            <p className="lede" style={{ marginTop: 24 }}>Compare the factors behind budgets in our <Link href="/blog/website-cost-canada">Canadian website cost guide</Link>, then <Link href="/contact">contact us to discuss your web development scope</Link>. Planning a project in the Alberta capital? See our <Link href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</Link> page. For proof, read how we built an <Link href="/case-studies/ecommerce-platform">enterprise e-commerce redesign for NorthStar E-Commerce</Link> and a <Link href="/case-studies/real-estate-portal">multi-listing real estate platform for PropConnect Canada</Link>.</p>
           </div>
         </section>
         <ServiceCityLinks
