@@ -309,12 +309,18 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Where AI helps Calgary businesses',
         body: [
           'Energy and oil and gas head offices hold huge libraries of technical manuals, regulatory filings and safety procedures, and AI search lets staff find the right passage in seconds instead of digging through folders. It can also condense long reports into short summaries for an engineer to review. Financial services and insurance teams can use AI for document intake and claims triage, with a person checking each result before it moves on. Logistics and transportation firms can sort dispatch emails automatically, agribusinesses can pull answers from crop, equipment and supplier records, and Calgary’s growing tech and startup scene can add LLM features to their SaaS products.',
+          ' See our ',
+          { href: '/services/ai-ml/ai-automation', label: 'AI workflow automation services' },
+          ' for how we scope these projects.',
         ],
       },
       {
         heading: 'Chatbots that answer from your own documents',
         body: [
           'A useful business chatbot should answer from what your company actually knows, not from whatever is on the public web. We build them with retrieval-augmented generation (RAG): when someone asks a question, the system looks up the matching sections in your manuals, policies or knowledge base, writes a reply from them and links to the source so the answer can be checked. Permissions follow your existing access rules, so people only get answers from documents they are cleared to see. If the bot is unsure or the question falls outside its scope, it passes the conversation to a person rather than making something up.',
+          ' Our ',
+          { href: '/services/ai-ml/ai-chatbots', label: 'AI chatbot development' },
+          ' page covers features and timelines.',
         ],
       },
       {
