@@ -268,6 +268,7 @@ const nextConfig: NextConfig = {
       { source: '/custom-android-apps-2', destination: '/services/mobile-app-development/android-app-development', permanent: true },
       { source: '/react-native-app-development-company', destination: '/services/mobile-app-development/react-native-apps', permanent: true },
       { source: '/services/blockchain', destination: '/services/blockchain-web3', permanent: true },
+      { source: '/services/ui-ux-design', destination: '/services/product-design', permanent: true },
       { source: '/services/saas-development/saas-development/multi-tenant', destination: '/services/saas-development/multi-tenant-architecture', permanent: true },
       { source: '/app-development-company-in-saskatchewan-2', destination: '/locations/app-development-company-in-saskatoon', permanent: true },
       { source: '/software-development-company-in-red-deer', destination: '/locations/software-development-company-in-edmonton', permanent: true },

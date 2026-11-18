@@ -81,12 +81,31 @@ export default function ContactRoute() {
         <section style={{ padding: 'calc(var(--section-y) + 40px) 0 0' }} aria-labelledby="contact-intro">
           <div className="cb-container">
             <h1 id="contact-intro" style={{ fontSize: 'var(--fs-display)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.04em', lineHeight: 1.05, margin: '0 0 20px', maxWidth: 840 }}>Contact Mapletech Labs for software, app, AI, UI/UX or digital marketing help</h1>
+            <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.7, maxWidth: 860, margin: '0 0 16px' }}>
+              To reach Mapletech Labs, call <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a>, email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a> or send the form below, and a senior engineer replies within one business day. The first call is a free 30-minute scoping call where we confirm scope, timeline and budget before any work starts.
+            </p>
             <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.7, maxWidth: 860, margin: 0 }}>
               To request help, send the form below with your goal, rough budget and target date, or call <a href="tel:+14036048692" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>+1 (403) 604-8692</a> or email <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>hello@mapletechlabs.ca</a>. A senior engineer replies within one working day, and the first 30-minute project consultation is free. Mapletech Labs is an Edmonton, Alberta software development company that builds custom software, mobile apps, AI and automation, UI/UX design, websites and SEO for clients across Canada. Start with our <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development services</Link>, see <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>typical project pricing in CAD</Link>, browse <Link href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development case studies</Link>, or learn how we work as a <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>software development company in Edmonton</Link>.
             </p>
           </div>
         </section>
         <ContactPage serviceOptions={SERVICE_OPTIONS} cityOptions={CITY_OPTIONS} />
+        <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-services">
+          <div className="cb-container">
+            <div style={{ maxWidth: 860 }}>
+              <h2 id="contact-services" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Services you can ask about</h2>
+              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
+                Mention the service closest to your project in the form and a senior engineer will confirm the right scope on the free scoping call.
+              </p>
+              <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760, display: 'grid', gap: 10 }}>
+                <li><Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Web development</Link> — marketing sites, online stores, redesigns and CMS builds with SEO foundations.</li>
+                <li><Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Mobile app development</Link> — iOS, Android and cross-platform apps, from a first MVP to store release.</li>
+                <li><Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>AI and machine learning development</Link> — automation, chatbots, LLM integrations and predictive analytics.</li>
+                <li><Link href="/services/ui-ux-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>UI/UX design</Link> — audits, user journeys, prototypes and design systems for products that feel hard to use.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-direct">
           <div className="cb-container">
             <div style={{ maxWidth: 860 }}>
@@ -223,7 +242,7 @@ export default function ContactRoute() {
           </div>
         </section>
         <section style={{ background: 'var(--surface)' }} aria-labelledby="contact-next-steps">
-          <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you contact Mapletech Labs?</h2>
+          <h2 id="contact-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>What happens after you contact us</h2>
           <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
             After you get in touch, a senior engineer replies within one working day, and the project moves through four clear steps.
           </p>
