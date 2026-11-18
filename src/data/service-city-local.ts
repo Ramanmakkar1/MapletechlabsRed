@@ -50,7 +50,13 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'Native or cross-platform: how we choose',
         body: [
-          'Most Edmonton projects need both iOS and Android, so we usually recommend a cross-platform build in Flutter or React Native: one codebase, both app stores, and typically 30-40% less cost than two separate apps. We go native with Swift or Kotlin when the app leans hard on device hardware, heavy offline data, Bluetooth sensors or top-end performance. We explain the trade-off for your app in plain language before you commit, rather than picking a stack by habit.',
+          'Most Edmonton projects need both iOS and Android, so we usually recommend a ',
+          { href: '/services/mobile-app-development/cross-platform-apps', label: 'cross-platform build' },
+          ' in ',
+          { href: '/services/mobile-app-development/flutter-development', label: 'Flutter' },
+          ' or ',
+          { href: '/services/mobile-app-development/react-native-apps', label: 'React Native' },
+          ': one codebase, both app stores, and typically 30-40% less cost than two separate apps. We go native with Swift or Kotlin when the app leans hard on device hardware, heavy offline data, Bluetooth sensors or top-end performance. We explain the trade-off for your app in plain language before you commit, rather than picking a stack by habit.',
         ],
       },
       {
