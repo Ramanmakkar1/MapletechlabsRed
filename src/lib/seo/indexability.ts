@@ -1,4 +1,4 @@
-import { isIndexableCityService } from '@/data/serviceCity';
+import { isIndexableCityService, isIndexableLocationSlug } from '@/data/serviceCity';
 import { isCityListiclePath } from './listicles';
 
 /**
@@ -24,6 +24,9 @@ export function isIndexableSitemapPath(pathname: string): boolean {
 
   const mesh = pathname.match(/^\/locations\/([^/]+)\/([^/]+)$/);
   if (mesh && !isIndexableCityService(mesh[1], mesh[2])) return false;
+
+  const kw = pathname.match(/^\/locations\/([^/]+)$/);
+  if (kw && !isIndexableLocationSlug(kw[1])) return false;
 
   return true;
 }
