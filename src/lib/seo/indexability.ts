@@ -8,7 +8,6 @@ import { isCityListiclePath } from './listicles';
  */
 export const NON_INDEXABLE_PATHS = new Set([
   '/blog/ai-development-companies-canada',
-  '/blog/digital-marketing-cost-canada',
   '/locations/toronto/game-development',
   '/locations/saas-development-company-in-windsor',
 ]);

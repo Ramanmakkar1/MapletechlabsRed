@@ -9,7 +9,6 @@ import { getServedCityServiceParams } from '../src/data/city-service';
 /** Audit URLs that were previously blocked because they 301 to a service page. */
 const BLOCKED_BLOG_PATHS = [
   '/blog/ai-development-companies-canada',
-  '/blog/digital-marketing-cost-canada',
 ];
 
 test('blocked legacy blog URLs can never return to the sitemap', () => {
