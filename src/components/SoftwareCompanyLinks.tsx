@@ -10,7 +10,8 @@ const CITY_LINKS = [
 ];
 
 const SERVICE_LINKS = [
-  { href: '/services/saas-development', label: 'Custom software & SaaS development' },
+  { href: '/services/software-development', label: 'Custom software development' },
+  { href: '/services/saas-development', label: 'SaaS development' },
   { href: '/services/web-development', label: 'Web development' },
   { href: '/services/mobile-app-development', label: 'Mobile app development' },
   { href: '/services/ai-ml', label: 'AI development' },
