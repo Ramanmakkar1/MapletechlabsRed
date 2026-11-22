@@ -30,7 +30,8 @@ export default function CookieConsent() {
     <div
       style={{
         position: 'fixed',
-        bottom: 'clamp(12px, 3vw, 24px)',
+        // Sit above the fixed bottom CTA bar (StickyCTA) so the two never overlap.
+        bottom: 'calc(clamp(12px, 3vw, 24px) + 64px)',
         left: 'clamp(12px, 3vw, 24px)',
         right: 'clamp(12px, 3vw, 24px)',
         maxWidth: 480,
