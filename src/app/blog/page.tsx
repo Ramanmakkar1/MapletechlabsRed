@@ -215,6 +215,67 @@ export default function Page() {
             <Link href="/blog/seo-companies-edmonton">SEO companies in Edmonton</Link>
           </li>
         </ul>
+
+        <nav aria-label="More guides">
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '1.25rem 0 0.5rem' }}>More guides</h3>
+          <ul style={{ lineHeight: 1.9, margin: 0, paddingLeft: '1.25rem' }}>
+            <li>
+              <Link href="/blog/ai-chatbot-development-cost-canada">
+                AI Chatbot Development Cost in Canada (2026 Guide)
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/app-development-companies-canada">
+                App Development Companies in Canada: How to Choose One (2026)
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/app-development-companies-ottawa">
+                App Development Companies in Ottawa: How to Choose One (2026)
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/digital-marketing-agencies-ottawa">
+                Digital Marketing Agencies in Ottawa: How to Choose
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/freelancer-vs-agency-vs-in-house-canada">
+                Freelancer vs Agency vs In-House Team in Canada (2026)
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/healthcare-ai-development-canada">
+                Healthcare AI Development in Canada: Buyer Guide (2026)
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/healthcare-software-development-canada">
+                Healthcare Software Development in Canada: A Buyer’s Guide
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/mobile-app-development-company-canada">
+                How to Choose a Mobile App Development Company in Canada
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/ui-ux-design-companies-vancouver">
+                UI/UX Design Companies in Vancouver: How to Choose
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/web-app-vs-mobile-app-canada">
+                Web App vs Mobile App: A Buyer&apos;s Guide for Canada
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/wordpress-vs-headless-cms-canada">
+                WordPress vs Headless CMS in Canada: Which to Choose?
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </section>
       <nav
         aria-label="Related blog topics"
