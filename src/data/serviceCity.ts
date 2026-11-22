@@ -89,9 +89,20 @@ export const isPriorityService = (serviceSlug: string): boolean => serviceSlug i
 const NICHE_SERVICES = new Set(['ar-vr', 'blockchain-web3', 'game-development']);
 const MAJOR_TECH_CITIES = new Set(['toronto', 'vancouver', 'montreal', 'calgary', 'edmonton', 'ottawa']);
 
-/** Whether a /locations/<city>/<service> mesh page should be indexed and listed in the sitemap. */
-export const isIndexableCityService = (citySlug: string, serviceSlug: string): boolean =>
+/** Whether a /locations/<city>/<service> mesh page is served (prerendered and reachable). */
+export const isServedCityService = (citySlug: string, serviceSlug: string): boolean =>
   !NICHE_SERVICES.has(serviceSlug) || MAJOR_TECH_CITIES.has(citySlug);
+
+const MESH_INDEX_CITIES = new Set(['edmonton', 'calgary', 'toronto', 'vancouver']);
+
+/**
+ * Whether a /locations/<city>/<service> mesh page should be indexed and listed
+ * in the sitemap. Owner decision 2026-11-22: only the four major cities are
+ * indexed (plus priority services everywhere); branding is never indexed.
+ */
+export const isIndexableCityService = (citySlug: string, serviceSlug: string): boolean =>
+  isServedCityService(citySlug, serviceSlug) &&
+  (isPriorityService(serviceSlug) || (MESH_INDEX_CITIES.has(citySlug) && serviceSlug !== 'branding'));
 
 /** Canonical path for a service in a city: keyword URL for priority services, else the mesh URL. */
 export const serviceCityPath = (serviceSlug: string, citySlug: string): string =>
