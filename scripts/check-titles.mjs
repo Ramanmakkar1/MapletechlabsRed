@@ -87,7 +87,8 @@ for (const file of files) {
 }
 
 // 1b. Regression guard for the six pages in the 2026-11-11 "titles over 60
-//     characters" audit. They must stay at 50-60 chars with the brand once.
+//     characters" audit. They must stay at 50-60 chars with the brand at most
+//     once (the brand is dropped when it would push the title past 60).
 const AUDIT_PAGES = [
   "src/app/blog/app-development-companies-edmonton/page.tsx",
   "src/app/blog/saas-development-cost-canada/page.tsx",
@@ -98,11 +99,11 @@ const AUDIT_PAGES = [
 ];
 const EXPECTED_AUDIT_TITLES = new Map([
   ["src/app/blog/app-development-companies-edmonton/page.tsx", "App Development Companies Edmonton 2026 | Mapletech Labs"],
-  ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost Canada: 2026 CAD | Mapletech Labs"],
-  ["src/app/blog/web-development-companies-toronto/page.tsx", "Web Development Companies Toronto 2026 | Mapletech Labs"],
-  ["src/app/blog/website-cost-canada/page.tsx", "Website Cost Canada 2026: Prices by Type | Mapletech Labs"],
-  ["src/app/case-studies/logistics-platform/page.tsx", "Logistics Platform: 15K+ Deliveries Daily | Mapletech Labs"],
-  ["src/app/services/digital-marketing/seo-services/page.tsx", "SEO Services Canada: Technical and Local | Mapletech Labs"],
+  ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost in Canada: 2026 Pricing Guide"],
+  ["src/app/blog/web-development-companies-toronto/page.tsx", "Web Development Companies in Toronto: How to Choose"],
+  ["src/app/blog/website-cost-canada/page.tsx", "Website Cost in Canada: 2026 Pricing Guide | Mapletech Labs"],
+  ["src/app/case-studies/logistics-platform/page.tsx", "Logistics Case Study: 15K+ Daily Deliveries | Mapletech Labs"],
+  ["src/app/services/digital-marketing/seo-services/page.tsx", "SEO Services Canada for Business Growth | Mapletech Labs"],
 ]);
 const auditArticlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
 function articleMetaTitle(slug) {
@@ -131,8 +132,8 @@ for (const file of AUDIT_PAGES) {
   if (rendered.length < 50 || rendered.length > MAX) {
     problems.push(`${file}: audit title "${rendered}" is ${rendered.length} chars (want 50-${MAX})`);
   }
-  if ((rendered.match(/Mapletech Labs/gi) || []).length !== 1) {
-    problems.push(`${file}: audit title must name the brand once`);
+  if ((rendered.match(/Mapletech Labs/gi) || []).length > 1) {
+    problems.push(`${file}: audit title must not name the brand twice`);
   }
   const owner = auditTitleOwners.get(rendered);
   if (owner) problems.push(`${file}: audit title "${rendered}" duplicates ${owner}`);
@@ -159,8 +160,8 @@ for (const file of AUDIT_PAGES) {
     if (ogRendered.length > MAX) {
       problems.push(`${file}: audit openGraph.title "${ogRendered}" is ${ogRendered.length} chars (max ${MAX})`);
     }
-    if ((ogRendered.match(/Mapletech Labs/gi) || []).length !== 1) {
-      problems.push(`${file}: audit openGraph.title must name the brand once`);
+    if ((ogRendered.match(/Mapletech Labs/gi) || []).length > 1) {
+      problems.push(`${file}: audit openGraph.title must not name the brand twice`);
     }
   }
 }
