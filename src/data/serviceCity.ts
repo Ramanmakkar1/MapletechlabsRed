@@ -93,8 +93,6 @@ const MAJOR_TECH_CITIES = new Set(['toronto', 'vancouver', 'montreal', 'calgary'
 export const isServedCityService = (citySlug: string, serviceSlug: string): boolean =>
   !NICHE_SERVICES.has(serviceSlug) || MAJOR_TECH_CITIES.has(citySlug);
 
-const MESH_INDEX_CITIES = new Set(['edmonton', 'calgary', 'toronto', 'vancouver']);
-
 /**
  * Whether a /locations/<city>/<service> mesh page should be indexed and listed
  * in the sitemap. Owner decision 2026-11-22: only the four major cities are
