@@ -166,6 +166,9 @@ const buyerContent = (
         <p style={p}>
           Read the <A href="/case-studies/healthcare-telehealth">healthcare telehealth platform case study</A> for the build, or see our <A href="/industries/healthcare">healthcare software development page for Canadian providers</A> for the wider sector work.
         </p>
+        <p style={p}>
+          Based in Alberta? See our <A href="/locations/healthcare-software-development-company-in-edmonton">healthcare software development company in Edmonton</A>, where our head office is.
+        </p>
       </div>
     </section>
   </>
