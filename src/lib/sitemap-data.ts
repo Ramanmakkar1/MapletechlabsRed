@@ -32,14 +32,14 @@ export const subServices: Record<string, string[]> = {
   'game-development': ['mobile-games', 'unity-development', 'unreal-engine', 'hyper-casual-games', 'multiplayer-liveops'],
   'branding': ['brand-strategy', 'logo-visual-identity', 'brand-guidelines', 'rebranding', 'motion-video-branding'],
   'saas-development': ['saas-mvp-development', 'multi-tenant-architecture', 'billing-subscriptions', 'auth-sso', 'analytics-dashboards'],
-  'software-development': ['legacy-software-modernization', 'healthcare-software'],
+  'software-development': ['legacy-software-modernization', 'healthcare-software', 'dedicated-development-team'],
 };
 
 export const industrySlugs = ['fintech', 'healthcare', 'ecommerce', 'logistics', 'edtech', 'enterprise'];
 
 export const blogSlugs = [
   'what-is-agentic-ai', 'build-saas-mvp-8-weeks', 'freelancer-vs-agency-vs-in-house-canada',
-  'native-vs-cross-platform-vs-pwa', 'flutter-vs-react-native-canada', 'wordpress-vs-headless-cms-canada', 'custom-software-vs-off-the-shelf',
+  'native-vs-cross-platform-vs-pwa', 'flutter-vs-react-native-canada', 'wordpress-vs-headless-cms-canada', 'web-app-vs-mobile-app-canada', 'custom-software-vs-off-the-shelf',
   'use-claude-for-free', 'run-ai-models-locally-free',
   'saas-development-company-canada', 'saas-development-companies-vancouver', 'saas-development-companies-toronto', 'saas-development-companies-calgary', 'saas-development-companies-montreal', 'website-development-company-canada',
   'agentic-ai-in-production', 'saas-ideas-2026', 'what-profitable-saas-gets-right',
