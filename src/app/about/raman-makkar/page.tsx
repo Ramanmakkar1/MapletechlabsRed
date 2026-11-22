@@ -725,6 +725,24 @@ export default function RamanPage() {
               </p>
             </section>
 
+            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Selected work and services</h2>
+              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/case-studies/logistics-platform" style={{ color: 'var(--brand)' }}>Logistics platform case study</Link>
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>Fintech trading platform case study</Link>
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/locations/edmonton/web-development" style={{ color: 'var(--brand)' }}>Custom software development in Edmonton</Link>
+                </li>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)' }}>SEO services</Link>
+                </li>
+              </ul>
+            </section>
+
             <div style={{ marginTop: '48px', textAlign: 'center' }}>
               <Link
                 href="/contact"
