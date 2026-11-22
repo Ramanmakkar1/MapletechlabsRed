@@ -129,6 +129,7 @@ const extra = (
       <ul style={{ margin: '0 0 16px', paddingLeft: 20, display: 'grid', gap: 8 }}>
         <li><Link href="/services/software-development/healthcare-software" style={linkStyle}>Healthcare software development services</Link></li>
         <li><Link href="/case-studies/healthcare-telehealth" style={linkStyle}>Healthcare telehealth platform case study</Link></li>
+        <li><Link href="/locations/healthcare-software-development-company-in-edmonton" style={linkStyle}>Healthcare software development company in Edmonton</Link></li>
       </ul>
       <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Services for this sector</h2>
       <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
