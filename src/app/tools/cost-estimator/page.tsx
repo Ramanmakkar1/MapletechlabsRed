@@ -67,7 +67,7 @@ export default function CostEstimatorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }} />
       <BreadcrumbSchema items={[
         { position: 1, name: 'Home', item: canonicalUrl('/') },
-        { position: 2, name: 'Tools', item: URL },
+        { position: 2, name: 'Tools', item: canonicalUrl('/tools') },
         { position: 3, name: 'Cost Estimator', item: URL },
       ]} />
       <FaqSchema faqs={FAQS} />
