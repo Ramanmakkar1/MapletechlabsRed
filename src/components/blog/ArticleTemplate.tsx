@@ -10,6 +10,7 @@ import type { Article, Block, RelatedArticle } from '@/data/articles';
 import { serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
+import { isCityListicleSlug } from '@/lib/seo/listicles';
 
 type CityService = { label: string; path: (city: string) => string; noun?: string };
 
@@ -226,6 +227,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
 
   return (
     <>
+      {isCityListicleSlug(a.slug) && <meta name="robots" content="noindex, follow" />}
       <Navbar />
       <main id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>
 
