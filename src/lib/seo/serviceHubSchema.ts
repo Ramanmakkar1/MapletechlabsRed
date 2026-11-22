@@ -6,7 +6,6 @@ const SUB_SERVICE_FOLDERS: Record<string, string[]> = {
   'web-development': [
     'nextjs-development',
     'web-design',
-    'saas-platforms',
     'ecommerce-systems',
     'api-backend',
     'enterprise-portals',
