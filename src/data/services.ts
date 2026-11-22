@@ -1057,10 +1057,10 @@ export const services: ServiceData[] = [
       },
     ],
     relatedSubServices: [
-      { name: "Smart Contracts", slug: "smart-contracts" },
-      { name: "DeFi Protocols", slug: "defi-protocols" },
+      { name: "smart contract development", slug: "smart-contracts" },
+      { name: "DeFi protocol development", slug: "defi-protocols" },
       { name: "NFT Platforms", slug: "nft-platforms" },
-      { name: "Crypto Wallets", slug: "crypto-wallets" },
+      { name: "crypto wallet development", slug: "crypto-wallets" },
       { name: "Web3 dApps", slug: "web3-dapps" },
     ],
   },
