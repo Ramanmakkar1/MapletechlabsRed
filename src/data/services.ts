@@ -450,8 +450,8 @@ export const services: ServiceData[] = [
       { name: "Web Design", slug: "web-design" },
       { name: "E-Commerce Systems", slug: "ecommerce-systems" },
       { name: "Shopify Development", slug: "shopify-development" },
-      { name: "API & Backend", slug: "api-backend" },
-      { name: "Enterprise Portals", slug: "enterprise-portals" },
+      { name: "API and backend development", slug: "api-backend" },
+      { name: "Enterprise portals", slug: "enterprise-portals" },
     ],
   },
 
