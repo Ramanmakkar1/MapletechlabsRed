@@ -39,10 +39,10 @@ const CATEGORY_RELATED_SERVICE: Record<string, { href: string; label: string }> 
 
 /** Direct service link in the project CTA when the secondary button points at a tool. */
 const SLUG_PROJECT_SERVICE: Record<string, { href: string; label: string }> = {
-  'nrc-irap-funding-software-canada': { href: '/services/saas-development', label: 'Custom software and SaaS development' },
-  'sred-software-development-canada': { href: '/services/saas-development', label: 'Custom software and SaaS development' },
-  'software-maintenance-cost-canada': { href: '/services/saas-development', label: 'Software and SaaS development services' },
-  'software-development-contract-canada': { href: '/services/saas-development', label: 'Custom software development services' },
+  'nrc-irap-funding-software-canada': { href: '/services/software-development', label: 'Custom software development services' },
+  'sred-software-development-canada': { href: '/services/software-development', label: 'Custom software development services' },
+  'software-maintenance-cost-canada': { href: '/services/software-maintenance', label: 'Software maintenance and support services' },
+  'software-development-contract-canada': { href: '/services/software-development', label: 'Custom software development services' },
   'healthcare-software-development-canada': { href: '/services/software-development', label: 'Custom software development services' },
 };
 
