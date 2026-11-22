@@ -56,6 +56,7 @@ export default function Page() {
               { href: '/services/software-development/healthcare-software', label: 'Healthcare software development services' },
               { href: '/industries/healthcare', label: 'Healthcare software development in Canada' },
               { href: '/case-studies/healthcare-telehealth', label: 'Healthcare telehealth platform case study' },
+              { href: '/locations/healthcare-software-development-company-in-edmonton', label: 'Healthcare software development company in Edmonton' },
             ]}
           />
         }
