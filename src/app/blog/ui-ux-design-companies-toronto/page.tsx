@@ -2,6 +2,7 @@ import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
+import RelatedServices from '@/components/RelatedServices';
 import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
@@ -47,7 +48,21 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'ui-ux-design-companies-toronto')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="toronto" cityName="Toronto" />} />
+      <ArticleTemplate
+        a={a}
+        related={getRelatedArticles(a.slug)}
+        cityLinks={<LocalServiceLinks citySlug="toronto" cityName="Toronto" />}
+        relatedServices={
+          <RelatedServices
+            links={[
+              { href: '/locations/ui-ux-design-company-in-toronto', label: 'UI/UX design company in Toronto' },
+              { href: '/services/product-design', label: 'UI/UX and product design services' },
+              { href: '/services/product-design/ux-audit', label: 'UX audit services' },
+              { href: '/locations/software-development-company-in-toronto', label: 'Software development company in Toronto' },
+            ]}
+          />
+        }
+      />
     </>
   );
 }
