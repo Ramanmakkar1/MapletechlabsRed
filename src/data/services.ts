@@ -1258,10 +1258,10 @@ export const services: ServiceData[] = [
       },
     ],
     relatedSubServices: [
-      { name: "AWS Architecture", slug: "aws-architecture" },
+      { name: "AWS architecture", slug: "aws-architecture" },
       { name: "Kubernetes & Docker", slug: "kubernetes-docker" },
       { name: "CI/CD Pipelines", slug: "ci-cd-pipelines" },
-      { name: "Infrastructure as Code", slug: "infrastructure-as-code" },
+      { name: "infrastructure as code", slug: "infrastructure-as-code" },
       { name: "Performance & Scaling", slug: "performance-scaling" },
     ],
   },
@@ -1459,7 +1459,7 @@ export const services: ServiceData[] = [
       },
     ],
     relatedSubServices: [
-      { name: "Mobile AR", slug: "mobile-ar" },
+      { name: "mobile AR development", slug: "mobile-ar" },
       { name: "VR Applications", slug: "vr-applications" },
       { name: "WebXR Experiences", slug: "webxr-experiences" },
       { name: "Apple Vision Pro", slug: "apple-vision-pro" },
