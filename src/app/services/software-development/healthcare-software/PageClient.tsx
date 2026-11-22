@@ -174,7 +174,7 @@ const buyerContent = (
 export default function PageClient() {
   return (
     <SubServicePageTemplate
-      parent={{ href: '/services/web-development', label: 'Software Development' }}
+      parent={{ href: '/services/software-development', label: 'Software Development' }}
       name="Healthcare Software Development"
       copy={{
         badge: 'SOFTWARE DEVELOPMENT',
