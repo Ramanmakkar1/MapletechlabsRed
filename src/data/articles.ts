@@ -56,7 +56,7 @@ export const articles: Article[] = [
   {
     slug: 'healthcare-software-development-canada',
     relatedTopic: 'software',
-    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
+    relatedService: { href: '/services/software-development/healthcare-software', label: 'healthcare software development' },
     category: 'Engineering',
     title: 'Healthcare Software Development in Canada: A Buyer’s Guide',
     dek: 'A practical guide for Canadian healthcare buyers: choose the right project, frame privacy and data residency questions for counsel, plan EHR integration, define a testable scope and compare development partners.',
