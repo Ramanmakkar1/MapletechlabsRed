@@ -55,6 +55,26 @@ const bySlug = new Map(allServiceCityCombos.map(c => [c.slug, c]));
 export const getServiceCityCombo = (slug: string): ServiceCityCombo | undefined => bySlug.get(slug);
 export const serviceCitySlugs = allServiceCityCombos.map(c => c.slug);
 
+/** Cities where the /locations/<city>/<service> mesh pages are indexable. */
+export const MESH_INDEX_CITIES = new Set(['edmonton', 'calgary', 'toronto', 'vancouver']);
+
+// Search Console impressions outside the office cities; owner can add slugs.
+export const DEMAND_LOCATION_SLUGS = new Set(['ai-development-company-in-regina']);
+
+/**
+ * Whether a /locations/<service>-company-in-<city> keyword page should be
+ * indexed and listed in the sitemap. Unknown combos stay indexable. Marketing
+ * pages are left to TML.ca, web-design pages are always kept, and every other
+ * service is indexed only in the mesh cities or when it has real demand.
+ */
+export function isIndexableLocationSlug(slug: string): boolean {
+  const combo = getServiceCityCombo(slug);
+  if (!combo) return true;
+  if (combo.serviceSlug === 'digital-marketing') return false;
+  if (webDesignCombos.some(c => c.slug === combo.slug)) return true;
+  return MESH_INDEX_CITIES.has(combo.citySlug) || DEMAND_LOCATION_SLUGS.has(slug);
+}
+
 const kwFor: Record<string, string> = Object.fromEntries(PRIORITY_SERVICES.map(p => [p.serviceSlug, p.kw]));
 export const isPriorityService = (serviceSlug: string): boolean => serviceSlug in kwFor;
 
