@@ -147,7 +147,7 @@ export default function ContactRoute() {
                 <li><Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Web development</Link> — marketing sites, online stores, redesigns and CMS builds with SEO foundations.</li>
                 <li><Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Mobile app development</Link> — iOS, Android and cross-platform apps, from a first MVP to store release.</li>
                 <li><Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>AI and machine learning development</Link> — automation, chatbots, LLM integrations and predictive analytics.</li>
-                <li><Link href="/services/ui-ux-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>UI/UX design</Link> — audits, user journeys, prototypes and design systems for products that feel hard to use.</li>
+                <li><Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>UI/UX design</Link> — audits, user journeys, prototypes and design systems for products that feel hard to use.</li>
               </ul>
             </div>
           </div>
