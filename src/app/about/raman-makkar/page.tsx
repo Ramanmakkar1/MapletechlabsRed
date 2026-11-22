@@ -684,6 +684,18 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
+              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Services</h2>
+              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
+                <li style={{ marginBottom: '8px' }}>
+                  <Link href="/locations/edmonton/web-development" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link>
+                </li>
+                <li>
+                  <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services</Link>
+                </li>
+              </ul>
+            </section>
+
+            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
               <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Frequently asked questions</h2>
               <div style={{ maxWidth: '800px' }}>
                 {faqs.map((item) => (
