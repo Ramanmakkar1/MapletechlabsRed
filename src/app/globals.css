@@ -719,6 +719,11 @@ main > section, main > div > section, main > article > section { border-bottom: 
   display: block;
 }
 .media--lg { border-radius: var(--r-lg); }
+/* On phones an aspect-ratio plus a min-height can force the frame wider
+   than the viewport, so cap it to the container and let height follow. */
+@media (max-width: 640px) {
+  .media--lg { max-width: 100%; min-width: 0; height: auto; }
+}
 .media--flat { border-radius: 0; }
 
 /* Hairline inside the frame keeps a pale photo from bleeding into
