@@ -70,7 +70,8 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/web-development", label: "Web Development" }}
       name="SaaS Platform Development"
-      copy={{ badge: "SAAS PRODUCT ENGINEERING", title: <>SaaS Platforms Built to{' '} <span style={{ color: 'var(--brand)' }}>Scale & Generate ARR</span></>, desc: <>We build production-grade SaaS platforms from the ground up — multi-tenant architecture, subscription billing, enterprise SSO, and scalable infrastructure — delivering your MVP in 8 weeks and growing with you from there.</> }}
+      copy={{ badge: "SAAS PRODUCT ENGINEERING", title: <>SaaS Platforms Built to{' '} <span style={{ color: 'var(--brand)' }}>Scale & Generate ARR</span></>, desc: <>We build production-grade SaaS platforms from the ground up — multi-tenant architecture, subscription billing, enterprise SSO, and scalable infrastructure — delivering your MVP in 8 weeks and growing with you from there.{' '}See our full <Link href="/services/saas-development">SaaS development services</Link>.</> }}
+      caseStudySlugs={['logistics-platform', 'payments-api-platform']}
       stats={stats}
       services={services}
       steps={steps}
