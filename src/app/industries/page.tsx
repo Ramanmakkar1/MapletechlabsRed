@@ -25,9 +25,40 @@ export const metadata: Metadata = {
   },
 };
 
+const industriesJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${canonicalUrl('/industries')}#collection`,
+      url: canonicalUrl('/industries'),
+      name: TITLE,
+      description: DESCRIPTION,
+      about: { '@id': 'https://mapletechlabs.ca/#organization' },
+      mainEntity: { '@id': `${canonicalUrl('/industries')}#list` },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${canonicalUrl('/industries')}#list`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'FinTech and banking', url: canonicalUrl('/industries/fintech') },
+        { '@type': 'ListItem', position: 2, name: 'Healthcare', url: canonicalUrl('/industries/healthcare') },
+        { '@type': 'ListItem', position: 3, name: 'E-commerce and retail', url: canonicalUrl('/industries/ecommerce') },
+        { '@type': 'ListItem', position: 4, name: 'Logistics and supply chain', url: canonicalUrl('/industries/logistics') },
+        { '@type': 'ListItem', position: 5, name: 'EdTech', url: canonicalUrl('/industries/edtech') },
+        { '@type': 'ListItem', position: 6, name: 'Enterprise', url: canonicalUrl('/industries/enterprise') },
+      ],
+    },
+  ],
+};
+
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(industriesJsonLd) }}
+      />
       <BreadcrumbSchema
         items={[
           { position: 1, name: 'Home', item: canonicalUrl('/') },
