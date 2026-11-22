@@ -1,4 +1,5 @@
 import { isIndexableCityService } from '@/data/serviceCity';
+import { isCityListiclePath } from './listicles';
 
 /**
  * Paths that must never appear in a sitemap: they 301 elsewhere or are known
@@ -19,6 +20,7 @@ export const NON_INDEXABLE_PATHS = new Set([
  */
 export function isIndexableSitemapPath(pathname: string): boolean {
   if (NON_INDEXABLE_PATHS.has(pathname)) return false;
+  if (isCityListiclePath(pathname)) return false;
 
   const mesh = pathname.match(/^\/locations\/([^/]+)\/([^/]+)$/);
   if (mesh && !isIndexableCityService(mesh[1], mesh[2])) return false;
