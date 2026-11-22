@@ -576,7 +576,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           'Our ',
           { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide' },
           ' gives planning ranges for Canadian projects. Adding an LLM feature to an existing app is about $10,000-$35,000 CAD. A chatbot on your own documents is about $15,000-$50,000. Custom model training starts around $75,000. If you are comparing local vendors, our ',
-          { href: '/blog/software-development-companies-vancouver', label: 'guide to Vancouver software companies' },
+          { href: '/blog/ai-development-companies-vancouver', label: 'guide to choosing an AI development company in Vancouver' },
           ' lists the questions to ask, and our ',
           { href: '/services/ai-ml', label: 'AI and machine learning development services' },
           ' page shows the capabilities we build. Discovery is free, and your price is fixed before coding starts.',
