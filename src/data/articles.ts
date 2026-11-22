@@ -1578,7 +1578,7 @@ export const articles: Article[] = [
   {
     slug: 'custom-software-vs-off-the-shelf',
     relatedTopic: 'software',
-    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
+    relatedService: { href: '/services/software-development', label: 'custom software development' },
     category: 'Business',
     title: 'Custom Software vs Off-the-Shelf: How to Decide (2026)',
     dek: 'Building custom software when you could have bought a tool is an expensive mistake — and so is forcing your business into software that does not fit. Here is an honest framework for deciding which is right.',
@@ -7496,7 +7496,7 @@ export const articles: Article[] = [
   {
     slug: 'custom-software-development-cost-canada',
     relatedTopic: 'software',
-    relatedService: { href: '/services/saas-development', label: 'SaaS development' },
+    relatedService: { href: '/services/software-development', label: 'custom software development' },
     category: 'Business',
     title: 'Custom Software Development Cost in Canada (2026 Guide)',
     dek: 'What custom software costs in Canada, what moves the number, what discovery and the build stages should include, example scope tiers and the questions to ask when comparing quotes.',
