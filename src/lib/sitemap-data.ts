@@ -214,7 +214,6 @@ const blogLastmod: Record<string, string> = {
   'top-seo-companies-canada':                    '2026-11-10',
   'top-software-development-companies-canada':   '2026-11-10',
   'app-development-cost-canada':                 '2026-02-05',
-  'ai-development-companies-canada':             '2026-11-10',
   'app-development-companies-edmonton':          '2026-02-14',
   'website-cost-canada':                         '2026-02-01',
   'choose-software-development-company-canada':  '2026-11-10',
