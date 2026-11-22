@@ -192,6 +192,8 @@ const nextConfig: NextConfig = {
     const frCityLandingRedirects = cityHubs.map(c => ({ source: `/fr/locations/${c}`, destination: `/locations/software-development-company-in-${c}`, statusCode: 301 as const }));
     const frKeywordRedirects = cityHubs.flatMap(c => priority.map(([, kw]) => ({ source: `/fr/locations/${kw}-company-in-${c}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const }))).filter(({ source }) => !legacyFrSources.has(source));
     return [
+      // /services/web-development/saas-platforms merged into /services/saas-development (owner decision).
+      { source: '/services/web-development/saas-platforms', destination: '/services/saas-development', statusCode: 301 as const },
       // The old French locale (/fr/*) no longer exists; 301 to the English pages.
       // Destinations never start with /fr, so this cannot loop.
       { source: '/fr', destination: '/', statusCode: 301 as const },

@@ -85,7 +85,7 @@ const services: ServiceCategory[] = [
     description: 'We architect and build scalable web systems for startups and enterprises. Our expertise spans React, Next.js, Node.js, and GraphQL to deliver SaaS platforms, e-commerce storefronts, and complex enterprise applications. Using modern frameworks and cloud-native architecture, we design systems that grow from MVP to millions of users. Our approach includes discovery and requirements mapping, database schema design, high-fidelity prototyping, agile development with weekly deployments, and post-launch performance optimization. Real examples: fintech dashboards handling $10M+ in daily transactions, HIPAA-compliant healthcare portals, and multi-tenant SaaS with Stripe billing integration. Technology stack: React, Next.js, TypeScript, PostgreSQL, GraphQL, AWS, Kubernetes. Timeline: 4-12 weeks from kickoff to production. Ideal for companies needing robust, scalable web infrastructure.',
     subServices: [
       { name: 'Next.js Development', href: '/services/web-development/nextjs-development' },
-      { name: 'SaaS Platforms', href: '/services/web-development/saas-platforms' },
+      { name: 'SaaS Platforms', href: '/services/saas-development' },
       { name: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
       { name: 'API & Backend', href: '/services/web-development/api-backend' },
       { name: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
