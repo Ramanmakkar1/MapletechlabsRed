@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
+import RelatedServices from '@/components/RelatedServices';
 import { getArticle, getRelatedArticles } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
@@ -48,7 +49,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'app-development-companies-edmonton')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="edmonton" cityName="Edmonton" />} extraBlock={
+      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="edmonton" cityName="Edmonton" />} relatedServices={<RelatedServices links={[{href:'/locations/app-development-company-in-edmonton',label:'App development company in Edmonton'},{href:'/services/mobile-app-development',label:'Mobile app development services'},{href:'/services/mobile-app-development/flutter-development',label:'Flutter app development'},{href:'/locations/software-development-company-in-edmonton',label:'Software development company in Edmonton'}]} />} extraBlock={
         <p style={{ marginTop: 24, lineHeight: 1.7 }}>
           Need a team to build it? See our{' '}
           <Link href="/services/mobile-app-development/edmonton">mobile app development in Edmonton</Link>{' '}
