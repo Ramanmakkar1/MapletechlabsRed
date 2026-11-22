@@ -102,6 +102,12 @@ export default function Home() {
           <Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development services</Link>{' '}
           to see how we work with Canadian teams.
         </p>
+        <p className="cb-container" style={{ fontSize: 14, color: 'var(--muted)' }}>
+          Learn more about{' '}
+          <Link href="/locations/edmonton/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development in Edmonton</Link>{' '}
+          and{' '}
+          <Link href="/services" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>our software development services</Link>.
+        </p>
         <EditorialBand />
         <EssentialGuides />
         <FeaturedWork />
