@@ -87,11 +87,9 @@ export default function Page() {
           <Link href="/blog/custom-software-development-cost-canada">
             custom software development cost in Canada guide
           </Link>
-          ; if you are hiring, start with the{' '}
-          <Link href="/blog/ai-development-companies-canada">
-            AI development companies in Canada guide
-          </Link>{' '}
-          and the{' '}
+          ; if you are hiring, start with our{' '}
+          <Link href="/services/ai-ml">AI development services in Canada</Link>{' '}
+          page and the{' '}
           <Link href="/blog/digital-marketing-cost-canada">
             digital marketing cost in Canada guide
           </Link>
@@ -179,9 +177,7 @@ export default function Page() {
         <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '1.25rem 0 0.5rem' }}>AI development</h3>
         <ul style={{ lineHeight: 1.9, margin: 0, paddingLeft: '1.25rem' }}>
           <li>
-            <Link href="/blog/ai-development-companies-canada">
-              AI development companies in Canada
-            </Link>
+            <Link href="/services/ai-ml">AI development services in Canada</Link>
           </li>
           <li>
             <Link href="/blog/ai-chatbot-vs-ai-agent-for-business">
