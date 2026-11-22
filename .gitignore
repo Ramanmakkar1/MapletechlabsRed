@@ -11,6 +11,9 @@
 /out/
 build
 
+# generated at build time by scripts/write-build-info.mjs
+/public/build-info.json
+
 # misc
 .DS_Store
 *.pem
