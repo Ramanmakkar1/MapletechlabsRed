@@ -2,7 +2,7 @@ import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
-  { value: '200+', label: 'Brands Built' },
+  { value: '200+', label: 'Brands Built (100+ brand identity projects)' },
   { value: '4.9★', label: 'Client Rating' },
   { value: 'F500', label: 'Fortune 500 Clients' },
   { value: '15', label: 'Design Awards' },

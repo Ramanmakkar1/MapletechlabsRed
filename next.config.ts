@@ -194,6 +194,8 @@ const nextConfig: NextConfig = {
     return [
       // /services/web-development/saas-platforms merged into /services/saas-development (owner decision).
       { source: '/services/web-development/saas-platforms', destination: '/services/saas-development', statusCode: 301 as const },
+      // /services/product-design/brand-identity merged into /services/branding (owner decision).
+      { source: '/services/product-design/brand-identity', destination: '/services/branding', statusCode: 301 as const },
       // The old French locale (/fr/*) no longer exists; 301 to the English pages.
       // Destinations never start with /fr, so this cannot loop.
       { source: '/fr', destination: '/', statusCode: 301 as const },

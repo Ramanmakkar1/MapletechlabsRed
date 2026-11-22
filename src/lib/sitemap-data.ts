@@ -23,7 +23,7 @@ export const subServices: Record<string, string[]> = {
   'mobile-app-development': ['ios-app-development', 'android-app-development', 'flutter-development', 'react-native-apps', 'cross-platform-apps'],
   'ai-ml': ['llm-integration', 'ai-automation', 'computer-vision', 'predictive-analytics', 'ai-chatbots', 'ai-agent-development'],
   'web-development': ['nextjs-development', 'web-design', 'ecommerce-systems', 'shopify-development', 'api-backend', 'enterprise-portals'],
-  'product-design': ['ui-ux-strategy', 'ux-audit', 'wireframing', 'prototyping', 'design-systems', 'brand-identity'],
+  'product-design': ['ui-ux-strategy', 'ux-audit', 'wireframing', 'prototyping', 'design-systems'],
   'blockchain-web3': ['smart-contracts', 'defi-protocols', 'nft-platforms', 'crypto-wallets', 'web3-dapps'],
   'cloud-devops': ['aws-architecture', 'kubernetes-docker', 'ci-cd-pipelines', 'infrastructure-as-code', 'performance-scaling'],
   'ar-vr': ['mobile-ar', 'vr-applications', 'webxr-experiences', 'apple-vision-pro', 'industrial-ar'],

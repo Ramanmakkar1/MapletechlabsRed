@@ -135,7 +135,7 @@ const services: ServiceCategory[] = [
       { name: 'Wireframing', href: '/services/product-design/wireframing' },
       { name: 'Prototyping', href: '/services/product-design/prototyping' },
       { name: 'Design Systems', href: '/services/product-design/design-systems' },
-      { name: 'Brand Identity', href: '/services/product-design/brand-identity' },
+      { name: 'Brand Identity', href: '/services/branding' },
     ],
   },
   {

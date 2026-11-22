@@ -96,7 +96,7 @@ export const serviceCategories = [
       { label: 'Wireframing', href: '/services/product-design/wireframing' },
       { label: 'Prototyping', href: '/services/product-design/prototyping' },
       { label: 'Design Systems', href: '/services/product-design/design-systems' },
-      { label: 'Brand Identity', href: '/services/product-design/brand-identity' },
+      { label: 'Brand Identity', href: '/services/branding' },
     ],
   },
   {

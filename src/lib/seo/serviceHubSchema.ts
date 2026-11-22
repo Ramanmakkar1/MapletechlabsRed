@@ -31,7 +31,6 @@ const SUB_SERVICE_FOLDERS: Record<string, string[]> = {
     'wireframing',
     'prototyping',
     'design-systems',
-    'brand-identity',
   ],
   'branding': [
     'brand-strategy',

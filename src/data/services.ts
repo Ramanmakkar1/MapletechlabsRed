@@ -861,7 +861,6 @@ export const services: ServiceData[] = [
       { name: "Wireframing", slug: "wireframing" },
       { name: "Prototyping", slug: "prototyping" },
       { name: "Design Systems", slug: "design-systems" },
-      { name: "Brand Identity", slug: "brand-identity" },
     ],
   },
 
