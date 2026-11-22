@@ -860,6 +860,7 @@ export const services: ServiceData[] = [
       { name: "Wireframing", slug: "wireframing" },
       { name: "Prototyping", slug: "prototyping" },
       { name: "Design Systems", slug: "design-systems" },
+      { name: "UX Audit", slug: "ux-audit" },
     ],
   },
 
@@ -1660,6 +1661,7 @@ export const services: ServiceData[] = [
     ],
     relatedSubServices: [
       { name: "SEO Services", slug: "seo-services" },
+      { name: "Local SEO", slug: "local-seo" },
       { name: "Google Ads & PPC", slug: "google-ads-ppc" },
       { name: "Social Media Marketing", slug: "social-media-marketing" },
       { name: "Content Marketing", slug: "content-marketing" },
