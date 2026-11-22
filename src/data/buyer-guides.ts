@@ -1,6 +1,5 @@
 /** Buyer-guide blog posts linked from service+city money pages (slug must exist under src/app/blog). */
 const BLOG_SLUGS = new Set([
-  'ai-development-companies-canada',
   'ai-development-companies-toronto',
   'ai-development-companies-edmonton',
   'ai-development-companies-calgary',
@@ -140,7 +139,6 @@ const PAGE_GUIDE: Partial<Record<string, { slug: string; label: string; linkText
 };
 
 const NATIONAL_GUIDE_SLUG: Partial<Record<string, string>> = {
-  'ai-ml': 'ai-development-companies-canada',
   'product-design': 'ui-ux-design-companies-canada',
   'digital-marketing': 'top-seo-companies-canada',
   'saas-development': 'saas-development-company-canada',
