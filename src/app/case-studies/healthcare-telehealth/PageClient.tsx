@@ -252,6 +252,7 @@ export default function HealthcareCaseStudyClient() {
             { label: 'Mobile App Development', href: '/services/mobile-app-development' },
             { label: 'Web Development', href: '/services/web-development' },
             { label: 'App Development in Calgary', href: '/locations/app-development-company-in-calgary' },
+            { label: 'Healthcare Software Development', href: '/industries/healthcare' },
           ]}
           city={{ label: 'Software Development in Calgary', href: '/locations/software-development-company-in-calgary' }}
         />
