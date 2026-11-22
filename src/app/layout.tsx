@@ -127,6 +127,14 @@ const organizationSchema = {
     jobTitle: "Founder & CEO",
     url: `${siteOrigin()}/about/raman-makkar`,
   },
+  award: [
+    "Top Generative AI Company, Clutch 2026",
+    "Top App Development Company, Clutch 2024",
+    "Webby Honoree 2024",
+    "Best App Award, Personal Growth, Google 2024",
+    "Advanced Tier Services Partner, AWS 2024",
+    "Top 100 North America, Red Herring 2023",
+  ],
   knowsAbout: [
     "Custom software development",
     "Mobile app development",
