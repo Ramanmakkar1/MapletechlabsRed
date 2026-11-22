@@ -252,6 +252,7 @@ export default function EcommerceCaseStudyClient() {
             { label: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
             { label: 'Web Development', href: '/services/web-development' },
             { label: 'Web Development in Edmonton', href: '/locations/web-development-company-in-edmonton' },
+            { label: 'E-Commerce Software Development', href: '/industries/ecommerce' },
           ]}
           city={{ label: 'Software Development in Edmonton', href: '/locations/software-development-company-in-edmonton' }}
         />
