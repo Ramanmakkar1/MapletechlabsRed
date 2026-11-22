@@ -252,6 +252,7 @@ export default function PaymentsCaseStudyClient() {
             { label: 'API & Backend Development', href: '/services/web-development/api-backend' },
             { label: 'SaaS Development', href: '/services/saas-development' },
             { label: 'SaaS Development in Ottawa', href: '/locations/saas-development-company-in-ottawa' },
+            { label: 'Fintech Software Development', href: '/industries/fintech' },
           ]}
           city={{ label: 'Software Development in Ottawa', href: '/locations/software-development-company-in-ottawa' }}
         />
