@@ -106,6 +106,7 @@ export const blogSlugs = [
   'digital-marketing-agencies-montreal',
   'digital-marketing-agencies-canada',
   'custom-software-development-cost-canada',
+  'digital-marketing-cost-canada',
 ];
 
 /**
