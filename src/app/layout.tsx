@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
@@ -238,7 +237,6 @@ export default function RootLayout({
         {children}
         <CookieConsent />
         <ClarityAnalytics />
-        <Analytics />
         {/* Google Tag Manager - moved to end of body for LCP optimization */}
         <Script
           async
