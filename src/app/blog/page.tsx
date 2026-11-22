@@ -272,6 +272,35 @@ export default function Page() {
             </li>
           </ul>
         </nav>
+
+        <nav aria-label="Services" style={{ margin: '1.25rem 0 0.5rem' }}>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 600, margin: '0 0 0.5rem' }}>
+            Services
+          </h3>
+          <ul
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '0.5rem 1.5rem',
+              listStyle: 'none',
+              margin: 0,
+              padding: 0,
+            }}
+          >
+            <li>
+              <Link href="/services/web-development">custom software development</Link>
+            </li>
+            <li>
+              <Link href="/services/mobile-app-development">app development</Link>
+            </li>
+            <li>
+              <Link href="/services/ai-ml">AI development</Link>
+            </li>
+            <li>
+              <Link href="/services/product-design">UI/UX design</Link>
+            </li>
+          </ul>
+        </nav>
       </section>
       <nav
         aria-label="Related blog topics"
