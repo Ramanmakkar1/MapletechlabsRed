@@ -5,6 +5,7 @@ import {
   serviceCitySlugs,
   priorityCompanyHeadline,
   isIndexableCityService,
+  isIndexableLocationSlug,
   WEB_DESIGN_CITIES,
   type ServiceCityCombo,
 } from '@/data/serviceCity';
@@ -174,6 +175,8 @@ function buildLocationPage(slug: string): LocationPageData | null {
       type: 'website',
     },
     alternates: { canonical: url },
+    // Keyword location pages with no local search demand stay crawlable but out of the index.
+    ...(isIndexableLocationSlug(slug) ? {} : { robots: { index: false, follow: true } }),
   };
 
   return {
