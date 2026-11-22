@@ -108,6 +108,23 @@ export const blogSlugs = [
   'custom-software-development-cost-canada',
 ];
 
+/**
+ * Legacy "Top 10 companies" listicles that are thin (one-line entries per
+ * company, no original analysis) and near-duplicate of each other. Google
+ * crawls them but will not index them, so they are kept out of the blog
+ * sitemap to stop wasting crawl budget. The pages stay live and linked; they
+ * are simply not advertised to crawlers until they are rewritten with real
+ * detail. The substantial guides and cost pages are unaffected.
+ */
+const THIN_BLOG_SLUGS = new Set([
+  'top-seo-companies-canada',
+  'top-software-development-companies-canada',
+  'blockchain-development-companies-canada',
+  'software-development-companies-calgary',
+  'web-development-companies-toronto',
+  'saas-guide',
+]);
+
 export const citySlugs = [
   'edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal',
   'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on',
@@ -209,12 +226,14 @@ const blogLastmod: Record<string, string> = {
 };
 
 export function blogSitemapEntries(): SitemapEntry[] {
-  return filterIndexableEntries(blogSlugs.map(slug => ({
-    loc: `${BASE_URL}/blog/${slug}`,
-    lastmod: getArticle(slug)?.dateModified ?? blogLastmod[slug],
-    changefreq: 'monthly',
-    priority: '0.6',
-  })));
+  return filterIndexableEntries(blogSlugs
+    .filter(slug => !THIN_BLOG_SLUGS.has(slug))
+    .map(slug => ({
+      loc: `${BASE_URL}/blog/${slug}`,
+      lastmod: getArticle(slug)?.dateModified ?? blogLastmod[slug],
+      changefreq: 'monthly',
+      priority: '0.6',
+    })));
 }
 
 export function serviceSitemapEntries(): SitemapEntry[] {
