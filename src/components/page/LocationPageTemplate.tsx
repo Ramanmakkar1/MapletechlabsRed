@@ -312,6 +312,18 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
+        <section style={{ padding: '0 0 var(--section-y)', background: 'var(--surface)' }}>
+          <div className="cb-container">
+            <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>We also work with clients in</h3>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              {cities.filter(c => c.slug !== p.slug).map(c => (
+                <Link key={c.slug} href={`/locations/software-development-company-in-${c.slug}`} className="pill">
+                  SEO and software development in {c.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
         <FaqSplit faqs={faqs} />
         <FaqSchema faqs={faqs} />
         <FinalCta title={`Building in ${name}? Let's scope it.`} sub={`Tell us what you need and a senior engineer will send a fixed-price plan within one working day${city?.isHQ ? ' — from our head office right here in ' + name + '.' : '.'}`} />
