@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import { PRIORITY_SERVICES, priorityCompanyHeadline, serviceCityPath } from '@/data/serviceCity';
+import { isIndexableHref } from '@/lib/seo/indexability';
 
 const CITIES = [
   { slug: 'edmonton', name: 'Edmonton' },
@@ -25,10 +26,11 @@ export default function BlogCityLinks({ serviceSlug, heading = 'Hire us in your 
   const ps = serviceSlug ? PRIORITY_SERVICES.find(p => p.serviceSlug === serviceSlug) : undefined;
   if (serviceSlug && !ps) return null;
   const name = ps ? priorityCompanyHeadline(ps.serviceSlug, ps.label) : 'Software Development';
-  const links = CITIES.map(c => ({
+  const links = CITIES.filter(c => isIndexableHref(ps ? serviceCityPath(ps.serviceSlug, c.slug) : `/locations/software-development-company-in-${c.slug}`)).map(c => ({
     href: ps ? serviceCityPath(ps.serviceSlug, c.slug) : `/locations/software-development-company-in-${c.slug}`,
     label: `${name} Company in ${c.name}`,
   }));
+  if (links.length === 0) return null;
   return (
     <nav aria-label={heading} style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
       <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>{heading}</h2>
