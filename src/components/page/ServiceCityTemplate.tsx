@@ -336,7 +336,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Explore our {serviceName} services</h3>
               <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 12px' }}>
-                Read more about our <Link href={`/services/${serviceSlug}`} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{serviceName} services in Canada</Link>.
+                Read more about our <Link href={`/services/${serviceSlug}`} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{serviceName} services in Canada</Link>, or browse <Link href="/services" style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>all Mapletech Labs services</Link>.
               </p>
               {pageKey === 'ai-development-company-in-calgary' ? (
                 <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 12px' }}>
