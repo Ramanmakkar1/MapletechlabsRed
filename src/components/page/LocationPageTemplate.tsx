@@ -21,7 +21,7 @@ import AiPractice from '@/components/home/AiPractice';
 import { humanPick } from '@/data/media';
 import { cities } from '@/data/cities';
 import { provinceSlugForName } from '@/data/provinces';
-import { serviceCityPath } from '@/data/serviceCity';
+import { serviceCityHref } from '@/data/serviceCity';
 import type { HeroCopy, Stat } from './types';
 
 export interface LocationProps {
@@ -197,7 +197,7 @@ export default function LocationPageTemplate(p: LocationProps) {
                   {city.localNeeds ? <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>{city.localNeeds}</p> : null}
                   {city.process ? <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>{city.process}</p> : null}
                   <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                    Related services in {name}: <Link href={serviceCityPath('web-development', p.slug)}>web development in {name}</Link>, <Link href={serviceCityPath('mobile-app-development', p.slug)}>mobile app development in {name}</Link>, <Link href={serviceCityPath('ai-ml', p.slug)}>AI development in {name}</Link> and <Link href={serviceCityPath('product-design', p.slug)}>UI/UX design in {name}</Link>.
+                    Related services in {name}: <Link href={serviceCityHref('web-development', p.slug)}>web development in {name}</Link>, <Link href={serviceCityHref('mobile-app-development', p.slug)}>mobile app development in {name}</Link>, <Link href={serviceCityHref('ai-ml', p.slug)}>AI development in {name}</Link> and <Link href={serviceCityHref('product-design', p.slug)}>UI/UX design in {name}</Link>.
                   </p>
                 </div>
               </div>
@@ -283,7 +283,7 @@ export default function LocationPageTemplate(p: LocationProps) {
           <div className="cb-container">
             <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Every service we offer in {name}</h3>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {serviceLinks.map(s => <Link key={s.slug} href={serviceCityPath(s.slug, p.slug)} className="pill">{s.name}</Link>)}
+              {serviceLinks.map(s => <Link key={s.slug} href={serviceCityHref(s.slug, p.slug)} className="pill">{s.name}</Link>)}
             </div>
           </div>
         </section>

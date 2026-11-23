@@ -105,3 +105,11 @@ export const isIndexableCityService = (citySlug: string, serviceSlug: string): b
 /** Canonical path for a service in a city: keyword URL for priority services, else the mesh URL. */
 export const serviceCityPath = (serviceSlug: string, citySlug: string): string =>
   kwFor[serviceSlug] ? `/locations/${kwFor[serviceSlug]}-company-in-${citySlug}` : `/locations/${citySlug}/${serviceSlug}`;
+
+/**
+ * Href for linking to a service in a city: the city+service page only when that
+ * page is live and indexable, otherwise the core service page (never a 301 or
+ * noindex city+service URL).
+ */
+export const serviceCityHref = (serviceSlug: string, citySlug: string): string =>
+  isIndexableCityService(citySlug, serviceSlug) ? serviceCityPath(serviceSlug, citySlug) : `/services/${serviceSlug}`;
