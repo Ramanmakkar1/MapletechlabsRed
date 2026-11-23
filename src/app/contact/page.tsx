@@ -136,22 +136,6 @@ export default function ContactRoute() {
             </div>
           </div>
         </section>
-        <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-services">
-          <div className="cb-container">
-            <div style={{ maxWidth: 860 }}>
-              <h2 id="contact-services" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', lineHeight: 1.2, margin: '0 0 14px' }}>Services you can ask about</h2>
-              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760 }}>
-                Mention the service closest to your project in the form and a senior engineer will confirm the right scope on the free scoping call.
-              </p>
-              <ul style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7, maxWidth: 760, display: 'grid', gap: 10 }}>
-                <li><Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Web development</Link> — marketing sites, online stores, redesigns and CMS builds with SEO foundations.</li>
-                <li><Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Mobile app development</Link> — iOS, Android and cross-platform apps, from a first MVP to store release.</li>
-                <li><Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>AI and machine learning development</Link> — automation, chatbots, LLM integrations and predictive analytics.</li>
-                <li><Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>UI/UX design</Link> — audits, user journeys, prototypes and design systems for products that feel hard to use.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
         <section style={{ padding: '0 0 var(--section-y)' }} aria-labelledby="contact-direct">
           <div className="cb-container">
             <div style={{ maxWidth: 860 }}>
