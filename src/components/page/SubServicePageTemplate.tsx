@@ -75,6 +75,7 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
             <div className="cb-container">
               <h2 id="sub-service-siblings" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 12px' }}>Related {parent.label} services</h2>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                <Link href={parent.href} className="pill" style={navigationLinkStyle}>{parent.label}</Link>
                 {siblings.map(r => <Link key={r.slug} href={`/services/${parentSlug}/${r.slug}`} className="pill" style={navigationLinkStyle}>{r.name}</Link>)}
               </div>
             </div>
