@@ -99,6 +99,9 @@ export default function Page() {
             management systems and subscription platforms.
           </li>
         </ul>
+        <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, margin: '2.5rem 0 1rem' }}>
+          All industry pages
+        </h2>
         <ul style={{ maxWidth: '70ch', lineHeight: 1.9 }}>
           {industries.map((industry) => (
             <li key={industry.key}>
