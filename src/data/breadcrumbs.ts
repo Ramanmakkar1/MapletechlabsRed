@@ -2,6 +2,8 @@
  * Utility functions to generate breadcrumb data for different page types
  */
 
+import { canonicalUrl } from '@/lib/seo/canonical';
+
 interface BreadcrumbItem {
   position: number;
   name: string;
