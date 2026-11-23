@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { services } from '@/data/services';
-import { serviceCityPath, isIndexableCityService } from '@/data/serviceCity';
+import { serviceCityHref, isIndexableLocationSlug } from '@/data/serviceCity';
 
 const navigationLinkStyle = {
   height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box',
@@ -12,7 +12,7 @@ const navigationLinkStyle = {
  * in that city, so the posts pass crawl paths to the local service pages.
  */
 export default function LocalServiceLinks({ citySlug, cityName, showWebDesignAndMarketing = false }: { citySlug: string; cityName: string; showWebDesignAndMarketing?: boolean }) {
-  const links = services.filter(s => isIndexableCityService(citySlug, s.slug));
+  const links = services.filter(s => serviceCityHref(s.slug, citySlug).startsWith('/locations/'));
   return (
     <div style={{
       background: 'var(--surface-alt)', border: '1px solid var(--line)',
@@ -36,13 +36,15 @@ export default function LocalServiceLinks({ citySlug, cityName, showWebDesignAnd
             <Link href={`/locations/web-design-company-in-${citySlug}`} className="pill" style={navigationLinkStyle}>
               Web design company in {cityName}
             </Link>
-            <Link href={`/locations/digital-marketing-agency-in-${citySlug}`} className="pill" style={navigationLinkStyle}>
-              Digital marketing agency in {cityName}
-            </Link>
+            {isIndexableLocationSlug(`digital-marketing-agency-in-${citySlug}`) && (
+              <Link href={`/locations/digital-marketing-agency-in-${citySlug}`} className="pill" style={navigationLinkStyle}>
+                Digital marketing agency in {cityName}
+              </Link>
+            )}
           </>
         )}
         {links.map(s => (
-          <Link key={s.slug} href={serviceCityPath(s.slug, citySlug)} className="pill" style={navigationLinkStyle}>
+          <Link key={s.slug} href={serviceCityHref(s.slug, citySlug)} className="pill" style={navigationLinkStyle}>
             {s.name} in {cityName}
           </Link>
         ))}
