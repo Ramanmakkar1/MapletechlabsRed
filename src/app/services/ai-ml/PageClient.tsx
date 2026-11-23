@@ -159,6 +159,12 @@ export default function PageClient() {
               <li style={{ marginBottom: 8 }}><Link href="/locations/ai-development-company-in-ottawa">AI development company in Ottawa</Link>: AI development for Ottawa businesses and public-sector teams, delivered remotely.</li>
               <li style={{ marginBottom: 8 }}><Link href="/locations/ai-development-company-in-montreal">AI development company in Montreal</Link>: AI development for Montreal businesses, delivered remotely, with Quebec Law 25 privacy in mind.</li>
             </ul>
+            <p className="lede">Related reading:</p>
+            <ul className="lede" style={{ paddingLeft: 24, margin: 0 }}>
+              <li style={{ marginBottom: 8 }}><Link href="/blog/use-claude-for-free">How to Use Claude for Free in 2026: A Practical Guide</Link></li>
+              <li style={{ marginBottom: 8 }}><Link href="/blog/run-ai-models-locally-free">How to Run AI Models Locally for Free in 2026</Link></li>
+              <li style={{ marginBottom: 8 }}><Link href="/blog/top-10-unicorn-apps-2026">Unicorn Apps 2026: Top 10 Growth Stories for Founders</Link></li>
+            </ul>
             <p className="lede">Proof: see AI in production in our <Link href="/case-studies/fintech-trading-platform">AI-powered trading platform case study</Link> and the <Link href="/case-studies/real-estate-portal">ML property recommendation engine for PropConnect Canada</Link>.</p>
             <p className="lede"><Link href="/contact">Talk to our AI team about your project&apos;s acceptance criteria</Link>.</p>
           </div>
