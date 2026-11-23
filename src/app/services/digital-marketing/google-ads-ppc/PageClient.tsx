@@ -32,8 +32,6 @@ const faqs = [
   { q: 'Google Ads vs Meta Ads — which is better for my business?', a: 'Google Ads excels at capturing existing demand — people actively searching for your product. Meta Ads is stronger for creating demand and targeting audiences by interest or behaviour. Most businesses benefit from both; we will recommend the right mix for your goals.' },
 ];
 
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-
 function BuyerContent() {
   return (
     <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
@@ -54,10 +52,7 @@ function BuyerContent() {
           Pair paid search with <Link href="/services/digital-marketing/seo-services">SEO services</Link> for compounding organic traffic, and use <Link href="/services/digital-marketing/performance-analytics">performance analytics</Link> to see which channels actually drive revenue. For budget planning, read our <Link href="/blog/digital-marketing-cost-canada">digital marketing cost guide for Canada</Link>.
         </p>
         <p>
-          Explore Google Ads management in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={`/locations/digital-marketing-agency-in-${slug}`}>{name}</Link></span>
-          ))}. Ready to make your ad spend profitable? <Link href="/contact">Book a Google Ads audit</Link>.
+          Explore Google Ads management across Canada, or contact us to discuss your city. Ready to make your ad spend profitable? <Link href="/contact">Book a Google Ads audit</Link>.
         </p>
       </div>
     </section>
