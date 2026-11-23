@@ -54,6 +54,8 @@ const caseStudies = [
     description: 'Redesigned checkout flow for 2M+ monthly visitors, increasing conversion rate from 2.1% to 3.8% in 90 days.',
     metric: { value: '3.8%', label: 'Conversion Rate' },
     tech: ['Next.js', 'Stripe', 'PostgreSQL', 'Redis'],
+    serviceHref: '/services/web-development/ecommerce-systems',
+    serviceLabel: 'Ecommerce systems development',
     },
   {
     slug: 'logistics-platform',
@@ -63,6 +65,8 @@ const caseStudies = [
     description: 'Built IoT-integrated platform tracking 500 trucks with 15K+ daily deliveries, achieving 25% fuel cost reduction ($180K annually).',
     metric: { value: '180K', label: 'Annual Savings' },
     tech: ['React', 'Python', 'TensorFlow', 'AWS IoT'],
+    serviceHref: '/services/web-development',
+    serviceLabel: 'Web development',
     },
   {
     slug: 'payments-api-platform',
@@ -70,8 +74,8 @@ const caseStudies = [
     title: 'PCI DSS Payments API',
     client: 'PayBridge Solutions \u00b7 Ottawa',
     description: 'Engineered secure payments processing API handling 12M+ monthly transactions with PCI DSS compliance.',
-    serviceHref: '/services/web-development',
-    serviceLabel: 'Web development',
+    serviceHref: '/services/web-development/api-backend',
+    serviceLabel: 'API and backend development',
     metric: { value: '12M+', label: 'Monthly Transactions' },
     tech: ['Node.js', 'PostgreSQL', 'Redis', 'AWS KMS'],
     },
@@ -266,6 +270,21 @@ export default function CaseStudiesPageClient() {
                             {cs.category}
                           </span>
                         </div>
+
+                        {/* Service link for proof */}
+                        {cs.serviceHref && (
+                          <div style={{ marginBottom: 12 }}>
+                            <Link
+                              href={cs.serviceHref}
+                              style={{
+                                fontSize: 13, fontWeight: 600, color: 'var(--brand)',
+                                textDecoration: 'underline', textUnderlineOffset: 2,
+                              }}
+                            >
+                              See our {cs.serviceLabel} services
+                            </Link>
+                          </div>
+                        )}
 
                         {/* Title */}
                         <h3 style={{
