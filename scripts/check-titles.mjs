@@ -99,7 +99,7 @@ const AUDIT_PAGES = [
 ];
 const EXPECTED_AUDIT_TITLES = new Map([
   ["src/app/blog/app-development-companies-edmonton/page.tsx", "App Development Companies Edmonton 2026 | Mapletech Labs"],
-  ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost in Canada: 2026 Pricing Guide"],
+  ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost Canada: 2026 Pricing | Mapletech Labs"],
   ["src/app/blog/web-development-companies-toronto/page.tsx", "Web Development Companies in Toronto: How to Choose"],
   ["src/app/blog/website-cost-canada/page.tsx", "Website Cost in Canada: 2026 Pricing Guide | Mapletech Labs"],
   ["src/app/case-studies/logistics-platform/page.tsx", "Logistics Case Study: 15K+ Daily Deliveries | Mapletech Labs"],
