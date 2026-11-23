@@ -4,6 +4,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { work } from '@/data/work';
 
 const TITLE = 'Software Development Case Studies in Canada';
 const DESCRIPTION = 'See how Mapletech Labs has helped Canadian businesses build scalable software. Real results from fintech, healthcare, e-commerce, and logistics projects.';
@@ -22,14 +23,23 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/case-studies') },
 };
 
-const caseStudies = [
-  { slug: 'fintech-trading-platform', name: 'AI-Powered Trading Platform', label: 'Fintech Trading Platform', outcome: '75K+ daily transactions at 99.99% uptime', serviceHref: '/services/software-development', serviceLabel: 'custom software development' },
-  { slug: 'healthcare-telehealth', name: 'HIPAA-Compliant Telehealth Platform', label: 'Healthcare Telehealth Platform', outcome: '450K+ patient records with 40% less admin', serviceHref: '/services/ai-ml', serviceLabel: 'AI development' },
-  { slug: 'ecommerce-platform', name: 'Enterprise E-Commerce Redesign', label: 'Ecommerce Platform', outcome: 'checkout conversion up from 2.1% to 3.8%', serviceHref: '/services/web-development/ecommerce-systems', serviceLabel: 'ecommerce systems development' },
-  { slug: 'logistics-platform', name: 'Real-Time Fleet Management System', label: 'Logistics Platform', outcome: '25% lower fuel costs, $180K saved a year', serviceHref: '/services/web-development/enterprise-portals', serviceLabel: 'enterprise portal development' },
-  { slug: 'payments-api-platform', name: 'PCI DSS Payments API', label: 'Payments API Platform', outcome: '12M+ monthly transactions, PCI DSS compliant', serviceHref: '/services/web-development/api-backend', serviceLabel: 'API and backend development' },
-  { slug: 'real-estate-portal', name: 'Multi-Listing Real Estate Platform', label: 'Real Estate Portal', outcome: '850K+ active listings with ML recommendations', serviceHref: '/services/web-development', serviceLabel: 'web development' },
-];
+const caseStudyMeta: Record<string, { outcome: string; serviceHref: string; serviceLabel: string }> = {
+  'fintech-trading-platform': { outcome: '75K+ daily transactions at 99.99% uptime', serviceHref: '/services/software-development', serviceLabel: 'custom software development' },
+  'healthcare-telehealth': { outcome: '450K+ patient records with 40% less admin', serviceHref: '/services/ai-ml', serviceLabel: 'AI development' },
+  'ecommerce-platform': { outcome: 'checkout conversion up from 2.1% to 3.8%', serviceHref: '/services/web-development/ecommerce-systems', serviceLabel: 'ecommerce systems development' },
+  'logistics-platform': { outcome: '25% lower fuel costs, $180K saved a year', serviceHref: '/services/web-development/enterprise-portals', serviceLabel: 'enterprise portal development' },
+  'payments-api-platform': { outcome: '12M+ monthly transactions, PCI DSS compliant', serviceHref: '/services/web-development/api-backend', serviceLabel: 'API and backend development' },
+  'real-estate-portal': { outcome: '850K+ active listings with ML recommendations', serviceHref: '/services/web-development', serviceLabel: 'web development' },
+};
+
+const caseStudies = work.map(w => ({
+  slug: w.slug,
+  name: w.title,
+  label: w.title,
+  outcome: caseStudyMeta[w.slug]?.outcome ?? w.metrics.map(m => `${m.value} ${m.label}`).join(', '),
+  serviceHref: caseStudyMeta[w.slug]?.serviceHref ?? '/services/software-development',
+  serviceLabel: caseStudyMeta[w.slug]?.serviceLabel ?? 'software development',
+}));
 
 const jsonLd = {
   '@context': 'https://schema.org',
