@@ -40,6 +40,17 @@ function BuyerContent() {
   return (
     <section aria-labelledby="ecommerce-buyer-guide" style={{ padding: 'var(--section-y-sm) 0', background: 'var(--surface-alt)' }}>
       <div className="cb-container" style={{ maxWidth: 960, color: 'var(--body)', lineHeight: 1.7 }}>
+        <h2 id="ecommerce-what-we-build">What we build</h2>
+        <ul className="lede">
+          <li>Custom storefronts built with Next.js Commerce or bespoke architecture.</li>
+          <li>Checkout and payment integrations, including Stripe, PayPal, Klarna and Afterpay.</li>
+          <li>Product catalogues with faceted search and filtering through Algolia or Elasticsearch.</li>
+          <li>Integrations with inventory, order management, shipping, ERP, PIM and 3PL systems.</li>
+        </ul>
+
+        <h2>Proof</h2>
+        <p className="lede">Read our <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)' }}>enterprise e-commerce platform case study</Link> to see a headless rebuild that lifted conversion from 2.1% to 3.8% in 90 days for a store serving 2M+ monthly visitors. You can also explore our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services</Link>, or <Link href="/contact" style={{ color: 'var(--brand)' }}>book an e-commerce consultation</Link> with your catalogue size, current platform and integration list.</p>
+
         <h2 id="ecommerce-buyer-guide">What is a custom e-commerce system?</h2>
         <p className="lede">A custom e-commerce system is an online store built around your catalogue, checkout and back-office processes instead of a fixed theme. It gives you control over product structure, pricing rules, integrations and page speed, and it fits when standard retail tooling cannot support how you actually sell. A simpler catalogue often launches faster on Shopify, so we recommend the platform only after reviewing your requirements.</p>
 
@@ -77,7 +88,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/web-development", label: "Web Development" }}
       name="E-Commerce Development"
-      copy={{ badge: "ONLINE RETAIL & COMMERCE", title: <>E-Commerce Stores Built to{' '} <span style={{ color: 'var(--brand)' }}>Convert & Scale</span></>, desc: <>We build high-converting online stores with lightning-fast storefronts, seamless payment integration, and conversion-optimised checkout flows. From boutique brands to enterprise retail, we engineer commerce experiences that drive revenue.</> }}
+      copy={{ badge: "ONLINE RETAIL & COMMERCE", title: <>E-Commerce Stores Built to{' '} <span style={{ color: 'var(--brand)' }}>Convert & Scale</span></>, desc: <>Mapletech Labs builds custom ecommerce stores for Canadian retailers and direct-to-consumer brands, with fast storefronts, checkout and payment integration, product catalogues and back-office systems. We work with boutique brands through to enterprise retailers, using Shopify, headless commerce or a bespoke build depending on the catalogue, order flow and integrations.</> }}
       stats={stats}
       services={services}
       steps={steps}
