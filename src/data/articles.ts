@@ -2221,7 +2221,7 @@ export const articles: Article[] = [
         { term: 'Bug fixes', text: 'Fixing defects that users report or that monitoring catches, including edge cases that only appear with real data and real traffic.' },
         { term: 'OS and framework updates', text: 'Apple and Google release new mobile operating systems every year, and web frameworks, libraries and runtimes reach end of support. Keeping up avoids crashes, store rejections and painful upgrades later.' },
         { term: 'Security patches', text: 'Applying fixes for vulnerabilities in your code and its dependencies, rotating keys and reviewing access. This is the part you cannot skip.' },
-        { term: 'Hosting and cloud', text: 'Servers, databases, storage, backups and bandwidth. Cloud bills grow with usage and need regular review.' },
+        { term: 'Hosting and cloud', text: 'Servers, databases, storage, backups and bandwidth. Cloud bills grow with usage and need regular review. Our <a href="/services/cloud-devops/aws-architecture">AWS cloud architecture service</a> can right-size this spend.' },
         { term: 'Monitoring', text: 'Uptime checks, error tracking and performance alerts, so problems are found before customers report them.' },
         { term: 'Small features', text: 'Copy changes, small workflow tweaks and minor improvements that keep the product in step with how the business works.' },
       ] },
@@ -2262,7 +2262,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Much of the maintenance bill is set by decisions made during the build. These habits keep it down:' },
       { type: 'checks', items: [
         { term: 'Automated tests', text: 'Tests catch regressions before users do, so updates can be made quickly and with less manual checking.' },
-        { term: 'CI/CD pipelines', text: 'Automated builds and deployments make every release cheaper, faster and less risky.' },
+        { term: 'CI/CD pipelines', text: 'Automated builds and deployments make every release cheaper, faster and less risky. See our <a href="/services/cloud-devops/ci-cd-pipelines">CI/CD pipeline setup service</a>.' },
         { term: 'Regular dependency updates', text: 'Small, frequent updates are far cheaper than one large upgrade after years of neglect, and they close security holes sooner.' },
         { term: 'Fewer, well-chosen dependencies', text: 'Every library and service is something you have to update and pay for. Choose mature, well-supported ones and remove what you no longer use.' },
         { term: 'Monitoring and documentation', text: 'Good error tracking and clear documentation shorten every fix, especially when a new developer joins.' },
