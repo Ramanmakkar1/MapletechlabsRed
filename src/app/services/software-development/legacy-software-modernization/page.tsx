@@ -35,7 +35,7 @@ export default function Page() {
         items={[
           { position: 1, name: 'Home', item: canonicalUrl('/') },
           { position: 2, name: 'Services', item: canonicalUrl('/services') },
-          { position: 3, name: 'Software Development', item: canonicalUrl('/services/web-development') },
+          { position: 3, name: 'Software Development', item: canonicalUrl('/services/software-development') },
           { position: 4, name: 'Legacy Software Modernization', item: URL },
         ]}
       />
