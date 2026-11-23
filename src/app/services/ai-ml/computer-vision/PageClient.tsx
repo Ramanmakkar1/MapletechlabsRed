@@ -1,7 +1,4 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import { PROJECT_PRICING } from '@/data/pricing';
-import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '40+', label: 'CV Systems Deployed' },
@@ -34,64 +31,6 @@ const faqs = [
   { q: 'How do you handle poor image quality — low light, blur, or noise?', a: 'We apply preprocessing pipelines specifically designed for your imaging conditions: adaptive histogram equalization for low light, deblurring filters, and noise reduction. During training, we augment data with simulated degradation so the model learns robustness. For critical applications, we also recommend hardware improvements (lighting, optics) alongside software solutions.' },
 ];
 
-const cad = (n: number) => `$${n.toLocaleString('en-CA')}`;
-const ai = PROJECT_PRICING.ai;
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-const h3 = { fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' } as const;
-
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Computer vision development for Canadian businesses</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Computer vision turns cameras and images into decisions: spotting defects on a production line, counting people or stock, reading text from documents and IDs, and flagging safety incidents in real time. Mapletech Labs has deployed 40+ CV systems for Canadian teams, and we build each one around your data, your accuracy target and the place it has to run — on a device at the edge or in the cloud. Start with our <Link href="/services/ai-ml">AI and machine learning services</Link> if you are still deciding which AI use case to fund first, or see <Link href="/services/ai-ml/predictive-analytics">predictive analytics</Link> when the question is forecasting rather than vision.
-        </p>
-        <div className="grid grid--2">
-          <div>
-            <h3 style={h3}>Budget guidance</h3>
-            <p>
-              Our published starting range for a first AI feature is {cad(ai.low)}–{cad(ai.high)} CAD over {ai.weeksLow}–{ai.weeksHigh} weeks. That is planning guidance for a focused first model, not a fixed computer vision quote: custom models are scoped after discovery, once we know your data volume, annotation needs, accuracy target and deployment hardware. The{' '}
-              <Link href="/blog/ai-development-cost-canada">Canadian AI development cost guide</Link> explains what moves the number.
-            </p>
-            <p>
-              Working with a local team? Explore AI development in{' '}
-              {cityLinks.map(([name, slug], i) => (
-                <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('ai-ml', slug)}>{name}</Link></span>
-              ))}.
-            </p>
-          </div>
-          <div>
-            <h3 style={h3}>Edge or cloud?</h3>
-            <table style={{ width: '100%', borderCollapse: 'collapse', margin: '0 0 16px' }}>
-              <caption style={{ textAlign: 'left', paddingBottom: 8, color: 'var(--body)' }}>Where to run inference for a computer vision system</caption>
-              <thead>
-                <tr>
-                  <th scope="col" style={{ textAlign: 'left', padding: '8px 10px', borderBottom: '1px solid var(--line)' }}>Option</th>
-                  <th scope="col" style={{ textAlign: 'left', padding: '8px 10px', borderBottom: '1px solid var(--line)' }}>Best for</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row" style={{ textAlign: 'left', padding: '8px 10px', borderBottom: '1px solid var(--line)' }}>Edge</th>
-                  <td style={{ padding: '8px 10px', borderBottom: '1px solid var(--line)' }}>Ultra-low latency, limited bandwidth or sensitive footage that must stay on site — NVIDIA Jetson or Raspberry Pi hardware.</td>
-                </tr>
-                <tr>
-                  <th scope="row" style={{ textAlign: 'left', padding: '8px 10px' }}>Cloud</th>
-                  <td style={{ padding: '8px 10px' }}>Large or variable workloads, complex models and centralised analysis across many cameras or sites.</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>
-              Ready to scope a system? <Link href="/contact">Contact us</Link> with your use case and we will reply within one working day.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -103,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

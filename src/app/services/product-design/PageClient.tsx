@@ -1,26 +1,10 @@
-import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
-import ServiceCityLinks from '@/components/ServiceCityLinks';
-import HubBuyerGuides from '@/components/page/HubBuyerGuides';
-import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '500+', label: 'Screens Designed' },
   { value: '4.8★', label: 'Avg Usability Score' },
   { value: '40%', label: 'Avg Conversion Lift' },
   { value: '200+', label: 'Design Systems' },
-];
-
-const faqs = [
-  { q: 'What can a UI/UX engagement include?', a: 'A UI/UX engagement can include user research and strategy, information architecture, wireframes, interactive prototypes, high-fidelity UI, a design system and developer handoff. It can also include a UX audit, accessibility review and post-launch usability testing, depending on where your product is today.' },
-  { q: 'Should I start with a UX audit or a full redesign?', a: 'Start with a UX audit when the product works but friction, support tickets or metrics show problems you cannot prioritise alone; it gives you a ranked fix list before you commit to a rebuild. A full redesign fits when journeys, information architecture or branding need rethinking across many screens, or when you are launching a new product.' },
-  { q: 'What affects UI/UX project scope and cost?', a: 'Scope and cost are driven by screen count and unique templates, the number of user roles, depth of research, whether a design system already exists, accessibility requirements and timeline. We fix the scope and price in a statement of work after a free audit.' },
-  { q: 'How much does UI/UX design cost in Canada?', a: 'UI/UX design ranges from roughly $1,500 CAD for a startup MVP design up to $30,000+ CAD for an enterprise design system. Cost depends on the number of screens, interaction complexity, depth of user research and whether branding is included. We provide a fixed quote after a free audit.' },
-  { q: 'How long does a UI/UX design project take?', a: 'Most projects take 6–11 weeks across research, strategy, wireframes, visual design and handoff. Small MVPs can be faster.' },
-  { q: 'What do I get at the end of a design project?', a: 'You get Figma files with auto-layout, an interactive prototype, a component library or design system, annotated specs and assets ready for developers.' },
-  { q: 'Do you also build the app or website you design?', a: 'Yes. The same team develops it. We build mobile apps and websites.' },
-  { q: 'Can you redesign an existing app or website?', a: 'Yes. We start with a UX audit that includes a heuristic review and analytics, then provide a prioritised fix list.' },
-  { q: 'Do you design for accessibility?', a: 'Designs target WCAG 2.2 AA, which covers Canadian requirements such as Ontario’s AODA.' },
 ];
 
 const services: { title: string; tag: string; desc: string; chips?: string[] }[] = [
@@ -92,62 +76,21 @@ const industries = [
   { icon: '🏥', title: 'HealthTech', desc: 'Accessible, HIPAA-aware interfaces that reduce cognitive load for patients and clinicians alike.' },
   { icon: '📱', title: 'Consumer Apps', desc: 'Habit-forming, delightful mobile experiences designed to maximise retention and NPS.' },
   { icon: '☁️', title: 'SaaS', desc: 'Complex feature surfaces made simple through progressive disclosure and strong IA.' },
-  { icon: '🛍️', title: 'E-commerce', desc: 'Conversion-optimised product pages, checkout flows and personalisation systems.' },
+  { icon: '🛍️', title: 'E-Commerce', desc: 'Conversion-optimised product pages, checkout flows and personalisation systems.' },
   { icon: '🏢', title: 'Enterprise', desc: 'Data-dense internal tools and dashboards that empower rather than overwhelm.' },
 ];
-
-function BuyerContent() {
-  return (
-    <>
-    <section aria-labelledby="product-design-hiring-guide" style={{ padding: 'var(--section-y-sm) 0', background: 'var(--surface-alt)' }}>
-      <div className="cb-container" style={{ maxWidth: 960, color: 'var(--body)', lineHeight: 1.7 }}>
-        <h2 id="product-design-hiring-guide">Planning a UI/UX redesign or new product design engagement</h2>
-        <p className="lede">A UI/UX engagement can include <Link href="/services/product-design/ui-ux-strategy">UX research and strategy</Link>, information architecture, wireframes, interactive prototypes, high-fidelity UI, a design system and developer handoff. Start with a UX audit when the product works but friction is unclear; choose a full redesign when journeys or branding need rethinking across many screens.</p>
-        <p className="lede">Whether you are fixing a live product or designing from zero, the right starting point saves budget and shortens time to launch. Use this guide to match scope to outcomes before you request a quote.</p>
-        <h3>UX audit versus a full redesign</h3>
-        <p className="lede">Choose a <Link href="/services/product-design/ux-audit">UX audit</Link> when the product mostly works but metrics, support tickets or stakeholder feedback point to friction you cannot prioritise alone. You get heuristic review, analytics context and a ranked fix list — ideal before a phased rollout. A full redesign fits when information architecture, branding or core journeys need rethinking across many screens, or when you are launching a new platform and need research through handoff in one programme.</p>
-        <h3>What drives scope: screens, roles, research and systems</h3>
-        <p className="lede">Screen count and unique templates multiply wireframe, visual and QA effort — cap phase one to revenue-critical paths. Distinct user roles (customer, admin, partner) add flows, permissions and empty states. Depth of UX research — interviews, jobs-to-be-done, competitive teardowns — scales with uncertainty in your roadmap. An existing <Link href="/services/product-design/design-systems">design system</Link> speeds visual design and dev handoff; starting without components means building or extending a library as part of the engagement. For what each of these drivers costs in CAD, see our <Link href="/blog/ui-ux-design-cost-canada" style={{ color: 'var(--brand)' }}>UI/UX design cost guide for Canada</Link>.</p>
-        <h3>What to bring to a consultation</h3>
-        <p className="lede">Share business goals, primary personas, analytics or support themes, and links to the current product or brief. Note platforms (web, iOS, Android), accessibility expectations, brand assets, engineering stack and target launch dates. If you only have hypotheses, say so — we will recommend research or audit work first.</p>
-        <h3>Deliverables aligned to our process</h3>
-        <p className="lede">Engagements typically include prioritised user journeys and information architecture from strategy, lo-fi and tested flows from wireframing, interactive <Link href="/services/product-design/prototyping">prototypes validated with users</Link>, hi-fi UI with responsive variants, and developer handoff: Figma with auto-layout, annotated specs, assets and component documentation. Exact artefacts are fixed in your statement of work based on the scope above.</p>
-        <p className="lede">For a real example, read our <Link href="/case-studies/ecommerce-platform">e-commerce checkout redesign case study</Link>: NorthStar E-Commerce went from a 2.1% to a 3.8% conversion rate in 90 days.</p>
-        <p className="lede"><Link href="/contact?service=product-design">Book a product design consultation</Link> with your goals, screen list and constraints so we can recommend audit, phased redesign or full product design and provide a fixed quote.</p>
-      </div>
-    </section>
-    <ServiceCityLinks
-      id="ui-ux-cities"
-      heading="UI/UX design in Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal"
-      intro="See local pricing guidance, process and FAQs for our UI/UX design work in your city:"
-      links={[
-        { href: '/locations/ui-ux-design-company-in-edmonton', label: 'UI/UX design company in Edmonton', note: 'Headquartered in Edmonton, with in-person discovery workshops and usability testing available.' },
-        { href: '/locations/ui-ux-design-company-in-calgary', label: 'UI/UX design company in Calgary', note: 'Alberta team that travels to Calgary for research and design workshops.' },
-        { href: '/locations/ui-ux-design-company-in-toronto', label: 'UI/UX design company in Toronto', note: 'Remote design work for GTA teams, with in-person workshops when needed.' },
-        { href: '/locations/ui-ux-design-company-in-vancouver', label: 'UI/UX design company in Vancouver', note: 'Remote UI/UX design for Lower Mainland teams, with workshops on request.' },
-        { href: '/locations/ui-ux-design-company-in-ottawa', label: 'UI/UX design company in Ottawa', note: 'Remote UI/UX design for Ottawa teams, including bilingual and WCAG-focused work.' },
-        { href: '/locations/ui-ux-design-company-in-montreal', label: 'UI/UX design company in Montreal', note: 'Remote UI/UX design for Montreal teams, with workshops on request.' },
-      ]}
-    />
-    <HubBuyerGuides serviceSlug="product-design" heading="How to choose a UI/UX design company: city guides" />
-    </>
-  );
-}
 
 export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="product-design"
-      caseStudySlugs={serviceCaseMap['product-design']}
       name="Product Design"
-      copy={{ badge: "UI/UX Design", title: <>UI/UX Design Company in Canada<br /><span style={{ color: 'var(--brand)' }}>Turning Users into Customers.</span></>, desc: <>A Canadian product design and UI/UX agency — UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes. Comparing studios? Read our guide to the <Link href="/blog/ui-ux-design-companies-canada" style={{ color: 'var(--brand)' }}>best UI/UX design companies in Canada</Link>.</> }}
+      copy={{ badge: "Product Design", title: <>Product Design That Converts<br /><span style={{ color: 'var(--brand)' }}>Users to Customers.</span></>, desc: <>A Canadian product design and UI/UX agency — UX research, product strategy and pixel-perfect interfaces designed to delight users and drive measurable business outcomes.</> }}
       stats={stats}
       services={services}
       steps={steps}
       techCategories={techCategories}
       industries={industries}
-      faqs={faqs}
-      buyerContent={<BuyerContent />}
     />
   );
 }

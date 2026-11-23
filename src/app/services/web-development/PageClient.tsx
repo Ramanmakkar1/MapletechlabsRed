@@ -1,8 +1,4 @@
-import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
-import ServiceCityLinks from '@/components/page/ServiceCityLinks';
-import HubBuyerGuides from '@/components/page/HubBuyerGuides';
-import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '200+', label: 'Web Projects' },
@@ -84,20 +80,10 @@ const industries = [
   { icon: '🏢', title: 'Enterprise', desc: 'Internal tools, ERPs, procurement portals and mission-critical business applications.' },
 ];
 
-const faqs = [
-  { q: 'How much does a website cost in Canada?', a: 'A marketing website of 10–20 pages typically runs CAD $15,000–$45,000. E-commerce platforms run higher, and larger web apps, portals and SaaS products are scoped individually. These are planning ranges based on Canadian market rates. After a discovery call we give you a fixed quote for your scope.' },
-  { q: 'How long does it take to build a website or web app?', a: 'A marketing website usually takes about 4–8 weeks from discovery to launch. E-commerce platforms run 8–16 weeks, and custom web apps or SaaS products take longer depending on scope. You get a timeline with the quote, and we demo working software every sprint.' },
-  { q: 'Which technologies do you use?', a: 'We build with the modern stack listed on this page — Next.js and React on the frontend, Node.js, Python, GraphQL and PostgreSQL on the backend, deployed on AWS, Vercel or Cloudflare with Docker and Kubernetes where scale requires it. We pick the tools that fit your project, not the other way around.' },
-  { q: 'Will my website be fast and SEO-ready?', a: 'Yes. Every site we ship is performance-tuned and ships with the SEO foundations in place — clean semantic markup, structured data, fast load times and proper metadata. Search visibility is part of the deliverable, not an afterthought, and we hand over an SEO baseline at launch.' },
-  { q: 'Do you redesign existing websites?', a: 'Yes. We start with an audit of the current site — performance, SEO, analytics and conversion — then deliver a prioritised plan and a redesign that keeps what works and fixes what does not. We can also migrate content and preserve existing rankings during the transition.' },
-  { q: 'Do you work with businesses in Edmonton, Calgary, Toronto and Vancouver?', a: 'Yes. We are based in Edmonton, Alberta, and work with clients across Canada — Edmonton, Calgary, Toronto, Vancouver and beyond — remotely or on site for discovery and launch.' },
-];
-
 export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="web-development"
-      caseStudySlugs={serviceCaseMap['web-development']}
       name="Web Development"
       copy={{ badge: "Web Development", title: <>Web Development<br />That <span style={{ color: 'var(--brand)' }}>Scales.</span></>, desc: <>A Canadian web development company engineering fast, secure and beautiful web platforms — from SaaS products to enterprise portals — that grow with your business.</> }}
       stats={stats}
@@ -105,49 +91,6 @@ export default function PageClient() {
       steps={steps}
       techCategories={techCategories}
       industries={industries}
-      faqs={faqs}
-      buyerContent={(
-        <>
-        <section style={{ padding: 'var(--section-y-sm) 0' }}>
-          <div className="cb-container">
-            <h2>Choose the right web development approach</h2>
-            <p className="lede">Start with what visitors or staff need to accomplish, then choose the simplest approach that supports those tasks. The number of page types, workflows and connections to other systems will shape the scope.</p>
-            <div className="grid grid--3">
-              <div className="tile">
-                <h3>Marketing website with an editable CMS</h3>
-                <p>Choose this approach when you need to explain your services, publish content and generate enquiries, while giving your team control over routine updates. A <Link href="/services/wordpress-cms">WordPress CMS website</Link> can support pages, articles and other reusable content types.</p>
-                <p>For a quote, list the page types you need, such as service pages, case studies and blog posts. Identify content and images to migrate, who will edit them, any forms or CRM integrations, and your accessibility requirements. Custom layouts, languages and the condition of existing content can affect the work.</p>
-              </div>
-              <div className="tile">
-                <h3>E-commerce storefront</h3>
-                <p>A storefront fits businesses selling products online that need a catalogue, cart and checkout. Scope depends on product variants, shipping and tax rules, promotions and the systems that manage inventory or fulfilment. Explore our <Link href="/services/web-development/ecommerce-systems">e-commerce development services</Link> for more detail.</p>
-                <p>Prepare a sample catalogue, product data and images, and note any content or customer data migration. List payment, shipping, accounting and inventory integrations, along with staff roles and accessibility needs for shopping and checkout.</p>
-              </div>
-              <div className="tile">
-                <h3>Custom web application or portal</h3>
-                <p>Choose a custom application when customers, partners or employees need to complete workflows, access account-specific information or use internal tools. Our <Link href="/services/web-development/enterprise-portals">enterprise portal services</Link> cover this type of connected experience.</p>
-                <p>Before requesting a quote, map the main tasks and user roles, including permissions and approvals. Share examples of existing data, migration needs, integrations, security constraints and accessibility requirements. The number of workflows, business rules and external systems can significantly change the scope.</p>
-              </div>
-            </div>
-            <p className="lede" style={{ marginTop: 24 }}>Compare the factors behind budgets in our <Link href="/blog/website-cost-canada">Canadian website cost guide</Link>, then <Link href="/contact">contact us to discuss your web development scope</Link>. Planning a project in the Alberta capital? See our <Link href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</Link> page. For proof, read how we built an <Link href="/case-studies/ecommerce-platform">enterprise e-commerce redesign for NorthStar E-Commerce</Link> and a <Link href="/case-studies/real-estate-portal">multi-listing real estate platform for PropConnect Canada</Link>.</p>
-          </div>
-        </section>
-        <ServiceCityLinks
-          id="web-dev-cities"
-          heading="Web development in Edmonton, Calgary, Toronto, Vancouver, Ottawa and Montreal"
-          intro="Mapletech Labs is based in Edmonton and builds websites, web apps and portals for businesses across Canada. See local pricing, process and FAQs for your city:"
-          links={[
-            { href: '/locations/web-development-company-in-edmonton', label: 'Web development company in Edmonton', note: 'our home city, with in-person discovery workshops available' },
-            { href: '/locations/web-development-company-in-calgary', label: 'Web development company in Calgary', note: 'local web projects supported remotely or on site' },
-            { href: '/locations/web-development-company-in-toronto', label: 'Web development company in Toronto', note: 'web development for Toronto businesses, delivered remotely or on site' },
-            { href: '/locations/web-development-company-in-vancouver', label: 'Web development company in Vancouver', note: 'web development for Vancouver businesses, delivered remotely or on site' },
-            { href: '/locations/web-development-company-in-ottawa', label: 'Web development company in Ottawa', note: 'web development for Ottawa businesses, delivered remotely' },
-            { href: '/locations/web-development-company-in-montreal', label: 'Web development company in Montreal', note: 'web development for Montreal businesses, delivered remotely' },
-          ]}
-        />
-        <HubBuyerGuides serviceSlug="web-development" heading="How to choose a web development company: city guides" />
-        </>
-      )}
     />
   );
 }

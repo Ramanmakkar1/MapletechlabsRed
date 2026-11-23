@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -32,33 +31,6 @@ const faqs = [
   { q: 'How much content do we need per month?', a: 'It depends on your goals, competition, and budget. A minimum viable programme typically includes 4 long-form blog posts per month. High-competition sectors often require 8–12 pieces per month across multiple formats to see meaningful results at pace.' },
 ];
 
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to hire a content marketing agency</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Hire a content marketing agency when you need consistent, search-optimised publishing but lack the writers, strategy or time in-house. A good agency turns your expertise into articles that rank, answer buyer questions and bring in qualified leads month after month.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>A keyword and topic plan mapped to your buyer journey and search demand.</li>
-          <li>Detailed content briefs with target terms, structure and internal links.</li>
-          <li>Expert-written articles, guides and landing copy edited for clarity and SEO.</li>
-          <li>Distribution and promotion across email, social and outreach channels.</li>
-          <li>A monthly report on rankings, traffic, engagement and leads generated.</li>
-        </ul>
-        <p>
-          Content works best alongside <Link href="/services/digital-marketing/seo-services">technical and on-page SEO services</Link>. For budget planning, read our <Link href="/blog/digital-marketing-cost-canada">digital marketing cost guide for Canada</Link>.
-        </p>
-        <p>
-          Explore content marketing across Canada, or contact us to discuss your city. Ready to publish content that ranks? <Link href="/contact">Book a content marketing consultation</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -70,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

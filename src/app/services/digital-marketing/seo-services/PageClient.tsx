@@ -1,5 +1,4 @@
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import Link from 'next/link';
 
 const stats = [
   { value: '200%', label: 'Avg organic traffic growth' },
@@ -30,7 +29,6 @@ const faqs = [
   { q: 'How do you build backlinks ethically?', a: 'We use only white-hat methods: editorial outreach to relevant publications, digital PR campaigns that earn genuine coverage, broken link building, and resource page placements. We never buy links or use private blog networks.' },
   { q: 'Local SEO vs national SEO — what is the difference?', a: 'Local SEO targets geo-specific search queries and optimises your visibility in Google Maps and the local pack. National SEO targets broader keyword sets across all regions. Many businesses need both, and we tailor strategy accordingly.' },
   { q: 'How do you track SEO ROI?', a: 'We connect Google Analytics 4, Search Console, and rank tracking tools to a custom Looker Studio dashboard that maps organic sessions, goal completions, and revenue directly to your SEO investment month over month.' },
-  { q: 'How much do SEO services cost in Canada?', a: 'Our Canadian digital marketing cost guide lists typical SEO budgets of $1,500–$10,000 CAD per month. The quoted scope depends on competition, site size and implementation needs — competitive markets need deeper keyword research, content and link acquisition, and larger sites need more pages audited and optimised. See the SEO pricing breakdown in our cost guide for the full range.' },
 ];
 
 export default function PageClient() {
@@ -38,96 +36,12 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/digital-marketing", label: "Digital Marketing" }}
       name="SEO Services"
-      copy={{ badge: "DIGITAL MARKETING", title: <>SEO Services in <span style={{ color: 'var(--brand)' }}>Canada</span></>, desc: <>Data-driven search engine optimisation that moves you up the rankings, grows organic traffic, and converts visitors into customers — month after month.</> }}
+      copy={{ badge: "DIGITAL MARKETING", title: <>SEO That Drives <span style={{ color: 'var(--brand)' }}>Real Growth</span></>, desc: <>Data-driven search engine optimisation that moves you up the rankings, grows organic traffic, and converts visitors into customers — month after month.</> }}
       stats={stats}
       services={services}
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our SEO Capabilities"
-      buyerContent={(
-        <>
-        <section style={{ padding: 'var(--section-y-sm) 0' }}>
-          <div className="cb-container">
-            <h2>What your SEO engagement includes</h2>
-            <p className="lede">Our site audit establishes your organic performance baseline and a prioritised roadmap of crawl, indexation, on-page and off-page opportunities. Keyword mapping connects relevant searches to the pages that should answer them, helping you see which existing service pages need improvement and where content gaps remain.</p>
-            <p className="lede">Technical fixes address the audit findings, including crawl errors, Core Web Vitals, metadata, schema and internal linking. Content recommendations identify pages to update or create, the search intent each page should serve and how it supports your services. Use the roadmap to discuss priorities, implementation dependencies and the content publishing work included in your scope.</p>
-            <p className="lede">Monthly ranking reports and our Looker Studio dashboard connect organic sessions, goal completions and revenue to your SEO investment using Google Analytics 4, Search Console and rank tracking. Review these alongside completed work and upcoming priorities to understand progress beyond individual keyword positions.</p>
-          </div>
-        </section>
-        <section style={{ padding: 'var(--section-y-sm) 0' }}>
-          <div className="cb-container">
-            <h2>SEO pricing and scope in Canada</h2>
-            <p className="lede">The <Link href="/blog/digital-marketing-cost-canada#seo">SEO pricing breakdown in our Canadian digital marketing cost guide</Link> lists typical SEO budgets of $1,500–$10,000 CAD per month, and our <Link href="/pricing">service pricing and engagement options</Link> show how to frame a scope discussion around your website and business goals. Your quoted scope depends on competition, site size and implementation needs.</p>
-            <p className="lede">Competition affects the depth of keyword research, content and link acquisition needed. Site size affects how many pages and templates need auditing and optimisation. Technical work depends on crawl and indexation issues, performance problems and the changes your platform requires. Content requirements depend on whether existing pages can be improved or new service pages, landing pages and supporting articles are needed.</p>
-            <p className="lede">When comparing proposals, ask which technical fixes, content deliverables and reporting are included, who implements each change and which work is ongoing. An initial repair programme and a continuing content and link-building campaign involve different workloads; agree priorities and responsibilities before starting.</p>
-          </div>
-        </section>
-        <section style={{ padding: 'var(--section-y-sm) 0' }}>
-          <div className="cb-container">
-            <h2>Which SEO engagement fits: local, national or technical SEO?</h2>
-            <p className="lede">Choose local SEO to win enquiries in specific service areas, national SEO to compete across Canada, or technical SEO when crawl, indexation and site-performance problems are holding back your existing pages. If you need several outcomes, use the table to agree the first priority and scope with our team.</p>
-            <div role="region" aria-label="SEO engagement comparison" tabIndex={0} style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', minWidth: 960, borderCollapse: 'collapse', textAlign: 'left' }}>
-                <caption style={{ textAlign: 'left', marginBottom: 12 }}>Compare the best fit, deliverables, measurement and next step for each SEO engagement.</caption>
-                <thead>
-                  <tr>
-                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Engagement</th>
-                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Best fit</th>
-                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Deliverables</th>
-                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Measurement</th>
-                    <th scope="col" style={{ padding: 12, borderBottom: '2px solid var(--border)' }}>Next step</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row" style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Local SEO</th>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Businesses that want nearby customers to find and contact them in defined cities or service areas.</td>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Google Business Profile and Bing Places optimisation, citation cleanup, local landing pages and locally relevant content.</td>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Local-pack and organic visibility, calls, direction requests, form enquiries and booked work by target location.</td>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>, then <Link href="/contact">contact us about local SEO</Link>.</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>National SEO</th>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Companies selling across Canada that need non-local rankings and organic leads in multiple provinces or markets.</td>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>National keyword mapping, service and content optimisation, internal linking, digital PR and priority city-page support.</td>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Non-brand organic visibility, national and city rankings, qualified sessions, enquiries and revenue attributable to organic search.</td>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>, then <Link href="/contact">contact us about national SEO</Link>.</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" style={{ padding: 12, verticalAlign: 'top' }}>Technical SEO</th>
-                    <td style={{ padding: 12, verticalAlign: 'top' }}>Websites with strong services or content that are constrained by crawling, indexing, duplication, schema or Core Web Vitals issues.</td>
-                    <td style={{ padding: 12, verticalAlign: 'top' }}>Technical audit, prioritised fix roadmap, implementation support and validation across key templates and devices.</td>
-                    <td style={{ padding: 12, verticalAlign: 'top' }}>Valid indexed pages, crawl and canonical health, Core Web Vitals, resolved audit issues and resulting organic traffic and enquiries.</td>
-                    <td style={{ padding: 12, verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>, then <Link href="/contact">contact us about technical SEO</Link>.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-        <section style={{ padding: 'var(--section-y-sm) 0' }}>
-          <div className="cb-container">
-            <h2>Prepare for your SEO consultation</h2>
-            <p className="lede">Bring the following so we can discuss a relevant audit and scope:</p>
-            <ul className="lede">
-              <li>Your website URL and any related sites or subdomains.</li>
-              <li>The services you want to grow and the cities or regions you serve.</li>
-              <li>Previous SEO work, including audits, content changes and agency reports.</li>
-              <li>How you currently measure enquiries from forms, calls or bookings, including any gaps in tracking.</li>
-            </ul>
-            <p className="lede"><Link href="/contact">Book an SEO consultation to discuss your website, target markets and enquiry goals</Link>.</p>
-          </div>
-        </section>
-        <section style={{ padding: 'var(--section-y-sm) 0' }}>
-          <div className="cb-container">
-            <h2>Need more enquiries from nearby customers?</h2>
-            <p className="lede">Explore our <Link href="/services/digital-marketing/local-seo">local SEO services in Canada for Google and Bing</Link>, including Google Business Profile, Bing Places, citation cleanup, service-area content and enquiry tracking.</p>
-            <p className="lede">Planning work beyond SEO? Read <Link href="/blog/website-cost-canada">what a website costs in Canada</Link> and <Link href="/blog/custom-software-vs-off-the-shelf">custom software vs off-the-shelf</Link> to compare your build options.</p>
-            <p className="lede">Looking for a local team? See our <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/services/digital-marketing/seo-services">SEO services</Link>.</p>
-          </div>
-        </section>
-        </>
-      )}
     />
   );
 }

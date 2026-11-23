@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
-import { serviceCaseMap } from '@/data/service-case-map';
 
 const stats = [
   { value: '60+', label: 'XR Apps Launched' },
@@ -43,7 +41,6 @@ export default function PageClient() {
   return (
     <ServicePageTemplate
       slug="ar-vr"
-      caseStudySlugs={serviceCaseMap['ar-vr']}
       name="AR & VR Development"
       copy={{ badge: "AR & VR Development", title: <>AR/VR Development That <span style={{ color: 'var(--brand)' }}>Wows.</span></>, desc: <>An AR/VR development company in Canada building augmented, virtual and mixed reality applications for mobile, headset and web — engineered for real-world impact.</> }}
       stats={stats}
@@ -52,16 +49,6 @@ export default function PageClient() {
       results={results}
       faqs={faqs}
       servicesTitle="XR Development Services"
-      buyerContent={
-        <section style={{ padding: 'var(--section-y-sm) 0' }}>
-          <div className="cb-container">
-            <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>Related AR/VR services</h2>
-            <ul style={{ margin: 0 }}>
-              <li><Link href="/services/ar-vr/mobile-ar">mobile AR development</Link> — ARKit and ARCore apps for iOS and Android, including product visualisation, navigation overlays, face filters and interactive AR campaigns.</li>
-            </ul>
-          </div>
-        </section>
-      }
     />
   );
 }

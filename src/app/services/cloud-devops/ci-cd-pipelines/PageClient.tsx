@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -32,30 +31,6 @@ const faqs = [
   { q: 'How long does it take to set up a full CI/CD pipeline?', a: 'A basic CI pipeline (build, test, lint) for a single service typically takes two to three days. A full CI/CD setup with multiple environments, Docker, promotion gates, blue-green deployments, and security scanning for a multi-service application typically takes two to three weeks. Legacy monolith migrations take longer depending on the existing test coverage.' },
 ];
 
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When your team needs a CI/CD pipeline</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Your team needs a CI/CD pipeline when releases depend on manual steps, take hours, or break in production. An automated pipeline builds, tests and deploys every change the same way, so shipping becomes routine instead of risky.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>A pipeline audit covering your current build, test and deploy process.</li>
-          <li>Automated tests wired into CI so every commit is checked before merge.</li>
-          <li>Preview environments for reviewing changes before they reach production.</li>
-          <li>Zero-downtime deploys with health checks and traffic switching.</li>
-          <li>A documented rollback plan your team can run without us.</li>
-        </ul>
-        <p>
-          Pipelines work best alongside <Link href="/services/cloud-devops/aws-architecture">AWS architecture</Link> and <Link href="/services/cloud-devops/infrastructure-as-code">infrastructure as code</Link>, and they fit into our wider <Link href="/services/software-development">software development</Link> engagements. Teams in <Link href="/locations/software-development-company-in-toronto">Toronto</Link> and <Link href="/locations/software-development-company-in-vancouver">Vancouver</Link> can book a pipeline review through our <Link href="/contact">contact page</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -67,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

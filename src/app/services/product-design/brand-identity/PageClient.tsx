@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '100+', label: 'Brands Created' },
@@ -33,38 +31,6 @@ const faqs = [
   { q: 'Can you refresh an existing brand instead of starting from scratch?', a: 'Absolutely. Brand refreshes are a common engagement — we audit your existing brand equity, identify what\'s worth preserving, and modernise elements that are letting your brand down. A refresh is typically faster and more cost-effective than a full rebrand.' },
 ];
 
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When a product needs a new brand identity</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          A product needs a new brand identity when its name, look and feel no longer match the quality of what it does, or when it is entering a new market and blending in with competitors. A strong identity makes the product instantly recognisable, builds trust before the first click, and scales cleanly from app icon to website to sales deck.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>A logo system with primary, secondary, icon and wordmark variations for every context.</li>
-          <li>A colour and type system built for accessibility and consistent use across digital and print.</li>
-          <li>UI tokens that translate the brand into reusable colours, spacing and typography for your product.</li>
-          <li>Brand guidelines documenting logo usage, voice and visual rules for your whole team.</li>
-          <li>Launch assets covering social templates, presentation decks and marketing collateral.</li>
-        </ul>
-        <p>
-          Extend the identity into a scalable <Link href="/services/product-design/design-systems">design system</Link> and the wider <Link href="/services/product-design">product design</Link> process. For budget planning, read our <Link href="/blog/ui-ux-design-cost-canada">UI/UX design cost guide for Canada</Link>.
-        </p>
-        <p>
-          Explore brand identity design in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('product-design', slug)}>{name}</Link></span>
-          ))}. Ready to give your product a brand people remember? <Link href="/contact">Book a brand identity consultation</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -76,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

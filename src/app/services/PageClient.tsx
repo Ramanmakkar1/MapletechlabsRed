@@ -4,9 +4,6 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { officeMedia, serviceMedia, humanMedia } from '@/data/media';
-import { serviceCityPath } from '@/data/serviceCity';
-import { isIndexableHref } from '@/lib/seo/indexability';
-import { buildFaqSchema } from '@/lib/seo/schema';
 import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
@@ -87,16 +84,10 @@ const services: ServiceCategory[] = [
     description: 'We architect and build scalable web systems for startups and enterprises. Our expertise spans React, Next.js, Node.js, and GraphQL to deliver SaaS platforms, e-commerce storefronts, and complex enterprise applications. Using modern frameworks and cloud-native architecture, we design systems that grow from MVP to millions of users. Our approach includes discovery and requirements mapping, database schema design, high-fidelity prototyping, agile development with weekly deployments, and post-launch performance optimization. Real examples: fintech dashboards handling $10M+ in daily transactions, HIPAA-compliant healthcare portals, and multi-tenant SaaS with Stripe billing integration. Technology stack: React, Next.js, TypeScript, PostgreSQL, GraphQL, AWS, Kubernetes. Timeline: 4-12 weeks from kickoff to production. Ideal for companies needing robust, scalable web infrastructure.',
     subServices: [
       { name: 'Next.js Development', href: '/services/web-development/nextjs-development' },
-      { name: 'Web Design', href: '/services/web-development/web-design' },
       { name: 'SaaS Platforms', href: '/services/saas-development' },
       { name: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
-      { name: 'Shopify Development', href: '/services/web-development/shopify-development' },
       { name: 'API & Backend', href: '/services/web-development/api-backend' },
       { name: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
-      { name: 'Custom Software Development', href: '/services/software-development' },
-      { name: 'Dedicated Development Team', href: '/services/software-development/dedicated-development-team' },
-      { name: 'Legacy Software Modernization', href: '/services/software-development/legacy-software-modernization' },
-      { name: 'Software Maintenance', href: '/services/software-maintenance' },
     ],
   },
   {
@@ -111,7 +102,6 @@ const services: ServiceCategory[] = [
       { name: 'Computer Vision', href: '/services/ai-ml/computer-vision' },
       { name: 'Predictive Analytics', href: '/services/ai-ml/predictive-analytics' },
       { name: 'AI Chatbots', href: '/services/ai-ml/ai-chatbots' },
-      { name: 'AI Agent Development', href: '/services/ai-ml/ai-agent-development' },
     ],
   },
   {
@@ -139,7 +129,6 @@ const services: ServiceCategory[] = [
       { name: 'Wireframing', href: '/services/product-design/wireframing' },
       { name: 'Prototyping', href: '/services/product-design/prototyping' },
       { name: 'Design Systems', href: '/services/product-design/design-systems' },
-      { name: 'UX Audit', href: '/services/product-design/ux-audit' },
       { name: 'Brand Identity', href: '/services/branding' },
     ],
   },
@@ -193,7 +182,6 @@ const services: ServiceCategory[] = [
     description: 'Data-driven SEO, PPC, social media, and content marketing strategies to grow your online presence.',
     subServices: [
       { name: 'SEO Services', href: '/services/digital-marketing/seo-services' },
-      { name: 'Local SEO', href: '/services/digital-marketing/local-seo' },
       { name: 'Google Ads (PPC)', href: '/services/digital-marketing/google-ads-ppc' },
       { name: 'Social Media Marketing', href: '/services/digital-marketing/social-media-marketing' },
       { name: 'Content Marketing', href: '/services/digital-marketing/content-marketing' },
@@ -244,132 +232,6 @@ const services: ServiceCategory[] = [
   },
 ];
 
-const CITY_CARDS = [
-  { name: 'Edmonton', slug: 'edmonton' },
-  { name: 'Calgary', slug: 'calgary' },
-  { name: 'Toronto', slug: 'toronto' },
-  { name: 'Vancouver', slug: 'vancouver' },
-];
-
-const SERVICE_GROUPS: {
-  title: string;
-  serviceLinks: { label: string; href: string }[];
-  cityHref: (slug: string) => string;
-}[] = [
-  {
-    title: 'Software development',
-    serviceLinks: [
-      { label: 'SaaS development', href: '/services/saas-development' },
-      { label: 'Software maintenance', href: '/services/software-maintenance' },
-    ],
-    cityHref: slug => `/locations/software-development-company-in-${slug}`,
-  },
-  {
-    title: 'App development',
-    serviceLinks: [{ label: 'Mobile app development', href: '/services/mobile-app-development' }],
-    cityHref: slug => serviceCityPath('mobile-app-development', slug),
-  },
-  {
-    title: 'AI development',
-    serviceLinks: [{ label: 'AI & machine learning', href: '/services/ai-ml' }],
-    cityHref: slug => serviceCityPath('ai-ml', slug),
-  },
-  {
-    title: 'UI/UX design',
-    serviceLinks: [{ label: 'Product design (UI/UX)', href: '/services/product-design' }],
-    cityHref: slug => serviceCityPath('product-design', slug),
-  },
-  {
-    title: 'Web development',
-    serviceLinks: [
-      { label: 'Web development', href: '/services/web-development' },
-      { label: 'WordPress & CMS', href: '/services/wordpress-cms' },
-    ],
-    cityHref: slug => serviceCityPath('web-development', slug),
-  },
-  {
-    title: 'Digital marketing',
-    serviceLinks: [{ label: 'Digital marketing & SEO', href: '/services/digital-marketing' }],
-    cityHref: slug => serviceCityPath('digital-marketing', slug),
-  },
-];
-
-const DECISION_LINKS = [
-  { label: 'Custom software development', href: '/services/software-development', desc: 'Custom platforms, SaaS and enterprise systems built to scale from MVP to millions of users.' },
-  { label: 'Mobile app development', href: '/services/mobile-app-development', desc: 'Native iOS, Android and cross-platform apps in Swift, Kotlin, Flutter and React Native.' },
-  { label: 'AI & machine learning', href: '/services/ai-ml', desc: 'LLM integration, AI automation, computer vision and predictive analytics.' },
-  { label: 'UI/UX product design', href: '/services/product-design', desc: 'User research, wireframes, prototypes and design systems that lift adoption and conversion.' },
-  { label: 'SEO & digital marketing', href: '/services/digital-marketing', desc: 'SEO, Google Ads, content and social media campaigns measured against leads and revenue.' },
-];
-
-const CHOOSE_GUIDE = [
-  {
-    need: 'A new product or platform',
-    advice: 'Start with a software discovery sprint to define scope, risks and a phased plan before development.',
-    href: '/services/software-discovery',
-    linkLabel: 'Software discovery',
-  },
-  {
-    need: 'An existing product that needs support',
-    advice: 'Choose software maintenance for bug fixes, security and dependency updates, monitoring, compatibility work and a monthly retainer.',
-    href: '/services/software-maintenance',
-    linkLabel: 'Software maintenance',
-  },
-  {
-    need: 'An iPhone or Android app',
-    advice: 'Choose mobile app development for native iOS, Android or cross-platform apps built with Swift, Kotlin, Flutter or React Native.',
-    href: '/services/mobile-app-development',
-    linkLabel: 'Mobile app development',
-  },
-  {
-    need: 'AI automation or a chatbot',
-    advice: 'Choose AI and machine learning for LLM integration, automation, computer vision and predictive analytics.',
-    href: '/services/ai-ml',
-    linkLabel: 'AI & machine learning',
-  },
-  {
-    need: 'A website or online store',
-    advice: 'Choose web development for custom sites, web apps and e-commerce, or WordPress and CMS for content-led sites.',
-    href: '/services/web-development',
-    linkLabel: 'Web development',
-  },
-  {
-    need: 'A redesign or better usability',
-    advice: 'Choose product design for user research, wireframes, prototypes and design systems that improve conversion.',
-    href: '/services/product-design',
-    linkLabel: 'Product design (UI/UX)',
-  },
-  {
-    need: 'More leads from Google',
-    advice: 'Choose digital marketing for SEO, Google Ads, content and social media campaigns measured against leads and revenue.',
-    href: '/services/digital-marketing',
-    linkLabel: 'Digital marketing',
-  },
-];
-
-const BUYER_FAQS = [
-  {
-    q: 'What services does Mapletech Labs offer?',
-    a: 'We offer software development, mobile app development, AI and machine learning, UI/UX product design, web development, digital marketing, cloud and DevOps, blockchain, AR/VR, game development, branding, WordPress and SaaS development.',
-  },
-  {
-    q: 'How much does a project cost?',
-    a: 'Every project is fixed-scope and fixed-price, so you get a CAD number before we write code. Use the cost estimator for a ballpark, or send a brief and we will reply within one working day with scope, timeline and price.',
-  },
-  {
-    q: 'How long does a project take?',
-    a: 'A focused MVP typically takes 8–12 weeks. A full-featured product is 16–24 weeks. Every project starts with a scoping session where we give you a precise timeline with fixed milestones.',
-  },
-  {
-    q: 'Do you work with businesses in Edmonton, Calgary, Toronto and Vancouver?',
-    a: 'Yes. We work with clients across Canada and have service-city pages for Edmonton, Calgary, Toronto and Vancouver, plus other Canadian cities.',
-  },
-  {
-    q: 'Who owns the code and IP?',
-    a: 'You do. 100%. Full source code, all intellectual property and credentials are transferred to you upon final payment. We sign an IP assignment agreement on day one.',
-  },
-];
-
 export default function ServicesIndexPage() {
   const heroRef = useRef<HTMLElement>(null);
   const s1 = useReveal() as React.RefObject<HTMLElement>;
@@ -386,36 +248,6 @@ export default function ServicesIndexPage() {
 
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} copy={{ badge: "What we do", title: <>Software Development<br /><span style={{ color: 'var(--brand)' }}>Services in Canada.</span></>, desc: <>From mobile apps and AI to web platforms, cloud and branding — a Canadian software development company delivering end-to-end digital solutions that help startups and enterprises build, launch and scale.</> }} photo={humanMedia.team} form={false} />
-
-        {/* ANSWER-FIRST INTRO */}
-        <section className="section-padding" style={{ paddingTop: 0 }}>
-          <div className="cb-container">
-            <div className="reveal" style={{ maxWidth: 820 }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>What does Mapletech Labs do?</h2>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, marginBottom: '1rem' }}>
-                Mapletech Labs is a Canadian software development company. We build custom software, mobile apps, AI systems, UI/UX design, websites and digital marketing for startups and enterprises, with service-city pages for Edmonton, Calgary, Toronto and Vancouver.
-              </p>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, margin: 0 }}>
-                Every engagement is fixed-scope and fixed-price, with senior engineers and a reply within one working day.
-              </p>
-              <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', marginTop: '1.5rem', marginBottom: '0.75rem' }}>
-                Our four priority service families
-              </h3>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, marginBottom: '0.75rem' }}>
-                Most of our client work falls into four families. We lead with these because they cover what Canadian startups and enterprises search for most:
-              </p>
-              <ul style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, margin: 0, paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <li><Link href="/services/software-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>Software development</Link> — custom software platforms, SaaS products and enterprise systems built to scale from MVP to millions of users. See also <Link href="/services/web-development/ecommerce-systems" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>ecommerce systems development</Link>.</li>
-                <li><Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>App development</Link> — native iOS, Android and cross-platform mobile apps in Swift, Kotlin, Flutter and React Native, with 300+ apps shipped. See also <Link href="/services/mobile-app-development/flutter-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>Flutter app development</Link>.</li>
-                <li><Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>AI development</Link> — LLM integration, AI automation, computer vision and predictive analytics that cut operational costs and unlock new capabilities. See also <Link href="/services/ai-ml/ai-automation" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>AI automation services</Link>.</li>
-                <li><Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>UI/UX design</Link> — user research, wireframes, interactive prototypes and design systems that measurably lift adoption and conversion. See also <Link href="/services/product-design/design-systems" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>design systems and component libraries</Link>.</li>
-              </ul>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.8, marginTop: '0.75rem', marginBottom: 0 }}>
-                We also run a dedicated <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 600 }}>digital marketing</Link> practice — SEO, Google Ads, content and social media — so the products we build keep getting found after launch.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* SERVICE GRID */}
         <section ref={s1} className="section-padding">
@@ -460,143 +292,6 @@ export default function ServicesIndexPage() {
             </div>
           </div>
         </section>
-
-        {/* WHICH SERVICE DO YOU NEED? */}
-        <section className="section-padding" style={{ paddingTop: 0 }}>
-          <div className="cb-container">
-            <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '0.75rem' }}>Which service do you need?</h2>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', maxWidth: 720, margin: '0 auto' }}>
-                One clear starting point for each major service — open the page for scope, process, pricing guidance and real client results.
-              </p>
-            </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
-              {DECISION_LINKS.map(item => (
-                <div key={item.href} style={{ border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', padding: 'clamp(1.25rem, 3vw, 1.75rem)', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <Link href={item.href} style={{ color: 'var(--ink)', fontWeight: 600, fontSize: 'var(--fs-h4)', textDecoration: 'none', lineHeight: 1.3 }}>{item.label}</Link>
-                  <p style={{ color: 'var(--body)', fontSize: 14.5, lineHeight: 1.7, margin: 0, flexGrow: 1 }}>{item.desc}</p>
-                  <Link href={item.href} style={{ color: 'var(--brand)', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none', minHeight: 44, display: 'flex', alignItems: 'center' }}>
-                    Explore {item.label} &rarr;
-                  </Link>
-                </div>
-              ))}
-            </div>
-            <div className="reveal" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '1rem 2rem', marginTop: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-              <Link href="/case-studies" style={{ color: 'var(--brand)', fontWeight: 600, fontSize: '0.95rem', textDecoration: 'none', minHeight: 44, display: 'flex', alignItems: 'center' }}>
-                See real client results in our case studies &rarr;
-              </Link>
-              <Link href="/contact" className="btn btn--primary">Book a free consultation</Link>
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICE + CITY HUB */}
-        <section className="section-padding">
-          <div className="cb-container">
-            <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Services by city</h2>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', maxWidth: 720, margin: '0 auto' }}>
-                Pick the service you need, then open the page for your city. Each service-city page covers local proof, process and pricing guidance.
-              </p>
-            </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
-              {SERVICE_GROUPS.map(group => (
-                <div key={group.title} style={{ border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', padding: 'clamp(1.25rem, 3vw, 2rem)', display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', marginBottom: '0.25rem' }}>{group.title}</h3>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 12px', marginBottom: '0.5rem' }}>
-                    {group.serviceLinks.map(link => (
-                      <Link key={link.href} href={link.href} style={{ color: 'var(--brand)', textDecoration: 'none', fontSize: 14, fontWeight: 600, lineHeight: 1.6 }}>
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                  {CITY_CARDS.filter(city => isIndexableHref(group.cityHref(city.slug))).map(city => (
-                    <Link
-                      key={city.slug}
-                      href={group.cityHref(city.slug)}
-                      style={{ color: 'var(--body)', textDecoration: 'none', fontSize: 14.5, lineHeight: 1.6, minHeight: 44, display: 'flex', alignItems: 'center', whiteSpace: 'normal', overflowWrap: 'anywhere', wordBreak: 'break-word' }}
-                    >
-                      {group.title} in {city.name}
-                    </Link>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CHOOSE A SERVICE */}
-        <section className="section-padding" style={{ paddingTop: 0 }}>
-          <div className="cb-container">
-            <div className="reveal" style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>How to choose a service</h2>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', maxWidth: 720, margin: '0 auto' }}>
-                Start with the outcome you need, not the technology. This short guide points you to the right team.
-              </p>
-            </div>
-            <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
-              {CHOOSE_GUIDE.map(item => (
-                <div key={item.need} style={{ border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', padding: 'clamp(1.25rem, 3vw, 2rem)', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', margin: 0 }}>{item.need}</h3>
-                  <p style={{ color: 'var(--body)', fontSize: 14.5, lineHeight: 1.7, margin: 0, flexGrow: 1 }}>{item.advice}</p>
-                  <Link href={item.href} style={{ color: 'var(--brand)', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none', marginTop: '0.5rem' }}>
-                    {item.linkLabel} &rarr;
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* RELATED TOOLS */}
-        <section className="section-padding" style={{ paddingTop: 0 }}>
-          <div className="cb-container">
-            <div style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Free planning tools</h2>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)' }}>Calculators to help you estimate costs and plan your project before getting started.</p>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}>
-              {[
-                { name: 'Cost Estimator', href: '/tools/cost-estimator', desc: 'Ballpark development costs in CAD' },
-                { name: 'SR&ED Estimator', href: '/tools/sred-estimator', desc: 'R&D tax incentive ranges' },
-                { name: 'In-House vs Agency', href: '/tools/in-house-vs-agency', desc: 'Compare developer hiring costs' },
-                { name: 'Project Brief Builder', href: '/tools/project-brief', desc: 'Structured scope builder' },
-              ].map(tool => (
-                <Link key={tool.href} href={tool.href} style={{ border: '1px solid var(--line)', borderRadius: 24, background: 'var(--surface-alt)', padding: 'clamp(1.25rem, 3vw, 2rem)', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', color: 'var(--ink)', margin: 0 }}>{tool.name}</h3>
-                  <p style={{ color: 'var(--body)', fontSize: 14.5, lineHeight: 1.6, margin: 0, flexGrow: 1 }}>{tool.desc}</p>
-                  <span style={{ color: 'var(--brand)', fontSize: '0.9rem', fontWeight: 600, marginTop: '0.5rem' }}>Open tool →</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* BUYER FAQ */}
-        <section className="section-padding" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container">
-            <div className="reveal" style={{ maxWidth: 820, margin: '0 auto' }}>
-              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, marginBottom: '1rem' }}>Buyer questions, answered</h2>
-              <p style={{ color: 'var(--body)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: 1.7, marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
-                Short answers to the questions we hear most before a project starts.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.25rem, 3vw, 2rem)' }}>
-                {BUYER_FAQS.map(faq => (
-                  <div key={faq.q}>
-                    <h3 style={{ fontWeight: 600, fontSize: 'var(--fs-h4)', marginBottom: '0.5rem', lineHeight: 1.4 }}>{faq.q}</h3>
-                    <p style={{ color: 'var(--body)', fontSize: 15, lineHeight: 1.8, margin: 0 }}>{faq.a}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(buildFaqSchema(BUYER_FAQS)),
-          }}
-        />
 
         {/* CTA */}
         <MediaBand media={humanMedia.planning} ratio="21 / 8" />

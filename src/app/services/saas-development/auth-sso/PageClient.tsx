@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '40+', label: 'Auth Systems Built' },
@@ -33,38 +31,6 @@ const faqs = [
   { q: 'How do you handle auth security?', a: 'We implement defence in depth: HTTPS everywhere, httpOnly secure cookies for session tokens, CSRF protection on state-changing endpoints, rate limiting on auth endpoints, account lockout after failed attempts, secure password reset flows with short-lived tokens, and regular token rotation. We also implement monitoring for anomalous login patterns and provide alerts for suspicious activity.' },
 ];
 
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to add SSO and enterprise authentication</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Add SSO and enterprise authentication when you start selling to mid-market or enterprise buyers — SAML 2.0, OIDC, MFA and audit logs are usually hard requirements in their security reviews. Building them before procurement asks keeps deals moving instead of stalling.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>SAML 2.0 and OIDC single sign-on with Okta, Azure AD and Google Workspace.</li>
-          <li>Multi-factor authentication with enforcement policies per organisation.</li>
-          <li>Role-based access control with granular, API-enforced permissions.</li>
-          <li>Immutable audit logs and active session management with remote revocation.</li>
-          <li>A pre-launch security review covering OWASP auth risks and token handling.</li>
-        </ul>
-        <p>
-          Pair auth with <Link href="/services/web-development/enterprise-portals">enterprise portal development</Link> and a <Link href="/services/saas-development/multi-tenant-architecture">multi-tenant architecture</Link> that isolates customer data. For budgeting, read our <Link href="/blog/saas-development-cost-canada">SaaS development cost guide for Canada</Link>.
-        </p>
-        <p>
-          Explore SaaS development in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('saas-development', slug)}>{name}</Link></span>
-          ))}. Ready to make your product enterprise-ready? <Link href="/contact">Book an auth and SSO consultation</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -76,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

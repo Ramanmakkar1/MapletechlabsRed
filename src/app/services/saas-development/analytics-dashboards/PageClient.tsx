@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '60+', label: 'Analytics Systems Built' },
@@ -33,38 +31,6 @@ const faqs = [
   { q: 'How to use analytics to reduce churn?', a: 'Identify the product behaviours correlated with retention vs churn in your historical data — this is your engagement model. Build automated health scores based on these signals, updated daily. Surface at-risk accounts to your CS team with specific reasons ("not used Feature X in 14 days") so outreach is targeted. Trigger in-app prompts and emails when engagement drops below thresholds. Measure the impact of each intervention on 30-day retention to iterate your playbook.' },
 ];
 
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to build a custom analytics dashboard</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Build a custom analytics dashboard when off-the-shelf reports cannot answer the questions your team and customers ask every week. A tailored dashboard turns your own product and revenue data into decisions instead of spreadsheet exports.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>A metrics workshop defining your North Star metric and leading indicators.</li>
-          <li>An event tracking plan with consistent naming across your product.</li>
-          <li>Custom dashboards for MRR, churn, activation and feature adoption.</li>
-          <li>Customer-facing analytics embedded in your product where it adds value.</li>
-          <li>Automated alerts and weekly digests that flag churn risk early.</li>
-        </ul>
-        <p>
-          Connect dashboards to <Link href="/services/saas-development/billing-subscriptions">billing and subscription data</Link> and the <Link href="/services/web-development/api-backend">APIs and backend</Link> that feed them. For budget planning, read our <Link href="/blog/custom-software-development-cost-canada">custom software development cost guide for Canada</Link>.
-        </p>
-        <p>
-          Explore analytics dashboards in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('saas-development', slug)}>{name}</Link></span>
-          ))}. Ready to see your product data clearly? <Link href="/contact">Book an analytics dashboard consultation</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -76,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

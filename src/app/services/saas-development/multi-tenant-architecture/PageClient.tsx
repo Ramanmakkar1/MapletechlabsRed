@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '30+', label: 'Multi-Tenant Systems Built' },
@@ -33,38 +31,6 @@ const faqs = [
   { q: 'How does multi-tenancy affect performance?', a: 'With proper indexing on tenant_id columns and RLS policies, the performance overhead of multi-tenancy is minimal — typically under 5% compared to a single-tenant equivalent. The bigger risk is N+1 queries and missing indexes as data grows. We profile and optimise these during load testing, and set up query monitoring in production to catch regressions early.' },
 ];
 
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When your SaaS needs multi-tenant architecture</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          You need multi-tenant architecture when one product must serve many separate customer organisations with isolated data, their own users and roles, and predictable performance as tenants grow. It is the foundation that lets you onboard new customers without duplicating infrastructure.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>A tenant isolation model (schema-per-tenant or row-level security) matched to your compliance and scale needs.</li>
-          <li>Organisation, team and role-based permission structures enforced at the API and database layers.</li>
-          <li>Automated tenant provisioning, custom domains and SSL for self-serve onboarding.</li>
-          <li>Load-tested evidence that isolation holds and performance stays predictable as tenants grow.</li>
-          <li>Migration and documentation so your team can operate and extend the platform safely.</li>
-        </ul>
-        <p>
-          Pair your tenant model with secure <Link href="/services/saas-development/auth-sso">authentication and SSO</Link> and flexible <Link href="/services/saas-development/billing-subscriptions">billing and subscriptions</Link>. For budgeting, read our <Link href="/blog/saas-development-cost-canada">SaaS development cost guide for Canada</Link>.
-        </p>
-        <p>
-          Explore multi-tenant SaaS development in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('saas-development', slug)}>{name}</Link></span>
-          ))}. Ready to plan your architecture? <Link href="/contact">Book a multi-tenant architecture consultation</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -76,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

@@ -1,7 +1,4 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import { MOBILE_PLATFORM_PRICING } from '@/data/pricing';
-import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '100+', label: 'Flutter Apps Shipped' },
@@ -32,182 +29,19 @@ const faqs = [
   { q: 'Can our existing native app be ported to Flutter?', a: 'Yes, we offer Flutter migration services. We typically recommend a screen-by-screen migration strategy, running Flutter and native code side by side using Add-to-App until the full migration is complete, minimising risk and disruption to your existing users.' },
   { q: 'How does Flutter performance compare to native?', a: 'For most app categories, Flutter performance is indistinguishable from native — both achieve 60/120fps animations and fast startup times. Complex platform integrations like maps or camera may have slight overhead from Platform Channels, but these are imperceptible in practice.' },
   { q: 'Who maintains a Flutter app long-term?', a: 'Flutter is backed by Google with a strong open-source community and a growing plugin ecosystem (pub.dev). We provide post-launch maintenance packages and stay current with Flutter SDK updates, Dart upgrades, and OS compatibility requirements so your app never falls behind.' },
-  {
-    q: 'How much does Flutter app development cost in Canada?',
-    a: `For general planning, our published cross-platform app range is $${MOBILE_PLATFORM_PRICING.cross.low.toLocaleString('en-CA')}–$${MOBILE_PLATFORM_PRICING.cross.high.toLocaleString('en-CA')} CAD over ${MOBILE_PLATFORM_PRICING.cross.weeksLow}–${MOBILE_PLATFORM_PRICING.cross.weeksHigh} weeks. That guidance applies to any cross-platform build, not a Flutter-specific quote. A fixed Flutter estimate follows discovery on features, custom Platform Channels, web or desktop targets and store requirements. The Canadian app development cost guide on our blog breaks down what moves the number.`,
-  },
-  {
-    q: 'How do you scope a native-to-Flutter migration?',
-    a: 'We start with repository access, a feature map of your current iOS and Android apps, and a list of native SDKs and device capabilities you rely on. We identify screens that can move to Flutter first, where Add-to-App embedding is required, and any plugins or Platform Channels we must build. You receive a phased plan with risks, dependencies and a scoped estimate per phase before we replace production code.',
-  },
 ];
-
-const engagements = [
-  {
-    title: 'Build a new iOS and Android app in Flutter',
-    desc: 'For a product that needs both app stores from one Dart codebase, starting from an idea, prototype or validated web product.',
-    inputs: ['Target users, core journeys and must-have features', 'Designs or brand assets, if they exist', 'APIs, auth and third-party services to integrate', 'Device needs such as camera, maps, push, offline or payments'],
-    deliverables: ['Architecture and state-management plan aligned to your release roadmap', 'Production Flutter app for iOS and Android with tested integrations', 'Simultaneous App Store and Google Play submissions', 'CI build pipeline, signing docs and release notes for your team'],
-  },
-  {
-    title: 'Extend an existing Flutter app',
-    desc: 'For teams with a live Flutter product that needs new features, performance work, SDK upgrades or extra engineering capacity.',
-    inputs: ['Repository access and current build or flavor setup', 'Crash, analytics and store review history', 'Prioritised feature, bug or upgrade list', 'Who owns releases, code review and design today'],
-    deliverables: ['Honest code and dependency review with risk summary', 'Features shipped through your existing release process', 'Performance or upgrade work measured on real devices', 'Updated docs for architecture or packages we touch'],
-  },
-  {
-    title: 'Phased native-to-Flutter migration',
-    desc: 'For products on separate native codebases (or a partial Flutter embed) that need a controlled move to a single Flutter app without a big-bang rewrite.',
-    inputs: ['Current native repositories and architecture overview', 'Native features, SDKs and background work the app depends on', 'Team skills and who will maintain Dart after each phase', 'Budget, timing and store or enterprise constraints'],
-    deliverables: ['Screen-by-screen migration plan with Add-to-App milestones', 'Custom Platform Channels or plugins where pub.dev is not enough', 'Parallel native and Flutter releases until cutover is safe', 'Scoped estimate and schedule for each migration phase'],
-  },
-];
-
-const handover = [
-  'Repositories: Flutter source, branches and CI access transferred to accounts you own.',
-  'Store accounts: App Store Connect and Google Play Console owned by your organisation, with signing keys and certificates documented.',
-  'Platform Channels: a list of every custom Swift/Kotlin bridge and third-party SDK, with versions and why each is needed.',
-  'Release documentation: build flavors, versioning, store submission and hotfix steps a new developer can follow.',
-  'Maintenance responsibilities: who handles Flutter SDK upgrades, Dart dependency updates, OS compatibility, crash monitoring and store policy changes after launch.',
-];
-
-const cad = (n: number) => `$${n.toLocaleString('en-CA')}`;
-const cross = MOBILE_PLATFORM_PRICING.cross;
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-const h3 = { fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' } as const;
-const list = { paddingLeft: 22, margin: '0 0 12px' } as const;
-
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>What is Flutter app development?</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Flutter app development is the process of building iOS, Android, web and desktop apps from a single Dart codebase using Google&apos;s open-source Flutter framework. It compiles to native ARM code and draws its own UI, so you get one team, one codebase and near-native speed instead of separate native builds for each platform.
-        </p>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When Flutter is the right choice</h2>
-        <p style={{ margin: '0 0 12px' }}>
-          Flutter fits teams that want one app on both stores without maintaining two codebases. It is usually the right call when:
-        </p>
-        <ul style={list}>
-          <li><strong>You need a single codebase.</strong> One Dart codebase ships to iOS and Android, so features and fixes land once instead of twice.</li>
-          <li><strong>You want a faster release cycle.</strong> Shared code and one QA pass shorten the path from design to both app stores.</li>
-          <li><strong>You need native-level performance.</strong> Flutter compiles to native ARM code and renders at 60/120fps without a JavaScript bridge.</li>
-          <li><strong>Your team already works in Dart or Flutter.</strong> Existing Flutter skills mean lower onboarding and easier long-term maintenance.</li>
-        </ul>
-        <p style={{ margin: '0 0 24px' }}>
-          If that sounds like your project, see our <Link href="/services/mobile-app-development">mobile app development services</Link> or <Link href="/contact">contact us for a Flutter quote</Link>.
-        </p>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Hire Flutter developers for your next release</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Mapletech Labs has shipped 100+ Flutter apps for Canadian teams. Choose the engagement that matches where your product is today. Still comparing stacks? Read our{' '}
-          <Link href="/blog/native-vs-cross-platform-vs-pwa">native vs cross-platform vs PWA comparison</Link>, then see how{' '}
-          <Link href="/services/mobile-app-development/react-native-apps">React Native development</Link> differs if your team is JavaScript-first.
-        </p>
-        <div className="grid grid--3" style={{ marginBottom: 32 }}>
-          {engagements.map(e => (
-            <div key={e.title}>
-              <h3 style={h3}>{e.title}</h3>
-              <p>{e.desc}</p>
-              <p style={{ margin: '0 0 4px', fontWeight: 600, color: 'var(--ink)' }}>What we need from you</p>
-              <ul style={list}>{e.inputs.map(i => <li key={i}>{i}</li>)}</ul>
-              <p style={{ margin: '0 0 4px', fontWeight: 600, color: 'var(--ink)' }}>What you receive</p>
-              <ul style={list}>{e.deliverables.map(d => <li key={d}>{d}</li>)}</ul>
-            </div>
-          ))}
-        </div>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Flutter vs native vs React Native</h2>
-        <p style={{ margin: '0 0 16px' }}>
-          Flutter is the best fit when you want one custom, pixel-consistent UI across iOS and Android on a single Dart codebase. Native is the right call for apps that lean heavily on platform-specific hardware or need the absolute latest OS APIs on day one. React Native suits JavaScript-first teams that want to reuse React skills and native components. The table below summarises the trade-offs buyers ask about most.
-        </p>
-        <div style={{ overflowX: 'auto', marginBottom: 32 }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
-            <thead>
-              <tr>
-                <th style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Factor</th>
-                <th style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Flutter</th>
-                <th style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Native (Swift/Kotlin)</th>
-                <th style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>React Native</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Codebases</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>One Dart codebase</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Two (iOS + Android)</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>One JavaScript/TypeScript codebase</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>UI consistency</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Identical on every platform</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Platform-native look per OS</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Native components, some per-platform tuning</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Performance</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Native ARM, 60/120fps</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Best possible, full hardware access</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Near-native via native modules</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Typical cost</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Up to 60% less than two native builds</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Highest — two teams, two timelines</td>
-                <td style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)' }}>Lower than native, similar to Flutter</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '10px 12px' }}>Best for</td>
-                <td style={{ padding: '10px 12px' }}>Custom branded UIs, fast multi-platform launches</td>
-                <td style={{ padding: '10px 12px' }}>Hardware-heavy or OS-first apps</td>
-                <td style={{ padding: '10px 12px' }}>JavaScript/React teams reusing existing skills</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Delivery scope, timeline and cost drivers</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Scope is set by the number of user journeys, integrations and platforms you need, not by the framework alone. A focused Flutter MVP can ship in 6–10 weeks, while a multi-platform product with custom Platform Channels, offline sync and store compliance typically runs 12–20 weeks. The biggest cost drivers are custom native bridges, third-party SDK integrations, migration from existing native apps, and App Store or Play Store review requirements. See our <Link href="/services/mobile-app-development/cross-platform-apps">cross-platform app development services</Link> for the wider delivery model.
-        </p>
-        <div className="grid grid--2">
-          <div>
-            <h2 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>Launch deliverables and handover</h2>
-            <p>Every Flutter project ends with assets your team can run without us — the same discipline we use across our <Link href="/services/mobile-app-development">mobile app development services</Link>:</p>
-            <ul style={list}>{handover.map(h => <li key={h}>{h}</li>)}</ul>
-            <p style={{ marginTop: 16 }}>
-              Ready to talk scope? <Link href="/contact">Contact us</Link> with your timeline and we will reply within one working day.
-            </p>
-          </div>
-          <div>
-            <h2 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>Budget guidance and timelines</h2>
-            <p>
-              Our published range for a general cross-platform app is {cad(cross.low)}–{cad(cross.high)} CAD over {cross.weeksLow}–{cross.weeksHigh} weeks. That is planning guidance for any cross-platform build, not a Flutter-specific quote — your fixed price follows discovery. Many greenfield Flutter products align with our 8wk average timeline once scope is locked, but project-specific schedules depend on integrations, migration phases and store review timing. The{' '}
-              <Link href="/blog/app-development-cost-canada">Canadian app development cost guide</Link> explains what moves the number.
-            </p>
-            <p>
-              Working with a local team? Explore app development in{' '}
-              {cityLinks.map(([name, slug], i) => (
-                <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('mobile-app-development', slug)}>{name}</Link></span>
-              ))}.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 export default function PageClient() {
   return (
     <SubServicePageTemplate
       parent={{ href: "/services/mobile-app-development", label: "Mobile App Development" }}
       name="Flutter Development"
-      copy={{ badge: "CROSS-PLATFORM NATIVE", title: <>Flutter App Development —{' '}<span style={{ color: 'var(--brand)' }}>One Codebase. Every Platform. Native Speed.</span></>, desc: <>Flutter development is building iOS, Android, web and desktop apps from one Dart codebase, so you ship every platform with a single team and a single release cycle. Mapletech Labs builds Flutter apps for startups and established Canadian teams that want native-speed performance and up to 60% lower cost than separate native builds, without sacrificing quality or native feel.</> }}
+      copy={{ badge: "CROSS-PLATFORM NATIVE", title: <>One Codebase.{' '} <span style={{ color: 'var(--brand)' }}>Every Platform. Native Speed.</span></>, desc: <>Flutter lets us ship beautiful, high-performance apps for iOS, Android, web, and desktop from a single Dart codebase — cutting your development cost by up to 60% without sacrificing quality or native feel.</> }}
       stats={stats}
       services={services}
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Complete Flutter Development Services"
-      buyerContent={<BuyerContent />}
     />
   );
 }

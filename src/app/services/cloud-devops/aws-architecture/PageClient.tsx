@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -32,33 +31,6 @@ const faqs = [
   { q: 'AWS vs Azure vs GCP — which cloud should I use?', a: 'AWS offers the broadest service catalogue and largest ecosystem — it\'s the default choice for most greenfield workloads. Azure is preferable for organisations heavily invested in Microsoft (Active Directory, .NET, Office 365). GCP excels for data analytics and ML workloads (BigQuery, Vertex AI). We work across all three and can advise based on your specific requirements.' },
 ];
 
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to hire an AWS architecture partner</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Hire an AWS architecture partner when your cloud environment needs to scale, pass a Well-Architected review, cut costs, or meet Canadian data residency rules without slowing your team down. An experienced architect designs the right foundations once, so you avoid costly rework as traffic and workloads grow.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>A full architecture review against your workloads, security posture and growth plans.</li>
-          <li>A prioritised report of Well-Architected gaps across reliability, security, cost and operations.</li>
-          <li>A cost plan with rightsizing, Savings Plans and budget alerts to reduce AWS spend.</li>
-          <li>Canadian region and data residency setup that keeps regulated data in-country.</li>
-          <li>A runbook and handover documentation so your team can operate the environment independently.</li>
-        </ul>
-        <p>
-          Our architects pair this work with <Link href="/services/cloud-devops/infrastructure-as-code">infrastructure as code</Link> and <Link href="/services/cloud-devops/kubernetes-docker">Kubernetes and Docker</Link> delivery. For budget planning, read our <Link href="/blog/custom-software-development-cost-canada">custom software development cost guide for Canada</Link>.
-        </p>
-        <p>
-          We design AWS environments for teams in <Link href="/locations/software-development-company-in-edmonton">Edmonton</Link> and <Link href="/locations/software-development-company-in-calgary">Calgary</Link>. Ready to review your AWS architecture? <Link href="/contact">Book an AWS architecture consultation</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -70,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

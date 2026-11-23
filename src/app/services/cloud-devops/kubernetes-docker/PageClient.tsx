@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -32,33 +31,6 @@ const faqs = [
   { q: 'How do you manage Kubernetes upgrades?', a: 'Cluster upgrades follow a defined process: upgrade control plane first via the managed provider, then cordon and drain nodes one availability zone at a time while new nodes running the target version are provisioned. We test all workloads against the new version in a staging cluster first. Automated upgrade tooling like Karpenter simplifies node lifecycle management on an ongoing basis.' },
 ];
 
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to move your app to containers and Kubernetes</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Move to containers when you want the same build to run identically on every machine, and add Kubernetes only when you need autoscaling, zero-downtime rollouts or many services across a team. For a single app on one server, plain Docker or Docker Compose is usually enough and cheaper to operate.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>Containerisation of your application with optimised, production-hardened Docker images.</li>
-          <li>A managed Kubernetes cluster set up with RBAC, networking, storage and ingress.</li>
-          <li>Autoscaling and load balancing tuned to your real traffic patterns.</li>
-          <li>Monitoring, logging and alerting so you see problems before your users do.</li>
-          <li>Handover documentation and runbooks so your team can operate the platform.</li>
-        </ul>
-        <p>
-          Containers pair well with <Link href="/services/cloud-devops/performance-scaling">performance and scaling work</Link> and <Link href="/services/cloud-devops/ci-cd-pipelines">CI/CD pipelines</Link> that build and deploy every image automatically. If you are building a product on top, see our <Link href="/services/saas-development">SaaS development services</Link>.
-        </p>
-        <p>
-          We deliver container and Kubernetes projects for teams in <Link href="/locations/software-development-company-in-edmonton">Edmonton and across Canada</Link>. Ready to plan your migration? <Link href="/contact">Book a containerisation consultation</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -70,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

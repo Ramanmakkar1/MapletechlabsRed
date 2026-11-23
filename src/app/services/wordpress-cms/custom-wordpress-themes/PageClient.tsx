@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '100+', label: 'Custom Themes Built' },
@@ -33,38 +31,6 @@ const faqs = [
   { q: 'Does the theme work with any plugins?', a: 'We code to WordPress standards, so the theme is compatible with all well-coded plugins. We also test compatibility with common plugins you plan to use (WooCommerce, SEO plugins, forms, etc.) during QA before launch.' },
 ];
 
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary']] as const;
-
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When a custom WordPress theme beats a premium theme</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          A custom WordPress theme beats a premium theme when performance, a unique brand experience and long-term maintenance matter more than a low upfront price. You get only the code your site needs, so pages load faster, stay easier to update and are built for search from day one.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>A lightweight block-based theme with no page-builder bloat.</li>
-          <li>Reusable editor patterns your team can apply to new pages.</li>
-          <li>A Core Web Vitals budget enforced across every template.</li>
-          <li>SEO-ready templates with clean headings, schema hooks and internal links.</li>
-          <li>A handover training session and documentation so you can manage content confidently.</li>
-        </ul>
-        <p>
-          Keep the theme fast with <Link href="/services/wordpress-cms/site-speed-optimisation">WordPress site speed optimisation</Link>, or go further with <Link href="/services/wordpress-cms/headless-wordpress">headless WordPress development</Link>. Plan your investment with our <Link href="/blog/website-cost-canada">website cost guide for Canada</Link>.
-        </p>
-        <p>
-          Explore custom WordPress theme development in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && ' and '}<Link href={serviceCityPath('web-development', slug)}>{name}</Link></span>
-          ))}. Ready to scope your theme? <Link href="/contact">Book a custom theme consultation</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -76,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

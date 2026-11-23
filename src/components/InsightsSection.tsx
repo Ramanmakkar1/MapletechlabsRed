@@ -37,49 +37,7 @@ const posts = [
   },
 ];
 
-const servicePosts: Record<string, typeof posts> = {
-  'mobile-app-development': [
-    { tag: 'Business', title: 'App Development Cost in Canada (2026 Guide)', excerpt: 'Compare Canadian app development price ranges, from a focused MVP to a more complex mobile product.', readTime: '8 min read', date: 'Mar 2026', href: '/blog/app-development-cost-canada' },
-    { tag: 'Engineering', title: 'Native vs Cross-Platform vs PWA: Choosing an App Approach', excerpt: 'Understand the trade-offs between native apps, cross-platform development and progressive web apps.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/native-vs-cross-platform-vs-pwa' },
-    { tag: 'Engineering', title: 'Privacy Compliance for Canadian Apps', excerpt: 'Plan for PIPEDA, Quebec Law 25 and provincial health privacy requirements when building an app.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/app-privacy-compliance-canada' },
-    { tag: 'Engineering', title: 'Healthcare Software Development in Canada: A Buyer’s Guide', excerpt: 'Plan project scope, privacy questions, EHR integration and vendor selection for Canadian healthcare software.', readTime: '10 min read', date: 'Nov 2026', href: '/blog/healthcare-software-development-canada' },
-  ],
-  'ai-ml': [
-    { tag: 'AI/ML', title: 'AI Development Cost in Canada', excerpt: 'Explore the factors that shape the cost of building and integrating AI products in Canada.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ai-development-cost-canada' },
-    { tag: 'AI/ML', title: 'AI Chatbot Development Cost in Canada', excerpt: 'See what an AI chatbot costs in Canada and which scope decisions change the price.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ai-chatbot-development-cost-canada' },
-    { tag: 'AI/ML', title: 'What Is Agentic AI?', excerpt: 'Learn how agentic AI systems plan and carry out multi-step tasks, and where they fit in products.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/what-is-agentic-ai' },
-    { tag: 'Engineering', title: 'Healthcare Software Development in Canada: A Buyer’s Guide', excerpt: 'Learn how to scope AI-assisted and other healthcare software with privacy, EHR integration and vendor checks.', readTime: '10 min read', date: 'Nov 2026', href: '/blog/healthcare-software-development-canada' },
-  ],
-  'product-design': [
-    { tag: 'Business', title: 'UI/UX Design Companies in Canada', excerpt: 'A guide to Canadian product design and UI/UX teams and the work they specialize in.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/ui-ux-design-companies-canada' },
-    { tag: 'Engineering', title: 'Native vs Cross-Platform vs PWA: Choosing an App Approach', excerpt: 'See how platform choices affect product experience, reach and design decisions.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/native-vs-cross-platform-vs-pwa' },
-    { tag: 'Business', title: 'Build a SaaS MVP in 8 Weeks', excerpt: 'A practical, week-by-week approach to shaping, designing and launching a focused SaaS MVP.', readTime: '10 min read', date: 'Sep 2026', href: '/blog/build-saas-mvp-8-weeks' },
-  ],
-  'digital-marketing': [
-    { tag: 'Digital Marketing', title: 'Top SEO Companies in Canada (2026)', excerpt: 'Compare leading Canadian SEO agencies and the organic growth work they deliver.', readTime: '9 min read', date: 'Mar 2026', href: '/blog/top-seo-companies-canada' },
-    { tag: 'Digital Marketing', title: 'Digital Marketing Cost in Canada (2026)', excerpt: 'Review typical Canadian budgets for SEO, paid ads, social media and content marketing.', readTime: '7 min read', date: 'Mar 2026', href: '/blog/digital-marketing-cost-canada' },
-    { tag: 'Business', title: 'Website Cost in Canada (2026 Guide)', excerpt: 'Compare website project pricing, from landing pages to custom web applications.', readTime: '7 min read', date: 'Mar 2026', href: '/blog/website-cost-canada' },
-  ],
-  'web-development': [
-    { tag: 'Business', title: 'Website Cost in Canada: 2026 Pricing Guide', excerpt: 'See what a website costs in Canada in 2026, from a small business site to a custom web application.', readTime: '7 min read', date: 'Jan 2026', href: '/blog/website-cost-canada' },
-    { tag: 'Engineering', title: 'Web App vs Mobile App: A Buyer’s Guide for Canada', excerpt: 'Decide whether a responsive web app or a native mobile app fits your product, budget and timeline.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/web-app-vs-mobile-app-canada' },
-    { tag: 'Engineering', title: 'WordPress vs Headless CMS in Canada: Which to Choose?', excerpt: 'Compare WordPress and headless CMS builds on cost, speed, SEO, editor experience and maintenance.', readTime: '8 min read', date: 'Nov 2026', href: '/blog/wordpress-vs-headless-cms-canada' },
-    { tag: 'Business', title: 'Shopify vs Custom Ecommerce: A Canadian Decision Guide', excerpt: 'Learn when Shopify fits a Canadian store and when custom ecommerce development is worth the investment.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/shopify-vs-custom-ecommerce-canada' },
-  ],
-  'saas-development': [
-    { tag: 'Business', title: 'SaaS Development Cost Canada: 2026 Pricing', excerpt: 'Review the factors that shape SaaS development costs in Canada and the ranges to plan with.', readTime: '9 min read', date: 'Mar 2026', href: '/blog/saas-development-cost-canada' },
-    { tag: 'Business', title: 'How to Build a SaaS MVP in 8 Weeks: A Founder’s Playbook', excerpt: 'Follow a week-by-week playbook for scoping and launching a focused SaaS MVP in eight weeks.', readTime: '10 min read', date: 'Sep 2026', href: '/blog/build-saas-mvp-8-weeks' },
-    { tag: 'Business', title: 'What the Most Profitable SaaS Products Get Right', excerpt: 'See the retention, expansion and pricing fundamentals that make SaaS products profitable.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/what-profitable-saas-gets-right' },
-  ],
-  'wordpress-cms': [
-    { tag: 'Engineering', title: 'WordPress vs Headless CMS in Canada: Which to Choose?', excerpt: 'Compare WordPress and headless CMS builds on cost, speed, SEO, editor experience and maintenance.', readTime: '8 min read', date: 'Nov 2026', href: '/blog/wordpress-vs-headless-cms-canada' },
-    { tag: 'Business', title: 'Website Cost in Canada: 2026 Pricing Guide', excerpt: 'See what a website costs in Canada in 2026, from a small business site to a custom web application.', readTime: '7 min read', date: 'Jan 2026', href: '/blog/website-cost-canada' },
-    { tag: 'Business', title: 'Shopify vs Custom Ecommerce: A Canadian Decision Guide', excerpt: 'Learn when Shopify fits a Canadian store and when custom ecommerce development is worth the investment.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/shopify-vs-custom-ecommerce-canada' },
-  ],
-};
-
-export default function InsightsSection({ serviceSlug }: { serviceSlug?: string }) {
-  const recommendedPosts = serviceSlug ? servicePosts[serviceSlug] ?? posts : posts;
+export default function InsightsSection() {
 
   return (
     <section id="insights" className="section-padding" style={{ background: 'var(--surface)', borderTop: '1px solid var(--line)' }}>
@@ -129,7 +87,7 @@ export default function InsightsSection({ serviceSlug }: { serviceSlug?: string 
 
         {/* Cards */}
         <div className="insights-grid">
-          {recommendedPosts.map((post, i) => (
+          {posts.map((post, i) => (
             <a
               key={post.title}
               href={post.href}

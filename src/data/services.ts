@@ -449,9 +449,8 @@ export const services: ServiceData[] = [
       { name: "Next.js Development", slug: "nextjs-development" },
       { name: "Web Design", slug: "web-design" },
       { name: "E-Commerce Systems", slug: "ecommerce-systems" },
-      { name: "Shopify Development", slug: "shopify-development" },
-      { name: "API and backend development", slug: "api-backend" },
-      { name: "Enterprise portals", slug: "enterprise-portals" },
+      { name: "API & Backend", slug: "api-backend" },
+      { name: "Enterprise Portals", slug: "enterprise-portals" },
     ],
   },
 
@@ -659,7 +658,6 @@ export const services: ServiceData[] = [
       { name: "Computer Vision", slug: "computer-vision" },
       { name: "Predictive Analytics", slug: "predictive-analytics" },
       { name: "AI Chatbots", slug: "ai-chatbots" },
-      { name: "AI Agent Development", slug: "ai-agent-development" },
     ],
   },
 
@@ -1057,10 +1055,10 @@ export const services: ServiceData[] = [
       },
     ],
     relatedSubServices: [
-      { name: "smart contract development", slug: "smart-contracts" },
-      { name: "DeFi protocol development", slug: "defi-protocols" },
+      { name: "Smart Contracts", slug: "smart-contracts" },
+      { name: "DeFi Protocols", slug: "defi-protocols" },
       { name: "NFT Platforms", slug: "nft-platforms" },
-      { name: "crypto wallet development", slug: "crypto-wallets" },
+      { name: "Crypto Wallets", slug: "crypto-wallets" },
       { name: "Web3 dApps", slug: "web3-dapps" },
     ],
   },
@@ -1258,10 +1256,10 @@ export const services: ServiceData[] = [
       },
     ],
     relatedSubServices: [
-      { name: "AWS architecture", slug: "aws-architecture" },
+      { name: "AWS Architecture", slug: "aws-architecture" },
       { name: "Kubernetes & Docker", slug: "kubernetes-docker" },
       { name: "CI/CD Pipelines", slug: "ci-cd-pipelines" },
-      { name: "infrastructure as code", slug: "infrastructure-as-code" },
+      { name: "Infrastructure as Code", slug: "infrastructure-as-code" },
       { name: "Performance & Scaling", slug: "performance-scaling" },
     ],
   },
@@ -1459,7 +1457,7 @@ export const services: ServiceData[] = [
       },
     ],
     relatedSubServices: [
-      { name: "mobile AR development", slug: "mobile-ar" },
+      { name: "Mobile AR", slug: "mobile-ar" },
       { name: "VR Applications", slug: "vr-applications" },
       { name: "WebXR Experiences", slug: "webxr-experiences" },
       { name: "Apple Vision Pro", slug: "apple-vision-pro" },
@@ -1661,7 +1659,6 @@ export const services: ServiceData[] = [
     ],
     relatedSubServices: [
       { name: "SEO Services", slug: "seo-services" },
-      { name: "Local SEO", slug: "local-seo" },
       { name: "Google Ads & PPC", slug: "google-ads-ppc" },
       { name: "Social Media Marketing", slug: "social-media-marketing" },
       { name: "Content Marketing", slug: "content-marketing" },

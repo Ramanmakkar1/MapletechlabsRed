@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
 
 const stats = [
@@ -32,33 +31,6 @@ const faqs = [
   { q: 'Google Ads vs Meta Ads — which is better for my business?', a: 'Google Ads excels at capturing existing demand — people actively searching for your product. Meta Ads is stronger for creating demand and targeting audiences by interest or behaviour. Most businesses benefit from both; we will recommend the right mix for your goals.' },
 ];
 
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>When to hire a Google Ads management agency</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Hire a Google Ads management agency when you need qualified leads or sales from search now, not in six months. A managed account typically pays for itself by cutting wasted spend and lifting conversion rates within the first 60–90 days.
-        </p>
-        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
-        <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
-          <li>A full audit of your existing account, wasted spend and quality score issues.</li>
-          <li>A campaign architecture built around your highest-intent keywords and audiences.</li>
-          <li>Ad copy, landing page recommendations and conversion tracking set up correctly.</li>
-          <li>Daily bid, budget and negative keyword optimisation against your target CPA and ROAS.</li>
-          <li>Monthly reporting that ties ad spend directly to leads and revenue.</li>
-        </ul>
-        <p>
-          Pair paid search with <Link href="/services/digital-marketing/seo-services">SEO services</Link> for compounding organic traffic, and use <Link href="/services/digital-marketing/performance-analytics">performance analytics</Link> to see which channels actually drive revenue. For budget planning, read our <Link href="/blog/digital-marketing-cost-canada">digital marketing cost guide for Canada</Link>.
-        </p>
-        <p>
-          Explore Google Ads management across Canada, or contact us to discuss your city. Ready to make your ad spend profitable? <Link href="/contact">Book a Google Ads audit</Link>.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 export default function PageClient() {
   return (
     <SubServicePageTemplate
@@ -70,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Our PPC Capabilities"
-      buyerContent={<BuyerContent />}
     />
   );
 }

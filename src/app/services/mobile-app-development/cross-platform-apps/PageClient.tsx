@@ -1,7 +1,4 @@
-import Link from 'next/link';
 import SubServicePageTemplate from '@/components/page/SubServicePageTemplate';
-import { MOBILE_PLATFORM_PRICING } from '@/data/pricing';
-import { serviceCityPath } from '@/data/serviceCity';
 
 const stats = [
   { value: '300+', label: 'Multi-Platform Apps' },
@@ -28,83 +25,11 @@ const steps = [
 
 const faqs = [
   { q: 'Which cross-platform framework is best?', a: 'There is no single answer — it depends on your team, design requirements, and integration needs. Flutter is best for custom, pixel-perfect UIs and multi-platform targets beyond mobile. React Native is ideal when you have a JavaScript/React team or need web code sharing. We help you evaluate objectively and pick the right fit for your project.' },
-  { q: 'Which platforms can Flutter and React Native support?', a: 'Flutter can target iOS, Android, web and desktop from one Dart codebase. React Native targets iOS and Android from one JavaScript or TypeScript codebase. Both approaches still require platform-specific testing, UI refinement and store releases.' },
   { q: 'Do cross-platform apps feel native to users?', a: 'Modern cross-platform frameworks have closed the gap significantly. Flutter renders its own pixels (no native component overhead), and React Native renders actual native components. With thoughtful platform-adaptive UX design, users typically cannot tell the difference from a native app. We prioritise platform feel as a core deliverable.' },
   { q: 'How do you handle platform differences like navigation and gestures?', a: 'We implement platform-adaptive navigation — iOS-style stack with swipe-back, Android back-button and predictive-back gesture, and Material vs Cupertino UI components where appropriate. Our designers create platform variants for critical UX patterns rather than forcing a single design on both platforms.' },
-  { q: 'When should we choose native apps instead of cross-platform?', a: 'Choose separate native apps when demanding performance, specialised hardware or platform-first behaviour is central to the product. Cross-platform is the practical choice for most business and customer apps that need both stores from one team, though specialised features can still use native modules.' },
   { q: 'What is the cost difference vs building separate native apps?', a: 'Cross-platform development typically reduces cost by 40–60% compared to maintaining two separate native codebases, since business logic, APIs, and state management are shared. Platform-specific UI work still requires native expertise, but the overall team size and timeline are substantially reduced.' },
-  { q: 'How long does cross-platform app development take?', a: 'Our published planning range for a cross-platform app is 10–24 weeks. The timeline depends on scope, integrations, native modules and platform-specific UI. We confirm the schedule after the platform audit and shared architecture are defined.' },
   { q: 'Can you migrate our existing native app to a cross-platform framework?', a: 'Yes. We offer structured migration services with a phased approach — typically starting with new features built in the cross-platform framework while the existing native code continues to ship. This reduces risk and allows the team to build familiarity with the new stack before full migration.' },
 ];
-
-const cad = (n: number) => `$${n.toLocaleString('en-CA')}`;
-const cross = MOBILE_PLATFORM_PRICING.cross;
-const nativeBoth = MOBILE_PLATFORM_PRICING['native-both'];
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-const cell = { padding: '10px 12px', borderBottom: '1px solid var(--line)', verticalAlign: 'top' } as const;
-const head = { ...cell, fontWeight: 600, color: 'var(--ink)', textAlign: 'left' } as const;
-
-function BuyerContent() {
-  return (
-    <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-      <div className="cb-container" style={{ lineHeight: 1.7, color: 'var(--body)' }}>
-        <p style={{ margin: '0 0 24px', maxWidth: 820 }}>
-          <strong>Cross-platform app development is the right choice when you need iOS and Android apps from one team and shared codebase, without paying for two fully separate native builds.</strong> It suits most business and customer apps; separate native development is the better fit when demanding performance, specialised hardware or platform-first behaviour is central to the product.
-        </p>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Which platforms can a cross-platform app support?</h2>
-        <p style={{ margin: '0 0 24px' }}>
-          Flutter supports iOS, Android, web and desktop from one Dart codebase, while React Native supports iOS and Android from one JavaScript or TypeScript codebase. Sharing code reduces duplicated work, but each store still needs platform-specific UI, device testing and release management; specialised native SDKs may also require native modules.
-        </p>
-        <table style={{ width: '100%', borderCollapse: 'collapse', margin: '0 0 24px', fontSize: '0.95rem' }}>
-          <caption style={{ captionSide: 'top', textAlign: 'left', padding: '0 0 10px', color: 'var(--body)' }}>
-            Flutter vs React Native vs separate native apps — see our <Link href="/blog/flutter-vs-react-native-canada">Flutter vs React Native comparison</Link> for the full breakdown.
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col" style={head}>Decision</th>
-              <th scope="col" style={head}><Link href="/services/mobile-app-development/flutter-development">Flutter</Link></th>
-              <th scope="col" style={head}><Link href="/services/mobile-app-development/react-native-apps">React Native</Link></th>
-              <th scope="col" style={head}>Separate native apps</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" style={head}>One codebase?</th>
-              <td style={cell}>Yes — one Dart codebase for iOS, Android, web and desktop.</td>
-              <td style={cell}>Yes — one JavaScript/TypeScript codebase for iOS and Android.</td>
-              <td style={cell}>No — separate Swift and Kotlin codebases maintained in parallel.</td>
-            </tr>
-            <tr>
-              <th scope="row" style={head}>Best for</th>
-              <td style={cell}>Custom, pixel-perfect UI and teams targeting mobile plus web or desktop.</td>
-              <td style={cell}>JavaScript/React teams that want to reuse skills and web code.</td>
-              <td style={cell}>Heavy native SDKs, maximum performance and platform-first experiences.</td>
-            </tr>
-            <tr>
-              <th scope="row" style={head}>Budget from pricing data</th>
-              <td style={cell}>{cad(cross.low)}–{cad(cross.high)} CAD, {cross.weeksLow}–{cross.weeksHigh} weeks</td>
-              <td style={cell}>{cad(cross.low)}–{cad(cross.high)} CAD, {cross.weeksLow}–{cross.weeksHigh} weeks</td>
-              <td style={cell}>{cad(nativeBoth.low)}–{cad(nativeBoth.high)} CAD, {nativeBoth.weeksLow}–{nativeBoth.weeksHigh} weeks</td>
-            </tr>
-          </tbody>
-        </table>
-        <h2 style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>How much does a cross-platform app cost, and how is it built?</h2>
-        <p style={{ margin: '0 0 12px' }}>
-          A cross-platform app built on one shared codebase typically costs {cad(cross.low)}–{cad(cross.high)} CAD and takes {cross.weeksLow}–{cross.weeksHigh} weeks, while separate native iOS and Android apps run {cad(nativeBoth.low)}–{cad(nativeBoth.high)} CAD over {nativeBoth.weeksLow}–{nativeBoth.weeksHigh} weeks. Scope, native integrations and platform-specific UI affect the quote. Delivery moves through a platform audit, shared architecture, platform-specific polish and a coordinated App Store and Play Store launch.
-        </p>
-        <p style={{ margin: '0 0 12px' }}>
-          Our <Link href="/blog/app-development-cost-canada">Canadian app development cost guide</Link> explains what moves the number, and our <Link href="/services/mobile-app-development">mobile app development services</Link> cover the full delivery process.
-        </p>
-        <p style={{ margin: 0 }}>
-          Working with a local team? Explore cross-platform app development in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={serviceCityPath('mobile-app-development', slug)}>{name}</Link></span>
-          ))}, or <Link href="/contact">contact us</Link> and we&apos;ll help scope it.
-        </p>
-      </div>
-    </section>
-  );
-}
 
 export default function PageClient() {
   return (
@@ -117,7 +42,6 @@ export default function PageClient() {
       steps={steps}
       faqs={faqs}
       capabilitiesTitle="Everything Your Multi-Platform App Needs"
-      buyerContent={<BuyerContent />}
     />
   );
 }
