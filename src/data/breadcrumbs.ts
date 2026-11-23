@@ -183,12 +183,12 @@ export function getLocationBreadcrumbs(
  */
 export function getBlogBreadcrumbs(postTitle: string, postSlug: string): BreadcrumbItem[] {
   return [
-    { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-    { position: 2, name: 'Blog', item: 'https://mapletechlabs.ca/blog' },
+    { position: 1, name: 'Home', item: canonicalUrl('/') },
+    { position: 2, name: 'Blog', item: canonicalUrl('/blog') },
     {
       position: 3,
       name: postTitle,
-      item: `https://mapletechlabs.ca/blog/${postSlug}`,
+      item: canonicalUrl(`/blog/${postSlug}`),
     },
   ];
 }
