@@ -206,7 +206,7 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
                     The massive price range exists because &quot;a website&quot; in 2026 can mean anything from a five-page marketing site to a real-time SaaS platform serving millions of users. The technology, design complexity, integrations, and ongoing maintenance requirements all play a role in determining the final cost.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    This guide gives you real numbers based on our experience building over 300 web projects for Canadian clients. No vague ranges, no sales pitches. Just transparent pricing data so you can budget with confidence.
+                    This guide gives you real numbers based on our experience building over 300 web projects for Canadian clients. No vague ranges, no sales pitches. Just transparent pricing data so you can budget with confidence. If you would rather have the build scoped for you, our <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>web development services</Link> team handles it end to end, and Edmonton businesses can work directly with our <Link href="/locations/edmonton/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>custom software development company in Edmonton</Link>.
                   </p>
                 </div>
 
