@@ -18,7 +18,7 @@ export const BLOG_SERVICE_CTA: Record<string, BlogServiceCtaData> = {
   'saas-guide': { href: '/services/saas-development', label: 'SaaS development services' },
   'software-development-companies-calgary': { href: '/services/software-development', label: 'custom software development services' },
   'top-10-unicorn-apps-2026': { href: '/services/mobile-app-development', label: 'mobile app development services' },
-  'top-seo-companies-canada': { href: '/services/digital-marketing', label: 'SEO and digital marketing services' },
+  'top-seo-companies-canada': { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
   'top-software-development-companies-canada': { href: '/services/software-development', label: 'custom software development services' },
   'web-development-companies-toronto': { href: '/services/web-development', label: 'web development services' },
   'website-cost-canada': { href: '/services/web-development', label: 'web development services' },
