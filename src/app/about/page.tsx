@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
-import { FaqSchema } from '@/components/ServiceSchema';
-import { ABOUT_FAQS } from '@/data/about';
 
 const TITLE = 'About Mapletech Labs: Edmonton Software Developers';
 
@@ -51,33 +48,6 @@ export default function Page() {
           { position: 2, name: 'About', item: canonicalUrl('/about') },
         ]}
       />
-      <FaqSchema faqs={ABOUT_FAQS} />
-      <section className="mx-auto max-w-4xl px-6 pb-2" style={{ paddingTop: 110, background: 'var(--surface)' }}>
-        <p className="text-base leading-relaxed text-slate-700">
-          Mapletech Labs is a Canadian software development company founded in Edmonton by{' '}
-          <Link href="/about/raman-makkar" className="font-semibold text-blue-700 underline">
-            Raman Makkar
-          </Link>
-          . With 300+ projects delivered, 150+ engineers and clients in 12 countries, we build
-          web, mobile and AI products for businesses across Canada. Explore our{' '}
-          <Link href="/services" className="font-semibold text-blue-700 underline">
-            software, app and AI development services
-          </Link>
-          , see the results in{' '}
-          <Link href="/case-studies" className="font-semibold text-blue-700 underline">
-            our case studies
-          </Link>
-          , including the{' '}
-          <Link href="/case-studies/logistics-platform" className="font-semibold text-blue-700 underline">
-            logistics platform case study
-          </Link>
-          , or{' '}
-          <Link href="/contact" className="font-semibold text-blue-700 underline">
-            contact our team
-          </Link>{' '}
-          to discuss your project.
-        </p>
-      </section>
       <PageClient />
     </>
   );

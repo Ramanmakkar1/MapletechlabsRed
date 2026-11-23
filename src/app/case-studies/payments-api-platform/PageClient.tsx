@@ -4,12 +4,10 @@ import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MoreCaseStudies from '@/components/MoreCaseStudies';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import CaseStudyRelated from '@/components/CaseStudyRelated';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
@@ -246,28 +244,6 @@ export default function PaymentsCaseStudyClient() {
           </div>
         </section>
 
-        <CaseStudyRelated
-          intro="Planning a payments or SaaS API in Ottawa? See our backend and SaaS development work for Ottawa companies."
-          services={[
-            { label: 'API & Backend Development', href: '/services/web-development/api-backend' },
-            { label: 'SaaS Development', href: '/services/saas-development' },
-            { label: 'SaaS Development in Ottawa', href: '/locations/saas-development-company-in-ottawa' },
-            { label: 'Fintech Software Development', href: '/industries/fintech' },
-          ]}
-          city={{ label: 'Software Development in Ottawa', href: '/locations/software-development-company-in-ottawa' }}
-        />
-
-        {/* ── RELATED SERVICES ── */}
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <div className="reveal" style={{ maxWidth: 760 }}>
-              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                Related services: <Link href="/services/web-development/api-backend">API and backend development</Link>, <Link href="/services/software-development">custom software development</Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
@@ -292,15 +268,20 @@ export default function PaymentsCaseStudyClient() {
                   Whether it&apos;s payments, crypto, or compliance-heavy fintech — we engineer secure, scalable systems. Let&apos;s talk about your next project.
                 </p>
               </div>
-              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Discuss your payments platform →
+              <Link href={contactHref} style={{ textDecoration: 'none' }}>
+                <button style={{
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
+                  transition: 'all 0.2s', whiteSpace: 'nowrap',
+                }}>
+                  Get in Touch →
+                </button>
               </Link>
             </div>
           </div>
         </section>
 
       </main>
-      <MoreCaseStudies current="payments-api-platform" />
       <Footer />
     </>
   );

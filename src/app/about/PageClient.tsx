@@ -3,12 +3,10 @@
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
 import { blogMedia, officeMedia, humanMedia } from '@/data/media';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import MediaBand from '@/components/MediaBand';
-import { ABOUT_FAQS } from '@/data/about';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -119,107 +117,7 @@ export default function AboutPage() {
         <article>
 
         {/* ── HERO ── */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "Software Development Company · Edmonton", title: <>About Mapletech Labs<br /><span style={{ color: 'var(--brand)' }}>We Build Software That Matters.</span></>, desc: <>Mapletech Labs is a custom software, app, AI and UI/UX development company headquartered in Edmonton, Canada, founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={humanMedia.workshop} form={false} />
-
-        {/* ── WHO WE ARE (ANSWER-FIRST) ── */}
-        <section style={{ padding: '0 0 8px' }}>
-          <div className="cb-container" style={{ maxWidth: 860 }}>
-            <h2 id="who-we-are" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
-              Who is Raman Makkar and what does Mapletech Labs do?
-            </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)', marginBottom: 16 }}>
-              Raman Makkar is the founder and CEO of Mapletech Labs, a Canadian software development company headquartered
-              in Edmonton, Alberta, that he founded in 2018. Mapletech Labs builds custom web platforms, mobile apps, AI
-              products and UI/UX experiences for businesses across Canada, with 12 locations in Edmonton, Calgary, Toronto
-              and Vancouver and a virtual team of the best agents from around the world.
-            </p>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)' }}>
-              Raman Makkar is the founder and CEO of Mapletech Labs, the Edmonton, Alberta software development company
-              he started in 2018. He brings 15+ years of engineering experience and leads a 25+ member team that has
-              delivered 500+ projects for clients across Canada and internationally. Read the full{' '}
-              <Link href="/about/raman-makkar" style={{ color: 'var(--brand)' }}>Raman Makkar founder profile</Link>,
-              explore the <Link href="/services" style={{ color: 'var(--brand)' }}>software development services he leads</Link>{' '}
-              and the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>client case studies and results</Link>,
-              find a local team through <Link href="/locations" style={{ color: 'var(--brand)' }}>Mapletech Labs locations across Canada</Link>,
-              review <Link href="/pricing" style={{ color: 'var(--brand)' }}>software development pricing guidance</Link>,
-              or <Link href="/contact" style={{ color: 'var(--brand)' }}>contact Raman for a free consultation</Link>.
-            </p>
-          </div>
-        </section>
-
-        {/* ── AT A GLANCE ── */}
-        <section style={{ padding: 'var(--section-y) 0 0' }}>
-          <div className="cb-container" style={{ maxWidth: 860 }}>
-            <h2 id="about-at-a-glance" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)' }}>
-              Mapletech Labs at a glance
-            </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)' }}>
-              Mapletech Labs is a Canadian software, app, AI and UI/UX development company founded by Raman Makkar in Edmonton, Alberta in 2018.
-            </p>
-            <dl style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)' }}>
-              <dt style={{ fontWeight: 600, color: 'var(--ink)' }}>Company</dt>
-              <dd style={{ margin: '0 0 12px' }}>Mapletech Labs (formerly TML Branding Agency)</dd>
-              <dt style={{ fontWeight: 600, color: 'var(--ink)' }}>Founded</dt>
-              <dd style={{ margin: '0 0 12px' }}>2018, Edmonton, Alberta</dd>
-              <dt style={{ fontWeight: 600, color: 'var(--ink)' }}>Founder &amp; CEO</dt>
-              <dd style={{ margin: '0 0 12px' }}><Link href="/about/raman-makkar" style={{ color: 'var(--brand)', fontWeight: 500 }}>Raman Makkar</Link></dd>
-              <dt style={{ fontWeight: 600, color: 'var(--ink)' }}>Head office</dt>
-              <dd style={{ margin: '0 0 12px' }}>Edmonton, Alberta. Offices in Toronto, Vancouver and Calgary</dd>
-              <dt style={{ fontWeight: 600, color: 'var(--ink)' }}>Services</dt>
-              <dd style={{ margin: '0 0 12px' }}>
-                <Link href="/services/web-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>web development</Link>,{' '}
-                <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>app development</Link>,{' '}
-                <Link href="/services/ai-ml" style={{ color: 'var(--brand)', fontWeight: 500 }}>AI development</Link>,{' '}
-                <Link href="/services/product-design" style={{ color: 'var(--brand)', fontWeight: 500 }}>UI/UX design</Link>,{' '}
-                <Link href="/services/saas-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>SaaS development</Link> and{' '}
-                <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', fontWeight: 500 }}>SEO and digital marketing</Link>,{' '}
-                <Link href="/services" style={{ color: 'var(--brand)', fontWeight: 500 }}>all services</Link>
-              </dd>
-              <dt style={{ fontWeight: 600, color: 'var(--ink)' }}>Contact</dt>
-              <dd style={{ margin: 0 }}>
-                <a href="tel:+14036048692" style={{ color: 'var(--brand)', fontWeight: 500 }}>+1 (403) 604-8692</a>{' '}
-                <a href="mailto:hello@mapletechlabs.ca" style={{ color: 'var(--brand)', fontWeight: 500 }}>hello@mapletechlabs.ca</a> — replies within one working day
-              </dd>
-            </dl>
-          </div>
-        </section>
-
-        {/* ── CORE SERVICES ── */}
-        <section style={{ padding: 'var(--section-y) 0' }}>
-          <div className="cb-container" style={{ maxWidth: 860 }}>
-            <h2 id="core-services" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
-              What Mapletech Labs builds for Canadian businesses
-            </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)', marginBottom: 20 }}>
-              Mapletech Labs delivers end-to-end product engineering: strategy, design, build and launch. Our core
-              services cover everything a Canadian startup, scale-up or enterprise needs to ship software that matters.
-            </p>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 16 }}>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/services/web-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>Web development</Link> — Next.js, API and backend systems, ecommerce platforms and enterprise portals.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>App development</Link> — iOS, Android and cross-platform mobile apps built for scale.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/services/ai-ml" style={{ color: 'var(--brand)', fontWeight: 500 }}>AI development</Link> — LLM integration, AI agents, computer vision and predictive analytics.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/services/product-design" style={{ color: 'var(--brand)', fontWeight: 500 }}>UI/UX design</Link> — product strategy, design systems, wireframing and UX audits.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/services/saas-development" style={{ color: 'var(--brand)', fontWeight: 500 }}>SaaS development</Link> — multi-tenant platforms, billing, auth and analytics dashboards.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', fontWeight: 500 }}>SEO and digital marketing</Link> — local SEO, content, Google Ads and performance analytics.
-              </li>
-            </ul>
-            <p style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)', marginTop: 20 }}>
-              See the <Link href="/services" style={{ color: 'var(--brand)', fontWeight: 500 }}>full list of Mapletech Labs services</Link> and{' '}
-              <Link href="/pricing" style={{ color: 'var(--brand)', fontWeight: 500 }}>software development pricing guidance</Link> for what projects typically cost.
-            </p>
-          </div>
-        </section>
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]} copy={{ badge: "About Mapletech Labs", title: <>We Build Software<br />That Matters.</>, desc: <>A world-class engineering firm headquartered in Edmonton, Canada. Founded by Raman Makkar in 2018. 12 locations across Canada. Best agents from around the world working virtually.</> }} photo={humanMedia.workshop} form={false} />
 
         {/* ── MISSION STATEMENT ── */}
         <section style={{
@@ -286,7 +184,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="reveal reveal-d2">
                   <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
-                    Mapletech Labs was founded in Edmonton, Canada in 2018 by Raman Makkar — with a mission to take Canadian businesses to the top in tech. What started as TML Branding Agency has grown into a full-service technology company serving clients across Canada.
+                    Mapletech Labs was founded in Edmonton, Canada in 2018 by Raman Makkar — with a mission to take Canadian businesses to the top in tech. What started as TML Branding Agency has grown into a full-service technology powerhouse ruling across all of Canada.
                   </p>
                   <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     They started with a simple belief: the best engineering talent in the world shouldn&apos;t only be available to the biggest companies. Founders building their first product deserve the same quality of engineering judgment as a Series D company with a 200-person team.
@@ -478,14 +376,6 @@ export default function AboutPage() {
             }}>
               12 locations across Canada, one engineering culture. Best agents from around the world.
             </p>
-            <p className="reveal reveal-d3" style={{
-              fontSize: 15.5, color: 'var(--muted)', lineHeight: 1.7,
-              maxWidth: 640, marginBottom: 40,
-            }}>
-              Our head office is in Edmonton, Alberta, with offices in Calgary, Toronto and Vancouver. We serve clients in
-              all 12 Canadian locations coast-to-coast — explore{' '}
-              <Link href="/locations" style={{ color: 'var(--brand)', fontWeight: 500 }}>Mapletech Labs locations across Canada</Link> to find your local team.
-            </p>
             <div style={{
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 20,
             }}>
@@ -525,62 +415,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── CASE STUDIES ── */}
-        <section style={{ padding: 'var(--section-y) 0' }}>
-          <div className="cb-container" style={{ maxWidth: 860 }}>
-            <h2 id="case-studies" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 12 }}>
-              Client work: case studies and results
-            </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)', marginBottom: 20 }}>
-              Our 500+ delivered projects include products that have collectively generated over $500 million in client
-              revenue. These case studies show what we build and the measurable results our clients get.
-            </p>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 16 }}>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--brand)', fontWeight: 500 }}>Ecommerce platform</Link> — high-converting storefront and checkout for a Canadian retailer.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)', fontWeight: 500 }}>Fintech trading platform</Link> — real-time trading interface with low-latency data feeds.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/case-studies/healthcare-telehealth" style={{ color: 'var(--brand)', fontWeight: 500 }}>Healthcare telehealth</Link> — secure video consultation platform for Canadian clinics.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/case-studies/logistics-platform" style={{ color: 'var(--brand)', fontWeight: 500 }}>Logistics platform</Link> — fleet tracking and route optimisation for a national carrier.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/case-studies/payments-api-platform" style={{ color: 'var(--brand)', fontWeight: 500 }}>Payments API platform</Link> — developer-facing API for processing payments at scale.
-              </li>
-              <li style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)' }}>
-                <Link href="/case-studies/real-estate-portal" style={{ color: 'var(--brand)', fontWeight: 500 }}>Real estate portal</Link> — property search and listing platform for a Canadian brokerage.
-              </li>
-            </ul>
-            <p style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--body)', marginTop: 20 }}>
-              Browse all <Link href="/case-studies" style={{ color: 'var(--brand)', fontWeight: 500 }}>Mapletech Labs case studies</Link> to see the full range of client work.
-            </p>
-          </div>
-        </section>
-
         {/* ── BOTTOM CTA ── */}
         <MediaBand media={humanMedia.meeting} ratio="21 / 8" />
-
-        {/* ── FAQ ── */}
-        <section style={{ padding: 'var(--section-y) 0' }}>
-          <div className="cb-container" style={{ maxWidth: 860 }}>
-            <h2 id="about-faq" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)' }}>
-              Frequently asked questions about Mapletech Labs
-            </h2>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              {ABOUT_FAQS.map(faq => (
-                <li key={faq.q} style={{ marginBottom: 28 }}>
-                  <h3 style={{ fontSize: 17, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>{faq.q}</h3>
-                  <p style={{ fontSize: 15.5, lineHeight: 1.75, color: 'var(--body)', margin: 0 }}>{faq.a}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
         <FinalCta title="Let’s talk about what you’re building." sub="Tell us the problem. A senior engineer will come back within one working day with how we’d approach it, what it takes and what it costs." />
 
         </article>

@@ -4,12 +4,10 @@ import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MoreCaseStudies from '@/components/MoreCaseStudies';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import CaseStudyRelated from '@/components/CaseStudyRelated';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
@@ -81,31 +79,9 @@ export default function LogisticsCaseStudyClient() {
 
             <p className="reveal reveal-d3" style={{
               fontSize: 20, color: 'var(--muted)', lineHeight: 1.65,
-              maxWidth: 720, marginBottom: 16, fontWeight: 400,
+              maxWidth: 720, marginBottom: 48, fontWeight: 400,
             }}>
               We built an intelligent logistics platform that combines IoT fleet tracking, ML-powered route optimization, and a real-time operations dashboard to transform last-mile delivery operations.
-            </p>
-
-            <p className="reveal reveal-d3" style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7, maxWidth: 840, marginBottom: 16 }}>
-              Mapletech Labs built a real-time logistics and fleet management platform for a Vancouver
-              logistics client, combining IoT fleet tracking, ML-powered route optimization and a live
-              operations dashboard. The platform now handles <strong>15K+ daily deliveries</strong> with a{' '}
-              <strong>98% on-time rate</strong> and delivers <strong>25% fuel savings</strong>.
-            </p>
-            <p className="reveal reveal-d3" style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7, maxWidth: 840, marginBottom: 48 }}>
-              Read more about our{' '}
-              <Link href="/industries/logistics" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-                logistics software development
-              </Link>{' '}
-              work, our{' '}
-              <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-                web development services
-              </Link>
-              , or{' '}
-              <Link href="/contact" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-                contact Mapletech Labs
-              </Link>{' '}
-              to discuss a similar platform.
             </p>
 
             <figure className="media media--lg fade" style={{ aspectRatio: '16 / 9', margin: '0 0 48px' }}>
@@ -268,29 +244,6 @@ export default function LogisticsCaseStudyClient() {
           </div>
         </section>
 
-        <CaseStudyRelated
-          intro="Planning a logistics platform in Vancouver? See our web and mobile development work for Vancouver teams."
-          services={[
-            { label: 'SaaS Development', href: '/services/saas-development' },
-            { label: 'Enterprise Portal Development', href: '/services/web-development/enterprise-portals' },
-            { label: 'API and Backend Development', href: '/services/web-development/api-backend' },
-            { label: 'Mobile App Development', href: '/services/mobile-app-development' },
-            { label: 'App Development in Vancouver', href: '/locations/app-development-company-in-vancouver' },
-          ]}
-          city={{ label: 'Software Development in Vancouver', href: '/locations/software-development-company-in-vancouver' }}
-        />
-
-        {/* ── RELATED SERVICES ── */}
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <div className="reveal" style={{ maxWidth: 760 }}>
-              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                Related services: <Link href="/services/web-development">custom software development</Link>, <Link href="/services/cloud-devops">cloud &amp; DevOps</Link>, <Link href="/services/web-development/api-backend">API and backend engineering</Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
@@ -315,15 +268,20 @@ export default function LogisticsCaseStudyClient() {
                   From IoT integration to ML-powered optimization, we build logistics platforms that cut costs and improve delivery performance. Let&apos;s talk.
                 </p>
               </div>
-              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Discuss your logistics platform →
+              <Link href={contactHref} style={{ textDecoration: 'none' }}>
+                <button style={{
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
+                  transition: 'all 0.2s', whiteSpace: 'nowrap',
+                }}>
+                  Get in Touch →
+                </button>
               </Link>
             </div>
           </div>
         </section>
 
       </main>
-      <MoreCaseStudies current="logistics-platform" />
       <Footer />
     </>
   );

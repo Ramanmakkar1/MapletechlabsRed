@@ -4,12 +4,10 @@ import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MoreCaseStudies from '@/components/MoreCaseStudies';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import CaseStudyRelated from '@/components/CaseStudyRelated';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
@@ -246,17 +244,6 @@ export default function HealthcareCaseStudyClient() {
           </div>
         </section>
 
-        <CaseStudyRelated
-          intro="Planning something similar in Calgary? See our app development work for Calgary businesses."
-          services={[
-            { label: 'Mobile App Development', href: '/services/mobile-app-development' },
-            { label: 'Web Development', href: '/services/web-development' },
-            { label: 'App Development in Calgary', href: '/locations/app-development-company-in-calgary' },
-            { label: 'Healthcare Software Development', href: '/industries/healthcare' },
-          ]}
-          city={{ label: 'Software Development in Calgary', href: '/locations/software-development-company-in-calgary' }}
-        />
-
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
@@ -281,15 +268,20 @@ export default function HealthcareCaseStudyClient() {
                   We specialize in HIPAA-compliant, patient-first digital health solutions. Let&apos;s discuss how we can help transform your healthcare delivery.
                 </p>
               </div>
-              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Discuss your healthcare app →
+              <Link href={contactHref} style={{ textDecoration: 'none' }}>
+                <button style={{
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
+                  transition: 'all 0.2s', whiteSpace: 'nowrap',
+                }}>
+                  Get in Touch →
+                </button>
               </Link>
             </div>
           </div>
         </section>
 
       </main>
-      <MoreCaseStudies current="healthcare-telehealth" />
       <Footer />
     </>
   );

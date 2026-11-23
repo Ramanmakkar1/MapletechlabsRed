@@ -4,12 +4,10 @@ import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MoreCaseStudies from '@/components/MoreCaseStudies';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import CaseStudyRelated from '@/components/CaseStudyRelated';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
@@ -246,20 +244,6 @@ export default function FintechCaseStudyClient() {
           </div>
         </section>
 
-        <CaseStudyRelated
-          intro="Building something similar in Toronto? See our web development and cloud DevOps services for Toronto fintech teams."
-          services={[
-            { label: 'Fintech Software Development', href: '/industries/fintech' },
-            { label: 'AI & Machine Learning', href: '/services/ai-ml' },
-            { label: 'Web Development', href: '/services/web-development' },
-            { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
-            { label: 'AWS Architecture', href: '/services/cloud-devops/aws-architecture' },
-            { label: 'Web Development in Toronto', href: '/locations/web-development-company-in-toronto' },
-            { label: 'Cloud & DevOps in Toronto', href: '/locations/toronto/cloud-devops' },
-          ]}
-          city={{ label: 'Software Development in Toronto', href: '/locations/software-development-company-in-toronto' }}
-        />
-
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
@@ -284,15 +268,20 @@ export default function FintechCaseStudyClient() {
                   Whether it&apos;s fintech, AI, or high-frequency systems — we engineer software that scales. Let&apos;s talk about your next project.
                 </p>
               </div>
-              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Discuss your trading platform →
+              <Link href={contactHref} style={{ textDecoration: 'none' }}>
+                <button style={{
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
+                  transition: 'all 0.2s', whiteSpace: 'nowrap',
+                }}>
+                  Get in Touch →
+                </button>
               </Link>
             </div>
           </div>
         </section>
 
       </main>
-      <MoreCaseStudies current="fintech-trading-platform" />
       <Footer />
     </>
   );

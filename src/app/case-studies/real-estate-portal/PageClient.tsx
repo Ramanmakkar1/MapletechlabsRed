@@ -4,12 +4,10 @@ import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MoreCaseStudies from '@/components/MoreCaseStudies';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import CaseStudyRelated from '@/components/CaseStudyRelated';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
@@ -246,15 +244,6 @@ export default function RealEstateCaseStudyClient() {
           </div>
         </section>
 
-        <CaseStudyRelated
-          intro="Planning a data-driven portal in Toronto? See our web development services for Toronto product teams."
-          services={[
-            { label: 'Web Development', href: '/services/web-development' },
-            { label: 'Web Development in Toronto', href: '/locations/web-development-company-in-toronto' },
-          ]}
-          city={{ label: 'Software Development in Toronto', href: '/locations/software-development-company-in-toronto' }}
-        />
-
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
@@ -279,15 +268,20 @@ export default function RealEstateCaseStudyClient() {
                   Whether it&apos;s real estate, e-commerce, or any data-driven platform — we build ML systems that scale and drive business results.
                 </p>
               </div>
-              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Discuss your real estate portal →
+              <Link href={contactHref} style={{ textDecoration: 'none' }}>
+                <button style={{
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
+                  transition: 'all 0.2s', whiteSpace: 'nowrap',
+                }}>
+                  Get in Touch →
+                </button>
               </Link>
             </div>
           </div>
         </section>
 
       </main>
-      <MoreCaseStudies current="real-estate-portal" />
       <Footer />
     </>
   );

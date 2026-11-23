@@ -4,12 +4,10 @@ import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MoreCaseStudies from '@/components/MoreCaseStudies';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { caseStudyMedia, humanPick } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import CaseStudyRelated from '@/components/CaseStudyRelated';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
@@ -246,17 +244,6 @@ export default function EcommerceCaseStudyClient() {
           </div>
         </section>
 
-        <CaseStudyRelated
-          intro="Planning a similar storefront in Edmonton? See how we approach web and e-commerce development for Edmonton businesses."
-          services={[
-            { label: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
-            { label: 'Web Development', href: '/services/web-development' },
-            { label: 'Web Development in Edmonton', href: '/locations/web-development-company-in-edmonton' },
-            { label: 'E-Commerce Software Development', href: '/industries/ecommerce' },
-          ]}
-          city={{ label: 'Software Development in Edmonton', href: '/locations/software-development-company-in-edmonton' }}
-        />
-
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
@@ -281,15 +268,20 @@ export default function EcommerceCaseStudyClient() {
                   From legacy migrations to headless commerce builds, we engineer platforms that drive real revenue. Let&apos;s discuss your growth goals.
                 </p>
               </div>
-              <Link href={contactHref} className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>
-                Discuss your e-commerce platform →
+              <Link href={contactHref} style={{ textDecoration: 'none' }}>
+                <button style={{
+                  padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                  fontSize: 15, fontWeight: 700, border: 'none', cursor: 'pointer',
+                  transition: 'all 0.2s', whiteSpace: 'nowrap',
+                }}>
+                  Get in Touch →
+                </button>
               </Link>
             </div>
           </div>
         </section>
 
       </main>
-      <MoreCaseStudies current="ecommerce-platform" />
       <Footer />
     </>
   );

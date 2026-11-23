@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
@@ -71,42 +70,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section
-        aria-labelledby="ecommerce-summary-heading"
-        style={{ maxWidth: 840, margin: '0 auto', padding: '48px 24px 0' }}
-      >
-        <h2
-          id="ecommerce-summary-heading"
-          style={{ fontSize: 28, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 16 }}
-        >
-          What Mapletech Labs built for the ecommerce client
-        </h2>
-        <p style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 16 }}>
-          Mapletech Labs rebuilt an Edmonton multi-vendor ecommerce platform, tripling revenue and
-          serving <strong>2M+ monthly visitors</strong> for a leading Canadian retailer. The
-          high-performance storefront combines vendor onboarding, inventory and checkout systems
-          built for peak traffic.
-        </p>
-        <p style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.7 }}>
-          Read more about our{' '}
-          <Link href="/services/software-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-            software development services
-          </Link>{' '}
-          services, our{' '}
-          <Link href="/services/web-development/ecommerce-systems" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-            ecommerce systems
-          </Link>
-          , our{' '}
-          <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-            Edmonton web development
-          </Link>{' '}
-          work, or{' '}
-          <Link href="/contact" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>
-            contact Mapletech Labs
-          </Link>{' '}
-          to discuss a similar platform.
-        </p>
-      </section>
       <PageClient />
     </>
   );

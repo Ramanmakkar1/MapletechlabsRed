@@ -29,18 +29,18 @@ export default function FAQPageClient() {
       <main ref={ref} style={{ background: 'var(--surface)', minHeight: '100vh' }}>
 
         {/* Hero */}
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]} copy={{ badge: "Help centre", title: <>Software Project<br /><span style={{ color: 'var(--brand)' }}>FAQ</span></>, desc: <>Mapletech Labs is a custom software, mobile app, AI and UI/UX development company headquartered in Edmonton, Alberta. Below are straight answers on timelines, fixed-price quotes, IP ownership, NDAs, tech stack and post-launch support.</> }} photo={officeMedia.desk} form={false} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]} copy={{ badge: "Help centre", title: <>Frequently Asked<br /><span style={{ color: 'var(--brand)' }}>Questions</span></>, desc: <></> }} photo={officeMedia.desk} form={false} />
 
         {/* FAQ Categories */}
         <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container" style={{ maxWidth: 800, margin: '0 auto' }}>
             {categories.map((cat, ci) => (
               <div key={cat.name} className={`reveal reveal-d${ci + 1}`} style={{ marginBottom: 56 }}>
-                <h2 style={{
+                <div style={{
                   fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
-                  color: 'var(--brand)', margin: '0 0 20px', paddingBottom: 16,
+                  color: 'var(--brand)', marginBottom: 20, paddingBottom: 16,
                   borderBottom: '1px solid var(--line)',
-                }}>{cat.name}</h2>
+                }}>{cat.name}</div>
                 {cat.faqs.map((faq, fi) => {
                   const key = `${ci}-${fi}`;
                   const isOpen = active === key;
@@ -85,47 +85,6 @@ export default function FAQPageClient() {
                 })}
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Where to go next */}
-        <section aria-labelledby="faq-next-steps" style={{ paddingBottom: 'var(--section-y)' }}>
-          <div className="cb-container" style={{ maxWidth: 800, margin: '0 auto' }}>
-            <h2 id="faq-next-steps" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 14px' }}>
-              Where to go next
-            </h2>
-            <ul style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--body)', paddingLeft: 22, margin: 0 }}>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/pricing" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Typical project prices in CAD</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/services" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Custom software development services</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Mobile app development company</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>AI development services</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>UI/UX design company</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Edmonton</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Calgary</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Toronto</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Software development company in Vancouver</Link>
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <Link href="/case-studies" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: 500 }}>Mapletech Labs case studies</Link>
-              </li>
-            </ul>
           </div>
         </section>
 

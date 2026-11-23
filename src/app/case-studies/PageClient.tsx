@@ -54,8 +54,6 @@ const caseStudies = [
     description: 'Redesigned checkout flow for 2M+ monthly visitors, increasing conversion rate from 2.1% to 3.8% in 90 days.',
     metric: { value: '3.8%', label: 'Conversion Rate' },
     tech: ['Next.js', 'Stripe', 'PostgreSQL', 'Redis'],
-    serviceHref: '/services/web-development/ecommerce-systems',
-    serviceLabel: 'Ecommerce systems development',
     },
   {
     slug: 'logistics-platform',
@@ -65,8 +63,6 @@ const caseStudies = [
     description: 'Built IoT-integrated platform tracking 500 trucks with 15K+ daily deliveries, achieving 25% fuel cost reduction ($180K annually).',
     metric: { value: '180K', label: 'Annual Savings' },
     tech: ['React', 'Python', 'TensorFlow', 'AWS IoT'],
-    serviceHref: '/services/web-development',
-    serviceLabel: 'Web development',
     },
   {
     slug: 'payments-api-platform',
@@ -74,8 +70,6 @@ const caseStudies = [
     title: 'PCI DSS Payments API',
     client: 'PayBridge Solutions \u00b7 Ottawa',
     description: 'Engineered secure payments processing API handling 12M+ monthly transactions with PCI DSS compliance.',
-    serviceHref: '/services/web-development/api-backend',
-    serviceLabel: 'API and backend development',
     metric: { value: '12M+', label: 'Monthly Transactions' },
     tech: ['Node.js', 'PostgreSQL', 'Redis', 'AWS KMS'],
     },
@@ -183,7 +177,7 @@ export default function CaseStudiesPageClient() {
                 A case study is easy to inflate. We try not to. Each project below leads with the outcome the client actually cared about &mdash; latency cut from 100ms to sub-50ms, checkout conversion moved from 2.1% to 3.8%, admin overhead down 40% &mdash; because that is the only measure of whether the engineering was worth it.
               </p>
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
-                They span the industries we know best: fintech and payments, healthcare, e-commerce, logistics and real estate. Different sectors, different regulations, one pattern &mdash; understand the business, ship something people use, and stay accountable for how it performs after launch. Filter by industry, or read them all. If you are looking for a team in the capital region, see our <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link> page.
+                They span the industries we know best: fintech and payments, healthcare, e-commerce, logistics and real estate. Different sectors, different regulations, one pattern &mdash; understand the business, ship something people use, and stay accountable for how it performs after launch. Filter by industry, or read them all.
               </p>
             </div>
           </div>
@@ -218,6 +212,7 @@ export default function CaseStudiesPageClient() {
                         display: 'flex',
                         flexDirection: 'column',
                         transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
+                        cursor: 'pointer',
                       }}
                       onMouseEnter={e => {
                         (e.currentTarget as HTMLElement).style.borderColor = 'var(--brand)';
@@ -270,21 +265,6 @@ export default function CaseStudiesPageClient() {
                             {cs.category}
                           </span>
                         </div>
-
-                        {/* Service link for proof */}
-                        {cs.serviceHref && (
-                          <div style={{ marginBottom: 12 }}>
-                            <Link
-                              href={cs.serviceHref}
-                              style={{
-                                fontSize: 13, fontWeight: 600, color: 'var(--brand)',
-                                textDecoration: 'underline', textUnderlineOffset: 2,
-                              }}
-                            >
-                              See our {cs.serviceLabel} services
-                            </Link>
-                          </div>
-                        )}
 
                         {/* Title */}
                         <h3 style={{
@@ -343,26 +323,6 @@ export default function CaseStudiesPageClient() {
                 );
               })}
             </div>
-
-            {/* Plain index of every case study, so each has a direct internal link */}
-            <nav aria-label="All case studies" style={{ marginTop: 56 }}>
-              <h2 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 16 }}>
-                All case studies
-              </h2>
-              <ul style={{ listStyle: 'disc', paddingLeft: 22, margin: 0, display: 'grid', gap: 10 }}>
-                {caseStudies.map(cs => (
-                  <li key={cs.slug} style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.6 }}>
-                    <Link
-                      href={`/case-studies/${cs.slug}`}
-                      style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 2 }}
-                    >
-                      {cs.title}
-                    </Link>
-                    {` — ${cs.client}`}
-                  </li>
-                ))}
-              </ul>
-            </nav>
           </div>
         </section>
 
