@@ -128,6 +128,26 @@ export default function Page() {
             ))}
           </ul>
         </nav>
+        <nav aria-label="Services behind these results" className="mt-6">
+          <h2 className="text-lg font-semibold text-slate-900">Services behind these results</h2>
+          <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+            <li>
+              <Link href="/services/web-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                custom software development and web development
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/ai-ml" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                AI development
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/product-design" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                UI/UX design
+              </Link>
+            </li>
+          </ul>
+        </nav>
         <nav aria-label="Related services" className="mt-6">
           <h2 className="text-lg font-semibold text-slate-900">Related services</h2>
           <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
