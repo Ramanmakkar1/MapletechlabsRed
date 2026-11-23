@@ -1,4 +1,5 @@
 import { isIndexableCityService, isIndexableLocationSlug } from '@/data/serviceCity';
+import { canonicalPath } from './canonical';
 import { isCityListiclePath } from './listicles';
 
 /**
@@ -30,4 +31,8 @@ export function isIndexableSitemapPath(pathname: string): boolean {
   if (kw && !isIndexableLocationSlug(kw[1])) return false;
 
   return true;
+}
+
+export function isIndexableHref(href: string): boolean {
+  return isIndexableSitemapPath(canonicalPath(href));
 }
