@@ -32,8 +32,6 @@ const faqs = [
   { q: 'How much content do we need per month?', a: 'It depends on your goals, competition, and budget. A minimum viable programme typically includes 4 long-form blog posts per month. High-competition sectors often require 8–12 pieces per month across multiple formats to see meaningful results at pace.' },
 ];
 
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-
 function BuyerContent() {
   return (
     <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
@@ -54,10 +52,7 @@ function BuyerContent() {
           Content works best alongside <Link href="/services/digital-marketing/seo-services">technical and on-page SEO services</Link>. For budget planning, read our <Link href="/blog/digital-marketing-cost-canada">digital marketing cost guide for Canada</Link>.
         </p>
         <p>
-          Explore content marketing in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={`/locations/digital-marketing-agency-in-${slug}`}>{name}</Link></span>
-          ))}. Ready to publish content that ranks? <Link href="/contact">Book a content marketing consultation</Link>.
+          Explore content marketing across Canada, or contact us to discuss your city. Ready to publish content that ranks? <Link href="/contact">Book a content marketing consultation</Link>.
         </p>
       </div>
     </section>
