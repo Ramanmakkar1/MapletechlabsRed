@@ -84,21 +84,21 @@ export default function PageClient() {
                     <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Businesses that want nearby customers to find and contact them in defined cities or service areas.</td>
                     <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Google Business Profile and Bing Places optimisation, citation cleanup, local landing pages and locally relevant content.</td>
                     <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Local-pack and organic visibility, calls, direction requests, form enquiries and booked work by target location.</td>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>; compare our city pages for <Link href="/locations/seo-company-in-edmonton">Edmonton</Link>, <Link href="/locations/seo-company-in-calgary">Calgary</Link>, <Link href="/locations/seo-company-in-toronto">Toronto</Link> and <Link href="/locations/seo-company-in-vancouver">Vancouver</Link>, then <Link href="/contact">contact us about local SEO</Link>.</td>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>, then <Link href="/contact">contact us about local SEO</Link>.</td>
                   </tr>
                   <tr>
                     <th scope="row" style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>National SEO</th>
                     <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Companies selling across Canada that need non-local rankings and organic leads in multiple provinces or markets.</td>
                     <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>National keyword mapping, service and content optimisation, internal linking, digital PR and priority city-page support.</td>
                     <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Non-brand organic visibility, national and city rankings, qualified sessions, enquiries and revenue attributable to organic search.</td>
-                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>; compare our city pages for <Link href="/locations/seo-company-in-edmonton">Edmonton</Link>, <Link href="/locations/seo-company-in-calgary">Calgary</Link>, <Link href="/locations/seo-company-in-toronto">Toronto</Link> and <Link href="/locations/seo-company-in-vancouver">Vancouver</Link>, then <Link href="/contact">contact us about national SEO</Link>.</td>
+                    <td style={{ padding: 12, borderBottom: '1px solid var(--border)', verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>, then <Link href="/contact">contact us about national SEO</Link>.</td>
                   </tr>
                   <tr>
                     <th scope="row" style={{ padding: 12, verticalAlign: 'top' }}>Technical SEO</th>
                     <td style={{ padding: 12, verticalAlign: 'top' }}>Websites with strong services or content that are constrained by crawling, indexing, duplication, schema or Core Web Vitals issues.</td>
                     <td style={{ padding: 12, verticalAlign: 'top' }}>Technical audit, prioritised fix roadmap, implementation support and validation across key templates and devices.</td>
                     <td style={{ padding: 12, verticalAlign: 'top' }}>Valid indexed pages, crawl and canonical health, Core Web Vitals, resolved audit issues and resulting organic traffic and enquiries.</td>
-                    <td style={{ padding: 12, verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>; compare our city pages for <Link href="/locations/seo-company-in-edmonton">Edmonton</Link>, <Link href="/locations/seo-company-in-calgary">Calgary</Link>, <Link href="/locations/seo-company-in-toronto">Toronto</Link> and <Link href="/locations/seo-company-in-vancouver">Vancouver</Link>, then <Link href="/contact">contact us about technical SEO</Link>.</td>
+                    <td style={{ padding: 12, verticalAlign: 'top' }}>Review the <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/blog/digital-marketing-cost-canada#seo">SEO cost guide</Link>, then <Link href="/contact">contact us about technical SEO</Link>.</td>
                   </tr>
                 </tbody>
               </table>
@@ -122,7 +122,7 @@ export default function PageClient() {
           <div className="cb-container">
             <h2>Need more enquiries from nearby customers?</h2>
             <p className="lede">Explore our <Link href="/services/digital-marketing/local-seo">local SEO services in Canada for Google and Bing</Link>, including Google Business Profile, Bing Places, citation cleanup, service-area content and enquiry tracking.</p>
-            <p className="lede">Looking for a local team? See our SEO company pages for <Link href="/locations/seo-company-in-edmonton">SEO company in Edmonton</Link>, <Link href="/locations/seo-company-in-calgary">Calgary</Link>, <Link href="/locations/seo-company-in-toronto">Toronto</Link>, <Link href="/locations/seo-company-in-vancouver">Vancouver</Link>, <Link href="/locations/seo-company-in-ottawa">Ottawa</Link> and <Link href="/locations/seo-company-in-montreal">Montreal</Link>.</p>
+            <p className="lede">Looking for a local team? See our <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/services/digital-marketing/seo-services">SEO services</Link>.</p>
           </div>
         </section>
         </>
