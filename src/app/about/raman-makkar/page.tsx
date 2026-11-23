@@ -395,11 +395,11 @@ export default function RamanPage() {
                   build scalable web applications, portals, and SaaS products tailored to real business workflows.
                 </li>
                 <li style={{ marginBottom: '12px' }}>
-                  <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>Mobile app development</Link>:
+                  <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>app development services</Link>:
                   design and ship iOS and Android apps, including cross-platform products for startups and growing teams.
                 </li>
                 <li style={{ marginBottom: '12px' }}>
-                  <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link>:
+                  <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development services</Link>:
                   add practical AI and machine learning features such as automation, assistants, and data-driven tools.
                 </li>
                 <li style={{ marginBottom: '12px' }}>
