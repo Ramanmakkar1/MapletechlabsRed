@@ -343,6 +343,25 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
         <FaqSchema faqs={p.faqs ?? defaultFaqs} />
         <FaqSplit faqs={p.faqs ?? defaultFaqs} title={`${serviceName} in ${cityName}: your questions`} />
 
+        {/* Proof — two case studies and the national service page, right after the FAQ */}
+        <section style={{ padding: '0 0 var(--section-y)' }}>
+          <div className="cb-container">
+            <Head title={`Proof: ${serviceName} case studies and services`} />
+            <div className="grid grid--3">
+              {caseStudies.slice(0, 2).map(cs => (
+                <Link key={cs.href} href={cs.href} className="tile rise" style={{ display: 'block', textDecoration: 'none' }}>
+                  <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8, color: 'var(--ink)' }}>{cs.client}: {cs.title}</h3>
+                  <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{cs.city} · {cs.category}</p>
+                </Link>
+              ))}
+              <Link href={`/services/${serviceSlug}`} className="tile rise" style={{ display: 'block', textDecoration: 'none' }}>
+                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8, color: 'var(--ink)' }}>{serviceName} services in Canada</h3>
+                <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>Scope, process and pricing for {serviceName.toLowerCase()} projects across Canada.</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Internal linking mesh */}
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container" style={{ display: 'grid', gap: 40 }}>
