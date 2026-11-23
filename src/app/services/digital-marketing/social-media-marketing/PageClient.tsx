@@ -32,8 +32,6 @@ const faqs = [
   { q: 'Do you create the content or do we?', a: 'We handle all content creation unless you prefer to provide assets — our team produces graphics, video edits, captions, and creative concepts. For some clients we work in a hybrid model, using your team\'s raw footage or photography with our creative direction and editing.' },
 ];
 
-const cityLinks = [['Edmonton', 'edmonton'], ['Calgary', 'calgary'], ['Toronto', 'toronto'], ['Vancouver', 'vancouver']] as const;
-
 function BuyerContent() {
   return (
     <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
@@ -54,10 +52,7 @@ function BuyerContent() {
           Pair social with <Link href="/services/digital-marketing/content-marketing">content marketing</Link> and <Link href="/services/digital-marketing/google-ads-ppc">Google Ads PPC</Link> for a full-funnel plan, and read our guide to <Link href="/blog/digital-marketing-agencies-canada">digital marketing agencies in Canada</Link> before you choose a partner.
         </p>
         <p>
-          Explore social media marketing in{' '}
-          {cityLinks.map(([name, slug], i) => (
-            <span key={slug}>{i > 0 && (i === cityLinks.length - 1 ? ' and ' : ', ')}<Link href={`/locations/digital-marketing-agency-in-${slug}`}>{name}</Link></span>
-          ))}. Ready to grow your audience? <Link href="/contact">Book a social media strategy call</Link>.
+          Explore social media marketing across Canada, or contact us to discuss your city. Ready to grow your audience? <Link href="/contact">Book a social media strategy call</Link>.
         </p>
       </div>
     </section>
