@@ -1,3 +1,4 @@
+import { PROJECT_PRICING } from '../../data/pricing.ts';
 import { BUSINESS } from './business.ts';
 import { siteOrigin } from './canonical.ts';
 
@@ -8,6 +9,14 @@ import { siteOrigin } from './canonical.ts';
  * prices or review counts. Components render these objects inside a
  * `<script type="application/ld+json">` tag.
  */
+
+/** Service pages whose schema should carry the real CAD price ranges. */
+const SERVICE_PRICING: Record<string, (keyof typeof PROJECT_PRICING)[]> = {
+  '/services/web-development': ['website', 'webapp'],
+  '/services/mobile-app-development': ['mobile'],
+  '/services/saas-development': ['saas'],
+  '/services/ai-ml': ['ai'],
+};
 
 /** Strip title suffixes (e.g. '| Toronto') so the schema name is the plain service name. */
 export function cleanServiceName(name: string): string {
@@ -33,6 +42,18 @@ export function buildServiceSchema({
   areaServed = 'Canada',
   areaServedType = 'Country',
 }: ServiceSchemaInput) {
+  let offers: Record<string, unknown> | undefined;
+  const pricingKeys = SERVICE_PRICING[new URL(url).pathname];
+  if (pricingKeys) {
+    const ranges = pricingKeys.map(key => PROJECT_PRICING[key]);
+    offers = {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'CAD',
+      lowPrice: Math.min(...ranges.map(range => range.low)),
+      highPrice: Math.max(...ranges.map(range => range.high)),
+      offerCount: ranges.length,
+    };
+  }
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -40,6 +61,7 @@ export function buildServiceSchema({
     description,
     url,
     ...(serviceType && { serviceType }),
+    ...(offers && { offers }),
     provider: {
       '@type': 'Organization',
       '@id': `${siteOrigin()}/#organization`,

@@ -30,6 +30,32 @@ test('buildServiceSchema emits the required Service fields', () => {
   assert.equal(schema.areaServed['@type'], 'AdministrativeArea');
 });
 
+test('buildServiceSchema adds CAD offers for a priced service page', () => {
+  const schema = buildServiceSchema({
+    name: 'Website Development',
+    description: 'Websites for Canadian businesses.',
+    url: 'https://mapletechlabs.ca/services/web-development',
+  });
+
+  assert.deepEqual(schema.offers, {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'CAD',
+    lowPrice: 10_000,
+    highPrice: 100_000,
+    offerCount: 2,
+  });
+});
+
+test('buildServiceSchema adds no offers for an industry page', () => {
+  const schema = buildServiceSchema({
+    name: 'Custom Software Development | Toronto',
+    description: 'Custom software for Toronto teams.',
+    url: 'https://mapletechlabs.ca/services/custom-software-development',
+  });
+
+  assert.equal(schema.offers, undefined);
+});
+
 test('buildFaqSchema returns null for an empty list', () => {
   assert.equal(buildFaqSchema([]), null);
 });
