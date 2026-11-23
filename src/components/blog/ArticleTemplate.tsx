@@ -327,7 +327,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                 </div>
 
                 {/* Related service */}
-                {relatedService && (
+                {relatedService && !a.relatedService && (
                   <div className="reveal" style={{ marginTop: 'clamp(32px, 4vw, 48px)', padding: 'clamp(22px, 2.6vw, 30px)', border: '1px solid var(--brand)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)' }}>
                     <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Related service</h2>
                     <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
