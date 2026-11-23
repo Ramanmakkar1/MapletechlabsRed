@@ -1,24 +1,11 @@
-interface BreadcrumbItem {
-  position: number;
-  name: string;
-  item?: string;
-}
+import { buildBreadcrumbSchema, type BreadcrumbItem } from '@/lib/seo/schema';
 
 interface BreadcrumbSchemaProps {
   items: BreadcrumbItem[];
 }
 
 export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map(item => ({
-      '@type': 'ListItem',
-      position: item.position,
-      name: item.name,
-      ...(item.item && { item: item.item }),
-    })),
-  };
+  const schema = buildBreadcrumbSchema(items);
 
   return (
     <script
