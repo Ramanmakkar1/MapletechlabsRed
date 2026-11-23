@@ -102,7 +102,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           <section style={{ padding: '18px 0', borderBottom: '1px solid var(--line)' }}>
             <div className="cb-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
               <span style={{ fontSize: 14.5, color: 'var(--muted)' }}>{serviceName} in {cityName}, part of our {province} practice.</span>
-              <Link href={`/locations/software-development-company-in-${citySlug}`} className="link-arrow" style={{ fontSize: 14 }}>All software development in {cityName} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M7 17 17 7M17 7H9M17 7v8" /></svg></Link>
+              <Link href={`/locations/software-development-company-in-${citySlug}`} className="link-arrow" style={{ fontSize: 14 }}>Custom software development company in {cityName} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M7 17 17 7M17 7H9M17 7v8" /></svg></Link>
             </div>
           </section>
         ) : null}
