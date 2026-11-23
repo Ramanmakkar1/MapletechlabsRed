@@ -37,6 +37,8 @@ export const serviceCategories = [
     href: '/services/web-development',
     links: [
       { label: 'Next.js Development', href: '/services/web-development/nextjs-development' },
+      { label: 'Web Design', href: '/services/web-development/web-design' },
+      { label: 'Shopify Development', href: '/services/web-development/shopify-development' },
       { label: 'SaaS Platforms', href: '/services/saas-development' },
       { label: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
       { label: 'API & Backend', href: '/services/web-development/api-backend' },
