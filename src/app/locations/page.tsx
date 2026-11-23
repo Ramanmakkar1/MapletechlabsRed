@@ -33,17 +33,6 @@ export const metadata: Metadata = {
 
 const MAJOR_CITIES = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa', 'montreal'].flatMap(slug => cities.filter(c => c.slug === slug));
 
-const PRIORITY_LOCATION_LINKS = [
-  { href: '/locations/nova-scotia', label: 'Software development company in Nova Scotia' },
-  { href: '/locations/quebec', label: 'Software development company in Quebec' },
-  { href: '/locations/saskatchewan', label: 'Software development company in Saskatchewan' },
-  { href: '/locations/manitoba', label: 'Software development company in Manitoba' },
-  { href: '/locations/software-development-company-in-burnaby', label: 'Software development company in Burnaby, British Columbia' },
-  { href: '/locations/software-development-company-in-halifax', label: 'Software development company in Halifax, Nova Scotia' },
-  { href: '/locations/software-development-company-in-london-on', label: 'Software development company in London, Ontario' },
-  { href: '/locations/software-development-company-in-laval', label: 'Software development company in Laval, Quebec' },
-] as const;
-
 // City + service mesh pages that live in local-seo-sitemap.xml. They are not
 // covered by the priority keyword links above, so list them here too: every
 // location URL in the sitemap gets a crawlable anchor from /locations.
@@ -112,13 +101,6 @@ export default function Page() {
               ))}
               {MESH_LOCATION_LINKS.map(link => (
                 <li key={`mesh-${link.href}`}>
-                  <Link href={link.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-              {PRIORITY_LOCATION_LINKS.map(link => (
-                <li key={link.href}>
                   <Link href={link.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>
                     {link.label}
                   </Link>
