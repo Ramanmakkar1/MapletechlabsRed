@@ -43,6 +43,13 @@ function BuyerContent() {
         <p style={{ margin: '0 0 24px' }}>
           A 3wk UI/UX strategy sprint maps users, journeys and priorities before design or build. It gives your team evidence for deciding what to improve first and what to leave out.
         </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What the engagement covers</h3>
+        <ol style={{ paddingLeft: 22, margin: '0 0 24px' }}>
+          <li><strong>Research:</strong> stakeholder interviews, user research and competitive audits to understand user needs.</li>
+          <li><strong>Wireframes:</strong> wireframe direction for the highest-priority screens and flows.</li>
+          <li><strong>Design system:</strong> a <Link href="/services/product-design/design-systems">shared design system</Link> keeps delivery consistent across the product.</li>
+          <li><strong>Handoff:</strong> a prioritised roadmap with milestones, KPIs and design recommendations.</li>
+        </ol>
         <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>What you receive</h3>
         <ul style={{ paddingLeft: 22, margin: '0 0 24px' }}>
           <li>Research findings that explain user needs, pain points and opportunities.</li>
@@ -53,6 +60,10 @@ function BuyerContent() {
         </ul>
         <p>
           Turn the strategy into <Link href="/services/product-design/wireframing">wireframes</Link>, validate critical flows with <Link href="/services/product-design/prototyping">interactive prototypes</Link>, and keep delivery consistent with a <Link href="/services/product-design/design-systems">shared design system</Link>. For budget planning, read our <Link href="/blog/ui-ux-design-cost-canada">UI/UX design cost guide for Canada</Link>.
+        </p>
+        <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 8px', color: 'var(--ink)' }}>Proof</h3>
+        <p style={{ margin: '0 0 24px' }}>
+          See the results in our <Link href="/case-studies/ecommerce-platform">enterprise e-commerce checkout redesign case study</Link>, where conversion rose from 2.1% to 3.8% in 90 days. That work sits within our full <Link href="/services/product-design">product design services</Link>.
         </p>
         <p>
           Explore UI/UX strategy in{' '}
@@ -70,7 +81,7 @@ export default function PageClient() {
     <SubServicePageTemplate
       parent={{ href: "/services/product-design", label: "Product Design" }}
       name="UI/UX Strategy"
-      copy={{ badge: "PRODUCT DESIGN", title: <>UI/UX Strategy That <span style={{ color: 'var(--brand)' }}>Converts</span></>, desc: <>We craft evidence-based UX strategies that align user needs with business goals — reducing guesswork and accelerating product-market fit.</> }}
+      copy={{ badge: "PRODUCT DESIGN", title: <>UI/UX Strategy That <span style={{ color: 'var(--brand)' }}>Converts</span></>, desc: <>UI/UX strategy is a three-week engagement that combines user research, journey mapping and wireframes into a prioritised roadmap your team can act on. It is for Canadian product and marketing teams that need evidence on what to improve first before investing in design or development.</> }}
       stats={stats}
       services={services}
       steps={steps}
