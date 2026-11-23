@@ -37,6 +37,7 @@ export const subServices: Record<string, string[]> = {
 
 export const industrySlugs = ['fintech', 'healthcare', 'ecommerce', 'logistics', 'edtech', 'enterprise'];
 
+// Blog URLs included in blog-sitemap.xml. Redirected and 4xx guides are omitted.
 export const blogSlugs = [
   'what-is-agentic-ai', 'build-saas-mvp-8-weeks', 'freelancer-vs-agency-vs-in-house-canada',
   'native-vs-cross-platform-vs-pwa', 'flutter-vs-react-native-canada', 'wordpress-vs-headless-cms-canada', 'web-app-vs-mobile-app-canada', 'custom-software-vs-off-the-shelf',
