@@ -122,6 +122,7 @@ export default function PageClient() {
           <div className="cb-container">
             <h2>Need more enquiries from nearby customers?</h2>
             <p className="lede">Explore our <Link href="/services/digital-marketing/local-seo">local SEO services in Canada for Google and Bing</Link>, including Google Business Profile, Bing Places, citation cleanup, service-area content and enquiry tracking.</p>
+            <p className="lede">Planning work beyond SEO? Read <Link href="/blog/website-cost-canada">what a website costs in Canada</Link> and <Link href="/blog/custom-software-vs-off-the-shelf">custom software vs off-the-shelf</Link> to compare your build options.</p>
             <p className="lede">Looking for a local team? See our <Link href="/services/digital-marketing/local-seo">local SEO service</Link> and <Link href="/services/digital-marketing/seo-services">SEO services</Link>.</p>
           </div>
         </section>
