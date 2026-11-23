@@ -56,6 +56,11 @@ export default function WhatWeBuild() {
           ))}
         </p>
         <p style={{ marginTop: 8, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
+          Need{' '}
+          <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development in Edmonton</Link>?
+          Meet our Edmonton web development team.
+        </p>
+        <p style={{ marginTop: 8, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
           Headquartered in Edmonton:{' '}
           <Link href={serviceCityPath('web-development', 'edmonton')} style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton web development</Link>{' '}
           and{' '}
