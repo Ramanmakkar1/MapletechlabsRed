@@ -26,6 +26,7 @@ import type { CityServicePageData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
 import { buyerGuideFor, buyerGuideLinkText } from '@/data/buyer-guides';
 import { serviceCaseMap } from '@/data/service-case-map';
+import { work } from '@/data/work';
 import { isIndexableHref } from '@/lib/seo/indexability';
 
 // Honest, company-wide facts — no invented per-city metrics.
@@ -76,6 +77,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
   const buyerGuideInProof = buyerGuide
     ? local?.proof.some(pr => pr.href === buyerGuide.href)
     : false;
+  const caseStudies = (serviceCaseMap[serviceSlug] ?? []).map(slug => work.find(w => w.slug === slug)).filter(Boolean) as typeof work;
 
   return (
     <>
@@ -344,6 +346,17 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {p.relatedSubServices.map(r => <Link key={r.slug} href={`/services/${serviceSlug}/${r.slug}`} className="pill" style={navigationLinkStyle}>{r.name}</Link>)}
               </div>
+              {caseStudies.length >= 2 ? (
+                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '12px 0 0' }}>
+                  Proof: case studies — <Link href={caseStudies[0].href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{caseStudies[0].client}: {caseStudies[0].title}</Link>
+                  {caseStudies[1] ? <> and <Link href={caseStudies[1].href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{caseStudies[1].client}: {caseStudies[1].title}</Link></> : null}
+                  {caseStudies[2] ? <> plus <Link href={caseStudies[2].href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{caseStudies[2].client}: {caseStudies[2].title}</Link></> : null}.
+                </p>
+              ) : (
+                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '12px 0 0' }}>
+                  See our <Link href="/case-studies" style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>case studies</Link> for proof of what we ship.
+                </p>
+              )}
             </div>
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>{serviceName} across Canada</h3>
