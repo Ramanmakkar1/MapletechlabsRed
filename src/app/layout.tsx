@@ -5,6 +5,7 @@ import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from "@/lib/seo/business";
+import { PROJECT_PRICING } from "@/data/pricing";
 import "./globals.css";
 
 // Bounded regeneration interval for repository-managed content.
@@ -157,6 +158,12 @@ const organizationSchema = {
           name: "Web Development",
           url: `${siteOrigin()}/services/web-development`,
         },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "CAD",
+          minPrice: PROJECT_PRICING.website.low,
+          maxPrice: PROJECT_PRICING.website.high,
+        },
       },
       {
         "@type": "Offer",
@@ -165,6 +172,12 @@ const organizationSchema = {
           name: "Mobile App Development",
           url: `${siteOrigin()}/services/mobile-app-development`,
         },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "CAD",
+          minPrice: PROJECT_PRICING.mobile.low,
+          maxPrice: PROJECT_PRICING.mobile.high,
+        },
       },
       {
         "@type": "Offer",
@@ -172,6 +185,12 @@ const organizationSchema = {
           "@type": "Service",
           name: "AI & Machine Learning",
           url: `${siteOrigin()}/services/ai-ml`,
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "CAD",
+          minPrice: PROJECT_PRICING.ai.low,
+          maxPrice: PROJECT_PRICING.ai.high,
         },
       },
       {
@@ -188,6 +207,12 @@ const organizationSchema = {
           "@type": "Service",
           name: "SaaS Development",
           url: `${siteOrigin()}/services/saas-development`,
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "CAD",
+          minPrice: PROJECT_PRICING.saas.low,
+          maxPrice: PROJECT_PRICING.saas.high,
         },
       },
       {
