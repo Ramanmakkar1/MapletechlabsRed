@@ -1,16 +1,12 @@
 import Link from 'next/link';
-import type { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
-import { CityTestimonial } from '@/components/home/Testimonial';
-import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import { defaultFaqs } from '@/data/faqs';
 import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
-import CostRangeSection, { COST_RANGE_ANCHOR } from './CostRangeSection';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, CardGrid, WhyUs } from './Blocks';
 import TechStrip from './TechStrip';
@@ -36,9 +32,6 @@ export interface LocationProps {
   trends: { title: string; items: { t: string; d: string }[] };
   serviceLinks?: { name: string; slug: string }[];
   overview?: { title: string; lead: string; points: { t: string; d: string }[]; covers: string[] };
-  localContent?: ReactNode;
-  // City-specific FAQs: one list feeds both the visible FAQ block and the FAQPage schema.
-  localFaqs?: { q: string; a: string }[];
 }
 
 // Shared defaults so a new city only needs its city-specific content (copy, whyCity, neighborhoods, trends).
@@ -119,7 +112,6 @@ function defaultOverview(cityName: string, industries: string[]) {
 
 /* City page — one honest block sequence shared by every city. */
 export default function LocationPageTemplate(p: LocationProps) {
-  const quote = quoteForCity(p.slug);
   const city = CITY_BY_SLUG.get(p.slug);
   const name = city?.name ?? p.slug;
   const provinceSlug = city ? provinceSlugForName(city.province) : undefined;
@@ -128,11 +120,6 @@ export default function LocationPageTemplate(p: LocationProps) {
   const overview = p.overview ?? defaultOverview(name, city?.localIndustries ?? []);
   const whyChoose = p.whyChoose ?? DEFAULT_WHYCHOOSE;
   const serviceLinks = p.serviceLinks ?? DEFAULT_SERVICELINKS;
-  const faqs = p.localFaqs ?? defaultFaqs;
-  const winsAreCommitments = p.wins?.length === COMMITMENTS.length && p.wins.every(w =>
-    COMMITMENTS.some(c => c.title === w.title && c.metric === w.metric &&
-      w.desc.replace('your Edmonton project', 'your project') === c.desc)
-  );
   const serviceItems = p.services
     ? p.services.map(s => {
         const slug = s.href.split('/').filter(Boolean).pop() ?? '';
@@ -153,19 +140,10 @@ export default function LocationPageTemplate(p: LocationProps) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      {quote ? (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [reviewForQuote(quote)],
-        }) }} />
-      ) : null}
       <Navbar />
       <main id="main-content">
-        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} costHref={`#${COST_RANGE_ANCHOR}`} />
+        <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} />
         <StatRow stats={heroStats} />
-        {p.heroStats && Array.from({ length: Math.ceil(p.heroStats.length / 4) }, (_, i) => (
-          <StatRow key={i} stats={p.heroStats!.slice(i * 4, i * 4 + 4)} />
-        ))}
         {provinceSlug && city ? (
           <section style={{ padding: '18px 0', borderBottom: '1px solid var(--line)' }}>
             <div className="cb-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
@@ -199,44 +177,11 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
-        {city?.answer ? (
-          <section style={{ padding: '0 0 var(--section-y)', borderTop: '1px solid var(--line)' }}>
-            <div className="cb-container">
-              <div className="prose-split">
-                <div><h2 style={{ maxWidth: '18ch' }}>Software development in {name}: what local businesses need</h2></div>
-                <div className="prose-body">
-                  <p style={{ fontSize: 'clamp(18px, 1.5vw, 20px)', color: 'var(--ink)', lineHeight: 1.65, fontWeight: 450, margin: '0 0 16px' }}>{city.answer}</p>
-                  {city.localNeeds ? <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>{city.localNeeds}</p> : null}
-                  {city.process ? <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>{city.process}</p> : null}
-                  <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                    Related services in {name}: <Link href={serviceCityHref('web-development', p.slug)}>web development in {name}</Link>, <Link href={serviceCityHref('mobile-app-development', p.slug)}>mobile app development in {name}</Link>, <Link href={serviceCityHref('ai-ml', p.slug)}>AI development in {name}</Link> and <Link href={serviceCityHref('product-design', p.slug)}>UI/UX design in {name}</Link>.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        ) : null}
         <MediaBand media={humanPick(p.slug, 4)} />
         <ServiceCards title={`Our services in ${name}`} items={serviceItems} />
-        {p.numbers && p.numbers.stats.length > 0 && (
-          <section style={{ padding: 'var(--section-y) 0' }}>
-            <div className="cb-container">
-              <div className="head"><div><h2>{p.numbers.title}</h2><p className="lede">{p.numbers.sub}</p></div></div>
-              <div className="grid grid--3">
-                {p.numbers.stats.map((stat, i) => (
-                  <div key={i} className="tile rise">
-                    <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', fontWeight: 700, color: 'var(--brand)' }}>{stat.value}</div>
-                    <p style={{ color: 'var(--body)' }}>{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
         <TechStrip />
         <Industries />
         <Process />
-        <CostRangeSection title={`Typical software project costs in ${name} (CAD)`} />
         <CardGrid title={`Why choose Mapletech Labs in ${name}`} items={whyChoose} variant="rows" />
         <CardGrid title={p.whyCity.title} sub={p.whyCity.intro} items={p.whyCity.items.map(i => ({ title: i.t, desc: i.d }))} />
         <MediaBand media={humanPick(p.slug, 6)} ratio="21 / 7" />
@@ -244,9 +189,9 @@ export default function LocationPageTemplate(p: LocationProps) {
         <AiPractice />
         <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
           <div className="cb-container">
-            <div className="head"><div><h2>{winsAreCommitments ? (p.winsTitle || `Client results in ${name}`) : 'What working with us looks like'}</h2></div></div>
+            <div className="head"><div><h2>What working with us looks like</h2></div></div>
             <div className="grid grid--3">
-              {(winsAreCommitments ? p.wins! : COMMITMENTS).map(w => (
+              {COMMITMENTS.map(w => (
                 <div key={w.title} className="tile rise">
                   <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.04em', lineHeight: 1.05 }}>{w.metric}</div>
                   <h3 style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{w.title}</h3>
@@ -256,43 +201,10 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
-        {p.wins && p.wins.length > 0 && !winsAreCommitments && (
-          <section style={{ padding: 'var(--section-y) 0' }}>
-            <div className="cb-container">
-              <div className="head"><div><h2>{p.winsTitle || `Client results in ${name}`}</h2></div></div>
-              <div className="grid grid--3">
-                {p.wins.map((w, i) => (
-                  <div key={i} className="tile rise">
-                    <div style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', fontWeight: 700, color: 'var(--brand)', letterSpacing: '-0.04em', lineHeight: 1.05 }}>{w.metric}</div>
-                    <h3 style={{ fontSize: 'var(--fs-h4)', margin: '14px 0 8px' }}>{w.title}</h3>
-                    <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7 }}>{w.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
         <MediaBand media={humanPick(p.slug, 8)} ratio="21 / 7" />
         <CardGrid title={p.trends.title} items={p.trends.items.map(i => ({ title: i.t, desc: i.d }))} variant="rows" />
-        {p.localContent}
-        {quote ? <CityTestimonial quote={quote} cityName={name} /> : null}
         <WhyUs />
         <Credentials />
-        <section style={{ padding: 'var(--section-y) 0 0', background: 'var(--surface)' }}>
-          <div className="cb-container">
-            <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Explore Mapletech Labs</h3>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              <Link href="/" className="pill">Mapletech Labs home</Link>
-              <Link href="/services" className="pill">All services</Link>
-              <Link href="/services/software-development" className="pill">Custom software development</Link>
-              <Link href="/services/web-development" className="pill">Web development</Link>
-              <Link href="/services/mobile-app-development" className="pill">Mobile app development</Link>
-              <Link href="/services/ai-ml" className="pill">AI development</Link>
-              <Link href="/services/product-design" className="pill">UI/UX design</Link>
-              <Link href="/services/digital-marketing" className="pill">SEO and digital marketing</Link>
-            </div>
-          </div>
-        </section>
         <section style={{ padding: 'var(--section-y) 0', background: 'var(--surface)' }}>
           <div className="cb-container">
             <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Every service we offer in {name}</h3>
@@ -301,31 +213,8 @@ export default function LocationPageTemplate(p: LocationProps) {
             </div>
           </div>
         </section>
-        <section style={{ padding: '0 0 var(--section-y)', background: 'var(--surface)' }}>
-          <div className="cb-container">
-            <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Services in {name}</h3>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              <Link href={serviceCityHref('web-development', p.slug)} className="pill">Web development in {name}</Link>
-              <Link href={serviceCityHref('mobile-app-development', p.slug)} className="pill">App development in {name}</Link>
-              <Link href={serviceCityHref('ai-ml', p.slug)} className="pill">AI development in {name}</Link>
-              <Link href={serviceCityHref('product-design', p.slug)} className="pill">UI/UX design in {name}</Link>
-            </div>
-          </div>
-        </section>
-        <section style={{ padding: '0 0 var(--section-y)', background: 'var(--surface)' }}>
-          <div className="cb-container">
-            <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>We also work with clients in</h3>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {cities.filter(c => c.slug !== p.slug).map(c => (
-                <Link key={c.slug} href={`/locations/software-development-company-in-${c.slug}`} className="pill">
-                  SEO and software development in {c.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-        <FaqSplit faqs={faqs} />
-        <FaqSchema faqs={faqs} />
+        <FaqSplit />
+        <FaqSchema faqs={defaultFaqs} />
         <FinalCta title={`Building in ${name}? Let's scope it.`} sub={`Tell us what you need and a senior engineer will send a fixed-price plan within one working day${city?.isHQ ? ' — from our head office right here in ' + name + '.' : '.'}`} />
       </main>
       <Footer />

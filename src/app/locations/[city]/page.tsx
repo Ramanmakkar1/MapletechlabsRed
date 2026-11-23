@@ -44,7 +44,6 @@ export default async function ServiceCityPage({ params }: PageProps) {
       <ServiceCityTemplate
         data={data}
         local={local}
-        pageKey={slug}
         heroTitle={page.heroTitle}
         heroDesc={page.heroDesc}
         crossPromo={page.crossLink}

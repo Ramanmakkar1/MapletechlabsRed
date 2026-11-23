@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
@@ -10,12 +9,12 @@ const numbers = pair([
                   ['$2B+', 'Client Revenue Impacted'],
                 ]);
 const services = [
-  { title: 'Mobile App Development in Calgary', desc: 'Field-ready mobile apps for energy crews, logistics teams, and fleet operators across Alberta.', href: '/services/mobile-app-development/calgary' },
-  { title: 'Web Development in Calgary', desc: 'Enterprise web platforms for oil and gas operators, pipeline companies, and energy trading desks.', href: '/locations/web-development-company-in-calgary' },
-  { title: 'AI Development in Calgary', desc: 'Predictive maintenance for drilling rigs, pipeline anomaly detection, and production optimization models.', href: '/locations/ai-development-company-in-calgary' },
+  { title: 'Mobile App Development', desc: 'Field-ready mobile apps for energy crews, logistics teams, and fleet operators across Alberta.', href: '/services/mobile-app-development/calgary' },
+  { title: 'Web Development', desc: 'Enterprise web platforms for oil and gas operators, pipeline companies, and energy trading desks.', href: '/locations/web-development-company-in-calgary' },
+  { title: 'AI & Machine Learning', desc: 'Predictive maintenance for drilling rigs, pipeline anomaly detection, and production optimization models.', href: '/locations/ai-development-company-in-calgary' },
   { title: 'Blockchain & Web3', desc: 'Supply chain transparency, carbon credit tokenization, and decentralized energy trading platforms.', href: '/services/blockchain-web3' },
-  { title: 'Cloud & DevOps in Calgary', desc: 'Secure cloud infrastructure for SCADA systems, real-time telemetry, and enterprise resource planning.', href: '/locations/calgary/cloud-devops' },
-  { title: 'UI/UX Design in Calgary', desc: 'UI/UX for complex operational dashboards, GIS mapping interfaces, and field service applications.', href: '/locations/ui-ux-design-company-in-calgary' },
+  { title: 'Cloud & DevOps', desc: 'Secure cloud infrastructure for SCADA systems, real-time telemetry, and enterprise resource planning.', href: '/locations/calgary/cloud-devops' },
+  { title: 'Product Design', desc: 'UI/UX for complex operational dashboards, GIS mapping interfaces, and field service applications.', href: '/locations/ui-ux-design-company-in-calgary' },
 ];
 
 const whyChoose = [
@@ -66,30 +65,6 @@ const serviceLinks = [
                 { name: 'AR & VR', slug: 'ar-vr' },
               ];
 
-// City-specific FAQs: one list feeds both the visible FAQ block and the FAQPage schema.
-const localFaqs = [
-  {
-    q: 'Do you build software for Calgary energy and logistics companies?',
-    a: 'Yes. Calgary is Canada\'s energy capital, and we build custom software for energy, logistics and industrial teams across Alberta - production reporting, SCADA integrations, field data capture, fleet management and predictive maintenance. We have delivered 70+ energy sector projects, including a predictive maintenance platform that cut unplanned downtime by 45% across 200+ well sites.',
-  },
-  {
-    q: 'What does your software development process look like?',
-    a: 'Every Calgary project starts with a discovery session where we map the workflow, agree the scope and fix the price. We then design, build in short milestones you can review, test, launch and support the product. You work directly with senior engineers, and you own all the code, infrastructure and IP.',
-  },
-  {
-    q: 'How long does a software project take in Calgary?',
-    a: 'A website usually takes 4-10 weeks, a web app 8-16 weeks, a mobile app 10-24 weeks, a SaaS MVP 8-13 weeks and a first AI feature about 3 weeks. Timelines depend on scope and integrations, and you get a dated plan with the fixed-price proposal.',
-  },
-  {
-    q: 'How much does software development cost in Calgary?',
-    a: 'In Canadian dollars, a typical Calgary website runs $10,000-$50,000, a web app $25,000-$100,000, a mobile app $30,000-$200,000, a SaaS MVP $30,000-$75,000 and an AI feature $10,000-$35,000. These are scope-dependent planning ranges, not quotes; after discovery we agree a fixed price before any code is written. See our pricing page for the full breakdown.',
-  },
-  {
-    q: 'Do you serve Calgary businesses from Edmonton?',
-    a: 'Yes. Mapletech Labs is headquartered in Edmonton, about three hours from Calgary, and we work with Calgary and Alberta clients both in person and remotely. We have served clients in 12 Canadian cities since 2018, so a Calgary team gets a senior engineering partner without building one in-house.',
-  },
-];
-
 export default function PageClient() {
   return (
     <LocationPageTemplate
@@ -104,16 +79,6 @@ export default function PageClient() {
       wins={wins}
       trends={{ title: "Calgary Tech Focus", items: trends }}
       serviceLinks={serviceLinks}
-      localContent={
-        <section style={{ padding: 'var(--section-y) 0' }}>
-          <div className="cb-container prose-body">
-            <p>A Calgary example: for RouteLogic Inc. we built a <Link href="/case-studies/logistics-platform">real-time fleet management system</Link> that tracks 500 trucks and 15K+ daily deliveries and cut fuel cost by 25%. See all our <Link href="/case-studies">software development case studies</Link>.</p>
-            <p>Energy and logistics teams modernizing infrastructure often start with cloud architecture and pipelines. See our page on <Link href="/locations/calgary/cloud-devops">cloud and DevOps in Calgary</Link>, or our <Link href="/blog/software-development-companies-calgary">Calgary software development guide</Link> for local costs and how to choose a partner.</p>
-            <p>Planning a mobile app? Compare <Link href="/services/mobile-app-development/calgary">mobile app development in Calgary</Link>, or read our guide on <Link href="/blog/app-development-companies-calgary">choosing an app development company in Calgary</Link>.</p>
-          </div>
-        </section>
-      }
-      localFaqs={localFaqs}
     />
   );
 }

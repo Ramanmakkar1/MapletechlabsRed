@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
@@ -80,14 +79,6 @@ export default function PageClient() {
       wins={wins}
       trends={{ title: "Montr&eacute;al Tech Focus", items: trends }}
       serviceLinks={serviceLinks}
-      localContent={
-        <section style={{ padding: 'var(--section-y) 0' }}>
-          <div className="cb-container prose-body">
-            <p>Comparing development partners in Montreal? Read our guide to <Link href="/blog/software-development-companies-montreal">software development companies in Montreal</Link> for Quebec Law 25 privacy, French-language rules, typical costs and the questions to ask on the first call. For bilingual SEO, paid search and content, see our page on <Link href="/locations/seo-company-in-montreal">digital marketing in Montreal</Link>.</p>
-            <p>A Montreal example: for NorthStar E-Commerce we <Link href="/case-studies/ecommerce-platform">redesigned the checkout of an enterprise e-commerce platform</Link> serving 2M+ monthly visitors, and conversion rose from 2.1% to 3.8% in 90 days.</p>
-          </div>
-        </section>
-      }
     />
   );
 }

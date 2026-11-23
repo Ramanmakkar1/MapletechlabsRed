@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -10,49 +9,6 @@ import FaqSplit from '@/components/home/FaqSplit';
 import { FaqSchema } from '@/components/ServiceSchema';
 import MediaBand from '@/components/MediaBand';
 import { humanMedia } from '@/data/media';
-import { PRIORITY_SERVICES, serviceCityHref, priorityCompanyHeadline, WEB_DESIGN_CITIES } from '@/data/serviceCity';
-import { cities as allCities } from '@/data/cities';
-import { isIndexableHref } from '@/lib/seo/indexability';
-import LocationDirectory from '@/components/LocationDirectory';
-
-// Edmonton (HQ) first, then the other major markets.
-const MAJOR_CITY_SLUGS = ['edmonton', 'calgary', 'toronto', 'vancouver', 'ottawa', 'montreal'];
-const majorCities = MAJOR_CITY_SLUGS.flatMap(slug => allCities.filter(c => c.slug === slug));
-const otherCities = allCities.filter(c => !MAJOR_CITY_SLUGS.includes(c.slug));
-
-// Ordered by buyer intent, with software development first because its city
-// landing pages are the main /locations/software-development-company-in-<city>
-// URLs rather than serviceCityPath keyword URLs.
-const BUYER_INTENT_SERVICES = [
-  { serviceSlug: 'software-development', label: 'Software Development' },
-  { serviceSlug: 'mobile-app-development', label: 'App Development' },
-  { serviceSlug: 'ai-ml', label: 'AI Development' },
-  { serviceSlug: 'product-design', label: 'UI/UX Design' },
-  { serviceSlug: 'web-development', label: 'Web Development' },
-  { serviceSlug: 'digital-marketing', label: 'SEO & Digital Marketing' },
-  { serviceSlug: 'saas-development', label: 'SaaS Development' },
-] as const;
-
-const buyerIntentPath = (serviceSlug: string, citySlug: string) =>
-  serviceSlug === 'software-development'
-    ? `/locations/software-development-company-in-${citySlug}`
-    : serviceCityHref(serviceSlug, citySlug);
-
-const INDEXABLE_BUYER_INTENT_SERVICES = BUYER_INTENT_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
-
-// The four markets buyers search for most. Rendered server-side so crawlers and
-// visitors without JS can reach the priority service + city pages from /locations.
-const PRIORITY_CITY_SLUGS = ['edmonton', 'calgary', 'toronto', 'vancouver'];
-const PRIORITY_CITY_SERVICES = [
-  { serviceSlug: 'software-development', label: 'Software development' },
-  { serviceSlug: 'mobile-app-development', label: 'App development' },
-  { serviceSlug: 'ai-ml', label: 'AI development' },
-  { serviceSlug: 'product-design', label: 'UI/UX design' },
-  { serviceSlug: 'web-development', label: 'Web development' },
-  { serviceSlug: 'digital-marketing', label: 'SEO' },
-] as const;
-
-const INDEXABLE_PRIORITY_CITY_SERVICES = PRIORITY_CITY_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
 
 const cardBase: React.CSSProperties = {
   border: '1px solid var(--line)',
@@ -107,7 +63,7 @@ const locationFaqs = [
   { q: 'Do you understand local privacy and compliance rules?', a: 'Yes, and it is province-specific. Alberta and BC have their own PIPA statutes, Quebec has Law 25, and elsewhere federal PIPEDA applies, with PHIPA for Ontario health data. Each province page explains how we design for its rules.' },
 ];
 
-export default function LocationsIndexPage({ priorityLocationLinks }: { priorityLocationLinks?: ReactNode }) {
+export default function LocationsIndexPage() {
   return (
     <>
       <Navbar />
@@ -116,131 +72,16 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
         {/* HERO */}
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations' }]} copy={{ badge: "Across Canada", title: <>Software Development Company<br /><span style={{ color: 'var(--brand)' }}>Across Canada.</span></>, desc: <>From coast to coast, Mapletech Labs brings world-class software development to businesses across Canada. Our distributed team model means you get local expertise backed by national resources.</> }} photo={officeMedia.open} form={false} />
 
-        {/* ANSWER-FIRST SUMMARY + PRIORITY CITY LINKS */}
-        <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container">
-            <div className="prose-body" style={{ maxWidth: 820 }}>
-              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
-                <strong>Mapletech Labs is a Canadian software company that builds custom software, mobile apps, AI systems and UI/UX design for businesses across Canada.</strong> We are headquartered in Edmonton and deliver from there to clients in Calgary, Toronto, Vancouver and twenty-four cities in seven provinces, combining local market knowledge with a national engineering bench.
-              </p>
-              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
-                Start with the city closest to you for local delivery details, industries and the services we ship there. Software development, app development, AI development and UI/UX design are available in every market we serve, including Edmonton, Calgary, Toronto, Vancouver, Quebec City, Victoria, Gatineau and Regina:
-              </p>
-            </div>
-            <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0 0', display: 'grid', gap: 12 }}>
-              <li>
-                <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Software, app, AI and UI/UX development in Edmonton (our headquarters)
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Software, app, AI and UI/UX development in Calgary
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Software, app, AI and UI/UX development in Toronto
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Software, app, AI and UI/UX development in Vancouver
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/software-development-company-in-quebec-city" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Software, app, AI and UI/UX development in Quebec City
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/software-development-company-in-victoria" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Software, app, AI and UI/UX development in Victoria
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/software-development-company-in-gatineau" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Software, app, AI and UI/UX development in Gatineau
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/software-development-company-in-regina" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Software, app, AI and UI/UX development in Regina
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        {/* PRIORITY CITY + SERVICE PAGES — server-rendered links to the highest-intent pages */}
-        <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container">
-            <div className="head">
-              <div>
-                <h2>Priority city and service pages</h2>
-                <p className="lede">Jump straight to the service and city you need. Each page below targets a specific search, with local proof, process and pricing guidance.</p>
-              </div>
-            </div>
-            <div className="grid grid--2">
-              {PRIORITY_CITY_SLUGS.map(slug => {
-                const city = allCities.find(c => c.slug === slug);
-                if (!city) return null;
-                return (
-                  <div key={slug} className="tile">
-                    <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', marginBottom: 14 }}>{city.name}{city.isHQ ? ' · HQ' : ''}</h3>
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                      {INDEXABLE_PRIORITY_CITY_SERVICES.map(service => (
-                        <Link key={service.serviceSlug} href={buyerIntentPath(service.serviceSlug, slug)} className="pill">
-                          {service.label} in {city.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: 'clamp(32px, 4vw, 48px) 0 12px' }}>Specialist location pages</h3>
-            <p className="lede" style={{ marginBottom: 16 }}>Focused consulting and industry practices in our two largest tech markets:</p>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
-              <li>
-                <Link href="/locations/ai-consulting-company-in-edmonton" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  AI consulting company in Edmonton — strategy, LLM integration and AI roadmaps
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/ai-consulting-company-in-toronto" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  AI consulting company in Toronto — enterprise AI strategy and delivery
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/healthcare-software-development-company-in-edmonton" style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                  Healthcare software development company in Edmonton — PHIPA-ready clinical platforms
-                </Link>
-              </li>
-            </ul>
-            <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: 'clamp(32px, 4vw, 48px) 0 12px' }}>More location pages</h3>
-            <p className="lede" style={{ marginBottom: 16 }}>Province overviews and service pages in the Prairie, Atlantic and Quebec markets:</p>
-            {priorityLocationLinks}
-            <LocationDirectory />
-          </div>
-        </section>
-
         {/* INTRO — national coverage, real content */}
         <section className="section-padding" style={{ borderTop: '1px solid var(--line)' }}>
           <div className="cb-container prose-split">
             <div><h2 style={{ maxWidth: '16ch' }}>One engineering bench, delivered locally across Canada</h2></div>
             <div className="prose-body">
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
-                <strong>Need a software development, app development, AI, UI/UX, web development or SEO company in Edmonton, Calgary, Toronto or Vancouver?</strong> Mapletech Labs delivers all of them for companies in those cities and across Canada, from our Edmonton headquarters.
-              </p>
-              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
                 Mapletech Labs is headquartered in Edmonton and works with companies in twenty-four cities across seven provinces. Our distributed model means you get a team that understands your local market &mdash; the regulators you answer to, the industries around you, the way business actually gets done in your province &mdash; backed by the depth of a national engineering bench.
               </p>
               <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8 }}>
                 That matters because software is not built in a vacuum. An Alberta energy operator, a Toronto fintech, a Montréal studio under Law 25 and a Halifax ocean-tech company each need something different, and each answers to different rules. Start with your province below, or jump straight to your city.
-              </p>
-              <p style={{ fontSize: 'clamp(16px, 1.35vw, 17.5px)', color: 'var(--body)', lineHeight: 1.8, marginTop: 20 }}>
-                Looking for our home market? Read about <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Custom Software Development in Edmonton</Link>, where our headquarters and most experienced engineers are based.
               </p>
             </div>
           </div>
@@ -271,8 +112,8 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
               ))}
             </div>
 
-            <div className="head"><div><h2>Choose a city</h2><p className="lede">Pick your city for local delivery details, or use the service links below to go straight to your service.</p></div></div>
-            <div className="grid grid--3">
+            <div className="head"><div><h2>All cities</h2></div></div>
+            <div className="reveal grid grid--3">
               {cities.map(city => (
                 <Link key={city.slug} href={`/locations/software-development-company-in-${city.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Card style={{ cursor: 'pointer', height: '100%' }}>
@@ -289,82 +130,6 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
                 </Link>
               ))}
             </div>
-
-            {/* SERVICES BY CITY — every keyword service+city page */}
-            <div className="head" style={{ marginTop: 'clamp(56px, 7vw, 96px)' }}>
-              <div>
-                <h2>Services by city</h2>
-                <p className="lede">Mapletech Labs is headquartered in Edmonton and works with companies in twenty-four cities across seven provinces. Every city gets the same national engineering bench for AI, SaaS, app and web development, SEO and UI/UX design. Pick your city and service below.</p>
-              </div>
-            </div>
-            <div className="grid grid--2">
-              {INDEXABLE_BUYER_INTENT_SERVICES.map(service => (
-                <div key={service.serviceSlug} className="tile">
-                  <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', marginBottom: 14 }}>{service.label} Company by City</h3>
-                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                    {majorCities.map(city => (
-                      <Link key={city.slug} href={buyerIntentPath(service.serviceSlug, city.slug)} className="pill">
-                        {service.label} in {city.name}{city.isHQ ? ' · HQ' : ''}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>Digital Marketing Agency</h3>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-              <Link href="/services/digital-marketing" className="pill">Digital marketing services across Canada</Link>
-            </div>
-
-            <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>Web Design Company</h3>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-              {WEB_DESIGN_CITIES.map(slug => {
-                const city = allCities.find(c => c.slug === slug);
-                if (!city) return null;
-                return (
-                  <Link key={slug} href={`/locations/web-design-company-in-${slug}`} className="pill">
-                    Web Design Company in {city.name}{city.isHQ ? ' · HQ' : ''}
-                  </Link>
-                );
-              })}
-            </div>
-
-            <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>All other cities</h3>
-            <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
-                <thead>
-                  <tr>
-                    <th scope="col" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)', color: 'var(--muted)', fontWeight: 600 }}>City</th>
-                    {PRIORITY_SERVICES.map(ps => (
-                      <th key={ps.serviceSlug} scope="col" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)', color: 'var(--muted)', fontWeight: 600, whiteSpace: 'nowrap' }}>{ps.label}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {otherCities.map(city => (
-                    <tr key={city.slug}>
-                      <th scope="row" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)', whiteSpace: 'nowrap' }}>
-                        <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ color: 'var(--ink)', fontWeight: 600 }}>{city.name}, {city.provinceAbbr}</Link>
-                      </th>
-                      {PRIORITY_SERVICES.map(ps => {
-                        const href = serviceCityHref(ps.serviceSlug, city.slug);
-                        return (
-                          <td key={ps.serviceSlug} style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)', whiteSpace: 'nowrap' }}>
-                            {isIndexableHref(href) ? (
-                              <Link href={href} title={`${priorityCompanyHeadline(ps.serviceSlug, ps.label)} Company in ${city.name}`} style={{ color: 'var(--brand)' }}>{priorityCompanyHeadline(ps.serviceSlug, ps.label)}</Link>
-                            ) : (
-                              <span>{priorityCompanyHeadline(ps.serviceSlug, ps.label)}</span>
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
             <div style={{
               textAlign: 'center',
               padding: '80px 0 0',

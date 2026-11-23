@@ -135,7 +135,6 @@ export function getCityServiceData(
       a: replacePlaceholders(faq.a, city),
     })),
     ...intersection.localFaqs,
-    ...serviceCityExtraFaqs(service.slug, city.name),
   ];
 
   // Build hero description with city context

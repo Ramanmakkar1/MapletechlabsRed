@@ -19,7 +19,6 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
 import { localServiceTitle, ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
-import { quoteForCity, reviewForQuote } from '@/data/testimonials';
 import { SERVICE_CITY_LOCAL, type ServiceCityLocal } from '@/data/service-city-local';
 
 export interface LocationPageData {
@@ -42,6 +41,13 @@ export interface LocationPageData {
 const AGENCY_SERVICE_TYPES = ['SEO', 'Google Ads (PPC)', 'Social Media Marketing', 'Content Marketing'];
 const MOBILE_CITY_PAGES = ['edmonton', 'calgary', 'toronto', 'vancouver'];
 
+// The keyword pages the owner designed (the original four priority services).
+// They render the owner's template sequence with the shared catalog data; the
+// page-specific hero, local sections and cross-links below apply only to the
+// newer keyword pages.
+const OWNER_KEYWORDS = ['ai-development', 'saas-development', 'app-development', 'web-development'];
+const isOwnerKeywordPage = (slug: string) => OWNER_KEYWORDS.some(kw => slug.startsWith(`${kw}-company-in-`));
+
 const cityBrand = (cityName: string) =>
   createElement('span', { style: { color: 'var(--brand)' } }, cityName);
 
@@ -52,9 +58,11 @@ function buildLocationPage(slug: string): LocationPageData | null {
   const raw = getCityServiceData(combo.citySlug, combo.serviceSlug);
   if (!raw) return null;
 
-  const local = Object.prototype.hasOwnProperty.call(SERVICE_CITY_LOCAL, slug)
+  const ownerPage = isOwnerKeywordPage(slug);
+  const localEntry = Object.prototype.hasOwnProperty.call(SERVICE_CITY_LOCAL, slug)
     ? SERVICE_CITY_LOCAL[slug]
     : undefined;
+  const local = ownerPage ? undefined : localEntry;
   const isAgencyPage = combo.slug.startsWith('digital-marketing-agency-in-');
   const serviceName = isAgencyPage
     ? 'Digital Marketing Agency'
@@ -78,12 +86,10 @@ function buildLocationPage(slug: string): LocationPageData | null {
   const serviceLabel = isAgencyPage
     ? `${serviceName} in ${data.cityName}`
     : `${combo.label} in ${data.cityName}`;
-  const quote = quoteForCity(combo.citySlug);
 
   const jsonLd: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@graph': [
-      ...(quote ? [reviewForQuote(quote)] : []),
       {
         '@type': 'Service',
         name: serviceLabel,
@@ -99,7 +105,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
           containedInPlace: { '@type': 'AdministrativeArea', name: data.province },
         },
         serviceType: isAgencyPage ? AGENCY_SERVICE_TYPES : combo.label,
-        description: data.description,
+        description: localEntry?.description ?? data.description,
         url,
       },
       localServiceSchema({
@@ -120,8 +126,9 @@ function buildLocationPage(slug: string): LocationPageData | null {
     ],
   };
 
-  const crossLink =
-    slug === 'web-development-company-in-edmonton'
+  const crossLink = ownerPage
+    ? undefined
+    : slug === 'web-development-company-in-edmonton'
       ? { before: 'Need custom software beyond a website? See our ', href: '/locations/software-development-company-in-edmonton', linkLabel: 'Custom Software Development in Edmonton' }
       : slug === `web-design-company-in-${combo.citySlug}`
         ? { before: 'Need a web app, portal or custom integrations as well? See our ', href: `/locations/web-development-company-in-${combo.citySlug}`, linkLabel: `Web Development Company in ${data.cityName}` }
@@ -135,7 +142,9 @@ function buildLocationPage(slug: string): LocationPageData | null {
 
   // Page-specific hero copy, built once with the rest of the record so the
   // route never branches on the slug or constructs content during render.
-  const heroTitle = isAgencyPage
+  const heroTitle = ownerPage
+    ? undefined
+    : isAgencyPage
     ? createElement(
         Fragment,
         null,
@@ -156,7 +165,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
       : undefined;
 
   const heroDesc =
-    slug === 'web-development-company-in-edmonton'
+    !ownerPage && slug === 'web-development-company-in-edmonton'
       ? 'Mapletech Labs is a web development company in Edmonton, working from our head office here. We build custom web apps, portals, e-commerce sites and the software behind them for Edmonton businesses — fast, SEO-ready, with a fixed CAD price and a senior engineer who replies in one day.'
       : undefined;
 
@@ -166,9 +175,9 @@ function buildLocationPage(slug: string): LocationPageData | null {
   const base = isAgencyPage
     ? `${headline} in ${data.cityName}`
     : `${headline} Company in ${data.cityName}`;
-  const title = local?.title ?? (base.length <= 43 ? base : `${combo.label} in ${data.cityName}`);
+  const title = localEntry?.title ?? (base.length <= 43 ? base : `${combo.label} in ${data.cityName}`);
   const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
-  const description = local?.description ?? data.description;
+  const description = localEntry?.description ?? data.description;
 
   const metadata: Metadata = {
     title: seoTitle(finalTitle),
@@ -249,7 +258,6 @@ function buildLocationMeshPage(city: string, service: string): LocationMeshPageD
   const title = isEdmWeb ? EDM_WEB_TITLE : data.title;
   const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
   const description = isEdmWeb ? EDM_WEB_DESCRIPTION : data.description;
-  const quote = quoteForCity(city);
   const serviceLabel = `${data.serviceName} in ${data.cityName}`;
 
   const breadcrumbItems = [
@@ -263,7 +271,6 @@ function buildLocationMeshPage(city: string, service: string): LocationMeshPageD
   const jsonLd: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@graph': [
-      ...(quote ? [reviewForQuote(quote)] : []),
       {
         '@type': 'Service',
         name: serviceLabel,

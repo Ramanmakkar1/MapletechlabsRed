@@ -3,9 +3,6 @@ import type { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MediaBand from '@/components/MediaBand';
-import ServiceProof from '@/components/ServiceProof';
-import { CityTestimonial } from '@/components/home/Testimonial';
-import { quoteForCity } from '@/data/testimonials';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
 import { defaultFaqs } from '@/data/faqs';
@@ -13,8 +10,6 @@ import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, TechBlocks, WhyUs } from './Blocks';
-import ServicePricing, { hasServicePricing } from './ServicePricing';
-import { COST_RANGE_ANCHOR } from './CostRangeSection';
 import TechStrip from './TechStrip';
 import { serviceMedia, defaultMedia, humanPick } from '@/data/media';
 import { provinceSlugForName } from '@/data/provinces';
@@ -25,9 +20,6 @@ import { contactHrefFor } from '@/lib/enquiryContext';
 import type { Stat } from './types';
 import type { CityServicePageData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
-import { buyerGuideFor, buyerGuideLinkText } from '@/data/buyer-guides';
-import { serviceCaseMap } from '@/data/service-case-map';
-import { work } from '@/data/work';
 import { isIndexableHref } from '@/lib/seo/indexability';
 
 // Honest, company-wide facts — no invented per-city metrics.
@@ -49,36 +41,26 @@ const POINTS = [
 ];
 const COVERS = ['Product strategy & UX', 'Engineering', 'Cloud & DevOps', 'Ongoing support'];
 
-const navigationLinkStyle = {
-  height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box',
-  padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere', lineHeight: 1.4,
-} as const;
-
 const Head = ({ title, sub }: { title: string; sub?: string }) => (
   <div className="head"><div><h2>{title}</h2>{sub && <p className="lede">{sub}</p>}</div></div>
 );
 const balanced = (n: number): string | null =>
   n % 3 === 0 ? 'grid grid--3' : n % 4 === 0 ? 'grid grid--2' : n % 2 === 0 ? 'grid grid--2' : null;
 
-/* Premium "[service] company in [city]" page — honest facts, no invented proof. */
-// heroTitle / heroDesc let one city+service page target its own search phrase; others keep the shared copy.
-// local adds hand-written sections and case-study proof (from SERVICE_CITY_LOCAL).
-export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo, pageKey, customSoftware }: { data: CityServicePageData; pageKey?: string; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string }; customSoftware?: ServiceCityLocal['customSoftware'] }) {
-  const deeperSection = customSoftware ?? local?.customSoftware;
+/* Premium "[service] company in [city]" page — honest facts, no invented proof.
+   heroTitle / heroDesc / local / crossPromo are optional slots for the newer
+   keyword pages that carry their own copy; without them the page renders the
+   base sequence. */
+export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo }: { data: CityServicePageData; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string } }) {
+  const deeperSection = local?.customSoftware;
   const { cityName, citySlug, province, serviceName, serviceSlug } = p;
   const contactHref = contactHrefFor(serviceSlug, citySlug, allServices, allCities);
-  const quote = quoteForCity(citySlug);
   const provinceSlug = provinceSlugForName(province);
   const services = [
     ...p.largeServices.map(s => ({ title: s.title, desc: s.desc, chips: s.tags })),
     ...p.smallServices.map(s => ({ title: s.title, desc: s.desc })),
   ];
   const tech = p.techCategories.map(t => ({ label: t.title, chips: t.items }));
-  const buyerGuide = buyerGuideFor(serviceSlug, citySlug, pageKey);
-  const buyerGuideInProof = buyerGuide
-    ? local?.proof.some(pr => pr.href === buyerGuide.href)
-    : false;
-  const caseStudies = (serviceCaseMap[serviceSlug] ?? []).map(slug => work.find(w => w.slug === slug)).filter(Boolean) as typeof work;
 
   return (
     <>
@@ -90,22 +72,13 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           stats={HONEST_STATS} photo={humanPick(citySlug + serviceSlug, 0)} serviceName={`${serviceName} in ${cityName}`}
           city={cityName}
           contactHref={contactHref}
-          costHref={hasServicePricing(serviceSlug) ? `#${COST_RANGE_ANCHOR}` : undefined}
         />
         <StatRow stats={HONEST_STATS} />
-        {p.stats.length > 0 ? (
-          <section style={{ paddingTop: 0 }}>
-            <div className="cb-container">
-              <Head title={`Our track record serving ${cityName}`} />
-              <StatRow stats={p.stats} />
-            </div>
-          </section>
-        ) : null}
         {provinceSlug ? (
           <section style={{ padding: '18px 0', borderBottom: '1px solid var(--line)' }}>
             <div className="cb-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
               <span style={{ fontSize: 14.5, color: 'var(--muted)' }}>{serviceName} in {cityName}, part of our {province} practice.</span>
-              <Link href={`/locations/software-development-company-in-${citySlug}`} className="link-arrow" style={{ fontSize: 14 }}>Custom software development company in {cityName} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M7 17 17 7M17 7H9M17 7v8" /></svg></Link>
+              <Link href={`/locations/software-development-company-in-${citySlug}`} className="link-arrow" style={{ fontSize: 14 }}>All software development in {cityName} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M7 17 17 7M17 7H9M17 7v8" /></svg></Link>
             </div>
           </section>
         ) : null}
@@ -143,26 +116,10 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
               <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--muted)', marginRight: 4 }}>One team, the whole build:</span>
               {COVERS.map(c => <span key={c} className="pill">{c}</span>)}
             </div>
-            {citySlug === 'edmonton' && serviceSlug === 'web-development' ? (
-              <div style={{ marginTop: 'clamp(22px, 2.6vw, 30px)' }}>
-                <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 10px' }}>Related services</h3>
-                <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
-                  <li style={{ fontSize: 15, lineHeight: 1.6 }}>
-                    <Link href="/services/web-development" style={{ fontWeight: 600, color: 'var(--brand)' }}>custom software development Edmonton</Link>
-                  </li>
-                  <li style={{ fontSize: 15, lineHeight: 1.6 }}>
-                    <Link href="/services/mobile-app-development" style={{ fontWeight: 600, color: 'var(--brand)' }}>mobile app development Edmonton</Link>
-                  </li>
-                  <li style={{ fontSize: 15, lineHeight: 1.6 }}>
-                    <Link href="/case-studies" style={{ fontWeight: 600, color: 'var(--brand)' }}>Mapletech Labs case studies</Link>
-                  </li>
-                </ul>
-              </div>
-            ) : null}
           </div>
         </section>
 
-        {/* Deeper service section (custom software on the Edmonton web-development page) */}
+        {/* Page-specific sections, only for keyword pages that pass `local`. */}
         {deeperSection ? (
           <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
             <div className="cb-container">
@@ -185,7 +142,6 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           </section>
         ) : null}
 
-        {/* Hand-written local sections and proof (only for combos in SERVICE_CITY_LOCAL) */}
         {local ? (
           <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
             <div className="cb-container">
@@ -236,29 +192,6 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           </section>
         ) : null}
 
-        {/* WordPress is a common request on web-development city pages, so give it
-            its own short section instead of burying it in the pricing copy. */}
-        {serviceSlug === 'web-development' ? (
-          <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-            <div className="cb-container">
-              <Head title={`WordPress websites for ${cityName} businesses`} />
-              <div className="prose-split">
-                <div><h3 style={{ maxWidth: '18ch', fontSize: 'var(--fs-h3)', margin: 0 }}>WordPress, when it is the right fit</h3></div>
-                <div className="prose-body">
-                  <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>
-                    We build WordPress sites for {cityName} businesses that need to publish and update content without a developer: brochure sites, service pages, blogs and small online stores. You get a custom theme, a clean editor, fast pages and the same fixed CAD price agreed before work starts.
-                  </p>
-                  <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                    When a WordPress site would outgrow itself, we say so and recommend a custom build instead. For content-led sites that change often, WordPress is often the practical choice, and we can connect it to your CRM, booking system or store.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        ) : null}
-
-        {quote ? <CityTestimonial quote={quote} cityName={cityName} /> : null}
-
         <MediaBand media={serviceMedia[serviceSlug] ?? defaultMedia} />
         <ServicesGrid title={`${serviceName} services we offer in ${cityName}`} items={services} />
 
@@ -278,26 +211,8 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           </div>
         </section>
 
-        {p.localSections.length > 0 ? (
-          <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
-            <div className="cb-container">
-              <Head title={`${serviceName} in ${cityName}: local context`} />
-              <div className="grid grid--2" style={{ rowGap: 'clamp(22px, 2.6vw, 32px)' }}>
-                {p.localSections.map(s => (
-                  <article key={s.heading} className="tile rise">
-                    <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8 }}>{s.heading}</h3>
-                    <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{s.body}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        ) : null}
-
         <TechStrip />
         <ProcessSteps title={`How we deliver your ${serviceName} project`} steps={p.steps} />
-        {!local?.proof.length ? <ServiceProof slug={serviceSlug} name={serviceName} contactHref={contactHref} caseStudySlugs={serviceCaseMap[serviceSlug]?.slice(0, 2)} heading="Relevant project work" /> : null}
-        <ServicePricing serviceSlug={serviceSlug} serviceName={serviceName} />
         <TechBlocks title={`The stack behind your ${serviceName}`} cats={tech} />
 
         {/* Honest commitments */}
@@ -319,87 +234,24 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
         <MediaBand media={humanPick(citySlug + serviceSlug, 8)} ratio="21 / 7" />
         <WhyUs />
         <Credentials />
-
-        {buyerGuide && !buyerGuideInProof ? (
-          <section style={{ padding: '0 0 var(--section-y)' }}>
-            <div className="cb-container">
-              <div className="tile rise" style={{ padding: 'clamp(22px, 2.6vw, 32px)', border: '1px solid var(--line)' }}>
-                <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 10px', color: 'var(--ink)' }}>
-                  Comparing {buyerGuide.label} companies in {cityName}?
-                </h3>
-                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 14px' }}>
-                  Our buyer&apos;s guide covers typical costs in CAD, red flags and questions to ask before you sign with any {cityName} team.
-                </p>
-                <Link href={buyerGuide.href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>
-                  {buyerGuide.linkText ?? buyerGuideLinkText(serviceSlug, cityName, buyerGuide.isCity)}
-                </Link>
-              </div>
-            </div>
-          </section>
-        ) : null}
-
-        {/* Visible FAQ and its FAQPage schema must always come from the same
-            list: FaqSplit falls back to defaultFaqs, so the schema must too. */}
+        {/* Visible FAQ and its FAQPage schema come from the same list. */}
         <FaqSchema faqs={p.faqs ?? defaultFaqs} />
         <FaqSplit faqs={p.faqs ?? defaultFaqs} title={`${serviceName} in ${cityName}: your questions`} />
-
-        {/* Proof — two case studies and the national service page, right after the FAQ */}
-        <section style={{ padding: '0 0 var(--section-y)' }}>
-          <div className="cb-container">
-            <Head title={`Proof: ${serviceName} case studies and services`} />
-            <div className="grid grid--3">
-              {caseStudies.slice(0, 2).map(cs => (
-                <Link key={cs.href} href={cs.href} className="tile rise" style={{ display: 'block', textDecoration: 'none' }}>
-                  <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8, color: 'var(--ink)' }}>{cs.client}: {cs.title}</h3>
-                  <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>{cs.city} · {cs.category}</p>
-                </Link>
-              ))}
-              <Link href={`/services/${serviceSlug}`} className="tile rise" style={{ display: 'block', textDecoration: 'none' }}>
-                <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 8, color: 'var(--ink)' }}>{serviceName} services in Canada</h3>
-                <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>Scope, process and pricing for {serviceName.toLowerCase()} projects across Canada.</p>
-              </Link>
-            </div>
-          </div>
-        </section>
 
         {/* Internal linking mesh */}
         <section style={{ padding: 'var(--section-y) 0' }}>
           <div className="cb-container" style={{ display: 'grid', gap: 40 }}>
             <div>
-              <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Related services in {cityName}</h3>
+              <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Other services in {cityName}</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.relatedCityServices.filter(r => isIndexableHref(serviceCityPath(r.serviceSlug, r.citySlug))).map(r => <Link key={r.serviceSlug} href={serviceCityPath(r.serviceSlug, r.citySlug)} className="pill" style={navigationLinkStyle}>{r.name} in {cityName}</Link>)}
+                {p.relatedCityServices.filter(r => isIndexableHref(serviceCityPath(r.serviceSlug, r.citySlug))).map(r => <Link key={r.serviceSlug} href={serviceCityPath(r.serviceSlug, r.citySlug)} className="pill">{r.name}</Link>)}
+                {p.relatedSubServices.map(r => <Link key={r.slug} href={`/services/${serviceSlug}/${r.slug}`} className="pill">{r.name}</Link>)}
               </div>
-            </div>
-            <div>
-              <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Explore our {serviceName} services</h3>
-              <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 12px' }}>
-                Read more about our <Link href={`/services/${serviceSlug}`} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{serviceName} services in Canada</Link>, or browse <Link href="/services" style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>all Mapletech Labs services</Link>.
-              </p>
-              {pageKey === 'ai-development-company-in-calgary' ? (
-                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 12px' }}>
-                  See our <Link href="/services/ai-ml" style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>AI development services</Link> and read the <Link href="/case-studies/healthcare-telehealth" style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>healthcare AI case study</Link>.
-                </p>
-              ) : null}
-              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.relatedSubServices.map(r => <Link key={r.slug} href={`/services/${serviceSlug}/${r.slug}`} className="pill" style={navigationLinkStyle}>{r.name}</Link>)}
-              </div>
-              {caseStudies.length >= 2 ? (
-                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '12px 0 0' }}>
-                  Proof: case studies — <Link href={caseStudies[0].href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{caseStudies[0].client}: {caseStudies[0].title}</Link>
-                  {caseStudies[1] ? <> and <Link href={caseStudies[1].href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{caseStudies[1].client}: {caseStudies[1].title}</Link></> : null}
-                  {caseStudies[2] ? <> plus <Link href={caseStudies[2].href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>{caseStudies[2].client}: {caseStudies[2].title}</Link></> : null}.
-                </p>
-              ) : (
-                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: '12px 0 0' }}>
-                  See our <Link href="/case-studies" style={{ fontSize: 15, fontWeight: 600, color: 'var(--brand)' }}>case studies</Link> for proof of what we ship.
-                </p>
-              )}
             </div>
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>{serviceName} across Canada</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.sameServiceOtherCities.filter(c => isIndexableHref(serviceCityPath(c.serviceSlug, c.citySlug))).map(c => <Link key={c.citySlug} href={serviceCityPath(c.serviceSlug, c.citySlug)} className="pill" style={navigationLinkStyle}>{serviceName} in {c.cityName}</Link>)}
+                {p.sameServiceOtherCities.filter(c => isIndexableHref(serviceCityPath(c.serviceSlug, c.citySlug))).map(c => <Link key={c.citySlug} href={serviceCityPath(c.serviceSlug, c.citySlug)} className="pill">{c.cityName}</Link>)}
               </div>
             </div>
           </div>

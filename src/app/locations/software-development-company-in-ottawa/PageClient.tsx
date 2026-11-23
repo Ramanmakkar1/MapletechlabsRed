@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
@@ -80,14 +79,6 @@ export default function PageClient() {
       wins={wins}
       trends={{ title: "Ottawa Tech Focus", items: trends }}
       serviceLinks={serviceLinks}
-      localContent={
-        <section style={{ padding: 'var(--section-y) 0' }}>
-          <div className="cb-container prose-body">
-            <p>Comparing development partners in Ottawa? Read our guide to <Link href="/blog/software-development-companies-ottawa">software development companies in Ottawa</Link> for public-sector security, bilingual and accessible builds, typical costs and the questions to ask on the first call.</p>
-            <p>An Ottawa example: for PayBridge Solutions we built a <Link href="/case-studies/payments-api-platform">PCI DSS-compliant payments API</Link> that handles 12M+ transactions a month.</p>
-          </div>
-        </section>
-      }
     />
   );
 }

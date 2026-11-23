@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
@@ -10,12 +9,12 @@ const numbers = pair([
                   ['15+', 'Clean Tech Platforms'],
                 ]);
 const services = [
-  { title: 'Mobile App Development in Vancouver', desc: 'High-performance mobile apps for gaming studios, PropTech platforms, and Pacific Rim commerce.', href: '/services/mobile-app-development/vancouver' },
-  { title: 'Web Development in Vancouver', desc: 'Scalable web platforms for film production pipelines, clean tech dashboards, and real estate marketplaces.', href: '/locations/web-development-company-in-vancouver' },
-  { title: 'AI Development in Vancouver', desc: 'Computer vision for VFX workflows, predictive models for clean energy, and NLP for multilingual markets.', href: '/locations/ai-development-company-in-vancouver' },
+  { title: 'Mobile App Development', desc: 'High-performance mobile apps for gaming studios, PropTech platforms, and Pacific Rim commerce.', href: '/services/mobile-app-development/vancouver' },
+  { title: 'Web Development', desc: 'Scalable web platforms for film production pipelines, clean tech dashboards, and real estate marketplaces.', href: '/locations/web-development-company-in-vancouver' },
+  { title: 'AI & Machine Learning', desc: 'Computer vision for VFX workflows, predictive models for clean energy, and NLP for multilingual markets.', href: '/locations/ai-development-company-in-vancouver' },
   { title: 'Blockchain & Web3', desc: 'Decentralized applications, NFT platforms, and tokenized asset systems for Vancouver\'s forward-thinking tech scene.', href: '/services/blockchain-web3' },
-  { title: 'Cloud & DevOps in Vancouver', desc: 'Cloud-native infrastructure and CI/CD pipelines built for gaming studios and media production at scale.', href: '/locations/vancouver/cloud-devops' },
-  { title: 'UI/UX Design in Vancouver', desc: 'UI/UX design for consumer apps, PropTech interfaces, and immersive gaming experiences.', href: '/locations/ui-ux-design-company-in-vancouver' },
+  { title: 'Cloud & DevOps', desc: 'Cloud-native infrastructure and CI/CD pipelines built for gaming studios and media production at scale.', href: '/locations/vancouver/cloud-devops' },
+  { title: 'Product Design', desc: 'UI/UX design for consumer apps, PropTech interfaces, and immersive gaming experiences.', href: '/locations/ui-ux-design-company-in-vancouver' },
 ];
 
 const whyChoose = [
@@ -80,14 +79,6 @@ export default function PageClient() {
       wins={wins}
       trends={{ title: "Vancouver Tech Focus", items: trends }}
       serviceLinks={serviceLinks}
-      localContent={
-        <section style={{ padding: 'var(--section-y) 0' }}>
-          <div className="cb-container prose-body">
-            <p>Comparing development partners in Vancouver? Read our guide to <Link href="/blog/software-development-companies-vancouver">software development companies in Vancouver</Link> for what to look for, typical costs and the questions to ask on the first call. If you are planning a mobile product, see our <Link href="/services/mobile-app-development/vancouver">mobile app development company in Vancouver</Link> page for platforms, process and pricing guidance.</p>
-            <p>A Vancouver example: for ClinicFlow Health we built a <Link href="/case-studies/healthcare-telehealth">HIPAA- and PIPEDA-compliant telehealth platform</Link> that serves 450K+ patient records and cut admin overhead by 40%. See all our <Link href="/case-studies">software development case studies</Link>.</p>
-          </div>
-        </section>
-      }
     />
   );
 }

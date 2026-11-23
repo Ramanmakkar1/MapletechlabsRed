@@ -53,7 +53,6 @@ export default async function LocationCatchAllPage({ params }: PageProps) {
       <ServiceCityTemplate
         data={data}
         local={local}
-        pageKey={slug}
         heroTitle={page.heroTitle}
         heroDesc={page.heroDesc}
         crossPromo={page.crossLink}
