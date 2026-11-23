@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { officeMedia, serviceMedia, humanMedia } from '@/data/media';
 import { serviceCityPath } from '@/data/serviceCity';
+import { isIndexableHref } from '@/lib/seo/indexability';
 import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
@@ -508,7 +509,7 @@ export default function ServicesIndexPage() {
                       </Link>
                     ))}
                   </div>
-                  {CITY_CARDS.map(city => (
+                  {CITY_CARDS.filter(city => isIndexableHref(group.cityHref(city.slug))).map(city => (
                     <Link
                       key={city.slug}
                       href={group.cityHref(city.slug)}
