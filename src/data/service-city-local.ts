@@ -133,11 +133,24 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         ],
       },
       {
+        heading: 'Proof from apps we have shipped',
+        body: [
+          'Our app work includes a ',
+          { href: '/case-studies/fintech-trading-platform', label: 'fintech trading platform' },
+          ' that processes 50K+ transactions daily with 99.99% uptime, a ',
+          { href: '/case-studies/payments-api-platform', label: 'PCI DSS certified payments API' },
+          ' processing 12 million transactions a month, and a ',
+          { href: '/case-studies/logistics-platform', label: 'real-time logistics platform' },
+          ' handling 15K+ daily deliveries with 25% fuel savings and a 98% on-time delivery rate. These are production systems used every day, not prototypes. The linked case studies walk through how each one was built.',
+        ],
+      },
+      {
         heading: 'What an app costs and how long it takes',
         body: [
           'Based on our ',
           { href: '/blog/app-development-cost-canada', label: 'Canadian app development cost guide' },
           ', a simple single-platform app with 5-8 screens costs about $25,000-$50,000 CAD and takes 8-12 weeks. A mid-size iOS and Android app with 15-30 screens, payments and an admin panel is about $50,000-$150,000 over 12-24 weeks. Complex platforms with AI, IoT or compliance work start near $150,000 and take 6-18 months. Discovery is free, and your price is locked in before any code is written.',
+          'Those ranges are planning guidance, not a template quote: your fixed CAD price depends on the screens, integrations and compliance work in your written scope, and any later scope change is priced and agreed before we build it. You own the source code, app store accounts, cloud accounts and design files we create for your project, with no lock-in.',
         ],
       },
     ],
