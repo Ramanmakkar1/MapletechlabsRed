@@ -188,6 +188,31 @@ export default function Page() {
             </li>
           </ul>
         </nav>
+        <nav aria-label="Services behind these projects" className="mt-6">
+          <h2 className="text-lg font-semibold text-slate-900">Services behind these projects</h2>
+          <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+            <li>
+              <Link href="/services/software-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                Custom software development services
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/mobile-app-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                App development services
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/ai-ml" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                AI development services
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/product-design" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                UI/UX design services
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </section>
       <PageClient />
     </>
