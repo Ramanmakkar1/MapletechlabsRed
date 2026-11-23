@@ -24,10 +24,9 @@ export default function Hero() {
             Custom software development in Edmonton and across Canada.
           </h1>
           <p className="lede" style={{ marginTop: 0, marginBottom: 16, maxWidth: '46ch' }}>
-            Mapletech Labs is an Edmonton custom software development company for startups and enterprises across Canada. Custom software development in Edmonton means building web platforms, mobile apps and AI systems around how your business actually works, rather than forcing an off-the-shelf product to fit. We design and build the digital products ambitious teams run on &mdash; engineered to last.
+            Mapletech Labs is a custom software development company headquartered in Edmonton, Alberta, building for startups and enterprises across Canada. Custom software means building web platforms, mobile apps and AI systems around how your business actually works, rather than forcing an off-the-shelf product to fit. We design and build the digital products ambitious teams run on &mdash; engineered to last.
           </p>
           <p style={{ marginTop: 0, marginBottom: 36, fontSize: 15, color: 'var(--muted)' }}>
-            Headquartered in Edmonton, we deliver custom software development in Edmonton: web platforms, mobile apps and AI systems for local teams, from our head office in Alberta.
             Explore our <Link href="/locations/software-development-company-in-edmonton">custom software development company in Edmonton</Link>, <Link href="/locations/healthcare-software-development-company-in-edmonton">healthcare software development in Edmonton</Link>, <Link href="/locations/web-development-company-in-edmonton">web development in Edmonton</Link> and <Link href="/services/software-development">custom software development services</Link>.
           </p>
 
