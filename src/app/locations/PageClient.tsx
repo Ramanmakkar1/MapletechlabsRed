@@ -10,8 +10,9 @@ import FaqSplit from '@/components/home/FaqSplit';
 import { FaqSchema } from '@/components/ServiceSchema';
 import MediaBand from '@/components/MediaBand';
 import { humanMedia } from '@/data/media';
-import { PRIORITY_SERVICES, serviceCityPath, priorityCompanyHeadline, AGENCY_CITIES, WEB_DESIGN_CITIES } from '@/data/serviceCity';
+import { PRIORITY_SERVICES, serviceCityPath, priorityCompanyHeadline, WEB_DESIGN_CITIES } from '@/data/serviceCity';
 import { cities as allCities } from '@/data/cities';
+import { isIndexableHref } from '@/lib/seo/indexability';
 import LocationDirectory from '@/components/LocationDirectory';
 
 // Edmonton (HQ) first, then the other major markets.
@@ -36,6 +37,9 @@ const buyerIntentPath = (serviceSlug: string, citySlug: string) =>
   serviceSlug === 'software-development'
     ? `/locations/software-development-company-in-${citySlug}`
     : serviceCityPath(serviceSlug, citySlug);
+
+const INDEXABLE_BUYER_INTENT_SERVICES = BUYER_INTENT_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
+const INDEXABLE_PRIORITY_CITY_SERVICES = PRIORITY_CITY_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
 
 // The four markets buyers search for most. Rendered server-side so crawlers and
 // visitors without JS can reach the priority service + city pages from /locations.
@@ -184,7 +188,7 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
                   <div key={slug} className="tile">
                     <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', marginBottom: 14 }}>{city.name}{city.isHQ ? ' · HQ' : ''}</h3>
                     <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                      {PRIORITY_CITY_SERVICES.map(service => (
+                      {INDEXABLE_PRIORITY_CITY_SERVICES.map(service => (
                         <Link key={service.serviceSlug} href={buyerIntentPath(service.serviceSlug, slug)} className="pill">
                           {service.label} in {city.name}
                         </Link>
@@ -293,7 +297,7 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
               </div>
             </div>
             <div className="grid grid--2">
-              {BUYER_INTENT_SERVICES.map(service => (
+              {INDEXABLE_BUYER_INTENT_SERVICES.map(service => (
                 <div key={service.serviceSlug} className="tile">
                   <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', marginBottom: 14 }}>{service.label} Company by City</h3>
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
@@ -309,15 +313,7 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
 
             <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>Digital Marketing Agency</h3>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-              {AGENCY_CITIES.map(slug => {
-                const city = allCities.find(c => c.slug === slug);
-                if (!city) return null;
-                return (
-                  <Link key={slug} href={`/locations/digital-marketing-agency-in-${slug}`} className="pill">
-                    Digital Marketing Agency in {city.name}{city.isHQ ? ' · HQ' : ''}
-                  </Link>
-                );
-              })}
+              <Link href="/services/digital-marketing" className="pill">Digital Marketing Agency</Link>
             </div>
 
             <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>Web Design Company</h3>
@@ -350,11 +346,18 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
                       <th scope="row" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid var(--line)', whiteSpace: 'nowrap' }}>
                         <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ color: 'var(--ink)', fontWeight: 600 }}>{city.name}, {city.provinceAbbr}</Link>
                       </th>
-                      {PRIORITY_SERVICES.map(ps => (
-                        <td key={ps.serviceSlug} style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)', whiteSpace: 'nowrap' }}>
-                          <Link href={serviceCityPath(ps.serviceSlug, city.slug)} title={`${priorityCompanyHeadline(ps.serviceSlug, ps.label)} Company in ${city.name}`} style={{ color: 'var(--brand)' }}>{priorityCompanyHeadline(ps.serviceSlug, ps.label)}</Link>
-                        </td>
-                      ))}
+                      {PRIORITY_SERVICES.map(ps => {
+                        const href = serviceCityPath(ps.serviceSlug, city.slug);
+                        return (
+                          <td key={ps.serviceSlug} style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)', whiteSpace: 'nowrap' }}>
+                            {isIndexableHref(href) ? (
+                              <Link href={href} title={`${priorityCompanyHeadline(ps.serviceSlug, ps.label)} Company in ${city.name}`} style={{ color: 'var(--brand)' }}>{priorityCompanyHeadline(ps.serviceSlug, ps.label)}</Link>
+                            ) : (
+                              <span>{priorityCompanyHeadline(ps.serviceSlug, ps.label)}</span>
+                            )}
+                          </td>
+                        );
+                      })}
                     </tr>
                   ))}
                 </tbody>
