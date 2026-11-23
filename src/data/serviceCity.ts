@@ -111,5 +111,13 @@ export const serviceCityPath = (serviceSlug: string, citySlug: string): string =
  * page is live and indexable, otherwise the core service page (never a 301 or
  * noindex city+service URL).
  */
-export const serviceCityHref = (serviceSlug: string, citySlug: string): string =>
-  isIndexableCityService(citySlug, serviceSlug) ? serviceCityPath(serviceSlug, citySlug) : `/services/${serviceSlug}`;
+export const serviceCityHref = (serviceSlug: string, citySlug: string): string => {
+  const kw = kwFor[serviceSlug];
+  if (kw) {
+    const slug = `${kw}-company-in-${citySlug}`;
+    return isIndexableLocationSlug(slug) ? `/locations/${slug}` : `/services/${serviceSlug}`;
+  }
+  return isIndexableCityService(citySlug, serviceSlug)
+    ? `/locations/${citySlug}/${serviceSlug}`
+    : `/services/${serviceSlug}`;
+};
