@@ -284,9 +284,9 @@ const nextConfig: NextConfig = {
       { source: '/hospitality-app-development-company', destination: '/services/mobile-app-development', permanent: true },
       { source: '/travel-app-development-company', destination: '/services/mobile-app-development', permanent: true },
       { source: '/sports-app-development-company', destination: '/services/mobile-app-development', permanent: true },
-      // Blocked legacy blog URLs: 301 to the matching service page so the
+      // Blocked legacy blog URLs: 301 to the closest live page so the
       // indexed links keep their equity instead of hitting a dead page.
-      { source: '/blog/ai-development-companies-canada', destination: '/services/ai-ml', permanent: true },
+      { source: '/blog/ai-development-companies-canada', destination: '/blog', permanent: true },
       // Location URLs that error: 301 to the closest working page.
       { source: '/locations/toronto/game-development', destination: '/services/game-development', permanent: true },
       { source: '/locations/saas-development-company-in-windsor', destination: '/locations/software-development-company-in-windsor', permanent: true },
