@@ -102,7 +102,7 @@ const EXPECTED_AUDIT_TITLES = new Map([
   ["src/app/blog/saas-development-cost-canada/page.tsx", "SaaS Development Cost Canada: 2026 Pricing | Mapletech Labs"],
   ["src/app/blog/web-development-companies-toronto/page.tsx", "Web Development Companies in Toronto: How to Choose"],
   ["src/app/blog/website-cost-canada/page.tsx", "Website Cost in Canada: 2026 Pricing Guide | Mapletech Labs"],
-  ["src/app/case-studies/logistics-platform/page.tsx", "Logistics Case Study: 15K+ Daily Deliveries | Mapletech Labs"],
+  ["src/app/case-studies/logistics-platform/page.tsx", "Logistics Platform: 15K+ Daily Deliveries | Mapletech Labs"],
   ["src/app/services/digital-marketing/seo-services/page.tsx", "SEO Services Canada for Business Growth | Mapletech Labs"],
 ]);
 const auditArticlesSrc = readFileSync(join(ROOT, "src/data/articles.ts"), "utf8");
