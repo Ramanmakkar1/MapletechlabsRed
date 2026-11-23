@@ -1,5 +1,6 @@
 import { cities } from '@/data/cities';
 import { PROJECT_PRICING } from '@/data/pricing';
+import { PRIORITY_SERVICES, serviceCityPath } from '@/data/serviceCity';
 import { services } from '@/data/services';
 import { work } from '@/data/work';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
@@ -57,6 +58,10 @@ function buildText(): string {
   out.push('');
   out.push(...lines(cities.map(c => link(`Software Development Company in ${c.name}`, `/locations/software-development-company-in-${c.slug}`))));
   out.push(...lines([link('All locations', '/locations')]));
+  out.push('');
+  out.push('## Service and city pages');
+  out.push('');
+  out.push(...lines(PRIORITY_SERVICES.flatMap(ps => ['edmonton', 'calgary', 'toronto', 'vancouver'].map(city => link(`${ps.label} in ${city}`, serviceCityPath(ps.serviceSlug, city))))));
   out.push('');
   out.push('## Case studies');
   out.push('');
