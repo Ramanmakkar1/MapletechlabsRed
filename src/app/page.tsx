@@ -93,7 +93,9 @@ export default function Home() {
           builds web platforms, mobile apps and AI systems from requirements to launch. See also{' '}
           <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton web development</Link>,{' '}
           <Link href="/services/product-design" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>UI/UX design</Link>,{' '}
-          <Link href="/services/ai-ml" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>AI development</Link>{' '}
+          <Link href="/services/ai-ml" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>AI development</Link>,{' '}
+          <Link href="/services/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development</Link>,{' '}
+          <Link href="/services/mobile-app-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>mobile app development</Link>{' '}
           and{' '}
           <Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>all software development services</Link>.
         </p>
