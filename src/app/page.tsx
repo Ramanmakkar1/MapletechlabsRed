@@ -99,6 +99,13 @@ export default function Home() {
           and{' '}
           <Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>all software development services</Link>.
         </p>
+        <p className="cb-container" style={{ fontSize: 15, color: 'var(--body)', maxWidth: '70ch', margin: '0 auto 48px' }}>
+          See how we deliver results in our{' '}
+          <Link href="/case-studies" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>case studies</Link>, including{' '}
+          <Link href="/case-studies/logistics-platform" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>logistics platform</Link>,{' '}
+          <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>fintech trading platform</Link> and{' '}
+          <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>ecommerce platform</Link> builds.
+        </p>
         <EditorialBand />
         <EssentialGuides />
         <FeaturedWork />
