@@ -106,7 +106,6 @@ export const blogSlugs = [
   'digital-marketing-agencies-montreal',
   'digital-marketing-agencies-canada',
   'custom-software-development-cost-canada',
-  'digital-marketing-cost-canada',
 ];
 
 /**
@@ -221,7 +220,6 @@ const blogLastmod: Record<string, string> = {
   'saas-development-cost-canada':                '2026-03-12',
   'saas-development-companies-montreal':         '2026-11-14',
   'blockchain-development-companies-canada':     '2026-03-10',
-  'digital-marketing-cost-canada':               '2026-03-14',
   'software-development-companies-calgary':      '2026-11-10',
 };
 
