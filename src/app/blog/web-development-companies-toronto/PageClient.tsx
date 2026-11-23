@@ -516,6 +516,7 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
             <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related guides</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {[
+                { title: 'Web Development Company in Toronto', href: '/locations/toronto/web-development' },
                 { title: 'How Much Does a Website Cost in Canada?', href: '/blog/website-cost-canada' },
                 { title: 'Top Software Development Companies in Canada', href: '/blog/top-software-development-companies-canada' },
                 { title: 'Software Development Companies in Calgary', href: '/blog/software-development-companies-calgary' },
