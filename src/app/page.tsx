@@ -95,7 +95,12 @@ export default function Home() {
           <Link href="/services/product-design" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>UI/UX design</Link>,{' '}
           <Link href="/services/ai-ml" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>AI development</Link>,{' '}
           <Link href="/services/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development</Link>,{' '}
-          <Link href="/services/mobile-app-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>mobile app development</Link>{' '}
+          <Link href="/services/mobile-app-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>mobile app development</Link>,{' '}
+          <Link href="/services/web-development/api-backend" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>API and backend development</Link>,{' '}
+          <Link href="/services/product-design/ui-ux-strategy" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>UI/UX strategy</Link>,{' '}
+          <Link href="/services/web-development/enterprise-portals" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>enterprise portals</Link>,{' '}
+          <Link href="/services/product-design/brand-identity" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>brand identity</Link>,{' '}
+          <Link href="/services/web-development/ecommerce-systems" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>ecommerce systems</Link>{' '}
           and{' '}
           <Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>all software development services</Link>.
         </p>
