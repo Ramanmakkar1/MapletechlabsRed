@@ -74,7 +74,12 @@ export default function RamanPage() {
         url: profileUrl,
         email: 'hello@mapletechlabs.ca',
         telephone: '+1-403-604-8692',
-        worksFor: { '@id': `${canonicalUrl('/')}#organization` },
+        worksFor: {
+          '@type': 'Organization',
+          '@id': `${canonicalUrl('/')}#organization`,
+          name: 'Mapletech Labs',
+          url: canonicalUrl('/'),
+        },
         description:
           'Founded Mapletech Labs in 2018 with a mission to build world-class software without compromise. With 15+ years in software engineering, Raman Makkar has architected systems processing billions of transactions, scaled engineering teams, and mentored builders across fintech, healthcare, and enterprise.',
         knowsAbout: [
@@ -86,9 +91,13 @@ export default function RamanPage() {
           'Scaling systems',
           'Team architecture',
           'AI integration',
+          'Web Development',
+          'Custom Software Development',
           'Mobile App Development',
           'SaaS Product Strategy',
           'Cloud Architecture (AWS/GCP)',
+          'Cloud & DevOps',
+          'Software Maintenance',
           'Product Design',
           'AI & Machine Learning',
         ],
