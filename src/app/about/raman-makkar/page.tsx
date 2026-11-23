@@ -709,18 +709,6 @@ export default function RamanPage() {
             </section>
 
             <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Services</h2>
-              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
-                <li style={{ marginBottom: '8px' }}>
-                  <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link>
-                </li>
-                <li>
-                  <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services</Link>
-                </li>
-              </ul>
-            </section>
-
-            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
               <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '24px' }}>Frequently asked questions</h2>
               <div style={{ maxWidth: '800px' }}>
                 {faqs.map((item) => (
@@ -748,24 +736,6 @@ export default function RamanPage() {
                 Prefer a form? <Link href="/contact" style={{ color: 'var(--brand)' }}>Send your project brief</Link> and
                 Raman or a senior engineer will follow up with honest first thoughts, questions and next steps.
               </p>
-            </section>
-
-            <section style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}>
-              <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Selected work and services</h2>
-              <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
-                <li style={{ marginBottom: '8px' }}>
-                  <Link href="/case-studies/logistics-platform" style={{ color: 'var(--brand)' }}>Logistics platform case study</Link>
-                </li>
-                <li style={{ marginBottom: '8px' }}>
-                  <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>Fintech trading platform case study</Link>
-                </li>
-                <li style={{ marginBottom: '8px' }}>
-                  <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Custom software development in Edmonton</Link>
-                </li>
-                <li style={{ marginBottom: '8px' }}>
-                  <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)' }}>SEO services</Link>
-                </li>
-              </ul>
             </section>
 
             <div style={{ marginTop: '48px', textAlign: 'center' }}>
