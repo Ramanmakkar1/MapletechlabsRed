@@ -4,8 +4,9 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
-import { PRIORITY_SERVICES, serviceCityPath } from '@/data/serviceCity';
+import { PRIORITY_SERVICES, serviceCityPath, serviceCityHref, priorityCompanyHeadline } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
+import { provinces } from '@/data/provinces';
 import { isIndexableHref } from '@/lib/seo/indexability';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -62,8 +63,36 @@ export default function Page() {
       <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: canonicalUrl('/') }, { position: 2, name: 'Locations', item: canonicalUrl('/locations') }]} />
       <PageClient
         priorityLocationLinks={(
-          <nav aria-label="Featured province and city software development pages">
+          <nav aria-label="All location pages">
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'grid', gap: 12 }}>
+              {provinces.map(prov => (
+                <li key={`province-${prov.slug}`}>
+                  <Link href={`/locations/${prov.slug}`} style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                    Software development company in {prov.name}
+                  </Link>
+                </li>
+              ))}
+              {cities.map(city => (
+                <li key={`city-${city.slug}`}>
+                  <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                    Software development company in {city.name}
+                  </Link>
+                </li>
+              ))}
+              {cities.flatMap(city =>
+                PRIORITY_SERVICES.map(ps => {
+                  const href = serviceCityHref(ps.serviceSlug, city.slug);
+                  return isIndexableHref(href)
+                    ? { href, label: `${priorityCompanyHeadline(ps.serviceSlug, ps.label)} company in ${city.name}` }
+                    : null;
+                })
+              ).filter((l): l is { href: string; label: string } => l !== null).map(link => (
+                <li key={`svc-${link.href}`}>
+                  <Link href={link.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
               {PRIORITY_LOCATION_LINKS.map(link => (
                 <li key={link.href}>
                   <Link href={link.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>
