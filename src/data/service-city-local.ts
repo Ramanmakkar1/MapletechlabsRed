@@ -1225,8 +1225,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       ],
       links: [
         { href: '/locations/software-development-company-in-edmonton', label: 'Custom software development company in Edmonton' },
+        { href: '/services/web-development', label: 'custom software development services' },
         { href: '/case-studies/real-estate-portal', label: 'Real estate portal case study with 850,000+ listings' },
-        { href: '/case-studies/logistics-platform', label: 'Logistics and fleet platform case study' },
+        { href: '/case-studies/logistics-platform', label: 'logistics platform case study' },
         { href: '/contact', label: 'Talk to our Edmonton team about custom software' },
       ],
     },
