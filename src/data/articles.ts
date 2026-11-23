@@ -7685,7 +7685,7 @@ export interface RelatedArticle {
 }
 
 /** Blog slugs that are 301-redirected in next.config.ts, so never linked as articles. */
-const REDIRECTED_BLOG_SLUGS = new Set(['ai-development-companies-canada']);
+const REDIRECTED_BLOG_SLUGS = new Set<string>([]);
 
 export function getRelatedArticles(slug: string, n = 3): RelatedArticle[] {
   const current = getArticle(slug);

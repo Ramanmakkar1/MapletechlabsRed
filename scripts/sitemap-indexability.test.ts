@@ -3,22 +3,8 @@ import test from 'node:test';
 import nextConfig from '../next.config';
 import { canonicalPath } from '../src/lib/seo/canonical';
 import { isIndexableSitemapPath } from '../src/lib/seo/indexability';
-import { BASE_URL, SITEMAP_CHILDREN, blogSitemapEntries, localSeoSitemapEntries } from '../src/lib/sitemap-data';
+import { BASE_URL, SITEMAP_CHILDREN, localSeoSitemapEntries } from '../src/lib/sitemap-data';
 import { getServedCityServiceParams } from '../src/data/city-service';
-
-/** Audit URLs that were previously blocked because they 301 to a service page. */
-const BLOCKED_BLOG_PATHS = [
-  '/blog/ai-development-companies-canada',
-];
-
-test('blocked legacy blog URLs can never return to the sitemap', () => {
-  const blogUrls = blogSitemapEntries().map(entry => entry.loc);
-
-  for (const path of BLOCKED_BLOG_PATHS) {
-    assert.equal(isIndexableSitemapPath(path), false, `${path} must be flagged non-indexable`);
-    assert.equal(blogUrls.includes(`${BASE_URL}${path}`), false, `${path} must not be in the blog sitemap`);
-  }
-});
 
 test('every sitemap entry is indexable and is not a redirect source', async () => {
   assert.equal(typeof nextConfig.redirects, 'function');

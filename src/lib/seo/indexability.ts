@@ -7,7 +7,6 @@ import { isCityListiclePath } from './listicles';
  * a URL cannot be redirected for visitors and still advertised to crawlers.
  */
 export const NON_INDEXABLE_PATHS = new Set([
-  '/blog/ai-development-companies-canada',
   '/locations/toronto/game-development',
   '/locations/saas-development-company-in-windsor',
   // Merged into /services/branding and /services/saas-development (owner decision).

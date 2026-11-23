@@ -94,6 +94,7 @@ export const blogSlugs = [
   'ai-development-companies-vancouver',
   'ai-development-companies-montreal',
   'ai-development-companies-ottawa',
+  'ai-development-companies-canada',
   'web-development-companies-calgary',
   'web-development-companies-ottawa',
   'web-development-companies-montreal',
