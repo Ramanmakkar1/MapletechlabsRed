@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getLocationMeshPage, locationMeshParams } from '@/lib/locationPages';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import { SERVICE_CITY_LOCAL } from '@/data/service-city-local';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -32,8 +30,7 @@ export default async function CityServicePage({ params }: PageProps) {
   const page = getLocationMeshPage(city, service);
   if (!page) notFound();
 
-  const { data, isEdmWeb, heroDescription, jsonLd, breadcrumbItems } = page;
-  const local = SERVICE_CITY_LOCAL[`${service}-company-in-${city}`];
+  const { data, jsonLd, breadcrumbItems } = page;
 
   return (
     <>
@@ -42,16 +39,7 @@ export default async function CityServicePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
-      {isEdmWeb ? (
-        <ServiceCityTemplate
-          data={data}
-          customSoftware={local?.customSoftware}
-          heroTitle={<>Web Development <span style={{ color: 'var(--brand)' }}>Edmonton</span><br />&amp; Website Development</>}
-          heroDesc={<>{heroDescription} Part of our <Link href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</Link>, from our head office here.</>}
-        />
-      ) : (
-        <ServiceCityTemplate data={data} />
-      )}
+      <ServiceCityTemplate data={data} />
     </>
   );
 }
