@@ -23,6 +23,7 @@ import { cities } from '@/data/cities';
 import { provinceSlugForName } from '@/data/provinces';
 import { serviceCityHref } from '@/data/serviceCity';
 import type { HeroCopy, Stat } from './types';
+import { canonicalUrl } from '@/lib/seo/canonical';
 
 export interface LocationProps {
   slug: string; copy: HeroCopy; heroStats?: Stat[];
@@ -139,8 +140,19 @@ export default function LocationPageTemplate(p: LocationProps) {
       })
     : DEFAULT_SERVICE_ITEMS;
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: canonicalUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Locations', item: canonicalUrl('/locations') },
+      { '@type': 'ListItem', position: 3, name, item: canonicalUrl(`/locations/${p.slug}`) },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {quote ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
