@@ -1624,6 +1624,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'If the honest answer is “buy,” buy — and if it is “build the 20% that matters and connect the rest,” that is the work we most enjoy.' },
       { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/web-development">custom software development services</a> team, or <a href="/contact">tell us about your project</a>. If you are based in Edmonton, we also run <a href="/locations/software-development-company-in-edmonton">custom software development in Edmonton</a>.' },
+      { type: 'p', html: '<strong>Related services:</strong> <a href="/services/software-development">custom software development services</a> · <a href="/locations/edmonton/web-development">custom software development in Edmonton</a>.' },
     ],
     keyTakeaways: [
       'Buy off-the-shelf for common, solved problems where your business is not special — payroll, accounting, CRM basics.',
