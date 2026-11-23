@@ -318,6 +318,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           ' See our ',
           { href: '/services/ai-ml/ai-automation', label: 'AI workflow automation services' },
           ' for how we scope these projects.',
+          ' For image and video inspection, see our ',
+          { href: '/services/ai-ml/computer-vision', label: 'computer vision development services' },
+          '.',
         ],
       },
       {
@@ -327,6 +330,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           ' Our ',
           { href: '/services/ai-ml/ai-chatbots', label: 'AI chatbot development' },
           ' page covers features and timelines.',
+          ' For custom model connections, see our ',
+          { href: '/services/ai-ml/llm-integration', label: 'LLM integration services' },
+          '.',
         ],
       },
       {
