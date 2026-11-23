@@ -142,6 +142,22 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
               <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--muted)', marginRight: 4 }}>One team, the whole build:</span>
               {COVERS.map(c => <span key={c} className="pill">{c}</span>)}
             </div>
+            {citySlug === 'edmonton' && serviceSlug === 'web-development' ? (
+              <div style={{ marginTop: 'clamp(22px, 2.6vw, 30px)' }}>
+                <h3 style={{ fontSize: 'var(--fs-h4)', margin: '0 0 10px' }}>Related services</h3>
+                <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
+                  <li style={{ fontSize: 15, lineHeight: 1.6 }}>
+                    <Link href="/services/web-development" style={{ fontWeight: 600, color: 'var(--brand)' }}>custom software development Edmonton</Link>
+                  </li>
+                  <li style={{ fontSize: 15, lineHeight: 1.6 }}>
+                    <Link href="/services/mobile-app-development" style={{ fontWeight: 600, color: 'var(--brand)' }}>mobile app development Edmonton</Link>
+                  </li>
+                  <li style={{ fontSize: 15, lineHeight: 1.6 }}>
+                    <Link href="/case-studies" style={{ fontWeight: 600, color: 'var(--brand)' }}>Mapletech Labs case studies</Link>
+                  </li>
+                </ul>
+              </div>
+            ) : null}
           </div>
         </section>
 
