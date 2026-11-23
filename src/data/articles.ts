@@ -1618,7 +1618,7 @@ export const articles: Article[] = [
         'Will licence costs balloon as you grow? → lean <strong>build</strong> (or a hybrid).',
       ] },
       { type: 'p', html: 'If the honest answer is “buy,” buy — and if it is “build the 20% that matters and connect the rest,” that is the work we most enjoy.' },
-      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/web-development">custom software and web development</a> team, or <a href="/contact">tell us about your project</a>.' },
+      { type: 'callout', tone: 'brand', title: 'Next steps', text: 'Need this built? See our <a href="/services/web-development">custom software development services</a> team, or <a href="/contact">tell us about your project</a>. If you are based in Edmonton, we also run <a href="/locations/edmonton/web-development">custom software development in Edmonton</a>.' },
     ],
     keyTakeaways: [
       'Buy off-the-shelf for common, solved problems where your business is not special — payroll, accounting, CRM basics.',
