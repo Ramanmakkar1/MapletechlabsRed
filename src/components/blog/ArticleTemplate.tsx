@@ -11,6 +11,7 @@ import { serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
+import { isIndexableHref } from '@/lib/seo/indexability';
 
 type CityService = { label: string; path: (city: string) => string; noun?: string };
 
@@ -209,7 +210,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
   const relatedService = a.relatedService ?? CATEGORY_RELATED_SERVICE[a.category];
   const postCity = CITIES.find(c => a.slug.endsWith(`-${c.slug}`));
-  const primaryLocal = cityLinks && categoryService && postCity ? { href: categoryService.path(postCity.slug), text: `${categoryService.label} ${categoryService.noun ?? 'company'} in ${postCity.name}`, city: postCity.name } : null;
+  const primaryLocal = cityLinks && categoryService && postCity && isIndexableHref(categoryService.path(postCity.slug)) ? { href: categoryService.path(postCity.slug), text: `${categoryService.label} ${categoryService.noun ?? 'company'} in ${postCity.name}`, city: postCity.name } : null;
   const projectService = SLUG_PROJECT_SERVICE[a.slug];
   const projectHref = contactHrefFor(a.enquiryContext?.serviceSlug, a.enquiryContext?.citySlug, serviceAllowlist, cities);
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
@@ -361,7 +362,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                   <nav aria-label="Hire a team in your city" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
                     <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Hire a team in your city</h2>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
-                      {CITIES.map(({ slug, name }) => (
+                      {CITIES.filter(({ slug }) => isIndexableHref(categoryService.path(slug))).map(({ slug, name }) => (
                         <li key={slug} style={{ minWidth: 0 }}><Link href={categoryService.path(slug)} style={{ display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none', overflowWrap: 'anywhere' }}>{categoryService.label} {categoryService.noun ?? 'company'} in {name}</Link></li>
                       ))}
                     </ul>
