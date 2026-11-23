@@ -87,31 +87,16 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <WhatWeBuild />
-        <p className="cb-container" style={{ fontSize: 14, color: 'var(--muted)' }}>
-          Planning a project in Alberta? Talk to our{' '}
-          <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development company in Edmonton</Link>.
-          <br />
-          <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Web development company in Edmonton</Link>.
-        </p>
         <p className="cb-container" style={{ fontSize: 15, color: 'var(--body)', maxWidth: '70ch', margin: '0 auto 48px' }}>
-          Custom software development in Edmonton means a local team that designs and builds web platforms, mobile apps and AI systems around your business, from requirements to launch and beyond. Explore our{' '}
-          <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton web development services</Link>{' '}
+          Planning a project in Alberta? Our{' '}
+          <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development company in Edmonton</Link>{' '}
+          builds web platforms, mobile apps and AI systems from requirements to launch. See also{' '}
+          <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton web development</Link>,{' '}
+          <Link href="/services/product-design" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>UI/UX design</Link>,{' '}
+          <Link href="/services/ai-ml" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>AI development</Link>{' '}
           and{' '}
-          <Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development services</Link>{' '}
-          to see how we work with Canadian teams.
+          <Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>all software development services</Link>.
         </p>
-        <p className="cb-container" style={{ fontSize: 14, color: 'var(--muted)' }}>
-          Learn more about{' '}
-          <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development in Edmonton</Link>{' '}
-          and{' '}
-          <Link href="/services" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>our software development services</Link>.
-        </p>
-        <ul className="cb-container" style={{ fontSize: 14, color: 'var(--muted)', margin: '0 auto 48px', paddingLeft: 20 }}>
-          <li><Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Custom software development</Link></li>
-          <li><Link href="/services/product-design" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>UI/UX design</Link></li>
-          <li><Link href="/services/ai-ml" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>AI development</Link></li>
-          <li><Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton software development</Link></li>
-        </ul>
         <EditorialBand />
         <EssentialGuides />
         <FeaturedWork />
