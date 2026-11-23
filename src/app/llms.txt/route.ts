@@ -30,7 +30,7 @@ function buildText(): string {
   out.push('');
   out.push('> Concise entity index for AI assistants and crawlers. Full index: ' + canonicalUrl('/llms-full.txt'));
   out.push('');
-  out.push(`${BUSINESS.name} is a software, app and AI development agency headquartered in Edmonton, Alberta, Canada.`);
+  out.push(`${BUSINESS.name} is a custom software, mobile app, AI and UI/UX development company, founded in 2018 in Edmonton by Raman Makkar, serving Edmonton, Calgary, Toronto and Vancouver.`);
   out.push('');
   out.push('## Entity facts');
   out.push('');
