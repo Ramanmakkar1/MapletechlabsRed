@@ -63,9 +63,13 @@ export default function Page() {
           <Link href="/services" className="font-semibold text-blue-700 underline">
             software, app and AI development services
           </Link>
-          , see the results in our{' '}
+          , see the results in{' '}
           <Link href="/case-studies" className="font-semibold text-blue-700 underline">
-            client case studies
+            our case studies
+          </Link>
+          , including the{' '}
+          <Link href="/case-studies/logistics-platform" className="font-semibold text-blue-700 underline">
+            logistics platform case study
           </Link>
           , or{' '}
           <Link href="/contact" className="font-semibold text-blue-700 underline">
