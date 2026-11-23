@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { serviceCityPath } from '@/data/serviceCity';
 
 /* Six capabilities, three and three. Every card holds the same
    shape of content so a row can never end ragged. */
@@ -54,12 +53,6 @@ export default function WhatWeBuild() {
               {i < also.length - 1 ? ' · ' : ''}
             </span>
           ))}
-        </p>
-        <p style={{ marginTop: 8, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
-          Headquartered in Edmonton:{' '}
-          <Link href={serviceCityPath('web-development', 'edmonton')} style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton web development</Link>{' '}
-          and{' '}
-          <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development in Edmonton</Link>
         </p>
         <p style={{ marginTop: 8, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
           Explore:{' '}
