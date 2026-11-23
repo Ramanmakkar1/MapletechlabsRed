@@ -13,6 +13,8 @@ import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
 import { isIndexableHref } from '@/lib/seo/indexability';
+import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
+import { buildBreadcrumbSchema } from '@/lib/seo/schema';
 
 type CityService = { label: string; path: (city: string) => string; noun?: string };
 
@@ -229,9 +231,12 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   // Related posts: same category first, then most recent, never the current slug.
   const morePosts = related.length > 0 ? related : getRelatedArticles(a.slug, 3);
 
+  const breadcrumbSchema = buildBreadcrumbSchema(getBlogBreadcrumbs(a.title, a.slug));
+
   return (
     <>
       {isCityListicleSlug(a.slug) && <meta name="robots" content="noindex, follow" />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
       <main id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>
 
