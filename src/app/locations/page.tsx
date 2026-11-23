@@ -7,6 +7,8 @@ import { seoDescription } from '@/lib/seo/description';
 import { PRIORITY_SERVICES, serviceCityPath, serviceCityHref, priorityCompanyHeadline } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { provinces } from '@/data/provinces';
+import { getServedCityServiceParams } from '@/data/city-service';
+import { services } from '@/data/services';
 import { isIndexableHref } from '@/lib/seo/indexability';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -41,6 +43,17 @@ const PRIORITY_LOCATION_LINKS = [
   { href: '/locations/software-development-company-in-london-on', label: 'Software development company in London, Ontario' },
   { href: '/locations/software-development-company-in-laval', label: 'Software development company in Laval, Quebec' },
 ] as const;
+
+// City + service mesh pages that live in local-seo-sitemap.xml. They are not
+// covered by the priority keyword links above, so list them here too: every
+// location URL in the sitemap gets a crawlable anchor from /locations.
+const MESH_LOCATION_LINKS = getServedCityServiceParams()
+  .map(({ city, service }) => {
+    const cityName = cities.find(c => c.slug === city)?.name ?? city;
+    const serviceName = services.find(s => s.slug === service)?.name ?? service;
+    return { href: `/locations/${city}/${service}`, label: `${serviceName} company in ${cityName}` };
+  })
+  .filter(link => isIndexableHref(link.href));
 
 const servicesByCityJsonLd = {
   '@context': 'https://schema.org',
@@ -92,6 +105,13 @@ export default function Page() {
                 })
               ).filter((l): l is { href: string; label: string } => l !== null).map(link => (
                 <li key={`svc-${link.href}`}>
+                  <Link href={link.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              {MESH_LOCATION_LINKS.map(link => (
+                <li key={`mesh-${link.href}`}>
                   <Link href={link.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>
                     {link.label}
                   </Link>
