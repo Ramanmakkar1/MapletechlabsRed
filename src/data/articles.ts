@@ -7691,11 +7691,11 @@ const REDIRECTED_BLOG_SLUGS = new Set<string>([]);
 export function getRelatedArticles(slug: string, n = 3): RelatedArticle[] {
   const current = getArticle(slug);
   const others = articles.filter(a => a.slug !== slug && !REDIRECTED_BLOG_SLUGS.has(a.slug));
-  // Rank by the buyer's service topic first, then category, then the rest;
+  // Rank by the same category first, then the buyer's service topic, then the rest;
   // original order is preserved within each tier, and the tiers are disjoint.
-  const sameTopic = current ? others.filter(a => a.relatedTopic === current.relatedTopic) : [];
-  const sameCategory = current ? others.filter(a => a.relatedTopic !== current.relatedTopic && a.category === current.category) : [];
-  const rest = others.filter(a => !sameTopic.includes(a) && !sameCategory.includes(a));
-  const selected = [...sameTopic, ...sameCategory, ...rest].slice(0, n);
+  const sameCategory = current ? others.filter(a => a.category === current.category) : [];
+  const sameTopic = current ? others.filter(a => a.category !== current.category && a.relatedTopic === current.relatedTopic) : [];
+  const rest = others.filter(a => !sameCategory.includes(a) && !sameTopic.includes(a));
+  const selected = [...sameCategory, ...sameTopic, ...rest].slice(0, n);
   return selected.map(({ slug: articleSlug, title, category, readTime }) => ({ slug: articleSlug, title, category, readTime }));
 }
