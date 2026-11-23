@@ -8,6 +8,7 @@ import { CityTestimonial } from '@/components/home/Testimonial';
 import { quoteForCity } from '@/data/testimonials';
 import Credentials from '@/components/home/Credentials';
 import FaqSplit from '@/components/home/FaqSplit';
+import { defaultFaqs } from '@/data/faqs';
 import { FaqSchema } from '@/components/ServiceSchema';
 import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
@@ -337,8 +338,10 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
           </section>
         ) : null}
 
-        <FaqSchema faqs={p.faqs ?? []} />
-        <FaqSplit faqs={p.faqs} title={`${serviceName} in ${cityName}: your questions`} />
+        {/* Visible FAQ and its FAQPage schema must always come from the same
+            list: FaqSplit falls back to defaultFaqs, so the schema must too. */}
+        <FaqSchema faqs={p.faqs ?? defaultFaqs} />
+        <FaqSplit faqs={p.faqs ?? defaultFaqs} title={`${serviceName} in ${cityName}: your questions`} />
 
         {/* Internal linking mesh */}
         <section style={{ padding: 'var(--section-y) 0' }}>
