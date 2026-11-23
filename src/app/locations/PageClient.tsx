@@ -39,7 +39,6 @@ const buyerIntentPath = (serviceSlug: string, citySlug: string) =>
     : serviceCityHref(serviceSlug, citySlug);
 
 const INDEXABLE_BUYER_INTENT_SERVICES = BUYER_INTENT_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
-const INDEXABLE_PRIORITY_CITY_SERVICES = PRIORITY_CITY_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
 
 // The four markets buyers search for most. Rendered server-side so crawlers and
 // visitors without JS can reach the priority service + city pages from /locations.
@@ -52,6 +51,8 @@ const PRIORITY_CITY_SERVICES = [
   { serviceSlug: 'web-development', label: 'Web development' },
   { serviceSlug: 'digital-marketing', label: 'SEO' },
 ] as const;
+
+const INDEXABLE_PRIORITY_CITY_SERVICES = PRIORITY_CITY_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
 
 const cardBase: React.CSSProperties = {
   border: '1px solid var(--line)',
