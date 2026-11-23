@@ -26,6 +26,7 @@ import type { CityServicePageData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
 import { buyerGuideFor, buyerGuideLinkText } from '@/data/buyer-guides';
 import { serviceCaseMap } from '@/data/service-case-map';
+import { isIndexableHref } from '@/lib/seo/indexability';
 
 // Honest, company-wide facts — no invented per-city metrics.
 const HONEST_STATS: Stat[] = [
@@ -327,7 +328,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Related services in {cityName}</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.relatedCityServices.map(r => <Link key={r.serviceSlug} href={serviceCityPath(r.serviceSlug, r.citySlug)} className="pill" style={navigationLinkStyle}>{r.name} in {cityName}</Link>)}
+                {p.relatedCityServices.filter(r => isIndexableHref(serviceCityPath(r.serviceSlug, r.citySlug))).map(r => <Link key={r.serviceSlug} href={serviceCityPath(r.serviceSlug, r.citySlug)} className="pill" style={navigationLinkStyle}>{r.name} in {cityName}</Link>)}
               </div>
             </div>
             <div>
@@ -342,7 +343,7 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             <div>
               <h3 style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>{serviceName} across Canada</h3>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {p.sameServiceOtherCities.map(c => <Link key={c.citySlug} href={serviceCityPath(c.serviceSlug, c.citySlug)} className="pill" style={navigationLinkStyle}>{serviceName} in {c.cityName}</Link>)}
+                {p.sameServiceOtherCities.filter(c => isIndexableHref(serviceCityPath(c.serviceSlug, c.citySlug))).map(c => <Link key={c.citySlug} href={serviceCityPath(c.serviceSlug, c.citySlug)} className="pill" style={navigationLinkStyle}>{serviceName} in {c.cityName}</Link>)}
               </div>
             </div>
           </div>
