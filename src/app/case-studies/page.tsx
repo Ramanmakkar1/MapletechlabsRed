@@ -198,8 +198,8 @@ export default function Page() {
             </li>
           </ul>
         </nav>
-        <nav aria-label="Services behind these projects" className="mt-6">
-          <h2 className="text-lg font-semibold text-slate-900">Services behind these projects</h2>
+        <nav aria-label="Services these projects prove" className="mt-6">
+          <h2 className="text-lg font-semibold text-slate-900">Services these projects prove</h2>
           <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
             <li>
               <Link href="/services/software-development" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
