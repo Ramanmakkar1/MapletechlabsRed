@@ -280,6 +280,17 @@ export default function LogisticsCaseStudyClient() {
           city={{ label: 'Software Development in Vancouver', href: '/locations/software-development-company-in-vancouver' }}
         />
 
+        {/* ── RELATED SERVICES ── */}
+        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
+          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
+            <div className="reveal" style={{ maxWidth: 760 }}>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
+                Related services: <Link href="/services/web-development">custom software development</Link>, <Link href="/services/cloud-devops">cloud &amp; DevOps</Link>, <Link href="/services/web-development/api-backend">API and backend engineering</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ── CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
