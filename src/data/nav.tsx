@@ -37,16 +37,10 @@ export const serviceCategories = [
     href: '/services/web-development',
     links: [
       { label: 'Next.js Development', href: '/services/web-development/nextjs-development' },
-      { label: 'Web Design', href: '/services/web-development/web-design' },
-      { label: 'Shopify Development', href: '/services/web-development/shopify-development' },
       { label: 'SaaS Platforms', href: '/services/saas-development' },
       { label: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
       { label: 'API & Backend', href: '/services/web-development/api-backend' },
       { label: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
-      { label: 'Custom Software Development', href: '/services/software-development' },
-      { label: 'Dedicated Development Team', href: '/services/software-development/dedicated-development-team' },
-      { label: 'Legacy Software Modernization', href: '/services/software-development/legacy-software-modernization' },
-      { label: 'Software Maintenance', href: '/services/software-maintenance' },
     ],
   },
   {
@@ -63,8 +57,6 @@ export const serviceCategories = [
       { label: 'Computer Vision', href: '/services/ai-ml/computer-vision' },
       { label: 'Predictive Analytics', href: '/services/ai-ml/predictive-analytics' },
       { label: 'AI Chatbots', href: '/services/ai-ml/ai-chatbots' },
-      { label: 'AI Agent Development', href: '/services/ai-ml/ai-agent-development' },
-      { label: 'AI Consulting', href: '/services/ai-consulting' },
     ],
   },
   {
@@ -94,7 +86,6 @@ export const serviceCategories = [
     href: '/services/product-design',
     links: [
       { label: 'UI/UX Strategy', href: '/services/product-design/ui-ux-strategy' },
-      { label: 'UX Audit', href: '/services/product-design/ux-audit' },
       { label: 'Wireframing', href: '/services/product-design/wireframing' },
       { label: 'Prototyping', href: '/services/product-design/prototyping' },
       { label: 'Design Systems', href: '/services/product-design/design-systems' },
@@ -159,7 +150,6 @@ export const serviceCategories = [
     href: '/services/digital-marketing',
     links: [
       { label: 'SEO Services', href: '/services/digital-marketing/seo-services' },
-      { label: 'Local SEO Services', href: '/services/digital-marketing/local-seo' },
       { label: 'Google Ads (PPC)', href: '/services/digital-marketing/google-ads-ppc' },
       { label: 'Social Media Marketing', href: '/services/digital-marketing/social-media-marketing' },
       { label: 'Content Marketing', href: '/services/digital-marketing/content-marketing' },

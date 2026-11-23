@@ -13,13 +13,12 @@ const columns: { title: string; links: { label: string; href: string; lang?: str
   {
     title: 'Services',
     links: [
-      { label: 'Custom Software Development', href: '/services/software-development' },
       { label: 'Web Development', href: '/services/web-development' },
       { label: 'Mobile Apps', href: '/services/mobile-app-development' },
       { label: 'AI & Machine Learning', href: '/services/ai-ml' },
       { label: 'SaaS Development', href: '/services/saas-development' },
       { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
-      { label: 'UI/UX Design', href: '/services/product-design' },
+      { label: 'Product Design', href: '/services/product-design' },
     ],
   },
   {
@@ -31,7 +30,6 @@ const columns: { title: string; links: { label: string; href: string; lang?: str
       { label: 'Logistics', href: '/industries/logistics' },
       { label: 'EdTech', href: '/industries/edtech' },
       { label: 'Enterprise', href: '/industries/enterprise' },
-      { label: 'All Industries', href: '/industries' },
     ],
   },
   {
@@ -51,10 +49,6 @@ const columns: { title: string; links: { label: string; href: string; lang?: str
       { label: 'About Us', href: '/about' },
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Blog', href: '/blog' },
-      { label: 'Cost Estimator', href: '/tools/cost-estimator' },
-      { label: 'Pricing', href: '/pricing' },
-      { label: 'SR&ED Estimator', href: '/tools/sred-estimator' },
-      { label: 'Developer Cost Calculator', href: '/tools/in-house-vs-agency' },
       { label: 'All Services', href: '/services' },
       { label: 'All Locations', href: '/locations' },
       { label: 'Contact', href: '/contact' },
@@ -109,16 +103,6 @@ const contacts = [
   },
 ];
 
-const guides: { label: string; href: string }[] = [
-  { label: 'About Mapletech Labs', href: '/about' },
-  { label: 'App development cost in Canada', href: '/blog/app-development-cost-canada' },
-  { label: 'Build a SaaS MVP in 8 weeks', href: '/blog/build-saas-mvp-8-weeks' },
-  { label: 'Agentic AI in production', href: '/blog/agentic-ai-in-production' },
-  { label: 'Choosing a SaaS development company', href: '/blog/saas-development-company-canada' },
-  { label: 'How to choose a software company', href: '/blog/choose-software-development-company-canada' },
-  { label: 'Custom software vs off-the-shelf', href: '/blog/custom-software-vs-off-the-shelf' },
-];
-
 const legal: [string, string][] = [
   ['Privacy Policy', '/privacy'],
   ['Terms of Service', '/terms'],
@@ -141,7 +125,6 @@ export default function Footer() {
               style={{ height: 40, width: 'auto', objectFit: 'contain' }}
             />
             <p>World-class software engineering for companies ready to lead their industry. Based in Canada, building globally.</p>
-            <p><Link href="/locations/software-development-company-in-edmonton">Custom Software Development Edmonton</Link></p>
             <ul className="footer-contact">
               {contacts.map(c => (
                 <li key={c.href}>
@@ -172,17 +155,6 @@ export default function Footer() {
             </nav>
           ))}
         </div>
-
-        {/* Essential reading, linked from every page */}
-        <nav className="footer-more" aria-label="Essential guides">
-          <h2 style={{ fontSize: '13.5px', fontWeight: 700, lineHeight: 1.4, color: 'var(--on-ink)', margin: '0 0 10px' }}>Essential guides</h2>
-          {guides.map((g, i) => (
-            <span key={g.href}>
-              <Link href={g.href}>{g.label}</Link>
-              {i < guides.length - 1 && <i aria-hidden>·</i>}
-            </span>
-          ))}
-        </nav>
 
         {/* Everything that did not fit the six, on one line */}
         <nav className="footer-more" aria-label="More services and locations">

@@ -36,10 +36,6 @@ export default function AiPractice() {
             ))}
           </div>
 
-          <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65, marginBottom: 24 }}>
-            Local AI development teams for: <Link href="/locations/ai-development-company-in-edmonton">AI development in Edmonton</Link>, <Link href="/locations/ai-development-company-in-calgary">AI development in Calgary</Link>, <Link href="/locations/ai-development-company-in-toronto">AI development in Toronto</Link> and <Link href="/locations/ai-development-company-in-vancouver">AI development in Vancouver</Link>.
-          </p>
-
           <div className="btn-group" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Link href="/services/ai-ml" className="btn btn--dark">Explore AI services</Link>
             <Link href="/contact" className="btn btn--ghost">Book an advisory session</Link>

@@ -20,14 +20,12 @@ export default function Hero() {
     <section style={{ padding: 'var(--hero-top) 0 var(--section-y)' }}>
       <div className="cb-container hero-split">
         <div>
-          <h1 style={{ marginBottom: 24, maxWidth: '18ch' }}>
-            Custom software development in Edmonton and across Canada.
+          <h1 style={{ marginBottom: 24, maxWidth: '15ch' }}>
+            Custom software that moves Canadian business forward.
           </h1>
-          <p className="lede" style={{ marginTop: 0, marginBottom: 16, maxWidth: '46ch' }}>
-            Mapletech Labs is a custom software development company headquartered in Edmonton, Alberta, building for startups and enterprises across Canada. Custom software means building web platforms, mobile apps and AI systems around how your business actually works, rather than forcing an off-the-shelf product to fit. We design and build the digital products ambitious teams run on &mdash; engineered to last.
-          </p>
-          <p style={{ marginTop: 0, marginBottom: 36, fontSize: 15, color: 'var(--muted)' }}>
-            Explore our <Link href="/locations/software-development-company-in-edmonton">custom software development company in Edmonton</Link>, <Link href="/locations/healthcare-software-development-company-in-edmonton">healthcare software development in Edmonton</Link>, <Link href="/locations/web-development-company-in-edmonton">web development in Edmonton</Link> and <Link href="/services/software-development">custom software development services</Link>.
+          <p className="lede" style={{ marginTop: 0, marginBottom: 36, maxWidth: '46ch' }}>
+            Mapletech Labs is a custom software development company in Canada, designing and building the digital products ambitious companies
+            run on &mdash; web platforms, mobile apps and AI systems, engineered to last.
           </p>
 
           <div className="btn-group" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 40 }}>

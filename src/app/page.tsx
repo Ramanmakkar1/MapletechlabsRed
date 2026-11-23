@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import nextDynamic from 'next/dynamic';
 import { canonicalPath } from '@/lib/seo/canonical';
 import { seoTitle } from '@/lib/seo/title';
@@ -11,7 +10,6 @@ import TrustStrip from '@/components/home/TrustStrip';
 // Below the fold: loaded lazily so the hero paints first.
 const WhatWeBuild = nextDynamic(() => import('@/components/home/WhatWeBuild'));
 const EditorialBand = nextDynamic(() => import('@/components/home/EditorialBand'));
-const EssentialGuides = nextDynamic(() => import('@/components/home/EssentialGuides'));
 const FeaturedWork = nextDynamic(() => import('@/components/home/FeaturedWork'));
 const Industries = nextDynamic(() => import('@/components/home/Industries'));
 const Process = nextDynamic(() => import('@/components/home/Process'));
@@ -87,32 +85,7 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <WhatWeBuild />
-        <p className="cb-container" style={{ fontSize: 15, color: 'var(--body)', maxWidth: '70ch', margin: '0 auto 48px' }}>
-          Planning a project in Alberta? Our{' '}
-          <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development company in Edmonton</Link>{' '}
-          builds web platforms, mobile apps and AI systems from requirements to launch. See also{' '}
-          <Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton web development</Link>,{' '}
-          <Link href="/services/product-design" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>UI/UX design</Link>,{' '}
-          <Link href="/services/ai-ml" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>AI development</Link>,{' '}
-          <Link href="/services/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>custom software development</Link>,{' '}
-          <Link href="/services/mobile-app-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>mobile app development</Link>,{' '}
-          <Link href="/services/web-development/api-backend" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>API and backend development</Link>,{' '}
-          <Link href="/services/product-design/ui-ux-strategy" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>UI/UX strategy</Link>,{' '}
-          <Link href="/services/web-development/enterprise-portals" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>enterprise portals</Link>,{' '}
-          <Link href="/services/product-design/brand-identity" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>brand identity</Link>,{' '}
-          <Link href="/services/web-development/ecommerce-systems" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>ecommerce systems</Link>{' '}
-          and{' '}
-          <Link href="/services/software-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>all software development services</Link>.
-        </p>
-        <p className="cb-container" style={{ fontSize: 15, color: 'var(--body)', maxWidth: '70ch', margin: '0 auto 48px' }}>
-          See how we deliver results in our{' '}
-          <Link href="/case-studies" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>case studies</Link>, including{' '}
-          <Link href="/case-studies/logistics-platform" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>logistics platform</Link>,{' '}
-          <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>fintech trading platform</Link> and{' '}
-          <Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>ecommerce platform</Link> builds.
-        </p>
         <EditorialBand />
-        <EssentialGuides />
         <FeaturedWork />
         <Industries />
         <Process />

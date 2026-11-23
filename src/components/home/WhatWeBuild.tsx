@@ -45,28 +45,6 @@ export default function WhatWeBuild() {
           ))}
         </div>
 
-        <p style={{ marginTop: 20, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
-          <strong>Web platforms:</strong>{' '}
-          <Link href="/services/web-development/saas-platforms" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>SaaS platform development</Link>{' '}
-          &middot;{' '}
-          <Link href="/services/web-development/ecommerce-systems" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>ecommerce systems</Link>
-          <br />
-          <strong>Product design:</strong>{' '}
-          <Link href="/services/product-design/prototyping" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>prototyping</Link>{' '}
-          &middot;{' '}
-          <Link href="/services/product-design/design-systems" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>design systems</Link>
-          <br />
-          <strong>Cloud &amp; DevOps:</strong>{' '}
-          <Link href="/services/cloud-devops/infrastructure-as-code" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>infrastructure as code</Link>{' '}
-          &middot;{' '}
-          <Link href="/services/cloud-devops/ci-cd-pipelines" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>CI/CD pipelines</Link>
-          <br />
-          <strong>Blockchain &amp; Web3:</strong>{' '}
-          <Link href="/services/blockchain-web3/smart-contracts" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>smart contracts</Link>{' '}
-          &middot;{' '}
-          <Link href="/services/blockchain-web3/defi-protocols" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>DeFi protocols</Link>
-        </p>
-
         <p style={{ marginTop: 28, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
           Also delivered:{' '}
           {also.map((a, i) => (
@@ -75,16 +53,6 @@ export default function WhatWeBuild() {
               {i < also.length - 1 ? ' · ' : ''}
             </span>
           ))}
-        </p>
-        <p style={{ marginTop: 8, fontSize: 14, color: 'var(--muted)', lineHeight: 2 }}>
-          Explore:{' '}
-          <Link href="/services" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>software development services</Link>{' '}
-          &middot;{' '}
-          <Link href="/case-studies" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>client case studies</Link>{' '}
-          &middot;{' '}
-          <Link href="/industries" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>industries we serve</Link>{' '}
-          &middot;{' '}
-          <Link href="/locations" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>locations across Canada</Link>
         </p>
       </div>
     </section>
