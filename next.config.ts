@@ -296,6 +296,9 @@ const nextConfig: NextConfig = {
       { source: '/mobile-app-development-:city', destination: '/locations/app-development-company-in-:city', permanent: true },
       { source: '/web-development-:city', destination: '/locations/web-development-company-in-:city', permanent: true },
       { source: '/software-development-:city', destination: '/locations/software-development-company-in-:city', permanent: true },
+      // 4xx blog posts -> closest live service pages (owner decision)
+      { source: '/blog/ai-development-companies-canada', destination: '/services/ai-ml', permanent: true },
+      { source: '/blog/digital-marketing-cost-canada', destination: '/services/digital-marketing', permanent: true },
     ];
   },
 };
