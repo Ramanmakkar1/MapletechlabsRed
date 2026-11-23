@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { BUSINESS, HQ_ADDRESS } from '@/lib/seo/business';
 import { serviceCityPath } from '@/data/serviceCity';
+import { isIndexableHref } from '@/lib/seo/indexability';
 
 const CITIES = [
   { slug: 'edmonton', name: 'Edmonton' },
@@ -28,6 +29,10 @@ const CITY_SERVICES = [
   { serviceSlug: 'product-design', label: 'UI/UX design' },
   { serviceSlug: 'digital-marketing', label: 'SEO' },
 ];
+
+const INDEXABLE_CITIES = CITIES.filter(city =>
+  CITY_SERVICES.some(s => isIndexableHref(serviceCityPath(s.serviceSlug, city.slug))),
+);
 
 const STEPS = [
   {
@@ -216,11 +221,11 @@ export default function ContactInfo() {
             {' '}Most projects run remotely with weekly demos, and we meet in person in Edmonton and Calgary when it helps.
           </p>
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'grid', gap: 22 }}>
-            {CITIES.map(city => (
+            {INDEXABLE_CITIES.map(city => (
               <li key={city.slug} style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.7 }}>
                 <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>{city.name}</strong>
                 <br />
-                {CITY_SERVICES.map((s, i) => (
+                {CITY_SERVICES.filter(s => isIndexableHref(serviceCityPath(s.serviceSlug, city.slug))).map((s, i) => (
                   <span key={s.serviceSlug}>
                     {i > 0 && ' · '}
                     <Link href={serviceCityPath(s.serviceSlug, city.slug)} style={link}>{s.label} in {city.name}</Link>
