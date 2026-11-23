@@ -10,6 +10,9 @@ export const NON_INDEXABLE_PATHS = new Set([
   '/blog/ai-development-companies-canada',
   '/locations/toronto/game-development',
   '/locations/saas-development-company-in-windsor',
+  // Merged into /services/branding and /services/saas-development (owner decision).
+  '/services/product-design/brand-identity',
+  '/services/web-development/saas-platforms',
 ]);
 
 /**
