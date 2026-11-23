@@ -277,7 +277,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
         <section style={{ paddingBottom: 'clamp(32px, 4vw, 52px)' }}>
           <div className="cb-container" style={{ maxWidth: 900 }}>
             <div className="media media--lg fade" style={{ aspectRatio: '21 / 9' }}>
-              <Image src={hero.src} alt={hero.alt} fill priority sizes="(max-width: 900px) 100vw, 900px" style={{ objectFit: 'cover' }} />
+              <Image src={hero.src} alt={hero.alt} width={1260} height={540} priority loading="eager" decoding="async" sizes="(max-width: 900px) 100vw, 900px" style={{ objectFit: 'cover' }} />
             </div>
           </div>
         </section>
