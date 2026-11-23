@@ -93,6 +93,22 @@ export default function ToolsPage() {
                 </Link>
               ))}
             </div>
+            <section style={{ marginTop: 64 }}>
+              <h2 style={{ fontSize: 'var(--fs-h2)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', margin: '0 0 12px' }}>
+                Need help with the build?
+              </h2>
+              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.7, maxWidth: 720, margin: '0 0 20px' }}>
+                These tools give you a planning range. Our team can scope the work with you and give you a fixed quote for your project.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 12 }}>
+                <li><Link href="/services/software-development" style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none' }}>Software development services</Link></li>
+                <li><Link href="/services/web-development" style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none' }}>Web development services</Link></li>
+                <li><Link href="/services/mobile-app-development" style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none' }}>Mobile app development</Link></li>
+                <li><Link href="/services/ai-ml" style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none' }}>AI &amp; ML development</Link></li>
+                <li><Link href="/pricing" style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none' }}>Pricing &amp; packages</Link></li>
+                <li><Link href="/case-studies" style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none' }}>Case studies</Link></li>
+              </ul>
+            </section>
           </div>
         </section>
       </main>
