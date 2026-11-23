@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 import { serviceCaseMap } from '@/data/service-case-map';
 
@@ -51,6 +52,16 @@ export default function PageClient() {
       results={results}
       faqs={faqs}
       servicesTitle="XR Development Services"
+      buyerContent={
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>Related AR/VR services</h2>
+            <ul style={{ margin: 0 }}>
+              <li><Link href="/services/ar-vr/mobile-ar">mobile AR development</Link> — ARKit and ARCore apps for iOS and Android, including product visualisation, navigation overlays, face filters and interactive AR campaigns.</li>
+            </ul>
+          </div>
+        </section>
+      }
     />
   );
 }
