@@ -34,6 +34,23 @@ const CITY_PROVINCE: Record<string, string> = {
   Vancouver: 'British Columbia',
 };
 
+/**
+ * areaServed City nodes for the four core markets, with the page's own city
+ * first on a service+city page.
+ */
+export function coreCitiesAreaServed(primaryCity?: string) {
+  const cities: string[] = [...SERVICE_AREA_SERVED];
+  if (primaryCity && cities.includes(primaryCity)) {
+    cities.splice(cities.indexOf(primaryCity), 1);
+    cities.unshift(primaryCity);
+  }
+  return cities.map(city => ({
+    '@type': 'City',
+    name: city,
+    containedInPlace: { '@type': 'AdministrativeArea', name: CITY_PROVINCE[city] },
+  }));
+}
+
 export interface ServiceSchemaInput {
   name: string;
   description: string;

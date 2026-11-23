@@ -8,6 +8,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
+import { coreCitiesAreaServed } from '@/lib/seo/schema';
 
 // Render this location page from build-time data and keep it in the static cache.
 export const dynamic = 'force-static';
@@ -138,11 +139,7 @@ const serviceSchema = {
     name: 'Mapletech Labs',
     url: 'https://mapletechlabs.ca',
   },
-  areaServed: {
-    '@type': 'City',
-    name: 'Toronto',
-    containedInPlace: { '@type': 'AdministrativeArea', name: 'Ontario' },
-  },
+  areaServed: coreCitiesAreaServed('Toronto'),
 };
 
 const breadcrumbSchema = [

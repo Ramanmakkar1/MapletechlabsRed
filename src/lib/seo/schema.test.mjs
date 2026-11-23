@@ -5,6 +5,7 @@ import {
   buildBreadcrumbSchema,
   buildFaqSchema,
   buildServiceSchema,
+  coreCitiesAreaServed,
 } from './schema.ts';
 
 test('buildServiceSchema emits the required Service fields', () => {
@@ -91,4 +92,14 @@ test('buildBreadcrumbSchema maps position, name and item', () => {
     position: 2,
     name: 'Services',
   });
+});
+
+test('coreCitiesAreaServed lists all four core cities with the page city first', () => {
+  const nodes = coreCitiesAreaServed('Calgary');
+  assert.deepEqual(nodes.map(node => node.name), ['Calgary', 'Edmonton', 'Toronto', 'Vancouver']);
+  assert.ok(nodes.every(node => node['@type'] === 'City' && node.containedInPlace.name));
+  assert.deepEqual(
+    coreCitiesAreaServed('Halifax').map(node => node.name),
+    ['Edmonton', 'Calgary', 'Toronto', 'Vancouver'],
+  );
 });
