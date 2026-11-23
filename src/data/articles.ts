@@ -7688,14 +7688,16 @@ export interface RelatedArticle {
 /** Blog slugs that are 301-redirected in next.config.ts, so never linked as articles. */
 const REDIRECTED_BLOG_SLUGS = new Set<string>([]);
 
-export function getRelatedArticles(slug: string, n = 3): RelatedArticle[] {
+export function getRelatedArticles(slug: string, limit = 3): RelatedArticle[] {
   const current = getArticle(slug);
-  const others = articles.filter(a => a.slug !== slug && !REDIRECTED_BLOG_SLUGS.has(a.slug));
+  const others = articles
+    .filter(a => a.slug !== slug && !REDIRECTED_BLOG_SLUGS.has(a.slug))
+    .sort((a, b) => b.date.localeCompare(a.date));
   // Rank by the same category first, then the buyer's service topic, then the rest;
-  // original order is preserved within each tier, and the tiers are disjoint.
+  // newest first within each tier, and the tiers are disjoint.
   const sameCategory = current ? others.filter(a => a.category === current.category) : [];
   const sameTopic = current ? others.filter(a => a.category !== current.category && a.relatedTopic === current.relatedTopic) : [];
   const rest = others.filter(a => !sameCategory.includes(a) && !sameTopic.includes(a));
-  const selected = [...sameCategory, ...sameTopic, ...rest].slice(0, n);
+  const selected = [...sameCategory, ...sameTopic, ...rest].slice(0, limit);
   return selected.map(({ slug: articleSlug, title, category, readTime }) => ({ slug: articleSlug, title, category, readTime }));
 }
