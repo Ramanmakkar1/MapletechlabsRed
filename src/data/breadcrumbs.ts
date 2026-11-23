@@ -195,8 +195,8 @@ export function getBlogBreadcrumbs(postTitle: string, postSlug: string): Breadcr
 
 export function getCaseStudyBreadcrumbs(title: string, slug: string): BreadcrumbItem[] {
   return [
-    { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-    { position: 2, name: 'Case Studies', item: 'https://mapletechlabs.ca/case-studies' },
-    { position: 3, name: title, item: `https://mapletechlabs.ca/case-studies/${slug}` },
+    { position: 1, name: 'Home', item: canonicalUrl('/') },
+    { position: 2, name: 'Case Studies', item: canonicalUrl('/case-studies') },
+    { position: 3, name: title, item: canonicalUrl(`/case-studies/${slug}`) },
   ];
 }
