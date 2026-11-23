@@ -268,7 +268,7 @@ export default function RamanPage() {
                 stays involved from the first discovery call through delivery. You can review the{' '}
                 <Link href="/services" style={{ color: 'var(--brand)' }}>software development services</Link> he leads,
                 see the results in the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>client case studies</Link>,
-                or explore <Link href="/locations/edmonton/web-development" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link>{' '}
+                or explore <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link>{' '}
                 to see how the team works with local businesses.
               </p>
             </section>
@@ -712,7 +712,7 @@ export default function RamanPage() {
               <h2 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>Services</h2>
               <ul style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', paddingLeft: '20px', maxWidth: '800px' }}>
                 <li style={{ marginBottom: '8px' }}>
-                  <Link href="/locations/edmonton/web-development" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link>
+                  <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link>
                 </li>
                 <li>
                   <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services</Link>
@@ -760,7 +760,7 @@ export default function RamanPage() {
                   <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>Fintech trading platform case study</Link>
                 </li>
                 <li style={{ marginBottom: '8px' }}>
-                  <Link href="/locations/edmonton/web-development" style={{ color: 'var(--brand)' }}>Custom software development in Edmonton</Link>
+                  <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Custom software development in Edmonton</Link>
                 </li>
                 <li style={{ marginBottom: '8px' }}>
                   <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)' }}>SEO services</Link>
