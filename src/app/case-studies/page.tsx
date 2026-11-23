@@ -146,6 +146,41 @@ export default function Page() {
             </li>
           </ul>
         </nav>
+        <nav aria-label="Industries" className="mt-6">
+          <h2 className="text-lg font-semibold text-slate-900">Industries we build for</h2>
+          <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+            <li>
+              <Link href="/industries/fintech" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                FinTech & Banking
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries/healthcare" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                Healthcare & Medical
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries/ecommerce" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                E-commerce & Retail
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries/enterprise" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                Enterprise & Logistics
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries/logistics" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                Logistics & Supply Chain
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries/edtech" className="text-blue-700 underline underline-offset-2 hover:text-blue-900">
+                EdTech & SaaS
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </section>
       <PageClient />
     </>
