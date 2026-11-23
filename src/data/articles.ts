@@ -11,6 +11,10 @@
 
 import { serviceCityPath } from './serviceCity';
 import { blogDescription } from '@/lib/seo/blog';
+import { BLOG_AUTHOR } from '@/lib/seo/business';
+
+/** Author credited on every article (visible byline and Article/BlogPosting JSON-LD). */
+export const ARTICLE_AUTHOR = BLOG_AUTHOR;
 
 export type Block =
   | { type: 'h2'; id: string; text: string }

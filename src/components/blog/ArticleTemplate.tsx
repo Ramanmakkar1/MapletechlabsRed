@@ -6,8 +6,8 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import FinalCta from '@/components/home/FinalCta';
 import { humanMedia } from '@/data/media';
-import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
-import { getRelatedArticles } from '@/data/articles';
+import { BLOG_IMAGE } from '@/lib/seo/business';
+import { getRelatedArticles, ARTICLE_AUTHOR } from '@/data/articles';
 import type { Article, Block, RelatedArticle } from '@/data/articles';
 import { serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
@@ -241,7 +241,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
     description: a.metaDescription,
     datePublished: a.date,
     dateModified: a.dateModified ?? a.date,
-    author: BLOG_AUTHOR,
+    author: ARTICLE_AUTHOR,
     image: BLOG_IMAGE,
     publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
     url: articleUrl,
