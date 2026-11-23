@@ -63,19 +63,23 @@ export default function Page() {
       <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: canonicalUrl('/') }, { position: 2, name: 'Locations', item: canonicalUrl('/locations') }]} />
       <PageClient
         priorityLocationLinks={(
-          <nav aria-label="All location pages">
+          <>
+            <h3 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 12px' }}>Cities we serve</h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'grid', gap: 12 }}>
+              {cities.map(city => (
+                <li key={`city-${city.slug}`}>
+                  <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ color: 'var(--brand)', fontWeight: 600 }}>
+                    {city.name} software development
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <nav aria-label="All location pages">
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'grid', gap: 12 }}>
               {provinces.map(prov => (
                 <li key={`province-${prov.slug}`}>
                   <Link href={`/locations/${prov.slug}`} style={{ color: 'var(--brand)', fontWeight: 600 }}>
                     Software development company in {prov.name}
-                  </Link>
-                </li>
-              ))}
-              {cities.map(city => (
-                <li key={`city-${city.slug}`}>
-                  <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ color: 'var(--brand)', fontWeight: 600 }}>
-                    Software development company in {city.name}
                   </Link>
                 </li>
               ))}
@@ -101,7 +105,8 @@ export default function Page() {
                 </li>
               ))}
             </ul>
-          </nav>
+            </nav>
+          </>
         )}
       />
     </>
