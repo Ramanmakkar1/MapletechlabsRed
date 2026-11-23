@@ -1,4 +1,3 @@
-import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import LocalServiceLinks from '@/components/LocalServiceLinks';
@@ -27,24 +26,9 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/blog/web-development-companies-calgary') },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: a.title,
-  description: a.metaDescription,
-  datePublished: a.date,
-  dateModified: a.dateModified,
-  author: BLOG_AUTHOR,
-  image: BLOG_IMAGE,
-  publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
-  url: URL,
-  mainEntityOfPage: URL,
-};
-
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'web-development-companies-calgary')} />
       <FaqSchema faqs={a.faqs} />
       <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="calgary" cityName="Calgary" showWebDesignAndMarketing />} />

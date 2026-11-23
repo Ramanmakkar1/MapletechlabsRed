@@ -1,4 +1,3 @@
-import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
@@ -29,24 +28,9 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/blog/app-development-companies-edmonton') },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: a.title,
-  description: a.metaDescription,
-  datePublished: a.date,
-  dateModified: a.dateModified,
-  author: BLOG_AUTHOR,
-  image: BLOG_IMAGE,
-  publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
-  url: URL,
-  mainEntityOfPage: URL,
-};
-
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'app-development-companies-edmonton')} />
       <FaqSchema faqs={a.faqs} />
       <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="edmonton" cityName="Edmonton" />} relatedServices={<RelatedServices links={[{href:'/locations/app-development-company-in-edmonton',label:'App development company in Edmonton'},{href:'/services/mobile-app-development',label:'Mobile app development services'},{href:'/services/mobile-app-development/flutter-development',label:'Flutter app development'},{href:'/locations/software-development-company-in-edmonton',label:'Software development company in Edmonton'}]} />} extraBlock={

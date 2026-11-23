@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import FinalCta from '@/components/home/FinalCta';
 import { humanMedia } from '@/data/media';
+import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import { getRelatedArticles } from '@/data/articles';
 import type { Article, Block, RelatedArticle } from '@/data/articles';
 import { serviceCityPath } from '@/data/serviceCity';
@@ -232,10 +233,25 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   const morePosts = related.length > 0 ? related : getRelatedArticles(a.slug, 3);
 
   const breadcrumbSchema = buildBreadcrumbSchema(getBlogBreadcrumbs(a.title, a.slug));
+  const articleUrl = `https://mapletechlabs.ca/blog/${a.slug}`;
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: a.title,
+    description: a.metaDescription,
+    datePublished: a.date,
+    dateModified: a.dateModified ?? a.date,
+    author: BLOG_AUTHOR,
+    image: BLOG_IMAGE,
+    publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
+    url: articleUrl,
+    mainEntityOfPage: articleUrl,
+  };
 
   return (
     <>
       {isCityListicleSlug(a.slug) && <meta name="robots" content="noindex, follow" />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
       <main id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>

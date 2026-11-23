@@ -1,4 +1,3 @@
-import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
 import RelatedServices from '@/components/RelatedServices';
@@ -31,24 +30,9 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/blog/ai-development-companies-canada') },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: article.title,
-  description: article.metaDescription,
-  datePublished: article.date,
-  dateModified: article.dateModified,
-  author: BLOG_AUTHOR,
-  image: BLOG_IMAGE,
-  publisher: { '@type': 'Organization', '@id': 'https://mapletechlabs.ca/#organization', name: 'Mapletech Labs', url: 'https://mapletechlabs.ca', logo: { '@type': 'ImageObject', url: 'https://mapletechlabs.ca/logo.png' } },
-  url: URL,
-  mainEntityOfPage: URL,
-};
-
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <BreadcrumbSchema items={getBlogBreadcrumbs(article.title, 'ai-development-companies-canada')} />
       <FaqSchema faqs={article.faqs} />
       <ArticleTemplate
