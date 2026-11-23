@@ -312,6 +312,18 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
     intro: 'Mapletech Labs is an Alberta company headquartered in Edmonton, roughly a three-hour drive north of Calgary and in the same time zone, so our working days line up with yours. We build AI chatbots, large language model (LLM) features and workflow automation for Calgary businesses that want AI to take routine work off their staff. You work directly with the senior engineers who design and build your system, with no sales layer in between. Scope and price are fixed in CAD before any work begins, so your budget stays put. Call us on +1-403-604-8692 to discuss your project.',
     sections: [
       {
+        heading: 'AI development services in Calgary',
+        body: [
+          'Our Calgary AI work covers ',
+          { href: '/services/ai-development', label: 'AI development services' },
+          ' such as document chatbots, LLM features, AI agents and workflow automation, built by an Alberta team at a fixed CAD price. You can read the projects behind that work in our ',
+          { href: '/case-studies', label: 'AI and software case studies' },
+          ', or see our ',
+          { href: '/locations/calgary', label: 'Calgary location page' },
+          ' for web and app development alongside AI.',
+        ],
+      },
+      {
         heading: 'Where AI helps Calgary businesses',
         body: [
           'Energy and oil and gas head offices hold huge libraries of technical manuals, regulatory filings and safety procedures, and AI search lets staff find the right passage in seconds instead of digging through folders. It can also condense long reports into short summaries for an engineer to review. Financial services and insurance teams can use AI for document intake and claims triage, with a person checking each result before it moves on. Logistics and transportation firms can sort dispatch emails automatically, agribusinesses can pull answers from crop, equipment and supplier records, and Calgary’s growing tech and startup scene can add LLM features to their SaaS products.',
