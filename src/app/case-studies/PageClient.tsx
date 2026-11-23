@@ -343,6 +343,26 @@ export default function CaseStudiesPageClient() {
                 );
               })}
             </div>
+
+            {/* Plain index of every case study, so each has a direct internal link */}
+            <nav aria-label="All case studies" style={{ marginTop: 56 }}>
+              <h2 style={{ fontSize: 20, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 16 }}>
+                All case studies
+              </h2>
+              <ul style={{ listStyle: 'disc', paddingLeft: 22, margin: 0, display: 'grid', gap: 10 }}>
+                {caseStudies.map(cs => (
+                  <li key={cs.slug} style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.6 }}>
+                    <Link
+                      href={`/case-studies/${cs.slug}`}
+                      style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 2 }}
+                    >
+                      {cs.title}
+                    </Link>
+                    {` — ${cs.client}`}
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </section>
 
