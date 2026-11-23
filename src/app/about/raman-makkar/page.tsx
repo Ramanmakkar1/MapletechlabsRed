@@ -248,6 +248,31 @@ export default function RamanPage() {
               mobile apps, AI/ML solutions, cloud infrastructure and SaaS platforms.
             </p>
 
+            <section
+              aria-labelledby="raman-works-on"
+              style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--line)' }}
+            >
+              <h2 id="raman-works-on" style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px' }}>
+                What Raman works on
+              </h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: '20px', maxWidth: '800px' }}>
+                Raman Makkar leads Mapletech Labs&apos; software development services as Founder &amp; CEO, working from
+                the Edmonton headquarters he founded in 2018. His team builds custom web applications, mobile apps, AI/ML
+                solutions, cloud infrastructure and SaaS platforms, and he also leads the company&apos;s UI/UX design work.
+                Clients come from fintech, healthcare, e-commerce, logistics, edtech and enterprise, from startups to
+                established Canadian companies.
+              </p>
+              <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--body)', marginBottom: 0, maxWidth: '800px' }}>
+                He works directly with clients from discovery through delivery, and the team serves businesses in
+                Edmonton, Calgary, Toronto and Vancouver. Projects run in short agile cycles with weekly demos, and Raman
+                stays involved from the first discovery call through delivery. You can review the{' '}
+                <Link href="/services" style={{ color: 'var(--brand)' }}>software development services</Link> he leads,
+                see the results in the <Link href="/case-studies" style={{ color: 'var(--brand)' }}>client case studies</Link>,
+                or explore <Link href="/locations/edmonton/web-development" style={{ color: 'var(--brand)' }}>custom software development in Edmonton</Link>{' '}
+                to see how the team works with local businesses.
+              </p>
+            </section>
+
             <section aria-labelledby="raman-at-a-glance" style={{ marginBottom: '32px' }}>
               <h2
                 id="raman-at-a-glance"
