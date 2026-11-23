@@ -54,6 +54,7 @@ export function serviceBreadcrumbSchema(opts: { slug: string; label: string }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${url}#breadcrumb`,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: canonicalUrl('/') },
       { '@type': 'ListItem', position: 2, name: 'Services', item: canonicalUrl('/services') },
