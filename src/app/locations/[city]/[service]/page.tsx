@@ -14,6 +14,9 @@ export function generateStaticParams() {
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
+// Match the keyword location route: never let a render opt into uncached fetch
+// work, which would turn a static page back into a slow on-demand render.
+export const fetchCache = 'force-cache';
 // Keep the prerendered city+service pages in the cache until the next deploy.
 // The slow-page audit was measuring a cold ISR render (7-40 s) as the server
 // response time when these pages expired in place. Use a numeric window (not

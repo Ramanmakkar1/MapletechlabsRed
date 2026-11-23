@@ -17,6 +17,9 @@ export function generateStaticParams() {
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
+// Match the catch-all location route: never let a render opt into uncached
+// fetch work, which would turn a static page back into a slow on-demand render.
+export const fetchCache = 'force-cache';
 // Keep the prerendered keyword pages in the cache until the next deploy. Use a
 // numeric window (not `false`) so the host emits a long s-maxage instead of its
 // 300 s default.
