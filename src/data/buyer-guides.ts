@@ -1,3 +1,5 @@
+import { isIndexableHref } from '@/lib/seo/indexability';
+
 /** Buyer-guide blog posts linked from service+city money pages (slug must exist under src/app/blog). */
 const BLOG_SLUGS = new Set([
   'ai-development-companies-toronto',
@@ -164,6 +166,7 @@ export type BuyerGuide = { href: string; label: string; isCity: boolean; linkTex
 
 function slugToHref(slug: string | undefined): string | undefined {
   if (!slug || !BLOG_SLUGS.has(slug)) return undefined;
+  if (!isIndexableHref(`/blog/${slug}`)) return undefined;
   return `/blog/${slug}`;
 }
 
