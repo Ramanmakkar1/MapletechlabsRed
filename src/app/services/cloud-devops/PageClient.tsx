@@ -100,8 +100,8 @@ export default function PageClient() {
           <div className="cb-container">
             <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>Related cloud services</h2>
             <ul style={{ margin: 0 }}>
-              <li><Link href="/services/cloud-devops/aws-architecture">AWS architecture consulting</Link> — production-grade AWS environments designed for reliability, security and cost control.</li>
-              <li><Link href="/services/cloud-devops/infrastructure-as-code">infrastructure as code</Link> — version-controlled Terraform and Pulumi infrastructure that is repeatable and auditable.</li>
+              <li><Link href="/services/cloud-devops/aws-architecture">AWS architecture and migration</Link> — production-grade AWS environments designed for reliability, security and cost control.</li>
+              <li><Link href="/services/cloud-devops/infrastructure-as-code">Infrastructure as code</Link> — version-controlled Terraform and Pulumi infrastructure that is repeatable and auditable.</li>
             </ul>
           </div>
         </section>
