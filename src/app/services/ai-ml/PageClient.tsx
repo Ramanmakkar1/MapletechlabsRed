@@ -159,8 +159,8 @@ export default function PageClient() {
               <li style={{ marginBottom: 8 }}><Link href="/locations/ai-development-company-in-ottawa">AI development company in Ottawa</Link>: AI development for Ottawa businesses and public-sector teams, delivered remotely.</li>
               <li style={{ marginBottom: 8 }}><Link href="/locations/ai-development-company-in-montreal">AI development company in Montreal</Link>: AI development for Montreal businesses, delivered remotely, with Quebec Law 25 privacy in mind.</li>
             </ul>
-            <p className="lede">See AI in production in our <Link href="/case-studies/fintech-trading-platform">AI-powered trading platform case study</Link> and the <Link href="/case-studies/real-estate-portal">ML property recommendation engine for PropConnect Canada</Link>.</p>
-            <p className="lede"><Link href="/contact">Discuss your AI project approach and acceptance criteria</Link>.</p>
+            <p className="lede">Proof: see AI in production in our <Link href="/case-studies/fintech-trading-platform">AI-powered trading platform case study</Link> and the <Link href="/case-studies/real-estate-portal">ML property recommendation engine for PropConnect Canada</Link>.</p>
+            <p className="lede"><Link href="/contact">Talk to our AI team about your project&apos;s acceptance criteria</Link>.</p>
           </div>
         </section>
         <HubBuyerGuides serviceSlug="ai-ml" heading="How to choose an AI development company: city guides" />
