@@ -635,6 +635,14 @@ export default function BlogPage() {
                 </button>
               ))}
             </div>
+
+            {/* Service links */}
+            <p className="reveal reveal-d4" style={{ fontSize: 14, color: 'var(--muted)', marginTop: 24 }}>
+              Looking for a team? See our{' '}
+              <Link href="/services/software-development" style={{ color: 'var(--brand)' }}>custom software development</Link>,{' '}
+              <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development</Link> and{' '}
+              <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link> services.
+            </p>
           </div>
         </section>
 
