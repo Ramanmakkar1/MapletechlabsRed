@@ -106,6 +106,12 @@ export default function Home() {
           and{' '}
           <Link href="/services" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>our software development services</Link>.
         </p>
+        <ul className="cb-container" style={{ fontSize: 14, color: 'var(--muted)', margin: '0 auto 48px', paddingLeft: 20 }}>
+          <li><Link href="/services/web-development" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Custom software development</Link></li>
+          <li><Link href="/services/product-design" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>UI/UX design</Link></li>
+          <li><Link href="/services/ai-ml" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>AI development</Link></li>
+          <li><Link href="/locations/web-development-company-in-edmonton" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Edmonton software development</Link></li>
+        </ul>
         <EditorialBand />
         <EssentialGuides />
         <FeaturedWork />
