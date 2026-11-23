@@ -253,6 +253,7 @@ export default function FintechCaseStudyClient() {
             { label: 'AI & Machine Learning', href: '/services/ai-ml' },
             { label: 'Web Development', href: '/services/web-development' },
             { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+            { label: 'AWS Architecture', href: '/services/cloud-devops/aws-architecture' },
             { label: 'Web Development in Toronto', href: '/locations/web-development-company-in-toronto' },
             { label: 'Cloud & DevOps in Toronto', href: '/locations/toronto/cloud-devops' },
           ]}
