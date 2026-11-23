@@ -41,6 +41,13 @@ function buildText(): string {
   out.push(`- Website: ${canonicalUrl('/')}`);
   out.push(`- Cities served: ${LOCAL_BUSINESS_AREA_SERVED.map(a => a.name).join(', ')}`);
   out.push(`- Founder: Raman Makkar, Founder & CEO — ${canonicalUrl('/about/raman-makkar')}`);
+  out.push(`- Founded: 2018, in Edmonton`);
+  out.push(`- Former name: TML Branding Agency`);
+  out.push(`- Team: 25+ engineers, designers and strategists`);
+  out.push(`- Projects delivered: 500+ for clients across Canada and internationally`);
+  out.push(`- Founder experience: 15+ years in software engineering`);
+  out.push(`- What we build: custom software, web applications, iOS and Android apps, AI/ML solutions, UI/UX design, SaaS platforms and cloud infrastructure`);
+  out.push(`- Industries: fintech, healthcare, e-commerce, logistics, edtech, real estate and enterprise`);
   out.push('');
   out.push('## Core services');
   out.push('');
