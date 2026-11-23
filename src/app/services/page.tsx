@@ -80,6 +80,8 @@ export default function Page() {
           <li><a href="/services/software-development" className="underline hover:no-underline">Custom software development services</a></li>
           <li><a href="/services/web-development" className="underline hover:no-underline">Web development company</a></li>
           <li><a href="/services/web-development/ecommerce-systems" className="underline hover:no-underline">Ecommerce systems development</a></li>
+          <li><a href="/services/web-development/web-design" className="underline hover:no-underline">Web Design</a></li>
+          <li><a href="/services/web-development/shopify-development" className="underline hover:no-underline">Shopify Development</a></li>
           <li><a href="/services/mobile-app-development" className="underline hover:no-underline">Mobile app development services</a></li>
           <li><a href="/services/mobile-app-development/flutter-development" className="underline hover:no-underline">Flutter app development</a></li>
           <li><a href="/services/mobile-app-development/cross-platform-apps" className="underline hover:no-underline">Cross-platform app development</a></li>
@@ -91,11 +93,13 @@ export default function Page() {
           <li><a href="/services/game-development" className="underline hover:no-underline">Game development services</a></li>
           <li><a href="/services/product-design" className="underline hover:no-underline">UI/UX and product design services</a></li>
           <li><a href="/services/product-design/design-systems" className="underline hover:no-underline">Design systems and component libraries</a></li>
+          <li><a href="/services/product-design/ux-audit" className="underline hover:no-underline">UX Audit</a></li>
           <li><a href="/services/branding" className="underline hover:no-underline">Branding and brand identity design</a></li>
           <li><a href="/services/saas-development" className="underline hover:no-underline">SaaS platform development</a></li>
           <li><a href="/services/wordpress-cms" className="underline hover:no-underline">WordPress and CMS development</a></li>
           <li><a href="/services/software-maintenance" className="underline hover:no-underline">Software maintenance and support</a></li>
           <li><a href="/services/digital-marketing" className="underline hover:no-underline">Digital marketing services</a></li>
+          <li><a href="/services/digital-marketing/local-seo" className="underline hover:no-underline">Local SEO</a></li>
         </ul>
       </nav>
       <PageClient />
