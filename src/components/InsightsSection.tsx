@@ -60,6 +60,22 @@ const servicePosts: Record<string, typeof posts> = {
     { tag: 'Digital Marketing', title: 'Digital Marketing Cost in Canada (2026)', excerpt: 'Review typical Canadian budgets for SEO, paid ads, social media and content marketing.', readTime: '7 min read', date: 'Mar 2026', href: '/blog/digital-marketing-cost-canada' },
     { tag: 'Business', title: 'Website Cost in Canada (2026 Guide)', excerpt: 'Compare website project pricing, from landing pages to custom web applications.', readTime: '7 min read', date: 'Mar 2026', href: '/blog/website-cost-canada' },
   ],
+  'web-development': [
+    { tag: 'Business', title: 'Website Cost in Canada: 2026 Pricing Guide', excerpt: 'See what a website costs in Canada in 2026, from a small business site to a custom web application.', readTime: '7 min read', date: 'Jan 2026', href: '/blog/website-cost-canada' },
+    { tag: 'Engineering', title: 'Web App vs Mobile App: A Buyer’s Guide for Canada', excerpt: 'Decide whether a responsive web app or a native mobile app fits your product, budget and timeline.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/web-app-vs-mobile-app-canada' },
+    { tag: 'Engineering', title: 'WordPress vs Headless CMS in Canada: Which to Choose?', excerpt: 'Compare WordPress and headless CMS builds on cost, speed, SEO, editor experience and maintenance.', readTime: '8 min read', date: 'Nov 2026', href: '/blog/wordpress-vs-headless-cms-canada' },
+    { tag: 'Business', title: 'Shopify vs Custom Ecommerce: A Canadian Decision Guide', excerpt: 'Learn when Shopify fits a Canadian store and when custom ecommerce development is worth the investment.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/shopify-vs-custom-ecommerce-canada' },
+  ],
+  'saas-development': [
+    { tag: 'Business', title: 'SaaS Development Cost Canada: 2026 Pricing', excerpt: 'Review the factors that shape SaaS development costs in Canada and the ranges to plan with.', readTime: '9 min read', date: 'Mar 2026', href: '/blog/saas-development-cost-canada' },
+    { tag: 'Business', title: 'How to Build a SaaS MVP in 8 Weeks: A Founder’s Playbook', excerpt: 'Follow a week-by-week playbook for scoping and launching a focused SaaS MVP in eight weeks.', readTime: '10 min read', date: 'Sep 2026', href: '/blog/build-saas-mvp-8-weeks' },
+    { tag: 'Business', title: 'What the Most Profitable SaaS Products Get Right', excerpt: 'See the retention, expansion and pricing fundamentals that make SaaS products profitable.', readTime: '9 min read', date: 'Sep 2026', href: '/blog/what-profitable-saas-gets-right' },
+  ],
+  'wordpress-cms': [
+    { tag: 'Engineering', title: 'WordPress vs Headless CMS in Canada: Which to Choose?', excerpt: 'Compare WordPress and headless CMS builds on cost, speed, SEO, editor experience and maintenance.', readTime: '8 min read', date: 'Nov 2026', href: '/blog/wordpress-vs-headless-cms-canada' },
+    { tag: 'Business', title: 'Website Cost in Canada: 2026 Pricing Guide', excerpt: 'See what a website costs in Canada in 2026, from a small business site to a custom web application.', readTime: '7 min read', date: 'Jan 2026', href: '/blog/website-cost-canada' },
+    { tag: 'Business', title: 'Shopify vs Custom Ecommerce: A Canadian Decision Guide', excerpt: 'Learn when Shopify fits a Canadian store and when custom ecommerce development is worth the investment.', readTime: '9 min read', date: 'Nov 2026', href: '/blog/shopify-vs-custom-ecommerce-canada' },
+  ],
 };
 
 export default function InsightsSection({ serviceSlug }: { serviceSlug?: string }) {
