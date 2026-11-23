@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import PageClient, { FAQS } from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { BUSINESS, localServiceSchema } from '@/lib/seo/business';
+import { localServiceSchema } from '@/lib/seo/business';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 
 export const dynamic = 'force-static';
@@ -25,19 +25,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: URL,
   },
-};
-
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://mapletechlabs.ca/#organization',
-  name: BUSINESS.name,
-  url: BUSINESS.url,
-  logo: BUSINESS.logo,
-  image: BUSINESS.image,
-  email: BUSINESS.email,
-  telephone: BUSINESS.telephone,
-  sameAs: BUSINESS.sameAs,
 };
 
 const localBusinessSchema = {
@@ -91,7 +78,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, localBusinessSchema, serviceSchema, breadcrumbSchema, faqSchema]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, serviceSchema, breadcrumbSchema, faqSchema]) }}
       />
       <PageClient />
     </>
