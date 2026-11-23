@@ -57,6 +57,7 @@ function buildText(): string {
   out.push('');
   out.push(...lines([
     link('All services', '/services'),
+    link('Software Development', '/services/software-development'),
     link('AI Consulting', '/services/ai-consulting'),
     link('Pricing', '/pricing', pricingNote),
   ]));

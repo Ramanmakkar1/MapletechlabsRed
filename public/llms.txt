@@ -25,6 +25,18 @@
 - All locations: https://mapletechlabs.ca/locations
 - Full index (every service, service + city page and buyer guide): https://mapletechlabs.ca/llms-full.txt
 
+## Core pages
+
+- [Services](https://mapletechlabs.ca/services): all software, app, AI and UI/UX development services.
+- [Software Development](https://mapletechlabs.ca/services/software-development): custom software engineering, web applications and platform builds.
+- [App Development](https://mapletechlabs.ca/services/mobile-app-development): iOS, Android, Flutter and React Native apps.
+- [AI Development](https://mapletechlabs.ca/services/ai-ml): LLM integration, AI automation, chatbots and predictive analytics.
+- [UI/UX Design](https://mapletechlabs.ca/services/product-design): UI/UX strategy, wireframing, prototyping and design systems.
+- [About](https://mapletechlabs.ca/about): company background, team and founder.
+- [Contact](https://mapletechlabs.ca/contact): free project consultation.
+- [Case Studies](https://mapletechlabs.ca/case-studies): delivered client projects.
+- [Locations](https://mapletechlabs.ca/locations): Edmonton, Calgary, Toronto, Vancouver and Canada-wide service pages.
+
 ## Services
 
 - [Software Development](https://mapletechlabs.ca/services): custom software, web and mobile apps, AI and UI/UX for Canadian businesses.
