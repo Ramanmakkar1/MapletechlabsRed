@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageClient from './PageClient';
+import { industries } from '@/data/industries';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
@@ -97,6 +98,13 @@ export default function Page() {
             <Link href="/industries/edtech">EdTech and SaaS development</Link> &mdash; learning
             management systems and subscription platforms.
           </li>
+        </ul>
+        <ul style={{ maxWidth: '70ch', lineHeight: 1.9 }}>
+          {industries.map((industry) => (
+            <li key={industry.key}>
+              <Link href={industry.href}>{industry.name}</Link>
+            </li>
+          ))}
         </ul>
         <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, margin: '2.5rem 0 1rem' }}>
           The software services behind each industry
