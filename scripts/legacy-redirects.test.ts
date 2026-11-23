@@ -15,6 +15,8 @@ const oneHopRedirects = [
   ['/fr/locations/laval/product-design', '/locations/ui-ux-design-company-in-laval'],
   ['/fr/locations/ai-development-company-in-burnaby', '/locations/ai-development-company-in-burnaby'],
   ['/fr/locations/app-development-company-in-vancouver', '/locations/app-development-company-in-vancouver'],
+  ['/fr/blog/ai-development-companies-canada', '/blog/ai-development-companies-canada'],
+  ['/fr/blog/digital-marketing-cost-canada', '/blog/digital-marketing-cost-canada'],
   ['/locations/edmonton/web-development', '/locations/web-development-company-in-edmonton'],
 ] as const;
 
