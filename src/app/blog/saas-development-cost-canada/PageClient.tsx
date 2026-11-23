@@ -9,6 +9,7 @@ import type { CSSProperties } from 'react';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
 import BlogServiceCta from '@/components/blog/BlogServiceCta';
+import RelatedServices from '@/components/RelatedServices';
 import ServiceCityLinks from '@/components/ServiceCityLinks';
 import BlogCityLinks from '@/components/blog/BlogCityLinks';
 import GuideFaq from '@/components/blog/GuideFaq';
@@ -654,6 +655,13 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
             </div>
           </div>
         </section>
+
+        <RelatedServices
+          links={[
+            { href: '/services/saas-development', label: 'SaaS platform development' },
+            { href: '/services/web-development', label: 'custom software development services' },
+          ]}
+        />
 
         <BlogServiceCta slug="saas-development-cost-canada" />
 
