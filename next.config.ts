@@ -287,7 +287,6 @@ const nextConfig: NextConfig = {
       // Blocked legacy blog URLs: 301 to the closest live page so the
       // indexed links keep their equity instead of hitting a dead page.
       { source: '/blog/ai-development-companies-canada', destination: '/blog', permanent: true },
-      { source: '/blog/digital-marketing-cost-canada', destination: '/services/digital-marketing', permanent: true },
       // Location URLs that error: 301 to the closest working page.
       { source: '/locations/toronto/game-development', destination: '/services/game-development', permanent: true },
       { source: '/locations/saas-development-company-in-windsor', destination: '/locations/software-development-company-in-windsor', permanent: true },
