@@ -15,6 +15,12 @@ export interface ServiceCityLocal {
   /** Optional answer-first lead: two plain sentences naming the service, city and what the client gets. */
   answer?: string;
   intro: string;
+  /** Optional deeper section rendered as a second-level heading directly after the overview. */
+  customSoftware?: {
+    heading: string;
+    body: string[];
+    links: { href: string; label: string }[];
+  };
   sections: { heading: string; body: LocalTextPart[] }[];
   /** Optional answer-first comparison table rendered after the local sections. */
   comparison?: {
@@ -1205,6 +1211,18 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       'Web development company in Edmonton: Mapletech Labs builds web apps, portals and e-commerce sites from our Edmonton head office. Fixed CAD price, free quote.',
     answer: 'Mapletech Labs is a web development company in Edmonton, building web apps, portals, e-commerce stores, AI systems and the custom software behind them for Edmonton companies. You get a fixed scope and price before work starts, senior engineers writing your code, and in-person workshops at your office.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for custom software or web development you are working with a local team at our head office, not a sales desk for developers somewhere else. We build fast, SEO-ready business websites, e-commerce stores, web apps and custom software for Edmonton companies, public bodies and growing teams across the city. You talk directly to the senior engineers who write the code, you get a fixed scope and price before work starts, and you can reach us on +1-403-604-8692.',
+    customSoftware: {
+      heading: 'Custom software development in Edmonton',
+      body: [
+        'Beyond websites, we build the custom software Edmonton organisations run on: web apps, customer and staff portals, e-commerce platforms, booking and dispatch tools, and AI systems that connect to the systems you already use. We work in Next.js and React with a CMS your team can edit, build to WCAG accessibility, and keep Canadian data residency by default. You own the code, design files and domain.',
+        'Every project follows the same process: discovery, design, build and launch. Discovery starts with a free workshop, in person at your Edmonton office if you prefer, and ends in a written scope listing every page, integration and content milestone. Design and build are handled by the senior engineers who scoped the work, with shared boards and weekly calls, then launch covers Core Web Vitals, SEO, accessibility and a CMS your team can update. You approve a fixed scope and price in CAD before coding starts.',
+      ],
+      links: [
+        { href: '/case-studies/real-estate-portal', label: 'Real estate portal case study with 850,000+ listings' },
+        { href: '/case-studies/logistics-platform', label: 'Logistics and fleet platform case study' },
+        { href: '/contact', label: 'Talk to our Edmonton team about custom software' },
+      ],
+    },
     sections: [
       {
         heading: 'The websites Edmonton organisations need',

@@ -60,7 +60,8 @@ const balanced = (n: number): string | null =>
 /* Premium "[service] company in [city]" page — honest facts, no invented proof. */
 // heroTitle / heroDesc let one city+service page target its own search phrase; others keep the shared copy.
 // local adds hand-written sections and case-study proof (from SERVICE_CITY_LOCAL).
-export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo, pageKey }: { data: CityServicePageData; pageKey?: string; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string } }) {
+export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, local, crossPromo, pageKey, customSoftware }: { data: CityServicePageData; pageKey?: string; heroTitle?: ReactNode; heroDesc?: ReactNode; local?: ServiceCityLocal; crossPromo?: { before: string; href: string; linkLabel: string }; customSoftware?: ServiceCityLocal['customSoftware'] }) {
+  const deeperSection = customSoftware ?? local?.customSoftware;
   const { cityName, citySlug, province, serviceName, serviceSlug } = p;
   const contactHref = contactHrefFor(serviceSlug, citySlug, allServices, allCities);
   const quote = quoteForCity(citySlug);
@@ -140,6 +141,29 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
             </div>
           </div>
         </section>
+
+        {/* Deeper service section (custom software on the Edmonton web-development page) */}
+        {deeperSection ? (
+          <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
+            <div className="cb-container">
+              <div className="prose-split">
+                <div><h2 style={{ maxWidth: '18ch' }}>{deeperSection.heading}</h2></div>
+                <div className="prose-body">
+                  {deeperSection.body.map((paragraph, i) => (
+                    <p key={i} style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.7, margin: i === 0 ? '0 0 14px' : '0 0 16px' }}>{paragraph}</p>
+                  ))}
+                  <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 8 }}>
+                    {deeperSection.links.map(link => (
+                      <li key={link.href} style={{ fontSize: 15, lineHeight: 1.6 }}>
+                        <Link href={link.href} style={{ fontWeight: 600, color: 'var(--brand)' }}>{link.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         {/* Hand-written local sections and proof (only for combos in SERVICE_CITY_LOCAL) */}
         {local ? (
