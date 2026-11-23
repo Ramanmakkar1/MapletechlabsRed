@@ -14,12 +14,15 @@ import PageHero from './PageHero';
 import FinalCta from '@/components/home/FinalCta';
 import { StatRow, ServicesGrid, ProcessSteps, WhyUs, SuccessStories } from './Blocks';
 import { serviceMedia, defaultMedia, officeMedia } from '@/data/media';
+import { work, type WorkItem } from '@/data/work';
 import { services as servicesAllowlist } from '@/data/services';
 import { cities as citiesAllowlist } from '@/data/cities';
 import { contactHrefFor } from '@/lib/enquiryContext';
 import type { Faq, HeroCopy, ServiceCard, Stat, Step } from './types';
 
 const heroShots = [officeMedia.desk, officeMedia.meeting, officeMedia.open];
+
+const workBySlug = new Map(work.map(w => [w.slug, w]));
 
 const navigationLinkStyle = {
   height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box',
@@ -61,6 +64,10 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
   const siblings = related.filter((_, i) => i !== currentIdx);
   const contactHref = contactHrefFor(parentSlug, undefined, servicesAllowlist, citiesAllowlist);
   const costGuide = COST_GUIDES[parentSlug];
+  const relatedWork = (serviceCaseMap[parentSlug] ?? [])
+    .map(s => workBySlug.get(s))
+    .filter((w): w is WorkItem => Boolean(w))
+    .slice(0, 3);
   const hero = heroShots[name.length % heroShots.length];
   return (
     <>
@@ -77,6 +84,16 @@ export default function SubServicePageTemplate({ parent, name, copy, stats, serv
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <Link href={parent.href} className="pill" style={navigationLinkStyle}>{parent.label}</Link>
                 {siblings.map(r => <Link key={r.slug} href={`/services/${parentSlug}/${r.slug}`} className="pill" style={navigationLinkStyle}>{r.name}</Link>)}
+              </div>
+            </div>
+          </section>
+        ) : null}
+        {relatedWork.length > 0 ? (
+          <section aria-labelledby="sub-service-related-work" style={{ padding: 'var(--section-y-sm) 0' }}>
+            <div className="cb-container">
+              <h2 id="sub-service-related-work" style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 12px' }}>Related work</h2>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                {relatedWork.map(w => <Link key={w.slug} href={`/case-studies/${w.slug}`} className="pill" style={navigationLinkStyle}>{w.title}</Link>)}
               </div>
             </div>
           </section>
