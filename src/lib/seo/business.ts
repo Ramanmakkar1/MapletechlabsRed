@@ -75,6 +75,20 @@ export function localServiceSchema(opts: {
   serviceType?: string[];
   priceRange?: string;
 }) {
+  const areaServed = [
+    ...LOCAL_BUSINESS_AREA_SERVED,
+    {
+      '@type': 'City',
+      name: opts.cityName,
+      containedInPlace: {
+        '@type': 'AdministrativeArea',
+        name: opts.provinceName,
+      },
+    },
+  ].filter(
+    (area, index, all) => all.findIndex((other) => other.name === area.name) === index,
+  );
+
   return {
     '@type': 'ProfessionalService',
     '@id': 'https://mapletechlabs.ca/#localbusiness',
@@ -87,7 +101,7 @@ export function localServiceSchema(opts: {
     priceRange: opts.priceRange ?? '$$-$$$',
     address: HQ_ADDRESS,
     parentOrganization: { '@id': 'https://mapletechlabs.ca/#organization' },
-    areaServed: LOCAL_BUSINESS_AREA_SERVED,
+    areaServed,
     sameAs: BUSINESS.sameAs,
     ...(opts.serviceType ? { serviceType: opts.serviceType } : {}),
     mainEntityOfPage: opts.url,
