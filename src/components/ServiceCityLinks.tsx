@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { cities } from '@/data/cities';
 import {
   serviceCityPath,
-  isIndexableCityService,
   PRIORITY_SERVICES,
   priorityCompanyHeadline,
   isPriorityService,
   AGENCY_CITIES,
   WEB_DESIGN_CITIES,
 } from '@/data/serviceCity';
+import { isIndexableHref } from '@/lib/seo/indexability';
 
 const CITIES = [
   { slug: 'edmonton', name: 'Edmonton' },
@@ -41,8 +41,14 @@ export default function ServiceCityLinks(props: ServiceCityLinksProps) {
   if ('label' in props) return <ServiceCitySidebar {...props} />;
   const { serviceSlug, serviceName } = props;
   const links = (isPriorityService(serviceSlug) ? cities : CITIES)
-    .filter(c => isIndexableCityService(c.slug, serviceSlug));
-  if (!links.length) return null;
+    .filter(c => isIndexableHref(serviceCityPath(serviceSlug, c.slug)));
+  const agencyLinks = serviceSlug === 'digital-marketing'
+    ? AGENCY_CITIES.filter(slug => isIndexableHref(`/locations/digital-marketing-agency-in-${slug}`))
+    : [];
+  const webDesignLinks = serviceSlug === 'web-development'
+    ? WEB_DESIGN_CITIES.filter(slug => isIndexableHref(`/locations/web-design-company-in-${slug}`))
+    : [];
+  if (!links.length && !agencyLinks.length && !webDesignLinks.length) return null;
   return (
     <section style={{ padding: 'var(--section-y-sm) 0' }}>
       <div className="cb-container">
@@ -55,7 +61,7 @@ export default function ServiceCityLinks(props: ServiceCityLinksProps) {
         </div>
         {serviceSlug === 'digital-marketing' ? (
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 10 }}>
-            {AGENCY_CITIES.map(slug => {
+            {agencyLinks.map(slug => {
               const city = cities.find(c => c.slug === slug);
               if (!city) return null;
               return (
@@ -68,7 +74,7 @@ export default function ServiceCityLinks(props: ServiceCityLinksProps) {
         ) : null}
         {serviceSlug === 'web-development' ? (
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 10 }}>
-            {WEB_DESIGN_CITIES.map(slug => {
+            {webDesignLinks.map(slug => {
               const city = cities.find(c => c.slug === slug);
               if (!city) return null;
               return (
@@ -109,6 +115,8 @@ function ServiceCityLinkList({ id, heading, intro, links }: { id?: string; headi
  * across cities, so the posts pass crawl paths to the local service pages.
  */
 function ServiceCitySidebar({ serviceSlug, label, heading }: { serviceSlug: string; label: string; heading?: string }) {
+  const links = CITIES.filter(c => isIndexableHref(serviceCityPath(serviceSlug, c.slug)));
+  if (!links.length) return null;
   return (
     <div style={{
       background: 'var(--surface-alt)', border: '1px solid var(--line)',
@@ -118,7 +126,7 @@ function ServiceCitySidebar({ serviceSlug, label, heading }: { serviceSlug: stri
         {heading ?? `${label} by city`}
       </p>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-        {CITIES.map(c => (
+        {links.map(c => (
           <Link key={c.slug} href={serviceCityPath(serviceSlug, c.slug)} className="pill" style={{ height: 'auto', minHeight: 44, maxWidth: '100%', boxSizing: 'border-box', padding: '10px 16px', whiteSpace: 'normal', overflowWrap: 'anywhere' }}>
             {`${label} in ${c.name}`}
           </Link>
