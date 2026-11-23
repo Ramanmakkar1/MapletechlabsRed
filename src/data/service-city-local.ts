@@ -1218,6 +1218,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         'Every project follows the same process: discovery, design, build and launch. Discovery starts with a free workshop, in person at your Edmonton office if you prefer, and ends in a written scope listing every page, integration and content milestone. Design and build are handled by the senior engineers who scoped the work, with shared boards and weekly calls, then launch covers Core Web Vitals, SEO, accessibility and a CMS your team can update. You approve a fixed scope and price in CAD before coding starts.',
       ],
       links: [
+        { href: '/locations/software-development-company-in-edmonton', label: 'Custom software development company in Edmonton' },
         { href: '/case-studies/real-estate-portal', label: 'Real estate portal case study with 850,000+ listings' },
         { href: '/case-studies/logistics-platform', label: 'Logistics and fleet platform case study' },
         { href: '/contact', label: 'Talk to our Edmonton team about custom software' },
