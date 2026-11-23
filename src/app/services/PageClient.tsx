@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { officeMedia, serviceMedia, humanMedia } from '@/data/media';
 import { serviceCityPath } from '@/data/serviceCity';
 import { isIndexableHref } from '@/lib/seo/indexability';
+import { buildFaqSchema } from '@/lib/seo/schema';
 import MediaBand from '@/components/MediaBand';
 import PageHero from '@/components/page/PageHero';
 import FinalCta from '@/components/home/FinalCta';
@@ -593,15 +594,7 @@ export default function ServicesIndexPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: BUYER_FAQS.map(faq => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            }),
+            __html: JSON.stringify(buildFaqSchema(BUYER_FAQS)),
           }}
         />
 
