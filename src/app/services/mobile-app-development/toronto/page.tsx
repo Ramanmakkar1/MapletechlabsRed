@@ -132,7 +132,12 @@ const serviceSchema = {
   serviceType: 'Mobile App Development',
   description: DESCRIPTION,
   url: URL,
-  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
+  provider: {
+    '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
+    name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
+  },
   areaServed: {
     '@type': 'City',
     name: 'Toronto',

@@ -87,7 +87,12 @@ function buildLocationPage(slug: string): LocationPageData | null {
       {
         '@type': 'Service',
         name: serviceLabel,
-        provider: { '@id': 'https://mapletechlabs.ca/#localbusiness' },
+        provider: {
+          '@type': 'Organization',
+          '@id': 'https://mapletechlabs.ca/#organization',
+          name: 'Mapletech Labs',
+          url: 'https://mapletechlabs.ca',
+        },
         areaServed: {
           '@type': 'City',
           name: data.cityName,
@@ -262,7 +267,12 @@ function buildLocationMeshPage(city: string, service: string): LocationMeshPageD
       {
         '@type': 'Service',
         name: serviceLabel,
-        provider: { '@id': 'https://mapletechlabs.ca/#localbusiness' },
+        provider: {
+          '@type': 'Organization',
+          '@id': 'https://mapletechlabs.ca/#organization',
+          name: 'Mapletech Labs',
+          url: 'https://mapletechlabs.ca',
+        },
         areaServed: {
           '@type': 'City',
           name: data.cityName,
