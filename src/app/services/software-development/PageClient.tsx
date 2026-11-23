@@ -131,6 +131,7 @@ const buyerContent = (
               <li><A href="/services/ai-ml">AI and machine learning</A></li>
               <li><A href="/services/software-development/legacy-software-modernization">Legacy software modernization</A></li>
               <li><A href="/services/software-development/healthcare-software">Healthcare software development</A></li>
+              <li><A href="/services/software-development/dedicated-development-team">Dedicated development team</A></li>
             </ul>
           </div>
           <div className="tile">
