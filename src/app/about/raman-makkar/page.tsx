@@ -639,7 +639,6 @@ export default function RamanPage() {
                   { title: 'How to Choose a Software Development Company in Canada', href: '/blog/choose-software-development-company-canada' },
                   { title: 'SaaS Development Cost in Canada: 2026 CAD', href: '/blog/saas-development-cost-canada' },
                   { title: 'Unicorn Apps 2026: Top 10 Growth Stories for Founders', href: '/blog/top-10-unicorn-apps-2026' },
-                  { title: 'Software Development Companies in Edmonton: How to Choose (2026)', href: '/blog/software-development-companies-edmonton' },
                   { title: 'How to Build a SaaS MVP in 8 Weeks: A Founder’s Playbook', href: '/blog/build-saas-mvp-8-weeks' },
                   { title: 'UI/UX Design Cost in Canada (2026 Guide)', href: '/blog/ui-ux-design-cost-canada' },
                   { title: 'AI Development Cost in Canada (2026): Chatbots, LLM Integration and Custom Models', href: '/blog/ai-development-cost-canada' },
