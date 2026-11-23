@@ -189,6 +189,27 @@ export default function RamanPage() {
               <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>, or{' '}
               <Link href="/contact" style={{ color: 'var(--brand)' }}>contact Raman for a free consultation</Link>.
             </p>
+            <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '20px', color: 'var(--body)', maxWidth: '800px' }}>
+              Raman founded Mapletech Labs in Edmonton in 2018 and still leads it as Founder &amp; CEO. From that base the
+              team has grown to 25+ engineers, designers and strategists who have delivered 500+ projects for clients in
+              Edmonton, Calgary, Toronto, Vancouver and internationally. The work spans fintech, healthcare, e-commerce,
+              logistics, edtech and enterprise, from startups to established Canadian companies.
+            </p>
+            <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '20px', color: 'var(--body)', maxWidth: '800px' }}>
+              Projects range from custom web applications and mobile apps to AI/ML solutions, cloud infrastructure and
+              SaaS platforms. Recent examples include a fintech trading platform processing 75K+ transactions a day, an
+              e-commerce rebuild that lifted conversion from 2.1% to 3.8%, and a telehealth platform serving 450K+ patient
+              records. You can review the full range of{' '}
+              <Link href="/services" style={{ color: 'var(--brand)' }}>software development services he leads</Link>, or
+              see the results in the{' '}
+              <Link href="/case-studies" style={{ color: 'var(--brand)' }}>Mapletech Labs case studies</Link>.
+            </p>
+            <p style={{ fontSize: '18px', lineHeight: 1.8, marginBottom: '20px', color: 'var(--body)', maxWidth: '800px' }}>
+              If you are planning a new product, a rebuild or an AI feature, Raman works directly with clients from
+              discovery through delivery, with projects run in short agile cycles and weekly demos. Start with a{' '}
+              <Link href="/contact" style={{ color: 'var(--brand)' }}>free consultation with Raman</Link> to talk through
+              your goals, users, timeline and budget.
+            </p>
             <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--ink)', marginBottom: '12px' }}>
               Who is Raman Makkar and what does Mapletech Labs deliver?
             </h2>
