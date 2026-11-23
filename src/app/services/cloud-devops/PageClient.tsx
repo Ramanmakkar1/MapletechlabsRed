@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ServicePageTemplate from '@/components/page/ServicePageTemplate';
 import { serviceCaseMap } from '@/data/service-case-map';
 
@@ -94,6 +95,17 @@ export default function PageClient() {
       techCategories={techCategories}
       industries={industries}
       servicesTitle="Every Platform. Every Screen."
+      buyerContent={
+        <section style={{ padding: 'var(--section-y-sm) 0' }}>
+          <div className="cb-container">
+            <h2 style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>Related cloud services</h2>
+            <ul style={{ margin: 0 }}>
+              <li><Link href="/services/cloud-devops/aws-architecture">AWS architecture consulting</Link> — production-grade AWS environments designed for reliability, security and cost control.</li>
+              <li><Link href="/services/cloud-devops/infrastructure-as-code">infrastructure as code</Link> — version-controlled Terraform and Pulumi infrastructure that is repeatable and auditable.</li>
+            </ul>
+          </div>
+        </section>
+      }
     />
   );
 }
