@@ -16,6 +16,13 @@ const h2 = {
   margin: '0 0 16px',
 };
 
+const coreServices: CaseStudyRelatedLink[] = [
+  { label: 'Web development services', href: '/services/web-development' },
+  { label: 'App development services', href: '/services/mobile-app-development' },
+  { label: 'AI development services', href: '/services/ai-ml' },
+  { label: 'Product design and UI/UX services', href: '/services/product-design' },
+];
+
 export default function CaseStudyRelated({ intro, services, city }: Props) {
   const links = city ? [...services, city] : services;
   const primaryService = services[0];
@@ -46,6 +53,46 @@ export default function CaseStudyRelated({ intro, services, city }: Props) {
           }}
         >
           {links.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                style={{
+                  display: 'block',
+                  padding: '18px 22px',
+                  borderRadius: 16,
+                  border: '1px solid var(--line)',
+                  background: 'var(--surface-alt)',
+                  color: 'var(--ink)',
+                  fontSize: 15,
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  lineHeight: 1.5,
+                }}
+              >
+                {item.label}
+                <span style={{ display: 'block', marginTop: 6, fontSize: 13, fontWeight: 500, color: 'var(--muted)' }}>
+                  Learn more →
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <h3 style={{ ...h2, marginTop: 40 }}>Services behind this project</h3>
+        <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, margin: '0 0 24px', maxWidth: 720 }}>
+          Every project draws on our core service lines. Explore the services behind this project:
+        </p>
+        <ul
+          style={{
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))',
+            gap: 16,
+          }}
+        >
+          {coreServices.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
