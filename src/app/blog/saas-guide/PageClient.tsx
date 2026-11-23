@@ -4,11 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import ServiceCityLinks from '@/components/ServiceCityLinks';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -62,11 +59,6 @@ export default function SaaSGuide2026Client() {
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'From Idea to MRR: How to Build a Profitable SaaS in 2026' },
-            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
@@ -332,7 +324,6 @@ export default function SaaSGuide2026Client() {
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8 }}>
                         Why? Because you aren&apos;t buying a template. You are hiring a team of engineers, designers, and project managers to architect a digital product that generates revenue passively.
                     </p>
-                    <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginTop: 16 }}>For a line-by-line breakdown, read our <Link href="/blog/saas-development-cost-canada" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>SaaS development cost guide for Canada</Link>, or see how our <Link href="/services/saas-development" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>SaaS development services</Link> take a product from MVP to scale. We build SaaS products for founders as a <Link href="/locations/saas-development-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>SaaS development company in Toronto</Link> and in <Link href="/locations/saas-development-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>Vancouver</Link>, <Link href="/locations/saas-development-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>Calgary</Link> and <Link href="/locations/saas-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>Edmonton</Link>.</p>
                 </div>
 
               </article>
@@ -408,7 +399,7 @@ export default function SaaSGuide2026Client() {
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -432,7 +423,6 @@ export default function SaaSGuide2026Client() {
                       ))}
                     </div>
                   </div>
-                  <ServiceCityLinks serviceSlug="saas-development" label="SaaS development" />
                 </div>
               </aside>
 
@@ -469,15 +459,21 @@ export default function SaaSGuide2026Client() {
                   We develop the engineering foundations of the fastest-growing companies in Canada. Let us build yours.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Book a Technical Discovery Call →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Book a Technical Discovery Call →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Related guides */}
+        {/* Related Articles */}
         <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related guides</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related Articles</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {[
                 { title: 'SaaS Development Cost in Canada', href: '/blog/saas-development-cost-canada' },
@@ -499,8 +495,6 @@ export default function SaaSGuide2026Client() {
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="saas-guide" />
 
       </main>
       <Footer />

@@ -1,11 +1,8 @@
 import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import { Metadata } from 'next';
 import PageClient from './PageClient';
-import LocalServiceLinks from '@/components/LocalServiceLinks';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
@@ -58,12 +55,11 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={getBlogBreadcrumbs(TITLE, SLUG)} />
-      <FaqSchema faqs={GUIDE_FAQS['software-development-companies-calgary']} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <PageClient localLinks={<LocalServiceLinks citySlug="calgary" cityName="Calgary" />} />
+      <PageClient />
     </>
   );
 }

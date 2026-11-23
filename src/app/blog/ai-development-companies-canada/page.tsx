@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import ArticleTemplate from '@/components/blog/ArticleTemplate';
-import RelatedServices from '@/components/RelatedServices';
-import { getArticle, getRelatedArticles } from '@/data/articles';
+import PageClient from './PageClient';
+import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
+import { getArticle } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
@@ -30,25 +29,38 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/blog/ai-development-companies-canada') },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: article.title,
+  description: article.metaDescription,
+  datePublished: article.date,
+  dateModified: article.dateModified,
+  author: BLOG_AUTHOR,
+  image: BLOG_IMAGE,
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
+    name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://mapletechlabs.ca/logo.png',
+    },
+  },
+  url: URL,
+  mainEntityOfPage: URL,
+};
+
 export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={getBlogBreadcrumbs(article.title, 'ai-development-companies-canada')} />
-      <FaqSchema faqs={article.faqs} />
-      <ArticleTemplate
-        a={article}
-        related={getRelatedArticles(article.slug)}
-        relatedServices={
-          <RelatedServices
-            links={[
-              { href: '/services/ai-ml', label: 'AI and machine learning services across Canada' },
-              { href: '/services/ai-ml/ai-chatbots', label: 'AI chatbot development services' },
-              { href: '/services/ai-ml/llm-integration', label: 'LLM integration services' },
-              { href: '/blog/ai-development-cost-canada', label: 'AI development cost guide for Canada' },
-            ]}
-          />
-        }
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <PageClient />
     </>
   );
 }

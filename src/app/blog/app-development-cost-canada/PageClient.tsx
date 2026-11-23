@@ -4,14 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import ServiceCityLinks from '@/components/ServiceCityLinks';
-import GuideFaq from '@/components/blog/GuideFaq';
-import BlogCityLinks from '@/components/blog/BlogCityLinks';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -43,7 +37,7 @@ const relatedPosts = [
   { slug: 'top-seo-companies-canada', title: 'Top 10 SEO Companies in Canada (2026)', category: 'Digital Marketing', readTime: '9 min' },
 ];
 
-export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: string }) {
+export default function AppDevelopmentCostCanadaClient() {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -69,11 +63,6 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'How Much Does App Development Cost in Canada? (2026 Guide)' },
-            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
@@ -167,16 +156,6 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
           </div>
         </section>
 
-        {/* QUICK ANSWER BOX */}
-        {answer && (
-          <section aria-labelledby="article-answer-heading" style={{ background: 'var(--surface-alt)', borderBottom: '1px solid var(--line)', padding: 'clamp(24px, 3vw, 32px)' }}>
-            <div className="cb-container" style={{ maxWidth: 900 }}>
-              <h2 id="article-answer-heading" style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--ink)', margin: '0 0 12px' }}>Quick answer</h2>
-              <p style={{ fontSize: '1rem', color: 'var(--body)', lineHeight: 1.6, margin: 0 }}>{answer}</p>
-            </div>
-          </section>
-        )}
-
         <MediaBand media={blogImage(2)} />
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
@@ -186,12 +165,6 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
 
               {/* ── MAIN ARTICLE ── */}
               <article>
-
-                <Link href="/tools/cost-estimator" style={{
-                  display: 'block', marginBottom: 40, padding: '16px 20px', borderRadius: 16,
-                  border: '1px solid var(--line)', background: 'var(--surface-alt)',
-                  fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none',
-                }}>Get a ballpark for your project → Free cost estimator</Link>
 
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="why-costs-vary">
@@ -270,7 +243,7 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
                       letterSpacing: '-0.03em', marginBottom: 16,
                     }}>$50,000 &ndash; $150,000</h3>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
-                      This is where most serious business applications land. Multi-platform apps (iOS + Android) with <Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>custom UI/UX design</Link>, real-time features like chat or notifications, payment processing, admin dashboards, and moderate backend complexity. Think a marketplace app, a fitness platform with tracking, or a B2B SaaS mobile companion.
+                      This is where most serious business applications land. Multi-platform apps (iOS + Android) with custom UI/UX design, real-time features like chat or notifications, payment processing, admin dashboards, and moderate backend complexity. Think a marketplace app, a fitness platform with tracking, or a B2B SaaS mobile companion.
                     </p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                       {['15-30 screens', 'iOS + Android', 'Payment integration', 'Real-time features', 'Admin panel', '12-24 weeks'].map(tag => (
@@ -439,7 +412,7 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
                     letterSpacing: '-0.03em', marginBottom: 20,
                   }}>Hidden Costs Most Agencies Won&apos;t Tell You About</h2>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 28 }}>
-                    The sticker price of app development is only the beginning. Here are the ongoing costs that catch most Canadian business owners off guard. For monthly ranges and ways to keep them down, see our <Link href="/blog/software-maintenance-cost-canada">software maintenance cost guide</Link>.
+                    The sticker price of app development is only the beginning. Here are the ongoing costs that catch most Canadian business owners off guard.
                   </p>
 
                   {[
@@ -534,9 +507,6 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
                     The quality difference? Zero. Our team ships the same React Native, Flutter, and native Swift/Kotlin code as any Bay Street firm. We just do it without the Bay Street overhead. In 2026, with fully remote collaboration tools, your development team&apos;s physical location is irrelevant to the quality of your product.
                   </p>
-                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
-                    If you are based in Alberta and want to meet the team, see our pages for an <Link href="/locations/app-development-company-in-edmonton">app development company in Edmonton</Link> and an <Link href="/locations/app-development-company-in-calgary">app development company in Calgary</Link>. If your team is in Ontario or BC, see our <Link href="/locations/app-development-company-in-toronto">app development company in Toronto</Link> and <Link href="/locations/app-development-company-in-vancouver">app development company in Vancouver</Link> pages.
-                  </p>
                   <div style={{
                     padding: '20px 24px', borderRadius: 16,
                     background: 'transparent', border: '1px solid transparent',
@@ -621,7 +591,7 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -645,7 +615,6 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
                       ))}
                     </div>
                   </div>
-                  <ServiceCityLinks serviceSlug="mobile-app-development" label="App development" />
                 </div>
               </aside>
 
@@ -653,66 +622,7 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
           </div>
         </section>
 
-        {/* ── NEXT STEPS ── */}
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <div className="reveal" style={{ maxWidth: 840 }}>
-              <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 24 }}>Next steps</h2>
-              <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>Ready to move from research to a real plan? Here is what we recommend:</p>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 16 }}>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 16 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                  <div>
-                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}><Link href="/services/mobile-app-development" style={{ color: 'var(--ink)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--ink)'}>Explore our mobile app development services</Link></p>
-                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>See our process, tech stacks, and delivery model for Canadian businesses.</p>
-                  </div>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 16 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                  <div>
-                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}><Link href="/case-studies/healthcare-telehealth" style={{ color: 'var(--ink)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--ink)'}>See our HIPAA-compliant telehealth app for ClinicFlow Health</Link></p>
-                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>450K+ patient records, built with PIPEDA compliance from day one.</p>
-                  </div>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 16 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                  <div>
-                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}><Link href="/case-studies/ecommerce-platform" style={{ color: 'var(--ink)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--ink)'}>Read our enterprise e-commerce platform for NorthStar E-Commerce</Link></p>
-                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>Lifted conversion from 2.1% to 3.8% for 2M+ monthly visitors.</p>
-                  </div>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 16 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                  <div>
-                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', margin: '0 0 4px' }}><Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--ink)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brand)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--ink)'}>Discover our AI-powered trading platform for Axion Capital</Link></p>
-                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>Sub-50ms latency, 75K+ daily transactions, zero data loss.</p>
-                  </div>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: 14, padding: '20px 24px', background: 'transparent', border: '1px solid var(--brand)', borderRadius: 16 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                  <div>
-                    <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--brand)', margin: '0 0 4px' }}><Link href="/contact" style={{ color: 'var(--brand)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--ink)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--brand)'}>Get a free app cost estimate for your project</Link></p>
-                    <p style={{ fontSize: 14, color: 'var(--muted)', margin: 0 }}>A senior engineer scopes your idea and delivers a fixed-price proposal in 48 hours.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
         <MediaBand media={blogImage(2 + 7)} ratio="21 / 7" />
-
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <GuideFaq faqs={GUIDE_FAQS['app-development-cost-canada']} />
-          </div>
-        </section>
-
-        <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
-          <div className="cb-container">
-            <BlogCityLinks serviceSlug="mobile-app-development" />
-          </div>
-        </section>
 
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
@@ -741,15 +651,16 @@ export default function AppDevelopmentCostCanadaClient({ answer }: { answer?: st
                   Stop guessing what your app will cost. Share your idea with our team and receive a detailed, fixed-price proposal within 48 hours. No commitment. No sales pitch. Just real numbers.
                 </p>
               </div>
-              <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                Review delivery scope, platform options and our process through our <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>mobile app development services</Link>.
-              </p>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Free Estimate →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Get Your Free Estimate →
+              </Link>
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="app-development-cost-canada" />
 
       </main>
       <Footer />

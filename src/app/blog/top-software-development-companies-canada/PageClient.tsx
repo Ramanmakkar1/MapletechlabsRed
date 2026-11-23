@@ -4,14 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import BlogCityLinks from '@/components/blog/BlogCityLinks';
-import SoftwareCompanyLinks from '@/components/SoftwareCompanyLinks';
-import GuideFaq from '@/components/blog/GuideFaq';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -37,39 +31,6 @@ const companies = [
   { num: 8, name: 'Kinaxis', category: 'Supply Chain', emoji: '🔗', metric: 'RapidResponse concurrent planning platform' },
   { num: 9, name: 'Lightspeed Commerce', category: 'POS Systems', emoji: '💳', metric: 'Cloud-based commerce for SMBs globally' },
   { num: 10, name: 'Descartes Systems Group', category: 'Logistics', emoji: '🚚', metric: 'Global Logistics Technology & Routing' },
-];
-
-const comparisonRows = [
-  {
-    criterion: 'Specialization',
-    check: 'Which industries and platforms do they know best?',
-    good: 'Recent work in your sector, senior engineers on the team, and a clear yes or no on fit.',
-  },
-  {
-    criterion: 'Discovery',
-    check: 'How do they turn an idea into a scoped plan?',
-    good: 'Structured discovery, written requirements, identified risks, and a realistic timeline before the build.',
-  },
-  {
-    criterion: 'Delivery process',
-    check: 'How will you see progress each week?',
-    good: 'Short iterations, a demo cadence, a shared backlog, and working software rather than status reports alone.',
-  },
-  {
-    criterion: 'Ownership and hand-off',
-    check: 'Who owns the code, designs, and accounts?',
-    good: 'Written IP assignment, full repository access, documentation, and a hand-off plan from day one.',
-  },
-  {
-    criterion: 'Support',
-    check: 'What happens after launch?',
-    good: 'A defined warranty period, response times, monitoring, and an optional maintenance agreement.',
-  },
-  {
-    criterion: 'Budget fit',
-    check: 'How is the price tied to scope?',
-    good: 'Transparent estimates, fixed milestones or a clear time-and-materials cap, and change control before extra work.',
-  },
 ];
 
 const relatedPosts = [
@@ -104,11 +65,6 @@ export default function BlogPostPageClient() {
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'Top 10 Software Development Companies in Canada (2026)' },
-            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
@@ -222,68 +178,6 @@ export default function BlogPostPageClient() {
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     We ranked these top firms based on actual technical prowess, the scale of platforms they&apos;ve delivered, engineering velocity, and client retention. Whether you&apos;re an ambitious scale-up or an established enterprise, these are the teams you call when your code needs to be flawless.
-                  </p>
-                </div>
-
-                {/* Answer-first summary */}
-                <div className="reveal" style={{
-                  marginBottom: 56, padding: 28, borderRadius: 20,
-                  border: '1px solid var(--brand)', background: 'var(--surface-alt)',
-                }}>
-                  <p style={{
-                    fontSize: 13, fontWeight: 700, color: 'var(--brand)',
-                    textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 12,
-                  }}>Quick answer</p>
-                  <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                    The top software development companies in Canada in 2026 include Mapletech Labs, Townmedialabs, TML, Shopify Engineering, OpenText, CGI Group, Constellation Software, Kinaxis, Lightspeed Commerce and Descartes Systems Group. The best partner for your project depends less on the ranking and more on six checks: specialization, discovery, delivery process, ownership and hand-off, support, and budget fit.
-                  </p>
-                </div>
-
-                {/* Comparison table */}
-                <div className="reveal" style={{ marginBottom: 56 }}>
-                  <h2 style={{
-                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
-                    letterSpacing: '-0.03em', marginBottom: 16,
-                  }}>
-                    How to Compare Software Development Companies
-                  </h2>
-                  <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
-                    Use this table to compare shortlisted companies on what you can verify in a proposal, a reference call, or a discovery workshop.
-                  </p>
-                  <div style={{ overflowX: 'auto', border: '1px solid var(--line)', borderRadius: 16 }}>
-                    <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 640, fontSize: 15 }}>
-                      <thead>
-                        <tr style={{ background: 'var(--surface-alt)' }}>
-                          {['Selection criterion', 'What to check', 'What good looks like'].map(heading => (
-                            <th key={heading} scope="col" style={{
-                              textAlign: 'left', padding: '14px 18px', color: 'var(--ink)',
-                              fontWeight: 700, borderBottom: '1px solid var(--line)',
-                            }}>{heading}</th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {comparisonRows.map(row => (
-                          <tr key={row.criterion}>
-                            <th scope="row" style={{
-                              textAlign: 'left', padding: '14px 18px', color: 'var(--ink)',
-                              fontWeight: 600, borderBottom: '1px solid var(--line)', verticalAlign: 'top',
-                            }}>{row.criterion}</th>
-                            <td style={{
-                              padding: '14px 18px', color: 'var(--body)',
-                              borderBottom: '1px solid var(--line)', verticalAlign: 'top',
-                            }}>{row.check}</td>
-                            <td style={{
-                              padding: '14px 18px', color: 'var(--body)',
-                              borderBottom: '1px solid var(--line)', verticalAlign: 'top',
-                            }}>{row.good}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                  <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginTop: 20 }}>
-                    Then match the work to the right service: <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development</Link>, <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link>, or <Link href="/services/saas-development" style={{ color: 'var(--brand)' }}>SaaS development</Link>. You can also review how we handled a <Link href="/case-studies/fintech-trading-platform" style={{ color: 'var(--brand)' }}>fintech trading platform</Link>, a <Link href="/case-studies/healthcare-telehealth" style={{ color: 'var(--brand)' }}>healthcare telehealth product</Link>, and a <Link href="/case-studies/logistics-platform" style={{ color: 'var(--brand)' }}>logistics platform</Link>. If you want a local team, see our pages for <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>software development in Edmonton</Link>, <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)' }}>Calgary</Link>, <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)' }}>Toronto</Link> and <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)' }}>Vancouver</Link>.
                   </p>
                 </div>
 
@@ -570,8 +464,6 @@ export default function BlogPostPageClient() {
                   </p>
                 </div>
 
-                <GuideFaq faqs={GUIDE_FAQS['top-software-development-companies-canada']} />
-
               </article>
 
               {/* ── SIDEBAR ── */}
@@ -647,7 +539,7 @@ export default function BlogPostPageClient() {
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -671,7 +563,6 @@ export default function BlogPostPageClient() {
                       ))}
                     </div>
                   </div>
-                  <SoftwareCompanyLinks />
                 </div>
               </aside>
 
@@ -680,13 +571,6 @@ export default function BlogPostPageClient() {
         </section>
 
         <MediaBand media={blogImage(11 + 7)} ratio="21 / 7" />
-
-        {/* ── CITY LINKS ── */}
-        <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
-          <div className="cb-container">
-            <BlogCityLinks />
-          </div>
-        </section>
 
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
@@ -715,12 +599,16 @@ export default function BlogPostPageClient() {
                   We develop the engineering foundations of the fastest-growing companies in Canada. Let us build yours.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start a Project →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Start a Project →
+              </Link>
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="top-software-development-companies-canada" />
 
       </main>
       <Footer />

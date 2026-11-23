@@ -478,6 +478,16 @@ const posts = [
     readTime: '8 min read',
   },
   {
+    slug: 'ai-development-companies-canada',
+    category: 'AI/ML',
+    title: 'Top 10 AI Development Companies in Canada (2026)',
+    excerpt: 'Ranking the best AI and machine learning development companies in Canada, from LLM integration specialists to computer vision experts.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Feb 2026',
+    readTime: '9 min read',
+  },
+  {
     slug: 'app-development-companies-edmonton',
     category: 'Mobile',
     title: 'Top 10 App Development Companies in Edmonton (2026)',
@@ -490,7 +500,7 @@ const posts = [
   {
     slug: 'website-cost-canada',
     category: 'Business',
-    title: 'Website Cost in Canada: 2026 Guide',
+    title: 'How Much Does a Website Cost in Canada? (2026 Guide)',
     excerpt: 'From simple landing pages to complex web applications — a complete guide to website development costs across Canada with real pricing benchmarks.',
     author: 'RM',
     authorName: 'Raman Makkar',
@@ -510,7 +520,7 @@ const posts = [
   {
     slug: 'web-development-companies-toronto',
     category: 'Engineering',
-    title: 'Top Web Development Companies in Toronto (2026)',
+    title: 'Top 10 Web Development Companies in Toronto (2026)',
     metaTitle: 'Web Development Companies in Toronto 2026',
     excerpt: 'Ranking the best web development companies in Toronto — from Next.js specialists to full-stack agencies building enterprise-grade digital products.',
     author: 'RM',
@@ -521,7 +531,7 @@ const posts = [
   {
     slug: 'saas-development-cost-canada',
     category: 'Business',
-    title: 'SaaS Development Cost in Canada (2026)',
+    title: 'How Much Does SaaS Development Cost in Canada? (2026)',
     metaTitle: 'SaaS Development Cost in Canada: 2026 CAD',
     excerpt: 'Complete cost breakdown for building a SaaS product in Canada — MVP pricing, scaling costs, and what drives development budgets in 2026.',
     author: 'RM',
@@ -538,6 +548,16 @@ const posts = [
     authorName: 'Raman Makkar',
     date: 'Mar 2026',
     readTime: '9 min read',
+  },
+  {
+    slug: 'digital-marketing-cost-canada',
+    category: 'Digital Marketing',
+    title: 'How Much Does Digital Marketing Cost in Canada? (2026)',
+    excerpt: 'Complete guide to digital marketing costs in Canada — SEO, PPC, social media, and content marketing pricing from top Canadian agencies.',
+    author: 'RM',
+    authorName: 'Raman Makkar',
+    date: 'Mar 2026',
+    readTime: '7 min read',
   },
   {
     slug: 'software-development-companies-calgary',
@@ -635,14 +655,6 @@ export default function BlogPage() {
                 </button>
               ))}
             </div>
-
-            {/* Service links */}
-            <p className="reveal reveal-d4" style={{ fontSize: 14, color: 'var(--muted)', marginTop: 24 }}>
-              Looking for a team? See our{' '}
-              <Link href="/services/software-development" style={{ color: 'var(--brand)' }}>custom software development</Link>,{' '}
-              <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development</Link> and{' '}
-              <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link> services.
-            </p>
           </div>
         </section>
 

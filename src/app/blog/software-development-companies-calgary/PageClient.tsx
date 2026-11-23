@@ -4,12 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import GuideFaq from '@/components/blog/GuideFaq';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -38,13 +34,12 @@ const companies = [
 ];
 
 const relatedPosts = [
-  { slug: 'app-development-companies-calgary', title: 'App Development Companies in Calgary: How to Choose One', category: 'Business', readTime: '9 min' },
   { slug: 'app-development-companies-edmonton', title: 'Top App Development Companies in Edmonton', category: 'Business', readTime: '8 min' },
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '9 min' },
   { slug: 'app-development-cost-canada', title: 'How Much Does App Development Cost in Canada?', category: 'Business', readTime: '10 min' },
 ];
 
-export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }: { localLinks?: React.ReactNode }) {
+export default function SoftwareDevelopmentCompaniesCalgaryClient() {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -70,11 +65,6 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'Top 10 Software Development Companies in Calgary (2026)' },
-            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
@@ -369,8 +359,6 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }
                   </div>
                 ))}
 
-                <GuideFaq faqs={GUIDE_FAQS['software-development-companies-calgary']} />
-
               </article>
 
               {/* -- SIDEBAR -- */}
@@ -446,7 +434,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -470,7 +458,6 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }
                       ))}
                     </div>
                   </div>
-                  {localLinks}
                 </div>
               </aside>
 
@@ -504,16 +491,17 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient({ localLinks }
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Calgary&apos;s tech ecosystem is thriving. Partner with Mapletech Labs to build enterprise-grade software with local engineering excellence at a fraction of Toronto and Vancouver costs.
                 </p>
-                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
-                  See our local pages for <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)' }}>software development in Calgary</Link>, <Link href="/locations/app-development-company-in-calgary" style={{ color: 'var(--brand)' }}>app development in Calgary</Link> and <Link href="/locations/ai-development-company-in-calgary" style={{ color: 'var(--brand)' }}>AI development in Calgary</Link>, or read what projects cost in our <Link href="/blog/website-cost-canada" style={{ color: 'var(--brand)' }}>website and web application cost guide</Link>. You can also compare our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>custom software and web development services</Link> and <Link href="/services/product-design" style={{ color: 'var(--brand)' }}>UI/UX design services</Link>.
-                </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your Calgary Project →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Start Your Calgary Project →
+              </Link>
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="software-development-companies-calgary" />
 
       </main>
       <Footer />

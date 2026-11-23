@@ -4,26 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import ServiceCityLinks from '@/components/ServiceCityLinks';
-import { AGENCY_CITIES } from '@/data/serviceCity';
-import GuideFaq from '@/components/blog/GuideFaq';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
-
-const AGENCY_CITY_NAMES: Record<(typeof AGENCY_CITIES)[number], string> = {
-  edmonton: 'Edmonton',
-  calgary: 'Calgary',
-  toronto: 'Toronto',
-  vancouver: 'Vancouver',
-  ottawa: 'Ottawa',
-  montreal: 'Montreal',
-  winnipeg: 'Winnipeg',
-  mississauga: 'Mississauga',
-  regina: 'Regina',
-};
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -97,7 +79,7 @@ const costCards = [
   },
 ];
 
-export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: string }) {
+export default function DigitalMarketingCostCanadaClient() {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -123,11 +105,6 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'How Much Does Digital Marketing Cost in Canada? (2026 Guide)' },
-            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
@@ -221,16 +198,6 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
           </div>
         </section>
 
-        {/* QUICK ANSWER BOX */}
-        {answer && (
-          <section aria-labelledby="article-answer-heading" style={{ background: 'var(--surface-alt)', borderBottom: '1px solid var(--line)', padding: 'clamp(24px, 3vw, 32px)' }}>
-            <div className="cb-container" style={{ maxWidth: 900 }}>
-              <h2 id="article-answer-heading" style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--ink)', margin: '0 0 12px' }}>Quick answer</h2>
-              <p style={{ fontSize: '1rem', color: 'var(--body)', lineHeight: 1.6, margin: 0 }}>{answer}</p>
-            </div>
-          </section>
-        )}
-
         <MediaBand media={blogImage(5)} />
 
         {/* -- ARTICLE BODY + SIDEBAR -- */}
@@ -240,12 +207,6 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
 
               {/* -- MAIN ARTICLE -- */}
               <article>
-
-                <Link href="/tools/cost-estimator" style={{
-                  display: 'block', marginBottom: 40, padding: '16px 20px', borderRadius: 16,
-                  border: '1px solid var(--line)', background: 'var(--surface-alt)',
-                  fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none',
-                }}>Get a ballpark for your project → Free cost estimator</Link>
 
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }}>
@@ -268,7 +229,7 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
                   <div key={card.id} className="reveal" style={{ marginBottom: 56 }} id={card.id}>
                     <div style={{
                       background: card.id === 'seo'
-                        ? 'var(--surface) 100%)'
+                        ? 'var(--surface)'
                         : 'rgba(0,0,0,0.035)',
                       border: card.id === 'seo'
                         ? '1px solid transparent'
@@ -595,7 +556,7 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -619,18 +580,10 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
                       ))}
                     </div>
                   </div>
-                  <ServiceCityLinks serviceSlug="digital-marketing" label="SEO company" heading="Our SEO services by city" />
                 </div>
               </aside>
 
             </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section style={{ paddingBottom: 'var(--section-y)' }}>
-          <div className="cb-container">
-            <GuideFaq faqs={GUIDE_FAQS['digital-marketing-cost-canada']} />
           </div>
         </section>
 
@@ -660,37 +613,17 @@ export default function DigitalMarketingCostCanadaClient({ answer }: { answer?: 
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Stop guessing what digital marketing should cost. Let Mapletech Labs build a data-driven strategy tailored to your Canadian market, budget, and growth targets.
                 </p>
-                <p style={{ fontSize: 15, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
-                  Compare our <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>digital marketing services</Link> and <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>SEO services</Link>, or see local pages for <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Edmonton</Link>, <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Calgary</Link>, <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Toronto</Link> and <Link href="/services/digital-marketing/seo-services" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Vancouver</Link>. Need full-service marketing? Meet our digital marketing agency in <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Edmonton</Link>, <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Calgary</Link>, <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Toronto</Link> or <Link href="/services/digital-marketing" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Vancouver</Link>.
-                </p>
-                <nav
-                  aria-label="Digital marketing agency by city"
-                  style={{
-                    marginTop: 20,
-                    width: '100%',
-                    maxWidth: 520,
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))',
-                    gap: 10,
-                  }}
-                >
-                  {AGENCY_CITIES.map(slug => (
-                    <Link
-                      key={slug}
-                      href="/services/digital-marketing"
-                      style={{ color: 'var(--brand)', textDecoration: 'underline', fontSize: 15, lineHeight: 1.5 }}
-                    >
-                      Digital marketing agency in {AGENCY_CITY_NAMES[slug]}
-                    </Link>
-                  ))}
-                </nav>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Custom Quote →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Get Your Custom Quote →
+              </Link>
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="digital-marketing-cost-canada" />
 
       </main>
       <Footer />

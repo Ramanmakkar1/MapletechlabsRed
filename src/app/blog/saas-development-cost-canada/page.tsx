@@ -2,8 +2,6 @@ import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import { FaqSchema } from '@/components/ServiceSchema';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
@@ -56,7 +54,6 @@ export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={getBlogBreadcrumbs(TITLE, SLUG)} />
-      <FaqSchema faqs={GUIDE_FAQS['saas-development-cost-canada']} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

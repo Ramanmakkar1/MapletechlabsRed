@@ -7,11 +7,6 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import ServiceCityLinks from '@/components/ServiceCityLinks';
-import BlogCityLinks from '@/components/blog/BlogCityLinks';
-import GuideFaq from '@/components/blog/GuideFaq';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -42,7 +37,7 @@ const relatedPosts = [
   { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
 ];
 
-export default function WebsiteCostCanadaClient({ answer }: { answer?: string }) {
+export default function WebsiteCostCanadaClient() {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -168,16 +163,6 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
           </div>
         </section>
 
-        {/* QUICK ANSWER BOX */}
-        {answer && (
-          <section aria-labelledby="article-answer-heading" style={{ background: 'var(--surface-alt)', borderBottom: '1px solid var(--line)', padding: 'clamp(24px, 3vw, 32px)' }}>
-            <div className="cb-container" style={{ maxWidth: 900 }}>
-              <h2 id="article-answer-heading" style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--ink)', margin: '0 0 12px' }}>Quick answer</h2>
-              <p style={{ fontSize: '1rem', color: 'var(--body)', lineHeight: 1.6, margin: 0 }}>{answer}</p>
-            </div>
-          </section>
-        )}
-
         <MediaBand media={blogImage(13)} />
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
@@ -187,12 +172,6 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
 
               {/* ── MAIN ARTICLE ── */}
               <article>
-
-                <Link href="/tools/cost-estimator" style={{
-                  display: 'block', marginBottom: 40, padding: '16px 20px', borderRadius: 16,
-                  border: '1px solid var(--line)', background: 'var(--surface-alt)',
-                  fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none',
-                }}>Get a ballpark for your project → Free cost estimator</Link>
 
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }}>
@@ -206,7 +185,7 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
                     The massive price range exists because &quot;a website&quot; in 2026 can mean anything from a five-page marketing site to a real-time SaaS platform serving millions of users. The technology, design complexity, integrations, and ongoing maintenance requirements all play a role in determining the final cost.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    This guide gives you real numbers based on our experience building over 300 web projects for Canadian clients. No vague ranges, no sales pitches. Just transparent pricing data so you can budget with confidence. If you would rather have the build scoped for you, our <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>web development services</Link> team handles it end to end, and Edmonton businesses can work directly with our <Link href="/locations/edmonton/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>custom software development company in Edmonton</Link>.
+                    This guide gives you real numbers based on our experience building over 300 web projects for Canadian clients. No vague ranges, no sales pitches. Just transparent pricing data so you can budget with confidence.
                   </p>
                 </div>
 
@@ -361,14 +340,14 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
                     </p>
                   </div>
 
-                   <div style={{
+                  <div style={{
                     background: 'var(--surface)',
                     border: '1px solid var(--brand)',
                     borderRadius: 20, padding: 28,
                   }}>
                     <h3 style={{ fontSize: 17, fontWeight: 600, color: 'var(--brand)', margin: '0 0 10px' }}>Custom Development (Next.js / React) — $15,000 - $500,000+</h3>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
-                      Best for: Businesses where the website IS the product, or companies competing in high-value markets where speed, SEO, and user experience directly impact revenue. Custom development gives you complete control over performance, security, and scalability. Pairing it with dedicated <Link href="/services/product-design" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>UI/UX design</Link> and <Link href="/services/web-development/web-design" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>web design</Link> is what turns that speed into conversions. This is what Mapletech Labs specializes in: <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>custom web development</Link>, and it is the only approach we recommend for businesses with serious growth ambitions.
+                      Best for: Businesses where the website IS the product, or companies competing in high-value markets where speed, SEO, and user experience directly impact revenue. Custom development gives you complete control over performance, security, and scalability. This is what Mapletech Labs specializes in, and it is the only approach we recommend for businesses with serious growth ambitions.
                     </p>
                   </div>
                 </div>
@@ -513,20 +492,9 @@ export default function WebsiteCostCanadaClient({ answer }: { answer?: string })
                     This approach ensures your website stays secure, fast, and competitive. Companies that invest in ongoing optimization typically see 30-50% better performance in search rankings compared to those who launch and forget.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/month that include hosting, security monitoring, monthly performance reports, content updates, and priority support. Every client gets a dedicated Slack channel with direct access to their development team.
-                      </p>
-                      <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                        Ready to price your own build? See our <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>web development services</Link>, or talk to a local team: <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>custom software development in Edmonton</Link>, <Link href="/locations/web-development-company-in-calgary" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Calgary</Link>, <Link href="/locations/web-development-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Toronto</Link> and <Link href="/locations/web-development-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>Vancouver</Link>. For apps rather than websites, read our <Link href="/blog/app-development-cost-canada" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>app development cost guide</Link>.
-                      </p>
-                    </div>
-
-                  {/* Related services */}
-                  <div className="reveal" style={{ marginBottom: 56 }}>
-                    <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 16 }}>Related services</p>
-                    <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                      Need a team to build it? Explore our <Link href="/services/web-development" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>web development services in Canada</Link> and our <Link href="/services/web-development/ecommerce-systems" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>ecommerce website development</Link> expertise.
-                    </p>
-                  </div>
+                    At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/month that include hosting, security monitoring, monthly performance reports, content updates, and priority support. Every client gets a dedicated Slack channel with direct access to their development team.
+                  </p>
+                </div>
 
               </article>
 
@@ -602,7 +570,7 @@ At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -626,7 +594,6 @@ At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/
                       ))}
                     </div>
                   </div>
-                  <ServiceCityLinks serviceSlug="web-development" label="Web development" />
                 </div>
               </aside>
 
@@ -635,19 +602,6 @@ At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/
         </section>
 
         <MediaBand media={blogImage(13 + 7)} ratio="21 / 7" />
-
-        {/* ── CITY LINKS ── */}
-        <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
-          <div className="cb-container">
-            <BlogCityLinks serviceSlug="web-development" />
-          </div>
-        </section>
-
-        <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
-          <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
-            <GuideFaq faqs={GUIDE_FAQS['website-cost-canada']} />
-          </div>
-        </section>
 
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
@@ -676,12 +630,16 @@ At Mapletech Labs, we offer transparent maintenance packages starting at $1,500/
                   Tell us about your project and get a transparent, detailed quote within 48 hours. No hidden fees, no surprise invoices. Just honest pricing from a team that has built 300+ web projects across Canada.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your Free Quote →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Get Your Free Quote →
+              </Link>
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="website-cost-canada" />
 
       </main>
       <Footer />

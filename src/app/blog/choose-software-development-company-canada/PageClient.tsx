@@ -7,11 +7,6 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import BlogCityLinks from '@/components/blog/BlogCityLinks';
-import SoftwareCompanyLinks from '@/components/SoftwareCompanyLinks';
-import GuideFaq from '@/components/blog/GuideFaq';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -388,15 +383,6 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                       <span style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7 }}>{q}</span>
                     </div>
                   ))}
-                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
-                    Not sure whether a fixed-price or time-and-materials quote suits you, or who should own the code? Our <Link href="/blog/software-development-contract-canada" style={{ color: 'var(--brand)' }}>guide to software development contracts in Canada</Link> compares the engagement models and lists the clauses to check before you sign.
-                  </p>
-                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
-                    Hiring a separate design partner too? Our guide to the <Link href="/blog/ui-ux-design-companies-canada" style={{ color: 'var(--brand)' }}>best UI/UX design companies in Canada</Link> covers costs, a checklist and the red flags to watch for.
-                  </p>
-                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16 }}>
-                    Comparing us too? See our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>custom software and web development services</Link>, <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)' }}>mobile app development</Link> and <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>AI development</Link>, or meet our local teams for <Link href="/locations/software-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>software development in Edmonton</Link>, <Link href="/locations/software-development-company-in-calgary" style={{ color: 'var(--brand)' }}>Calgary</Link>, <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)' }}>Toronto</Link> and <Link href="/locations/software-development-company-in-vancouver" style={{ color: 'var(--brand)' }}>Vancouver</Link>.
-                  </p>
                 </div>
 
                 {/* Section 6: How Mapletech Labs Stands Apart */}
@@ -480,8 +466,6 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   </p>
                 </div>
 
-                <GuideFaq faqs={GUIDE_FAQS['choose-software-development-company-canada']} />
-
               </article>
 
               {/* ── SIDEBAR ── */}
@@ -556,7 +540,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -580,7 +564,6 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                       ))}
                     </div>
                   </div>
-                  <SoftwareCompanyLinks />
                 </div>
               </aside>
 
@@ -589,13 +572,6 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
         </section>
 
         <MediaBand media={blogImage(4 + 7)} ratio="21 / 7" />
-
-        {/* ── CITY LINKS ── */}
-        <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
-          <div className="cb-container">
-            <BlogCityLinks />
-          </div>
-        </section>
 
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
@@ -624,12 +600,16 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                   Stop wasting time with agencies that over-promise and under-deliver. Talk to our team and get a fixed-price proposal for your project within 48 hours.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Schedule a Free Consultation →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Schedule a Free Consultation →
+              </Link>
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="choose-software-development-company-canada" />
 
       </main>
       <Footer />

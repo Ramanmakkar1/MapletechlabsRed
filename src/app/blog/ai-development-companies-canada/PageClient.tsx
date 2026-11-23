@@ -7,10 +7,6 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import ServiceCityLinks from '@/components/ServiceCityLinks';
-import GuideFaq from '@/components/blog/GuideFaq';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -196,7 +192,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   </p>
                 </div>
 
-                 {/* Company 1: Mapletech Labs */}
+                {/* Company 1: Mapletech Labs */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="mapletech-labs">
                   <div style={{
                     background: 'var(--surface)', border: '1px solid var(--brand)',
@@ -445,8 +441,6 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                   </div>
                 ))}
 
-                <GuideFaq faqs={GUIDE_FAQS['ai-development-companies-canada']} />
-
               </article>
 
               {/* ── SIDEBAR ── */}
@@ -522,7 +516,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -546,7 +540,6 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                       ))}
                     </div>
                   </div>
-                  <ServiceCityLinks serviceSlug="ai-ml" label="AI development" />
                 </div>
               </aside>
 
@@ -582,19 +575,22 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
                   Stop experimenting with AI demos and start deploying production systems. Mapletech Labs builds custom AI solutions that integrate seamlessly into your existing infrastructure and deliver measurable ROI.
                 </p>
-                <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7, marginTop: 12 }}>
-                  Looking for a team near you? See <Link href="/services/ai-ml" style={{ color: 'var(--brand)' }}>our AI development services</Link>, our local pages for <Link href="/locations/ai-development-company-in-edmonton" style={{ color: 'var(--brand)' }}>Edmonton</Link>, <Link href="/locations/ai-development-company-in-calgary" style={{ color: 'var(--brand)' }}>Calgary</Link>, <Link href="/locations/ai-development-company-in-toronto" style={{ color: 'var(--brand)' }}>Toronto</Link> and <Link href="/locations/ai-development-company-in-vancouver" style={{ color: 'var(--brand)' }}>Vancouver</Link>, and typical prices in our <Link href="/blog/ai-development-cost-canada" style={{ color: 'var(--brand)' }}>AI development cost guide</Link>.
-                </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your AI Project →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Start Your AI Project →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Related guides */}
+        {/* Related Articles */}
         <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related guides</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related Articles</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {[
                 { title: 'Top Software Development Companies in Canada', href: '/blog/top-software-development-companies-canada' },
@@ -616,8 +612,6 @@ export default function AiDevelopmentCompaniesCanadaClient() {
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="ai-development-companies-canada" />
 
       </main>
       <Footer />

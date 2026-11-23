@@ -4,10 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -37,17 +35,11 @@ const apps = [
 
 const relatedPosts = [
   { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
-  { slug: 'ai-development-companies-edmonton', title: 'AI Development Companies in Edmonton', category: 'AI/ML', readTime: '9 min' },
+  { slug: 'ai-development-companies-canada', title: 'Top 10 AI Development Companies in Canada (2026)', category: 'AI/ML', readTime: '9 min' },
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
-export default function BlogPostPageClient({
-  answer,
-  faqs,
-}: {
-  answer?: string;
-  faqs: { q: string; a: string }[];
-}) {
+export default function BlogPostPageClient() {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -73,11 +65,6 @@ export default function BlogPostPageClient({
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'Unicorn Apps 2026: Top 10 Growth Stories for Founders' },
-            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
@@ -193,22 +180,6 @@ export default function BlogPostPageClient({
                     This year, ten apps joined the unicorn club through mobile-first products. We studied each one — their architecture, their growth mechanics, their design decisions — to understand exactly what separated them from the thousands of apps that launched alongside them and quietly disappeared. What we found was a set of shared principles, applied relentlessly.
                   </p>
                 </div>
-
-                {/* Answer-first summary */}
-                {answer && (
-                  <div className="reveal" style={{
-                    background: 'var(--surface-alt)', border: '1px solid var(--brand)',
-                    borderRadius: 20, padding: '24px 28px', marginBottom: 56,
-                  }}>
-                    <p style={{
-                      fontSize: 13, fontWeight: 700, color: 'var(--brand)',
-                      letterSpacing: '0.04em', textTransform: 'uppercase', margin: '0 0 10px',
-                    }}>Quick Answer</p>
-                    <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, margin: 0 }}>
-                      {answer}
-                    </p>
-                  </div>
-                )}
 
                 {/* App 1: NovaPay */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="novapay">
@@ -624,47 +595,6 @@ export default function BlogPostPageClient({
                   </div>
                 </div>
 
-                {/* ── CONTEXTUAL APP DEVELOPMENT LINKS ── */}
-                <div className="reveal" style={{ marginBottom: 64 }}>
-                  <h2 style={{
-                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
-                    letterSpacing: '-0.03em', marginBottom: 20,
-                  }}>
-                    Building an app like these in Canada?
-                  </h2>
-                  <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
-                    If one of these products sparked an idea, it helps to start with a clear scope and the right team. Mapletech Labs is headquartered in Edmonton and works with clients across Canada through{' '}
-                    <Link href="/services/mobile-app-development" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>mobile app development services</Link>
-                    {' '}and{' '}
-                    <Link href="/services/ai-ml" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI development</Link>.
-                    {' '}You can also review{' '}
-                    <Link href="/blog/app-development-cost-canada" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>what an app costs to build in Canada</Link>
-                    {' '}to plan your budget before you begin.
-                  </p>
-                  <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8 }}>
-                    Looking for local project support? Explore how we help businesses as an{' '}
-                    <Link href="/locations/app-development-company-in-toronto" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>app development company in Toronto</Link>
-                    {' '}and an{' '}
-                    <Link href="/locations/app-development-company-in-vancouver" style={{ color: 'var(--brand)', textDecoration: 'underline', textUnderlineOffset: 3 }}>app development company in Vancouver</Link>.
-                  </p>
-                </div>
-
-                {/* ── FAQS ── */}
-                <div className="reveal" style={{ marginBottom: 48 }} id="faqs">
-                  <h2 style={{
-                    fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)',
-                    letterSpacing: '-0.03em', marginBottom: 20,
-                  }}>Frequently Asked Questions</h2>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0, borderTop: '1px solid var(--line)' }}>
-                    {faqs.map((f, i) => (
-                      <li key={i} style={{ borderBottom: '1px solid var(--line)', padding: '22px 0' }}>
-                        <h3 style={{ fontSize: 17, fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>{f.q}</h3>
-                        <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.75, margin: 0, maxWidth: '68ch' }}>{f.a}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
               </article>
 
               {/* ── SIDEBAR ── */}
@@ -740,7 +670,7 @@ export default function BlogPostPageClient({
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -800,12 +730,16 @@ export default function BlogPostPageClient({
                   We&apos;ve helped build the engineering foundations of some of the fastest-growing apps in the world. Let us help you build yours.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start a Project →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Start a Project →
+              </Link>
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="top-10-unicorn-apps-2026" />
 
       </main>
       <Footer />

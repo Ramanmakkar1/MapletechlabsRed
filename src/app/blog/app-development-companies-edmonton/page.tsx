@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import ArticleTemplate from '@/components/blog/ArticleTemplate';
-import LocalServiceLinks from '@/components/LocalServiceLinks';
-import RelatedServices from '@/components/RelatedServices';
-import { getArticle, getRelatedArticles } from '@/data/articles';
+import PageClient from './PageClient';
+import { BLOG_AUTHOR, BLOG_IMAGE } from '@/lib/seo/business';
+import { getArticle } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
@@ -28,18 +25,38 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/blog/app-development-companies-edmonton') },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: a.title,
+  description: a.metaDescription,
+  datePublished: a.date,
+  dateModified: a.dateModified,
+  author: BLOG_AUTHOR,
+  image: BLOG_IMAGE,
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://mapletechlabs.ca/#organization',
+    name: 'Mapletech Labs',
+    url: 'https://mapletechlabs.ca',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://mapletechlabs.ca/logo.png',
+    },
+  },
+  url: URL,
+  mainEntityOfPage: URL,
+};
+
 export default function Page() {
   return (
     <>
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'app-development-companies-edmonton')} />
-      <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<LocalServiceLinks citySlug="edmonton" cityName="Edmonton" />} relatedServices={<RelatedServices links={[{href:'/locations/app-development-company-in-edmonton',label:'App development company in Edmonton'},{href:'/services/mobile-app-development',label:'Mobile app development services'},{href:'/services/mobile-app-development/flutter-development',label:'Flutter app development'},{href:'/locations/software-development-company-in-edmonton',label:'Software development company in Edmonton'}]} />} extraBlock={
-        <p style={{ marginTop: 24, lineHeight: 1.7 }}>
-          Need a team to build it? See our{' '}
-          <Link href="/services/mobile-app-development/edmonton">mobile app development in Edmonton</Link>{' '}
-          page for iOS, Android and Flutter builds, our process, CAD pricing and case studies.
-        </p>
-      } />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <PageClient />
     </>
   );
 }

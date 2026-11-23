@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
-import BlogCityLinks from '@/components/blog/BlogCityLinks';
-import { getArticle, getRelatedArticles } from '@/data/articles';
+import { getArticle } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
@@ -31,7 +30,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'saas-development-company-canada')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} cityLinks={<BlogCityLinks serviceSlug="saas-development" />} />
+      <ArticleTemplate a={a} />
     </>
   );
 }

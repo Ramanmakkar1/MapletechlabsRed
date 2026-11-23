@@ -4,12 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import GuideFaq from '@/components/blog/GuideFaq';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -43,7 +39,7 @@ const relatedPosts = [
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
-export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { localLinks?: React.ReactNode }) {
+export default function WebDevelopmentCompaniesTorontoClient() {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -69,11 +65,6 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'Web Development Companies in Toronto 2026' },
-            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
@@ -189,8 +180,7 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                     But Toronto is also saturated with web development agencies. Hundreds of shops claim to build &quot;world-class&quot; websites, making it nearly impossible to separate genuine engineering talent from template resellers and offshore middlemen.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    We evaluated over 80 Toronto-area web development companies based on portfolio quality, technical capabilities, client retention, team size, and industry reputation to compile this definitive ranking of the <strong>Top 10 Web Development Companies in Toronto</strong> for 2026. If you are comparing agencies against how we scope Toronto web projects, see our{' '}
-                    <Link href="/locations/web-development-company-in-toronto" style={{ color: 'var(--brand)' }}>web development company in Toronto</Link> page.
+                    We evaluated over 80 Toronto-area web development companies based on portfolio quality, technical capabilities, client retention, team size, and industry reputation to compile this definitive ranking of the <strong>Top 10 Web Development Companies in Toronto</strong> for 2026.
                   </p>
                 </div>
 
@@ -367,8 +357,6 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                   </div>
                 ))}
 
-                <GuideFaq faqs={GUIDE_FAQS['web-development-companies-toronto']} />
-
               </article>
 
               {/* ── SIDEBAR ── */}
@@ -444,7 +432,7 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -468,7 +456,6 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                       ))}
                     </div>
                   </div>
-                  {localLinks}
                 </div>
               </aside>
 
@@ -502,21 +489,26 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
                   Start Your Web Project in Toronto
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                  Whether you need a high-performance marketing site, a complex SaaS platform, or an enterprise web application, our Toronto team is ready to build it. Get a fixed-price proposal within 48 hours. See our <Link href="/locations/web-development-company-in-toronto" style={{ color: 'var(--brand)' }}>web development company in Toronto</Link> page, our <Link href="/services/web-development" style={{ color: 'var(--brand)' }}>web development services</Link>, or all of our <Link href="/locations/software-development-company-in-toronto" style={{ color: 'var(--brand)' }}>software development in Toronto</Link>. If you mainly need a new marketing website designed, see our <Link href="/locations/web-design-company-in-toronto" style={{ color: 'var(--brand)' }}>web design company in Toronto</Link> page.
+                  Whether you need a high-performance marketing site, a complex SaaS platform, or an enterprise web application, our Toronto team is ready to build it. Get a fixed-price proposal within 48 hours.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Start Your Web Project in Toronto →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Start Your Web Project in Toronto →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Related guides */}
+        {/* Related Articles */}
         <section style={{ padding: 'var(--section-y) 0', borderTop: '1px solid var(--line)' }}>
           <div className="cb-container">
-            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related guides</h2>
+            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', marginBottom: 32 }}>Related Articles</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {[
-                { title: 'Web Development Company in Toronto', href: '/locations/toronto/web-development' },
                 { title: 'How Much Does a Website Cost in Canada?', href: '/blog/website-cost-canada' },
                 { title: 'Top Software Development Companies in Canada', href: '/blog/top-software-development-companies-canada' },
                 { title: 'Software Development Companies in Calgary', href: '/blog/software-development-companies-calgary' },
@@ -536,8 +528,6 @@ export default function WebDevelopmentCompaniesTorontoClient({ localLinks }: { l
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="web-development-companies-toronto" />
 
       </main>
       <Footer />

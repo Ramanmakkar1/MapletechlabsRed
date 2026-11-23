@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import FinalCta from '@/components/home/FinalCta';
 import { humanMedia } from '@/data/media';
 import { BLOG_IMAGE } from '@/lib/seo/business';
-import { getRelatedArticles, ARTICLE_AUTHOR } from '@/data/articles';
+import { ARTICLE_AUTHOR } from '@/data/articles';
 import type { Article, Block, RelatedArticle } from '@/data/articles';
 import { serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
@@ -24,41 +24,6 @@ const CATEGORY_SERVICE: Record<string, CityService> = {
   Engineering: { label: 'Web Development', path: c => serviceCityPath('web-development', c) },
   Business: { label: 'Software Development', path: c => `/locations/software-development-company-in-${c}` },
 };
-
-/** Canonical service page per Article.relatedTopic, for the top service callout. */
-const RELATED_TOPIC_SERVICE: Record<import('@/data/articles').RelatedTopic, { href: string; label: string }> = {
-  software: { href: '/services/software-development', label: 'software development services' },
-  saas: { href: '/services/saas-development', label: 'SaaS development services' },
-  web: { href: '/services/web-development', label: 'web development services' },
-  apps: { href: '/services/mobile-app-development', label: 'mobile app development services' },
-  ai: { href: '/services/ai-ml', label: 'AI development services' },
-  design: { href: '/services/product-design', label: 'UI/UX design services' },
-  seo: { href: '/services/digital-marketing', label: 'SEO and digital marketing services' },
-};
-
-/** Fallback related service per article category, used when an article has no explicit relatedService. */
-const CATEGORY_RELATED_SERVICE: Record<string, { href: string; label: string }> = {
-  'AI/ML': { href: '/services/ai-ml', label: 'AI development services' },
-  Engineering: { href: '/services/web-development', label: 'web development services' },
-  Business: { href: '/services/saas-development', label: 'SaaS development services' },
-};
-
-/** Direct service link in the project CTA when the secondary button points at a tool. */
-const SLUG_PROJECT_SERVICE: Record<string, { href: string; label: string }> = {
-  'nrc-irap-funding-software-canada': { href: '/services/software-development', label: 'Custom software development services' },
-  'sred-software-development-canada': { href: '/services/software-development', label: 'Custom software development services' },
-  'software-maintenance-cost-canada': { href: '/services/software-maintenance', label: 'Software maintenance and support services' },
-  'software-development-contract-canada': { href: '/services/software-development', label: 'Custom software development services' },
-  'healthcare-software-development-canada': { href: '/services/software-development', label: 'Custom software development services' },
-};
-
-/** AI explainer posts that get a short business-context paragraph after the intro. */
-const AI_EXPLAINER_SLUGS = new Set([
-  'agentic-ai-in-production',
-  'what-is-agentic-ai',
-  'use-claude-for-free',
-  'run-ai-models-locally-free',
-]);
 
 const SLUG_SERVICE: Record<string, CityService> = {
   'native-vs-cross-platform-vs-pwa': { label: 'App Development', path: c => serviceCityPath('mobile-app-development', c) },
@@ -212,10 +177,8 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
 
 export default function ArticleTemplate({ a, related = [], cityLinks, relatedServices, extraBlock }: { a: Article; related?: RelatedArticle[]; cityLinks?: ReactNode; relatedServices?: ReactNode; extraBlock?: ReactNode }) {
   const categoryService = SLUG_SERVICE[a.slug] ?? CATEGORY_SERVICE[a.category];
-  const relatedService = a.relatedService ?? CATEGORY_RELATED_SERVICE[a.category];
   const postCity = CITIES.find(c => a.slug.endsWith(`-${c.slug}`));
   const primaryLocal = cityLinks && categoryService && postCity && isIndexableHref(categoryService.path(postCity.slug)) ? { href: categoryService.path(postCity.slug), text: `${categoryService.label} ${categoryService.noun ?? 'company'} in ${postCity.name}`, city: postCity.name } : null;
-  const projectService = SLUG_PROJECT_SERVICE[a.slug];
   const projectHref = contactHrefFor(a.enquiryContext?.serviceSlug, a.enquiryContext?.citySlug, serviceAllowlist, cities);
   const toc = a.body.filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2');
   const blockHeadings: (string | undefined)[] = [];
@@ -226,11 +189,6 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   }
   const hero = humanMedia[a.heroKey as keyof typeof humanMedia] ?? humanMedia.team;
   const published = new Date(a.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
-  const updated = a.dateModified && a.dateModified !== a.date
-    ? new Date(a.dateModified).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })
-    : null;
-  // Related posts: same category first, then most recent, never the current slug.
-  const morePosts = related.length > 0 ? related : getRelatedArticles(a.slug, 3);
 
   const breadcrumbSchema = buildBreadcrumbSchema(getBlogBreadcrumbs(a.title, a.slug));
   const articleUrl = `https://mapletechlabs.ca/blog/${a.slug}`;
@@ -265,9 +223,8 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
               <h1 style={{ fontSize: 'clamp(2.1rem, 4.2vw, 3.4rem)', fontWeight: 600, color: 'var(--ink)', lineHeight: 1.08, letterSpacing: '-0.035em', margin: '14px 0 20px', textWrap: 'balance' }}>{a.title}</h1>
               <p style={{ fontSize: 'clamp(17px, 1.5vw, 19px)', color: 'var(--body)', lineHeight: 1.7, marginBottom: 24, maxWidth: '62ch' }}>{a.dek}</p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', fontSize: 14, color: 'var(--muted)' }}>
-                <Link href="/about/raman-makkar" rel="author" style={{ fontWeight: 600, color: 'var(--ink)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>By Raman Makkar, Mapletech Labs</Link>
+                <span style={{ fontWeight: 600, color: 'var(--ink)' }}>Raman Makkar</span>
                 <span aria-hidden>&middot;</span><span>{published}</span>
-                {updated && <><span aria-hidden>&middot;</span><span>Updated {updated}</span></>}
                 <span aria-hidden>&middot;</span><span>{a.readTime}</span>
               </div>
             </div>
@@ -287,20 +244,6 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
           <div className="cb-container">
             <div className="blog-layout" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'clamp(40px, 6vw, 80px)', alignItems: 'start', maxWidth: 1140, margin: '0 auto' }}>
               <article style={{ minWidth: 0 }}>
-                {toc.length > 0 && (
-                  <details className="article-toc-mobile reveal">
-                    <summary className="article-toc-mobile-summary">On this page</summary>
-                    <nav aria-label="On this page" className="article-toc-mobile-nav">
-                      <ul className="article-toc-mobile-list">
-                        {toc.map(h => (
-                          <li key={h.id}>
-                            <a href={`#${h.id}`} className="article-toc-mobile-link">{h.text}</a>
-                          </li>
-                        ))}
-                      </ul>
-                    </nav>
-                  </details>
-                )}
                 <div className="reveal" style={{ marginBottom: 44 }}>
                   {a.answer && (
                     <p style={{ fontSize: 18.5, color: 'var(--ink)', lineHeight: 1.75, marginBottom: 18, fontWeight: 500 }} dangerouslySetInnerHTML={{ __html: a.answer }} />
@@ -312,25 +255,6 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                     );
                   })}
                 </div>
-
-                {AI_EXPLAINER_SLUGS.has(a.slug) && (
-                  <p className="reveal" style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: '0 0 28px', padding: 'clamp(16px, 2vw, 20px)', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)' }}>
-                    Building this for a business? Mapletech Labs helps Canadian companies put AI into production with <Link href="/services/ai-ml/llm-integration" style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>LLM integration</Link> and <Link href="/services/ai-ml/ai-chatbots" style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>AI chatbot development</Link>.
-                  </p>
-                )}
-
-                {/* Top service callout */}
-                {(() => {
-                  const svc = a.relatedService ?? RELATED_TOPIC_SERVICE[a.relatedTopic];
-                  if (!svc) return null;
-                  return (
-                    <div className="reveal" style={{ marginBottom: 28, padding: 'clamp(18px, 2.2vw, 24px)', border: '1px solid var(--brand)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)' }}>
-                      <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                        {a.relatedService ? 'Get a quote for our ' : 'Need this built? See our '}<Link href={svc.href} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>{svc.label}</Link> from Mapletech Labs.
-                      </p>
-                    </div>
-                  );
-                })()}
 
                 {a.body.map((b, i) => (
                   <div key={i} className="reveal" style={{ marginBottom: b.type === 'h2' ? 4 : 0 }}>
@@ -350,16 +274,6 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                     ))}
                   </ul>
                 </div>
-
-                {/* Related service */}
-                {relatedService && !a.relatedService && (
-                  <div className="reveal" style={{ marginTop: 'clamp(32px, 4vw, 48px)', padding: 'clamp(22px, 2.6vw, 30px)', border: '1px solid var(--brand)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)' }}>
-                    <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Related service</h2>
-                    <p style={{ fontSize: 15.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }}>
-                      Get a quote for <Link href={relatedService.href} style={{ color: 'var(--brand)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>{relatedService.label}</Link> from Mapletech Labs.
-                    </p>
-                  </div>
-                )}
 
                 {relatedServices}
 
@@ -382,68 +296,24 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                   <aside aria-label="Our service in this city" style={{ marginTop: 'clamp(40px, 5vw, 60px)', border: '1px solid var(--brand)', borderRadius: 16, padding: 'clamp(20px, 2.4vw, 28px)' }}><p style={{ fontSize: 16, color: 'var(--ink)', lineHeight: 1.7, margin: 0 }}>Hiring in {primaryLocal.city}? See Mapletech Labs&apos; <Link href={primaryLocal.href} style={{ color: 'var(--brand)', fontWeight: 600 }}>{primaryLocal.text}</Link> page for services, process and a free quote.</p></aside>
                 )}
 
-                {cityLinks ?? (categoryService && (
-                  <nav aria-label="Hire a team in your city" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
-                    <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Hire a team in your city</h2>
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
-                      {CITIES.filter(({ slug }) => isIndexableHref(categoryService.path(slug))).map(({ slug, name }) => (
-                        <li key={slug} style={{ minWidth: 0 }}><Link href={categoryService.path(slug)} style={{ display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none', overflowWrap: 'anywhere' }}>{categoryService.label} {categoryService.noun ?? 'company'} in {name}</Link></li>
-                      ))}
-                    </ul>
-                  </nav>
-                ))}
+                {cityLinks}
 
                 {extraBlock}
-
-                <nav aria-label="Mapletech Labs services" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
-                  <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Explore Mapletech Labs</h2>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                    {[
-                      { href: '/', label: 'Mapletech Labs home' },
-                      { href: '/services/web-development', label: 'Web development' },
-                      { href: '/services/mobile-app-development', label: 'Mobile app development' },
-                      { href: '/services/ai-ml', label: 'AI development' },
-                      { href: '/services/product-design', label: 'UI/UX design' },
-                      { href: '/services/digital-marketing', label: 'SEO and digital marketing' },
-                    ].map(link => (
-                      <li key={link.href}><Link href={link.href} className="pill">{link.label}</Link></li>
-                    ))}
-                  </ul>
-                </nav>
 
                 {/* Inline CTA */}
                 <div className="reveal" style={{ marginTop: 'clamp(40px, 5vw, 60px)', padding: 'clamp(28px, 3.5vw, 44px)', borderRadius: 'var(--r-lg)', background: 'var(--surface-ink)', color: 'var(--on-ink-body)' }}>
                   <h2 style={{ color: 'var(--on-ink)', fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>Have a project in mind?</h2>
                   <p style={{ lineHeight: 1.7, margin: '0 0 22px', maxWidth: '52ch' }}>Tell us what you&rsquo;re building. A senior engineer will come back within one working day with a scope, a timeline and a fixed price.</p>
-                  <div className="article-project-cta" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                  <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <Link href={projectHref} className="btn btn--on-ink">Start a project</Link>
-                    {projectService && (
-                      <Link href={projectService.href} className="btn btn--ghost-on-ink">{projectService.label}</Link>
-                    )}
                     <Link href={a.cta.href} className="btn btn--ghost-on-ink">{a.cta.label}</Link>
                   </div>
                 </div>
-                {/* Related services */}
-                <nav aria-label="Related services" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
-                  <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>Related services</h2>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
-                    {[
-                      { href: '/services/software-development', label: 'Software development' },
-                      { href: '/services/web-development', label: 'Web development' },
-                      { href: '/services/ai-ml', label: 'AI development' },
-                    ].map(link => (
-                      <li key={link.href} style={{ minWidth: 0 }}>
-                        <Link href={link.href} style={{ display: 'block', padding: '16px 18px', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', color: 'var(--ink)', fontWeight: 600, fontSize: 15, lineHeight: 1.4, textDecoration: 'none', overflowWrap: 'anywhere' }}>{link.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-
-                {morePosts.length > 0 && (
+                {related.length > 0 && (
                   <nav aria-label="More from the blog" style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
                     <h2 style={{ fontSize: 'var(--fs-h4)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 16px' }}>More from the blog</h2>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
-                      {morePosts.map(r => (
+                      {related.map(r => (
                         <li key={r.slug}>
                           <Link href={`/blog/${r.slug}`} style={{ display: 'block', padding: 20, border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', textDecoration: 'none' }}>
                             <span style={{ display: 'block', fontSize: 12.5, color: 'var(--muted)', marginBottom: 6 }}>{r.category} · {r.readTime}</span>
@@ -457,7 +327,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
               </article>
 
               {/* TOC sidebar */}
-              <aside className="article-toc-sidebar">
+              <aside className="hide-mobile">
                 <div style={{ position: 'sticky', top: 100, display: 'grid', gap: 20 }}>
                   <nav aria-label="On this page" style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', padding: 24 }}>
                     <p style={{ fontSize: 12.5, fontWeight: 700, color: 'var(--muted)', letterSpacing: '0.04em', textTransform: 'uppercase', margin: '0 0 14px' }}>On this page</p>
@@ -476,7 +346,6 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
         <FinalCta title="Let's build something worth keeping." sub="Tell us what you're building and a senior engineer will scope it within one working day." contactHref={projectHref} />
       </main>
       <Footer />
-
     </>
   );
 }

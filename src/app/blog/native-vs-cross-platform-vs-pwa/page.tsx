@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ArticleTemplate from '@/components/blog/ArticleTemplate';
-import { getArticle, getRelatedArticles } from '@/data/articles';
+import { getArticle } from '@/data/articles';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
 import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
@@ -30,7 +30,7 @@ export default function Page() {
     <>
       <BreadcrumbSchema items={getBlogBreadcrumbs(a.title, 'native-vs-cross-platform-vs-pwa')} />
       <FaqSchema faqs={a.faqs} />
-      <ArticleTemplate a={a} related={getRelatedArticles(a.slug)} />
+      <ArticleTemplate a={a} />
     </>
   );
 }

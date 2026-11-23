@@ -4,11 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import ServiceCityLinks from '@/components/ServiceCityLinks';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -37,7 +34,7 @@ const companies = [
 ];
 
 const relatedPosts = [
-  { slug: 'ai-development-companies-edmonton', title: 'AI Development Companies in Edmonton', category: 'Technology', readTime: '9 min' },
+  { slug: 'ai-development-companies-canada', title: 'Top 10 AI Development Companies in Canada', category: 'Technology', readTime: '9 min' },
   { slug: 'top-software-development-companies-canada', title: 'Top 10 Software Development Companies in Canada', category: 'Business', readTime: '10 min' },
   { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
 ];
@@ -68,11 +65,6 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
             pointerEvents: 'none',
           }} />
           <div className="cb-container">
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'Top 10 Blockchain Development Companies in Canada (2026)' },
-            ]} />
             <div className="reveal" style={{ marginBottom: 24 }}>
               <Link href="/blog" style={{
                 fontSize: 13, color: 'var(--muted)', textDecoration: 'none',
@@ -222,13 +214,10 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      From <Link href="/services/blockchain-web3/smart-contracts" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>smart contract development</Link> and DeFi protocols to NFT platforms and <Link href="/services/blockchain-web3/crypto-wallets" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>crypto wallet development</Link>, we build production-grade blockchain solutions. Our Web3 team has deployed over 50 smart contracts across Ethereum, Solana, and Polygon, serving Canadian fintech and enterprise clients.
+                      From smart contracts and DeFi protocols to NFT platforms and crypto wallets, we build production-grade blockchain solutions. Our Web3 team has deployed over 50 smart contracts across Ethereum, Solana, and Polygon, serving Canadian fintech and enterprise clients.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       What sets Mapletech Labs apart is our full-stack approach. We do not just write Solidity — we architect entire decentralized ecosystems, from on-chain logic and tokenomics design to the React frontends and Node.js backends that make Web3 applications accessible to mainstream users. Our team maintains deep expertise in ERC-20, ERC-721, ERC-1155 token standards, cross-chain bridges, and Layer 2 scaling solutions.
-                    </p>
-                    <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.75, marginTop: 16, position: 'relative', zIndex: 1 }}>
-                      See our <Link href="/services/blockchain-web3" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>blockchain and Web3 development services</Link>, or meet our <Link href="/locations/toronto/blockchain-web3" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>blockchain developers in Toronto</Link> and <Link href="/locations/vancouver/blockchain-web3" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>Vancouver</Link>. Specialist services: <Link href="/services/blockchain-web3/smart-contracts" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>smart contract development</Link>, <Link href="/services/blockchain-web3/defi-protocols" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>DeFi protocol development</Link> and <Link href="/services/blockchain-web3/crypto-wallets" style={{ color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' }}>crypto wallet development</Link>.
                     </p>
                     <div style={{
                       padding: '14px 20px', borderRadius: 12,
@@ -445,7 +434,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -469,7 +458,6 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                       ))}
                     </div>
                   </div>
-                  <ServiceCityLinks serviceSlug="web-development" label="Web development" heading="Need a web3 front end? Web development by city" />
                 </div>
               </aside>
 
@@ -506,12 +494,16 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                   Whether you are building a DeFi protocol, NFT marketplace, or enterprise blockchain solution, Mapletech Labs has the Web3 engineering expertise to bring your vision to production.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Launch Your Blockchain Project →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Launch Your Blockchain Project →
+              </Link>
             </div>
           </div>
         </section>
-
-        <BlogServiceCta slug="blockchain-development-companies-canada" />
 
       </main>
       <Footer />

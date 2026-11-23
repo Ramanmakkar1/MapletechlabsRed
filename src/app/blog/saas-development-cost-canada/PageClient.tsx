@@ -5,17 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import type { CSSProperties } from 'react';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
-import BlogServiceCta from '@/components/blog/BlogServiceCta';
-import RelatedServices from '@/components/RelatedServices';
-import ServiceCityLinks from '@/components/ServiceCityLinks';
-import BlogCityLinks from '@/components/blog/BlogCityLinks';
-import GuideFaq from '@/components/blog/GuideFaq';
-import { GUIDE_FAQS } from '@/data/guide-faqs';
-
-const LINK: CSSProperties = { color: 'var(--brand)', textDecoration: 'none', borderBottom: '1px solid var(--brand)' };
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -39,7 +30,6 @@ const tocItems = [
   { id: 'tech-stack', label: 'The Tech Stack That Matters', emoji: '🛠️' },
   { id: 'funding', label: 'Canadian SaaS Funding', emoji: '🇨🇦' },
   { id: 'our-process', label: 'How Mapletech Labs Builds SaaS', emoji: '🚀' },
-  { id: 'work-with-us', label: 'Work with us', emoji: '🤝' },
 ];
 
 const relatedPosts = [
@@ -48,7 +38,7 @@ const relatedPosts = [
   { slug: 'website-cost-canada', title: 'How Much Does a Website Cost in Canada?', category: 'Business', readTime: '8 min' },
 ];
 
-export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: string }) {
+export default function SaasDevelopmentCostCanadaClient() {
   const pageRef = useReveal();
   const [copied, setCopied] = useState(false);
 
@@ -174,16 +164,6 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
           </div>
         </section>
 
-        {/* QUICK ANSWER BOX */}
-        {answer && (
-          <section aria-labelledby="article-answer-heading" style={{ background: 'var(--surface-alt)', borderBottom: '1px solid var(--line)', padding: 'clamp(24px, 3vw, 32px)' }}>
-            <div className="cb-container" style={{ maxWidth: 900 }}>
-              <h2 id="article-answer-heading" style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--ink)', margin: '0 0 12px' }}>Quick answer</h2>
-              <p style={{ fontSize: '1rem', color: 'var(--body)', lineHeight: 1.6, margin: 0 }}>{answer}</p>
-            </div>
-          </section>
-        )}
-
         <MediaBand media={blogImage(6)} />
 
         {/* ── ARTICLE BODY + SIDEBAR ── */}
@@ -193,12 +173,6 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
 
               {/* ── MAIN ARTICLE ── */}
               <article>
-
-                <Link href="/tools/cost-estimator" style={{
-                  display: 'block', marginBottom: 40, padding: '16px 20px', borderRadius: 16,
-                  border: '1px solid var(--line)', background: 'var(--surface-alt)',
-                  fontSize: 16, fontWeight: 600, color: 'var(--brand)', textDecoration: 'none',
-                }}>Get a ballpark for your project → Free cost estimator</Link>
 
                 {/* Intro */}
                 <div className="reveal" style={{ marginBottom: 56 }} id="intro">
@@ -226,7 +200,7 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                     Every SaaS product falls into one of three cost tiers. Where yours lands depends on the number of features, integrations, compliance requirements, and the scale you need to support at launch.
                   </p>
 
-                   {/* Tier 1: MVP */}
+                  {/* Tier 1: MVP */}
                   <div style={{
                     background: 'var(--surface)',
                     border: '1px solid var(--brand)',
@@ -483,25 +457,6 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                   ))}
                 </div>
 
-                <div className="reveal" style={{ marginBottom: 56 }} id="work-with-us">
-                  <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', marginBottom: 24 }}>Planning a SaaS build in Canada?</h2>
-                  <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    Our <Link href="/services/saas-development" style={LINK}>SaaS development services</Link> cover discovery, multi-tenant architecture, billing and launch. We work with founders across the country, including as a{' '}
-                    <Link href="/locations/saas-development-company-in-toronto" style={LINK}>SaaS development company in Toronto</Link>,{' '}
-                    <Link href="/locations/saas-development-company-in-vancouver" style={LINK}>Vancouver</Link>,{' '}
-                    <Link href="/locations/saas-development-company-in-calgary" style={LINK}>Calgary</Link> and{' '}
-                    <Link href="/locations/saas-development-company-in-edmonton" style={LINK}>Edmonton</Link>. If AI features are on your roadmap, see our <Link href="/services/ai-ml" style={LINK}>AI development services</Link>.
-                  </p>
-                </div>
-
-                  {/* Related services */}
-                  <div className="reveal" style={{ marginBottom: 56 }}>
-                    <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none', color: 'var(--faint)', marginBottom: 16 }}>Related services</p>
-                    <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                      Ready to build? See our <Link href="/services/saas-development" style={LINK}>SaaS development services in Canada</Link> and learn how we <Link href="/blog/build-saas-mvp-8-weeks" style={LINK}>build a SaaS MVP in 8 weeks</Link>.
-                    </p>
-                  </div>
-
               </article>
 
               {/* ── SIDEBAR ── */}
@@ -576,7 +531,7 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                     <p style={{
                       fontSize: 13, fontWeight: 700, letterSpacing: '-0.005em', textTransform: 'none',
                       color: 'var(--faint)', marginBottom: 16,
-                    }}>Related guides</p>
+                    }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
                         <Link key={post.slug} href={`/blog/${post.slug}`} style={{
@@ -600,7 +555,6 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                       ))}
                     </div>
                   </div>
-                  <ServiceCityLinks serviceSlug="saas-development" label="SaaS development" />
                 </div>
               </aside>
 
@@ -609,20 +563,6 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
         </section>
 
         <MediaBand media={blogImage(6 + 7)} ratio="21 / 7" />
-
-        {/* ── CITY LINKS ── */}
-        <section style={{ paddingBottom: 'var(--section-y-sm)' }}>
-          <div className="cb-container">
-            <BlogCityLinks serviceSlug="saas-development" />
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section style={{ paddingBottom: 'var(--section-y)' }}>
-          <div className="cb-container">
-            <GuideFaq faqs={GUIDE_FAQS['saas-development-cost-canada']} />
-          </div>
-        </section>
 
         {/* ── BOTTOM CTA ── */}
         <section style={{ paddingBottom: 'var(--section-y)', borderTop: '1px solid var(--line)' }}>
@@ -651,19 +591,16 @@ export default function SaasDevelopmentCostCanadaClient({ answer }: { answer?: s
                   Stop guessing and start building. Share your SaaS idea with Mapletech Labs and receive a detailed cost breakdown, timeline, and technical roadmap within 48 hours — completely free.
                 </p>
               </div>
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ textDecoration: 'none' }}>Get Your SaaS Cost Estimate →</Link>
+              <Link href="/contact" style={{
+                display: 'inline-block', padding: '18px 40px', borderRadius: 100, background: 'var(--brand)', color: '#fff',
+                fontSize: 15, fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+              }}>
+                Get Your SaaS Cost Estimate →
+              </Link>
             </div>
           </div>
         </section>
-
-        <RelatedServices
-          links={[
-            { href: '/services/saas-development', label: 'SaaS platform development' },
-            { href: '/services/web-development', label: 'custom software development services' },
-          ]}
-        />
-
-        <BlogServiceCta slug="saas-development-cost-canada" />
 
       </main>
       <Footer />
