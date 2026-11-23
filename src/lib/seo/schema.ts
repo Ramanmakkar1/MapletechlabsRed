@@ -24,12 +24,22 @@ export function cleanServiceName(name: string): string {
   return first.replace(/\s*\|\s*Mapletech Labs$/i, '').trim() || name.trim();
 }
 
+/** Core Canadian markets every service page sells into. */
+const SERVICE_AREA_SERVED = ['Edmonton', 'Calgary', 'Toronto', 'Vancouver'] as const;
+
+const CITY_PROVINCE: Record<string, string> = {
+  Edmonton: 'Alberta',
+  Calgary: 'Alberta',
+  Toronto: 'Ontario',
+  Vancouver: 'British Columbia',
+};
+
 export interface ServiceSchemaInput {
   name: string;
   description: string;
   url: string;
   serviceType?: string;
-  areaServed?: string;
+  areaServed?: string | string[];
   areaServedType?: 'Country' | 'AdministrativeArea';
 }
 
@@ -39,9 +49,25 @@ export function buildServiceSchema({
   description,
   url,
   serviceType,
-  areaServed = 'Canada',
+  areaServed = [...SERVICE_AREA_SERVED],
   areaServedType = 'Country',
 }: ServiceSchemaInput) {
+  const resolvedServiceType = serviceType ?? cleanServiceName(name);
+  const areaServedNode = Array.isArray(areaServed)
+    ? areaServed.map(city => ({
+        '@type': 'City',
+        name: city,
+        ...(CITY_PROVINCE[city] && {
+          containedInPlace: { '@type': 'AdministrativeArea', name: CITY_PROVINCE[city] },
+        }),
+      }))
+    : {
+        '@type': areaServedType,
+        name: areaServed,
+        ...(areaServedType === 'AdministrativeArea' && {
+          containedInPlace: { '@type': 'Country', name: 'Canada' },
+        }),
+      };
   let offers: Record<string, unknown> | undefined;
   const pricingKeys = SERVICE_PRICING[new URL(url).pathname];
   if (pricingKeys) {
@@ -60,7 +86,7 @@ export function buildServiceSchema({
     name: cleanServiceName(name),
     description,
     url,
-    ...(serviceType && { serviceType }),
+    ...(resolvedServiceType && { serviceType: resolvedServiceType }),
     ...(offers && { offers }),
     provider: {
       '@type': 'Organization',
@@ -68,13 +94,7 @@ export function buildServiceSchema({
       name: 'Mapletech Labs',
       url: siteOrigin(),
     },
-    areaServed: {
-      '@type': areaServedType,
-      name: areaServed,
-      ...(areaServedType === 'AdministrativeArea' && {
-        containedInPlace: { '@type': 'Country', name: 'Canada' },
-      }),
-    },
+    areaServed: areaServedNode,
     availableChannel: {
       '@type': 'ServiceChannel',
       serviceUrl: url,

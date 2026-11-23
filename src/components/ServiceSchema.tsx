@@ -15,14 +15,14 @@ export function ServiceSchema({
   description,
   url,
   serviceType,
-  areaServed = 'Canada',
+  areaServed,
   areaServedType = 'Country',
 }: {
   name: string;
   description: string;
   url: string;
   serviceType?: string;
-  areaServed?: string;
+  areaServed?: string | string[];
   areaServedType?: 'Country' | 'AdministrativeArea';
 }) {
   const schema = buildServiceSchema({
