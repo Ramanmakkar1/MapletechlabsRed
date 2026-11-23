@@ -10,7 +10,7 @@ import FaqSplit from '@/components/home/FaqSplit';
 import { FaqSchema } from '@/components/ServiceSchema';
 import MediaBand from '@/components/MediaBand';
 import { humanMedia } from '@/data/media';
-import { PRIORITY_SERVICES, serviceCityPath, priorityCompanyHeadline, WEB_DESIGN_CITIES } from '@/data/serviceCity';
+import { PRIORITY_SERVICES, serviceCityHref, priorityCompanyHeadline, WEB_DESIGN_CITIES } from '@/data/serviceCity';
 import { cities as allCities } from '@/data/cities';
 import { isIndexableHref } from '@/lib/seo/indexability';
 import LocationDirectory from '@/components/LocationDirectory';
@@ -36,7 +36,7 @@ const BUYER_INTENT_SERVICES = [
 const buyerIntentPath = (serviceSlug: string, citySlug: string) =>
   serviceSlug === 'software-development'
     ? `/locations/software-development-company-in-${citySlug}`
-    : serviceCityPath(serviceSlug, citySlug);
+    : serviceCityHref(serviceSlug, citySlug);
 
 const INDEXABLE_BUYER_INTENT_SERVICES = BUYER_INTENT_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
 const INDEXABLE_PRIORITY_CITY_SERVICES = PRIORITY_CITY_SERVICES.filter(s => isIndexableHref(buyerIntentPath(s.serviceSlug, 'edmonton')));
@@ -313,7 +313,7 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
 
             <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>Digital Marketing Agency</h3>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-              <Link href="/services/digital-marketing" className="pill">Digital Marketing Agency</Link>
+              <Link href="/services/digital-marketing" className="pill">Digital marketing services across Canada</Link>
             </div>
 
             <h3 style={{ fontWeight: 600, fontSize: '1.2rem', margin: 'clamp(40px, 5vw, 64px) 0 16px' }}>Web Design Company</h3>
@@ -347,7 +347,7 @@ export default function LocationsIndexPage({ priorityLocationLinks }: { priority
                         <Link href={`/locations/software-development-company-in-${city.slug}`} style={{ color: 'var(--ink)', fontWeight: 600 }}>{city.name}, {city.provinceAbbr}</Link>
                       </th>
                       {PRIORITY_SERVICES.map(ps => {
-                        const href = serviceCityPath(ps.serviceSlug, city.slug);
+                        const href = serviceCityHref(ps.serviceSlug, city.slug);
                         return (
                           <td key={ps.serviceSlug} style={{ padding: '10px 12px', borderBottom: '1px solid var(--line)', whiteSpace: 'nowrap' }}>
                             {isIndexableHref(href) ? (
