@@ -171,10 +171,10 @@ const nextConfig: NextConfig = {
       { source: '/fr/locations/ai-development-company-in-burnaby', destination: '/locations/ai-development-company-in-burnaby', statusCode: 301 },
       { source: '/fr/locations/app-development-company-in-vancouver', destination: '/locations/app-development-company-in-vancouver', statusCode: 301 },
       // fr-ca hreflang alternates of the two blog posts Google reports as 4xx.
-      // The generic /fr/:path* rule below covers them, but these exact entries
-      // guarantee a single 301 to the live English post.
-      { source: '/fr/blog/ai-development-companies-canada', destination: '/blog/ai-development-companies-canada', statusCode: 301 },
-      { source: '/fr/blog/digital-marketing-cost-canada', destination: '/blog/digital-marketing-cost-canada', statusCode: 301 },
+      // They go straight to the final service page in ONE hop, bypassing the
+      // English blog post that itself 301s (no 2-hop redirect chain).
+      { source: '/fr/blog/ai-development-companies-canada', destination: '/services/ai-ml', statusCode: 301 },
+      { source: '/fr/blog/digital-marketing-cost-canada', destination: '/services/digital-marketing', statusCode: 301 },
     ];
     const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development'], ['digital-marketing', 'seo'], ['product-design', 'ui-ux-design']];
     const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const })));
