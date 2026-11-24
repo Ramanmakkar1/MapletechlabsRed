@@ -9,7 +9,9 @@ import {
   isPriorityService,
   priorityCompanyHeadline,
   serviceCityCombos,
+  serviceCityHref,
 } from '@/data/serviceCity';
+import { isIndexableHref } from '@/lib/seo/indexability';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { SITEMAP_CHILDREN } from '@/lib/sitemap-data';
@@ -95,12 +97,18 @@ function buildText(): string {
     const items = lines([
       ...serviceCityCombos
         .filter(sc => sc.citySlug === c.slug)
-        .map(sc => link(`${priorityCompanyHeadline(sc.serviceSlug, sc.label)} Company in ${c.name}`, `/locations/${sc.slug}`)),
+        .map(sc => {
+          const href = serviceCityHref(sc.serviceSlug, sc.citySlug);
+          if (!href.startsWith('/locations/') && !href.startsWith('/services/mobile-app-development/')) {
+            return null;
+          }
+          return link(`${priorityCompanyHeadline(sc.serviceSlug, sc.label)} Company in ${c.name}`, href);
+        }),
       ...agencyCombos
-        .filter(ac => ac.citySlug === c.slug)
+        .filter(ac => ac.citySlug === c.slug && isIndexableHref(`/locations/${ac.slug}`))
         .map(ac => link(`${ac.label} in ${c.name}`, `/locations/${ac.slug}`)),
       ...webDesignCombos
-        .filter(wd => wd.citySlug === c.slug)
+        .filter(wd => wd.citySlug === c.slug && isIndexableHref(`/locations/${wd.slug}`))
         .map(wd => link(`${wd.label} Company in ${c.name}`, `/locations/${wd.slug}`)),
       ...services
         .filter(s => !isPriorityService(s.slug) && isIndexableCityService(c.slug, s.slug))
