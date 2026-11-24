@@ -169,7 +169,7 @@ const nextConfig: NextConfig = {
       { source: '/fr/locations/vancouver/cloud-devops', destination: '/locations/vancouver/cloud-devops', statusCode: 301 },
       { source: '/fr/locations/laval/product-design', destination: '/locations/ui-ux-design-company-in-laval', statusCode: 301 },
       { source: '/fr/locations/ai-development-company-in-burnaby', destination: '/locations/ai-development-company-in-burnaby', statusCode: 301 },
-      { source: '/fr/locations/app-development-company-in-vancouver', destination: '/locations/app-development-company-in-vancouver', statusCode: 301 },
+      { source: '/fr/locations/app-development-company-in-vancouver', destination: '/services/mobile-app-development/vancouver', statusCode: 301 },
       // fr-ca hreflang alternates of the two blog posts Google reports as 4xx.
       // They go straight to the final service page in ONE hop, bypassing the
       // English blog post that itself 301s (no 2-hop redirect chain).
@@ -177,7 +177,12 @@ const nextConfig: NextConfig = {
       { source: '/fr/blog/digital-marketing-cost-canada', destination: '/services/digital-marketing', statusCode: 301 },
     ];
     const priority: [string, string][] = [['ai-ml', 'ai-development'], ['saas-development', 'saas-development'], ['mobile-app-development', 'app-development'], ['web-development', 'web-development'], ['digital-marketing', 'seo'], ['product-design', 'ui-ux-design']];
-    const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const })));
+    const mobileAppCities = new Set(['edmonton', 'calgary', 'toronto', 'vancouver']);
+    // App-development keyword pages for those four cities canonicalise to
+    // /services/mobile-app-development/<city> (owner decision), so point the 301s there.
+    const meshDestination = (c: string, kw: string) =>
+      kw === 'app-development' && mobileAppCities.has(c) ? `/services/mobile-app-development/${c}` : `/locations/${kw}-company-in-${c}`;
+    const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: meshDestination(c, kw), statusCode: 301 as const })));
     // Niche services (blockchain-web3, ar-vr, game-development) are not in the priority
     // keyword list. For non-major cities, their /locations/<city>/<service> mesh pages
     // are not indexable and return errors. Redirect them to the core service page.
@@ -193,9 +198,9 @@ const nextConfig: NextConfig = {
     // old French URLs redirect in ONE hop instead of chaining through /fr/:path*
     // (e.g. /fr/locations/calgary/digital-marketing -> /locations/seo-company-in-calgary).
     const legacyFrSources = new Set(legacyFrRedirects.map(({ source }) => source));
-    const frServiceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/fr/locations/${c}/${svc}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const }))).filter(({ source }) => !legacyFrSources.has(source));
+    const frServiceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/fr/locations/${c}/${svc}`, destination: meshDestination(c, kw), statusCode: 301 as const }))).filter(({ source }) => !legacyFrSources.has(source));
     const frCityLandingRedirects = cityHubs.map(c => ({ source: `/fr/locations/${c}`, destination: `/locations/software-development-company-in-${c}`, statusCode: 301 as const }));
-    const frKeywordRedirects = cityHubs.flatMap(c => priority.map(([, kw]) => ({ source: `/fr/locations/${kw}-company-in-${c}`, destination: `/locations/${kw}-company-in-${c}`, statusCode: 301 as const }))).filter(({ source }) => !legacyFrSources.has(source));
+    const frKeywordRedirects = cityHubs.flatMap(c => priority.map(([, kw]) => ({ source: `/fr/locations/${kw}-company-in-${c}`, destination: meshDestination(c, kw), statusCode: 301 as const }))).filter(({ source }) => !legacyFrSources.has(source));
     return [
       // /services/web-development/saas-platforms merged into /services/saas-development (owner decision).
       { source: '/services/web-development/saas-platforms', destination: '/services/saas-development', statusCode: 301 as const },
@@ -241,10 +246,10 @@ const nextConfig: NextConfig = {
       { source: '/software-development-company-in-calgary', destination: '/locations/software-development-company-in-calgary', permanent: true },
       { source: '/software-development-company-in-ottawa', destination: '/locations/software-development-company-in-ottawa', permanent: true },
       { source: '/software-development-company-in-montreal', destination: '/locations/software-development-company-in-montreal', permanent: true },
-      { source: '/app-development-company-in-edmonton', destination: '/locations/app-development-company-in-edmonton', permanent: true },
-      { source: '/app-development-company-in-toronto', destination: '/locations/app-development-company-in-toronto', permanent: true },
-      { source: '/app-development-company-in-vancouver', destination: '/locations/app-development-company-in-vancouver', permanent: true },
-      { source: '/app-development-company-in-calgary', destination: '/locations/app-development-company-in-calgary', permanent: true },
+      { source: '/app-development-company-in-edmonton', destination: '/services/mobile-app-development/edmonton', permanent: true },
+      { source: '/app-development-company-in-toronto', destination: '/services/mobile-app-development/toronto', permanent: true },
+      { source: '/app-development-company-in-vancouver', destination: '/services/mobile-app-development/vancouver', permanent: true },
+      { source: '/app-development-company-in-calgary', destination: '/services/mobile-app-development/calgary', permanent: true },
       { source: '/web-development-company-in-edmonton', destination: '/locations/web-development-company-in-edmonton', permanent: true },
       { source: '/web-development-company-in-toronto', destination: '/locations/web-development-company-in-toronto', permanent: true },
       { source: '/web-development-company-in-vancouver', destination: '/locations/web-development-company-in-vancouver', permanent: true },
@@ -273,7 +278,7 @@ const nextConfig: NextConfig = {
       { source: '/contacts', destination: '/contact', statusCode: 301 as const },
       { source: '/kontakt', destination: '/contact', statusCode: 301 as const },
       { source: '/mobile-app-development', destination: '/services/mobile-app-development', permanent: true },
-      { source: '/mobile-app-development-in-edmonton', destination: '/locations/app-development-company-in-edmonton', permanent: true },
+      { source: '/mobile-app-development-in-edmonton', destination: '/services/mobile-app-development/edmonton', permanent: true },
       { source: '/custom-android-apps-2', destination: '/services/mobile-app-development/android-app-development', permanent: true },
       { source: '/react-native-app-development-company', destination: '/services/mobile-app-development/react-native-apps', permanent: true },
       { source: '/services/blockchain', destination: '/services/blockchain-web3', permanent: true },
@@ -293,6 +298,12 @@ const nextConfig: NextConfig = {
       { source: '/locations/toronto/game-development', destination: '/services/game-development', permanent: true },
       { source: '/locations/saas-development-company-in-windsor', destination: '/locations/software-development-company-in-windsor', permanent: true },
       // Old .com domain paths (catch common patterns)
+      // Explicit city rules go before the :city catch-all so these 301 in one hop to the
+      // canonical app-development city pages instead of the /locations mesh URL.
+      { source: '/mobile-app-development-edmonton', destination: '/services/mobile-app-development/edmonton', permanent: true },
+      { source: '/mobile-app-development-calgary', destination: '/services/mobile-app-development/calgary', permanent: true },
+      { source: '/mobile-app-development-toronto', destination: '/services/mobile-app-development/toronto', permanent: true },
+      { source: '/mobile-app-development-vancouver', destination: '/services/mobile-app-development/vancouver', permanent: true },
       { source: '/mobile-app-development-:city', destination: '/locations/app-development-company-in-:city', permanent: true },
       { source: '/web-development-:city', destination: '/locations/web-development-company-in-:city', permanent: true },
       { source: '/software-development-:city', destination: '/locations/software-development-company-in-:city', permanent: true },
