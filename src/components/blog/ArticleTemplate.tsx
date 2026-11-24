@@ -14,8 +14,6 @@ import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
 import { isIndexableHref } from '@/lib/seo/indexability';
-import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
-import { buildBreadcrumbSchema } from '@/lib/seo/schema';
 
 type CityService = { label: string; path: (city: string) => string; noun?: string };
 
@@ -190,7 +188,6 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   const hero = humanMedia[a.heroKey as keyof typeof humanMedia] ?? humanMedia.team;
   const published = new Date(a.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
 
-  const breadcrumbSchema = buildBreadcrumbSchema(getBlogBreadcrumbs(a.title, a.slug));
   const articleUrl = `https://mapletechlabs.ca/blog/${a.slug}`;
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -210,7 +207,6 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
     <>
       {isCityListicleSlug(a.slug) && <meta name="robots" content="noindex, follow" />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
       <main id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>
 
