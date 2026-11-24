@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: TITLE,
+  headline: 'Real-Time Logistics & Fleet Management - Case Study',
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
