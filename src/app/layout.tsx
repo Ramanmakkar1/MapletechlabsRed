@@ -94,6 +94,9 @@ const organizationSchema = {
   alternateName: ["TML Branding Agency"],
   url: siteOrigin(),
   logo: `${siteOrigin()}/logo.png`,
+  telephone: BUSINESS.telephone,
+  email: BUSINESS.email,
+  image: BUSINESS.image,
   description:
     "Mapletech Labs is a custom software development company founded by Raman Makkar in Edmonton, Alberta in 2018 (formerly TML Branding Agency). Its team of 25+ engineers, designers and strategists has delivered 500+ projects, building web and mobile apps, AI solutions, SaaS platforms, UI/UX design and SEO for clients across Canada, with 12 locations across Canada and an experienced remote engineering team.",
   address: { ...HQ_ADDRESS },
@@ -147,13 +150,8 @@ const organizationSchema = {
     "Search engine optimization (SEO)",
     "Digital marketing",
     "Google Ads management",
-  ],
-  serviceType: [
     "Software development",
     "App development",
-    "AI development",
-    "UI/UX design",
-    "Ecommerce systems",
     "SEO",
   ],
   hasOfferCatalog: {
