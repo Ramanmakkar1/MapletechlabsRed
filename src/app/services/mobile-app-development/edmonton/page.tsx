@@ -82,7 +82,7 @@ const breadcrumbSchema = [
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, '\\u003c') }} />
       <BreadcrumbSchema items={breadcrumbSchema} />
       <FaqSchema faqs={FAQS} />
       <PageClient faqs={FAQS} contactHref={contactHref} />
