@@ -160,10 +160,10 @@ const nextConfig: NextConfig = {
     // 301 to a live English page even if a city or keyword is missing from a list.
     const legacyFrRedirects: { source: string; destination: string; statusCode: 301 }[] = [
       { source: '/fr/locations/saas-development-company-in-calgary', destination: '/locations/saas-development-company-in-calgary', statusCode: 301 },
-      { source: '/fr/locations/winnipeg/digital-marketing', destination: '/locations/seo-company-in-winnipeg', statusCode: 301 },
-      { source: '/fr/locations/quebec-city/digital-marketing', destination: '/locations/seo-company-in-quebec-city', statusCode: 301 },
+      { source: '/fr/locations/winnipeg/digital-marketing', destination: '/services/digital-marketing/seo-services', statusCode: 301 },
+      { source: '/fr/locations/quebec-city/digital-marketing', destination: '/services/digital-marketing/seo-services', statusCode: 301 },
       { source: '/fr/locations/web-development-company-in-winnipeg', destination: '/locations/web-development-company-in-winnipeg', statusCode: 301 },
-      { source: '/fr/locations/calgary/digital-marketing', destination: '/locations/seo-company-in-calgary', statusCode: 301 },
+      { source: '/fr/locations/calgary/digital-marketing', destination: '/services/digital-marketing/seo-services', statusCode: 301 },
       { source: '/fr/locations/saas-development-company-in-hamilton', destination: '/locations/saas-development-company-in-hamilton', statusCode: 301 },
       { source: '/fr/locations/saas-development-company-in-kelowna', destination: '/locations/saas-development-company-in-kelowna', statusCode: 301 },
       { source: '/fr/locations/vancouver/cloud-devops', destination: '/locations/vancouver/cloud-devops', statusCode: 301 },
