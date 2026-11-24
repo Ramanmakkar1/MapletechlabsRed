@@ -209,7 +209,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   return (
     <>
       {isCityListicleSlug(a.slug) && <meta name="robots" content="noindex, follow" />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
       <Navbar />
       <main id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>
 
