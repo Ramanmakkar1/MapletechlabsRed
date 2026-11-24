@@ -74,6 +74,7 @@ export function localServiceSchema(opts: {
   url: string;
   serviceType?: string[];
   priceRange?: string;
+  mainEntity?: boolean;
 }) {
   const areaServed = [
     ...LOCAL_BUSINESS_AREA_SERVED,
@@ -104,6 +105,6 @@ export function localServiceSchema(opts: {
     areaServed,
     sameAs: BUSINESS.sameAs,
     ...(opts.serviceType ? { serviceType: opts.serviceType } : {}),
-    mainEntityOfPage: opts.url,
+    ...(opts.mainEntity === false ? {} : { mainEntityOfPage: opts.url }),
   };
 }

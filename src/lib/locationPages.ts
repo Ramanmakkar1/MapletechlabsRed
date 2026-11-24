@@ -107,12 +107,14 @@ function buildLocationPage(slug: string): LocationPageData | null {
         serviceType: isAgencyPage ? AGENCY_SERVICE_TYPES : combo.label,
         description: localEntry?.description ?? data.description,
         url,
+        mainEntityOfPage: url,
       },
       localServiceSchema({
         cityName: data.cityName,
         provinceName: data.province,
         url,
         serviceType: isAgencyPage ? AGENCY_SERVICE_TYPES : [combo.label],
+        mainEntity: false,
       }),
       {
         '@type': 'BreadcrumbList',
@@ -288,12 +290,14 @@ function buildLocationMeshPage(city: string, service: string): LocationMeshPageD
         serviceType: data.serviceName,
         description,
         url: data.canonicalUrl,
+        mainEntityOfPage: data.canonicalUrl,
       },
       localServiceSchema({
         cityName: data.cityName,
         provinceName: data.province,
         url: data.canonicalUrl,
         serviceType: [data.serviceName],
+        mainEntity: false,
       }),
     ],
   };

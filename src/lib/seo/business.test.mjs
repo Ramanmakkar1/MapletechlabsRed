@@ -28,3 +28,24 @@ test('localServiceSchema dedupes areaServed by name', () => {
   assert.equal(names.filter((name) => name === 'Edmonton').length, 1);
   assert.equal(new Set(names).size, names.length);
 });
+
+test('localServiceSchema mainEntity:false leaves out mainEntityOfPage', () => {
+  const url = 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton';
+  const schema = localServiceSchema({
+    cityName: 'Edmonton',
+    provinceName: 'Alberta',
+    url,
+    mainEntity: false,
+  });
+  assert.equal(Object.prototype.hasOwnProperty.call(schema, 'mainEntityOfPage'), false);
+});
+
+test('localServiceSchema default keeps mainEntityOfPage', () => {
+  const url = 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton';
+  const schema = localServiceSchema({
+    cityName: 'Edmonton',
+    provinceName: 'Alberta',
+    url,
+  });
+  assert.equal(schema.mainEntityOfPage, url);
+});
