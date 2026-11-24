@@ -22,3 +22,10 @@ test('niche city+service pages stay out of the index and sitemap', () => {
   // A non-niche service in a mesh-index city stays indexable.
   assert.equal(isIndexableSitemapPath('/locations/edmonton/cloud-devops'), true);
 });
+
+test('301-d blog posts stay out of the sitemap', () => {
+  assert.equal(isIndexableSitemapPath('/blog/ai-development-companies-canada'), false);
+  assert.equal(isIndexableSitemapPath('/blog/digital-marketing-cost-canada'), false);
+  // Not redirected, stays indexable.
+  assert.equal(isIndexableSitemapPath('/blog/website-cost-canada'), true);
+});

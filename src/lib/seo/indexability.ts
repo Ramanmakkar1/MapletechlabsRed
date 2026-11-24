@@ -13,6 +13,9 @@ export const NON_INDEXABLE_PATHS = new Set([
   // Merged into /services/branding and /services/saas-development (owner decision).
   '/services/product-design/brand-identity',
   '/services/web-development/saas-platforms',
+  // 301'd to service pages in next.config.ts (owner decision).
+  '/blog/ai-development-companies-canada',
+  '/blog/digital-marketing-cost-canada',
 ]);
 
 /**
