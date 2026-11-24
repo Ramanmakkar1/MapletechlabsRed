@@ -192,6 +192,9 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${articleUrl}#article`,
+    isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+    inLanguage: 'en-CA',
     headline: a.title,
     description: a.metaDescription,
     datePublished: a.date,
