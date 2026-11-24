@@ -85,7 +85,7 @@ const local: ServiceCityLocal = {
         ' Need more than an app? Our ',
         { href: '/locations/software-development-company-in-toronto', label: 'software development company in Toronto' },
         ' page covers custom software, web platforms and AI work for Toronto teams, and our guide to ',
-        { href: '/blog/app-development-companies-toronto', label: 'choosing an app development company in Toronto' },
+        { href: '/blog/app-development-companies-canada', label: 'choosing an app development company in Canada' },
         ' lists the questions to ask before you sign.',
       ],
     },
