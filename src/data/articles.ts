@@ -1614,7 +1614,7 @@ export const articles: Article[] = [
       { q: 'What is the hybrid approach to business software?', a: 'Buy off-the-shelf tools for the commodities — accounting, email, CRM — and build custom software only for the few workflows that are genuinely your business, often as the layer that connects your bought tools and adds automation. You get off-the-shelf economics where fit does not matter and custom fit where it does.' },
       { q: 'When should I not build custom software?', a: 'When a mature product already covers 80% or more of your need, when the problem is a common commodity, and when being different at it is not an advantage. In those cases building custom wastes money and time — a good software partner will tell you to buy instead.' },
     ],
-    cta: { href: '/services/web-development', label: 'See our custom software services' },
+    cta: { href: '/services/software-development', label: 'See our custom software services' },
   },
   {
     slug: 'shopify-vs-custom-ecommerce-canada',
