@@ -364,11 +364,11 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'AI development services in Calgary',
         body: [
           'Our Calgary AI work covers ',
-          { href: '/services/ai-development', label: 'AI development services' },
+          { href: '/services/ai-ml', label: 'AI development services' },
           ' such as document chatbots, LLM features, AI agents and workflow automation, built by an Alberta team at a fixed CAD price. You can read the projects behind that work in our ',
           { href: '/case-studies', label: 'AI and software case studies' },
           ', or see our ',
-          { href: '/locations/calgary', label: 'Calgary location page' },
+          { href: '/locations/software-development-company-in-calgary', label: 'Calgary location page' },
           ' for web and app development alongside AI.',
         ],
       },
@@ -737,7 +737,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'What digital marketing costs in Edmonton',
         body: [
           'Typical Canadian agency ranges — not quotes from us — are published in our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ': SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. After a free review we quote a fixed monthly scope in CAD for the channels you choose.',
         ],
       },
@@ -808,7 +808,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'What digital marketing costs in Calgary',
         body: [
           'These are typical Canadian ranges from our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', not quotes: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Your Calgary scope is quoted in CAD after a free review of your site, ads accounts and competitors.',
         ],
       },
@@ -893,7 +893,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'What digital marketing costs in Toronto',
         body: [
           'Typical Canadian agency ranges — not quotes from us — are published in our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ': SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Ad spend in the GTA often runs higher than smaller markets because clicks are more competitive. After a free review we quote a fixed monthly scope in CAD for the channels you choose.',
         ],
       },
@@ -958,7 +958,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'What digital marketing costs in Vancouver',
         body: [
           'Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' gives typical Canadian ranges in CAD, not quotes: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content marketing about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Your scope depends on the channels and work you need.',
         ],
       },
@@ -1031,7 +1031,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Reporting and what results to expect',
         body: [
           'You get regular reporting on rankings, organic traffic, conversions and the work completed, with plain-language notes on what moved and what we are testing next. SEO is not overnight: local gains often show in a few months, while competitive national terms take longer. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          { href: '/services/digital-marketing', label: 'Canadian digital marketing cost guide' },
           ', SEO retainers typically run $1,500-$10,000 per month depending on scope. Typical SEO budgets in CAD are outlined in the cost guide above, and you can compare our project prices on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
@@ -1104,7 +1104,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Retainers, reporting and what results cost',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. You can sanity-check our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit, and the scope is confirmed in writing before the first invoice.',
@@ -1177,7 +1177,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'SEO costs and monthly reporting',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Toronto is a competitive market, so we agree the scope in writing before the first invoice. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
@@ -2076,7 +2076,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'SEO costs and monthly reporting',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Metro Vancouver is a competitive market, so we agree the scope in writing before the first invoice. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
@@ -2895,7 +2895,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'SEO costs and monthly reporting',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a report with rankings, organic traffic and conversions, the work completed, and plain-language notes on what moved and what we are testing next. Ottawa spans government suppliers, professional services and competitive tech keywords, so we agree the scope in writing before the first invoice. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit. If you are still comparing firms, read our ',
@@ -3155,7 +3155,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Pricing and reporting',
         body: [
           'SEO retainers are typically about $1,500-$10,000 CAD per month, depending on your site, competition and scope. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          { href: '/services/digital-marketing', label: 'Canadian digital marketing cost guide' },
           ' explains the planning range. Each month we report on rankings, organic traffic and conversions, the work completed and the next priorities. We agree on the scope before the campaign starts.',
         ],
       },
@@ -3479,7 +3479,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Pricing and how we work',
         body: [
           'Digital marketing is quoted as a monthly retainer in CAD, not hourly. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' publishes the typical Canadian ranges: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Ottawa sits between smaller markets and the GTA in click costs, so your quote depends on the channels you choose. After a free review of your site and your Ottawa competitors, we agree a fixed monthly scope in writing before the first invoice, and you get a monthly report with rankings, traffic, ad spend and conversions.',
         ],
       },
@@ -3545,7 +3545,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Pricing and process',
         body: [
           'Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          { href: '/services/digital-marketing', label: 'Canadian digital marketing cost guide' },
           ' puts typical SEO at $1,500-$10,000 CAD per month, PPC management at $2,000-$15,000 plus ad spend, and full-service packages at $5,000-$25,000 per month. These are market estimates, not quotes. We start with a review of your site, audience and Montreal competitors, then agree on a monthly scope in CAD. Weekly calls keep work moving, and monthly reports cover traffic, ad spend, conversions, completed work and next steps.',
         ],
       },
@@ -3612,7 +3612,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Pricing and how we work',
         body: [
           'Digital marketing is quoted as a monthly retainer in CAD, not hourly. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' publishes the typical Canadian ranges: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Winnipeg sits below the largest Canadian click markets, so your quote depends on the channels you choose. After a free review of your site and your Winnipeg competitors, we agree a fixed monthly scope in writing before the first invoice, and you get a monthly report with rankings, traffic, ad spend and conversions.',
         ],
       },
@@ -3681,7 +3681,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Pricing and how we work',
         body: [
           'Digital marketing is quoted as a monthly retainer in CAD, not hourly. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' publishes the typical Canadian ranges: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. GTA click costs are among the highest in Canada, so your quote depends on the channels you choose. After a free review of your site and your Mississauga competitors, we agree a fixed monthly scope in writing before the first invoice, and you get a monthly report with rankings, traffic, ad spend and conversions.',
         ],
       },
@@ -3748,7 +3748,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Lead tracking and CAD pricing',
         body: [
           'Every campaign reports leads, not just clicks. We set up conversion tracking for form submissions, calls and quote requests, so each month you can see which channels produced real enquiries and what they cost. Digital marketing is quoted as a monthly retainer in CAD, not hourly. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' publishes the typical Canadian ranges: SEO about $1,500-$10,000 per month, PPC management about $2,000-$15,000 per month plus ad spend, social media about $1,000-$8,000 per month, content about $2,000-$10,000 per month, and full-service packages about $5,000-$25,000 per month. Regina sits below the largest Canadian click markets, so your quote depends on the channels you choose. After a free review of your site and your Regina competitors, we agree a fixed monthly scope in writing before the first invoice, and you get a monthly report with rankings, traffic, ad spend and conversions.',
         ],
       },
@@ -3996,7 +3996,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'SEO costs and reporting in CAD',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Mississauga local campaigns often sit at the lower end; corporate head-office and national terms sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
@@ -4118,7 +4118,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'SEO costs and reporting in CAD',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Single-location Winnipeg campaigns often sit at the lower end; bilingual sites and national or industrial terms sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
@@ -4663,7 +4663,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           'Rankings stall when the site is slow, poorly indexed or missing the pages buyers expect. We audit Core Web Vitals, crawl coverage and internal links, fix indexing blockers, tighten titles and meta descriptions, add schema where it helps, and build service and city pages that answer Hamilton-specific searches — from port logistics and industrial suppliers to clinic, legal and trade queries. Content targets what your market actually types, with internal links pointing authority at the pages that should convert. See our ',
           { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
           ' for the full scope, and our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          { href: '/services/digital-marketing', label: 'Canadian digital marketing cost guide' },
           ' for typical monthly retainer ranges in CAD.',
         ],
       },
@@ -4671,7 +4671,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'How we report results',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Single-location Hamilton campaigns often sit at the lower end; manufacturers and brands competing across the Golden Horseshoe or nationally sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next, in plain language.',
         ],
       },
@@ -4923,7 +4923,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Reporting and SEO pricing in CAD',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Single-location Kitchener, Waterloo or Cambridge campaigns often sit at the lower end; national SaaS and industrial B2B terms sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next, in plain language.',
         ],
       },
@@ -5437,7 +5437,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'SEO costs and reporting in CAD',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Single-location Brampton campaigns often sit at the lower end; logistics, manufacturing and brands competing across the GTA or nationally sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
@@ -5746,7 +5746,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           'Mapletech Labs is a software development company first, so the technical work is done by the engineers who build Next.js and WordPress sites every week. We audit Core Web Vitals, crawling and indexation, canonical tags, schema markup and internal linking on our ',
           { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
           ' page, then fix what is slowing pages or blocking crawlers — changes go into your codebase or CMS, not bolted on with plugins. SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. Each month you get a plain-language report with rankings, organic traffic and conversions, the work completed, and what we are testing next.',
         ],
       },
@@ -6042,7 +6042,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Technical SEO and pricing for Surrey businesses',
         body: [
           'Mapletech Labs is a software company first, so the engineers who build Next.js and WordPress sites every week handle your technical SEO. We fix crawl and indexing problems, slow pages and Core Web Vitals, canonical tags, schema markup and internal links in your codebase or CMS, not with stacks of plugins, and we set up proper language tags for multilingual sites. SEO is a monthly retainer in CAD. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'Canadian digital marketing cost guide' },
+          { href: '/services/digital-marketing', label: 'Canadian digital marketing cost guide' },
           ' shows SEO retainers typically running $1,500-$10,000 CAD per month, depending on competition, site size and scope. Every month you get a plain-language report on rankings, organic traffic and leads, plus the work done and what comes next.',
         ],
       },
@@ -6216,7 +6216,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'SEO costs and reporting in CAD',
         body: [
           'SEO is quoted as a monthly retainer in CAD. In our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ', SEO retainers typically run $1,500-$10,000 CAD per month, depending on competition, site size and scope. A single-location Markham clinic or trades campaign often sits at the lower end; tech companies competing for national or international category terms sit higher. Each month you get rankings, organic traffic and conversions, the work completed, and what we are testing next. You can compare our rates on ',
           { href: '/pricing', label: 'our pricing page' },
           ' before you commit.',
@@ -6390,7 +6390,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           'Mapletech Labs builds software first, so the engineers who build Next.js and WordPress sites every week handle the technical audit: Core Web Vitals, crawling and indexing, canonical tags, schema markup and internal links. Fixes go into your codebase or CMS rather than a stack of plugins. The full scope is on our ',
           { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
           ' page. SEO is quoted as a monthly retainer in CAD, and our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' puts typical SEO retainers at $1,500-$10,000 CAD per month, depending on competition, site size and scope. Every month you get a plain-language report with rankings, organic traffic, enquiries, the work completed and what we are testing next.',
         ],
       },
@@ -7254,7 +7254,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
           'Mapletech Labs builds software first, so the engineers who build Next.js and WordPress sites every week handle the technical audit: Core Web Vitals, crawling and indexing, canonical tags, schema markup and internal links. Fixes go into your codebase or CMS rather than a stack of plugins. The full scope is on our ',
           { href: '/services/digital-marketing/seo-services', label: 'SEO services' },
           ' page. SEO is quoted as a monthly retainer in CAD, and our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' puts typical SEO retainers at $1,500-$10,000 CAD per month, depending on competition, site size and scope. Every month you get a plain-language report with rankings, organic traffic, enquiries, the work completed and what we are testing next.',
         ],
       },
@@ -7600,7 +7600,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Honest local listings and SEO pricing in CAD',
         body: [
           'We do not have a London office, and we will not invent one for you either. If you serve London from a location in the region, your Google Business Profile and Bing Places listing are set up as a real storefront or service-area business, with categories that match your actual work and the same name, address and phone everywhere online. Virtual offices and fake addresses get listings suspended, so we never use them. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' puts typical SEO retainers at $1,500-$10,000 CAD per month; your figure depends on competition and site size, and it is fixed before work starts.',
         ],
       },
@@ -7918,7 +7918,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Technical SEO from engineers, with monthly CAD retainers',
         body: [
           'Because we build software every day, our engineers handle the technical side directly in your code or CMS: Core Web Vitals, crawl errors, indexing, canonical tags, structured data and internal links. Content work follows, with service and location pages written for Regina buyers rather than copied from other cities. Retainers are a fixed monthly figure in CAD, and our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' puts typical SEO retainers at $1,500-$10,000 CAD per month depending on competition and scope. Each month you get a plain report showing rankings, organic traffic, calls and form leads, the work completed and the next tests.',
         ],
       },
@@ -8878,7 +8878,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Honest local listings and SEO pricing in CAD',
         body: [
           'We do not have a Windsor office, and we will not invent one for you either. If you serve Windsor from a location in the region, your Google Business Profile and Bing Places listing are set up as a real storefront or service-area business, with categories that match your actual work and the same name, address and phone everywhere online. Virtual offices and fake addresses get listings suspended, so we never use them. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' puts typical SEO retainers at $1,500-$10,000 CAD per month; your figure depends on competition and site size, and it is fixed before work starts.',
         ],
       },
@@ -9890,7 +9890,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Monthly CAD retainers and clear reporting',
         body: [
           'SEO retainers for Laval businesses usually fall between $1,500 and $10,000 CAD a month, depending on how competitive your terms are and how much content you need. A single-location service business sits near the lower end, while bilingual campaigns, retailers competing with Montreal and national chains, and manufacturers targeting buyers across Canada sit higher. Our ',
-          { href: '/blog/digital-marketing-cost-canada', label: 'digital marketing cost guide for Canada' },
+          { href: '/services/digital-marketing', label: 'digital marketing cost guide for Canada' },
           ' explains how those budgets break down. We start with a free review, then quote one fixed monthly figure. Each month you get a plain report covering rankings, organic traffic, calls, bookings and form leads, the work we finished and what we will test next.',
         ],
       },
