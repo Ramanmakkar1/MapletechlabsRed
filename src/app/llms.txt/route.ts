@@ -1,6 +1,6 @@
 import { cities } from '@/data/cities';
 import { PROJECT_PRICING } from '@/data/pricing';
-import { PRIORITY_SERVICES, serviceCityPath } from '@/data/serviceCity';
+import { PRIORITY_SERVICES, serviceCityHref } from '@/data/serviceCity';
 import { services } from '@/data/services';
 import { work } from '@/data/work';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
@@ -69,7 +69,11 @@ function buildText(): string {
   out.push('');
   out.push('## Service and city pages');
   out.push('');
-  out.push(...lines(PRIORITY_SERVICES.flatMap(ps => ['edmonton', 'calgary', 'toronto', 'vancouver'].map(city => link(`${ps.label} in ${cities.find(c => c.slug === city)?.name ?? city.charAt(0).toUpperCase() + city.slice(1)}`, serviceCityPath(ps.serviceSlug, city))))));
+  out.push(...lines(PRIORITY_SERVICES.flatMap(ps => ['edmonton', 'calgary', 'toronto', 'vancouver'].map(city => {
+    const href = serviceCityHref(ps.serviceSlug, city);
+    if (href === `/services/${ps.serviceSlug}`) return null;
+    return link(`${ps.label} in ${cities.find(c => c.slug === city)?.name ?? city.charAt(0).toUpperCase() + city.slice(1)}`, href);
+  }))));
   out.push('');
   out.push('## Case studies');
   out.push('');
