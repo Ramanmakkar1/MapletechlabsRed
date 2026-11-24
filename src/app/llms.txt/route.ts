@@ -69,7 +69,7 @@ function buildText(): string {
   out.push('');
   out.push('## Service and city pages');
   out.push('');
-  out.push(...lines(PRIORITY_SERVICES.flatMap(ps => ['edmonton', 'calgary', 'toronto', 'vancouver'].map(city => link(`${ps.label} in ${city}`, serviceCityPath(ps.serviceSlug, city))))));
+  out.push(...lines(PRIORITY_SERVICES.flatMap(ps => ['edmonton', 'calgary', 'toronto', 'vancouver'].map(city => link(`${ps.label} in ${cities.find(c => c.slug === city)?.name ?? city.charAt(0).toUpperCase() + city.slice(1)}`, serviceCityPath(ps.serviceSlug, city))))));
   out.push('');
   out.push('## Case studies');
   out.push('');
