@@ -68,7 +68,7 @@ export default function RamanMakkarPageClient() {
               <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20 }}>Published Articles</h2>
               <div style={{ display: 'grid', gap: 12 }}>
                 {[
-                  { title: 'Top 10 AI Development Companies in Canada', href: '/blog/ai-development-companies-canada' },
+                  { title: 'Top 10 AI Development Companies in Canada', href: '/services/ai-ml' },
                   { title: 'How Much Does a Custom Website Cost in Canada?', href: '/blog/website-cost-canada' },
                   { title: 'How to Choose a Software Development Company in Canada', href: '/blog/choose-software-development-company-canada' },
                   { title: 'SaaS Development Cost in Canada (2026)', href: '/blog/saas-development-cost-canada' },
