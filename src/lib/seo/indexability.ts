@@ -26,12 +26,27 @@ export const NON_INDEXABLE_PATHS = new Set([
 ]);
 
 /**
+ * Paths whose own route metadata sets `robots: { index: false }`. They are live
+ * and reachable (200) but must never be advertised to crawlers, so the sitemap,
+ * llms.txt and internal-link helpers all drop them. Keep this list next to the
+ * `robots` export of each page so a noindex page cannot be re-advertised by a
+ * sitemap or link change.
+ */
+export const NOINDEX_PATHS = new Set([
+  '/blog/app-development-companies-edmonton',
+  '/blog/software-development-companies-calgary',
+  '/blog/web-development-companies-toronto',
+]);
+
+/**
  * Shared indexability rule for sitemap entries. A canonical path is eligible
- * only when it is not redirected/removed and its route metadata does not mark
- * it noindex (city/service mesh pages use isIndexableCityService for that).
+ * only when it is not redirected/removed, not marked noindex, and its route
+ * metadata does not mark it noindex (city/service mesh pages use
+ * isIndexableCityService for that).
  */
 export function isIndexableSitemapPath(pathname: string): boolean {
   if (NON_INDEXABLE_PATHS.has(pathname)) return false;
+  if (NOINDEX_PATHS.has(pathname)) return false;
   if (isCityListiclePath(pathname)) return false;
 
   const mesh = pathname.match(/^\/locations\/([^/]+)\/([^/]+)$/);

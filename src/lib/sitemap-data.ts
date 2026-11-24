@@ -154,12 +154,25 @@ export function xmlEscape(value: string): string {
 }
 
 /**
- * Keep redirected, removed and noindex URLs out of every child sitemap. This
- * is applied at the builder level so route handlers, the sitemap index and
- * llms.txt all consume the same indexability-safe list.
+ * True only when the entry's loc is already the page's own canonical URL: no
+ * query string, hash, duplicate slash or trailing slash. A loc that canonicalises
+ * elsewhere is a canonicalised duplicate, so it must not be advertised.
+ */
+function isSelfCanonicalLoc(loc: string): boolean {
+  const path = canonicalPath(loc);
+  if (path === '/') return loc === BASE_URL || loc === `${BASE_URL}/`;
+  return loc === `${BASE_URL}${path}`;
+}
+
+/**
+ * Keep redirected, removed, noindex and non-self-canonical URLs out of every
+ * child sitemap. This is applied at the builder level so route handlers, the
+ * sitemap index and llms.txt all consume the same indexability-safe list.
  */
 export function filterIndexableEntries(entries: SitemapEntry[]): SitemapEntry[] {
-  return entries.filter(entry => isIndexableSitemapPath(canonicalPath(entry.loc)));
+  return entries.filter(entry =>
+    isSelfCanonicalLoc(entry.loc) && isIndexableSitemapPath(canonicalPath(entry.loc))
+  );
 }
 
 /** Newest lastmod among a set of entries, or undefined when none carries one. */

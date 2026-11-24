@@ -30,6 +30,17 @@ test('301-d blog posts stay out of the sitemap', () => {
   assert.equal(isIndexableSitemapPath('/blog/website-cost-canada'), true);
 });
 
+test('noindex blog posts stay out of the sitemap and link rewrites', () => {
+  for (const path of [
+    '/blog/app-development-companies-edmonton',
+    '/blog/software-development-companies-calgary',
+    '/blog/web-development-companies-toronto',
+  ]) {
+    assert.equal(isIndexableSitemapPath(path), false, `${path} is noindex and must be out of the sitemap`);
+    assert.equal(isIndexableHref(path), false, `${path} is noindex and must not be a link target`);
+  }
+});
+
 test('app-development location pages canonicalise to services and stay out of the sitemap', () => {
   for (const city of ['edmonton', 'calgary', 'toronto', 'vancouver']) {
     const path = `/locations/app-development-company-in-${city}`;
