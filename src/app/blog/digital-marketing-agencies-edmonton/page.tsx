@@ -39,8 +39,8 @@ export default function Page() {
         relatedServices={
           <RelatedServices
             links={[
-              { href: '/locations/digital-marketing-agency-in-edmonton', label: 'Digital marketing agency in Edmonton' },
-              { href: '/locations/seo-company-in-edmonton', label: 'SEO company in Edmonton' },
+              { href: '/services/digital-marketing/seo-services', label: 'SEO services across Canada' },
+              { href: '/services/digital-marketing/local-seo', label: 'Local SEO services' },
               { href: '/services/digital-marketing', label: 'Digital marketing services' },
               { href: '/services/digital-marketing/google-ads-ppc', label: 'Google Ads management' },
             ]}
