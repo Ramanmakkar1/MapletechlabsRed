@@ -8,7 +8,7 @@ const services = [
   { title: 'Web Development', desc: 'Fast, secure web platforms and enterprise portals engineered to scale — from marketing sites to the complex internal systems that replace spreadsheets and legacy tools.', href: '/locations/web-development-company-in-edmonton' },
   { title: 'AI & Machine Learning', desc: 'LLM integration, intelligent automation and predictive analytics built for production — wired into the systems your team already uses, where a model removes real work.', href: '/locations/ai-development-company-in-edmonton' },
   { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols and decentralized apps engineered for security and audit — practical Web3 that solves a real problem rather than chasing a trend.', href: '/services/blockchain-web3' },
-  { title: 'Cloud & DevOps', desc: 'AWS and Azure architecture, Kubernetes and CI/CD pipelines for zero-downtime releases — infrastructure that scales with demand and costs less to run.', href: '/services/cloud-devops' },
+  { title: 'Cloud & DevOps', desc: 'AWS and Azure architecture, Kubernetes and CI/CD pipelines for zero-downtime releases — infrastructure that scales with demand and costs less to run.', href: '/locations/edmonton/cloud-devops' },
   { title: 'Product Design', desc: 'UX research, product strategy, prototyping and design systems that convert — interfaces your customers find obvious and your engineers can build on.', href: '/locations/ui-ux-design-company-in-edmonton' },
 ];
 
