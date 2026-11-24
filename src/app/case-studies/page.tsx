@@ -34,7 +34,10 @@ const jsonLd = {
       name: TITLE,
       description: DESCRIPTION,
       about: { '@id': 'https://mapletechlabs.ca/#organization' },
+      isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+      inLanguage: 'en-CA',
       mainEntity: { '@id': `${canonicalUrl('/case-studies')}#list` },
+      breadcrumb: { '@id': `${canonicalUrl('/case-studies')}#breadcrumb` },
     },
     {
       '@type': 'ItemList',
@@ -48,6 +51,7 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
+      '@id': `${canonicalUrl('/case-studies')}#breadcrumb`,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: canonicalUrl('/') },
         { '@type': 'ListItem', position: 2, name: 'Case Studies', item: canonicalUrl('/case-studies') },
@@ -61,7 +65,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
       <PageClient />
     </>
