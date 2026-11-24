@@ -59,7 +59,7 @@ const jsonLd = {
   about: [
     { '@type': 'Service', name: 'Enterprise Portals', url: 'https://mapletechlabs.ca/services/web-development/enterprise-portals' },
     { '@type': 'Service', name: 'Mobile App Development', url: 'https://mapletechlabs.ca/services/mobile-app-development' },
-    { '@type': 'Service', name: 'App Development in Vancouver', url: 'https://mapletechlabs.ca/locations/app-development-company-in-vancouver' },
+    { '@type': 'Service', name: 'App Development in Vancouver', url: 'https://mapletechlabs.ca/services/mobile-app-development/vancouver' },
   ],
   url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/case-studies/${SLUG}`,
