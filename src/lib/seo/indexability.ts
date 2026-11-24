@@ -1,4 +1,4 @@
-import { isIndexableCityService, isIndexableLocationSlug } from '@/data/serviceCity';
+import { getServiceCityCombo, isIndexableCityService, isIndexableLocationSlug, serviceCityHref } from '@/data/serviceCity';
 import { canonicalPath } from './canonical';
 import { isCityListiclePath } from './listicles';
 
@@ -45,4 +45,25 @@ export function isIndexableSitemapPath(pathname: string): boolean {
 
 export function isIndexableHref(href: string): boolean {
   return isIndexableSitemapPath(canonicalPath(href));
+}
+
+export function indexableLinkHref(href: string): string {
+  if (!href.startsWith('/locations/')) return href;
+  if (isIndexableHref(href)) return href;
+
+  const m = href.match(/^\/locations\/([^/?#]+)(?:\/([^/?#]+))?\/?$/);
+  if (!m) return href;
+
+  if (m[2]) {
+    return serviceCityHref(m[2], m[1]);
+  }
+
+  const combo = getServiceCityCombo(m[1]);
+  return combo ? serviceCityHref(combo.serviceSlug, combo.citySlug) : href;
+}
+
+export function rewriteLocationLinks(html: string): string {
+  return html.replace(/(href=["'])(\/locations\/[^"']+)([^"']*["'])/g, (_match, quote: string, href: string, rest: string) =>
+    quote + indexableLinkHref(href) + rest
+  );
 }
