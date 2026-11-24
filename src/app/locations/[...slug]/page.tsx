@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const slug = segments.join('/');
   const page = getLocationPage(slug);
   const baseMetadata = page?.metadata ?? {};
-  const canonical = canonicalUrl(`/locations/${slug}`);
+  const canonical = baseMetadata.alternates?.canonical ?? canonicalUrl(`/locations/${slug}`);
   return {
     ...baseMetadata,
     alternates: {
