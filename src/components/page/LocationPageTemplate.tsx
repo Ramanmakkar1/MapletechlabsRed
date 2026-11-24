@@ -137,9 +137,29 @@ export default function LocationPageTemplate(p: LocationProps) {
     ],
   };
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `Custom software development in ${name}`,
+    serviceType: 'Custom Software Development',
+    provider: {
+      '@type': 'Organization',
+      '@id': 'https://mapletechlabs.ca/#organization',
+      name: 'Mapletech Labs',
+      url: 'https://mapletechlabs.ca',
+    },
+    areaServed: {
+      '@type': 'City',
+      name,
+      ...(city ? { containedInPlace: { '@type': 'AdministrativeArea', name: city.province } } : {}),
+    },
+    url: canonicalUrl(`/locations/software-development-company-in-${p.slug}`),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navbar />
       <main id="main-content">
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} />
