@@ -100,6 +100,7 @@ export const isServedCityService = (citySlug: string, serviceSlug: string): bool
  */
 export const isIndexableCityService = (citySlug: string, serviceSlug: string): boolean =>
   isServedCityService(citySlug, serviceSlug) &&
+  !NICHE_SERVICES.has(serviceSlug) &&
   (isPriorityService(serviceSlug) || (MESH_INDEX_CITIES.has(citySlug) && serviceSlug !== 'branding'));
 
 /** Canonical path for a service in a city: keyword URL for priority services, else the mesh URL. */

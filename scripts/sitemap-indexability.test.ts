@@ -45,10 +45,10 @@ test('live service, location, case-study and blog URLs are retained', () => {
     '/locations/ai-development-company-in-toronto',
     '/case-studies/fintech-trading-platform',
     '/blog/what-is-agentic-ai',
-    '/locations/toronto/ar-vr',
   ]) {
     assert.equal(urls.has(`${BASE_URL}${path}`), true, `${path} must stay in the sitemap`);
   }
 
   assert.equal(urls.has(`${BASE_URL}/locations/winnipeg/ar-vr`), false, 'noindex city/niche pages must stay out');
+  assert.equal(urls.has(`${BASE_URL}/locations/toronto/ar-vr`), false, 'noindex niche pages must stay out');
 });
