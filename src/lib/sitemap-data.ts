@@ -11,6 +11,7 @@ export const BASE_URL = siteOrigin();
 const REDIRECTED_LOCATION_SLUGS = new Set([
   '/locations/toronto/game-development',
   '/locations/saas-development-company-in-windsor',
+  '/locations/kitchener/blockchain-web3',
 ]);
 
 export const serviceSlugs = [

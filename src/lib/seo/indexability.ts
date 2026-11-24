@@ -10,6 +10,7 @@ import { isCityListiclePath } from './listicles';
 export const NON_INDEXABLE_PATHS = new Set([
   '/locations/toronto/game-development',
   '/locations/saas-development-company-in-windsor',
+  '/locations/kitchener/blockchain-web3',
   // Merged into /services/branding and /services/saas-development (owner decision).
   '/services/product-design/brand-identity',
   '/services/web-development/saas-platforms',
