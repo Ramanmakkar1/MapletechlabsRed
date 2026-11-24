@@ -3,6 +3,27 @@ import test from 'node:test';
 
 import { localServiceSchema } from './business.ts';
 
+test('localServiceSchema emits a LocalBusiness node with full NAP', () => {
+  const schema = localServiceSchema({
+    cityName: 'Edmonton',
+    provinceName: 'Alberta',
+    url: 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton',
+  });
+
+  assert.equal(schema['@type'], 'LocalBusiness');
+  assert.equal(schema.name, 'Mapletech Labs');
+  assert.equal(schema.url, 'https://mapletechlabs.ca');
+  assert.equal(schema.telephone, '+1-403-604-8692');
+  assert.equal(schema.email, 'hello@mapletechlabs.ca');
+  assert.equal(schema.address.addressLocality, 'Edmonton');
+  assert.equal(schema.address.addressRegion, 'AB');
+  assert.equal(schema.address.postalCode, 'T5J 1B9');
+  assert.equal(schema.address.addressCountry, 'CA');
+  assert.equal(schema.logo, 'https://mapletechlabs.ca/logo.png');
+  assert.ok(Array.isArray(schema.sameAs) && schema.sameAs.length > 0);
+  assert.equal(schema.parentOrganization['@id'], 'https://mapletechlabs.ca/#organization');
+});
+
 test('localServiceSchema includes the page city in areaServed', () => {
   const schema = localServiceSchema({
     cityName: 'Halifax',
