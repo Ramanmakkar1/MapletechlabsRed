@@ -29,3 +29,11 @@ test('301-d blog posts stay out of the sitemap', () => {
   // Not redirected, stays indexable.
   assert.equal(isIndexableSitemapPath('/blog/website-cost-canada'), true);
 });
+
+test('app-development location pages canonicalise to services and stay out of the sitemap', () => {
+  for (const city of ['edmonton', 'calgary', 'toronto', 'vancouver']) {
+    const path = `/locations/app-development-company-in-${city}`;
+    assert.equal(isIndexableHref(path), false, `${path} must not be a link target`);
+    assert.equal(isIndexableSitemapPath(path), false, `${path} must be out of the sitemap`);
+  }
+});

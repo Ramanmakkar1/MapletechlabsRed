@@ -16,6 +16,13 @@ export const NON_INDEXABLE_PATHS = new Set([
   // 301'd to service pages in next.config.ts (owner decision).
   '/blog/ai-development-companies-canada',
   '/blog/digital-marketing-cost-canada',
+  // Canonicalised to /services/mobile-app-development/<city> (owner decision:
+  // keep the services pages, stop the competing /locations app-development
+  // keyword pages from appearing in the index and sitemap).
+  '/locations/app-development-company-in-edmonton',
+  '/locations/app-development-company-in-calgary',
+  '/locations/app-development-company-in-toronto',
+  '/locations/app-development-company-in-vancouver',
 ]);
 
 /**

@@ -181,6 +181,13 @@ function buildLocationPage(slug: string): LocationPageData | null {
   const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
   const description = localEntry?.description ?? data.description;
 
+  // Owner decision: the app-development keyword pages for Edmonton, Calgary,
+  // Toronto and Vancouver canonicalise to /services/mobile-app-development/<city>
+  // so the two page sets don't compete for the same 'app development <city>' query.
+  const canonical = (MOBILE_CITY_PAGES.includes(combo.citySlug) &&
+    slug === `app-development-company-in-${combo.citySlug}`)
+    ? `https://mapletechlabs.ca/services/mobile-app-development/${combo.citySlug}`
+    : url;
   const metadata: Metadata = {
     title: seoTitle(finalTitle),
     description: seoDescription(description),
@@ -190,7 +197,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
       url,
       type: 'website',
     },
-    alternates: { canonical: url },
+    alternates: { canonical },
     // Keyword location pages with no local search demand stay crawlable but out of the index.
     ...(isIndexableLocationSlug(slug) ? {} : { robots: { index: false, follow: true } }),
   };
