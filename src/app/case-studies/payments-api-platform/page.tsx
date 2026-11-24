@@ -55,7 +55,7 @@ const jsonLd = {
   about: [
     { '@type': 'Service', name: 'API & Backend Development', url: 'https://mapletechlabs.ca/services/web-development/api-backend' },
     { '@type': 'Service', name: 'SaaS Development', url: 'https://mapletechlabs.ca/services/saas-development' },
-    { '@type': 'Service', name: 'SaaS Development in Ottawa', url: 'https://mapletechlabs.ca/locations/saas-development-company-in-ottawa' },
+    { '@type': 'Service', name: 'Software Development in Ottawa', url: 'https://mapletechlabs.ca/locations/software-development-company-in-ottawa' },
   ],
   url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/case-studies/${SLUG}`,
