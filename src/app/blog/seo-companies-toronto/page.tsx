@@ -39,8 +39,8 @@ export default function Page() {
         relatedServices={
           <RelatedServices
             links={[
-              { href: '/locations/seo-company-in-toronto', label: 'SEO company in Toronto' },
-              { href: '/locations/digital-marketing-agency-in-toronto', label: 'Digital marketing agency in Toronto' },
+              { href: '/services/digital-marketing', label: 'Digital marketing services' },
+              { href: '/services/digital-marketing/google-ads-ppc', label: 'Google Ads PPC management' },
               { href: '/services/digital-marketing/seo-services', label: 'SEO services across Canada' },
               { href: '/services/digital-marketing/local-seo', label: 'Local SEO services' },
             ]}
