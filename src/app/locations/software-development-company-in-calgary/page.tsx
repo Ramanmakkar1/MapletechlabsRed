@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const dynamic = 'force-static';
 export const revalidate = 31536000;
@@ -38,6 +39,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: 'https://mapletechlabs.ca' }, { position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' }, { position: 3, name: 'Software Development in Calgary', item: 'https://mapletechlabs.ca/locations/software-development-company-in-calgary' }]} />
       <PageClient />
     </>
   );
