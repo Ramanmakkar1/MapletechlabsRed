@@ -39,8 +39,8 @@ export default function Page() {
         relatedServices={
           <RelatedServices
             links={[
-              { href: '/locations/seo-company-in-calgary', label: 'SEO company in Calgary' },
-              { href: '/locations/digital-marketing-agency-in-calgary', label: 'Digital marketing agency in Calgary' },
+              { href: '/services/digital-marketing', label: 'Digital marketing services' },
+              { href: '/locations/web-design-company-in-calgary', label: 'Web design company in Calgary' },
               { href: '/services/digital-marketing/seo-services', label: 'SEO services across Canada' },
               { href: '/services/digital-marketing/local-seo', label: 'Local SEO services' },
             ]}
