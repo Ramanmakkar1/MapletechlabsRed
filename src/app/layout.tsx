@@ -138,6 +138,7 @@ const organizationSchema = {
     "Best App Award, Personal Growth, Google 2024",
     "Advanced Tier Services Partner, AWS 2024",
     "Top 100 North America, Red Herring 2023",
+    "Deloitte Fast 50, 2023",
   ],
   knowsAbout: [
     "Custom software development",
