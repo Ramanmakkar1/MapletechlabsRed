@@ -4,7 +4,7 @@ const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, la
 // Honest hero figures: the company's own verifiable facts, not invented client metrics.
 const heroStats = pair([['2018', 'Founded in Edmonton'], ['12', 'Canadian cities served'], ['1 day', 'To a senior-engineer reply']]);
 const services = [
-  { title: 'Mobile App Development', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: '/locations/app-development-company-in-edmonton' },
+  { title: 'Mobile App Development', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: '/services/mobile-app-development/edmonton' },
   { title: 'Web Development', desc: 'Fast, secure web platforms and enterprise portals engineered to scale — from marketing sites to the complex internal systems that replace spreadsheets and legacy tools.', href: '/locations/web-development-company-in-edmonton' },
   { title: 'AI & Machine Learning', desc: 'LLM integration, intelligent automation and predictive analytics built for production — wired into the systems your team already uses, where a model removes real work.', href: '/locations/ai-development-company-in-edmonton' },
   { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols and decentralized apps engineered for security and audit — practical Web3 that solves a real problem rather than chasing a trend.', href: '/services/blockchain-web3' },
