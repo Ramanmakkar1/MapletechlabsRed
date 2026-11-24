@@ -13,7 +13,7 @@ import { serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
-import { isIndexableHref } from '@/lib/seo/indexability';
+import { isIndexableHref, rewriteLocationLinks } from '@/lib/seo/indexability';
 
 type CityService = { label: string; path: (city: string) => string; noun?: string };
 
@@ -106,11 +106,11 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
     case 'h2':
       return <h2 id={b.id} style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.03em', margin: '0 0 20px', scrollMarginTop: 100 }}>{b.text}</h2>;
     case 'p':
-      return <p style={{ fontSize: 16.5, color: 'var(--body)', lineHeight: 1.8, marginBottom: 18 }} dangerouslySetInnerHTML={{ __html: b.html }} />;
+      return <p style={{ fontSize: 16.5, color: 'var(--body)', lineHeight: 1.8, marginBottom: 18 }} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(b.html) }} />;
     case 'ul':
       return (
         <ul style={{ margin: '0 0 22px', paddingLeft: 22, display: 'grid', gap: 10 }}>
-          {b.items.map((it, i) => <li key={i} style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75 }} dangerouslySetInnerHTML={{ __html: it }} />)}
+          {b.items.map((it, i) => <li key={i} style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75 }} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(it) }} />)}
         </ul>
       );
     case 'ol':
@@ -119,7 +119,7 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
           {b.items.map((it, i) => (
             <li key={i} style={{ display: 'grid', gridTemplateColumns: '32px 1fr', gap: 14, alignItems: 'start' }}>
               <span style={{ width: 32, height: 32, borderRadius: '50%', border: '1px solid var(--brand)', color: 'var(--brand)', fontSize: 14, fontWeight: 700, display: 'grid', placeItems: 'center', flexShrink: 0 }}>{i + 1}</span>
-              <span style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, paddingTop: 4 }} dangerouslySetInnerHTML={{ __html: it }} />
+              <span style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, paddingTop: 4 }} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(it) }} />
             </li>
           ))}
         </ol>
@@ -132,7 +132,7 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
               <span style={{ width: 24, height: 24, borderRadius: '50%', border: '1px solid var(--brand)', color: 'var(--brand)', display: 'grid', placeItems: 'center', flexShrink: 0, marginTop: 3 }}><Check /></span>
               <div>
                 <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: 3 }}>{it.term}</strong>
-                <span style={{ color: 'var(--body)', fontSize: 15.5, lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: it.text }} />
+                <span style={{ color: 'var(--body)', fontSize: 15.5, lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(it.text) }} />
               </div>
             </li>
           ))}
@@ -144,7 +144,7 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
           {b.items.map((it, i) => (
             <div key={i} className="tile" style={{ padding: 'clamp(20px, 2vw, 26px)' }}>
               <h3 style={{ fontSize: 16.5, fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px' }}>{it.title}</h3>
-              <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }} dangerouslySetInnerHTML={{ __html: it.text }} />
+              <p style={{ fontSize: 14.5, color: 'var(--body)', lineHeight: 1.7, margin: 0 }} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(it.text) }} />
             </div>
           ))}
         </div>
@@ -153,7 +153,7 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
       return (
         <div style={{ border: `1px solid ${b.tone === 'brand' ? 'var(--brand)' : 'var(--line)'}`, background: b.tone === 'brand' ? 'transparent' : 'var(--surface-alt)', borderRadius: 16, padding: 'clamp(22px, 2.4vw, 28px)', margin: '0 0 22px' }}>
           {b.title && <p style={{ fontSize: 15, fontWeight: 700, color: b.tone === 'brand' ? 'var(--brand)' : 'var(--ink)', margin: '0 0 8px' }}>{b.title}</p>}
-          <p style={{ fontSize: 16, color: 'var(--ink)', lineHeight: 1.75, margin: 0, fontWeight: 500 }} dangerouslySetInnerHTML={{ __html: b.text }} />
+          <p style={{ fontSize: 16, color: 'var(--ink)', lineHeight: 1.75, margin: 0, fontWeight: 500 }} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(b.text) }} />
         </div>
       );
     case 'quote':
@@ -167,7 +167,7 @@ function BlockView({ b, heading }: { b: Block; heading?: string }) {
       return (
         <>
           <p className="article-table-hint">Scroll sideways or use arrow keys to see all columns.</p>
-          <div className="article-table" role="region" tabIndex={0} aria-label={heading ? `Table: ${heading}` : 'Comparison table'} dangerouslySetInnerHTML={{ __html: b.html }} />
+          <div className="article-table" role="region" tabIndex={0} aria-label={heading ? `Table: ${heading}` : 'Comparison table'} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(b.html) }} />
         </>
       );
   }
@@ -242,12 +242,12 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
               <article style={{ minWidth: 0 }}>
                 <div className="reveal" style={{ marginBottom: 44 }}>
                   {a.answer && (
-                    <p style={{ fontSize: 18.5, color: 'var(--ink)', lineHeight: 1.75, marginBottom: 18, fontWeight: 500 }} dangerouslySetInnerHTML={{ __html: a.answer }} />
+                    <p style={{ fontSize: 18.5, color: 'var(--ink)', lineHeight: 1.75, marginBottom: 18, fontWeight: 500 }} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(a.answer) }} />
                   )}
                   {a.intro.map((p, i) => {
                     if (a.answer && i === 0 && p === a.answer) return null;
                     return (
-                      <p key={i} style={{ fontSize: 18.5, color: i === 0 ? 'var(--ink)' : 'var(--body)', lineHeight: 1.75, marginBottom: 18, fontWeight: i === 0 ? 500 : 400 }} dangerouslySetInnerHTML={{ __html: p }} />
+                      <p key={i} style={{ fontSize: 18.5, color: i === 0 ? 'var(--ink)' : 'var(--body)', lineHeight: 1.75, marginBottom: 18, fontWeight: i === 0 ? 500 : 400 }} dangerouslySetInnerHTML={{ __html: rewriteLocationLinks(p) }} />
                     );
                   })}
                 </div>
