@@ -181,7 +181,7 @@ export function newestLastmod(entries: SitemapEntry[]): string | undefined {
 
 export function pageSitemapEntries(): SitemapEntry[] {
   return filterIndexableEntries([
-    { loc: BASE_URL, lastmod: '2026-03-15', changefreq: 'weekly', priority: '1.0' },
+    { loc: BASE_URL, lastmod: '2026-11-23', changefreq: 'weekly', priority: '1.0' },
     { loc: `${BASE_URL}/about`, lastmod: '2026-11-13', changefreq: 'monthly', priority: '0.8' },
     { loc: `${BASE_URL}/contact`, lastmod: '2026-11-14', changefreq: 'monthly', priority: '0.9' },
     { loc: `${BASE_URL}/pricing`, lastmod: '2026-11-02', changefreq: 'monthly', priority: '0.8' },
