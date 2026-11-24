@@ -133,7 +133,7 @@ export default function LocationPageTemplate(p: LocationProps) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: canonicalUrl('/') },
       { '@type': 'ListItem', position: 2, name: 'Locations', item: canonicalUrl('/locations') },
-      { '@type': 'ListItem', position: 3, name, item: canonicalUrl(`/locations/${p.slug}`) },
+      { '@type': 'ListItem', position: 3, name, item: canonicalUrl(`/locations/software-development-company-in-${p.slug}`) },
     ],
   };
 
