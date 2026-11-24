@@ -9,7 +9,7 @@
  * that cannot be verified.
  */
 
-import { serviceCityPath } from './serviceCity';
+import { serviceCityPath, serviceCityHref } from './serviceCity';
 import { blogDescription } from '@/lib/seo/blog';
 import { BLOG_AUTHOR } from '@/lib/seo/business';
 
@@ -4306,7 +4306,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Mapletech Labs is an Edmonton app development team headquartered in the city. We build native iOS and Android apps and cross-platform apps with React Native and Flutter, and we architect the wider product: scalable backend APIs, cloud infrastructure on AWS and GCP, CI/CD pipelines and analytics dashboards. Our team has delivered 300+ product launches, and we use Edmonton\'s AI talent to integrate machine learning features directly into mobile applications.' },
       { type: 'p', html: 'Our work includes a high-performance e-commerce platform for a leading Canadian retailer that drove 3x revenue growth and handles 2M+ monthly visitors, and a telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider. All source code, app store accounts, cloud accounts and design files we create belong to you, with no lock-in. Discovery is free, and you speak directly with the senior engineers who build your app.' },
 
-      { type: 'callout', tone: 'brand', title: 'Talk to an Edmonton app team about your project', text: `See how we scope and price Edmonton builds on our <a href="${serviceCityPath('mobile-app-development', 'edmonton')}">app development company in Edmonton</a> page, or explore our <a href="/services/mobile-app-development">mobile app development services</a>.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an Edmonton app team about your project', text: `See how we scope and price Edmonton builds on our <a href="${serviceCityHref('mobile-app-development', 'edmonton')}">app development company in Edmonton</a> page, or explore our <a href="/services/mobile-app-development">mobile app development services</a>.` },
     ],
     keyTakeaways: [
       'Compare Edmonton app companies on discovery, platform reasoning, portfolio evidence, ownership and post-launch support, not on a ranking.',
@@ -4322,7 +4322,7 @@ export const articles: Article[] = [
       { q: 'Which privacy laws apply to an app built in Edmonton?', a: 'Alberta\'s Personal Information Protection Act (PIPA) covers personal information handled by private organisations in Alberta, and PIPEDA applies to commercial activity across provinces and borders. Your app should collect only what it needs, get clear consent and secure the data.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: serviceCityPath('mobile-app-development', 'edmonton'), label: 'See our Edmonton app development services' },
+    cta: { href: serviceCityHref('mobile-app-development', 'edmonton'), label: 'See our Edmonton app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'edmonton' },
   },
   {
@@ -4412,7 +4412,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Most private-sector apps in Calgary handle personal information, so privacy law applies from day one. Alberta’s Personal Information Protection Act (PIPA) covers personal information handled by private organisations in the province, and the federal PIPEDA applies to commercial activity across provinces and borders. In practice, your app company should help you collect only the data you need, explain it in a clear privacy notice, get meaningful consent, secure data in storage and in transit, and know which cloud regions and third-party services touch it.' },
       { type: 'p', html: 'Our <a href="/blog/app-privacy-compliance-canada">app privacy compliance guide for Canada</a> covers what to plan for. Treat it as practical guidance, not legal advice, and involve your own lawyer for regulated data.' },
 
-      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Calgary project', text: `See how we work on our <a href="${serviceCityPath('mobile-app-development', 'calgary')}">app development company in Calgary</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or visit our <a href="/locations/software-development-company-in-calgary">software development company in Calgary</a> page.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Calgary project', text: `See how we work on our <a href="${serviceCityHref('mobile-app-development', 'calgary')}">app development company in Calgary</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or visit our <a href="/locations/software-development-company-in-calgary">software development company in Calgary</a> page.` },
     ],
     keyTakeaways: [
       'Calgary app demand spans energy and oilfield field apps, agtech, fintech, logistics and customer-facing apps, and each needs a different build.',
@@ -4428,7 +4428,7 @@ export const articles: Article[] = [
       { q: 'Which privacy laws apply to an app built in Calgary?', a: 'Alberta’s Personal Information Protection Act (PIPA) covers personal information handled by private organisations in Alberta, and PIPEDA applies to commercial activity across provinces and borders. Your app should collect only what it needs, get clear consent and secure the data.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: serviceCityPath('mobile-app-development', 'calgary'), label: 'See our Calgary app development services' },
+    cta: { href: serviceCityHref('mobile-app-development', 'calgary'), label: 'See our Calgary app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'calgary' },
   },
   {
@@ -4512,7 +4512,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, and we build iOS and Android apps for Vancouver and BC businesses. We do not have a Vancouver office; Edmonton is just one hour ahead of Vancouver, so our working days almost fully overlap and you rarely wait for an answer, and we can hold in-person workshops in Vancouver by arrangement. You speak directly with the senior engineers who build your app, you sign with a Canadian company priced in CAD, and scope and price are fixed before any work starts. Discovery is free.' },
       { type: 'p', html: 'Our work includes a high-performance e-commerce platform for a leading Canadian retailer that drove 3x revenue growth and handles 2M+ monthly visitors, and a telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider. All source code, app store accounts, cloud accounts and design files we create belong to you, with no lock-in.' },
 
-      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Vancouver project', text: `See how we scope and price Vancouver builds on our <a href="${serviceCityPath('mobile-app-development', 'vancouver')}">app development company in Vancouver</a> page, or explore our <a href="/services/mobile-app-development">mobile app development services</a>.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Vancouver project', text: `See how we scope and price Vancouver builds on our <a href="${serviceCityHref('mobile-app-development', 'vancouver')}">app development company in Vancouver</a> page, or explore our <a href="/services/mobile-app-development">mobile app development services</a>.` },
     ],
     keyTakeaways: [
       'A good Vancouver app company delivers discovery and a written scope, a tested prototype, regular builds on your phone, real-device QA and a support plan.',
@@ -4528,7 +4528,7 @@ export const articles: Article[] = [
       { q: 'Do I need an app company with an office in Vancouver?', a: 'Not always. A local office makes workshops easy, but a Canadian team in a nearby time zone can deliver the same quality remotely. Focus on a named senior contact, a fixed scope in CAD and experience with apps like yours.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: serviceCityPath('mobile-app-development', 'vancouver'), label: 'See our Vancouver app development services' },
+    cta: { href: serviceCityHref('mobile-app-development', 'vancouver'), label: 'See our Vancouver app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'vancouver' },
   },
   {
@@ -5165,7 +5165,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Toronto businesses' },
       { type: 'p', html: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, and we build iOS and Android apps for Toronto businesses. Edmonton is only two hours behind Toronto, so our working days overlap for most of yours and questions get answered the same day. We work with fintech firms, retailers, health providers and SaaS companies across the city. You deal directly with the senior engineers who write your code, and your contract is with a Canadian company, priced in CAD. Before any work starts you get a fixed scope and a fixed price. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your app.' },
       { type: 'p', html: 'We do not have a Toronto office. We serve Toronto clients remotely, with working hours that overlap for most of the day, and we come to Toronto for in-person workshops when a milestone needs one, with travel agreed up front. You own all source code, app store accounts, cloud accounts and design files we create for your project, with no lock-in.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Toronto project', text: `See how we work on our <a href="${serviceCityPath('mobile-app-development', 'toronto')}">app development company in Toronto</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Toronto project', text: `See how we work on our <a href="${serviceCityHref('mobile-app-development', 'toronto')}">app development company in Toronto</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
     ],
     keyTakeaways: [
       'Toronto app demand spans fintech, retail, health and SaaS companion apps, each with different privacy, accessibility and integration needs.',
@@ -5182,7 +5182,7 @@ export const articles: Article[] = [
       { q: 'Should I build native, cross-platform or a PWA?', a: 'Cross-platform (Flutter or React Native) suits most business and customer apps because one codebase serves both stores. Native suits heavy hardware or performance needs. A PWA suits internal tools and simple flows that do not need an app store.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: serviceCityPath('mobile-app-development', 'toronto'), label: 'See our Toronto app development services' },
+    cta: { href: serviceCityHref('mobile-app-development', 'toronto'), label: 'See our Toronto app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'toronto' },
   },
   {
