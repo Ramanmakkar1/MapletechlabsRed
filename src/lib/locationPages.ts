@@ -99,6 +99,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
     '@graph': [
       {
         '@type': 'Service',
+        '@id': `${canonical}#service`,
         name: serviceLabel,
         provider: {
           '@type': 'Organization',
@@ -282,6 +283,7 @@ function buildLocationMeshPage(city: string, service: string): LocationMeshPageD
     '@graph': [
       {
         '@type': 'Service',
+        '@id': `${data.canonicalUrl}#service`,
         name: serviceLabel,
         provider: {
           '@type': 'Organization',
