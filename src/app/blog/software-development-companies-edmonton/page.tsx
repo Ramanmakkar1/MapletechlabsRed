@@ -42,7 +42,7 @@ export default function Page() {
               { href: '/locations/software-development-company-in-edmonton', label: 'Custom software development company in Edmonton' },
               { href: '/services/software-development', label: 'Custom software development services' },
               { href: '/locations/healthcare-software-development-company-in-edmonton', label: 'Healthcare software development in Edmonton' },
-              { href: '/locations/app-development-company-in-edmonton', label: 'App development company in Edmonton' },
+              { href: '/services/mobile-app-development/edmonton', label: 'App development company in Edmonton' },
             ]}
           />
         }
