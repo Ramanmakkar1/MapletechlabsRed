@@ -44,6 +44,8 @@ const contactSchema = {
   name: TITLE,
   description: DESCRIPTION,
   about: { '@id': 'https://mapletechlabs.ca/#organization' },
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+  inLanguage: 'en-CA',
   mainEntity: {
     '@type': 'ProfessionalService',
     '@id': 'https://mapletechlabs.ca/#localbusiness',
@@ -80,7 +82,7 @@ export default function ContactRoute() {
         { position: 1, name: 'Home', item: canonicalUrl('/') },
         { position: 2, name: 'Contact', item: canonicalUrl('/contact') },
       ]} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema).replace(/</g, '\\u003c') }} />
       <Footer />
     </>
   );
