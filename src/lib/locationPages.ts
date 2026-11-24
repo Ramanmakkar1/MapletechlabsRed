@@ -82,6 +82,13 @@ function buildLocationPage(slug: string): LocationPageData | null {
     : { ...raw, serviceName };
 
   const url = canonicalUrl(`/locations/${slug}`);
+  // Owner decision: the app-development keyword pages for Edmonton, Calgary,
+  // Toronto and Vancouver canonicalise to /services/mobile-app-development/<city>
+  // so the two page sets don't compete for the same 'app development <city>' query.
+  const canonical = (MOBILE_CITY_PAGES.includes(combo.citySlug) &&
+    slug === `app-development-company-in-${combo.citySlug}`)
+    ? `https://mapletechlabs.ca/services/mobile-app-development/${combo.citySlug}`
+    : url;
   const cityLanding = `https://mapletechlabs.ca/locations/software-development-company-in-${combo.citySlug}`;
   const serviceLabel = isAgencyPage
     ? `${serviceName} in ${data.cityName}`
@@ -106,13 +113,13 @@ function buildLocationPage(slug: string): LocationPageData | null {
         },
         serviceType: isAgencyPage ? AGENCY_SERVICE_TYPES : combo.label,
         description: localEntry?.description ?? data.description,
-        url,
-        mainEntityOfPage: url,
+        url: canonical,
+        mainEntityOfPage: canonical,
       },
       localServiceSchema({
         cityName: data.cityName,
         provinceName: data.province,
-        url,
+        url: canonical,
         serviceType: isAgencyPage ? AGENCY_SERVICE_TYPES : [combo.label],
         mainEntity: false,
       }),
@@ -122,7 +129,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
           { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
           { '@type': 'ListItem', position: 3, name: data.cityName, item: cityLanding },
-          { '@type': 'ListItem', position: 4, name: serviceLabel, item: url },
+          { '@type': 'ListItem', position: 4, name: serviceLabel, item: canonical },
         ],
       },
     ],
@@ -181,20 +188,13 @@ function buildLocationPage(slug: string): LocationPageData | null {
   const finalTitle = localServiceTitle(title, data.cityName, data.provinceAbbr);
   const description = localEntry?.description ?? data.description;
 
-  // Owner decision: the app-development keyword pages for Edmonton, Calgary,
-  // Toronto and Vancouver canonicalise to /services/mobile-app-development/<city>
-  // so the two page sets don't compete for the same 'app development <city>' query.
-  const canonical = (MOBILE_CITY_PAGES.includes(combo.citySlug) &&
-    slug === `app-development-company-in-${combo.citySlug}`)
-    ? `https://mapletechlabs.ca/services/mobile-app-development/${combo.citySlug}`
-    : url;
   const metadata: Metadata = {
     title: seoTitle(finalTitle),
     description: seoDescription(description),
     openGraph: {
       title: ogTitle(finalTitle),
       description: seoDescription(description),
-      url,
+      url: canonical,
       type: 'website',
     },
     alternates: { canonical },
