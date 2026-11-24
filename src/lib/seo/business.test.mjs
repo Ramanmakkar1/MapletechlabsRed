@@ -70,3 +70,14 @@ test('localServiceSchema default keeps mainEntityOfPage', () => {
   });
   assert.equal(schema.mainEntityOfPage, url);
 });
+
+test('localServiceSchema emits knowsAbout instead of serviceType', () => {
+  const schema = localServiceSchema({
+    cityName: 'Edmonton',
+    provinceName: 'Alberta',
+    url: 'https://mapletechlabs.ca/x',
+    serviceType: ['Web Development'],
+  });
+  assert.deepEqual(schema.knowsAbout, ['Web Development']);
+  assert.equal(Object.prototype.hasOwnProperty.call(schema, 'serviceType'), false);
+});

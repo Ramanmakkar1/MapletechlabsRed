@@ -104,7 +104,7 @@ export function localServiceSchema(opts: {
     parentOrganization: { '@id': 'https://mapletechlabs.ca/#organization' },
     areaServed,
     sameAs: BUSINESS.sameAs,
-    ...(opts.serviceType ? { serviceType: opts.serviceType } : {}),
+    ...(opts.serviceType ? { knowsAbout: opts.serviceType } : {}),
     ...(opts.mainEntity === false ? {} : { mainEntityOfPage: opts.url }),
   };
 }
