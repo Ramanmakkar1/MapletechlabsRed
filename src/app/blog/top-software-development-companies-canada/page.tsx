@@ -8,7 +8,7 @@ import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Software Development Companies in Canada: Top 10 2026';
-const DESCRIPTION = 'Top software development companies in Canada for 2026: our 10 picks, compared on specialization, delivery, code ownership, support and budget.';
+const DESCRIPTION = 'Top software development companies in Canada for 2026: our 10 picks compared on specialization, delivery, code ownership, support and budget.';
 const SLUG = 'top-software-development-companies-canada';
 const DATE = '2026-02-10';
 

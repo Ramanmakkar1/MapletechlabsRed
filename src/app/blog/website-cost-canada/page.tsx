@@ -8,7 +8,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Website Cost in Canada: 2026 Pricing Guide';
-const DESCRIPTION = 'Website development cost in Canada: see 2026 price ranges, what drives the price, and how to budget design, features, maintenance and growth.';
+const DESCRIPTION = 'Website development cost in Canada: compare 2026 price ranges, cost drivers and budget tips for design, features, maintenance and growth before you build.';
 const SLUG = 'website-cost-canada';
 const DATE = '2026-01-22';
 
