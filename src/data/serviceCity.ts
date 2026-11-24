@@ -108,11 +108,19 @@ export const serviceCityPath = (serviceSlug: string, citySlug: string): string =
   kwFor[serviceSlug] ? `/locations/${kwFor[serviceSlug]}-company-in-${citySlug}` : `/locations/${citySlug}/${serviceSlug}`;
 
 /**
+ * Cities whose app-development keyword page canonicalises to the core
+ * service+city page (/services/mobile-app-development/<city>). Links to those
+ * /locations/app-development-company-in-<city> URLs must skip the 301 chain.
+ */
+export const MOBILE_APP_CITY_PAGES = new Set(['edmonton', 'calgary', 'toronto', 'vancouver']);
+
+/**
  * Href for linking to a service in a city: the city+service page only when that
  * page is live and indexable, otherwise the core service page (never a 301 or
  * noindex city+service URL).
  */
 export const serviceCityHref = (serviceSlug: string, citySlug: string): string => {
+  if (serviceSlug === 'mobile-app-development' && MOBILE_APP_CITY_PAGES.has(citySlug)) return `/services/mobile-app-development/${citySlug}`;
   const kw = kwFor[serviceSlug];
   if (kw) {
     const slug = `${kw}-company-in-${citySlug}`;
