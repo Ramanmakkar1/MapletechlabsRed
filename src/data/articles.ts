@@ -9,7 +9,7 @@
  * that cannot be verified.
  */
 
-import { serviceCityPath, serviceCityHref } from './serviceCity';
+import { serviceCityHref } from './serviceCity';
 import { blogDescription } from '@/lib/seo/blog';
 import { BLOG_AUTHOR } from '@/lib/seo/business';
 
@@ -834,7 +834,7 @@ export const articles: Article[] = [
       { q: 'Why are Vancouver SaaS development quotes higher than elsewhere in Canada?', a: 'Vancouver competes with Seattle and the Bay Area for senior engineers, so experienced product engineers command high salaries and contractors charge accordingly. That cost appears in every proposal, whether the team is local or remote. The useful comparison is who actually writes the code, how senior they are and what the quote includes, not just the hourly rate.' },
       { q: 'What should I ask a Vancouver SaaS development company before signing?', a: 'Ask who specifically will build the product and how senior they are, how they handle multi-tenant isolation and scaling, how they approach BC PIPA, PIPEDA and data residency, what their billing implementation covers, whether you own all the code and accounts, how Pacific-time collaboration works, and what support costs after launch. Get the answers in writing and check the contract terms before paying a deposit.' },
     ],
-    cta: { href: serviceCityPath('saas-development', 'vancouver'), label: 'SaaS development company in Vancouver' },
+    cta: { href: serviceCityHref('saas-development', 'vancouver'), label: 'SaaS development company in Vancouver' },
     enquiryContext: { serviceSlug: 'saas-development', citySlug: 'vancouver' },
   },
   {
@@ -2901,7 +2901,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Hiring on the West Coast? Our <a href="/blog/ui-ux-design-companies-vancouver">guide to choosing a UI/UX design company in Vancouver</a> covers BC accessibility expectations, portfolio checks and questions to ask local studios.' },
 
       { type: 'h2', id: 'next-steps', text: 'Work with a UI/UX team near you' },
-      { type: 'callout', tone: 'brand', title: 'Talk to our UI/UX design team', text: `See how we run research, prototyping, design systems and handoff on our <a href="/services/product-design">UI/UX and product design</a> page, or visit the page for your city: <a href="${serviceCityPath('product-design', 'edmonton')}">UI/UX design in Edmonton</a>, <a href="${serviceCityPath('product-design', 'calgary')}">Calgary</a>, <a href="${serviceCityPath('product-design', 'toronto')}">Toronto</a> or <a href="${serviceCityPath('product-design', 'vancouver')}">Vancouver</a>. Every project starts with a free audit and a fixed quote.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to our UI/UX design team', text: `See how we run research, prototyping, design systems and handoff on our <a href="/services/product-design">UI/UX and product design</a> page, or visit the page for your city: <a href="${serviceCityHref('product-design', 'edmonton')}">UI/UX design in Edmonton</a>, <a href="${serviceCityHref('product-design', 'calgary')}">Calgary</a>, <a href="${serviceCityHref('product-design', 'toronto')}">Toronto</a> or <a href="${serviceCityHref('product-design', 'vancouver')}">Vancouver</a>. Every project starts with a free audit and a fixed quote.` },
     ],
     keyTakeaways: [
       'A real UI/UX company delivers research, wireframes, prototypes, usability testing and a design system, not just final screens.',
@@ -3185,7 +3185,7 @@ export const articles: Article[] = [
       { q: 'Should I choose local SEO or Google Ads?', a: 'Google Ads brings traffic as soon as campaigns go live but stops when you stop paying. Local SEO takes longer to build but keeps bringing map-pack and organic traffic without a cost per click. Many Edmonton businesses run ads while SEO builds, then shift budget as organic leads grow.' },
       { q: 'Do I need separate pages for St. Albert, Sherwood Park and Spruce Grove?', a: 'If you genuinely serve those areas and customers search for them, a useful page for each area can help you rank there. Each page should say something specific about the work you do in that area, not repeat the same text with the town name swapped.' },
     ],
-    cta: { href: serviceCityPath('digital-marketing', 'edmonton'), label: 'See our Edmonton SEO services' },
+    cta: { href: serviceCityHref('digital-marketing', 'edmonton'), label: 'See our Edmonton SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'edmonton' },
   },
   {
@@ -3405,7 +3405,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Ottawa businesses' },
       { type: 'p', html: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton. We serve Ottawa and National Capital Region clients remotely, with working hours that fully overlap Eastern Time, and we come to Ottawa for in-person workshops when a milestone needs one, with travel agreed up front. Your contract is with a Canadian company, priced in CAD, and before any work starts you get a fixed scope and a fixed price.' },
       { type: 'p', html: 'You own all source code, app store accounts, cloud accounts and design files we create for your project, with no lock-in. We design for bilingual delivery and WCAG 2.1 AA from the first wireframe, and consider PIPEDA, PHIPA and federal data residency requirements when planning apps that handle personal or classified information.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Ottawa project', text: `See how we scope Ottawa builds on our <a href="${serviceCityPath('mobile-app-development', 'ottawa')}">app development company in Ottawa</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Ottawa project', text: `See how we scope Ottawa builds on our <a href="${serviceCityHref('mobile-app-development', 'ottawa')}">app development company in Ottawa</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
     ],
     keyTakeaways: [
       'Ottawa app demand spans government citizen apps, cybersecurity and defence tools, telecom network apps, SaaS companions and health research apps, each with different privacy, bilingual and security needs.',
@@ -3422,7 +3422,7 @@ export const articles: Article[] = [
       { q: 'Should I build native, cross-platform or a PWA?', a: 'Cross-platform (Flutter or React Native) suits most business, SaaS and government-facing apps because one codebase serves both stores. Native suits heavy hardware or performance needs. A PWA suits internal tools and simple citizen flows that do not need an app store.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name.' },
     ],
-    cta: { href: serviceCityPath('mobile-app-development', 'ottawa'), label: 'See our Ottawa app development services' },
+    cta: { href: serviceCityHref('mobile-app-development', 'ottawa'), label: 'See our Ottawa app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'ottawa' },
   },
   {
@@ -3525,7 +3525,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Montreal businesses' },
       { type: 'p', html: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton. We do not have a Montreal office; we work with Montreal clients remotely through video workshops, weekly demos and shared project boards, and Edmonton runs two hours behind Montreal so most of the working day overlaps. There is no account manager in the middle: you speak directly with the senior engineers who write your app. Your contract is with a Canadian company, priced in CAD, and the scope and price are fixed before development begins.' },
       { type: 'p', html: 'We design French-first or fully bilingual apps from the first wireframe, including screens, onboarding, push notifications, emails and app-store listings, and we build Law 25 consent and privacy-by-default settings into the app. You own all source code, app store accounts, cloud accounts and design files we create for your project, with no lock-in.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Montreal project', text: `See how we scope Montreal builds on our <a href="${serviceCityPath('mobile-app-development', 'montreal')}">app development company in Montreal</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an app team about your Montreal project', text: `See how we scope Montreal builds on our <a href="${serviceCityHref('mobile-app-development', 'montreal')}">app development company in Montreal</a> page, explore our <a href="/services/mobile-app-development">mobile app development services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
     ],
     keyTakeaways: [
       'Montreal app demand spans games and entertainment, AI-powered products, aerospace and manufacturing field tools, fintech, retail and health apps, each with different privacy and French-language needs.',
@@ -3541,7 +3541,7 @@ export const articles: Article[] = [
       { q: 'Should I hire a local Montreal team or a remote Canadian one?', a: 'A local team can make in-person workshops easy, but a Canadian team elsewhere with overlapping working hours can deliver the same quality remotely and visit when a milestone needs it. Mapletech Labs is headquartered in Edmonton with no Montreal office; Edmonton is two hours behind Montreal, and we work through video workshops, weekly demos and shared boards. Focus on meeting the build team, fixed CAD pricing and who owns the code.' },
       { q: 'Who owns the app when the project is finished?', a: 'You should. The contract should assign the code, designs and other custom work to your business on payment, with the repository, cloud accounts and App Store and Google Play listings in your name. Mapletech Labs hands over all source code, design files, store accounts and cloud accounts we create, with no lock-in.' },
     ],
-    cta: { href: serviceCityPath('mobile-app-development', 'montreal'), label: 'See our Montreal app development services' },
+    cta: { href: serviceCityHref('mobile-app-development', 'montreal'), label: 'See our Montreal app development services' },
     enquiryContext: { serviceSlug: 'mobile-app-development', citySlug: 'montreal' },
   },
   {
@@ -4651,7 +4651,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'why-mapletech', text: 'Why Vancouver businesses work with Mapletech Labs' },
       { type: 'p', html: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building business websites, e-commerce stores and web apps for Vancouver companies. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day, and we can hold in-person workshops in Vancouver by arrangement. You work directly with the senior engineers who build your site, your contract is with a Canadian company priced in CAD, and scope and price are fixed before any work starts. Discovery is free. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your project.' },
       { type: 'p', html: 'We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get fast first loads, with Core Web Vitals shaped during the build and a CMS so your team can publish without a developer. Our work includes a high-performance e-commerce platform for a leading Canadian retailer that drove 3x revenue growth and handles 2M+ monthly visitors, and a real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings. All source code, design files, domain and hosting accounts we create belong to you, with no lock-in.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Vancouver project', text: `See how we scope and price Vancouver builds on our <a href="${serviceCityPath('web-development', 'vancouver')}">web development company in Vancouver</a> page, explore our <a href="/services/web-development">web development services</a>, or <a href="/contact">contact us</a> to describe what you want to build. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-vancouver">web design company in Vancouver</a> page.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Vancouver project', text: `See how we scope and price Vancouver builds on our <a href="${serviceCityHref('web-development', 'vancouver')}">web development company in Vancouver</a> page, explore our <a href="/services/web-development">web development services</a>, or <a href="/contact">contact us</a> to describe what you want to build. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-vancouver">web design company in Vancouver</a> page.` },
     ],
     keyTakeaways: [
       'Vancouver web demand spans SaaS and startups, film and VFX, tourism, real estate, logistics and DTC e-commerce — each needs a different scope and budget.',
@@ -4669,7 +4669,7 @@ export const articles: Article[] = [
       { q: 'Who owns the website code and hosting when the project ends?', a: 'You should. The contract should assign the source code, design files and content created for you to your business on payment, with the domain registered in your name and hosting, CMS, analytics and Search Console accounts held by you from the start. A development company working inside accounts it owns is a red flag, whatever the proposal says.' },
       { q: 'Will a new website hurt my Google and Bing rankings?', a: 'Not if the migration is planned properly. Audit the URLs that earn traffic today, map them to the new structure, use 301 redirects where addresses change, keep titles and headings that still match search intent, submit a clean sitemap, and review the site on staging before launch. Rebuilding without a redirect plan is the main reason rankings drop.' },
     ],
-    cta: { href: serviceCityPath('web-development', 'vancouver'), label: 'See our Vancouver web development services' },
+    cta: { href: serviceCityHref('web-development', 'vancouver'), label: 'See our Vancouver web development services' },
     enquiryContext: { serviceSlug: 'web-development', citySlug: 'vancouver' },
   },
   {
@@ -4801,7 +4801,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'why-mapletech', text: 'Why Calgary businesses work with Mapletech Labs' },
       { type: 'p', html: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, about three hours’ drive from Calgary and in the same time zone. We do not have a Calgary office, and we can hold in-person workshops in Calgary by arrangement. You work directly with the senior engineers who build your site, your contract is with a Canadian company priced in CAD, and scope and price are fixed before any work starts. Discovery is free. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your project.' },
       { type: 'p', html: 'We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get fast first loads, with Core Web Vitals shaped during the build and a CMS so your team can publish without a developer. Our work includes a high-performance e-commerce platform for a leading Canadian retailer that drove 3x revenue growth and handles 2M+ monthly visitors, and a real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings. All source code, design files, domain and hosting accounts we create belong to you, with no lock-in.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Calgary project', text: `See how we scope and price Calgary builds on our <a href="${serviceCityPath('web-development', 'calgary')}">web development company in Calgary</a> page, explore our <a href="/services/web-development">web development services</a>, call <a href="tel:+14036048692">+1-403-604-8692</a>, or <a href="/contact">contact us</a> to describe what you want to build. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-calgary">web design company in Calgary</a> page.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Calgary project', text: `See how we scope and price Calgary builds on our <a href="${serviceCityHref('web-development', 'calgary')}">web development company in Calgary</a> page, explore our <a href="/services/web-development">web development services</a>, call <a href="tel:+14036048692">+1-403-604-8692</a>, or <a href="/contact">contact us</a> to describe what you want to build. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-calgary">web design company in Calgary</a> page.` },
     ],
     keyTakeaways: [
       'Calgary web projects range from local trade-service sites to energy procurement resources, agtech products and field-crew portals; define the real workflow before comparing prices.',
@@ -4819,7 +4819,7 @@ export const articles: Article[] = [
       { q: 'Who owns the website code and hosting when the project ends?', a: 'You should. The contract should assign your custom code, design files and content to your business on payment. The domain, hosting, cloud, CMS, analytics, Search Console and Bing Webmaster Tools accounts should be in your name from the start, with developers granted collaborator access and a documented handover at launch.' },
       { q: 'Will a new website hurt my Google and Bing rankings?', a: 'Not if the migration is planned properly. Inventory the URLs that earn traffic, preserve useful content and search intent, map changed addresses with 301 redirects, check canonicals and internal links, test staging and submit a clean sitemap. Rebuilding without this plan is a common reason rankings fall after launch.' },
     ],
-    cta: { href: serviceCityPath('web-development', 'calgary'), label: 'See our Calgary web development services' },
+    cta: { href: serviceCityHref('web-development', 'calgary'), label: 'See our Calgary web development services' },
     enquiryContext: { serviceSlug: 'web-development', citySlug: 'calgary' },
   },
   {
@@ -4928,7 +4928,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'why-mapletech', text: 'Why Ottawa businesses work with Mapletech Labs' },
       { type: 'p', html: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton, building business websites, e-commerce stores and web apps for Ottawa companies. We do not have an Ottawa office, and we can hold in-person workshops in Ottawa by arrangement. You work directly with the senior engineers who build your site, your contract is with a Canadian company priced in CAD, and scope and price are fixed before any work starts. Discovery is free. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your project.' },
       { type: 'p', html: 'We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get fast first loads, with Core Web Vitals shaped during the build and a CMS so your team can publish without a developer. Our work includes a PCI DSS certified payments API for Ottawa-based PayBridge Solutions processing 12 million transactions a month, a high-performance e-commerce platform for a leading Canadian retailer that drove 3x revenue growth and handles 2M+ monthly visitors, and a real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings. All source code, design files, domain and hosting accounts we create belong to you, with no lock-in.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Ottawa project', text: `See how we scope and price Ottawa builds on our <a href="${serviceCityPath('web-development', 'ottawa')}">web development company in Ottawa</a> page, explore our <a href="/services/web-development">web development services</a>, compare our <a href="/locations/software-development-company-in-ottawa">software development company in Ottawa</a> services, read our <a href="/blog/software-development-companies-ottawa">guide to software development companies in Ottawa</a>, or <a href="/contact">contact us</a> to describe what you want to build. Call <a href="tel:+14036048692">+1-403-604-8692</a> to talk it through. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-ottawa">web design company in Ottawa</a> page.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Ottawa project', text: `See how we scope and price Ottawa builds on our <a href="${serviceCityHref('web-development', 'ottawa')}">web development company in Ottawa</a> page, explore our <a href="/services/web-development">web development services</a>, compare our <a href="/locations/software-development-company-in-ottawa">software development company in Ottawa</a> services, read our <a href="/blog/software-development-companies-ottawa">guide to software development companies in Ottawa</a>, or <a href="/contact">contact us</a> to describe what you want to build. Call <a href="tel:+14036048692">+1-403-604-8692</a> to talk it through. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-ottawa">web design company in Ottawa</a> page.` },
     ],
     keyTakeaways: [
       'Ottawa web projects range from government-supplier sites and bilingual service pages to Kanata product dashboards and client portals; define the real workflow before comparing prices.',
@@ -4946,7 +4946,7 @@ export const articles: Article[] = [
       { q: 'Do you have developers in Ottawa?', a: 'No. Mapletech Labs is headquartered in Edmonton, and we do not have an Ottawa office or Ottawa staff. We build for Ottawa clients remotely, and we can hold in-person workshops in Ottawa by arrangement. What matters more is a named senior contact, a fixed scope in CAD and work like yours in the portfolio.' },
       { q: 'Who owns the website code and hosting when the project ends?', a: 'You should. The contract should assign your custom code, design files and content to your business on payment. The domain, hosting, cloud, CMS, analytics, Search Console and Bing Webmaster Tools accounts should be in your name from the start, with developers granted collaborator access and a documented handover at launch.' },
     ],
-    cta: { href: serviceCityPath('web-development', 'ottawa'), label: 'See our Ottawa web development services' },
+    cta: { href: serviceCityHref('web-development', 'ottawa'), label: 'See our Ottawa web development services' },
     enquiryContext: { serviceSlug: 'web-development', citySlug: 'ottawa' },
   },
   {
@@ -5047,7 +5047,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'why-mapletech', text: 'How Mapletech Labs works with Montreal companies' },
       { type: 'p', html: 'Mapletech Labs is a Canadian web development team headquartered in Edmonton. We do not have a Montreal office or Montreal staff, and we build for Montreal clients remotely through video workshops, weekly calls and shared project boards. Edmonton is two hours behind Montreal, so our working days overlap for most of yours. You work directly with the senior engineers who build your site, your contract is with a Canadian company priced in CAD, and scope and price are fixed before any work starts. Discovery is free. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your project.' },
       { type: 'p', html: 'We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get fast first loads, with Core Web Vitals shaped during the build and a CMS so your team can publish without a developer. Our work includes a PCI DSS certified payments API for Ottawa-based PayBridge Solutions processing 12 million transactions a month, a high-performance e-commerce platform for a leading Canadian retailer that drove 3x revenue growth and handles 2M+ monthly visitors, and a real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings. All source code, design files, domain and hosting accounts we create belong to you, with no lock-in.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Montreal project', text: `See how we scope and price Montreal builds on our <a href="${serviceCityPath('web-development', 'montreal')}">web development company in Montreal</a> page, compare our <a href="/locations/software-development-company-in-montreal">software development company in Montreal</a> services, read our <a href="/blog/software-development-companies-montreal">guide to software development companies in Montreal</a>, or <a href="/contact">contact us</a> to describe what you want to build. Call <a href="tel:+14036048692">+1-403-604-8692</a> to talk it through. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-montreal">web design company in Montreal</a> page.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to a web team about your Montreal project', text: `See how we scope and price Montreal builds on our <a href="${serviceCityHref('web-development', 'montreal')}">web development company in Montreal</a> page, compare our <a href="/locations/software-development-company-in-montreal">software development company in Montreal</a> services, read our <a href="/blog/software-development-companies-montreal">guide to software development companies in Montreal</a>, or <a href="/contact">contact us</a> to describe what you want to build. Call <a href="tel:+14036048692">+1-403-604-8692</a> to talk it through. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-montreal">web design company in Montreal</a> page.` },
     ],
     keyTakeaways: [
       'Montreal web projects range from bilingual retail and hospitality sites to tech product dashboards and client portals; define the real workflow before comparing prices.',
@@ -5064,7 +5064,7 @@ export const articles: Article[] = [
       { q: 'Do you have an office in Montreal?', a: 'No. Mapletech Labs is headquartered in Edmonton, and we do not have a Montreal office or Montreal staff. We build for Montreal clients remotely through video workshops, weekly calls and shared project boards, with Edmonton two hours behind Montreal so most of the working day overlaps.' },
       { q: 'Who owns the website code and hosting when the project ends?', a: 'You should. The contract should assign your custom code, design files and content to your business on payment. The domain, hosting, cloud, CMS, analytics, Search Console and Bing Webmaster Tools accounts should be in your name from the start, with developers granted collaborator access and a documented handover at launch.' },
     ],
-    cta: { href: serviceCityPath('web-development', 'montreal'), label: 'See our Montreal web development services' },
+    cta: { href: serviceCityHref('web-development', 'montreal'), label: 'See our Montreal web development services' },
     enquiryContext: { serviceSlug: 'web-development', citySlug: 'montreal' },
   },
   {
@@ -5274,7 +5274,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'Many Calgary businesses run ads while SEO builds, then use what the ads reveal about converting keywords to decide which pages to grow.' },
 
-      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Calgary business', text: `See our <a href="${serviceCityPath('digital-marketing', 'calgary')}">SEO company in Calgary</a> page and our <a href="/locations/digital-marketing-agency-in-calgary">digital marketing agency in Calgary</a> page, or explore our <a href="/services/digital-marketing/local-seo">local SEO</a> and <a href="/services/digital-marketing/seo-services">SEO services</a>.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Calgary business', text: `See our <a href="${serviceCityHref('digital-marketing', 'calgary')}">SEO company in Calgary</a> page and our <a href="/locations/digital-marketing-agency-in-calgary">digital marketing agency in Calgary</a> page, or explore our <a href="/services/digital-marketing/local-seo">local SEO</a> and <a href="/services/digital-marketing/seo-services">SEO services</a>.` },
     ],
     keyTakeaways: [
       'Decide first which SEO job you need: map pack for Calgary trades and clinics, separate pages for Airdrie, Cochrane, Okotoks and Chestermere, or technical B2B searches.',
@@ -5291,7 +5291,7 @@ export const articles: Article[] = [
       { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and where, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
       { q: 'Should I choose SEO or Google Ads?', a: 'Google Ads brings traffic as soon as campaigns go live but stops when you stop paying. SEO takes longer but keeps bringing traffic without a cost per click. Many Calgary businesses run ads while SEO builds, then shift budget as organic leads grow.' },
     ],
-    cta: { href: serviceCityPath('digital-marketing', 'calgary'), label: 'See our Calgary SEO services' },
+    cta: { href: serviceCityHref('digital-marketing', 'calgary'), label: 'See our Calgary SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'calgary' },
   },
   {
@@ -5411,7 +5411,7 @@ export const articles: Article[] = [
       { q: 'Does Bing matter for an Ottawa business?', a: 'Yes. Bing has its own share of searches, and several AI assistants draw on its index. Setting up Bing Webmaster Tools and Bing Places takes little time and makes sure you are not invisible there.' },
       { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and where, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
     ],
-    cta: { href: serviceCityPath('digital-marketing', 'ottawa'), label: 'See our Ottawa SEO services' },
+    cta: { href: serviceCityHref('digital-marketing', 'ottawa'), label: 'See our Ottawa SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'ottawa' },
   },
   {
@@ -5497,7 +5497,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Mapletech Labs is headquartered in Edmonton and serves Montreal clients remotely. We have no Montreal office, and we say so plainly: you work with the specialists who research your search terms, improve your website and write your content, through calls and shared documents. Edmonton is two hours behind Montreal, so there is plenty of overlap for planning and reviewing progress together.' },
       { type: 'p', html: 'We agree the scope and a monthly retainer in CAD before work begins, and report on rankings, organic traffic and conversions each month. If you want to see how we approach Montreal search, visit our <a href="/locations/seo-company-in-montreal">SEO company in Montreal</a> page, or read our <a href="/blog/top-seo-companies-canada">guide to top SEO companies in Canada</a> for national context.' },
 
-      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Montreal business', text: `See our <a href="${serviceCityPath('digital-marketing', 'montreal')}">SEO company in Montreal</a> page and our <a href="/locations/digital-marketing-agency-in-montreal">digital marketing agency in Montreal</a> page, or call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your search goals.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Montreal business', text: `See our <a href="${serviceCityHref('digital-marketing', 'montreal')}">SEO company in Montreal</a> page and our <a href="/locations/digital-marketing-agency-in-montreal">digital marketing agency in Montreal</a> page, or call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your search goals.` },
     ],
     keyTakeaways: [
       'Decide first which SEO job you need: map pack for Montreal trades and clinics, separate pages for the Plateau, Laval, Longueuil and the West Island, or bilingual French and English search.',
@@ -5513,7 +5513,7 @@ export const articles: Article[] = [
       { q: 'Does Bing matter for a Montreal business?', a: 'Yes. Bing has its own share of searches, and several AI assistants draw on its index. Setting up Bing Webmaster Tools and Bing Places takes little time and makes sure you are not invisible there.' },
       { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and where, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
     ],
-    cta: { href: serviceCityPath('digital-marketing', 'montreal'), label: 'See our Montreal SEO services' },
+    cta: { href: serviceCityHref('digital-marketing', 'montreal'), label: 'See our Montreal SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'montreal' },
   },
   {
@@ -5628,7 +5628,7 @@ export const articles: Article[] = [
         '<strong>OSFI model-risk guidance.</strong> Federally regulated financial institutions follow Office of the Superintendent of Financial Institutions expectations on model risk. That usually means documenting each model, testing before launch, monitoring in production and keeping audit logs of what the system was asked and how it answered.',
         '<strong>Canadian data residency.</strong> Many Toronto buyers ask for AI workloads and document stores in Canadian cloud regions, and for model providers configured so your data is not used for training. Confirm the final compliance position with your privacy officer or lawyer; your AI partner should design for the answer you need, not hand-wave it.',
       ] },
-      { type: 'p', html: `These points mirror how we describe privacy on our <a href="${serviceCityPath('ai-ml', 'toronto')}">AI development company in Toronto</a> page. Treat this guide as practical planning, not legal advice.` },
+      { type: 'p', html: `These points mirror how we describe privacy on our <a href="${serviceCityHref('ai-ml', 'toronto')}">AI development company in Toronto</a> page. Treat this guide as practical planning, not legal advice.` },
 
       { type: 'h2', id: 'pricing', text: 'Typical AI development costs in Canada (CAD)' },
       { type: 'p', html: 'Toronto AI projects follow Canadian onshore rates. As approximate ranges from our <a href="/blog/ai-development-cost-canada">AI development cost guide</a> and the planning numbers we publish for Toronto clients:' },
@@ -5668,7 +5668,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features and workflow automation for Toronto businesses. Edmonton is two hours behind Toronto, so most of your working day overlaps with ours and questions get answered the same day. We focus on practical AI that saves staff time and answers from your own documents. You work directly with the senior engineers who build your system, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your idea.' },
       { type: 'p', html: 'We do not have a Toronto office. We serve Toronto clients remotely, with working hours that overlap for most of the day, and we come to Toronto for in-person workshops when a milestone needs one, with travel agreed up front. You own all source code, prompts, configuration and cloud accounts we create for your project, with no lock-in. Discovery is free, and your price is fixed before coding starts.' },
       { type: 'p', html: 'Our work includes an AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech, a PCI DSS certified payments API processing 12 million transactions a month, securely and at scale, and a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider. See the <a href="/case-studies/fintech-trading-platform">fintech trading</a>, <a href="/case-studies/payments-api-platform">payments API</a> and <a href="/case-studies/healthcare-telehealth">telehealth</a> case studies.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to an AI team about your Toronto project', text: `See how we work on our <a href="${serviceCityPath('ai-ml', 'toronto')}">AI development company in Toronto</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, <a href="/services/ai-ml/llm-integration">LLM integration</a> and <a href="/services/ai-ml/ai-chatbots">AI chatbots</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an AI team about your Toronto project', text: `See how we work on our <a href="${serviceCityHref('ai-ml', 'toronto')}">AI development company in Toronto</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, <a href="/services/ai-ml/llm-integration">LLM integration</a> and <a href="/services/ai-ml/ai-chatbots">AI chatbots</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
     ],
     keyTakeaways: [
       'AI development spans LLM features, RAG chatbots on your documents, automation, computer vision and predictive analytics — scope the right one before you buy.',
@@ -5685,7 +5685,7 @@ export const articles: Article[] = [
       { q: 'Can our AI data stay in Canada?', a: 'Yes, with the right architecture. A credible vendor should offer Canadian cloud regions for your application and document store, and configure model providers so your content is not used for training. Your compliance team should sign off on the final design.' },
       { q: 'Who owns the AI system when the project finishes?', a: 'You should. The contract should assign source code, prompts, configuration and cloud accounts to your business on payment, with no lock-in. You can keep working with the same partner after launch or hand everything to your own team.' },
     ],
-    cta: { href: serviceCityPath('ai-ml', 'toronto'), label: 'See our Toronto AI development services' },
+    cta: { href: serviceCityHref('ai-ml', 'toronto'), label: 'See our Toronto AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'toronto' },
   },
   {
@@ -5774,10 +5774,10 @@ export const articles: Article[] = [
       { type: 'p', html: 'Good answers are specific and in writing. If you are still building a shortlist, compare notes with our <a href="/services/ai-ml">AI development services in Canada</a>, or <a href="/contact">contact us</a> to talk it through.' },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Edmonton organisations' },
-      { type: 'p', html: `Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for AI development you work with a local team. We build AI chatbots, LLM features and workflow automation for Edmonton companies, public bodies and health providers. Our focus is practical AI that saves your staff time, answers from your own documents and keeps your data under control. You work directly with the senior engineers who build it, not a sales layer, and we can hold discovery workshops, reviews and demos at your office or site. See our <a href="${serviceCityPath('ai-ml', 'edmonton')}">AI development company in Edmonton</a> page for how we scope and price this work.` },
+      { type: 'p', html: `Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for AI development you work with a local team. We build AI chatbots, LLM features and workflow automation for Edmonton companies, public bodies and health providers. Our focus is practical AI that saves your staff time, answers from your own documents and keeps your data under control. You work directly with the senior engineers who build it, not a sales layer, and we can hold discovery workshops, reviews and demos at your office or site. See our <a href="${serviceCityHref('ai-ml', 'edmonton')}">AI development company in Edmonton</a> page for how we scope and price this work.` },
       { type: 'p', html: 'We can host your AI system and its data in Canadian cloud regions and set up model providers so your data is not used for training. Scope and price are fixed in CAD before any work starts, and all source code, prompts, configuration and cloud accounts we create belong to you, with no lock-in. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your idea.' },
       { type: 'p', html: 'Our work includes a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider, a real-time logistics platform handling 15K+ daily deliveries with 25% fuel savings and a 98% on-time delivery rate, and a PCI DSS certified payments API processing 12 million transactions a month, securely and at scale. See the <a href="/case-studies/healthcare-telehealth">telehealth</a>, <a href="/case-studies/logistics-platform">logistics</a> and <a href="/case-studies/payments-api-platform">payments API</a> case studies.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to an Edmonton AI team about your project', text: `See how we work on our <a href="${serviceCityPath('ai-ml', 'edmonton')}">AI development company in Edmonton</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, <a href="/services/ai-ml/llm-integration">LLM integration</a> and <a href="/services/ai-ml/ai-chatbots">AI chatbots</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an Edmonton AI team about your project', text: `See how we work on our <a href="${serviceCityHref('ai-ml', 'edmonton')}">AI development company in Edmonton</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, <a href="/services/ai-ml/llm-integration">LLM integration</a> and <a href="/services/ai-ml/ai-chatbots">AI chatbots</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
     ],
     keyTakeaways: [
       'AI development covers LLM apps, RAG on your documents, automation, computer vision and predictive analytics; scope the right one before you buy.',
@@ -5793,7 +5793,7 @@ export const articles: Article[] = [
       { q: 'Can our AI data stay in Canada?', a: 'Yes, with the right architecture. A credible vendor can host your AI system, document store and logs in Canadian cloud regions and configure model providers so your data is not used for training. Your compliance team should sign off on the final design.' },
       { q: 'Can SR&ED or IRAP help pay for an AI project?', a: 'Sometimes. Work that resolves genuine technical uncertainty may qualify for SR&ED tax credits, and NRC IRAP can fund part of some innovation projects. Routine chatbot configuration usually does not qualify. Keep technical records from the start and check eligibility with the programs and your accountant.' },
     ],
-    cta: { href: serviceCityPath('ai-ml', 'edmonton'), label: 'See our Edmonton AI development services' },
+    cta: { href: serviceCityHref('ai-ml', 'edmonton'), label: 'See our Edmonton AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'edmonton' },
   },
   {
@@ -5886,10 +5886,10 @@ export const articles: Article[] = [
       { type: 'p', html: 'Good answers are specific and in writing. If you are also comparing general software vendors, our <a href="/blog/software-development-companies-calgary">guide to choosing a Calgary software company</a> covers the wider questions.' },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Calgary companies' },
-      { type: 'p', html: `Mapletech Labs is an Alberta company headquartered in Edmonton, roughly a three-hour drive north of Calgary and in the same time zone, so our working days line up with yours. We build AI chatbots, large language model (LLM) features and workflow automation for Calgary businesses that want AI to take routine work off their staff. You work directly with the senior engineers who design and build your system, with no sales layer in between. We do not have a Calgary office; we serve Calgary clients remotely through weekly calls and shared project boards, and our team can come to Calgary for in-person workshops by arrangement. See our <a href="${serviceCityPath('ai-ml', 'calgary')}">AI development company in Calgary</a> page for how we scope and price this work.` },
+      { type: 'p', html: `Mapletech Labs is an Alberta company headquartered in Edmonton, roughly a three-hour drive north of Calgary and in the same time zone, so our working days line up with yours. We build AI chatbots, large language model (LLM) features and workflow automation for Calgary businesses that want AI to take routine work off their staff. You work directly with the senior engineers who design and build your system, with no sales layer in between. We do not have a Calgary office; we serve Calgary clients remotely through weekly calls and shared project boards, and our team can come to Calgary for in-person workshops by arrangement. See our <a href="${serviceCityHref('ai-ml', 'calgary')}">AI development company in Calgary</a> page for how we scope and price this work.` },
       { type: 'p', html: 'We can run your AI system and store its data in Canadian cloud regions, and we configure model providers so your information is not used to train their models. Scope and price are fixed in CAD before any work begins. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to discuss your project.' },
       { type: 'p', html: 'Our work includes an AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech, a real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate, and a PCI DSS certified payments API processing 12 million transactions a month, securely and at scale. See the <a href="/case-studies/fintech-trading-platform">fintech trading</a>, <a href="/case-studies/logistics-platform">logistics</a> and <a href="/case-studies/payments-api-platform">payments API</a> case studies.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to an Alberta AI team about your Calgary project', text: `See our <a href="${serviceCityPath('ai-ml', 'calgary')}">AI development company in Calgary</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an Alberta AI team about your Calgary project', text: `See our <a href="${serviceCityHref('ai-ml', 'calgary')}">AI development company in Calgary</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
     ],
     keyTakeaways: [
       'Match the project to your industry: document search for energy, record answers and forecasting for agtech, intake and triage for fintech, dispatch automation for logistics.',
@@ -5906,7 +5906,7 @@ export const articles: Article[] = [
       { q: 'Does Mapletech Labs have an office in Calgary?', a: 'No. Mapletech Labs is headquartered in Edmonton, about a three-hour drive from Calgary and in the same time zone. We serve Calgary clients remotely through weekly calls and shared project boards, and our team can come to Calgary for in-person workshops by arrangement.' },
       { q: 'Can SR&ED or IRAP help pay for an AI project?', a: 'Sometimes. Work that resolves genuine technical uncertainty may qualify for SR&ED tax credits, and NRC IRAP can fund part of some innovation projects. Routine chatbot setup usually does not qualify. Keep technical records from the start and confirm eligibility with the programs and your accountant.' },
     ],
-    cta: { href: serviceCityPath('ai-ml', 'calgary'), label: 'See our Calgary AI development services' },
+    cta: { href: serviceCityHref('ai-ml', 'calgary'), label: 'See our Calgary AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'calgary' },
   },
   {
@@ -5953,7 +5953,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Private-sector organisations in British Columbia fall under BC’s Personal Information Protection Act (PIPA). BC public bodies fall under the Freedom of Information and Protection of Privacy Act (FIPPA), which has its own rules on storing personal information outside Canada. Ask every vendor exactly where prompts, documents, embeddings and logs will be stored, whether all of it can stay in Canadian cloud regions, and whether the model provider is set up so it does not train on your data. Encryption, role-based access and audit logs should be part of the design, not an add-on. Your privacy officer should confirm the final compliance position; this guide is planning advice, not legal advice.' },
 
       { type: 'h2', id: 'vancouver-local', text: 'Working with an AI development team in Vancouver' },
-      { type: 'p', html: `Mapletech Labs is a Canadian AI development team headquartered in Edmonton. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day, and we come to Vancouver for in-person workshops when a milestone needs one, with travel agreed up front. You work directly with the senior engineers who design and build your system, and your contract is with a Canadian company, with a fixed scope and price in CAD agreed before work starts. See our <a href="${serviceCityPath('ai-ml', 'vancouver')}">AI development company in Vancouver</a> page for how we scope this work, and our <a href="/services/ai-ml">AI and machine learning services</a> page for the full range. Call us on <a href="tel:+14036048692">+1-403-604-8692</a>.` },
+      { type: 'p', html: `Mapletech Labs is a Canadian AI development team headquartered in Edmonton. We do not have a Vancouver office. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day, and we come to Vancouver for in-person workshops when a milestone needs one, with travel agreed up front. You work directly with the senior engineers who design and build your system, and your contract is with a Canadian company, with a fixed scope and price in CAD agreed before work starts. See our <a href="${serviceCityHref('ai-ml', 'vancouver')}">AI development company in Vancouver</a> page for how we scope this work, and our <a href="/services/ai-ml">AI and machine learning services</a> page for the full range. Call us on <a href="tel:+14036048692">+1-403-604-8692</a>.` },
       { type: 'p', html: 'Our work includes a high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a Canadian retailer, a real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate, and an AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech. See the <a href="/case-studies/ecommerce-platform">e-commerce</a>, <a href="/case-studies/logistics-platform">logistics</a> and <a href="/case-studies/fintech-trading-platform">fintech trading</a> case studies.' },
 
       { type: 'h2', id: 'cost', text: 'What AI development costs for a Vancouver project (CAD)' },
@@ -5973,7 +5973,7 @@ export const articles: Article[] = [
         '<strong>Vague answers on data location</strong>, or on whether a provider trains on your content.',
         '<strong>Accounts and keys in the agency’s name</strong>, and no support plan after go-live.',
       ] },
-      { type: 'callout', tone: 'brand', title: 'Planning an AI project in Vancouver?', text: `See our <a href="${serviceCityPath('ai-ml', 'vancouver')}">AI development company in Vancouver</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, or <a href="/contact">contact us</a> to book a free discovery call.` },
+      { type: 'callout', tone: 'brand', title: 'Planning an AI project in Vancouver?', text: `See our <a href="${serviceCityHref('ai-ml', 'vancouver')}">AI development company in Vancouver</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, or <a href="/contact">contact us</a> to book a free discovery call.` },
     ],
     keyTakeaways: [
       'Compare every Vancouver AI vendor on five points: portfolio, discovery process, code and design-system ownership, pricing model and post-launch support.',
@@ -5989,7 +5989,7 @@ export const articles: Article[] = [
       { q: 'Does Mapletech Labs have an office in Vancouver?', a: 'No. Mapletech Labs is headquartered in Edmonton, one hour ahead of Vancouver, so we serve Vancouver clients remotely with almost the same working day. We come to Vancouver for in-person workshops when a milestone needs one, with travel agreed up front.' },
       { q: 'Who owns the AI system after launch?', a: 'You should. All source code, prompts, configuration and cloud accounts created for your project should belong to you, with no lock-in, so you can keep working with the vendor after launch or hand everything to your own team.' },
     ],
-    cta: { href: serviceCityPath('ai-ml', 'vancouver'), label: 'See our Vancouver AI development services' },
+    cta: { href: serviceCityHref('ai-ml', 'vancouver'), label: 'See our Vancouver AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'vancouver' },
   },
   {
@@ -6085,7 +6085,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Good answers are specific and in writing. If you are also comparing general software vendors, our <a href="/blog/software-development-companies-montreal">guide to software development companies in Montreal</a> covers the wider questions.' },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Montreal companies' },
-      { type: 'p', html: `Mapletech Labs is a Canadian AI development team headquartered in Edmonton. We do not have a Montreal office; we deliver remotely, and you work directly with the senior engineers who design and build your system, not a sales layer. Our focus is AI that saves staff time and answers from your own data. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. See our <a href="${serviceCityPath('ai-ml', 'montreal')}">AI development company in Montreal</a> page for how we scope and price this work, and our <a href="/services/ai-ml">AI and machine learning services</a> page for the full range. Call us on <a href="tel:+14036048692">+1-403-604-8692</a>.` },
+      { type: 'p', html: `Mapletech Labs is a Canadian AI development team headquartered in Edmonton. We do not have a Montreal office; we deliver remotely, and you work directly with the senior engineers who design and build your system, not a sales layer. Our focus is AI that saves staff time and answers from your own data. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. See our <a href="${serviceCityHref('ai-ml', 'montreal')}">AI development company in Montreal</a> page for how we scope and price this work, and our <a href="/services/ai-ml">AI and machine learning services</a> page for the full range. Call us on <a href="tel:+14036048692">+1-403-604-8692</a>.` },
       { type: 'callout', tone: 'brand', title: 'Talk to a Canadian AI team about your Montreal project', text: `See our <a href="/locations/ai-development-company-in-montreal">AI development company in Montreal</a> page, compare general vendors in our <a href="/locations/software-development-company-in-montreal">software development company in Montreal</a> page, or read our <a href="/blog/software-development-companies-montreal">Montreal software development guide</a>. Call <a href="tel:+14036048692">+1-403-604-8692</a> or <a href="/contact">contact us</a> to book a free discovery call.` },
     ],
     keyTakeaways: [
@@ -6103,7 +6103,7 @@ export const articles: Article[] = [
       { q: 'Can our AI system and data stay in Canada?', a: 'Yes, with the right architecture. A credible vendor can host the system, documents, embeddings and logs in Canadian cloud regions and configure model providers so your data is not used for training. Ask for the hosting region of every component in writing, and have your privacy officer confirm the final position.' },
       { q: 'Does Mapletech Labs have an office in Montreal?', a: 'No. Mapletech Labs is headquartered in Edmonton and we do not have a Montreal office. We serve Montreal clients remotely through video workshops, weekly calls and shared project boards, and you work directly with the senior engineers building your system.' },
     ],
-    cta: { href: serviceCityPath('ai-ml', 'montreal'), label: 'See our Montreal AI development services' },
+    cta: { href: serviceCityHref('ai-ml', 'montreal'), label: 'See our Montreal AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'montreal' },
   },
   {
@@ -6193,10 +6193,10 @@ export const articles: Article[] = [
       { type: 'p', html: 'Good answers are specific and in writing. If you are also comparing general software vendors, our <a href="/blog/software-development-companies-ottawa">guide to choosing a software development company in Ottawa</a> covers the wider questions.' },
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Ottawa companies' },
-      { type: 'p', html: `Mapletech Labs is a Canadian AI development team headquartered in Edmonton. We do not have an Ottawa office or Ottawa staff, and we build for Ottawa clients remotely through video workshops, weekly calls and shared project boards. Edmonton is two hours behind Ottawa, so our working days overlap for most of yours. You work directly with the senior engineers who design and build your system, your contract is with a Canadian company priced in CAD, and scope and price are fixed before any work starts. Discovery is free. See our <a href="${serviceCityPath('ai-ml', 'ottawa')}">AI development company in Ottawa</a> page for how we scope and price this work.` },
+      { type: 'p', html: `Mapletech Labs is a Canadian AI development team headquartered in Edmonton. We do not have an Ottawa office or Ottawa staff, and we build for Ottawa clients remotely through video workshops, weekly calls and shared project boards. Edmonton is two hours behind Ottawa, so our working days overlap for most of yours. You work directly with the senior engineers who design and build your system, your contract is with a Canadian company priced in CAD, and scope and price are fixed before any work starts. Discovery is free. See our <a href="${serviceCityHref('ai-ml', 'ottawa')}">AI development company in Ottawa</a> page for how we scope and price this work.` },
       { type: 'p', html: 'We can run your AI system and store its data in Canadian cloud regions, and we configure model providers so your information is not used to train their models. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to discuss your project.' },
       { type: 'p', html: 'Our work includes an AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech, a real-time logistics platform handling 15K+ daily deliveries, with 25% fuel savings and a 98% on-time delivery rate, and a PCI DSS certified payments API processing 12 million transactions a month, securely and at scale. See the <a href="/case-studies/fintech-trading-platform">fintech trading</a>, <a href="/case-studies/logistics-platform">logistics</a> and <a href="/case-studies/payments-api-platform">payments API</a> case studies.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a Canadian AI team about your Ottawa project', text: `See our <a href="${serviceCityPath('ai-ml', 'ottawa')}">AI development company in Ottawa</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to a Canadian AI team about your Ottawa project', text: `See our <a href="${serviceCityHref('ai-ml', 'ottawa')}">AI development company in Ottawa</a> page, explore our <a href="/services/ai-ml">AI and machine learning services</a>, or <a href="/contact">contact us</a> to describe what you want to build.` },
     ],
     keyTakeaways: [
       'Ottawa AI work usually means chatbots, LLM features, RAG over documents or workflow automation; a good vendor says when you need none of them.',
@@ -6212,7 +6212,7 @@ export const articles: Article[] = [
       { q: 'Does Mapletech Labs have an office in Ottawa?', a: 'No. Mapletech Labs is headquartered in Edmonton, and we do not have an Ottawa office or Ottawa staff. We serve Ottawa clients remotely through video workshops, weekly calls and shared project boards, with Edmonton two hours behind Ottawa so most of the working day overlaps.' },
       { q: 'Can SR&ED or IRAP help pay for an AI project?', a: 'Sometimes. Work that resolves genuine technical uncertainty may qualify for SR&ED tax credits, and NRC IRAP can fund part of some innovation projects. Routine chatbot setup usually does not qualify. Keep technical records from the start and confirm eligibility with the programs and your accountant.' },
     ],
-    cta: { href: serviceCityPath('ai-ml', 'ottawa'), label: 'See our Ottawa AI development services' },
+    cta: { href: serviceCityHref('ai-ml', 'ottawa'), label: 'See our Ottawa AI development services' },
     enquiryContext: { serviceSlug: 'ai-ml', citySlug: 'ottawa' },
   },
   {
@@ -6253,7 +6253,7 @@ export const articles: Article[] = [
         { term: 'Health and retail apps', text: 'Patient, shopper and staff journeys must respect privacy and conversion goals at once. Forms, consent and checkout need testing on phones, not only desktop mockups.' },
         { term: 'AODA and WCAG 2.0 AA', text: 'Ontario public-facing products often need to meet Accessibility for Ontarians with Disabilities Act expectations. We design to WCAG 2.0 AA: contrast, focus states, keyboard paths, text sizing and screen-reader labels are decided in the design files, not patched after development. Confirm your legal obligations with your compliance team; this guide is practical planning, not legal advice.' },
       ] },
-      { type: 'p', html: `These themes match how we describe Toronto work on our <a href="${serviceCityPath('product-design', 'toronto')}">UI/UX design company in Toronto</a> page.` },
+      { type: 'p', html: `These themes match how we describe Toronto work on our <a href="${serviceCityHref('product-design', 'toronto')}">UI/UX design company in Toronto</a> page.` },
 
       { type: 'h2', id: 'pricing', text: 'Typical UI/UX design costs in Toronto (CAD)' },
       { type: 'p', html: 'Toronto design projects follow Canadian onshore rates. The ranges below are the same fixed-price bands we publish for Toronto clients on our service+city page — use them to sanity-check quotes, not as a promise without a scoped audit:' },
@@ -6292,7 +6292,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Toronto teams' },
       { type: 'p', html: 'Mapletech Labs is headquartered in Edmonton and partners with Toronto and GTA teams on UI/UX design for products people actually use. Our designers work beside the engineers who build the software, so research, screen flows and handoff stay on one thread from wireframes through launch. We serve Toronto clients remotely with hours that overlap Eastern time, and we travel to the GTA for discovery and design workshops when in-person work helps, with travel agreed up front. You review shared Figma files and talk directly with the people doing the work. You own the editable Figma files, prototypes and research when the project ends.' },
       { type: 'p', html: 'Our design work sits alongside shipped products such as an AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech, a high-performance e-commerce platform driving 3x revenue growth and handling 2M+ monthly visitors for a leading Canadian retailer, and a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider. See those stories on our case study pages linked from our Toronto service page.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a UI/UX team about your Toronto project', text: `See how we work on our <a href="${serviceCityPath('product-design', 'toronto')}">UI/UX design company in Toronto</a> page, explore our <a href="/services/product-design">UI/UX and product design services</a>, read our <a href="/blog/ui-ux-design-companies-canada">UI/UX design companies in Canada</a> guide, or <a href="/contact">contact us</a> to book a free UX audit.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to a UI/UX team about your Toronto project', text: `See how we work on our <a href="${serviceCityHref('product-design', 'toronto')}">UI/UX design company in Toronto</a> page, explore our <a href="/services/product-design">UI/UX and product design services</a>, read our <a href="/blog/ui-ux-design-companies-canada">UI/UX design companies in Canada</a> guide, or <a href="/contact">contact us</a> to book a free UX audit.` },
     ],
     keyTakeaways: [
       'A credible UI/UX partner delivers audit, research, wireframes, a tested clickable prototype, a design system and developer handoff — not only final screens.',
@@ -6308,7 +6308,7 @@ export const articles: Article[] = [
       { q: 'Who owns the design files when the project ends?', a: 'You should. The contract should hand over editable Figma files, clickable prototypes, the component library, design tokens, research findings and usability notes with no lock-in. If you have an in-house team, a working session at handoff helps them extend the system after launch.' },
       { q: 'Should the same company design and build my Toronto product?', a: 'It often helps. Mapletech Labs designs and builds on one team, so the design system maps to real components and edge cases are settled with the engineers who will code them. If you use separate vendors, insist on annotated specs and a designer who stays available during the build.' },
     ],
-    cta: { href: serviceCityPath('product-design', 'toronto'), label: 'See our Toronto UI/UX design services' },
+    cta: { href: serviceCityHref('product-design', 'toronto'), label: 'See our Toronto UI/UX design services' },
     enquiryContext: { serviceSlug: 'product-design', citySlug: 'toronto' },
   },
   {
@@ -6419,7 +6419,7 @@ export const articles: Article[] = [
       { q: 'Who owns the design files after the project?', a: 'You should. Your contract should hand over editable design files, prototypes, the component library, design tokens and research findings when the project ends, with no lock-in.' },
       { q: 'Should I hire a design-only studio or a team that also builds?', a: 'If you have strong in-house engineers, a design-only studio can work well with a detailed handover. If you need the product built too, a design-and-build team keeps designers and engineers on the same project, which reduces gaps between the design and the final software.' },
     ],
-    cta: { href: serviceCityPath('product-design', 'vancouver'), label: 'See our Vancouver UI/UX design services' },
+    cta: { href: serviceCityHref('product-design', 'vancouver'), label: 'See our Vancouver UI/UX design services' },
     enquiryContext: { serviceSlug: 'product-design', citySlug: 'vancouver' },
   },
   {
@@ -6546,7 +6546,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Edmonton teams' },
       { type: 'p', html: 'Mapletech Labs was founded in Edmonton in 2018 and is still headquartered here, so Edmonton projects are our home market rather than one we visit. Our designers sit beside the engineers who build the product, keeping research, screen flows and handoff on one thread from the first wireframe through launch. We run discovery workshops and usability sessions at your Edmonton office, plant or campus when in-person work helps, share Figma files for day-to-day review, and agree a fixed scope and price in CAD before visual design starts. We design to WCAG 2.1 AA and consider Alberta PIPA requirements when planning flows that handle personal information. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your project.' },
       { type: 'p', html: 'Our product design team has designed 500+ screens and 200+ design systems, and the same team can build the product it designs. Our work includes an AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech, a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider, and a real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings. See the <a href="/case-studies/fintech-trading-platform">fintech trading</a>, <a href="/case-studies/healthcare-telehealth">telehealth</a> and <a href="/case-studies/real-estate-portal">real estate</a> case studies.' },
-      { type: 'callout', tone: 'brand', title: 'Planning a UI/UX project in Edmonton?', text: `See how we scope local projects on our <a href="${serviceCityPath('product-design', 'edmonton')}">UI/UX design company in Edmonton</a> page, explore our <a href="/services/product-design">UI/UX and product design services</a>, compare with our <a href="/blog/ui-ux-design-companies-canada">guide to choosing a UI/UX design company in Canada</a>, or <a href="/contact">contact us</a> to book a free UX audit.` },
+      { type: 'callout', tone: 'brand', title: 'Planning a UI/UX project in Edmonton?', text: `See how we scope local projects on our <a href="${serviceCityHref('product-design', 'edmonton')}">UI/UX design company in Edmonton</a> page, explore our <a href="/services/product-design">UI/UX and product design services</a>, compare with our <a href="/blog/ui-ux-design-companies-canada">guide to choosing a UI/UX design company in Canada</a>, or <a href="/contact">contact us</a> to book a free UX audit.` },
     ],
     keyTakeaways: [
       'A complete UI/UX engagement covers research, a UX audit, wireframes, prototypes, usability testing, a design system and developer handover — not just final screens.',
@@ -6563,7 +6563,7 @@ export const articles: Article[] = [
       { q: 'Who owns the design files after the project?', a: 'You should. The contract should hand over editable design files, clickable prototypes, the component library, design tokens, research findings and usability notes when the project ends, with no lock-in.' },
       { q: 'Should the same company design and build my product?', a: 'It often helps. Mapletech Labs designs and builds on one team, so the design system maps to real components and edge cases are settled with the engineers who will code them. If you use separate vendors, insist on annotated specs and a designer who stays available during the build.' },
     ],
-    cta: { href: serviceCityPath('product-design', 'edmonton'), label: 'See our Edmonton UI/UX design services' },
+    cta: { href: serviceCityHref('product-design', 'edmonton'), label: 'See our Edmonton UI/UX design services' },
     enquiryContext: { serviceSlug: 'product-design', citySlug: 'edmonton' },
   },
   {
@@ -6610,7 +6610,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'That prototype should then be tested with five to eight real users on set tasks, such as “log today’s inspection” or “find the delayed shipment”. Where people hesitate tells you what to change while it is still a design file and not code. Accessibility belongs in the same stage: contrast, focus states, keyboard paths, text size and screen-reader labels are design decisions, and a Calgary studio should be able to show how it targets WCAG 2.2 AA in the files themselves.' },
 
       { type: 'h2', id: 'calgary-local', text: 'Working with a UI/UX team in Calgary' },
-      { type: 'p', html: `Mapletech Labs is an Alberta UI/UX design team, founded in Edmonton in 2018 and still headquartered there. We do not have a Calgary office. We serve Calgary teams on calls and shared Figma files, in the same time zone, and travel to Calgary for research and design workshops in person when a project calls for it, with travel agreed up front. Our designers sit with the engineers who build the product, so what we design is what gets shipped. See how we scope local work on our <a href="${serviceCityPath('product-design', 'calgary')}">UI/UX design company in Calgary</a> page, and how research, prototyping and design systems fit together on our <a href="/services/product-design">UI/UX and product design services</a> page. Call us on <a href="tel:+14036048692">+1-403-604-8692</a>.` },
+      { type: 'p', html: `Mapletech Labs is an Alberta UI/UX design team, founded in Edmonton in 2018 and still headquartered there. We do not have a Calgary office. We serve Calgary teams on calls and shared Figma files, in the same time zone, and travel to Calgary for research and design workshops in person when a project calls for it, with travel agreed up front. Our designers sit with the engineers who build the product, so what we design is what gets shipped. See how we scope local work on our <a href="${serviceCityHref('product-design', 'calgary')}">UI/UX design company in Calgary</a> page, and how research, prototyping and design systems fit together on our <a href="/services/product-design">UI/UX and product design services</a> page. Call us on <a href="tel:+14036048692">+1-403-604-8692</a>.` },
       { type: 'p', html: 'Our product design team has designed 500+ screens and 200+ design systems. Our work includes an AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech, a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider, and a real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings. See the <a href="/case-studies/fintech-trading-platform">fintech trading</a>, <a href="/case-studies/healthcare-telehealth">telehealth</a> and <a href="/case-studies/real-estate-portal">real estate</a> case studies.' },
 
       { type: 'h2', id: 'cost', text: 'What UI/UX design costs for a Calgary project' },
@@ -6630,7 +6630,7 @@ export const articles: Article[] = [
         '<strong>Design files kept by the studio</strong>, or a design system you cannot edit without them.',
         '<strong>No one available after handover</strong> to answer developer questions or review the build.',
       ] },
-      { type: 'callout', tone: 'brand', title: 'Planning a UI/UX project in Calgary?', text: `See our <a href="${serviceCityPath('product-design', 'calgary')}">UI/UX design company in Calgary</a> page, explore our <a href="/services/product-design">UI/UX and product design services</a>, or <a href="/contact">contact us</a> to book a free UX audit.` },
+      { type: 'callout', tone: 'brand', title: 'Planning a UI/UX project in Calgary?', text: `See our <a href="${serviceCityHref('product-design', 'calgary')}">UI/UX design company in Calgary</a> page, explore our <a href="/services/product-design">UI/UX and product design services</a>, or <a href="/contact">contact us</a> to book a free UX audit.` },
     ],
     keyTakeaways: [
       'Compare every Calgary studio on five points: portfolio, discovery process, design-system ownership, pricing model and post-launch support.',
@@ -6646,7 +6646,7 @@ export const articles: Article[] = [
       { q: 'Who should own the design system after the project?', a: 'You should. The editable Figma files, clickable prototypes, component library, design tokens and research notes should be handed over and belong to you, with no lock-in, so your own team or another vendor can keep building on them.' },
       { q: 'What support should I expect after a UI/UX project launches?', a: 'A designer should stay available to answer developer questions during the build and review the coded screens against the design. After launch, agree in writing how usability fixes and new screens are scoped and priced, so improvements do not stall.' },
     ],
-    cta: { href: serviceCityPath('product-design', 'calgary'), label: 'See our Calgary UI/UX design services' },
+    cta: { href: serviceCityHref('product-design', 'calgary'), label: 'See our Calgary UI/UX design services' },
     enquiryContext: { serviceSlug: 'product-design', citySlug: 'calgary' },
   },
   {
@@ -6748,7 +6748,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works with Ottawa teams' },
       { type: 'p', html: 'Mapletech Labs was founded in Edmonton in 2018 and is still headquartered there. We do not have an Ottawa office. We serve Ottawa teams remotely, in the same Eastern time zone, and travel to Ottawa for discovery workshops and usability sessions when a project calls for it, with travel agreed up front. Our designers sit beside the engineers who build the product, so research, screen flows and handover stay on one thread from the first wireframe through launch. We design to WCAG 2.1 AA, plan bilingual English and French interfaces, and consider GC Cloud and Ontario privacy expectations when planning flows that handle personal information. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your project.' },
       { type: 'p', html: 'Our product design team has designed 500+ screens and 200+ design systems, and the same team can build the product it designs. Our work includes an AI-powered trading platform processing 50K+ transactions daily with 99.99% uptime for a leading Canadian fintech, a HIPAA-compliant telehealth platform serving 200K+ patient sessions with 99.97% uptime for a leading Canadian healthcare provider, and a real estate platform for PropConnect Canada with machine-learning recommendations across 850,000+ active listings. See the <a href="/case-studies/fintech-trading-platform">fintech trading</a>, <a href="/case-studies/healthcare-telehealth">telehealth</a> and <a href="/case-studies/real-estate-portal">real estate</a> case studies.' },
-      { type: 'callout', tone: 'brand', title: 'Planning a UI/UX project in Ottawa?', text: `See how we scope local projects on our <a href="${serviceCityPath('product-design', 'ottawa')}">UI/UX design company in Ottawa</a> page, explore our <a href="/services/product-design">UI/UX and product design services</a>, compare with our <a href="/blog/ui-ux-design-companies-canada">guide to choosing a UI/UX design company in Canada</a>, or <a href="/contact">contact us</a> to book a free UX audit.` },
+      { type: 'callout', tone: 'brand', title: 'Planning a UI/UX project in Ottawa?', text: `See how we scope local projects on our <a href="${serviceCityHref('product-design', 'ottawa')}">UI/UX design company in Ottawa</a> page, explore our <a href="/services/product-design">UI/UX and product design services</a>, compare with our <a href="/blog/ui-ux-design-companies-canada">guide to choosing a UI/UX design company in Canada</a>, or <a href="/contact">contact us</a> to book a free UX audit.` },
     ],
     keyTakeaways: [
       'Compare Ottawa studios on five points: portfolio and shipped work, discovery and research, design-system ownership, pricing model and post-launch support.',
@@ -6765,7 +6765,7 @@ export const articles: Article[] = [
       { q: 'Who owns the design files after the project?', a: 'You should. The contract should hand over editable design files, clickable prototypes, the component library, design tokens, research findings and usability notes when the project ends, with no lock-in.' },
       { q: 'Should the same company design and build my product?', a: 'It often helps. Mapletech Labs designs and builds on one team, so the design system maps to real components and edge cases are settled with the engineers who will code them. If you use separate vendors, insist on annotated specs and a designer who stays available during the build.' },
     ],
-    cta: { href: serviceCityPath('product-design', 'ottawa'), label: 'See our Ottawa UI/UX design services' },
+    cta: { href: serviceCityHref('product-design', 'ottawa'), label: 'See our Ottawa UI/UX design services' },
     enquiryContext: { serviceSlug: 'product-design', citySlug: 'ottawa' },
   },
   {
@@ -6891,7 +6891,7 @@ export const articles: Article[] = [
       { q: 'How long does a UI/UX project take?', a: 'Most projects take 6 to 11 weeks across research, wireframes, prototyping, visual design and developer handover. A focused MVP can move faster, while a large research program or a multi-product design system takes longer. We plan French and English content reviews into the milestones so feedback and translation do not stall the build.' },
       { q: 'Who owns the design files after the project?', a: 'You should. The contract should hand over editable design files, clickable prototypes, the component library, design tokens, research findings and usability notes when the project ends, with no lock-in so your own team or another vendor can keep building on them.' },
     ],
-    cta: { href: serviceCityPath('product-design', 'montreal'), label: 'See our Montreal UI/UX design services' },
+    cta: { href: serviceCityHref('product-design', 'montreal'), label: 'See our Montreal UI/UX design services' },
     enquiryContext: { serviceSlug: 'product-design', citySlug: 'montreal' },
   },
 
@@ -6984,7 +6984,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'how-we-work', text: 'How Mapletech Labs works in Edmonton' },
       { type: 'p', html: 'Mapletech Labs was founded in Edmonton in 2018 and Edmonton is still our headquarters. When an Edmonton company hires us for web development, the people who scope the work are the people who build it. We run discovery in person when a workshop helps, agree on a fixed scope and fixed price in CAD before coding starts, and you own the code, domain and hosting accounts. Call us on <a href="tel:+14036048692">+1-403-604-8692</a> to talk through your project.' },
-      { type: 'callout', tone: 'brand', title: 'Talk to a web team in Edmonton', text: `See how we work on our <a href="${serviceCityPath('web-development', 'edmonton')}">web development company in Edmonton</a> page, explore our <a href="/services/web-development">web development services</a>, or <a href="/contact">contact us</a> to describe what you want to build. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-edmonton">web design company in Edmonton</a> page.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to a web team in Edmonton', text: `See how we work on our <a href="${serviceCityHref('web-development', 'edmonton')}">web development company in Edmonton</a> page, explore our <a href="/services/web-development">web development services</a>, or <a href="/contact">contact us</a> to describe what you want to build. If you mainly need a new marketing website designed rather than a web app, see our <a href="/locations/web-design-company-in-edmonton">web design company in Edmonton</a> page.` },
     ],
     keyTakeaways: [
       'Edmonton web work spans capital-region trades and clinics, B2B energy and public-sector portals, and e-commerce — each needs a different scope.',
@@ -7001,7 +7001,7 @@ export const articles: Article[] = [
       { q: 'Will a new site hurt my Google rankings?', a: 'Not if migration is planned. Audit URLs that earn traffic today, map them to the new structure, use 301 redirects where URLs change, keep titles and headings where they still match search intent, and launch from staging after technical and content review.' },
       { q: 'Who owns the website when the project finishes?', a: 'You should. The contract should assign source code, design files, the domain and CMS access to your business on payment, with no lock-in. Analytics and Search Console should stay in your name throughout the project.' },
     ],
-    cta: { href: serviceCityPath('web-development', 'edmonton'), label: 'See our Edmonton web development services' },
+    cta: { href: serviceCityHref('web-development', 'edmonton'), label: 'See our Edmonton web development services' },
     enquiryContext: { serviceSlug: 'web-development', citySlug: 'edmonton' },
   },
   {
@@ -7101,7 +7101,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'Many Toronto businesses run ads while SEO builds, then use what the ads reveal about converting keywords to decide which pages to grow. If you want ads and SEO under one roof, see our <a href="/locations/digital-marketing-agency-in-toronto">digital marketing agency in Toronto</a> page.' },
 
-      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Toronto business', text: `See our <a href="${serviceCityPath('digital-marketing', 'toronto')}">SEO company in Toronto</a> page and our <a href="/locations/digital-marketing-agency-in-toronto">digital marketing agency in Toronto</a> page, or explore our <a href="/services/digital-marketing/local-seo">local SEO</a> and <a href="/services/digital-marketing/seo-services">SEO services</a>.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Toronto business', text: `See our <a href="${serviceCityHref('digital-marketing', 'toronto')}">SEO company in Toronto</a> page and our <a href="/locations/digital-marketing-agency-in-toronto">digital marketing agency in Toronto</a> page, or explore our <a href="/services/digital-marketing/local-seo">local SEO</a> and <a href="/services/digital-marketing/seo-services">SEO services</a>.` },
     ],
     keyTakeaways: [
       'Decide first which SEO job you need: map pack for GTA trades and clinics, useful pages for Mississauga, Brampton, Markham, Scarborough and North York, or competitive downtown and B2B searches.',
@@ -7117,7 +7117,7 @@ export const articles: Article[] = [
       { q: 'Can we rank in the Toronto map pack without a downtown address?', a: 'Yes, if the address and service area are real. You need either a staffed address in the area or a genuine service-area setup. Google removes or down-ranks profiles built on virtual offices and fake addresses.' },
       { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and where you serve in the GTA, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
     ],
-    cta: { href: serviceCityPath('digital-marketing', 'toronto'), label: 'See our Toronto SEO services' },
+    cta: { href: serviceCityHref('digital-marketing', 'toronto'), label: 'See our Toronto SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'toronto' },
   },
   {
@@ -7218,7 +7218,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'Many Vancouver businesses run ads while SEO builds, then use what the ads reveal about converting keywords to decide which pages to grow. If you want ads and SEO under one roof, see our <a href="/locations/digital-marketing-agency-in-vancouver">digital marketing agency in Vancouver</a> page.' },
 
-      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Vancouver business', text: `Mapletech Labs is headquartered in Edmonton, one hour ahead of Vancouver, and travels to Vancouver for workshops, audits and milestone reviews when a project needs it. See our <a href="${serviceCityPath('digital-marketing', 'vancouver')}">SEO company in Vancouver</a> page and our <a href="/locations/digital-marketing-agency-in-vancouver">digital marketing agency in Vancouver</a> page, or explore our <a href="/services/digital-marketing/seo-services">SEO services</a>.` },
+      { type: 'callout', tone: 'brand', title: 'Talk to an SEO team about your Vancouver business', text: `Mapletech Labs is headquartered in Edmonton, one hour ahead of Vancouver, and travels to Vancouver for workshops, audits and milestone reviews when a project needs it. See our <a href="${serviceCityHref('digital-marketing', 'vancouver')}">SEO company in Vancouver</a> page and our <a href="/locations/digital-marketing-agency-in-vancouver">digital marketing agency in Vancouver</a> page, or explore our <a href="/services/digital-marketing/seo-services">SEO services</a>.` },
     ],
     keyTakeaways: [
       'Decide first which SEO job you need: the Metro Vancouver map pack, useful pages for Burnaby, Surrey, Richmond and North Vancouver, or competitive category and comparison searches.',
@@ -7234,7 +7234,7 @@ export const articles: Article[] = [
       { q: 'How long until Vancouver SEO shows results?', a: 'Profile and technical fixes usually show movement within 8 to 16 weeks for a site without serious blockers. Competitive category terms such as SaaS comparisons, real estate or tourism more often need 4 to 9 months before the trend is worth judging.' },
       { q: 'How can my business show up in ChatGPT or Perplexity answers?', a: 'Make your website state clear facts about who you are, what you do and which Lower Mainland cities you serve, add valid Organization or LocalBusiness and Service schema, keep your name, address and phone consistent everywhere, and make sure your site is indexed in Google and Bing.' },
     ],
-    cta: { href: serviceCityPath('digital-marketing', 'vancouver'), label: 'See our Vancouver SEO services' },
+    cta: { href: serviceCityHref('digital-marketing', 'vancouver'), label: 'See our Vancouver SEO services' },
     enquiryContext: { serviceSlug: 'digital-marketing', citySlug: 'vancouver' },
   },
   {
