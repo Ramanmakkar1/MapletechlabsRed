@@ -186,17 +186,17 @@ export default function PageClient({ faqs, contactHref }: { faqs: Faq[]; contact
                 software development company in Edmonton
               </Link>{' '}
               page for the wider engineering service, read our guide to{' '}
-              <Link href="/blog/app-development-companies-edmonton">
-                choosing an app development company in Edmonton
+              <Link href="/blog/app-development-companies-canada">
+                choosing an app development company in Canada
               </Link>
               , or <Link href={contactHref}>talk to us about your app project</Link>.
             </p>
             <p style={{ ...body, marginTop: 12 }}>
               Comparing local teams? Our{' '}
-              <Link href="/locations/app-development-company-in-edmonton">
-                app development company in Edmonton
+              <Link href="/blog/app-development-cost-canada">
+                Canadian app development cost guide
               </Link>{' '}
-              page covers local pricing guidance, sectors we serve and Edmonton FAQs.
+              covers pricing ranges and the main cost drivers.
             </p>
           </div>
         </section>
