@@ -1,14 +1,15 @@
 import LocationPageTemplate from '@/components/page/LocationPageTemplate';
+import { serviceCityHref } from '@/data/serviceCity';
 
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
 // Honest hero figures: the company's own verifiable facts, not invented client metrics.
 const heroStats = pair([['2018', 'Founded in Edmonton'], ['12', 'Canadian cities served'], ['1 day', 'To a senior-engineer reply']]);
 const services = [
-  { title: 'Mobile App Development', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: '/services/mobile-app-development/edmonton' },
-  { title: 'Web Development', desc: 'Fast, secure web platforms and enterprise portals engineered to scale — from marketing sites to the complex internal systems that replace spreadsheets and legacy tools.', href: '/locations/web-development-company-in-edmonton' },
-  { title: 'AI & Machine Learning', desc: 'LLM integration, intelligent automation and predictive analytics built for production — wired into the systems your team already uses, where a model removes real work.', href: '/locations/ai-development-company-in-edmonton' },
+  { title: 'Mobile App Development', desc: 'Native iOS and Android and cross-platform apps built for performance and the app stores — from field-crew tools to consumer products your users keep on the home screen.', href: serviceCityHref('mobile-app-development', 'edmonton') },
+  { title: 'Web Development', desc: 'Fast, secure web platforms and enterprise portals engineered to scale — from marketing sites to the complex internal systems that replace spreadsheets and legacy tools.', href: serviceCityHref('web-development', 'edmonton') },
+  { title: 'AI & Machine Learning', desc: 'LLM integration, intelligent automation and predictive analytics built for production — wired into the systems your team already uses, where a model removes real work.', href: serviceCityHref('ai-ml', 'edmonton') },
   { title: 'Blockchain & Web3', desc: 'Smart contracts, DeFi protocols and decentralized apps engineered for security and audit — practical Web3 that solves a real problem rather than chasing a trend.', href: '/services/blockchain-web3' },
-  { title: 'Cloud & DevOps', desc: 'AWS and Azure architecture, Kubernetes and CI/CD pipelines for zero-downtime releases — infrastructure that scales with demand and costs less to run.', href: '/locations/edmonton/cloud-devops' },
+  { title: 'Cloud & DevOps', desc: 'AWS and Azure architecture, Kubernetes and CI/CD pipelines for zero-downtime releases — infrastructure that scales with demand and costs less to run.', href: serviceCityHref('cloud-devops', 'edmonton') },
   { title: 'Product Design', desc: 'UX research, product strategy, prototyping and design systems that convert — interfaces your customers find obvious and your engineers can build on.', href: '/locations/ui-ux-design-company-in-edmonton' },
 ];
 
