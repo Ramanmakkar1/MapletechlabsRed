@@ -4,6 +4,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { BUSINESS, AUTHOR_PERSON_ID } from '@/lib/seo/business';
 
 const profileUrl = canonicalUrl('/about/raman-makkar');
 const title = 'Raman Makkar, Founder & CEO of Mapletech Labs, Edmonton';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function RamanPage() {
-  const personId = `${profileUrl}#person`;
+  const personId = AUTHOR_PERSON_ID;
   const profileSchema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -41,13 +42,14 @@ export default function RamanPage() {
         name: 'Raman Makkar',
         jobTitle: 'Founder & CEO',
         url: profileUrl,
-        email: 'hello@mapletechlabs.ca',
-        telephone: '+1-403-604-8692',
+        email: BUSINESS.email,
+        telephone: BUSINESS.telephone,
         worksFor: {
           '@type': 'Organization',
           '@id': `${canonicalUrl('/')}#organization`,
           name: 'Mapletech Labs',
           url: canonicalUrl('/'),
+          sameAs: [...BUSINESS.sameAs],
         },
         description:
           'Founded Mapletech Labs in 2018 with a mission to build world-class software without compromise. With 15+ years in software engineering, Raman Makkar has architected systems processing billions of transactions, scaled engineering teams, and mentored builders across fintech, healthcare, and enterprise.',
