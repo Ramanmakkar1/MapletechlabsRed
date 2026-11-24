@@ -190,10 +190,10 @@ export default function PageClient({ faqs, contactHref }: { faqs: Faq[]; contact
             </p>
             <p style={{ ...body, marginTop: 12 }}>
               Comparing local teams? Our{' '}
-              <Link href="/locations/app-development-company-in-vancouver">
-                app development company in Vancouver
+              <Link href="/blog/app-development-cost-canada">
+                Canadian app development cost guide
               </Link>{' '}
-              page covers local pricing guidance, sectors we serve and Vancouver FAQs.{' '}Before you sign with anyone, read our guide to{' '}<Link href="/blog/app-development-companies-vancouver">choosing an app development company in Vancouver</Link>{' '}for the questions to ask.
+              covers pricing ranges and the main cost drivers.{' '}Before you sign with anyone, read our guide to{' '}<Link href="/blog/app-development-companies-canada">choosing an app development company in Canada</Link>{' '}for the questions to ask.
             </p>
           </div>
         </section>
