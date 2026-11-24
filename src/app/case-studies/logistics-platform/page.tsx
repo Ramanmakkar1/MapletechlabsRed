@@ -35,6 +35,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': `https://mapletechlabs.ca/case-studies/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+  inLanguage: 'en-CA',
   headline: 'Real-Time Logistics & Fleet Management - Case Study',
   description: DESCRIPTION,
   datePublished: DATE,
@@ -71,7 +74,7 @@ export default function Page() {
       <BreadcrumbSchema items={getCaseStudyBreadcrumbs(NAME, SLUG)} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
       <PageClient />
     </>
