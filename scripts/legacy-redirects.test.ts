@@ -40,3 +40,24 @@ test('legacy French and service-city URLs each have one 301 to their final Engli
     );
   }
 });
+
+const legacyServiceRedirects: Array<[string, string]> = [
+  ['/digital-marketing-company-in-edmonton', '/services/digital-marketing'],
+  ['/digital-marketing-company-in-toronto', '/services/digital-marketing'],
+  ['/digital-marketing-company-in-vancouver', '/services/digital-marketing'],
+  ['/digital-marketing-company-in-calgary', '/services/digital-marketing'],
+  ['/seo-company-in-edmonton', '/services/digital-marketing/seo-services'],
+  ['/seo-company-in-toronto', '/services/digital-marketing/seo-services'],
+  ['/seo-company-in-vancouver', '/services/digital-marketing/seo-services'],
+  ['/seo-company-in-calgary', '/services/digital-marketing/seo-services'],
+] as const;
+
+test('legacy /seo-company-in-* and /digital-marketing-company-in-* rules are permanent 301s to indexable service pages', async () => {
+  const redirects = await nextConfig.redirects!();
+  for (const [source, destination] of legacyServiceRedirects) {
+    const matches = redirects.filter((redirect) => redirect.source === source);
+    assert.equal(matches.length, 1, `${source} must have exactly one redirect rule`);
+    assert.equal(matches[0].permanent, true, `${source} must be permanent`);
+    assert.equal(matches[0].destination, destination, `${source} must redirect to its indexable service page`);
+  }
+});
