@@ -164,6 +164,15 @@ const organizationSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
+          name: "Custom Software Development",
+          url: `${siteOrigin()}/services/software-development`,
+          areaServed: { "@type": "Country", name: "Canada" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
           name: "Web Development",
           url: `${siteOrigin()}/services/web-development`,
         },
