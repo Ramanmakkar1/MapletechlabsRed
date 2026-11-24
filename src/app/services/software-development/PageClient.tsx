@@ -152,7 +152,7 @@ const buyerContent = (
               <li><A href="/blog/custom-software-development-cost-canada">Custom software cost guide</A></li>
               <li><A href="/blog/choose-software-development-company-canada">How to choose a development company</A></li>
               <li><A href="/pricing">Pricing and engagement models</A></li>
-              <li><A href="/locations/edmonton/web-development">custom software development company in Edmonton</A></li>
+              <li><A href="/locations/software-development-company-in-edmonton">custom software development company in Edmonton</A></li>
             </ul>
           </div>
         </div>
