@@ -47,6 +47,13 @@ const PRIORITY_SERVICES: [string, string][] = [['ai-ml', 'ai-development'], ['sa
 // a slow on-demand render when the config redirect table is not applied.
 const NICHE_SERVICES = new Set(['ar-vr', 'blockchain-web3', 'game-development']);
 const MAJOR_TECH_CITIES = new Set(['toronto', 'vancouver', 'montreal', 'calgary', 'edmonton', 'ottawa']);
+const MOBILE_APP_CITIES = new Set(['edmonton', 'calgary', 'toronto', 'vancouver']);
+
+function meshDestination(city: string, kw: string): string {
+  return kw === 'app-development' && MOBILE_APP_CITIES.has(city)
+    ? `/services/mobile-app-development/${city}`
+    : `/locations/${kw}-company-in-${city}`;
+}
 
 function englishMeshRedirect(pathname: string): string | undefined {
   const parts = pathname.split('/').filter(Boolean);
@@ -54,7 +61,7 @@ function englishMeshRedirect(pathname: string): string | undefined {
   const city = parts[1];
   const service = parts[2];
   const match = PRIORITY_SERVICES.find(([svc]) => svc === service);
-  if (match) return `/locations/${match[1]}-company-in-${city}`;
+  if (match) return meshDestination(city, match[1]);
   if (NICHE_SERVICES.has(service) && !MAJOR_TECH_CITIES.has(city)) return `/services/${service}`;
   return undefined;
 }
@@ -68,7 +75,7 @@ function englishPathForFrench(pathname: string): string {
   }
   if (parts[0] === 'locations' && parts.length === 3 && CITY_HUBS.includes(parts[1])) {
     const match = PRIORITY_SERVICES.find(([service]) => service === parts[2]);
-    if (match) return `/locations/${match[1]}-company-in-${parts[1]}`;
+    if (match) return meshDestination(parts[1], match[1]);
   }
   return rest;
 }
