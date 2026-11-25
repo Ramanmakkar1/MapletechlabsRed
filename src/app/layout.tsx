@@ -135,6 +135,7 @@ const organizationSchema = {
   award: [...AWARDS],
   knowsAbout: [
     "Custom software development",
+    "Manufacturing software development",
     "Mobile app development",
     "AI development",
     "LLM integration",
