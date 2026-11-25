@@ -12,6 +12,8 @@ const DESCRIPTION = 'Web development companies in Toronto for 2026: compare serv
 const SLUG = 'web-development-companies-toronto';
 const DATE = '2026-02-19';
 
+const H1 = 'Top 10 Web Development Companies in Toronto (2026)';
+
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
   description: seoDescription(DESCRIPTION),
@@ -34,12 +36,14 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  '@id': 'https://mapletechlabs.ca/blog/web-development-companies-toronto#article',
+  headline: H1,
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-10',
   author: BLOG_AUTHOR,
   image: BLOG_IMAGE,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
   publisher: {
     '@type': 'Organization',
     '@id': 'https://mapletechlabs.ca/#organization',
