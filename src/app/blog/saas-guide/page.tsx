@@ -10,6 +10,7 @@ import { seoDescription } from '@/lib/seo/description';
 const TITLE = 'SaaS Guide 2026: How to Build a Profitable SaaS Product';
 const DESCRIPTION = 'From validating an idea to your first paying customers: a practical, Canadian founder\u2019s guide to building a profitable SaaS product in 2026.';
 const SLUG = 'saas-guide';
+const H1 = 'From Idea to MRR: How to Build a Profitable SaaS in 2026';
 const DATE = '2026-01-08';
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: H1,
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-01-15',
@@ -48,6 +49,8 @@ const jsonLd = {
   },
   url: `https://mapletechlabs.ca/blog/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/blog/${SLUG}`,
+  '@id': `https://mapletechlabs.ca/blog/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
 };
 
 export default function Page() {
