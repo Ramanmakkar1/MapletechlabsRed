@@ -92,3 +92,9 @@ test('blogPostHref returns /blog/<slug> for indexable posts', () => {
   assert.equal(blogPostHref('website-cost-canada'), '/blog/website-cost-canada');
   assert.equal(blogPostHref('top-10-unicorn-apps-2026'), '/blog/top-10-unicorn-apps-2026');
 });
+
+test('blogPostHref sends 301-d posts to their service path', () => {
+  assert.equal(blogPostHref('ai-development-companies-canada'), '/services/ai-ml');
+  assert.equal(blogPostHref('digital-marketing-cost-canada'), '/services/digital-marketing');
+  assert.equal(blogPostHref('saas-guide'), '/blog/saas-guide');
+});

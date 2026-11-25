@@ -79,12 +79,13 @@ export function indexableLinkHref(href: string): string {
 }
 
 /**
- * Redirect map for 301'd blog posts. When we link to a non-indexable post,
- * send crawlers to the redirect destination instead.
+ * Redirect map for 301'd blog posts. Keys are post slugs; values are the
+ * redirect destinations from next.config.ts. When we link to a non-indexable
+ * post, send crawlers to the redirect destination instead.
  */
-const BLOG_REDIRECT_MAP: Record<string, string> = {
-  '/blog/ai-development-companies-canada': '/services/ai-ml',
-  '/blog/digital-marketing-cost-canada': '/services/digital-marketing',
+export const BLOG_REDIRECTS: Record<string, string> = {
+  'ai-development-companies-canada': '/services/ai-ml',
+  'digital-marketing-cost-canada': '/services/digital-marketing',
 };
 
 /**
@@ -92,9 +93,7 @@ const BLOG_REDIRECT_MAP: Record<string, string> = {
  * returns the redirect destination; otherwise returns /blog/<slug>.
  */
 export function blogPostHref(slug: string): string {
-  const path = `/blog/${slug}`;
-  if (isIndexableHref(path)) return path;
-  return BLOG_REDIRECT_MAP[path] ?? path;
+  return BLOG_REDIRECTS[slug] ?? `/blog/${slug}`;
 }
 
 export function rewriteLocationLinks(html: string): string {
