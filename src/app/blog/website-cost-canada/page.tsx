@@ -12,6 +12,7 @@ const TITLE = 'Website Cost in Canada: 2026 Pricing Guide';
 const DESCRIPTION = 'Website development cost in Canada: compare 2026 CAD price ranges, cost drivers and budget tips for design, features and maintenance before you build.';
 const SLUG = 'website-cost-canada';
 const DATE = '2026-01-22';
+const H1 = 'How Much Does a Custom Website Cost in Canada? (2026 Pricing Guide)';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: H1,
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-02-01',
@@ -49,6 +50,8 @@ const jsonLd = {
   },
   url: `https://mapletechlabs.ca/blog/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/blog/${SLUG}`,
+  '@id': `https://mapletechlabs.ca/blog/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
 };
 
 export default function Page() {
