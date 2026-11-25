@@ -30,7 +30,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: 'Top 10 Blockchain Development Companies in Canada (2026)',
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-03-10',
