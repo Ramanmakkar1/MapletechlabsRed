@@ -10,6 +10,7 @@ import { seoDescription } from '@/lib/seo/description';
 const TITLE = 'Software Development Companies in Calgary: Top 10 2026';
 const DESCRIPTION = 'The best software development companies in Calgary, Alberta for 2026, compared on services, industries and track record, plus how to choose a team.';
 const SLUG = 'software-development-companies-calgary';
+const H1 = 'Top 10 Software Development Companies in Calgary (2026)';
 const DATE = '2026-02-28';
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: H1,
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-10',
@@ -49,6 +50,8 @@ const jsonLd = {
   },
   url: `https://mapletechlabs.ca/blog/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/blog/${SLUG}`,
+  '@id': `https://mapletechlabs.ca/blog/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
 };
 
 export default function Page() {
