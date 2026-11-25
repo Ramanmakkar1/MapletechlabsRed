@@ -3,7 +3,7 @@ import { PROJECT_PRICING } from '@/data/pricing';
 import { PRIORITY_SERVICES, serviceCityHref } from '@/data/serviceCity';
 import { services } from '@/data/services';
 import { work } from '@/data/work';
-import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
+import { AWARDS, BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { SITEMAP_CHILDREN } from '@/lib/sitemap-data';
 
@@ -48,6 +48,7 @@ function buildText(): string {
   out.push(`- Founder experience: 15+ years in software engineering`);
   out.push(`- What we build: custom software, web applications, iOS and Android apps, AI/ML solutions, UI/UX design, SaaS platforms and cloud infrastructure`);
   out.push(`- Industries: fintech, healthcare, e-commerce, logistics, edtech, real estate and enterprise`);
+  out.push(`- Awards: ${AWARDS.join('; ')}`);
   out.push('');
   out.push('## Core services');
   out.push('');

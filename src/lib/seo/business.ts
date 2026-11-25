@@ -21,6 +21,16 @@ export const BUSINESS = {
   ],
 } as const;
 
+export const AWARDS = [
+  "Top Generative AI Company, Clutch 2026",
+  "Top App Development Company, Clutch 2024",
+  "Webby Honoree 2024",
+  "Best App Award, Personal Growth, Google 2024",
+  "Advanced Tier Services Partner, AWS 2024",
+  "Top 100 North America, Red Herring 2023",
+  "Deloitte Fast 50, 2023",
+] as const;
+
 export const BLOG_IMAGE = { '@type': 'ImageObject', url: BUSINESS.image, width: 1200, height: 630 };
 
 export const HQ_ADDRESS = {

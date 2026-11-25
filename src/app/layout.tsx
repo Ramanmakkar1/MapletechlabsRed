@@ -4,7 +4,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
-import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from "@/lib/seo/business";
+import { AWARDS, BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from "@/lib/seo/business";
 import { safeJsonLd } from "@/lib/seo/jsonLd";
 import { PROJECT_PRICING } from "@/data/pricing";
 import "./globals.css";
@@ -132,15 +132,7 @@ const organizationSchema = {
     jobTitle: "Founder & CEO",
     url: `${siteOrigin()}/about/raman-makkar`,
   },
-  award: [
-    "Top Generative AI Company, Clutch 2026",
-    "Top App Development Company, Clutch 2024",
-    "Webby Honoree 2024",
-    "Best App Award, Personal Growth, Google 2024",
-    "Advanced Tier Services Partner, AWS 2024",
-    "Top 100 North America, Red Herring 2023",
-    "Deloitte Fast 50, 2023",
-  ],
+  award: [...AWARDS],
   knowsAbout: [
     "Custom software development",
     "Mobile app development",
