@@ -13,7 +13,7 @@ import { serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
-import { isIndexableHref, rewriteLocationLinks, blogPostHref } from '@/lib/seo/indexability';
+import { isIndexableHref, rewriteLocationLinks, blogPostHref, indexableLinkHref } from '@/lib/seo/indexability';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 type CityService = { label: string; path: (city: string) => string; noun?: string };
@@ -306,7 +306,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                   <p style={{ lineHeight: 1.7, margin: '0 0 22px', maxWidth: '52ch' }}>Tell us what you&rsquo;re building. A senior engineer will come back within one working day with a scope, a timeline and a fixed price.</p>
                   <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <Link href={projectHref} className="btn btn--on-ink">Start a project</Link>
-                    <Link href={a.cta.href} className="btn btn--ghost-on-ink">{a.cta.label}</Link>
+                    <Link href={indexableLinkHref(a.cta.href)} className="btn btn--ghost-on-ink">{a.cta.label}</Link>
                   </div>
                 </div>
                 {related.length > 0 && (

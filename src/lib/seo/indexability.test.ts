@@ -73,6 +73,11 @@ test('indexableLinkHref resolves noindexed /locations links to indexable equival
   assert.equal(indexableLinkHref('/locations/toronto/game-development'), '/services/game-development');
 });
 
+test('indexableLinkHref resolves noindexed digital-marketing-agency location links to the services page', () => {
+  assert.equal(indexableLinkHref('/locations/digital-marketing-agency-in-edmonton'), '/services/digital-marketing');
+  assert.equal(indexableLinkHref('/services/ai-ml'), '/services/ai-ml');
+});
+
 test('rewriteLocationLinks replaces hrefs in HTML with indexable equivalents', () => {
   const html = '<a href="/locations/saas-development-company-in-montreal">x</a>';
   const result = rewriteLocationLinks(html);
