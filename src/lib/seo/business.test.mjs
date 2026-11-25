@@ -61,12 +61,23 @@ test('localServiceSchema mainEntity:false leaves out mainEntityOfPage', () => {
   assert.equal(Object.prototype.hasOwnProperty.call(schema, 'mainEntityOfPage'), false);
 });
 
-test('localServiceSchema default keeps mainEntityOfPage', () => {
+test('localServiceSchema default omits mainEntityOfPage', () => {
   const url = 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton';
   const schema = localServiceSchema({
     cityName: 'Edmonton',
     provinceName: 'Alberta',
     url,
+  });
+  assert.equal(Object.prototype.hasOwnProperty.call(schema, 'mainEntityOfPage'), false);
+});
+
+test('localServiceSchema mainEntity:true sets mainEntityOfPage to url', () => {
+  const url = 'https://mapletechlabs.ca/locations/software-development-company-in-edmonton';
+  const schema = localServiceSchema({
+    cityName: 'Edmonton',
+    provinceName: 'Alberta',
+    url,
+    mainEntity: true,
   });
   assert.equal(schema.mainEntityOfPage, url);
 });

@@ -88,6 +88,7 @@ export function localServiceSchema(opts: {
   url: string;
   serviceType?: string[];
   priceRange?: string;
+  /** Opt-in: when true, adds mainEntityOfPage pointing to opts.url. Default false omits it. */
   mainEntity?: boolean;
 }) {
   const areaServed = [
@@ -119,6 +120,6 @@ export function localServiceSchema(opts: {
     areaServed,
     sameAs: BUSINESS.sameAs,
     ...(opts.serviceType ? { knowsAbout: opts.serviceType } : {}),
-    ...(opts.mainEntity === false ? {} : { mainEntityOfPage: opts.url }),
+    ...(opts.mainEntity === true ? { mainEntityOfPage: opts.url } : {}),
   };
 }
