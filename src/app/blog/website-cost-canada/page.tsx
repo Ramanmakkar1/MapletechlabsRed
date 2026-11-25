@@ -56,7 +56,7 @@ export default function Page() {
       <BreadcrumbSchema items={getBlogBreadcrumbs(TITLE, SLUG)} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
       <PageClient />
     </>
