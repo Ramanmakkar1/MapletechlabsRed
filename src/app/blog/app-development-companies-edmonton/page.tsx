@@ -28,6 +28,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
   headline: a.title,
   description: a.metaDescription,
   datePublished: a.date,
