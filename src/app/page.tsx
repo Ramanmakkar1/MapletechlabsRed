@@ -71,6 +71,22 @@ const homepageSchema = {
   about: { '@id': 'https://mapletechlabs.ca/#organization' },
 };
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://mapletechlabs.ca/#custom-software-edmonton',
+  name: 'Custom Software Development in Edmonton',
+  serviceType: 'Custom Software Development',
+  url: 'https://mapletechlabs.ca/',
+  provider: { '@id': 'https://mapletechlabs.ca/#organization' },
+  areaServed: {
+    '@type': 'City',
+    name: 'Edmonton',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'Alberta' },
+  },
+  description: metadata.description,
+};
+
 /* One continuous story rather than a stack of card grids: the rhythm
    alternates split / grid / full-bleed photograph / timeline / ink band
    so no two neighbouring sections share a shape. */
@@ -80,6 +96,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(homepageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceSchema) }}
       />
       <Navbar />
       <ScrollUI />
