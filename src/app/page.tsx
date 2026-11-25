@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
-import { canonicalPath } from '@/lib/seo/canonical';
+import { canonicalUrl } from '@/lib/seo/canonical';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: canonicalPath('/') },
+  alternates: { canonical: canonicalUrl('/') },
 };
 
 const homepageSchema = {
