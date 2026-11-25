@@ -1576,7 +1576,7 @@ export const articles: Article[] = [
     ],
     body: [
       { type: 'h2', id: 'definitions', text: 'What each really means' },
-      { type: 'p', html: 'Off-the-shelf software is a product built for many customers — you configure it and adopt its way of working. Custom software is built for you — it fits your process exactly and is yours to change. Most real businesses end up with a mix: bought tools for the commodities, custom software for the few things that are genuinely theirs.' },
+      { type: 'p', html: 'Off-the-shelf software is a product built for many customers — you configure it and adopt its way of working. Custom software is built for you — it fits your process exactly and is yours to change. Most real businesses end up with a mix: bought tools for the commodities, <a href="/services/software-development">custom software</a> for the few things that are genuinely theirs.' },
       { type: 'h2', id: 'buy', text: 'When off-the-shelf is the right call' },
       { type: 'p', html: 'Buy when the problem is a solved, common one and your business is not special at it. Email, accounting, payroll, CRM basics, help-desk ticketing — these are commodities. Excellent products exist, they are cheaper than anything you could build, and being “different” at payroll is not an advantage. If a mature tool covers 80% or more of your need and the rest is a nice-to-have, buy it. A good software partner will tell you this rather than quote you a build.' },
       { type: 'h2', id: 'build', text: 'When custom pays off' },
