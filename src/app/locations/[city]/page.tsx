@@ -40,7 +40,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(page.jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(page.jsonLd).replace(/</g, '\\u003c') }} />
       <ServiceCityTemplate
         data={data}
         local={local}
