@@ -2989,7 +2989,7 @@ export const articles: Article[] = [
   {
     slug: 'software-development-companies-edmonton',
     relatedTopic: 'software',
-    relatedService: { href: '/services/saas-development', label: 'custom software and SaaS development' },
+    relatedService: { href: '/services/software-development', label: 'custom software development' },
     category: 'Business',
     title: 'Software Development Companies in Edmonton: How to Choose (2026)',
     dek: 'A buyer’s guide for Edmonton businesses hiring a software development company: what custom software should cover for local sectors, what to look for in a partner, typical Canadian costs in CAD, red flags to avoid and ten questions to ask before you sign.',
@@ -3001,7 +3001,7 @@ export const articles: Article[] = [
     heroKey: 'planning',
     intro: [
       'Searching for a software development company in Edmonton turns up agencies, freelancers and national firms that all promise fast delivery and modern stacks. Their home pages look alike, and it is hard to tell from the outside who will build software your team can run for years and who will leave you with a prototype nobody maintains.',
-      'This is a buyer’s guide, not a ranked list. It covers what Edmonton organisations actually need from custom software, what to look for in a development partner, typical Canadian pricing in CAD, red flags to avoid, ten questions to ask before hiring, and how local versus remote Canadian teams compare. For ballpark budgets by project type, see our <a href="/blog/app-development-cost-canada">app development cost guide for Canada</a>. If you are comparing us with others, start with our <a href="/locations/software-development-company-in-edmonton">software development company in Edmonton</a> page.',
+      'This is a buyer’s guide, not a ranked list. It covers what Edmonton organisations actually need from custom software, what to look for in a development partner, typical Canadian pricing in CAD, red flags to avoid, ten questions to ask before hiring, and how local versus remote Canadian teams compare. For ballpark budgets by project type, see our <a href="/blog/app-development-cost-canada">app development cost guide for Canada</a>. If you are comparing us with others, start with our <a href="/locations/software-development-company-in-edmonton">custom software development company in Edmonton</a> page.',
     ],
     body: [
       { type: 'h2', id: 'what-edmonton-needs', text: 'What custom software means for Edmonton businesses' },
