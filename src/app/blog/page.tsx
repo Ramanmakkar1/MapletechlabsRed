@@ -5,6 +5,7 @@ import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { articles } from '@/data/articles';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
+import { isIndexableSitemapPath } from '@/lib/seo/indexability';
 
 const TITLE = 'Software, AI & App Development Blog | Mapletech Labs';
 const DESCRIPTION = 'Guides on software, app and AI development costs, process and results in Canada. Learn what projects cost, how we build them, and what to expect.';
@@ -45,7 +46,7 @@ const jsonLd = {
       '@type': 'ItemList',
       '@id': `${canonicalUrl('/blog')}#list`,
       itemListElement: articles
-        .filter((a) => !isCityListicleSlug(a.slug))
+        .filter((a) => !isCityListicleSlug(a.slug) && isIndexableSitemapPath(`/blog/${a.slug}`))
         .map((a, i) => ({
           '@type': 'ListItem',
           position: i + 1,
@@ -68,7 +69,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\u003c') }}
       />
       <PageClient />
     </>
