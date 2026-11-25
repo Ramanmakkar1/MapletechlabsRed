@@ -3,6 +3,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { articles } from '@/data/articles';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
 import { isIndexableSitemapPath } from '@/lib/seo/indexability';
@@ -69,7 +70,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\u003c') }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <PageClient />
     </>

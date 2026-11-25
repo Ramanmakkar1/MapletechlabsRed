@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { seoTitle } from '@/lib/seo/title';
 
 const TITLE = 'About Mapletech Labs: Edmonton Software Developers';
@@ -40,7 +41,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema).replace(/</g, '\\u003c') }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(aboutSchema) }}
       />
       <BreadcrumbSchema
         items={[

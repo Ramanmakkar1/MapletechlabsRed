@@ -5,6 +5,7 @@ import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from "@/lib/seo/business";
+import { safeJsonLd } from "@/lib/seo/jsonLd";
 import { PROJECT_PRICING } from "@/data/pricing";
 import "./globals.css";
 
@@ -274,14 +275,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema).replace(/</g, '\\u003c'),
+            __html: safeJsonLd(organizationSchema),
           }}
         />
         {/* WebSite Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteSchema).replace(/</g, '\\u003c'),
+            __html: safeJsonLd(websiteSchema),
           }}
         />
         {children}

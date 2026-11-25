@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { locationPageSlugs, getLocationPage } from '@/lib/locationPages';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 interface PageProps {
   params: Promise<{ city: string }>;
@@ -40,7 +41,7 @@ export default async function ServiceCityPage({ params }: PageProps) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(page.jsonLd).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(page.jsonLd) }} />
       <ServiceCityTemplate
         data={data}
         local={local}

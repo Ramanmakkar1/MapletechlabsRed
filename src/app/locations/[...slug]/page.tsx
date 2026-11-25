@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { locationPageSlugs, getLocationPage } from '@/lib/locationPages';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 interface PageProps {
   params: Promise<{ slug: string[] }>;
@@ -49,7 +50,7 @@ export default async function LocationCatchAllPage({ params }: PageProps) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(page.jsonLd).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(page.jsonLd) }} />
       <ServiceCityTemplate
         data={data}
         local={local}

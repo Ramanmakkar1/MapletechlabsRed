@@ -11,6 +11,7 @@ import { serviceCityPath, isIndexableCityService } from '@/data/serviceCity';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 const TITLE = 'Software Development Pricing in Canada';
 const DESCRIPTION = 'Explore typical Canadian website, web app, SaaS, mobile and AI project ranges in CAD, engagement models, and ways to manage software development costs.';
@@ -73,7 +74,7 @@ export default function PricingPage() {
   return <>
     <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: canonicalUrl('/') }, { position: 2, name: 'Pricing', item: URL }]} />
     <FaqSchema faqs={FAQS} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema).replace(/</g, '\\u003c') }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(pricingSchema) }} />
     <Navbar />
     <main>
       <section style={{ paddingTop: 'clamp(100px, 12vw, 140px)', paddingBottom: 'var(--section-y)' }}>

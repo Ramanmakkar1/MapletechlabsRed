@@ -9,6 +9,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 import { coreCitiesAreaServed } from '@/lib/seo/schema';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 // Render this location page from build-time data and keep it in the static cache.
 export const dynamic = 'force-static';
@@ -167,7 +168,7 @@ export default function Page() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceSchema) }} />
       <BreadcrumbSchema items={breadcrumbSchema} />
       <ServiceCityTemplate data={data} heroDesc={HERO_DESC} local={local} />
     </>

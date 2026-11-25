@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { localServiceSchema } from '@/lib/seo/business';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 export const dynamic = 'force-static';
 export const revalidate = 31536000;
@@ -40,7 +41,7 @@ const localBusinessSchema = {
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(localBusinessSchema) }} />
       <PageClient />
     </>
   );

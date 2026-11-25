@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getLocationMeshPage, locationMeshParams } from '@/lib/locationPages';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 interface PageProps {
   params: Promise<{ city: string; service: string }>;
@@ -39,7 +40,7 @@ export default async function CityServicePage({ params }: PageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <ServiceCityTemplate data={data} />

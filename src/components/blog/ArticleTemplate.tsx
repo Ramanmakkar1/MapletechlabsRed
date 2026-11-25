@@ -14,6 +14,7 @@ import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
 import { isIndexableHref, rewriteLocationLinks, blogPostHref } from '@/lib/seo/indexability';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 type CityService = { label: string; path: (city: string) => string; noun?: string };
 
@@ -209,7 +210,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
   return (
     <>
       {isCityListicleSlug(a.slug) && <meta name="robots" content="noindex, follow" />}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(articleSchema) }} />
       <Navbar />
       <main id="main-content" tabIndex={-1} style={{ background: 'var(--surface)' }}>
 

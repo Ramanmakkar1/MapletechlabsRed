@@ -10,6 +10,7 @@ import { cities } from '@/data/cities';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 import { coreCitiesAreaServed } from '@/lib/seo/schema';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 // Keyword-first title; seoTitle appends the brand within the 50-60 char limit.
 const TITLE = 'Mobile App Development in Edmonton';
@@ -82,7 +83,7 @@ const breadcrumbSchema = [
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceSchema) }} />
       <BreadcrumbSchema items={breadcrumbSchema} />
       <FaqSchema faqs={FAQS} />
       <PageClient faqs={FAQS} contactHref={contactHref} />

@@ -1,4 +1,5 @@
 import { buildBreadcrumbSchema, type BreadcrumbItem } from '@/lib/seo/schema';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 interface BreadcrumbSchemaProps {
   items: BreadcrumbItem[];
@@ -10,7 +11,7 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
     />
   );
 }

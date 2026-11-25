@@ -4,6 +4,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { BUSINESS, AUTHOR_PERSON_ID } from '@/lib/seo/business';
 
 const profileUrl = canonicalUrl('/about/raman-makkar');
@@ -95,7 +96,7 @@ export default function RamanPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema).replace(/</g, '\\u003c') }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(profileSchema) }}
       />
       <PageClient />
     </>

@@ -11,6 +11,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { services } from '@/data/services';
 import { cities } from '@/data/cities';
 import { SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
@@ -82,7 +83,7 @@ export default function ContactRoute() {
         { position: 1, name: 'Home', item: canonicalUrl('/') },
         { position: 2, name: 'Contact', item: canonicalUrl('/contact') },
       ]} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(contactSchema) }} />
       <Footer />
     </>
   );

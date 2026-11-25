@@ -1,4 +1,5 @@
 import { buildFaqSchema, buildServiceSchema } from '@/lib/seo/schema';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 export { cleanServiceName } from '@/lib/seo/schema';
 
@@ -37,7 +38,7 @@ export function ServiceSchema({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
     />
   );
 }
@@ -49,7 +50,7 @@ export function FaqSchema({ faqs }: { faqs: { q: string; a: string }[] }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
     />
   );
 }

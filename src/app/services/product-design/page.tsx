@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { serviceBreadcrumbSchema, serviceHubSchema } from '@/lib/seo/serviceHubSchema';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
@@ -34,8 +35,8 @@ const breadcrumbSchema = serviceBreadcrumbSchema({ slug: 'product-design', label
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, '\\u003c') }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <PageClient />
     </>
   );

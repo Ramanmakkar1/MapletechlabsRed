@@ -1,6 +1,7 @@
 'use client';
 
 import { defaultFaqs } from '@/data/faqs';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 export default function FAQSchema() {
   const faqs = defaultFaqs;
@@ -21,7 +22,7 @@ export default function FAQSchema() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData).replace(/</g, '\\u003c') }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schemaData) }}
     />
   );
 }

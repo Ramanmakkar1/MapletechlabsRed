@@ -3,6 +3,7 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { PRIORITY_SERVICES, serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { isIndexableHref } from '@/lib/seo/indexability';
@@ -46,7 +47,7 @@ const servicesByCityJsonLd = {
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesByCityJsonLd).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(servicesByCityJsonLd) }} />
       <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: canonicalUrl('/') }, { position: 2, name: 'Locations', item: canonicalUrl('/locations') }]} />
       <PageClient />
     </>

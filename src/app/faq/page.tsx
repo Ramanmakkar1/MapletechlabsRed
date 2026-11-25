@@ -5,6 +5,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { FAQ_JSON_LD } from '@/data/faq-categories';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 const TITLE = 'FAQ: Custom Software Projects in Canada';
 const DESCRIPTION = 'Get answers to common questions about working with Mapletech Labs: pricing, timelines, tech stack, IP ownership, post-launch support and NDAs.';
@@ -32,7 +33,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD).replace(/</g, '\\u003c') }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(FAQ_JSON_LD) }}
       />
       <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: 'https://mapletechlabs.ca' }, { position: 2, name: 'FAQ', item: 'https://mapletechlabs.ca/faq' }]} />
       <FAQPageClient />

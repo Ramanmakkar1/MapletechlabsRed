@@ -6,6 +6,7 @@ import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 const TITLE = 'Website Cost in Canada: 2026 Pricing Guide';
 const DESCRIPTION = 'Website development cost in Canada: compare 2026 price ranges, cost drivers and budget tips for design, features, maintenance and growth before you build.';
@@ -56,7 +57,7 @@ export default function Page() {
       <BreadcrumbSchema items={getBlogBreadcrumbs(TITLE, SLUG)} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <PageClient />
     </>
