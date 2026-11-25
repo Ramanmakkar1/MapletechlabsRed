@@ -1,6 +1,7 @@
 import { PROJECT_PRICING } from '../../data/pricing.ts';
 import { BUSINESS } from './business.ts';
 import { siteOrigin } from './canonical.ts';
+export { safeJsonLd } from './jsonLd.ts';
 
 /**
  * Shared JSON-LD builders for Service, FAQPage and BreadcrumbList nodes.

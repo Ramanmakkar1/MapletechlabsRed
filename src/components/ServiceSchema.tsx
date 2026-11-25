@@ -1,6 +1,7 @@
 import { buildFaqSchema, buildServiceSchema } from '@/lib/seo/schema';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
 
+export { safeJsonLd } from '@/lib/seo/jsonLd';
 export { cleanServiceName } from '@/lib/seo/schema';
 
 /**

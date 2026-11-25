@@ -6,7 +6,9 @@ import {
   buildFaqSchema,
   buildServiceSchema,
   coreCitiesAreaServed,
+  safeJsonLd,
 } from './schema.ts';
+import { localServiceSchema } from './business.ts';
 
 test('buildServiceSchema emits the required Service fields', () => {
   const schema = buildServiceSchema({
@@ -102,4 +104,53 @@ test('coreCitiesAreaServed lists all four core cities with the page city first',
     coreCitiesAreaServed('Halifax').map(node => node.name),
     ['Edmonton', 'Calgary', 'Toronto', 'Vancouver'],
   );
+});
+
+test('safeJsonLd escapes < to \\u003c in JSON-LD output without HTML entities', () => {
+  const output = safeJsonLd({
+    name: '<Special & Unique> Service',
+    description: 'Apps built in <3 weeks with <script> tags & HTML',
+  });
+
+  assert.ok(output.includes('\\u003cSpecial & Unique> Service'), 'escapes < to \\u003c');
+  assert.ok(output.includes('\\u003c3 weeks with \\u003cscript> tags & HTML'), 'escapes all < to \\u003c');
+  assert.ok(!output.includes('<'), 'contains no unescaped <');
+  assert.ok(!output.includes('&lt;'), 'does not use HTML entities');
+
+  // Must remain valid JSON that parses cleanly
+  const parsed = JSON.parse(output);
+  assert.equal(parsed.name, '<Special & Unique> Service');
+  assert.equal(parsed.description, 'Apps built in <3 weeks with <script> tags & HTML');
+});
+
+test('safeJsonLd serializes Service, LocalBusiness and Organization schemas with \\u003c escaping', () => {
+  const service = buildServiceSchema({
+    name: 'Web Development <Next.js>',
+    description: 'Enterprise portals & webapps with <1s load times.',
+    url: 'https://mapletechlabs.ca/services/web-development',
+  });
+  const serviceJsonLd = safeJsonLd(service);
+  assert.ok(serviceJsonLd.includes('\\u003cNext.js>'));
+  assert.ok(serviceJsonLd.includes('\\u003c1s load times.'));
+  assert.ok(!serviceJsonLd.includes('<'));
+
+  const localBiz = localServiceSchema({
+    cityName: 'Edmonton <HQ>',
+    provinceName: 'Alberta',
+    url: 'https://mapletechlabs.ca/locations/edmonton',
+  });
+  const localBizJsonLd = safeJsonLd(localBiz);
+  assert.ok(localBizJsonLd.includes('\\u003cHQ>'));
+  assert.ok(!localBizJsonLd.includes('<'));
+
+  const org = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Mapletech Labs <Canada>',
+    description: 'Top-tier software agency <established 2020>',
+  };
+  const orgJsonLd = safeJsonLd(org);
+  assert.ok(orgJsonLd.includes('\\u003cCanada>'));
+  assert.ok(orgJsonLd.includes('\\u003cestablished 2020>'));
+  assert.ok(!orgJsonLd.includes('<'));
 });
