@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import MediaBand from '@/components/MediaBand';
 import FinalCta from '@/components/home/FinalCta';
+import { blogPostHref } from '@/lib/seo/indexability';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -664,7 +665,7 @@ export default function BlogPage() {
         <section style={{ paddingBottom: 'var(--section-y)' }}>
           <div className="cb-container" style={{ paddingTop: 'var(--section-y)' }}>
             <h2 style={{ marginBottom: 32 }}>The one to read first</h2>
-            <Link href={`/blog/${FEATURED}`} style={{ textDecoration: 'none', display: 'block' }}>
+            <Link href={blogPostHref(FEATURED)} style={{ textDecoration: 'none', display: 'block' }}>
               <div
                 className="reveal"
                 style={{
@@ -743,7 +744,7 @@ export default function BlogPage() {
               {filteredPosts.map((post, i) => {
                 const accentColor = 'var(--brand)';
                 return (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
+                  <Link key={post.slug} href={blogPostHref(post.slug)} style={{ textDecoration: 'none' }}>
                     <article
                       className={`reveal reveal-d${Math.min(i + 1, 6)}`}
                       style={{
