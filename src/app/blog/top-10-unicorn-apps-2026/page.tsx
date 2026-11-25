@@ -6,12 +6,14 @@ import PageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 const TITLE = 'Unicorn Apps 2026: Top 10 Growth Stories for Founders';
 const DESCRIPTION =
   'Top 10 unicorn apps of 2026: see how each mobile product reached a $1B valuation and the growth, AI and onboarding lessons founders can apply today.';
 const SLUG = 'top-10-unicorn-apps-2026';
 const DATE = '2026-01-15';
+const H1 = 'Top 10 Unicorn Apps of 2026';
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
@@ -31,7 +33,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: H1,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-01-22',
@@ -58,7 +61,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <BreadcrumbSchema items={breadcrumbs} />
       <PageClient />
