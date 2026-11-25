@@ -58,6 +58,7 @@ const homepageSchema = {
   '@type': 'WebPage',
   '@id': 'https://mapletechlabs.ca/#webpage',
   url: 'https://mapletechlabs.ca/',
+  inLanguage: 'en-CA',
   name: seoTitle(TITLE).absolute,
   description: metadata.description,
   isPartOf: {
@@ -77,7 +78,7 @@ export default function Home() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema).replace(/</g, '\\u003c') }}
       />
       <Navbar />
       <ScrollUI />
