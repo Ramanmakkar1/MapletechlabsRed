@@ -7,8 +7,10 @@ import { getBlogBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { seoTitle, ogTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 const TITLE = 'Freelancer vs Agency vs In-House Developers in Canada (2026)';
+const H1 = 'Freelancer vs Agency vs In-House Team in Canada (2026)';
 const DESCRIPTION =
   'Freelancer vs software agency vs in-house team in Canada: compare cost, speed, risk, team depth, code ownership and post-launch support before you hire.';
 const SLUG = 'freelancer-vs-agency-vs-in-house-canada';
@@ -74,7 +76,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: H1,
   description: `${SHORT_ANSWER} ${DESCRIPTION}`,
   datePublished: DATE,
   dateModified: DATE,
@@ -92,6 +94,7 @@ const jsonLd = {
   },
   url: `https://mapletechlabs.ca/blog/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/blog/${SLUG}`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
 };
 
 export default function Page() {
@@ -101,7 +104,7 @@ export default function Page() {
       <FaqSchema faqs={FAQS} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <PageClient answer={SHORT_ANSWER} faqs={FAQS} />
     </>
