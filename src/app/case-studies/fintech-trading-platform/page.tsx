@@ -32,7 +32,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Fintech AI Trading Platform - Case Study',
+  '@id': `https://mapletechlabs.ca/case-studies/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+  inLanguage: 'en-CA',
+  headline: 'AI-Powered Trading Platform',
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
