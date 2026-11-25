@@ -40,7 +40,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: 'How Much Does Digital Marketing Cost in Canada? (2026 Guide)',
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-03-14',
