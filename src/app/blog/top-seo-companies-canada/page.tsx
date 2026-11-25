@@ -10,6 +10,7 @@ import { seoDescription } from '@/lib/seo/description';
 const TITLE = 'SEO Companies in Canada 2026: How the Top 10 Compare';
 const DESCRIPTION = 'A data-driven ranking of the top 10 SEO companies in Canada for 2026, with what each agency does best and how to choose the right SEO partner for you.';
 const SLUG = 'top-seo-companies-canada';
+const H1 = 'Top 10 SEO Companies in Canada (2026)';
 const DATE = '2026-03-14';
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: H1,
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-10',
@@ -48,6 +49,8 @@ const jsonLd = {
   },
   url: `https://mapletechlabs.ca/blog/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/blog/${SLUG}`,
+  '@id': `https://mapletechlabs.ca/blog/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
 };
 
 export default function Page() {
