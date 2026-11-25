@@ -50,6 +50,7 @@ const MAJOR_TECH_CITIES = new Set(['toronto', 'vancouver', 'montreal', 'calgary'
 const MOBILE_APP_CITIES = new Set(['edmonton', 'calgary', 'toronto', 'vancouver']);
 
 function meshDestination(city: string, kw: string): string {
+  if (kw === 'seo') return '/services/digital-marketing/seo-services';
   return kw === 'app-development' && MOBILE_APP_CITIES.has(city)
     ? `/services/mobile-app-development/${city}`
     : `/locations/${kw}-company-in-${city}`;

@@ -181,7 +181,7 @@ const nextConfig: NextConfig = {
     // App-development keyword pages for those four cities canonicalise to
     // /services/mobile-app-development/<city> (owner decision), so point the 301s there.
     const meshDestination = (c: string, kw: string) =>
-      kw === 'app-development' && mobileAppCities.has(c) ? `/services/mobile-app-development/${c}` : `/locations/${kw}-company-in-${c}`;
+      kw === 'seo' ? '/services/digital-marketing/seo-services' : kw === 'app-development' && mobileAppCities.has(c) ? `/services/mobile-app-development/${c}` : `/locations/${kw}-company-in-${c}`;
     const serviceCityMeshRedirects = cityHubs.flatMap(c => priority.map(([svc, kw]) => ({ source: `/locations/${c}/${svc}`, destination: meshDestination(c, kw), statusCode: 301 as const })));
     // Niche services (blockchain-web3, ar-vr, game-development) are not in the priority
     // keyword list. For non-major cities, their /locations/<city>/<service> mesh pages

@@ -18,6 +18,8 @@ const oneHopRedirects = [
   ['/fr/blog/ai-development-companies-canada', '/services/ai-ml'],
   ['/fr/blog/digital-marketing-cost-canada', '/services/digital-marketing'],
   ['/locations/edmonton/web-development', '/locations/web-development-company-in-edmonton'],
+  ['/locations/montreal/digital-marketing', '/services/digital-marketing/seo-services'],
+  ['/fr/locations/ottawa/digital-marketing', '/services/digital-marketing/seo-services'],
 ] as const;
 
 test('legacy French and service-city URLs each have one 301 to their final English page', async () => {
