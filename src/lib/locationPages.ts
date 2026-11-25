@@ -117,6 +117,16 @@ function buildLocationPage(slug: string): LocationPageData | null {
         description: localEntry?.description ?? data.description,
         url: canonical,
         mainEntityOfPage: canonical,
+        ...(localEntry?.priceFromCad
+          ? {
+              offers: {
+                '@type': 'AggregateOffer',
+                priceCurrency: 'CAD',
+                lowPrice: localEntry.priceFromCad,
+                url: canonical,
+              },
+            }
+          : {}),
       },
       localServiceSchema({
         cityName: data.cityName,

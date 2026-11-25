@@ -22,6 +22,8 @@ export interface ServiceCityLocal {
     links: { href: string; label: string }[];
   };
   sections: { heading: string; body: LocalTextPart[] }[];
+  /** Optional CAD starting price for the Service JSON-LD AggregateOffer. */
+  priceFromCad?: number;
   /** Optional answer-first comparison table rendered after the local sections. */
   comparison?: {
     heading: string;
@@ -356,6 +358,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'ai-development-company-in-calgary': {
     title: 'AI Development Company in Calgary',
+    priceFromCad: 10000,
     description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Calgary companies, from an Alberta team with fixed CAD pricing. Get a free quote.',
     answer: 'Mapletech Labs provides AI development in Calgary, building chatbots, LLM features, AI agents and workflow automation for local companies. You get a system built on your own documents and data, a fixed CAD price and senior engineers working directly with your team.',
     intro: 'Mapletech Labs is an Alberta company headquartered in Edmonton, roughly a three-hour drive north of Calgary and in the same time zone, so our working days line up with yours. We build AI chatbots, large language model (LLM) features and workflow automation for Calgary businesses that want AI to take routine work off their staff. You work directly with the senior engineers who design and build your system, with no sales layer in between. Scope and price are fixed in CAD before any work begins, so your budget stays put. Call us on +1-403-604-8692 to discuss your project.',
