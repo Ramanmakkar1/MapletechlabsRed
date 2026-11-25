@@ -78,6 +78,25 @@ export function indexableLinkHref(href: string): string {
   return combo ? serviceCityHref(combo.serviceSlug, combo.citySlug) : href;
 }
 
+/**
+ * Redirect map for 301'd blog posts. When we link to a non-indexable post,
+ * send crawlers to the redirect destination instead.
+ */
+const BLOG_REDIRECT_MAP: Record<string, string> = {
+  '/blog/ai-development-companies-canada': '/services/ai-ml',
+  '/blog/digital-marketing-cost-canada': '/services/digital-marketing',
+};
+
+/**
+ * Returns the correct href for a blog post slug. If the post 301s elsewhere,
+ * returns the redirect destination; otherwise returns /blog/<slug>.
+ */
+export function blogPostHref(slug: string): string {
+  const path = `/blog/${slug}`;
+  if (isIndexableHref(path)) return path;
+  return BLOG_REDIRECT_MAP[path] ?? path;
+}
+
 export function rewriteLocationLinks(html: string): string {
   return html.replace(/(href=["'])(\/locations\/[^"']+)([^"']*["'])/g, (_match, quote: string, href: string, rest: string) =>
     quote + indexableLinkHref(href) + rest

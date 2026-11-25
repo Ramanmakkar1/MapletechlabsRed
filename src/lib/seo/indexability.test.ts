@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { isIndexableHref, isIndexableSitemapPath, indexableLinkHref, rewriteLocationLinks } from './indexability';
+import { isIndexableHref, isIndexableSitemapPath, indexableLinkHref, blogPostHref, rewriteLocationLinks } from './indexability';
 
 test('isIndexableHref returns true for indexable internal links', () => {
   assert.equal(isIndexableHref('/locations/ai-development-company-in-edmonton'), true);
@@ -81,4 +81,14 @@ test('rewriteLocationLinks replaces hrefs in HTML with indexable equivalents', (
   const html2 = "<a href='/locations/saas-development-company-in-montreal'>x</a>";
   const result2 = rewriteLocationLinks(html2);
   assert.ok(result2.includes("href='/services/saas-development'"), `Expected indexable href in result: ${result2}`);
+});
+
+test('blogPostHref returns redirect destination for 301-d blog posts', () => {
+  assert.equal(blogPostHref('ai-development-companies-canada'), '/services/ai-ml');
+  assert.equal(blogPostHref('digital-marketing-cost-canada'), '/services/digital-marketing');
+});
+
+test('blogPostHref returns /blog/<slug> for indexable posts', () => {
+  assert.equal(blogPostHref('website-cost-canada'), '/blog/website-cost-canada');
+  assert.equal(blogPostHref('top-10-unicorn-apps-2026'), '/blog/top-10-unicorn-apps-2026');
 });

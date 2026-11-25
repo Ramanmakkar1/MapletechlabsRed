@@ -13,7 +13,7 @@ import { serviceCityPath } from '@/data/serviceCity';
 import { cities } from '@/data/cities';
 import { contactHrefFor, SERVICE_PROJECT_TYPE } from '@/lib/enquiryContext';
 import { isCityListicleSlug } from '@/lib/seo/listicles';
-import { isIndexableHref, rewriteLocationLinks } from '@/lib/seo/indexability';
+import { isIndexableHref, rewriteLocationLinks, blogPostHref } from '@/lib/seo/indexability';
 
 type CityService = { label: string; path: (city: string) => string; noun?: string };
 
@@ -314,7 +314,7 @@ export default function ArticleTemplate({ a, related = [], cityLinks, relatedSer
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
                       {related.map(r => (
                         <li key={r.slug}>
-                          <Link href={`/blog/${r.slug}`} style={{ display: 'block', padding: 20, border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', textDecoration: 'none' }}>
+                          <Link href={blogPostHref(r.slug)} style={{ display: 'block', padding: 20, border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', background: 'var(--surface-alt)', textDecoration: 'none' }}>
                             <span style={{ display: 'block', fontSize: 12.5, color: 'var(--muted)', marginBottom: 6 }}>{r.category} · {r.readTime}</span>
                             <span style={{ fontWeight: 600, color: 'var(--ink)' }}>{r.title}</span>
                           </Link>
