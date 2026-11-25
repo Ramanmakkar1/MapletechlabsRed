@@ -21,6 +21,9 @@ export const BUSINESS = {
   ],
 } as const;
 
+// OWNER DECISION: Raman to add his own LinkedIn/profile URLs here (leave empty until provided).
+export const FOUNDER_SAME_AS: readonly string[] = [];
+
 export const AWARDS = [
   "Top Generative AI Company, Clutch 2026",
   "Top App Development Company, Clutch 2024",

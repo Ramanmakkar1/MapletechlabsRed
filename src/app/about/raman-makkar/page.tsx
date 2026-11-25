@@ -5,7 +5,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
-import { BUSINESS, AUTHOR_PERSON_ID } from '@/lib/seo/business';
+import { BUSINESS, AUTHOR_PERSON_ID, FOUNDER_SAME_AS } from '@/lib/seo/business';
 
 const profileUrl = canonicalUrl('/about/raman-makkar');
 const title = 'Raman Makkar, Founder & CEO of Mapletech Labs, Edmonton';
@@ -45,6 +45,7 @@ export default function RamanPage() {
         url: profileUrl,
         email: BUSINESS.email,
         telephone: BUSINESS.telephone,
+        ...(FOUNDER_SAME_AS.length ? { sameAs: [...FOUNDER_SAME_AS] } : {}),
         worksFor: {
           '@type': 'Organization',
           '@id': `${canonicalUrl('/')}#organization`,
