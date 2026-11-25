@@ -35,6 +35,7 @@ export const BLOG_IMAGE = { '@type': 'ImageObject', url: BUSINESS.image, width: 
 
 export const HQ_ADDRESS = {
   '@type': 'PostalAddress',
+  // OWNER DECISION: street address pending — add streetAddress here once Raman confirms it.
   addressLocality: 'Edmonton',
   addressRegion: 'AB',
   postalCode: 'T5J 1B9',
