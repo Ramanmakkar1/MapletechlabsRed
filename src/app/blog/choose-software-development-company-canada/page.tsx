@@ -10,6 +10,7 @@ import { seoDescription } from '@/lib/seo/description';
 const TITLE = 'Software Development Company Canada: How to Choose 2026';
 const DESCRIPTION = 'How to choose a software development company in Canada: what to look for, questions to ask, pricing models, red flags, and how to compare your shortlist.';
 const SLUG = 'choose-software-development-company-canada';
+const H1 = 'How to Choose a Software Development Company in Canada (2026 Guide)';
 const DATE = '2026-02-05';
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  headline: H1,
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-10',
@@ -48,6 +49,8 @@ const jsonLd = {
   },
   url: `https://mapletechlabs.ca/blog/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/blog/${SLUG}`,
+  '@id': `https://mapletechlabs.ca/blog/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
 };
 
 export default function Page() {
