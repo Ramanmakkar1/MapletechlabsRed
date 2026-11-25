@@ -16,6 +16,7 @@ import {
   type CityServicePageData,
 } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { indexableLinkHref } from '@/lib/seo/indexability';
 import { localServiceSchema } from '@/lib/seo/business';
 import { localServiceTitle, ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
@@ -141,11 +142,11 @@ function buildLocationPage(slug: string): LocationPageData | null {
     : slug === 'web-development-company-in-edmonton'
       ? { before: 'Need custom software beyond a website? See our ', href: '/locations/software-development-company-in-edmonton', linkLabel: 'Custom Software Development in Edmonton' }
       : slug === `web-design-company-in-${combo.citySlug}`
-        ? { before: 'Need a web app, portal or custom integrations as well? See our ', href: `/locations/web-development-company-in-${combo.citySlug}`, linkLabel: `Web Development Company in ${data.cityName}` }
+        ? { before: 'Need a web app, portal or custom integrations as well? See our ', href: indexableLinkHref(`/locations/web-development-company-in-${combo.citySlug}`), linkLabel: `Web Development Company in ${data.cityName}` }
         : slug === `web-development-company-in-${combo.citySlug}` && (WEB_DESIGN_CITIES as readonly string[]).includes(combo.citySlug)
           ? { before: 'Mainly need a new website designed? See our ', href: `/locations/web-design-company-in-${combo.citySlug}`, linkLabel: `Web Design Company in ${data.cityName}` }
           : isAgencyPage && !local
-            ? { before: 'Focused on SEO only? See our ', href: `/locations/seo-company-in-${combo.citySlug}`, linkLabel: `SEO Company in ${data.cityName}` }
+            ? { before: 'Focused on SEO only? See our ', href: indexableLinkHref(`/locations/seo-company-in-${combo.citySlug}`), linkLabel: `SEO Company in ${data.cityName}` }
             : slug === `app-development-company-in-${combo.citySlug}` && MOBILE_CITY_PAGES.includes(combo.citySlug)
               ? { before: 'Planning a native or cross-platform app? See our ', href: `/services/mobile-app-development/${combo.citySlug}`, linkLabel: `iOS, Android and Flutter app development in ${data.cityName}` }
               : undefined;
