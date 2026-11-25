@@ -32,7 +32,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Enterprise E-Commerce Platform - Case Study',
+  '@id': `https://mapletechlabs.ca/case-studies/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+  inLanguage: 'en-CA',
+  headline: NAME,
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
