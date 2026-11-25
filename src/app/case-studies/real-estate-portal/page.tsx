@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageClient from './PageClient';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { getCaseStudyBreadcrumbs } from '@/data/breadcrumbs';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
@@ -31,7 +32,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'ML-Powered Real Estate Portal - Case Study',
+  headline: 'ML-Powered Real Estate Platform',
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
@@ -66,7 +68,7 @@ export default function Page() {
       <BreadcrumbSchema items={getCaseStudyBreadcrumbs(NAME, SLUG)} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <PageClient />
     </>
