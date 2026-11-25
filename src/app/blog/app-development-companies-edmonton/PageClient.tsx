@@ -222,7 +222,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      Edmonton&apos;s premier app development agency. We build native iOS, Android, and cross-platform apps using React Native and Flutter. From MVPs to enterprise-grade solutions, our Edmonton headquarters serves as the command center for 300+ successful product launches.
+                      Edmonton&apos;s premier <Link href="/services/mobile-app-development/edmonton">app development agency</Link>. We build native iOS, Android, and cross-platform apps using React Native and Flutter. From MVPs to enterprise-grade solutions, our Edmonton headquarters serves as the command center for 300+ successful product launches.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       What sets Mapletech Labs apart is our full-stack approach. We don&apos;t just build the front-end mobile experience; we architect the entire product ecosystem including scalable backend APIs, cloud infrastructure on AWS and GCP, CI/CD pipelines, and analytics dashboards. Our team leverages Edmonton&apos;s AI talent pool to integrate machine learning features directly into mobile applications, giving our clients a competitive edge that template-based agencies simply cannot match.
