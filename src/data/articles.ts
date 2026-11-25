@@ -5107,7 +5107,7 @@ export const articles: Article[] = [
         { term: 'Cross-platform (Flutter or React Native)', text: 'One codebase for both app stores, which usually lowers cost and keeps iOS and Android in step. The default for most Toronto business and customer apps that must reach both stores.' },
         { term: 'Progressive web app (PWA)', text: 'Runs in the browser and can be installed from a link, with no app store review. Good for internal tools and simple customer flows; weaker for deep hardware access and some iOS features.' },
       ] },
-      { type: 'p', html: 'Our guide to <a href="/blog/native-vs-cross-platform-vs-pwa">native vs cross-platform vs PWA</a> compares the three in detail. For cross-platform builds we often use <a href="/services/mobile-app-development/flutter-development">Flutter</a>, but the right stack depends on your integrations and team, not a agency default.' },
+      { type: 'p', html: 'Our guide to <a href="/blog/native-vs-cross-platform-vs-pwa">native vs cross-platform vs PWA</a> compares the three in detail. For cross-platform builds we often use <a href="/services/mobile-app-development/flutter-development">Flutter</a>, but the right stack depends on your integrations and team, not an agency default.' },
 
       { type: 'h2', id: 'what-good-looks-like', text: 'What a good app development company does' },
       { type: 'ol', items: [
