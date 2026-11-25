@@ -39,7 +39,7 @@ const jsonLd = {
   '@id': `https://mapletechlabs.ca/case-studies/${SLUG}#article`,
   isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
   inLanguage: 'en-CA',
-  headline: 'Real-Time Logistics & Fleet Management - Case Study',
+  headline: 'Real-Time Logistics & Fleet Management',
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
