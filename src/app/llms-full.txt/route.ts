@@ -1,6 +1,7 @@
 import { getArticle } from '@/data/articles';
 import { buyerGuideSlugs } from '@/data/buyer-guides';
 import { cities } from '@/data/cities';
+import { industries } from '@/data/industries';
 import { services } from '@/data/services';
 import {
   agencyCombos,
@@ -120,6 +121,11 @@ function buildText(): string {
     out.push('');
     out.push(...items);
   }
+  out.push('');
+
+  out.push('## Industries');
+  out.push('');
+  out.push(...lines(industries.map(i => link(i.name, i.href, i.description))));
   out.push('');
 
   out.push('## Buyer guides');
