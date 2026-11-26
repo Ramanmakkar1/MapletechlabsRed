@@ -5269,7 +5269,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'seo-vs-ads', text: 'SEO vs Google Ads in Calgary' },
       { type: 'checks', items: [
-        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live and stops when you stop paying. In Canada, ad management fees typically start around $2,000 per month plus ad spend. Useful for seasonal demand such as hail repairs or furnace season, launches, and testing which services bring leads.' },
+        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live and stops when you stop paying. In Canada, <a href="/services/digital-marketing/google-ads-ppc">ad management fees</a> typically start around $2,000 per month plus ad spend. Useful for seasonal demand such as hail repairs or furnace season, launches, and testing which services bring leads.' },
         { term: 'SEO', text: 'Takes months to build, but map-pack and organic traffic keeps coming without a cost per click. Useful for steady lead flow and for technical B2B searches where buyers research for weeks before they get in touch.' },
       ] },
       { type: 'p', html: 'Many Calgary businesses run ads while SEO builds, then use what the ads reveal about converting keywords to decide which pages to grow.' },
