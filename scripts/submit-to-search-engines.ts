@@ -15,6 +15,8 @@
  *   5. Set GOOGLE_SERVICE_ACCOUNT_KEY env var to the JSON key file path
  */
 
+import { isIndexableSitemapPath } from '@/lib/seo/indexability';
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://mapletechlabs.ca';
 const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
 
@@ -133,7 +135,7 @@ function generateUrls(): string[] {
     urls.push(`${SITE_URL}/blog/${slug}`);
   }
 
-  return urls;
+  return urls.filter(u => isIndexableSitemapPath(new URL(u).pathname));
 }
 
 // ── Google Indexing API ──────────────────────────────────────────────────────
