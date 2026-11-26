@@ -1000,7 +1000,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'A disciplined partner will push you toward the smallest release that can win paying customers, then price the next stage once usage data exists. If a vendor quotes a full enterprise platform before discovery, ask what evidence that scope is based on.' },
       { type: 'h2', id: 'multi-tenant-architecture', text: 'How should a Calgary SaaS product handle multi-tenancy?' },
-      { type: 'p', html: 'Multi-tenancy means one running product serves many customers while keeping each customer’s data separate. The architecture choice affects cost, security and how easily you can scale, so it should be explained in plain language before the first sprint.' },
+      { type: 'p', html: '<a href="/services/saas-development/multi-tenant-architecture">Multi-tenancy</a> means one running product serves many customers while keeping each customer’s data separate. The architecture choice affects cost, security and how easily you can scale, so it should be explained in plain language before the first sprint.' },
       { type: 'ul', items: [
         '<strong>Choose an isolation model deliberately.</strong> Shared database with tenant keys, separate schemas or separate databases each trade cost against isolation and operational complexity. The right answer depends on your buyers and their security reviews.',
         '<strong>Enforce permissions in the backend.</strong> Hiding a button in the interface is not access control. Every request should check the tenant and the user’s role on the server.',
