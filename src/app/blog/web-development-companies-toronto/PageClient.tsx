@@ -214,7 +214,7 @@ export default function WebDevelopmentCompaniesTorontoClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      While headquartered in Edmonton, our Toronto office serves as our central hub for enterprise web development. We build high-performance Next.js applications, SaaS platforms, and complex e-commerce systems. Our Toronto team handles some of the most demanding web projects in the country.
+                      While headquartered in Edmonton, our Toronto office serves as our central hub for <Link href="/locations/web-development-company-in-toronto" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>enterprise web development</Link>. We build high-performance Next.js applications, SaaS platforms, and complex e-commerce systems. Our Toronto team handles some of the most demanding web projects in the country.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       What sets Mapletech Labs apart is our engineering-first approach. Every website we build scores 95+ on Google Lighthouse, ships with server-side rendering for instant load times, and is architected for scale from day one. We do not use templates. We do not outsource. Every line of code is written by our in-house Canadian team.
