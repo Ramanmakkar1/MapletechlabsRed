@@ -1227,7 +1227,7 @@ export const articles: Article[] = [
         'Communication that is already slow or unclear before you have even paid — it does not improve later.',
       ] },
       { type: 'h2', id: 'why-canadian', text: 'The case for a Canadian web partner' },
-      { type: 'p', html: 'A Canadian website development company brings overlapping working hours, straightforward communication, and familiarity with the Canadian market, bilingual requirements where they apply, and privacy expectations under PIPEDA. For local businesses there is a further edge: a partner who understands Canadian local SEO and can build a site that ranks for the cities and regions you actually serve.' },
+      { type: 'p', html: 'A Canadian website development company brings overlapping working hours, straightforward communication, and familiarity with the Canadian market, bilingual requirements where they apply, and privacy expectations under PIPEDA. For local businesses there is a further edge: a partner who understands <a href="/services/digital-marketing/local-seo">Canadian local SEO</a> and can build a site that ranks for the cities and regions you actually serve.' },
       { type: 'h2', id: 'questions', text: 'Questions to ask before you commit' },
       { type: 'ol', items: [
         'How do you approach site speed and Core Web Vitals?',
