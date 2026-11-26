@@ -5088,7 +5088,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'what-toronto-builds', text: 'What Toronto businesses build with apps' },
       { type: 'p', html: 'Toronto is Canada’s financial centre and one of its largest retail and health markets, so app projects here cluster differently from Calgary or Edmonton:' },
       { type: 'checks', items: [
-        { term: 'Fintech and banking-adjacent apps', text: 'Payments, investing, lending, insurance and account-access apps need strong authentication, audit trails, secure APIs and careful handling of personal and financial data under PIPEDA.' },
+        { term: 'Fintech and banking-adjacent apps', text: '<a href="/industries/fintech">Payments, investing, lending, insurance and account-access apps</a> need strong authentication, audit trails, secure APIs and careful handling of personal and financial data under PIPEDA.' },
         { term: 'Retail and e-commerce', text: 'Brands across the GTA build shopping apps with fast checkout, loyalty, push offers and integrations to inventory and order systems, often alongside a web storefront.' },
         { term: 'Health and telehealth', text: 'Clinics, networks and digital-health startups need <a href="/industries/healthcare">booking, messaging, records and video visits</a> where personal health information must meet Ontario’s PHIPA, not just generic “HIPAA-style” checklists.' },
         { term: 'B2B SaaS companion apps', text: 'Software companies along the King–Spadina corridor and in Mississauga often need iOS and Android apps so customers can use the core product on the go, with the same permissions and billing as the web app.' },
