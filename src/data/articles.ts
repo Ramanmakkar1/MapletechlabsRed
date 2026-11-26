@@ -3370,7 +3370,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Ottawa app projects follow Canadian onshore rates, not US agency pricing. As approximate ranges from our <a href="/blog/app-development-cost-canada">app development cost guide</a> and <a href="/pricing">pricing page</a>:' },
       { type: 'ul', items: [
         'Mobile app overall: about CAD $30,000&ndash;$200,000, roughly 10&ndash;24 weeks.',
-        'Native iOS only: about CAD $40,000&ndash;$180,000; native Android only: about CAD $35,000&ndash;$160,000.',
+        'Native iOS only: about CAD $40,000&ndash;$180,000; <a href="/services/mobile-app-development/android-app-development">native Android only</a>: about CAD $35,000&ndash;$160,000.',
         'Cross-platform (Flutter or React Native) for both stores: about CAD $30,000&ndash;$200,000, roughly 10&ndash;24 weeks.',
         'Separate native iOS and Android apps: about CAD $75,000&ndash;$340,000, roughly 16&ndash;32 weeks.',
         'Canadian onshore development rates typically run about $100&ndash;$200 per hour.',
