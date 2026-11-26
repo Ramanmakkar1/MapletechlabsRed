@@ -353,7 +353,7 @@ export default function AppDevelopmentCostCanadaClient() {
                   </div>
 
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    For most Canadian businesses in 2026, we recommend starting with <strong style={{ color: 'var(--ink)' }}><Link href="/services/mobile-app-development/flutter-development" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>Flutter</Link> or React Native</strong>. The cross-platform frameworks have matured to the point where the performance gap is negligible for 90% of use cases. You save 30-40% on development while reaching both iOS and Android users from day one.
+                    For most Canadian businesses in 2026, we recommend starting with <strong style={{ color: 'var(--ink)' }}><Link href="/services/mobile-app-development/flutter-development" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>Flutter</Link> or <Link href="/services/mobile-app-development/react-native-apps" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>React Native</Link></strong>. The cross-platform frameworks have matured to the point where the performance gap is negligible for 90% of use cases. You save 30-40% on development while reaching both iOS and Android users from day one.
                   </p>
                 </div>
 
