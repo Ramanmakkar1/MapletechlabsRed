@@ -2679,7 +2679,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Toronto&rsquo;s demand for software comes from a few large sectors. Each one brings its own expectations to a project:' },
       { type: 'checks', items: [
         { term: 'Finance and insurance', text: 'Toronto is the centre of Canadian banking and insurance. Software for this sector needs strong security, audit trails, careful handling of personal and financial data, and integrations with older core systems.' },
-        { term: 'Health and life sciences', text: 'Hospitals, clinics, research groups and health startups need software that protects personal health information and fits into clinical workflows without slowing staff down.' },
+        { term: 'Health and life sciences', text: 'Hospitals, clinics, research groups and health startups need <a href="/services/software-development/healthcare-software">software that protects personal health information</a> and fits into clinical workflows without slowing staff down.' },
         { term: 'AI and research', text: 'The city has deep university and research ties in machine learning. Projects often involve data pipelines, model integration and putting AI features into real products in a way that can be tested and explained.' },
         { term: 'Startups and scale-ups', text: 'A large startup community means many MVPs, SaaS platforms and mobile apps, usually on tight timelines where scope control matters as much as code quality.' },
       ] },
