@@ -666,7 +666,7 @@ export const articles: Article[] = [
       { type: 'checks', items: [
         { term: 'Product thinking, not just execution', text: 'The best partners push back on scope, question features that will not earn their keep, and help you ship a focused first version instead of building everything you asked for.' },
         { term: 'Architecture for multi-tenancy and scale', text: 'Ask how they isolate customer data and how the system grows. The answer should be specific and confident, not hand-waved.' },
-        { term: 'Billing and subscriptions done properly', text: 'Stripe integration, trials, upgrades and downgrades, failed-payment handling and usage-based pricing are their own discipline. It should be treated as core, not an afterthought.' },
+        { term: 'Billing and subscriptions done properly', text: '<a href="/services/saas-development/billing-subscriptions">Stripe integration, trials, upgrades and downgrades</a>, failed-payment handling and usage-based pricing are their own discipline. It should be treated as core, not an afterthought.' },
         { term: 'Security and Canadian compliance', text: 'PIPEDA nationally, and Quebec’s Law 25 if you serve Quebec, are not optional. Encryption, access control and audit trails should be designed in from the start.' },
         { term: 'Senior people on your project', text: 'Find out who actually writes your code. Some shops sell you a senior team and staff the work with juniors once the contract is signed.' },
       ] },
