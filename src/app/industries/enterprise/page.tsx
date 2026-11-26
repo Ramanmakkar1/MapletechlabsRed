@@ -8,7 +8,7 @@ import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 
 const TITLE = 'Enterprise Software Development Company in Canada';
-const DESCRIPTION = 'Enterprise software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI solutions at enterprise scale, built for security.';
+const DESCRIPTION = 'Enterprise and manufacturing software development in Canada by Mapletech Labs: ERP, CRM, workflow automation and BI, built secure and ready to scale.';
 
 export const dynamic = 'force-static';
 
