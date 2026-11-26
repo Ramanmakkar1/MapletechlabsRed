@@ -3703,7 +3703,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'A complete agency should be able to run four core areas for a Montreal business, and explain how each one produces enquiries rather than just activity.' },
       { type: 'checks', items: [
         { term: 'Local SEO and Google Business Profile', text: 'Accurate categories, services, hours, photos, reviews and consistent name, address and phone details, plus French and English service pages for the areas you serve. Ask how the agency will improve the profile and track calls and direction requests.' },
-        { term: 'Google Ads and Microsoft Advertising', text: 'Search campaigns in French and English that exclude job and research searches, with conversion tracking and cost per lead reported separately from the management fee.' },
+        { term: 'Google Ads and Microsoft Advertising', text: '<a href="/services/digital-marketing/google-ads-ppc">Search campaigns in French and English</a> that exclude job and research searches, with conversion tracking and cost per lead reported separately from the management fee.' },
         { term: 'Content', text: 'Service pages, comparisons and answers to the questions buyers ask before they contact you, written natively for each language and linked to the pages that earn enquiries.' },
         { term: 'Analytics and reporting', text: 'Calls, forms and bookings attributed to each channel and language, with a baseline before work starts and a monthly report you can read in ten minutes.' },
       ] },
