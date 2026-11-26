@@ -2045,7 +2045,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'IRAP is about technology innovation, so the question is whether your project develops something technically new for your business, with real risk and a path to market. Software work that often fits includes:' },
       { type: 'ul', items: [
         'Building a new product or platform around technology that does not exist in a ready-made form.',
-        'Developing new algorithms, machine learning models or data processing methods for a specific problem.',
+        'Developing new algorithms, <a href="/services/ai-ml/predictive-analytics">machine learning models</a> or data processing methods for a specific problem.',
         'Solving hard technical problems such as performance at scale, real-time processing or complex integrations with hardware or <a href="/services/software-development/legacy-software-modernization">legacy systems</a>.',
         'Adapting an emerging technology to a new use where the outcome is uncertain.',
       ] },
