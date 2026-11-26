@@ -419,7 +419,7 @@ export default function DigitalMarketingCostCanadaClient() {
                       </div>
 
                       <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
-                        Most digital marketing agencies treat SEO, paid ads, and development as separate silos. At Mapletech Labs, we believe this fragmentation is why most marketing campaigns underperform. Our approach integrates technical SEO directly into the development process, ensuring your website is built from the ground up for search engine dominance.
+                        Most digital marketing agencies treat SEO, paid ads, and development as separate silos. At Mapletech Labs, we believe this fragmentation is why most marketing campaigns underperform. Our approach integrates <Link href="/services/digital-marketing/seo-services" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>technical SEO</Link> directly into the development process, ensuring your website is built from the ground up for search engine dominance.
                       </p>
                       <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
                         We build every client project on Next.js with server-side rendering, achieving perfect Google Lighthouse scores that give you a structural advantage over competitors running on bloated WordPress themes. Our data-driven methodology combines real-time analytics, AI-assisted content optimization, and conversion rate engineering to maximize every dollar of your marketing budget.
