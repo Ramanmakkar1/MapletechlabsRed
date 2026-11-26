@@ -1911,7 +1911,7 @@ export const articles: Article[] = [
       { type: 'checks', items: [
         { term: 'AI research', text: 'The city has deep university and research ties in machine learning, and a strong pool of AI talent. Projects here often involve data pipelines, model training and putting AI features into real products.' },
         { term: 'Gaming and creative tech', text: 'Montreal is home to many game studios and visual effects companies. Software for this sector tends to deal with real-time performance, live operations, player analytics and large asset pipelines.' },
-        { term: 'Aerospace and manufacturing', text: 'The region has a long aerospace history. Software for this market covers simulation, training, maintenance and supply chain tools, usually with strict quality and documentation needs.' },
+        { term: 'Aerospace and manufacturing', text: 'The region has a long aerospace history. Software for this market covers simulation, training, maintenance and <a href="/industries/enterprise">manufacturing supply chain software</a>, usually with strict quality and documentation needs.' },
         { term: 'Fintech and financial services', text: 'Banks, insurers and fintech startups need secure, audited systems that handle personal and financial data carefully.' },
       ] },
       { type: 'p', html: 'Whatever your industry, ask a partner how they have handled work like yours, and what they would do differently for a Quebec audience.' },
