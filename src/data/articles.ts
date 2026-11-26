@@ -1656,7 +1656,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Custom development is a real option, but it should earn its place. It may be justified when:' },
       { type: 'checks', items: [
         { term: 'Your buying process is genuinely unusual', text: 'Configure-to-order products, complex quoting, approvals, rentals or B2B pricing that the platform cannot model without heavy customisation.' },
-        { term: 'You need deep system integration', text: 'Your ERP, inventory, manufacturing, CRM or warehouse systems must stay in sync in real time, and the available connectors do not cover it.' },
+        { term: 'You need deep system integration', text: 'Your <a href="/services/web-development/api-backend">ERP, inventory, manufacturing, CRM or warehouse systems</a> must stay in sync in real time, and the available connectors do not cover it.' },
         { term: 'Commerce is part of a larger product', text: 'The store sits inside a web app, portal or marketplace where the storefront is only one feature, not the whole business.' },
         { term: 'You need full control of the experience', text: 'Performance, layout, checkout logic and data ownership are core to your brand or your customers, and the platform&rsquo;s constraints block it.' },
         { term: 'Platform costs scale badly for you', text: 'App subscriptions, transaction or plan limits grow faster than the cost of owning the equivalent system.' },
