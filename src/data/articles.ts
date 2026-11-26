@@ -3471,7 +3471,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'The platform choice shapes cost, timeline and what the app can do on a phone:' },
       { type: 'checks', items: [
         { term: 'Native (Swift for iOS, Kotlin for Android)', text: 'Best performance and full access to device hardware. A good fit when you need maximum speed, deep camera or AR features, background Bluetooth or very demanding interfaces.' },
-        { term: 'Cross-platform (Flutter or React Native)', text: 'One codebase for both app stores, which usually lowers cost and keeps iOS and Android in step. The default for most Montreal business, SaaS and consumer apps that must reach both stores.' },
+        { term: 'Cross-platform (Flutter or React Native)', text: '<a href="/services/mobile-app-development/cross-platform-apps">One codebase for both app stores</a>, which usually lowers cost and keeps iOS and Android in step. The default for most Montreal business, SaaS and consumer apps that must reach both stores.' },
         { term: 'Progressive web app (PWA)', text: 'Runs in the browser and can be installed from a link, with no app store review. Good for internal tools and simple customer flows; weaker for deep hardware access and some iOS features.' },
       ] },
       { type: 'p', html: 'Our guide to <a href="/blog/native-vs-cross-platform-vs-pwa">native vs cross-platform vs PWA</a> compares the three in detail, and <a href="/blog/flutter-vs-react-native-canada">Flutter vs React Native in Canada</a> covers the two cross-platform options. The right stack depends on your features, integrations and team, not an agency default.' },
