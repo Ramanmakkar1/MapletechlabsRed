@@ -1,4 +1,5 @@
 import { cities } from '@/data/cities';
+import { industries } from '@/data/industries';
 import { PROJECT_PRICING } from '@/data/pricing';
 import { PRIORITY_SERVICES, serviceCityHref } from '@/data/serviceCity';
 import { services } from '@/data/services';
@@ -84,6 +85,11 @@ function buildText(): string {
     project.desc,
   ))));
   out.push(...lines([link('All case studies', '/case-studies')]));
+  out.push('');
+  out.push('## Industries');
+  out.push('');
+  out.push(...lines(industries.map(i => link(i.name, i.href, i.description))));
+  out.push(...lines([link('All industries', '/industries')]));
   out.push('');
   out.push('## Contact');
   out.push('');
