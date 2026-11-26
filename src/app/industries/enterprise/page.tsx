@@ -36,6 +36,7 @@ export default function Page() {
         name={TITLE}
         description={seoDescription(DESCRIPTION)}
         url={'https://mapletechlabs.ca/industries/enterprise'}
+        serviceType={'Enterprise and manufacturing software development'}
       />
       <PageClient />
     </>
