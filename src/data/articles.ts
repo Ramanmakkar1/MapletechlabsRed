@@ -1841,7 +1841,7 @@ export const articles: Article[] = [
         'Marketing website (10&ndash;20 pages): CAD $15,000&ndash;$45,000, about 4&ndash;8 weeks.',
         'E-commerce platform: CAD $40,000&ndash;$120,000, about 8&ndash;16 weeks.',
         'Custom mobile app (iOS + Android): CAD $60,000&ndash;$200,000, about 12&ndash;24 weeks.',
-        'SaaS platform (MVP): CAD $80,000&ndash;$250,000, about 16&ndash;28 weeks.',
+        '<a href="/services/saas-development/saas-mvp-development">SaaS platform (MVP)</a>: CAD $80,000&ndash;$250,000, about 16&ndash;28 weeks.',
         'Enterprise software system: CAD $150,000&ndash;$500,000+, about 24&ndash;52 weeks.',
       ] },
       { type: 'p', html: 'These are approximate ranges based on Canadian market averages. Security assessments, bilingual content and accessibility testing add time and cost, so include them in the scope from the start. Our <a href="/blog/app-development-cost-canada">app development cost guide for Canada</a> goes deeper, our <a href="/pricing">pricing page</a> shows how we structure engagements, and the <a href="/tools/cost-estimator">software cost estimator</a> gives a rough number for your own scope.' },
