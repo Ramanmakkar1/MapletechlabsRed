@@ -1749,7 +1749,7 @@ export const articles: Article[] = [
         'Custom mobile app (iOS + Android): CAD $60,000&ndash;$200,000, about 12&ndash;24 weeks.',
         'SaaS platform (MVP): CAD $80,000&ndash;$250,000, about 16&ndash;28 weeks.',
         'AI/ML integration project: CAD $50,000&ndash;$180,000, about 10&ndash;20 weeks.',
-        'Enterprise software system: CAD $150,000&ndash;$500,000+, about 24&ndash;52 weeks.',
+        '<a href="/services/software-development">Enterprise software system</a>: CAD $150,000&ndash;$500,000+, about 24&ndash;52 weeks.',
       ] },
       { type: 'p', html: 'These are approximate ranges based on Canadian market averages. Final pricing depends on complexity, integrations and specific requirements. For a rough number on your own scope, try the <a href="/tools/cost-estimator">software cost estimator</a>.' },
 
