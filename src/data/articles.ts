@@ -986,9 +986,9 @@ export const articles: Article[] = [
       { type: 'p', html: 'Calgary’s economy is built on energy, finance, agriculture and logistics, and its SaaS products tend to solve operational problems in those sectors rather than consumer social apps. That shapes the data, integrations and security expectations a development partner needs to understand.' },
       { type: 'checks', items: [
         { term: 'Energy tech', text: 'Field operations, asset tracking, emissions reporting, scheduling and maintenance software for oil and gas and renewables teams. Expect offline-tolerant mobile workflows, role-based access and integrations with existing operational systems.' },
-        { term: 'Fintech', text: 'Payments, lending, reconciliation and financial reporting products. These bring stronger expectations around audit trails, access control, data residency and security reviews, even when the company is not a bank.' },
+        { term: 'Fintech', text: '<a href="/industries/fintech">Payments, lending, reconciliation and financial reporting products</a>. These bring stronger expectations around audit trails, access control, data residency and security reviews, even when the company is not a bank.' },
         { term: 'Agtech', text: 'Farm management, yield and input tracking, equipment telemetry and supply-chain tools. Data often arrives from sensors, spreadsheets and third-party platforms, so import quality and reporting matter as much as the interface.' },
-        { term: 'Logistics', text: 'Dispatch, fleet, warehouse and last-mile software. Multi-party permissions, real-time status and integrations with carriers or ERP systems are usually the hard part, not the screens.' },
+        { term: 'Logistics', text: '<a href="/industries/logistics">Dispatch, fleet, warehouse and last-mile software</a>. Multi-party permissions, real-time status and integrations with carriers or ERP systems are usually the hard part, not the screens.' },
       ] },
       { type: 'p', html: 'A serious partner asks how a customer signs up, who approves what, which systems hold the source of truth and how you will bill for usage before proposing a stack or a price. If the proposal could describe any SaaS company in any city, it is not scoped for your product.' },
       { type: 'h2', id: 'mvp-vs-growth', text: 'MVP or growth-stage build: what should you fund first?' },
