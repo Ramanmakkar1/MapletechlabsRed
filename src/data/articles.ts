@@ -5007,7 +5007,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'The stack should follow your content, integrations and team, not an agency default. Ask why a framework and CMS are recommended, and whether your editors can try the workflow before you commit:' },
       { type: 'ul', items: [
         '<strong>Framework and rendering.</strong> We develop on Next.js and React, rendering key pages on the server so crawlers and visitors get fast first loads. Ask how the proposed stack handles speed, SEO metadata and Core Web Vitals.',
-        '<strong>CMS and editing.</strong> A headless CMS can give your team structured content and fast pages, while WordPress can be quicker for a small brochure site. Compare the trade-offs in our <a href="/blog/wordpress-vs-headless-cms-canada">WordPress vs headless CMS guide for Canada</a>.',
+        '<strong>CMS and editing.</strong> <a href="/services/wordpress-cms/strapi-sanity-cms">A headless CMS</a> can give your team structured content and fast pages, while WordPress can be quicker for a small brochure site. Compare the trade-offs in our <a href="/blog/wordpress-vs-headless-cms-canada">WordPress vs headless CMS guide for Canada</a>.',
         '<strong>Hosting and data location.</strong> Ask where the site, database, form submissions and backups are hosted, and whether the full setup can meet Canadian residency requirements.',
         '<strong>Integrations and ownership.</strong> List the CRM, payments, booking and analytics systems the site must connect to, and confirm the domain, hosting, CMS and analytics accounts are in your name from day one.',
       ] },
