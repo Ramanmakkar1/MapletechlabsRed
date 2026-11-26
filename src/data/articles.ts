@@ -7521,7 +7521,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Most custom software projects move through the same stages. The names vary, but the work does not:' },
       { type: 'ol', items: [
         '<strong>Discovery and scoping.</strong> Define the users, the first release, integrations, data, risks and success measures, then agree a written scope and price.',
-        '<strong>UX and technical design.</strong> Map the key journeys, test wireframes and settle the architecture, data model and security approach before building.',
+        '<strong>UX and technical design.</strong> Map the key journeys, test <a href="/services/product-design/wireframing">wireframes</a> and settle the architecture, data model and security approach before building.',
         '<strong>Development in short iterations.</strong> Build working software in sprints, with demos, code review and a repository you can access throughout.',
         '<strong>QA and security review.</strong> Test the workflows, integrations, permissions and edge cases, and check performance and accessibility before launch.',
         '<strong>Launch and handover.</strong> Deploy into accounts you control, migrate data, train users and hand over code, designs, documentation and credentials.',
