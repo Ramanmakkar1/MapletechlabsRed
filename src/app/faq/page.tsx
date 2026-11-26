@@ -3,8 +3,9 @@ import FAQPageClient from './PageClient';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
-import { FAQ_JSON_LD } from '@/data/faq-categories';
+import { FAQ_ITEMS } from '@/data/faq-categories';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { faqPageSchema } from '@/lib/seo/schema';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 const TITLE = 'FAQ: Custom Software Projects in Canada';
@@ -33,7 +34,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJsonLd(FAQ_JSON_LD) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(faqPageSchema(FAQ_ITEMS.map(faq => ({ question: faq.q, answer: faq.a })))) }}
       />
       <BreadcrumbSchema items={[{ position: 1, name: 'Home', item: 'https://mapletechlabs.ca' }, { position: 2, name: 'FAQ', item: 'https://mapletechlabs.ca/faq' }]} />
       <FAQPageClient />

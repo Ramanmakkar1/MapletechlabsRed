@@ -307,6 +307,20 @@ export function buildServiceSchema({
   };
 }
 
+/** FAQPage JSON-LD for a page that already renders these questions on screen. */
+export function faqPageSchema(faqs: { question: string; answer: string }[]) {
+  if (!faqs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+}
+
 /** FAQPage for a page that already renders these questions on screen. */
 export function buildFaqSchema(faqs: { q: string; a: string }[]) {
   if (!faqs.length) return null;
