@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
+import { blogPostHref } from '@/lib/seo/indexability';
 import MediaBand from '@/components/MediaBand';
 
 function useReveal() {
@@ -462,7 +463,7 @@ export default function AppDevelopmentCompaniesEdmontonClient() {
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
-                        <Link key={post.slug} href={`/blog/${post.slug}`} style={{
+                        <Link key={post.slug} href={blogPostHref(post.slug)} style={{
                           textDecoration: 'none', display: 'block', padding: '14px',
                           borderRadius: 12, border: '1px solid var(--line)',
                           background: 'transparent', transition: 'all 0.2s',
