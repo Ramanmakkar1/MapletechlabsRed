@@ -5090,7 +5090,7 @@ export const articles: Article[] = [
       { type: 'checks', items: [
         { term: 'Fintech and banking-adjacent apps', text: 'Payments, investing, lending, insurance and account-access apps need strong authentication, audit trails, secure APIs and careful handling of personal and financial data under PIPEDA.' },
         { term: 'Retail and e-commerce', text: 'Brands across the GTA build shopping apps with fast checkout, loyalty, push offers and integrations to inventory and order systems, often alongside a web storefront.' },
-        { term: 'Health and telehealth', text: 'Clinics, networks and digital-health startups need booking, messaging, records and video visits where personal health information must meet Ontario’s PHIPA, not just generic “HIPAA-style” checklists.' },
+        { term: 'Health and telehealth', text: 'Clinics, networks and digital-health startups need <a href="/industries/healthcare">booking, messaging, records and video visits</a> where personal health information must meet Ontario’s PHIPA, not just generic “HIPAA-style” checklists.' },
         { term: 'B2B SaaS companion apps', text: 'Software companies along the King–Spadina corridor and in Mississauga often need iOS and Android apps so customers can use the core product on the go, with the same permissions and billing as the web app.' },
         { term: 'Customer-facing service apps', text: 'Hospitality, proptech, fitness and professional services build account, booking and loyalty apps where App Store polish, speed and accessibility decide whether people keep the app installed.' },
       ] },
