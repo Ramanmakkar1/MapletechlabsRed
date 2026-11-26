@@ -10,7 +10,7 @@ const sectors = [
   { key: 'ecommerce',  name: 'Retail & e-commerce', href: '/industries/ecommerce', d: 'Headless commerce and multi-vendor platforms engineered around checkout conversion.' },
   { key: 'logistics',  name: 'Logistics',   href: '/industries/logistics',  d: 'Fleet tracking, route optimisation and warehouse automation with IoT in the field.' },
   { key: 'edtech',     name: 'Education',   href: '/industries/edtech',     d: 'Adaptive learning platforms and assessment tools for schools and training providers.' },
-  { key: 'enterprise', name: 'Enterprise',  href: '/industries/enterprise', d: 'ERP, business intelligence and workflow automation that connect the whole organisation.' },
+  { key: 'enterprise', name: 'Enterprise',  href: '/industries/enterprise', d: 'ERP, manufacturing and operations software, business intelligence and workflow automation that connect the whole organisation.' },
 ];
 
 export default function Industries() {
