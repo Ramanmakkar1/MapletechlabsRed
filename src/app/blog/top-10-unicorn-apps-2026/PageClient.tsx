@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { blogImage } from '@/data/media';
 import MediaBand from '@/components/MediaBand';
+import { blogPostHref } from '@/lib/seo/indexability';
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null);
@@ -673,7 +674,7 @@ export default function BlogPostPageClient() {
                     }}>Related Articles</p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                       {relatedPosts.map(post => (
-                        <Link key={post.slug} href={`/blog/${post.slug}`} style={{
+                        <Link key={post.slug} href={blogPostHref(post.slug)} style={{
                           textDecoration: 'none', display: 'block', padding: '14px',
                           borderRadius: 12, border: '1px solid var(--line)',
                           background: 'transparent', transition: 'all 0.2s',
