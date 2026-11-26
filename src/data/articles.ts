@@ -2154,7 +2154,7 @@ export const articles: Article[] = [
         'Send AI services only the personal information the task needs, and strip or mask identifiers where you can.',
         'Prefer settings or plans that do not retain prompts or use them for training.',
         'Tell users when AI is part of how their information is processed, in plain language.',
-        'For sensitive data, consider models hosted in a Canadian region or on your own infrastructure.',
+        'For sensitive data, consider <a href="/services/ai-ml/llm-integration">models hosted in a Canadian region or on your own infrastructure</a>.',
       ] },
 
       { type: 'h2', id: 'budget-timeline', text: 'What this means for your budget and timeline' },
