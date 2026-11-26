@@ -1274,7 +1274,7 @@ export const articles: Article[] = [
     ],
     body: [
       { type: 'h2', id: 'what-it-is', text: 'What agentic AI actually is' },
-      { type: 'p', html: 'Strip away the marketing and an AI agent is three things put together: a capable model, a set of <strong>tools</strong> it is allowed to use (look up a customer, send an email, run a calculation), and a <strong>loop</strong>. You give it a goal; it decides which tool to use, sees the result, decides what to do next, and repeats until the goal is met or it gives up. A chatbot produces words. An agent produces <em>actions</em>, one after another, adjusting as it goes.' },
+      { type: 'p', html: 'Strip away the marketing and <a href="/services/ai-ml/ai-agent-development">an AI agent</a> is three things put together: a capable model, a set of <strong>tools</strong> it is allowed to use (look up a customer, send an email, run a calculation), and a <strong>loop</strong>. You give it a goal; it decides which tool to use, sees the result, decides what to do next, and repeats until the goal is met or it gives up. A chatbot produces words. An agent produces <em>actions</em>, one after another, adjusting as it goes.' },
       { type: 'p', html: 'That loop is the whole difference. It is what lets an agent handle a task with several steps and a few surprises, rather than answering a single question and stopping.' },
       { type: 'h2', id: 'vs-chatbot', text: 'How it differs from the chatbot you already know' },
       { type: 'cards', items: [
