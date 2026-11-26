@@ -462,7 +462,7 @@ export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
                     </div>
                   ))}
                   <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, marginTop: 16, fontStyle: 'italic' }}>
-                    Note: These are approximate ranges based on Canadian market averages. Final pricing depends on complexity, integrations, and specific requirements. Contact Mapletech Labs for a precise, fixed-price quote tailored to your project.
+                    Note: These are approximate ranges based on Canadian market averages. Final pricing depends on complexity, integrations, and specific requirements. Contact Mapletech Labs for a precise, <Link href="/pricing" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>fixed-price quote</Link> tailored to your project.
                   </p>
                 </div>
 
