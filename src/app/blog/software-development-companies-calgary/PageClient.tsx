@@ -214,7 +214,7 @@ export default function SoftwareDevelopmentCompaniesCalgaryClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      Our Calgary office serves Alberta&apos;s energy, fintech, and logistics sectors with world-class custom software. We build Next.js web apps, mobile platforms, AI solutions, and cloud infrastructure. Calgary&apos;s tech renaissance is being driven by companies choosing local engineering excellence over offshore alternatives.
+                      Our Calgary office serves Alberta&apos;s energy, fintech, and logistics sectors with <Link href="/locations/software-development-company-in-calgary" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>world-class custom software</Link>. We build Next.js web apps, mobile platforms, AI solutions, and cloud infrastructure. Calgary&apos;s tech renaissance is being driven by companies choosing local engineering excellence over offshore alternatives.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       What sets Mapletech Labs apart is our full-stack approach: we don&apos;t just write code, we engineer complete digital ecosystems. From server-side rendered applications that achieve perfect Lighthouse scores to AI-powered data pipelines that transform how energy companies optimize operations, our Calgary team delivers enterprise-grade solutions with startup-speed execution.
