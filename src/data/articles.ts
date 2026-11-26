@@ -409,7 +409,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'next', text: 'From idea to something real' },
       { type: 'p', html: 'The gap between an idea on this list and a product people pay for is almost entirely validation and disciplined building. Before writing a line of code, get a handful of real potential buyers to tell you the pain is worth paying to remove. Then build the smallest thing that proves it — <a href="/services/saas-development/saas-mvp-development">an MVP that solves the core problem</a> and nothing else.' },
-      { type: 'p', html: 'That is the part we help with most: taking a validated idea and engineering it into a product that can scale, on architecture you own, without the eighteen-month detour that sinks most first attempts. The idea is the easy half. The build, and the judgement about what not to build, is the rest.' },
+      { type: 'p', html: 'That is the part we help with most: taking a validated idea and <a href="/services/saas-development">engineering it into a product that can scale</a>, on architecture you own, without the eighteen-month detour that sinks most first attempts. The idea is the easy half. The build, and the judgement about what not to build, is the rest.' },
     ],
     keyTakeaways: [
       'A SaaS idea is only a business if the pain is expensive, the buyer is reachable, you have a wedge, and it gets stickier over time.',
