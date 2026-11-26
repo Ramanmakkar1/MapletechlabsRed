@@ -6369,7 +6369,7 @@ export const articles: Article[] = [
         '<strong>Full product design:</strong> 30+ screens with research and a design system foundation. About CAD $5,000&ndash;$12,000.',
         '<strong>Enterprise design system:</strong> a full research program, accessibility work and a documented system for several teams or products. About CAD $12,000&ndash;$30,000+.',
       ] },
-      { type: 'p', html: 'Most projects run 6&ndash;11 weeks from research through handover. Screen count, how complex the interactions are, how much research you need and whether branding is in scope all move the price. A quote well below these bands usually drops research or testing; one well above should list the extra scope in writing.' },
+      { type: 'p', html: 'Most projects run 6&ndash;11 weeks from research through handover. Screen count, how complex the interactions are, how much research you need and whether <a href="/services/branding/logo-visual-identity">branding</a> is in scope all move the price. A quote well below these bands usually drops research or testing; one well above should list the extra scope in writing.' },
 
       { type: 'h2', id: 'red-flags', text: 'Red flags when hiring a Vancouver UI/UX studio' },
       { type: 'ul', items: [
