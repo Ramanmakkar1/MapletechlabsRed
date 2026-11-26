@@ -1,4 +1,4 @@
-import { buildFaqSchema, buildServiceSchema } from '@/lib/seo/schema';
+import { buildFaqSchema, serviceSchema } from '@/lib/seo/schema';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 export { safeJsonLd } from '@/lib/seo/jsonLd';
@@ -27,7 +27,7 @@ export function ServiceSchema({
   areaServed?: string | string[];
   areaServedType?: 'Country' | 'AdministrativeArea';
 }) {
-  const schema = buildServiceSchema({
+  const schema = serviceSchema({
     name,
     description,
     url,

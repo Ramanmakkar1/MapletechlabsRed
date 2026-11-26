@@ -61,6 +61,15 @@ export interface ServiceSchemaInput {
   areaServedType?: 'Country' | 'AdministrativeArea';
 }
 
+/**
+ * Service JSON-LD for a service detail page: @type Service, serviceType,
+ * provider (Organization), areaServed (Place) and offers (price range) when
+ * the page has real pricing data.
+ */
+export function serviceSchema(input: ServiceSchemaInput) {
+  return buildServiceSchema(input);
+}
+
 /** Service structured data for a service, sub-service or industry page. */
 export function buildServiceSchema({
   name,
