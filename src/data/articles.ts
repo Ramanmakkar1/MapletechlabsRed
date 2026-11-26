@@ -3712,7 +3712,7 @@ export const articles: Article[] = [
       { type: 'checks', items: [
         { term: 'Google Ads', text: 'Captures people already searching for your service. Ask how the agency will separate French and English campaigns, exclude job and research searches, and report cost per lead rather than clicks.' },
         { term: 'Meta ads', text: 'Creates demand and reaches people who were not searching yet. Ask how it will build separate French and English audiences and ad copy, and how it will measure leads rather than likes.' },
-        { term: 'Social media', text: 'Keeps a local brand visible and gives paid campaigns something to point to. Ask which platforms fit your customers and who produces the French and English content.' },
+        { term: 'Social media', text: '<a href="/services/digital-marketing/social-media-marketing">Keeps a local brand visible</a> and gives paid campaigns something to point to. Ask which platforms fit your customers and who produces the French and English content.' },
         { term: 'Content and SEO', text: 'Builds lasting visibility for the questions people ask before they buy. Ask what pages will be created or improved and how they will be measured.' },
         { term: 'Tracking and consent', text: 'Connects every channel to real enquiries. In Quebec this includes Law 25 consent for pixels and analytics, which should be planned before campaigns launch.' },
       ] },
