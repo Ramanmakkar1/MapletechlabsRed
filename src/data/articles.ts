@@ -3577,8 +3577,8 @@ export const articles: Article[] = [
       { type: 'h2', id: 'seo-evaluation', text: 'How to judge the SEO part of an agency proposal' },
       { type: 'p', html: 'SEO is the channel most often described in vague terms, so ask what will change on the site and in your Google Business Profile in the first 90 days. Useful answers cover:' },
       { type: 'ul', items: [
-        '<strong>Technical foundations:</strong> indexing, page speed, mobile layout, broken links, duplicate pages, titles and descriptions, and a self-referencing canonical on every indexable page.',
-        '<strong>Local search:</strong> Google Business Profile details, categories, services, photos, reviews and consistent name, address and phone details across the web.',
+        '<strong>Technical foundations:</strong> <a href="/services/digital-marketing/seo-services">indexing, page speed, mobile layout</a>, broken links, duplicate pages, titles and descriptions, and a self-referencing canonical on every indexable page.',
+        '<strong>Local search:</strong> <a href="/services/digital-marketing/local-seo">Google Business Profile details</a>, categories, services, photos, reviews and consistent name, address and phone details across the web.',
         '<strong>Content that matches demand:</strong> service pages for what customers search, useful answers to common questions, and internal links from strong pages to the pages that should earn enquiries.',
         '<strong>Bing as well as Google:</strong> the same fundamentals help you appear in Bing and in AI answers that draw on your site, so a plan should not treat Bing as an afterthought.',
         '<strong>Measurement:</strong> Search Console, Analytics and call or form tracking set up in your accounts, with a baseline before work starts.',
