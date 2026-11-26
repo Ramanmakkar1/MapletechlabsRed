@@ -7,6 +7,9 @@ import { seoTitle } from '@/lib/seo/title';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 const title = 'AI Automation Services Canada: Workflows | Mapletech Labs';
 const description = 'Compare AI automation approaches for invoices, email and CRM workflows. Explore cost drivers and plan your Canadian business automation with an engineer.';
 const url = canonicalUrl('/services/ai-ml/ai-automation');
