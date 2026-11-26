@@ -31,7 +31,7 @@ export default function Industries() {
             return (
               <Link key={s.key} href={s.href} className="tile rise" style={{ padding: 0, overflow: 'hidden' }}>
                 <div className="media media--flat media--zoom" style={{ aspectRatio: '16 / 10' }}>
-                  <Image src={m.src} alt={m.alt} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
+                  <Image src={m.src} alt={m.alt} fill loading="lazy" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
                 </div>
                 <div style={{ padding: 'clamp(22px, 2.2vw, 28px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                   <h3 style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{s.name}</h3>

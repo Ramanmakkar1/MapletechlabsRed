@@ -16,7 +16,7 @@ export default function AiPractice() {
     <section style={{ padding: 'var(--section-y) 0' }}>
       <div className="cb-container split">
         <div className="media media--lg fade" style={{ aspectRatio: '4 / 3.4' }}>
-          <Image src={m.src} alt={m.alt} fill sizes="(max-width: 1023px) 100vw, 46vw" style={{ objectFit: 'cover' }} />
+          <Image src={m.src} alt={m.alt} fill loading="lazy" sizes="(max-width: 1023px) 100vw, 46vw" style={{ objectFit: 'cover' }} />
         </div>
         <div>
           <h2 style={{ marginBottom: 16, maxWidth: '16ch' }}>

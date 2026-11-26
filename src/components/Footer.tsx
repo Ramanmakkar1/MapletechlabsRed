@@ -122,6 +122,7 @@ export default function Footer() {
               alt="Mapletech Labs"
               width={250}
               height={100}
+              loading="lazy"
               style={{ height: 40, width: 'auto', objectFit: 'contain' }}
             />
             <p>World-class software engineering for companies ready to lead their industry. Based in Canada, building globally.</p>

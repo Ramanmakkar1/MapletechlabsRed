@@ -43,7 +43,7 @@ export default function Credentials() {
           {awards.map(a => (
             <li key={a.n} className="rise">
               <div className={a.light ? 'award-badge award-badge--light' : 'award-badge'}>
-                <Image src={a.src} alt={`${a.n}, ${a.s} ${a.y}`} fill sizes="200px" style={{ objectFit: 'contain' }} />
+                <Image src={a.src} alt={`${a.n}, ${a.s} ${a.y}`} fill loading="lazy" sizes="200px" style={{ objectFit: 'contain' }} />
               </div>
               <p className="award-name">{a.n}</p>
               <p className="award-meta">{a.s} &middot; {a.y}</p>

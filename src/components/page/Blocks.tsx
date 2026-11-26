@@ -242,7 +242,7 @@ export function SuccessStories({ title = 'Work we have shipped' }: { bg?: string
           {work.slice(0, 3).map(w => (
             <Link key={w.slug} href={w.href} className="tile rise" style={{ padding: 0, overflow: 'hidden' }}>
               <div className="media media--flat media--zoom" style={{ aspectRatio: '16 / 10' }}>
-                <Image src={w.media.src} alt={w.media.alt} fill sizes="(max-width: 639px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                <Image src={w.media.src} alt={w.media.alt} fill loading="lazy" sizes="(max-width: 639px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
               </div>
               <div style={{ padding: 'clamp(22px, 2.2vw, 28px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--brand)', marginBottom: 10 }}>{w.category} &middot; {w.city}</p>

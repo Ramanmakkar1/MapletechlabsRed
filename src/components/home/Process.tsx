@@ -39,7 +39,7 @@ export default function Process() {
             ))}
           </ol>
           <div className="media media--lg hide-mobile fade" style={{ minHeight: 420 }}>
-            <Image src={m.src} alt={m.alt} fill sizes="(max-width: 1023px) 100vw, 38vw" style={{ objectFit: 'cover' }} />
+            <Image src={m.src} alt={m.alt} fill loading="lazy" sizes="(max-width: 1023px) 100vw, 38vw" style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </div>
