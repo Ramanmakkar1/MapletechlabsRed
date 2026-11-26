@@ -4349,7 +4349,7 @@ export const articles: Article[] = [
         { term: 'Energy and oilfield field apps', text: 'Crews at well sites, pipelines and plants need inspection forms, safety checklists, work orders and asset logs that work offline, sync when the device is back in range, and handle photos, GPS and signatures.' },
         { term: 'Agtech', text: 'Growers, ranchers and agribusiness suppliers use apps for field records, equipment and sensor data, and logistics across large rural areas where connectivity is patchy.' },
         { term: 'Fintech', text: '<a href="/industries/fintech">Payments, lending, wealth and insurance apps</a> need strong authentication, audit trails, secure data handling and integrations with banks and payment processors.' },
-        { term: 'Logistics and transportation', text: 'Calgary’s role as a distribution hub drives driver apps, dispatch tools, proof-of-delivery and real-time tracking that must stay reliable at peak volume.' },
+        { term: 'Logistics and transportation', text: 'Calgary’s role as a distribution hub drives <a href="/industries/logistics">driver apps, dispatch tools, proof-of-delivery and real-time tracking</a> that must stay reliable at peak volume.' },
         { term: 'Customer-facing apps', text: 'Retail, hospitality, healthcare and service businesses build booking, loyalty, ordering and account apps where speed, accessibility and App Store polish decide whether people keep the app installed.' },
       ] },
       { type: 'p', html: 'A good partner asks which of these you are before proposing a stack or a price. If the first proposal could apply to any city or industry, it probably will.' },
