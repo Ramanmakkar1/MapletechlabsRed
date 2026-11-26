@@ -611,7 +611,7 @@ export const articles: Article[] = [
       ] },
       { type: 'p', html: 'A model runs on CPU alone — it is just slower. If you have a recent Mac with Apple Silicon or a gaming PC with a good GPU, local models feel genuinely snappy.' },
       { type: 'h2', id: 'real-work', text: 'Using local models for real work' },
-      { type: 'p', html: 'Beyond chatting in the app, the local API is what makes this powerful. Coding assistants such as <strong>Continue</strong> and <strong>Cline</strong> can point at your local Ollama or LM Studio server, giving you an AI pair-programmer inside your editor that runs entirely on your machine. Because most tools speak the same OpenAI-compatible API, pointing them at <code>localhost</code> instead of a cloud provider is often a one-line change.' },
+      { type: 'p', html: 'Beyond chatting in the app, the local API is what makes this powerful. Coding assistants such as <strong>Continue</strong> and <strong>Cline</strong> can point at your local Ollama or LM Studio server, giving you an AI pair-programmer inside your editor that runs entirely on your machine. Because most tools speak <a href="/services/ai-ml/llm-integration">the same OpenAI-compatible API</a>, pointing them at <code>localhost</code> instead of a cloud provider is often a one-line change.' },
       { type: 'h2', id: 'local-vs-cloud', text: 'Local vs cloud: an honest comparison' },
       { type: 'p', html: 'Local models are not a drop-in replacement for the best hosted models, and pretending otherwise leads to disappointment. Here is the fair version:' },
       { type: 'ul', items: [
