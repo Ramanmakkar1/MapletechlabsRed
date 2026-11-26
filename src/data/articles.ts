@@ -7501,7 +7501,7 @@ export const articles: Article[] = [
         { term: 'Integrations', text: 'Payments, accounting, CRM, EHR, ERP, maps, messaging and legacy systems each add design, authentication, error handling and testing work. An integration with no usable API can cost more than the feature it supports.' },
         { term: 'Data migration and quality', text: 'Moving data from spreadsheets or an old system means cleaning, mapping and checking it. Poor source data is one of the most common reasons a build takes longer than planned.' },
         { term: 'Security, privacy and compliance', text: 'Sensitive data, role-based access, audit logs, Canadian data residency and sector rules add design and review work. They should be scoped from the start, not added at launch.' },
-        { term: 'Delivery model and team', text: 'A fixed-scope build, a time-and-materials engagement and a dedicated team carry different risk and cost profiles. Senior Canadian rates are higher than offshore rates, and the difference usually shows in judgement and rework.' },
+        { term: 'Delivery model and team', text: 'A fixed-scope build, a time-and-materials engagement and <a href="/services/software-development/dedicated-development-team">a dedicated team</a> carry different risk and cost profiles. Senior Canadian rates are higher than offshore rates, and the difference usually shows in judgement and rework.' },
         { term: 'Support after launch', text: 'Monitoring, bug fixes, security updates and new features continue after go-live. Budget for them separately so the launch price is not mistaken for the whole cost.' },
       ] },
 
