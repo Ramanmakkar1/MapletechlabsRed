@@ -4,9 +4,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import CookieConsent from "@/components/CookieConsent";
 import ClarityAnalytics from "@/components/ClarityAnalytics";
 import { previewRobots, siteOrigin } from "@/lib/seo/canonical";
-import { AWARDS, BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from "@/lib/seo/business";
 import { safeJsonLd } from "@/lib/seo/jsonLd";
-import { PROJECT_PRICING } from "@/data/pricing";
+import { organizationSchema as buildOrganizationSchema, webSiteSchema as buildWebSiteSchema } from "@/lib/seo/schema";
 import "./globals.css";
 
 // Bounded regeneration interval for repository-managed content.
@@ -87,166 +86,8 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${siteOrigin()}/#organization`,
-  name: "Mapletech Labs",
-  alternateName: ["TML Branding Agency"],
-  url: siteOrigin(),
-  logo: `${siteOrigin()}/logo.png`,
-  telephone: BUSINESS.telephone,
-  email: BUSINESS.email,
-  image: BUSINESS.image,
-  description:
-    "Mapletech Labs is a custom software development company founded by Raman Makkar in Edmonton, Alberta in 2018 (formerly TML Branding Agency). Its team of 25+ engineers, designers and strategists has delivered 500+ projects, building web and mobile apps, AI solutions, SaaS platforms, UI/UX design and SEO for clients across Canada, with 12 locations across Canada and an experienced remote engineering team.",
-  address: { ...HQ_ADDRESS },
-  sameAs: [...BUSINESS.sameAs],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "sales",
-    availableLanguage: ["English", "French"],
-    telephone: BUSINESS.telephone,
-    email: BUSINESS.email,
-  },
-  areaServed: ['CA', 'US', ...LOCAL_BUSINESS_AREA_SERVED],
-  foundingDate: "2018",
-  foundingLocation: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Edmonton",
-      addressRegion: "Alberta",
-      addressCountry: "CA",
-    },
-  },
-  numberOfEmployees: {
-    "@type": "QuantitativeValue",
-    minValue: 25,
-    maxValue: 50,
-  },
-  founder: {
-    "@type": "Person",
-    "@id": `${siteOrigin()}/about/raman-makkar#person`,
-    name: "Raman Makkar",
-    jobTitle: "Founder & CEO",
-    url: `${siteOrigin()}/about/raman-makkar`,
-  },
-  award: [...AWARDS],
-  knowsAbout: [
-    "Custom software development",
-    "Manufacturing software development",
-    "Mobile app development",
-    "AI development",
-    "LLM integration",
-    "UI/UX design",
-    "Ecommerce systems",
-    "SaaS development",
-    "Search engine optimization (SEO)",
-    "Digital marketing",
-    "Google Ads management",
-    "Software development",
-    "App development",
-    "SEO",
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Software Development Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Custom Software Development",
-          url: `${siteOrigin()}/services/software-development`,
-          areaServed: { "@type": "Country", name: "Canada" },
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Web Development",
-          url: `${siteOrigin()}/services/web-development`,
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "CAD",
-          minPrice: PROJECT_PRICING.website.low,
-          maxPrice: PROJECT_PRICING.website.high,
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Mobile App Development",
-          url: `${siteOrigin()}/services/mobile-app-development`,
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "CAD",
-          minPrice: PROJECT_PRICING.mobile.low,
-          maxPrice: PROJECT_PRICING.mobile.high,
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "AI & Machine Learning",
-          url: `${siteOrigin()}/services/ai-ml`,
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "CAD",
-          minPrice: PROJECT_PRICING.ai.low,
-          maxPrice: PROJECT_PRICING.ai.high,
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "UI/UX Design",
-          url: `${siteOrigin()}/services/product-design`,
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "SaaS Development",
-          url: `${siteOrigin()}/services/saas-development`,
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "CAD",
-          minPrice: PROJECT_PRICING.saas.low,
-          maxPrice: PROJECT_PRICING.saas.high,
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "SEO & Digital Marketing",
-          url: `${siteOrigin()}/services/digital-marketing`,
-        },
-      },
-    ],
-  },
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${siteOrigin()}/#website`,
-  name: "Mapletech Labs",
-  url: siteOrigin(),
-  inLanguage: "en-CA",
-  publisher: { "@id": `${siteOrigin()}/#organization` },
-};
+const organizationSchema = buildOrganizationSchema();
+const websiteSchema = buildWebSiteSchema();
 
 export default function RootLayout({
   children,
