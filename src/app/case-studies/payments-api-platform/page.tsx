@@ -31,7 +31,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'PCI DSS Payments API - Case Study',
+  '@id': `https://mapletechlabs.ca/case-studies/${SLUG}#article`,
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+  inLanguage: 'en-CA',
+  headline: 'PCI DSS Payments API',
   description: DESCRIPTION,
   datePublished: DATE,
   dateModified: '2026-11-12',
