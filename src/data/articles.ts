@@ -1747,7 +1747,7 @@ export const articles: Article[] = [
         'Marketing website (10&ndash;20 pages): CAD $15,000&ndash;$45,000, about 4&ndash;8 weeks.',
         'E-commerce platform: CAD $40,000&ndash;$120,000, about 8&ndash;16 weeks.',
         'Custom mobile app (iOS + Android): CAD $60,000&ndash;$200,000, about 12&ndash;24 weeks.',
-        'SaaS platform (MVP): CAD $80,000&ndash;$250,000, about 16&ndash;28 weeks.',
+        '<a href="/services/saas-development/saas-mvp-development">SaaS platform (MVP)</a>: CAD $80,000&ndash;$250,000, about 16&ndash;28 weeks.',
         'AI/ML integration project: CAD $50,000&ndash;$180,000, about 10&ndash;20 weeks.',
         '<a href="/services/software-development">Enterprise software system</a>: CAD $150,000&ndash;$500,000+, about 24&ndash;52 weeks.',
       ] },
