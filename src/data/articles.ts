@@ -5820,7 +5820,7 @@ export const articles: Article[] = [
         { term: 'Energy and oil and gas', text: 'Head offices and service companies hold huge libraries of technical manuals, well and facility reports, regulatory submissions and safety procedures. AI search and summaries let engineers and field staff find the right passage in seconds, with the source shown so it can be checked before anyone acts on it.' },
         { term: 'Agriculture and agtech', text: 'Agribusinesses, equipment dealers and agtech startups can pull answers from crop, equipment, warranty and supplier records, or forecast seasonal demand for inputs and parts from historical orders.' },
         { term: 'Fintech, banking and insurance', text: 'Document intake, claims and application triage, and drafting replies to routine requests, with a person checking each result before it moves on. Auditability matters more here than raw speed.' },
-        { term: 'Logistics and transportation', text: 'Calgary is a major distribution hub for Western Canada. AI can sort dispatch emails, pull fields from bills of lading and delivery paperwork, and forecast volumes so planners can staff and route ahead of demand.' },
+        { term: 'Logistics and transportation', text: 'Calgary is a major distribution hub for Western Canada. AI can sort dispatch emails, pull fields from <a href="/industries/logistics">bills of lading and delivery paperwork</a>, and forecast volumes so planners can staff and route ahead of demand.' },
         { term: 'Tech and SaaS startups', text: 'Calgary’s growing startup scene often needs LLM features inside an existing product: smart search, summaries, classification or an assistant that answers from the customer’s own data.' },
       ] },
 
