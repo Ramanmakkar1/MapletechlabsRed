@@ -1343,7 +1343,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'The most common way to blow the eight weeks is to treat the MVP as “version one of everything.” The discipline is the opposite: pick the single core loop, build that well, and leave everything else for after you have learned something.' },
       { type: 'h2', id: 'week-by-week', text: 'The eight weeks, week by week' },
       { type: 'ol', items: [
-        '<strong>Weeks 1–2 — Discovery and design.</strong> Nail the one core workflow, the data model behind it and the screens for it. Produce a clickable prototype, so the hard product decisions are settled before engineering starts.',
+        '<strong>Weeks 1–2 — Discovery and design.</strong> Nail the one core workflow, the data model behind it and the screens for it. Produce <a href="/services/product-design/prototyping">a clickable prototype</a>, so the hard product decisions are settled before engineering starts.',
         '<strong>Weeks 3–6 — Build.</strong> Two-week sprints against a fixed scope: <a href="/services/saas-development/auth-sso">authentication and accounts</a>, the core workflow end to end, and <a href="/services/saas-development/billing-subscriptions">the minimum billing you need</a>. You see working software every fortnight, not a status report.',
         '<strong>Week 7 — Harden.</strong> Real error handling, security review, the empty states and edge cases that make software feel finished, and instrumentation so you can see what users actually do.',
         '<strong>Week 8 — Launch.</strong> Deploy, migrate any early data, set up monitoring, and get it in front of your first real users with someone on hand to fix what the first day reveals.',
