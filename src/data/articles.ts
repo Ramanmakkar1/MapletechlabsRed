@@ -2600,7 +2600,7 @@ export const articles: Article[] = [
         'Designing a new algorithm or data structure because existing ones could not meet a performance, accuracy or memory target.',
         'Making a system work at a scale or speed where known architectures failed, and showing why through testing.',
         'Building machine learning models or data pipelines where it was unclear whether the approach could reach the required results.',
-        'Integrating with hardware, legacy systems or protocols whose behaviour was undocumented and had to be worked out by experiment.',
+        'Integrating with hardware, <a href="/services/software-development/legacy-software-modernization">legacy systems</a> or protocols whose behaviour was undocumented and had to be worked out by experiment.',
       ] },
       { type: 'p', html: 'Work that usually does not qualify includes routine CRUD screens, standard UI and front-end work, configuring off-the-shelf platforms, ordinary bug fixing, data entry, content, and integrating well-documented APIs in a known way. A project can contain both kinds of work, and usually only the part that tackled the uncertainty counts.' },
 
