@@ -1286,7 +1286,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'The best early wins share a shape: a repetitive, multi-step task, with clear inputs and a checkable result. For example:' },
       { type: 'ul', items: [
         '<strong>Customer support triage</strong> — reading an incoming ticket, pulling the customer’s history, drafting a reply and routing anything it is unsure about to a person.',
-        '<strong>Back-office reconciliation</strong> — matching invoices to purchase orders and flagging the exceptions, instead of a person eyeballing spreadsheets.',
+        '<a href="/services/ai-ml/ai-automation"><strong>Back-office reconciliation</strong></a> — matching invoices to purchase orders and flagging the exceptions, instead of a person eyeballing spreadsheets.',
         '<strong>Research and summarisation</strong> — gathering information from several sources and producing a structured brief a human then checks.',
         '<strong>Data entry and migration</strong> — moving information between systems that were never designed to talk to each other.',
       ] },
