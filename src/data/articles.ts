@@ -2134,7 +2134,7 @@ export const articles: Article[] = [
       ] },
 
       { type: 'h2', id: 'data-residency', text: 'Where your data lives' },
-      { type: 'p', html: 'Decide early where personal information will be stored and processed. The major cloud providers offer Canadian hosting regions, and some clients, especially in health and the public sector, will ask for data to stay in Canada. List every third-party service that touches personal information, including analytics, email, error tracking and backups, and note where each one stores data.' },
+      { type: 'p', html: 'Decide early where personal information will be stored and processed. The major cloud providers offer <a href="/services/cloud-devops/aws-architecture">Canadian hosting regions</a>, and some clients, especially in health and the public sector, will ask for data to stay in Canada. List every third-party service that touches personal information, including analytics, email, error tracking and backups, and note where each one stores data.' },
       { type: 'p', html: 'Under Law 25, before personal information is communicated outside Quebec, a business is expected to assess whether it will be adequately protected. Build that assessment into vendor selection rather than discovering the question after launch.' },
 
       { type: 'h2', id: 'breaches', text: 'Breach logging and reporting' },
