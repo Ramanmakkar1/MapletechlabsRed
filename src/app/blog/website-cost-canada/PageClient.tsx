@@ -277,7 +277,7 @@ export default function WebsiteCostCanadaClient() {
                       }}>$50,000 - $300,000+</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
-                      Subscription-based software products with multi-tenant architecture, billing integration (Stripe Billing), onboarding flows, admin dashboards, and analytics. Requires ongoing development, infrastructure scaling, and feature iteration. Timeline: 3-12 months for MVP.
+                      <Link href="/services/web-development/saas-platforms" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>Subscription-based software products</Link> with multi-tenant architecture, billing integration (Stripe Billing), onboarding flows, admin dashboards, and analytics. Requires ongoing development, infrastructure scaling, and feature iteration. Timeline: 3-12 months for MVP.
                     </p>
                   </div>
                 </div>
