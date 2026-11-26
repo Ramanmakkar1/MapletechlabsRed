@@ -3,11 +3,19 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'How Mapletech Labs collects, uses and protects personal information, our PIPEDA commitments, and how to request access, correction or deletion in Canada.',
   alternates: { canonical: canonicalUrl('/privacy') },
+  openGraph: {
+    title: 'Privacy Policy | Mapletech Labs',
+    description: 'How Mapletech Labs collects, uses and protects personal information, our PIPEDA commitments, and how to request access, correction or deletion in Canada.',
+    url: canonicalUrl('/privacy'),
+    type: 'website',
+    images: DEFAULT_OG_IMAGES,
+  },
 };
 
 export default function PrivacyPage() {
