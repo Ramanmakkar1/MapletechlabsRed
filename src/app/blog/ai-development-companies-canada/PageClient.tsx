@@ -222,7 +222,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      We build production-grade AI systems, not just prototypes. From LLM integration and computer vision to predictive analytics, our AI engineers deploy models that drive real business outcomes for Canadian enterprises.
+                      We build <Link href="/services/ai-ml" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>production-grade AI systems</Link>, not just prototypes. From LLM integration and computer vision to predictive analytics, our AI engineers deploy models that drive real business outcomes for Canadian enterprises.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       While most agencies are still experimenting with ChatGPT wrappers, Mapletech Labs is fine-tuning custom models, building RAG pipelines, and deploying AI agents that automate complex business workflows. Our Edmonton-based team combines deep ML engineering expertise with practical software development to deliver AI solutions that actually work in production, not just in demos.
