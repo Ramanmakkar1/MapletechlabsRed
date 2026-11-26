@@ -1584,7 +1584,7 @@ export const articles: Article[] = [
       { type: 'checks', items: [
         { term: 'Your process is the edge', text: 'If how you do the work is a competitive advantage, off-the-shelf forces you to give it up. Custom protects it.' },
         { term: 'Nothing fits', text: 'When you have looked and every product needs heavy workarounds, the workarounds are a hidden custom-build you are paying for anyway.' },
-        { term: 'Integration tax', text: 'If people spend hours moving data between tools, custom software that connects them often pays for itself quickly.' },
+        { term: 'Integration tax', text: 'If people spend hours moving data between tools, <a href="/services/web-development/api-backend">custom software that connects them</a> often pays for itself quickly.' },
         { term: 'You need to own it', text: 'When the data, the roadmap or the customer experience are core, owning the software is worth the investment.' },
       ] },
       { type: 'h2', id: 'tco', text: 'The real total cost of ownership' },
