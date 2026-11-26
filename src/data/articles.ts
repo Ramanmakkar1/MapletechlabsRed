@@ -6237,7 +6237,7 @@ export const articles: Article[] = [
       { type: 'p', html: '“UI/UX design” is not a single deliverable. Before you compare quotes, agree which of these outputs you need and which are non‑negotiable for your product:' },
       { type: 'checks', items: [
         { term: 'UX audit and user research', text: '<a href="/services/product-design/ux-audit">A review of your existing product</a> or brief, analytics where you have them, and interviews or tests with the people who use (or will use) the software. The output is a clear problem statement and prioritized user goals, not a mood board.' },
-        { term: 'Wireframes', text: 'Low-fidelity layouts of each key screen and flow so structure and navigation can be debated before visual polish. Edge cases and empty states belong here, not as surprises after launch.' },
+        { term: 'Wireframes', text: '<a href="/services/product-design/wireframing">Low-fidelity layouts</a> of each key screen and flow so structure and navigation can be debated before visual polish. Edge cases and empty states belong here, not as surprises after launch.' },
         { term: 'Clickable prototype', text: 'An <a href="/services/product-design/prototyping">interactive Figma (or equivalent) prototype</a> of the main journeys so stakeholders can sign off and users can try real tasks before development starts.' },
         { term: 'Usability testing', text: 'Real users attempting set tasks on the prototype, with notes on where they hesitate or fail. Fixes happen in design files, not as expensive change orders in code.' },
         { term: 'Design system', text: 'Reusable components, colour and type tokens, and documented states so developers and future designers stay consistent as the product grows.' },
