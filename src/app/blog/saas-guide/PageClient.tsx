@@ -304,7 +304,7 @@ export default function SaaSGuide2026Client() {
                         </li>
                     </ul>
                     <p style={{ fontSize: 14, color: 'var(--muted)', fontStyle: 'italic' }}>
-                        (Note: This is exactly why Mapletech Labs builds enterprise-grade Next.js applications—we engineer platforms that are built to scale from day one.)
+                        (Note: This is exactly why Mapletech Labs builds <Link href="/services/web-development/nextjs-development" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>enterprise-grade Next.js applications</Link>—we engineer platforms that are built to scale from day one.)
                     </p>
                 </div>
 
