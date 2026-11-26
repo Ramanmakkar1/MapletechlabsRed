@@ -4226,7 +4226,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Edmonton app projects cluster around a few sectors, and each one changes what a good build looks like:' },
       { type: 'checks', items: [
         { term: 'Energy and industrial field apps', text: 'Crews at well sites, pipelines and plants need inspection forms, safety checklists, work orders and asset logs that work offline, sync when the device is back in range, and handle photos, GPS and signatures.' },
-        { term: 'Health and wellness apps', text: 'Booking, telehealth, patient records and care coordination apps need strong authentication, audit trails and careful handling of personal health information.' },
+        { term: 'Health and wellness apps', text: '<a href="/industries/healthcare">Booking, telehealth, patient records and care coordination apps</a> need strong authentication, audit trails and careful handling of personal health information.' },
         { term: 'Fintech and payments', text: 'Lending, wealth, insurance and payment apps need secure data handling, audit trails and integrations with banks and payment processors.' },
         { term: 'Logistics and transportation', text: 'Edmonton\'s role as a distribution hub drives <a href="/industries/logistics">driver apps, dispatch tools, proof-of-delivery and real-time tracking</a> that must stay reliable at peak volume.' },
         { term: 'Retail, hospitality and customer apps', text: 'Ordering, loyalty, booking and account apps where speed, accessibility and App Store polish decide whether people keep the app installed.' },
