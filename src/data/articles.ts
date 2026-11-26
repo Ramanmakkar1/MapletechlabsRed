@@ -2504,7 +2504,7 @@ export const articles: Article[] = [
         { term: 'Model choice', text: 'Using an API model (OpenAI, Claude, Gemini) is faster and cheaper to start. Open-weight models (Llama, Mistral) can reduce per-request cost but need hosting and tuning. Custom training is the most flexible and the most expensive, because you own the weights and the risk.' },
         { term: 'Integration', text: 'Connecting the model to your app, your database, your workflow and your authentication. Integration usually takes more time than the model call itself.' },
         { term: 'Evaluation and guardrails', text: 'Testing for accuracy, latency, bias and failure modes, plus input validation, output filtering and escalation rules for anything the model should not do.' },
-        { term: 'Hosting and serving', text: 'API calls, GPU instances for open-weight or custom models, caching layers and load balancing. Cost grows with usage, not just with build.' },
+        { term: 'Hosting and serving', text: 'API calls, GPU instances for open-weight or custom models, <a href="/services/cloud-devops/performance-scaling">caching layers and load balancing</a>. Cost grows with usage, not just with build.' },
       ] },
 
       { type: 'h2', id: 'cost-table', text: 'AI development cost by project type (CAD)' },
