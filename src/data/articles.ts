@@ -871,7 +871,7 @@ export const articles: Article[] = [
       { type: 'checks', items: [
         { term: 'MVP (roughly CAD $30,000–$75,000, 8–16 weeks)', text: 'One core workflow, authentication, subscription billing for a single plan or two, admin tools and a production deployment. Enough to onboard design partners and learn what they actually use.' },
         { term: 'Growth-stage build (roughly CAD $75,000–$200,000)', text: 'Full multi-tenancy, role-based permissions, integrations, richer billing including upgrades and failed payments, usage reporting and analytics, and security hardening for larger customers.' },
-        { term: 'Enterprise platform (roughly CAD $200,000–$500,000+)', text: 'SAML/OIDC single sign-on, audit trails, SOC 2 readiness, multi-region or Canadian-only hosting, advanced reporting and SLA-backed infrastructure. Scope this only when a contract or pipeline justifies it.' },
+        { term: 'Enterprise platform (roughly CAD $200,000–$500,000+)', text: 'SAML/OIDC single sign-on, audit trails, SOC 2 readiness, <a href="/services/cloud-devops/aws-architecture">multi-region or Canadian-only hosting</a>, advanced reporting and SLA-backed infrastructure. Scope this only when a contract or pipeline justifies it.' },
       ] },
       { type: 'p', html: 'A disciplined partner will push you toward the smallest release that can win paying customers, then price the next stage once usage data exists. If a vendor quotes a full enterprise platform before discovery, ask what evidence that scope is based on.' },
       { type: 'h2', id: 'security-and-hosting', text: 'SOC 2 readiness, PIPEDA and Canadian hosting' },
