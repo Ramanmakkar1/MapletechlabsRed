@@ -6510,7 +6510,7 @@ export const articles: Article[] = [
         '<strong>Full product design:</strong> 30+ screens with research, usability testing and a design system foundation. About CAD $5,000&ndash;$12,000.',
         '<strong>Enterprise design system:</strong> a full research program, accessibility work and a documented system for several teams or products. About CAD $12,000&ndash;$30,000+.',
       ] },
-      { type: 'p', html: 'Most projects take 6&ndash;11 weeks from research through handover. Screen count, how complex the interactions are, how much research you need and whether branding is in scope all move the price. A quote well below these bands usually drops research or testing; one well above should list the extra scope in writing. For national context, see our <a href="/blog/ui-ux-design-companies-canada">UI/UX design companies in Canada</a> guide.' },
+      { type: 'p', html: 'Most projects take 6&ndash;11 weeks from research through handover. Screen count, how complex the interactions are, how much research you need and whether <a href="/services/branding/brand-strategy">branding</a> is in scope all move the price. A quote well below these bands usually drops research or testing; one well above should list the extra scope in writing. For national context, see our <a href="/blog/ui-ux-design-companies-canada">UI/UX design companies in Canada</a> guide.' },
 
       { type: 'h2', id: 'red-flags', text: 'Red flags when hiring a UI/UX design company in Edmonton' },
       { type: 'ul', items: [
