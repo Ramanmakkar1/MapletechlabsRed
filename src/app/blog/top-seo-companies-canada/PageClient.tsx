@@ -214,7 +214,7 @@ export default function TopSeoCompaniesCanadaClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      We might be biased, but the data is undeniable. Most SEO agencies fail because they don&apos;t understand the underlying code of a website. Mapletech Labs bridges the gap between elite custom software development and aggressive search strategies.
+                      We might be biased, but the data is undeniable. Most SEO agencies fail because they don&apos;t understand the underlying code of a website. Mapletech Labs bridges the gap between elite custom software development and <Link href="/services/digital-marketing/seo-services" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>aggressive search strategies</Link>.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       We don&apos;t just write content; we architect Next.js applications that score 100 on Google Lighthouse, implement complex Schema markup perfectly, and build digital experiences that convert traffic into high-ticket clients.
