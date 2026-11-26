@@ -3332,7 +3332,7 @@ export const articles: Article[] = [
         { term: 'Cybersecurity and defence applications', text: 'Kanata\'s tech corridor builds threat intelligence dashboards, secure messaging, identity and access management tools, and mission-critical software that must meet Protected B, SOC 2 and FedRAMP expectations.' },
         { term: 'Telecom and 5G network apps', text: 'Nokia, Ciena, Ericsson and their partners need network monitoring, operations management, field workforce and customer-facing apps that handle real-time data at scale.' },
         { term: 'B2B SaaS companion apps', text: 'Ottawa\'s SaaS cluster builds iOS and Android companions so customers can use the core product on the go, with the same permissions, billing and data residency as the web platform.' },
-        { term: 'Health and research apps', text: 'Hospitals, CHEO, The Ottawa Hospital and research institutes need clinical trial, patient engagement and telehealth apps where personal health information must meet PHIPA and federal privacy rules.' },
+        { term: 'Health and research apps', text: 'Hospitals, CHEO, The Ottawa Hospital and research institutes need clinical trial, patient engagement and <a href="/services/software-development/healthcare-software">telehealth apps</a> where personal health information must meet PHIPA and federal privacy rules.' },
       ] },
       { type: 'p', html: 'A strong partner asks which of these you are before proposing a stack or a price. If the first proposal could apply to any city, it probably will. See our <a href="/services/mobile-app-development">mobile app development services</a> for how we scope government, cybersecurity and telecom builds.' },
 
