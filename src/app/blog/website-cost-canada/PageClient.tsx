@@ -243,7 +243,7 @@ export default function WebsiteCostCanadaClient() {
                       }}>$25,000 - $100,000</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
-                      Full online store with product catalog, shopping cart, payment processing (Stripe, Square, or custom gateway), inventory management, shipping integrations, and customer accounts. May include Shopify headless, WooCommerce, or fully custom solutions. Timeline: 8-16 weeks.
+                      <Link href="/services/web-development/ecommerce-systems" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>Full online store</Link> with product catalog, shopping cart, payment processing (Stripe, Square, or custom gateway), inventory management, shipping integrations, and customer accounts. May include Shopify headless, WooCommerce, or fully custom solutions. Timeline: 8-16 weeks.
                     </p>
                   </div>
 
