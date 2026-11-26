@@ -48,11 +48,11 @@ test("six audited long-title patterns stay within 50-60 chars", () => {
   // Current shipped titles (post-fix): keyword first, brand last, 50-60 chars.
   const audited = [
     "App Development Companies Edmonton 2026",
-    "SaaS Development Cost Canada: 2026 CAD",
+    "SaaS Development Cost Canada: 2026 Pricing",
     "Web Development Companies Toronto 2026",
-    "Website Cost Canada 2026: Prices by Type",
-    "Logistics Platform: 15K+ Deliveries Daily",
-    "SEO Services Canada: Technical and Local",
+    "Website Cost in Canada: 2026 Pricing Guide",
+    "Logistics Platform: 15K+ Daily Deliveries | Mapletech Labs",
+    "SEO Services Canada for Business Growth | Mapletech Labs",
   ];
   for (const title of audited) {
     const { absolute } = seoTitle(title);
