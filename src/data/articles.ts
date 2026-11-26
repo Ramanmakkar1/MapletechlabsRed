@@ -3160,7 +3160,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'seo-vs-ads', text: 'Local SEO vs Google Ads' },
       { type: 'p', html: 'SEO and Google Ads solve different problems, and many Edmonton businesses use both.' },
       { type: 'checks', items: [
-        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live, and stops when you stop paying. In Canada, ad management fees typically start around $2,000 per month plus your ad spend. Good for launches, seasonal demand, and testing which services and keywords bring leads.' },
+        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live, and stops when you stop paying. In Canada, <a href="/services/digital-marketing/google-ads-ppc">ad management fees</a> typically start around $2,000 per month plus your ad spend. Good for launches, seasonal demand, and testing which services and keywords bring leads.' },
         { term: 'Local SEO', text: 'Takes months to build, but traffic from the map pack and organic results keeps coming without a cost per click. Good for steady, long-term lead flow and for searches where people skip the ads.' },
       ] },
       { type: 'p', html: 'A practical approach is to run ads while SEO builds, then use what the ads teach you about converting keywords to decide which pages to grow. If you want both handled by one team, see our <a href="/locations/digital-marketing-agency-in-edmonton">digital marketing agency in Edmonton</a>. If you are hiring for more than search, read our <a href="/blog/digital-marketing-agencies-edmonton">guide to choosing a digital marketing agency in Edmonton</a>.' },
