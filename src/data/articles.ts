@@ -2200,7 +2200,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'Maintenance is everything needed to keep a live product working, secure and useful. It is different from building major new features, although small improvements are often part of it.' },
       { type: 'checks', items: [
         { term: 'Bug fixes', text: 'Fixing defects that users report or that monitoring catches, including edge cases that only appear with real data and real traffic.' },
-        { term: 'OS and framework updates', text: 'Apple and Google release new mobile operating systems every year, and web frameworks, libraries and runtimes reach end of support. Keeping up avoids crashes, store rejections and painful upgrades later.' },
+        { term: 'OS and framework updates', text: 'Apple and Google release new mobile operating systems every year, and web frameworks, libraries and runtimes reach end of support. Keeping up avoids crashes, store rejections and painful <a href="/services/software-development/legacy-software-modernization">upgrades later</a>.' },
         { term: 'Security patches', text: 'Applying fixes for vulnerabilities in your code and its dependencies, rotating keys and reviewing access. This is the part you cannot skip.' },
         { term: 'Hosting and cloud', text: 'Servers, databases, storage, backups and bandwidth. Cloud bills grow with usage and need regular review. Our <a href="/services/cloud-devops/aws-architecture">AWS cloud architecture service</a> can right-size this spend.' },
         { term: 'Monitoring', text: 'Uptime checks, error tracking and performance alerts, so problems are found before customers report them.' },
