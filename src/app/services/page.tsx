@@ -34,6 +34,9 @@ const servicesJsonLd = {
       url: canonicalUrl('/services'),
       name: TITLE,
       description: DESCRIPTION,
+      isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+      about: { '@id': 'https://mapletechlabs.ca/#organization' },
+      inLanguage: 'en-CA',
     },
     {
       '@type': 'ItemList',
