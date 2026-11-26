@@ -21,6 +21,7 @@ import { localServiceSchema } from '@/lib/seo/business';
 import { localServiceTitle, ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import { SERVICE_CITY_LOCAL, type ServiceCityLocal } from '@/data/service-city-local';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 export interface LocationPageData {
   slug: string;
@@ -208,6 +209,9 @@ function buildLocationPage(slug: string): LocationPageData | null {
       description: seoDescription(description),
       url: canonical,
       type: 'website',
+      images: DEFAULT_OG_IMAGES,
+      siteName: 'Mapletech Labs',
+      locale: 'en_CA',
     },
     alternates: { canonical },
     // Keyword location pages with no local search demand stay crawlable but out of the index.
@@ -330,6 +334,9 @@ function buildLocationMeshPage(city: string, service: string): LocationMeshPageD
       description: seoDescription(description),
       url: data.canonicalUrl,
       type: 'website',
+      images: DEFAULT_OG_IMAGES,
+      siteName: 'Mapletech Labs',
+      locale: 'en_CA',
     },
     alternates: { canonical: data.canonicalUrl },
     // Niche pairs in smaller cities stay crawlable but out of the index.
