@@ -7407,7 +7407,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'platform-choice', text: 'Native vs cross-platform: the buyer trade-off' },
       { type: 'cards', items: [
         { title: 'Native iOS or Android', text: 'Choose native when deep device access, demanding graphics, platform-specific behaviour or maximum performance matters. The trade-off is separate codebases, release work and maintenance for each platform.' },
-        { title: 'Cross-platform', text: 'Flutter or React Native can serve both stores from one codebase and are a practical fit for most business and customer apps. Some specialised device features may still need native modules.' },
+        { title: 'Cross-platform', text: '<a href="/services/mobile-app-development/flutter-development">Flutter</a> or <a href="/services/mobile-app-development/react-native-apps">React Native</a> can serve both stores from one codebase and are a practical fit for most business and customer apps. Some specialised device features may still need native modules.' },
         { title: 'Progressive web app', text: 'A PWA can be the better first step for browser-first workflows that do not need an app-store listing or deep hardware access. It is not a substitute for every mobile product.' },
       ] },
       { type: 'p', html: 'Ask the company to connect its recommendation to your users, integrations, device features, offline needs and internal team. A vendor that recommends one stack before asking those questions is showing you a sales preference, not product judgement. Our <a href="/blog/native-vs-cross-platform-vs-pwa">native, cross-platform and PWA comparison</a> gives a fuller decision framework.' },
