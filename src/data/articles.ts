@@ -5829,7 +5829,7 @@ export const articles: Article[] = [
       { type: 'ul', items: [
         '<strong>LLM and RAG apps.</strong> A large language model (LLM) feature summarises, classifies or drafts text. Retrieval-augmented generation (RAG) adds a search step, so the system finds the matching sections in your manuals, policies or knowledge base, answers from them and links to the source. Permissions should follow your existing access rules. See our <a href="/services/ai-ml/llm-integration">LLM integration</a> and <a href="/services/ai-ml/ai-chatbots">AI chatbots</a> pages for typical scope.',
         '<strong>Workflow automation.</strong> Rules plus models that read incoming emails, forms and PDFs, extract the fields you need and push them into your ERP, CRM or ticketing tool. There is often no chat window at all, just fewer routine steps for your team.',
-        '<strong>Forecasting and predictive analytics.</strong> Demand, maintenance, volume or risk forecasts built from your historical data. These live or die on data quality, and an honest vendor will say early if your data cannot support the prediction you want.',
+        '<strong><a href="/services/ai-ml/predictive-analytics">Forecasting and predictive analytics</a>.</strong> Demand, maintenance, volume or risk forecasts built from your historical data. These live or die on data quality, and an honest vendor will say early if your data cannot support the prediction you want.',
       ] },
       { type: 'p', html: 'Our <a href="/services/ai-ml">AI and machine learning services</a> page explains how we scope LLM, RAG and automation work in plain language. If a proposal says “we will add ChatGPT” but never asks which documents, users, systems or rules apply, treat it as a template.' },
 
