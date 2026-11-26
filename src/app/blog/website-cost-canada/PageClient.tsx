@@ -226,7 +226,7 @@ export default function WebsiteCostCanadaClient() {
                       }}>$10,000 - $50,000</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
-                      Fully custom design and development with unique UI, animations, CMS integration, and advanced SEO architecture. Built with modern frameworks like Next.js or Nuxt for superior performance. Includes 10-50 pages, blog functionality, analytics integration, and custom forms. Timeline: 4-10 weeks.
+                      <Link href="/services/web-development/web-design" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>Fully custom design and development</Link> with unique UI, animations, CMS integration, and advanced SEO architecture. Built with modern frameworks like Next.js or Nuxt for superior performance. Includes 10-50 pages, blog functionality, analytics integration, and custom forms. Timeline: 4-10 weeks.
                     </p>
                   </div>
 
