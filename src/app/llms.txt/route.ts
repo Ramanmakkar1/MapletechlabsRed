@@ -6,7 +6,8 @@ import { services } from '@/data/services';
 import { work } from '@/data/work';
 import { AWARDS, BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { SITEMAP_CHILDREN } from '@/lib/sitemap-data';
+import { SITEMAP_CHILDREN, subserviceSitemapEntries } from '@/lib/sitemap-data';
+import { getServiceBreadcrumbs } from '@/data/breadcrumbs';
 
 export const revalidate = 86400;
 
@@ -63,6 +64,15 @@ function buildText(): string {
     link('AI Consulting', '/services/ai-consulting'),
     link('Pricing', '/pricing', pricingNote),
   ]));
+  out.push('');
+  out.push('## Specialist service pages');
+  out.push('');
+  out.push(...lines(subserviceSitemapEntries().map(e => {
+    const path = new URL(e.loc).pathname;
+    const [, , category, slug] = path.split('/');
+    const name = getServiceBreadcrumbs(category, slug).at(-1)!.name;
+    return link(name, path);
+  })));
   out.push('');
   out.push('## Cities served');
   out.push('');
