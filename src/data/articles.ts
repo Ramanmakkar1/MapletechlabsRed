@@ -72,7 +72,7 @@ export const articles: Article[] = [
     readTime: '10 min read',
     heroKey: 'workshop',
     intro: [
-      'Canadian healthcare software development is the design, building and integration of digital tools for care providers, patients and health organizations, with clinical workflows, privacy, security and interoperability planned from the start. It can mean a telehealth service, patient portal, clinical workflow, remote monitoring product or connection to an existing electronic health record (EHR), rather than a generic business app with a healthcare label.',
+      'Canadian healthcare software development is the design, building and integration of digital tools for care providers, patients and health organizations, with clinical workflows, privacy, security and interoperability planned from the start. It can mean a telehealth service, patient portal, clinical workflow, remote monitoring product or <a href="/services/software-development/healthcare-software">connection to an existing electronic health record (EHR)</a>, rather than a generic business app with a healthcare label.',
       'For a buyer, the useful first step is not choosing a framework or requesting a feature list. It is defining one workflow, the people and systems involved, the information it handles and the result that would make the project worthwhile. This guide covers the project types, the privacy and data residency questions to take to your lawyer or privacy officer, EHR integration, a testable scope and vendor selection. For our sector capabilities, see <a href="/industries/healthcare">healthcare software development at Mapletech Labs</a>.',
     ],
     body: [
