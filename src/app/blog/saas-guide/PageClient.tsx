@@ -316,7 +316,7 @@ export default function SaaSGuide2026Client() {
                         How Much Does it Cost?
                     </h2>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
-                        Transparency is key. Building a robust MVP with a professional agency in Canada is an investment in your business infrastructure.
+                        Transparency is key. <Link href="/services/saas-development/saas-mvp-development" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>Building a robust MVP</Link> with a professional agency in Canada is an investment in your business infrastructure.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
                         While a simple informational website costs a few thousand dollars, a custom SaaS application (with user authentication, database architecture, payment gateways, and core features) typically ranges from <strong>$25,000 to $75,000+</strong> for an MVP.
