@@ -675,7 +675,7 @@ export const articles: Article[] = [
       { type: 'cards', items: [
         { title: 'Fixed scope, fixed price', text: 'Best for a well-defined first build or MVP. You know the cost up front and the risk of overruns sits with the vendor. Requires disciplined scope to work well.' },
         { title: 'Time and materials', text: 'A flexible monthly or hourly engagement, best when requirements will evolve. More adaptable, but you carry the budget risk, so trust and transparency matter most here.' },
-        { title: 'Dedicated team', text: 'An embedded squad working as an extension of your company, best for ongoing product development after launch or when you are scaling fast.' },
+        { title: 'Dedicated team', text: '<a href="/services/software-development/dedicated-development-team">An embedded squad</a> working as an extension of your company, best for ongoing product development after launch or when you are scaling fast.' },
       ] },
       { type: 'p', html: 'A good partner will recommend the model that fits your situation rather than the one that is most profitable for them. That recommendation is itself a useful signal.' },
       { type: 'h2', id: 'cost', text: 'What SaaS development costs in Canada in 2026' },
