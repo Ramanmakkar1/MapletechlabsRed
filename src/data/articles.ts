@@ -2146,7 +2146,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'encryption-audit', text: 'Encryption and audit logs' },
       { type: 'p', html: 'Encrypt personal information in transit and at rest, manage keys properly, and limit access by role so staff see only what their job needs. Encryption in transit and at rest is a baseline safeguard these laws expect.' },
-      { type: 'p', html: 'Audit logs record who viewed or changed sensitive records and when. For health data under PHIPA or HIA, audit logging is especially important. Make the logs tamper-resistant and keep them out of reach of the people whose actions they record.' },
+      { type: 'p', html: 'Audit logs record who viewed or changed sensitive records and when. For <a href="/services/software-development/healthcare-software">health data under PHIPA or HIA</a>, audit logging is especially important. Make the logs tamper-resistant and keep them out of reach of the people whose actions they record.' },
 
       { type: 'h2', id: 'vendors-ai', text: 'Vendors and AI APIs' },
       { type: 'p', html: 'Every vendor that processes personal information for you is part of your compliance. Read their data processing terms, confirm where they store data, and put contracts in place that protect it. This matters most with AI APIs: check whether prompts and outputs are stored, for how long, in which region, and whether they are used to train models.' },
