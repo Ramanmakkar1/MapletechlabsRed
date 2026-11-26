@@ -1408,7 +1408,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'three', text: 'The three approaches, briefly' },
       { type: 'cards', items: [
         { title: 'Native', text: 'Separate apps written for each platform in its own language (<a href="/services/mobile-app-development/ios-app-development">Swift for iOS</a>, <a href="/services/mobile-app-development/android-app-development">Kotlin for Android</a>). Maximum performance and full access to the device — at the cost of two codebases.' },
-        { title: 'Cross-platform', text: 'One codebase (React Native or Flutter) that ships to both iOS and Android. Most of the reach for much less of the effort, with occasional native touch-ups.' },
+        { title: 'Cross-platform', text: 'One codebase (<a href="/services/mobile-app-development/react-native-apps">React Native</a> or <a href="/services/mobile-app-development/flutter-development">Flutter</a>) that ships to both iOS and Android. Most of the reach for much less of the effort, with occasional native touch-ups.' },
         { title: 'PWA', text: 'A web app that installs and behaves like an app in the browser. No app stores, instant updates, one codebase — with real limits on device features and performance.' },
       ] },
       { type: 'h2', id: 'native-wins', text: 'When native wins' },
