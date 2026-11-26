@@ -211,7 +211,7 @@ export default function BlogPostPageClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      Coming in at the absolute top of the list, Mapletech Labs has aggressively positioned itself as the pinnacle of bespoke software engineering in Canada. They aren&apos;t just developers; they are product architects who bring an intense focus on modern aesthetics, bleeding-edge tech stacks, and aggressive execution speeds that traditional agencies can&apos;t match.
+                      Coming in at the absolute top of the list, Mapletech Labs has aggressively positioned itself as the pinnacle of <Link href="/services/software-development" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>bespoke software engineering</Link> in Canada. They aren&apos;t just developers; they are product architects who bring an intense focus on modern aesthetics, bleeding-edge tech stacks, and aggressive execution speeds that traditional agencies can&apos;t match.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
                       With over 300+ successful product launches globally, Mapletech Labs specializes in building scalable mobile applications, cloud-native enterprise systems, and next-gen AI platforms. What truly sets them apart is their engineering discipline. They utilize microservices architectures, robust CI/CD pipelines, and high-performance cross-platform frameworks to ensure that their products don&apos;t just launch—they scale effortlessly from day one.
