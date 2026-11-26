@@ -7096,7 +7096,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'seo-vs-ads', text: 'SEO vs Google Ads in Toronto' },
       { type: 'checks', items: [
-        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live and stops when you stop paying. In the GTA, cost per click runs high in finance, legal, real estate and SaaS. Ad management fees typically start around $2,000 per month plus ad spend. Useful for launches, seasonal demand and testing which services bring leads.' },
+        { term: 'Google Ads', text: 'Puts you at the top of results as soon as campaigns go live and stops when you stop paying. In the GTA, cost per click runs high in finance, legal, real estate and SaaS. <a href="/services/digital-marketing/google-ads-ppc">Ad management fees</a> typically start around $2,000 per month plus ad spend. Useful for launches, seasonal demand and testing which services bring leads.' },
         { term: 'SEO', text: 'Takes months to build, but map-pack and organic traffic keeps coming without a cost per click. Useful for steady lead flow across Toronto neighbourhoods and suburbs, and for B2B searches where buyers research for weeks before they get in touch.' },
       ] },
       { type: 'p', html: 'Many Toronto businesses run ads while SEO builds, then use what the ads reveal about converting keywords to decide which pages to grow. If you want ads and SEO under one roof, see our <a href="/locations/digital-marketing-agency-in-toronto">digital marketing agency in Toronto</a> page.' },
