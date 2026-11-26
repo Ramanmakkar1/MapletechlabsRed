@@ -4450,7 +4450,7 @@ export const articles: Article[] = [
     ],
     body: [
       { type: 'h2', id: 'what-to-expect', text: 'What a Vancouver app development company should deliver' },
-      { type: 'p', html: 'Vancouver app projects come from a mix of sectors: tech startups and SaaS companies that need a companion app or a lean MVP for early users and investors, retail, outdoor and apparel brands that want shopping and loyalty apps, health and wellness providers that need booking and telehealth apps, tourism, hospitality and events businesses, and port, logistics and trades firms that need field and tracking apps. Whatever the sector, a good company should deliver the same core things:' },
+      { type: 'p', html: 'Vancouver app projects come from a mix of sectors: tech startups and SaaS companies that need a companion app or a lean MVP for early users and investors, retail, outdoor and apparel brands that want shopping and loyalty apps, health and wellness providers that need booking and telehealth apps, tourism, hospitality and events businesses, and port, logistics and trades firms that need <a href="/industries/logistics">field and tracking apps</a>. Whatever the sector, a good company should deliver the same core things:' },
       { type: 'ol', items: [
         '<strong>Discovery and a written scope.</strong> Interviews with your users and stakeholders, a clear feature list for the first release, integrations, data and privacy needs, and a scope you can price against.',
         '<strong>Design you can test.</strong> User flows, wireframes and a clickable prototype tested with real people before development starts.',
