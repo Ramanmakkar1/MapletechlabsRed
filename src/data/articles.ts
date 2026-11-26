@@ -1344,7 +1344,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'week-by-week', text: 'The eight weeks, week by week' },
       { type: 'ol', items: [
         '<strong>Weeks 1–2 — Discovery and design.</strong> Nail the one core workflow, the data model behind it and the screens for it. Produce a clickable prototype, so the hard product decisions are settled before engineering starts.',
-        '<strong>Weeks 3–6 — Build.</strong> Two-week sprints against a fixed scope: authentication and accounts, the core workflow end to end, and the minimum billing you need. You see working software every fortnight, not a status report.',
+        '<strong>Weeks 3–6 — Build.</strong> Two-week sprints against a fixed scope: <a href="/services/saas-development/auth-sso">authentication and accounts</a>, the core workflow end to end, and <a href="/services/saas-development/billing-subscriptions">the minimum billing you need</a>. You see working software every fortnight, not a status report.',
         '<strong>Week 7 — Harden.</strong> Real error handling, security review, the empty states and edge cases that make software feel finished, and instrumentation so you can see what users actually do.',
         '<strong>Week 8 — Launch.</strong> Deploy, migrate any early data, set up monitoring, and get it in front of your first real users with someone on hand to fix what the first day reveals.',
       ] },
