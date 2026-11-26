@@ -4463,7 +4463,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'native-cross-platform-pwa', text: 'Native vs cross-platform vs PWA' },
       { type: 'p', html: 'The platform decision shapes cost, timeline and what the app can do:' },
       { type: 'checks', items: [
-        { term: 'Cross-platform (Flutter or React Native)', text: 'One shared codebase reaches both the App Store and Google Play. That usually costs 30–40% less than building and maintaining two separate native apps, and it is the right default for most business and customer apps.' },
+        { term: 'Cross-platform (Flutter or React Native)', text: '<a href="/services/mobile-app-development/cross-platform-apps">One shared codebase</a> reaches both the App Store and Google Play. That usually costs 30–40% less than building and maintaining two separate native apps, and it is the right default for most business and customer apps.' },
         { term: 'Native (Swift for iOS, Kotlin for Android)', text: 'Best performance and full device access, at the cost of two codebases. A good fit when the app leans hard on device hardware or Bluetooth, stores large amounts of data offline, or needs the best possible performance.' },
         { term: 'Progressive web app (PWA)', text: 'Runs in the browser and can be installed from a link, with no app store review. Good for internal tools and simple customer flows; weaker for deep hardware access and some iOS features.' },
       ] },
