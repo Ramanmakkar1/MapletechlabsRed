@@ -6240,7 +6240,7 @@ export const articles: Article[] = [
         { term: 'Wireframes', text: '<a href="/services/product-design/wireframing">Low-fidelity layouts</a> of each key screen and flow so structure and navigation can be debated before visual polish. Edge cases and empty states belong here, not as surprises after launch.' },
         { term: 'Clickable prototype', text: 'An <a href="/services/product-design/prototyping">interactive Figma (or equivalent) prototype</a> of the main journeys so stakeholders can sign off and users can try real tasks before development starts.' },
         { term: 'Usability testing', text: 'Real users attempting set tasks on the prototype, with notes on where they hesitate or fail. Fixes happen in design files, not as expensive change orders in code.' },
-        { term: 'Design system', text: 'Reusable components, colour and type tokens, and documented states so developers and future designers stay consistent as the product grows.' },
+        { term: 'Design system', text: '<a href="/services/product-design/design-systems">Reusable components, colour and type tokens</a>, and documented states so developers and future designers stay consistent as the product grows.' },
         { term: 'Developer handoff', text: 'Annotated specs, exported assets, a component library your engineers can implement, and someone available to answer questions during the build — not a PDF of static screens.' },
       ] },
       { type: 'p', html: 'If the first proposal jumps straight to “high-fidelity UI” without research, wireframes or testing, you are buying decoration. Our <a href="/services/product-design">UI/UX and product design services</a> page explains how we run audit, prototyping and handoff in plain language.' },
