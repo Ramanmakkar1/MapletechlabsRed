@@ -4147,7 +4147,7 @@ export const articles: Article[] = [
         '<strong>Email marketing:</strong> about $500&ndash;$3,000 per month, useful for e-commerce and repeat-visit businesses.',
         '<strong>Full-service packages:</strong> about $5,000&ndash;$25,000 per month across several channels.',
       ] },
-      { type: 'p', html: 'For visual brands, ask whether photography and video are included or quoted separately. That single line often explains the gap between two social media quotes.' },
+      { type: 'p', html: 'For visual brands, ask whether photography and <a href="/services/branding/motion-video-branding">video</a> are included or quoted separately. That single line often explains the gap between two social media quotes.' },
 
       { type: 'h2', id: 'proposal', text: 'What to ask for in a proposal' },
       { type: 'p', html: 'A good proposal makes it easy to hold the agency to account. It should include:' },
