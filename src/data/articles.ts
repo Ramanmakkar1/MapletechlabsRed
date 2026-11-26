@@ -1680,7 +1680,7 @@ export const articles: Article[] = [
 
       { type: 'h2', id: 'seo', text: 'SEO, URLs and content control' },
       { type: 'p', html: 'Both approaches can be strong for SEO. What matters is clean URLs, fast pages, structured product data, crawlable navigation and useful content. Shopify handles the basics and gives you control over titles, descriptions and URL handles. A custom build gives you unlimited control, but only if you actually implement those basics properly.' },
-      { type: 'p', html: 'Do not choose custom solely for “better SEO”. Many custom stores launch with worse technical SEO than a well-configured Shopify store because the fundamentals were skipped. If search traffic matters, budget for content, internal linking and ongoing technical work on either platform.' },
+      { type: 'p', html: 'Do not choose custom solely for “better SEO”. Many custom stores launch with worse technical SEO than a well-configured Shopify store because the fundamentals were skipped. If search traffic matters, budget for content, internal linking and <a href="/services/digital-marketing/seo-services">ongoing technical work</a> on either platform.' },
 
       { type: 'h2', id: 'decision-checklist', text: 'A practical decision checklist' },
       { type: 'ol', items: [
