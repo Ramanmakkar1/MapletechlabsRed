@@ -33,6 +33,8 @@ export default function Page() {
         description: metadata.description,
         mainEntity: { '@id': `${canonicalUrl('/')}#organization` },
         about: { '@id': `${canonicalUrl('/')}#organization` },
+        isPartOf: { '@id': `${canonicalUrl('/')}#website` },
+        inLanguage: 'en-CA',
       },
     ],
   };
