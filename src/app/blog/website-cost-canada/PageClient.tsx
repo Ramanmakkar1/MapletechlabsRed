@@ -260,7 +260,7 @@ export default function WebsiteCostCanadaClient() {
                       }}>$100,000 - $500,000+</span>
                     </div>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
-                      Complex, custom-built web applications with user authentication, role-based access, real-time data dashboards, third-party API integrations, and scalable cloud infrastructure. Includes comprehensive testing, security audits, and DevOps setup. Timeline: 4-12 months.
+                      Complex, <Link href="/services/web-development/enterprise-portals" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>custom-built web applications</Link> with user authentication, role-based access, real-time data dashboards, third-party API integrations, and scalable cloud infrastructure. Includes comprehensive testing, security audits, and DevOps setup. Timeline: 4-12 months.
                     </p>
                   </div>
 
