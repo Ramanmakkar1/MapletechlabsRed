@@ -3245,7 +3245,7 @@ export const articles: Article[] = [
         '<strong>Discovery.</strong> The agency learns your services, margins, best customers, service area and sales process, and agrees which outcomes count as success.',
         '<strong>Tracking first.</strong> Call tracking, form tracking, analytics and, where possible, a connection to your CRM, all in accounts owned by your business.',
         '<strong>Audits.</strong> A review of your website, Google Business Profile, existing ad accounts and social channels, with a short prioritised list of fixes.',
-        '<strong>Quick wins.</strong> Fixing obvious problems: broken forms, slow pages, wasted ad spend on irrelevant keywords, missing profile details.',
+        '<strong>Quick wins.</strong> Fixing obvious problems: broken forms, <a href="/services/wordpress-cms/site-speed-optimisation">slow pages</a>, wasted ad spend on irrelevant keywords, missing profile details.',
         '<strong>Channel plan.</strong> A written plan stating which channels get budget first, what each should achieve and when it will be reviewed.',
         '<strong>First campaigns and content.</strong> Launching or rebuilding the priority channel, so that by day 90 there is real data to judge.',
       ] },
