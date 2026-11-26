@@ -4557,7 +4557,7 @@ export const articles: Article[] = [
         { term: 'Tourism and hospitality operators', text: 'Booking pages, seasonal campaigns and content that changes often. You need a CMS your staff can actually use in July, plus pages that rank for the seasonal queries visitors search.' },
         { term: 'Real estate brokerages', text: 'Listing search, lead capture and agent pages. Listing data has to stay fresh, and enquiries need to reach the right agent fast — these are web applications with a public face, not brochure sites.' },
         { term: 'Port, logistics and trades firms', text: 'Shipment tracking, quote and customer portals, and service pages that win work from searches across Burnaby, Surrey, Richmond and the North Shore.' },
-        { term: 'E-commerce and DTC brands', text: 'Storefronts tied into inventory, fulfilment and payment providers, with checkout speed and Core Web Vitals that decide whether mobile shoppers convert or bounce.' },
+        { term: 'E-commerce and DTC brands', text: '<a href="/industries/ecommerce">Storefronts tied into inventory, fulfilment and payment providers</a>, with checkout speed and Core Web Vitals that decide whether mobile shoppers convert or bounce.' },
       ] },
       { type: 'p', html: 'A good web development company asks which of these you are, how a lead or an order is worth, and what your team needs to update itself before it proposes a stack or a price. If the first proposal could apply to any city in Canada, it probably will.' },
 
