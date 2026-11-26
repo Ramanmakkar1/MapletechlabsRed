@@ -2046,7 +2046,7 @@ export const articles: Article[] = [
       { type: 'ul', items: [
         'Building a new product or platform around technology that does not exist in a ready-made form.',
         'Developing new algorithms, machine learning models or data processing methods for a specific problem.',
-        'Solving hard technical problems such as performance at scale, real-time processing or complex integrations with hardware or legacy systems.',
+        'Solving hard technical problems such as performance at scale, real-time processing or complex integrations with hardware or <a href="/services/software-development/legacy-software-modernization">legacy systems</a>.',
         'Adapting an emerging technology to a new use where the outcome is uncertain.',
       ] },
       { type: 'p', html: 'Work that usually fits poorly includes routine website builds, standard e-commerce stores, theme customization, ordinary maintenance and bug fixing, and projects that mainly assemble existing tools in a well-known way. Marketing, sales and general operating costs are also typically outside a technology project. If you are not sure, describe the technical challenge to your ITA and let them guide you.' },
