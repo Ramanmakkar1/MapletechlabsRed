@@ -179,7 +179,7 @@ export default function AppDevelopmentCostCanadaClient() {
                     Ask five Canadian app development agencies how much it costs to build a mobile app and you will get five wildly different answers. That is not because they are trying to mislead you. It is because &ldquo;building an app&rdquo; is about as specific as saying &ldquo;building a house.&rdquo; A cabin in Muskoka and a downtown Toronto penthouse are both &ldquo;houses,&rdquo; but the price difference is astronomical.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20 }}>
-                    In 2026, the Canadian app development market has matured significantly. With the rise of cross-platform frameworks like Flutter and React Native, the explosion of AI-powered features, and increasing user expectations, the cost equation has become more nuanced than ever before.
+                    In 2026, the Canadian app development market has matured significantly. With the rise of <Link href="/services/mobile-app-development/cross-platform-apps" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>cross-platform frameworks</Link> like Flutter and React Native, the explosion of AI-powered features, and increasing user expectations, the cost equation has become more nuanced than ever before.
                   </p>
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
                     This guide cuts through the noise. We are going to give you real numbers based on our experience delivering over 200 mobile applications for Canadian businesses, from scrappy startups in Edmonton to enterprise clients in Toronto and Vancouver.
