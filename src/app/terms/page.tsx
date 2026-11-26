@@ -3,11 +3,21 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo/og';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Read the terms governing use of the Mapletech Labs website and services, including intellectual property, liability and governing law in Canada and Quebec.',
   alternates: { canonical: canonicalUrl('/terms') },
+  openGraph: {
+    title: 'Terms of Service | Mapletech Labs',
+    description: 'Read the terms governing use of the Mapletech Labs website and services, including intellectual property, liability and governing law in Canada and Quebec.',
+    url: canonicalUrl('/terms'),
+    type: 'website',
+    siteName: 'Mapletech Labs',
+    locale: 'en_CA',
+    images: DEFAULT_OG_IMAGES,
+  },
 };
 
 export default function TermsPage() {
