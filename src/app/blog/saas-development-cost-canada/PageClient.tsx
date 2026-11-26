@@ -391,7 +391,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                   </div>
 
                   <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    This stack powers over 80% of the SaaS products we have built at Mapletech Labs. It enables a small team of 3-5 developers to move with the velocity of teams twice their size, which directly translates to lower costs for our Canadian clients.
+                    This stack powers over 80% of the <Link href="/services/saas-development" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>SaaS products we have built</Link> at Mapletech Labs. It enables a small team of 3-5 developers to move with the velocity of teams twice their size, which directly translates to lower costs for our Canadian clients.
                   </p>
                 </div>
 
