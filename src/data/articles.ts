@@ -1339,7 +1339,7 @@ export const articles: Article[] = [
     ],
     body: [
       { type: 'h2', id: 'what-mvp-is', text: 'What an MVP actually is (and is not)' },
-      { type: 'p', html: 'An MVP is the smallest thing you can put in front of real users that tests your riskiest assumption. It is not a cheap version of the whole product, and it is not a throwaway prototype. It is a real, working slice — built properly — of the one workflow that proves people will use and pay for what you are making.' },
+      { type: 'p', html: 'An MVP is the smallest thing you can put in front of real users that tests your riskiest assumption. It is not a cheap version of the whole product, and it is not a throwaway prototype. It is <a href="/services/saas-development/saas-mvp-development">a real, working slice</a> — built properly — of the one workflow that proves people will use and pay for what you are making.' },
       { type: 'p', html: 'The most common way to blow the eight weeks is to treat the MVP as “version one of everything.” The discipline is the opposite: pick the single core loop, build that well, and leave everything else for after you have learned something.' },
       { type: 'h2', id: 'week-by-week', text: 'The eight weeks, week by week' },
       { type: 'ol', items: [
