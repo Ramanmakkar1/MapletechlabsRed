@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl(`/blog/${SLUG}`),
   },
+  robots: { index: false, follow: true },
 };
 
 const jsonLd = {
