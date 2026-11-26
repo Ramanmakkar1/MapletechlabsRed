@@ -34,6 +34,8 @@ const industriesJsonLd = {
       name: TITLE,
       description: DESCRIPTION,
       about: { '@id': 'https://mapletechlabs.ca/#organization' },
+      isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+      inLanguage: 'en-CA',
       mainEntity: { '@id': `${canonicalUrl('/industries')}#list` },
     },
     {
