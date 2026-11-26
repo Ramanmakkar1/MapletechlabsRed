@@ -237,7 +237,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                     <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>Growth Stage SaaS</h3>
                     <p style={{ fontSize: 28, fontWeight: 800, color: '#E11900', marginBottom: 16, letterSpacing: '-0.02em' }}>$75,000 - $200,000</p>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
-                      A production-ready platform with multi-tenant architecture, role-based access control, team management, advanced billing with plan tiers, third-party integrations (Slack, Zapier, HubSpot), analytics dashboards, email notifications, and a comprehensive admin panel. This is the stage where most funded Canadian startups begin scaling to their first 100 paying customers.
+                      A production-ready platform with multi-tenant architecture, role-based access control, team management, advanced billing with plan tiers, third-party integrations (Slack, Zapier, HubSpot), <Link href="/services/saas-development/analytics-dashboards" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>analytics dashboards</Link>, email notifications, and a comprehensive admin panel. This is the stage where most funded Canadian startups begin scaling to their first 100 paying customers.
                     </p>
                   </div>
 
