@@ -38,7 +38,7 @@ export default function PageClient() {
     <IndustryPageTemplate
       slug="enterprise"
       name="Enterprise"
-      copy={{ badge: "Enterprise", title: <>Enterprise Software Development That <span style={{ color: 'var(--brand)' }}>Actually Works.</span></>, desc: <>Enterprise software development in Canada — internal tools, workflow automation, ERP and CRM integrations and mission-critical systems for companies with thousands of employees.</> }}
+      copy={{ badge: "Enterprise", title: <>Enterprise Software Development That <span style={{ color: 'var(--brand)' }}>Actually Works.</span></>, desc: <>Enterprise software development in Canada — internal tools, workflow automation, ERP and CRM integrations, manufacturing and operations software, and mission-critical systems for companies with thousands of employees.</> }}
       heroStats={heroStats}
       challenges={challenges}
       solutions={solutions}
