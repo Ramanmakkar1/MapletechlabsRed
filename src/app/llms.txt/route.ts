@@ -48,7 +48,7 @@ function buildText(): string {
   out.push(`- Projects delivered: 500+ for clients across Canada and internationally`);
   out.push(`- Founder experience: 15+ years in software engineering`);
   out.push(`- What we build: custom software, web applications, iOS and Android apps, AI/ML solutions, UI/UX design, SaaS platforms and cloud infrastructure`);
-  out.push(`- Industries: fintech, healthcare, e-commerce, logistics, edtech, real estate and enterprise`);
+  out.push(`- Industries: fintech, healthcare, e-commerce, logistics, edtech, real estate, and enterprise and manufacturing`);
   out.push(`- Awards: ${AWARDS.join('; ')}`);
   out.push('');
   out.push('## Core services');
