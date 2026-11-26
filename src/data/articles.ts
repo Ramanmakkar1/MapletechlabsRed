@@ -5944,7 +5944,7 @@ export const articles: Article[] = [
         '<strong>Tech and SaaS startups.</strong> AI features built straight into the product, plus support bots that answer common questions around the clock. See our <a href="/services/ai-ml/llm-integration">LLM integration</a> page for typical scope.',
         '<strong>Film, VFX and gaming studios.</strong> Search across large asset libraries and production documents in seconds instead of digging through folders.',
         '<strong>Tourism and hospitality.</strong> Multilingual guest help that answers from your own policies and information.',
-        '<strong>Port, logistics and trade.</strong> Automatic sorting of shipping documents and busy email inboxes, with the extracted fields pushed into the systems your team already uses.',
+        '<strong>Port, logistics and trade.</strong> <a href="/services/ai-ml/ai-automation">Automatic sorting of shipping documents and busy email inboxes</a>, with the extracted fields pushed into the systems your team already uses.',
         '<strong>Clean-tech and real estate.</strong> Short summaries of long reports for staff to check before they act.',
       ] },
       { type: 'p', html: 'Most of these use retrieval-augmented generation (RAG): the system first finds the right passages in your own manuals, policies or help centre, then writes its reply from them and shows where each answer came from. Access rules decide which documents each person can draw on, and questions outside what the system knows go to a member of your team. Our <a href="/services/ai-ml/ai-chatbots">AI chatbots</a> page explains how that works.' },
