@@ -214,7 +214,7 @@ export default function BlockchainDevelopmentCompaniesCanadaClient() {
                     </div>
 
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16, position: 'relative', zIndex: 1 }}>
-                      From smart contracts and DeFi protocols to NFT platforms and crypto wallets, we build production-grade blockchain solutions. Our Web3 team has deployed over 50 smart contracts across Ethereum, Solana, and Polygon, serving Canadian fintech and enterprise clients.
+                      From smart contracts and DeFi protocols to NFT platforms and crypto wallets, we build <Link href="/services/blockchain-web3" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>production-grade blockchain solutions</Link>. Our Web3 team has deployed over 50 smart contracts across Ethereum, Solana, and Polygon, serving Canadian fintech and enterprise clients.
                     </p>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20, position: 'relative', zIndex: 1 }}>
                       What sets Mapletech Labs apart is our full-stack approach. We do not just write Solidity — we architect entire decentralized ecosystems, from on-chain logic and tokenomics design to the React frontends and Node.js backends that make Web3 applications accessible to mainstream users. Our team maintains deep expertise in ERC-20, ERC-721, ERC-1155 token standards, cross-chain bridges, and Layer 2 scaling solutions.
