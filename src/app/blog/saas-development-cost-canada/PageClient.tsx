@@ -257,7 +257,7 @@ export default function SaasDevelopmentCostCanadaClient() {
                     <h3 style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>Enterprise SaaS</h3>
                     <p style={{ fontSize: 28, fontWeight: 800, color: '#E11900', marginBottom: 16, letterSpacing: '-0.02em' }}>$200,000 - $500,000+</p>
                     <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
-                      A fully-scaled enterprise platform with SSO/SAML authentication, SOC 2 compliance readiness, custom API with rate limiting and versioning, white-label capabilities, advanced reporting with data exports, audit logs, multi-region deployment, dedicated onboarding workflows, and SLA-backed infrastructure. Built for companies targeting enterprise contracts of $50K+ ARR per client.
+                      A fully-scaled enterprise platform with <Link href="/services/saas-development/auth-sso" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>SSO/SAML authentication</Link>, SOC 2 compliance readiness, custom API with rate limiting and versioning, white-label capabilities, advanced reporting with data exports, audit logs, multi-region deployment, dedicated onboarding workflows, and SLA-backed infrastructure. Built for companies targeting enterprise contracts of $50K+ ARR per client.
                     </p>
                   </div>
                 </div>
