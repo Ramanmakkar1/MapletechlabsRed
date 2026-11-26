@@ -1638,7 +1638,7 @@ export const articles: Article[] = [
     ],
     body: [
       { type: 'h2', id: 'quick-answer', text: 'Shopify or custom ecommerce: which should you choose?' },
-      { type: 'p', html: 'Start with the shape of your business, not the technology. Shopify is a hosted commerce platform: you pay a subscription, configure a theme, install apps and start selling. Custom ecommerce means building the storefront, checkout, catalogue and admin on your own stack, usually with a framework such as Next.js or a commerce API behind it. Custom gives you control; it also gives you every operational problem that Shopify would otherwise handle.' },
+      { type: 'p', html: 'Start with the shape of your business, not the technology. Shopify is a hosted commerce platform: you pay a subscription, configure a theme, install apps and start selling. Custom ecommerce means building the storefront, checkout, catalogue and admin on your own stack, usually with a framework such as <a href="/services/web-development/nextjs-development">Next.js</a> or a commerce API behind it. Custom gives you control; it also gives you every operational problem that Shopify would otherwise handle.' },
       { type: 'callout', tone: 'brand', title: 'The honest rule of thumb', text: 'If a mature hosted platform covers 80% or more of what you need, use it. Build custom only for the remaining part that is genuinely your advantage, or when the platform&rsquo;s limits cost you more than the build would.' },
 
       { type: 'h2', id: 'when-shopify-fits', text: 'When Shopify fits' },
