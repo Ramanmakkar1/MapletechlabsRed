@@ -30,7 +30,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: TITLE,
+  '@id': `https://mapletechlabs.ca/blog/${SLUG}#article`,
+  headline: 'Top 10 Software Development Companies in Canada',
+  isPartOf: { '@id': 'https://mapletechlabs.ca/#website' },
+  inLanguage: 'en-CA',
   description: seoDescription(DESCRIPTION),
   datePublished: DATE,
   dateModified: '2026-11-10',
