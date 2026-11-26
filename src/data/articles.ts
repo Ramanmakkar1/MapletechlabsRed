@@ -1210,7 +1210,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'standards', text: 'The standards that separate professional work' },
       { type: 'p', html: 'This is where most of the real difference lives, and most of it is invisible in a screenshot. Insist on:' },
       { type: 'checks', items: [
-        { term: 'Performance and Core Web Vitals', text: 'Google measures real loading, interactivity and visual stability, and it affects both rankings and conversions. A professional build targets these deliberately, not by accident.' },
+        { term: 'Performance and Core Web Vitals', text: 'Google measures <a href="/services/wordpress-cms/site-speed-optimisation">real loading, interactivity and visual stability</a>, and it affects both rankings and conversions. A professional build targets these deliberately, not by accident.' },
         { term: 'SEO built into the foundation', text: 'Clean semantic markup, proper metadata and structured data, sensible URLs and fast rendering. SEO bolted on afterwards is never as effective as SEO designed in.' },
         { term: 'Accessibility (WCAG)', text: 'A site that works for people using keyboards and screen readers is both the right thing to do and, increasingly, a legal expectation. It also tends to be better-built overall.' },
         { term: 'Mobile-first, genuinely responsive', text: 'Most Canadian traffic is on phones. The mobile experience should be the priority, not a shrunk-down desktop.' },
