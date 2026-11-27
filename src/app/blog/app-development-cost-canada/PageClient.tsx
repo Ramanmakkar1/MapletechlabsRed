@@ -273,7 +273,7 @@ export default function AppDevelopmentCostCanadaClient() {
                       letterSpacing: '-0.03em', marginBottom: 16,
                     }}>$150,000 &ndash; $500,000+</h3>
                     <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 16 }}>
-                      Enterprise-grade applications with advanced architecture. AI/ML integration, complex data pipelines, microservices backend, advanced security requirements (PIPEDA/SOC 2 compliance), offline-first capabilities, and custom hardware integrations (IoT, Bluetooth). Think a fintech platform, a healthcare records system, or an enterprise logistics solution.
+                      Enterprise-grade applications with advanced architecture. AI/ML integration, complex data pipelines, microservices backend, advanced security requirements (PIPEDA/SOC 2 compliance), offline-first capabilities, and custom hardware integrations (IoT, Bluetooth). Think a fintech platform, a healthcare records system, or an <Link href="/industries/logistics" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>enterprise logistics solution</Link>.
                     </p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                       {['50+ screens', 'AI/ML features', 'Microservices', 'PIPEDA compliance', 'IoT integration', 'Custom APIs', '6-18 months'].map(tag => (
