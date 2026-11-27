@@ -2203,7 +2203,7 @@ export const articles: Article[] = [
         { term: 'OS and framework updates', text: 'Apple and Google release new mobile operating systems every year, and web frameworks, libraries and runtimes reach end of support. Keeping up avoids crashes, store rejections and painful <a href="/services/software-development/legacy-software-modernization">upgrades later</a>.' },
         { term: 'Security patches', text: 'Applying fixes for vulnerabilities in your code and its dependencies, rotating keys and reviewing access. This is the part you cannot skip.' },
         { term: 'Hosting and cloud', text: 'Servers, databases, storage, backups and bandwidth. Cloud bills grow with usage and need regular review. Our <a href="/services/cloud-devops/aws-architecture">AWS cloud architecture service</a> can right-size this spend.' },
-        { term: 'Monitoring', text: 'Uptime checks, error tracking and performance alerts, so problems are found before customers report them.' },
+        { term: 'Monitoring', text: 'Uptime checks, error tracking and <a href="/services/cloud-devops/performance-scaling">performance alerts</a>, so problems are found before customers report them.' },
         { term: 'Small features', text: 'Copy changes, small workflow tweaks and minor improvements that keep the product in step with how the business works.' },
       ] },
 
