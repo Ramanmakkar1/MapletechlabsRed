@@ -4346,7 +4346,7 @@ export const articles: Article[] = [
       { type: 'h2', id: 'what-calgary-builds', text: 'What Calgary businesses build with apps' },
       { type: 'p', html: 'App projects in Calgary cluster around a few sectors, and each one changes what a good build looks like:' },
       { type: 'checks', items: [
-        { term: 'Energy and oilfield field apps', text: 'Crews at well sites, pipelines and plants need inspection forms, safety checklists, work orders and asset logs that work offline, sync when the device is back in range, and handle photos, GPS and signatures.' },
+        { term: 'Energy and oilfield field apps', text: 'Crews at well sites, pipelines and plants need <a href="/industries/enterprise">inspection forms, safety checklists, work orders and asset logs</a> that work offline, sync when the device is back in range, and handle photos, GPS and signatures.' },
         { term: 'Agtech', text: 'Growers, ranchers and agribusiness suppliers use apps for field records, equipment and sensor data, and logistics across large rural areas where connectivity is patchy.' },
         { term: 'Fintech', text: '<a href="/industries/fintech">Payments, lending, wealth and insurance apps</a> need strong authentication, audit trails, secure data handling and integrations with banks and payment processors.' },
         { term: 'Logistics and transportation', text: 'Calgary’s role as a distribution hub drives <a href="/industries/logistics">driver apps, dispatch tools, proof-of-delivery and real-time tracking</a> that must stay reliable at peak volume.' },
