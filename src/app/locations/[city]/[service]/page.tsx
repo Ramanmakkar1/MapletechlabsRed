@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getLocationMeshPage, locationMeshParams } from '@/lib/locationPages';
+import { isServedCityService } from '@/data/serviceCity';
 import ServiceCityTemplate from '@/components/page/ServiceCityTemplate';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
@@ -10,7 +11,13 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return locationMeshParams;
+  // Niche mesh pages (blockchain-web3, ar-vr, game-development) in non-major
+  // cities are 301'd to the core service page by next.config.ts and the
+  // middleware. Prerendering them here made the host serve a slow 200 render
+  // (the audited /locations/laval/blockchain-web3, 3.9 s) on hosts that skip
+  // the config redirect table, so keep the prerender list in sync with the
+  // redirect rules: only the pairs that are actually served get prerendered.
+  return locationMeshParams.filter(({ city, service }) => isServedCityService(city, service));
 }
 
 export const dynamic = 'force-static';
