@@ -4261,7 +4261,7 @@ export const articles: Article[] = [
         '<strong>References in your sector.</strong> Two recent clients you can call, ideally with a product similar to yours.',
         '<strong>The work your team will actually do.</strong> Ask which parts were designed and built in-house and which were subcontracted.',
       ] },
-      { type: 'p', html: 'Our own <a href="/case-studies">app and software case studies</a> include a telehealth platform serving 200K+ patient sessions with 99.97% uptime and an e-commerce platform that drove 3x revenue growth for 2M+ monthly visitors. Ask any Edmonton firm for the same level of detail.' },
+      { type: 'p', html: 'Our own <a href="/case-studies">app and software case studies</a> include a telehealth platform serving 200K+ patient sessions with 99.97% uptime and an <a href="/case-studies/ecommerce-platform">e-commerce platform</a> that drove 3x revenue growth for 2M+ monthly visitors. Ask any Edmonton firm for the same level of detail.' },
 
       { type: 'h2', id: 'ownership', text: 'Who owns the code, accounts and data' },
       { type: 'p', html: 'Ownership is the clause buyers most often discover too late. Before work starts, confirm in writing that:' },
