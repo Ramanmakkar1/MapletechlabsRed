@@ -197,6 +197,13 @@ export default function LocationPageTemplate(p: LocationProps) {
 
   return (
     <>
+      {/* Self-canonical for the indexable city landing pages. Noindex keyword
+          pages (isIndexableLocationSlug false) emit no canonical here: their
+          route metadata already points the canonical at the preferred
+          indexable service page. */}
+      {isIndexableLocationSlug(p.slug) ? (
+        <link rel="canonical" href={canonicalUrl(pageHref)} />
+      ) : null}
       {isIndexableLocationSlug(p.slug) ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       ) : null}
