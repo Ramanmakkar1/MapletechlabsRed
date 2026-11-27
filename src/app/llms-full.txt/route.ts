@@ -77,9 +77,10 @@ function buildText(): string {
   out.push('## Services');
   out.push('');
   out.push(...lines([link('All services', '/services')]));
-  out.push(...lines(services.map(s =>
-    link(s.name, `/services/${s.slug}`, s.relatedSubServices.map(r => r.name).join(', '))
-  )));
+  out.push(...lines(services.flatMap(s => [
+    link(s.name, `/services/${s.slug}`, s.relatedSubServices.map(r => r.name).join(', ')),
+    ...s.relatedSubServices.map(r => link(`${s.name}: ${r.name}`, `/services/${s.slug}/${r.slug}`)),
+  ])));
   out.push(...lines([
     link('Healthcare Software Development', '/services/software-development/healthcare-software', 'telehealth, patient portals, clinical workflow tools and EHR integration for Canadian healthcare providers'),
     link('AI Consulting', '/services/ai-consulting', 'AI use-case assessment, data readiness, build versus buy and feasibility planning for Canadian businesses'),
