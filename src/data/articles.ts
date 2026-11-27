@@ -4229,7 +4229,7 @@ export const articles: Article[] = [
         { term: 'Health and wellness apps', text: '<a href="/industries/healthcare">Booking, telehealth, patient records and care coordination apps</a> need strong authentication, audit trails and careful handling of personal health information.' },
         { term: 'Fintech and payments', text: '<a href="/industries/fintech">Lending, wealth, insurance and payment apps</a> need secure data handling, audit trails and integrations with banks and payment processors.' },
         { term: 'Logistics and transportation', text: 'Edmonton\'s role as a distribution hub drives <a href="/industries/logistics">driver apps, dispatch tools, proof-of-delivery and real-time tracking</a> that must stay reliable at peak volume.' },
-        { term: 'Retail, hospitality and customer apps', text: 'Ordering, loyalty, booking and account apps where speed, accessibility and App Store polish decide whether people keep the app installed.' },
+        { term: 'Retail, hospitality and customer apps', text: '<a href="/industries/ecommerce">Ordering, loyalty, booking and account apps</a> where speed, accessibility and App Store polish decide whether people keep the app installed.' },
         { term: 'AI-enabled products', text: 'The University of Alberta and Amii produce models and research that still need a production app: APIs, admin tools, hosting in Canada and integrations with the systems customers already use.' },
       ] },
       { type: 'p', html: 'A good partner asks which of these you are before proposing a stack or a price. If the first proposal could apply to any city or industry, it probably will.' },
