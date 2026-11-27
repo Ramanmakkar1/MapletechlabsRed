@@ -101,6 +101,11 @@ const DEFAULT_SERVICE_ITEMS = DEFAULT_SERVICES.map(s => {
   return { ...s, desc: SERVICE_BLURB[slug] ?? s.desc };
 });
 
+const cityCardHref = (href: string, citySlug: string) => {
+  const m = href.match(/^\/services\/([^/?#]+)\/?$/);
+  return m ? serviceCityHref(m[1], citySlug) : href;
+};
+
 function defaultOverview(cityName: string, industries: string[]) {
   const inds = industries.length ? industries.slice(0, 3).join(', ').toLowerCase() : 'local business';
   return {
@@ -121,12 +126,13 @@ export default function LocationPageTemplate(p: LocationProps) {
   const overview = p.overview ?? defaultOverview(name, city?.localIndustries ?? []);
   const whyChoose = p.whyChoose ?? DEFAULT_WHYCHOOSE;
   const serviceLinks = p.serviceLinks ?? DEFAULT_SERVICELINKS;
-  const serviceItems = p.services
+  const serviceItems = (p.services
     ? p.services.map(s => {
         const slug = s.href.split('/').filter(Boolean).pop() ?? '';
         return { ...s, desc: SERVICE_BLURB[slug] ?? s.desc };
       })
-    : DEFAULT_SERVICE_ITEMS;
+    : DEFAULT_SERVICE_ITEMS
+  ).map(s => ({ ...s, href: cityCardHref(s.href, p.slug) }));
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
