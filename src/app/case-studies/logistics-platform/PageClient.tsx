@@ -265,7 +265,7 @@ export default function LogisticsCaseStudyClient() {
                   Need Smarter Logistics?
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                  From IoT integration to ML-powered optimization, we build logistics platforms that cut costs and improve delivery performance. Let&apos;s talk.
+                  From IoT integration to ML-powered optimization, we build <Link href="/industries/logistics" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>logistics platforms</Link> that cut costs and improve delivery performance. Let&apos;s talk.
                 </p>
               </div>
               <Link href={contactHref} style={{ textDecoration: 'none' }}>
