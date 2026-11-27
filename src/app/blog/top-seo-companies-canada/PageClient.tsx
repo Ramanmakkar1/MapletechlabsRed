@@ -35,8 +35,8 @@ const companies = [
 
 const relatedPosts = [
   { slug: 'top-10-unicorn-apps-2026', title: 'Top 10 Unicorn Apps of 2026', category: 'Business', readTime: '8 min' },
-  { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
-  { slug: 'top-software-development-companies-canada', title: 'Top 10 Software Development Companies in Canada', category: 'Business', readTime: '10 min' },
+  { slug: 'digital-marketing-agencies-canada', title: 'Digital Marketing Agencies in Canada: How to Choose (2026)', category: 'Digital Marketing', readTime: '12 min' },
+  { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
 export default function TopSeoCompaniesCanadaClient() {
