@@ -265,7 +265,7 @@ export default function PaymentsCaseStudyClient() {
                   Building a Payments Platform?
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                  Whether it&apos;s payments, crypto, or compliance-heavy fintech — we engineer secure, scalable systems. Let&apos;s talk about your next project.
+                  Whether it&apos;s payments, crypto, or <Link href="/industries/fintech" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>compliance-heavy fintech</Link> — we engineer secure, scalable systems. Let&apos;s talk about your next project.
                 </p>
               </div>
               <Link href={contactHref} style={{ textDecoration: 'none' }}>
