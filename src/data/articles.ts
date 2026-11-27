@@ -1329,7 +1329,7 @@ export const articles: Article[] = [
     title: 'How to Build a SaaS MVP in 8 Weeks: A Founder’s Playbook',
     dek: 'Eight weeks is enough to launch a real SaaS MVP — but only with ruthless scope and the right decisions early. Here is the week-by-week playbook we use, what to cut, and the honest cases where eight weeks is not realistic.',
     metaTitle: 'Build a SaaS MVP in 8 Weeks (2026)',
-    metaDescription: "Build a SaaS MVP in 8 weeks: follow a founder's week-by-week plan for scope and launch, see what to cut, and when eight weeks is unrealistic.",
+    metaDescription: "Build a SaaS MVP in 8 weeks: scope, launch, what to cut and when eight weeks is unrealistic. Mapletech Labs builds SaaS MVPs for Canadian businesses.",
     date: '2026-09-08',
     dateModified: '2026-09-08',
     readTime: '10 min read',
