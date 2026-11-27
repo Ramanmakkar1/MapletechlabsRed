@@ -36,7 +36,7 @@ const apps = [
 
 const relatedPosts = [
   { slug: 'what-profitable-saas-gets-right', title: 'What the Most Profitable SaaS Products Get Right', category: 'Business', readTime: '9 min' },
-  { slug: 'ai-development-companies-canada', title: 'Top 10 AI Development Companies in Canada (2026)', category: 'AI/ML', readTime: '9 min' },
+  { slug: 'ai-development-cost-canada', title: 'AI Development Cost in Canada (2026)', category: 'AI/ML', readTime: '9 min' },
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
