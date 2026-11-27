@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { FaqSchema } from '@/components/ServiceSchema';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { seoDescription } from '@/lib/seo/description';
 import { seoTitle } from '@/lib/seo/title';
 import EstimatorClient from './EstimatorClient';
 import ToolServiceCta from '@/components/ToolServiceCta';
@@ -17,10 +18,10 @@ const URL = canonicalUrl('/tools/sred-estimator');
 
 export const metadata: Metadata = {
   title: seoTitle(TITLE),
-  description: DESCRIPTION,
+  description: seoDescription(DESCRIPTION),
   openGraph: {
     title: TITLE,
-    description: DESCRIPTION,
+    description: seoDescription(DESCRIPTION),
     url: URL,
     type: 'website',
   },
