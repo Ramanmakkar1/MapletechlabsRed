@@ -664,7 +664,7 @@ export const articles: Article[] = [
       { type: 'p', html: 'So the first filter is simple: you are hiring <strong>product engineers</strong>, not just people who can write code. The question is whether they think about what happens at customer number 1,000, not just customer number one.' },
       { type: 'h2', id: 'what-to-look-for', text: 'What to look for in a SaaS development company' },
       { type: 'checks', items: [
-        { term: 'Product thinking, not just execution', text: 'The best partners push back on scope, question features that will not earn their keep, and help you ship a focused first version instead of building everything you asked for.' },
+        { term: 'Product thinking, not just execution', text: 'The best partners push back on scope, question features that will not earn their keep, and help you <a href="/services/saas-development/saas-mvp-development">ship a focused first version</a> instead of building everything you asked for.' },
         { term: 'Architecture for multi-tenancy and scale', text: 'Ask how they <a href="/services/saas-development/multi-tenant-architecture">isolate customer data</a> and how the system grows. The answer should be specific and confident, not hand-waved.' },
         { term: 'Billing and subscriptions done properly', text: '<a href="/services/saas-development/billing-subscriptions">Stripe integration, trials, upgrades and downgrades</a>, failed-payment handling and usage-based pricing are their own discipline. It should be treated as core, not an afterthought.' },
         { term: 'Security and Canadian compliance', text: 'PIPEDA nationally, and Quebec’s Law 25 if you serve Quebec, are not optional. Encryption, access control and audit trails should be designed in from the start.' },
