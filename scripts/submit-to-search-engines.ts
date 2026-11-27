@@ -15,7 +15,7 @@
  *   5. Set GOOGLE_SERVICE_ACCOUNT_KEY env var to the JSON key file path
  */
 
-import { isIndexableSitemapPath } from '@/lib/seo/indexability';
+import { SITEMAP_CHILDREN } from '@/lib/sitemap-data';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://mapletechlabs.ca';
 const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
@@ -83,59 +83,7 @@ async function getUrlsFromSitemap(): Promise<string[]> {
 // ── Fallback: generate URLs locally ──────────────────────────────────────────
 
 function generateUrls(): string[] {
-  const urls: string[] = [
-    SITE_URL,
-    `${SITE_URL}/about`,
-    `${SITE_URL}/contact`,
-    `${SITE_URL}/services`,
-    `${SITE_URL}/blog`,
-    `${SITE_URL}/case-studies`,
-    `${SITE_URL}/locations`,
-  ];
-
-  const serviceCategories = [
-    'mobile-app-development', 'ai-ml', 'web-development', 'product-design',
-    'blockchain-web3', 'cloud-devops', 'ar-vr', 'digital-marketing',
-    'wordpress-cms', 'game-development', 'branding', 'saas-development',
-  ];
-
-  const cities = [
-    'edmonton', 'toronto', 'vancouver', 'calgary', 'ottawa', 'montreal',
-    'winnipeg', 'halifax', 'victoria', 'saskatoon', 'kitchener', 'london-on',
-  ];
-
-  // Service category pages
-  for (const svc of serviceCategories) {
-    urls.push(`${SITE_URL}/services/${svc}`);
-  }
-
-  // Location pages
-  for (const city of cities) {
-    urls.push(`${SITE_URL}/locations/${city}`);
-  }
-
-  // City + Service combo pages (144)
-  for (const city of cities) {
-    for (const svc of serviceCategories) {
-      urls.push(`${SITE_URL}/locations/${city}/${svc}`);
-    }
-  }
-
-  // Blog posts
-  const blogSlugs = [
-    'top-10-unicorn-apps-2026', 'saas-guide', 'top-seo-companies-canada',
-    'top-software-development-companies-canada',
-    'app-development-cost-canada', 'ai-development-companies-canada',
-    'app-development-companies-edmonton', 'website-cost-canada',
-    'choose-software-development-company-canada', 'web-development-companies-toronto',
-    'saas-development-cost-canada', 'blockchain-development-companies-canada',
-    'digital-marketing-cost-canada', 'software-development-companies-calgary',
-  ];
-  for (const slug of blogSlugs) {
-    urls.push(`${SITE_URL}/blog/${slug}`);
-  }
-
-  return urls.filter(u => isIndexableSitemapPath(new URL(u).pathname));
+  return [...new Set(SITEMAP_CHILDREN.flatMap(c => c.entries().map(e => e.loc)))];
 }
 
 // ── Google Indexing API ──────────────────────────────────────────────────────
