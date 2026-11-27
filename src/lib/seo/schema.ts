@@ -137,6 +137,16 @@ export function organizationSchema() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
+            name: 'Enterprise & Manufacturing Software Development',
+            serviceType: 'Enterprise and manufacturing software development',
+            url: `${siteOrigin()}/industries/enterprise`,
+            areaServed: { '@type': 'Country', name: 'Canada' },
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
             name: 'Web Development',
             url: `${siteOrigin()}/services/web-development`,
           },
