@@ -33,8 +33,8 @@ const tocSections = [
 
 const relatedPosts = [
   { slug: 'app-development-cost-canada', title: 'How Much Does App Development Cost in Canada? (2026)', category: 'Business', readTime: '9 min' },
-  { slug: 'top-seo-companies-canada', title: 'Top 10 SEO Companies in Canada (2026)', category: 'Digital Marketing', readTime: '9 min' },
-  { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
+  { slug: 'digital-marketing-agencies-canada', title: 'Digital Marketing Agencies in Canada: How to Choose (2026)', category: 'Business', readTime: '12 min' },
+  { slug: 'custom-software-development-cost-canada', title: 'Custom Software Development Cost in Canada (2026 Guide)', category: 'Business', readTime: '9 min' },
 ];
 
 export default function WebsiteCostCanadaClient() {
