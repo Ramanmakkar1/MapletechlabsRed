@@ -136,15 +136,19 @@ function buildLocationPage(slug: string): LocationPageData | null {
         serviceType: isAgencyPage ? AGENCY_SERVICE_TYPES : [combo.label],
         mainEntity: false,
       }),
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
-          { '@type': 'ListItem', position: 3, name: data.cityName, item: cityLanding },
-          { '@type': 'ListItem', position: 4, name: serviceLabel, item: canonical },
-        ],
-      },
+      ...(isIndexableLocationSlug(slug)
+        ? [
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
+                { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
+                { '@type': 'ListItem', position: 3, name: data.cityName, item: cityLanding },
+                { '@type': 'ListItem', position: 4, name: serviceLabel, item: canonical },
+              ],
+            },
+          ]
+        : []),
     ],
   };
 
@@ -285,12 +289,15 @@ function buildLocationMeshPage(city: string, service: string): LocationMeshPageD
   const description = isEdmWeb ? EDM_WEB_DESCRIPTION : data.description;
   const serviceLabel = `${data.serviceName} in ${data.cityName}`;
 
-  const breadcrumbItems = [
-    { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
-    { position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
-    { position: 3, name: data.cityName, item: `https://mapletechlabs.ca/locations/software-development-company-in-${data.citySlug}` },
-    { position: 4, name: serviceLabel, item: data.canonicalUrl },
-  ];
+  // Noindex mesh pairs (niche services in smaller cities) get no BreadcrumbList.
+  const breadcrumbItems = isIndexableCityService(city, service)
+    ? [
+        { position: 1, name: 'Home', item: 'https://mapletechlabs.ca' },
+        { position: 2, name: 'Locations', item: 'https://mapletechlabs.ca/locations' },
+        { position: 3, name: data.cityName, item: `https://mapletechlabs.ca/locations/software-development-company-in-${data.citySlug}` },
+        { position: 4, name: serviceLabel, item: data.canonicalUrl },
+      ]
+    : [];
 
   // Combined JSON-LD schema (single @graph to avoid duplicate field errors)
   const jsonLd: Record<string, unknown> = {

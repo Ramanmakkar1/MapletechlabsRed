@@ -18,7 +18,7 @@ import AiPractice from '@/components/home/AiPractice';
 import { humanPick } from '@/data/media';
 import { cities } from '@/data/cities';
 import { provinceSlugForName } from '@/data/provinces';
-import { serviceCityHref } from '@/data/serviceCity';
+import { serviceCityHref, isIndexableLocationSlug } from '@/data/serviceCity';
 import type { HeroCopy, Stat } from './types';
 import { canonicalUrl } from '@/lib/seo/canonical';
 
@@ -167,7 +167,9 @@ export default function LocationPageTemplate(p: LocationProps) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      {isIndexableLocationSlug(p.slug) ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
+      ) : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceSchema) }} />
       <Navbar />
       <main id="main-content">
