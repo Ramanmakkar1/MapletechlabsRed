@@ -95,6 +95,8 @@ export const isServedCityService = (citySlug: string, serviceSlug: string): bool
 
 export const EDMONTON_MESH_NOINDEX = new Set(['cloud-devops', 'product-design', 'digital-marketing', 'game-development']);
 
+export const TORONTO_MESH_NOINDEX = new Set(['cloud-devops', 'product-design']);
+
 /**
  * Whether a /locations/<city>/<service> mesh page should be indexed and listed
  * in the sitemap. Owner decision 2026-11-22: only the four major cities are
@@ -104,6 +106,7 @@ export const isIndexableCityService = (citySlug: string, serviceSlug: string): b
   isServedCityService(citySlug, serviceSlug) &&
   !NICHE_SERVICES.has(serviceSlug) &&
   !(citySlug === 'edmonton' && EDMONTON_MESH_NOINDEX.has(serviceSlug)) &&
+  !(citySlug === 'toronto' && TORONTO_MESH_NOINDEX.has(serviceSlug)) &&
   (isPriorityService(serviceSlug) || (MESH_INDEX_CITIES.has(citySlug) && serviceSlug !== 'branding'));
 
 /** Canonical path for a service in a city: keyword URL for priority services, else the mesh URL. */
