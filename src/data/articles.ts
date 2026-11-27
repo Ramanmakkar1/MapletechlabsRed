@@ -6602,7 +6602,7 @@ export const articles: Article[] = [
         '<strong>Fintech and trading.</strong> <a href="/industries/fintech">Dashboards where the key numbers can be read at a glance</a>, actions can be reversed, and dense tables still have a clear order of importance.',
         '<strong>Logistics and transport.</strong> <a href="/industries/logistics">Dispatch and tracking screens</a> that drivers and dispatchers can pick up without a training session.',
         '<strong>Health providers.</strong> <a href="/industries/healthcare">Patient and clinic tools</a> with short forms, clear consent and flows that respect privacy.',
-        '<strong>SaaS companies.</strong> Onboarding and admin areas designed to cut support tickets rather than add to them.',
+        '<strong>SaaS companies.</strong> <a href="/services/saas-development">Onboarding and admin areas</a> designed to cut support tickets rather than add to them.',
       ] },
 
       { type: 'h2', id: 'process', text: 'What a good discovery and testing process looks like' },
