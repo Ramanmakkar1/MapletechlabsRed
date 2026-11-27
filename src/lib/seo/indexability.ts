@@ -34,8 +34,11 @@ export const NON_INDEXABLE_PATHS = new Set([
  * sitemap or link change.
  */
 export const NOINDEX_PATHS = new Set([
-  '/blog/app-development-companies-edmonton',
+  '/blog/blockchain-development-companies-canada',
+  '/blog/saas-guide',
   '/blog/software-development-companies-calgary',
+  '/blog/top-seo-companies-canada',
+  '/blog/top-software-development-companies-canada',
   '/blog/web-development-companies-toronto',
 ]);
 
@@ -48,7 +51,11 @@ export const NOINDEX_PATHS = new Set([
 export function isIndexableSitemapPath(pathname: string): boolean {
   if (NON_INDEXABLE_PATHS.has(pathname)) return false;
   if (NOINDEX_PATHS.has(pathname)) return false;
-  if (isCityListiclePath(pathname)) return false;
+
+  // /blog/app-development-companies-edmonton sets no robots noindex and uses a
+  // self canonical, so it stays indexable even though its slug looks like a
+  // city listicle. Every other /blog/<city>-companies-* post is a listicle.
+  if (pathname !== '/blog/app-development-companies-edmonton' && isCityListiclePath(pathname)) return false;
 
   const mesh = pathname.match(/^\/locations\/([^/]+)\/([^/]+)$/);
   if (mesh && !isIndexableCityService(mesh[1], mesh[2])) return false;

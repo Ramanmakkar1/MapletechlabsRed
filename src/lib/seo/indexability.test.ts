@@ -32,13 +32,21 @@ test('301-d blog posts stay out of the sitemap', () => {
 
 test('noindex blog posts stay out of the sitemap and link rewrites', () => {
   for (const path of [
-    '/blog/app-development-companies-edmonton',
+    '/blog/blockchain-development-companies-canada',
+    '/blog/saas-guide',
     '/blog/software-development-companies-calgary',
+    '/blog/top-seo-companies-canada',
+    '/blog/top-software-development-companies-canada',
     '/blog/web-development-companies-toronto',
   ]) {
     assert.equal(isIndexableSitemapPath(path), false, `${path} is noindex and must be out of the sitemap`);
     assert.equal(isIndexableHref(path), false, `${path} is noindex and must not be a link target`);
   }
+});
+
+test('app-development-companies-edmonton is indexable again (self canonical, no robots noindex)', () => {
+  assert.equal(isIndexableSitemapPath('/blog/app-development-companies-edmonton'), true);
+  assert.equal(isIndexableHref('/blog/app-development-companies-edmonton'), true);
 });
 
 test('app-development location pages canonicalise to services and stay out of the sitemap', () => {
