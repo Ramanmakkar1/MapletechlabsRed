@@ -2856,7 +2856,7 @@ export const articles: Article[] = [
         { term: 'Usability testing', text: 'Watching five to eight real users try the prototype on set tasks, noting where they hesitate or fail, and fixing those screens. This is the step most often skipped, and the one that catches the most expensive mistakes. We run it on prototypes as part of our <a href="/services/product-design/prototyping">prototyping</a> work.' },
         { term: 'Design system', text: 'A library of reusable components, colours, type styles and spacing tokens, documented so developers and future designers stay consistent as the product grows. See our <a href="/services/product-design/design-systems">design systems</a> service.' },
       ] },
-      { type: 'p', html: 'Some studios also offer <a href="/services/branding">brand identity</a> work. That is useful when you are launching something new, but it is a separate job from product design and should be priced separately.' },
+      { type: 'p', html: 'Some studios also offer <a href="/services/branding/logo-visual-identity">brand identity</a> work. That is useful when you are launching something new, but it is a separate job from product design and should be priced separately.' },
 
       { type: 'h2', id: 'costs', text: 'How much UI/UX design costs in Canada' },
       { type: 'p', html: 'Prices vary with the number of screens, how complex the interactions are, how much research is involved and whether branding is included. These are the CAD ranges we publish on our <a href="/services/product-design">UI/UX service page</a> and our UI/UX city pages, so you can use them as a reference point when comparing quotes:' },
