@@ -53,6 +53,8 @@ export default function WhatWeBuild() {
               {i < also.length - 1 ? ' · ' : ''}
             </span>
           ))}
+          {' · '}
+          <Link href="/locations/app-development-company-in-victoria" style={{ color: 'var(--body)', borderBottom: '1px solid var(--line-strong)' }}>Mobile App Development in Victoria, BC</Link>
         </p>
       </div>
     </section>
