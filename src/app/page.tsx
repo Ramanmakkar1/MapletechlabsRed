@@ -3,6 +3,7 @@ import nextDynamic from 'next/dynamic';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { organizationSchema, webSiteSchema } from '@/lib/seo/schema';
+import { BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
 import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
 import Navbar from '@/components/Navbar';
@@ -88,6 +89,31 @@ const serviceSchema = {
   description: metadata.description,
 };
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://mapletechlabs.ca/#localbusiness',
+  name: BUSINESS.name,
+  url: BUSINESS.url,
+  telephone: BUSINESS.telephone,
+  email: BUSINESS.email,
+  image: BUSINESS.image,
+  logo: BUSINESS.logo,
+  priceRange: '$$-$$$',
+  address: { ...HQ_ADDRESS },
+  areaServed: [...LOCAL_BUSINESS_AREA_SERVED],
+  parentOrganization: { '@id': 'https://mapletechlabs.ca/#organization' },
+  sameAs: [...BUSINESS.sameAs],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: BUSINESS.telephone,
+    email: BUSINESS.email,
+    contactType: 'sales',
+    areaServed: 'CA',
+    availableLanguage: ['English'],
+  },
+};
+
 /* One continuous story rather than a stack of card grids: the rhythm
    alternates split / grid / full-bleed photograph / timeline / ink band
    so no two neighbouring sections share a shape. */
@@ -109,6 +135,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(webSiteSchema()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(localBusinessSchema) }}
       />
       <Navbar />
       <ScrollUI />
