@@ -21,6 +21,7 @@ import { provinceSlugForName } from '@/data/provinces';
 import { serviceCityHref, isIndexableLocationSlug } from '@/data/serviceCity';
 import type { HeroCopy, Stat } from './types';
 import { canonicalUrl } from '@/lib/seo/canonical';
+import { isIndexableHref } from '@/lib/seo/indexability';
 
 export interface LocationProps {
   slug: string; copy: HeroCopy; heroStats?: Stat[];
@@ -165,12 +166,44 @@ export default function LocationPageTemplate(p: LocationProps) {
     url: canonicalUrl(`/locations/software-development-company-in-${p.slug}`),
   };
 
+  const pageHref = `/locations/software-development-company-in-${p.slug}`;
+  const serviceSchemas = isIndexableHref(pageHref)
+    ? serviceItems
+        .filter(s => isIndexableHref(s.href))
+        .map(s => {
+          const serviceType = s.title;
+          return {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            '@id': canonicalUrl(s.href) + '#service',
+            inLanguage: 'en-CA',
+            name: `${serviceType} in ${name}`,
+            serviceType,
+            provider: {
+              '@type': 'Organization',
+              '@id': 'https://mapletechlabs.ca/#organization',
+              name: 'Mapletech Labs',
+              url: 'https://mapletechlabs.ca',
+            },
+            areaServed: {
+              '@type': 'City',
+              name,
+              ...(city ? { containedInPlace: { '@type': 'AdministrativeArea', name: city.province } } : {}),
+            },
+            url: canonicalUrl(s.href),
+          };
+        })
+    : [];
+
   return (
     <>
       {isIndexableLocationSlug(p.slug) ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       ) : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceSchema) }} />
+      {serviceSchemas.map(s => (
+        <script key={s['@id']} type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(s) }} />
+      ))}
       <Navbar />
       <main id="main-content">
         <PageHero crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: name }]} copy={p.copy} stats={heroStats} photo={humanPick(p.slug, 0)} serviceName={`Software development in ${name}`} />
