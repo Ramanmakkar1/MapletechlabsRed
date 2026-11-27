@@ -1566,7 +1566,7 @@ export const articles: Article[] = [
     title: 'Custom Software vs Off-the-Shelf: How to Decide (2026)',
     dek: 'Building custom software when you could have bought a tool is an expensive mistake — and so is forcing your business into software that does not fit. Here is an honest framework for deciding which is right.',
     metaTitle: 'Custom Software vs Off-the-Shelf (2026)',
-    metaDescription: 'Custom software vs off-the-shelf: compare real CAD costs, timelines and pros and cons, then decide when to build custom software or buy off the shelf.',
+    metaDescription: 'Custom software vs off-the-shelf: compare real CAD costs, timelines and pros/cons to decide when to build or buy. Mapletech Labs builds custom software.',
     date: '2026-09-08',
     dateModified: '2026-09-08',
     readTime: '9 min read',
