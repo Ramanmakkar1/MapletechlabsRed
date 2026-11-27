@@ -2402,7 +2402,11 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'The SaaS foundations we get right first',
         body: [
-          'A SaaS product needs foundations that support both its users and the people running it. We plan multi-tenant architecture to separate customer data, authentication and SSO for access, and Stripe billing with GST/HST for subscriptions. An admin dashboard gives your team a place to manage the product, while APIs connect it with other systems. Testing covers the key workflows and integrations, helping the team find problems before customers encounter them and prepare for growth.',
+          'A SaaS product needs foundations that support both its users and the people running it. We plan ',
+          { href: '/services/saas-development/multi-tenant-architecture', label: 'multi-tenant architecture' },
+          ' to separate customer data, ',
+          { href: '/services/saas-development/auth-sso', label: 'authentication and SSO' },
+          ' for access, and Stripe billing with GST/HST for subscriptions. An admin dashboard gives your team a place to manage the product, while APIs connect it with other systems. Testing covers the key workflows and integrations, helping the team find problems before customers encounter them and prepare for growth.',
         ],
       },
       {
