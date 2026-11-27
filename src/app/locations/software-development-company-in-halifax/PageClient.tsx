@@ -19,6 +19,7 @@ const services = [
 const whyChoose = [
                 { title: 'Local Expertise', desc: 'Halifax is home to Dalhousie University, a thriving ocean-tech sector, and a growing defence industry. We build software tailored to these ecosystems and the unique needs of Atlantic Canadian businesses.' },
                 { title: 'Virtual Team of World-Class Agents', desc: 'Our distributed team of senior developers, AI engineers, and product designers plug directly into your Halifax operations -- delivering Silicon Valley calibre work at Canadian rates.' },
+                // OWNER DECISION: conflicts with service-city-local.ts 'We do not have a Victoria office' (app/web Victoria pages) and the Edmonton page '12 Locations Across Canada'. Raman to confirm which wording is correct.
                 { title: '12 Locations Across Canada', desc: 'With offices from Victoria to Halifax, Mapletech Labs brings national-scale resources to every Atlantic Canada engagement.' },
                 { title: 'Proudly Canadian', desc: 'Canadian-owned, Canadian-operated. Your data stays in Canada, your IP is protected by Canadian law, and your project is managed by people who understand local business culture.' },
               ];
