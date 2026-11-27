@@ -660,7 +660,7 @@ export const articles: Article[] = [
     ],
     body: [
       { type: 'h2', id: 'not-a-website', text: 'SaaS is not a website — and the difference is the whole job' },
-      { type: 'p', html: 'A brochure website shows information. A SaaS product <em>does work</em> for paying customers, every day, reliably, while you sleep. That difference drives everything: multi-tenant architecture so one customer’s data is never another’s, authentication and permissions, subscription billing, security and compliance, and the observability to know something is wrong before your customers tell you. A company that treats SaaS like a bigger website will build you something that looks right in a demo and falls over in production.' },
+      { type: 'p', html: 'A brochure website shows information. A SaaS product <em>does work</em> for paying customers, every day, reliably, while you sleep. That difference drives everything: multi-tenant architecture so one customer’s data is never another’s, <a href="/services/saas-development/auth-sso">authentication and permissions</a>, subscription billing, security and compliance, and the observability to know something is wrong before your customers tell you. A company that treats SaaS like a bigger website will build you something that looks right in a demo and falls over in production.' },
       { type: 'p', html: 'So the first filter is simple: you are hiring <strong>product engineers</strong>, not just people who can write code. The question is whether they think about what happens at customer number 1,000, not just customer number one.' },
       { type: 'h2', id: 'what-to-look-for', text: 'What to look for in a SaaS development company' },
       { type: 'checks', items: [
