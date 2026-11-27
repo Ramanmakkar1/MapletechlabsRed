@@ -1371,7 +1371,7 @@ export const articles: Article[] = [
       ] },
       { type: 'h2', id: 'when-not', text: 'When eight weeks is not realistic — honestly' },
       { type: 'p', html: 'We will tell you up front when your idea does not fit the timeline, because promising eight weeks and missing it helps no one. Eight weeks is not realistic when the product needs heavy regulatory or compliance work before launch, when it depends on complex integrations with slow third parties, when there is real hardware or on-device machine learning involved, or when the “MVP” is genuinely several products wearing one name. In those cases the right move is a longer, honestly scoped plan — or a smaller first slice that still proves something real.' },
-      { type: 'p', html: 'For the bigger picture on turning an MVP into a business, see our guide on <a href="/blog/saas-guide">building a profitable SaaS</a>.' },
+      { type: 'p', html: 'For the bigger picture on turning an MVP into a business, see our guide on <a href="/blog/what-profitable-saas-gets-right">what the most profitable SaaS products get right</a>.' },
     ],
     keyTakeaways: [
       'An MVP is the smallest real, well-built slice that tests your riskiest assumption — not a cheap version of everything.',
