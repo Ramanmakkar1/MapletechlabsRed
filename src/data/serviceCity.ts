@@ -59,7 +59,7 @@ export const serviceCitySlugs = allServiceCityCombos.map(c => c.slug);
 export const MESH_INDEX_CITIES = new Set(['edmonton', 'calgary', 'toronto', 'vancouver']);
 
 // Search Console impressions outside the office cities; owner can add slugs.
-export const DEMAND_LOCATION_SLUGS = new Set(['ai-development-company-in-regina']);
+export const DEMAND_LOCATION_SLUGS = new Set(['ai-development-company-in-regina', 'app-development-company-in-victoria', 'app-development-company-in-brampton']);
 
 /**
  * Whether a /locations/<service>-company-in-<city> keyword page should be

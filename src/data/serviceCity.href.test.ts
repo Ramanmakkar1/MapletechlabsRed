@@ -10,6 +10,8 @@ const CASES: Array<[string, string, string]> = [
   ['ai-ml', 'edmonton', '/locations/ai-development-company-in-edmonton'],
   ['ai-ml', 'halifax', '/services/ai-ml'],
   ['ai-ml', 'regina', '/locations/ai-development-company-in-regina'],
+  ['mobile-app-development', 'victoria', '/locations/app-development-company-in-victoria'],
+  ['mobile-app-development', 'brampton', '/locations/app-development-company-in-brampton'],
   ['blockchain-web3', 'halifax', '/services/blockchain-web3'],
   ['cloud-devops', 'toronto', '/locations/toronto/cloud-devops'],
   ['branding', 'edmonton', '/services/branding'],
