@@ -265,7 +265,7 @@ export default function FintechCaseStudyClient() {
                   Ready to Build Your Trading Platform?
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                  Whether it&apos;s fintech, AI, or high-frequency systems — we engineer software that scales. Let&apos;s talk about your next project.
+                  Whether it&apos;s <Link href="/industries/fintech" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>fintech</Link>, AI, or high-frequency systems — we engineer software that scales. Let&apos;s talk about your next project.
                 </p>
               </div>
               <Link href={contactHref} style={{ textDecoration: 'none' }}>
