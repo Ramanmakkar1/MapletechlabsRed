@@ -6601,7 +6601,7 @@ export const articles: Article[] = [
         '<strong>Energy and oilfield services.</strong> Field and inspection tools that stay usable on a tablet with gloves on: large touch targets, clear offline states and data that syncs once the crew is back in range.',
         '<strong>Fintech and trading.</strong> <a href="/industries/fintech">Dashboards where the key numbers can be read at a glance</a>, actions can be reversed, and dense tables still have a clear order of importance.',
         '<strong>Logistics and transport.</strong> <a href="/industries/logistics">Dispatch and tracking screens</a> that drivers and dispatchers can pick up without a training session.',
-        '<strong>Health providers.</strong> Patient and clinic tools with short forms, clear consent and flows that respect privacy.',
+        '<strong>Health providers.</strong> <a href="/industries/healthcare">Patient and clinic tools</a> with short forms, clear consent and flows that respect privacy.',
         '<strong>SaaS companies.</strong> Onboarding and admin areas designed to cut support tickets rather than add to them.',
       ] },
 
