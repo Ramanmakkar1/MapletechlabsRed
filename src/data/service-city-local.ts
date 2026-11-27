@@ -1026,7 +1026,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Content and service-page strategy',
         body: [
           'We map the keywords that matter for your services and build or refine pages that answer those searches with clear proof and calls to action. Our approach matches what we outline for Canadian teams in ',
-          { href: '/blog/top-seo-companies-canada', label: 'our guide to SEO companies in Canada' },
+          { href: '/blog/digital-marketing-agencies-canada', label: 'our guide to choosing a digital marketing agency in Canada' },
           ', with internal links from blog and service content so authority flows to the pages that should rank.',
         ],
       },
