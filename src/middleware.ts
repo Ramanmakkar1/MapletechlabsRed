@@ -5,6 +5,7 @@ import {
   STATIC_SERVICE_LOCATION_CACHE,
   STATIC_SERVICE_LOCATION_CDN_CACHE,
 } from '@/lib/cache-headers';
+import { isCityListiclePath } from '@/lib/seo/listicles';
 
 // HTML documents sit in the CDN for a year, matching the broad HTML rule in
 // next.config.ts headers() (1 year fresh, 1 week stale-while-revalidate).
@@ -125,6 +126,7 @@ export function middleware(req: NextRequest) {
       res.headers.set('CDN-Cache-Control', serviceOrLocation ? STATIC_SERVICE_LOCATION_CDN_CACHE : STATIC_TEMPLATE_CDN_CACHE);
     } else {
       res.headers.set('Cache-Control', HTML_CACHE);
+      if (pathname !== '/blog/app-development-companies-edmonton' && isCityListiclePath(pathname)) res.headers.set('X-Robots-Tag', 'noindex, follow');
     }
     return res;
   }
