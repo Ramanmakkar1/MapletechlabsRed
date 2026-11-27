@@ -2634,7 +2634,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'Ready for enterprise and international customers',
         body: [
-          'Many Vancouver SaaS companies sell into the US early, so we plan for it from the start. We build SSO/SAML for company sign-in, role-based access for different responsibilities, and audit logs that make sensitive actions traceable. Tenant isolation and SOC 2-ready testing prepare the product for security reviews, with test evidence your team can examine. For billing, we set up multi-currency Stripe so US customers pay in USD, and we plan taxes, including GST and PST in BC, so invoices are correct from the first sale. We agree these requirements during discovery so the first release has a clear path to enterprise adoption.',
+          'Many Vancouver SaaS companies sell into the US early, so we plan for it from the start. We build SSO/SAML for company sign-in, role-based access for different responsibilities, and audit logs that make sensitive actions traceable. Tenant isolation and SOC 2-ready testing prepare the product for security reviews, with test evidence your team can examine. For billing, we set up ',
+          { href: '/services/saas-development/billing-subscriptions', label: 'multi-currency Stripe' },
+          ' so US customers pay in USD, and we plan taxes, including GST and PST in BC, so invoices are correct from the first sale. We agree these requirements during discovery so the first release has a clear path to enterprise adoption.',
         ],
       },
       {
