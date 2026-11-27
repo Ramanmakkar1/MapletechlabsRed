@@ -35,7 +35,7 @@ const companies = [
 
 const relatedPosts = [
   { slug: 'website-cost-canada', title: 'How Much Does a Website Cost in Canada?', category: 'Business', readTime: '7 min' },
-  { slug: 'top-seo-companies-canada', title: 'Top 10 SEO Companies in Canada (2026)', category: 'Digital Marketing', readTime: '9 min' },
+  { slug: 'website-development-company-canada', title: 'How to Choose a Website Development Company in Canada (2026)', category: 'Business', readTime: '9 min' },
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
@@ -510,8 +510,8 @@ export default function WebDevelopmentCompaniesTorontoClient() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {[
                 { title: 'How Much Does a Website Cost in Canada?', href: '/blog/website-cost-canada' },
-                { title: 'Top Software Development Companies in Canada', href: '/blog/top-software-development-companies-canada' },
-                { title: 'Software Development Companies in Calgary', href: '/blog/software-development-companies-calgary' },
+                { title: 'Custom Software Development Cost in Canada (2026 Guide)', href: '/blog/custom-software-development-cost-canada' },
+                { title: 'WordPress vs Headless CMS in Canada: Which to Choose?', href: '/blog/wordpress-vs-headless-cms-canada' },
               ].map((post) => (
                 <a key={post.href} href={post.href} style={{
                   display: 'block', padding: '24px', borderRadius: 16,
