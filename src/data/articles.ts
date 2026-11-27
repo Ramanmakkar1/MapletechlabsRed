@@ -6250,7 +6250,7 @@ export const articles: Article[] = [
       { type: 'checks', items: [
         { term: 'Fintech and banking dashboards', text: '<a href="/industries/fintech">Trading, balances, approvals and alerts</a> must stay scannable under pressure. Dense data tables, role-based views and error recovery need wireframe-level planning, not cosmetic reskins.' },
         { term: 'SaaS onboarding and admin', text: 'Multi-step signup, trial conversion, admin consoles and reporting flows should reduce support tickets. Empty states, permissions and upgrade paths belong in the prototype, not as post-launch patches.' },
-        { term: 'Health and retail apps', text: 'Patient, shopper and staff journeys must respect privacy and conversion goals at once. Forms, consent and checkout need testing on phones, not only desktop mockups.' },
+        { term: 'Health and retail apps', text: '<a href="/industries/healthcare">Patient, shopper and staff journeys</a> must respect privacy and conversion goals at once. Forms, consent and checkout need testing on phones, not only desktop mockups.' },
         { term: 'AODA and WCAG 2.0 AA', text: 'Ontario public-facing products often need to meet Accessibility for Ontarians with Disabilities Act expectations. We design to WCAG 2.0 AA: contrast, focus states, keyboard paths, text sizing and screen-reader labels are decided in the design files, not patched after development. Confirm your legal obligations with your compliance team; this guide is practical planning, not legal advice.' },
       ] },
       { type: 'p', html: `These themes match how we describe Toronto work on our <a href="${serviceCityHref('product-design', 'toronto')}">UI/UX design company in Toronto</a> page.` },
