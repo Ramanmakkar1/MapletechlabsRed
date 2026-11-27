@@ -34,7 +34,7 @@ const tocSections = [
 const relatedPosts = [
   { slug: 'app-development-cost-canada', title: 'How Much Does App Development Cost in Canada?', category: 'Business', readTime: '8 min' },
   { slug: 'website-cost-canada', title: 'How Much Does a Website Cost in Canada?', category: 'Business', readTime: '7 min' },
-  { slug: 'top-software-development-companies-canada', title: 'Top 10 Software Development Companies in Canada', category: 'Business', readTime: '10 min' },
+  { slug: 'custom-software-development-cost-canada', title: 'Custom Software Development Cost in Canada (2026 Guide)', category: 'Business', readTime: '9 min' },
 ];
 
 export default function ChooseSoftwareDevelopmentCompanyCanadaClient() {
