@@ -33,7 +33,7 @@ const tocItems = [
 ];
 
 const relatedPosts = [
-  { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
+  { slug: 'build-saas-mvp-8-weeks', title: 'How to Build a SaaS MVP in 8 Weeks: A Founder’s Playbook', category: 'Business', readTime: '10 min' },
   { slug: 'app-development-cost-canada', title: 'How Much Does App Development Cost in Canada?', category: 'Business', readTime: '9 min' },
   { slug: 'website-cost-canada', title: 'How Much Does a Website Cost in Canada?', category: 'Business', readTime: '8 min' },
 ];
