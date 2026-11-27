@@ -12,6 +12,7 @@
 import { serviceCityHref } from './serviceCity';
 import { blogDescription } from '@/lib/seo/blog';
 import { BLOG_AUTHOR } from '@/lib/seo/business';
+import { isIndexableSitemapPath } from '@/lib/seo/indexability';
 
 /** Author credited on every article (visible byline and Article/BlogPosting JSON-LD). */
 export const ARTICLE_AUTHOR = BLOG_AUTHOR;
@@ -7671,7 +7672,7 @@ const REDIRECTED_BLOG_SLUGS = new Set<string>([]);
 export function getRelatedArticles(slug: string, limit = 3): RelatedArticle[] {
   const current = getArticle(slug);
   const others = articles
-    .filter(a => a.slug !== slug && !REDIRECTED_BLOG_SLUGS.has(a.slug))
+    .filter(a => a.slug !== slug && !REDIRECTED_BLOG_SLUGS.has(a.slug) && isIndexableSitemapPath(`/blog/${a.slug}`))
     .sort((a, b) => b.date.localeCompare(a.date));
   // Rank by the same category first, then the buyer's service topic, then the rest;
   // newest first within each tier, and the tiers are disjoint.
