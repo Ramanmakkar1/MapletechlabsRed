@@ -19,8 +19,10 @@ test('niche city+service pages stay out of the index and sitemap', () => {
   assert.equal(isIndexableSitemapPath('/locations/edmonton/ar-vr'), false);
   assert.equal(isIndexableSitemapPath('/locations/edmonton/blockchain-web3'), false);
   assert.equal(isIndexableSitemapPath('/locations/edmonton/game-development'), false);
-  // A non-niche service in a mesh-index city stays indexable.
-  assert.equal(isIndexableSitemapPath('/locations/edmonton/cloud-devops'), true);
+  // Edmonton mesh pages noindexed by owner decision 2026-11-24.
+  assert.equal(isIndexableSitemapPath('/locations/edmonton/cloud-devops'), false);
+  // A non-niche, non-noindexed service in a mesh-index city stays indexable.
+  assert.equal(isIndexableSitemapPath('/locations/edmonton/ai-ml'), true);
 });
 
 test('301-d blog posts stay out of the sitemap', () => {
