@@ -265,7 +265,7 @@ export default function HealthcareCaseStudyClient() {
                   Building a Healthcare Platform?
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                  We specialize in HIPAA-compliant, patient-first digital health solutions. Let&apos;s discuss how we can help transform your healthcare delivery.
+                  We specialize in HIPAA-compliant, patient-first <Link href="/industries/healthcare" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>digital health solutions</Link>. Let&apos;s discuss how we can help transform your healthcare delivery.
                 </p>
               </div>
               <Link href={contactHref} style={{ textDecoration: 'none' }}>
