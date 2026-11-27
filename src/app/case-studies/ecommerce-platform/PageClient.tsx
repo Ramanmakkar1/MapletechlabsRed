@@ -265,7 +265,7 @@ export default function EcommerceCaseStudyClient() {
                   Ready to Scale Your E-Commerce?
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                  From legacy migrations to headless commerce builds, we engineer platforms that drive real revenue. Let&apos;s discuss your growth goals.
+                  From legacy migrations to <Link href="/industries/ecommerce" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>headless commerce builds</Link>, we engineer platforms that drive real revenue. Let&apos;s discuss your growth goals.
                 </p>
               </div>
               <Link href={contactHref} style={{ textDecoration: 'none' }}>
