@@ -210,6 +210,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'ai-development-company-in-edmonton': {
     title: 'AI Development Company in Edmonton',
+    priceFromCad: 10000,
     description: 'Mapletech Labs is headquartered in Edmonton and builds AI chatbots, LLM features and automation for Alberta teams at a fixed CAD price. Get a free quote.',
     answer: 'Mapletech Labs is headquartered in Edmonton and provides AI development there, building AI chatbots, LLM features and workflow automation for Edmonton companies and health providers. You get a fixed scope and price in CAD, senior engineers building your system, and AI that answers from your own documents.',
     intro: 'Mapletech Labs is headquartered in Edmonton, Alberta, so when you hire us for AI development you work with a local team. We build AI chatbots, large language model (LLM) features and workflow automation for Edmonton companies, public bodies and health providers. Our focus is practical AI that saves your staff time, answers from your own documents and keeps your data under control. You work directly with the senior engineers who build it, not a sales layer. Scope and price are fixed in CAD before any work starts, so the budget does not drift. Call us on +1-403-604-8692 to talk through your idea.',
@@ -540,6 +541,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'ai-development-company-in-toronto': {
     title: 'AI Development Company in Toronto',
+    priceFromCad: 10000,
     description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Toronto businesses, with a fixed CAD price agreed up front. Get a free quote.',
     answer: 'Mapletech Labs provides AI development in Toronto, building AI chatbots, LLM features and workflow automation for Toronto businesses. You get a fixed CAD price agreed up front, senior engineers building your system, and AI that answers from your own documents.',
     intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features and workflow automation for Toronto businesses. Edmonton is two hours behind Toronto, so most of your working day overlaps with ours and questions get answered the same day. We focus on practical AI that saves staff time and answers from your own documents. You work directly with the senior engineers who build your system, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your idea.',
@@ -630,6 +632,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'ai-development-company-in-vancouver': {
     title: 'AI Development Company in Vancouver',
+    priceFromCad: 10000,
     description: 'Mapletech Labs builds AI chatbots, LLM features and automation for Vancouver and BC businesses, with a fixed CAD price agreed up front. Free quote.',
     answer: 'Mapletech Labs provides AI development in Vancouver, building AI chatbots, LLM features and workflow automation for Vancouver businesses. You get a fixed CAD price agreed up front, senior engineers building your system, and AI that answers from your own documents.',
     intro: 'Mapletech Labs is a Canadian AI development team headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features and workflow automation for Vancouver businesses. Vancouver is one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. You work directly with the senior engineers who design and build your system, not a sales layer. Your contract is with a Canadian company, priced in CAD, with a fixed scope and a fixed price agreed before work starts. Call us on +1-403-604-8692 to talk through your idea.',
