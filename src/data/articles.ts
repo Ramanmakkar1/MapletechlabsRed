@@ -6620,7 +6620,7 @@ export const articles: Article[] = [
         '<strong>Full product design</strong> with 30+ screens, research and a design system foundation: about CAD $5,000&ndash;$12,000.',
         '<strong>Enterprise design system</strong> with a full research program and accessibility work: about CAD $12,000&ndash;$30,000+.',
       ] },
-      { type: 'p', html: 'Most projects take 6&ndash;11 weeks. Screen count, interaction complexity, research depth and whether branding is in scope move the number. For a full breakdown of what drives the price, read our <a href="/blog/ui-ux-design-cost-canada">UI/UX design cost guide for Canada</a>.' },
+      { type: 'p', html: 'Most projects take 6&ndash;11 weeks. Screen count, interaction complexity, research depth and whether <a href="/services/branding/brand-strategy">branding</a> is in scope move the number. For a full breakdown of what drives the price, read our <a href="/blog/ui-ux-design-cost-canada">UI/UX design cost guide for Canada</a>.' },
 
       { type: 'h2', id: 'red-flags', text: 'Red flags to watch for' },
       { type: 'ul', items: [
