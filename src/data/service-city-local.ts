@@ -2492,7 +2492,9 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'Built for enterprise buyers from day one',
         body: [
-          'Enterprise procurement questions shape the architecture early. We plan SSO/SAML for company sign-in, role-based access for different responsibilities and audit logs that make sensitive actions traceable. Tenant isolation and SOC 2-ready testing help prepare the product for security reviews, with test evidence your team can examine. Canadian data residency is planned across hosting, storage, backups and connected services. We agree these requirements during discovery so the first release has a clear path to enterprise adoption as customer needs grow.',
+          'Enterprise procurement questions shape the architecture early. We plan ',
+          { href: '/services/saas-development/auth-sso', label: 'SSO/SAML' },
+          ' for company sign-in, role-based access for different responsibilities and audit logs that make sensitive actions traceable. Tenant isolation and SOC 2-ready testing help prepare the product for security reviews, with test evidence your team can examine. Canadian data residency is planned across hosting, storage, backups and connected services. We agree these requirements during discovery so the first release has a clear path to enterprise adoption as customer needs grow.',
         ],
       },
       {
