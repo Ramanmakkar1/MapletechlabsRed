@@ -2565,7 +2565,11 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
       {
         heading: 'SaaS foundations we plan first',
         body: [
-          'Before features pile up, we align on foundations that keep the product maintainable. Multi-tenant architecture separates each customer\'s data with isolation your security reviewers can trace. SSO and role-based access match how Calgary enterprises sign in and delegate work. Stripe subscription billing includes GST handling suited to Canadian invoices. An admin dashboard lets your staff manage tenants, plans and support without developer tickets. APIs and integrations connect ERP, CRM and industry systems, and automated tests cover the workflows that must not break on release.',
+          'Before features pile up, we align on foundations that keep the product maintainable. ',
+          { href: '/services/saas-development/multi-tenant-architecture', label: 'Multi-tenant architecture' },
+          " separates each customer's data with isolation your security reviewers can trace. SSO and role-based access match how Calgary enterprises sign in and delegate work. ",
+          { href: '/services/saas-development/billing-subscriptions', label: 'Stripe subscription billing' },
+          ' includes GST handling suited to Canadian invoices. An admin dashboard lets your staff manage tenants, plans and support without developer tickets. APIs and integrations connect ERP, CRM and industry systems, and automated tests cover the workflows that must not break on release.',
         ],
       },
       {
