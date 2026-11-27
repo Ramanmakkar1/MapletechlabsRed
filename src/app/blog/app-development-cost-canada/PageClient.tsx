@@ -33,8 +33,8 @@ const tocSections = [
 
 const relatedPosts = [
   { slug: 'top-10-unicorn-apps-2026', title: 'Top 10 Unicorn Apps of 2026', category: 'Business', readTime: '8 min' },
-  { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
-  { slug: 'top-seo-companies-canada', title: 'Top 10 SEO Companies in Canada (2026)', category: 'Digital Marketing', readTime: '9 min' },
+  { slug: 'native-vs-cross-platform-vs-pwa', title: 'Native vs Cross-Platform vs PWA: Choosing Your App Approach (2026)', category: 'Engineering', readTime: '9 min' },
+  { slug: 'custom-software-development-cost-canada', title: 'Custom Software Development Cost in Canada (2026 Guide)', category: 'Business', readTime: '9 min' },
 ];
 
 export default function AppDevelopmentCostCanadaClient() {
