@@ -3863,7 +3863,7 @@ export const articles: Article[] = [
       { type: 'checks', items: [
         { term: 'A written scope', text: 'The proposal should name the channels, deliverables, reporting cadence, contract length and notice period. Vague promises such as &ldquo;full digital marketing&rdquo; are not a scope.' },
         { term: 'Fees separated from ad spend', text: 'You should see what goes to the agency and what goes to Google or Meta. Ask for the management fee, minimum spend and any setup or content charges in writing.' },
-        { term: 'Account ownership', text: 'Your business should own Google Ads, Google Analytics, Search Console, Meta Business Manager and your Google Business Profile, with the agency added as a user.' },
+        { term: 'Account ownership', text: 'Your business should own Google Ads, Google Analytics, Search Console, Meta Business Manager and your <a href="/services/digital-marketing/local-seo">Google Business Profile</a>, with the agency added as a user.' },
         { term: 'Proof of the work', text: 'Ask for a sample monthly report with client details removed, and for examples of the work the team actually did, not just logos on a homepage.' },
         { term: 'The people doing the work', text: 'Ask who will manage your account each week and whether you can meet them. A senior salesperson who disappears after signing is a common complaint.' },
         { term: 'Tracking and consent', text: 'Agree how calls, forms and bookings will be tracked, and how CASL, PIPEDA and Law 25 consent will be handled before campaigns launch.' },
