@@ -265,7 +265,7 @@ export default function RealEstateCaseStudyClient() {
                   Need ML Recommendations?
                 </h2>
                 <p style={{ fontSize: 16, color: 'var(--muted)', maxWidth: 480, lineHeight: 1.7 }}>
-                  Whether it&apos;s real estate, e-commerce, or any data-driven platform — we build <Link href="/services/ai-ml" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>ML systems</Link> that scale and drive business results.
+                  Whether it&apos;s real estate, <Link href="/industries/ecommerce" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>e-commerce</Link>, or any data-driven platform — we build <Link href="/services/ai-ml" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>ML systems</Link> that scale and drive business results.
                 </p>
               </div>
               <Link href={contactHref} style={{ textDecoration: 'none' }}>
