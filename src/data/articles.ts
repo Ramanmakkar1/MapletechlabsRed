@@ -6794,7 +6794,7 @@ export const articles: Article[] = [
         '<strong>AI products.</strong> Interfaces that explain model outputs, show sources and make review and correction steps easy to follow, so people can trust and challenge what the system suggests.',
         '<strong>Fintech.</strong> <a href="/industries/fintech">Onboarding, verification, payments and account screens</a> where trust, clear error handling and visible security cues matter as much as visual polish.',
         '<strong>E-commerce and retail.</strong> <a href="/industries/ecommerce">Product discovery, checkout and account flows</a> that work for French and English shoppers, including returns, sizing and delivery information.',
-        '<strong>SaaS dashboards.</strong> Dense data, permissions and multi-step workflows that stay scannable, with empty, loading and error states designed rather than left to developers.',
+        '<strong>SaaS dashboards.</strong> <a href="/services/saas-development/analytics-dashboards">Dense data, permissions and multi-step workflows</a> that stay scannable, with empty, loading and error states designed rather than left to developers.',
         '<strong>Public-sector services.</strong> Citizen and internal tools that have to meet accessibility, privacy and procurement expectations, often with French-language requirements written into the contract.',
       ] },
       { type: 'p', html: 'A good studio asks which of these you are, who will actually use the product and which language, privacy and accessibility rules apply before it proposes a price. These themes match how we describe Montreal work on our <a href="/locations/ui-ux-design-company-in-montreal">UI/UX design company in Montreal</a> page.' },
