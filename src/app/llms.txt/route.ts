@@ -1,7 +1,7 @@
 import { cities } from '@/data/cities';
 import { industries } from '@/data/industries';
 import { PROJECT_PRICING } from '@/data/pricing';
-import { PRIORITY_SERVICES, serviceCityHref } from '@/data/serviceCity';
+import { DEMAND_LOCATION_SLUGS, PRIORITY_SERVICES, getServiceCityCombo, serviceCityHref } from '@/data/serviceCity';
 import { services } from '@/data/services';
 import { work } from '@/data/work';
 import { AWARDS, BUSINESS, HQ_ADDRESS, LOCAL_BUSINESS_AREA_SERVED } from '@/lib/seo/business';
@@ -86,6 +86,12 @@ function buildText(): string {
     if (href === `/services/${ps.serviceSlug}`) return null;
     return link(`${ps.label} in ${cities.find(c => c.slug === city)?.name ?? city.charAt(0).toUpperCase() + city.slice(1)}`, href);
   }))));
+  out.push(...lines([...DEMAND_LOCATION_SLUGS].map(slug => {
+    const c = getServiceCityCombo(slug);
+    if (!c) return null;
+    const city = cities.find(x => x.slug === c.citySlug)?.name ?? c.citySlug;
+    return link(`${c.label} in ${city}`, `/locations/${slug}`);
+  })));
   out.push('');
   out.push('## Case studies');
   out.push('');
