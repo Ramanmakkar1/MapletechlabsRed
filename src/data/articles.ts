@@ -6664,7 +6664,7 @@ export const articles: Article[] = [
     readTime: '9 min read',
     heroKey: 'planning',
     intro: [
-      "Ottawa design briefs are shaped by the city's biggest employers: federal departments and agencies, Kanata's technology and cybersecurity companies, telecom and defence suppliers, health organizations and universities. That means the screens often have to survive procurement review, meet accessibility expectations and handle sensitive data, not just look good in a portfolio. Choosing a UI/UX design company in Ottawa starts with finding a team that has designed for those constraints.",
+      "Ottawa design briefs are shaped by the city's biggest employers: federal departments and agencies, Kanata's technology and cybersecurity companies, telecom and defence suppliers, health organizations and <a href='/industries/edtech'>universities</a>. That means the screens often have to survive procurement review, meet accessibility expectations and handle sensitive data, not just look good in a portfolio. Choosing a UI/UX design company in Ottawa starts with finding a team that has designed for those constraints.",
       'This is a buyer\'s guide, not a ranked list. It covers a five-point agency selection checklist, what UX research and product design scope should include, the questions to ask before you sign, what drives the budget in CAD and which red flags matter. For Canada-wide context, read our <a href="/blog/ui-ux-design-companies-canada">guide to UI/UX design companies in Canada</a>. To see how we scope work in the capital, visit our <a href="/locations/ui-ux-design-company-in-ottawa">UI/UX design company in Ottawa</a> page and our <a href="/services/product-design">UI/UX and product design services</a>.',
     ],
     body: [
