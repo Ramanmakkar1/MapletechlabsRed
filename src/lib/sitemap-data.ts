@@ -1,6 +1,6 @@
 import { getArticle } from '@/data/articles';
 import { provinceSlugs } from '@/data/provinces';
-import { serviceCityCombos, agencyCombos, webDesignCombos, isPriorityService } from '@/data/serviceCity';
+import { serviceCityCombos, agencyCombos, webDesignCombos, isPriorityService, MOBILE_APP_CITY_PAGES } from '@/data/serviceCity';
 import { getServedCityServiceParams } from '@/data/city-service';
 import { canonicalPath, siteOrigin } from '@/lib/seo/canonical';
 import { isIndexableSitemapPath } from '@/lib/seo/indexability';
@@ -302,6 +302,7 @@ export function locationSitemapEntries(): SitemapEntry[] {
   }));
   const serviceCities = [...serviceCityCombos, ...agencyCombos, ...webDesignCombos]
     .filter(c => !REDIRECTED_LOCATION_SLUGS.has(`/locations/${c.slug}`))
+    .filter(c => !(c.slug === `app-development-company-in-${c.citySlug}` && MOBILE_APP_CITY_PAGES.has(c.citySlug)))
     .map(c => ({
       loc: `${BASE_URL}/locations/${c.slug}`,
       changefreq: 'monthly' as const,
