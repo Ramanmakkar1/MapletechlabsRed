@@ -6792,7 +6792,7 @@ export const articles: Article[] = [
       { type: 'ul', items: [
         '<strong>Gaming and entertainment.</strong> Studio tools, player dashboards, companion apps and community features need clear navigation around rich visual experiences, plus onboarding that does not assume every player is an expert.',
         '<strong>AI products.</strong> Interfaces that explain model outputs, show sources and make review and correction steps easy to follow, so people can trust and challenge what the system suggests.',
-        '<strong>Fintech.</strong> Onboarding, verification, payments and account screens where trust, clear error handling and visible security cues matter as much as visual polish.',
+        '<strong>Fintech.</strong> <a href="/industries/fintech">Onboarding, verification, payments and account screens</a> where trust, clear error handling and visible security cues matter as much as visual polish.',
         '<strong>E-commerce and retail.</strong> Product discovery, checkout and account flows that work for French and English shoppers, including returns, sizing and delivery information.',
         '<strong>SaaS dashboards.</strong> Dense data, permissions and multi-step workflows that stay scannable, with empty, loading and error states designed rather than left to developers.',
         '<strong>Public-sector services.</strong> Citizen and internal tools that have to meet accessibility, privacy and procurement expectations, often with French-language requirements written into the contract.',
