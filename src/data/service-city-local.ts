@@ -4930,7 +4930,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
         heading: 'Content that ranks for B2B buyers',
         body: [
           'Software and manufacturing buyers search for problems, comparisons and integrations long before they ask for a demo or a quote. We map those searches — category terms, “alternative to” and comparison queries, use-case pages and industry terms — and build service, product and blog pages that answer them with clear proof and a next step. Internal links from articles point authority at the pages that should convert. If you are still comparing providers, our ',
-          { href: '/blog/top-seo-companies-canada', label: 'guide to SEO companies in Canada' },
+          { href: '/blog/digital-marketing-agencies-canada', label: 'guide to choosing a digital marketing agency in Canada' },
           ' covers what to ask before you hire anyone.',
         ],
       },
