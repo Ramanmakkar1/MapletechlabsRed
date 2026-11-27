@@ -165,7 +165,7 @@ export default function EcommerceCaseStudyClient() {
                 Stripe was integrated as the payment backbone, supporting multi-vendor payouts, subscription billing, and complex tax calculations across Canadian provinces. Elasticsearch powered the product search and filtering engine, delivering instant results across a catalog of 50K+ SKUs with faceted navigation, typo tolerance, and relevance tuning.
               </p>
               <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 32 }}>
-                Redis handled session management, cart state, and real-time inventory synchronization across vendors. We built a custom vendor dashboard that allowed marketplace sellers to manage their own products, track orders, and view analytics — eliminating the bottleneck of centralized catalog management. The entire system was deployed on AWS with auto-scaling groups to handle traffic spikes gracefully.
+                Redis handled session management, cart state, and real-time inventory synchronization across vendors. We built a custom <Link href="/services/saas-development/analytics-dashboards" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--line-strong)' }}>vendor dashboard</Link> that allowed marketplace sellers to manage their own products, track orders, and view analytics — eliminating the bottleneck of centralized catalog management. The entire system was deployed on AWS with auto-scaling groups to handle traffic spikes gracefully.
               </p>
 
               {/* Tech stack badges */}
