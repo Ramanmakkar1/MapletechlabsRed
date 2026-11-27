@@ -3826,7 +3826,7 @@ export const articles: Article[] = [
     heroKey: 'planning',
     intro: [
       'Choose a digital marketing agency in Canada by matching the channels you need to a team that can prove the work, quote in CAD and handle Canadian rules such as CASL, PIPEDA and Quebec&rsquo;s Law 25. A full-service agency should cover SEO, Google Ads, social media, content and analytics as one plan, not five disconnected retainers.',
-      'This is a buyer guide, not a ranked list. It explains what a full-service agency covers, the CAD retainer ranges to expect, the Canadian rules that change how campaigns are built, how agency types compare, a vetting checklist and the red flags to avoid. If organic search is your main channel, our <a href="/blog/top-seo-companies-canada">guide to choosing an SEO company in Canada</a> goes deeper on that one service.',
+      'This is a buyer guide, not a ranked list. It explains what a full-service agency covers, the CAD retainer ranges to expect, the Canadian rules that change how campaigns are built, how agency types compare, a vetting checklist and the red flags to avoid. If organic search is your main channel, our <a href="/services/digital-marketing/seo-services">SEO services page</a> goes deeper on that one service.',
     ],
     body: [
       { type: 'p', html: '<strong>Quick answer:</strong> A full-service digital marketing agency in Canada typically costs about CAD $5,000 to $25,000 per month for SEO, Google Ads, social media, content and analytics together; single channels cost less. Choose one that separates agency fees from ad spend, keeps accounts in your name, plans consent for tracking and email, and puts the scope in writing before you sign.' },
