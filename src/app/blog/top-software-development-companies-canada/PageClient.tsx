@@ -35,7 +35,7 @@ const companies = [
 
 const relatedPosts = [
   { slug: 'top-10-unicorn-apps-2026', title: 'Top 10 Unicorn Apps of 2026', category: 'Business', readTime: '8 min' },
-  { slug: 'saas-guide', title: 'From Idea to MRR: How to Build a Profitable SaaS in 2026', category: 'Business', readTime: '7 min' },
+  { slug: 'what-profitable-saas-gets-right', title: 'What the Most Profitable SaaS Products Get Right', category: 'Business', readTime: '9 min' },
   { slug: 'choose-software-development-company-canada', title: 'How to Choose a Software Development Company in Canada', category: 'Business', readTime: '8 min' },
 ];
 
