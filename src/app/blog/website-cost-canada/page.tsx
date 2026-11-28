@@ -9,7 +9,7 @@ import { seoDescription } from '@/lib/seo/description';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
 
 const TITLE = 'Website Cost in Canada: 2026 Pricing Guide';
-const DESCRIPTION = 'Website development cost in Canada for 2026: CAD price ranges by project type, the cost drivers behind them, and budget tips before you build.';
+const DESCRIPTION = 'Website development cost in Canada for 2026: CAD price ranges by project type, the cost drivers behind them, and budget tips to use before you build.';
 const SLUG = 'website-cost-canada';
 const DATE = '2026-01-22';
 const H1 = 'How Much Does a Custom Website Cost in Canada? (2026 Pricing Guide)';
