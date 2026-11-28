@@ -89,9 +89,9 @@ export default function WebsiteCostCanadaClient() {
                 background: 'transparent', border: '1px solid var(--brand)', color: 'var(--brand)',
                 padding: '5px 14px', borderRadius: 100,
               }}>Business</span>
-              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
+              <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>January 22, 2026</span>
               <span style={{ color: 'var(--muted)', margin: '0 8px' }}>·</span>
-              <span style={{ color: 'var(--muted)' }}>Updated Mar 2026</span>
+              <span style={{ color: 'var(--muted)' }}>Updated Feb 2026</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>·</span>
               <span className="reveal reveal-d1" style={{
                 fontSize: 13, color: 'var(--faint)',
