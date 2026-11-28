@@ -5634,7 +5634,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   'app-development-company-in-victoria': {
     title: 'Mobile App Development in Victoria, BC',
     priceFromCad: 25000,
-    description: 'Victoria app development by Mapletech Labs: iOS & Android apps for BC government suppliers, tourism and marine firms, with a fixed CAD price. Free quote.',
+    description: 'Mobile app development in Victoria, BC: iOS and Android apps for BC government suppliers, tourism and marine firms, at a fixed CAD price. Get a free quote.',
     answer: 'Mapletech Labs provides mobile app development in Victoria, BC, building iOS and Android apps for local organizations. You get a fixed scope, a fixed CAD price and direct access to the senior engineers who design and build your app.',
     intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, with our engineers based in Vancouver, and we build iOS and Android apps for Victoria organizations. We do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. We work with BC provincial government suppliers, tourism and hospitality operators, tech firms around downtown and the University of Victoria and Camosun campuses, ocean and marine companies, and healthcare teams serving Island Health patients. You speak directly with the senior engineers who build your app, and you sign with a Canadian company, priced in CAD, with a fixed scope and a fixed price before any work starts. Call us on +1-403-604-8692 to talk about your app.',
     sections: [
