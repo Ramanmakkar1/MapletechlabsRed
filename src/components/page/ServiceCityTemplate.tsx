@@ -21,8 +21,6 @@ import type { Stat } from './types';
 import type { CityServicePageData } from '@/data/city-service';
 import type { ServiceCityLocal } from '@/data/service-city-local';
 import { isIndexableHref } from '@/lib/seo/indexability';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import { canonicalUrl } from '@/lib/seo/canonical';
 
 // Honest, company-wide facts — no invented per-city metrics.
 const HONEST_STATS: Stat[] = [
@@ -64,20 +62,8 @@ export default function ServiceCityTemplate({ data: p, heroTitle, heroDesc, loca
   ];
   const tech = p.techCategories.map(t => ({ label: t.title, chips: t.items }));
 
-  // BreadcrumbList schema for the service+city page. Rendered only on indexable
-  // pages: noindex mesh pairs (niche services in smaller cities) get no schema.
-  const breadcrumbItems = [
-    { position: 1, name: 'Home', item: canonicalUrl('/') },
-    { position: 2, name: 'Services', item: canonicalUrl('/services') },
-    { position: 3, name: serviceName, item: canonicalUrl(`/services/${serviceSlug}`) },
-    { position: 4, name: cityName, item: canonicalUrl(`/locations/${serviceSlug}/${citySlug}`) },
-  ];
-
   return (
     <>
-      {isIndexableHref(`/locations/${citySlug}/${serviceSlug}`) ? (
-        <BreadcrumbSchema items={breadcrumbItems} />
-      ) : null}
       <Navbar />
       <main id="main-content">
         <PageHero
