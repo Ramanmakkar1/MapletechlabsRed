@@ -175,7 +175,6 @@ export default function LocationPageTemplate(p: LocationProps) {
           return {
             '@context': 'https://schema.org',
             '@type': 'Service',
-            '@id': canonicalUrl(s.href) + '#service',
             inLanguage: 'en-CA',
             name: `${serviceType} in ${name}`,
             serviceType,
@@ -202,7 +201,7 @@ export default function LocationPageTemplate(p: LocationProps) {
       ) : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceSchema) }} />
       {serviceSchemas.map(s => (
-        <script key={s['@id']} type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(s) }} />
+        <script key={s.url} type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(s) }} />
       ))}
       <Navbar />
       <main id="main-content">
