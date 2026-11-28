@@ -101,7 +101,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
     '@graph': [
       {
         '@type': 'Service',
-        '@id': `${canonical}#service`,
+        '@id': `${url}#service`,
         name: serviceLabel,
         provider: {
           '@type': 'Organization',
