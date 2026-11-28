@@ -98,6 +98,13 @@ export const EDMONTON_MESH_NOINDEX = new Set(['cloud-devops', 'product-design', 
 export const TORONTO_MESH_NOINDEX = new Set(['cloud-devops', 'product-design']);
 
 /**
+ * Owner decision 2026-11-27: these services are noindexed in all four mesh
+ * cities (62 of 120 checked /locations URLs were left unindexed in GSC). The
+ * pages stay live as noindex,follow and fall out of the sitemap.
+ */
+export const MESH_NOINDEX_SERVICES = new Set(['branding', 'product-design', 'cloud-devops', 'ar-vr', 'blockchain-web3', 'game-development']);
+
+/**
  * Whether a /locations/<city>/<service> mesh page should be indexed and listed
  * in the sitemap. Owner decision 2026-11-22: only the four major cities are
  * indexed (plus priority services everywhere); branding is never indexed.
@@ -107,6 +114,7 @@ export const isIndexableCityService = (citySlug: string, serviceSlug: string): b
   !NICHE_SERVICES.has(serviceSlug) &&
   !(citySlug === 'edmonton' && EDMONTON_MESH_NOINDEX.has(serviceSlug)) &&
   !(citySlug === 'toronto' && TORONTO_MESH_NOINDEX.has(serviceSlug)) &&
+  !MESH_NOINDEX_SERVICES.has(serviceSlug) &&
   (isPriorityService(serviceSlug) || (MESH_INDEX_CITIES.has(citySlug) && serviceSlug !== 'branding'));
 
 /** Canonical path for a service in a city: keyword URL for priority services, else the mesh URL. */
