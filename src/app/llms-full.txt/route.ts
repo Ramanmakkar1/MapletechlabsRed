@@ -132,6 +132,7 @@ function buildText(): string {
   out.push('## Buyer guides');
   out.push('');
   out.push(...lines(buyerGuideSlugs.map(slug => {
+    if (!isIndexableHref(`/blog/${slug}`)) return null;
     const title = getArticle(slug)?.title ?? LEGACY_GUIDE_TITLES[slug];
     return title ? link(title, `/blog/${slug}`) : null;
   })));
