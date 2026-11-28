@@ -115,7 +115,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
           containedInPlace: { '@type': 'AdministrativeArea', name: data.province },
         },
         serviceType: isAgencyPage ? AGENCY_SERVICE_TYPES : combo.label,
-        description: localEntry?.description ?? data.description,
+        description: data.description,
         url: canonical,
         mainEntityOfPage: canonical,
         ...(local?.priceFromCad
