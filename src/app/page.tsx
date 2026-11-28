@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
 import { canonicalUrl } from '@/lib/seo/canonical';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
-import { organizationSchema, webSiteSchema } from '@/lib/seo/schema';
 import { localBusinessNode } from '@/lib/seo/business';
 import { seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
@@ -104,14 +103,6 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationSchema()) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJsonLd(webSiteSchema()) }}
       />
       <script
         type="application/ld+json"
