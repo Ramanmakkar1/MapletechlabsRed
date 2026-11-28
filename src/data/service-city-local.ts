@@ -2392,6 +2392,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'saas-development-company-in-edmonton': {
     title: 'SaaS Development Company in Edmonton',
+    priceFromCad: 30000,
     description: 'Mapletech Labs is headquartered in Edmonton and builds multi-tenant SaaS products with a fixed CAD price from our Edmonton team. Get a free quote.',
     answer: 'Mapletech Labs is headquartered in Edmonton and provides SaaS development there, building multi-tenant products from MVP to scale for Edmonton teams. You get a fixed CAD price agreed up front, senior engineers building your product, and in-person discovery workshops at your Edmonton office.',
     intro: 'Mapletech Labs is headquartered in Edmonton, so your SaaS project is supported by a local team you can meet in person. We build products from an initial MVP through to a platform ready to scale, whether you are testing a new idea or expanding an existing service. You talk directly to the senior engineers who build your product and can work with us in person at discovery workshops. Before development starts, we agree on a fixed scope and price in CAD, so you know what the project includes. Call us on +1-403-604-8692 to discuss your SaaS idea.',
@@ -2486,6 +2487,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'saas-development-company-in-toronto': {
     title: 'SaaS Development Company in Toronto',
+    priceFromCad: 30000,
     description: 'Mapletech Labs builds multi-tenant SaaS from MVP to scale for Toronto teams, with a fixed CAD price agreed up front from Edmonton. Get a free quote.',
     answer: 'Mapletech Labs provides SaaS development in Toronto, building multi-tenant products from MVP to scale for Toronto teams. You get a fixed CAD price agreed up front, senior engineers building your platform, and written scope agreed before development starts.',
     intro: 'Mapletech Labs is a Canadian team headquartered in Edmonton, building multi-tenant SaaS products for Toronto businesses from MVP to scale. We do not have a Toronto office. Edmonton is two hours behind Toronto, so our working days overlap for product reviews, planning and decisions. You work directly with the senior engineers building your platform, with a written scope and a fixed CAD price agreed before development starts. We can travel to Toronto for discovery workshops, with travel agreed up front. Call +1-403-604-8692 to discuss your users, integrations and the first release your business needs.',
@@ -2553,6 +2555,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'saas-development-company-in-calgary': {
     title: 'SaaS Development Company in Calgary',
+    priceFromCad: 30000,
     description:
       'Mapletech Labs builds multi-tenant SaaS for Calgary energy, logistics and fintech teams, from MVP to scale, with a fixed CAD price. Get a free quote.',
     answer: 'Mapletech Labs provides SaaS development in Calgary, building multi-tenant products from first MVP through to scale for energy, logistics and fintech teams. You get a written scope, a fixed CAD price and senior engineers who stay with the product after launch.',
@@ -2626,6 +2629,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'saas-development-company-in-vancouver': {
     title: 'SaaS Development Company in Vancouver',
+    priceFromCad: 30000,
     description:
       'Mapletech Labs builds multi-tenant SaaS for Vancouver and BC teams, with Canadian data residency and a fixed CAD price agreed up front. Get a free quote.',
     answer: 'Mapletech Labs provides SaaS development in Vancouver, building multi-tenant products from MVP to enterprise scale for Vancouver and BC teams. You get Canadian data residency, a fixed CAD price agreed up front, and senior engineers building your platform.',
