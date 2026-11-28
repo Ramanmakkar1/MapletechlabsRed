@@ -13,7 +13,7 @@ const services = [
   { title: 'Web Development', desc: 'Scalable web platforms for film production pipelines, clean tech dashboards, and real estate marketplaces.', href: '/locations/web-development-company-in-vancouver' },
   { title: 'AI & Machine Learning', desc: 'Computer vision for VFX workflows, predictive models for clean energy, and NLP for multilingual markets.', href: '/locations/ai-development-company-in-vancouver' },
   { title: 'Blockchain & Web3', desc: 'Decentralized applications, NFT platforms, and tokenized asset systems for Vancouver\'s forward-thinking tech scene.', href: '/services/blockchain-web3' },
-  { title: 'Cloud & DevOps', desc: 'Cloud-native infrastructure and CI/CD pipelines built for gaming studios and media production at scale.', href: '/locations/vancouver/cloud-devops' },
+  { title: 'Cloud & DevOps', desc: 'Cloud-native infrastructure and CI/CD pipelines built for gaming studios and media production at scale.', href: '/services/cloud-devops' },
   { title: 'Product Design', desc: 'UI/UX design for consumer apps, PropTech interfaces, and immersive gaming experiences.', href: '/locations/ui-ux-design-company-in-vancouver' },
 ];
 
