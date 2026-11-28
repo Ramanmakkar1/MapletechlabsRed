@@ -94,7 +94,7 @@ export default function AiDevelopmentCompaniesCanadaClient() {
               }}>Technology</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>March 14, 2026</span>
               <span style={{ color: 'var(--muted)', margin: '0 8px' }}>·</span>
-              <span style={{ color: 'var(--muted)' }}>Updated Mar 2026</span>
+              <span style={{ color: 'var(--muted)' }}>Updated Nov 2026</span>
               <span className="reveal reveal-d1" style={{ fontSize: 13, color: 'var(--faint)' }}>·</span>
               <span className="reveal reveal-d1" style={{
                 fontSize: 13, color: 'var(--faint)',
