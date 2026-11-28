@@ -118,12 +118,12 @@ function buildLocationPage(slug: string): LocationPageData | null {
         description: localEntry?.description ?? data.description,
         url: canonical,
         mainEntityOfPage: canonical,
-        ...(localEntry?.priceFromCad
+        ...(local?.priceFromCad
           ? {
               offers: {
                 '@type': 'AggregateOffer',
                 priceCurrency: 'CAD',
-                lowPrice: localEntry.priceFromCad,
+                lowPrice: local.priceFromCad,
                 url: canonical,
               },
             }
