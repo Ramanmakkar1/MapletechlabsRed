@@ -16,7 +16,7 @@ import {
   type CityServicePageData,
 } from '@/data/city-service';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { indexableLinkHref } from '@/lib/seo/indexability';
+import { indexableLinkHref, isIndexableSitemapPath } from '@/lib/seo/indexability';
 import { localServiceSchema } from '@/lib/seo/business';
 import { localServiceTitle, ogTitle, seoTitle } from '@/lib/seo/title';
 import { seoDescription } from '@/lib/seo/description';
@@ -136,7 +136,7 @@ function buildLocationPage(slug: string): LocationPageData | null {
         serviceType: isAgencyPage ? AGENCY_SERVICE_TYPES : [combo.label],
         mainEntity: false,
       }),
-      ...(isIndexableLocationSlug(slug)
+      ...(isIndexableSitemapPath(`/locations/${slug}`)
         ? [
             {
               '@type': 'BreadcrumbList',
