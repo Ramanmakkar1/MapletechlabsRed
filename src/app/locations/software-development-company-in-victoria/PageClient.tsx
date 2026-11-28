@@ -3,7 +3,7 @@ import LocationPageTemplate from '@/components/page/LocationPageTemplate';
 const pair = (xs: [string, string][]) => xs.map(([value, label]) => ({ value, label }));
 const heroStats = pair([['25+', 'BC Gov Projects'], ['95%', 'Client Satisfaction'], ['10+', 'Clean Tech Builds']]);
 const services = [
-  { title: 'Mobile App Development', desc: 'Tourism apps, government field tools, and marine industry solutions for Vancouver Island and beyond.', href: '/services/mobile-app-development' },
+  { title: 'Mobile App Development', desc: 'Tourism apps, government field tools, and marine industry solutions for Vancouver Island and beyond.', href: '/locations/app-development-company-in-victoria' },
   { title: 'Web Development', desc: 'BC government portals, tourism booking platforms, and clean tech dashboards built to provincial standards.', href: '/services/web-development' },
   { title: 'AI & Machine Learning', desc: 'Environmental monitoring AI, ocean data analytics, and intelligent automation for provincial services.', href: '/services/ai-ml' },
   { title: 'Blockchain & Web3', desc: 'Carbon credit tracking, transparent procurement systems, and decentralized identity for government services.', href: '/services/blockchain-web3' },
