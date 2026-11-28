@@ -5306,6 +5306,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'app-development-company-in-brampton': {
     title: 'App Development Company in Brampton, ON',
+    priceFromCad: 25000,
     description: 'App development company in Brampton for Peel Region firms: iOS and Android apps at a fixed CAD price from Edmonton. Call for a free quote today.',
     intro: 'Mapletech Labs is a Canadian app development company headquartered in Edmonton, building iOS and Android apps for Brampton and Peel Region businesses. We do not have a Brampton office. Brampton runs on Eastern time, two hours ahead of Edmonton, so our working days overlap for standups, design reviews and release decisions. We work with logistics and warehousing teams along Highways 410 and 407 and near Toronto Pearson, manufacturers across the city, health groups tied to Brampton Civic Hospital and William Osler Health System, Sheridan College\'s Davis campus, and the many small businesses in Brampton\'s large South Asian community—plus retailers and restaurants downtown and along Queen Street. You talk directly with the engineers writing your code, and the price is fixed in CAD before development starts. Call +1-403-604-8692 to get a free quote.',
     sections: [
@@ -5628,6 +5629,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'app-development-company-in-victoria': {
     title: 'Mobile App Development in Victoria, BC',
+    priceFromCad: 25000,
     description: 'Victoria app development by Mapletech Labs: iOS & Android apps for BC government suppliers, tourism and marine firms, with a fixed CAD price. Free quote.',
     answer: 'Mapletech Labs provides mobile app development in Victoria, BC, building iOS and Android apps for local organizations. You get a fixed scope, a fixed CAD price and direct access to the senior engineers who design and build your app.',
     intro: 'Mapletech Labs is a Canadian app development team headquartered in Edmonton, with our engineers based in Vancouver, and we build iOS and Android apps for Victoria organizations. We do not have a Victoria office. Victoria is on Pacific time, one hour behind Edmonton, so our working days almost fully overlap and questions get answered the same day. We work with BC provincial government suppliers, tourism and hospitality operators, tech firms around downtown and the University of Victoria and Camosun campuses, ocean and marine companies, and healthcare teams serving Island Health patients. You speak directly with the senior engineers who build your app, and you sign with a Canadian company, priced in CAD, with a fixed scope and a fixed price before any work starts. Call us on +1-403-604-8692 to talk about your app.',
@@ -7967,6 +7969,7 @@ export const SERVICE_CITY_LOCAL: Record<string, ServiceCityLocal> = {
   },
   'ai-development-company-in-regina': {
     title: 'AI Development Company in Regina, SK',
+    priceFromCad: 10000,
     description: 'AI development company in Regina, Saskatchewan: chatbots, LLM features and automation for agri-tech, insurance and public-sector teams. Fixed CAD price.',
     intro: 'Mapletech Labs is a Canadian AI development company headquartered in Edmonton, and we build AI chatbots, large language model (LLM) features, prediction models and workflow automation for organizations in Regina, Saskatchewan. We have no Regina office and serve Regina clients remotely through video calls, weekly demos and a shared project board. Regina stays on Central Standard Time all year, the same as Edmonton in summer and one hour ahead in winter, so a full working day of overlap is easy to hold. We work with agriculture and agri-tech companies, potash and energy operators and their contractors, insurers and brokers, teams connected to the University of Regina, and businesses that supply the provincial government and Crown corporations such as SaskTel, SaskPower and SGI — that is the market we understand, not a list of clients. Senior engineers build your system, you see it working at a weekly demo, and scope and a fixed CAD price are agreed in writing before any work starts.',
     sections: [
