@@ -106,7 +106,7 @@ export function localServiceSchema(opts: {
   );
 
   return {
-    '@type': 'LocalBusiness',
+    '@type': 'ProfessionalService',
     '@id': 'https://mapletechlabs.ca/#localbusiness',
     name: BUSINESS.name,
     url: BUSINESS.url,
