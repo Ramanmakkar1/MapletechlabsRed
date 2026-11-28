@@ -60,7 +60,6 @@ const jsonLd = {
     { '@type': 'Service', name: 'Web Development', url: 'https://mapletechlabs.ca/services/web-development' },
     { '@type': 'Service', name: 'Cloud & DevOps', url: 'https://mapletechlabs.ca/services/cloud-devops' },
     { '@type': 'Service', name: 'Web Development in Toronto', url: 'https://mapletechlabs.ca/locations/web-development-company-in-toronto' },
-    { '@type': 'Service', name: 'Cloud & DevOps in Toronto', url: 'https://mapletechlabs.ca/locations/toronto/cloud-devops' },
   ],
   url: `https://mapletechlabs.ca/case-studies/${SLUG}`,
   mainEntityOfPage: `https://mapletechlabs.ca/case-studies/${SLUG}`,
