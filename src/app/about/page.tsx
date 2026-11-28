@@ -5,6 +5,7 @@ import { canonicalUrl } from '@/lib/seo/canonical';
 import { safeJsonLd } from '@/lib/seo/jsonLd';
 import { seoTitle } from '@/lib/seo/title';
 
+// OWNER DECISION (Raman): the About page meta and PageClient stats say '300+ projects, 150+ engineers'. src/lib/seo/schema.ts organizationSchema, llms.txt, llms-full.txt and about/raman-makkar/PageClient.tsx say '500+ projects, 25+ engineers'. Both are kept until the owner confirms which figures are current.
 const TITLE = 'About Mapletech Labs: Edmonton Software Developers';
 
 export const metadata: Metadata = {
