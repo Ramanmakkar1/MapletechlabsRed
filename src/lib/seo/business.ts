@@ -82,6 +82,33 @@ export const LOCAL_BUSINESS_AREA_SERVED = [
   },
 ] as const;
 
+/** Shared #localbusiness node (ProfessionalService) for the homepage and contact page. No @context. */
+export function localBusinessNode() {
+  return {
+    '@type': 'ProfessionalService',
+    '@id': 'https://mapletechlabs.ca/#localbusiness',
+    name: BUSINESS.name,
+    url: BUSINESS.url,
+    telephone: BUSINESS.telephone,
+    email: BUSINESS.email,
+    image: BUSINESS.image,
+    logo: BUSINESS.logo,
+    priceRange: '$$-$$$',
+    address: HQ_ADDRESS,
+    areaServed: LOCAL_BUSINESS_AREA_SERVED,
+    parentOrganization: { '@id': 'https://mapletechlabs.ca/#organization' },
+    sameAs: BUSINESS.sameAs,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: BUSINESS.telephone,
+      email: BUSINESS.email,
+      contactType: 'sales',
+      areaServed: 'CA',
+      availableLanguage: ['English'],
+    },
+  };
+}
+
 export function localServiceSchema(opts: {
   cityName: string;
   provinceName: string;
