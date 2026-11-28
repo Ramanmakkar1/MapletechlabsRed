@@ -21,7 +21,7 @@ import { provinceSlugForName } from '@/data/provinces';
 import { serviceCityHref, isIndexableLocationSlug } from '@/data/serviceCity';
 import type { HeroCopy, Stat } from './types';
 import { canonicalUrl } from '@/lib/seo/canonical';
-import { isIndexableHref } from '@/lib/seo/indexability';
+import { isIndexableHref, indexableLinkHref } from '@/lib/seo/indexability';
 
 export interface LocationProps {
   slug: string; copy: HeroCopy; heroStats?: Stat[];
@@ -104,7 +104,7 @@ const DEFAULT_SERVICE_ITEMS = DEFAULT_SERVICES.map(s => {
 
 const cityCardHref = (href: string, citySlug: string) => {
   const m = href.match(/^\/services\/([^/?#]+)\/?$/);
-  return m ? serviceCityHref(m[1], citySlug) : href;
+  return m ? serviceCityHref(m[1], citySlug) : indexableLinkHref(href);
 };
 
 function defaultOverview(cityName: string, industries: string[]) {
